@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { canaliInspo, detectPlatform, embedUrl } from "@/lib/trends";
+import { canaliInspo, detectPlatform, embedUrl, type CanaleInspo } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/canali-inspo/$id")({
-  loader: ({ params }) => {
+  loader: ({ params }): { canale: CanaleInspo } => {
     const canale = canaliInspo.find((c) => c.id === params.id);
     if (!canale) throw notFound();
     return { canale };
