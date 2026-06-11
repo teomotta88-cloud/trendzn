@@ -4,7 +4,7 @@ import { canaliInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { Search } from "lucide-react";
 
-export const Route = createFileRoute("/canali-inspo")({
+export const Route = createFileRoute("/canali-inspo/")({
   head: () => ({
     meta: [
       { title: "Canali Inspo — Feed" },
