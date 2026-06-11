@@ -32,7 +32,7 @@ export const Route = createFileRoute("/canali-inspo/$id")({
 });
 
 function Page() {
-  const { canale } = Route.useLoaderData();
+  const { canale } = Route.useLoaderData() as { canale: CanaleInspo };
   const initial = canale.name.replace(/[^a-zA-Z0-9]/g, "").charAt(0).toUpperCase() || "•";
 
   // Posts come from any account URL that resolves to an embeddable single post.
