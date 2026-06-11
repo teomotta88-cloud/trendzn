@@ -118,8 +118,43 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen">
+        <Navbar />
+        <main className="mx-auto w-full max-w-[1400px] px-4 pb-20 pt-6 sm:px-6 lg:px-10">
+          <Outlet />
+        </main>
+      </div>
     </QueryClientProvider>
+  );
+}
+
+function Navbar() {
+  const items = [
+    { to: "/", label: "Home" },
+    { to: "/trend-real-time", label: "Trend Real Time" },
+    { to: "/trend-attuali", label: "Trend Attuali" },
+    { to: "/canali-inspo", label: "Canali Inspo" },
+  ];
+  return (
+    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
+      <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 sm:px-6 lg:px-10">
+        <Link to="/" className="flex items-center gap-2">
+          <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">T</span>
+          <span className="font-display text-base font-semibold tracking-tight">TrendDeck</span>
+        </Link>
+        <nav className="ml-auto flex items-center gap-1 overflow-x-auto">
+          {items.map((it) => (
+            <Link
+              key={it.to}
+              to={it.to}
+              activeOptions={{ exact: it.to === "/" }}
+              className="rounded-md px-3 py-1.5 text-sm text-muted-foreground transition hover:text-foreground data-[status=active]:bg-secondary data-[status=active]:text-foreground"
+            >
+              {it.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }

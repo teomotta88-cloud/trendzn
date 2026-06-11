@@ -9,38 +9,108 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
+import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
+import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 
+const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
+  id: '/trend-real-time',
+  path: '/trend-real-time',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrendAttualiRoute = TrendAttualiRouteImport.update({
+  id: '/trend-attuali',
+  path: '/trend-attuali',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
+  id: '/canali-inspo/',
+  path: '/canali-inspo/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
+  id: '/canali-inspo/$id',
+  path: '/canali-inspo/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/canali-inspo/': typeof CanaliInspoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/canali-inspo': typeof CanaliInspoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/canali-inspo/': typeof CanaliInspoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/trend-attuali'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/trend-attuali'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo'
+  id:
+    | '__root__'
+    | '/'
+    | '/trend-attuali'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  TrendAttualiRoute: typeof TrendAttualiRoute
+  TrendRealTimeRoute: typeof TrendRealTimeRoute
+  CanaliInspoIdRoute: typeof CanaliInspoIdRoute
+  CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trend-real-time': {
+      id: '/trend-real-time'
+      path: '/trend-real-time'
+      fullPath: '/trend-real-time'
+      preLoaderRoute: typeof TrendRealTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trend-attuali': {
+      id: '/trend-attuali'
+      path: '/trend-attuali'
+      fullPath: '/trend-attuali'
+      preLoaderRoute: typeof TrendAttualiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +118,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/canali-inspo/': {
+      id: '/canali-inspo/'
+      path: '/canali-inspo'
+      fullPath: '/canali-inspo/'
+      preLoaderRoute: typeof CanaliInspoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/canali-inspo/$id': {
+      id: '/canali-inspo/$id'
+      path: '/canali-inspo/$id'
+      fullPath: '/canali-inspo/$id'
+      preLoaderRoute: typeof CanaliInspoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  TrendAttualiRoute: TrendAttualiRoute,
+  TrendRealTimeRoute: TrendRealTimeRoute,
+  CanaliInspoIdRoute: CanaliInspoIdRoute,
+  CanaliInspoIndexRoute: CanaliInspoIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
