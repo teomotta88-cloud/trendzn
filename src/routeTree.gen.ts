@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
+import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
   id: '/trend-real-time',
   path: '/trend-real-time',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrendAttualiRoute = TrendAttualiRouteImport.update({
+  id: '/trend-attuali',
+  path: '/trend-attuali',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
   '/trend-real-time': typeof TrendRealTimeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
   '/trend-real-time': typeof TrendRealTimeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
   '/trend-real-time': typeof TrendRealTimeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/trend-real-time'
+  fullPaths: '/' | '/trend-attuali' | '/trend-real-time'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/trend-real-time'
-  id: '__root__' | '/' | '/trend-real-time'
+  to: '/' | '/trend-attuali' | '/trend-real-time'
+  id: '__root__' | '/' | '/trend-attuali' | '/trend-real-time'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  TrendAttualiRoute: typeof TrendAttualiRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/trend-real-time'
       fullPath: '/trend-real-time'
       preLoaderRoute: typeof TrendRealTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trend-attuali': {
+      id: '/trend-attuali'
+      path: '/trend-attuali'
+      fullPath: '/trend-attuali'
+      preLoaderRoute: typeof TrendAttualiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  TrendAttualiRoute: TrendAttualiRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,
 }
 export const routeTree = rootRouteImport
