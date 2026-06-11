@@ -13,6 +13,7 @@ import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
+import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
   id: '/trend-real-time',
@@ -34,17 +35,24 @@ const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
   path: '/canali-inspo/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
+  id: '/canali-inspo/$id',
+  path: '/canali-inspo/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
 }
 export interface FileRoutesById {
@@ -52,18 +60,30 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/trend-attuali' | '/trend-real-time' | '/canali-inspo/'
+  fullPaths:
+    | '/'
+    | '/trend-attuali'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/trend-attuali' | '/trend-real-time' | '/canali-inspo'
+  to:
+    | '/'
+    | '/trend-attuali'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo'
   id:
     | '__root__'
     | '/'
     | '/trend-attuali'
     | '/trend-real-time'
+    | '/canali-inspo/$id'
     | '/canali-inspo/'
   fileRoutesById: FileRoutesById
 }
@@ -71,6 +91,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   TrendAttualiRoute: typeof TrendAttualiRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
+  CanaliInspoIdRoute: typeof CanaliInspoIdRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
 }
 
@@ -104,6 +125,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CanaliInspoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/canali-inspo/$id': {
+      id: '/canali-inspo/$id'
+      path: '/canali-inspo/$id'
+      fullPath: '/canali-inspo/$id'
+      preLoaderRoute: typeof CanaliInspoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -111,6 +139,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   TrendAttualiRoute: TrendAttualiRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,
+  CanaliInspoIdRoute: CanaliInspoIdRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
 }
 export const routeTree = rootRouteImport
