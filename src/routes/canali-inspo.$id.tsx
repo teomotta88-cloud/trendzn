@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { canaliInspo, detectPlatform, embedUrl, type CanaleInspo } from "@/lib/trends";
+import { canaliInspo, detectPlatform, type CanaleInspo } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
