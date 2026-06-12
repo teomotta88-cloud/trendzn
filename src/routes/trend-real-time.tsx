@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { trendRealTime } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
@@ -7,24 +7,21 @@ import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/trend-real-time")({
   head: () => ({
-    meta: [
-      { title: "Trend Real Time — TrendDeck" },
-      {
-        name: "description",
-        content: "Trend social da realizzare entro 1-2 giorni: avvenimenti, notizie d'attualità, real time marketing.",
-      },
-    ],
+    meta: [{ title: "Trend Real Time — TrendDeck" }],
   }),
   component: Page,
 });
 
-function submissionToTrendItem(row: {
+type DbRow = {
+  id: string;
   url: string;
   title: string | null;
   category: string | null;
   industry: string | null;
   tags: string[] | null;
-}): TrendItem {
+};
+
+function rowToTrendItem(row: DbRow): TrendItem {
   return {
     category: row.category ?? "Trend Real Time",
     links: [row.url],
@@ -37,36 +34,43 @@ function submissionToTrendItem(row: {
 }
 
 function Page() {
-  const [dbItems, setDbItems] = useState<TrendItem[]>([]);
+  const [dbRows, setDbRows] = useState<DbRow[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     supabase
       .from("trend_submissions")
-      .select("url, title, category, industry, tags")
+      .select("id, url, title, category, industry, tags")
       .eq("section", "trend-real-time")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
-      .then(({ data, error }) => {
-        console.log("DB data:", data);
-        console.log("DB error:", error);
-        if (data) setDbItems(data.map(submissionToTrendItem));
+      .then(({ data }) => {
+        if (data) setDbRows(data as DbRow[]);
         setLoading(false);
       });
   }, []);
 
-  const allItems = [...dbItems, ...trendRealTime];
+  const handleDelete = useCallback((url: string) => {
+    setDbRows((prev) => prev.filter((r) => r.url !== url));
+  }, []);
+
+  const dbIds: Record<string, string> = Object.fromEntries(dbRows.map((r) => [r.url, r.id]));
+  const allItems: TrendItem[] = [...dbRows.map(rowToTrendItem), ...trendRealTime];
 
   return (
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Real Time</h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
-          Da realizzare entro 1-2 giorni. Legati ad avvenimenti, notizie d'attualità o citazioni di altri brand. Conta
+          Da realizzare entro 1-2 giorni. Legati ad avvenimenti, notizie d'attualità o citazioni di altri brand.\n Conta
           più la velocità di realizzazione che il crafting minuzioso.
         </p>
       </header>
-      {loading ? <div className="text-sm text-muted-foreground">Caricamento…</div> : <TrendGrid items={allItems} />}
+      {loading ? (
+        <div className="text-sm text-muted-foreground">Caricamento…</div>
+      ) : (
+        <TrendGrid items={allItems} dbIds={dbIds} onDelete={handleDelete} />
+      )}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import { canaliInspo } from "@/lib/trends";
 import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
-import { Search } from "lucide-react";
+import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/canali-inspo/")({
@@ -30,20 +30,15 @@ function extractHandle(url: string): string {
   try {
     const clean = url.replace(/\/$/, "");
     const parts = clean.split("/");
-    const handle = parts[parts.length - 1].replace(/^@/, "");
-    return handle || url;
+    return parts[parts.length - 1].replace(/^@/, "") || url;
   } catch {
     return url;
   }
 }
 
-function submissionToCanale(row: {
-  id: string;
-  url: string;
-  title: string | null;
-  industry: string | null;
-  category: string | null;
-}): CanaleInspo {
+type DbRow = { id: string; url: string; title: string | null; industry: string | null; category: string | null };
+
+function rowToCanale(row: DbRow): CanaleInspo {
   const platform = detectPlatform(row.url);
   const handle = extractHandle(row.url);
   return {
@@ -58,7 +53,8 @@ function submissionToCanale(row: {
 function Feed() {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
-  const [dbCanali, setDbCanali] = useState<CanaleInspo[]>([]);
+  const [dbRows, setDbRows] = useState<DbRow[]>([]);
+  const [deleting, setDeleting] = useState<string | null>(null);
 
   useEffect(() => {
     supabase
@@ -68,11 +64,21 @@ function Feed() {
       .eq("status", "approved")
       .order("created_at", { ascending: false })
       .then(({ data }) => {
-        if (data) setDbCanali(data.map(submissionToCanale));
+        if (data) setDbRows(data as DbRow[]);
       });
   }, []);
 
+  const handleDelete = useCallback(async (id: string) => {
+    if (!window.confirm("Eliminare questo canale?")) return;
+    setDeleting(id);
+    await supabase.from("trend_submissions").delete().eq("id", id);
+    setDbRows((prev) => prev.filter((r) => r.id !== id));
+    setDeleting(null);
+  }, []);
+
+  const dbCanali = dbRows.map(rowToCanale);
   const allCanali = [...dbCanali, ...canaliInspo];
+  const dbIds = new Set(dbRows.map((r) => r.id));
 
   const platforms = useMemo(
     () => Array.from(new Set(allCanali.flatMap((c) => c.accounts.map((a) => a.platform)))).sort(),
@@ -138,37 +144,46 @@ function Feed() {
               .replace(/[^a-zA-Z0-9]/g, "")
               .charAt(0)
               .toUpperCase() || "•";
-          const isDb = dbCanali.some((d) => d.id === c.id);
-          const className =
-            "group flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary";
-          const inner = (
-            <>
-              <div className="relative mx-auto flex aspect-square w-full max-w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/10">
-                <div className="flex size-[88%] items-center justify-center rounded-full bg-card font-display text-3xl font-bold">
-                  {initial}
+          const isDb = dbIds.has(c.id);
+          return (
+            <div key={c.id} className="group relative">
+              {isDb && (
+                <button
+                  onClick={() => handleDelete(c.id)}
+                  disabled={deleting === c.id}
+                  className="absolute right-2 top-2 z-10 hidden rounded-lg border border-border bg-card p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex"
+                  title="Elimina"
+                >
+                  <Trash2 className="size-3.5" />
+                </button>
+              )}
+              <Link
+                to={isDb ? (main.url as any) : "/canali-inspo/$id"}
+                params={isDb ? undefined : { id: c.id }}
+                target={isDb ? "_blank" : undefined}
+                rel={isDb ? "noreferrer" : undefined}
+                className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
+              >
+                <div className="relative mx-auto flex aspect-square w-full max-w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/10">
+                  <div className="flex size-[88%] items-center justify-center rounded-full bg-card font-display text-3xl font-bold">
+                    {initial}
+                  </div>
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="truncate font-display text-sm font-semibold">@{main.handle}</div>
-                <div className="mt-1 flex items-center justify-center gap-1.5 text-muted-foreground">
-                  {c.accounts.map((a, i) => (
-                    <PlatformIcon key={i} platform={a.platform} className="size-3.5" />
-                  ))}
+                <div className="text-center">
+                  <div className="truncate font-display text-sm font-semibold">@{main.handle}</div>
+                  <div className="mt-1 flex items-center justify-center gap-1.5 text-muted-foreground">
+                    {c.accounts.map((a, i) => (
+                      <PlatformIcon key={i} platform={a.platform} className="size-3.5" />
+                    ))}
+                  </div>
+                  {c.descrizione && (
+                    <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-muted-foreground">
+                      {c.descrizione}
+                    </p>
+                  )}
                 </div>
-                {c.descrizione && (
-                  <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-muted-foreground">{c.descrizione}</p>
-                )}
-              </div>
-            </>
-          );
-          return isDb ? (
-            <a key={c.id} href={main.url} target="_blank" rel="noreferrer" className={className}>
-              {inner}
-            </a>
-          ) : (
-            <Link key={c.id} to="/canali-inspo/$id" params={{ id: c.id }} className={className}>
-              {inner}
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </div>
