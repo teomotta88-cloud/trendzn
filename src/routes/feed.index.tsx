@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/feed/")({
@@ -85,8 +85,67 @@ function PlatformBadge({ platform }: { platform: string }) {
   );
 }
 
-function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
+/**
+ * Renderizza l'iframe solo quando la card entra nel viewport.
+ * Evita di montare decine di embed contemporaneamente (che bloccano il browser).
+ */
+function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} style={{ position: "relative", background: "#f8f9fa", minHeight: height }}>
+      {!loaded && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#f8f9fa",
+            color: "#94a3b8",
+            fontSize: 13,
+          }}
+        >
+          Caricamento…
+        </div>
+      )}
+      {visible && (
+        <iframe
+          src={embedUrl}
+          width="100%"
+          height={height}
+          frameBorder={0}
+          allowFullScreen
+          scrolling="no"
+          loading="lazy"
+          style={{ display: "block", border: "none", position: "relative" }}
+          onLoad={() => setLoaded(true)}
+        />
+      )}
+    </div>
+  );
+}
+
+function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
   const embedUrl = getEmbedUrl(post.url);
   const platform = getPlatform(post.url);
   const heights: Record<string, number> = { instagram: 480, tiktok: 560, youtube: 315 };
@@ -130,35 +189,7 @@ function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
       </div>
 
       {embedUrl ? (
-        <div style={{ position: "relative", background: "#f8f9fa" }}>
-          {!loaded && (
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#f8f9fa",
-                height: h,
-                color: "#94a3b8",
-                fontSize: 13,
-              }}
-            >
-              Caricamento…
-            </div>
-          )}
-          <iframe
-            src={embedUrl}
-            width="100%"
-            height={h}
-            frameBorder={0}
-            allowFullScreen
-            scrolling="no"
-            style={{ display: "block", border: "none" }}
-            onLoad={() => setLoaded(true)}
-          />
-        </div>
+        <LazyEmbed embedUrl={embedUrl} height={h} />
       ) : (
         <a
           href={post.url}
@@ -266,11 +297,14 @@ function SyncButton() {
   );
 }
 
+const PAGE_SIZE = 12;
+
 function TrendzFeed() {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
   const [search, setSearch] = useState("");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
@@ -281,6 +315,11 @@ function TrendzFeed() {
       })
       .catch(() => setError("Impossibile caricare il feed."));
   }, []);
+
+  // Reset paginazione quando cambiano i filtri
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [platformFilter, search]);
 
   if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
   if (!data) return <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>;
@@ -308,6 +347,9 @@ function TrendzFeed() {
       p.canaleName?.toLowerCase().includes(search.toLowerCase());
     return matchPlatform && matchSearch;
   });
+
+  const visiblePosts = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
 
   const platforms = ["tutti", ...new Set(allPosts.map((p) => p.platform))];
 
@@ -395,17 +437,39 @@ function TrendzFeed() {
             Nessun post trovato.
           </div>
         ) : (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-              gap: 20,
-            }}
-          >
-            {filtered.map((post, i) => (
-              <PostCard key={`${post.url}-${i}`} post={post} canaleName={post.canaleName} />
-            ))}
-          </div>
+          <>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+                gap: 20,
+              }}
+            >
+              {visiblePosts.map((post, i) => (
+                <PostCard key={`${post.url}-${i}`} post={post} canaleName={post.canaleName} />
+              ))}
+            </div>
+
+            {hasMore && (
+              <div style={{ textAlign: "center", marginTop: 28 }}>
+                <button
+                  onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                  style={{
+                    padding: "10px 28px",
+                    borderRadius: 99,
+                    border: "1px solid #e2e8f0",
+                    background: "#fff",
+                    color: "#1e293b",
+                    fontSize: 14,
+                    fontWeight: 500,
+                    cursor: "pointer",
+                  }}
+                >
+                  Carica altri ({filtered.length - visibleCount} rimanenti)
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

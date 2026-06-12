@@ -76,7 +76,10 @@ function Feed() {
     setDeleting(null);
   }, []);
 
-  const dbCanali = dbRows.map(rowToCanale);
+  const jsonHandles = new Set(canaliInspo.flatMap((c) => c.accounts.map((a) => a.handle.toLowerCase())));
+  const dbCanali = dbRows
+    .map(rowToCanale)
+    .filter((c) => !c.accounts.some((a) => jsonHandles.has(a.handle.toLowerCase())));
   const allCanali = [...dbCanali, ...canaliInspo];
   const dbIds = new Set(dbRows.map((r) => r.id));
 
