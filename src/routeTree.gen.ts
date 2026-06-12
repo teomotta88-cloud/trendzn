@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
+import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
@@ -19,6 +20,11 @@ import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
   id: '/trend-real-time',
   path: '/trend-real-time',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrendEvergreenRoute = TrendEvergreenRouteImport.update({
+  id: '/trend-evergreen',
+  path: '/trend-evergreen',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TrendAttualiRoute = TrendAttualiRouteImport.update({
@@ -50,6 +56,7 @@ const ApiPublicHooksPollGmailRoute = ApiPublicHooksPollGmailRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/trend-attuali'
+    | '/trend-evergreen'
     | '/trend-real-time'
     | '/canali-inspo/$id'
     | '/canali-inspo/'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/trend-attuali'
+    | '/trend-evergreen'
     | '/trend-real-time'
     | '/canali-inspo/$id'
     | '/canali-inspo'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/trend-attuali'
+    | '/trend-evergreen'
     | '/trend-real-time'
     | '/canali-inspo/$id'
     | '/canali-inspo/'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   TrendAttualiRoute: typeof TrendAttualiRoute
+  TrendEvergreenRoute: typeof TrendEvergreenRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/trend-real-time'
       fullPath: '/trend-real-time'
       preLoaderRoute: typeof TrendRealTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trend-evergreen': {
+      id: '/trend-evergreen'
+      path: '/trend-evergreen'
+      fullPath: '/trend-evergreen'
+      preLoaderRoute: typeof TrendEvergreenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/trend-attuali': {
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   TrendAttualiRoute: TrendAttualiRoute,
+  TrendEvergreenRoute: TrendEvergreenRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
