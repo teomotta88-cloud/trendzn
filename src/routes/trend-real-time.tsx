@@ -47,7 +47,9 @@ function Page() {
       .eq("section", "trend-real-time")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
-      .then(({ data }) => {
+      .then(({ data, error }) => {
+        console.log("DB data:", data);
+        console.log("DB error:", error);
         if (data) setDbItems(data.map(submissionToTrendItem));
         setLoading(false);
       });
