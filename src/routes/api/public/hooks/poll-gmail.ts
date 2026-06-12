@@ -1,9 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1";
-
 const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
-const TAG_REGEX = /\[([^\]]+)\]/g;
+
+// Mappa il primo tag [categoria] alla sezione del sito
+const CATEGORY_TO_SECTION: Record<string, string> = {
+  "trend real time": "trend-real-time",
+  "trend attuali": "trend-attuali",
+  "trend evergreen": "trend-evergreen",
+  "canali inspo": "canali-inspo",
+  // alias brevi accettati
+  "real time": "trend-real-time",
+  attuali: "trend-attuali",
+  evergreen: "trend-evergreen",
+  canali: "canali-inspo",
+};
 
 function decodeBase64Url(input: string): string {
   const normalized = input.replace(/-/g, "+").replace(/_/g, "/");
@@ -25,37 +36,32 @@ type GmailPart = {
 function extractText(payload: GmailPart | undefined): string {
   if (!payload) return "";
   let out = "";
-  if (payload.body?.data) {
-    out += decodeBase64Url(payload.body.data) + "\n";
-  }
-  if (payload.parts) {
-    for (const p of payload.parts) out += extractText(p) + "\n";
-  }
+  if (payload.body?.data) out += decodeBase64Url(payload.body.data) + "\n";
+  if (payload.parts) for (const p of payload.parts) out += extractText(p) + "\n";
   return out;
 }
 
 function findHeader(headers: { name: string; value: string }[] | undefined, name: string): string {
   if (!headers) return "";
-  const h = headers.find((x) => x.name.toLowerCase() === name.toLowerCase());
-  return h?.value ?? "";
+  return headers.find((x) => x.name.toLowerCase() === name.toLowerCase())?.value ?? "";
 }
 
 function parseSubject(subject: string): {
   tags: string[];
   category: string | null;
   industry: string | null;
+  section: string | null;
 } {
   const tags: string[] = [];
+  const re = /\[([^\]]+)\]/g;
   let match: RegExpExecArray | null;
-  const re = new RegExp(TAG_REGEX.source, "g");
   while ((match = re.exec(subject)) !== null) {
     tags.push(match[1].trim().toLowerCase());
   }
-  return {
-    tags,
-    category: tags[0] ?? null,
-    industry: tags[1] ?? null,
-  };
+  const category = tags[0] ?? null;
+  const industry = tags[1] ?? null;
+  const section = category ? (CATEGORY_TO_SECTION[category] ?? null) : null;
+  return { tags, category, industry, section };
 }
 
 async function gmailFetch(path: string, init?: RequestInit) {
@@ -114,7 +120,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
               const urls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
 
               if (urls.length > 0) {
-                const { tags, category, industry } = parseSubject(subject);
+                const { tags, category, industry, section } = parseSubject(subject);
 
                 const rows = urls.map((url) => ({
                   url,
@@ -124,6 +130,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                   tags,
                   category,
                   industry,
+                  section,
                   status: "approved" as const,
                 }));
 
@@ -145,18 +152,11 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
           if (processedIds.length > 0) {
             await gmailFetch(`/users/me/messages/batchModify`, {
               method: "POST",
-              body: JSON.stringify({
-                ids: processedIds,
-                removeLabelIds: ["UNREAD"],
-              }),
+              body: JSON.stringify({ ids: processedIds, removeLabelIds: ["UNREAD"] }),
             });
           }
 
-          return Response.json({
-            ok: true,
-            processed: processedIds.length,
-            inserted,
-          });
+          return Response.json({ ok: true, processed: processedIds.length, inserted });
         } catch (err) {
           const msg = err instanceof Error ? err.message : String(err);
           console.error("poll-gmail failed:", msg);
