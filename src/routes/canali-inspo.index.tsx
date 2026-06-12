@@ -139,15 +139,10 @@ function Feed() {
               .charAt(0)
               .toUpperCase() || "•";
           const isDb = dbCanali.some((d) => d.id === c.id);
-          return (
-            <Link
-              key={c.id}
-              to={isDb ? (main.url as any) : "/canali-inspo/$id"}
-              params={isDb ? undefined : { id: c.id }}
-              target={isDb ? "_blank" : undefined}
-              rel={isDb ? "noreferrer" : undefined}
-              className="group flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
-            >
+          const className =
+            "group flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary";
+          const inner = (
+            <>
               <div className="relative mx-auto flex aspect-square w-full max-w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/10">
                 <div className="flex size-[88%] items-center justify-center rounded-full bg-card font-display text-3xl font-bold">
                   {initial}
@@ -164,6 +159,15 @@ function Feed() {
                   <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-muted-foreground">{c.descrizione}</p>
                 )}
               </div>
+            </>
+          );
+          return isDb ? (
+            <a key={c.id} href={main.url} target="_blank" rel="noreferrer" className={className}>
+              {inner}
+            </a>
+          ) : (
+            <Link key={c.id} to="/canali-inspo/$id" params={{ id: c.id }} className={className}>
+              {inner}
             </Link>
           );
         })}
