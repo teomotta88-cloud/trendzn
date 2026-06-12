@@ -44,6 +44,24 @@ function findHeader(headers: { name: string; value: string }[] | undefined, name
   return headers.find((x) => x.name.toLowerCase() === name.toLowerCase())?.value ?? "";
 }
 
+// Estrae l'handle da un URL di profilo social
+// es. https://www.instagram.com/crsel.app/ → crsel.app
+function extractHandleFromUrl(url: string): string | null {
+  try {
+    const clean = url.replace(/\/$/, "");
+    const parts = clean.split("/");
+    const handle = parts[parts.length - 1].replace(/^@/, "");
+    return handle || null;
+  } catch {
+    return null;
+  }
+}
+
+function isProfileUrl(url: string): boolean {
+  // URL di profilo: instagram.com/handle, tiktok.com/@handle — NO /p/ /reel/ /video/
+  return !/\/(p|reel|reels|tv|video|photo)\//.test(url);
+}
+
 function parseSubject(subject: string): {
   tags: string[];
   category: string | null;
@@ -54,14 +72,13 @@ function parseSubject(subject: string): {
   const hasBrackets = /\[/.test(subject);
 
   if (hasBrackets) {
-    // formato [tag1][tag2][tag3]
     const re = /\[([^\]]+)\]/g;
     let match: RegExpExecArray | null;
     while ((match = re.exec(subject)) !== null) {
       tags.push(match[1].trim().toLowerCase());
     }
   } else {
-    // formato tag1-tag2-tag3 (eventuale testo libero dopo doppio spazio ignorato)
+    // formato categoria-industry-applicazione
     const part = subject.split(/\s{2,}/)[0].trim();
     part.split("-").forEach((t) => {
       const clean = t.trim().toLowerCase();
@@ -128,22 +145,39 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
               const body = extractText(msg.payload) || msg.snippet || "";
               const raw = `Subject: ${subject}\nFrom: ${from}\n\n${body}`;
 
-              const urls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
+              const { tags, category, industry, section } = parseSubject(subject);
+
+              // Per canali inspo: prendi solo URL di profilo
+              // Per trend: prendi solo URL di post
+              const allUrls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
+
+              const urls =
+                section === "canali-inspo"
+                  ? allUrls.filter(isProfileUrl)
+                  : allUrls.filter((u) => !isProfileUrl(u) || allUrls.length === 1);
 
               if (urls.length > 0) {
-                const { tags, category, industry, section } = parseSubject(subject);
+                const rows = urls.map((url) => {
+                  // Per canali inspo usa l'handle come title se il subject non ha un nome esplicito
+                  const derivedTitle =
+                    section === "canali-inspo"
+                      ? tags[2]
+                        ? tags.slice(2).join(" ")
+                        : extractHandleFromUrl(url)
+                      : subject || null;
 
-                const rows = urls.map((url) => ({
-                  url,
-                  submitted_by: from,
-                  raw_email: raw.slice(0, 10000),
-                  title: subject || null,
-                  tags,
-                  category,
-                  industry,
-                  section,
-                  status: "approved" as const,
-                }));
+                  return {
+                    url,
+                    submitted_by: from,
+                    raw_email: raw.slice(0, 10000),
+                    title: derivedTitle,
+                    tags,
+                    category,
+                    industry,
+                    section,
+                    status: "approved" as const,
+                  };
+                });
 
                 const { error } = await supabaseAdmin.from("trend_submissions").insert(rows);
 
