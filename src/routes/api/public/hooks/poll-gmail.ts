@@ -16,7 +16,7 @@ const CATEGORY_TO_SECTION: Record<string, string> = {
 
 function extractHandleFromUrl(url: string): string | null {
   try {
-    const clean = url.replace(/\/$/, "");
+    const clean = url.replace(/\/$/, "").split("?")[0];
     const parts = clean.split("/");
     const handle = parts[parts.length - 1].replace(/^@/, "");
     return handle || null;
