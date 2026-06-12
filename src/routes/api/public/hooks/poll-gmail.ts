@@ -14,6 +14,17 @@ const CATEGORY_TO_SECTION: Record<string, string> = {
   canali: "canali-inspo",
 };
 
+function extractHandleFromUrl(url: string): string | null {
+  try {
+    const clean = url.replace(/\/$/, "");
+    const parts = clean.split("/");
+    const handle = parts[parts.length - 1].replace(/^@/, "");
+    return handle || null;
+  } catch {
+    return null;
+  }
+}
+
 function decodeBase64Url(input: string): string {
   const normalized = input.replace(/-/g, "+").replace(/_/g, "/");
   const padded = normalized + "=".repeat((4 - (normalized.length % 4)) % 4);
@@ -44,24 +55,6 @@ function findHeader(headers: { name: string; value: string }[] | undefined, name
   return headers.find((x) => x.name.toLowerCase() === name.toLowerCase())?.value ?? "";
 }
 
-// Estrae l'handle da un URL di profilo social
-// es. https://www.instagram.com/crsel.app/ → crsel.app
-function extractHandleFromUrl(url: string): string | null {
-  try {
-    const clean = url.replace(/\/$/, "");
-    const parts = clean.split("/");
-    const handle = parts[parts.length - 1].replace(/^@/, "");
-    return handle || null;
-  } catch {
-    return null;
-  }
-}
-
-function isProfileUrl(url: string): boolean {
-  // URL di profilo: instagram.com/handle, tiktok.com/@handle — NO /p/ /reel/ /video/
-  return !/\/(p|reel|reels|tv|video|photo)\//.test(url);
-}
-
 function parseSubject(subject: string): {
   tags: string[];
   category: string | null;
@@ -78,7 +71,6 @@ function parseSubject(subject: string): {
       tags.push(match[1].trim().toLowerCase());
     }
   } else {
-    // formato categoria-industry-applicazione
     const part = subject.split(/\s{2,}/)[0].trim();
     part.split("-").forEach((t) => {
       const clean = t.trim().toLowerCase();
@@ -147,18 +139,15 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
 
               const { tags, category, industry, section } = parseSubject(subject);
 
-              // Per canali inspo: prendi solo URL di profilo
-              // Per trend: prendi solo URL di post
               const allUrls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
 
-              const urls =
-                section === "canali-inspo"
-                  ? allUrls.filter(isProfileUrl)
-                  : allUrls.filter((u) => !isProfileUrl(u) || allUrls.length === 1);
+              // Per canali inspo: solo il primo URL (quello incollato dall'utente),
+              // il resto viene ignorato perché è firma/footer della mail.
+              // Per trend: tutti gli URL trovati nel body.
+              const urls = section === "canali-inspo" ? (allUrls[0] ? [allUrls[0]] : []) : allUrls;
 
               if (urls.length > 0) {
                 const rows = urls.map((url) => {
-                  // Per canali inspo usa l'handle come title se il subject non ha un nome esplicito
                   const derivedTitle =
                     section === "canali-inspo"
                       ? tags[2]
