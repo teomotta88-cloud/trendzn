@@ -16,27 +16,39 @@ export type Database = {
     Tables: {
       trend_submissions: {
         Row: {
+          category: string | null
           created_at: string
           id: string
+          industry: string | null
           raw_email: string | null
           status: Database["public"]["Enums"]["trend_submission_status"]
           submitted_by: string | null
+          tags: string[] | null
+          title: string | null
           url: string
         }
         Insert: {
+          category?: string | null
           created_at?: string
           id?: string
+          industry?: string | null
           raw_email?: string | null
           status?: Database["public"]["Enums"]["trend_submission_status"]
           submitted_by?: string | null
+          tags?: string[] | null
+          title?: string | null
           url: string
         }
         Update: {
+          category?: string | null
           created_at?: string
           id?: string
+          industry?: string | null
           raw_email?: string | null
           status?: Database["public"]["Enums"]["trend_submission_status"]
           submitted_by?: string | null
+          tags?: string[] | null
+          title?: string | null
           url?: string
         }
         Relationships: []
