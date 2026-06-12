@@ -51,11 +51,10 @@ function Index() {
             Social trend deck
           </span>
           <h1 className="font-display text-4xl font-bold leading-tight sm:text-6xl">
-            Tutti i trend social, in un posto solo.
+            SBAM! Tutti i trend social, in un posto solo.
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg">
-            Video embeddati, filtri per industry e piattaforma, e una bacheca con i canali da seguire per restare sul
-            pezzo.
+            Creato su misura per il Team Social di SBAM.
           </p>
         </div>
       </section>
