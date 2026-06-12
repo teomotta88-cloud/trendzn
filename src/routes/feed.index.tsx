@@ -5,7 +5,8 @@ export const Route = createFileRoute("/feed/")({
   component: TrendzFeed,
 });
 
-const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
+const TRENDS_JSON_URL =
+  "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
 
 interface Account {
   platform: string;
@@ -209,9 +210,12 @@ function TrendzFeed() {
 
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setError("Impossibile caricare il feed."));
+  .then((r) => r.json())
+  .then((res) => {
+    const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
+    setData(decoded);
+  })
+  .catch(() => setError("Impossibile caricare il feed."));
   }, []);
 
   if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
