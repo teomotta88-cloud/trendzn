@@ -110,14 +110,9 @@ async function gmailFetch(path: string, init?: RequestInit) {
   return text ? JSON.parse(text) : {};
 }
 
-async function syncCanaleToGitHub(url: string, title: string | null) {
-  // Letto qui (non a livello di modulo) così le modifiche alle env var
-  // vengono raccolte senza dipendere dal momento di inizializzazione del modulo.
+async function syncCanaleToGitHub(url: string, title: string | null): Promise<string> {
   const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    console.warn("GITHUB_TOKEN non configurato, skip sync GitHub");
-    return;
-  }
+  if (!token) return "no_token";
 
   try {
     // Leggi il file attuale da GitHub
@@ -127,10 +122,8 @@ async function syncCanaleToGitHub(url: string, title: string | null) {
         Accept: "application/vnd.github.v3+json",
       },
     });
-    if (!res.ok) {
-      console.error("GitHub read failed:", res.status);
-      return;
-    }
+    if (!res.ok) return `read_failed_${res.status}`;
+
     const file = await res.json();
     const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
 
@@ -159,10 +152,7 @@ async function syncCanaleToGitHub(url: string, title: string | null) {
     const exists = (trends.canali_inspo as { accounts: { url: string }[] }[]).some((c) =>
       c.accounts.some((a) => a.url === url),
     );
-    if (exists) {
-      console.log("Canale già presente in trends.json, skip");
-      return;
-    }
+    if (exists) return "already_exists";
 
     // Aggiungi il canale
     trends.canali_inspo.push({
@@ -188,13 +178,13 @@ async function syncCanaleToGitHub(url: string, title: string | null) {
     });
 
     if (writeRes.ok) {
-      console.log(`Canale ${handle} aggiunto a trends.json`);
+      return "ok";
     } else {
       const err = await writeRes.text();
-      console.error("GitHub write failed:", err);
+      return `write_failed: ${err.slice(0, 100)}`;
     }
   } catch (err) {
-    console.error("syncCanaleToGitHub error:", err);
+    return `exception: ${String(err).slice(0, 100)}`;
   }
 }
 
@@ -216,6 +206,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
 
           let inserted = 0;
           const processedIds: string[] = [];
+          const syncResults: string[] = [];
 
           for (const m of messages) {
             try {
@@ -270,7 +261,8 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                 // Sync su GitHub per canali inspo
                 if (section === "canali-inspo" && urls[0]) {
                   const title = rows[0]?.title ?? null;
-                  await syncCanaleToGitHub(urls[0], title).catch((e) => console.error("GitHub sync failed:", e));
+                  const result = await syncCanaleToGitHub(urls[0], title);
+                  syncResults.push(`${urls[0]}: ${result}`);
                 }
               }
 
@@ -287,7 +279,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
             });
           }
 
-          return Response.json({ ok: true, processed: processedIds.length, inserted });
+          return Response.json({ ok: true, processed: processedIds.length, inserted, syncResults });
         } catch (err) {
           const msg = err instanceof Error ? err.message : String(err);
           console.error("poll-gmail failed:", msg);
