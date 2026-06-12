@@ -13,6 +13,7 @@ import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
 import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
@@ -35,6 +36,11 @@ const TrendAttualiRoute = TrendAttualiRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeedIndexRoute = FeedIndexRouteImport.update({
+  id: '/feed/',
+  path: '/feed/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
+  '/feed/': typeof FeedIndexRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
+  '/feed': typeof FeedIndexRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
+  '/feed/': typeof FeedIndexRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/canali-inspo/$id'
     | '/canali-inspo/'
+    | '/feed/'
     | '/api/public/hooks/poll-gmail'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/canali-inspo/$id'
     | '/canali-inspo'
+    | '/feed'
     | '/api/public/hooks/poll-gmail'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/canali-inspo/$id'
     | '/canali-inspo/'
+    | '/feed/'
     | '/api/public/hooks/poll-gmail'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   TrendRealTimeRoute: typeof TrendRealTimeRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
+  FeedIndexRoute: typeof FeedIndexRoute
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
 }
 
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/feed/': {
+      id: '/feed/'
+      path: '/feed'
+      fullPath: '/feed/'
+      preLoaderRoute: typeof FeedIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/canali-inspo/': {
       id: '/canali-inspo/'
       path: '/canali-inspo'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   TrendRealTimeRoute: TrendRealTimeRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
+  FeedIndexRoute: FeedIndexRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
 }
 export const routeTree = rootRouteImport

@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
- 
+
 export const Route = createFileRoute("/feed/")({
   component: TrendzFeed,
 });
 
-const TRENDS_JSON_URL =
-  "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+
+const N8N_WEBHOOK = "https://trendzn.app.n8n.cloud/webhook/trendzn-sync";
 
 interface Account {
   platform: string;
@@ -88,7 +89,6 @@ function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
   const [loaded, setLoaded] = useState(false);
   const embedUrl = getEmbedUrl(post.url);
   const platform = getPlatform(post.url);
-
   const heights: Record<string, number> = { instagram: 480, tiktok: 560, youtube: 315 };
   const h = heights[platform] || 400;
 
@@ -202,6 +202,70 @@ function FilterPill({ label, active, onClick }: { label: string; active: boolean
   );
 }
 
+type SyncStatus = "idle" | "loading" | "success" | "error";
+
+function SyncButton() {
+  const [status, setStatus] = useState<SyncStatus>("idle");
+
+  const handleSync = async () => {
+    setStatus("loading");
+    try {
+      await fetch(N8N_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ trigger: "manual" }),
+      });
+      setStatus("success");
+      setTimeout(() => setStatus("idle"), 4000);
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 4000);
+    }
+  };
+
+  const label: Record<SyncStatus, string> = {
+    idle: "↻ Sync ora",
+    loading: "Sincronizzazione…",
+    success: "✓ Avviato",
+    error: "Errore — riprova",
+  };
+
+  const bg: Record<SyncStatus, string> = {
+    idle: "#f1f5f9",
+    loading: "#e2e8f0",
+    success: "#dcfce7",
+    error: "#fee2e2",
+  };
+
+  const color: Record<SyncStatus, string> = {
+    idle: "#475569",
+    loading: "#94a3b8",
+    success: "#16a34a",
+    error: "#dc2626",
+  };
+
+  return (
+    <button
+      onClick={handleSync}
+      disabled={status === "loading"}
+      style={{
+        padding: "5px 14px",
+        borderRadius: 99,
+        border: "none",
+        background: bg[status],
+        color: color[status],
+        fontSize: 13,
+        fontWeight: 500,
+        cursor: status === "loading" ? "default" : "pointer",
+        transition: "all 0.2s",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {label[status]}
+    </button>
+  );
+}
+
 function TrendzFeed() {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -210,12 +274,12 @@ function TrendzFeed() {
 
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
-  .then((r) => r.json())
-  .then((res) => {
-    const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
-    setData(decoded);
-  })
-  .catch(() => setError("Impossibile caricare il feed."));
+      .then((r) => r.json())
+      .then((res) => {
+        const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
+        setData(decoded);
+      })
+      .catch(() => setError("Impossibile caricare il feed."));
   }, []);
 
   if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
@@ -311,6 +375,8 @@ function TrendzFeed() {
               />
             ))}
           </div>
+
+          <SyncButton />
 
           <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>{filtered.length} post</span>
         </div>
