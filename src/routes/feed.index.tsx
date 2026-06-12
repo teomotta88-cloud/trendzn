@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-const TRENDS_JSON_URL =
-  "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
+const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 function isPostUrl(url) {
   return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
@@ -227,7 +226,9 @@ export default function TrendzFeed() {
           padding: "12px 20px",
         }}
       >
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+        <div
+          style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}
+        >
           <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
             Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ feed</span>
           </div>
@@ -258,18 +259,14 @@ export default function TrendzFeed() {
             ))}
           </div>
 
-          <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>
-            {filtered.length} post
-          </span>
+          <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>{filtered.length} post</span>
         </div>
       </div>
 
       {/* Grid */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 20px" }}>
         {filtered.length === 0 ? (
-          <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>
-            Nessun post trovato.
-          </div>
+          <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>Nessun post trovato.</div>
         ) : (
           <div
             style={{
