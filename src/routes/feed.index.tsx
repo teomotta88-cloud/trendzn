@@ -1,19 +1,47 @@
 import { useState, useEffect } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/feed/")({
+  component: TrendzFeed,
+});
 
 const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
-function isPostUrl(url) {
+interface Account {
+  platform: string;
+  handle: string;
+  url: string;
+}
+
+interface Canale {
+  id: string;
+  name: string;
+  accounts: Account[];
+}
+
+interface TrendsData {
+  canali_inspo: Canale[];
+}
+
+interface Post {
+  url: string;
+  handle: string;
+  platform: string;
+  canaleName: string;
+}
+
+function isPostUrl(url: string): boolean {
   return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
 }
 
-function getPlatform(url) {
+function getPlatform(url: string): string {
   if (/instagram\.com/.test(url)) return "instagram";
   if (/tiktok\.com/.test(url)) return "tiktok";
   if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
   return "web";
 }
 
-function getEmbedUrl(url) {
+function getEmbedUrl(url: string): string | null {
   const ig = url.match(/instagram\.com\/(p|reel|reels|tv)\/([^/?#]+)/);
   if (ig) return `https://www.instagram.com/${ig[1]}/${ig[2]}/embed/`;
   const tt = url.match(/tiktok\.com\/@[^/]+\/(?:video|photo)\/(\d+)/);
@@ -23,15 +51,20 @@ function getEmbedUrl(url) {
   return null;
 }
 
-function PlatformBadge({ platform }) {
-  const colors = {
+function PlatformBadge({ platform }: { platform: string }) {
+  const colors: Record<string, { bg: string; text: string }> = {
     instagram: { bg: "#f0e6f6", text: "#7c3aed" },
     tiktok: { bg: "#e8f0fe", text: "#1a73e8" },
     youtube: { bg: "#fce8e8", text: "#d93025" },
     web: { bg: "#f0f4f8", text: "#64748b" },
   };
   const c = colors[platform] || colors.web;
-  const labels = { instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube", web: "Web" };
+  const labels: Record<string, string> = {
+    instagram: "Instagram",
+    tiktok: "TikTok",
+    youtube: "YouTube",
+    web: "Web",
+  };
   return (
     <span
       style={{
@@ -50,12 +83,12 @@ function PlatformBadge({ platform }) {
   );
 }
 
-function PostCard({ post, canaleName }) {
+function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
   const [loaded, setLoaded] = useState(false);
   const embedUrl = getEmbedUrl(post.url);
   const platform = getPlatform(post.url);
 
-  const heights = { instagram: 480, tiktok: 560, youtube: 315 };
+  const heights: Record<string, number> = { instagram: 480, tiktok: 560, youtube: 315 };
   const h = heights[platform] || 400;
 
   return (
@@ -118,7 +151,7 @@ function PostCard({ post, canaleName }) {
             src={embedUrl}
             width="100%"
             height={h}
-            frameBorder="0"
+            frameBorder={0}
             allowFullScreen
             scrolling="no"
             style={{ display: "block", border: "none" }}
@@ -146,7 +179,7 @@ function PostCard({ post, canaleName }) {
   );
 }
 
-function FilterPill({ label, active, onClick }) {
+function FilterPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
@@ -168,9 +201,9 @@ function FilterPill({ label, active, onClick }) {
   );
 }
 
-export default function TrendzFeed() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+function TrendzFeed() {
+  const [data, setData] = useState<TrendsData | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
   const [search, setSearch] = useState("");
 
@@ -184,8 +217,7 @@ export default function TrendzFeed() {
   if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
   if (!data) return <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>;
 
-  // Raccoglie tutti i post con metadati
-  const allPosts = [];
+  const allPosts: Post[] = [];
   for (const canale of data.canali_inspo || []) {
     const name = canale.name || canale.id || "";
     for (const account of canale.accounts || []) {
@@ -195,13 +227,11 @@ export default function TrendzFeed() {
           handle: account.handle,
           platform: account.platform || getPlatform(account.url),
           canaleName: name,
-          canaleId: canale.id,
         });
       }
     }
   }
 
-  // Filtra
   const filtered = allPosts.filter((p) => {
     const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
     const matchSearch =
@@ -214,8 +244,13 @@ export default function TrendzFeed() {
   const platforms = ["tutti", ...new Set(allPosts.map((p) => p.platform))];
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui, -apple-system, sans-serif" }}>
-      {/* Header */}
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#f8fafc",
+        fontFamily: "system-ui, -apple-system, sans-serif",
+      }}
+    >
       <div
         style={{
           background: "#fff",
@@ -227,9 +262,23 @@ export default function TrendzFeed() {
         }}
       >
         <div
-          style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
+            flexWrap: "wrap",
+          }}
         >
-          <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
+          <div
+            style={{
+              fontWeight: 700,
+              fontSize: 18,
+              color: "#1e293b",
+              letterSpacing: -0.5,
+            }}
+          >
             Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ feed</span>
           </div>
 
@@ -263,10 +312,18 @@ export default function TrendzFeed() {
         </div>
       </div>
 
-      {/* Grid */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 20px" }}>
         {filtered.length === 0 ? (
-          <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>Nessun post trovato.</div>
+          <div
+            style={{
+              textAlign: "center",
+              color: "#94a3b8",
+              padding: 60,
+              fontSize: 14,
+            }}
+          >
+            Nessun post trovato.
+          </div>
         ) : (
           <div
             style={{
