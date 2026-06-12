@@ -150,6 +150,7 @@ function Navbar() {
     { to: "/trend-attuali", label: "Trend Attuali" },
     { to: "/trend-evergreen", label: "Trend Evergreen" },
     { to: "/canali-inspo", label: "Canali Inspo" },
+    { to: "/feed", label: "Feed" },
   ];
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
