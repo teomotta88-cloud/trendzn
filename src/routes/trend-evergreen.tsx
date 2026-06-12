@@ -1,14 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { trendRealTime } from "@/lib/trends";
+import { trendEvergreen } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
 import { supabase } from "@/integrations/supabase/client";
-
-// I trend evergreen statici vengono dal JSON (hanno category === "TREND EVERGREEN")
-const trendEvergreenStatic = trendRealTime.filter(
-  (t) => t.category?.toUpperCase().includes("EVERGREEN"),
-);
 
 export const Route = createFileRoute("/trend-evergreen")({
   head: () => ({
@@ -55,7 +50,7 @@ function Page() {
       });
   }, []);
 
-  const allItems = [...dbItems, ...trendEvergreenStatic];
+  const allItems = [...dbItems, ...trendEvergreen];
 
   return (
     <div className="space-y-8">
