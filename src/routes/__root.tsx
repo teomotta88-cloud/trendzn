@@ -1,12 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
+import { Outlet, Link, createRootRouteWithContext, useRouter, HeadContent, Scripts } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
@@ -44,9 +37,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">This page didn't load</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
@@ -78,17 +69,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lovable App" },
-      { name: "description", content: "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options." },
+      {
+        name: "description",
+        content:
+          "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options." },
+      {
+        property: "og:description",
+        content:
+          "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bb61e71-74bc-45ae-9543-23f1d14fff21/id-preview-8f4a3ee6--54afe560-3e1f-4196-977c-05f75da520ec.lovable.app-1781187441235.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bb61e71-74bc-45ae-9543-23f1d14fff21/id-preview-8f4a3ee6--54afe560-3e1f-4196-977c-05f75da520ec.lovable.app-1781187441235.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bb61e71-74bc-45ae-9543-23f1d14fff21/id-preview-8f4a3ee6--54afe560-3e1f-4196-977c-05f75da520ec.lovable.app-1781187441235.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bb61e71-74bc-45ae-9543-23f1d14fff21/id-preview-8f4a3ee6--54afe560-3e1f-4196-977c-05f75da520ec.lovable.app-1781187441235.png",
+      },
     ],
     links: [
       {
@@ -137,13 +148,16 @@ function Navbar() {
     { to: "/", label: "Home" },
     { to: "/trend-real-time", label: "Trend Real Time" },
     { to: "/trend-attuali", label: "Trend Attuali" },
+    { to: "/trend-evergreen", label: "Trend Evergreen" },
     { to: "/canali-inspo", label: "Canali Inspo" },
   ];
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 sm:px-6 lg:px-10">
         <Link to="/" className="flex items-center gap-2">
-          <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">T</span>
+          <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">
+            T
+          </span>
           <span className="font-display text-base font-semibold tracking-tight">TrendDeck</span>
         </Link>
         <nav className="ml-auto flex items-center gap-1 overflow-x-auto">
