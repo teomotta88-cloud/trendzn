@@ -1,0 +1,1 @@
+ALTER TABLE public.trend_submissions ADD COLUMN IF NOT EXISTS section text;
