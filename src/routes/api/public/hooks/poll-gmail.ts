@@ -3,14 +3,13 @@ import { createFileRoute } from "@tanstack/react-router";
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1";
 
 const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
+const TAG_REGEX = /\[([^\]]+)\]/g;
 
 function decodeBase64Url(input: string): string {
   const normalized = input.replace(/-/g, "+").replace(/_/g, "/");
   const padded = normalized + "=".repeat((4 - (normalized.length % 4)) % 4);
   try {
-    return new TextDecoder("utf-8").decode(
-      Uint8Array.from(atob(padded), (c) => c.charCodeAt(0)),
-    );
+    return new TextDecoder("utf-8").decode(Uint8Array.from(atob(padded), (c) => c.charCodeAt(0)));
   } catch {
     return "";
   }
@@ -39,6 +38,24 @@ function findHeader(headers: { name: string; value: string }[] | undefined, name
   if (!headers) return "";
   const h = headers.find((x) => x.name.toLowerCase() === name.toLowerCase());
   return h?.value ?? "";
+}
+
+function parseSubject(subject: string): {
+  tags: string[];
+  category: string | null;
+  industry: string | null;
+} {
+  const tags: string[] = [];
+  let match: RegExpExecArray | null;
+  const re = new RegExp(TAG_REGEX.source, "g");
+  while ((match = re.exec(subject)) !== null) {
+    tags.push(match[1].trim().toLowerCase());
+  }
+  return {
+    tags,
+    category: tags[0] ?? null,
+    industry: tags[1] ?? null,
+  };
 }
 
 async function gmailFetch(path: string, init?: RequestInit) {
@@ -87,21 +104,31 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                 payload?: GmailPart;
                 snippet?: string;
               };
+
               const headers = msg.payload?.headers;
               const from = findHeader(headers, "From");
               const subject = findHeader(headers, "Subject");
               const body = extractText(msg.payload) || msg.snippet || "";
               const raw = `Subject: ${subject}\nFrom: ${from}\n\n${body}`;
+
               const urls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
 
               if (urls.length > 0) {
+                const { tags, category, industry } = parseSubject(subject);
+
                 const rows = urls.map((url) => ({
                   url,
                   submitted_by: from,
                   raw_email: raw.slice(0, 10000),
-                  status: "pending" as const,
+                  title: subject || null,
+                  tags,
+                  category,
+                  industry,
+                  status: "approved" as const,
                 }));
+
                 const { error } = await supabaseAdmin.from("trend_submissions").insert(rows);
+
                 if (error) {
                   console.error("Insert error:", error.message);
                   continue;
