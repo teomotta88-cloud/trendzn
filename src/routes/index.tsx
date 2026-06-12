@@ -6,7 +6,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "TrendDeck — Trend social & canali inspo" },
-      { name: "description", content: "Esplora trend social real time, trend attuali e canali di ispirazione, filtrabili per industry, piattaforma e categoria." },
+      {
+        name: "description",
+        content:
+          "Esplora trend social real time, trend attuali e canali di ispirazione, filtrabili per industry, piattaforma e categoria.",
+      },
     ],
   }),
   component: Index,
@@ -14,9 +18,27 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const cards = [
-    { to: "/trend-real-time", label: "Trend Real Time", count: trendRealTime.length, icon: Zap, blurb: "Da realizzare in 1–2 giorni. Velocità più che crafting." },
-    { to: "/trend-attuali", label: "Trend Attuali", count: trendAttuali.length, icon: TrendingUp, blurb: "Trend social di IG/TikTok con durata 1–2 settimane." },
-    { to: "/canali-inspo", label: "Canali Inspo", count: canaliInspo.length, icon: Sparkles, blurb: "Account e siti da tenere d'occhio per format, meme e RTM." },
+    {
+      to: "/trend-real-time",
+      label: "Trend Real Time",
+      count: trendRealTime.length,
+      icon: Zap,
+      blurb: "Da realizzare in 1–2 giorni. Velocità più che crafting.",
+    },
+    {
+      to: "/trend-attuali",
+      label: "Trend Attuali",
+      count: trendAttuali.length,
+      icon: TrendingUp,
+      blurb: "Trend social di IG/TikTok con durata 1–2 settimane.",
+    },
+    {
+      to: "/canali-inspo",
+      label: "Canali Inspo",
+      count: canaliInspo.length,
+      icon: Sparkles,
+      blurb: "Account e siti da tenere d'occhio per format, meme e RTM.",
+    },
   ] as const;
 
   return (
@@ -32,21 +54,30 @@ function Index() {
             Tutti i trend social, in un posto solo.
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg">
-            Video embeddati, filtri per industry e piattaforma, e una bacheca con i canali da seguire per restare sul pezzo.
+            Video embeddati, filtri per industry e piattaforma, e una bacheca con i canali da seguire per restare sul
+            pezzo.
           </p>
         </div>
       </section>
 
       <section className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {cards.map((c) => (
-          <Link key={c.to} to={c.to} className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition hover:border-primary">
+          <Link
+            key={c.to}
+            to={c.to}
+            className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition hover:border-primary"
+          >
             <c.icon className="size-7 text-primary" />
             <div className="mt-5 flex items-baseline justify-between">
               <h2 className="font-display text-xl font-semibold">{c.label}</h2>
-              <span className="font-display text-2xl font-bold text-muted-foreground group-hover:text-primary">{c.count}</span>
+              <span className="font-display text-2xl font-bold text-muted-foreground group-hover:text-primary">
+                {c.count}
+              </span>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">{c.blurb}</p>
-            <span className="mt-4 inline-flex items-center gap-1 text-sm text-primary">Apri <ArrowRight className="size-4 transition group-hover:translate-x-1" /></span>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm text-primary">
+              Apri <ArrowRight className="size-4 transition group-hover:translate-x-1" />
+            </span>
           </Link>
         ))}
       </section>
