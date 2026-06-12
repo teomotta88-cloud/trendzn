@@ -3,6 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1";
 const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
 
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = "teomotta88-cloud/trendzn";
+const TRENDS_PATH = "src/data/trends.json";
+
 const CATEGORY_TO_SECTION: Record<string, string> = {
   "trend real time": "trend-real-time",
   "trend attuali": "trend-attuali",
@@ -104,6 +108,92 @@ async function gmailFetch(path: string, init?: RequestInit) {
   return res.json();
 }
 
+async function syncCanaleToGitHub(url: string, title: string | null) {
+  if (!GITHUB_TOKEN) {
+    console.warn("GITHUB_TOKEN non configurato, skip sync GitHub");
+    return;
+  }
+
+  try {
+    // Leggi il file attuale da GitHub
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+      headers: {
+        Authorization: `token ${GITHUB_TOKEN}`,
+        Accept: "application/vnd.github.v3+json",
+      },
+    });
+    if (!res.ok) {
+      console.error("GitHub read failed:", res.status);
+      return;
+    }
+    const file = await res.json();
+    const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+
+    // Funzioni locali
+    function detectPlatformLocal(u: string) {
+      if (/instagram\.com/.test(u)) return "instagram";
+      if (/tiktok\.com/.test(u)) return "tiktok";
+      if (/youtube\.com|youtu\.be/.test(u)) return "youtube";
+      return "web";
+    }
+    function extractHandleLocal(u: string) {
+      try {
+        const clean = u.replace(/\/$/, "").split("?")[0];
+        const parts = clean.split("/");
+        return parts[parts.length - 1].replace(/^@/, "") || u;
+      } catch {
+        return u;
+      }
+    }
+
+    const platform = detectPlatformLocal(url);
+    const handle = extractHandleLocal(url);
+    const name = title || handle;
+    const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
+    // Evita duplicati
+    const exists = (trends.canali_inspo as { accounts: { url: string }[] }[]).some((c) =>
+      c.accounts.some((a) => a.url === url),
+    );
+    if (exists) {
+      console.log("Canale già presente in trends.json, skip");
+      return;
+    }
+
+    // Aggiungi il canale
+    trends.canali_inspo.push({
+      id,
+      name,
+      urls: [url],
+      descrizione: null,
+      accounts: [{ platform, handle, url }],
+    });
+
+    // Scrivi su GitHub
+    const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `token ${GITHUB_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: `chore: aggiungi canale ${handle} [trendzn-bot]`,
+        content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
+        sha: file.sha,
+      }),
+    });
+
+    if (writeRes.ok) {
+      console.log(`Canale ${handle} aggiunto a trends.json`);
+    } else {
+      const err = await writeRes.text();
+      console.error("GitHub write failed:", err);
+    }
+  } catch (err) {
+    console.error("syncCanaleToGitHub error:", err);
+  }
+}
+
 export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
   server: {
     handlers: {
@@ -141,9 +231,6 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
 
               const allUrls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
 
-              // Per canali inspo: solo il primo URL (quello incollato dall'utente),
-              // il resto viene ignorato perché è firma/footer della mail.
-              // Per trend: tutti gli URL trovati nel body.
               const urls = section === "canali-inspo" ? (allUrls[0] ? [allUrls[0]] : []) : allUrls;
 
               if (urls.length > 0) {
@@ -175,6 +262,12 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                   continue;
                 }
                 inserted += rows.length;
+
+                // Sync su GitHub per canali inspo
+                if (section === "canali-inspo" && urls[0]) {
+                  const title = rows[0]?.title ?? null;
+                  await syncCanaleToGitHub(urls[0], title).catch((e) => console.error("GitHub sync failed:", e));
+                }
               }
 
               processedIds.push(msg.id);
