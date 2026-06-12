@@ -28,7 +28,7 @@ function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web"
 
 function extractHandle(url: string): string {
   try {
-    const clean = url.replace(/\/$/, "");
+    const clean = url.replace(/\/$/, "").split("?")[0];
     const parts = clean.split("/");
     return parts[parts.length - 1].replace(/^@/, "") || url;
   } catch {
@@ -145,29 +145,6 @@ function Feed() {
               .charAt(0)
               .toUpperCase() || "•";
           const isDb = dbIds.has(c.id);
-          const cardContent = (
-            <>
-              <div className="relative mx-auto flex aspect-square w-full max-w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/10">
-                <div className="flex size-[88%] items-center justify-center rounded-full bg-card font-display text-3xl font-bold">
-                  {initial}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="truncate font-display text-sm font-semibold">@{main.handle}</div>
-                <div className="mt-1 flex items-center justify-center gap-1.5 text-muted-foreground">
-                  {c.accounts.map((a, i) => (
-                    <PlatformIcon key={i} platform={a.platform} className="size-3.5" />
-                  ))}
-                </div>
-                {c.descrizione && (
-                  <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-muted-foreground">
-                    {c.descrizione}
-                  </p>
-                )}
-              </div>
-            </>
-          );
-
           return (
             <div key={c.id} className="group relative">
               {isDb && (
@@ -180,24 +157,32 @@ function Feed() {
                   <Trash2 className="size-3.5" />
                 </button>
               )}
-              {isDb ? (
-                <a
-                  href={main.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
-                >
-                  {cardContent}
-                </a>
-              ) : (
-                <Link
-                  to="/canali-inspo/$id"
-                  params={{ id: c.id }}
-                  className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
-                >
-                  {cardContent}
-                </Link>
-              )}
+              <Link
+                to={isDb ? (main.url as any) : "/canali-inspo/$id"}
+                params={isDb ? undefined : { id: c.id }}
+                target={isDb ? "_blank" : undefined}
+                rel={isDb ? "noreferrer" : undefined}
+                className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
+              >
+                <div className="relative mx-auto flex aspect-square w-full max-w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/10">
+                  <div className="flex size-[88%] items-center justify-center rounded-full bg-card font-display text-3xl font-bold">
+                    {initial}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="truncate font-display text-sm font-semibold">@{main.handle}</div>
+                  <div className="mt-1 flex items-center justify-center gap-1.5 text-muted-foreground">
+                    {c.accounts.map((a, i) => (
+                      <PlatformIcon key={i} platform={a.platform} className="size-3.5" />
+                    ))}
+                  </div>
+                  {c.descrizione && (
+                    <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-muted-foreground">
+                      {c.descrizione}
+                    </p>
+                  )}
+                </div>
+              </Link>
             </div>
           );
         })}
