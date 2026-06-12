@@ -1,0 +1,289 @@
+import { useState, useEffect } from "react";
+
+const TRENDS_JSON_URL =
+  "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
+
+function isPostUrl(url) {
+  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
+}
+
+function getPlatform(url) {
+  if (/instagram\.com/.test(url)) return "instagram";
+  if (/tiktok\.com/.test(url)) return "tiktok";
+  if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
+  return "web";
+}
+
+function getEmbedUrl(url) {
+  const ig = url.match(/instagram\.com\/(p|reel|reels|tv)\/([^/?#]+)/);
+  if (ig) return `https://www.instagram.com/${ig[1]}/${ig[2]}/embed/`;
+  const tt = url.match(/tiktok\.com\/@[^/]+\/(?:video|photo)\/(\d+)/);
+  if (tt) return `https://www.tiktok.com/embed/v2/${tt[1]}`;
+  const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&/?#]+)/);
+  if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
+  return null;
+}
+
+function PlatformBadge({ platform }) {
+  const colors = {
+    instagram: { bg: "#f0e6f6", text: "#7c3aed" },
+    tiktok: { bg: "#e8f0fe", text: "#1a73e8" },
+    youtube: { bg: "#fce8e8", text: "#d93025" },
+    web: { bg: "#f0f4f8", text: "#64748b" },
+  };
+  const c = colors[platform] || colors.web;
+  const labels = { instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube", web: "Web" };
+  return (
+    <span
+      style={{
+        background: c.bg,
+        color: c.text,
+        padding: "2px 8px",
+        borderRadius: 99,
+        fontSize: 11,
+        fontWeight: 600,
+        letterSpacing: 0.3,
+        textTransform: "uppercase",
+      }}
+    >
+      {labels[platform] || platform}
+    </span>
+  );
+}
+
+function PostCard({ post, canaleName }) {
+  const [loaded, setLoaded] = useState(false);
+  const embedUrl = getEmbedUrl(post.url);
+  const platform = getPlatform(post.url);
+
+  const heights = { instagram: 480, tiktok: 560, youtube: 315 };
+  const h = heights[platform] || 400;
+
+  return (
+    <div
+      style={{
+        background: "#fff",
+        borderRadius: 14,
+        overflow: "hidden",
+        boxShadow: "0 1px 4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06)",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        style={{
+          padding: "10px 14px",
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          borderBottom: "1px solid #f1f1f1",
+        }}
+      >
+        <PlatformBadge platform={platform} />
+        <span
+          style={{
+            fontSize: 12,
+            color: "#94a3b8",
+            fontWeight: 500,
+            marginLeft: "auto",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            maxWidth: 160,
+          }}
+        >
+          {canaleName}
+        </span>
+      </div>
+
+      {embedUrl ? (
+        <div style={{ position: "relative", background: "#f8f9fa" }}>
+          {!loaded && (
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#f8f9fa",
+                height: h,
+                color: "#94a3b8",
+                fontSize: 13,
+              }}
+            >
+              Caricamento…
+            </div>
+          )}
+          <iframe
+            src={embedUrl}
+            width="100%"
+            height={h}
+            frameBorder="0"
+            allowFullScreen
+            scrolling="no"
+            style={{ display: "block", border: "none" }}
+            onLoad={() => setLoaded(true)}
+          />
+        </div>
+      ) : (
+        <a
+          href={post.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px 14px",
+            color: "#3b82f6",
+            fontSize: 13,
+            textDecoration: "none",
+            wordBreak: "break-all",
+          }}
+        >
+          {post.url}
+        </a>
+      )}
+    </div>
+  );
+}
+
+function FilterPill({ label, active, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        padding: "5px 14px",
+        borderRadius: 99,
+        border: active ? "none" : "1px solid #e2e8f0",
+        background: active ? "#1e293b" : "#fff",
+        color: active ? "#fff" : "#64748b",
+        fontSize: 13,
+        fontWeight: active ? 600 : 400,
+        cursor: "pointer",
+        transition: "all 0.15s",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {label}
+    </button>
+  );
+}
+
+export default function TrendzFeed() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [platformFilter, setPlatformFilter] = useState("tutti");
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    fetch(TRENDS_JSON_URL)
+      .then((r) => r.json())
+      .then(setData)
+      .catch(() => setError("Impossibile caricare il feed."));
+  }, []);
+
+  if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
+  if (!data) return <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>;
+
+  // Raccoglie tutti i post con metadati
+  const allPosts = [];
+  for (const canale of data.canali_inspo || []) {
+    const name = canale.name || canale.id || "";
+    for (const account of canale.accounts || []) {
+      if (isPostUrl(account.url)) {
+        allPosts.push({
+          url: account.url,
+          handle: account.handle,
+          platform: account.platform || getPlatform(account.url),
+          canaleName: name,
+          canaleId: canale.id,
+        });
+      }
+    }
+  }
+
+  // Filtra
+  const filtered = allPosts.filter((p) => {
+    const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
+    const matchSearch =
+      !search ||
+      p.handle?.toLowerCase().includes(search.toLowerCase()) ||
+      p.canaleName?.toLowerCase().includes(search.toLowerCase());
+    return matchPlatform && matchSearch;
+  });
+
+  const platforms = ["tutti", ...new Set(allPosts.map((p) => p.platform))];
+
+  return (
+    <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui, -apple-system, sans-serif" }}>
+      {/* Header */}
+      <div
+        style={{
+          background: "#fff",
+          borderBottom: "1px solid #e2e8f0",
+          position: "sticky",
+          top: 0,
+          zIndex: 10,
+          padding: "12px 20px",
+        }}
+      >
+        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
+            Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ feed</span>
+          </div>
+
+          <input
+            placeholder="Cerca canale o account…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{
+              padding: "6px 12px",
+              borderRadius: 8,
+              border: "1px solid #e2e8f0",
+              fontSize: 13,
+              outline: "none",
+              width: 200,
+              background: "#f8fafc",
+            }}
+          />
+
+          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+            {platforms.map((p) => (
+              <FilterPill
+                key={p}
+                label={p === "tutti" ? `Tutti (${allPosts.length})` : p}
+                active={platformFilter === p}
+                onClick={() => setPlatformFilter(p)}
+              />
+            ))}
+          </div>
+
+          <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>
+            {filtered.length} post
+          </span>
+        </div>
+      </div>
+
+      {/* Grid */}
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 20px" }}>
+        {filtered.length === 0 ? (
+          <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>
+            Nessun post trovato.
+          </div>
+        ) : (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+              gap: 20,
+            }}
+          >
+            {filtered.map((post, i) => (
+              <PostCard key={`${post.url}-${i}`} post={post} canaleName={post.canaleName} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
