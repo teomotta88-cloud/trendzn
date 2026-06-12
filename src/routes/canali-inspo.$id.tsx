@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { canaliInspo, detectPlatform, embedUrl, type CanaleInspo } from "@/lib/trends";
+import { canaliInspo, detectPlatform, type CanaleInspo } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
@@ -35,10 +35,11 @@ function Page() {
   const { canale } = Route.useLoaderData() as { canale: CanaleInspo };
   const initial = canale.name.replace(/[^a-zA-Z0-9]/g, "").charAt(0).toUpperCase() || "•";
 
-  // Posts come from any account URL that resolves to an embeddable single post.
-  // For account-level URLs (no post id), there's no embed; we show the profile link card.
-  const postEmbeds = canale.accounts.filter((a) => embedUrl(a.url));
-  const profileLinks = canale.accounts.filter((a) => !embedUrl(a.url));
+  // Un URL è considerato "post" se contiene uno dei segmenti embeddabili tipici.
+  // Nessun filtro per handle o piattaforma: leggiamo tutti gli accounts del canale.
+  const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
+  const postEmbeds = canale.accounts.filter((a) => POST_URL_RE.test(a.url));
+  const profileLinks = canale.accounts.filter((a) => !POST_URL_RE.test(a.url));
 
   return (
     <div className="space-y-8">
