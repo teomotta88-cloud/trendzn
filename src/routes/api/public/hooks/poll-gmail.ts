@@ -105,11 +105,13 @@ async function gmailFetch(path: string, init?: RequestInit) {
     const body = await res.text();
     throw new Error(`Gmail ${path} ${res.status}: ${body}`);
   }
-  return res.json();
+  const text = await res.text();
+  return text ? JSON.parse(text) : {};
 }
 
 async function syncCanaleToGitHub(url: string, title: string | null) {
-  if (!GITHUB_TOKEN) {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
     console.warn("GITHUB_TOKEN non configurato, skip sync GitHub");
     return;
   }
