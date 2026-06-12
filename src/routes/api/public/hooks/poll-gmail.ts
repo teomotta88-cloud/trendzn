@@ -3,7 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1";
 const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
 
@@ -105,11 +104,15 @@ async function gmailFetch(path: string, init?: RequestInit) {
     const body = await res.text();
     throw new Error(`Gmail ${path} ${res.status}: ${body}`);
   }
+  // Alcune risposte Gmail (es. batchModify) sono 204 No Content con body vuoto:
+  // fare res.json() su un body vuoto lancia "Unexpected end of JSON input".
   const text = await res.text();
   return text ? JSON.parse(text) : {};
 }
 
 async function syncCanaleToGitHub(url: string, title: string | null) {
+  // Letto qui (non a livello di modulo) così le modifiche alle env var
+  // vengono raccolte senza dipendere dal momento di inizializzazione del modulo.
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
     console.warn("GITHUB_TOKEN non configurato, skip sync GitHub");
@@ -120,7 +123,7 @@ async function syncCanaleToGitHub(url: string, title: string | null) {
     // Leggi il file attuale da GitHub
     const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
       headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
+        Authorization: `token ${token}`,
         Accept: "application/vnd.github.v3+json",
       },
     });
@@ -131,7 +134,6 @@ async function syncCanaleToGitHub(url: string, title: string | null) {
     const file = await res.json();
     const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
 
-    // Funzioni locali
     function detectPlatformLocal(u: string) {
       if (/instagram\.com/.test(u)) return "instagram";
       if (/tiktok\.com/.test(u)) return "tiktok";
@@ -175,7 +177,7 @@ async function syncCanaleToGitHub(url: string, title: string | null) {
     const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
       method: "PUT",
       headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
+        Authorization: `token ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
