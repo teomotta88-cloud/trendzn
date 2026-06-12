@@ -3,13 +3,11 @@ import { createFileRoute } from "@tanstack/react-router";
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1";
 const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
 
-// Mappa il primo tag [categoria] alla sezione del sito
 const CATEGORY_TO_SECTION: Record<string, string> = {
   "trend real time": "trend-real-time",
   "trend attuali": "trend-attuali",
   "trend evergreen": "trend-evergreen",
   "canali inspo": "canali-inspo",
-  // alias brevi accettati
   "real time": "trend-real-time",
   attuali: "trend-attuali",
   evergreen: "trend-evergreen",
@@ -53,11 +51,24 @@ function parseSubject(subject: string): {
   section: string | null;
 } {
   const tags: string[] = [];
-  const re = /\[([^\]]+)\]/g;
-  let match: RegExpExecArray | null;
-  while ((match = re.exec(subject)) !== null) {
-    tags.push(match[1].trim().toLowerCase());
+  const hasBrackets = /\[/.test(subject);
+
+  if (hasBrackets) {
+    // formato [tag1][tag2][tag3]
+    const re = /\[([^\]]+)\]/g;
+    let match: RegExpExecArray | null;
+    while ((match = re.exec(subject)) !== null) {
+      tags.push(match[1].trim().toLowerCase());
+    }
+  } else {
+    // formato tag1-tag2-tag3 (eventuale testo libero dopo doppio spazio ignorato)
+    const part = subject.split(/\s{2,}/)[0].trim();
+    part.split("-").forEach((t) => {
+      const clean = t.trim().toLowerCase();
+      if (clean) tags.push(clean);
+    });
   }
+
   const category = tags[0] ?? null;
   const industry = tags[1] ?? null;
   const section = category ? (CATEGORY_TO_SECTION[category] ?? null) : null;
