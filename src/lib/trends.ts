@@ -21,6 +21,7 @@ export type CanaleInspo = {
 
 export const trendRealTime = data.trend_real_time as TrendItem[];
 export const trendAttuali = data.trend_attuali as TrendItem[];
+export const trendEvergreen = data.trend_evergreen as TrendItem[];
 export const canaliInspo = data.canali_inspo as CanaleInspo[];
 
 export function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web" {

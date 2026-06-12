@@ -1,57 +1,9 @@
 {
-  "trend_real_time": [
-    {
-      "category": "TREND EVERGREEN",
-      "links": [
-        "https://www.instagram.com/reels/DZInwhVtjGZ/"
-      ],
-      "descrizione": null,
-      "nome_trend": "Preferiresti…",
-      "industry": "Multi brand",
-      "applicazione": null,
-      "canali": null
-    },
-    {
-      "category": "TREND EVERGREEN",
-      "links": [
-        "https://www.instagram.com/p/DZVB8zglEpd/",
-        "https://www.instagram.com/p/DZR_cVWAN5R/"
-      ],
-      "descrizione": null,
-      "nome_trend": "Keep on swiping (crei curiosità per imandare a un evento/curiosità etc.)",
-      "industry": "Multi brand",
-      "applicazione": null,
-      "canali": null
-    },
-    {
-      "category": "TREND EVERGREEN",
-      "links": [
-        "https://www.instagram.com/p/DY6xs3MF0H7/"
-      ],
-      "descrizione": null,
-      "nome_trend": "Facilmente riconoscibile",
-      "industry": "Brand che vendono più prodotti",
-      "applicazione": null,
-      "canali": null
-    },
-    {
-      "category": "TREND EVERGREEN",
-      "links": [
-        "https://www.instagram.com/reels/DYj_oBKoH9H/"
-      ],
-      "descrizione": null,
-      "nome_trend": "Fun fact",
-      "industry": "Multi brand",
-      "applicazione": "\"Il prodotto X più Y che vedrai oggi\" (light shooting ma anche card statica)",
-      "canali": null
-    }
-  ],
+  "trend_real_time": [],
   "trend_attuali": [
     {
-      "category": "TREND ATTUALI",
-      "links": [
-        "https://www.tiktok.com/@rebeccagotti/photo/7623117961422769410"
-      ],
+      "category": "Trend Attuali",
+      "links": ["https://www.tiktok.com/@rebeccagotti/photo/7623117961422769410"],
       "descrizione": null,
       "nome_trend": "TOP 5 film horror",
       "industry": "Multi brand",
@@ -59,10 +11,8 @@
       "canali": null
     },
     {
-      "category": "TREND ATTUALI",
-      "links": [
-        "https://www.tiktok.com/@violasssspam/video/7628877683837144342"
-      ],
+      "category": "Trend Attuali",
+      "links": ["https://www.tiktok.com/@violasssspam/video/7628877683837144342"],
       "descrizione": null,
       "nome_trend": "La tensione che c'è tra noi e…",
       "industry": "Multi brand",
@@ -70,10 +20,8 @@
       "canali": null
     },
     {
-      "category": "TREND ATTUALI",
-      "links": [
-        "https://www.tiktok.com/@der_connaisseur/video/7645742616713186593"
-      ],
+      "category": "Trend Attuali",
+      "links": ["https://www.tiktok.com/@der_connaisseur/video/7645742616713186593"],
       "descrizione": null,
       "nome_trend": "Transition con comparsa oggetto",
       "industry": "Multi brand",
@@ -81,11 +29,49 @@
       "canali": null
     }
   ],
+  "trend_evergreen": [
+    {
+      "category": "Trend Evergreen",
+      "links": ["https://www.instagram.com/reels/DZInwhVtjGZ/"],
+      "descrizione": null,
+      "nome_trend": "Preferiresti…",
+      "industry": "Multi brand",
+      "applicazione": null,
+      "canali": null
+    },
+    {
+      "category": "Trend Evergreen",
+      "links": ["https://www.instagram.com/p/DZVB8zglEpd/"],
+      "descrizione": null,
+      "nome_trend": "Keep on swiping (crei curiosità per imandare a un evento/curiosità etc.)",
+      "industry": "Multi brand",
+      "applicazione": null,
+      "canali": null
+    },
+    {
+      "category": "Trend Evergreen",
+      "links": ["https://www.instagram.com/p/DY6xs3MF0H7/"],
+      "descrizione": null,
+      "nome_trend": "Facilmente riconoscibile",
+      "industry": "Brand che vendono più prodotti",
+      "applicazione": null,
+      "canali": null
+    },
+    {
+      "category": "Trend Evergreen",
+      "links": ["https://www.instagram.com/reels/DYj_oBKoH9H/"],
+      "descrizione": null,
+      "nome_trend": "Fun fact",
+      "industry": "Multi brand",
+      "applicazione": "\"Il prodotto X più Y che vedrai oggi\" (light shooting ma anche card statica)",
+      "canali": null
+    }
+  ],
   "canali_inspo": [
     {
-      "urls": [
-        "https://www.instagram.com/crsel.app/"
-      ],
+      "id": "1",
+      "name": "Inspo varie per i social (trend, formati etc.)",
+      "urls": ["https://www.instagram.com/crsel.app/"],
       "descrizione": "Inspo varie per i social (trend, formati etc.)",
       "accounts": [
         {
@@ -93,64 +79,25 @@
           "handle": "crsel.app",
           "url": "https://www.instagram.com/crsel.app/"
         }
-      ],
-      "id": "crsel-app",
-      "name": "crsel.app"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/marketing_espresso/"
-      ],
+      "id": "2",
+      "name": "Inspo costanti, segnalazioni campagne di vario tipo (non solo social), calendari editoriali con giornate internazionali",
+      "urls": ["https://www.instagram.com/marketing_espresso/"],
       "descrizione": "Inspo costanti, segnalazioni campagne di vario tipo (non solo social), calendari editoriali con giornate internazionali",
       "accounts": [
         {
           "platform": "instagram",
           "handle": "marketing_espresso",
           "url": "https://www.instagram.com/marketing_espresso/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DZcM61nDZ72/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DZZnulcDfGn/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DZXwYDxDVrr/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DZXC56ljav_/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DY6uCgFDT7W/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DZc6G3sjTVW/"
-        },
-        {
-          "platform": "instagram",
-          "handle": "marketing_espresso",
-          "url": "https://www.instagram.com/p/DZezqi4NUFX/"
         }
-      ],
-      "id": "marketing-espresso",
-      "name": "marketing_espresso"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/lagazzettadelpubblicitario/"
-      ],
+      "id": "3",
+      "name": "Inspo costanti, segnalazioni campagne di vario tipo (non solo social)",
+      "urls": ["https://www.instagram.com/lagazzettadelpubblicitario/"],
       "descrizione": "Inspo costanti, segnalazioni campagne di vario tipo (non solo social)",
       "accounts": [
         {
@@ -158,14 +105,12 @@
           "handle": "lagazzettadelpubblicitario",
           "url": "https://www.instagram.com/lagazzettadelpubblicitario/"
         }
-      ],
-      "id": "lagazzettadelpubblicitario",
-      "name": "lagazzettadelpubblicitario"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/netflixit/"
-      ],
+      "id": "4",
+      "name": "Ogni tanto fanno meme",
+      "urls": ["https://www.instagram.com/netflixit/"],
       "descrizione": "Ogni tanto fanno meme",
       "accounts": [
         {
@@ -173,14 +118,12 @@
           "handle": "netflixit",
           "url": "https://www.instagram.com/netflixit/"
         }
-      ],
-      "id": "netflixit",
-      "name": "netflixit"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/spotifyitaly/"
-      ],
+      "id": "5",
+      "name": "Meme e Real time marketing",
+      "urls": ["https://www.instagram.com/spotifyitaly/"],
       "descrizione": "Meme e Real time marketing",
       "accounts": [
         {
@@ -188,44 +131,38 @@
           "handle": "spotifyitaly",
           "url": "https://www.instagram.com/spotifyitaly/"
         }
-      ],
-      "id": "spotifyitaly",
-      "name": "spotifyitaly"
+      ]
     },
     {
-      "urls": [
-        "https://thepreviewapp.com/instagram-story-games-ideas/"
-      ],
+      "id": "6",
+      "name": "Idee creative per le IG stories",
+      "urls": ["https://thepreviewapp.com/instagram-story-games-ideas/"],
       "descrizione": "Idee creative per le IG stories",
       "accounts": [
         {
-          "platform": "web",
-          "handle": "thepreviewapp.com",
+          "platform": "instagram",
+          "handle": "instagram-story-games-ideas",
           "url": "https://thepreviewapp.com/instagram-story-games-ideas/"
         }
-      ],
-      "id": "thepreviewapp-com",
-      "name": "thepreviewapp.com"
+      ]
     },
     {
-      "urls": [
-        "https://www.tiktok.com/@duolingoitalia"
-      ],
+      "id": "7",
+      "name": "Meme, meme ovunque",
+      "urls": ["https://www.tiktok.com/@duolingoitalia"],
       "descrizione": "Meme, meme ovunque",
       "accounts": [
         {
           "platform": "tiktok",
-          "handle": "duolingoitalia",
+          "handle": "@duolingoitalia",
           "url": "https://www.tiktok.com/@duolingoitalia"
         }
-      ],
-      "id": "duolingoitalia",
-      "name": "duolingoitalia"
+      ]
     },
     {
-      "urls": [
-        "https://activationideas.com/"
-      ],
+      "id": "8",
+      "name": "Case di tutti i tipi (ANCHE SOCIAL!). Fonte inesauribile di spunti per progetti più di ampio respiro",
+      "urls": ["https://activationideas.com/"],
       "descrizione": "Case di tutti i tipi (ANCHE SOCIAL!). Fonte inesauribile di spunti per progetti più di ampio respiro",
       "accounts": [
         {
@@ -233,15 +170,12 @@
           "handle": "activationideas.com",
           "url": "https://activationideas.com/"
         }
-      ],
-      "id": "activationideas-com",
-      "name": "activationideas.com"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/italrugby/",
-        "https://www.tiktok.com/@blupeers_"
-      ],
+      "id": "9",
+      "name": "Format interviste/giochini",
+      "urls": ["https://www.instagram.com/italrugby/", "https://www.tiktok.com/@blupeers_"],
       "descrizione": "Format interviste/giochini",
       "accounts": [
         {
@@ -251,17 +185,15 @@
         },
         {
           "platform": "tiktok",
-          "handle": "blupeers_",
+          "handle": "@blupeers_",
           "url": "https://www.tiktok.com/@blupeers_"
         }
-      ],
-      "id": "italrugby",
-      "name": "italrugby"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/socialcreativeawards/"
-      ],
+      "id": "10",
+      "name": "Post social carini da copiare/adattare",
+      "urls": ["https://www.instagram.com/socialcreativeawards/"],
       "descrizione": "Post social carini da copiare/adattare",
       "accounts": [
         {
@@ -269,14 +201,12 @@
           "handle": "socialcreativeawards",
           "url": "https://www.instagram.com/socialcreativeawards/"
         }
-      ],
-      "id": "socialcreativeawards",
-      "name": "socialcreativeawards"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/chiquitabananaitalia/"
-      ],
+      "id": "11",
+      "name": "Giochini e format carini",
+      "urls": ["https://www.instagram.com/chiquitabananaitalia/"],
       "descrizione": "Giochini e format carini",
       "accounts": [
         {
@@ -284,14 +214,12 @@
           "handle": "chiquitabananaitalia",
           "url": "https://www.instagram.com/chiquitabananaitalia/"
         }
-      ],
-      "id": "chiquitabananaitalia",
-      "name": "chiquitabananaitalia"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/intrashttenimento2.0/"
-      ],
+      "id": "12",
+      "name": "Tenere d'occhio per RTM o commenti",
+      "urls": ["https://www.instagram.com/intrashttenimento2.0/"],
       "descrizione": "Tenere d'occhio per RTM o commenti",
       "accounts": [
         {
@@ -299,14 +227,12 @@
           "handle": "intrashttenimento2.0",
           "url": "https://www.instagram.com/intrashttenimento2.0/"
         }
-      ],
-      "id": "intrashttenimento2-0",
-      "name": "intrashttenimento2.0"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/trash_italiano/"
-      ],
+      "id": "13",
+      "name": "Tenere d'occhio per RTM o commenti",
+      "urls": ["https://www.instagram.com/trash_italiano/"],
       "descrizione": "Tenere d'occhio per RTM o commenti",
       "accounts": [
         {
@@ -314,14 +240,12 @@
           "handle": "trash_italiano",
           "url": "https://www.instagram.com/trash_italiano/"
         }
-      ],
-      "id": "trash-italiano",
-      "name": "trash_italiano"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/sapore.di.male/"
-      ],
+      "id": "14",
+      "name": "Tenere d'occhio per RTM o commenti",
+      "urls": ["https://www.instagram.com/sapore.di.male/"],
       "descrizione": "Tenere d'occhio per RTM o commenti",
       "accounts": [
         {
@@ -329,14 +253,12 @@
           "handle": "sapore.di.male",
           "url": "https://www.instagram.com/sapore.di.male/"
         }
-      ],
-      "id": "sapore-di-male",
-      "name": "sapore.di.male"
+      ]
     },
     {
-      "urls": [
-        "https://www.instagram.com/headspace/"
-      ],
+      "id": "15",
+      "name": "Inspo per pagine con visual grafici cute",
+      "urls": ["https://www.instagram.com/headspace/"],
       "descrizione": "Inspo per pagine con visual grafici cute",
       "accounts": [
         {
@@ -344,9 +266,7 @@
           "handle": "headspace",
           "url": "https://www.instagram.com/headspace/"
         }
-      ],
-      "id": "headspace",
-      "name": "headspace"
+      ]
     }
   ]
 }

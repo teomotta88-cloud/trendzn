@@ -8,170 +8,170 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as TrendRealTimeRouteImport } from "./routes/trend-real-time";
-import { Route as TrendEvergreenRouteImport } from "./routes/trend-evergreen";
-import { Route as TrendAttualiRouteImport } from "./routes/trend-attuali";
-import { Route as IndexRouteImport } from "./routes/index";
-import { Route as CanaliInspoIndexRouteImport } from "./routes/canali-inspo.index";
-import { Route as CanaliInspoIdRouteImport } from "./routes/canali-inspo.$id";
-import { Route as ApiPublicHooksPollGmailRouteImport } from "./routes/api/public/hooks/poll-gmail";
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
+import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
+import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
+import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
+import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
-  id: "/trend-real-time",
-  path: "/trend-real-time",
+  id: '/trend-real-time',
+  path: '/trend-real-time',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const TrendEvergreenRoute = TrendEvergreenRouteImport.update({
-  id: "/trend-evergreen",
-  path: "/trend-evergreen",
+  id: '/trend-evergreen',
+  path: '/trend-evergreen',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const TrendAttualiRoute = TrendAttualiRouteImport.update({
-  id: "/trend-attuali",
-  path: "/trend-attuali",
+  id: '/trend-attuali',
+  path: '/trend-attuali',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
-  id: "/canali-inspo/",
-  path: "/canali-inspo/",
+  id: '/canali-inspo/',
+  path: '/canali-inspo/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
-  id: "/canali-inspo/$id",
-  path: "/canali-inspo/$id",
+  id: '/canali-inspo/$id',
+  path: '/canali-inspo/$id',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ApiPublicHooksPollGmailRoute = ApiPublicHooksPollGmailRouteImport.update({
-  id: "/api/public/hooks/poll-gmail",
-  path: "/api/public/hooks/poll-gmail",
+  id: '/api/public/hooks/poll-gmail',
+  path: '/api/public/hooks/poll-gmail',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute;
-  "/trend-attuali": typeof TrendAttualiRoute;
-  "/trend-evergreen": typeof TrendEvergreenRoute;
-  "/trend-real-time": typeof TrendRealTimeRoute;
-  "/canali-inspo/$id": typeof CanaliInspoIdRoute;
-  "/canali-inspo/": typeof CanaliInspoIndexRoute;
-  "/api/public/hooks/poll-gmail": typeof ApiPublicHooksPollGmailRoute;
+  '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-evergreen': typeof TrendEvergreenRoute
+  '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/canali-inspo/': typeof CanaliInspoIndexRoute
+  '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute;
-  "/trend-attuali": typeof TrendAttualiRoute;
-  "/trend-evergreen": typeof TrendEvergreenRoute;
-  "/trend-real-time": typeof TrendRealTimeRoute;
-  "/canali-inspo/$id": typeof CanaliInspoIdRoute;
-  "/canali-inspo": typeof CanaliInspoIndexRoute;
-  "/api/public/hooks/poll-gmail": typeof ApiPublicHooksPollGmailRoute;
+  '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-evergreen': typeof TrendEvergreenRoute
+  '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/canali-inspo': typeof CanaliInspoIndexRoute
+  '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  "/": typeof IndexRoute;
-  "/trend-attuali": typeof TrendAttualiRoute;
-  "/trend-evergreen": typeof TrendEvergreenRoute;
-  "/trend-real-time": typeof TrendRealTimeRoute;
-  "/canali-inspo/$id": typeof CanaliInspoIdRoute;
-  "/canali-inspo/": typeof CanaliInspoIndexRoute;
-  "/api/public/hooks/poll-gmail": typeof ApiPublicHooksPollGmailRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/trend-attuali': typeof TrendAttualiRoute
+  '/trend-evergreen': typeof TrendEvergreenRoute
+  '/trend-real-time': typeof TrendRealTimeRoute
+  '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/canali-inspo/': typeof CanaliInspoIndexRoute
+  '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
+  fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | "/"
-    | "/trend-attuali"
-    | "/trend-evergreen"
-    | "/trend-real-time"
-    | "/canali-inspo/$id"
-    | "/canali-inspo/"
-    | "/api/public/hooks/poll-gmail";
-  fileRoutesByTo: FileRoutesByTo;
+    | '/'
+    | '/trend-attuali'
+    | '/trend-evergreen'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo/'
+    | '/api/public/hooks/poll-gmail'
+  fileRoutesByTo: FileRoutesByTo
   to:
-    | "/"
-    | "/trend-attuali"
-    | "/trend-evergreen"
-    | "/trend-real-time"
-    | "/canali-inspo/$id"
-    | "/canali-inspo"
-    | "/api/public/hooks/poll-gmail";
+    | '/'
+    | '/trend-attuali'
+    | '/trend-evergreen'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo'
+    | '/api/public/hooks/poll-gmail'
   id:
-    | "__root__"
-    | "/"
-    | "/trend-attuali"
-    | "/trend-evergreen"
-    | "/trend-real-time"
-    | "/canali-inspo/$id"
-    | "/canali-inspo/"
-    | "/api/public/hooks/poll-gmail";
-  fileRoutesById: FileRoutesById;
+    | '__root__'
+    | '/'
+    | '/trend-attuali'
+    | '/trend-evergreen'
+    | '/trend-real-time'
+    | '/canali-inspo/$id'
+    | '/canali-inspo/'
+    | '/api/public/hooks/poll-gmail'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  TrendAttualiRoute: typeof TrendAttualiRoute;
-  TrendEvergreenRoute: typeof TrendEvergreenRoute;
-  TrendRealTimeRoute: typeof TrendRealTimeRoute;
-  CanaliInspoIdRoute: typeof CanaliInspoIdRoute;
-  CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute;
-  ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute;
+  IndexRoute: typeof IndexRoute
+  TrendAttualiRoute: typeof TrendAttualiRoute
+  TrendEvergreenRoute: typeof TrendEvergreenRoute
+  TrendRealTimeRoute: typeof TrendRealTimeRoute
+  CanaliInspoIdRoute: typeof CanaliInspoIdRoute
+  CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
+  ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/trend-real-time": {
-      id: "/trend-real-time";
-      path: "/trend-real-time";
-      fullPath: "/trend-real-time";
-      preLoaderRoute: typeof TrendRealTimeRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/trend-evergreen": {
-      id: "/trend-evergreen";
-      path: "/trend-evergreen";
-      fullPath: "/trend-evergreen";
-      preLoaderRoute: typeof TrendEvergreenRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/trend-attuali": {
-      id: "/trend-attuali";
-      path: "/trend-attuali";
-      fullPath: "/trend-attuali";
-      preLoaderRoute: typeof TrendAttualiRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/canali-inspo/": {
-      id: "/canali-inspo/";
-      path: "/canali-inspo";
-      fullPath: "/canali-inspo/";
-      preLoaderRoute: typeof CanaliInspoIndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/canali-inspo/$id": {
-      id: "/canali-inspo/$id";
-      path: "/canali-inspo/$id";
-      fullPath: "/canali-inspo/$id";
-      preLoaderRoute: typeof CanaliInspoIdRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/api/public/hooks/poll-gmail": {
-      id: "/api/public/hooks/poll-gmail";
-      path: "/api/public/hooks/poll-gmail";
-      fullPath: "/api/public/hooks/poll-gmail";
-      preLoaderRoute: typeof ApiPublicHooksPollGmailRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+    '/trend-real-time': {
+      id: '/trend-real-time'
+      path: '/trend-real-time'
+      fullPath: '/trend-real-time'
+      preLoaderRoute: typeof TrendRealTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trend-evergreen': {
+      id: '/trend-evergreen'
+      path: '/trend-evergreen'
+      fullPath: '/trend-evergreen'
+      preLoaderRoute: typeof TrendEvergreenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trend-attuali': {
+      id: '/trend-attuali'
+      path: '/trend-attuali'
+      fullPath: '/trend-attuali'
+      preLoaderRoute: typeof TrendAttualiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/canali-inspo/': {
+      id: '/canali-inspo/'
+      path: '/canali-inspo'
+      fullPath: '/canali-inspo/'
+      preLoaderRoute: typeof CanaliInspoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/canali-inspo/$id': {
+      id: '/canali-inspo/$id'
+      path: '/canali-inspo/$id'
+      fullPath: '/canali-inspo/$id'
+      preLoaderRoute: typeof CanaliInspoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/poll-gmail': {
+      id: '/api/public/hooks/poll-gmail'
+      path: '/api/public/hooks/poll-gmail'
+      fullPath: '/api/public/hooks/poll-gmail'
+      preLoaderRoute: typeof ApiPublicHooksPollGmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,5 +183,7 @@ const rootRouteChildren: RootRouteChildren = {
   CanaliInspoIdRoute: CanaliInspoIdRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
-};
-export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)._addFileTypes<FileRouteTypes>();
+}
+export const routeTree = rootRouteImport
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
