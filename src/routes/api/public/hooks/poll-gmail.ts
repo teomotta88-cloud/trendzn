@@ -120,6 +120,7 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       headers: {
         Authorization: `token ${token}`,
         Accept: "application/vnd.github.v3+json",
+        "User-Agent": "trendzn-bot",
       },
     });
     if (!res.ok) return `read_failed_${res.status}`;
@@ -169,6 +170,7 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       headers: {
         Authorization: `token ${token}`,
         "Content-Type": "application/json",
+        "User-Agent": "trendzn-bot",
       },
       body: JSON.stringify({
         message: `chore: aggiungi canale ${handle} [trendzn-bot]`,
