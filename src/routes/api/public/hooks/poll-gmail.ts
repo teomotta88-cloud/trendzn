@@ -6,7 +6,20 @@ const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
 
-const CATEGORY_TO_SECTION: Record<string, string> = {
+// Mappa categoria normalizzata → label display
+const CATEGORY_MAP: Record<string, string> = {
+  "trend real time": "Trend Real Time",
+  "trend attuali": "Trend Attuali",
+  "trend evergreen": "Trend Evergreen",
+  "canali inspo": "Canali Inspo",
+  "real time": "Trend Real Time",
+  attuali: "Trend Attuali",
+  evergreen: "Trend Evergreen",
+  canali: "Canali Inspo",
+};
+
+// Mappa categoria normalizzata → section slug
+const SECTION_MAP: Record<string, string> = {
   "trend real time": "trend-real-time",
   "trend attuali": "trend-attuali",
   "trend evergreen": "trend-evergreen",
@@ -16,6 +29,11 @@ const CATEGORY_TO_SECTION: Record<string, string> = {
   evergreen: "trend-evergreen",
   canali: "canali-inspo",
 };
+
+function normalizeIndustry(raw: string): string {
+  const trimmed = raw.trim();
+  return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
+}
 
 function extractHandleFromUrl(url: string): string | null {
   try {
@@ -64,26 +82,37 @@ function parseSubject(subject: string): {
   industry: string | null;
   section: string | null;
 } {
-  const tags: string[] = [];
+  const rawTags: string[] = [];
   const hasBrackets = /\[/.test(subject);
 
   if (hasBrackets) {
     const re = /\[([^\]]+)\]/g;
     let match: RegExpExecArray | null;
     while ((match = re.exec(subject)) !== null) {
-      tags.push(match[1].trim().toLowerCase());
+      rawTags.push(match[1].trim());
     }
   } else {
     const part = subject.split(/\s{2,}/)[0].trim();
     part.split("-").forEach((t) => {
-      const clean = t.trim().toLowerCase();
-      if (clean) tags.push(clean);
+      const clean = t.trim();
+      if (clean) rawTags.push(clean);
     });
   }
 
-  const category = tags[0] ?? null;
-  const industry = tags[1] ?? null;
-  const section = category ? (CATEGORY_TO_SECTION[category] ?? null) : null;
+  // Normalizza in lowercase per il confronto
+  const tagsLower = rawTags.map((t) => t.toLowerCase());
+
+  const categoryKey = tagsLower[0] ?? null;
+  const category = categoryKey ? (CATEGORY_MAP[categoryKey] ?? rawTags[0]) : null;
+  const section = categoryKey ? (SECTION_MAP[categoryKey] ?? null) : null;
+
+  // Industry: prima lettera maiuscola, resto minuscolo → "travel" e "Travel" diventano "Travel"
+  const industryRaw = rawTags[1] ?? null;
+  const industry = industryRaw ? normalizeIndustry(industryRaw) : null;
+
+  // Tags salvati in lowercase per consistenza
+  const tags = tagsLower;
+
   return { tags, category, industry, section };
 }
 
@@ -104,8 +133,7 @@ async function gmailFetch(path: string, init?: RequestInit) {
     const body = await res.text();
     throw new Error(`Gmail ${path} ${res.status}: ${body}`);
   }
-  // Alcune risposte Gmail (es. batchModify) sono 204 No Content con body vuoto:
-  // fare res.json() su un body vuoto lancia "Unexpected end of JSON input".
+  // batchModify risponde 204 No Content — body vuoto → non fare res.json()
   const text = await res.text();
   return text ? JSON.parse(text) : {};
 }
@@ -115,7 +143,6 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
   if (!token) return "no_token";
 
   try {
-    // Leggi il file attuale da GitHub
     const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
       headers: {
         Authorization: `token ${token}`,
@@ -149,13 +176,11 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
     const name = title || handle;
     const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
-    // Evita duplicati
     const exists = (trends.canali_inspo as { accounts: { url: string }[] }[]).some((c) =>
       c.accounts.some((a) => a.url === url),
     );
     if (exists) return "already_exists";
 
-    // Aggiungi il canale
     trends.canali_inspo.push({
       id,
       name,
@@ -164,7 +189,6 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       accounts: [{ platform, handle, url }],
     });
 
-    // Scrivi su GitHub
     const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
       method: "PUT",
       headers: {
@@ -179,12 +203,9 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       }),
     });
 
-    if (writeRes.ok) {
-      return "ok";
-    } else {
-      const err = await writeRes.text();
-      return `write_failed: ${err.slice(0, 100)}`;
-    }
+    if (writeRes.ok) return "ok";
+    const err = await writeRes.text();
+    return `write_failed: ${err.slice(0, 100)}`;
   } catch (err) {
     return `exception: ${String(err).slice(0, 100)}`;
   }
