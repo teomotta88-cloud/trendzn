@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState, useEffect, useCallback } from "react";
-import { canaliInspo } from "@/lib/trends";
 import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { Search, Trash2 } from "lucide-react";
@@ -18,6 +17,8 @@ export const Route = createFileRoute("/canali-inspo/")({
   }),
   component: Feed,
 });
+
+const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
 
 function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web" {
   if (/instagram\.com/.test(url)) return "instagram";
@@ -54,8 +55,23 @@ function Feed() {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [dbRows, setDbRows] = useState<DbRow[]>([]);
+  const [jsonCanali, setJsonCanali] = useState<CanaleInspo[]>([]);
+  const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
 
+  // Leggi trends.json da GitHub a runtime (non dal bundle statico)
+  useEffect(() => {
+    fetch(TRENDS_JSON_URL)
+      .then((r) => r.json())
+      .then((res) => {
+        const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
+        setJsonCanali(decoded.canali_inspo || []);
+      })
+      .catch((e) => console.error("Errore caricamento trends.json:", e))
+      .finally(() => setLoading(false));
+  }, []);
+
+  // Leggi canali da Supabase
   useEffect(() => {
     supabase
       .from("trend_submissions")
@@ -76,32 +92,53 @@ function Feed() {
     setDeleting(null);
   }, []);
 
-  const jsonHandles = new Set(canaliInspo.flatMap((c) => c.accounts.map((a) => a.handle.toLowerCase())));
-  const dbCanali = dbRows
-    .map(rowToCanale)
-    .filter((c) => !c.accounts.some((a) => jsonHandles.has(a.handle.toLowerCase())));
-  const allCanali = [...dbCanali, ...canaliInspo];
-  const dbIds = new Set(dbRows.map((r) => r.id));
+  // Filtra i canali Supabase che sono già nel JSON (confronto per handle)
+  const jsonHandles = useMemo(
+    () => new Set(jsonCanali.flatMap((c) => c.accounts.map((a) => a.handle.toLowerCase()))),
+    [jsonCanali],
+  );
+
+  const dbCanali = useMemo(
+    () => dbRows.map(rowToCanale).filter((c) => !c.accounts.some((a) => jsonHandles.has(a.handle.toLowerCase()))),
+    [dbRows, jsonHandles],
+  );
+
+  const allCanali = useMemo(() => [...dbCanali, ...jsonCanali], [dbCanali, jsonCanali]);
+  const dbIds = useMemo(() => new Set(dbRows.map((r) => r.id)), [dbRows]);
 
   const platforms = useMemo(
     () => Array.from(new Set(allCanali.flatMap((c) => c.accounts.map((a) => a.platform)))).sort(),
     [allCanali],
   );
 
-  const filtered = allCanali.filter((c) => {
-    if (plat && !c.accounts.some((a) => a.platform === plat)) return false;
-    if (q) {
-      const hay = (
-        c.name +
-        " " +
-        (c.descrizione ?? "") +
-        " " +
-        c.accounts.map((a) => a.handle).join(" ")
-      ).toLowerCase();
-      if (!hay.includes(q.toLowerCase())) return false;
-    }
-    return true;
-  });
+  const filtered = useMemo(
+    () =>
+      allCanali.filter((c) => {
+        if (plat && !c.accounts.some((a) => a.platform === plat)) return false;
+        if (q) {
+          const hay = (
+            c.name +
+            " " +
+            (c.descrizione ?? "") +
+            " " +
+            c.accounts.map((a) => a.handle).join(" ")
+          ).toLowerCase();
+          if (!hay.includes(q.toLowerCase())) return false;
+        }
+        return true;
+      }),
+    [allCanali, q, plat],
+  );
+
+  if (loading)
+    return (
+      <div className="space-y-8">
+        <header className="space-y-2">
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Canali Inspo</h1>
+        </header>
+        <div className="text-sm text-muted-foreground">Caricamento canali…</div>
+      </div>
+    );
 
   return (
     <div className="space-y-8">
@@ -148,6 +185,8 @@ function Feed() {
               .charAt(0)
               .toUpperCase() || "•";
           const isDb = dbIds.has(c.id);
+          const isJsonCanale = jsonCanali.some((j) => j.id === c.id);
+
           return (
             <div key={c.id} className="group relative">
               {isDb && (
@@ -187,18 +226,20 @@ function Feed() {
                 const cardClassName =
                   "flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary";
 
-                if (isDb) {
+                // Se il canale è nel JSON → Link alla pagina dettaglio con feed
+                if (isJsonCanale) {
                   return (
-                    <a href={main.url} target="_blank" rel="noreferrer" className={cardClassName}>
+                    <Link to="/canali-inspo/$id" params={{ id: c.id }} className={cardClassName}>
                       {cardContent}
-                    </a>
+                    </Link>
                   );
                 }
 
+                // Altrimenti (solo su Supabase, n8n non ha ancora fetchato i post) → link esterno
                 return (
-                  <Link to="/canali-inspo/$id" params={{ id: c.id }} className={cardClassName}>
+                  <a href={main.url} target="_blank" rel="noreferrer" className={cardClassName}>
                     {cardContent}
-                  </Link>
+                  </a>
                 );
               })()}
             </div>
