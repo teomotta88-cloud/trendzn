@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { trendRealTime, trendAttuali, canaliInspo } from "@/lib/trends";
+import { trendRealTime, trendAttuali, trendEvergreen, canaliInspo } from "@/lib/trends";
 import { ArrowRight, Zap, TrendingUp, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/")({
