@@ -5,7 +5,7 @@ import { ArrowRight, Zap, TrendingUp, Sparkles } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TrendDeck — Trend social & canali inspo" },
+      { title: "Trendzn — Trend social & canali inspo" },
       {
         name: "description",
         content:
