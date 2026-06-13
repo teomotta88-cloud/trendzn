@@ -13,6 +13,7 @@ interface Account {
   platform: string;
   handle: string;
   url: string;
+  date?: string | null;
 }
 
 interface Canale {
@@ -30,6 +31,7 @@ interface Post {
   handle: string;
   platform: string;
   canaleName: string;
+  date: string | null;
 }
 
 function isPostUrl(url: string): boolean {
@@ -51,6 +53,19 @@ function getEmbedUrl(url: string): string | null {
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&/?#]+)/);
   if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
   return null;
+}
+
+function formatDate(dateStr: string | null): string {
+  if (!dateStr) return "";
+  try {
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    }).format(new Date(dateStr));
+  } catch {
+    return "";
+  }
 }
 
 function PlatformBadge({ platform }: { platform: string }) {
@@ -85,10 +100,6 @@ function PlatformBadge({ platform }: { platform: string }) {
   );
 }
 
-/**
- * Renderizza l'iframe solo quando la card entra nel viewport.
- * Evita di montare decine di embed contemporaneamente (che bloccano il browser).
- */
 function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -150,6 +161,7 @@ function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
   const platform = getPlatform(post.url);
   const heights: Record<string, number> = { instagram: 480, tiktok: 560, youtube: 315 };
   const h = heights[platform] || 400;
+  const dateStr = formatDate(post.date);
 
   return (
     <div
@@ -177,15 +189,26 @@ function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
             fontSize: 12,
             color: "#94a3b8",
             fontWeight: 500,
-            marginLeft: "auto",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            maxWidth: 160,
+            maxWidth: 120,
           }}
         >
           {canaleName}
         </span>
+        {dateStr && (
+          <span
+            style={{
+              fontSize: 11,
+              color: "#cbd5e1",
+              marginLeft: "auto",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {dateStr}
+          </span>
+        )}
       </div>
 
       {embedUrl ? (
@@ -234,6 +257,7 @@ function FilterPill({ label, active, onClick }: { label: string; active: boolean
 }
 
 type SyncStatus = "idle" | "loading" | "success" | "error";
+type SortOrder = "recenti" | "meno_recenti";
 
 function SyncButton() {
   const [status, setStatus] = useState<SyncStatus>("idle");
@@ -304,6 +328,7 @@ function TrendzFeed() {
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
   const [search, setSearch] = useState("");
+  const [sortOrder, setSortOrder] = useState<SortOrder>("recenti");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
@@ -316,10 +341,9 @@ function TrendzFeed() {
       .catch(() => setError("Impossibile caricare il feed."));
   }, []);
 
-  // Reset paginazione quando cambiano i filtri
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [platformFilter, search]);
+  }, [platformFilter, search, sortOrder]);
 
   if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
   if (!data) return <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>;
@@ -334,12 +358,20 @@ function TrendzFeed() {
           handle: account.handle,
           platform: account.platform || getPlatform(account.url),
           canaleName: name,
+          date: account.date ?? null,
         });
       }
     }
   }
 
-  const filtered = allPosts.filter((p) => {
+  // Ordina per data
+  const sorted = [...allPosts].sort((a, b) => {
+    const da = a.date ? new Date(a.date).getTime() : 0;
+    const db = b.date ? new Date(b.date).getTime() : 0;
+    return sortOrder === "recenti" ? db - da : da - db;
+  });
+
+  const filtered = sorted.filter((p) => {
     const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
     const matchSearch =
       !search ||
@@ -350,7 +382,6 @@ function TrendzFeed() {
 
   const visiblePosts = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
-
   const platforms = ["tutti", ...new Set(allPosts.map((p) => p.platform))];
 
   return (
@@ -381,14 +412,7 @@ function TrendzFeed() {
             flexWrap: "wrap",
           }}
         >
-          <div
-            style={{
-              fontWeight: 700,
-              fontSize: 18,
-              color: "#1e293b",
-              letterSpacing: -0.5,
-            }}
-          >
+          <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
             Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ feed</span>
           </div>
 
@@ -418,6 +442,25 @@ function TrendzFeed() {
             ))}
           </div>
 
+          {/* Ordinamento */}
+          <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value as SortOrder)}
+            style={{
+              padding: "5px 10px",
+              borderRadius: 8,
+              border: "1px solid #e2e8f0",
+              background: "#fff",
+              color: "#475569",
+              fontSize: 13,
+              cursor: "pointer",
+              outline: "none",
+            }}
+          >
+            <option value="recenti">Più recenti</option>
+            <option value="meno_recenti">Meno recenti</option>
+          </select>
+
           <SyncButton />
 
           <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>{filtered.length} post</span>
@@ -426,16 +469,7 @@ function TrendzFeed() {
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 20px" }}>
         {filtered.length === 0 ? (
-          <div
-            style={{
-              textAlign: "center",
-              color: "#94a3b8",
-              padding: 60,
-              fontSize: 14,
-            }}
-          >
-            Nessun post trovato.
-          </div>
+          <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>Nessun post trovato.</div>
         ) : (
           <>
             <div
