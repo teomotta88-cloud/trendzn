@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet, Link, createRootRouteWithContext, useRouter, HeadContent, Scripts } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import { Menu, X } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -68,14 +69,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "TrendDeck" },
       {
         name: "description",
         content:
           "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options.",
       },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "TrendDeck" },
       {
         property: "og:description",
         content:
@@ -84,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:title", content: "TrendDeck" },
       {
         name: "twitter:description",
         content:
@@ -101,12 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bb61e71-74bc-45ae-9543-23f1d14fff21/id-preview-8f4a3ee6--54afe560-3e1f-4196-977c-05f75da520ec.lovable.app-1781187441235.png",
       },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -130,7 +126,6 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen">
@@ -143,26 +138,32 @@ function RootComponent() {
   );
 }
 
+const NAV_ITEMS = [
+  { to: "/", label: "Home" },
+  { to: "/trend-real-time", label: "Trend Real Time" },
+  { to: "/trend-attuali", label: "Trend Attuali" },
+  { to: "/trend-evergreen", label: "Trend Evergreen" },
+  { to: "/canali-inspo", label: "Canali Inspo" },
+  { to: "/feed", label: "Feed" },
+];
+
 function Navbar() {
-  const items = [
-    { to: "/", label: "Home" },
-    { to: "/trend-real-time", label: "Trend Real Time" },
-    { to: "/trend-attuali", label: "Trend Attuali" },
-    { to: "/trend-evergreen", label: "Trend Evergreen" },
-    { to: "/canali-inspo", label: "Canali Inspo" },
-    { to: "/feed", label: "Feed" },
-  ];
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 sm:px-6 lg:px-10">
-        <Link to="/" className="flex items-center gap-2">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">
             T
           </span>
           <span className="font-display text-base font-semibold tracking-tight">TrendDeck</span>
         </Link>
-        <nav className="ml-auto flex items-center gap-1 overflow-x-auto">
-          {items.map((it) => (
+
+        {/* Desktop nav */}
+        <nav className="ml-auto hidden items-center gap-1 md:flex">
+          {NAV_ITEMS.map((it) => (
             <Link
               key={it.to}
               to={it.to}
@@ -173,7 +174,35 @@ function Navbar() {
             </Link>
           ))}
         </nav>
+
+        {/* Hamburger (mobile) */}
+        <button
+          onClick={() => setOpen((v) => !v)}
+          className="ml-auto rounded-md p-2 text-muted-foreground hover:bg-secondary hover:text-foreground md:hidden"
+          aria-label={open ? "Chiudi menu" : "Apri menu"}
+        >
+          {open ? <X className="size-5" /> : <Menu className="size-5" />}
+        </button>
       </div>
+
+      {/* Mobile drawer */}
+      {open && (
+        <div className="border-t border-border bg-background md:hidden">
+          <nav className="flex flex-col px-4 py-3 gap-1">
+            {NAV_ITEMS.map((it) => (
+              <Link
+                key={it.to}
+                to={it.to}
+                activeOptions={{ exact: it.to === "/" }}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-2.5 text-sm text-muted-foreground transition hover:bg-secondary hover:text-foreground data-[status=active]:bg-secondary data-[status=active]:text-foreground"
+              >
+                {it.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
