@@ -1,12 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1";
-const URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
+
+// Solo URL che sono effettivamente post social — esclude link firma, siti generici ecc.
+const SOCIAL_POST_REGEX =
+  /https?:\/\/(www\.)?(instagram\.com\/(p|reel|reels|tv)\/|tiktok\.com\/@[^/\s]+\/(video|photo)\/|youtube\.com\/watch|youtu\.be\/)[^\s<>"')]+/gi;
+
+// Per canali inspo accettiamo anche URL di profilo
+const PROFILE_URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
 
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
 
-// Mappa categoria normalizzata → label display
 const CATEGORY_MAP: Record<string, string> = {
   "trend real time": "Trend Real Time",
   "trend attuali": "Trend Attuali",
@@ -18,7 +23,6 @@ const CATEGORY_MAP: Record<string, string> = {
   canali: "Canali Inspo",
 };
 
-// Mappa categoria normalizzata → section slug
 const SECTION_MAP: Record<string, string> = {
   "trend real time": "trend-real-time",
   "trend attuali": "trend-attuali",
@@ -33,6 +37,21 @@ const SECTION_MAP: Record<string, string> = {
 function normalizeIndustry(raw: string): string {
   const trimmed = raw.trim();
   return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
+}
+
+// Normalizza URL rimuovendo parametri di tracking e trailing slash
+// es. instagram.com/factanza?igsh=xxx → instagram.com/factanza
+function normalizeUrl(url: string): string {
+  try {
+    const u = new URL(url);
+    // Rimuovi parametri di tracking comuni
+    ["igsh", "igshid", "utm_source", "utm_medium", "utm_campaign", "fbclid"].forEach((p) => u.searchParams.delete(p));
+    // Rimuovi trailing slash dal path
+    u.pathname = u.pathname.replace(/\/$/, "") || "/";
+    return u.toString();
+  } catch {
+    return url.replace(/[).,;]+$/, "");
+  }
 }
 
 function extractHandleFromUrl(url: string): string | null {
@@ -99,18 +118,12 @@ function parseSubject(subject: string): {
     });
   }
 
-  // Normalizza in lowercase per il confronto
   const tagsLower = rawTags.map((t) => t.toLowerCase());
-
   const categoryKey = tagsLower[0] ?? null;
   const category = categoryKey ? (CATEGORY_MAP[categoryKey] ?? rawTags[0]) : null;
   const section = categoryKey ? (SECTION_MAP[categoryKey] ?? null) : null;
-
-  // Industry: prima lettera maiuscola, resto minuscolo → "travel" e "Travel" diventano "Travel"
   const industryRaw = rawTags[1] ?? null;
   const industry = industryRaw ? normalizeIndustry(industryRaw) : null;
-
-  // Tags salvati in lowercase per consistenza
   const tags = tagsLower;
 
   return { tags, category, industry, section };
@@ -133,7 +146,6 @@ async function gmailFetch(path: string, init?: RequestInit) {
     const body = await res.text();
     throw new Error(`Gmail ${path} ${res.status}: ${body}`);
   }
-  // batchModify risponde 204 No Content — body vuoto → non fare res.json()
   const text = await res.text();
   return text ? JSON.parse(text) : {};
 }
@@ -171,22 +183,23 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       }
     }
 
-    const platform = detectPlatformLocal(url);
-    const handle = extractHandleLocal(url);
+    const normalizedUrl = normalizeUrl(url);
+    const platform = detectPlatformLocal(normalizedUrl);
+    const handle = extractHandleLocal(normalizedUrl);
     const name = title || handle;
     const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
     const exists = (trends.canali_inspo as { accounts: { url: string }[] }[]).some((c) =>
-      c.accounts.some((a) => a.url === url),
+      c.accounts.some((a) => normalizeUrl(a.url) === normalizedUrl),
     );
     if (exists) return "already_exists";
 
     trends.canali_inspo.push({
       id,
       name,
-      urls: [url],
+      urls: [normalizedUrl],
       descrizione: null,
-      accounts: [{ platform, handle, url }],
+      accounts: [{ platform, handle, url: normalizedUrl }],
     });
 
     const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
@@ -247,9 +260,19 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
 
               const { tags, category, industry, section } = parseSubject(subject);
 
-              const allUrls = Array.from(new Set((body.match(URL_REGEX) ?? []).map((u) => u.replace(/[).,;]+$/, ""))));
+              let urls: string[];
 
-              const urls = section === "canali-inspo" ? (allUrls[0] ? [allUrls[0]] : []) : allUrls;
+              if (section === "canali-inspo") {
+                // Per canali inspo: primo URL qualsiasi (inclusi profili)
+                const allUrls = Array.from(
+                  new Set((body.match(PROFILE_URL_REGEX) ?? []).map((u) => normalizeUrl(u.replace(/[).,;]+$/, "")))),
+                );
+                urls = allUrls[0] ? [allUrls[0]] : [];
+              } else {
+                // Per trend: solo URL di post social, deduplicati dopo normalizzazione
+                const rawMatches = body.match(SOCIAL_POST_REGEX) ?? [];
+                urls = Array.from(new Set(rawMatches.map((u) => normalizeUrl(u.replace(/[).,;]+$/, "")))));
+              }
 
               if (urls.length > 0) {
                 const rows = urls.map((url) => {
@@ -281,7 +304,6 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                 }
                 inserted += rows.length;
 
-                // Sync su GitHub per canali inspo
                 if (section === "canali-inspo" && urls[0]) {
                   const title = rows[0]?.title ?? null;
                   const result = await syncCanaleToGitHub(urls[0], title);
