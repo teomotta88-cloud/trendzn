@@ -39,6 +39,16 @@ function normalizeIndustry(raw: string): string {
   return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
 }
 
+// Estrai solo origin + pathname, senza parametri
+function urlBase(url: string): string {
+  try {
+    const u = new URL(url);
+    return u.origin + u.pathname.replace(/\/$/, "");
+  } catch {
+    return url.split("?")[0].replace(/\/$/, "");
+  }
+}
+
 // Normalizza URL rimuovendo parametri di tracking e trailing slash
 function normalizeUrl(url: string): string {
   try {
@@ -90,12 +100,35 @@ type GmailPart = {
   headers?: { name: string; value: string }[];
 };
 
-function extractText(payload: GmailPart | undefined): string {
+// Legge solo text/plain per evitare duplicati da multipart/alternative
+// (la parte HTML contiene gli stessi URL della parte plain)
+function extractTextPlainOnly(payload: GmailPart | undefined): string {
   if (!payload) return "";
-  let out = "";
-  if (payload.body?.data) out += decodeBase64Url(payload.body.data) + "\n";
-  if (payload.parts) for (const p of payload.parts) out += extractText(p) + "\n";
-  return out;
+
+  // Se questo nodo è text/plain, restituiscilo
+  if (payload.mimeType === "text/plain" && payload.body?.data) {
+    return decodeBase64Url(payload.body.data);
+  }
+
+  // Se è text/html, ignoralo (stessi URL della parte plain)
+  if (payload.mimeType === "text/html") {
+    return "";
+  }
+
+  // Per multipart/*, leggi ricorsivamente ma fermati al primo text/plain trovato
+  if (payload.parts) {
+    for (const p of payload.parts) {
+      const text = extractTextPlainOnly(p);
+      if (text) return text;
+    }
+  }
+
+  // Fallback: se non c'è text/plain, usa il body diretto
+  if (payload.body?.data) {
+    return decodeBase64Url(payload.body.data);
+  }
+
+  return "";
 }
 
 function findHeader(headers: { name: string; value: string }[] | undefined, name: string): string {
@@ -192,13 +225,14 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
     }
 
     const normalizedUrl = normalizeUrl(url);
+    const base = urlBase(normalizedUrl);
     const platform = detectPlatformLocal(normalizedUrl);
     const handle = extractHandleLocal(normalizedUrl);
     const name = title || handle;
     const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 
     const exists = (trends.canali_inspo as { accounts: { url: string }[] }[]).some((c) =>
-      c.accounts.some((a) => normalizeUrl(a.url) === normalizedUrl),
+      c.accounts.some((a) => urlBase(a.url) === base),
     );
     if (exists) return "already_exists";
 
@@ -263,7 +297,9 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
               const headers = msg.payload?.headers;
               const from = findHeader(headers, "From");
               const subject = findHeader(headers, "Subject");
-              const body = extractText(msg.payload) || msg.snippet || "";
+
+              // Usa solo text/plain per evitare duplicati da multipart/alternative
+              const body = extractTextPlainOnly(msg.payload) || msg.snippet || "";
               const raw = `Subject: ${subject}\nFrom: ${from}\n\n${body}`;
 
               const { tags, category, industry, section } = parseSubject(subject);
@@ -271,13 +307,11 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
               let urls: string[];
 
               if (section === "canali-inspo") {
-                // Per canali inspo: primo URL qualsiasi (inclusi profili)
                 const allUrls = Array.from(
                   new Set((body.match(PROFILE_URL_REGEX) ?? []).map((u) => normalizeUrl(u.replace(/[).,;]+$/, "")))),
                 );
                 urls = allUrls[0] ? [allUrls[0]] : [];
               } else {
-                // Per trend: solo URL di post social, deduplicati dopo normalizzazione
                 const rawMatches = body.match(SOCIAL_POST_REGEX) ?? [];
                 urls = Array.from(new Set(rawMatches.map((u) => normalizeUrl(u.replace(/[).,;]+$/, "")))));
               }
@@ -296,12 +330,12 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                 }[] = [];
 
                 for (const url of urls) {
-                  // Controlla se l'URL esiste già su Supabase — evita duplicati
-                  // anche se la mail viene processata più volte
+                  // Controlla duplicati confrontando solo origin+pathname (ignora parametri)
+                  const base = urlBase(url);
                   const { data: existing } = await supabaseAdmin
                     .from("trend_submissions")
                     .select("id")
-                    .eq("url", url)
+                    .like("url", `${base}%`)
                     .maybeSingle();
 
                   if (existing) {
