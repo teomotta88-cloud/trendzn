@@ -40,13 +40,21 @@ function normalizeIndustry(raw: string): string {
 }
 
 // Normalizza URL rimuovendo parametri di tracking e trailing slash
-// es. instagram.com/factanza?igsh=xxx → instagram.com/factanza
 function normalizeUrl(url: string): string {
   try {
     const u = new URL(url);
-    // Rimuovi parametri di tracking comuni
-    ["igsh", "igshid", "utm_source", "utm_medium", "utm_campaign", "fbclid"].forEach((p) => u.searchParams.delete(p));
-    // Rimuovi trailing slash dal path
+    [
+      "igsh",
+      "igshid",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term",
+      "fbclid",
+      "is_from_webapp",
+      "sender_device",
+    ].forEach((p) => u.searchParams.delete(p));
     u.pathname = u.pathname.replace(/\/$/, "") || "/";
     return u.toString();
   } catch {
@@ -275,7 +283,32 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
               }
 
               if (urls.length > 0) {
-                const rows = urls.map((url) => {
+                const rows: {
+                  url: string;
+                  submitted_by: string;
+                  raw_email: string;
+                  title: string | null;
+                  tags: string[];
+                  category: string | null;
+                  industry: string | null;
+                  section: string | null;
+                  status: "approved";
+                }[] = [];
+
+                for (const url of urls) {
+                  // Controlla se l'URL esiste già su Supabase — evita duplicati
+                  // anche se la mail viene processata più volte
+                  const { data: existing } = await supabaseAdmin
+                    .from("trend_submissions")
+                    .select("id")
+                    .eq("url", url)
+                    .maybeSingle();
+
+                  if (existing) {
+                    console.log("URL già presente su Supabase, skip:", url);
+                    continue;
+                  }
+
                   const derivedTitle =
                     section === "canali-inspo"
                       ? tags[2]
@@ -283,7 +316,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                         : extractHandleFromUrl(url)
                       : subject || null;
 
-                  return {
+                  rows.push({
                     url,
                     submitted_by: from,
                     raw_email: raw.slice(0, 10000),
@@ -292,9 +325,14 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                     category,
                     industry,
                     section,
-                    status: "approved" as const,
-                  };
-                });
+                    status: "approved",
+                  });
+                }
+
+                if (rows.length === 0) {
+                  processedIds.push(m.id);
+                  continue;
+                }
 
                 const { error } = await supabaseAdmin.from("trend_submissions").insert(rows);
 
@@ -311,7 +349,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                 }
               }
 
-              processedIds.push(msg.id);
+              processedIds.push(m.id);
             } catch (err) {
               console.error("Message error:", err);
             }
@@ -324,7 +362,12 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
             });
           }
 
-          return Response.json({ ok: true, processed: processedIds.length, inserted, syncResults });
+          return Response.json({
+            ok: true,
+            processed: processedIds.length,
+            inserted,
+            syncResults,
+          });
         } catch (err) {
           const msg = err instanceof Error ? err.message : String(err);
           console.error("poll-gmail failed:", msg);
