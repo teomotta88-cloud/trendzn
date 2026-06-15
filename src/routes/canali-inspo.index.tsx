@@ -90,7 +90,7 @@ function Feed() {
       });
   }, []);
 
-  // Mappa handle → id Supabase (per trovare il record anche dei canali JSON)
+  // Mappa handle → id Supabase
   const handleToDbId = useMemo(() => {
     const map = new Map<string, string>();
     dbRows.forEach((r) => {
@@ -100,11 +100,33 @@ function Feed() {
     return map;
   }, [dbRows]);
 
-  const handleDelete = useCallback(async (dbId: string) => {
+  // Elimina canale da Supabase (inseriti via mail)
+  const handleDeleteSupabase = useCallback(async (dbId: string) => {
     if (!window.confirm("Eliminare questo canale?")) return;
     setDeleting(dbId);
     await supabase.from("trend_submissions").delete().eq("id", dbId);
     setDbRows((prev) => prev.filter((r) => r.id !== dbId));
+    setDeleting(null);
+  }, []);
+
+  // Elimina canale da trends.json via endpoint server (canali statici)
+  const handleDeleteJson = useCallback(async (canaleId: string) => {
+    if (!window.confirm("Eliminare questo canale?")) return;
+    setDeleting(canaleId);
+    try {
+      const res = await fetch("/api/public/hooks/delete-canale", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ canaleId }),
+      });
+      if (res.ok) {
+        setJsonCanali((prev) => prev.filter((c) => c.id !== canaleId));
+      } else {
+        alert("Errore durante l'eliminazione. Riprova.");
+      }
+    } catch {
+      alert("Errore di rete. Riprova.");
+    }
     setDeleting(null);
   }, []);
 
@@ -209,14 +231,31 @@ function Feed() {
             ? c.id
             : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ?? null);
 
-          const canDelete = !!dbIdForCanale;
+          // Può essere eliminato da Supabase
+          const canDeleteSupabase = !!dbIdForCanale;
+          // Può essere eliminato da JSON (canali statici senza record Supabase)
+          const canDeleteJson = isJsonCanale && !canDeleteSupabase;
+
+          const deletingThis = deleting === dbIdForCanale || deleting === c.id;
 
           return (
             <div key={c.id} className="group relative">
-              {canDelete && (
+              {/* Cestino Supabase */}
+              {canDeleteSupabase && (
                 <button
-                  onClick={() => handleDelete(dbIdForCanale!)}
-                  disabled={deleting === dbIdForCanale}
+                  onClick={() => handleDeleteSupabase(dbIdForCanale!)}
+                  disabled={deletingThis}
+                  className="absolute right-2 top-2 z-10 hidden rounded-lg border border-border bg-card p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex"
+                  title="Elimina"
+                >
+                  <Trash2 className="size-3.5" />
+                </button>
+              )}
+              {/* Cestino JSON (canali statici) */}
+              {canDeleteJson && (
+                <button
+                  onClick={() => handleDeleteJson(c.id)}
+                  disabled={deletingThis}
                   className="absolute right-2 top-2 z-10 hidden rounded-lg border border-border bg-card p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex"
                   title="Elimina"
                 >
