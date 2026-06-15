@@ -37,7 +37,13 @@ function extractHandle(url: string): string {
   }
 }
 
-type DbRow = { id: string; url: string; title: string | null; industry: string | null; category: string | null };
+type DbRow = {
+  id: string;
+  url: string;
+  title: string | null;
+  industry: string | null;
+  category: string | null;
+};
 
 function rowToCanale(row: DbRow): CanaleInspo {
   const platform = detectPlatform(row.url);
@@ -59,7 +65,7 @@ function Feed() {
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
 
-  // Leggi trends.json da GitHub a runtime (non dal bundle statico)
+  // Leggi trends.json da GitHub a runtime
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
@@ -84,15 +90,25 @@ function Feed() {
       });
   }, []);
 
-  const handleDelete = useCallback(async (id: string) => {
+  // Mappa handle → id Supabase (per trovare il record anche dei canali JSON)
+  const handleToDbId = useMemo(() => {
+    const map = new Map<string, string>();
+    dbRows.forEach((r) => {
+      const handle = extractHandle(r.url).toLowerCase();
+      if (!map.has(handle)) map.set(handle, r.id);
+    });
+    return map;
+  }, [dbRows]);
+
+  const handleDelete = useCallback(async (dbId: string) => {
     if (!window.confirm("Eliminare questo canale?")) return;
-    setDeleting(id);
-    await supabase.from("trend_submissions").delete().eq("id", id);
-    setDbRows((prev) => prev.filter((r) => r.id !== id));
+    setDeleting(dbId);
+    await supabase.from("trend_submissions").delete().eq("id", dbId);
+    setDbRows((prev) => prev.filter((r) => r.id !== dbId));
     setDeleting(null);
   }, []);
 
-  // Filtra i canali Supabase che sono già nel JSON (confronto per handle)
+  // Filtra i canali Supabase già nel JSON (evita doppioni)
   const jsonHandles = useMemo(
     () => new Set(jsonCanali.flatMap((c) => c.accounts.map((a) => a.handle.toLowerCase()))),
     [jsonCanali],
@@ -184,15 +200,23 @@ function Feed() {
               .replace(/[^a-zA-Z0-9]/g, "")
               .charAt(0)
               .toUpperCase() || "•";
+
           const isDb = dbIds.has(c.id);
           const isJsonCanale = jsonCanali.some((j) => j.id === c.id);
 
+          // Cerca il Supabase ID anche per i canali JSON (inseriti via mail e poi syncati)
+          const dbIdForCanale = isDb
+            ? c.id
+            : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ?? null);
+
+          const canDelete = !!dbIdForCanale;
+
           return (
             <div key={c.id} className="group relative">
-              {isDb && (
+              {canDelete && (
                 <button
-                  onClick={() => handleDelete(c.id)}
-                  disabled={deleting === c.id}
+                  onClick={() => handleDelete(dbIdForCanale!)}
+                  disabled={deleting === dbIdForCanale}
                   className="absolute right-2 top-2 z-10 hidden rounded-lg border border-border bg-card p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex"
                   title="Elimina"
                 >
@@ -226,7 +250,6 @@ function Feed() {
                 const cardClassName =
                   "flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary";
 
-                // Se il canale è nel JSON → Link alla pagina dettaglio con feed
                 if (isJsonCanale) {
                   return (
                     <Link to="/canali-inspo/$id" params={{ id: c.id }} className={cardClassName}>
@@ -235,7 +258,6 @@ function Feed() {
                   );
                 }
 
-                // Altrimenti (solo su Supabase, n8n non ha ancora fetchato i post) → link esterno
                 return (
                   <a href={main.url} target="_blank" rel="noreferrer" className={cardClassName}>
                     {cardContent}
