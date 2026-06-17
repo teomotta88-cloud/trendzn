@@ -4,7 +4,7 @@ const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1"
 
 // Solo URL che sono effettivamente post social — esclude link firma, siti generici ecc.
 const SOCIAL_POST_REGEX =
-  /https?:\/\/(www\.)?(instagram\.com\/(p|reel|reels|tv)\/|tiktok\.com\/@[^/\s]+\/(video|photo)\/|youtube\.com\/watch|youtu\.be\/)[^\s<>"')]+/gi;
+  /https?:\/\/(www\.)?(instagram\.com\/(p|reel|reels|tv)\/|tiktok\.com\/@[^/\s]+\/(video|photo)\/|youtube\.com\/watch|youtu\.be\/|linkedin\.com\/(feed\/update\/urn:li:activity:|posts\/)[^\s<>"')]+)[^\s<>"')]*/gi;
 
 // Per canali inspo accettiamo anche URL di profilo
 const PROFILE_URL_REGEX = /https?:\/\/[^\s<>"']+/gi;
@@ -64,6 +64,9 @@ function normalizeUrl(url: string): string {
       "fbclid",
       "is_from_webapp",
       "sender_device",
+      "trk",
+      "trackingId",
+      "rcm", // parametri tracking LinkedIn
     ].forEach((p) => u.searchParams.delete(p));
     u.pathname = u.pathname.replace(/\/$/, "") || "/";
     return u.toString();
@@ -101,21 +104,17 @@ type GmailPart = {
 };
 
 // Legge solo text/plain per evitare duplicati da multipart/alternative
-// (la parte HTML contiene gli stessi URL della parte plain)
 function extractTextPlainOnly(payload: GmailPart | undefined): string {
   if (!payload) return "";
 
-  // Se questo nodo è text/plain, restituiscilo
   if (payload.mimeType === "text/plain" && payload.body?.data) {
     return decodeBase64Url(payload.body.data);
   }
 
-  // Se è text/html, ignoralo (stessi URL della parte plain)
   if (payload.mimeType === "text/html") {
     return "";
   }
 
-  // Per multipart/*, leggi ricorsivamente ma fermati al primo text/plain trovato
   if (payload.parts) {
     for (const p of payload.parts) {
       const text = extractTextPlainOnly(p);
@@ -123,7 +122,6 @@ function extractTextPlainOnly(payload: GmailPart | undefined): string {
     }
   }
 
-  // Fallback: se non c'è text/plain, usa il body diretto
   if (payload.body?.data) {
     return decodeBase64Url(payload.body.data);
   }
@@ -212,6 +210,7 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       if (/instagram\.com/.test(u)) return "instagram";
       if (/tiktok\.com/.test(u)) return "tiktok";
       if (/youtube\.com|youtu\.be/.test(u)) return "youtube";
+      if (/linkedin\.com/.test(u)) return "linkedin";
       return "web";
     }
     function extractHandleLocal(u: string) {
@@ -298,7 +297,6 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
               const from = findHeader(headers, "From");
               const subject = findHeader(headers, "Subject");
 
-              // Usa solo text/plain per evitare duplicati da multipart/alternative
               const body = extractTextPlainOnly(msg.payload) || msg.snippet || "";
               const raw = `Subject: ${subject}\nFrom: ${from}\n\n${body}`;
 
@@ -330,7 +328,6 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                 }[] = [];
 
                 for (const url of urls) {
-                  // Controlla duplicati confrontando solo origin+pathname (ignora parametri)
                   const base = urlBase(url);
                   const { data: existing } = await supabaseAdmin
                     .from("trend_submissions")
