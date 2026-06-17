@@ -55,7 +55,7 @@ function Index() {
         <div className="absolute -bottom-20 -left-10 size-72 rounded-full bg-accent/20 blur-3xl" />
         <div className="relative max-w-2xl space-y-4">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-            Social trend deck
+            Social trend watcher
           </span>
           <h1 className="font-display text-4xl font-bold leading-tight sm:text-6xl">
             TRENDZN! Tutti i trend social, in un posto solo.
