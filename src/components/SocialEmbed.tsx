@@ -113,7 +113,8 @@ export function SocialEmbed({ url }: { url: string }) {
   const platform = detectPlatform(url);
   const embed = embedUrl(url);
 
-  // LinkedIn non ha embed pubblico: mostra anteprima Open Graph
+  // LinkedIn: se abbiamo un embed reale (activity ID trovato), usalo.
+  // Altrimenti fallback all'anteprima Open Graph.
   if (!embed && platform === "linkedin") {
     return <LinkedInPreview url={url} />;
   }
@@ -131,6 +132,25 @@ export function SocialEmbed({ url }: { url: string }) {
           Apri link esterno
         </span>
       </a>
+    );
+  }
+
+  if (platform === "linkedin") {
+    return (
+      <div
+        className="relative w-full overflow-hidden rounded-xl border border-border bg-white"
+        style={{ minHeight: 570 }}
+      >
+        <iframe
+          src={embed}
+          className="absolute inset-0 size-full"
+          height="570"
+          width="100%"
+          frameBorder={0}
+          allowFullScreen
+          title="Post LinkedIn"
+        />
+      </div>
     );
   }
 

@@ -41,6 +41,16 @@ export function embedUrl(url: string): string | null {
   if (ttp) return `https://www.tiktok.com/embed/v2/${ttp[1]}`;
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?]+)/);
   if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
-  // LinkedIn non ha embed pubblico — gestito separatamente con anteprima Open Graph
+
+  // LinkedIn: l'activity ID compare sia in
+  // linkedin.com/feed/update/urn:li:activity:1234567890
+  // sia in linkedin.com/posts/handle_titolo-activity-1234567890-xxxx
+  // LinkedIn fornisce un embed ufficiale costruibile da quell'ID:
+  // linkedin.com/embed/feed/update/urn:li:activity:1234567890
+  const liUrn = url.match(/urn:li:activity:(\d+)/);
+  if (liUrn) return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${liUrn[1]}`;
+  const liActivity = url.match(/-activity-(\d+)-/);
+  if (liActivity) return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${liActivity[1]}`;
+
   return null;
 }
