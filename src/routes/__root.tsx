@@ -144,6 +144,7 @@ const NAV_ITEMS = [
   { to: "/trend-attuali", label: "Trend Attuali" },
   { to: "/trend-evergreen", label: "Trend Evergreen" },
   { to: "/canali-inspo", label: "Canali Inspo" },
+  { to: "/linkedin", label: "LinkedIn" },
   { to: "/feed", label: "Feed" },
 ];
 
@@ -158,7 +159,7 @@ function Navbar() {
           <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">
             T
           </span>
-          <span className="font-display text-base font-semibold tracking-tight">Trendzn</span>
+          <span className="font-display text-base font-semibold tracking-tight">TrendDeck</span>
         </Link>
 
         {/* Desktop nav */}
