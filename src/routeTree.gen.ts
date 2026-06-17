@@ -17,6 +17,7 @@ import { Route as InfluencerRouteImport } from './routes/influencer'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
+import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
@@ -63,6 +64,11 @@ const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
   path: '/canali-inspo/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InfluencerIdRoute = InfluencerIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => InfluencerRoute,
+} as any)
 const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
   id: '/canali-inspo/$id',
   path: '/canali-inspo/$id',
@@ -94,12 +100,13 @@ const ApiPublicHooksDeleteCanaleRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/influencer': typeof InfluencerRoute
+  '/influencer': typeof InfluencerRouteWithChildren
   '/linkedin': typeof LinkedinRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/influencer/$id': typeof InfluencerIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
@@ -109,12 +116,13 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/influencer': typeof InfluencerRoute
+  '/influencer': typeof InfluencerRouteWithChildren
   '/linkedin': typeof LinkedinRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/influencer/$id': typeof InfluencerIdRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
   '/feed': typeof FeedIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
@@ -125,12 +133,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/influencer': typeof InfluencerRoute
+  '/influencer': typeof InfluencerRouteWithChildren
   '/linkedin': typeof LinkedinRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/influencer/$id': typeof InfluencerIdRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/trend-evergreen'
     | '/trend-real-time'
     | '/canali-inspo/$id'
+    | '/influencer/$id'
     | '/canali-inspo/'
     | '/feed/'
     | '/api/public/hooks/delete-canale'
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
     | '/trend-evergreen'
     | '/trend-real-time'
     | '/canali-inspo/$id'
+    | '/influencer/$id'
     | '/canali-inspo'
     | '/feed'
     | '/api/public/hooks/delete-canale'
@@ -178,6 +189,7 @@ export interface FileRouteTypes {
     | '/trend-evergreen'
     | '/trend-real-time'
     | '/canali-inspo/$id'
+    | '/influencer/$id'
     | '/canali-inspo/'
     | '/feed/'
     | '/api/public/hooks/delete-canale'
@@ -188,7 +200,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  InfluencerRoute: typeof InfluencerRoute
+  InfluencerRoute: typeof InfluencerRouteWithChildren
   LinkedinRoute: typeof LinkedinRoute
   TrendAttualiRoute: typeof TrendAttualiRoute
   TrendEvergreenRoute: typeof TrendEvergreenRoute
@@ -260,6 +272,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CanaliInspoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/influencer/$id': {
+      id: '/influencer/$id'
+      path: '/$id'
+      fullPath: '/influencer/$id'
+      preLoaderRoute: typeof InfluencerIdRouteImport
+      parentRoute: typeof InfluencerRoute
+    }
     '/canali-inspo/$id': {
       id: '/canali-inspo/$id'
       path: '/canali-inspo/$id'
@@ -298,9 +317,21 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface InfluencerRouteChildren {
+  InfluencerIdRoute: typeof InfluencerIdRoute
+}
+
+const InfluencerRouteChildren: InfluencerRouteChildren = {
+  InfluencerIdRoute: InfluencerIdRoute,
+}
+
+const InfluencerRouteWithChildren = InfluencerRoute._addFileChildren(
+  InfluencerRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  InfluencerRoute: InfluencerRoute,
+  InfluencerRoute: InfluencerRouteWithChildren,
   LinkedinRoute: LinkedinRoute,
   TrendAttualiRoute: TrendAttualiRoute,
   TrendEvergreenRoute: TrendEvergreenRoute,
