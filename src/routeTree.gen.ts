@@ -17,6 +17,7 @@ import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
+import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
@@ -59,6 +60,12 @@ const ApiPublicHooksPollGmailRoute = ApiPublicHooksPollGmailRouteImport.update({
   path: '/api/public/hooks/poll-gmail',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicHooksLinkPreviewRoute =
+  ApiPublicHooksLinkPreviewRouteImport.update({
+    id: '/api/public/hooks/link-preview',
+    path: '/api/public/hooks/link-preview',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksDeleteCanaleRoute =
   ApiPublicHooksDeleteCanaleRouteImport.update({
     id: '/api/public/hooks/delete-canale',
@@ -75,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
+  '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRoutesByTo {
@@ -86,6 +94,7 @@ export interface FileRoutesByTo {
   '/canali-inspo': typeof CanaliInspoIndexRoute
   '/feed': typeof FeedIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
+  '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRoutesById {
@@ -98,6 +107,7 @@ export interface FileRoutesById {
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
+  '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
 }
 export interface FileRouteTypes {
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/canali-inspo/'
     | '/feed/'
     | '/api/public/hooks/delete-canale'
+    | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -122,6 +133,7 @@ export interface FileRouteTypes {
     | '/canali-inspo'
     | '/feed'
     | '/api/public/hooks/delete-canale'
+    | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
   id:
     | '__root__'
@@ -133,6 +145,7 @@ export interface FileRouteTypes {
     | '/canali-inspo/'
     | '/feed/'
     | '/api/public/hooks/delete-canale'
+    | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
   fileRoutesById: FileRoutesById
 }
@@ -145,6 +158,7 @@ export interface RootRouteChildren {
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
   FeedIndexRoute: typeof FeedIndexRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
+  ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
 }
 
@@ -206,6 +220,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksPollGmailRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/link-preview': {
+      id: '/api/public/hooks/link-preview'
+      path: '/api/public/hooks/link-preview'
+      fullPath: '/api/public/hooks/link-preview'
+      preLoaderRoute: typeof ApiPublicHooksLinkPreviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/delete-canale': {
       id: '/api/public/hooks/delete-canale'
       path: '/api/public/hooks/delete-canale'
@@ -225,6 +246,7 @@ const rootRouteChildren: RootRouteChildren = {
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
   FeedIndexRoute: FeedIndexRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
+  ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
 }
 export const routeTree = rootRouteImport
