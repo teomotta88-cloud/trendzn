@@ -287,7 +287,7 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
               submitted_by: "manual",
               raw_email: `Inserimento manuale — ${category}`,
               title: derivedTitle,
-              tags: [section, industry].filter(Boolean),
+              tags: [section, industry].filter((t): t is string => Boolean(t)),
               category,
               industry,
               section,
