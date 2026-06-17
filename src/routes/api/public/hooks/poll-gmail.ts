@@ -18,6 +18,7 @@ const CATEGORY_MAP: Record<string, string> = {
   "trend evergreen": "Trend Evergreen",
   "canali inspo": "Canali Inspo",
   linkedin: "LinkedIn",
+  influencer: "Influencer",
   "real time": "Trend Real Time",
   attuali: "Trend Attuali",
   evergreen: "Trend Evergreen",
@@ -30,6 +31,7 @@ const SECTION_MAP: Record<string, string> = {
   "trend evergreen": "trend-evergreen",
   "canali inspo": "canali-inspo",
   linkedin: "linkedin",
+  influencer: "influencer",
   "real time": "trend-real-time",
   attuali: "trend-attuali",
   evergreen: "trend-evergreen",
@@ -347,7 +349,7 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                       ? tags[2]
                         ? tags.slice(2).join(" ")
                         : extractHandleFromUrl(url)
-                      : section === "linkedin"
+                      : section === "linkedin" || section === "influencer"
                         ? tags[2]
                           ? tags.slice(2).join(" ")
                           : subject || null
