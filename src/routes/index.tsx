@@ -60,7 +60,9 @@ function Index() {
           <h1 className="font-display text-4xl font-bold leading-tight sm:text-6xl">
             TRENDZN! Tutti i trend social, in un posto solo.
           </h1>
-          <p className="text-base text-muted-foreground sm:text-lg">Creato su misura per il Team Social.</p>
+          <p className="text-base text-muted-foreground sm:text-lg">
+            Creato dal vostro MM su misura per il Team Social.
+          </p>
         </div>
       </section>
 
