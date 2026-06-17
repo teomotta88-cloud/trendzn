@@ -429,6 +429,7 @@ function TrendzFeed() {
               outline: "none",
               width: 200,
               background: "#f8fafc",
+              color: "#000",
             }}
           />
 
