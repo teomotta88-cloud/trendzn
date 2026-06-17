@@ -151,6 +151,91 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
   }
 }
 
+async function syncInfluencerToGitHub(
+  url: string,
+  nomeInfluencer: string | null,
+  cliente: string | null,
+): Promise<string> {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return "no_token";
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: "application/vnd.github.v3+json",
+        "User-Agent": "trendzn-bot",
+      },
+    });
+    if (!res.ok) return `read_failed_${res.status}`;
+
+    const file = await res.json();
+    const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+
+    if (!Array.isArray(trends.influencer_profiles)) {
+      trends.influencer_profiles = [];
+    }
+
+    function detectPlatformLocal(u: string) {
+      if (/instagram\.com/.test(u)) return "instagram";
+      if (/tiktok\.com/.test(u)) return "tiktok";
+      if (/youtube\.com|youtu\.be/.test(u)) return "youtube";
+      if (/linkedin\.com/.test(u)) return "linkedin";
+      return "web";
+    }
+    function extractHandleLocal(u: string) {
+      try {
+        const clean = u.replace(/\/$/, "").split("?")[0];
+        const parts = clean.split("/");
+        return parts[parts.length - 1].replace(/^@/, "") || u;
+      } catch {
+        return u;
+      }
+    }
+
+    const normalizedUrl = normalizeUrl(url);
+    const base = urlBase(normalizedUrl);
+    const platform = detectPlatformLocal(normalizedUrl);
+    const handle = extractHandleLocal(normalizedUrl);
+    const name = nomeInfluencer || handle;
+    const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
+    const exists = (trends.influencer_profiles as { accounts: { url: string }[] }[]).some((c) =>
+      c.accounts.some((a) => urlBase(a.url) === base),
+    );
+    if (exists) return "already_exists";
+
+    trends.influencer_profiles.push({
+      id,
+      name,
+      cliente: cliente || null,
+      urls: [normalizedUrl],
+      descrizione: null,
+      accounts: [{ platform, handle, url: normalizedUrl }],
+    });
+
+    const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `token ${token}`,
+        "Content-Type": "application/json",
+        "User-Agent": "trendzn-bot",
+      },
+      body: JSON.stringify({
+        message: `chore: aggiungi influencer ${handle} [trendzn-manual]`,
+        content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
+        sha: file.sha,
+      }),
+    });
+
+    if (writeRes.ok) return "ok";
+    const err = await writeRes.text();
+    return `write_failed: ${err.slice(0, 100)}`;
+  } catch (err) {
+    return `exception: ${String(err).slice(0, 100)}`;
+  }
+}
+
 export const Route = createFileRoute("/api/public/hooks/submit-manual")({
   server: {
     handlers: {
@@ -161,6 +246,7 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
             url: string;
             industry?: string | null;
             title?: string | null;
+            cliente?: string | null;
           };
 
           const { section, url } = body;
@@ -191,7 +277,8 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
             return Response.json({ ok: false, error: "Questo URL è già presente" }, { status: 409 });
           }
 
-          const derivedTitle = section === "canali-inspo" ? title || extractHandleFromUrl(cleanUrl) : title;
+          const derivedTitle =
+            section === "canali-inspo" || section === "influencer" ? title || extractHandleFromUrl(cleanUrl) : title;
 
           const { data: inserted, error } = await supabaseAdmin
             .from("trend_submissions")
@@ -200,7 +287,7 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
               submitted_by: "manual",
               raw_email: `Inserimento manuale — ${category}`,
               title: derivedTitle,
-              tags: [section, industry].filter((t): t is string => Boolean(t)),
+              tags: [section, industry].filter(Boolean),
               category,
               industry,
               section,
@@ -216,6 +303,11 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
           let syncResult: string | null = null;
           if (section === "canali-inspo") {
             syncResult = await syncCanaleToGitHub(cleanUrl, derivedTitle);
+          }
+          if (section === "influencer") {
+            // industry = Nome Influencer, derivedTitle = Cliente (fallback handle se vuoto)
+            const cliente = title || null;
+            syncResult = await syncInfluencerToGitHub(cleanUrl, industry, cliente);
           }
 
           return Response.json({ ok: true, id: inserted?.id, syncResult });

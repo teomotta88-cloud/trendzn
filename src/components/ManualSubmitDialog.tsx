@@ -27,6 +27,9 @@ const SECTION_FIELDS: Record<Section, FieldConfig[]> = {
   ],
 };
 
+// Per canali-inspo e influencer l'URL richiesto è quello del PROFILO, non di un post singolo
+const PROFILE_BASED_SECTIONS: Section[] = ["canali-inspo", "influencer"];
+
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ManualSubmitDialog({ section, onSuccess }: { section: Section; onSuccess?: () => void }) {
@@ -38,6 +41,9 @@ export function ManualSubmitDialog({ section, onSuccess }: { section: Section; o
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const fields = SECTION_FIELDS[section];
+  const isProfileBased = PROFILE_BASED_SECTIONS.includes(section);
+  const urlLabel = isProfileBased ? "URL profilo *" : "URL post / profilo *";
+  const urlPlaceholder = isProfileBased ? "https://www.instagram.com/nomeaccount/" : "https://...";
 
   function reset() {
     setUrl("");
@@ -116,13 +122,13 @@ export function ManualSubmitDialog({ section, onSuccess }: { section: Section; o
 
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label className="mb-1 block text-xs font-medium text-muted-foreground">URL post / profilo *</label>
+                <label className="mb-1 block text-xs font-medium text-muted-foreground">{urlLabel}</label>
                 <input
                   type="url"
                   required
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
-                  placeholder="https://..."
+                  placeholder={urlPlaceholder}
                   className="w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
                 />
               </div>
