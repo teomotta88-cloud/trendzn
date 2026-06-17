@@ -4,7 +4,7 @@ const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail/gmail/v1"
 
 // Solo URL che sono effettivamente post social — esclude link firma, siti generici ecc.
 const SOCIAL_POST_REGEX =
-  /https?:\/\/(www\.)?(instagram\.com\/(p|reel|reels|tv)\/|tiktok\.com\/@[^/\s]+\/(video|photo)\/|youtube\.com\/watch|youtu\.be\/|linkedin\.com\/(feed\/update\/urn:li:activity:|posts\/)[^\s<>"')]+)[^\s<>"')]*/gi;
+  /https?:\/\/(www\.)?(instagram\.com\/(p|reel|reels|tv)\/|tiktok\.com\/@[^/\s]+\/(video|photo)\/|youtube\.com\/watch|youtu\.be\/|linkedin\.com\/(embed\/feed\/update\/urn:li:(share|activity|ugcPost):|feed\/update\/urn:li:activity:|posts\/)[^\s<>"')]+)[^\s<>"')]*/gi;
 
 // Per canali inspo accettiamo anche URL di profilo
 const PROFILE_URL_REGEX = /https?:\/\/[^\s<>"']+/gi;

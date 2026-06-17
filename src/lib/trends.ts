@@ -42,13 +42,13 @@ export function embedUrl(url: string): string | null {
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?]+)/);
   if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
 
-  // LinkedIn: l'activity ID compare sia in
-  // linkedin.com/feed/update/urn:li:activity:1234567890
-  // sia in linkedin.com/posts/handle_titolo-activity-1234567890-xxxx
-  // LinkedIn fornisce un embed ufficiale costruibile da quell'ID:
-  // linkedin.com/embed/feed/update/urn:li:activity:1234567890
-  const liUrn = url.match(/urn:li:activity:(\d+)/);
-  if (liUrn) return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${liUrn[1]}`;
+  // LinkedIn: l'ID può comparire come:
+  // - urn:li:activity:1234567890 (URL normale del post o link "copy link to post")
+  // - urn:li:share:1234567890 (codice embed copiato direttamente da LinkedIn)
+  // - "-activity-1234567890-" dentro un URL /posts/...
+  // In tutti i casi, l'URL embed risultante usa lo stesso schema con il tipo corretto.
+  const liEmbed = url.match(/urn:li:(share|activity|ugcPost):(\d+)/);
+  if (liEmbed) return `https://www.linkedin.com/embed/feed/update/urn:li:${liEmbed[1]}:${liEmbed[2]}`;
   const liActivity = url.match(/-activity-(\d+)-/);
   if (liActivity) return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${liActivity[1]}`;
 
