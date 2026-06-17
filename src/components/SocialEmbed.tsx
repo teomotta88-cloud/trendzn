@@ -62,6 +62,16 @@ function LinkedInPreview({ url }: { url: string }) {
     );
   }
 
+  // LinkedIn restituisce spesso un'immagine generica di brand invece della
+  // foto specifica del post (i post pubblici non autenticati sono limitati).
+  // La riconosciamo dal pattern dell'URL e la trattiamo come "nessuna immagine".
+  const isGenericLinkedInImage =
+    !preview.image ||
+    /static[.-]licdn\.com.*(logo|brand|default)/i.test(preview.image) ||
+    /licdn\.com\/aero-v1/i.test(preview.image);
+
+  const hasRealImage = preview.image && !isGenericLinkedInImage;
+
   return (
     <a
       href={url}
@@ -69,17 +79,20 @@ function LinkedInPreview({ url }: { url: string }) {
       rel="noreferrer"
       className="group flex aspect-[9/16] w-full flex-col overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary"
     >
-      {preview.image ? (
+      {hasRealImage ? (
         <div className="relative flex-1 overflow-hidden bg-muted">
           <img
-            src={preview.image}
+            src={preview.image!}
             alt=""
             className="absolute inset-0 size-full object-cover transition group-hover:scale-105"
           />
         </div>
       ) : (
-        <div className="flex flex-1 items-center justify-center bg-[#0a66c2]/10">
-          <Linkedin className="size-10 text-[#0a66c2]" />
+        <div className="flex flex-1 flex-col items-center justify-center gap-3 bg-[#0a66c2]/5 p-6 text-center">
+          <Linkedin className="size-8 text-[#0a66c2]/60" />
+          {preview.title && (
+            <p className="line-clamp-4 text-sm font-semibold leading-snug text-foreground">{preview.title}</p>
+          )}
         </div>
       )}
       <div className="space-y-1 border-t border-border p-3">
@@ -87,7 +100,7 @@ function LinkedInPreview({ url }: { url: string }) {
           <Linkedin className="size-3" />
           LinkedIn
         </div>
-        {preview.title && (
+        {hasRealImage && preview.title && (
           <p className="line-clamp-2 text-xs font-semibold leading-snug text-foreground">{preview.title}</p>
         )}
         {preview.description && <p className="line-clamp-2 text-[11px] text-muted-foreground">{preview.description}</p>}
