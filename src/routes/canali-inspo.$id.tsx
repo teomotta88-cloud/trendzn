@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { detectPlatform, type CanaleInspo } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
 export const Route = createFileRoute("/canali-inspo/$id")({
   head: () => ({
@@ -36,9 +36,8 @@ function Page() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [search, setSearch] = useState("");
 
-  // Legge trends.json da GitHub a runtime — sempre aggiornato con i sync di n8n,
-  // a differenza dell'import statico dal bundle.
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
@@ -55,16 +54,26 @@ function Page() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  const postEmbeds = useMemo(() => {
+  const allPosts = useMemo(() => {
     if (!canale) return [];
     const posts = canale.accounts.filter((a) => POST_URL_RE.test(a.url));
-    // Ordina dal più recente al meno recente — i post senza data vanno in fondo
     return [...posts].sort((a, b) => {
       const da = a.date ? new Date(a.date).getTime() : 0;
       const db = b.date ? new Date(b.date).getTime() : 0;
       return db - da;
     });
   }, [canale]);
+
+  const filteredPosts = useMemo(() => {
+    if (!search) return allPosts;
+    const q = search.toLowerCase();
+    return allPosts.filter((a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q));
+  }, [allPosts, search]);
+
+  // Reset paginazione quando cambia la ricerca
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [search]);
 
   const profileLinks = useMemo(() => (canale ? canale.accounts.filter((a) => !POST_URL_RE.test(a.url)) : []), [canale]);
 
@@ -88,8 +97,8 @@ function Page() {
       .replace(/[^a-zA-Z0-9]/g, "")
       .charAt(0)
       .toUpperCase() || "•";
-  const visiblePosts = postEmbeds.slice(0, visibleCount);
-  const hasMore = visibleCount < postEmbeds.length;
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPosts.length;
 
   return (
     <div className="space-y-8">
@@ -128,16 +137,27 @@ function Page() {
       </header>
 
       <section className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 className="font-display text-xl font-semibold">Ultimi contenuti</h2>
-          {postEmbeds.length > 0 && (
-            <span className="text-xs text-muted-foreground">
-              {Math.min(visibleCount, postEmbeds.length)} / {postEmbeds.length}
-            </span>
+          {allPosts.length > 0 && (
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
+                <input
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Cerca nelle caption…"
+                  className="w-56 rounded-lg border border-border bg-background/60 py-1.5 pl-8 pr-3 text-xs outline-none focus:border-primary"
+                />
+              </div>
+              <span className="text-xs text-muted-foreground">
+                {Math.min(visibleCount, filteredPosts.length)} / {filteredPosts.length}
+              </span>
+            </div>
           )}
         </div>
 
-        {postEmbeds.length === 0 ? (
+        {allPosts.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center">
             <p className="text-sm text-muted-foreground">
               Nessun post embeddabile per questo canale.
@@ -159,6 +179,10 @@ function Page() {
               ))}
             </div>
           </div>
+        ) : filteredPosts.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-border p-10 text-center text-sm text-muted-foreground">
+            Nessun post corrisponde alla ricerca.
+          </div>
         ) : (
           <>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -167,7 +191,7 @@ function Page() {
                 return (
                   <article key={i} className="space-y-2 rounded-2xl border border-border bg-card p-3">
                     <SocialEmbed url={a.url} />
-                    <div className="flex items-center justify-between px-1 pb-1 text-xs">
+                    <div className="flex items-center justify-between px-1 text-xs">
                       <span className="inline-flex items-center gap-1 text-muted-foreground">
                         <PlatformIcon platform={detectPlatform(a.url)} className="size-3" />
                         {detectPlatform(a.url)}
@@ -177,6 +201,11 @@ function Page() {
                         Apri ↗
                       </a>
                     </div>
+                    {a.caption && (
+                      <p className="line-clamp-3 px-1 pb-1 text-[11px] leading-relaxed text-muted-foreground">
+                        {a.caption}
+                      </p>
+                    )}
                   </article>
                 );
               })}
@@ -188,7 +217,7 @@ function Page() {
                   onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
                   className="rounded-full border border-border bg-card px-6 py-2.5 text-sm font-medium text-foreground transition hover:border-primary"
                 >
-                  Carica altri ({postEmbeds.length - visibleCount} rimanenti)
+                  Carica altri ({filteredPosts.length - visibleCount} rimanenti)
                 </button>
               </div>
             )}

@@ -14,6 +14,7 @@ interface Account {
   handle: string;
   url: string;
   date?: string | null;
+  caption?: string | null;
 }
 
 interface Canale {
@@ -32,6 +33,7 @@ interface Post {
   platform: string;
   canaleName: string;
   date: string | null;
+  caption: string | null;
 }
 
 function isPostUrl(url: string): boolean {
@@ -238,6 +240,25 @@ function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
           {post.url}
         </a>
       )}
+
+      {post.caption && (
+        <p
+          style={{
+            margin: 0,
+            padding: "10px 14px",
+            fontSize: 12,
+            lineHeight: 1.4,
+            color: "#475569",
+            borderTop: "1px solid #f1f1f1",
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
+          {post.caption}
+        </p>
+      )}
     </div>
   );
 }
@@ -365,12 +386,12 @@ function TrendzFeed() {
           platform: account.platform || getPlatform(account.url),
           canaleName: name,
           date: account.date ?? null,
+          caption: account.caption ?? null,
         });
       }
     }
   }
 
-  // Ordina per data — post senza data vanno in fondo
   const sorted = [...allPosts].sort((a, b) => {
     const da = a.date ? new Date(a.date).getTime() : 0;
     const db = b.date ? new Date(b.date).getTime() : 0;
@@ -379,10 +400,12 @@ function TrendzFeed() {
 
   const filtered = sorted.filter((p) => {
     const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
+    const q = search.toLowerCase();
     const matchSearch =
       !search ||
-      p.handle?.toLowerCase().includes(search.toLowerCase()) ||
-      p.canaleName?.toLowerCase().includes(search.toLowerCase());
+      p.handle?.toLowerCase().includes(q) ||
+      p.canaleName?.toLowerCase().includes(q) ||
+      p.caption?.toLowerCase().includes(q);
     return matchPlatform && matchSearch;
   });
 
@@ -392,7 +415,6 @@ function TrendzFeed() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui, -apple-system, sans-serif" }}>
-      {/* Header sticky */}
       <div
         style={{
           background: "#fff",
@@ -418,7 +440,7 @@ function TrendzFeed() {
           </div>
 
           <input
-            placeholder="Cerca canale o account…"
+            placeholder="Cerca canale, account o nella caption…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             style={{
@@ -427,9 +449,8 @@ function TrendzFeed() {
               border: "1px solid #e2e8f0",
               fontSize: 13,
               outline: "none",
-              width: 200,
+              width: 240,
               background: "#f8fafc",
-              color: "#000",
             }}
           />
 
@@ -468,7 +489,6 @@ function TrendzFeed() {
         </div>
       </div>
 
-      {/* Grid */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 20px" }}>
         {filtered.length === 0 ? (
           <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>Nessun post trovato.</div>

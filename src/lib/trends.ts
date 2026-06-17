@@ -10,7 +10,13 @@ export type TrendItem = {
   canali: string | null;
 };
 
-export type AccountRef = { platform: string; handle: string; url: string; date?: string | null };
+export type AccountRef = {
+  platform: string;
+  handle: string;
+  url: string;
+  date?: string | null;
+  caption?: string | null;
+};
 export type CanaleInspo = {
   id: string;
   name: string;
