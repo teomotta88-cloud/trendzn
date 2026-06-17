@@ -33,10 +33,19 @@ function normalizeUrl(url: string): string {
   try {
     const u = new URL(url);
     [
-      "igsh", "igshid",
-      "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term",
-      "fbclid", "is_from_webapp", "sender_device",
-      "trk", "trackingId", "rcm",
+      "igsh",
+      "igshid",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term",
+      "fbclid",
+      "is_from_webapp",
+      "sender_device",
+      "trk",
+      "trackingId",
+      "rcm",
     ].forEach((p) => u.searchParams.delete(p));
     u.pathname = u.pathname.replace(/\/$/, "") || "/";
     return u.toString();
@@ -71,16 +80,13 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
   if (!token) return "no_token";
 
   try {
-    const res = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`,
-      {
-        headers: {
-          Authorization: `token ${token}`,
-          Accept: "application/vnd.github.v3+json",
-          "User-Agent": "trendzn-bot",
-        },
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: "application/vnd.github.v3+json",
+        "User-Agent": "trendzn-bot",
       },
-    );
+    });
     if (!res.ok) return `read_failed_${res.status}`;
 
     const file = await res.json();
@@ -123,22 +129,19 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       accounts: [{ platform, handle, url: normalizedUrl }],
     });
 
-    const writeRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`,
-      {
-        method: "PUT",
-        headers: {
-          Authorization: `token ${token}`,
-          "Content-Type": "application/json",
-          "User-Agent": "trendzn-bot",
-        },
-        body: JSON.stringify({
-          message: `chore: aggiungi canale ${handle} [trendzn-manual]`,
-          content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
-          sha: file.sha,
-        }),
+    const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+      method: "PUT",
+      headers: {
+        Authorization: `token ${token}`,
+        "Content-Type": "application/json",
+        "User-Agent": "trendzn-bot",
       },
-    );
+      body: JSON.stringify({
+        message: `chore: aggiungi canale ${handle} [trendzn-manual]`,
+        content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
+        sha: file.sha,
+      }),
+    });
 
     if (writeRes.ok) return "ok";
     const err = await writeRes.text();
@@ -188,8 +191,7 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
             return Response.json({ ok: false, error: "Questo URL è già presente" }, { status: 409 });
           }
 
-          const derivedTitle =
-            section === "canali-inspo" ? title || extractHandleFromUrl(cleanUrl) : title;
+          const derivedTitle = section === "canali-inspo" ? title || extractHandleFromUrl(cleanUrl) : title;
 
           const { data: inserted, error } = await supabaseAdmin
             .from("trend_submissions")
@@ -218,10 +220,7 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
 
           return Response.json({ ok: true, id: inserted?.id, syncResult });
         } catch (err) {
-          return Response.json(
-            { ok: false, error: String(err).slice(0, 200) },
-            { status: 500 },
-          );
+          return Response.json({ ok: false, error: String(err).slice(0, 200) }, { status: 500 });
         }
       },
     },

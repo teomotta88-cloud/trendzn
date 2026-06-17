@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { TrendGrid } from "@/components/TrendGrid";
+import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import type { TrendItem } from "@/lib/trends";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -41,7 +42,7 @@ function InfluencerPage() {
   const [rows, setRows] = useState<DbRow[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  const fetchRows = useCallback(() => {
     supabase
       .from("trend_submissions")
       .select("id, url, title, industry, category")
@@ -54,16 +55,23 @@ function InfluencerPage() {
       });
   }, []);
 
+  useEffect(() => {
+    fetchRows();
+  }, [fetchRows]);
+
   const items = rows.map(rowToTrendItem);
   const dbIds = Object.fromEntries(rows.map((r) => [r.url, r.id]));
 
   return (
     <div className="space-y-8">
-      <header className="space-y-2">
-        <h1 className="font-display text-3xl font-bold sm:text-4xl">Influencer</h1>
-        <p className="max-w-2xl text-sm text-muted-foreground">
-          Post influencer segnalati via mail dal team. Il filtro "Industry" qui corrisponde al nome dell'influencer.
-        </p>
+      <header className="flex flex-wrap items-start justify-between gap-4">
+        <div className="space-y-2">
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Influencer</h1>
+          <p className="max-w-2xl text-sm text-muted-foreground">
+            Post influencer segnalati via mail dal team. Il filtro "Industry" qui corrisponde al nome dell'influencer.
+          </p>
+        </div>
+        <ManualSubmitDialog section="influencer" onSuccess={fetchRows} />
       </header>
 
       {loading ? (

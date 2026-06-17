@@ -1,13 +1,7 @@
 import { useState } from "react";
 import { Plus, X } from "lucide-react";
 
-type Section =
-  | "trend-real-time"
-  | "trend-attuali"
-  | "trend-evergreen"
-  | "canali-inspo"
-  | "linkedin"
-  | "influencer";
+type Section = "trend-real-time" | "trend-attuali" | "trend-evergreen" | "canali-inspo" | "linkedin" | "influencer";
 
 type FieldConfig = {
   key: "industry" | "title";
@@ -19,18 +13,10 @@ type FieldConfig = {
 // Stessa mappatura semantica usata in poll-gmail.ts per ogni sezione:
 // [tag1]=categoria (fissa), [tag2]=industry, [tag3]=title/descrizione
 const SECTION_FIELDS: Record<Section, FieldConfig[]> = {
-  "trend-real-time": [
-    { key: "industry", label: "Industry", placeholder: "es. Travel", required: false },
-  ],
-  "trend-attuali": [
-    { key: "industry", label: "Industry", placeholder: "es. Beauty", required: false },
-  ],
-  "trend-evergreen": [
-    { key: "industry", label: "Industry", placeholder: "es. Multi brand", required: false },
-  ],
-  "canali-inspo": [
-    { key: "title", label: "Nome canale", placeholder: "es. Format interviste", required: false },
-  ],
+  "trend-real-time": [{ key: "industry", label: "Industry", placeholder: "es. Travel", required: false }],
+  "trend-attuali": [{ key: "industry", label: "Industry", placeholder: "es. Beauty", required: false }],
+  "trend-evergreen": [{ key: "industry", label: "Industry", placeholder: "es. Multi brand", required: false }],
+  "canali-inspo": [{ key: "title", label: "Nome canale", placeholder: "es. Format interviste", required: false }],
   linkedin: [
     { key: "industry", label: "Catalogazione", placeholder: "es. Digital Agency", required: false },
     { key: "title", label: "Descrizione", placeholder: "es. Award", required: false },
@@ -43,13 +29,7 @@ const SECTION_FIELDS: Record<Section, FieldConfig[]> = {
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export function ManualSubmitDialog({
-  section,
-  onSuccess,
-}: {
-  section: Section;
-  onSuccess?: () => void;
-}) {
+export function ManualSubmitDialog({ section, onSuccess }: { section: Section; onSuccess?: () => void }) {
   const [open, setOpen] = useState(false);
   const [url, setUrl] = useState("");
   const [industry, setIndustry] = useState("");
@@ -119,10 +99,7 @@ export function ManualSubmitDialog({
       </button>
 
       {open && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-          onClick={close}
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" onClick={close}>
           <div
             className="w-full max-w-md rounded-2xl border border-border bg-card p-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
@@ -139,9 +116,7 @@ export function ManualSubmitDialog({
 
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label className="mb-1 block text-xs font-medium text-muted-foreground">
-                  URL post / profilo *
-                </label>
+                <label className="mb-1 block text-xs font-medium text-muted-foreground">URL post / profilo *</label>
                 <input
                   type="url"
                   required
@@ -162,9 +137,7 @@ export function ManualSubmitDialog({
                     type="text"
                     required={f.required}
                     value={f.key === "industry" ? industry : title}
-                    onChange={(e) =>
-                      f.key === "industry" ? setIndustry(e.target.value) : setTitle(e.target.value)
-                    }
+                    onChange={(e) => (f.key === "industry" ? setIndustry(e.target.value) : setTitle(e.target.value))}
                     placeholder={f.placeholder}
                     className="w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
                   />
@@ -172,9 +145,7 @@ export function ManualSubmitDialog({
               ))}
 
               {errorMsg && <p className="text-xs text-destructive">{errorMsg}</p>}
-              {status === "success" && (
-                <p className="text-xs text-green-600">✓ Aggiunto correttamente</p>
-              )}
+              {status === "success" && <p className="text-xs text-green-600">✓ Aggiunto correttamente</p>}
 
               <button
                 type="submit"

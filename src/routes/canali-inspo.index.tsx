@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState, useEffect, useCallback } from "react";
 import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
+import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -65,21 +66,20 @@ function Feed() {
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
 
-  // Leggi trends.json da GitHub a runtime
-  useEffect(() => {
-    fetch(TRENDS_JSON_URL)
+  // Legge trends.json da GitHub a runtime
+  const fetchJson = useCallback(() => {
+    return fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
       .then((res) => {
         const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
         setJsonCanali(decoded.canali_inspo || []);
       })
-      .catch((e) => console.error("Errore caricamento trends.json:", e))
-      .finally(() => setLoading(false));
+      .catch((e) => console.error("Errore caricamento trends.json:", e));
   }, []);
 
-  // Leggi canali da Supabase
-  useEffect(() => {
-    supabase
+  // Legge canali da Supabase
+  const fetchDb = useCallback(() => {
+    return supabase
       .from("trend_submissions")
       .select("id, url, title, industry, category")
       .eq("section", "canali-inspo")
@@ -89,6 +89,18 @@ function Feed() {
         if (data) setDbRows(data as DbRow[]);
       });
   }, []);
+
+  useEffect(() => {
+    Promise.all([fetchJson(), fetchDb()]).finally(() => setLoading(false));
+  }, [fetchJson, fetchDb]);
+
+  // Dopo un inserimento manuale, il canale finisce su Supabase E (se non è duplicato)
+  // viene subito sincronizzato su GitHub: ricarichiamo entrambe le fonti.
+  const handleManualSuccess = useCallback(() => {
+    fetchDb();
+    // Piccolo delay per dare tempo al commit GitHub di propagarsi prima del refetch
+    setTimeout(fetchJson, 1500);
+  }, [fetchDb, fetchJson]);
 
   // Mappa handle → id Supabase
   const handleToDbId = useMemo(() => {
@@ -100,7 +112,7 @@ function Feed() {
     return map;
   }, [dbRows]);
 
-  // Elimina canale da Supabase (inseriti via mail)
+  // Elimina canale da Supabase (inseriti via mail o manualmente)
   const handleDeleteSupabase = useCallback(async (dbId: string) => {
     if (!window.confirm("Eliminare questo canale?")) return;
     setDeleting(dbId);
@@ -180,11 +192,14 @@ function Feed() {
 
   return (
     <div className="space-y-8">
-      <header className="space-y-2">
-        <h1 className="font-display text-3xl font-bold sm:text-4xl">Canali Inspo</h1>
-        <p className="max-w-2xl text-sm text-muted-foreground">
-          Account e siti da tenere d'occhio per trend, format, meme e real time marketing.
-        </p>
+      <header className="flex flex-wrap items-start justify-between gap-4">
+        <div className="space-y-2">
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Canali Inspo</h1>
+          <p className="max-w-2xl text-sm text-muted-foreground">
+            Account e siti da tenere d'occhio per trend, format, meme e real time marketing.
+          </p>
+        </div>
+        <ManualSubmitDialog section="canali-inspo" onSuccess={handleManualSuccess} />
       </header>
 
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
@@ -226,21 +241,17 @@ function Feed() {
           const isDb = dbIds.has(c.id);
           const isJsonCanale = jsonCanali.some((j) => j.id === c.id);
 
-          // Cerca il Supabase ID anche per i canali JSON (inseriti via mail e poi syncati)
           const dbIdForCanale = isDb
             ? c.id
             : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ?? null);
 
-          // Può essere eliminato da Supabase
           const canDeleteSupabase = !!dbIdForCanale;
-          // Può essere eliminato da JSON (canali statici senza record Supabase)
           const canDeleteJson = isJsonCanale && !canDeleteSupabase;
 
           const deletingThis = deleting === dbIdForCanale || deleting === c.id;
 
           return (
             <div key={c.id} className="group relative">
-              {/* Cestino Supabase */}
               {canDeleteSupabase && (
                 <button
                   onClick={() => handleDeleteSupabase(dbIdForCanale!)}
@@ -251,7 +262,6 @@ function Feed() {
                   <Trash2 className="size-3.5" />
                 </button>
               )}
-              {/* Cestino JSON (canali statici) */}
               {canDeleteJson && (
                 <button
                   onClick={() => handleDeleteJson(c.id)}
