@@ -24,10 +24,11 @@ export const trendAttuali = data.trend_attuali as TrendItem[];
 export const trendEvergreen = data.trend_evergreen as TrendItem[];
 export const canaliInspo = data.canali_inspo as CanaleInspo[];
 
-export function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web" {
+export function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "linkedin" | "web" {
   if (/instagram\.com/.test(url)) return "instagram";
   if (/tiktok\.com/.test(url)) return "tiktok";
   if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
+  if (/linkedin\.com/.test(url)) return "linkedin";
   return "web";
 }
 
@@ -40,5 +41,6 @@ export function embedUrl(url: string): string | null {
   if (ttp) return `https://www.tiktok.com/embed/v2/${ttp[1]}`;
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?]+)/);
   if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
+  // LinkedIn non ha embed pubblico — gestito separatamente con anteprima Open Graph
   return null;
 }
