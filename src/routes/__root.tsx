@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Trend Watcher analyzes Excel files to display YouTube videos from specified URLs, with filtering options.",
       },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "TrendDeck" },
+      { property: "og:title", content: "TRENDZN" },
       {
         property: "og:description",
         content:
@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "TrendDeck" },
+      { name: "twitter:title", content: "TRENDZN" },
       {
         name: "twitter:description",
         content:
@@ -161,7 +161,7 @@ function Navbar() {
           <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">
             T
           </span>
-          <span className="font-display text-base font-semibold tracking-tight">TrendDeck</span>
+          <span className="font-display text-base font-semibold tracking-tight">TRENDZN</span>
         </Link>
 
         {/* Desktop nav */}
