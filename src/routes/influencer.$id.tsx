@@ -6,16 +6,12 @@ import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
 export const Route = createFileRoute("/influencer/$id")({
   head: () => ({
-    meta: [
-      { title: "Influencer — Trendzn" },
-      { name: "description", content: "Profilo influencer monitorato." },
-    ],
+    meta: [{ title: "Influencer — Trendzn" }, { name: "description", content: "Profilo influencer monitorato." }],
   }),
   component: Page,
 });
 
-const TRENDS_JSON_URL =
-  "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
 
 const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
 
@@ -57,9 +53,7 @@ function Page() {
       .then((r) => r.json())
       .then((res) => {
         const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
-        const found = (decoded.influencer_profiles as InfluencerProfile[] | undefined)?.find(
-          (c) => c.id === id,
-        );
+        const found = (decoded.influencer_profiles as InfluencerProfile[] | undefined)?.find((c) => c.id === id);
         if (!found) {
           setError("Profilo non trovato");
         } else {
@@ -83,9 +77,7 @@ function Page() {
   const filteredPosts = useMemo(() => {
     if (!search) return allPosts;
     const q = search.toLowerCase();
-    return allPosts.filter(
-      (a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q),
-    );
+    return allPosts.filter((a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q));
   }, [allPosts, search]);
 
   useEffect(() => {
@@ -112,7 +104,11 @@ function Page() {
     );
   }
 
-  const initial = profile.name.replace(/[^a-zA-Z0-9]/g, "").charAt(0).toUpperCase() || "•";
+  const initial =
+    profile.name
+      .replace(/[^a-zA-Z0-9]/g, "")
+      .charAt(0)
+      .toUpperCase() || "•";
   const visiblePosts = filteredPosts.slice(0, visibleCount);
   const hasMore = visibleCount < filteredPosts.length;
 
@@ -247,3 +243,4 @@ function Page() {
     </div>
   );
 }
+//file finito, prova di redeploy
