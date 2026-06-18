@@ -49,14 +49,14 @@ function Index() {
     {
       to: "/influencer",
       label: "Influencer",
-      count: canaliInspo.length,
+      count: influencer.length,
       icon: Sparkles,
       blurb: "Influencer monitorati",
     },
     {
       to: "/linkedin",
       label: "Linkedin",
-      count: canaliInspo.length,
+      count: linkedin.length,
       icon: Sparkles,
       blurb: "Ispirazioni dal mondo del marketing",
     },
