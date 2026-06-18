@@ -91,7 +91,7 @@ function Index() {
             <div className="mt-5 flex items-baseline justify-between">
               <h2 className="font-display text-xl font-semibold">{c.label}</h2>
               <span className="font-display text-2xl font-bold text-muted-foreground group-hover:text-primary">
-                {"count" in c ? c.count : null}
+                {"count" in c ? (c.count as number) : null}
               </span>
             </div>
             <p className="mt-2 text-sm text-muted-foreground">{c.blurb}</p>
