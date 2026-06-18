@@ -46,6 +46,20 @@ function Index() {
       icon: Sparkles,
       blurb: "Account e siti da tenere d'occhio per format, meme e RTM.",
     },
+    {
+      to: "/influencer",
+      label: "Influencer",
+      count: canaliInspo.length,
+      icon: Sparkles,
+      blurb: "Influencer monitorati",
+    },
+    {
+      to: "/linkedin",
+      label: "Linkedin",
+      count: canaliInspo.length,
+      icon: Sparkles,
+      blurb: "Ispirazioni dal mondo del marketing",
+    },
   ] as const;
 
   return (
