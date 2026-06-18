@@ -146,6 +146,7 @@ const NAV_ITEMS = [
   { to: "/canali-inspo", label: "Canali Inspo" },
   { to: "/linkedin", label: "LinkedIn" },
   { to: "/influencer", label: "Influencer" },
+  { to: "/influencer-feed", label: "Influencer Feed" },
   { to: "/feed", label: "Feed" },
 ];
 

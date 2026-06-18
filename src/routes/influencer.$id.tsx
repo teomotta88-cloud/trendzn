@@ -25,6 +25,8 @@ type InfluencerProfile = {
   accounts: AccountRef[];
 };
 
+type DatePreset = "tutto" | "7g" | "30g" | "90g" | "custom";
+
 function formatDate(dateStr: string | null | undefined): string {
   if (!dateStr) return "";
   try {
@@ -38,6 +40,70 @@ function formatDate(dateStr: string | null | undefined): string {
   }
 }
 
+function FilterPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium transition ${
+        active
+          ? "bg-foreground text-background"
+          : "border border-border bg-background/50 text-muted-foreground hover:border-primary"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
+function DateRangeFilter({
+  preset,
+  setPreset,
+  customFrom,
+  setCustomFrom,
+  customTo,
+  setCustomTo,
+}: {
+  preset: DatePreset;
+  setPreset: (p: DatePreset) => void;
+  customFrom: string;
+  setCustomFrom: (v: string) => void;
+  customTo: string;
+  setCustomTo: (v: string) => void;
+}) {
+  const presets: { key: DatePreset; label: string }[] = [
+    { key: "tutto", label: "Tutto" },
+    { key: "7g", label: "Ultima settimana" },
+    { key: "30g", label: "Ultimo mese" },
+    { key: "90g", label: "Ultimi 3 mesi" },
+  ];
+
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      {presets.map((p) => (
+        <FilterPill key={p.key} label={p.label} active={preset === p.key} onClick={() => setPreset(p.key)} />
+      ))}
+      <FilterPill label="Personalizzato" active={preset === "custom"} onClick={() => setPreset("custom")} />
+      {preset === "custom" && (
+        <div className="flex items-center gap-1.5">
+          <input
+            type="date"
+            value={customFrom}
+            onChange={(e) => setCustomFrom(e.target.value)}
+            className="rounded-lg border border-border bg-background/60 px-2 py-1 text-xs text-foreground outline-none focus:border-primary"
+          />
+          <span className="text-xs text-muted-foreground">→</span>
+          <input
+            type="date"
+            value={customTo}
+            onChange={(e) => setCustomTo(e.target.value)}
+            className="rounded-lg border border-border bg-background/60 px-2 py-1 text-xs text-foreground outline-none focus:border-primary"
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
 const PAGE_SIZE = 9;
 
 function Page() {
@@ -47,6 +113,10 @@ function Page() {
   const [error, setError] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [search, setSearch] = useState("");
+
+  const [datePreset, setDatePreset] = useState<DatePreset>("tutto");
+  const [customFrom, setCustomFrom] = useState("");
+  const [customTo, setCustomTo] = useState("");
 
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
@@ -74,15 +144,45 @@ function Page() {
     });
   }, [profile]);
 
+  const dateRange = useMemo(() => {
+    const now = new Date();
+    if (datePreset === "tutto") return null;
+    if (datePreset === "custom") {
+      const from = customFrom ? new Date(customFrom) : null;
+      const to = customTo ? new Date(customTo + "T23:59:59") : null;
+      if (!from && !to) return null;
+      return { from, to };
+    }
+    const days = datePreset === "7g" ? 7 : datePreset === "30g" ? 30 : 90;
+    const from = new Date(now);
+    from.setDate(from.getDate() - days);
+    return { from, to: now };
+  }, [datePreset, customFrom, customTo]);
+
   const filteredPosts = useMemo(() => {
-    if (!search) return allPosts;
-    const q = search.toLowerCase();
-    return allPosts.filter((a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q));
-  }, [allPosts, search]);
+    let result = allPosts;
+
+    if (search) {
+      const q = search.toLowerCase();
+      result = result.filter((a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q));
+    }
+
+    if (dateRange) {
+      result = result.filter((a) => {
+        if (!a.date) return false;
+        const d = new Date(a.date);
+        if (dateRange.from && d < dateRange.from) return false;
+        if (dateRange.to && d > dateRange.to) return false;
+        return true;
+      });
+    }
+
+    return result;
+  }, [allPosts, search, dateRange]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [search]);
+  }, [search, datePreset, customFrom, customTo]);
 
   const profileLinks = useMemo(
     () => (profile ? profile.accounts.filter((a) => !POST_URL_RE.test(a.url)) : []),
@@ -173,6 +273,17 @@ function Page() {
           )}
         </div>
 
+        {allPosts.length > 0 && (
+          <DateRangeFilter
+            preset={datePreset}
+            setPreset={setDatePreset}
+            customFrom={customFrom}
+            setCustomFrom={setCustomFrom}
+            customTo={customTo}
+            setCustomTo={setCustomTo}
+          />
+        )}
+
         {allPosts.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center">
             <p className="text-sm text-muted-foreground">
@@ -197,7 +308,7 @@ function Page() {
           </div>
         ) : filteredPosts.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center text-sm text-muted-foreground">
-            Nessun post corrisponde alla ricerca.
+            Nessun post corrisponde ai filtri selezionati.
           </div>
         ) : (
           <>
@@ -243,4 +354,3 @@ function Page() {
     </div>
   );
 }
-//file finito, prova di redeploy
