@@ -20,6 +20,7 @@ import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
+import { Route as ApiPublicHooksTiktokTagSyncRouteImport } from './routes/api/public/hooks/tiktok-tag-sync'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
@@ -80,6 +81,12 @@ const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
   path: '/canali-inspo/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicHooksTiktokTagSyncRoute =
+  ApiPublicHooksTiktokTagSyncRouteImport.update({
+    id: '/api/public/hooks/tiktok-tag-sync',
+    path: '/api/public/hooks/tiktok-tag-sync',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksSubmitManualRoute =
   ApiPublicHooksSubmitManualRouteImport.update({
     id: '/api/public/hooks/submit-manual',
@@ -120,6 +127,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/tiktok-tag-sync': typeof ApiPublicHooksTiktokTagSyncRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -137,6 +145,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/tiktok-tag-sync': typeof ApiPublicHooksTiktokTagSyncRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -155,6 +164,7 @@ export interface FileRoutesById {
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/tiktok-tag-sync': typeof ApiPublicHooksTiktokTagSyncRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/tiktok-tag-sync'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -191,6 +202,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/tiktok-tag-sync'
   id:
     | '__root__'
     | '/'
@@ -208,6 +220,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/tiktok-tag-sync'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -226,6 +239,7 @@ export interface RootRouteChildren {
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
+  ApiPublicHooksTiktokTagSyncRoute: typeof ApiPublicHooksTiktokTagSyncRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -307,6 +321,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CanaliInspoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/tiktok-tag-sync': {
+      id: '/api/public/hooks/tiktok-tag-sync'
+      path: '/api/public/hooks/tiktok-tag-sync'
+      fullPath: '/api/public/hooks/tiktok-tag-sync'
+      preLoaderRoute: typeof ApiPublicHooksTiktokTagSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/submit-manual': {
       id: '/api/public/hooks/submit-manual'
       path: '/api/public/hooks/submit-manual'
@@ -354,7 +375,18 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
+  ApiPublicHooksTiktokTagSyncRoute: ApiPublicHooksTiktokTagSyncRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
