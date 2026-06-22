@@ -195,7 +195,7 @@ export function NewPostCard({
 
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Visual</span>
-          <label className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
+          <label className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
             Aggiungi file
             <input
               type="file"
