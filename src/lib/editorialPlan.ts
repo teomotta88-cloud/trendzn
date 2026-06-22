@@ -2,6 +2,18 @@ import { supabase } from "@/integrations/supabase/client";
 
 export type ReviewComponent = "copy" | "copy_visual" | "visual";
 
+export const CHANNELS = [
+  { code: "IG", label: "Instagram" },
+  { code: "IGS", label: "Instagram Stories" },
+  { code: "FB", label: "Facebook" },
+  { code: "TT", label: "TikTok" },
+  { code: "LK", label: "LinkedIn" },
+  { code: "X", label: "X" },
+  { code: "YT", label: "YouTube" },
+] as const;
+
+export type ChannelCode = (typeof CHANNELS)[number]["code"];
+
 export interface EditorialPlan {
   id: string;
   year: number;
@@ -15,9 +27,9 @@ export interface EditorialPost {
   post_date: string; // YYYY-MM-DD
   rubrica: string | null;
   topic: string | null;
-  canale: string | null;
+  canali: string[];
   formato: string | null;
-  copy: string | null;
+  channel_copies: Record<string, string>;
   copy_visual: string | null;
   visual_url: string | null;
   visual_type: string | null;
@@ -93,13 +105,23 @@ export async function createPost(input: Omit<EditorialPost, "id" | "created_at">
   return data;
 }
 
-export async function updatePostText(
-  id: string,
-  field: "copy" | "copy_visual",
-  value: string | null,
-): Promise<void> {
+export async function updatePostText(id: string, field: "copy_visual", value: string | null): Promise<void> {
   const { error } = await db.from("editorial_posts").update({ [field]: value }).eq("id", id);
   if (error) throw error;
+}
+
+export async function updateChannelCopy(
+  id: string,
+  channel: string,
+  value: string | null,
+  channelCopies: Record<string, string>,
+): Promise<Record<string, string>> {
+  const next = { ...channelCopies };
+  if (value) next[channel] = value;
+  else delete next[channel];
+  const { error } = await db.from("editorial_posts").update({ channel_copies: next }).eq("id", id);
+  if (error) throw error;
+  return next;
 }
 
 export async function deletePost(id: string): Promise<void> {

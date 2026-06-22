@@ -191,7 +191,7 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
               </div>
               <div className="scrollbar-thin min-w-0 flex-1 overflow-y-auto p-3 text-sm">
                 <p className="whitespace-pre-line break-words">
-                  <span className="font-semibold">{PROFILE.handle}</span> {selectedPost.copy || ""}
+                  <span className="font-semibold">{PROFILE.handle}</span> {selectedPost.channel_copies?.IG || ""}
                 </p>
               </div>
               <div className="shrink-0 border-t border-border p-3">

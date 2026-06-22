@@ -87,8 +87,8 @@ export function PostReviewBlock({
 
       <div
         ref={contentRef}
-        className="min-h-0 text-xs text-foreground/90"
-        style={maxContentHeight ? { height: maxContentHeight, overflow: "hidden" } : undefined}
+        className={`min-h-0 text-xs text-foreground/90 ${maxContentHeight ? "scrollbar-thin overflow-y-auto" : ""}`}
+        style={maxContentHeight ? { height: maxContentHeight } : undefined}
       >
         {children}
       </div>

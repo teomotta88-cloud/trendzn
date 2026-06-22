@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import { createPost, addMedia } from "@/lib/editorialPlan";
+import { createPost, addMedia, CHANNELS } from "@/lib/editorialPlan";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary";
@@ -31,9 +31,9 @@ export function NewPostCard({
   const [date, setDate] = useState(defaultDate);
   const [rubrica, setRubrica] = useState("");
   const [topic, setTopic] = useState("");
-  const [canale, setCanale] = useState("");
+  const [canali, setCanali] = useState<string[]>([]);
   const [formato, setFormato] = useState("");
-  const [copy, setCopy] = useState("");
+  const [channelCopies, setChannelCopies] = useState<Record<string, string>>({});
   const [copyVisual, setCopyVisual] = useState("");
   const [disclaimer, setDisclaimer] = useState("");
   const [obiettivo, setObiettivo] = useState("");
@@ -46,14 +46,19 @@ export function NewPostCard({
     setSubmitting(true);
     setError(null);
     try {
+      const filteredCopies: Record<string, string> = {};
+      for (const code of canali) {
+        const value = channelCopies[code]?.trim();
+        if (value) filteredCopies[code] = value;
+      }
       const post = await createPost({
         plan_id: planId,
         post_date: date,
         rubrica: rubrica.trim() || null,
         topic: topic.trim() || null,
-        canale: canale.trim() || null,
+        canali,
         formato: formato.trim() || null,
-        copy: copy.trim() || null,
+        channel_copies: filteredCopies,
         copy_visual: copyVisual.trim() || null,
         visual_url: null,
         visual_type: null,
@@ -82,9 +87,6 @@ export function NewPostCard({
           <Field label="Rubrica">
             <input value={rubrica} onChange={(e) => setRubrica(e.target.value)} className={inputCls} placeholder="es. Edutainment" />
           </Field>
-          <Field label="Canale">
-            <input value={canale} onChange={(e) => setCanale(e.target.value)} className={inputCls} placeholder="es. IG + FB" />
-          </Field>
           <Field label="Formato">
             <input value={formato} onChange={(e) => setFormato(e.target.value)} className={inputCls} placeholder="es. Carousel" />
           </Field>
@@ -104,15 +106,51 @@ export function NewPostCard({
         <input value={topic} onChange={(e) => setTopic(e.target.value)} className={inputCls} placeholder="es. HydraFit Zero" />
       </Field>
 
+      <Field label="Canali">
+        <div className="flex flex-wrap gap-1.5">
+          {CHANNELS.map((c) => {
+            const active = canali.includes(c.code);
+            return (
+              <button
+                key={c.code}
+                type="button"
+                onClick={() =>
+                  setCanali((prev) => (active ? prev.filter((x) => x !== c.code) : [...prev, c.code]))
+                }
+                className={`rounded-full border px-2.5 py-1 text-[11px] font-medium transition ${
+                  active
+                    ? "border-primary bg-primary/15 text-primary"
+                    : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+                }`}
+                title={c.label}
+              >
+                {c.code}
+              </button>
+            );
+          })}
+        </div>
+      </Field>
+
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Copy</span>
-          <textarea
-            value={copy}
-            onChange={(e) => setCopy(e.target.value)}
-            className={`${inputCls} scrollbar-thin max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
-            placeholder="Testo del post…"
-          />
+          {canali.length === 0 ? (
+            <p className="text-[11px] text-muted-foreground">Seleziona almeno un canale per inserire il copy.</p>
+          ) : (
+            canali.map((code) => (
+              <div key={code} className="space-y-1">
+                <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
+                <textarea
+                  value={channelCopies[code] ?? ""}
+                  onChange={(e) =>
+                    setChannelCopies((prev) => ({ ...prev, [code]: e.target.value }))
+                  }
+                  className={`${inputCls} scrollbar-thin max-h-40 min-h-16 overflow-y-auto text-[11px] leading-snug`}
+                  placeholder={`Testo del post per ${code}…`}
+                />
+              </div>
+            ))
+          )}
         </div>
 
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
