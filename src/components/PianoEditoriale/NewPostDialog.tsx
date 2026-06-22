@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Plus, X } from "lucide-react";
-import { createPost, uploadVisual } from "@/lib/editorialPlan";
+import { createPost, addMedia } from "@/lib/editorialPlan";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary";
@@ -37,7 +37,7 @@ export function NewPostDialog({
   const [disclaimer, setDisclaimer] = useState("");
   const [obiettivo, setObiettivo] = useState("");
   const [budget, setBudget] = useState("");
-  const [file, setFile] = useState<File | null>(null);
+  const [files, setFiles] = useState<File[]>([]);
 
   function reset() {
     setDate(defaultDate);
@@ -50,7 +50,7 @@ export function NewPostDialog({
     setDisclaimer("");
     setObiettivo("");
     setBudget("");
-    setFile(null);
+    setFiles([]);
     setError(null);
   }
 
@@ -65,14 +65,7 @@ export function NewPostDialog({
     setSubmitting(true);
     setError(null);
     try {
-      let visual_url: string | null = null;
-      let visual_type: string | null = null;
-      if (file) {
-        const uploaded = await uploadVisual(file);
-        visual_url = uploaded.url;
-        visual_type = uploaded.type;
-      }
-      await createPost({
+      const post = await createPost({
         plan_id: planId,
         post_date: date,
         rubrica: rubrica.trim() || null,
@@ -81,12 +74,15 @@ export function NewPostDialog({
         formato: formato.trim() || null,
         copy: copy.trim() || null,
         copy_visual: copyVisual.trim() || null,
-        visual_url,
-        visual_type,
+        visual_url: null,
+        visual_type: null,
         disclaimer: disclaimer.trim() || null,
         obiettivo_media: obiettivo.trim() || null,
         budget_media: budget ? Number(budget) : null,
       });
+      for (const file of files) {
+        await addMedia(post.id, file);
+      }
       onCreated();
       close();
     } catch (err) {
@@ -150,8 +146,17 @@ export function NewPostDialog({
                   placeholder="Testo presente nelle card / nel visual…"
                 />
               </Field>
-              <Field label="Visual (jpeg, png, mp4…)">
-                <input type="file" accept="image/*,video/*" onChange={(e) => setFile(e.target.files?.[0] ?? null)} className="w-full text-sm" />
+              <Field label="Visual (jpeg, png, mp4… anche più file)">
+                <input
+                  type="file"
+                  accept="image/*,video/*"
+                  multiple
+                  onChange={(e) => setFiles(e.target.files ? Array.from(e.target.files) : [])}
+                  className="w-full text-sm"
+                />
+                {files.length > 0 && (
+                  <p className="mt-1 text-[11px] text-muted-foreground">{files.length} file selezionati</p>
+                )}
               </Field>
               <div className="grid grid-cols-2 gap-3">
                 <Field label="Obiettivo media">
