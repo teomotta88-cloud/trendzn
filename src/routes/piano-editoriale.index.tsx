@@ -29,6 +29,7 @@ function PianoEditorialePage() {
   const [creating, setCreating] = useState(false);
   const postElsRef = useRef(new Map<string, HTMLDivElement>());
   const getPostEl = useCallback((id: string) => postElsRef.current.get(id) ?? null, []);
+  const postsColumnRef = useRef<HTMLDivElement>(null);
 
   async function load(y: number, m: number) {
     setLoading(true);
@@ -113,7 +114,7 @@ function PianoEditorialePage() {
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
-        <div className="space-y-4">
+        <div ref={postsColumnRef} className="space-y-4">
           {plan && creating && (
             <NewPostCard
               planId={plan.id}
@@ -142,7 +143,7 @@ function PianoEditorialePage() {
               </div>
             ))
           )}
-          <PostNumberRail posts={posts} getPostEl={getPostEl} />
+          <PostNumberRail posts={posts} getPostEl={getPostEl} anchorRef={postsColumnRef} />
         </div>
       ) : (
         <InstagramFeedPreview posts={posts} />
