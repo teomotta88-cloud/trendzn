@@ -110,7 +110,7 @@ export function NewPostCard({
           <textarea
             value={copy}
             onChange={(e) => setCopy(e.target.value)}
-            className={`${inputCls} max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
+            className={`${inputCls} scrollbar-thin max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
             placeholder="Testo del post…"
           />
         </div>
@@ -120,7 +120,7 @@ export function NewPostCard({
           <textarea
             value={copyVisual}
             onChange={(e) => setCopyVisual(e.target.value)}
-            className={`${inputCls} max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
+            className={`${inputCls} scrollbar-thin max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
             placeholder="Testo presente nelle card / nel visual…"
           />
         </div>
