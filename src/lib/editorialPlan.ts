@@ -107,19 +107,24 @@ export async function deletePost(id: string): Promise<void> {
   if (error) throw error;
 }
 
-export async function getApprovalCounts(postId: string): Promise<Record<ReviewComponent, number>> {
+export async function getApprovalStatus(postId: string): Promise<Record<ReviewComponent, boolean>> {
   const { data, error } = await db.from("editorial_post_approvals").select("component").eq("post_id", postId);
   if (error) throw error;
-  const counts: Record<ReviewComponent, number> = { copy: 0, copy_visual: 0, visual: 0 };
+  const status: Record<ReviewComponent, boolean> = { copy: false, copy_visual: false, visual: false };
   (data ?? []).forEach((r: { component: ReviewComponent }) => {
-    counts[r.component] = (counts[r.component] ?? 0) + 1;
+    status[r.component] = true;
   });
-  return counts;
+  return status;
 }
 
-export async function approveComponent(postId: string, component: ReviewComponent): Promise<void> {
-  const { error } = await db.from("editorial_post_approvals").insert({ post_id: postId, component });
-  if (error) throw error;
+export async function toggleApproval(postId: string, component: ReviewComponent, approved: boolean): Promise<void> {
+  if (approved) {
+    const { error } = await db.from("editorial_post_approvals").delete().eq("post_id", postId).eq("component", component);
+    if (error) throw error;
+  } else {
+    const { error } = await db.from("editorial_post_approvals").insert({ post_id: postId, component });
+    if (error) throw error;
+  }
 }
 
 export async function listComments(postId: string): Promise<EditorialPostComment[]> {
