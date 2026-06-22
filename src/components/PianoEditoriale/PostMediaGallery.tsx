@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Plus, Trash2 } from "lucide-react";
-import { type EditorialPostMedia, addMedia, deleteMedia, listMedia, swapMediaPosition } from "@/lib/editorialPlan";
+import {
+  type EditorialPostMedia,
+  addMedia,
+  deleteMedia,
+  listMedia,
+  swapMediaPosition,
+  reorderMedia,
+} from "@/lib/editorialPlan";
 import { MediaLightbox } from "./MediaLightbox";
 
 const MAX_PREVIEWS = 4;
@@ -15,6 +22,8 @@ export function PostMediaGallery({ postId }: { postId: string }) {
   const [uploading, setUploading] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
+  const [dragIndex, setDragIndex] = useState<number | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
 
   async function refresh() {
     setMedia(await listMedia(postId));
@@ -48,6 +57,19 @@ export function PostMediaGallery({ postId }: { postId: string }) {
     await refresh();
   }
 
+  async function handleDrop(targetIdx: number) {
+    const sourceIdx = dragIndex;
+    setDragIndex(null);
+    setDragOverIndex(null);
+    if (sourceIdx === null || sourceIdx === targetIdx) return;
+    const reordered = [...media];
+    const [moved] = reordered.splice(sourceIdx, 1);
+    reordered.splice(targetIdx, 0, moved);
+    setMedia(reordered);
+    await reorderMedia(reordered);
+    await refresh();
+  }
+
   if (loading) return <span className="text-muted-foreground">Carico…</span>;
 
   const hasMore = media.length > MAX_PREVIEWS;
@@ -60,7 +82,27 @@ export function PostMediaGallery({ postId }: { postId: string }) {
       ) : (
         <div className="grid grid-cols-2 gap-2">
           {visible.map((item, idx) => (
-            <div key={item.id} className="group relative aspect-square overflow-hidden rounded-lg border border-border">
+            <div
+              key={item.id}
+              draggable
+              onDragStart={() => setDragIndex(idx)}
+              onDragOver={(e) => {
+                e.preventDefault();
+                if (dragOverIndex !== idx) setDragOverIndex(idx);
+              }}
+              onDragLeave={() => setDragOverIndex((v) => (v === idx ? null : v))}
+              onDrop={(e) => {
+                e.preventDefault();
+                handleDrop(idx);
+              }}
+              onDragEnd={() => {
+                setDragIndex(null);
+                setDragOverIndex(null);
+              }}
+              className={`group relative aspect-square cursor-grab overflow-hidden rounded-lg border transition active:cursor-grabbing ${
+                dragOverIndex === idx ? "border-primary ring-2 ring-primary/40" : "border-border"
+              } ${dragIndex === idx ? "opacity-50" : ""}`}
+            >
               <button type="button" className="size-full" onClick={() => setLightboxIndex(idx)}>
                 {isVideo(item.url, item.type) ? (
                   <video src={item.url} className="size-full object-cover" muted />

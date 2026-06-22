@@ -220,3 +220,15 @@ export async function swapMediaPosition(a: EditorialPostMedia, b: EditorialPostM
   const { error: errB } = await db.from("editorial_post_media").update({ position: a.position }).eq("id", b.id);
   if (errB) throw errB;
 }
+
+export async function reorderMedia(items: EditorialPostMedia[]): Promise<void> {
+  const results = await Promise.all(
+    items.map((item, position) =>
+      item.position === position
+        ? null
+        : db.from("editorial_post_media").update({ position }).eq("id", item.id),
+    ),
+  );
+  const error = results.find((r) => r?.error)?.error;
+  if (error) throw error;
+}
