@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight, Plus, Trash2 } from "lucide-react";
 import { type EditorialPostMedia, addMedia, deleteMedia, listMedia, swapMediaPosition } from "@/lib/editorialPlan";
 import { MediaLightbox } from "./MediaLightbox";
 
+const MAX_PREVIEWS = 4;
+
 function isVideo(url: string, type: string | null) {
   return (!!type && type.startsWith("video")) || /\.(mp4|mov|webm)$/i.test(url);
 }
@@ -12,6 +14,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   async function refresh() {
     setMedia(await listMedia(postId));
@@ -47,13 +50,16 @@ export function PostMediaGallery({ postId }: { postId: string }) {
 
   if (loading) return <span className="text-muted-foreground">Carico…</span>;
 
+  const hasMore = media.length > MAX_PREVIEWS;
+  const visible = showAll ? media : media.slice(0, MAX_PREVIEWS);
+
   return (
     <div className="space-y-2">
       {media.length === 0 ? (
         <span className="text-muted-foreground">Nessun visual caricato</span>
       ) : (
         <div className="grid grid-cols-2 gap-2">
-          {media.map((item, idx) => (
+          {visible.map((item, idx) => (
             <div key={item.id} className="group relative aspect-square overflow-hidden rounded-lg border border-border">
               <button type="button" className="size-full" onClick={() => setLightboxIndex(idx)}>
                 {isVideo(item.url, item.type) ? (
@@ -93,6 +99,16 @@ export function PostMediaGallery({ postId }: { postId: string }) {
             </div>
           ))}
         </div>
+      )}
+
+      {hasMore && (
+        <button
+          type="button"
+          onClick={() => setShowAll((v) => !v)}
+          className="w-full rounded-lg border border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary"
+        >
+          {showAll ? "Mostra meno" : `Vedi di più (+${media.length - MAX_PREVIEWS})`}
+        </button>
       )}
 
       <label className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
