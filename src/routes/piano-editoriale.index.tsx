@@ -1,7 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { MONTH_NAMES, getOrCreatePlan, listPosts, type EditorialPlan, type EditorialPost } from "@/lib/editorialPlan";
+import {
+  MONTH_NAMES,
+  getOrCreatePlan,
+  listPosts,
+  getApprovalStatus,
+  type EditorialPlan,
+  type EditorialPost,
+  type ReviewComponent,
+} from "@/lib/editorialPlan";
 import { PostCard } from "@/components/PianoEditoriale/PostCard";
 import { NewPostCard } from "@/components/PianoEditoriale/NewPostCard";
 import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeedPreview";
@@ -30,13 +38,21 @@ function PianoEditorialePage() {
   const postElsRef = useRef(new Map<string, HTMLDivElement>());
   const getPostEl = useCallback((id: string) => postElsRef.current.get(id) ?? null, []);
   const postsColumnRef = useRef<HTMLDivElement>(null);
+  const [approvalsByPost, setApprovalsByPost] = useState<Record<string, Record<ReviewComponent, boolean>>>({});
 
   async function load(y: number, m: number) {
     setLoading(true);
     const p = await getOrCreatePlan(y, m);
     setPlan(p);
-    setPosts(await listPosts(p.id));
+    const loadedPosts = await listPosts(p.id);
+    setPosts(loadedPosts);
     setLoading(false);
+    loadApprovals(loadedPosts);
+  }
+
+  async function loadApprovals(postList: EditorialPost[]) {
+    const entries = await Promise.all(postList.map((p) => getApprovalStatus(p.id).then((a) => [p.id, a] as const)));
+    setApprovalsByPost(Object.fromEntries(entries));
   }
 
   useEffect(() => {
@@ -139,11 +155,20 @@ function PianoEditorialePage() {
                   else postElsRef.current.delete(p.id);
                 }}
               >
-                <PostCard post={p} onDeleted={() => load(year, month)} />
+                <PostCard
+                  post={p}
+                  onDeleted={() => load(year, month)}
+                  onApprovalChange={() => loadApprovals(posts)}
+                />
               </div>
             ))
           )}
-          <PostNumberRail posts={posts} getPostEl={getPostEl} anchorRef={postsColumnRef} />
+          <PostNumberRail
+            posts={posts}
+            getPostEl={getPostEl}
+            anchorRef={postsColumnRef}
+            approvalsByPost={approvalsByPost}
+          />
         </div>
       ) : (
         <InstagramFeedPreview posts={posts} />
