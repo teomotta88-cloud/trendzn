@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MONTH_NAMES, getOrCreatePlan, listPosts, type EditorialPlan, type EditorialPost } from "@/lib/editorialPlan";
 import { PostCard } from "@/components/PianoEditoriale/PostCard";
 import { NewPostCard } from "@/components/PianoEditoriale/NewPostCard";
 import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeedPreview";
+import { PostNumberRail } from "@/components/PianoEditoriale/PostNumberRail";
 
 export const Route = createFileRoute("/piano-editoriale/")({
   head: () => ({
@@ -26,6 +27,8 @@ function PianoEditorialePage() {
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<"calendario" | "feed">("calendario");
   const [creating, setCreating] = useState(false);
+  const postElsRef = useRef(new Map<string, HTMLDivElement>());
+  const getPostEl = useCallback((id: string) => postElsRef.current.get(id) ?? null, []);
 
   async function load(y: number, m: number) {
     setLoading(true);
@@ -110,25 +113,38 @@ function PianoEditorialePage() {
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
-        <div className="space-y-4">
-          {plan && creating && (
-            <NewPostCard
-              planId={plan.id}
-              defaultDate={defaultDate}
-              onCreated={() => {
-                setCreating(false);
-                load(year, month);
-              }}
-              onCancel={() => setCreating(false)}
-            />
-          )}
-          {posts.length === 0 && !creating ? (
-            <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
-              Nessun post per {MONTH_NAMES[month - 1]} {year}. Aggiungine uno con "Nuovo post".
-            </div>
-          ) : (
-            posts.map((p) => <PostCard key={p.id} post={p} onDeleted={() => load(year, month)} />)
-          )}
+        <div className="flex items-start gap-3">
+          <div className="min-w-0 flex-1 space-y-4">
+            {plan && creating && (
+              <NewPostCard
+                planId={plan.id}
+                defaultDate={defaultDate}
+                onCreated={() => {
+                  setCreating(false);
+                  load(year, month);
+                }}
+                onCancel={() => setCreating(false)}
+              />
+            )}
+            {posts.length === 0 && !creating ? (
+              <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+                Nessun post per {MONTH_NAMES[month - 1]} {year}. Aggiungine uno con "Nuovo post".
+              </div>
+            ) : (
+              posts.map((p) => (
+                <div
+                  key={p.id}
+                  ref={(el) => {
+                    if (el) postElsRef.current.set(p.id, el);
+                    else postElsRef.current.delete(p.id);
+                  }}
+                >
+                  <PostCard post={p} onDeleted={() => load(year, month)} />
+                </div>
+              ))
+            )}
+          </div>
+          <PostNumberRail posts={posts} getPostEl={getPostEl} />
         </div>
       ) : (
         <InstagramFeedPreview posts={posts} />
