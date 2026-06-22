@@ -8,7 +8,7 @@ export function PostNumberRail({
   posts: EditorialPost[];
   getPostEl: (id: string) => HTMLElement | null;
 }) {
-  const numberRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     let frame = requestAnimationFrame(tick);
@@ -18,19 +18,22 @@ export function PostNumberRail({
       const spread = window.innerHeight * 0.55;
       posts.forEach((post, i) => {
         const el = getPostEl(post.id);
-        const numEl = numberRefs.current[i];
-        if (!el || !numEl) return;
+        const boxEl = boxRefs.current[i];
+        if (!el || !boxEl) return;
         const rect = el.getBoundingClientRect();
         const centerY = rect.top + rect.height / 2;
         const dist = Math.abs(centerY - viewportCenter);
         const t = Math.max(0, 1 - dist / spread);
-        const scale = 1 + t * 1.15;
-        const z = t * 50;
-        numEl.style.transform = `translateZ(${z}px) scale(${scale})`;
-        numEl.style.opacity = String(0.35 + t * 0.65);
-        numEl.style.color = t > 0.55 ? "var(--color-primary)" : "var(--color-muted-foreground)";
-        numEl.style.fontWeight = t > 0.55 ? "700" : "500";
-        numEl.style.textShadow = t > 0.55 ? "0 2px 10px color-mix(in oklch, var(--color-primary) 45%, transparent)" : "none";
+        const scale = 1 + t * 0.55;
+        const z = t * 60;
+        boxEl.style.transform = `translateZ(${z}px) scale(${scale})`;
+        boxEl.style.borderColor =
+          t > 0.55 ? "var(--color-primary)" : "color-mix(in oklch, var(--color-border) 100%, transparent)";
+        boxEl.style.backgroundColor = t > 0.55 ? "color-mix(in oklch, var(--color-primary) 18%, transparent)" : "transparent";
+        boxEl.style.color = t > 0.55 ? "var(--color-primary)" : "var(--color-muted-foreground)";
+        boxEl.style.boxShadow =
+          t > 0.55 ? "0 6px 20px color-mix(in oklch, var(--color-primary) 35%, transparent)" : "none";
+        boxEl.style.zIndex = t > 0.55 ? "10" : "1";
       });
       frame = requestAnimationFrame(tick);
     }
@@ -42,19 +45,20 @@ export function PostNumberRail({
 
   return (
     <div
-      className="sticky top-24 hidden h-fit w-10 shrink-0 flex-col items-center gap-4 self-start py-2 sm:flex"
-      style={{ perspective: "700px" }}
+      className="fixed right-4 top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-3 sm:flex"
+      style={{ perspective: "800px" }}
     >
       {posts.map((post, i) => (
-        <span
+        <div
           key={post.id}
           ref={(el) => {
-            numberRefs.current[i] = el;
+            boxRefs.current[i] = el;
           }}
-          className="text-xs tabular-nums text-muted-foreground transition-[color,text-shadow] [transform-style:preserve-3d] will-change-transform"
+          className="flex size-11 items-center justify-center rounded-xl border text-base font-bold tabular-nums transition-[background-color,border-color,box-shadow] [transform-style:preserve-3d] will-change-transform"
+          style={{ borderColor: "var(--color-border)", color: "var(--color-muted-foreground)" }}
         >
           {i + 1}
-        </span>
+        </div>
       ))}
     </div>
   );
