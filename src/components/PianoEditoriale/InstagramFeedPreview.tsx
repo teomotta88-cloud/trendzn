@@ -3,7 +3,7 @@ import { Grid3x3, Bookmark, UserSquare2, Heart, MessageCircle, Send, ChevronLeft
 import { type EditorialPost, type EditorialPostMedia, listMedia } from "@/lib/editorialPlan";
 
 const PROFILE = {
-  avatar: "https://instagram.fblq3-1.fna.fbcdn.net/v/t51.82787-19/657357989_18574636963062354_1764510709046221226_n.jpg?stp=dst-jpg_s150x150_tt6",
+  avatar: "/brand/logo.png",
   handle: "namedsport",
   name: "NAMEDSPORT",
   bio: "Supplements for Conscious Sport\nEnergy • Hydration • Muscle Mass • Wellbeing • Diet",
