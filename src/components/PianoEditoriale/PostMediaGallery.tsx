@@ -103,7 +103,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                 dragOverIndex === idx ? "border-primary ring-2 ring-primary/40" : "border-border"
               } ${dragIndex === idx ? "opacity-50" : ""}`}
             >
-              <button type="button" className="size-full" onClick={() => setLightboxIndex(idx)}>
+              <button type="button" className="size-full cursor-grab active:cursor-grabbing" onClick={() => setLightboxIndex(idx)}>
                 {isVideo(item.url, item.type) ? (
                   <video src={item.url} className="size-full object-cover" muted />
                 ) : (
@@ -115,7 +115,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                   type="button"
                   onClick={() => handleMove(idx, -1)}
                   disabled={idx === 0}
-                  className="rounded bg-white/20 p-0.5 text-white disabled:opacity-30"
+                  className="cursor-pointer rounded bg-white/20 p-0.5 text-white disabled:cursor-default disabled:opacity-30"
                   title="Sposta prima"
                 >
                   <ChevronLeft className="size-3" />
@@ -123,7 +123,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                 <button
                   type="button"
                   onClick={() => handleDelete(item)}
-                  className="rounded bg-white/20 p-0.5 text-white hover:bg-destructive"
+                  className="cursor-pointer rounded bg-white/20 p-0.5 text-white hover:bg-destructive"
                   title="Elimina"
                 >
                   <Trash2 className="size-3" />
@@ -132,7 +132,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                   type="button"
                   onClick={() => handleMove(idx, 1)}
                   disabled={idx === media.length - 1}
-                  className="rounded bg-white/20 p-0.5 text-white disabled:opacity-30"
+                  className="cursor-pointer rounded bg-white/20 p-0.5 text-white disabled:cursor-default disabled:opacity-30"
                   title="Sposta dopo"
                 >
                   <ChevronRight className="size-3" />
