@@ -145,10 +145,10 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
           </button>
 
           <div
-            className="flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-card sm:flex-row"
+            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-xl bg-card sm:flex-row"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative flex aspect-square shrink-0 items-center justify-center bg-black sm:aspect-auto sm:w-[60%]">
+            <div className="relative flex aspect-square shrink-0 items-center justify-center bg-black sm:aspect-auto sm:w-[62%]">
               {currentMedia && isVideo(currentMedia.url, currentMedia.type) ? (
                 <video src={currentMedia.url} controls autoPlay className="max-h-full max-w-full object-contain" />
               ) : currentMedia ? (
@@ -184,17 +184,17 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
               )}
             </div>
 
-            <div className="flex min-h-0 w-full flex-col sm:w-[40%]">
-              <div className="flex items-center gap-2 border-b border-border p-3">
-                <img src={PROFILE.avatar} alt={PROFILE.handle} className="size-8 rounded-full object-cover" />
+            <div className="flex min-h-0 w-full min-w-0 flex-col sm:w-[38%]">
+              <div className="flex shrink-0 items-center gap-2 border-b border-border p-3">
+                <img src={PROFILE.avatar} alt={PROFILE.handle} className="size-8 shrink-0 rounded-full object-cover" />
                 <span className="text-sm font-semibold">{PROFILE.handle}</span>
               </div>
-              <div className="flex-1 overflow-y-auto p-3 text-sm">
-                <p className="whitespace-pre-line">
+              <div className="min-w-0 flex-1 overflow-y-auto p-3 text-sm">
+                <p className="whitespace-pre-line break-words">
                   <span className="font-semibold">{PROFILE.handle}</span> {selectedPost.copy || ""}
                 </p>
               </div>
-              <div className="border-t border-border p-3">
+              <div className="shrink-0 border-t border-border p-3">
                 <div className="flex items-center gap-3 text-foreground">
                   <Heart className="size-5" />
                   <MessageCircle className="size-5" />
