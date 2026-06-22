@@ -16,7 +16,15 @@ function formatDate(d: string) {
   return new Date(`${d}T00:00:00`).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
 }
 
-export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: () => void }) {
+export function PostCard({
+  post,
+  onDeleted,
+  onApprovalChange,
+}: {
+  post: EditorialPost;
+  onDeleted: () => void;
+  onApprovalChange?: () => void;
+}) {
   const [approvals, setApprovals] = useState<Record<ReviewComponent, boolean>>({
     copy: false,
     copy_visual: false,
@@ -67,6 +75,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
   async function handleToggle(component: ReviewComponent) {
     await toggleApproval(post.id, component, approvals[component]);
     await refreshApprovals();
+    onApprovalChange?.();
   }
 
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
