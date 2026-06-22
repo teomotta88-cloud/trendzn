@@ -60,7 +60,7 @@ export function EditableText({
   return (
     <div className="group relative">
       {value ? (
-        <p className="line-clamp-6 whitespace-pre-line pr-5">{value}</p>
+        <p className="whitespace-pre-line pr-5">{value}</p>
       ) : (
         <span className="text-muted-foreground">{placeholder}</span>
       )}
