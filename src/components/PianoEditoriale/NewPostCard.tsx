@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import { createPost, addMedia, CHANNELS, SAME_AS_IG_FLAG } from "@/lib/editorialPlan";
+import { type EditorialPost, createPost, updatePost, addMedia, CHANNELS, SAME_AS_IG_FLAG } from "@/lib/editorialPlan";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary";
@@ -17,27 +17,29 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 export function NewPostCard({
   planId,
   defaultDate,
+  editPost,
   onCreated,
   onCancel,
 }: {
-  planId: string;
-  defaultDate: string;
+  planId?: string;
+  defaultDate?: string;
+  editPost?: EditorialPost;
   onCreated: () => void;
   onCancel: () => void;
 }) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [date, setDate] = useState(defaultDate);
-  const [rubrica, setRubrica] = useState("");
-  const [topic, setTopic] = useState("");
-  const [canali, setCanali] = useState<string[]>([]);
-  const [formato, setFormato] = useState("");
-  const [channelCopies, setChannelCopies] = useState<Record<string, string>>({});
-  const [copyVisual, setCopyVisual] = useState("");
-  const [disclaimer, setDisclaimer] = useState("");
-  const [obiettivo, setObiettivo] = useState("");
-  const [budget, setBudget] = useState("");
+  const [date, setDate] = useState(editPost?.post_date ?? defaultDate ?? "");
+  const [rubrica, setRubrica] = useState(editPost?.rubrica ?? "");
+  const [topic, setTopic] = useState(editPost?.topic ?? "");
+  const [canali, setCanali] = useState<string[]>(editPost?.canali ?? []);
+  const [formato, setFormato] = useState(editPost?.formato ?? "");
+  const [channelCopies, setChannelCopies] = useState<Record<string, string>>(editPost?.channel_copies ?? {});
+  const [copyVisual, setCopyVisual] = useState(editPost?.copy_visual ?? "");
+  const [disclaimer, setDisclaimer] = useState(editPost?.disclaimer ?? "");
+  const [obiettivo, setObiettivo] = useState(editPost?.obiettivo_media ?? "");
+  const [budget, setBudget] = useState(editPost?.budget_media ? String(editPost.budget_media) : "");
   const [files, setFiles] = useState<File[]>([]);
 
   async function handleSubmit(e: React.FormEvent) {
@@ -51,8 +53,7 @@ export function NewPostCard({
         const value = channelCopies[code]?.trim();
         if (value) filteredCopies[code] = value;
       }
-      const post = await createPost({
-        plan_id: planId,
+      const fields = {
         post_date: date,
         rubrica: rubrica.trim() || null,
         topic: topic.trim() || null,
@@ -60,12 +61,19 @@ export function NewPostCard({
         formato: formato.trim() || null,
         channel_copies: filteredCopies,
         copy_visual: copyVisual.trim() || null,
-        visual_url: null,
-        visual_type: null,
         disclaimer: disclaimer.trim() || null,
         obiettivo_media: obiettivo.trim() || null,
         budget_media: budget ? Number(budget) : null,
-      });
+      };
+      const post = editPost
+        ? await updatePost(editPost.id, fields)
+        : await createPost({
+            plan_id: planId!,
+            ...fields,
+            visual_url: null,
+            visual_type: null,
+            programmato: false,
+          });
       for (const file of files) {
         await addMedia(post.id, file);
       }
@@ -221,7 +229,7 @@ export function NewPostCard({
           disabled={submitting}
           className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 disabled:opacity-60"
         >
-          {submitting ? "Salvo…" : "Crea post"}
+          {submitting ? "Salvo…" : editPost ? "Salva modifiche" : "Crea post"}
         </button>
         <button
           type="button"

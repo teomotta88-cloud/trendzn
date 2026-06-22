@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Trash2 } from "lucide-react";
+import { Trash2, Pencil, Clock } from "lucide-react";
 import {
   type EditorialPost,
   type ReviewComponent,
   getApprovalStatus,
   toggleApproval,
   deletePost,
+  updatePost,
   updatePostText,
   updateChannelCopy,
   SAME_AS_IG_FLAG,
@@ -13,6 +14,7 @@ import {
 import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
 import { PostMediaGallery } from "./PostMediaGallery";
+import { NewPostCard } from "./NewPostCard";
 
 function formatDate(d: string) {
   return new Date(`${d}T00:00:00`).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
@@ -21,10 +23,12 @@ function formatDate(d: string) {
 export function PostCard({
   post,
   onDeleted,
+  onUpdated,
   onApprovalChange,
 }: {
   post: EditorialPost;
   onDeleted: () => void;
+  onUpdated?: () => void;
   onApprovalChange?: () => void;
 }) {
   const [approvals, setApprovals] = useState<Record<ReviewComponent, boolean>>({
@@ -33,6 +37,9 @@ export function PostCard({
     visual: false,
   });
   const [deleting, setDeleting] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [programmato, setProgrammato] = useState(post.programmato);
+  const [togglingProgrammato, setTogglingProgrammato] = useState(false);
   const [channelCopies, setChannelCopies] = useState(post.channel_copies);
   const [activeChannel, setActiveChannel] = useState(post.canali[0]);
   const [copyVisual, setCopyVisual] = useState(post.copy_visual);
@@ -85,7 +92,27 @@ export function PostCard({
     onApprovalChange?.();
   }
 
+  async function handleToggleProgrammato() {
+    setTogglingProgrammato(true);
+    await updatePost(post.id, { programmato: !programmato });
+    setProgrammato((v) => !v);
+    setTogglingProgrammato(false);
+  }
+
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
+
+  if (editing) {
+    return (
+      <NewPostCard
+        editPost={post}
+        onCreated={() => {
+          setEditing(false);
+          onUpdated?.();
+        }}
+        onCancel={() => setEditing(false)}
+      />
+    );
+  }
 
   return (
     <article
@@ -111,14 +138,36 @@ export function PostCard({
           </div>
           {post.topic && <h3 className="font-display text-sm font-semibold text-foreground">{post.topic}</h3>}
         </div>
-        <button
-          onClick={handleDelete}
-          disabled={deleting}
-          className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive"
-          title="Elimina"
-        >
-          <Trash2 className="size-3.5" />
-        </button>
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={handleToggleProgrammato}
+            disabled={togglingProgrammato}
+            className={`inline-flex items-center gap-1 rounded-lg border px-2 py-1.5 text-[11px] font-medium transition disabled:opacity-60 ${
+              programmato
+                ? "border-green-500 text-green-600 hover:bg-green-500/10"
+                : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+            }`}
+            title={programmato ? "Programmato" : "Non programmato"}
+          >
+            <Clock className="size-3.5" />
+            {programmato ? "Programmato" : "Non programmato"}
+          </button>
+          <button
+            onClick={() => setEditing(true)}
+            className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary"
+            title="Modifica post"
+          >
+            <Pencil className="size-3.5" />
+          </button>
+          <button
+            onClick={handleDelete}
+            disabled={deleting}
+            className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive"
+            title="Elimina"
+          >
+            <Trash2 className="size-3.5" />
+          </button>
+        </div>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">

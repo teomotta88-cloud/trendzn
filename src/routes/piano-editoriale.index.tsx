@@ -158,6 +158,7 @@ function PianoEditorialePage() {
                 <PostCard
                   post={p}
                   onDeleted={() => load(year, month)}
+                  onUpdated={() => load(year, month)}
                   onApprovalChange={() => loadApprovals(posts)}
                 />
               </div>
