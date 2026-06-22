@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Trash2 } from "lucide-react";
 import {
   type EditorialPost,
@@ -25,6 +25,19 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
   const [deleting, setDeleting] = useState(false);
   const [copy, setCopy] = useState(post.copy);
   const [copyVisual, setCopyVisual] = useState(post.copy_visual);
+  const visualContentRef = useRef<HTMLDivElement>(null);
+  const [visualContentHeight, setVisualContentHeight] = useState<number>();
+
+  useEffect(() => {
+    const el = visualContentRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver((entries) => {
+      const height = entries[0]?.contentRect.height;
+      if (height) setVisualContentHeight(height);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   async function refreshApprovals() {
     setApprovals(await getApprovalStatus(post.id));
@@ -89,7 +102,14 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <PostReviewBlock postId={post.id} component="copy" label="Copy" approved={approvals.copy} onToggle={() => handleToggle("copy")}>
+        <PostReviewBlock
+          postId={post.id}
+          component="copy"
+          label="Copy"
+          approved={approvals.copy}
+          onToggle={() => handleToggle("copy")}
+          maxContentHeight={visualContentHeight}
+        >
           <EditableText value={copy} placeholder="—" onSave={saveCopy} />
         </PostReviewBlock>
 
@@ -99,6 +119,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
           label="Copy Visual"
           approved={approvals.copy_visual}
           onToggle={() => handleToggle("copy_visual")}
+          maxContentHeight={visualContentHeight}
         >
           <EditableText value={copyVisual} placeholder="—" onSave={saveCopyVisual} />
         </PostReviewBlock>
@@ -109,6 +130,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
           label="Visual"
           approved={approvals.visual}
           onToggle={() => handleToggle("visual")}
+          contentRef={visualContentRef}
         >
           <PostMediaGallery postId={post.id} />
         </PostReviewBlock>

@@ -14,6 +14,8 @@ export function PostReviewBlock({
   approved,
   onToggle,
   children,
+  maxContentHeight,
+  contentRef,
 }: {
   postId: string;
   component: ReviewComponent;
@@ -21,6 +23,8 @@ export function PostReviewBlock({
   approved: boolean;
   onToggle: () => Promise<void>;
   children: React.ReactNode;
+  maxContentHeight?: number;
+  contentRef?: React.Ref<HTMLDivElement>;
 }) {
   const [comments, setComments] = useState<EditorialPostComment[]>([]);
   const [showComments, setShowComments] = useState(false);
@@ -52,7 +56,7 @@ export function PostReviewBlock({
 
   return (
     <div
-      className={`flex h-full flex-col space-y-2 rounded-xl border p-3 transition-colors ${
+      className={`flex flex-col space-y-2 rounded-xl border p-3 transition-colors ${
         approved ? "border-green-500 bg-green-500/5" : "border-border bg-background/40"
       }`}
     >
@@ -81,7 +85,13 @@ export function PostReviewBlock({
         </div>
       </div>
 
-      <div className="min-h-0 flex-1 text-xs text-foreground/90">{children}</div>
+      <div
+        ref={contentRef}
+        className="min-h-0 text-xs text-foreground/90"
+        style={maxContentHeight ? { height: maxContentHeight, overflow: "hidden" } : undefined}
+      >
+        {children}
+      </div>
 
       {showComments && (
         <div className="space-y-2 border-t border-border pt-2">
