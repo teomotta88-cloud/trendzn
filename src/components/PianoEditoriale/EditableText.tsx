@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Pencil } from "lucide-react";
 
+const MAX_BOX_HEIGHT = "max-h-80";
+
 export function EditableText({
   value,
   placeholder,
@@ -33,7 +35,7 @@ export function EditableText({
           autoFocus
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
-          className="min-h-20 w-full rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs text-foreground outline-none focus:border-primary"
+          className={`${MAX_BOX_HEIGHT} min-h-20 w-full overflow-y-auto rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs text-foreground outline-none focus:border-primary`}
         />
         <div className="flex gap-1.5">
           <button
@@ -60,7 +62,7 @@ export function EditableText({
   return (
     <div className="group relative">
       {value ? (
-        <p className="whitespace-pre-line pr-5">{value}</p>
+        <p className={`${MAX_BOX_HEIGHT} overflow-y-auto whitespace-pre-line pr-5`}>{value}</p>
       ) : (
         <span className="text-muted-foreground">{placeholder}</span>
       )}
