@@ -43,6 +43,8 @@ export function PostCard({
   const [channelCopies, setChannelCopies] = useState(post.channel_copies);
   const [activeChannel, setActiveChannel] = useState(post.canali[0]);
   const [copyVisual, setCopyVisual] = useState(post.copy_visual);
+  const [editingCopy, setEditingCopy] = useState(false);
+  const [editingCopyVisual, setEditingCopyVisual] = useState(false);
   const visualContentRef = useRef<HTMLDivElement>(null);
   const [visualContentHeight, setVisualContentHeight] = useState<number>();
 
@@ -177,7 +179,7 @@ export function PostCard({
           label="Copy"
           approved={approvals.copy}
           onToggle={() => handleToggle("copy")}
-          maxContentHeight={visualContentHeight}
+          maxContentHeight={editingCopy ? undefined : visualContentHeight}
         >
           {post.canali.length === 0 ? (
             <p className="text-xs text-muted-foreground">—</p>
@@ -227,6 +229,7 @@ export function PostCard({
                           value={channelCopies[code] ?? null}
                           placeholder="—"
                           onSave={(value) => saveChannelCopy(code, value)}
+                          onEditingChange={setEditingCopy}
                         />
                       )}
                     </div>
@@ -242,9 +245,14 @@ export function PostCard({
           label="Copy Visual"
           approved={approvals.copy_visual}
           onToggle={() => handleToggle("copy_visual")}
-          maxContentHeight={visualContentHeight}
+          maxContentHeight={editingCopyVisual ? undefined : visualContentHeight}
         >
-          <EditableText value={copyVisual} placeholder="—" onSave={saveCopyVisual} />
+          <EditableText
+            value={copyVisual}
+            placeholder="—"
+            onSave={saveCopyVisual}
+            onEditingChange={setEditingCopyVisual}
+          />
         </PostReviewBlock>
 
         <PostReviewBlock
