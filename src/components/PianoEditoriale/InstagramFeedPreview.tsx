@@ -189,7 +189,7 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
                 <img src={PROFILE.avatar} alt={PROFILE.handle} className="size-8 shrink-0 rounded-full object-cover" />
                 <span className="text-sm font-semibold">{PROFILE.handle}</span>
               </div>
-              <div className="min-w-0 flex-1 overflow-y-auto p-3 text-sm">
+              <div className="scrollbar-thin min-w-0 flex-1 overflow-y-auto p-3 text-sm">
                 <p className="whitespace-pre-line break-words">
                   <span className="font-semibold">{PROFILE.handle}</span> {selectedPost.copy || ""}
                 </p>
