@@ -27,6 +27,15 @@ export interface EditorialPost {
   created_at: string;
 }
 
+export interface EditorialPostMedia {
+  id: string;
+  post_id: string;
+  url: string;
+  type: string | null;
+  position: number;
+  created_at: string;
+}
+
 export interface EditorialPostComment {
   id: string;
   post_id: string;
@@ -84,6 +93,15 @@ export async function createPost(input: Omit<EditorialPost, "id" | "created_at">
   return data;
 }
 
+export async function updatePostText(
+  id: string,
+  field: "copy" | "copy_visual",
+  value: string | null,
+): Promise<void> {
+  const { error } = await db.from("editorial_posts").update({ [field]: value }).eq("id", id);
+  if (error) throw error;
+}
+
 export async function deletePost(id: string): Promise<void> {
   const { error } = await db.from("editorial_posts").delete().eq("id", id);
   if (error) throw error;
@@ -135,4 +153,39 @@ export async function uploadVisual(file: File): Promise<{ url: string; type: str
   if (error) throw error;
   const { data } = supabase.storage.from("piano-editoriale").getPublicUrl(path);
   return { url: data.publicUrl, type: file.type };
+}
+
+export async function listMedia(postId: string): Promise<EditorialPostMedia[]> {
+  const { data, error } = await db
+    .from("editorial_post_media")
+    .select("*")
+    .eq("post_id", postId)
+    .order("position", { ascending: true });
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function addMedia(postId: string, file: File): Promise<EditorialPostMedia> {
+  const uploaded = await uploadVisual(file);
+  const existing = await listMedia(postId);
+  const nextPosition = existing.length > 0 ? Math.max(...existing.map((m) => m.position)) + 1 : 0;
+  const { data, error } = await db
+    .from("editorial_post_media")
+    .insert({ post_id: postId, url: uploaded.url, type: uploaded.type, position: nextPosition })
+    .select("*")
+    .single();
+  if (error) throw error;
+  return data;
+}
+
+export async function deleteMedia(id: string): Promise<void> {
+  const { error } = await db.from("editorial_post_media").delete().eq("id", id);
+  if (error) throw error;
+}
+
+export async function swapMediaPosition(a: EditorialPostMedia, b: EditorialPostMedia): Promise<void> {
+  const { error: errA } = await db.from("editorial_post_media").update({ position: b.position }).eq("id", a.id);
+  if (errA) throw errA;
+  const { error: errB } = await db.from("editorial_post_media").update({ position: a.position }).eq("id", b.id);
+  if (errB) throw errB;
 }

@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
-import { type EditorialPost, type ReviewComponent, getApprovalCounts, deletePost } from "@/lib/editorialPlan";
+import { type EditorialPost, type ReviewComponent, getApprovalCounts, deletePost, updatePostText } from "@/lib/editorialPlan";
 import { PostReviewBlock } from "./PostReviewBlock";
+import { EditableText } from "./EditableText";
+import { PostMediaGallery } from "./PostMediaGallery";
 
 function formatDate(d: string) {
   return new Date(`${d}T00:00:00`).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
 }
 
-function isVideo(url: string | null, type: string | null) {
-  return (!!type && type.startsWith("video")) || (!!url && /\.(mp4|mov|webm)$/i.test(url));
-}
-
 export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: () => void }) {
   const [counts, setCounts] = useState<Record<ReviewComponent, number>>({ copy: 0, copy_visual: 0, visual: 0 });
   const [deleting, setDeleting] = useState(false);
+  const [copy, setCopy] = useState(post.copy);
+  const [copyVisual, setCopyVisual] = useState(post.copy_visual);
 
   async function refreshCounts() {
     setCounts(await getApprovalCounts(post.id));
@@ -28,6 +28,16 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
     setDeleting(true);
     await deletePost(post.id);
     onDeleted();
+  }
+
+  async function saveCopy(value: string) {
+    await updatePostText(post.id, "copy", value || null);
+    setCopy(value || null);
+  }
+
+  async function saveCopyVisual(value: string) {
+    await updatePostText(post.id, "copy_visual", value || null);
+    setCopyVisual(value || null);
   }
 
   return (
@@ -58,11 +68,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
 
       <div className="grid gap-3 sm:grid-cols-3">
         <PostReviewBlock postId={post.id} component="copy" label="Copy" approvalCount={counts.copy} onApproved={refreshCounts}>
-          {post.copy ? (
-            <p className="line-clamp-6 whitespace-pre-line">{post.copy}</p>
-          ) : (
-            <span className="text-muted-foreground">—</span>
-          )}
+          <EditableText value={copy} placeholder="—" onSave={saveCopy} />
         </PostReviewBlock>
 
         <PostReviewBlock
@@ -72,11 +78,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
           approvalCount={counts.copy_visual}
           onApproved={refreshCounts}
         >
-          {post.copy_visual ? (
-            <p className="line-clamp-6 whitespace-pre-line">{post.copy_visual}</p>
-          ) : (
-            <span className="text-muted-foreground">—</span>
-          )}
+          <EditableText value={copyVisual} placeholder="—" onSave={saveCopyVisual} />
         </PostReviewBlock>
 
         <PostReviewBlock
@@ -86,15 +88,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
           approvalCount={counts.visual}
           onApproved={refreshCounts}
         >
-          {post.visual_url ? (
-            isVideo(post.visual_url, post.visual_type) ? (
-              <video src={post.visual_url} controls className="aspect-square w-full rounded-lg object-cover" />
-            ) : (
-              <img src={post.visual_url} alt="" className="aspect-square w-full rounded-lg object-cover" />
-            )
-          ) : (
-            <span className="text-muted-foreground">Nessun visual caricato</span>
-          )}
+          <PostMediaGallery postId={post.id} />
         </PostReviewBlock>
       </div>
 
