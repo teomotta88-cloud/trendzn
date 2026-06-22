@@ -40,6 +40,7 @@ export interface EditorialPost {
   disclaimer: string | null;
   obiettivo_media: string | null;
   budget_media: number | null;
+  programmato: boolean;
   created_at: string;
 }
 
@@ -105,6 +106,15 @@ export async function listPosts(planId: string): Promise<EditorialPost[]> {
 
 export async function createPost(input: Omit<EditorialPost, "id" | "created_at">): Promise<EditorialPost> {
   const { data, error } = await db.from("editorial_posts").insert(input).select("*").single();
+  if (error) throw error;
+  return data;
+}
+
+export async function updatePost(
+  id: string,
+  fields: Partial<Omit<EditorialPost, "id" | "plan_id" | "created_at">>,
+): Promise<EditorialPost> {
+  const { data, error } = await db.from("editorial_posts").update(fields).eq("id", id).select("*").single();
   if (error) throw error;
   return data;
 }
