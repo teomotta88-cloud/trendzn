@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
-import { type EditorialPost, type ReviewComponent, getApprovalCounts, deletePost, updatePostText } from "@/lib/editorialPlan";
+import {
+  type EditorialPost,
+  type ReviewComponent,
+  getApprovalStatus,
+  toggleApproval,
+  deletePost,
+  updatePostText,
+} from "@/lib/editorialPlan";
 import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
 import { PostMediaGallery } from "./PostMediaGallery";
@@ -10,17 +17,21 @@ function formatDate(d: string) {
 }
 
 export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: () => void }) {
-  const [counts, setCounts] = useState<Record<ReviewComponent, number>>({ copy: 0, copy_visual: 0, visual: 0 });
+  const [approvals, setApprovals] = useState<Record<ReviewComponent, boolean>>({
+    copy: false,
+    copy_visual: false,
+    visual: false,
+  });
   const [deleting, setDeleting] = useState(false);
   const [copy, setCopy] = useState(post.copy);
   const [copyVisual, setCopyVisual] = useState(post.copy_visual);
 
-  async function refreshCounts() {
-    setCounts(await getApprovalCounts(post.id));
+  async function refreshApprovals() {
+    setApprovals(await getApprovalStatus(post.id));
   }
 
   useEffect(() => {
-    refreshCounts();
+    refreshApprovals();
   }, [post.id]);
 
   async function handleDelete() {
@@ -40,8 +51,19 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
     setCopyVisual(value || null);
   }
 
+  async function handleToggle(component: ReviewComponent) {
+    await toggleApproval(post.id, component, approvals[component]);
+    await refreshApprovals();
+  }
+
+  const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
+
   return (
-    <article className="space-y-3 rounded-2xl border border-border bg-card p-4">
+    <article
+      className={`space-y-3 rounded-2xl border p-4 transition-colors ${
+        allApproved ? "border-green-500 bg-green-500/5" : "border-border bg-card"
+      }`}
+    >
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
@@ -67,7 +89,7 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <PostReviewBlock postId={post.id} component="copy" label="Copy" approvalCount={counts.copy} onApproved={refreshCounts}>
+        <PostReviewBlock postId={post.id} component="copy" label="Copy" approved={approvals.copy} onToggle={() => handleToggle("copy")}>
           <EditableText value={copy} placeholder="—" onSave={saveCopy} />
         </PostReviewBlock>
 
@@ -75,8 +97,8 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
           postId={post.id}
           component="copy_visual"
           label="Copy Visual"
-          approvalCount={counts.copy_visual}
-          onApproved={refreshCounts}
+          approved={approvals.copy_visual}
+          onToggle={() => handleToggle("copy_visual")}
         >
           <EditableText value={copyVisual} placeholder="—" onSave={saveCopyVisual} />
         </PostReviewBlock>
@@ -85,8 +107,8 @@ export function PostCard({ post, onDeleted }: { post: EditorialPost; onDeleted: 
           postId={post.id}
           component="visual"
           label="Visual"
-          approvalCount={counts.visual}
-          onApproved={refreshCounts}
+          approved={approvals.visual}
+          onToggle={() => handleToggle("visual")}
         >
           <PostMediaGallery postId={post.id} />
         </PostReviewBlock>
