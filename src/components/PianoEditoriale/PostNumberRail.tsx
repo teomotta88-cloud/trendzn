@@ -1,19 +1,39 @@
 import { useEffect, useRef } from "react";
 import type { EditorialPost } from "@/lib/editorialPlan";
 
+const RAIL_WIDTH = 56;
+const GAP = 16;
+
+function formatDayMonth(dateStr: string) {
+  const d = new Date(`${dateStr}T00:00:00`);
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  return `${day}/${month}`;
+}
+
 export function PostNumberRail({
   posts,
   getPostEl,
+  anchorRef,
 }: {
   posts: EditorialPost[];
   getPostEl: (id: string) => HTMLElement | null;
+  anchorRef: React.RefObject<HTMLElement | null>;
 }) {
+  const railRef = useRef<HTMLDivElement>(null);
   const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     let frame = requestAnimationFrame(tick);
 
     function tick() {
+      const anchorEl = anchorRef.current;
+      const railEl = railRef.current;
+      if (anchorEl && railEl) {
+        const left = anchorEl.getBoundingClientRect().left - GAP - RAIL_WIDTH;
+        railEl.style.left = `${Math.max(8, left)}px`;
+      }
+
       const viewportCenter = window.innerHeight / 2;
       const spread = window.innerHeight * 0.55;
       posts.forEach((post, i) => {
@@ -39,14 +59,15 @@ export function PostNumberRail({
     }
 
     return () => cancelAnimationFrame(frame);
-  }, [posts, getPostEl]);
+  }, [posts, getPostEl, anchorRef]);
 
   if (posts.length === 0) return null;
 
   return (
     <div
-      className="fixed right-4 top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-3 sm:flex"
-      style={{ perspective: "800px" }}
+      ref={railRef}
+      className="fixed top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-3 sm:flex"
+      style={{ perspective: "800px", width: RAIL_WIDTH }}
     >
       {posts.map((post, i) => (
         <div
@@ -54,10 +75,10 @@ export function PostNumberRail({
           ref={(el) => {
             boxRefs.current[i] = el;
           }}
-          className="flex size-11 items-center justify-center rounded-xl border text-base font-bold tabular-nums transition-[background-color,border-color,box-shadow] [transform-style:preserve-3d] will-change-transform"
+          className="flex size-11 items-center justify-center rounded-xl border text-[11px] font-bold tabular-nums transition-[background-color,border-color,box-shadow] [transform-style:preserve-3d] will-change-transform"
           style={{ borderColor: "var(--color-border)", color: "var(--color-muted-foreground)" }}
         >
-          {i + 1}
+          {formatDayMonth(post.post_date)}
         </div>
       ))}
     </div>
