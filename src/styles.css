@@ -77,3 +77,14 @@
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-muted-foreground);
 }
+
+a,
+button:not(:disabled),
+[role="button"],
+.cursor-pointer:not(:disabled),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled),
+select:not(:disabled),
+summary {
+  cursor: url("/cursors/pointer.png") 13 3, pointer;
+}

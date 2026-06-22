@@ -153,7 +153,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
         </button>
       )}
 
-      <label className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
+      <label className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
         <Plus className="size-3" />
         {uploading ? "Carico…" : "Aggiungi file"}
         <input
