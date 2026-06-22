@@ -113,37 +113,35 @@ function PianoEditorialePage() {
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
-        <div className="flex items-start gap-3">
-          <div className="min-w-0 flex-1 space-y-4">
-            {plan && creating && (
-              <NewPostCard
-                planId={plan.id}
-                defaultDate={defaultDate}
-                onCreated={() => {
-                  setCreating(false);
-                  load(year, month);
+        <div className="space-y-4">
+          {plan && creating && (
+            <NewPostCard
+              planId={plan.id}
+              defaultDate={defaultDate}
+              onCreated={() => {
+                setCreating(false);
+                load(year, month);
+              }}
+              onCancel={() => setCreating(false)}
+            />
+          )}
+          {posts.length === 0 && !creating ? (
+            <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+              Nessun post per {MONTH_NAMES[month - 1]} {year}. Aggiungine uno con "Nuovo post".
+            </div>
+          ) : (
+            posts.map((p) => (
+              <div
+                key={p.id}
+                ref={(el) => {
+                  if (el) postElsRef.current.set(p.id, el);
+                  else postElsRef.current.delete(p.id);
                 }}
-                onCancel={() => setCreating(false)}
-              />
-            )}
-            {posts.length === 0 && !creating ? (
-              <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
-                Nessun post per {MONTH_NAMES[month - 1]} {year}. Aggiungine uno con "Nuovo post".
+              >
+                <PostCard post={p} onDeleted={() => load(year, month)} />
               </div>
-            ) : (
-              posts.map((p) => (
-                <div
-                  key={p.id}
-                  ref={(el) => {
-                    if (el) postElsRef.current.set(p.id, el);
-                    else postElsRef.current.delete(p.id);
-                  }}
-                >
-                  <PostCard post={p} onDeleted={() => load(year, month)} />
-                </div>
-              ))
-            )}
-          </div>
+            ))
+          )}
           <PostNumberRail posts={posts} getPostEl={getPostEl} />
         </div>
       ) : (
