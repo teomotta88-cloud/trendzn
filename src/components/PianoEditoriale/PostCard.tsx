@@ -7,6 +7,7 @@ import {
   toggleApproval,
   deletePost,
   updatePostText,
+  updateChannelCopy,
 } from "@/lib/editorialPlan";
 import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
@@ -31,7 +32,7 @@ export function PostCard({
     visual: false,
   });
   const [deleting, setDeleting] = useState(false);
-  const [copy, setCopy] = useState(post.copy);
+  const [channelCopies, setChannelCopies] = useState(post.channel_copies);
   const [copyVisual, setCopyVisual] = useState(post.copy_visual);
   const visualContentRef = useRef<HTMLDivElement>(null);
   const [visualContentHeight, setVisualContentHeight] = useState<number>();
@@ -62,9 +63,9 @@ export function PostCard({
     onDeleted();
   }
 
-  async function saveCopy(value: string) {
-    await updatePostText(post.id, "copy", value || null);
-    setCopy(value || null);
+  async function saveChannelCopy(channel: string, value: string) {
+    const next = await updateChannelCopy(post.id, channel, value || null, channelCopies);
+    setChannelCopies(next);
   }
 
   async function saveCopyVisual(value: string) {
@@ -95,7 +96,11 @@ export function PostCard({
                 {post.rubrica}
               </span>
             )}
-            {post.canale && <span className="rounded-md border border-border px-2 py-0.5 text-[10px]">{post.canale}</span>}
+            {post.canali.map((code) => (
+              <span key={code} className="rounded-md border border-border px-2 py-0.5 text-[10px]">
+                {code}
+              </span>
+            ))}
             {post.formato && <span className="rounded-md border border-border px-2 py-0.5 text-[10px]">{post.formato}</span>}
           </div>
           {post.topic && <h3 className="font-display text-sm font-semibold text-foreground">{post.topic}</h3>}
@@ -119,7 +124,22 @@ export function PostCard({
           onToggle={() => handleToggle("copy")}
           maxContentHeight={visualContentHeight}
         >
-          <EditableText value={copy} placeholder="—" onSave={saveCopy} />
+          {post.canali.length === 0 ? (
+            <p className="text-xs text-muted-foreground">—</p>
+          ) : (
+            <div className="flex flex-col gap-2">
+              {post.canali.map((code) => (
+                <div key={code} className="space-y-0.5">
+                  <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
+                  <EditableText
+                    value={channelCopies[code] ?? null}
+                    placeholder="—"
+                    onSave={(value) => saveChannelCopy(code, value)}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </PostReviewBlock>
 
         <PostReviewBlock
