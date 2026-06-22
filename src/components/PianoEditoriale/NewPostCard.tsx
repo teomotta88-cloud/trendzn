@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import { createPost, addMedia, CHANNELS } from "@/lib/editorialPlan";
+import { createPost, addMedia, CHANNELS, SAME_AS_IG_FLAG } from "@/lib/editorialPlan";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary";
@@ -137,19 +137,41 @@ export function NewPostCard({
           {canali.length === 0 ? (
             <p className="text-[11px] text-muted-foreground">Seleziona almeno un canale per inserire il copy.</p>
           ) : (
-            canali.map((code) => (
-              <div key={code} className="space-y-1">
-                <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
-                <textarea
-                  value={channelCopies[code] ?? ""}
-                  onChange={(e) =>
-                    setChannelCopies((prev) => ({ ...prev, [code]: e.target.value }))
-                  }
-                  className={`${inputCls} scrollbar-thin max-h-40 min-h-16 overflow-y-auto text-[11px] leading-snug`}
-                  placeholder={`Testo del post per ${code}…`}
-                />
-              </div>
-            ))
+            canali.map((code) => {
+              const sameAsIG = code !== "IG" && channelCopies[code] === SAME_AS_IG_FLAG;
+              return (
+                <div key={code} className="space-y-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
+                    {code !== "IG" && canali.includes("IG") && (
+                      <label className="flex items-center gap-1 text-[10px] text-muted-foreground">
+                        <input
+                          type="checkbox"
+                          checked={sameAsIG}
+                          onChange={(e) =>
+                            setChannelCopies((prev) => ({
+                              ...prev,
+                              [code]: e.target.checked ? SAME_AS_IG_FLAG : "",
+                            }))
+                          }
+                        />
+                        Uguale al copy IG
+                      </label>
+                    )}
+                  </div>
+                  {!sameAsIG && (
+                    <textarea
+                      value={channelCopies[code] ?? ""}
+                      onChange={(e) =>
+                        setChannelCopies((prev) => ({ ...prev, [code]: e.target.value }))
+                      }
+                      className={`${inputCls} scrollbar-thin max-h-40 min-h-16 overflow-y-auto text-[11px] leading-snug`}
+                      placeholder={`Testo del post per ${code}…`}
+                    />
+                  )}
+                </div>
+              );
+            })
           )}
         </div>
 

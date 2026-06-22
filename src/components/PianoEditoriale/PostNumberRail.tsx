@@ -65,10 +65,10 @@ export function PostNumberRail({
         const scale = 1 + t * 0.55;
         const z = t * 60;
         boxEl.style.transform = `translateZ(${z}px) scale(${scale})`;
-        boxEl.style.borderColor = active ? palette.solid : palette.border;
-        boxEl.style.backgroundColor = active ? `color-mix(in oklch, ${palette.solid} 22%, transparent)` : palette.bg;
-        boxEl.style.color = active ? palette.solid : palette.text;
-        boxEl.style.boxShadow = active ? `0 6px 20px color-mix(in oklch, ${palette.solid} 35%, transparent)` : "none";
+        boxEl.style.borderColor = palette.border;
+        boxEl.style.backgroundColor = palette.bg;
+        boxEl.style.color = palette.text;
+        boxEl.style.boxShadow = "none";
         boxEl.style.zIndex = active ? "10" : "1";
       });
       frame = requestAnimationFrame(tick);

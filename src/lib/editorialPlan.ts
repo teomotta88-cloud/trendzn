@@ -14,6 +14,10 @@ export const CHANNELS = [
 
 export type ChannelCode = (typeof CHANNELS)[number]["code"];
 
+// Sentinel salvato in channel_copies quando un canale usa "Uguale al copy IG"
+// invece di un testo proprio: evita di dover aggiungere una colonna dedicata.
+export const SAME_AS_IG_FLAG = "__same_as_ig__";
+
 export interface EditorialPlan {
   id: string;
   year: number;

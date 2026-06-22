@@ -8,6 +8,7 @@ import {
   deletePost,
   updatePostText,
   updateChannelCopy,
+  SAME_AS_IG_FLAG,
 } from "@/lib/editorialPlan";
 import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
@@ -33,6 +34,7 @@ export function PostCard({
   });
   const [deleting, setDeleting] = useState(false);
   const [channelCopies, setChannelCopies] = useState(post.channel_copies);
+  const [activeChannel, setActiveChannel] = useState(post.canali[0]);
   const [copyVisual, setCopyVisual] = useState(post.copy_visual);
   const visualContentRef = useRef<HTMLDivElement>(null);
   const [visualContentHeight, setVisualContentHeight] = useState<number>();
@@ -66,6 +68,10 @@ export function PostCard({
   async function saveChannelCopy(channel: string, value: string) {
     const next = await updateChannelCopy(post.id, channel, value || null, channelCopies);
     setChannelCopies(next);
+  }
+
+  async function toggleSameAsIG(channel: string, checked: boolean) {
+    await saveChannelCopy(channel, checked ? SAME_AS_IG_FLAG : "");
   }
 
   async function saveCopyVisual(value: string) {
@@ -128,16 +134,55 @@ export function PostCard({
             <p className="text-xs text-muted-foreground">—</p>
           ) : (
             <div className="flex flex-col gap-2">
-              {post.canali.map((code) => (
-                <div key={code} className="space-y-0.5">
-                  <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
-                  <EditableText
-                    value={channelCopies[code] ?? null}
-                    placeholder="—"
-                    onSave={(value) => saveChannelCopy(code, value)}
-                  />
-                </div>
-              ))}
+              <div className="flex flex-wrap gap-1">
+                {post.canali.map((code) => (
+                  <button
+                    key={code}
+                    type="button"
+                    onClick={() => setActiveChannel(code)}
+                    className={`rounded-full border px-2 py-0.5 text-[10px] font-medium transition ${
+                      activeChannel === code
+                        ? "border-primary bg-primary/15 text-primary"
+                        : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+                    }`}
+                  >
+                    {code}
+                  </button>
+                ))}
+              </div>
+              {activeChannel &&
+                (() => {
+                  const code = activeChannel;
+                  const sameAsIG = code !== "IG" && channelCopies[code] === SAME_AS_IG_FLAG;
+                  return (
+                    <div key={code} className="space-y-1">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
+                        {code !== "IG" && post.canali.includes("IG") && (
+                          <label className="flex items-center gap-1 text-[10px] text-muted-foreground">
+                            <input
+                              type="checkbox"
+                              checked={sameAsIG}
+                              onChange={(e) => toggleSameAsIG(code, e.target.checked)}
+                            />
+                            Uguale al copy IG
+                          </label>
+                        )}
+                      </div>
+                      {sameAsIG ? (
+                        <p className="whitespace-pre-line text-[11px] leading-snug text-foreground/90">
+                          {channelCopies.IG || "—"}
+                        </p>
+                      ) : (
+                        <EditableText
+                          value={channelCopies[code] ?? null}
+                          placeholder="—"
+                          onSave={(value) => saveChannelCopy(code, value)}
+                        />
+                      )}
+                    </div>
+                  );
+                })()}
             </div>
           )}
         </PostReviewBlock>
