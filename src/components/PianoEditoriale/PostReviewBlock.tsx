@@ -3,7 +3,6 @@ import { ThumbsUp, MessageSquare } from "lucide-react";
 import {
   type ReviewComponent,
   type EditorialPostComment,
-  approveComponent,
   addComment,
   listComments,
 } from "@/lib/editorialPlan";
@@ -12,15 +11,15 @@ export function PostReviewBlock({
   postId,
   component,
   label,
-  approvalCount,
-  onApproved,
+  approved,
+  onToggle,
   children,
 }: {
   postId: string;
   component: ReviewComponent;
   label: string;
-  approvalCount: number;
-  onApproved: () => void;
+  approved: boolean;
+  onToggle: () => Promise<void>;
   children: React.ReactNode;
 }) {
   const [comments, setComments] = useState<EditorialPostComment[]>([]);
@@ -35,10 +34,9 @@ export function PostReviewBlock({
     }
   }, [showComments, postId, component]);
 
-  async function handleApprove() {
+  async function handleToggleApprove() {
     setApproving(true);
-    await approveComponent(postId, component);
-    onApproved();
+    await onToggle();
     setApproving(false);
   }
 
@@ -53,17 +51,25 @@ export function PostReviewBlock({
   }
 
   return (
-    <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
+    <div
+      className={`space-y-2 rounded-xl border p-3 transition-colors ${
+        approved ? "border-green-500 bg-green-500/5" : "border-border bg-background/40"
+      }`}
+    >
       <div className="flex items-center justify-between gap-2">
         <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{label}</span>
         <div className="flex items-center gap-1.5">
           <button
-            onClick={handleApprove}
+            onClick={handleToggleApprove}
             disabled={approving}
-            className="inline-flex items-center gap-1 rounded-md border border-border px-2 py-1 text-[11px] text-muted-foreground transition hover:border-primary hover:text-primary disabled:opacity-60"
+            className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-[11px] transition disabled:opacity-60 ${
+              approved
+                ? "border-green-500 text-green-600 hover:bg-green-500/10"
+                : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+            }`}
           >
             <ThumbsUp className="size-3" />
-            Approva{approvalCount > 0 ? ` (${approvalCount})` : ""}
+            {approved ? "Approvato" : "Approva"}
           </button>
           <button
             onClick={() => setShowComments((v) => !v)}
