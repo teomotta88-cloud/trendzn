@@ -52,7 +52,7 @@ export function PostReviewBlock({
 
   return (
     <div
-      className={`space-y-2 rounded-xl border p-3 transition-colors ${
+      className={`flex h-full flex-col space-y-2 rounded-xl border p-3 transition-colors ${
         approved ? "border-green-500 bg-green-500/5" : "border-border bg-background/40"
       }`}
     >
@@ -81,7 +81,7 @@ export function PostReviewBlock({
         </div>
       </div>
 
-      <div className="text-xs text-foreground/90">{children}</div>
+      <div className="min-h-0 flex-1 text-xs text-foreground/90">{children}</div>
 
       {showComments && (
         <div className="space-y-2 border-t border-border pt-2">
