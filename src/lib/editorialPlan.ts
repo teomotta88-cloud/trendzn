@@ -383,14 +383,14 @@ async function matchPublishedPostFromCaption(
     .gte("post_date", shiftDate(publishedDate, -MATCH_DATE_TOLERANCE_DAYS))
     .lte("post_date", shiftDate(publishedDate, MATCH_DATE_TOLERANCE_DAYS));
   if (error || !candidates) return null;
-  console.debug("[match] candidati nella finestra di data per", canale, ":", candidates.length);
+  console.log("[match] candidati nella finestra di data per", canale, ":", candidates.length);
 
   let best: { id: string; score: number } | null = null;
   for (const post of candidates as { id: string; channel_copies: Record<string, string> }[]) {
     const channelCopy = post.channel_copies?.[canale];
     if (!channelCopy) continue;
     const score = textSimilarity(channelCopy, caption);
-    console.debug("[match] score", score.toFixed(2), "per post", post.id);
+    console.log("[match] score", score.toFixed(2), "per post", post.id);
     if (score >= MATCH_SIMILARITY_THRESHOLD && (!best || score > best.score)) {
       best = { id: post.id, score };
     }
@@ -403,14 +403,14 @@ async function matchPublishedPostFromCaption(
 // editoriale, popolando editorial_published_posts.
 export async function syncPublishedPostsFromTrendsJson(): Promise<void> {
   const channels = await fetchTrendsJsonCanaliCliente();
-  console.debug("[syncPublishedPostsFromTrendsJson] canali_cliente trovati:", channels.length);
+  console.log("[syncPublishedPostsFromTrendsJson] canali_cliente trovati:", channels.length);
 
   for (const channel of channels) {
     for (const account of channel.accounts) {
       if (!account.date || !account.caption) continue;
       const canale = PLATFORM_TO_CANALE[account.platform];
       if (!canale) {
-        console.debug("[sync] platform non mappata:", account.platform, account.url);
+        console.log("[sync] platform non mappata:", account.platform, account.url);
         continue;
       }
 
@@ -425,7 +425,7 @@ export async function syncPublishedPostsFromTrendsJson(): Promise<void> {
       if (existing?.matched_post_id) continue;
 
       const matchedPostId = await matchPublishedPostFromCaption(canale, publishedDate, account.caption);
-      console.debug("[sync]", canale, publishedDate, account.url, "-> matchedPostId:", matchedPostId);
+      console.log("[sync]", canale, publishedDate, account.url, "-> matchedPostId:", matchedPostId);
 
       const { error } = await db.from("editorial_published_posts").upsert(
         {
