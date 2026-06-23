@@ -109,15 +109,15 @@ function LinkedInPreview({ url }: { url: string }) {
   );
 }
 
-// Larghezza/altezza native del player embed v2 di TikTok: non si adattano
-// al contenitore (l'iframe è cross-origin, non possiamo cambiarne il layout
-// interno). Il rapporto nativo (325:738) è più "alto" del 9:16 standard delle
-// altre card, quindi non possiamo semplicemente riempire la larghezza senza
-// tagliare il video in verticale: calcoliamo lo scale come il minimo tra
-// quello orizzontale e verticale (object-fit: contain), centrando il player
-// nel box, così il post resta sempre visibile per intero.
+// Larghezza/altezza native del player embed v2 di TikTok: l'iframe è
+// cross-origin, quindi non possiamo restare la scrollbar interna che TikTok
+// mostra quando la caption non ha spazio sufficiente — possiamo però dare al
+// canvas nativo più altezza (738 → 860) così la caption ha spazio per intero
+// e lo scroll interno non scatta più. Il box esterno usa lo stesso rapporto
+// esatto (via aspect-ratio), così lo scale è uguale su entrambi gli assi e
+// non c'è letterboxing.
 const TIKTOK_NATIVE_WIDTH = 325;
-const TIKTOK_NATIVE_HEIGHT = 738;
+const TIKTOK_NATIVE_HEIGHT = 860;
 
 function TikTokEmbed({ embed }: { embed: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -126,11 +126,7 @@ function TikTokEmbed({ embed }: { embed: string }) {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const update = () => {
-      const scaleX = el.clientWidth / TIKTOK_NATIVE_WIDTH;
-      const scaleY = el.clientHeight / TIKTOK_NATIVE_HEIGHT;
-      setScale(Math.min(scaleX, scaleY));
-    };
+    const update = () => setScale(el.clientWidth / TIKTOK_NATIVE_WIDTH);
     update();
     const observer = new ResizeObserver(update);
     observer.observe(el);
@@ -140,18 +136,19 @@ function TikTokEmbed({ embed }: { embed: string }) {
   return (
     <div
       ref={containerRef}
-      className="relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-xl border border-border bg-black"
+      className="relative mx-auto w-full max-w-[260px] overflow-hidden rounded-xl border border-border bg-black"
+      style={{ aspectRatio: `${TIKTOK_NATIVE_WIDTH} / ${TIKTOK_NATIVE_HEIGHT}` }}
     >
       <iframe
         src={embed}
         style={{
           position: "absolute",
-          top: "50%",
-          left: "50%",
+          top: 0,
+          left: 0,
           width: TIKTOK_NATIVE_WIDTH,
           height: TIKTOK_NATIVE_HEIGHT,
-          transform: `translate(-50%, -50%) scale(${scale})`,
-          transformOrigin: "center",
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
         }}
         allow="autoplay; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
