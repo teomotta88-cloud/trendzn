@@ -360,6 +360,15 @@ interface TrendsClienteChannel {
   accounts: TrendsClientAccount[];
 }
 
+// atob() decodifica il base64 in una stringa dove ogni char è un byte: se il
+// contenuto originale è UTF-8 multi-byte (es. accenti), va riassemblato con
+// TextDecoder, altrimenti caratteri come "è" diventano "Ã¨".
+function decodeBase64Utf8(base64: string): string {
+  const binary = atob(base64);
+  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+  return new TextDecoder("utf-8").decode(bytes);
+}
+
 async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {
   const res = await fetch(TRENDS_JSON_URL, { headers: { Accept: "application/vnd.github.v3+json" } });
   if (!res.ok) {
@@ -367,7 +376,7 @@ async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {
     return [];
   }
   const file = await res.json();
-  const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+  const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
   return Array.isArray(trends.canali_cliente) ? trends.canali_cliente : [];
 }
 
@@ -391,8 +400,6 @@ async function matchPublishedPostFromCaption(
     if (!channelCopy) continue;
     const score = textSimilarity(channelCopy, caption);
     console.log("[match] score", score.toFixed(2), "per post", post.id);
-    console.log("[match] channelCopy:", JSON.stringify(channelCopy));
-    console.log("[match] caption:", JSON.stringify(caption));
     if (score >= MATCH_SIMILARITY_THRESHOLD && (!best || score > best.score)) {
       best = { id: post.id, score };
     }
