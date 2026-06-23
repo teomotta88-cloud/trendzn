@@ -22,6 +22,7 @@ import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
+import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/api/public/hooks/sync-tiktok-hashtag'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
@@ -93,6 +94,12 @@ const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
   path: '/canali-inspo/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicHooksSyncTiktokHashtagRoute =
+  ApiPublicHooksSyncTiktokHashtagRouteImport.update({
+    id: '/api/public/hooks/sync-tiktok-hashtag',
+    path: '/api/public/hooks/sync-tiktok-hashtag',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksSubmitManualRoute =
   ApiPublicHooksSubmitManualRouteImport.update({
     id: '/api/public/hooks/submit-manual',
@@ -142,6 +149,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -162,6 +170,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -183,6 +192,7 @@ export interface FileRoutesById {
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/sync-tiktok-hashtag'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -225,6 +236,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/sync-tiktok-hashtag'
   id:
     | '__root__'
     | '/'
@@ -245,6 +257,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/sync-tiktok-hashtag'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -266,6 +279,7 @@ export interface RootRouteChildren {
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
+  ApiPublicHooksSyncTiktokHashtagRoute: typeof ApiPublicHooksSyncTiktokHashtagRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -361,6 +375,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CanaliInspoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/sync-tiktok-hashtag': {
+      id: '/api/public/hooks/sync-tiktok-hashtag'
+      path: '/api/public/hooks/sync-tiktok-hashtag'
+      fullPath: '/api/public/hooks/sync-tiktok-hashtag'
+      preLoaderRoute: typeof ApiPublicHooksSyncTiktokHashtagRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/submit-manual': {
       id: '/api/public/hooks/submit-manual'
       path: '/api/public/hooks/submit-manual'
@@ -418,6 +439,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
+  ApiPublicHooksSyncTiktokHashtagRoute: ApiPublicHooksSyncTiktokHashtagRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
