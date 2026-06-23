@@ -8,6 +8,7 @@ const PALETTE = {
   none: { border: "var(--color-border)", bg: "transparent", text: "var(--color-muted-foreground)", solid: "var(--color-primary)" },
   some: { border: "#eab308", bg: "color-mix(in oklch, #eab308 18%, transparent)", text: "#eab308", solid: "#eab308" },
   all: { border: "#22c55e", bg: "color-mix(in oklch, #22c55e 18%, transparent)", text: "#22c55e", solid: "#22c55e" },
+  violet: { border: "#8b5cf6", bg: "color-mix(in oklch, #8b5cf6 18%, transparent)", text: "#8b5cf6", solid: "#8b5cf6" },
 } as const;
 
 function formatDayMonth(dateStr: string) {
@@ -17,10 +18,10 @@ function formatDayMonth(dateStr: string) {
   return `${day}/${month}`;
 }
 
-function approvalLevel(approvals?: Record<ReviewComponent, boolean>): keyof typeof PALETTE {
+function approvalLevel(approvals: Record<ReviewComponent, boolean> | undefined, programmato: boolean): keyof typeof PALETTE {
   if (!approvals) return "none";
   const values = [approvals.copy, approvals.copy_visual, approvals.visual];
-  if (values.every(Boolean)) return "all";
+  if (values.every(Boolean)) return programmato ? "violet" : "all";
   if (values.some(Boolean)) return "some";
   return "none";
 }
@@ -61,7 +62,7 @@ export function PostNumberRail({
         const dist = Math.abs(centerY - viewportCenter);
         const t = Math.max(0, 1 - dist / spread);
         const active = t > 0.55;
-        const palette = PALETTE[approvalLevel(approvalsByPost[post.id])];
+        const palette = PALETTE[approvalLevel(approvalsByPost[post.id], post.programmato)];
         const scale = 1 + t * 0.55;
         const z = t * 60;
         boxEl.style.transform = `translateZ(${z}px) scale(${scale})`;
