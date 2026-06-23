@@ -28,12 +28,14 @@ export function PostCard({
   onUpdated,
   onApprovalChange,
   onPublishedChange,
+  onProgrammatoChange,
 }: {
   post: EditorialPost;
   onDeleted: () => void;
   onUpdated?: () => void;
   onApprovalChange?: () => void;
   onPublishedChange?: () => void;
+  onProgrammatoChange?: (programmato: boolean) => void;
 }) {
   const [approvals, setApprovals] = useState<Record<ReviewComponent, boolean>>({
     copy: false,
@@ -115,6 +117,7 @@ export function PostCard({
     await updatePost(post.id, { programmato: !programmato });
     setProgrammato((v) => !v);
     setTogglingProgrammato(false);
+    onProgrammatoChange?.(!programmato);
   }
 
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;

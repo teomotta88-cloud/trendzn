@@ -195,6 +195,9 @@ function PianoEditorialePage() {
                   onUpdated={() => load(year, month)}
                   onApprovalChange={() => loadApprovals(posts)}
                   onPublishedChange={() => loadPublished(posts)}
+                  onProgrammatoChange={(programmato) =>
+                    setPosts((prev) => prev.map((post) => (post.id === p.id ? { ...post, programmato } : post)))
+                  }
                 />
               </div>
             ))
