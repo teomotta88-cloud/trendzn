@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { detectPlatform, type CanaleInspo } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink, Search } from "lucide-react";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 export const Route = createFileRoute("/canali-inspo/$id")({
   head: () => ({
@@ -42,7 +43,7 @@ function Page() {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
       .then((res) => {
-        const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
+        const decoded = JSON.parse(decodeBase64Utf8(res.content.replace(/\n/g, "")));
         const found = (decoded.canali_inspo as CanaleInspo[]).find((c) => c.id === id);
         if (!found) {
           setError("Canale non trovato");

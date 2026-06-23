@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
@@ -40,7 +41,7 @@ async function syncClientChannelToGitHub(canale: string, handle: string, url: st
     if (!res.ok) return `read_failed_${res.status}`;
 
     const file = await res.json();
-    const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+    const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
 
     if (!Array.isArray(trends.canali_cliente)) {
       trends.canali_cliente = [];

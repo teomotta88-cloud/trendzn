@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 export const Route = createFileRoute("/feed/")({
   component: TrendzFeed,
@@ -362,7 +363,7 @@ function TrendzFeed() {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
       .then((res) => {
-        const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
+        const decoded = JSON.parse(decodeBase64Utf8(res.content.replace(/\n/g, "")));
         setData(decoded);
       })
       .catch(() => setError("Impossibile caricare il feed."));

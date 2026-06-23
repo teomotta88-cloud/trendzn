@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
@@ -90,7 +91,7 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
     if (!res.ok) return `read_failed_${res.status}`;
 
     const file = await res.json();
-    const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+    const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
 
     function detectPlatformLocal(u: string) {
       if (/instagram\.com/.test(u)) return "instagram";
@@ -170,7 +171,7 @@ async function syncInfluencerToGitHub(
     if (!res.ok) return `read_failed_${res.status}`;
 
     const file = await res.json();
-    const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+    const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
 
     if (!Array.isArray(trends.influencer_profiles)) {
       trends.influencer_profiles = [];
