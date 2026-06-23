@@ -4,6 +4,7 @@ import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 export const Route = createFileRoute("/influencer/")({
   head: () => ({
@@ -80,7 +81,7 @@ function InfluencerPage() {
     return fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
       .then((res) => {
-        const decoded = JSON.parse(atob(res.content.replace(/\n/g, "")));
+        const decoded = JSON.parse(decodeBase64Utf8(res.content.replace(/\n/g, "")));
         setJsonProfiles(decoded.influencer_profiles || []);
       })
       .catch((e) => console.error("Errore caricamento trends.json:", e));

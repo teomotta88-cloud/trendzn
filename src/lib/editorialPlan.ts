@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { textSimilarity } from "@/lib/textSimilarity";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 export type ReviewComponent = "copy" | "copy_visual" | "visual";
 
@@ -358,15 +359,6 @@ interface TrendsClientAccount {
 
 interface TrendsClienteChannel {
   accounts: TrendsClientAccount[];
-}
-
-// atob() decodifica il base64 in una stringa dove ogni char è un byte: se il
-// contenuto originale è UTF-8 multi-byte (es. accenti), va riassemblato con
-// TextDecoder, altrimenti caratteri come "è" diventano "Ã¨".
-function decodeBase64Utf8(base64: string): string {
-  const binary = atob(base64);
-  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
-  return new TextDecoder("utf-8").decode(bytes);
 }
 
 async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {

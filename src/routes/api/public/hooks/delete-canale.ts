@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { decodeBase64Utf8 } from "@/lib/base64";
 
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
@@ -37,7 +38,7 @@ export const Route = createFileRoute("/api/public/hooks/delete-canale")({
           }
 
           const file = await res.json();
-          const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+          const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
 
           // Rimuovi il canale per id
           const before = trends.canali_inspo.length;
