@@ -118,6 +118,7 @@ export function PostCard({
   }
 
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
+  const someApproved = approvals.copy || approvals.copy_visual || approvals.visual;
   const fullyDone = allApproved && programmato;
   const isPublished = publishedMatches.length > 0;
 
@@ -143,7 +144,9 @@ export function PostCard({
             ? "border-violet-500 bg-violet-500/5"
             : allApproved
               ? "border-green-500 bg-green-500/5"
-              : "border-border bg-card"
+              : someApproved
+                ? "border-yellow-500 bg-yellow-500/5"
+                : "border-border bg-card"
       }`}
     >
       <div className="flex flex-wrap items-start justify-between gap-2">
