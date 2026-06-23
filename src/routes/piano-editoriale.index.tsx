@@ -6,6 +6,7 @@ import {
   getOrCreatePlan,
   listPosts,
   getApprovalStatus,
+  syncPublishedPostsFromTrendsJson,
   type EditorialPlan,
   type EditorialPost,
   type ReviewComponent,
@@ -59,6 +60,10 @@ function PianoEditorialePage() {
   useEffect(() => {
     load(year, month);
   }, [year, month]);
+
+  useEffect(() => {
+    syncPublishedPostsFromTrendsJson().catch(() => {});
+  }, []);
 
   const defaultDate = useMemo(() => {
     const day = Math.min(now.getDate(), 28);
