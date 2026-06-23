@@ -319,12 +319,117 @@ export async function listClientChannels(): Promise<EditorialClientChannel[]> {
 export async function addClientChannel(input: Omit<EditorialClientChannel, "id" | "created_at">): Promise<EditorialClientChannel> {
   const { data, error } = await db.from("editorial_client_channels").insert(input).select("*").single();
   if (error) throw error;
+
+  // Scrive il canale anche in trends.json (chiave "canali_cliente") cosi'
+  // n8n lo monitora con la stessa logica già usata per "canali_inspo",
+  // senza bisogno di modifiche lato n8n.
+  fetch("/api/public/hooks/add-client-channel", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+  }).catch(() => {});
+
   return data;
 }
 
 export async function deleteClientChannel(id: string): Promise<void> {
   const { error } = await db.from("editorial_client_channels").delete().eq("id", id);
   if (error) throw error;
+}
+
+const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+
+const PLATFORM_TO_CANALE: Record<string, string> = {
+  instagram: "IG",
+  tiktok: "TT",
+  linkedin: "LK",
+  youtube: "YT",
+  x: "X",
+  facebook: "FB",
+};
+
+interface TrendsClientAccount {
+  platform: string;
+  handle: string;
+  url: string;
+  date?: string | null;
+  caption?: string | null;
+}
+
+interface TrendsClienteChannel {
+  accounts: TrendsClientAccount[];
+}
+
+async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {
+  const res = await fetch(TRENDS_JSON_URL, { headers: { Accept: "application/vnd.github.v3+json" } });
+  if (!res.ok) return [];
+  const file = await res.json();
+  const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
+  return Array.isArray(trends.canali_cliente) ? trends.canali_cliente : [];
+}
+
+async function matchPublishedPostFromCaption(
+  canale: string,
+  publishedDate: string,
+  caption: string,
+): Promise<string | null> {
+  const { data: candidates, error } = await db
+    .from("editorial_posts")
+    .select("id, channel_copies")
+    .contains("canali", [canale])
+    .gte("post_date", shiftDate(publishedDate, -MATCH_DATE_TOLERANCE_DAYS))
+    .lte("post_date", shiftDate(publishedDate, MATCH_DATE_TOLERANCE_DAYS));
+  if (error || !candidates) return null;
+
+  let best: { id: string; score: number } | null = null;
+  for (const post of candidates as { id: string; channel_copies: Record<string, string> }[]) {
+    const channelCopy = post.channel_copies?.[canale];
+    if (!channelCopy) continue;
+    const score = textSimilarity(channelCopy, caption);
+    if (score >= MATCH_SIMILARITY_THRESHOLD && (!best || score > best.score)) {
+      best = { id: post.id, score };
+    }
+  }
+  return best?.id ?? null;
+}
+
+// Legge trends.json (scritto da n8n sotto "canali_cliente" con la stessa
+// logica già usata per "canali_inspo") e matcha i post trovati con il piano
+// editoriale, popolando editorial_published_posts.
+export async function syncPublishedPostsFromTrendsJson(): Promise<void> {
+  const channels = await fetchTrendsJsonCanaliCliente();
+
+  for (const channel of channels) {
+    for (const account of channel.accounts) {
+      if (!account.date || !account.caption) continue;
+      const canale = PLATFORM_TO_CANALE[account.platform];
+      if (!canale) continue;
+
+      const publishedDate = account.date.slice(0, 10);
+      const { data: existing } = await db
+        .from("editorial_published_posts")
+        .select("id, matched_post_id")
+        .eq("canale", canale)
+        .eq("url", account.url)
+        .maybeSingle();
+
+      if (existing?.matched_post_id) continue;
+
+      const matchedPostId = await matchPublishedPostFromCaption(canale, publishedDate, account.caption);
+
+      const { error } = await db.from("editorial_published_posts").upsert(
+        {
+          canale,
+          url: account.url,
+          published_date: publishedDate,
+          caption: account.caption,
+          matched_post_id: matchedPostId,
+        },
+        { onConflict: "canale,url" },
+      );
+      if (error) throw error;
+    }
+  }
 }
 
 export async function reorderMedia(items: EditorialPostMedia[]): Promise<void> {

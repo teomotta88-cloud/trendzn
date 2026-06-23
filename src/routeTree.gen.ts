@@ -24,9 +24,9 @@ import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
-import { Route as ApiPublicHooksN8nPublishedPostRouteImport } from './routes/api/public/hooks/n8n-published-post'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
+import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
   id: '/trend-real-time',
@@ -104,12 +104,6 @@ const ApiPublicHooksPollGmailRoute = ApiPublicHooksPollGmailRouteImport.update({
   path: '/api/public/hooks/poll-gmail',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicHooksN8nPublishedPostRoute =
-  ApiPublicHooksN8nPublishedPostRouteImport.update({
-    id: '/api/public/hooks/n8n-published-post',
-    path: '/api/public/hooks/n8n-published-post',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ApiPublicHooksLinkPreviewRoute =
   ApiPublicHooksLinkPreviewRouteImport.update({
     id: '/api/public/hooks/link-preview',
@@ -120,6 +114,12 @@ const ApiPublicHooksDeleteCanaleRoute =
   ApiPublicHooksDeleteCanaleRouteImport.update({
     id: '/api/public/hooks/delete-canale',
     path: '/api/public/hooks/delete-canale',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksAddClientChannelRoute =
+  ApiPublicHooksAddClientChannelRouteImport.update({
+    id: '/api/public/hooks/add-client-channel',
+    path: '/api/public/hooks/add-client-channel',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -137,9 +137,9 @@ export interface FileRoutesByFullPath {
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
+  '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
-  '/api/public/hooks/n8n-published-post': typeof ApiPublicHooksN8nPublishedPostRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
 }
@@ -157,9 +157,9 @@ export interface FileRoutesByTo {
   '/feed': typeof FeedIndexRoute
   '/influencer': typeof InfluencerIndexRoute
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
+  '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
-  '/api/public/hooks/n8n-published-post': typeof ApiPublicHooksN8nPublishedPostRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
 }
@@ -178,9 +178,9 @@ export interface FileRoutesById {
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
+  '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
-  '/api/public/hooks/n8n-published-post': typeof ApiPublicHooksN8nPublishedPostRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
 }
@@ -200,9 +200,9 @@ export interface FileRouteTypes {
     | '/feed/'
     | '/influencer/'
     | '/piano-editoriale/'
+    | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/link-preview'
-    | '/api/public/hooks/n8n-published-post'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
   fileRoutesByTo: FileRoutesByTo
@@ -220,9 +220,9 @@ export interface FileRouteTypes {
     | '/feed'
     | '/influencer'
     | '/piano-editoriale'
+    | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/link-preview'
-    | '/api/public/hooks/n8n-published-post'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
   id:
@@ -240,9 +240,9 @@ export interface FileRouteTypes {
     | '/feed/'
     | '/influencer/'
     | '/piano-editoriale/'
+    | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/link-preview'
-    | '/api/public/hooks/n8n-published-post'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
   fileRoutesById: FileRoutesById
@@ -261,9 +261,9 @@ export interface RootRouteChildren {
   FeedIndexRoute: typeof FeedIndexRoute
   InfluencerIndexRoute: typeof InfluencerIndexRoute
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
+  ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
-  ApiPublicHooksN8nPublishedPostRoute: typeof ApiPublicHooksN8nPublishedPostRoute
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
 }
@@ -375,13 +375,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksPollGmailRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/hooks/n8n-published-post': {
-      id: '/api/public/hooks/n8n-published-post'
-      path: '/api/public/hooks/n8n-published-post'
-      fullPath: '/api/public/hooks/n8n-published-post'
-      preLoaderRoute: typeof ApiPublicHooksN8nPublishedPostRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/public/hooks/link-preview': {
       id: '/api/public/hooks/link-preview'
       path: '/api/public/hooks/link-preview'
@@ -394,6 +387,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/delete-canale'
       fullPath: '/api/public/hooks/delete-canale'
       preLoaderRoute: typeof ApiPublicHooksDeleteCanaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/add-client-channel': {
+      id: '/api/public/hooks/add-client-channel'
+      path: '/api/public/hooks/add-client-channel'
+      fullPath: '/api/public/hooks/add-client-channel'
+      preLoaderRoute: typeof ApiPublicHooksAddClientChannelRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -413,9 +413,9 @@ const rootRouteChildren: RootRouteChildren = {
   FeedIndexRoute: FeedIndexRoute,
   InfluencerIndexRoute: InfluencerIndexRoute,
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
+  ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
-  ApiPublicHooksN8nPublishedPostRoute: ApiPublicHooksN8nPublishedPostRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
 }
