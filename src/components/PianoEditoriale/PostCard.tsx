@@ -27,11 +27,13 @@ export function PostCard({
   onDeleted,
   onUpdated,
   onApprovalChange,
+  onPublishedChange,
 }: {
   post: EditorialPost;
   onDeleted: () => void;
   onUpdated?: () => void;
   onApprovalChange?: () => void;
+  onPublishedChange?: () => void;
 }) {
   const [approvals, setApprovals] = useState<Record<ReviewComponent, boolean>>({
     copy: false,
@@ -54,6 +56,7 @@ export function PostCard({
 
   async function refreshPublishedMatches() {
     setPublishedMatches(await getPublishedMatches(post.id));
+    onPublishedChange?.();
   }
 
   useEffect(() => {

@@ -6,6 +6,7 @@ import {
   getOrCreatePlan,
   listPosts,
   getApprovalStatus,
+  getPublishedMatches,
   syncPublishedPostsFromTrendsJson,
   type EditorialPlan,
   type EditorialPost,
@@ -44,6 +45,8 @@ function PianoEditorialePage() {
   const getPostEl = useCallback((id: string) => postElsRef.current.get(id) ?? null, []);
   const postsColumnRef = useRef<HTMLDivElement>(null);
   const [approvalsByPost, setApprovalsByPost] = useState<Record<string, Record<ReviewComponent, boolean>>>({});
+  const [publishedCountByPost, setPublishedCountByPost] = useState<Record<string, number>>({});
+  const postsRef = useRef<EditorialPost[]>([]);
 
   async function load(y: number, m: number) {
     setLoading(true);
@@ -53,6 +56,7 @@ function PianoEditorialePage() {
     setPosts(loadedPosts);
     setLoading(false);
     loadApprovals(loadedPosts);
+    loadPublished(loadedPosts);
   }
 
   async function loadApprovals(postList: EditorialPost[]) {
@@ -60,12 +64,25 @@ function PianoEditorialePage() {
     setApprovalsByPost(Object.fromEntries(entries));
   }
 
+  async function loadPublished(postList: EditorialPost[]) {
+    const entries = await Promise.all(
+      postList.map((p) => getPublishedMatches(p.id).then((m) => [p.id, m.length] as const)),
+    );
+    setPublishedCountByPost(Object.fromEntries(entries));
+  }
+
   useEffect(() => {
     load(year, month);
   }, [year, month]);
 
   useEffect(() => {
-    syncPublishedPostsFromTrendsJson().catch((err) => console.error("[syncPublishedPostsFromTrendsJson]", err));
+    postsRef.current = posts;
+  }, [posts]);
+
+  useEffect(() => {
+    syncPublishedPostsFromTrendsJson()
+      .then(() => loadPublished(postsRef.current))
+      .catch((err) => console.error("[syncPublishedPostsFromTrendsJson]", err));
   }, []);
 
   const defaultDate = useMemo(() => {
@@ -177,6 +194,7 @@ function PianoEditorialePage() {
                   onDeleted={() => load(year, month)}
                   onUpdated={() => load(year, month)}
                   onApprovalChange={() => loadApprovals(posts)}
+                  onPublishedChange={() => loadPublished(posts)}
                 />
               </div>
             ))
@@ -186,6 +204,7 @@ function PianoEditorialePage() {
             getPostEl={getPostEl}
             anchorRef={postsColumnRef}
             approvalsByPost={approvalsByPost}
+            publishedCountByPost={publishedCountByPost}
           />
         </div>
       ) : (
