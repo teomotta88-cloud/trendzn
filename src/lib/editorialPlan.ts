@@ -362,7 +362,10 @@ interface TrendsClienteChannel {
 
 async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {
   const res = await fetch(TRENDS_JSON_URL, { headers: { Accept: "application/vnd.github.v3+json" } });
-  if (!res.ok) return [];
+  if (!res.ok) {
+    console.error("[fetchTrendsJsonCanaliCliente] richiesta a GitHub fallita:", res.status, await res.text());
+    return [];
+  }
   const file = await res.json();
   const trends = JSON.parse(atob(file.content.replace(/\n/g, "")));
   return Array.isArray(trends.canali_cliente) ? trends.canali_cliente : [];
