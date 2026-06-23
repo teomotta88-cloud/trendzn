@@ -231,6 +231,34 @@ export async function swapMediaPosition(a: EditorialPostMedia, b: EditorialPostM
   if (errB) throw errB;
 }
 
+export interface EditorialClientChannel {
+  id: string;
+  canale: string;
+  handle: string;
+  url: string;
+  created_at: string;
+}
+
+export async function listClientChannels(): Promise<EditorialClientChannel[]> {
+  const { data, error } = await db
+    .from("editorial_client_channels")
+    .select("*")
+    .order("canale", { ascending: true });
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function addClientChannel(input: Omit<EditorialClientChannel, "id" | "created_at">): Promise<EditorialClientChannel> {
+  const { data, error } = await db.from("editorial_client_channels").insert(input).select("*").single();
+  if (error) throw error;
+  return data;
+}
+
+export async function deleteClientChannel(id: string): Promise<void> {
+  const { error } = await db.from("editorial_client_channels").delete().eq("id", id);
+  if (error) throw error;
+}
+
 export async function reorderMedia(items: EditorialPostMedia[]): Promise<void> {
   const results = await Promise.all(
     items.map((item, position) =>

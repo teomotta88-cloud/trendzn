@@ -14,6 +14,7 @@ import { PostCard } from "@/components/PianoEditoriale/PostCard";
 import { NewPostCard } from "@/components/PianoEditoriale/NewPostCard";
 import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeedPreview";
 import { PostNumberRail } from "@/components/PianoEditoriale/PostNumberRail";
+import { ClientChannelsPanel } from "@/components/PianoEditoriale/ClientChannelsPanel";
 
 export const Route = createFileRoute("/piano-editoriale/")({
   head: () => ({
@@ -33,7 +34,7 @@ function PianoEditorialePage() {
   const [plan, setPlan] = useState<EditorialPlan | null>(null);
   const [posts, setPosts] = useState<EditorialPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<"calendario" | "feed">("calendario");
+  const [tab, setTab] = useState<"calendario" | "feed" | "canali">("calendario");
   const [creating, setCreating] = useState(false);
   const postElsRef = useRef(new Map<string, HTMLDivElement>());
   const getPostEl = useCallback((id: string) => postElsRef.current.get(id) ?? null, []);
@@ -124,10 +125,18 @@ function PianoEditorialePage() {
           >
             Feed Instagram
           </button>
+          <button
+            onClick={() => setTab("canali")}
+            className={`rounded-md px-3 py-1.5 text-sm ${tab === "canali" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+          >
+            Canali cliente
+          </button>
         </div>
       </div>
 
-      {loading ? (
+      {tab === "canali" ? (
+        <ClientChannelsPanel />
+      ) : loading ? (
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
         <div ref={postsColumnRef} className="space-y-4">
