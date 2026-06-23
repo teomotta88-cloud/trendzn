@@ -10,6 +10,7 @@ const TRENDS_JSON_URL =
   "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
 
 const N8N_WEBHOOK = "https://trendzn.app.n8n.cloud/webhook/trendzn-sync";
+const GITHUB_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-canali-feed";
 
 interface Account {
   platform: string;
@@ -316,13 +317,13 @@ type SyncStatus = "idle" | "loading" | "success" | "error";
 type SortOrder = "recenti" | "meno_recenti";
 type DatePreset = "tutto" | "7g" | "30g" | "90g" | "custom";
 
-function SyncButton() {
+function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: string }) {
   const [status, setStatus] = useState<SyncStatus>("idle");
 
   const handleSync = async () => {
     setStatus("loading");
     try {
-      await fetch(N8N_WEBHOOK, {
+      await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ trigger: "manual" }),
@@ -336,7 +337,7 @@ function SyncButton() {
   };
 
   const label: Record<SyncStatus, string> = {
-    idle: "↻ Sync ora",
+    idle: idleLabel,
     loading: "Sincronizzazione…",
     success: "✓ Avviato",
     error: "Errore — riprova",
@@ -606,7 +607,8 @@ function InfluencerFeed() {
               <option value="meno_recenti">Meno recenti</option>
             </select>
 
-            <SyncButton />
+            <SyncButton endpoint={N8N_WEBHOOK} label="↻ Sync ora - N8N" />
+            <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Sync ora - Github" />
 
             <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>
               {filtered.length} post
