@@ -163,8 +163,7 @@ function Navbar() {
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 sm:px-6 lg:px-10">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <img src="/brand/logo-mark.png" alt="" className="size-7" />
-          <span className="font-display text-base font-semibold tracking-tight">TRENDZN</span>
+          <img src="/brand/logo-full-v2.png" alt="TRENDZN" className="h-7 w-auto" />
         </Link>
 
         {/* Desktop nav */}
