@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { textSimilarity } from "@/lib/textSimilarity";
 
 export type ReviewComponent = "copy" | "copy_visual" | "visual";
 
@@ -135,7 +136,74 @@ export async function updateChannelCopy(
   else delete next[channel];
   const { error } = await db.from("editorial_posts").update({ channel_copies: next }).eq("id", id);
   if (error) throw error;
+  if (value) await matchPublishedPostsForChannel(id, channel, value);
   return next;
+}
+
+const MATCH_SIMILARITY_THRESHOLD = 0.55;
+const MATCH_DATE_TOLERANCE_DAYS = 1;
+
+function shiftDate(dateStr: string, days: number): string {
+  const d = new Date(`${dateStr}T00:00:00`);
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+// Cattura i casi in cui n8n ha importato un post pubblicato prima che il copy
+// venisse scritto nel piano: a ogni salvataggio del copy proviamo a recuperare
+// un match tra i post importati ancora senza match per quel canale.
+export async function matchPublishedPostsForChannel(
+  postId: string,
+  channel: string,
+  channelCopy: string,
+): Promise<string | null> {
+  const { data: post, error: postError } = await db
+    .from("editorial_posts")
+    .select("post_date")
+    .eq("id", postId)
+    .single();
+  if (postError || !post) return null;
+
+  const { data: candidates, error } = await db
+    .from("editorial_published_posts")
+    .select("id, url, caption")
+    .eq("canale", channel)
+    .is("matched_post_id", null)
+    .gte("published_date", shiftDate(post.post_date, -MATCH_DATE_TOLERANCE_DAYS))
+    .lte("published_date", shiftDate(post.post_date, MATCH_DATE_TOLERANCE_DAYS));
+  if (error || !candidates) return null;
+
+  let best: { id: string; url: string; score: number } | null = null;
+  for (const candidate of candidates as { id: string; url: string; caption: string | null }[]) {
+    if (!candidate.caption) continue;
+    const score = textSimilarity(channelCopy, candidate.caption);
+    if (score >= MATCH_SIMILARITY_THRESHOLD && (!best || score > best.score)) {
+      best = { id: candidate.id, url: candidate.url, score };
+    }
+  }
+  if (!best) return null;
+
+  const { error: updateError } = await db
+    .from("editorial_published_posts")
+    .update({ matched_post_id: postId })
+    .eq("id", best.id);
+  if (updateError) throw updateError;
+
+  return best.url;
+}
+
+export interface PublishedPostMatch {
+  url: string;
+  canale: string;
+}
+
+export async function getPublishedMatches(postId: string): Promise<PublishedPostMatch[]> {
+  const { data, error } = await db
+    .from("editorial_published_posts")
+    .select("url, canale")
+    .eq("matched_post_id", postId);
+  if (error) throw error;
+  return data ?? [];
 }
 
 export async function deletePost(id: string): Promise<void> {
