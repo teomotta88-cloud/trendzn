@@ -102,6 +102,7 @@ export function PostCard({
   }
 
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
+  const fullyDone = allApproved && programmato;
 
   if (editing) {
     return (
@@ -119,7 +120,11 @@ export function PostCard({
   return (
     <article
       className={`space-y-3 rounded-2xl border p-4 transition-colors ${
-        allApproved ? "border-green-500 bg-green-500/5" : "border-border bg-card"
+        fullyDone
+          ? "border-violet-500 bg-violet-500/5"
+          : allApproved
+            ? "border-green-500 bg-green-500/5"
+            : "border-border bg-card"
       }`}
     >
       <div className="flex flex-wrap items-start justify-between gap-2">
@@ -145,9 +150,11 @@ export function PostCard({
             onClick={handleToggleProgrammato}
             disabled={togglingProgrammato}
             className={`inline-flex items-center gap-1 rounded-lg border px-2 py-1.5 text-[11px] font-medium transition disabled:opacity-60 ${
-              programmato
-                ? "border-green-500 text-green-600 hover:bg-green-500/10"
-                : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+              fullyDone
+                ? "border-violet-500 text-violet-600 hover:bg-violet-500/10"
+                : programmato
+                  ? "border-green-500 text-green-600 hover:bg-green-500/10"
+                  : "border-border text-muted-foreground hover:border-primary hover:text-primary"
             }`}
             title={programmato ? "Programmato" : "Non programmato"}
           >
