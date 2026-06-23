@@ -65,7 +65,7 @@ function PianoEditorialePage() {
   }, [year, month]);
 
   useEffect(() => {
-    syncPublishedPostsFromTrendsJson().catch(() => {});
+    syncPublishedPostsFromTrendsJson().catch((err) => console.error("[syncPublishedPostsFromTrendsJson]", err));
   }, []);
 
   const defaultDate = useMemo(() => {
