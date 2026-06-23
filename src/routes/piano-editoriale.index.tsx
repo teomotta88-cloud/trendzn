@@ -27,9 +27,12 @@ export const Route = createFileRoute("/piano-editoriale/")({
   component: PianoEditorialePage,
 });
 
-const now = new Date();
-
 function PianoEditorialePage() {
+  // Calcolato dentro il componente (non a livello di modulo) per evitare un
+  // mismatch di hydration: a livello di modulo verrebbe valutato una sola
+  // volta all'avvio del processo server, restando "congelato" nel tempo
+  // rispetto al client che lo ricalcola a ogni caricamento pagina.
+  const now = new Date();
   const [year, setYear] = useState(now.getFullYear());
   const [month, setMonth] = useState(now.getMonth() + 1);
   const [plan, setPlan] = useState<EditorialPlan | null>(null);
