@@ -1,6 +1,23 @@
 import { useEffect, useState } from "react";
-import { Grid3x3, Bookmark, UserSquare2, Heart, MessageCircle, Send, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { type EditorialPost, type EditorialPostMedia, listMedia } from "@/lib/editorialPlan";
+import {
+  Grid3x3,
+  Bookmark,
+  UserSquare2,
+  Heart,
+  MessageCircle,
+  Send,
+  ChevronLeft,
+  ChevronRight,
+  X,
+  ExternalLink,
+} from "lucide-react";
+import {
+  type EditorialPost,
+  type EditorialPostMedia,
+  type PublishedPostMatch,
+  listMedia,
+  getPublishedMatches,
+} from "@/lib/editorialPlan";
 
 const PROFILE = {
   avatar: "/brand/logo.png",
@@ -22,11 +39,22 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
   const [mediaByPost, setMediaByPost] = useState<Record<string, EditorialPostMedia[]>>({});
   const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
   const [mediaIndex, setMediaIndex] = useState(0);
+  const [matchesByPost, setMatchesByPost] = useState<Record<string, PublishedPostMatch[]>>({});
 
   useEffect(() => {
     let cancelled = false;
     Promise.all(posts.map((p) => listMedia(p.id).then((m) => [p.id, m] as const))).then((entries) => {
       if (!cancelled) setMediaByPost(Object.fromEntries(entries));
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [posts]);
+
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all(posts.map((p) => getPublishedMatches(p.id).then((m) => [p.id, m] as const))).then((entries) => {
+      if (!cancelled) setMatchesByPost(Object.fromEntries(entries));
     });
     return () => {
       cancelled = true;
@@ -46,6 +74,7 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
 
   const selectedPost = withVisual.find((p) => p.id === selectedPostId) ?? null;
   const selectedMedia = selectedPost ? mediaFor(selectedPost) : [];
+  const selectedIgUrl = selectedPost ? matchesByPost[selectedPost.id]?.find((m) => m.canale === "IG")?.url : null;
 
   function openPost(postId: string) {
     setSelectedPostId(postId);
@@ -201,6 +230,17 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
                   <Send className="size-5" />
                   <Bookmark className="ml-auto size-5" />
                 </div>
+                {selectedIgUrl && (
+                  <a
+                    href={selectedIgUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 flex items-center justify-center gap-1.5 rounded-lg border border-border py-1.5 text-sm font-semibold text-primary hover:bg-primary/10"
+                  >
+                    <ExternalLink className="size-4" />
+                    Guarda su Instagram
+                  </a>
+                )}
               </div>
             </div>
           </div>

@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { Trash2, Pencil, Clock } from "lucide-react";
+import { Trash2, Pencil, Clock, Link2 } from "lucide-react";
 import {
   type EditorialPost,
   type ReviewComponent,
+  type PublishedPostMatch,
   getApprovalStatus,
   toggleApproval,
   deletePost,
   updatePost,
   updatePostText,
   updateChannelCopy,
+  getPublishedMatches,
   SAME_AS_IG_FLAG,
 } from "@/lib/editorialPlan";
 import { PostReviewBlock } from "./PostReviewBlock";
@@ -47,6 +49,16 @@ export function PostCard({
   const [editingCopyVisual, setEditingCopyVisual] = useState(false);
   const visualContentRef = useRef<HTMLDivElement>(null);
   const [visualContentHeight, setVisualContentHeight] = useState<number>();
+  const [publishedMatches, setPublishedMatches] = useState<PublishedPostMatch[]>([]);
+  const [showPublishedUrl, setShowPublishedUrl] = useState(false);
+
+  async function refreshPublishedMatches() {
+    setPublishedMatches(await getPublishedMatches(post.id));
+  }
+
+  useEffect(() => {
+    refreshPublishedMatches();
+  }, [post.id]);
 
   useEffect(() => {
     const el = visualContentRef.current;
@@ -77,6 +89,7 @@ export function PostCard({
   async function saveChannelCopy(channel: string, value: string) {
     const next = await updateChannelCopy(post.id, channel, value || null, channelCopies);
     setChannelCopies(next);
+    refreshPublishedMatches();
   }
 
   async function toggleSameAsIG(channel: string, checked: boolean) {
@@ -193,6 +206,38 @@ export function PostCard({
             <p className="text-xs text-muted-foreground">—</p>
           ) : (
             <div className="flex flex-col gap-2">
+              {publishedMatches.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setShowPublishedUrl((v) => !v)}
+                  className={`inline-flex items-center gap-1 self-start rounded-full border px-2 py-0.5 text-[10px] font-medium transition ${
+                    showPublishedUrl
+                      ? "border-primary bg-primary/15 text-primary"
+                      : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+                  }`}
+                >
+                  <Link2 className="size-3" />
+                  Url pubblicato ({publishedMatches.length})
+                </button>
+              )}
+              {showPublishedUrl && publishedMatches.length > 0 && (
+                <div className="flex flex-col gap-1 rounded-lg border border-border bg-muted/30 p-2">
+                  {publishedMatches.map((m) => (
+                    <a
+                      key={m.url}
+                      href={m.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1.5 text-[11px] text-primary hover:underline"
+                    >
+                      <span className="rounded border border-border px-1 text-[9px] font-semibold text-foreground">
+                        {m.canale}
+                      </span>
+                      <span className="truncate">{m.url}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
               <div className="flex flex-wrap gap-1">
                 {post.canali.map((code) => (
                   <button
