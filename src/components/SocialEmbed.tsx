@@ -150,7 +150,7 @@ function TikTokEmbed({ embed }: { embed: string }) {
           transform: `scale(${scale})`,
           transformOrigin: "top left",
         }}
-        allow="autoplay; encrypted-media; picture-in-picture; web-share"
+        allow="encrypted-media; picture-in-picture; web-share"
         allowFullScreen
         loading="lazy"
       />
@@ -215,7 +215,7 @@ export function SocialEmbed({ url }: { url: string }) {
         src={embed}
         className="absolute inset-0 size-full"
         scrolling="no"
-        allow="autoplay; encrypted-media; picture-in-picture; web-share"
+        allow="encrypted-media; picture-in-picture; web-share"
         allowFullScreen
         loading="lazy"
       />
