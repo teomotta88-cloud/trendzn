@@ -135,7 +135,7 @@ export function PostCard({
     <article
       className={`space-y-3 rounded-2xl border p-4 transition-colors ${
         isPublished
-          ? "border-amber-500 bg-amber-500/5"
+          ? "border-cyan-500 bg-cyan-500/5"
           : fullyDone
             ? "border-violet-500 bg-violet-500/5"
             : allApproved
