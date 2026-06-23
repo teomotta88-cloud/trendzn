@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Plus, Trash2 } from "lucide-react";
-import { type EditorialPostMedia, addMedia, deleteMedia, listMedia, swapMediaPosition } from "@/lib/editorialPlan";
+import {
+  type EditorialPostMedia,
+  addMedia,
+  deleteMedia,
+  listMedia,
+  swapMediaPosition,
+  reorderMedia,
+} from "@/lib/editorialPlan";
 import { MediaLightbox } from "./MediaLightbox";
+
+const MAX_PREVIEWS = 4;
 
 function isVideo(url: string, type: string | null) {
   return (!!type && type.startsWith("video")) || /\.(mp4|mov|webm)$/i.test(url);
@@ -12,6 +21,9 @@ export function PostMediaGallery({ postId }: { postId: string }) {
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const [dragIndex, setDragIndex] = useState<number | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
 
   async function refresh() {
     setMedia(await listMedia(postId));
@@ -45,7 +57,23 @@ export function PostMediaGallery({ postId }: { postId: string }) {
     await refresh();
   }
 
+  async function handleDrop(targetIdx: number) {
+    const sourceIdx = dragIndex;
+    setDragIndex(null);
+    setDragOverIndex(null);
+    if (sourceIdx === null || sourceIdx === targetIdx) return;
+    const reordered = [...media];
+    const [moved] = reordered.splice(sourceIdx, 1);
+    reordered.splice(targetIdx, 0, moved);
+    setMedia(reordered);
+    await reorderMedia(reordered);
+    await refresh();
+  }
+
   if (loading) return <span className="text-muted-foreground">Carico…</span>;
+
+  const hasMore = media.length > MAX_PREVIEWS;
+  const visible = showAll ? media : media.slice(0, MAX_PREVIEWS);
 
   return (
     <div className="space-y-2">
@@ -53,9 +81,29 @@ export function PostMediaGallery({ postId }: { postId: string }) {
         <span className="text-muted-foreground">Nessun visual caricato</span>
       ) : (
         <div className="grid grid-cols-2 gap-2">
-          {media.map((item, idx) => (
-            <div key={item.id} className="group relative aspect-square overflow-hidden rounded-lg border border-border">
-              <button type="button" className="size-full" onClick={() => setLightboxIndex(idx)}>
+          {visible.map((item, idx) => (
+            <div
+              key={item.id}
+              draggable
+              onDragStart={() => setDragIndex(idx)}
+              onDragOver={(e) => {
+                e.preventDefault();
+                if (dragOverIndex !== idx) setDragOverIndex(idx);
+              }}
+              onDragLeave={() => setDragOverIndex((v) => (v === idx ? null : v))}
+              onDrop={(e) => {
+                e.preventDefault();
+                handleDrop(idx);
+              }}
+              onDragEnd={() => {
+                setDragIndex(null);
+                setDragOverIndex(null);
+              }}
+              className={`group relative aspect-square cursor-grab overflow-hidden rounded-lg border transition active:cursor-grabbing ${
+                dragOverIndex === idx ? "border-primary ring-2 ring-primary/40" : "border-border"
+              } ${dragIndex === idx ? "opacity-50" : ""}`}
+            >
+              <button type="button" className="size-full cursor-grab active:cursor-grabbing" onClick={() => setLightboxIndex(idx)}>
                 {isVideo(item.url, item.type) ? (
                   <video src={item.url} className="size-full object-cover" muted />
                 ) : (
@@ -67,7 +115,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                   type="button"
                   onClick={() => handleMove(idx, -1)}
                   disabled={idx === 0}
-                  className="rounded bg-white/20 p-0.5 text-white disabled:opacity-30"
+                  className="cursor-pointer rounded bg-white/20 p-0.5 text-white disabled:cursor-default disabled:opacity-30"
                   title="Sposta prima"
                 >
                   <ChevronLeft className="size-3" />
@@ -75,7 +123,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                 <button
                   type="button"
                   onClick={() => handleDelete(item)}
-                  className="rounded bg-white/20 p-0.5 text-white hover:bg-destructive"
+                  className="cursor-pointer rounded bg-white/20 p-0.5 text-white hover:bg-destructive"
                   title="Elimina"
                 >
                   <Trash2 className="size-3" />
@@ -84,7 +132,7 @@ export function PostMediaGallery({ postId }: { postId: string }) {
                   type="button"
                   onClick={() => handleMove(idx, 1)}
                   disabled={idx === media.length - 1}
-                  className="rounded bg-white/20 p-0.5 text-white disabled:opacity-30"
+                  className="cursor-pointer rounded bg-white/20 p-0.5 text-white disabled:cursor-default disabled:opacity-30"
                   title="Sposta dopo"
                 >
                   <ChevronRight className="size-3" />
@@ -95,7 +143,17 @@ export function PostMediaGallery({ postId }: { postId: string }) {
         </div>
       )}
 
-      <label className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
+      {hasMore && (
+        <button
+          type="button"
+          onClick={() => setShowAll((v) => !v)}
+          className="w-full rounded-lg border border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary"
+        >
+          {showAll ? "Mostra meno" : `Vedi di più (+${media.length - MAX_PREVIEWS})`}
+        </button>
+      )}
+
+      <label className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
         <Plus className="size-3" />
         {uploading ? "Carico…" : "Aggiungi file"}
         <input

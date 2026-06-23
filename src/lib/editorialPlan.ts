@@ -2,6 +2,22 @@ import { supabase } from "@/integrations/supabase/client";
 
 export type ReviewComponent = "copy" | "copy_visual" | "visual";
 
+export const CHANNELS = [
+  { code: "IG", label: "Instagram" },
+  { code: "IGS", label: "Instagram Stories" },
+  { code: "FB", label: "Facebook" },
+  { code: "TT", label: "TikTok" },
+  { code: "LK", label: "LinkedIn" },
+  { code: "X", label: "X" },
+  { code: "YT", label: "YouTube" },
+] as const;
+
+export type ChannelCode = (typeof CHANNELS)[number]["code"];
+
+// Sentinel salvato in channel_copies quando un canale usa "Uguale al copy IG"
+// invece di un testo proprio: evita di dover aggiungere una colonna dedicata.
+export const SAME_AS_IG_FLAG = "__same_as_ig__";
+
 export interface EditorialPlan {
   id: string;
   year: number;
@@ -15,15 +31,16 @@ export interface EditorialPost {
   post_date: string; // YYYY-MM-DD
   rubrica: string | null;
   topic: string | null;
-  canale: string | null;
+  canali: string[];
   formato: string | null;
-  copy: string | null;
+  channel_copies: Record<string, string>;
   copy_visual: string | null;
   visual_url: string | null;
   visual_type: string | null;
   disclaimer: string | null;
   obiettivo_media: string | null;
   budget_media: number | null;
+  programmato: boolean;
   created_at: string;
 }
 
@@ -93,13 +110,32 @@ export async function createPost(input: Omit<EditorialPost, "id" | "created_at">
   return data;
 }
 
-export async function updatePostText(
+export async function updatePost(
   id: string,
-  field: "copy" | "copy_visual",
-  value: string | null,
-): Promise<void> {
+  fields: Partial<Omit<EditorialPost, "id" | "plan_id" | "created_at">>,
+): Promise<EditorialPost> {
+  const { data, error } = await db.from("editorial_posts").update(fields).eq("id", id).select("*").single();
+  if (error) throw error;
+  return data;
+}
+
+export async function updatePostText(id: string, field: "copy_visual", value: string | null): Promise<void> {
   const { error } = await db.from("editorial_posts").update({ [field]: value }).eq("id", id);
   if (error) throw error;
+}
+
+export async function updateChannelCopy(
+  id: string,
+  channel: string,
+  value: string | null,
+  channelCopies: Record<string, string>,
+): Promise<Record<string, string>> {
+  const next = { ...channelCopies };
+  if (value) next[channel] = value;
+  else delete next[channel];
+  const { error } = await db.from("editorial_posts").update({ channel_copies: next }).eq("id", id);
+  if (error) throw error;
+  return next;
 }
 
 export async function deletePost(id: string): Promise<void> {
@@ -107,19 +143,24 @@ export async function deletePost(id: string): Promise<void> {
   if (error) throw error;
 }
 
-export async function getApprovalCounts(postId: string): Promise<Record<ReviewComponent, number>> {
+export async function getApprovalStatus(postId: string): Promise<Record<ReviewComponent, boolean>> {
   const { data, error } = await db.from("editorial_post_approvals").select("component").eq("post_id", postId);
   if (error) throw error;
-  const counts: Record<ReviewComponent, number> = { copy: 0, copy_visual: 0, visual: 0 };
+  const status: Record<ReviewComponent, boolean> = { copy: false, copy_visual: false, visual: false };
   (data ?? []).forEach((r: { component: ReviewComponent }) => {
-    counts[r.component] = (counts[r.component] ?? 0) + 1;
+    status[r.component] = true;
   });
-  return counts;
+  return status;
 }
 
-export async function approveComponent(postId: string, component: ReviewComponent): Promise<void> {
-  const { error } = await db.from("editorial_post_approvals").insert({ post_id: postId, component });
-  if (error) throw error;
+export async function toggleApproval(postId: string, component: ReviewComponent, approved: boolean): Promise<void> {
+  if (approved) {
+    const { error } = await db.from("editorial_post_approvals").delete().eq("post_id", postId).eq("component", component);
+    if (error) throw error;
+  } else {
+    const { error } = await db.from("editorial_post_approvals").insert({ post_id: postId, component });
+    if (error) throw error;
+  }
 }
 
 export async function listComments(postId: string): Promise<EditorialPostComment[]> {
@@ -188,4 +229,16 @@ export async function swapMediaPosition(a: EditorialPostMedia, b: EditorialPostM
   if (errA) throw errA;
   const { error: errB } = await db.from("editorial_post_media").update({ position: a.position }).eq("id", b.id);
   if (errB) throw errB;
+}
+
+export async function reorderMedia(items: EditorialPostMedia[]): Promise<void> {
+  const results = await Promise.all(
+    items.map((item, position) =>
+      item.position === position
+        ? null
+        : db.from("editorial_post_media").update({ position }).eq("id", item.id),
+    ),
+  );
+  const error = results.find((r) => r?.error)?.error;
+  if (error) throw error;
 }

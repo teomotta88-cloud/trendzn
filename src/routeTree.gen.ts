@@ -16,6 +16,7 @@ import { Route as TiktokHashtagRouteImport } from './routes/tiktok-hashtag'
 import { Route as LinkedinRouteImport } from './routes/linkedin'
 import { Route as InfluencerFeedRouteImport } from './routes/influencer-feed'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editoriale.index'
 import { Route as InfluencerIndexRouteImport } from './routes/influencer.index'
 import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
@@ -60,6 +61,11 @@ const InfluencerFeedRoute = InfluencerFeedRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PianoEditorialeIndexRoute = PianoEditorialeIndexRouteImport.update({
+  id: '/piano-editoriale/',
+  path: '/piano-editoriale/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InfluencerIndexRoute = InfluencerIndexRouteImport.update({
@@ -130,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
+  '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/n8n-published-post': typeof ApiPublicHooksN8nPublishedPostRoute
@@ -149,6 +156,7 @@ export interface FileRoutesByTo {
   '/canali-inspo': typeof CanaliInspoIndexRoute
   '/feed': typeof FeedIndexRoute
   '/influencer': typeof InfluencerIndexRoute
+  '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/n8n-published-post': typeof ApiPublicHooksN8nPublishedPostRoute
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
+  '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/n8n-published-post': typeof ApiPublicHooksN8nPublishedPostRoute
@@ -190,6 +199,7 @@ export interface FileRouteTypes {
     | '/canali-inspo/'
     | '/feed/'
     | '/influencer/'
+    | '/piano-editoriale/'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/n8n-published-post'
@@ -209,6 +219,7 @@ export interface FileRouteTypes {
     | '/canali-inspo'
     | '/feed'
     | '/influencer'
+    | '/piano-editoriale'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/n8n-published-post'
@@ -228,6 +239,7 @@ export interface FileRouteTypes {
     | '/canali-inspo/'
     | '/feed/'
     | '/influencer/'
+    | '/piano-editoriale/'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/n8n-published-post'
@@ -248,6 +260,7 @@ export interface RootRouteChildren {
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
   FeedIndexRoute: typeof FeedIndexRoute
   InfluencerIndexRoute: typeof InfluencerIndexRoute
+  PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksN8nPublishedPostRoute: typeof ApiPublicHooksN8nPublishedPostRoute
@@ -304,6 +317,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/piano-editoriale/': {
+      id: '/piano-editoriale/'
+      path: '/piano-editoriale'
+      fullPath: '/piano-editoriale/'
+      preLoaderRoute: typeof PianoEditorialeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/influencer/': {
@@ -392,6 +412,7 @@ const rootRouteChildren: RootRouteChildren = {
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
   FeedIndexRoute: FeedIndexRoute,
   InfluencerIndexRoute: InfluencerIndexRoute,
+  PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksN8nPublishedPostRoute: ApiPublicHooksN8nPublishedPostRoute,

@@ -149,6 +149,7 @@ const NAV_ITEMS = [
   { to: "/influencer-feed", label: "Influencer Feed" },
   { to: "/feed", label: "Feed" },
   { to: "/tiktok-hashtag", label: "TikTok Hashtag" },
+  { to: "/piano-editoriale", label: "Piano Editoriale" },
 ];
 
 function Navbar() {
