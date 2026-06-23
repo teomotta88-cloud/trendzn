@@ -102,7 +102,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bb61e71-74bc-45ae-9543-23f1d14fff21/id-preview-8f4a3ee6--54afe560-3e1f-4196-977c-05f75da520ec.lovable.app-1781187441235.png",
       },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/brand/favicon.png" },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -160,9 +163,7 @@ function Navbar() {
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 sm:px-6 lg:px-10">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="inline-flex size-7 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">
-            T
-          </span>
+          <img src="/brand/logo-mark.png" alt="" className="size-7" />
           <span className="font-display text-base font-semibold tracking-tight">TRENDZN</span>
         </Link>
 
