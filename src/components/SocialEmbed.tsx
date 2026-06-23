@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { detectPlatform, embedUrl } from "@/lib/trends";
 import { ExternalLink, Instagram, Music2, Youtube, Globe, Linkedin } from "lucide-react";
 
@@ -109,6 +109,58 @@ function LinkedInPreview({ url }: { url: string }) {
   );
 }
 
+// Larghezza/altezza native del player embed v2 di TikTok: non si adattano
+// al contenitore (l'iframe è cross-origin, non possiamo cambiarne il layout
+// interno). Il rapporto nativo (325:738) è più "alto" del 9:16 standard delle
+// altre card, quindi non possiamo semplicemente riempire la larghezza senza
+// tagliare il video in verticale: calcoliamo lo scale come il minimo tra
+// quello orizzontale e verticale (object-fit: contain), centrando il player
+// nel box, così il post resta sempre visibile per intero.
+const TIKTOK_NATIVE_WIDTH = 325;
+const TIKTOK_NATIVE_HEIGHT = 738;
+
+function TikTokEmbed({ embed }: { embed: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const update = () => {
+      const scaleX = el.clientWidth / TIKTOK_NATIVE_WIDTH;
+      const scaleY = el.clientHeight / TIKTOK_NATIVE_HEIGHT;
+      setScale(Math.min(scaleX, scaleY));
+    };
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-xl border border-border bg-black"
+    >
+      <iframe
+        src={embed}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: TIKTOK_NATIVE_WIDTH,
+          height: TIKTOK_NATIVE_HEIGHT,
+          transform: `translate(-50%, -50%) scale(${scale})`,
+          transformOrigin: "center",
+        }}
+        allow="autoplay; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
 export function SocialEmbed({ url }: { url: string }) {
   const platform = detectPlatform(url);
   const embed = embedUrl(url);
@@ -154,6 +206,10 @@ export function SocialEmbed({ url }: { url: string }) {
     );
   }
 
+  if (platform === "tiktok") {
+    return <TikTokEmbed embed={embed} />;
+  }
+
   const aspect = platform === "youtube" ? "aspect-video" : "aspect-[9/16]";
 
   return (
@@ -161,6 +217,7 @@ export function SocialEmbed({ url }: { url: string }) {
       <iframe
         src={embed}
         className="absolute inset-0 size-full"
+        scrolling="no"
         allow="autoplay; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
         loading="lazy"
