@@ -121,24 +121,37 @@ type GmailPart = {
   headers?: { name: string; value: string }[];
 };
 
-// Legge solo text/plain per evitare duplicati da multipart/alternative
-function extractTextPlainOnly(payload: GmailPart | undefined): string {
+// Cerca una parte con un determinato mimeType, ricorsivamente.
+function findPartBody(payload: GmailPart | undefined, mimeType: string): string {
   if (!payload) return "";
 
-  if (payload.mimeType === "text/plain" && payload.body?.data) {
+  if (payload.mimeType === mimeType && payload.body?.data) {
     return decodeBase64Url(payload.body.data);
-  }
-
-  if (payload.mimeType === "text/html") {
-    return "";
   }
 
   if (payload.parts) {
     for (const p of payload.parts) {
-      const text = extractTextPlainOnly(p);
+      const text = findPartBody(p, mimeType);
       if (text) return text;
     }
   }
+
+  return "";
+}
+
+// Preferisce text/plain (evita duplicati da multipart/alternative); se il
+// messaggio non ha alcuna parte text/plain (es. mail condivise dall'app
+// TikTok via Gmail mobile, che generano solo HTML), usa text/html come
+// fallback — altrimenti l'URL del post resta irraggiungibile e si ricade
+// sullo snippet troncato di Gmail.
+function extractTextPlainOnly(payload: GmailPart | undefined): string {
+  if (!payload) return "";
+
+  const plain = findPartBody(payload, "text/plain");
+  if (plain) return plain;
+
+  const html = findPartBody(payload, "text/html");
+  if (html) return html;
 
   if (payload.body?.data) {
     return decodeBase64Url(payload.body.data);
