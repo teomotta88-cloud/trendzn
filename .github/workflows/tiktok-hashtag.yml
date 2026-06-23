@@ -20,9 +20,7 @@ jobs:
           npm install playwright
           npx playwright install --with-deps chromium
 
-      - name: Run scraper and sync to Supabase
+      - name: Run scraper and sync via Lovable endpoint
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           TIKTOK_HASHTAG: starhotels
         run: node scripts/sync-tiktok-hashtag.mjs
