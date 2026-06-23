@@ -8,6 +8,11 @@ export type TrendItem = {
   industry: string | null;
   applicazione: string | null;
   canali: string | null;
+  // Testo grezzo della mail di origine e tag dell'oggetto: non vengono
+  // mostrati in UI, servono solo per ampliare la ricerca a tutto il
+  // contenuto arrivato via mail (caption, descrizione, ecc).
+  rawEmail?: string | null;
+  tags?: string[] | null;
 };
 
 export type AccountRef = {
@@ -29,6 +34,17 @@ export const trendRealTime = data.trend_real_time as TrendItem[];
 export const trendAttuali = data.trend_attuali as TrendItem[];
 export const trendEvergreen = data.trend_evergreen as TrendItem[];
 export const canaliInspo = data.canali_inspo as CanaleInspo[];
+
+// Estrae lo username del post dall'URL, quando disponibile (es. TikTok
+// @handle). Per piattaforme dove l'URL non lo contiene (es. Instagram /p/ID/)
+// ritorna null.
+export function extractUsername(url: string): string | null {
+  const tt = url.match(/tiktok\.com\/@([^/]+)/i);
+  if (tt) return tt[1];
+  const ig = url.match(/instagram\.com\/([^/]+)\/(?:p|reel|reels|tv)\//i);
+  if (ig) return ig[1];
+  return null;
+}
 
 export function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "linkedin" | "web" {
   if (/instagram\.com/.test(url)) return "instagram";
