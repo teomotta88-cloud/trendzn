@@ -99,6 +99,7 @@ export function PostCard({
     await updatePost(post.id, { programmato: !programmato });
     setProgrammato((v) => !v);
     setTogglingProgrammato(false);
+    onUpdated?.();
   }
 
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
