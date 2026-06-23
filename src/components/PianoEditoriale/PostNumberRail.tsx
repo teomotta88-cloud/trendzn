@@ -9,6 +9,7 @@ const PALETTE = {
   some: { border: "#eab308", bg: "color-mix(in oklch, #eab308 18%, transparent)", text: "#eab308", solid: "#eab308" },
   all: { border: "#22c55e", bg: "color-mix(in oklch, #22c55e 18%, transparent)", text: "#22c55e", solid: "#22c55e" },
   violet: { border: "#8b5cf6", bg: "color-mix(in oklch, #8b5cf6 18%, transparent)", text: "#8b5cf6", solid: "#8b5cf6" },
+  published: { border: "#06b6d4", bg: "color-mix(in oklch, #06b6d4 18%, transparent)", text: "#06b6d4", solid: "#06b6d4" },
 } as const;
 
 function formatDayMonth(dateStr: string) {
@@ -18,7 +19,12 @@ function formatDayMonth(dateStr: string) {
   return `${day}/${month}`;
 }
 
-function approvalLevel(approvals: Record<ReviewComponent, boolean> | undefined, programmato: boolean): keyof typeof PALETTE {
+function approvalLevel(
+  approvals: Record<ReviewComponent, boolean> | undefined,
+  programmato: boolean,
+  publishedCount: number,
+): keyof typeof PALETTE {
+  if (publishedCount > 0) return "published";
   if (!approvals) return "none";
   const values = [approvals.copy, approvals.copy_visual, approvals.visual];
   if (values.every(Boolean)) return programmato ? "violet" : "all";
@@ -31,11 +37,13 @@ export function PostNumberRail({
   getPostEl,
   anchorRef,
   approvalsByPost,
+  publishedCountByPost,
 }: {
   posts: EditorialPost[];
   getPostEl: (id: string) => HTMLElement | null;
   anchorRef: React.RefObject<HTMLElement | null>;
   approvalsByPost: Record<string, Record<ReviewComponent, boolean>>;
+  publishedCountByPost: Record<string, number>;
 }) {
   const railRef = useRef<HTMLDivElement>(null);
   const boxRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -62,7 +70,7 @@ export function PostNumberRail({
         const dist = Math.abs(centerY - viewportCenter);
         const t = Math.max(0, 1 - dist / spread);
         const active = t > 0.55;
-        const palette = PALETTE[approvalLevel(approvalsByPost[post.id], post.programmato)];
+        const palette = PALETTE[approvalLevel(approvalsByPost[post.id], post.programmato, publishedCountByPost[post.id] ?? 0)];
         const scale = 1 + t * 0.55;
         const z = t * 60;
         boxEl.style.transform = `translateZ(${z}px) scale(${scale})`;
@@ -76,7 +84,7 @@ export function PostNumberRail({
     }
 
     return () => cancelAnimationFrame(frame);
-  }, [posts, getPostEl, anchorRef, approvalsByPost]);
+  }, [posts, getPostEl, anchorRef, approvalsByPost, publishedCountByPost]);
 
   if (posts.length === 0) return null;
 
