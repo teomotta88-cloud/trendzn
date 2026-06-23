@@ -22,6 +22,10 @@ export function textSimilarity(a: string, b: string): number {
   if (!na || !nb) return 0;
   if (na === nb) return 1;
 
+  // Le caption importate da n8n sono spesso troncate (es. "...sottovalutare....");
+  // se il frammento normalizzato è contenuto per intero nell'altro testo, è un match pieno.
+  if (na.length > 20 && nb.length > 20 && (na.includes(nb) || nb.includes(na))) return 1;
+
   const ga = bigrams(na);
   const gb = bigrams(nb);
   if (ga.length === 0 || gb.length === 0) return 0;
