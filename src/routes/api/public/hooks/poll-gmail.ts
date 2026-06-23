@@ -425,12 +425,46 @@ export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
                   const base = urlBase(url);
                   const { data: existing } = await supabaseAdmin
                     .from("trend_submissions")
-                    .select("id")
+                    .select("id, section, category")
                     .like("url", `${base}%`)
                     .maybeSingle();
 
                   if (existing) {
-                    console.log("URL già presente su Supabase, skip:", url);
+                    // Se il duplicato esistente non ha una categoria/sezione valida
+                    // (es. arrivato da una mail con tag errati nell'oggetto), la
+                    // mail corrente potrebbe portare i tag corretti: aggiorniamo
+                    // la riga invece di scartarla, così il trend non resta "perso".
+                    if (!existing.section && section) {
+                      const derivedTitleUpdate =
+                        section === "canali-inspo" || section === "influencer"
+                          ? tags[2]
+                            ? tags.slice(2).join(" ")
+                            : extractHandleFromUrl(url)
+                          : section === "linkedin"
+                            ? tags[2]
+                              ? tags.slice(2).join(" ")
+                              : subject || null
+                            : subject || null;
+
+                      const { error: updateError } = await supabaseAdmin
+                        .from("trend_submissions")
+                        .update({
+                          category,
+                          industry,
+                          section,
+                          tags,
+                          title: derivedTitleUpdate,
+                        })
+                        .eq("id", existing.id);
+
+                      if (updateError) {
+                        console.error("Update error:", updateError.message);
+                      } else {
+                        console.log("URL già presente con categoria non valida, aggiornata:", url);
+                      }
+                    } else {
+                      console.log("URL già presente su Supabase, skip:", url);
+                    }
                     continue;
                   }
 
