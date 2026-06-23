@@ -391,6 +391,8 @@ async function matchPublishedPostFromCaption(
     if (!channelCopy) continue;
     const score = textSimilarity(channelCopy, caption);
     console.log("[match] score", score.toFixed(2), "per post", post.id);
+    console.log("[match] channelCopy:", JSON.stringify(channelCopy));
+    console.log("[match] caption:", JSON.stringify(caption));
     if (score >= MATCH_SIMILARITY_THRESHOLD && (!best || score > best.score)) {
       best = { id: post.id, score };
     }
