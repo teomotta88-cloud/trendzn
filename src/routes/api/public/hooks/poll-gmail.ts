@@ -374,10 +374,17 @@ async function syncInfluencerToGitHub(
 export const Route = createFileRoute("/api/public/hooks/poll-gmail")({
   server: {
     handlers: {
-      POST: async () => {
+      // Il cron chiama questo endpoint con body "{}", quindi usa la query di default
+      // (solo non lette). Passando un "query" custom nel body è possibile rilanciare
+      // manualmente un controllo una tantum anche su mail già lette (es. per recuperare
+      // link ignorati prima di un fix nel regex).
+      POST: async ({ request }) => {
         try {
+          const body = (await request.json().catch(() => ({}))) as { query?: string };
+          const gmailQuery = body.query?.trim() || "is:unread in:inbox";
+
           const list = (await gmailFetch(
-            `/users/me/messages?q=${encodeURIComponent("is:unread in:inbox")}&maxResults=50`,
+            `/users/me/messages?q=${encodeURIComponent(gmailQuery)}&maxResults=50`,
           )) as { messages?: { id: string }[] };
 
           const messages = list.messages ?? [];
