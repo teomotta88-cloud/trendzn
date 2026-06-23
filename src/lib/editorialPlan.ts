@@ -357,6 +357,16 @@ interface TrendsClientAccount {
   caption?: string | null;
 }
 
+// RSS-Bridge non fornisce la data di pubblicazione per TikTok: gli id video
+// sono snowflake e codificano il timestamp Unix (secondi) nei 32 bit alti.
+function deriveTikTokDateFromUrl(url: string): string | null {
+  const match = url.match(/\/video\/(\d+)/);
+  if (!match) return null;
+  const timestampSeconds = Number(BigInt(match[1]) >> 32n);
+  if (!Number.isFinite(timestampSeconds) || timestampSeconds <= 0) return null;
+  return new Date(timestampSeconds * 1000).toISOString();
+}
+
 interface TrendsClienteChannel {
   accounts: TrendsClientAccount[];
 }
@@ -408,14 +418,15 @@ export async function syncPublishedPostsFromTrendsJson(): Promise<void> {
 
   for (const channel of channels) {
     for (const account of channel.accounts) {
-      if (!account.date || !account.caption) continue;
+      const accountDate = account.date || (account.platform === "tiktok" ? deriveTikTokDateFromUrl(account.url) : null);
+      if (!accountDate || !account.caption) continue;
       const canale = PLATFORM_TO_CANALE[account.platform];
       if (!canale) {
         console.log("[sync] platform non mappata:", account.platform, account.url);
         continue;
       }
 
-      const publishedDate = account.date.slice(0, 10);
+      const publishedDate = accountDate.slice(0, 10);
       const { data: existing } = await db
         .from("editorial_published_posts")
         .select("id, matched_post_id")
