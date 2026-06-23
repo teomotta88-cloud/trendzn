@@ -116,6 +116,7 @@ export function PostCard({
 
   const allApproved = approvals.copy && approvals.copy_visual && approvals.visual;
   const fullyDone = allApproved && programmato;
+  const isPublished = publishedMatches.length > 0;
 
   if (editing) {
     return (
@@ -133,11 +134,13 @@ export function PostCard({
   return (
     <article
       className={`space-y-3 rounded-2xl border p-4 transition-colors ${
-        fullyDone
-          ? "border-violet-500 bg-violet-500/5"
-          : allApproved
-            ? "border-green-500 bg-green-500/5"
-            : "border-border bg-card"
+        isPublished
+          ? "border-amber-500 bg-amber-500/5"
+          : fullyDone
+            ? "border-violet-500 bg-violet-500/5"
+            : allApproved
+              ? "border-green-500 bg-green-500/5"
+              : "border-border bg-card"
       }`}
     >
       <div className="flex flex-wrap items-start justify-between gap-2">
