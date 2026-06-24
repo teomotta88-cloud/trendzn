@@ -1,25 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import { detectPlatform, embedUrl } from "@/lib/trends";
-import { ExternalLink, Instagram, Music2, Youtube, Globe, Linkedin, Play } from "lucide-react";
+import { ExternalLink, Instagram, Music2, Youtube, Globe, Linkedin } from "lucide-react";
 
-// L'iframe non viene montato finché l'utente non clicca: gli embed di
-// TikTok/Instagram/YouTube partono in autoplay muto a prescindere dalla
-// permission "autoplay" (i browser lo consentono comunque), quindi l'unico
-// modo per evitare che tutti i video carichino dati al caricamento pagina è
-// non richiedere affatto l'iframe finché non serve.
-function PlayOverlay({ onPlay }: { onPlay: () => void }) {
-  return (
-    <button
-      type="button"
-      onClick={onPlay}
-      aria-label="Riproduci video"
-      className="absolute inset-0 z-10 flex items-center justify-center bg-black/35 text-white transition hover:bg-black/45"
-    >
-      <span className="flex size-14 items-center justify-center rounded-full bg-white/90 text-black shadow-lg transition group-hover:scale-105">
-        <Play className="size-6 fill-current" />
-      </span>
-    </button>
-  );
+// L'iframe viene montato solo quando la card entra nel viewport e
+// smontato quando ne esce: gli embed di TikTok/Instagram/YouTube partono
+// in autoplay muto a prescindere dalla permission "autoplay" (i browser
+// lo consentono comunque), quindi l'unico modo per evitare che tutti i
+// video carichino dati e suonino contemporaneamente è richiedere
+// l'iframe solo per i contenuti effettivamente visibili.
+function useVisible<T extends HTMLElement>(threshold = 0.5) {
+  const ref = useRef<T>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, visible] as const;
 }
 
 type LinkPreview = {
@@ -142,7 +143,7 @@ const TIKTOK_NATIVE_HEIGHT = 860;
 function TikTokEmbed({ embed }: { embed: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
-  const [started, setStarted] = useState(false);
+  const [visibleRef, visible] = useVisible<HTMLDivElement>();
 
   useEffect(() => {
     const el = containerRef.current;
@@ -156,11 +157,14 @@ function TikTokEmbed({ embed }: { embed: string }) {
 
   return (
     <div
-      ref={containerRef}
-      className="group relative mx-auto w-full max-w-[260px] overflow-hidden rounded-xl border border-border bg-black"
+      ref={(el) => {
+        containerRef.current = el;
+        visibleRef.current = el;
+      }}
+      className="relative mx-auto w-full max-w-[260px] overflow-hidden rounded-xl border border-border bg-black"
       style={{ aspectRatio: `${TIKTOK_NATIVE_WIDTH} / ${TIKTOK_NATIVE_HEIGHT}` }}
     >
-      {started ? (
+      {visible && (
         <iframe
           src={embed}
           style={{
@@ -176,8 +180,6 @@ function TikTokEmbed({ embed }: { embed: string }) {
           allowFullScreen
           loading="lazy"
         />
-      ) : (
-        <PlayOverlay onPlay={() => setStarted(true)} />
       )}
     </div>
   );
@@ -186,7 +188,7 @@ function TikTokEmbed({ embed }: { embed: string }) {
 export function SocialEmbed({ url }: { url: string }) {
   const platform = detectPlatform(url);
   const embed = embedUrl(url);
-  const [started, setStarted] = useState(false);
+  const [visibleRef, visible] = useVisible<HTMLDivElement>();
 
   // LinkedIn: se abbiamo un embed reale (activity ID trovato), usalo.
   // Altrimenti fallback all'anteprima Open Graph.
@@ -212,11 +214,8 @@ export function SocialEmbed({ url }: { url: string }) {
 
   if (platform === "linkedin") {
     return (
-      <div
-        className="group relative w-full overflow-hidden rounded-xl border border-border bg-white"
-        style={{ minHeight: 570 }}
-      >
-        {started ? (
+      <div ref={visibleRef} className="relative w-full overflow-hidden rounded-xl border border-border bg-white" style={{ minHeight: 570 }}>
+        {visible && (
           <iframe
             src={embed}
             className="absolute inset-0 size-full"
@@ -226,8 +225,6 @@ export function SocialEmbed({ url }: { url: string }) {
             allowFullScreen
             title="Post LinkedIn"
           />
-        ) : (
-          <PlayOverlay onPlay={() => setStarted(true)} />
         )}
       </div>
     );
@@ -240,8 +237,8 @@ export function SocialEmbed({ url }: { url: string }) {
   const aspect = platform === "youtube" ? "aspect-video" : "aspect-[9/16]";
 
   return (
-    <div className={`group relative ${aspect} w-full overflow-hidden rounded-xl border border-border bg-black`}>
-      {started ? (
+    <div ref={visibleRef} className={`relative ${aspect} w-full overflow-hidden rounded-xl border border-border bg-black`}>
+      {visible && (
         <iframe
           src={embed}
           className="absolute inset-0 size-full"
@@ -250,8 +247,6 @@ export function SocialEmbed({ url }: { url: string }) {
           allowFullScreen
           loading="lazy"
         />
-      ) : (
-        <PlayOverlay onPlay={() => setStarted(true)} />
       )}
     </div>
   );
