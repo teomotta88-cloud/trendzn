@@ -20,6 +20,7 @@ type DbRow = {
   category: string | null;
   industry: string | null;
   tags: string[] | null;
+  raw_email: string | null;
 };
 
 function rowToTrendItem(row: DbRow): TrendItem {
@@ -31,6 +32,8 @@ function rowToTrendItem(row: DbRow): TrendItem {
     industry: row.industry ?? null,
     applicazione: null,
     canali: null,
+    rawEmail: row.raw_email ?? null,
+    tags: row.tags ?? null,
   };
 }
 
@@ -41,7 +44,7 @@ function Page() {
   const fetchRows = useCallback(() => {
     supabase
       .from("trend_submissions")
-      .select("id, url, title, category, industry, tags")
+      .select("id, url, title, category, industry, tags, raw_email")
       .eq("section", "trend-evergreen")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
