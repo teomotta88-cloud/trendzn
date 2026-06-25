@@ -35,14 +35,29 @@ Variabili d'ambiente:
 | `SESSION_PATH` | dove persistere la sessione (default `./session.json`) |
 | `MAX_POSTS_PER_CHANNEL` | default 15, come lo script Node |
 
+## Primo login
+
+LinkedIn quasi sempre chiede una verifica (CAPTCHA, codice email/SMS) al
+primo accesso di un account nuovo da un IP/dispositivo mai visto — un login
+headless automatico non può superarla. Va quindi fatto a mano una volta:
+
+```bash
+python first_login.py
+```
+
+Si apre un browser visibile: fai login (e l'eventuale verifica) nella
+finestra, poi torna nel terminale e premi Invio. Viene creato `session.json`.
+
 ## Esecuzione
 
 ```bash
 python sync_linkedin.py
 ```
 
-Pensato per essere lanciato a intervalli (es. cron Railway) mantenendo lo
-stesso volume montato per `session.json` tra un'esecuzione e l'altra.
+Da quel momento riusa `session.json` senza richiedere altri login. Pensato
+per essere lanciato a intervalli (es. cron Railway) mantenendo lo stesso
+volume montato per `session.json` tra un'esecuzione e l'altra — se la
+sessione scade o viene invalidata, ripetere `first_login.py`.
 
 ## Da verificare prima di portarlo in produzione
 
