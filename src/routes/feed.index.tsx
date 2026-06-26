@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Zap, Flame, Infinity as InfinityIcon, Check } from "lucide-react";
 import { decodeBase64Utf8 } from "@/lib/base64";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/feed/")({
   component: TrendzFeed,
@@ -160,7 +162,107 @@ function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
   );
 }
 
-function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
+type TrendSection = "trend-real-time" | "trend-attuali" | "trend-evergreen";
+
+const TREND_SECTIONS: { section: TrendSection; label: string; icon: typeof Zap; color: string }[] = [
+  { section: "trend-real-time", label: "Real Time", icon: Zap, color: "#d97706" },
+  { section: "trend-attuali", label: "Attuali", icon: Flame, color: "#dc2626" },
+  { section: "trend-evergreen", label: "Evergreen", icon: InfinityIcon, color: "#16a34a" },
+];
+
+function MarkAsTrendButtons({
+  post,
+  marked,
+  onMarked,
+}: {
+  post: Post;
+  marked: Set<TrendSection>;
+  onMarked: (section: TrendSection) => void;
+}) {
+  const [loadingSection, setLoadingSection] = useState<TrendSection | null>(null);
+
+  async function handleMark(section: TrendSection) {
+    if (marked.has(section) || loadingSection) return;
+    setLoadingSection(section);
+    try {
+      const res = await fetch("/api/public/hooks/submit-manual", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          section,
+          url: post.url,
+          title: post.caption ? post.caption.slice(0, 200) : post.canaleName,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        onMarked(section);
+      } else if (res.status === 409) {
+        // già presente: la consideriamo comunque marcata
+        onMarked(section);
+      }
+    } catch {
+      // silenzioso: l'utente può ritentare
+    } finally {
+      setLoadingSection(null);
+    }
+  }
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        gap: 6,
+        padding: "8px 14px",
+        borderTop: "1px solid #f1f1f1",
+      }}
+    >
+      {TREND_SECTIONS.map(({ section, label, icon: Icon, color }) => {
+        const isMarked = marked.has(section);
+        const isLoading = loadingSection === section;
+        return (
+          <button
+            key={section}
+            onClick={() => handleMark(section)}
+            disabled={isLoading}
+            title={isMarked ? `Già in ${label}` : `Marca come ${label}`}
+            style={{
+              flex: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 4,
+              padding: "5px 6px",
+              borderRadius: 8,
+              border: "1px solid " + (isMarked ? color : "#e2e8f0"),
+              background: isMarked ? color + "1a" : "#fff",
+              color: isMarked ? color : "#64748b",
+              fontSize: 11,
+              fontWeight: 600,
+              cursor: isLoading ? "default" : "pointer",
+              transition: "all 0.15s",
+            }}
+          >
+            {isMarked ? <Check size={12} /> : <Icon size={12} />}
+            {label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function PostCard({
+  post,
+  canaleName,
+  marked,
+  onMarked,
+}: {
+  post: Post;
+  canaleName: string;
+  marked: Set<TrendSection>;
+  onMarked: (section: TrendSection) => void;
+}) {
   const embedUrl = getEmbedUrl(post.url);
   const platform = getPlatform(post.url);
   const heights: Record<string, number> = { instagram: 480, tiktok: 560, youtube: 315 };
@@ -261,6 +363,8 @@ function PostCard({ post, canaleName }: { post: Post; canaleName: string }) {
           {post.caption}
         </p>
       )}
+
+      <MarkAsTrendButtons post={post} marked={marked} onMarked={onMarked} />
     </div>
   );
 }
@@ -351,6 +455,7 @@ function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: s
 }
 
 const PAGE_SIZE = 12;
+const EMPTY_MARKED: Set<TrendSection> = new Set();
 
 function TrendzFeed() {
   const [data, setData] = useState<TrendsData | null>(null);
@@ -359,6 +464,7 @@ function TrendzFeed() {
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOrder>("recenti");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [markedByUrl, setMarkedByUrl] = useState<Record<string, Set<TrendSection>>>({});
 
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
@@ -369,6 +475,37 @@ function TrendzFeed() {
       })
       .catch(() => setError("Impossibile caricare il feed."));
   }, []);
+
+  useEffect(() => {
+    supabase
+      .from("trend_submissions")
+      .select("url, section")
+      .in(
+        "section",
+        TREND_SECTIONS.map((t) => t.section),
+      )
+      .eq("status", "approved")
+      .then(({ data: rows }) => {
+        if (!rows) return;
+        setMarkedByUrl((prev) => {
+          const next = { ...prev };
+          for (const row of rows as { url: string; section: TrendSection }[]) {
+            const set = new Set(next[row.url] ?? []);
+            set.add(row.section);
+            next[row.url] = set;
+          }
+          return next;
+        });
+      });
+  }, []);
+
+  const handleMarked = (url: string, section: TrendSection) => {
+    setMarkedByUrl((prev) => {
+      const set = new Set(prev[url] ?? []);
+      set.add(section);
+      return { ...prev, [url]: set };
+    });
+  };
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
@@ -506,7 +643,13 @@ function TrendzFeed() {
               }}
             >
               {visiblePosts.map((post, i) => (
-                <PostCard key={`${post.url}-${i}`} post={post} canaleName={post.canaleName} />
+                <PostCard
+                  key={`${post.url}-${i}`}
+                  post={post}
+                  canaleName={post.canaleName}
+                  marked={markedByUrl[post.url] ?? EMPTY_MARKED}
+                  onMarked={(section) => handleMarked(post.url, section)}
+                />
               ))}
             </div>
 
