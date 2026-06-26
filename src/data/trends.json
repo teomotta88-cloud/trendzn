@@ -2182,6 +2182,21 @@
           "caption": "No cos&igrave; a intuito"
         }
       ]
+    },
+    {
+      "id": "16",
+      "name": "Girl Power Marketing (LinkedIn, test sync)",
+      "urls": [
+        "https://www.linkedin.com/company/girl-power-marketing/"
+      ],
+      "descrizione": "Canale di test per il prototipo di sync LinkedIn (linkedin_scraper)",
+      "accounts": [
+        {
+          "platform": "linkedin",
+          "handle": "girl-power-marketing",
+          "url": "https://www.linkedin.com/company/girl-power-marketing/"
+        }
+      ]
     }
   ],
   "influencer_profiles": [
