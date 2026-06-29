@@ -287,7 +287,7 @@ function Feed() {
           const canDeleteJson = isJsonCanale;
           const canDeleteSupabase = !!dbIdForCanale && !isJsonCanale;
 
-          const deletingThis = deleting === dbIdForCanale || deleting === c.id;
+          const deletingThis = !!deleting && (deleting === dbIdForCanale || deleting === c.id);
 
           return (
             <div key={c.id} className="group relative">
