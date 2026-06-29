@@ -246,8 +246,12 @@ function Feed() {
             ? c.id
             : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ?? null);
 
-          const canDeleteSupabase = !!dbIdForCanale;
-          const canDeleteJson = isJsonCanale && !canDeleteSupabase;
+          // Un canale presente in trends.json va sempre eliminato da lì, anche se
+          // condivide l'handle con una riga Supabase (es. duplicato già filtrato
+          // da dbCanali): altrimenti il bottone elimina solo la riga Supabase
+          // senza toccare il json e il canale resta visibile.
+          const canDeleteJson = isJsonCanale;
+          const canDeleteSupabase = !!dbIdForCanale && !isJsonCanale;
 
           const deletingThis = deleting === dbIdForCanale || deleting === c.id;
 
