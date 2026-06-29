@@ -66,6 +66,16 @@ function Feed() {
   const [jsonCanali, setJsonCanali] = useState<CanaleInspo[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
+  // Conferma a doppio click invece di window.confirm: nell'iframe di preview
+  // i dialog nativi vengono spesso bloccati/auto-dismessi (confirm() ritorna
+  // false all'istante), facendo sembrare il bottone elimina "rotto".
+  const [confirmingId, setConfirmingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!confirmingId) return;
+    const t = setTimeout(() => setConfirmingId(null), 3000);
+    return () => clearTimeout(t);
+  }, [confirmingId]);
 
   // Legge trends.json da GitHub a runtime
   const fetchJson = useCallback(() => {
@@ -113,9 +123,11 @@ function Feed() {
     return map;
   }, [dbRows]);
 
+  const [deleteError, setDeleteError] = useState<string | null>(null);
+
   // Elimina canale da Supabase (inseriti via mail o manualmente)
   const handleDeleteSupabase = useCallback(async (dbId: string) => {
-    if (!window.confirm("Eliminare questo canale?")) return;
+    setConfirmingId(null);
     setDeleting(dbId);
     await supabase.from("trend_submissions").delete().eq("id", dbId);
     setDbRows((prev) => prev.filter((r) => r.id !== dbId));
@@ -124,7 +136,7 @@ function Feed() {
 
   // Elimina canale da trends.json via endpoint server (canali statici)
   const handleDeleteJson = useCallback(async (canaleId: string) => {
-    if (!window.confirm("Eliminare questo canale?")) return;
+    setConfirmingId(null);
     setDeleting(canaleId);
     try {
       const res = await fetch("/api/public/hooks/delete-canale", {
@@ -135,10 +147,12 @@ function Feed() {
       if (res.ok) {
         setJsonCanali((prev) => prev.filter((c) => c.id !== canaleId));
       } else {
-        alert("Errore durante l'eliminazione. Riprova.");
+        setDeleteError("Errore durante l'eliminazione. Riprova.");
+        setTimeout(() => setDeleteError(null), 4000);
       }
     } catch {
-      alert("Errore di rete. Riprova.");
+      setDeleteError("Errore di rete. Riprova.");
+      setTimeout(() => setDeleteError(null), 4000);
     }
     setDeleting(null);
   }, []);
@@ -203,6 +217,12 @@ function Feed() {
         <ManualSubmitDialog section="canali-inspo" onSuccess={handleManualSuccess} />
       </header>
 
+      {deleteError && (
+        <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2 text-sm text-destructive">
+          {deleteError}
+        </div>
+      )}
+
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
         <div className="relative flex-1 min-w-[220px]">
           <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
@@ -257,26 +277,48 @@ function Feed() {
 
           return (
             <div key={c.id} className="group relative">
-              {canDeleteSupabase && (
-                <button
-                  onClick={() => handleDeleteSupabase(dbIdForCanale!)}
-                  disabled={deletingThis}
-                  className="absolute right-2 top-2 z-10 hidden rounded-lg border border-border bg-card p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex"
-                  title="Elimina"
-                >
-                  <Trash2 className="size-3.5" />
-                </button>
-              )}
-              {canDeleteJson && (
-                <button
-                  onClick={() => handleDeleteJson(c.id)}
-                  disabled={deletingThis}
-                  className="absolute right-2 top-2 z-10 hidden rounded-lg border border-border bg-card p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex"
-                  title="Elimina"
-                >
-                  <Trash2 className="size-3.5" />
-                </button>
-              )}
+              {canDeleteSupabase &&
+                (() => {
+                  const isConfirming = confirmingId === dbIdForCanale;
+                  return (
+                    <button
+                      onClick={() =>
+                        isConfirming ? handleDeleteSupabase(dbIdForCanale!) : setConfirmingId(dbIdForCanale)
+                      }
+                      disabled={deletingThis}
+                      className={
+                        "absolute right-2 top-2 z-10 rounded-lg border p-1.5 text-xs font-medium transition " +
+                        (isConfirming
+                          ? "flex items-center gap-1 border-destructive bg-destructive text-destructive-foreground"
+                          : "hidden border-border bg-card text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex")
+                      }
+                      title={isConfirming ? "Clicca di nuovo per confermare" : "Elimina"}
+                    >
+                      <Trash2 className="size-3.5" />
+                      {isConfirming && "Confermi?"}
+                    </button>
+                  );
+                })()}
+              {canDeleteJson &&
+                (() => {
+                  const isConfirming = confirmingId === c.id;
+                  return (
+                    <button
+                      onClick={() => (isConfirming ? handleDeleteJson(c.id) : setConfirmingId(c.id))}
+                      disabled={deletingThis}
+                      className={
+                        "absolute right-2 top-2 z-10 rounded-lg border p-1.5 text-xs font-medium transition " +
+                        (isConfirming
+                          ? "flex items-center gap-1 border-destructive bg-destructive text-destructive-foreground"
+                          : "hidden border-border bg-card text-muted-foreground hover:border-destructive hover:text-destructive group-hover:flex")
+                      }
+                      title={isConfirming ? "Clicca di nuovo per confermare" : "Elimina"}
+                    >
+                      <Trash2 className="size-3.5" />
+                      {isConfirming && "Confermi?"}
+                    </button>
+                  );
+                })()}
               {(() => {
                 const cardContent = (
                   <>
