@@ -129,8 +129,22 @@ function Feed() {
   const handleDeleteSupabase = useCallback(async (dbId: string) => {
     setConfirmingId(null);
     setDeleting(dbId);
-    await supabase.from("trend_submissions").delete().eq("id", dbId);
-    setDbRows((prev) => prev.filter((r) => r.id !== dbId));
+    try {
+      const res = await fetch("/api/public/hooks/delete-trend-submission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: dbId }),
+      });
+      if (res.ok) {
+        setDbRows((prev) => prev.filter((r) => r.id !== dbId));
+      } else {
+        setDeleteError("Errore durante l'eliminazione. Riprova.");
+        setTimeout(() => setDeleteError(null), 4000);
+      }
+    } catch {
+      setDeleteError("Errore di rete. Riprova.");
+      setTimeout(() => setDeleteError(null), 4000);
+    }
     setDeleting(null);
   }, []);
 
