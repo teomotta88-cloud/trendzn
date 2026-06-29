@@ -27,8 +27,8 @@ import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/ap
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
-import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
+import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
@@ -125,16 +125,16 @@ const ApiPublicHooksLinkPreviewRoute =
     path: '/api/public/hooks/link-preview',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ApiPublicHooksDeleteCanaleRoute =
-  ApiPublicHooksDeleteCanaleRouteImport.update({
-    id: '/api/public/hooks/delete-canale',
-    path: '/api/public/hooks/delete-canale',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ApiPublicHooksDeleteTrendSubmissionRoute =
   ApiPublicHooksDeleteTrendSubmissionRouteImport.update({
     id: '/api/public/hooks/delete-trend-submission',
     path: '/api/public/hooks/delete-trend-submission',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksDeleteCanaleRoute =
+  ApiPublicHooksDeleteCanaleRouteImport.update({
+    id: '/api/public/hooks/delete-canale',
+    path: '/api/public/hooks/delete-canale',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksAddClientChannelRoute =
@@ -438,18 +438,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksLinkPreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/hooks/delete-canale': {
-      id: '/api/public/hooks/delete-canale'
-      path: '/api/public/hooks/delete-canale'
-      fullPath: '/api/public/hooks/delete-canale'
-      preLoaderRoute: typeof ApiPublicHooksDeleteCanaleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/public/hooks/delete-trend-submission': {
       id: '/api/public/hooks/delete-trend-submission'
       path: '/api/public/hooks/delete-trend-submission'
       fullPath: '/api/public/hooks/delete-trend-submission'
       preLoaderRoute: typeof ApiPublicHooksDeleteTrendSubmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/delete-canale': {
+      id: '/api/public/hooks/delete-canale'
+      path: '/api/public/hooks/delete-canale'
+      fullPath: '/api/public/hooks/delete-canale'
+      preLoaderRoute: typeof ApiPublicHooksDeleteCanaleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/add-client-channel': {
@@ -478,7 +478,8 @@ const rootRouteChildren: RootRouteChildren = {
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
-  ApiPublicHooksDeleteTrendSubmissionRoute: ApiPublicHooksDeleteTrendSubmissionRoute,
+  ApiPublicHooksDeleteTrendSubmissionRoute:
+    ApiPublicHooksDeleteTrendSubmissionRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
