@@ -28,6 +28,7 @@ import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/pub
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
+import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
@@ -130,6 +131,12 @@ const ApiPublicHooksDeleteCanaleRoute =
     path: '/api/public/hooks/delete-canale',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksDeleteTrendSubmissionRoute =
+  ApiPublicHooksDeleteTrendSubmissionRouteImport.update({
+    id: '/api/public/hooks/delete-trend-submission',
+    path: '/api/public/hooks/delete-trend-submission',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksAddClientChannelRoute =
   ApiPublicHooksAddClientChannelRouteImport.update({
     id: '/api/public/hooks/add-client-channel',
@@ -153,6 +160,7 @@ export interface FileRoutesByFullPath {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
+  '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
@@ -175,6 +183,7 @@ export interface FileRoutesByTo {
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
+  '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
@@ -198,6 +207,7 @@ export interface FileRoutesById {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
+  '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
@@ -222,6 +232,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/delete-canale'
+    | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
@@ -244,6 +255,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/delete-canale'
+    | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
@@ -266,6 +278,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/delete-canale'
+    | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/submit-manual'
@@ -289,6 +302,7 @@ export interface RootRouteChildren {
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
+  ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
@@ -431,6 +445,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksDeleteCanaleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/delete-trend-submission': {
+      id: '/api/public/hooks/delete-trend-submission'
+      path: '/api/public/hooks/delete-trend-submission'
+      fullPath: '/api/public/hooks/delete-trend-submission'
+      preLoaderRoute: typeof ApiPublicHooksDeleteTrendSubmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/add-client-channel': {
       id: '/api/public/hooks/add-client-channel'
       path: '/api/public/hooks/add-client-channel'
@@ -457,6 +478,7 @@ const rootRouteChildren: RootRouteChildren = {
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
+  ApiPublicHooksDeleteTrendSubmissionRoute: ApiPublicHooksDeleteTrendSubmissionRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksPollGmailRoute: ApiPublicHooksPollGmailRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
