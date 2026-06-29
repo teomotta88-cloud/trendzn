@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Anti-Standby</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #0f0f12;
+    color: #eaeaea;
+    font-family: system-ui, sans-serif;
+    overflow: hidden;
+  }
+  #panel {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 10;
+    background: rgba(20,20,24,0.85);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 16px 20px;
+    max-width: 360px;
+    line-height: 1.5;
+  }
+  #status {
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+  #status.active { color: #4ade80; }
+  #status.idle { color: #f87171; }
+  kbd {
+    background: #2a2a30;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-family: monospace;
+  }
+  #dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #60a5fa;
+    box-shadow: 0 0 12px #60a5fa;
+    pointer-events: none;
+    transition: top 0.6s ease, left 0.6s ease;
+  }
+</style>
+</head>
+<body>
+  <div id="panel">
+    <div id="status" class="idle">In pausa</div>
+    <p>
+      <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> — avvia/ferma il movimento anti-standby<br />
+      <kbd>Esc</kbd> — ferma e chiude la scheda
+    </p>
+    <p style="opacity:.7; font-size:.85em;">
+      Il browser non può muovere il puntatore reale del sistema operativo (limite di sicurezza),
+      ma questa pagina mantiene attivo lo schermo tramite la Screen Wake Lock API e simula
+      un movimento visivo per evitare lo standby mentre la scheda è aperta.
+    </p>
+  </div>
+  <div id="dot"></div>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const dot = document.getElementById('dot');
+    let active = false;
+    let moveTimer = null;
+    let wakeLock = null;
+
+    function randomMove() {
+      const x = Math.random() * (window.innerWidth - 20);
+      const y = Math.random() * (window.innerHeight - 20);
+      dot.style.left = x + 'px';
+      dot.style.top = y + 'px';
+    }
+
+    async function acquireWakeLock() {
+      try {
+        if ('wakeLock' in navigator) {
+          wakeLock = await navigator.wakeLock.request('screen');
+          wakeLock.addEventListener('release', () => { wakeLock = null; });
+        }
+      } catch (err) {
+        console.warn('Wake Lock non disponibile:', err);
+      }
+    }
+
+    function releaseWakeLock() {
+      if (wakeLock) {
+        wakeLock.release().catch(() => {});
+        wakeLock = null;
+      }
+    }
+
+    function start() {
+      if (active) return;
+      active = true;
+      statusEl.textContent = 'Attivo — movimento in corso';
+      statusEl.className = 'active';
+      acquireWakeLock();
+      randomMove();
+      moveTimer = setInterval(randomMove, 4000);
+    }
+
+    function stop() {
+      if (!active) return;
+      active = false;
+      statusEl.textContent = 'In pausa';
+      statusEl.className = 'idle';
+      clearInterval(moveTimer);
+      moveTimer = null;
+      releaseWakeLock();
+    }
+
+    function toggle() {
+      active ? stop() : start();
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && active) acquireWakeLock();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        stop();
+        window.close();
+        return;
+      }
+      if (e.ctrlKey && e.altKey && (e.key === 'k' || e.key === 'K')) {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  </script>
+</body>
+</html>
