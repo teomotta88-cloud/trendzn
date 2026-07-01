@@ -43,6 +43,12 @@ function isPostUrl(url: string): boolean {
   return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
 }
 
+function decodeHtmlEntities(str: string): string {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = str;
+  return textarea.value;
+}
+
 function getPlatform(url: string): string {
   if (/instagram\.com/.test(url)) return "instagram";
   if (/tiktok\.com/.test(url)) return "tiktok";
@@ -377,7 +383,7 @@ function PostCard({
             whiteSpace: "pre-wrap",
           }}
         >
-          {post.caption}
+          {decodeHtmlEntities(post.caption)}
         </p>
       )}
 

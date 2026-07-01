@@ -75,6 +75,30 @@ function fullCaption(item) {
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&rsquo;/g, "’")
+    .replace(/&lsquo;/g, "‘")
+    .replace(/&rdquo;/g, "”")
+    .replace(/&ldquo;/g, "“")
+    .replace(/&ndash;/g, "–")
+    .replace(/&mdash;/g, "—")
+    .replace(/&hellip;/g, "…")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&[a-z]+;/gi, (entity) => {
+      const map = {
+        "&agrave;": "à", "&aacute;": "á", "&acirc;": "â", "&atilde;": "ã", "&auml;": "ä", "&aring;": "å",
+        "&egrave;": "è", "&eacute;": "é", "&ecirc;": "ê", "&euml;": "ë",
+        "&igrave;": "ì", "&iacute;": "í", "&icirc;": "î", "&iuml;": "ï",
+        "&ograve;": "ò", "&oacute;": "ó", "&ocirc;": "ô", "&otilde;": "õ", "&ouml;": "ö",
+        "&ugrave;": "ù", "&uacute;": "ú", "&ucirc;": "û", "&uuml;": "ü",
+        "&ntilde;": "ñ", "&ccedil;": "ç", "&szlig;": "ß",
+        "&Agrave;": "À", "&Aacute;": "Á", "&Egrave;": "È", "&Eacute;": "É",
+        "&Igrave;": "Ì", "&Iacute;": "Í", "&Ograve;": "Ò", "&Oacute;": "Ó",
+        "&Ugrave;": "Ù", "&Uacute;": "Ú",
+      };
+      return map[entity] ?? entity;
+    })
     .trim();
   return text || (item.title || "").trim() || null;
 }
