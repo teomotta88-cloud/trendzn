@@ -5,7 +5,6 @@ import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { decodeBase64Utf8 } from "@/lib/base64";
 
 export const Route = createFileRoute("/canali-inspo/")({
   head: () => ({
@@ -20,7 +19,7 @@ export const Route = createFileRoute("/canali-inspo/")({
   component: Feed,
 });
 
-const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web" {
   if (/instagram\.com/.test(url)) return "instagram";
@@ -81,8 +80,7 @@ function Feed() {
   const fetchJson = useCallback(() => {
     return fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
-      .then((res) => {
-        const decoded = JSON.parse(decodeBase64Utf8(res.content.replace(/\n/g, "")));
+      .then((decoded) => {
         setJsonCanali(decoded.canali_inspo || []);
       })
       .catch((e) => console.error("Errore caricamento trends.json:", e));

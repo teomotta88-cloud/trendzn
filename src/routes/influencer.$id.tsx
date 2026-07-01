@@ -3,7 +3,6 @@ import { useEffect, useMemo, useState } from "react";
 import { detectPlatform } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink, Search } from "lucide-react";
-import { decodeBase64Utf8 } from "@/lib/base64";
 
 export const Route = createFileRoute("/influencer/$id")({
   head: () => ({
@@ -12,7 +11,7 @@ export const Route = createFileRoute("/influencer/$id")({
   component: Page,
 });
 
-const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomatta88-cloud/trendzn/main/src/data/trends.json";
 
 const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
 
@@ -122,8 +121,7 @@ function Page() {
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
-      .then((res) => {
-        const decoded = JSON.parse(decodeBase64Utf8(res.content.replace(/\n/g, "")));
+      .then((decoded) => {
         const found = (decoded.influencer_profiles as InfluencerProfile[] | undefined)?.find((c) => c.id === id);
         if (!found) {
           setError("Profilo non trovato");

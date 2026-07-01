@@ -1,6 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
 import { textSimilarity } from "@/lib/textSimilarity";
-import { decodeBase64Utf8 } from "@/lib/base64";
 
 export type ReviewComponent = "copy" | "copy_visual" | "visual";
 
@@ -338,7 +337,7 @@ export async function deleteClientChannel(id: string): Promise<void> {
   if (error) throw error;
 }
 
-const TRENDS_JSON_URL = "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 const PLATFORM_TO_CANALE: Record<string, string> = {
   instagram: "IG",
@@ -372,13 +371,12 @@ interface TrendsClienteChannel {
 }
 
 async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {
-  const res = await fetch(TRENDS_JSON_URL, { headers: { Accept: "application/vnd.github.v3+json" } });
+  const res = await fetch(TRENDS_JSON_URL);
   if (!res.ok) {
     console.error("[fetchTrendsJsonCanaliCliente] richiesta a GitHub fallita:", res.status, await res.text());
     return [];
   }
-  const file = await res.json();
-  const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
+  const trends = await res.json();
   return Array.isArray(trends.canali_cliente) ? trends.canali_cliente : [];
 }
 
