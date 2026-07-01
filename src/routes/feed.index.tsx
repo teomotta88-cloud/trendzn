@@ -381,6 +381,24 @@ function PostCard({
         </a>
       </div>
 
+      {post.caption && (
+        <p
+          style={{
+            margin: 0,
+            padding: "10px 14px",
+            fontSize: 14,
+            lineHeight: 1.5,
+            color: "#334155",
+            borderTop: "1px solid #f1f1f1",
+            maxHeight: "6em",
+            overflowY: "auto",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          {decodeHtmlEntities(post.caption)}
+        </p>
+      )}
+
       {embedUrl ? (
         <LazyEmbed embedUrl={embedUrl} height={h} />
       ) : (
@@ -399,24 +417,6 @@ function PostCard({
         >
           {post.url}
         </a>
-      )}
-
-      {post.caption && (
-        <p
-          style={{
-            margin: 0,
-            padding: "10px 14px",
-            fontSize: 14,
-            lineHeight: 1.5,
-            color: "#334155",
-            borderTop: "1px solid #f1f1f1",
-            maxHeight: "6em",
-            overflowY: "auto",
-            whiteSpace: "pre-wrap",
-          }}
-        >
-          {decodeHtmlEntities(post.caption)}
-        </p>
       )}
 
       <MarkAsTrendButtons post={post} marked={marked} onMarked={onMarked} />
