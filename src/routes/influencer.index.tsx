@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { InfluencerToggle } from "./influencer-feed";
 import { useMemo, useState, useEffect, useCallback } from "react";
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
@@ -68,7 +69,7 @@ function rowToProfile(row: DbRow): InfluencerProfile {
   };
 }
 
-export function InfluencerView() {
+export function InfluencerView({ tab, setTab }: { tab?: "feed" | "profili"; setTab?: (t: "feed" | "profili") => void }) {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [dbRows, setDbRows] = useState<DbRow[]>([]);
@@ -185,6 +186,12 @@ export function InfluencerView() {
         </div>
         <ManualSubmitDialog section="influencer" onSuccess={handleManualSuccess} />
       </header>
+
+      {tab !== undefined && setTab && (
+        <div className="flex">
+          <InfluencerToggle tab={tab} setTab={setTab} />
+        </div>
+      )}
 
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
         <div className="relative flex-1 min-w-[220px]">

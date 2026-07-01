@@ -8,34 +8,35 @@ export const Route = createFileRoute("/feed/")({
   component: FeedPage,
 });
 
-function FeedPage() {
-  const [tab, setTab] = useState<"feed" | "canali">("feed");
+export function FeedPageToggle({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed" | "canali") => void }) {
   return (
-    <div>
-      <div style={{ display: "flex", gap: 8, padding: "12px 16px 0", borderBottom: "1px solid #e2e8f0" }}>
-        {(["feed", "canali"] as const).map((t) => (
-          <button
-            key={t}
-            onClick={() => setTab(t)}
-            style={{
-              padding: "6px 16px",
-              borderRadius: 20,
-              border: "none",
-              cursor: "pointer",
-              fontSize: 13,
-              fontWeight: tab === t ? 700 : 400,
-              background: tab === t ? "#1e293b" : "transparent",
-              color: tab === t ? "#fff" : "#64748b",
-              transition: "all 0.15s",
-            }}
-          >
-            {t === "feed" ? "Feed" : "Canali Inspo"}
-          </button>
-        ))}
-      </div>
-      {tab === "feed" ? <TrendzFeed /> : <CanaliInspoView />}
+    <div style={{ display: "flex", gap: 4 }}>
+      {(["canali", "feed"] as const).map((t) => (
+        <button
+          key={t}
+          onClick={() => setTab(t)}
+          style={{
+            padding: "5px 14px",
+            borderRadius: 20,
+            border: "none",
+            cursor: "pointer",
+            fontSize: 13,
+            fontWeight: tab === t ? 700 : 400,
+            background: tab === t ? "#1e293b" : "transparent",
+            color: tab === t ? "#fff" : "#64748b",
+            transition: "all 0.15s",
+          }}
+        >
+          {t === "canali" ? "Canali Inspo" : "Feed"}
+        </button>
+      ))}
     </div>
   );
+}
+
+function FeedPage() {
+  const [tab, setTab] = useState<"feed" | "canali">("canali");
+  return tab === "canali" ? <CanaliInspoView tab={tab} setTab={setTab} /> : <TrendzFeed tab={tab} setTab={setTab} />;
 }
 
 const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
@@ -511,7 +512,7 @@ function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: s
 const PAGE_SIZE = 12;
 const EMPTY_MARKED: Set<TrendSection> = new Set();
 
-function TrendzFeed() {
+function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed" | "canali") => void }) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
@@ -630,6 +631,8 @@ function TrendzFeed() {
           <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
             Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ feed</span>
           </div>
+
+          <FeedPageToggle tab={tab} setTab={setTab} />
 
           <input
             placeholder="Cerca canale, account o nella caption…"

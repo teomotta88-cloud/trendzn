@@ -148,7 +148,7 @@ const NAV_ITEMS = [
   { to: "/trend-evergreen", label: "Trend Evergreen" },
   { to: "/linkedin", label: "LinkedIn" },
   { to: "/influencer-feed", label: "Influencer" },
-  { to: "/feed", label: "Feed" },
+  { to: "/feed", label: "Canali Inspo" },
 /*{ to: "/tiktok-hashtag", label: "TikTok Hashtag" },*/
   { to: "/piano-editoriale", label: "Piano Editoriale" },
 ];

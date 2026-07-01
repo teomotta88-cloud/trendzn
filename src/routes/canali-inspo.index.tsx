@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { FeedPageToggle } from "./feed.index";
 import { useMemo, useState, useEffect, useCallback } from "react";
 import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
@@ -58,7 +59,7 @@ function rowToCanale(row: DbRow): CanaleInspo {
   };
 }
 
-export function CanaliInspoView() {
+export function CanaliInspoView({ tab, setTab }: { tab?: "feed" | "canali"; setTab?: (t: "feed" | "canali") => void }) {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [dbRows, setDbRows] = useState<DbRow[]>([]);
@@ -232,6 +233,12 @@ export function CanaliInspoView() {
       {deleteError && (
         <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2 text-sm text-destructive">
           {deleteError}
+        </div>
+      )}
+
+      {tab !== undefined && setTab && (
+        <div className="flex">
+          <FeedPageToggle tab={tab} setTab={setTab} />
         </div>
       )}
 
