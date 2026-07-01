@@ -372,10 +372,7 @@ function PostCard({
             lineHeight: 1.4,
             color: "#475569",
             borderTop: "1px solid #f1f1f1",
-            display: "-webkit-box",
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
+            whiteSpace: "pre-wrap",
           }}
         >
           {post.caption}
