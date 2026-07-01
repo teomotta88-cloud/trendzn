@@ -76,6 +76,12 @@ interface Post {
   caption: string | null;
 }
 
+function decodeHtmlEntities(str: string): string {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = str;
+  return textarea.value;
+}
+
 function isPostUrl(url: string): boolean {
   return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
 }
@@ -382,7 +388,7 @@ function PostCard({
             whiteSpace: "pre-wrap",
           }}
         >
-          {post.caption}
+          {decodeHtmlEntities(post.caption)}
         </p>
       )}
 
