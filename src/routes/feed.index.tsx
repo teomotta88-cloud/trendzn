@@ -607,130 +607,79 @@ function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed
   const platforms = ["tutti", ...new Set(allPosts.map((p) => p.platform))];
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui, -apple-system, sans-serif" }}>
-      <div
-        style={{
-          background: "#fff",
-          borderBottom: "1px solid #e2e8f0",
-          position: "sticky",
-          top: 0,
-          zIndex: 10,
-          padding: "12px 20px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 1200,
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-            flexWrap: "wrap",
-          }}
+    <div className="space-y-8">
+      <header className="flex flex-wrap items-start justify-between gap-4">
+        <div className="space-y-2">
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Feed</h1>
+          <p className="max-w-2xl text-sm text-muted-foreground">
+            Post recenti dai canali monitorati su Instagram e TikTok.
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <SyncButton endpoint={N8N_WEBHOOK} label="↻ N8N" />
+          <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Github" />
+        </div>
+      </header>
+
+      <div className="flex">
+        <FeedPageToggle tab={tab} setTab={setTab} />
+      </div>
+
+      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
+        <input
+          placeholder="Cerca canale, account o nella caption…"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="flex-1 min-w-[200px] rounded-lg border border-border bg-background/60 py-2 px-3 text-sm outline-none focus:border-primary"
+        />
+        <div className="flex gap-2 flex-wrap">
+          {platforms.map((p) => (
+            <FilterPill
+              key={p}
+              label={p === "tutti" ? `Tutti (${allPosts.length})` : p}
+              active={platformFilter === p}
+              onClick={() => setPlatformFilter(p)}
+            />
+          ))}
+        </div>
+        <select
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value as SortOrder)}
+          className="rounded-lg border border-border bg-background/60 py-2 px-3 text-sm text-muted-foreground outline-none cursor-pointer"
         >
-          <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
-            Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ feed</span>
-          </div>
+          <option value="recenti">Più recenti</option>
+          <option value="meno_recenti">Meno recenti</option>
+        </select>
+        <span className="ml-auto text-xs text-muted-foreground">{filtered.length} post</span>
+      </div>
 
-          <FeedPageToggle tab={tab} setTab={setTab} />
-
-          <input
-            placeholder="Cerca canale, account o nella caption…"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            style={{
-              padding: "6px 12px",
-              borderRadius: 8,
-              border: "1px solid #e2e8f0",
-              fontSize: 13,
-              outline: "none",
-              width: 240,
-              background: "#f8fafc",
-              color: "#000",
-            }}
-          />
-
-          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-            {platforms.map((p) => (
-              <FilterPill
-                key={p}
-                label={p === "tutti" ? `Tutti (${allPosts.length})` : p}
-                active={platformFilter === p}
-                onClick={() => setPlatformFilter(p)}
+      {filtered.length === 0 ? (
+        <div className="py-16 text-center text-sm text-muted-foreground">Nessun post trovato.</div>
+      ) : (
+        <>
+          <div className="grid gap-5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}>
+            {visiblePosts.map((post, i) => (
+              <PostCard
+                key={`${post.url}-${i}`}
+                post={post}
+                canaleName={post.canaleName}
+                marked={markedByUrl[post.url] ?? EMPTY_MARKED}
+                onMarked={(section) => handleMarked(post.url, section)}
               />
             ))}
           </div>
-
-          <select
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value as SortOrder)}
-            style={{
-              padding: "5px 10px",
-              borderRadius: 8,
-              border: "1px solid #e2e8f0",
-              background: "#fff",
-              color: "#475569",
-              fontSize: 13,
-              cursor: "pointer",
-              outline: "none",
-            }}
-          >
-            <option value="recenti">Più recenti</option>
-            <option value="meno_recenti">Meno recenti</option>
-          </select>
-
-          <SyncButton endpoint={N8N_WEBHOOK} label="↻ Sync ora - N8N" />
-          <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Sync ora - Github" />
-
-          <span style={{ marginLeft: "auto", fontSize: 12, color: "#94a3b8" }}>{filtered.length} post</span>
-        </div>
-      </div>
-
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 20px" }}>
-        {filtered.length === 0 ? (
-          <div style={{ textAlign: "center", color: "#94a3b8", padding: 60, fontSize: 14 }}>Nessun post trovato.</div>
-        ) : (
-          <>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-                gap: 20,
-              }}
-            >
-              {visiblePosts.map((post, i) => (
-                <PostCard
-                  key={`${post.url}-${i}`}
-                  post={post}
-                  canaleName={post.canaleName}
-                  marked={markedByUrl[post.url] ?? EMPTY_MARKED}
-                  onMarked={(section) => handleMarked(post.url, section)}
-                />
-              ))}
+          {hasMore && (
+            <div className="text-center mt-6">
+              <button
+                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                className="rounded-full border border-border bg-card px-7 py-2.5 text-sm font-medium text-foreground transition hover:border-primary"
+              >
+                Carica altri ({filtered.length - visibleCount} rimanenti)
+              </button>
             </div>
-
-            {hasMore && (
-              <div style={{ textAlign: "center", marginTop: 28 }}>
-                <button
-                  onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-                  style={{
-                    padding: "10px 28px",
-                    borderRadius: 99,
-                    border: "1px solid #e2e8f0",
-                    background: "#fff",
-                    color: "#1e293b",
-                    fontSize: 14,
-                    fontWeight: 500,
-                    cursor: "pointer",
-                  }}
-                >
-                  Carica altri ({filtered.length - visibleCount} rimanenti)
-                </button>
-              </div>
-            )}
-          </>
-        )}
-      </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
