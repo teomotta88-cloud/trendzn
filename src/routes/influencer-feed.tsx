@@ -76,6 +76,12 @@ interface Post {
   caption: string | null;
 }
 
+function decodeHtmlEntities(str: string): string {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = str;
+  return textarea.value;
+}
+
 function isPostUrl(url: string): boolean {
   return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
 }
@@ -368,6 +374,24 @@ function PostCard({
         </a>
       </div>
 
+      {post.caption && (
+        <p
+          style={{
+            margin: 0,
+            padding: "10px 14px",
+            fontSize: 14,
+            lineHeight: 1.5,
+            color: "#334155",
+            borderTop: "1px solid #f1f1f1",
+            maxHeight: "6em",
+            overflowY: "auto",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          {decodeHtmlEntities(post.caption)}
+        </p>
+      )}
+
       {embedUrl ? (
         <LazyEmbed embedUrl={embedUrl} height={h} />
       ) : (
@@ -386,25 +410,6 @@ function PostCard({
         >
           {post.url}
         </a>
-      )}
-
-      {post.caption && (
-        <p
-          style={{
-            margin: 0,
-            padding: "10px 14px",
-            fontSize: 12,
-            lineHeight: 1.4,
-            color: "#475569",
-            borderTop: "1px solid #f1f1f1",
-            display: "-webkit-box",
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {post.caption}
-        </p>
       )}
 
       <MarkAsTrendButtons post={post} marked={marked} onMarked={onMarked} />
