@@ -8,34 +8,37 @@ export const Route = createFileRoute("/influencer-feed")({
   component: InfluencerPage,
 });
 
-function InfluencerPage() {
-  const [tab, setTab] = useState<"feed" | "profili">("profili");
+export function InfluencerToggle({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: "feed" | "profili") => void }) {
   return (
-    <div>
-      <div style={{ display: "flex", gap: 8, padding: "12px 16px 0", borderBottom: "1px solid #e2e8f0" }}>
-        {(["profili", "feed"] as const).map((t) => (
-          <button
-            key={t}
-            onClick={() => setTab(t)}
-            style={{
-              padding: "6px 16px",
-              borderRadius: 20,
-              border: "none",
-              cursor: "pointer",
-              fontSize: 13,
-              fontWeight: tab === t ? 700 : 400,
-              background: tab === t ? "#1e293b" : "transparent",
-              color: tab === t ? "#fff" : "#64748b",
-              transition: "all 0.15s",
-            }}
-          >
-            {t === "profili" ? "Influencer" : "Feed"}
-          </button>
-        ))}
-      </div>
-      {tab === "profili" ? <InfluencerView /> : <InfluencerFeed />}
+    <div style={{ display: "flex", gap: 4 }}>
+      {(["profili", "feed"] as const).map((t) => (
+        <button
+          key={t}
+          onClick={() => setTab(t)}
+          style={{
+            padding: "5px 14px",
+            borderRadius: 20,
+            border: "none",
+            cursor: "pointer",
+            fontSize: 13,
+            fontWeight: tab === t ? 700 : 400,
+            background: tab === t ? "#1e293b" : "transparent",
+            color: tab === t ? "#fff" : "#64748b",
+            transition: "all 0.15s",
+          }}
+        >
+          {t === "profili" ? "Influencer" : "Feed"}
+        </button>
+      ))}
     </div>
   );
+}
+
+function InfluencerPage() {
+  const [tab, setTab] = useState<"feed" | "profili">("profili");
+  return tab === "profili"
+    ? <InfluencerView tab={tab} setTab={setTab} />
+    : <InfluencerFeed tab={tab} setTab={setTab} />;
 }
 
 const TRENDS_JSON_URL =
@@ -557,7 +560,7 @@ function DateRangeFilter({
 const PAGE_SIZE = 12;
 const EMPTY_MARKED: Set<TrendSection> = new Set();
 
-function InfluencerFeed() {
+function InfluencerFeed({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: "feed" | "profili") => void }) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
@@ -709,6 +712,8 @@ function InfluencerFeed() {
             <div style={{ fontWeight: 700, fontSize: 18, color: "#1e293b", letterSpacing: -0.5 }}>
               Trendzn <span style={{ color: "#94a3b8", fontWeight: 400, fontSize: 14 }}>/ influencer feed</span>
             </div>
+
+            <InfluencerToggle tab={tab} setTab={setTab} />
 
             <input
               placeholder="Cerca influencer, cliente, account o caption…"
