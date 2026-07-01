@@ -146,10 +146,10 @@ const NAV_ITEMS = [
   { to: "/trend-real-time", label: "Trend Real Time" },
   { to: "/trend-attuali", label: "Trend Attuali" },
   { to: "/trend-evergreen", label: "Trend Evergreen" },
+  { to: "/feed", label: "Canali Inspo" },
   { to: "/linkedin", label: "LinkedIn" },
   { to: "/influencer-feed", label: "Influencer" },
-  { to: "/feed", label: "Canali Inspo" },
-/*{ to: "/tiktok-hashtag", label: "TikTok Hashtag" },*/
+  /*{ to: "/tiktok-hashtag", label: "TikTok Hashtag" },*/
   { to: "/piano-editoriale", label: "Piano Editoriale" },
 ];
 
