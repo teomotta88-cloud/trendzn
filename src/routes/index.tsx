@@ -40,14 +40,14 @@ function Index() {
       blurb: "Trend senza scadenza, sempre validi per qualsiasi brand.",
     },
     {
-      to: "/canali-inspo",
+      to: "/feed",
       label: "Canali Inspo",
       // count: canaliInspo.length,
       icon: Sparkles,
       blurb: "Account e siti da tenere d'occhio per format, meme e RTM.",
     },
     {
-      to: "/influencer",
+      to: "/influencer-feed",
       label: "Influencer",
       //count: influencer.length,
       icon: Sparkles,
