@@ -616,8 +616,7 @@ function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed
           </p>
         </div>
         <div className="flex gap-2">
-          <SyncButton endpoint={N8N_WEBHOOK} label="↻ N8N" />
-          <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Github" />
+          <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Sincronizza ora" />
         </div>
       </header>
 
