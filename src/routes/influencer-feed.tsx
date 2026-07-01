@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { decodeBase64Utf8 } from "@/lib/base64";
 import { Zap, Flame, Infinity as InfinityIcon, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -9,7 +8,7 @@ export const Route = createFileRoute("/influencer-feed")({
 });
 
 const TRENDS_JSON_URL =
-  "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/trends.json";
+  "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 const N8N_WEBHOOK = "https://trendzn.app.n8n.cloud/webhook/trendzn-sync";
 const GITHUB_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-canali-feed";
@@ -572,8 +571,7 @@ function InfluencerFeed() {
   useEffect(() => {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
-      .then((res) => {
-        const decoded = JSON.parse(decodeBase64Utf8(res.content.replace(/\n/g, "")));
+      .then((decoded) => {
         setData(decoded);
       })
       .catch(() => setError("Impossibile caricare il feed."));
