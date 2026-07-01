@@ -16,7 +16,7 @@ export const Route = createFileRoute("/canali-inspo/")({
       },
     ],
   }),
-  component: Feed,
+  component: CanaliInspoView,
 });
 
 const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
@@ -58,7 +58,7 @@ function rowToCanale(row: DbRow): CanaleInspo {
   };
 }
 
-function Feed() {
+export function CanaliInspoView() {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [dbRows, setDbRows] = useState<DbRow[]>([]);

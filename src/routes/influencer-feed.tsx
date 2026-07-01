@@ -2,10 +2,41 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Zap, Flame, Infinity as InfinityIcon, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { InfluencerView } from "./influencer.index";
 
 export const Route = createFileRoute("/influencer-feed")({
-  component: InfluencerFeed,
+  component: InfluencerPage,
 });
+
+function InfluencerPage() {
+  const [tab, setTab] = useState<"feed" | "profili">("profili");
+  return (
+    <div>
+      <div style={{ display: "flex", gap: 8, padding: "12px 16px 0", borderBottom: "1px solid #e2e8f0" }}>
+        {(["profili", "feed"] as const).map((t) => (
+          <button
+            key={t}
+            onClick={() => setTab(t)}
+            style={{
+              padding: "6px 16px",
+              borderRadius: 20,
+              border: "none",
+              cursor: "pointer",
+              fontSize: 13,
+              fontWeight: tab === t ? 700 : 400,
+              background: tab === t ? "#1e293b" : "transparent",
+              color: tab === t ? "#fff" : "#64748b",
+              transition: "all 0.15s",
+            }}
+          >
+            {t === "profili" ? "Influencer" : "Feed"}
+          </button>
+        ))}
+      </div>
+      {tab === "profili" ? <InfluencerView /> : <InfluencerFeed />}
+    </div>
+  );
+}
 
 const TRENDS_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";

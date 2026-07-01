@@ -15,7 +15,7 @@ export const Route = createFileRoute("/influencer/")({
       },
     ],
   }),
-  component: InfluencerPage,
+  component: InfluencerView,
 });
 
 const TRENDS_JSON_URL =
@@ -68,7 +68,7 @@ function rowToProfile(row: DbRow): InfluencerProfile {
   };
 }
 
-function InfluencerPage() {
+export function InfluencerView() {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [dbRows, setDbRows] = useState<DbRow[]>([]);

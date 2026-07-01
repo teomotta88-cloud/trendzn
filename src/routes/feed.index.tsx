@@ -2,10 +2,41 @@ import { useState, useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Zap, Flame, Infinity as InfinityIcon, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { CanaliInspoView } from "./canali-inspo.index";
 
 export const Route = createFileRoute("/feed/")({
-  component: TrendzFeed,
+  component: FeedPage,
 });
+
+function FeedPage() {
+  const [tab, setTab] = useState<"feed" | "canali">("feed");
+  return (
+    <div>
+      <div style={{ display: "flex", gap: 8, padding: "12px 16px 0", borderBottom: "1px solid #e2e8f0" }}>
+        {(["feed", "canali"] as const).map((t) => (
+          <button
+            key={t}
+            onClick={() => setTab(t)}
+            style={{
+              padding: "6px 16px",
+              borderRadius: 20,
+              border: "none",
+              cursor: "pointer",
+              fontSize: 13,
+              fontWeight: tab === t ? 700 : 400,
+              background: tab === t ? "#1e293b" : "transparent",
+              color: tab === t ? "#fff" : "#64748b",
+              transition: "all 0.15s",
+            }}
+          >
+            {t === "feed" ? "Feed" : "Canali Inspo"}
+          </button>
+        ))}
+      </div>
+      {tab === "feed" ? <TrendzFeed /> : <CanaliInspoView />}
+    </div>
+  );
+}
 
 const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
@@ -374,11 +405,11 @@ function PostCard({
           style={{
             margin: 0,
             padding: "10px 14px",
-            fontSize: 12,
-            lineHeight: 1.4,
-            color: "#475569",
+            fontSize: 14,
+            lineHeight: 1.5,
+            color: "#334155",
             borderTop: "1px solid #f1f1f1",
-            maxHeight: "4.2em",
+            maxHeight: "6em",
             overflowY: "auto",
             whiteSpace: "pre-wrap",
           }}
