@@ -372,6 +372,8 @@ function PostCard({
             lineHeight: 1.4,
             color: "#475569",
             borderTop: "1px solid #f1f1f1",
+            maxHeight: "4.2em",
+            overflowY: "auto",
             whiteSpace: "pre-wrap",
           }}
         >
