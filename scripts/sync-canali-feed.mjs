@@ -170,7 +170,18 @@ for (const list of lists) {
     const canale = list.find((c) => c.accounts.some((a) => a.handle === handle));
     if (!canale) continue;
 
-    if (canale.accounts.some((a) => a.url === url)) continue;
+    // Se l'URL esiste già ma manca la caption, aggiornala senza aggiungere un duplicato
+    const existing = canale.accounts.find((a) => a.url === url);
+    if (existing) {
+      if (!existing.caption) {
+        const caption = fullCaption(item);
+        if (caption) {
+          existing.caption = caption;
+          modified = true;
+        }
+      }
+      continue;
+    }
 
     const date = item.date_modified || item.date_published || null;
     const caption = fullCaption(item);
