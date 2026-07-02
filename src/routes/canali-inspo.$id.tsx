@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { detectPlatform, type CanaleInspo } from "@/lib/trends";
+import { detectPlatform, canaliInspo, type CanaleInspo } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
@@ -10,8 +10,6 @@ export const Route = createFileRoute("/canali-inspo/$id")({
   }),
   component: Page,
 });
-
-const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomatta88-cloud/trendzn/main/src/data/trends.json";
 
 const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
 
@@ -32,26 +30,9 @@ const PAGE_SIZE = 9;
 
 function Page() {
   const { id } = Route.useParams();
-  const [canale, setCanale] = useState<CanaleInspo | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const canale: CanaleInspo | undefined = canaliInspo.find((c) => String(c.id) === String(id));
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    fetch(TRENDS_JSON_URL)
-      .then((r) => r.json())
-      .then((decoded) => {
-        const found = (decoded.canali_inspo as CanaleInspo[]).find((c) => c.id === id);
-        if (!found) {
-          setError("Canale non trovato");
-        } else {
-          setCanale(found);
-        }
-      })
-      .catch(() => setError("Impossibile caricare il canale."))
-      .finally(() => setLoading(false));
-  }, [id]);
 
   const allPosts = useMemo(() => {
     if (!canale) return [];
@@ -69,22 +50,17 @@ function Page() {
     return allPosts.filter((a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q));
   }, [allPosts, search]);
 
-  // Reset paginazione quando cambia la ricerca
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
   }, [search]);
 
   const profileLinks = useMemo(() => (canale ? canale.accounts.filter((a) => !POST_URL_RE.test(a.url)) : []), [canale]);
 
-  if (loading) {
-    return <div className="py-20 text-center text-sm text-muted-foreground">Caricamento…</div>;
-  }
-
-  if (error || !canale) {
+  if (!canale) {
     return (
       <div className="py-20 text-center">
         <h1 className="font-display text-2xl font-bold">Canale non trovato</h1>
-        <Link to="/canali-inspo" className="mt-4 inline-block text-primary">
+        <Link to="/feed" className="mt-4 inline-block text-primary">
           Torna ai canali
         </Link>
       </div>
@@ -102,7 +78,7 @@ function Page() {
   return (
     <div className="space-y-8">
       <Link
-        to="/canali-inspo"
+        to="/feed"
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> Tutti i canali
