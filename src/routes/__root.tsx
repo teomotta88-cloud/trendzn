@@ -149,7 +149,7 @@ const NAV_ITEMS = [
   { to: "/feed", label: "Canali Inspo" },
   { to: "/linkedin", label: "LinkedIn" },
   { to: "/influencer-feed", label: "Influencer" },
-  /*{ to: "/tiktok-hashtag", label: "TikTok Hashtag" },*/
+  { to: "/tiktok-hashtag", label: "TikTok Trending" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
 ];
 

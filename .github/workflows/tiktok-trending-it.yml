@@ -1,0 +1,38 @@
+name: TikTok Trending IT
+
+on:
+  schedule:
+    # Ogni 12 ore (00:00 e 12:00 UTC)
+    - cron: "0 0,12 * * *"
+  workflow_dispatch:
+    inputs:
+      max_hashtags:
+        description: "Numero massimo di hashtag da processare"
+        default: "10"
+      max_posts_per_tag:
+        description: "Max URL per hashtag"
+        default: "12"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Discover trending hashtags e scrapa contenuti
+        env:
+          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '10' }}
+          MAX_POSTS_PER_TAG: ${{ github.event.inputs.max_posts_per_tag || '12' }}
+          DELAY_BETWEEN_TAGS_MS: "45000"
+        run: node scripts/sync-trending-it.mjs
