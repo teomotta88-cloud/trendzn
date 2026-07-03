@@ -119,9 +119,22 @@ export function InfluencerView({ tab, setTab }: { tab?: "feed" | "profili"; setT
   const handleDeleteSupabase = useCallback(async (dbId: string) => {
     if (!window.confirm("Eliminare questo profilo?")) return;
     setDeleting(dbId);
-    await supabase.from("trend_submissions").delete().eq("id", dbId);
-    setDbRows((prev) => prev.filter((r) => r.id !== dbId));
-    setDeleting(null);
+    try {
+      const res = await fetch("/api/public/hooks/delete-trend-submission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: dbId }),
+      });
+      if (res.ok) {
+        setDbRows((prev) => prev.filter((r) => r.id !== dbId));
+      } else {
+        window.alert("Errore durante l'eliminazione. Riprova.");
+      }
+    } catch {
+      window.alert("Errore di rete. Riprova.");
+    } finally {
+      setDeleting(null);
+    }
   }, []);
 
   const jsonHandles = useMemo(
