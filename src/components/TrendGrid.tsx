@@ -3,7 +3,6 @@ import type { TrendItem } from "@/lib/trends";
 import { detectPlatform, extractUsername } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "./SocialEmbed";
 import { Search, X, Trash2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 
 type Props = {
   items: TrendItem[];
@@ -57,9 +56,22 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
     if (!id) return;
     if (!window.confirm("Eliminare questo contenuto?")) return;
     setDeleting(url);
-    await supabase.from("trend_submissions").delete().eq("id", id);
-    setDeleting(null);
-    onDelete?.(url);
+    try {
+      const res = await fetch("/api/public/hooks/delete-trend-submission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      });
+      if (res.ok) {
+        onDelete?.(url);
+      } else {
+        window.alert("Errore durante l'eliminazione. Riprova.");
+      }
+    } catch {
+      window.alert("Errore di rete. Riprova.");
+    } finally {
+      setDeleting(null);
+    }
   }
 
   return (
