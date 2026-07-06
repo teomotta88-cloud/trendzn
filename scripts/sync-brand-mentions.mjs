@@ -11,12 +11,15 @@
 //   MAX_RESULTS_PER_CALL    default: 25 (ogni risultato consuma credit anysite)
 //   DELAY_BETWEEN_CALLS_MS  default: 2000
 //
-// ATTENZIONE: i path/parametri esatti degli endpoint per piattaforma sono
-// stati dedotti dalla documentazione pubblica di anysite (docs.anysite.io),
-// non testati live: l'host mcp.anysite.io/api.anysite.io e' irraggiungibile
-// dalla sandbox di sviluppo per policy di rete. Verificare PLATFORM_ENDPOINTS
-// contro la doc reale al primo run e aggiustare i nomi dei campi in
-// normalizeResult() in base alla risposta JSON effettiva.
+// NOTA: primo run (workflow #<vedi log>) ha dato 404 su tutte le piattaforme
+// perche' i path erano indovinati come GET /{platform}/search. Il formato reale
+// e' POST /api/{platform}/search/{noun} con body JSON (confermato per twitter
+// via ricerca pubblica: "/api/twitter/search/posts"). reddit/instagram/youtube/
+// linkedin sono per ora dedotti per coerenza di naming con lo stesso pattern +
+// i nomi tool della skill (search_reddit_posts, search_instagram_posts,
+// search_youtube_videos, search_linkedin_posts) — da confermare al prossimo
+// run e aggiustare se ancora 404. Se necessario, i campi di normalizeResult()
+// vanno adeguati in base alla risposta JSON reale.
 //
 // Eseguito da .github/workflows/sync-brand-mentions.yml su schedule.
 
@@ -37,13 +40,14 @@ const KEYWORDS = (process.env.KEYWORDS ?? "hyundai,hyundai_italia")
 const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "25", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 
-// TODO: confermare path/query param esatti su docs.anysite.io.
+// path/param confermati per twitter; gli altri sono dedotti per coerenza
+// (vedi nota in testa al file) e vanno riverificati al prossimo run.
 const PLATFORM_ENDPOINTS = {
-  twitter: { path: "/twitter/search", param: "query" },
-  reddit: { path: "/reddit/search", param: "query" },
-  instagram: { path: "/instagram/search", param: "query" },
-  youtube: { path: "/youtube/search", param: "query" },
-  linkedin: { path: "/linkedin/search", param: "keywords" },
+  twitter: { path: "/api/twitter/search/posts", param: "query" },
+  reddit: { path: "/api/reddit/search/posts", param: "query" },
+  instagram: { path: "/api/instagram/search/posts", param: "query" },
+  youtube: { path: "/api/youtube/search/videos", param: "query" },
+  linkedin: { path: "/api/linkedin/search/posts", param: "keywords" },
 };
 
 // Framework "Manual Sentiment Classification" dal MONITORING_GUIDE.md della skill.
@@ -72,11 +76,11 @@ function classifySentiment(text) {
 async function searchPlatform(platform, keyword) {
   const { path, param } = PLATFORM_ENDPOINTS[platform];
   const url = new URL(path, ANYSITE_BASE);
-  url.searchParams.set(param, keyword);
-  url.searchParams.set("count", String(MAX_RESULTS_PER_CALL));
 
   const res = await fetch(url, {
-    headers: { "access-token": apiKey },
+    method: "POST",
+    headers: { "access-token": apiKey, "Content-Type": "application/json" },
+    body: JSON.stringify({ [param]: keyword, count: MAX_RESULTS_PER_CALL }),
   });
   if (!res.ok) {
     const body = await res.text();
