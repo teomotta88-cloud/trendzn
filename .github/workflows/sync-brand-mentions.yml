@@ -15,7 +15,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Sync brand mentions via anysite
+      - name: Sync brand mentions
         env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
         run: node scripts/sync-brand-mentions.mjs
