@@ -40,19 +40,26 @@ function ReputazioneBrandPage() {
   const [platformFilter, setPlatformFilter] = useState<Platform | "all">("all");
   const [sentimentFilter, setSentimentFilter] = useState<Sentiment | "all">("all");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   async function load() {
     setLoading(true);
-    const [mentionsData, alertsData] = await Promise.all([
-      listMentions({
-        platform: platformFilter === "all" ? undefined : platformFilter,
-        sentiment: sentimentFilter === "all" ? undefined : sentimentFilter,
-      }),
-      listUnresolvedAlerts(),
-    ]);
-    setMentions(mentionsData);
-    setAlerts(alertsData);
-    setLoading(false);
+    setError(null);
+    try {
+      const [mentionsData, alertsData] = await Promise.all([
+        listMentions({
+          platform: platformFilter === "all" ? undefined : platformFilter,
+          sentiment: sentimentFilter === "all" ? undefined : sentimentFilter,
+        }),
+        listUnresolvedAlerts(),
+      ]);
+      setMentions(mentionsData);
+      setAlerts(alertsData);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setLoading(false);
+    }
   }
 
   useEffect(() => {
@@ -110,7 +117,12 @@ function ReputazioneBrandPage() {
         </Select>
       </div>
 
-      {loading ? (
+      {error ? (
+        <p className="text-sm text-destructive">
+          Errore nel caricamento: {error}. Probabile causa: la migration non è ancora stata
+          applicata al database (tabelle brand_mentions / brand_sentiment_alerts mancanti).
+        </p>
+      ) : loading ? (
         <p className="text-sm text-muted-foreground">Caricamento…</p>
       ) : (
         <MentionsTable mentions={mentions} />
