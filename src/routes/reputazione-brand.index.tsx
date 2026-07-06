@@ -32,13 +32,14 @@ export const Route = createFileRoute("/reputazione-brand/")({
   component: ReputazioneBrandPage,
 });
 
-const TREND_DAYS = 14;
+const DAYS_RANGE_OPTIONS = [7, 14, 30, 90] as const;
 
 function ReputazioneBrandPage() {
   const [mentions, setMentions] = useState<BrandMention[]>([]);
   const [alerts, setAlerts] = useState<BrandSentimentAlert[]>([]);
   const [platformFilter, setPlatformFilter] = useState<Platform | "all">("all");
   const [sentimentFilter, setSentimentFilter] = useState<Sentiment | "all">("all");
+  const [daysRange, setDaysRange] = useState<number>(14);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -50,6 +51,7 @@ function ReputazioneBrandPage() {
         listMentions({
           platform: platformFilter === "all" ? undefined : platformFilter,
           sentiment: sentimentFilter === "all" ? undefined : sentimentFilter,
+          sinceDays: daysRange,
         }),
         listUnresolvedAlerts(),
       ]);
@@ -64,9 +66,9 @@ function ReputazioneBrandPage() {
 
   useEffect(() => {
     load();
-  }, [platformFilter, sentimentFilter]);
+  }, [platformFilter, sentimentFilter, daysRange]);
 
-  const trendSeries = useMemo(() => buildDailySentimentSeries(mentions, TREND_DAYS), [mentions]);
+  const trendSeries = useMemo(() => buildDailySentimentSeries(mentions, daysRange), [mentions, daysRange]);
 
   async function handleResolve(id: string) {
     await resolveAlert(id);
@@ -85,11 +87,26 @@ function ReputazioneBrandPage() {
       <AlertBanner alerts={alerts} onResolve={handleResolve} />
 
       <div className="rounded-lg border p-4">
-        <h2 className="mb-2 text-sm font-medium text-muted-foreground">Andamento sentiment (14 giorni)</h2>
+        <h2 className="mb-2 text-sm font-medium text-muted-foreground">
+          Andamento sentiment ({daysRange} giorni)
+        </h2>
         <SentimentTrendChart data={trendSeries} />
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
+        <Select value={String(daysRange)} onValueChange={(v) => setDaysRange(Number(v))}>
+          <SelectTrigger className="w-44">
+            <SelectValue placeholder="Intervallo" />
+          </SelectTrigger>
+          <SelectContent>
+            {DAYS_RANGE_OPTIONS.map((d) => (
+              <SelectItem key={d} value={String(d)}>
+                Ultimi {d} giorni
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
         <Select value={platformFilter} onValueChange={(v) => setPlatformFilter(v as Platform | "all")}>
           <SelectTrigger className="w-44">
             <SelectValue placeholder="Piattaforma" />
