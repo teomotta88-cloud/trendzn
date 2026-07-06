@@ -14,6 +14,156 @@ export type Database = {
   }
   public: {
     Tables: {
+      brand_keywords: {
+        Row: {
+          active: boolean
+          created_at: string
+          id: string
+          keyword: string
+          platforms: string[]
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          id?: string
+          keyword: string
+          platforms?: string[]
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          id?: string
+          keyword?: string
+          platforms?: string[]
+        }
+        Relationships: []
+      }
+      brand_mentions: {
+        Row: {
+          author: string | null
+          category: string | null
+          content: string | null
+          created_at: string
+          engagement: number
+          external_id: string
+          id: string
+          is_viral: boolean
+          keyword_matched: string
+          platform: string
+          published_at: string | null
+          raw: Json | null
+          reach: number | null
+          sentiment: string
+          url: string
+        }
+        Insert: {
+          author?: string | null
+          category?: string | null
+          content?: string | null
+          created_at?: string
+          engagement?: number
+          external_id: string
+          id?: string
+          is_viral?: boolean
+          keyword_matched: string
+          platform: string
+          published_at?: string | null
+          raw?: Json | null
+          reach?: number | null
+          sentiment: string
+          url: string
+        }
+        Update: {
+          author?: string | null
+          category?: string | null
+          content?: string | null
+          created_at?: string
+          engagement?: number
+          external_id?: string
+          id?: string
+          is_viral?: boolean
+          keyword_matched?: string
+          platform?: string
+          published_at?: string | null
+          raw?: Json | null
+          reach?: number | null
+          sentiment?: string
+          url?: string
+        }
+        Relationships: []
+      }
+      brand_monitoring_runs: {
+        Row: {
+          created_at: string
+          error_message: string | null
+          finished_at: string | null
+          id: string
+          keyword: string | null
+          mentions_found: number
+          platform: string | null
+          requests_used: number
+          started_at: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          keyword?: string | null
+          mentions_found?: number
+          platform?: string | null
+          requests_used?: number
+          started_at?: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          keyword?: string | null
+          mentions_found?: number
+          platform?: string | null
+          requests_used?: number
+          started_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      brand_sentiment_alerts: {
+        Row: {
+          created_at: string
+          id: string
+          level: number
+          metrics: Json | null
+          platform: string | null
+          reason: string
+          resolved_at: string | null
+          triggered_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          level: number
+          metrics?: Json | null
+          platform?: string | null
+          reason: string
+          resolved_at?: string | null
+          triggered_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          level?: number
+          metrics?: Json | null
+          platform?: string | null
+          reason?: string
+          resolved_at?: string | null
+          triggered_at?: string
+        }
+        Relationships: []
+      }
       editorial_client_channels: {
         Row: {
           canale: string
