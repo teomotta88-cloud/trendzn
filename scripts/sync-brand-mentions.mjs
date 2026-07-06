@@ -1,52 +1,63 @@
-// Reputazione Brand: cerca menzioni del brand su Twitter/X, Reddit, Instagram,
-// YouTube, LinkedIn tramite la REST API di anysite (https://api.anysite.io),
-// classifica il sentiment (regole da .claude/skills/anysite-brand-reputation/
-// references/MONITORING_GUIDE.md) e invia il risultato all'hook
+// Reputazione Brand: cerca menzioni del brand e invia il risultato all'hook
 // sync-brand-mentions, che fa l'upsert su Supabase (vedi sync-tiktok-hashtag.mjs
 // per lo stesso pattern: script esterno -> hook pubblico -> supabaseAdmin).
 //
-// Variabili d'ambiente:
-//   ANYSITE_API_KEY        obbligatoria, header "access-token" per api.anysite.io
-//   KEYWORDS                csv, default: "hyundai,hyundai_italia"
-//   MAX_RESULTS_PER_CALL    default: 25 (ogni risultato consuma credit anysite)
-//   DELAY_BETWEEN_CALLS_MS  default: 2000
+// Stato attuale: solo YouTube e' collegato a una fonte dati reale e gratuita
+// (YouTube Data API v3, richiede solo una API key gratuita — niente OAuth,
+// niente carta di credito, quota gratuita 10.000 unita'/giorno). Le altre
+// piattaforme (Twitter/X, Reddit, Instagram, LinkedIn) restano collegate ad
+// anysite (https://api.anysite.io) ma non vengono eseguite di default perche'
+// l'account anysite in uso e' in trial e la sua REST API diretta risponde
+// 403 "This token is restricted to MCP usage only" — serve un piano a
+// pagamento per sbloccarle. Il codice resta pronto: basta aggiungere quelle
+// piattaforme a PLATFORMS quando l'accesso anysite sara' disponibile.
 //
-// NOTA: primo run (workflow #<vedi log>) ha dato 404 su tutte le piattaforme
-// perche' i path erano indovinati come GET /{platform}/search. Il formato reale
-// e' POST /api/{platform}/search/{noun} con body JSON (confermato per twitter
-// via ricerca pubblica: "/api/twitter/search/posts"). reddit/instagram/youtube/
-// linkedin sono per ora dedotti per coerenza di naming con lo stesso pattern +
-// i nomi tool della skill (search_reddit_posts, search_instagram_posts,
-// search_youtube_videos, search_linkedin_posts) — da confermare al prossimo
-// run e aggiustare se ancora 404. Se necessario, i campi di normalizeResult()
-// vanno adeguati in base alla risposta JSON reale.
+// Variabili d'ambiente:
+//   YOUTUBE_API_KEY         richiesta se "youtube" e' tra le PLATFORMS eseguite
+//   ANYSITE_API_KEY         richiesta se una piattaforma anysite e' tra le PLATFORMS eseguite
+//   PLATFORMS               csv, default: "youtube" (opzioni: youtube,twitter,reddit,instagram,linkedin)
+//   KEYWORDS                csv, default: "hyundai,hyundai_italia"
+//   MAX_RESULTS_PER_CALL    default: 25 (ogni risultato consuma quota/credit)
+//   DELAY_BETWEEN_CALLS_MS  default: 2000
 //
 // Eseguito da .github/workflows/sync-brand-mentions.yml su schedule.
 
 const ANYSITE_BASE = "https://api.anysite.io";
+const YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3/search";
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-brand-mentions";
-
-const apiKey = process.env.ANYSITE_API_KEY;
-if (!apiKey) {
-  console.error("Manca ANYSITE_API_KEY nell'ambiente.");
-  process.exit(1);
-}
 
 const KEYWORDS = (process.env.KEYWORDS ?? "hyundai,hyundai_italia")
   .split(",")
   .map((k) => k.trim())
   .filter(Boolean);
 
+const PLATFORMS_TO_RUN = (process.env.PLATFORMS ?? "youtube")
+  .split(",")
+  .map((p) => p.trim())
+  .filter(Boolean);
+
 const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "25", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 
-// path/param confermati per twitter; gli altri sono dedotti per coerenza
-// (vedi nota in testa al file) e vanno riverificati al prossimo run.
-const PLATFORM_ENDPOINTS = {
+const youtubeApiKey = process.env.YOUTUBE_API_KEY;
+if (PLATFORMS_TO_RUN.includes("youtube") && !youtubeApiKey) {
+  console.error("Manca YOUTUBE_API_KEY nell'ambiente (richiesta da PLATFORMS=youtube).");
+  process.exit(1);
+}
+
+const anysiteApiKey = process.env.ANYSITE_API_KEY;
+const ANYSITE_PLATFORMS = ["twitter", "reddit", "instagram", "linkedin"];
+if (PLATFORMS_TO_RUN.some((p) => ANYSITE_PLATFORMS.includes(p)) && !anysiteApiKey) {
+  console.error("Manca ANYSITE_API_KEY nell'ambiente (richiesta dalle piattaforme anysite in PLATFORMS).");
+  process.exit(1);
+}
+
+// path/param anysite: confermati per twitter, dedotti per gli altri (vedi
+// PR #80). Non eseguiti di default: vedi nota in testa al file.
+const ANYSITE_ENDPOINTS = {
   twitter: { path: "/api/twitter/search/posts", param: "query" },
   reddit: { path: "/api/reddit/search/posts", param: "query" },
   instagram: { path: "/api/instagram/search/posts", param: "query" },
-  youtube: { path: "/api/youtube/search/videos", param: "query" },
   linkedin: { path: "/api/linkedin/search/posts", param: "keywords" },
 };
 
@@ -73,13 +84,53 @@ function classifySentiment(text) {
   return "neutral";
 }
 
-async function searchPlatform(platform, keyword) {
-  const { path, param } = PLATFORM_ENDPOINTS[platform];
+async function searchYouTube(keyword) {
+  const url = new URL(YOUTUBE_BASE);
+  url.searchParams.set("part", "snippet");
+  url.searchParams.set("q", keyword);
+  url.searchParams.set("type", "video");
+  url.searchParams.set("order", "date");
+  url.searchParams.set("maxResults", String(Math.min(MAX_RESULTS_PER_CALL, 50)));
+  url.searchParams.set("key", youtubeApiKey);
+
+  const res = await fetch(url);
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`YouTube search failed (${res.status}): ${body.slice(0, 200)}`);
+  }
+  const data = await res.json();
+  return data.items ?? [];
+}
+
+function normalizeYouTubeResult(keyword, item) {
+  const videoId = item.id?.videoId ?? "";
+  const snippet = item.snippet ?? {};
+  return {
+    platform: "youtube",
+    external_id: videoId || `youtube-${keyword}-${Math.random().toString(36).slice(2)}`,
+    url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : "",
+    author: snippet.channelTitle ?? null,
+    content: [snippet.title, snippet.description].filter(Boolean).join(" — "),
+    published_at: snippet.publishedAt ?? null,
+    keyword_matched: keyword,
+    sentiment: classifySentiment(`${snippet.title ?? ""} ${snippet.description ?? ""}`),
+    // YouTube search.list non include statistiche (viste/like): servirebbe una
+    // seconda chiamata a videos.list, evitata per ora per non raddoppiare la
+    // quota. engagement/reach restano a 0/null finche' non serve davvero.
+    engagement: 0,
+    reach: null,
+    is_viral: false,
+    raw: item,
+  };
+}
+
+async function searchAnysite(platform, keyword) {
+  const { path, param } = ANYSITE_ENDPOINTS[platform];
   const url = new URL(path, ANYSITE_BASE);
 
   const res = await fetch(url, {
     method: "POST",
-    headers: { "access-token": apiKey, "Content-Type": "application/json" },
+    headers: { "access-token": anysiteApiKey, "Content-Type": "application/json" },
     body: JSON.stringify({ [param]: keyword, count: MAX_RESULTS_PER_CALL }),
   });
   if (!res.ok) {
@@ -87,11 +138,10 @@ async function searchPlatform(platform, keyword) {
     throw new Error(`anysite ${platform} search failed (${res.status}): ${body.slice(0, 200)}`);
   }
   const data = await res.json();
-  const items = Array.isArray(data) ? data : (data.results ?? data.data ?? data.items ?? []);
-  return items;
+  return Array.isArray(data) ? data : (data.results ?? data.data ?? data.items ?? []);
 }
 
-function normalizeResult(platform, keyword, item) {
+function normalizeAnysiteResult(platform, keyword, item) {
   const externalId = String(item.id ?? item.post_id ?? item.external_id ?? item.url ?? "");
   const url = item.url ?? item.link ?? item.permalink ?? "";
   const content = item.text ?? item.content ?? item.caption ?? item.title ?? item.body ?? "";
@@ -119,6 +169,15 @@ function normalizeResult(platform, keyword, item) {
   };
 }
 
+async function fetchMentions(platform, keyword) {
+  if (platform === "youtube") {
+    const items = await searchYouTube(keyword);
+    return items.map((item) => normalizeYouTubeResult(keyword, item));
+  }
+  const items = await searchAnysite(platform, keyword);
+  return items.map((item) => normalizeAnysiteResult(platform, keyword, item));
+}
+
 async function sendToHook(mentions, run) {
   const res = await fetch(SYNC_ENDPOINT, {
     method: "POST",
@@ -133,20 +192,19 @@ async function sendToHook(mentions, run) {
 }
 
 // --- Main ---
-console.log("=== TRENDZN — Reputazione Brand (anysite) ===");
+console.log("=== TRENDZN — Reputazione Brand ===");
+console.log(`Piattaforme: ${PLATFORMS_TO_RUN.join(", ")}`);
 console.log(`Keyword: ${KEYWORDS.join(", ")}`);
 
-const platforms = Object.keys(PLATFORM_ENDPOINTS);
 let totalInserted = 0;
 const summary = [];
 
-for (const platform of platforms) {
+for (const platform of PLATFORMS_TO_RUN) {
   for (const keyword of KEYWORDS) {
     const startedAt = new Date().toISOString();
     console.log(`\n[${platform}] "${keyword}"`);
     try {
-      const items = await searchPlatform(platform, keyword);
-      const mentions = items.map((item) => normalizeResult(platform, keyword, item));
+      const mentions = await fetchMentions(platform, keyword);
       console.log(`  Trovate ${mentions.length} mention`);
 
       const result = await sendToHook(mentions, {
