@@ -1,0 +1,21 @@
+name: Sync Brand Mentions
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync brand mentions via anysite
+        env:
+          ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
+        run: node scripts/sync-brand-mentions.mjs

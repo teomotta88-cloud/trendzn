@@ -151,6 +151,7 @@ const NAV_ITEMS = [
   { to: "/influencer-feed", label: "Influencer" },
   { to: "/tiktok-hashtag", label: "TikTok Trending" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
+  { to: "/reputazione-brand", label: "Reputazione Brand" },
 ];
 
 function Navbar() {
