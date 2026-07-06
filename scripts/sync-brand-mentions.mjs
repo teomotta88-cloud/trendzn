@@ -243,7 +243,7 @@ for (const platform of PLATFORMS_TO_RUN) {
       });
       totalInserted += result.inserted ?? 0;
       summary.push({ platform, keyword, found: mentions.length, inserted: result.inserted ?? 0 });
-      console.log(`  Inserite: ${result.inserted ?? 0}`);
+      console.log(`  Sincronizzate (nuove o aggiornate): ${result.inserted ?? 0}`);
     } catch (err) {
       console.error(`  ERRORE: ${String(err)}`);
       summary.push({ platform, keyword, error: String(err) });
@@ -268,7 +268,7 @@ for (const r of summary) {
   if (r.error) {
     console.log(`  [${r.platform}] "${r.keyword}": ERRORE — ${r.error}`);
   } else {
-    console.log(`  [${r.platform}] "${r.keyword}": ${r.found} trovate → ${r.inserted} inserite`);
+    console.log(`  [${r.platform}] "${r.keyword}": ${r.found} trovate → ${r.inserted} sincronizzate`);
   }
 }
-console.log(`\nTotale nuove mention inserite: ${totalInserted}`);
+console.log(`\nTotale mention sincronizzate (nuove o aggiornate): ${totalInserted}`);

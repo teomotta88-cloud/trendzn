@@ -72,9 +72,12 @@ export const Route = createFileRoute("/api/public/hooks/sync-brand-mentions")({
                 raw: m.raw ?? null,
               }));
 
+            // ignoreDuplicates: false (default upsert) cosi' una mention gia' vista
+            // viene aggiornata con i dati freschi (es. engagement/reach cambiati)
+            // invece di essere saltata per sempre dopo il primo inserimento.
             const { data, error } = await supabaseAdmin
               .from("brand_mentions")
-              .upsert(rows, { onConflict: "platform,external_id", ignoreDuplicates: true })
+              .upsert(rows, { onConflict: "platform,external_id" })
               .select("id");
 
             if (error) {
