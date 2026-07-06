@@ -24,6 +24,7 @@
 
 const ANYSITE_BASE = "https://api.anysite.io";
 const YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3/search";
+const YOUTUBE_VIDEOS_BASE = "https://www.googleapis.com/youtube/v3/videos";
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-brand-mentions";
 
 const KEYWORDS = (process.env.KEYWORDS ?? "hyundai,hyundai_italia")
@@ -102,9 +103,34 @@ async function searchYouTube(keyword) {
   return data.items ?? [];
 }
 
-function normalizeYouTubeResult(keyword, item) {
+// search.list non include statistiche (viste/like/commenti): videos.list le
+// da' in un'unica chiamata batch per fino a 50 ID, costo 1 unita' di quota
+// totale (non per video) — molto piu' economico che chiamarla per ogni item.
+async function fetchVideoStatistics(videoIds) {
+  if (videoIds.length === 0) return new Map();
+
+  const url = new URL(YOUTUBE_VIDEOS_BASE);
+  url.searchParams.set("part", "statistics");
+  url.searchParams.set("id", videoIds.join(","));
+  url.searchParams.set("key", youtubeApiKey);
+
+  const res = await fetch(url);
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`YouTube videos.list failed (${res.status}): ${body.slice(0, 200)}`);
+  }
+  const data = await res.json();
+  return new Map((data.items ?? []).map((v) => [v.id, v.statistics ?? {}]));
+}
+
+function normalizeYouTubeResult(keyword, item, statsByVideoId) {
   const videoId = item.id?.videoId ?? "";
   const snippet = item.snippet ?? {};
+  const stats = statsByVideoId.get(videoId) ?? {};
+  const likes = Number(stats.likeCount ?? 0);
+  const comments = Number(stats.commentCount ?? 0);
+  const views = stats.viewCount != null ? Number(stats.viewCount) : null;
+
   return {
     platform: "youtube",
     external_id: videoId || `youtube-${keyword}-${Math.random().toString(36).slice(2)}`,
@@ -114,12 +140,9 @@ function normalizeYouTubeResult(keyword, item) {
     published_at: snippet.publishedAt ?? null,
     keyword_matched: keyword,
     sentiment: classifySentiment(`${snippet.title ?? ""} ${snippet.description ?? ""}`),
-    // YouTube search.list non include statistiche (viste/like): servirebbe una
-    // seconda chiamata a videos.list, evitata per ora per non raddoppiare la
-    // quota. engagement/reach restano a 0/null finche' non serve davvero.
-    engagement: 0,
-    reach: null,
-    is_viral: false,
+    engagement: likes + comments,
+    reach: views,
+    is_viral: likes + comments > 1000,
     raw: item,
   };
 }
@@ -172,7 +195,9 @@ function normalizeAnysiteResult(platform, keyword, item) {
 async function fetchMentions(platform, keyword) {
   if (platform === "youtube") {
     const items = await searchYouTube(keyword);
-    return items.map((item) => normalizeYouTubeResult(keyword, item));
+    const videoIds = items.map((item) => item.id?.videoId).filter(Boolean);
+    const statsByVideoId = await fetchVideoStatistics(videoIds);
+    return items.map((item) => normalizeYouTubeResult(keyword, item, statsByVideoId));
   }
   const items = await searchAnysite(platform, keyword);
   return items.map((item) => normalizeAnysiteResult(platform, keyword, item));
