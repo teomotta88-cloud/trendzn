@@ -117,15 +117,28 @@ export const Route = createFileRoute("/api/public/hooks/sync-brand-mentions")({
 
               const level = computeCrisisLevel(todayRows.length, negativeShare, baseline);
               if (level !== null) {
-                await supabaseAdmin.from("brand_sentiment_alerts").insert({
-                  level,
-                  platform: run.platform,
-                  reason:
-                    level === 3
-                      ? "Volume >3x baseline o sentiment negativo >50%"
-                      : "Volume 2-3x baseline o sentiment negativo >30%",
-                  metrics: { today_count: todayRows.length, baseline, negative_share: negativeShare },
-                });
+                // Evita di accumulare alert duplicati: ogni run che ritrova le
+                // stesse condizioni non deve creare una nuova riga finche' la
+                // precedente per questa piattaforma non e' stata risolta.
+                const { data: existingAlert } = await supabaseAdmin
+                  .from("brand_sentiment_alerts")
+                  .select("id")
+                  .eq("platform", run.platform)
+                  .is("resolved_at", null)
+                  .limit(1)
+                  .maybeSingle();
+
+                if (!existingAlert) {
+                  await supabaseAdmin.from("brand_sentiment_alerts").insert({
+                    level,
+                    platform: run.platform,
+                    reason:
+                      level === 3
+                        ? "Volume >3x baseline o sentiment negativo >50%"
+                        : "Volume 2-3x baseline o sentiment negativo >30%",
+                    metrics: { today_count: todayRows.length, baseline, negative_share: negativeShare },
+                  });
+                }
               }
             }
           }
