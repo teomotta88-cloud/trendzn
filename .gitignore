@@ -20,6 +20,11 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Sessione TikTok Creative Center (cookie di login: mai da committare,
+# vive solo nella cache di GitHub Actions o in locale per il bootstrap)
+.tiktok-session/
+debug/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

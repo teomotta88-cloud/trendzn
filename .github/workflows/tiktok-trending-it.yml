@@ -30,9 +30,43 @@ jobs:
           npm install playwright
           npx playwright install --with-deps chromium
 
+      # La sessione TikTok Creative Center (cookie di login) viene
+      # persistita qui tra un'esecuzione e l'altra, invece che su un
+      # server sempre acceso: gratuito, nessuna infrastruttura da pagare.
+      # La chiave include l'ID del run perché il salvataggio a fine job
+      # deve creare una voce nuova (le cache di GitHub Actions sono
+      # immutabili); il ripristino usa "restore-keys" per prendere sempre
+      # la più recente disponibile.
+      - name: Ripristina sessione TikTok Creative Center
+        uses: actions/cache/restore@v4
+        with:
+          path: .tiktok-session
+          key: tiktok-cc-session-${{ github.run_id }}
+          restore-keys: |
+            tiktok-cc-session-
+
       - name: Discover trending hashtags e scrapa contenuti
         env:
           MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '10' }}
           MAX_POSTS_PER_TAG: ${{ github.event.inputs.max_posts_per_tag || '12' }}
           DELAY_BETWEEN_TAGS_MS: "45000"
+          TIKTOK_CC_EMAIL: ${{ secrets.TIKTOK_CC_EMAIL }}
+          TIKTOK_CC_PASSWORD: ${{ secrets.TIKTOK_CC_PASSWORD }}
+          TIKTOK_CC_SESSION_SEED: ${{ secrets.TIKTOK_CC_SESSION_SEED }}
         run: node scripts/sync-trending-it.mjs
+
+      - name: Salva sessione TikTok Creative Center aggiornata
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .tiktok-session
+          key: tiktok-cc-session-${{ github.run_id }}
+
+      - name: Carica artifact di debug (se la pagina non è stata riconosciuta)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiktok-cc-debug
+          path: debug/
+          if-no-files-found: ignore
+          retention-days: 7
