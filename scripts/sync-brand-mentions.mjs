@@ -2,15 +2,16 @@
 // sync-brand-mentions, che fa l'upsert su Supabase (vedi sync-tiktok-hashtag.mjs
 // per lo stesso pattern: script esterno -> hook pubblico -> supabaseAdmin).
 //
-// Stato attuale: solo YouTube e' collegato a una fonte dati reale e gratuita
-// (YouTube Data API v3, richiede solo una API key gratuita — niente OAuth,
-// niente carta di credito, quota gratuita 10.000 unita'/giorno). Le altre
-// piattaforme (Twitter/X, Reddit, Instagram, LinkedIn) restano collegate ad
-// anysite (https://api.anysite.io) ma non vengono eseguite di default perche'
-// l'account anysite in uso e' in trial e la sua REST API diretta risponde
-// 403 "This token is restricted to MCP usage only" — serve un piano a
-// pagamento per sbloccarle. Il codice resta pronto: basta aggiungere quelle
-// piattaforme a PLATFORMS quando l'accesso anysite sara' disponibile.
+// YouTube usa la Data API v3 ufficiale (API key gratuita). Twitter/X, Reddit,
+// Instagram, LinkedIn usano la REST API di anysite (https://api.anysite.io,
+// header access-token) — riattivate in PLATFORMS ora che l'account ha accesso
+// REST diretto (non piu' il token "restricted to MCP usage only" del trial).
+//
+// ATTENZIONE: solo il path di twitter (/api/twitter/search/posts) e' stato
+// confermato da un run reale. reddit/instagram/linkedin sono dedotti per
+// coerenza di naming (vedi ANYSITE_ENDPOINTS) e non ancora testati con un
+// token valido: il primo run potrebbe dare 404 su questi tre e richiedere
+// un aggiustamento dei path in base al log.
 //
 // Variabili d'ambiente:
 //   YOUTUBE_API_KEY         richiesta se "youtube" e' tra le PLATFORMS eseguite
