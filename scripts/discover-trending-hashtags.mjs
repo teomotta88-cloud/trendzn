@@ -1,28 +1,24 @@
-// Scopre gli hashtag in trend su TikTok per l'Italia.
+// Scopre contenuti in trend per l'Italia, in due modi distinti:
 //
-// Fonte primaria: TikTok Creative Center (pagina "Trending Hashtags",
-// richiede login — vedi scripts/tiktok-cc-session.mjs). È la fonte reale
-// di hashtag TikTok in trend, non un proxy indiretto come Google Trends.
+// - discoverTrendingHashtags(): fonte primaria, TikTok Creative Center
+//   (pagina "Trending Hashtags", richiede login — vedi tiktok-cc-session.mjs).
+//   Ritorna nomi di hashtag TikTok reali, da passare a scrapeHashtag().
 //
-// Se il login/estrazione fallisce (sessione scaduta, pagina cambiata),
-// ripiega su Google Trends RSS Italia (pubblico, no auth) e poi su una
-// lista hardcoded, così il job non si blocca mai del tutto.
+// - discoverSocialUrlsFromGoogleTrends(): ripiego se Creative Center non
+//   restituisce nulla. Legge il feed pubblico Google Trends Italia e ne
+//   estrae direttamente i link a contenuti social (Instagram, Facebook,
+//   TikTok, X, LinkedIn) citati come fonte di ogni tendenza — sono URL
+//   di post reali, pronti da inviare così come sono. Niente più
+//   conversione euristica "argomento di ricerca → hashtag inventato".
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { chromium } from "playwright";
 import { createAuthenticatedContext, ensureLoggedIn, persistSession } from "./tiktok-cc-session.mjs";
 
-// Google ha deprecato il vecchio endpoint /trends/trendingsearches/daily/rss
-// (risponde 404) a favore di questo, sotto il nuovo prodotto "Trending Now".
-// È comunque solo un ripiego se TikTok Creative Center fallisce: se anche
-// questo smette di funzionare, si scende semplicemente alla lista fissa.
 const GOOGLE_TRENDS_IT_URL = "https://trends.google.com/trending/rss?geo=IT";
 
-const FALLBACK_HASHTAGS = [
-  "italia", "viral", "fyp", "trend",
-  "calcio", "food", "moda", "musica", "estate",
-  "milano", "roma", "vacanze", "humor", "notizie",
-];
+const SOCIAL_HOST_PATTERN =
+  /(^|\.)(instagram\.com|facebook\.com|fb\.watch|tiktok\.com|x\.com|twitter\.com|linkedin\.com)$/i;
 
 function normalizeHashtag(raw) {
   return raw
@@ -30,6 +26,15 @@ function normalizeHashtag(raw) {
     .toLowerCase()
     .replace(/[^a-z0-9àáâãäåèéêëìíîïòóôõöùúûüñçß]/g, "")
     .trim();
+}
+
+function detectPlatformFromHost(hostname) {
+  if (/(^|\.)instagram\.com$/i.test(hostname)) return "instagram";
+  if (/(^|\.)(facebook\.com|fb\.watch)$/i.test(hostname)) return "facebook";
+  if (/(^|\.)tiktok\.com$/i.test(hostname)) return "tiktok";
+  if (/(^|\.)(x\.com|twitter\.com)$/i.test(hostname)) return "x";
+  if (/(^|\.)linkedin\.com$/i.test(hostname)) return "linkedin";
+  return "web";
 }
 
 // Cerca ricorsivamente, dentro una risposta JSON, array di oggetti che
@@ -124,11 +129,50 @@ async function discoverFromCreativeCenter() {
   }
 }
 
-function topicToHashtag(title) {
-  return normalizeHashtag(title.replace(/\s+/g, ""));
+export async function discoverTrendingHashtags() {
+  console.error("[discover] Cerco trending hashtag da TikTok Creative Center…");
+  const tags = await discoverFromCreativeCenter();
+  console.error(`[discover] ${tags.length} hashtag da TikTok Creative Center`);
+  return tags.slice(0, 20);
 }
 
-async function discoverFromGoogleTrends() {
+// Estrae, da ogni voce del feed Google Trends, solo i link a contenuti
+// social (non l'argomento di ricerca in sé): sono URL di post reali già
+// pronti da inviare, non c'è nessuna conversione euristica di mezzo.
+// Non ci affidiamo ai nomi esatti dei tag del feed (namespace ht:news_item*,
+// che Google può cambiare) ma cerchiamo qualsiasi URL nel blocco di ogni
+// tendenza e lo filtriamo per dominio: più robusto a variazioni di schema.
+function extractSocialUrlsFromXml(xml) {
+  const urlPattern = /https?:\/\/[^\s"'<>]+/g;
+  const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
+  const results = [];
+  const seen = new Set();
+
+  for (const block of itemBlocks) {
+    const titleMatch = block.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/);
+    const topic = titleMatch ? titleMatch[1].trim() : null;
+
+    const rawUrls = block.match(urlPattern) || [];
+    for (const raw of rawUrls) {
+      const cleaned = raw.replace(/&amp;/g, "&").replace(/[).,;\]"']+$/, "");
+      let parsed;
+      try {
+        parsed = new URL(cleaned);
+      } catch {
+        continue;
+      }
+      if (!SOCIAL_HOST_PATTERN.test(parsed.hostname)) continue;
+      if (seen.has(cleaned)) continue;
+      seen.add(cleaned);
+      results.push({ url: cleaned, topic, platform: detectPlatformFromHost(parsed.hostname) });
+    }
+  }
+
+  return results;
+}
+
+export async function discoverSocialUrlsFromGoogleTrends() {
+  console.error("[discover] Cerco link social nel feed Google Trends IT…");
   const res = await fetch(GOOGLE_TRENDS_IT_URL, {
     headers: {
       "User-Agent": "Mozilla/5.0 (compatible; TrendzBot/1.0)",
@@ -140,54 +184,20 @@ async function discoverFromGoogleTrends() {
   if (!res.ok) throw new Error(`Google Trends RSS: HTTP ${res.status}`);
 
   const xml = await res.text();
-
-  const cdataMatches = [...xml.matchAll(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/g)];
-  const cdataTitles = cdataMatches.map((m) => m[1].trim()).filter(Boolean);
-
-  const plainMatches = [...xml.matchAll(/<title>([^<]+)<\/title>/g)];
-  const plainTitles = plainMatches
-    .map((m) => m[1].trim())
-    .filter((t) => !t.toLowerCase().includes("google") && t.length > 1);
-
-  const all = [...new Set([...cdataTitles, ...plainTitles])];
-
-  const hashtags = all
-    .map(topicToHashtag)
-    .filter((t) => t.length >= 3 && t.length <= 40);
-
-  return [...new Set(hashtags)];
-}
-
-export async function discoverTrendingHashtags() {
-  console.error("[discover] Cerco trending hashtag da TikTok Creative Center…");
-  try {
-    const tags = await discoverFromCreativeCenter();
-    if (tags.length >= 5) {
-      console.error(`[discover] ${tags.length} hashtag da TikTok Creative Center`);
-      return tags.slice(0, 20);
-    }
-    console.error(`[discover] Solo ${tags.length} hashtag da Creative Center — provo Google Trends`);
-  } catch (err) {
-    console.error(`[discover] Errore Creative Center: ${String(err)} — provo Google Trends`);
-  }
-
-  try {
-    const tags = await discoverFromGoogleTrends();
-    if (tags.length >= 5) {
-      console.error(`[discover] ${tags.length} hashtag da Google Trends IT`);
-      return tags.slice(0, 20);
-    }
-    console.error(`[discover] Solo ${tags.length} hashtag da Google Trends — uso fallback`);
-    return [...new Set([...tags, ...FALLBACK_HASHTAGS])].slice(0, 15);
-  } catch (err) {
-    console.error(`[discover] Errore Google Trends: ${String(err)} — uso fallback`);
-    return FALLBACK_HASHTAGS.slice(0, 15);
-  }
+  const items = extractSocialUrlsFromXml(xml);
+  console.error(`[discover] ${items.length} URL social trovati nel feed Google Trends`);
+  return items;
 }
 
 // Esecuzione standalone: node scripts/discover-trending-hashtags.mjs
 if (import.meta.url === `file://${process.argv[1]}`) {
   const tags = await discoverTrendingHashtags();
-  console.log(JSON.stringify(tags, null, 2));
+  console.log(JSON.stringify({ hashtags: tags }, null, 2));
   console.error(`\n${tags.length} hashtag trovati`);
+
+  if (tags.length === 0) {
+    const items = await discoverSocialUrlsFromGoogleTrends();
+    console.log(JSON.stringify({ googleTrendsSocialUrls: items }, null, 2));
+    console.error(`${items.length} URL social trovati come ripiego`);
+  }
 }
