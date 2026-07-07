@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
     steps:
       - uses: actions/checkout@v4
 
@@ -17,7 +22,17 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Attendi che RSS-Bridge sia pronto
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge non ha risposto in tempo" >&2
+          exit 1
+
       - name: Sync canali feed via RSS-Bridge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RSS_BRIDGE_BASE: http://localhost:3000/
         run: node scripts/sync-canali-feed.mjs

@@ -2,15 +2,19 @@
 // elencati in trends.json (canali_inspo, influencer_profiles, canali_cliente)
 // via RSS-Bridge e scrive i nuovi post trovati in trends.json su GitHub.
 //
-// Variabile d'ambiente richiesta:
-//   GITHUB_TOKEN  token con permesso "contents: write" sul repo
+// Variabili d'ambiente:
+//   GITHUB_TOKEN     richiesta, token con permesso "contents: write" sul repo
+//   RSS_BRIDGE_BASE  opzionale, URL base dell'istanza RSS-Bridge da interrogare
+//                    (default: RSS-Bridge lanciato come service container dal
+//                    workflow stesso, così non serve più un'istanza esterna
+//                    sempre accesa da pagare — vedi .github/workflows/sync-canali-feed.yml)
 //
 // Eseguito da .github/workflows/sync-canali-feed.yml su schedule (ogni 3h)
 // o manualmente via workflow_dispatch.
 
 const REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
-const RSS_BRIDGE_BASE = "https://trendzn-production.up.railway.app/";
+const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
 const MAX_POSTS_PER_CHANNEL = 15;
 
 const token = process.env.GITHUB_TOKEN;
