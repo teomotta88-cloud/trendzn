@@ -1,5 +1,12 @@
-// Orchestratore: scopre gli hashtag in trend per l'Italia e per ognuno
-// esegue lo scraper TikTok, poi invia i nuovi URL all'endpoint Lovable.
+// Orchestratore: scopre contenuti TikTok in trend per l'Italia.
+//
+// Percorso primario: hashtag reali da TikTok Creative Center → scraping
+// della pagina hashtag pubblica → sync su Supabase (via sync-tiktok-hashtag).
+//
+// Ripiego (solo se Creative Center non restituisce nulla): link social
+// (Instagram/Facebook/TikTok/X/LinkedIn) citati nel feed Google Trends IT,
+// inviati direttamente come trend "trend-real-time" (via submit-manual) —
+// sono già URL di post reali, non serve scraping aggiuntivo.
 //
 // Variabili d'ambiente (opzionali):
 //   MAX_HASHTAGS     quanti hashtag processare al massimo (default: 10)
@@ -8,11 +15,11 @@
 //
 // Eseguito da .github/workflows/tiktok-trending-it.yml
 
-import { discoverTrendingHashtags } from "./discover-trending-hashtags.mjs";
+import { discoverTrendingHashtags, discoverSocialUrlsFromGoogleTrends } from "./discover-trending-hashtags.mjs";
 import { scrapeHashtag } from "./scrape-tiktok-hashtag.mjs";
 
-const SYNC_ENDPOINT =
-  "https://trendzn.lovable.app/api/public/hooks/sync-tiktok-hashtag";
+const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-tiktok-hashtag";
+const SUBMIT_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/submit-manual";
 
 const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "10", 10);
 const MAX_POSTS_PER_TAG = parseInt(process.env.MAX_POSTS_PER_TAG ?? "12", 10);
@@ -36,54 +43,110 @@ async function syncUrls(urls, hashtag) {
   return res.json();
 }
 
+async function submitTrendUrl(item) {
+  const res = await fetch(SUBMIT_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      section: "trend-real-time",
+      url: item.url,
+      title: item.topic,
+    }),
+  });
+  const body = await res.json().catch(() => ({}));
+  return { ok: res.ok, status: res.status, body };
+}
+
+async function syncFromCreativeCenter(hashtags) {
+  let totalInserted = 0;
+  const results = [];
+
+  for (let i = 0; i < hashtags.length; i++) {
+    const tag = hashtags[i];
+    console.log(`\n[${i + 1}/${hashtags.length}] #${tag}`);
+
+    try {
+      const urls = await scrapeHashtag(tag);
+      const trimmed = urls.slice(0, MAX_POSTS_PER_TAG);
+      console.log(`  Trovati ${urls.length} URL → invio ${trimmed.length}`);
+
+      if (trimmed.length > 0) {
+        const result = await syncUrls(trimmed, tag);
+        totalInserted += result.inserted ?? 0;
+        results.push({ tag, found: urls.length, sent: trimmed.length, inserted: result.inserted ?? 0 });
+        console.log(`  Inseriti: ${result.inserted ?? 0}`);
+      } else {
+        results.push({ tag, found: 0, sent: 0, inserted: 0 });
+      }
+    } catch (err) {
+      console.error(`  ERRORE per #${tag}: ${String(err)}`);
+      results.push({ tag, error: String(err) });
+    }
+
+    // Pausa tra hashtag per non sovraccaricare TikTok (salta dopo l'ultimo)
+    if (i < hashtags.length - 1) {
+      console.log(`  Attesa ${DELAY_MS / 1000}s…`);
+      await sleep(DELAY_MS);
+    }
+  }
+
+  console.log("\n=== RIEPILOGO (Creative Center) ===");
+  for (const r of results) {
+    if (r.error) {
+      console.log(`  #${r.tag}: ERRORE — ${r.error}`);
+    } else {
+      console.log(`  #${r.tag}: ${r.found} trovati → ${r.sent} inviati → ${r.inserted} inseriti`);
+    }
+  }
+  console.log(`\nTotale nuovi video inseriti: ${totalInserted}`);
+}
+
+async function syncFromGoogleTrendsFallback() {
+  let items;
+  try {
+    items = await discoverSocialUrlsFromGoogleTrends();
+  } catch (err) {
+    console.error(`Ripiego Google Trends fallito: ${String(err)}`);
+    return;
+  }
+
+  if (items.length === 0) {
+    console.log("Nessun link social trovato nel feed Google Trends, nessun ripiego disponibile.");
+    return;
+  }
+
+  console.log(`\nInvio ${items.length} URL social trovati su Google Trends (sezione trend-real-time)…`);
+  let inserted = 0;
+  let duplicates = 0;
+  let failed = 0;
+
+  for (const item of items) {
+    const { ok, status, body } = await submitTrendUrl(item);
+    if (ok) {
+      inserted++;
+      console.log(`  [${item.platform}] ${item.url} → inserito`);
+    } else if (status === 409) {
+      duplicates++;
+    } else {
+      failed++;
+      console.error(`  [${item.platform}] ${item.url} → errore: ${body.error ?? status}`);
+    }
+  }
+
+  console.log(`\n=== RIEPILOGO (Google Trends) ===`);
+  console.log(`  Inseriti: ${inserted} · Già presenti: ${duplicates} · Falliti: ${failed}`);
+}
+
 // --- Main ---
 console.log("=== TRENDZN — TikTok Trending IT ===");
 
-// Step 1: scopri hashtag
 const allHashtags = await discoverTrendingHashtags();
 const hashtags = allHashtags.slice(0, MAX_HASHTAGS);
-console.log(`\nHashtag da processare (${hashtags.length}): ${hashtags.join(", ")}`);
 
-let totalInserted = 0;
-const results = [];
-
-// Step 2: per ogni hashtag, scraping + sync
-for (let i = 0; i < hashtags.length; i++) {
-  const tag = hashtags[i];
-  console.log(`\n[${i + 1}/${hashtags.length}] #${tag}`);
-
-  try {
-    const urls = await scrapeHashtag(tag);
-    const trimmed = urls.slice(0, MAX_POSTS_PER_TAG);
-    console.log(`  Trovati ${urls.length} URL → invio ${trimmed.length}`);
-
-    if (trimmed.length > 0) {
-      const result = await syncUrls(trimmed, tag);
-      totalInserted += result.inserted ?? 0;
-      results.push({ tag, found: urls.length, sent: trimmed.length, inserted: result.inserted ?? 0 });
-      console.log(`  Inseriti: ${result.inserted ?? 0}`);
-    } else {
-      results.push({ tag, found: 0, sent: 0, inserted: 0 });
-    }
-  } catch (err) {
-    console.error(`  ERRORE per #${tag}: ${String(err)}`);
-    results.push({ tag, error: String(err) });
-  }
-
-  // Pausa tra hashtag per non sovraccaricare TikTok (salta dopo l'ultimo)
-  if (i < hashtags.length - 1) {
-    console.log(`  Attesa ${DELAY_MS / 1000}s…`);
-    await sleep(DELAY_MS);
-  }
+if (hashtags.length > 0) {
+  console.log(`\nHashtag da processare (${hashtags.length}): ${hashtags.join(", ")}`);
+  await syncFromCreativeCenter(hashtags);
+} else {
+  console.log("\nNessun hashtag da TikTok Creative Center, provo il ripiego Google Trends…");
+  await syncFromGoogleTrendsFallback();
 }
-
-// Riepilogo
-console.log("\n=== RIEPILOGO ===");
-for (const r of results) {
-  if (r.error) {
-    console.log(`  #${r.tag}: ERRORE — ${r.error}`);
-  } else {
-    console.log(`  #${r.tag}: ${r.found} trovati → ${r.sent} inviati → ${r.inserted} inseriti`);
-  }
-}
-console.log(`\nTotale nuovi video inseriti: ${totalInserted}`);
