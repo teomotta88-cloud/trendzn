@@ -123,6 +123,20 @@ function looksItalian(text) {
   return hits >= 2;
 }
 
+// Rete di sicurezza indipendente dalla piattaforma: alcuni endpoint (in
+// particolare quelli anysite con path/parametro dedotti e mai confermati da
+// documentazione reale, es. linkedin) possono restituire risultati che non
+// c'entrano nulla con la keyword cercata — probabile che il parametro di
+// ricerca venga ignorato server-side. Scarta qui qualunque mention il cui
+// contenuto non menzioni davvero la keyword (o la sua parola principale).
+function containsKeyword(content, keyword) {
+  if (!content) return false;
+  const text = content.toLowerCase();
+  const words = keyword.toLowerCase().split(/[\s_]+/).filter((w) => w.length > 2);
+  if (words.length === 0) return text.includes(keyword.toLowerCase());
+  return words.some((w) => text.includes(w));
+}
+
 function classifySentiment(text) {
   const t = (text ?? "").toLowerCase();
   const positive = POSITIVE_WORDS.some((w) => t.includes(w));
@@ -263,21 +277,25 @@ function normalizeAnysiteResult(platform, keyword, item) {
 }
 
 async function fetchMentions(platform, keyword) {
+  let mentions;
+
   if (platform === "youtube") {
     const items = await searchYouTube(keyword);
     const videoIds = items.map((item) => item.id?.videoId).filter(Boolean);
     const statsByVideoId = await fetchVideoStatistics(videoIds);
-    return items.map((item) => normalizeYouTubeResult(keyword, item, statsByVideoId));
-  }
-  const items = await searchAnysite(platform, keyword);
-  const mentions = items.map((item) => normalizeAnysiteResult(platform, keyword, item));
+    mentions = items.map((item) => normalizeYouTubeResult(keyword, item, statsByVideoId));
+  } else {
+    const items = await searchAnysite(platform, keyword);
+    mentions = items.map((item) => normalizeAnysiteResult(platform, keyword, item));
 
-  // reddit/instagram/linkedin non hanno un filtro lingua nativo noto: scarta
-  // qui i risultati che non sembrano italiani (vedi looksItalian).
-  if (ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS.includes(platform)) {
-    return mentions.filter((m) => looksItalian(m.content));
+    // reddit/instagram/linkedin non hanno un filtro lingua nativo noto: scarta
+    // qui i risultati che non sembrano italiani (vedi looksItalian).
+    if (ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS.includes(platform)) {
+      mentions = mentions.filter((m) => looksItalian(m.content));
+    }
   }
-  return mentions;
+
+  return mentions.filter((m) => containsKeyword(m.content, keyword));
 }
 
 async function sendToHook(mentions, run) {
