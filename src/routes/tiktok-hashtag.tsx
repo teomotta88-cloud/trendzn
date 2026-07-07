@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
+import { TrendingHashtagsTable } from "@/components/TrendingHashtagsTable";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/tiktok-hashtag")({
@@ -98,6 +99,8 @@ function Page() {
           Filtrate per hashtag con i chip qui sotto.
         </p>
       </header>
+
+      <TrendingHashtagsTable onSelectHashtag={setActiveTag} />
 
       {/* Filtro hashtag */}
       {allTags.length > 0 && (
