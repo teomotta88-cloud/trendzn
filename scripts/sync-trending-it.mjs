@@ -15,11 +15,12 @@
 //
 // Eseguito da .github/workflows/tiktok-trending-it.yml
 
-import { discoverTrendingHashtags, discoverSocialUrlsFromGoogleTrends } from "./discover-trending-hashtags.mjs";
+import { discoverTrendingHashtagsWithMetadata, discoverSocialUrlsFromGoogleTrends } from "./discover-trending-hashtags.mjs";
 import { scrapeHashtag } from "./scrape-tiktok-hashtag.mjs";
 
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-tiktok-hashtag";
 const SUBMIT_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/submit-manual";
+const TRENDING_HASHTAGS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-trending-hashtags";
 
 const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "10", 10);
 const MAX_POSTS_PER_TAG = parseInt(process.env.MAX_POSTS_PER_TAG ?? "12", 10);
@@ -41,6 +42,28 @@ async function syncUrls(urls, hashtag) {
     throw new Error(`Sync endpoint failed (${res.status}): ${body.slice(0, 200)}`);
   }
   return res.json();
+}
+
+// Aggiorna la tabella "trend del giorno" mostrata prima del feed nella
+// pagina TikTok Trending Italia. Best-effort: se fallisce non deve
+// bloccare il resto del sync (video URL è la parte che conta di più).
+async function syncTrendingHashtagsMetadata(metadata) {
+  try {
+    const res = await fetch(TRENDING_HASHTAGS_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ region: "IT", periodDays: 7, items: metadata }),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      console.error(`Sync tabella hashtag fallito (${res.status}): ${body.slice(0, 200)}`);
+      return;
+    }
+    const result = await res.json();
+    console.log(`Tabella trend aggiornata: ${result.inserted ?? 0} hashtag salvati.`);
+  } catch (err) {
+    console.error(`Sync tabella hashtag fallito: ${String(err)}`);
+  }
 }
 
 async function submitTrendUrl(item) {
@@ -140,8 +163,12 @@ async function syncFromGoogleTrendsFallback() {
 // --- Main ---
 console.log("=== TRENDZN — TikTok Trending IT ===");
 
-const allHashtags = await discoverTrendingHashtags();
+const { hashtags: allHashtags, metadata } = await discoverTrendingHashtagsWithMetadata();
 const hashtags = allHashtags.slice(0, MAX_HASHTAGS);
+
+if (metadata.length > 0) {
+  await syncTrendingHashtagsMetadata(metadata);
+}
 
 if (hashtags.length > 0) {
   console.log(`\nHashtag da processare (${hashtags.length}): ${hashtags.join(", ")}`);

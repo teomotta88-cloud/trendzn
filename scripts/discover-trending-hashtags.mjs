@@ -37,22 +37,67 @@ function detectPlatformFromHost(hostname) {
   return "web";
 }
 
-// Cerca ricorsivamente, dentro una risposta JSON, array di oggetti che
-// somigliano a "voci di hashtag" (nome + eventuale rank/volume). Non ci
-// affidiamo a un path fisso perché lo schema esatto dell'API interna di
-// Creative Center non è documentato pubblicamente e può cambiare.
-function extractHashtagsFromJson(value, out = new Set(), depth = 0) {
+function pickNumber(obj, keys) {
+  for (const k of keys) {
+    const v = obj[k];
+    if (typeof v === "number") return v;
+    if (typeof v === "string" && /^\d+$/.test(v)) return Number(v);
+  }
+  return null;
+}
+
+function pickCategoryList(obj) {
+  for (const k of ["industry_list", "industryList", "category", "categories", "label_list"]) {
+    const v = obj[k];
+    if (Array.isArray(v)) {
+      return v
+        .map((c) => (typeof c === "string" ? c : c?.value || c?.label || c?.name))
+        .filter((c) => typeof c === "string" && c.length > 0);
+    }
+  }
+  return [];
+}
+
+function pickTrendArray(obj) {
+  for (const k of ["trend", "trend_list", "trendList", "sparkline"]) {
+    const v = obj[k];
+    if (Array.isArray(v) && v.length > 0 && v.every((n) => typeof n === "number")) return v;
+  }
+  return null;
+}
+
+// Cerca ricorsivamente, dentro una risposta JSON, oggetti che somigliano a
+// "voci di hashtag" (nome + rank/categoria/volumi/sparkline). Non ci
+// affidiamo a un path fisso né a nomi di campo certi perché lo schema
+// esatto dell'API interna di Creative Center non è documentato
+// pubblicamente e può cambiare — per questo discoverFromCreativeCenter
+// salva anche le risposte grezze in debug/, così i nomi dei campi qui
+// sotto si possono affinare guardando dati reali invece di indovinare.
+function extractHashtagObjectsFromJson(value, out = new Map(), depth = 0) {
   if (depth > 6 || !value) return out;
   if (Array.isArray(value)) {
-    for (const item of value) extractHashtagsFromJson(item, out, depth + 1);
+    for (const item of value) extractHashtagObjectsFromJson(item, out, depth + 1);
     return out;
   }
   if (typeof value === "object") {
     const nameKey = ["hashtag_name", "hashtagName", "name", "title"].find(
       (k) => typeof value[k] === "string" && value[k].length > 0,
     );
-    if (nameKey) out.add(normalizeHashtag(value[nameKey]));
-    for (const v of Object.values(value)) extractHashtagsFromJson(v, out, depth + 1);
+    if (nameKey) {
+      const hashtag = normalizeHashtag(value[nameKey]);
+      if (hashtag && !out.has(hashtag)) {
+        out.set(hashtag, {
+          hashtag,
+          rank: pickNumber(value, ["rank", "ranking", "position"]),
+          category: pickCategoryList(value),
+          postCount: pickNumber(value, ["publish_cnt", "post_count", "postCount", "video_count", "videoCount"]),
+          viewCount: pickNumber(value, ["video_views", "view_count", "viewCount", "views"]),
+          trend: pickTrendArray(value),
+          raw: value,
+        });
+      }
+    }
+    for (const v of Object.values(value)) extractHashtagObjectsFromJson(v, out, depth + 1);
   }
   return out;
 }
@@ -70,7 +115,8 @@ async function saveDebugArtifacts(page, label) {
 
 async function discoverFromCreativeCenter() {
   const browser = await chromium.launch({ headless: true });
-  const found = new Set();
+  const found = new Map();
+  const capturedResponses = [];
   let context;
   let page;
 
@@ -90,7 +136,8 @@ async function discoverFromCreativeCenter() {
       if (!contentType.includes("application/json")) return;
       try {
         const json = await response.json();
-        extractHashtagsFromJson(json, found);
+        capturedResponses.push({ url, json });
+        extractHashtagObjectsFromJson(json, found);
       } catch {
         // risposta non JSON valido o già consumata, ignora
       }
@@ -104,13 +151,31 @@ async function discoverFromCreativeCenter() {
     await page.waitForTimeout(8000);
 
     if (found.size === 0) {
-      // Fallback DOM: qualunque testo visibile a forma di hashtag nella pagina.
+      // Fallback DOM: qualunque testo visibile a forma di hashtag nella pagina
+      // (nessun rank/categoria/volumi disponibili in questo caso).
       const domHashtags = await page.$$eval("body *", (els) =>
         els
           .map((el) => el.textContent?.trim())
           .filter((t) => t && /^#[a-zA-Z0-9à-ü]{2,40}$/.test(t)),
       );
-      for (const h of domHashtags) found.add(normalizeHashtag(h));
+      for (const h of domHashtags) {
+        const hashtag = normalizeHashtag(h);
+        if (hashtag && !found.has(hashtag)) {
+          found.set(hashtag, { hashtag, rank: null, category: [], postCount: null, viewCount: null, trend: null });
+        }
+      }
+    }
+
+    // Sempre salvate (non solo quando vuoto): sono la fonte di verità per
+    // affinare i nomi dei campi in extractHashtagObjectsFromJson senza
+    // dover indovinare alla cieca.
+    if (capturedResponses.length > 0) {
+      try {
+        mkdirSync("debug", { recursive: true });
+        writeFileSync(`debug/tiktok-cc-responses-${Date.now()}.json`, JSON.stringify(capturedResponses, null, 2));
+      } catch (err) {
+        console.error(`[discover] Impossibile salvare le risposte grezze: ${String(err)}`);
+      }
     }
 
     if (found.size === 0) {
@@ -118,7 +183,9 @@ async function discoverFromCreativeCenter() {
     }
 
     await persistSession(context);
-    return [...found].filter((h) => h.length >= 2 && h.length <= 40);
+    return [...found.values()]
+      .filter((h) => h.hashtag.length >= 2 && h.hashtag.length <= 40)
+      .sort((a, b) => (a.rank ?? Infinity) - (b.rank ?? Infinity));
   } catch (err) {
     console.error(`[discover] Creative Center fallito: ${String(err)}`);
     if (page) await saveDebugArtifacts(page, `tiktok-cc-error-${Date.now()}`);
@@ -129,11 +196,20 @@ async function discoverFromCreativeCenter() {
   }
 }
 
-export async function discoverTrendingHashtags() {
+// Ritorna sia i nomi hashtag (per lo scraping della pagina pubblica) sia
+// i metadati completi (rank/categoria/volumi/sparkline, quando disponibili)
+// per popolare la tabella "trend del giorno" mostrata prima del feed.
+export async function discoverTrendingHashtagsWithMetadata() {
   console.error("[discover] Cerco trending hashtag da TikTok Creative Center…");
-  const tags = await discoverFromCreativeCenter();
-  console.error(`[discover] ${tags.length} hashtag da TikTok Creative Center`);
-  return tags.slice(0, 20);
+  const items = await discoverFromCreativeCenter();
+  console.error(`[discover] ${items.length} hashtag da TikTok Creative Center`);
+  const top = items.slice(0, 20);
+  return { hashtags: top.map((h) => h.hashtag), metadata: top };
+}
+
+export async function discoverTrendingHashtags() {
+  const { hashtags } = await discoverTrendingHashtagsWithMetadata();
+  return hashtags;
 }
 
 // Estrae, da ogni voce del feed Google Trends, solo i link a contenuti
@@ -191,11 +267,11 @@ export async function discoverSocialUrlsFromGoogleTrends() {
 
 // Esecuzione standalone: node scripts/discover-trending-hashtags.mjs
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const tags = await discoverTrendingHashtags();
-  console.log(JSON.stringify({ hashtags: tags }, null, 2));
-  console.error(`\n${tags.length} hashtag trovati`);
+  const { hashtags, metadata } = await discoverTrendingHashtagsWithMetadata();
+  console.log(JSON.stringify({ hashtags, metadata }, null, 2));
+  console.error(`\n${hashtags.length} hashtag trovati`);
 
-  if (tags.length === 0) {
+  if (hashtags.length === 0) {
     const items = await discoverSocialUrlsFromGoogleTrends();
     console.log(JSON.stringify({ googleTrendsSocialUrls: items }, null, 2));
     console.error(`${items.length} URL social trovati come ripiego`);

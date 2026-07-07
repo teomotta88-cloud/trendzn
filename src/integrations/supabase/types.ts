@@ -408,6 +408,48 @@ export type Database = {
           },
         ]
       }
+      tiktok_trending_hashtags: {
+        Row: {
+          captured_at: string
+          category: string[]
+          hashtag: string
+          id: string
+          period_days: number
+          post_count: number | null
+          rank: number | null
+          raw: Json | null
+          region: string
+          trend_points: Json | null
+          view_count: number | null
+        }
+        Insert: {
+          captured_at?: string
+          category?: string[]
+          hashtag: string
+          id?: string
+          period_days?: number
+          post_count?: number | null
+          rank?: number | null
+          raw?: Json | null
+          region?: string
+          trend_points?: Json | null
+          view_count?: number | null
+        }
+        Update: {
+          captured_at?: string
+          category?: string[]
+          hashtag?: string
+          id?: string
+          period_days?: number
+          post_count?: number | null
+          rank?: number | null
+          raw?: Json | null
+          region?: string
+          trend_points?: Json | null
+          view_count?: number | null
+        }
+        Relationships: []
+      }
       trend_submissions: {
         Row: {
           category: string | null
