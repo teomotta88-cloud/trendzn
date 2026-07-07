@@ -7,6 +7,12 @@
 // valore da usare per il secret GitHub TIKTOK_CC_SESSION_SEED.
 //
 // Uso: node scripts/tiktok-cc-bootstrap-session.mjs
+//
+// Alternativa senza Node/locale: fai login su ads.tiktok.com/creative/creativeCenter
+// nel tuo browser normale, esporta i cookie con l'estensione "Cookie-Editor"
+// (Export → Export as JSON), e incolla il risultato in un piccolo convertitore
+// client-side (nessun dato inviato in rete) che produce lo stesso valore per
+// TIKTOK_CC_SESSION_SEED. Vedi la PR/conversazione per il link allo strumento.
 
 import { chromium } from "playwright";
 import readline from "node:readline/promises";
