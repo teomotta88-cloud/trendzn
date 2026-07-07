@@ -19,4 +19,5 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
+          PLATFORMS: "youtube,twitter,reddit,instagram,linkedin"
         run: node scripts/sync-brand-mentions.mjs
