@@ -77,6 +77,19 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// anysite restituisce le date come timestamp Unix (secondi, es. "1782783856"),
+// non come stringhe ISO: passate cosi' com'erano a Postgres davano
+// "date/time field value out of range". Qui le normalizziamo tutte in ISO 8601.
+function toIsoDate(value) {
+  if (value == null || value === "") return null;
+  if (typeof value === "number" || /^\d+$/.test(String(value))) {
+    const d = new Date(Number(value) * 1000);
+    return Number.isNaN(d.getTime()) ? null : d.toISOString();
+  }
+  const d = new Date(value);
+  return Number.isNaN(d.getTime()) ? null : d.toISOString();
+}
+
 function classifySentiment(text) {
   const t = (text ?? "").toLowerCase();
   const positive = POSITIVE_WORDS.some((w) => t.includes(w));
@@ -138,7 +151,7 @@ function normalizeYouTubeResult(keyword, item, statsByVideoId) {
     url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : "",
     author: snippet.channelTitle ?? null,
     content: [snippet.title, snippet.description].filter(Boolean).join(" — "),
-    published_at: snippet.publishedAt ?? null,
+    published_at: toIsoDate(snippet.publishedAt),
     keyword_matched: keyword,
     sentiment: classifySentiment(`${snippet.title ?? ""} ${snippet.description ?? ""}`),
     engagement: likes + comments,
@@ -170,7 +183,7 @@ function normalizeAnysiteResult(platform, keyword, item) {
   const url = item.url ?? item.link ?? item.permalink ?? "";
   const content = item.text ?? item.content ?? item.caption ?? item.title ?? item.body ?? "";
   const author = item.author ?? item.username ?? item.user?.username ?? item.channel ?? null;
-  const publishedAt = item.published_at ?? item.created_at ?? item.date ?? null;
+  const publishedAt = toIsoDate(item.published_at ?? item.created_at ?? item.date ?? null);
   const likes = item.likes ?? item.like_count ?? 0;
   const shares = item.shares ?? item.retweet_count ?? item.share_count ?? 0;
   const comments = item.comments ?? item.comment_count ?? item.reply_count ?? 0;
