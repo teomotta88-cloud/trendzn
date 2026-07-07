@@ -10,13 +10,13 @@
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { chromium } from "playwright";
-import { createAuthenticatedContext, persistSession } from "./tiktok-cc-session.mjs";
+import { createAuthenticatedContext, ensureLoggedIn, persistSession } from "./tiktok-cc-session.mjs";
 
-const CC_TRENDS_URL =
-  "https://ads.tiktok.com/creative/creativeCenter/trends/hashtag?locale=en&deviceType=pc&region=IT&period=7";
-
-const GOOGLE_TRENDS_IT_URL =
-  "https://trends.google.com/trends/trendingsearches/daily/rss?geo=IT";
+// Google ha deprecato il vecchio endpoint /trends/trendingsearches/daily/rss
+// (risponde 404) a favore di questo, sotto il nuovo prodotto "Trending Now".
+// È comunque solo un ripiego se TikTok Creative Center fallisce: se anche
+// questo smette di funzionare, si scende semplicemente alla lista fissa.
+const GOOGLE_TRENDS_IT_URL = "https://trends.google.com/trending/rss?geo=IT";
 
 const FALLBACK_HASHTAGS = [
   "italia", "viral", "fyp", "trend",
@@ -66,14 +66,18 @@ async function saveDebugArtifacts(page, label) {
 async function discoverFromCreativeCenter() {
   const browser = await chromium.launch({ headless: true });
   const found = new Set();
+  let context;
+  let page;
 
   try {
-    const context = await createAuthenticatedContext(browser);
-    const page = await context.newPage();
+    context = await createAuthenticatedContext(browser);
+    page = await context.newPage();
 
     // Intercetta le risposte JSON della pagina mentre carica: è il modo
     // più robusto per leggere i dati reali (l'HTML/CSS di Creative Center
-    // è generato da un bundle React con classi non stabili).
+    // è generato da un bundle React con classi non stabili). Registrato
+    // PRIMA della navigazione così cattura anche le richieste sparate
+    // subito dopo il caricamento iniziale della pagina.
     page.on("response", async (response) => {
       const url = response.url();
       if (!/hashtag|trend/i.test(url)) return;
@@ -87,8 +91,12 @@ async function discoverFromCreativeCenter() {
       }
     });
 
-    await page.goto(CC_TRENDS_URL, { waitUntil: "networkidle", timeout: 45000 });
-    await page.waitForTimeout(3000);
+    await ensureLoggedIn(page);
+    // Attesa dopo il caricamento (non "networkidle": Creative Center ha
+    // polling/analytics continui che a volte non lasciano mai la rete
+    // "inattiva") per dare tempo alle chiamate XHR della dashboard di
+    // completarsi e finire nell'intercettore sopra.
+    await page.waitForTimeout(8000);
 
     if (found.size === 0) {
       // Fallback DOM: qualunque testo visibile a forma di hashtag nella pagina.
@@ -108,6 +116,8 @@ async function discoverFromCreativeCenter() {
     return [...found].filter((h) => h.length >= 2 && h.length <= 40);
   } catch (err) {
     console.error(`[discover] Creative Center fallito: ${String(err)}`);
+    if (page) await saveDebugArtifacts(page, `tiktok-cc-error-${Date.now()}`);
+    if (context) await persistSession(context).catch(() => {});
     return [];
   } finally {
     await browser.close();

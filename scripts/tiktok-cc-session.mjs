@@ -18,6 +18,8 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 export const SESSION_PATH = process.env.TIKTOK_CC_SESSION_PATH || ".tiktok-session/state.json";
+export const CC_TRENDS_URL =
+  "https://ads.tiktok.com/creative/creativeCenter/trends/hashtag?locale=en&deviceType=pc&region=IT&period=7";
 const LOGIN_URL = "https://ads.tiktok.com/i18n/login/";
 
 function seedSessionFromEnv() {
@@ -96,34 +98,34 @@ async function loginWithCredentials(page) {
   console.error("[session] Login automatico riuscito.");
 }
 
-// Prepara un BrowserContext autenticato, pronto per navigare sulle pagine
-// di Creative Center. Ritorna { context, usedFreshLogin } — usedFreshLogin
-// indica se è stato necessario fare login (utile per decidere se risalvare
-// la sessione a fine run).
+// Crea un BrowserContext con la sessione salvata (se presente), senza
+// navigare da nessuna parte: la navigazione/login la fa ensureLoggedIn
+// sulla pagina che il chiamante vuole effettivamente usare, per evitare
+// una doppia navigazione con impostazioni diverse.
 export async function createAuthenticatedContext(browser) {
   if (!existsSync(SESSION_PATH)) {
     seedSessionFromEnv();
   }
 
   const hasStoredSession = existsSync(SESSION_PATH);
-  const context = await browser.newContext({
+  return browser.newContext({
     storageState: hasStoredSession ? SESSION_PATH : undefined,
     userAgent:
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
   });
+}
 
-  const page = await context.newPage();
-  await page.goto("https://ads.tiktok.com/creative/creativeCenter/trends/hashtag?locale=en&deviceType=pc&region=IT&period=7", {
-    waitUntil: "domcontentloaded",
-    timeout: 30000,
-  });
+// Naviga la pagina data verso Creative Center e, se la sessione non è
+// valida, fa login e ci torna. Usa "domcontentloaded" (non "networkidle":
+// Creative Center ha polling/analytics continui che a volte non lasciano
+// mai la rete "inattiva", causando timeout).
+export async function ensureLoggedIn(page) {
+  await page.goto(CC_TRENDS_URL, { waitUntil: "domcontentloaded", timeout: 30000 });
 
-  if (!(await isLoggedIn(page))) {
-    await loginWithCredentials(page);
-  }
+  if (await isLoggedIn(page)) return;
 
-  await page.close();
-  return context;
+  await loginWithCredentials(page);
+  await page.goto(CC_TRENDS_URL, { waitUntil: "domcontentloaded", timeout: 30000 });
 }
 
 // Risalva sempre lo stato aggiornato (i cookie di sessione TikTok
