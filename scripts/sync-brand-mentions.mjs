@@ -20,6 +20,16 @@
 //   KEYWORDS                csv, default: "hyundai,hyundai_italia"
 //   MAX_RESULTS_PER_CALL    default: 25 (ogni risultato consuma quota/credit)
 //   DELAY_BETWEEN_CALLS_MS  default: 2000
+//   LANGUAGE                default: "it" — usato come bias nativo (youtube/twitter)
+//                            e come filtro euristico lato script per reddit/instagram/linkedin
+//   REGION                  default: "IT" — bias nativo per youtube (regionCode)
+//
+// Filtro lingua/regione: solo youtube (regionCode/relevanceLanguage) e twitter
+// (operatore lang: nella query) hanno un filtro nativo, ed e' comunque un
+// bias/preferenza, non un'esclusione rigida. reddit/instagram/linkedin non
+// hanno un filtro lingua noto nella REST anysite: qui applichiamo un
+// controllo euristico (parole funzionali italiane) lato script, impreciso
+// ma sufficiente a scartare contenuti chiaramente in altre lingue.
 //
 // Eseguito da .github/workflows/sync-brand-mentions.yml su schedule.
 
@@ -40,6 +50,8 @@ const PLATFORMS_TO_RUN = (process.env.PLATFORMS ?? "youtube")
 
 const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "25", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
+const LANGUAGE = process.env.LANGUAGE ?? "it";
+const REGION = process.env.REGION ?? "IT";
 
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 if (PLATFORMS_TO_RUN.includes("youtube") && !youtubeApiKey) {
@@ -53,6 +65,10 @@ if (PLATFORMS_TO_RUN.some((p) => ANYSITE_PLATFORMS.includes(p)) && !anysiteApiKe
   console.error("Manca ANYSITE_API_KEY nell'ambiente (richiesta dalle piattaforme anysite in PLATFORMS).");
   process.exit(1);
 }
+
+// nessun filtro lingua nativo noto per queste tre: applichiamo l'euristica
+// looksItalian() lato script (vedi fetchMentions).
+const ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS = ["reddit", "instagram", "linkedin"];
 
 // path/param anysite: confermati per twitter, dedotti per gli altri (vedi
 // PR #80). Non eseguiti di default: vedi nota in testa al file.
@@ -90,6 +106,23 @@ function toIsoDate(value) {
   return Number.isNaN(d.getTime()) ? null : d.toISOString();
 }
 
+// Parole funzionali molto comuni in italiano, improbabili per caso in altre
+// lingue: euristica grezza per scartare contenuti chiaramente non italiani
+// dove anysite non offre un filtro lingua nativo (reddit/instagram/linkedin).
+const ITALIAN_STOPWORDS = new Set([
+  "il", "lo", "la", "gli", "le", "di", "che", "non", "è", "un", "una", "per",
+  "con", "sono", "questo", "questa", "della", "dei", "delle", "anche", "come",
+  "più", "ma", "se", "molto", "suo", "loro", "nuovo", "nuova", "grazie",
+]);
+
+function looksItalian(text) {
+  if (!text) return false;
+  const words = text.toLowerCase().match(/[a-zàèéìòù]+/g) ?? [];
+  if (words.length === 0) return false;
+  const hits = words.filter((w) => ITALIAN_STOPWORDS.has(w)).length;
+  return hits >= 2;
+}
+
 function classifySentiment(text) {
   const t = (text ?? "").toLowerCase();
   const positive = POSITIVE_WORDS.some((w) => t.includes(w));
@@ -106,6 +139,8 @@ async function searchYouTube(keyword) {
   url.searchParams.set("type", "video");
   url.searchParams.set("order", "date");
   url.searchParams.set("maxResults", String(Math.min(MAX_RESULTS_PER_CALL, 50)));
+  url.searchParams.set("regionCode", REGION);
+  url.searchParams.set("relevanceLanguage", LANGUAGE);
   url.searchParams.set("key", youtubeApiKey);
 
   const res = await fetch(url);
@@ -165,10 +200,15 @@ async function searchAnysite(platform, keyword) {
   const { path, param } = ANYSITE_ENDPOINTS[platform];
   const url = new URL(path, ANYSITE_BASE);
 
+  // Twitter/X supporta l'operatore lang: nella query stessa (sintassi nativa
+  // di ricerca X, inoltrata cosi' com'e' da anysite). E' l'unica delle 4
+  // piattaforme anysite con un filtro lingua noto e affidabile.
+  const query = platform === "twitter" ? `${keyword} lang:${LANGUAGE}` : keyword;
+
   const res = await fetch(url, {
     method: "POST",
     headers: { "access-token": anysiteApiKey, "Content-Type": "application/json" },
-    body: JSON.stringify({ [param]: keyword, count: MAX_RESULTS_PER_CALL }),
+    body: JSON.stringify({ [param]: query, count: MAX_RESULTS_PER_CALL }),
   });
   if (!res.ok) {
     const body = await res.text();
@@ -214,7 +254,14 @@ async function fetchMentions(platform, keyword) {
     return items.map((item) => normalizeYouTubeResult(keyword, item, statsByVideoId));
   }
   const items = await searchAnysite(platform, keyword);
-  return items.map((item) => normalizeAnysiteResult(platform, keyword, item));
+  const mentions = items.map((item) => normalizeAnysiteResult(platform, keyword, item));
+
+  // reddit/instagram/linkedin non hanno un filtro lingua nativo noto: scarta
+  // qui i risultati che non sembrano italiani (vedi looksItalian).
+  if (ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS.includes(platform)) {
+    return mentions.filter((m) => looksItalian(m.content));
+  }
+  return mentions;
 }
 
 async function sendToHook(mentions, run) {
