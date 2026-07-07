@@ -1,7 +1,19 @@
-// Scopre i topic in trend in Italia via Google Trends RSS (pubblico, no auth, no browser).
-// Li converte in hashtag TikTok-style (lowercase, senza spazi).
+// Scopre gli hashtag in trend su TikTok per l'Italia.
 //
-// Fallback: lista hardcoded di hashtag IT sempre rilevanti.
+// Fonte primaria: TikTok Creative Center (pagina "Trending Hashtags",
+// richiede login — vedi scripts/tiktok-cc-session.mjs). È la fonte reale
+// di hashtag TikTok in trend, non un proxy indiretto come Google Trends.
+//
+// Se il login/estrazione fallisce (sessione scaduta, pagina cambiata),
+// ripiega su Google Trends RSS Italia (pubblico, no auth) e poi su una
+// lista hardcoded, così il job non si blocca mai del tutto.
+
+import { mkdirSync, writeFileSync } from "node:fs";
+import { chromium } from "playwright";
+import { createAuthenticatedContext, persistSession } from "./tiktok-cc-session.mjs";
+
+const CC_TRENDS_URL =
+  "https://ads.tiktok.com/creative/creativeCenter/trends/hashtag?locale=en&deviceType=pc&region=IT&period=7";
 
 const GOOGLE_TRENDS_IT_URL =
   "https://trends.google.com/trends/trendingsearches/daily/rss?geo=IT";
@@ -12,12 +24,98 @@ const FALLBACK_HASHTAGS = [
   "milano", "roma", "vacanze", "humor", "notizie",
 ];
 
-function topicToHashtag(title) {
-  return title
+function normalizeHashtag(raw) {
+  return raw
+    .replace(/^#/, "")
     .toLowerCase()
-    .replace(/[''`]/g, "")
     .replace(/[^a-z0-9àáâãäåèéêëìíîïòóôõöùúûüñçß]/g, "")
     .trim();
+}
+
+// Cerca ricorsivamente, dentro una risposta JSON, array di oggetti che
+// somigliano a "voci di hashtag" (nome + eventuale rank/volume). Non ci
+// affidiamo a un path fisso perché lo schema esatto dell'API interna di
+// Creative Center non è documentato pubblicamente e può cambiare.
+function extractHashtagsFromJson(value, out = new Set(), depth = 0) {
+  if (depth > 6 || !value) return out;
+  if (Array.isArray(value)) {
+    for (const item of value) extractHashtagsFromJson(item, out, depth + 1);
+    return out;
+  }
+  if (typeof value === "object") {
+    const nameKey = ["hashtag_name", "hashtagName", "name", "title"].find(
+      (k) => typeof value[k] === "string" && value[k].length > 0,
+    );
+    if (nameKey) out.add(normalizeHashtag(value[nameKey]));
+    for (const v of Object.values(value)) extractHashtagsFromJson(v, out, depth + 1);
+  }
+  return out;
+}
+
+async function saveDebugArtifacts(page, label) {
+  try {
+    mkdirSync("debug", { recursive: true });
+    await page.screenshot({ path: `debug/${label}.png`, fullPage: true });
+    writeFileSync(`debug/${label}.html`, await page.content());
+    console.error(`[discover] Salvati artifact di debug in debug/${label}.png / .html`);
+  } catch (err) {
+    console.error(`[discover] Impossibile salvare artifact di debug: ${String(err)}`);
+  }
+}
+
+async function discoverFromCreativeCenter() {
+  const browser = await chromium.launch({ headless: true });
+  const found = new Set();
+
+  try {
+    const context = await createAuthenticatedContext(browser);
+    const page = await context.newPage();
+
+    // Intercetta le risposte JSON della pagina mentre carica: è il modo
+    // più robusto per leggere i dati reali (l'HTML/CSS di Creative Center
+    // è generato da un bundle React con classi non stabili).
+    page.on("response", async (response) => {
+      const url = response.url();
+      if (!/hashtag|trend/i.test(url)) return;
+      const contentType = response.headers()["content-type"] || "";
+      if (!contentType.includes("application/json")) return;
+      try {
+        const json = await response.json();
+        extractHashtagsFromJson(json, found);
+      } catch {
+        // risposta non JSON valido o già consumata, ignora
+      }
+    });
+
+    await page.goto(CC_TRENDS_URL, { waitUntil: "networkidle", timeout: 45000 });
+    await page.waitForTimeout(3000);
+
+    if (found.size === 0) {
+      // Fallback DOM: qualunque testo visibile a forma di hashtag nella pagina.
+      const domHashtags = await page.$$eval("body *", (els) =>
+        els
+          .map((el) => el.textContent?.trim())
+          .filter((t) => t && /^#[a-zA-Z0-9à-ü]{2,40}$/.test(t)),
+      );
+      for (const h of domHashtags) found.add(normalizeHashtag(h));
+    }
+
+    if (found.size === 0) {
+      await saveDebugArtifacts(page, `tiktok-cc-empty-${Date.now()}`);
+    }
+
+    await persistSession(context);
+    return [...found].filter((h) => h.length >= 2 && h.length <= 40);
+  } catch (err) {
+    console.error(`[discover] Creative Center fallito: ${String(err)}`);
+    return [];
+  } finally {
+    await browser.close();
+  }
+}
+
+function topicToHashtag(title) {
+  return normalizeHashtag(title.replace(/\s+/g, ""));
 }
 
 async function discoverFromGoogleTrends() {
@@ -33,11 +131,9 @@ async function discoverFromGoogleTrends() {
 
   const xml = await res.text();
 
-  // Estrae titoli con CDATA
   const cdataMatches = [...xml.matchAll(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/g)];
   const cdataTitles = cdataMatches.map((m) => m[1].trim()).filter(Boolean);
 
-  // Estrae titoli senza CDATA, escludendo il titolo del feed
   const plainMatches = [...xml.matchAll(/<title>([^<]+)<\/title>/g)];
   const plainTitles = plainMatches
     .map((m) => m[1].trim())
@@ -53,7 +149,18 @@ async function discoverFromGoogleTrends() {
 }
 
 export async function discoverTrendingHashtags() {
-  console.error("[discover] Cerco trend IT da Google Trends RSS…");
+  console.error("[discover] Cerco trending hashtag da TikTok Creative Center…");
+  try {
+    const tags = await discoverFromCreativeCenter();
+    if (tags.length >= 5) {
+      console.error(`[discover] ${tags.length} hashtag da TikTok Creative Center`);
+      return tags.slice(0, 20);
+    }
+    console.error(`[discover] Solo ${tags.length} hashtag da Creative Center — provo Google Trends`);
+  } catch (err) {
+    console.error(`[discover] Errore Creative Center: ${String(err)} — provo Google Trends`);
+  }
+
   try {
     const tags = await discoverFromGoogleTrends();
     if (tags.length >= 5) {
