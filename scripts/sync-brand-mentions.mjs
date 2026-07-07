@@ -218,11 +218,27 @@ async function searchAnysite(platform, keyword) {
   return Array.isArray(data) ? data : (data.results ?? data.data ?? data.items ?? []);
 }
 
+// item.author non e' sempre una stringa: linkedin restituisce un oggetto
+// ({@type, internal_id, name, alias, url, headline, image, ...}) che prima
+// finiva stringificato per intero nel campo autore. Qui estraiamo solo il
+// nome leggibile, qualunque sia la forma (stringa o oggetto annidato).
+function extractAuthorName(item) {
+  const candidates = [item.author, item.username, item.user?.username, item.channel];
+  for (const candidate of candidates) {
+    if (typeof candidate === "string" && candidate.trim()) return candidate;
+    if (candidate && typeof candidate === "object") {
+      const name = candidate.name ?? candidate.username ?? candidate.alias ?? candidate.handle;
+      if (typeof name === "string" && name.trim()) return name;
+    }
+  }
+  return null;
+}
+
 function normalizeAnysiteResult(platform, keyword, item) {
   const externalId = String(item.id ?? item.post_id ?? item.external_id ?? item.url ?? "");
   const url = item.url ?? item.link ?? item.permalink ?? "";
   const content = item.text ?? item.content ?? item.caption ?? item.title ?? item.body ?? "";
-  const author = item.author ?? item.username ?? item.user?.username ?? item.channel ?? null;
+  const author = extractAuthorName(item);
   const publishedAt = toIsoDate(item.published_at ?? item.created_at ?? item.date ?? null);
   const likes = item.likes ?? item.like_count ?? 0;
   const shares = item.shares ?? item.retweet_count ?? item.share_count ?? 0;
