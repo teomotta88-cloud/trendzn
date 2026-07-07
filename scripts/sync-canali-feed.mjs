@@ -113,12 +113,6 @@ function rssBridgeUrl(platform, handle) {
     : `${RSS_BRIDGE_BASE}?action=display&bridge=TikTok&context=By+user&username=${handle}&format=JSON`;
 }
 
-// DIAGNOSTICA TEMPORANEA: stampa il primo item grezzo per piattaforma per
-// verificare se RSS-Bridge espone metriche di engagement (like/commenti/view)
-// che al momento vengono scartate da fullCaption()/il resto dello script.
-// Da rimuovere una volta verificato.
-const loggedRawItem = new Set();
-
 async function fetchFeed(platform, handle) {
   const url = rssBridgeUrl(platform, handle);
   try {
@@ -128,12 +122,7 @@ async function fetchFeed(platform, handle) {
       return [];
     }
     const data = await res.json();
-    const items = data.items ?? [];
-    if (items.length > 0 && !loggedRawItem.has(platform)) {
-      loggedRawItem.add(platform);
-      console.log(`[diagnostica] item grezzo ${platform} (${handle}):`, JSON.stringify(items[0], null, 2));
-    }
-    return items;
+    return data.items ?? [];
   } catch (err) {
     console.error(`Feed ${platform}/${handle} errore: ${String(err)}`);
     return [];
