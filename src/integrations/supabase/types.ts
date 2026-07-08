@@ -495,6 +495,99 @@ export type Database = {
         }
         Relationships: []
       }
+      viral_trend_content: {
+        Row: {
+          author: string | null
+          content: string | null
+          created_at: string
+          engagement: number
+          external_id: string
+          id: string
+          is_viral: boolean
+          keyword_matched: string
+          platform: string
+          published_at: string | null
+          raw: Json | null
+          reach: number | null
+          source_hashtag: string
+          url: string
+        }
+        Insert: {
+          author?: string | null
+          content?: string | null
+          created_at?: string
+          engagement?: number
+          external_id: string
+          id?: string
+          is_viral?: boolean
+          keyword_matched: string
+          platform: string
+          published_at?: string | null
+          raw?: Json | null
+          reach?: number | null
+          source_hashtag: string
+          url: string
+        }
+        Update: {
+          author?: string | null
+          content?: string | null
+          created_at?: string
+          engagement?: number
+          external_id?: string
+          id?: string
+          is_viral?: boolean
+          keyword_matched?: string
+          platform?: string
+          published_at?: string | null
+          raw?: Json | null
+          reach?: number | null
+          source_hashtag?: string
+          url?: string
+        }
+        Relationships: []
+      }
+      viral_trend_runs: {
+        Row: {
+          content_found: number
+          created_at: string
+          error_message: string | null
+          finished_at: string | null
+          id: string
+          keyword_matched: string | null
+          platform: string | null
+          requests_used: number
+          source_hashtag: string | null
+          started_at: string
+          status: string
+        }
+        Insert: {
+          content_found?: number
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          keyword_matched?: string | null
+          platform?: string | null
+          requests_used?: number
+          source_hashtag?: string | null
+          started_at?: string
+          status?: string
+        }
+        Update: {
+          content_found?: number
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          keyword_matched?: string | null
+          platform?: string | null
+          requests_used?: number
+          source_hashtag?: string | null
+          started_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

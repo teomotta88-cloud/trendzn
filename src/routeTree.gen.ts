@@ -12,7 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
 import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
-import { Route as TiktokViraliRouteImport } from './routes/tiktok-virali'
+import { Route as TrendViraliRouteImport } from './routes/trend-virali'
 import { Route as TiktokHashtagRouteImport } from './routes/tiktok-hashtag'
 import { Route as LinkedinRouteImport } from './routes/linkedin'
 import { Route as InfluencerFeedRouteImport } from './routes/influencer-feed'
@@ -33,6 +33,8 @@ import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/publ
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
+import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
+import { Route as ApiPublicHooksSyncViralTrendsRouteImport } from './routes/api/public/hooks/sync-viral-trends'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
   id: '/trend-real-time',
@@ -49,9 +51,9 @@ const TrendAttualiRoute = TrendAttualiRouteImport.update({
   path: '/trend-attuali',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TiktokViraliRoute = TiktokViraliRouteImport.update({
-  id: '/tiktok-virali',
-  path: '/tiktok-virali',
+const TrendViraliRoute = TrendViraliRouteImport.update({
+  id: '/trend-virali',
+  path: '/trend-virali',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TiktokHashtagRoute = TiktokHashtagRouteImport.update({
@@ -163,13 +165,25 @@ const ApiPublicHooksAddClientChannelRoute =
     path: '/api/public/hooks/add-client-channel',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksTopTiktokHashtagsRoute =
+  ApiPublicHooksTopTiktokHashtagsRouteImport.update({
+    id: '/api/public/hooks/top-tiktok-hashtags',
+    path: '/api/public/hooks/top-tiktok-hashtags',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksSyncViralTrendsRoute =
+  ApiPublicHooksSyncViralTrendsRouteImport.update({
+    id: '/api/public/hooks/sync-viral-trends',
+    path: '/api/public/hooks/sync-viral-trends',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
-  '/tiktok-virali': typeof TiktokViraliRoute
+  '/trend-virali': typeof TrendViraliRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -180,6 +194,8 @@ export interface FileRoutesByFullPath {
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -195,7 +211,7 @@ export interface FileRoutesByTo {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
-  '/tiktok-virali': typeof TiktokViraliRoute
+  '/trend-virali': typeof TrendViraliRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -206,6 +222,8 @@ export interface FileRoutesByTo {
   '/influencer': typeof InfluencerIndexRoute
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -222,7 +240,7 @@ export interface FileRoutesById {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
-  '/tiktok-virali': typeof TiktokViraliRoute
+  '/trend-virali': typeof TrendViraliRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -233,6 +251,8 @@ export interface FileRoutesById {
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -250,7 +270,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
-    | '/tiktok-virali'
+    | '/trend-virali'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -261,6 +281,8 @@ export interface FileRouteTypes {
     | '/influencer/'
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
@@ -276,7 +298,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
-    | '/tiktok-virali'
+    | '/trend-virali'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -287,6 +309,8 @@ export interface FileRouteTypes {
     | '/influencer'
     | '/piano-editoriale'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
@@ -302,7 +326,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
-    | '/tiktok-virali'
+    | '/trend-virali'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -313,6 +337,8 @@ export interface FileRouteTypes {
     | '/influencer/'
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
@@ -329,7 +355,7 @@ export interface RootRouteChildren {
   InfluencerFeedRoute: typeof InfluencerFeedRoute
   LinkedinRoute: typeof LinkedinRoute
   TiktokHashtagRoute: typeof TiktokHashtagRoute
-  TiktokViraliRoute: typeof TiktokViraliRoute
+  TrendViraliRoute: typeof TrendViraliRoute
   TrendAttualiRoute: typeof TrendAttualiRoute
   TrendEvergreenRoute: typeof TrendEvergreenRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
@@ -340,6 +366,8 @@ export interface RootRouteChildren {
   InfluencerIndexRoute: typeof InfluencerIndexRoute
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
+  ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
+  ApiPublicHooksSyncViralTrendsRoute: typeof ApiPublicHooksSyncViralTrendsRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
@@ -381,11 +409,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TiktokHashtagRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tiktok-virali': {
-      id: '/tiktok-virali'
-      path: '/tiktok-virali'
-      fullPath: '/tiktok-virali'
-      preLoaderRoute: typeof TiktokViraliRouteImport
+    '/trend-virali': {
+      id: '/trend-virali'
+      path: '/trend-virali'
+      fullPath: '/trend-virali'
+      preLoaderRoute: typeof TrendViraliRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/linkedin': {
@@ -521,6 +549,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksAddClientChannelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/top-tiktok-hashtags': {
+      id: '/api/public/hooks/top-tiktok-hashtags'
+      path: '/api/public/hooks/top-tiktok-hashtags'
+      fullPath: '/api/public/hooks/top-tiktok-hashtags'
+      preLoaderRoute: typeof ApiPublicHooksTopTiktokHashtagsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/sync-viral-trends': {
+      id: '/api/public/hooks/sync-viral-trends'
+      path: '/api/public/hooks/sync-viral-trends'
+      fullPath: '/api/public/hooks/sync-viral-trends'
+      preLoaderRoute: typeof ApiPublicHooksSyncViralTrendsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -529,7 +571,7 @@ const rootRouteChildren: RootRouteChildren = {
   InfluencerFeedRoute: InfluencerFeedRoute,
   LinkedinRoute: LinkedinRoute,
   TiktokHashtagRoute: TiktokHashtagRoute,
-  TiktokViraliRoute: TiktokViraliRoute,
+  TrendViraliRoute: TrendViraliRoute,
   TrendAttualiRoute: TrendAttualiRoute,
   TrendEvergreenRoute: TrendEvergreenRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,
@@ -540,6 +582,8 @@ const rootRouteChildren: RootRouteChildren = {
   InfluencerIndexRoute: InfluencerIndexRoute,
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
+  ApiPublicHooksTopTiktokHashtagsRoute: ApiPublicHooksTopTiktokHashtagsRoute,
+  ApiPublicHooksSyncViralTrendsRoute: ApiPublicHooksSyncViralTrendsRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:
     ApiPublicHooksDeleteTrendSubmissionRoute,
