@@ -113,6 +113,28 @@ function rssBridgeUrl(platform, handle) {
     : `${RSS_BRIDGE_BASE}?action=display&bridge=TikTok&context=By+user&username=${handle}&format=JSON`;
 }
 
+// "129.5K" / "2,431" / "1.2M" -> numero. TikTokBridge.php scrive il conteggio
+// così come lo trova sulla pagina (già abbreviato da TikTok stesso).
+function parseCompactNumber(str) {
+  const match = str.trim().replace(/,/g, "").match(/^([\d.]+)\s*([KMB])?$/i);
+  if (!match) return null;
+  const n = parseFloat(match[1]);
+  const suffix = (match[2] || "").toUpperCase();
+  if (suffix === "K") return Math.round(n * 1_000);
+  if (suffix === "M") return Math.round(n * 1_000_000);
+  if (suffix === "B") return Math.round(n * 1_000_000_000);
+  return Math.round(n);
+}
+
+// TikTokBridge.php include il numero di view nel content_html come testo
+// libero ("<p>129.5K views<p>"): nessun altro engagement (like/commenti) è
+// disponibile né per TikTok né per Instagram via RSS-Bridge (verificato sul
+// sorgente dei due bridge).
+function extractTikTokViews(item) {
+  const match = (item.content_html || "").match(/([\d.,]+\s*[KMB]?)\s*views/i);
+  return match ? parseCompactNumber(match[1]) : null;
+}
+
 async function fetchFeed(platform, handle) {
   const url = rssBridgeUrl(platform, handle);
   try {
@@ -174,7 +196,8 @@ for (const list of lists) {
     const canale = list.find((c) => c.accounts.some((a) => a.handle === handle));
     if (!canale) continue;
 
-    // Se l'URL esiste già ma manca la caption, aggiornala senza aggiungere un duplicato
+    // Se l'URL esiste già ma manca la caption/le view, aggiornale senza
+    // aggiungere un duplicato
     const existing = canale.accounts.find((a) => a.url === url);
     if (existing) {
       if (!existing.caption) {
@@ -184,18 +207,29 @@ for (const list of lists) {
           modified = true;
         }
       }
+      if (existing.views == null && existing.platform === "tiktok") {
+        const views = extractTikTokViews(item);
+        if (views != null) {
+          existing.views = views;
+          modified = true;
+        }
+      }
       continue;
     }
 
     const date = item.date_modified || item.date_published || null;
     const caption = fullCaption(item);
+    const postPlatform = detectPlatform(url);
 
     canale.accounts.push({
-      platform: detectPlatform(url),
+      platform: postPlatform,
       handle,
       url,
       date,
       caption,
+      // Solo TikTok espone le view via RSS-Bridge; per Instagram nessuna
+      // metrica di engagement è disponibile gratuitamente.
+      views: postPlatform === "tiktok" ? extractTikTokViews(item) : null,
     });
 
     const posts = canale.accounts.filter((a) => isPostUrl(a.url));

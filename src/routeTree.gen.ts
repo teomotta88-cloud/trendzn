@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
 import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
+import { Route as TiktokViraliRouteImport } from './routes/tiktok-virali'
 import { Route as TiktokHashtagRouteImport } from './routes/tiktok-hashtag'
 import { Route as LinkedinRouteImport } from './routes/linkedin'
 import { Route as InfluencerFeedRouteImport } from './routes/influencer-feed'
@@ -46,6 +47,11 @@ const TrendEvergreenRoute = TrendEvergreenRouteImport.update({
 const TrendAttualiRoute = TrendAttualiRouteImport.update({
   id: '/trend-attuali',
   path: '/trend-attuali',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TiktokViraliRoute = TiktokViraliRouteImport.update({
+  id: '/tiktok-virali',
+  path: '/tiktok-virali',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TiktokHashtagRoute = TiktokHashtagRouteImport.update({
@@ -163,6 +169,7 @@ export interface FileRoutesByFullPath {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
+  '/tiktok-virali': typeof TiktokViraliRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -188,6 +195,7 @@ export interface FileRoutesByTo {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
+  '/tiktok-virali': typeof TiktokViraliRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -214,6 +222,7 @@ export interface FileRoutesById {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
+  '/tiktok-virali': typeof TiktokViraliRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -241,6 +250,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
+    | '/tiktok-virali'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -266,6 +276,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
+    | '/tiktok-virali'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -291,6 +302,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
+    | '/tiktok-virali'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -317,6 +329,7 @@ export interface RootRouteChildren {
   InfluencerFeedRoute: typeof InfluencerFeedRoute
   LinkedinRoute: typeof LinkedinRoute
   TiktokHashtagRoute: typeof TiktokHashtagRoute
+  TiktokViraliRoute: typeof TiktokViraliRoute
   TrendAttualiRoute: typeof TrendAttualiRoute
   TrendEvergreenRoute: typeof TrendEvergreenRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
@@ -366,6 +379,13 @@ declare module '@tanstack/react-router' {
       path: '/tiktok-hashtag'
       fullPath: '/tiktok-hashtag'
       preLoaderRoute: typeof TiktokHashtagRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tiktok-virali': {
+      id: '/tiktok-virali'
+      path: '/tiktok-virali'
+      fullPath: '/tiktok-virali'
+      preLoaderRoute: typeof TiktokViraliRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/linkedin': {
@@ -509,6 +529,7 @@ const rootRouteChildren: RootRouteChildren = {
   InfluencerFeedRoute: InfluencerFeedRoute,
   LinkedinRoute: LinkedinRoute,
   TiktokHashtagRoute: TiktokHashtagRoute,
+  TiktokViraliRoute: TiktokViraliRoute,
   TrendAttualiRoute: TrendAttualiRoute,
   TrendEvergreenRoute: TrendEvergreenRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,

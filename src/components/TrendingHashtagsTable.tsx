@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { formatCompactNumber } from "@/lib/format";
 
 type TrendingHashtagRow = {
   hashtag: string;
@@ -9,13 +10,6 @@ type TrendingHashtagRow = {
   view_count: number | null;
   trend_points: number[] | null;
 };
-
-function formatCompactNumber(n: number | null): string {
-  if (n == null) return "—";
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace(/\.0$/, "")}K`;
-  return String(n);
-}
 
 function Sparkline({ points }: { points: number[] | null }) {
   if (!points || points.length < 2) {
