@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { Search, Eye } from "lucide-react";
+import { Search, Eye, Heart, TrendingUp } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -8,22 +8,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { PlatformIcon } from "@/components/SocialEmbed";
+import { PlatformIcon, SocialEmbed } from "@/components/SocialEmbed";
 import { formatCompactNumber } from "@/lib/format";
 import {
   DISCOVERY_SOURCES,
   listViralTrendContent,
+  SORT_OPTIONS,
   VIRAL_PLATFORMS,
   VIRALITY_WINDOW_DAYS,
   type DiscoverySource,
+  type SortBy,
   type ViralPlatform,
   type ViralTrendContent,
 } from "@/lib/viralTrends";
@@ -35,7 +29,7 @@ export const Route = createFileRoute("/trend-virali")({
       {
         name: "description",
         content:
-          "Contenuti Instagram e TikTok reali degli ultimi 7 giorni, ordinati per viralità (crescita di view/engagement, non valore assoluto).",
+          "Contenuti Instagram e TikTok reali degli ultimi 7 giorni, con la variazione di view/engagement rilevata — ordinabili per viralità, data, engagement o views.",
       },
     ],
   }),
@@ -45,6 +39,13 @@ export const Route = createFileRoute("/trend-virali")({
 const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   "tiktok-hashtag": "TikTok",
   "google-trends": "Google Trends",
+};
+
+const SORT_LABELS: Record<SortBy, string> = {
+  virality: "Viralità",
+  date: "Più recenti",
+  engagement: "Engagement",
+  views: "Views",
 };
 
 function formatDate(dateStr: string | null): string {
@@ -60,6 +61,33 @@ function formatDate(dateStr: string | null): string {
   }
 }
 
+// La variazione (crescita nella finestra di 7gg) è assente finché il
+// contenuto non è stato ritrovato in almeno un sync successivo al primo —
+// non è "zero crescita", è "ancora nessun secondo dato". Va distinto nella UI.
+function VariationBadge({ item }: { item: ViralTrendContent }) {
+  const hasReachGrowth = item.delta_reach > 0;
+  const hasEngagementGrowth = item.platform !== "tiktok" && item.delta_engagement > 0;
+
+  if (!hasReachGrowth && !hasEngagementGrowth) {
+    return (
+      <span className="inline-flex items-center gap-1.5 rounded-lg bg-muted px-2 py-1 text-[11px] text-muted-foreground">
+        Nessuna crescita rilevata ancora
+      </span>
+    );
+  }
+
+  return (
+    <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg bg-emerald-500/10 px-2 py-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+      <TrendingUp className="size-3.5 shrink-0" />
+      {hasReachGrowth && <span>+{formatCompactNumber(item.delta_reach)} views</span>}
+      {hasEngagementGrowth && <span>+{formatCompactNumber(item.delta_engagement)} engagement</span>}
+      <span className="text-emerald-600/70 dark:text-emerald-400/70">
+        (ultimi {VIRALITY_WINDOW_DAYS}gg)
+      </span>
+    </span>
+  );
+}
+
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -67,6 +95,7 @@ function Page() {
   const [platformFilter, setPlatformFilter] = useState<ViralPlatform | "all">("all");
   const [hashtagFilter, setHashtagFilter] = useState<string>("all");
   const [sourceFilter, setSourceFilter] = useState<DiscoverySource | "all">("all");
+  const [sortBy, setSortBy] = useState<SortBy>("virality");
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -75,11 +104,12 @@ function Page() {
     listViralTrendContent({
       platform: platformFilter === "all" ? undefined : platformFilter,
       sourceHashtag: hashtagFilter === "all" ? undefined : hashtagFilter,
+      sortBy,
     })
       .then(setItems)
       .catch((err) => setError(err instanceof Error ? err.message : String(err)))
       .finally(() => setLoading(false));
-  }, [platformFilter, hashtagFilter]);
+  }, [platformFilter, hashtagFilter, sortBy]);
 
   // Per gli item da Google Trends, source_hashtag contiene il termine di
   // ricerca stesso (non un hashtag): l'etichetta "#" va mostrata solo per
@@ -116,11 +146,9 @@ function Page() {
         <p className="max-w-2xl text-sm text-muted-foreground">
           Topic scoperti da due fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
           leggibile, es. #empirestatebuilding → "Empire State Building") e ricerche in tendenza
-          Google Trends per l'Italia — poi cercati su Instagram. I contenuti (sempre degli ultimi{" "}
-          {VIRALITY_WINDOW_DAYS} giorni) sono ordinati per punteggio di viralità: quanto stanno
-          crescendo view/engagement in questa finestra, non il loro valore assoluto. I video TikTok
-          per lo stesso hashtag sono inclusi con le view quando disponibili; l'engagement
-          (like/commenti) non è invece disponibile per questa fonte gratuita.
+          Google Trends per l'Italia — poi cercati su Instagram. Contenuti sempre degli ultimi{" "}
+          {VIRALITY_WINDOW_DAYS} giorni, con la variazione di view/engagement rilevata rispetto al
+          sync più vecchio in questa stessa finestra.
         </p>
       </header>
 
@@ -134,6 +162,19 @@ function Page() {
             className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
           />
         </div>
+
+        <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortBy)}>
+          <SelectTrigger className="w-44">
+            <SelectValue placeholder="Ordina per" />
+          </SelectTrigger>
+          <SelectContent>
+            {SORT_OPTIONS.map((s) => (
+              <SelectItem key={s} value={s}>
+                {SORT_LABELS[s]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
 
         <Select
           value={platformFilter}
@@ -201,83 +242,69 @@ function Page() {
           giorno a partire dagli hashtag TikTok in trend e dalle ricerche Google Trends IT.
         </div>
       ) : (
-        <div className="overflow-hidden rounded-2xl border border-border bg-card">
-          <div className="overflow-x-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Piattaforma</TableHead>
-                  <TableHead>Fonte → Keyword</TableHead>
-                  <TableHead>Autore</TableHead>
-                  <TableHead>Contenuto</TableHead>
-                  <TableHead className="text-right">Views</TableHead>
-                  <TableHead className="text-right">Engagement</TableHead>
-                  <TableHead className="text-right">Variazione (7gg)</TableHead>
-                  <TableHead>Data</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filtered.map((item) => (
-                  <TableRow key={item.id}>
-                    <TableCell>
-                      <span className="inline-flex items-center gap-1.5 capitalize">
-                        <PlatformIcon platform={item.platform} className="size-3.5" />
-                        {item.platform}
-                      </span>
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
-                      <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
-                        {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
-                      </span>{" "}
-                      {item.discovery_source === "tiktok-hashtag"
-                        ? `#${item.source_hashtag}`
-                        : item.source_hashtag}{" "}
-                      → {item.keyword_matched}
-                    </TableCell>
-                    <TableCell>{item.author ?? "—"}</TableCell>
-                    <TableCell className="max-w-md truncate">
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:underline"
-                      >
-                        {item.content || item.url}
-                      </a>
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap text-right tabular-nums">
-                      {item.reach != null ? (
-                        <span className="inline-flex items-center justify-end gap-1">
-                          <Eye className="size-3 text-muted-foreground" />
-                          {formatCompactNumber(item.reach)}
-                        </span>
-                      ) : (
-                        "—"
-                      )}
-                    </TableCell>
-                    <TableCell className="text-right tabular-nums">
-                      {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
-                          "zero interazioni", non "dato non disponibile". */}
-                      {item.platform === "tiktok" ? "—" : formatCompactNumber(item.engagement)}
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap text-right tabular-nums text-xs">
-                      {/* Crescita nella finestra nota (7gg): assente finché il contenuto non
-                          è stato ritrovato in almeno un sync successivo al primo. */}
-                      {item.delta_reach > 0
-                        ? `+${formatCompactNumber(item.delta_reach)} views`
-                        : "—"}
-                      {item.platform !== "tiktok" && item.delta_engagement > 0 && (
-                        <>, +{formatCompactNumber(item.delta_engagement)} eng</>
-                      )}
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
-                      {formatDate(item.published_at ?? item.created_at)}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filtered.map((item) => (
+            <article
+              key={item.id}
+              className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60"
+            >
+              <SocialEmbed url={item.url} />
+
+              <div className="space-y-2 px-1 pb-2">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium capitalize text-foreground">
+                    <PlatformIcon platform={item.platform} className="size-3.5" />
+                    {item.platform}
+                  </span>
+                  <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">
+                    {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
+                  </span>
+                  <span className="ml-auto text-[10px] text-muted-foreground">
+                    {formatDate(item.published_at ?? item.created_at)}
+                  </span>
+                </div>
+
+                {item.author && (
+                  <p className="text-xs font-semibold text-foreground">{item.author}</p>
+                )}
+
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block hover:underline"
+                >
+                  <p className="line-clamp-3 text-xs text-muted-foreground">
+                    {item.content || item.url}
+                  </p>
+                </a>
+
+                <p className="text-[10px] text-muted-foreground">
+                  {item.discovery_source === "tiktok-hashtag"
+                    ? `#${item.source_hashtag}`
+                    : item.source_hashtag}{" "}
+                  → {item.keyword_matched}
+                </p>
+
+                <div className="flex items-center gap-3 text-xs tabular-nums">
+                  <span className="inline-flex items-center gap-1">
+                    <Eye className="size-3 text-muted-foreground" />
+                    {formatCompactNumber(item.reach)}
+                  </span>
+                  {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
+                      "zero interazioni", non "dato non disponibile". */}
+                  {item.platform !== "tiktok" && (
+                    <span className="inline-flex items-center gap-1">
+                      <Heart className="size-3 text-muted-foreground" />
+                      {formatCompactNumber(item.engagement)}
+                    </span>
+                  )}
+                </div>
+
+                <VariationBadge item={item} />
+              </div>
+            </article>
+          ))}
         </div>
       )}
     </div>
