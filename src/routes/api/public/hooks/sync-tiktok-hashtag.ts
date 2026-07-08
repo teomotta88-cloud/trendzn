@@ -36,11 +36,14 @@ export const Route = createFileRoute("/api/public/hooks/sync-tiktok-hashtag")({
       // e ha quindi accesso alla service role key senza che lo script esterno la conosca.
       POST: async ({ request }) => {
         try {
-          const body = (await request.json()) as { urls?: string[]; hashtag?: string };
-          const urls = Array.isArray(body.urls) ? body.urls : [];
+          const body = (await request.json()) as {
+            posts?: { url: string; views?: number | null }[];
+            hashtag?: string;
+          };
+          const posts = Array.isArray(body.posts) ? body.posts : [];
           const hashtag = body.hashtag?.trim() || "starhotels";
 
-          if (urls.length === 0) {
+          if (posts.length === 0) {
             return Response.json({ ok: true, inserted: 0 });
           }
 
@@ -49,7 +52,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-tiktok-hashtag")({
           // di inserimento, ma l'ordinamento della pagina usa posted_at (data reale del post,
           // decodificata dall'ID del video).
           const now = Date.now();
-          const rows = urls.map((url, index) => ({
+          const rows = posts.map(({ url, views }, index) => ({
             url: normalizeUrl(url),
             section: SECTION,
             category: CATEGORY,
@@ -58,6 +61,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-tiktok-hashtag")({
             submitted_by: "tiktok-hashtag-scraper",
             created_at: new Date(now - index).toISOString(),
             posted_at: decodePostedAt(url),
+            view_count: views ?? null,
           }));
 
           const { supabaseAdmin } = await import("@/integrations/supabase/client.server");

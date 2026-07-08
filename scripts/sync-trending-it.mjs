@@ -30,12 +30,12 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function syncUrls(urls, hashtag) {
-  if (urls.length === 0) return { inserted: 0 };
+async function syncPosts(posts, hashtag) {
+  if (posts.length === 0) return { inserted: 0 };
   const res = await fetch(SYNC_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ urls, hashtag }),
+    body: JSON.stringify({ posts, hashtag }),
   });
   if (!res.ok) {
     const body = await res.text();
@@ -89,14 +89,19 @@ async function syncFromCreativeCenter(hashtags) {
     console.log(`\n[${i + 1}/${hashtags.length}] #${tag}`);
 
     try {
-      const urls = await scrapeHashtag(tag);
-      const trimmed = urls.slice(0, MAX_POSTS_PER_TAG);
-      console.log(`  Trovati ${urls.length} URL → invio ${trimmed.length}`);
+      const posts = await scrapeHashtag(tag);
+      const trimmed = posts.slice(0, MAX_POSTS_PER_TAG);
+      console.log(`  Trovati ${posts.length} URL → invio ${trimmed.length}`);
 
       if (trimmed.length > 0) {
-        const result = await syncUrls(trimmed, tag);
+        const result = await syncPosts(trimmed, tag);
         totalInserted += result.inserted ?? 0;
-        results.push({ tag, found: urls.length, sent: trimmed.length, inserted: result.inserted ?? 0 });
+        results.push({
+          tag,
+          found: posts.length,
+          sent: trimmed.length,
+          inserted: result.inserted ?? 0,
+        });
         console.log(`  Inseriti: ${result.inserted ?? 0}`);
       } else {
         results.push({ tag, found: 0, sent: 0, inserted: 0 });

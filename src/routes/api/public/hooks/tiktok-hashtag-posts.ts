@@ -3,10 +3,12 @@ import { createFileRoute } from "@tanstack/react-router";
 /**
  * Restituisce gli URL dei video TikTok reali già raccolti per un hashtag
  * dalla pipeline "TikTok Trending IT" (section=tiktok-hashtag di
- * trend_submissions). Usato da sync-viral-trends.mjs per includere contenuti
- * TikTok nel feed "Trend Virali" — anysite non supporta la ricerca TikTok,
- * quindi qui non ci sono view/engagement (solo l'URL e la data del post),
- * a differenza degli altri contenuti trovati via anysite.
+ * trend_submissions), con le views se estratte durante lo scraping (best
+ * effort, vedi scripts/scrape-tiktok-hashtag.mjs — può essere null).
+ * Usato da sync-viral-trends.mjs per includere contenuti TikTok nel feed
+ * "Trend Virali": anysite non supporta la ricerca TikTok, e per questa
+ * fonte non c'è comunque nessun dato di engagement (like/commenti), solo
+ * le views.
  */
 
 const DEFAULT_LIMIT = 10;
@@ -30,10 +32,11 @@ export const Route = createFileRoute("/api/public/hooks/tiktok-hashtag-posts")({
 
           const { data, error } = await supabaseAdmin
             .from("trend_submissions")
-            .select("url, posted_at, created_at")
+            .select("url, posted_at, created_at, view_count")
             .eq("section", "tiktok-hashtag")
             .eq("status", "approved")
             .contains("tags", [hashtag])
+            .order("view_count", { ascending: false, nullsFirst: false })
             .order("posted_at", { ascending: false, nullsFirst: false })
             .limit(limit);
 
@@ -44,6 +47,7 @@ export const Route = createFileRoute("/api/public/hooks/tiktok-hashtag-posts")({
           const posts = (data ?? []).map((row) => ({
             url: row.url,
             publishedAt: row.posted_at ?? row.created_at,
+            views: row.view_count ?? null,
           }));
 
           return Response.json({ ok: true, posts });

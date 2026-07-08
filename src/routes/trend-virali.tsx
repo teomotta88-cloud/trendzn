@@ -101,9 +101,9 @@ function Page() {
           Ogni hashtag TikTok in trend (pagina TikTok Trending) viene trasformato in una keyword di
           ricerca leggibile separandone le parole (es. #empirestatebuilding → "Empire State
           Building"), poi cercato su Instagram. I contenuti trovati sono ordinati per view ed
-          engagement reali — non per hashtag. I video TikTok per lo stesso hashtag sono inclusi ma,
-          non essendoci una fonte gratuita per le loro metriche, restano senza dati di
-          views/engagement.
+          engagement reali — non per hashtag. I video TikTok per lo stesso hashtag sono inclusi con
+          le view quando disponibili (estrazione automatica, non sempre riuscita); l'engagement
+          (like/commenti) non è invece disponibile per questa fonte gratuita.
         </p>
       </header>
 
