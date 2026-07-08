@@ -34,6 +34,7 @@ import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './route
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
+import { Route as ApiPublicHooksTiktokHashtagPostsRouteImport } from './routes/api/public/hooks/tiktok-hashtag-posts'
 import { Route as ApiPublicHooksSyncViralTrendsRouteImport } from './routes/api/public/hooks/sync-viral-trends'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
@@ -171,6 +172,12 @@ const ApiPublicHooksTopTiktokHashtagsRoute =
     path: '/api/public/hooks/top-tiktok-hashtags',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksTiktokHashtagPostsRoute =
+  ApiPublicHooksTiktokHashtagPostsRouteImport.update({
+    id: '/api/public/hooks/tiktok-hashtag-posts',
+    path: '/api/public/hooks/tiktok-hashtag-posts',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksSyncViralTrendsRoute =
   ApiPublicHooksSyncViralTrendsRouteImport.update({
     id: '/api/public/hooks/sync-viral-trends',
@@ -195,6 +202,7 @@ export interface FileRoutesByFullPath {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
@@ -223,6 +231,7 @@ export interface FileRoutesByTo {
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
@@ -252,6 +261,7 @@ export interface FileRoutesById {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
@@ -282,6 +292,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
@@ -310,6 +321,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
@@ -338,6 +350,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
@@ -367,6 +380,7 @@ export interface RootRouteChildren {
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
   ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
+  ApiPublicHooksTiktokHashtagPostsRoute: typeof ApiPublicHooksTiktokHashtagPostsRoute
   ApiPublicHooksSyncViralTrendsRoute: typeof ApiPublicHooksSyncViralTrendsRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
@@ -556,6 +570,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksTopTiktokHashtagsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/tiktok-hashtag-posts': {
+      id: '/api/public/hooks/tiktok-hashtag-posts'
+      path: '/api/public/hooks/tiktok-hashtag-posts'
+      fullPath: '/api/public/hooks/tiktok-hashtag-posts'
+      preLoaderRoute: typeof ApiPublicHooksTiktokHashtagPostsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/sync-viral-trends': {
       id: '/api/public/hooks/sync-viral-trends'
       path: '/api/public/hooks/sync-viral-trends'
@@ -583,6 +604,7 @@ const rootRouteChildren: RootRouteChildren = {
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksTopTiktokHashtagsRoute: ApiPublicHooksTopTiktokHashtagsRoute,
+  ApiPublicHooksTiktokHashtagPostsRoute: ApiPublicHooksTiktokHashtagPostsRoute,
   ApiPublicHooksSyncViralTrendsRoute: ApiPublicHooksSyncViralTrendsRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:

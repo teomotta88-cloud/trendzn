@@ -1,6 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 
-export const VIRAL_PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin"] as const;
+export const VIRAL_PLATFORMS = ["instagram", "tiktok"] as const;
 export type ViralPlatform = (typeof VIRAL_PLATFORMS)[number];
 
 export interface ViralTrendContent {
