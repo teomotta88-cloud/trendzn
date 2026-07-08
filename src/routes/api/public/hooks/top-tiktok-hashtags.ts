@@ -13,6 +13,12 @@ import { createFileRoute } from "@tanstack/react-router";
 const DEFAULT_LIMIT = 5;
 const LOOKBACK_DAYS = 3;
 
+// "starhotels" è il tag di fallback hardcoded in sync-tiktok-hashtag.ts
+// quando lo scraper del brand cliente non passa un hashtag esplicito —
+// condivide la stessa tabella/section della pipeline "TikTok Trending IT",
+// ma non è un hashtag realmente in trend: va escluso dall'aggregazione.
+const EXCLUDED_TAGS = new Set(["starhotels"]);
+
 export const Route = createFileRoute("/api/public/hooks/top-tiktok-hashtags")({
   server: {
     handlers: {
@@ -41,7 +47,7 @@ export const Route = createFileRoute("/api/public/hooks/top-tiktok-hashtags")({
           const freq = new Map<string, number>();
           for (const row of data ?? []) {
             for (const tag of row.tags ?? []) {
-              if (!tag) continue;
+              if (!tag || EXCLUDED_TAGS.has(tag.toLowerCase())) continue;
               freq.set(tag, (freq.get(tag) ?? 0) + 1);
             }
           }

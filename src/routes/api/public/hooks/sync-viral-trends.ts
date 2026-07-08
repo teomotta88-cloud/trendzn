@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin"] as const;
+const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin", "tiktok"] as const;
 type Platform = (typeof PLATFORMS)[number];
 
 type IncomingContent = {
@@ -35,11 +35,13 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
     handlers: {
       // Riceve i contenuti raccolti dallo script GitHub Actions
       // (scripts/sync-viral-trends.mjs), che per ogni hashtag TikTok in
-      // trend cerca la keyword corrispondente (parole separate offline via
-      // wordsninja) su YouTube + anysite, e li inserisce con supabaseAdmin —
-      // stesso pattern di sync-brand-mentions.ts ma senza sentiment/
-      // crisis-alert, che non hanno senso per keyword generiche non legate
-      // a un brand.
+      // trend cerca la keyword corrispondente (parole separate offline,
+      // vedi scripts/lib/word-segment.mjs) su Instagram (anysite), più i
+      // video TikTok reali già raccolti per lo stesso hashtag (senza
+      // engagement/views, anysite non supporta la ricerca TikTok), e li
+      // inserisce con supabaseAdmin — stesso pattern di
+      // sync-brand-mentions.ts ma senza sentiment/crisis-alert, che non
+      // hanno senso per keyword generiche non legate a un brand.
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as {

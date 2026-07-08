@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       max_hashtags:
-        description: "Numero massimo di hashtag TikTok da processare (ognuno cerca su tutte le PLATFORMS)"
+        description: "Numero massimo di hashtag TikTok da processare (ognuno cerca su Instagram + TikTok)"
         default: "5"
 
 jobs:
@@ -22,13 +22,12 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
-        run: npm install wordsninja
+      # Nessuna dipendenza da installare: la conversione hashtag -> keyword
+      # (scripts/lib/word-segment.mjs) e' pura segmentazione offline a
+      # dizionario (JSON bundled nel repo), nessun pacchetto npm esterno.
 
       - name: Sync trend virali
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
-          PLATFORMS: "youtube,twitter,reddit,instagram,linkedin"
           MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '5' }}
         run: node scripts/sync-viral-trends.mjs

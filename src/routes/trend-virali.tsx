@@ -32,7 +32,7 @@ export const Route = createFileRoute("/trend-virali")({
       {
         name: "description",
         content:
-          "Contenuti reali ordinati per view ed engagement, trovati cercando su Twitter/X, Reddit, Instagram, LinkedIn e YouTube le keyword ricavate separando le parole degli hashtag TikTok in trend.",
+          "Contenuti Instagram e TikTok reali ordinati per view ed engagement, trovati cercando le keyword ricavate separando le parole degli hashtag TikTok in trend.",
       },
     ],
   }),
@@ -100,8 +100,10 @@ function Page() {
         <p className="max-w-2xl text-sm text-muted-foreground">
           Ogni hashtag TikTok in trend (pagina TikTok Trending) viene trasformato in una keyword di
           ricerca leggibile separandone le parole (es. #empirestatebuilding → "Empire State
-          Building"), poi cercato su Twitter/X, Reddit, Instagram, LinkedIn e YouTube. I contenuti
-          trovati sono ordinati per view ed engagement reali — non per hashtag.
+          Building"), poi cercato su Instagram. I contenuti trovati sono ordinati per view ed
+          engagement reali — non per hashtag. I video TikTok per lo stesso hashtag sono inclusi ma,
+          non essendoci una fonte gratuita per le loro metriche, restano senza dati di
+          views/engagement.
         </p>
       </header>
 
@@ -226,7 +228,9 @@ function Page() {
                       )}
                     </TableCell>
                     <TableCell className="text-right tabular-nums">
-                      {formatCompactNumber(item.engagement)}
+                      {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
+                          "zero interazioni", non "dato non disponibile". */}
+                      {item.platform === "tiktok" ? "—" : formatCompactNumber(item.engagement)}
                     </TableCell>
                     <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
                       {formatDate(item.published_at ?? item.created_at)}
