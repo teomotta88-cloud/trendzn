@@ -54,7 +54,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-brand-mentions")({
 
           let inserted = 0;
           if (mentions.length > 0) {
-            const rows = mentions
+            const rowsWithDupes = mentions
               .filter((m) => PLATFORMS.includes(m.platform))
               .map((m) => ({
                 platform: m.platform,
@@ -71,6 +71,16 @@ export const Route = createFileRoute("/api/public/hooks/sync-brand-mentions")({
                 is_viral: m.is_viral ?? false,
                 raw: m.raw ?? null,
               }));
+
+            // anysite può restituire lo stesso post più volte nella stessa
+            // pagina di risultati: un batch con (platform, external_id)
+            // duplicati fa fallire l'intero upsert con "ON CONFLICT DO
+            // UPDATE command cannot affect row a second time" (Postgres non
+            // permette di aggiornare la stessa riga due volte in un solo
+            // statement). Dedup per la chiave di conflitto prima di inviare.
+            const rows = [
+              ...new Map(rowsWithDupes.map((r) => [`${r.platform}:${r.external_id}`, r])).values(),
+            ];
 
             // ignoreDuplicates: false (default upsert) cosi' una mention gia' vista
             // viene aggiornata con i dati freschi (es. engagement/reach cambiati)
