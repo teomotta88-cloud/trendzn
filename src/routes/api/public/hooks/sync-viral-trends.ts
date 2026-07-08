@@ -71,7 +71,12 @@ function computeViralityScore({
 
   const velocityReach = Math.log1p(deltaReach) / elapsedHours;
   const velocityEngagement = Math.log1p(deltaEngagement) / elapsedHours;
-  const engagementRate = engagement / Math.max(reach ?? 0, 1);
+  // Instagram non ha views per i post foto/carosello (reach resta null, non
+  // 0 — vedi normalizeAnysiteResult in scripts/lib/social-search.mjs): senza
+  // questo controllo engagement/max(reach,1) collassava a "engagement/1",
+  // cioè l'engagement grezzo (fino a decine di migliaia) invece di un
+  // rapporto, dominando l'intero punteggio per ogni post senza reach noto.
+  const engagementRate = reach != null && reach > 0 ? engagement / reach : 0;
   const ageHours = Math.max(0, (now - new Date(publishedAt).getTime()) / 3_600_000);
   const recencyBoost = Math.exp(-ageHours / RECENCY_HALF_LIFE_HOURS);
 
