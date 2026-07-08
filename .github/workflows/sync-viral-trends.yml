@@ -10,6 +10,9 @@ on:
       max_hashtags:
         description: "Numero massimo di hashtag TikTok da processare (ognuno cerca su Instagram + TikTok)"
         default: "5"
+      max_trends:
+        description: "Numero massimo di ricerche Google Trends IT da processare (ognuna cerca solo su Instagram)"
+        default: "5"
 
 jobs:
   sync:
@@ -23,9 +26,11 @@ jobs:
           node-version: "20"
 
       # Nessuna dipendenza da installare: sia la chiamata OpenRouter
-      # (scripts/lib/openrouter.mjs) sia il fallback offline
-      # (scripts/lib/word-segment.mjs, dizionari JSON bundled nel repo) usano
-      # solo fetch nativo, nessun pacchetto npm esterno.
+      # (scripts/lib/openrouter.mjs) sia i fallback offline
+      # (scripts/lib/word-segment.mjs, dizionari JSON bundled nel repo) sia la
+      # lettura di Google Trends (scripts/lib/google-trends.mjs, feed RSS
+      # pubblico) usano solo fetch nativo, nessun pacchetto npm esterno,
+      # nessuna chiave/secret aggiuntiva richiesta per quest'ultima.
 
       - name: Sync trend virali
         env:
@@ -34,4 +39,5 @@ jobs:
           # il fallback offline (meno preciso su nomi propri/toponimi).
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '5' }}
+          MAX_TRENDS: ${{ github.event.inputs.max_trends || '5' }}
         run: node scripts/sync-viral-trends.mjs

@@ -503,6 +503,9 @@ export type Database = {
           author: string | null
           content: string | null
           created_at: string
+          delta_engagement: number
+          delta_reach: number
+          discovery_source: string
           engagement: number
           external_id: string
           id: string
@@ -514,11 +517,15 @@ export type Database = {
           reach: number | null
           source_hashtag: string
           url: string
+          virality_score: number
         }
         Insert: {
           author?: string | null
           content?: string | null
           created_at?: string
+          delta_engagement?: number
+          delta_reach?: number
+          discovery_source?: string
           engagement?: number
           external_id: string
           id?: string
@@ -530,11 +537,15 @@ export type Database = {
           reach?: number | null
           source_hashtag: string
           url: string
+          virality_score?: number
         }
         Update: {
           author?: string | null
           content?: string | null
           created_at?: string
+          delta_engagement?: number
+          delta_reach?: number
+          discovery_source?: string
           engagement?: number
           external_id?: string
           id?: string
@@ -546,13 +557,47 @@ export type Database = {
           reach?: number | null
           source_hashtag?: string
           url?: string
+          virality_score?: number
         }
         Relationships: []
+      }
+      viral_trend_metrics_history: {
+        Row: {
+          captured_at: string
+          content_id: string
+          engagement: number
+          id: string
+          reach: number | null
+        }
+        Insert: {
+          captured_at?: string
+          content_id: string
+          engagement?: number
+          id?: string
+          reach?: number | null
+        }
+        Update: {
+          captured_at?: string
+          content_id?: string
+          engagement?: number
+          id?: string
+          reach?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "viral_trend_metrics_history_content_id_fkey"
+            columns: ["content_id"]
+            isOneToOne: false
+            referencedRelation: "viral_trend_content"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       viral_trend_runs: {
         Row: {
           content_found: number
           created_at: string
+          discovery_source: string | null
           error_message: string | null
           finished_at: string | null
           id: string
@@ -566,6 +611,7 @@ export type Database = {
         Insert: {
           content_found?: number
           created_at?: string
+          discovery_source?: string | null
           error_message?: string | null
           finished_at?: string | null
           id?: string
@@ -579,6 +625,7 @@ export type Database = {
         Update: {
           content_found?: number
           created_at?: string
+          discovery_source?: string | null
           error_message?: string | null
           finished_at?: string | null
           id?: string
