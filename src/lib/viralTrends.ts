@@ -33,8 +33,11 @@ export interface ViralTrendContent {
   created_at: string;
 }
 
+export const SORT_OPTIONS = ["virality", "date", "engagement", "views"] as const;
+export type SortBy = (typeof SORT_OPTIONS)[number];
+
 export async function listViralTrendContent(
-  filters: { platform?: ViralPlatform; sourceHashtag?: string } = {},
+  filters: { platform?: ViralPlatform; sourceHashtag?: string; sortBy?: SortBy } = {},
 ): Promise<ViralTrendContent[]> {
   const since = new Date();
   since.setDate(since.getDate() - VIRALITY_WINDOW_DAYS);
@@ -47,14 +50,28 @@ export async function listViralTrendContent(
   let query = supabase
     .from("viral_trend_content")
     .select("*")
-    .or(`published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`)
-    .order("virality_score", { ascending: false })
-    .limit(300);
+    .or(`published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`);
 
   if (filters.platform) query = query.eq("platform", filters.platform);
   if (filters.sourceHashtag) query = query.eq("source_hashtag", filters.sourceHashtag);
 
-  const { data, error } = await query;
+  switch (filters.sortBy) {
+    case "date":
+      query = query
+        .order("published_at", { ascending: false, nullsFirst: false })
+        .order("created_at", { ascending: false });
+      break;
+    case "engagement":
+      query = query.order("engagement", { ascending: false });
+      break;
+    case "views":
+      query = query.order("reach", { ascending: false, nullsFirst: false });
+      break;
+    default:
+      query = query.order("virality_score", { ascending: false });
+  }
+
+  const { data, error } = await query.limit(300);
   if (error) throw error;
   return (data ?? []) as ViralTrendContent[];
 }
