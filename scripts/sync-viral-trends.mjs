@@ -1,22 +1,26 @@
 // "Trend Virali": prende gli hashtag TikTok in trend (già sincronizzati
 // dalla pipeline tiktok-hashtag), li converte in keyword di ricerca
-// leggibili separando le parole attaccate (es. "#empirestatebuilding" ->
-// "Empire State Building") tramite segmentazione offline a dizionario
-// inglese+italiano (nessuna chiamata LLM/API — vedi scripts/lib/word-segment.mjs),
-// poi cerca quella keyword su Instagram (anysite) — stessa logica di
-// ricerca/normalizzazione di sync-brand-mentions.mjs (vedi
-// scripts/lib/social-search.mjs) — e sincronizza i contenuti trovati, con
-// views/engagement reali, verso viral_trend_content.
+// leggibili (es. "#empirestatebuilding" -> "Empire State Building") tramite
+// un LLM gratuito su OpenRouter (scripts/lib/openrouter.mjs) — con fallback
+// automatico alla segmentazione offline a dizionario inglese+italiano
+// (scripts/lib/word-segment.mjs, nessuna chiamata di rete) se
+// OPENROUTER_API_KEY non è configurata o la chiamata fallisce — poi cerca
+// quella keyword su Instagram (anysite) — stessa logica di ricerca/
+// normalizzazione di sync-brand-mentions.mjs (vedi scripts/lib/social-search.mjs)
+// — e sincronizza i contenuti trovati, con views/engagement reali, verso
+// viral_trend_content.
 //
 // Il feed "Trend Virali" deve contenere solo Instagram e TikTok: anysite non
 // supporta la ricerca TikTok per keyword, quindi per ogni hashtag vengono
 // aggiunti anche i video TikTok reali già raccolti dalla pipeline
 // tiktok-hashtag per quello stesso hashtag (endpoint tiktok-hashtag-posts) —
-// senza però nessuna metrica di engagement/views, non disponibile per quella
-// fonte (vedi fetchTikTokContent).
+// con le views se estratte durante lo scraping, ma senza engagement, non
+// disponibile per quella fonte (vedi fetchTikTokContent).
 //
 // Variabili d'ambiente:
 //   ANYSITE_API_KEY         richiesta (usata per la ricerca Instagram)
+//   OPENROUTER_API_KEY      opzionale — se assente si usa solo il fallback offline
+//   OPENROUTER_MODEL        default: vedi DEFAULT_MODEL in scripts/lib/openrouter.mjs
 //   MAX_HASHTAGS            default: 5 — quanti hashtag TikTok in trend processare per run
 //                            (ogni hashtag genera una ricerca per piattaforma: tenerlo
 //                            basso limita il consumo di credit anysite)
@@ -28,6 +32,7 @@
 // Eseguito da .github/workflows/sync-viral-trends.yml su schedule.
 
 import { hashtagToKeyword } from "./lib/word-segment.mjs";
+import { convertHashtagsToKeywords } from "./lib/openrouter.mjs";
 import {
   ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS,
   containsKeyword,
@@ -47,6 +52,8 @@ const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "25", 
 const MAX_TIKTOK_POSTS = parseInt(process.env.MAX_TIKTOK_POSTS ?? "10", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 const LANGUAGE = process.env.LANGUAGE ?? "it";
+const openrouterApiKey = process.env.OPENROUTER_API_KEY;
+const openrouterModel = process.env.OPENROUTER_MODEL;
 
 const anysiteApiKey = process.env.ANYSITE_API_KEY;
 if (!anysiteApiKey) {
@@ -64,14 +71,34 @@ async function fetchTopHashtags() {
   return data.hashtags ?? [];
 }
 
-// Converte ogni hashtag TikTok in una keyword/frase di ricerca leggibile
-// separando le parole attaccate (es. "empirestatebuilding" -> "Empire State
-// Building") tramite segmentazione offline a dizionario inglese+italiano —
-// nessuna chiamata LLM/API, nessun costo. Meno preciso di un LLM su nomi
-// propri, acronimi, toponimi o parole non presenti nei due dizionari (es.
-// "torvergata"), ma sufficiente per costruire una query di ricerca testuale.
-function hashtagsToKeywords(hashtags) {
+// Fallback offline: separa le parole attaccate a dizionario (inglese +
+// italiano), nessuna chiamata di rete, nessun costo. Meno preciso di un LLM
+// su nomi propri, acronimi, toponimi non a dizionario (es. "torvergata"),
+// ma sempre disponibile.
+function hashtagsToKeywordsOffline(hashtags) {
   return hashtags.map((hashtag) => ({ hashtag, keyword: hashtagToKeyword(hashtag) }));
+}
+
+// Prova prima OpenRouter (LLM gratuito, gestisce correttamente nomi propri
+// e toponimi che un dizionario non può risolvere), poi ripiega sulla
+// segmentazione offline se la chiave non è configurata o la chiamata
+// fallisce (rate limit, modello ritirato, errore di rete, ecc.) — il resto
+// della pipeline deve continuare a funzionare comunque.
+async function hashtagsToKeywords(hashtags) {
+  if (!openrouterApiKey) {
+    console.log("OPENROUTER_API_KEY non configurata, uso la segmentazione offline.");
+    return hashtagsToKeywordsOffline(hashtags);
+  }
+
+  try {
+    return await convertHashtagsToKeywords(hashtags, {
+      apiKey: openrouterApiKey,
+      model: openrouterModel,
+    });
+  } catch (err) {
+    console.error(`OpenRouter fallito, ripiego sulla segmentazione offline: ${String(err)}`);
+    return hashtagsToKeywordsOffline(hashtags);
+  }
 }
 
 async function fetchInstagramContent(keyword) {
@@ -102,8 +129,10 @@ function extractTikTokId(url) {
 
 // Aggiunge al feed i video TikTok reali già raccolti dalla pipeline
 // tiktok-hashtag per questo stesso hashtag — anysite non supporta la
-// ricerca TikTok, quindi qui non c'è nessuna metrica engagement/views (a
-// differenza di normalizeAnysiteResult), solo url e data del post.
+// ricerca TikTok. Le views (quando estratte durante lo scraping, best
+// effort — vedi scripts/scrape-tiktok-hashtag.mjs) diventano "reach";
+// l'engagement (like/commenti) resta sempre 0, non disponibile per questa
+// fonte gratuita.
 async function fetchTikTokContent(hashtag, keyword) {
   const res = await fetch(
     `${TIKTOK_HASHTAG_POSTS_ENDPOINT}?hashtag=${encodeURIComponent(hashtag)}&limit=${MAX_TIKTOK_POSTS}`,
@@ -125,8 +154,8 @@ async function fetchTikTokContent(hashtag, keyword) {
         published_at: post.publishedAt ?? null,
         keyword_matched: keyword,
         engagement: 0,
-        reach: null,
-        is_viral: false,
+        reach: post.views ?? null,
+        is_viral: (post.views ?? 0) > 100_000,
         raw: null,
       };
     })
@@ -157,7 +186,7 @@ if (hashtags.length === 0) {
   process.exit(0);
 }
 
-const mappings = hashtagsToKeywords(hashtags);
+const mappings = await hashtagsToKeywords(hashtags);
 console.log("Conversione hashtag -> keyword:");
 for (const m of mappings) console.log(`  #${m.hashtag} -> "${m.keyword}"`);
 

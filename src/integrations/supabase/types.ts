@@ -464,6 +464,7 @@ export type Database = {
           tags: string[] | null
           title: string | null
           url: string
+          view_count: number | null
         }
         Insert: {
           category?: string | null
@@ -478,6 +479,7 @@ export type Database = {
           tags?: string[] | null
           title?: string | null
           url: string
+          view_count?: number | null
         }
         Update: {
           category?: string | null
@@ -492,6 +494,7 @@ export type Database = {
           tags?: string[] | null
           title?: string | null
           url?: string
+          view_count?: number | null
         }
         Relationships: []
       }

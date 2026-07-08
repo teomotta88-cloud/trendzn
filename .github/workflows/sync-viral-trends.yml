@@ -22,12 +22,16 @@ jobs:
         with:
           node-version: "20"
 
-      # Nessuna dipendenza da installare: la conversione hashtag -> keyword
-      # (scripts/lib/word-segment.mjs) e' pura segmentazione offline a
-      # dizionario (JSON bundled nel repo), nessun pacchetto npm esterno.
+      # Nessuna dipendenza da installare: sia la chiamata OpenRouter
+      # (scripts/lib/openrouter.mjs) sia il fallback offline
+      # (scripts/lib/word-segment.mjs, dizionari JSON bundled nel repo) usano
+      # solo fetch nativo, nessun pacchetto npm esterno.
 
       - name: Sync trend virali
         env:
           ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
+          # Opzionale: se assente, la conversione hashtag -> keyword usa solo
+          # il fallback offline (meno preciso su nomi propri/toponimi).
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '5' }}
         run: node scripts/sync-viral-trends.mjs
