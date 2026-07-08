@@ -3,6 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin", "tiktok"] as const;
 type Platform = (typeof PLATFORMS)[number];
 
+const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends"] as const;
+type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
+
 type IncomingContent = {
   platform: Platform;
   external_id: string;
@@ -12,6 +15,7 @@ type IncomingContent = {
   published_at?: string | null;
   source_hashtag: string;
   keyword_matched: string;
+  discovery_source?: DiscoverySource;
   engagement?: number;
   reach?: number | null;
   is_viral?: boolean;
@@ -22,6 +26,7 @@ type IncomingRun = {
   source_hashtag?: string;
   keyword_matched?: string;
   platform?: string;
+  discovery_source?: string;
   requests_used?: number;
   content_found?: number;
   status?: "ok" | "error";
@@ -30,18 +35,67 @@ type IncomingRun = {
   finished_at?: string;
 };
 
+// Finestra fissa (sempre 7 giorni, mai configurabile — vedi src/lib/viralTrends.ts)
+// sia per l'eleggibilità del contenuto nel feed sia per il calcolo della
+// variazione qui sotto: senza uno storico delle metriche non si può sapere
+// quanto un post è cresciuto, solo il suo valore attuale (per questo esiste
+// viral_trend_metrics_history, popolata in append, mai in upsert).
+const VIRALITY_WINDOW_DAYS = 7;
+const RECENCY_HALF_LIFE_HOURS = 48;
+
+type MetricsSnapshot = { engagement: number; reach: number | null; captured_at: string };
+
+// Punteggio di viralità: premia la crescita di views/engagement nella finestra
+// nota (non il valore assoluto — un post vecchio con molte view non è
+// "virale ora") più un bonus di recency rispetto alla pubblicazione. log1p
+// smorza gli outlier (un salto da 500k a 5M non deve pesare 10000x più di un
+// salto da 5 a 50) mantenendo comunque l'ordine di grandezza.
+function computeViralityScore({
+  engagement,
+  reach,
+  publishedAt,
+  oldest,
+}: {
+  engagement: number;
+  reach: number | null;
+  publishedAt: string;
+  oldest: MetricsSnapshot | null;
+}) {
+  const now = Date.now();
+  const elapsedHours = oldest
+    ? Math.max(1, (now - new Date(oldest.captured_at).getTime()) / 3_600_000)
+    : 1;
+
+  const deltaReach = oldest ? Math.max(0, (reach ?? 0) - (oldest.reach ?? 0)) : 0;
+  const deltaEngagement = oldest ? Math.max(0, engagement - oldest.engagement) : 0;
+
+  const velocityReach = Math.log1p(deltaReach) / elapsedHours;
+  const velocityEngagement = Math.log1p(deltaEngagement) / elapsedHours;
+  const engagementRate = engagement / Math.max(reach ?? 0, 1);
+  const ageHours = Math.max(0, (now - new Date(publishedAt).getTime()) / 3_600_000);
+  const recencyBoost = Math.exp(-ageHours / RECENCY_HALF_LIFE_HOURS);
+
+  const viralityScore =
+    3 * velocityReach + 3 * velocityEngagement + 2 * engagementRate + 2 * recencyBoost;
+
+  return { viralityScore, deltaEngagement, deltaReach };
+}
+
 export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
   server: {
     handlers: {
       // Riceve i contenuti raccolti dallo script GitHub Actions
-      // (scripts/sync-viral-trends.mjs), che per ogni hashtag TikTok in
-      // trend cerca la keyword corrispondente (parole separate offline,
-      // vedi scripts/lib/word-segment.mjs) su Instagram (anysite), più i
-      // video TikTok reali già raccolti per lo stesso hashtag (senza
-      // engagement/views, anysite non supporta la ricerca TikTok), e li
-      // inserisce con supabaseAdmin — stesso pattern di
+      // (scripts/sync-viral-trends.mjs), che per ogni topic (hashtag TikTok
+      // in trend o ricerca Google Trends IT, vedi discovery_source) cerca la
+      // keyword corrispondente su Instagram (anysite), più i video TikTok
+      // reali già raccolti per lo stesso hashtag (solo per topic da hashtag
+      // TikTok — senza engagement/views, anysite non supporta la ricerca
+      // TikTok), e li inserisce con supabaseAdmin — stesso pattern di
       // sync-brand-mentions.ts ma senza sentiment/crisis-alert, che non
-      // hanno senso per keyword generiche non legate a un brand.
+      // hanno senso per keyword generiche non legate a un brand. Dopo
+      // l'upsert calcola anche il punteggio di viralità (vedi
+      // computeViralityScore sopra), confrontando col valore più vecchio
+      // noto negli ultimi 7 giorni in viral_trend_metrics_history.
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as {
@@ -66,6 +120,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 published_at: c.published_at ?? null,
                 source_hashtag: c.source_hashtag,
                 keyword_matched: c.keyword_matched,
+                discovery_source: c.discovery_source ?? "tiktok-hashtag",
                 engagement: c.engagement ?? 0,
                 reach: c.reach ?? null,
                 is_viral: c.is_viral ?? false,
@@ -85,18 +140,69 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
             const { data, error } = await supabaseAdmin
               .from("viral_trend_content")
               .upsert(rows, { onConflict: "platform,external_id" })
-              .select("id");
+              .select("id, engagement, reach, published_at, created_at");
 
             if (error) {
               return Response.json({ ok: false, error: error.message }, { status: 500 });
             }
             inserted = data?.length ?? 0;
+
+            // Uno snapshot per ogni post appena scritto, poi si ricalcola il
+            // punteggio di viralità confrontando col valore più vecchio noto
+            // nella finestra di 7 giorni (vedi computeViralityScore sopra).
+            // Alla prima volta che un post viene visto non esiste ancora uno
+            // snapshot precedente: il punteggio riflette solo recency ed
+            // engagement-rate, il delta di crescita comparirà dal prossimo
+            // sync in cui questo stesso post viene ritrovato.
+            const windowStart = new Date(
+              Date.now() - VIRALITY_WINDOW_DAYS * 24 * 60 * 60 * 1000,
+            ).toISOString();
+
+            for (const row of data ?? []) {
+              await supabaseAdmin.from("viral_trend_metrics_history").insert({
+                content_id: row.id,
+                engagement: row.engagement,
+                reach: row.reach,
+              });
+
+              const { data: oldestRows } = await supabaseAdmin
+                .from("viral_trend_metrics_history")
+                .select("engagement, reach, captured_at")
+                .eq("content_id", row.id)
+                .gte("captured_at", windowStart)
+                .order("captured_at", { ascending: true })
+                .limit(1);
+
+              const { viralityScore, deltaEngagement, deltaReach } = computeViralityScore({
+                engagement: row.engagement,
+                reach: row.reach,
+                publishedAt: row.published_at ?? row.created_at,
+                oldest: oldestRows?.[0] ?? null,
+              });
+
+              await supabaseAdmin
+                .from("viral_trend_content")
+                .update({
+                  virality_score: viralityScore,
+                  delta_engagement: deltaEngagement,
+                  delta_reach: deltaReach,
+                })
+                .eq("id", row.id);
+            }
+
+            // La finestra è sempre e solo l'ultima settimana: non serve
+            // conservare snapshot più vecchi, si accumulerebbero all'infinito.
+            await supabaseAdmin
+              .from("viral_trend_metrics_history")
+              .delete()
+              .lt("captured_at", windowStart);
           }
 
           await supabaseAdmin.from("viral_trend_runs").insert({
             source_hashtag: run.source_hashtag ?? null,
             keyword_matched: run.keyword_matched ?? null,
             platform: run.platform ?? null,
+            discovery_source: run.discovery_source ?? null,
             requests_used: run.requests_used ?? 0,
             content_found: run.content_found ?? contents.length,
             status: run.status ?? "ok",

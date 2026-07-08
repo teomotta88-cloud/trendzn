@@ -19,8 +19,11 @@ import {
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { formatCompactNumber } from "@/lib/format";
 import {
+  DISCOVERY_SOURCES,
   listViralTrendContent,
   VIRAL_PLATFORMS,
+  VIRALITY_WINDOW_DAYS,
+  type DiscoverySource,
   type ViralPlatform,
   type ViralTrendContent,
 } from "@/lib/viralTrends";
@@ -32,14 +35,17 @@ export const Route = createFileRoute("/trend-virali")({
       {
         name: "description",
         content:
-          "Contenuti Instagram e TikTok reali ordinati per view ed engagement, trovati cercando le keyword ricavate separando le parole degli hashtag TikTok in trend.",
+          "Contenuti Instagram e TikTok reali degli ultimi 7 giorni, ordinati per viralità (crescita di view/engagement, non valore assoluto).",
       },
     ],
   }),
   component: Page,
 });
 
-const DAYS_RANGE_OPTIONS = [7, 14, 30, 90] as const;
+const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
+  "tiktok-hashtag": "TikTok",
+  "google-trends": "Google Trends",
+};
 
 function formatDate(dateStr: string | null): string {
   if (!dateStr) return "—";
@@ -60,7 +66,7 @@ function Page() {
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState<ViralPlatform | "all">("all");
   const [hashtagFilter, setHashtagFilter] = useState<string>("all");
-  const [daysRange, setDaysRange] = useState<number>(14);
+  const [sourceFilter, setSourceFilter] = useState<DiscoverySource | "all">("all");
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -69,40 +75,51 @@ function Page() {
     listViralTrendContent({
       platform: platformFilter === "all" ? undefined : platformFilter,
       sourceHashtag: hashtagFilter === "all" ? undefined : hashtagFilter,
-      sinceDays: daysRange,
     })
       .then(setItems)
       .catch((err) => setError(err instanceof Error ? err.message : String(err)))
       .finally(() => setLoading(false));
-  }, [platformFilter, hashtagFilter, daysRange]);
+  }, [platformFilter, hashtagFilter]);
 
-  const hashtags = useMemo(
-    () => Array.from(new Set(items.map((i) => i.source_hashtag))).sort(),
-    [items],
-  );
+  // Per gli item da Google Trends, source_hashtag contiene il termine di
+  // ricerca stesso (non un hashtag): l'etichetta "#" va mostrata solo per
+  // quelli scoperti da un hashtag TikTok.
+  const hashtagOptions = useMemo(() => {
+    const bySourceHashtag = new Map<string, DiscoverySource>();
+    for (const i of items) {
+      if (!bySourceHashtag.has(i.source_hashtag))
+        bySourceHashtag.set(i.source_hashtag, i.discovery_source);
+    }
+    return Array.from(bySourceHashtag.entries()).sort(([a], [b]) => a.localeCompare(b));
+  }, [items]);
 
   const filtered = useMemo(() => {
-    if (!search) return items;
-    const q = search.toLowerCase();
-    return items.filter(
-      (i) =>
-        i.content?.toLowerCase().includes(q) ||
-        i.author?.toLowerCase().includes(q) ||
-        i.keyword_matched.toLowerCase().includes(q) ||
-        i.source_hashtag.toLowerCase().includes(q),
-    );
-  }, [items, search]);
+    let result = items;
+    if (sourceFilter !== "all") result = result.filter((i) => i.discovery_source === sourceFilter);
+    if (search) {
+      const q = search.toLowerCase();
+      result = result.filter(
+        (i) =>
+          i.content?.toLowerCase().includes(q) ||
+          i.author?.toLowerCase().includes(q) ||
+          i.keyword_matched.toLowerCase().includes(q) ||
+          i.source_hashtag.toLowerCase().includes(q),
+      );
+    }
+    return result;
+  }, [items, sourceFilter, search]);
 
   return (
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Virali</h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
-          Ogni hashtag TikTok in trend (pagina TikTok Trending) viene trasformato in una keyword di
-          ricerca leggibile separandone le parole (es. #empirestatebuilding → "Empire State
-          Building"), poi cercato su Instagram. I contenuti trovati sono ordinati per view ed
-          engagement reali — non per hashtag. I video TikTok per lo stesso hashtag sono inclusi con
-          le view quando disponibili (estrazione automatica, non sempre riuscita); l'engagement
+          Topic scoperti da due fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
+          leggibile, es. #empirestatebuilding → "Empire State Building") e ricerche in tendenza
+          Google Trends per l'Italia — poi cercati su Instagram. I contenuti (sempre degli ultimi{" "}
+          {VIRALITY_WINDOW_DAYS} giorni) sono ordinati per punteggio di viralità: quanto stanno
+          crescendo view/engagement in questa finestra, non il loro valore assoluto. I video TikTok
+          per lo stesso hashtag sono inclusi con le view quando disponibili; l'engagement
           (like/commenti) non è invece disponibile per questa fonte gratuita.
         </p>
       </header>
@@ -117,19 +134,6 @@ function Page() {
             className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
           />
         </div>
-
-        <Select value={String(daysRange)} onValueChange={(v) => setDaysRange(Number(v))}>
-          <SelectTrigger className="w-44">
-            <SelectValue placeholder="Intervallo" />
-          </SelectTrigger>
-          <SelectContent>
-            {DAYS_RANGE_OPTIONS.map((d) => (
-              <SelectItem key={d} value={String(d)}>
-                Ultimi {d} giorni
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
 
         <Select
           value={platformFilter}
@@ -148,16 +152,33 @@ function Page() {
           </SelectContent>
         </Select>
 
-        {hashtags.length > 0 && (
+        <Select
+          value={sourceFilter}
+          onValueChange={(v) => setSourceFilter(v as DiscoverySource | "all")}
+        >
+          <SelectTrigger className="w-44">
+            <SelectValue placeholder="Fonte del topic" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Tutte le fonti</SelectItem>
+            {DISCOVERY_SOURCES.map((s) => (
+              <SelectItem key={s} value={s}>
+                {DISCOVERY_SOURCE_LABELS[s]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {hashtagOptions.length > 0 && (
           <Select value={hashtagFilter} onValueChange={setHashtagFilter}>
             <SelectTrigger className="w-48">
               <SelectValue placeholder="Hashtag di origine" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">Tutti gli hashtag</SelectItem>
-              {hashtags.map((h) => (
+              {hashtagOptions.map(([h, source]) => (
                 <SelectItem key={h} value={h}>
-                  #{h}
+                  {source === "tiktok-hashtag" ? `#${h}` : h}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -177,7 +198,7 @@ function Page() {
       ) : filtered.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
           Nessun contenuto ancora. Il workflow "Sync Trend Virali" popola questa pagina una volta al
-          giorno a partire dagli hashtag TikTok in trend.
+          giorno a partire dagli hashtag TikTok in trend e dalle ricerche Google Trends IT.
         </div>
       ) : (
         <div className="overflow-hidden rounded-2xl border border-border bg-card">
@@ -186,11 +207,12 @@ function Page() {
               <TableHeader>
                 <TableRow>
                   <TableHead>Piattaforma</TableHead>
-                  <TableHead>Hashtag → Keyword</TableHead>
+                  <TableHead>Fonte → Keyword</TableHead>
                   <TableHead>Autore</TableHead>
                   <TableHead>Contenuto</TableHead>
                   <TableHead className="text-right">Views</TableHead>
                   <TableHead className="text-right">Engagement</TableHead>
+                  <TableHead className="text-right">Variazione (7gg)</TableHead>
                   <TableHead>Data</TableHead>
                 </TableRow>
               </TableHeader>
@@ -204,7 +226,13 @@ function Page() {
                       </span>
                     </TableCell>
                     <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
-                      #{item.source_hashtag} → {item.keyword_matched}
+                      <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
+                        {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
+                      </span>{" "}
+                      {item.discovery_source === "tiktok-hashtag"
+                        ? `#${item.source_hashtag}`
+                        : item.source_hashtag}{" "}
+                      → {item.keyword_matched}
                     </TableCell>
                     <TableCell>{item.author ?? "—"}</TableCell>
                     <TableCell className="max-w-md truncate">
@@ -231,6 +259,16 @@ function Page() {
                       {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
                           "zero interazioni", non "dato non disponibile". */}
                       {item.platform === "tiktok" ? "—" : formatCompactNumber(item.engagement)}
+                    </TableCell>
+                    <TableCell className="whitespace-nowrap text-right tabular-nums text-xs">
+                      {/* Crescita nella finestra nota (7gg): assente finché il contenuto non
+                          è stato ritrovato in almeno un sync successivo al primo. */}
+                      {item.delta_reach > 0
+                        ? `+${formatCompactNumber(item.delta_reach)} views`
+                        : "—"}
+                      {item.platform !== "tiktok" && item.delta_engagement > 0 && (
+                        <>, +{formatCompactNumber(item.delta_engagement)} eng</>
+                      )}
                     </TableCell>
                     <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
                       {formatDate(item.published_at ?? item.created_at)}
