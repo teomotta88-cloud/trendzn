@@ -55,7 +55,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
 
           let inserted = 0;
           if (contents.length > 0) {
-            const rows = contents
+            const rowsWithDupes = contents
               .filter((c) => PLATFORMS.includes(c.platform))
               .map((c) => ({
                 platform: c.platform,
@@ -71,6 +71,16 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 is_viral: c.is_viral ?? false,
                 raw: c.raw ?? null,
               }));
+
+            // anysite può restituire lo stesso post più volte nella stessa
+            // pagina di risultati: un batch con (platform, external_id)
+            // duplicati fa fallire l'intero upsert con "ON CONFLICT DO
+            // UPDATE command cannot affect row a second time" (Postgres non
+            // permette di aggiornare la stessa riga due volte in un solo
+            // statement). Dedup per la chiave di conflitto prima di inviare.
+            const rows = [
+              ...new Map(rowsWithDupes.map((r) => [`${r.platform}:${r.external_id}`, r])).values(),
+            ];
 
             const { data, error } = await supabaseAdmin
               .from("viral_trend_content")
