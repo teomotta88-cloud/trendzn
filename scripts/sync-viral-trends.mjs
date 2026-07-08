@@ -37,7 +37,8 @@
 //                            (ogni hashtag genera una ricerca per piattaforma: tenerlo
 //                            basso limita il consumo di credit anysite)
 //   MAX_TRENDS              default: 5 — quante ricerche Google Trends IT processare per run
-//   MAX_RESULTS_PER_CALL    default: 25 (ogni risultato consuma quota/credit)
+//   MAX_RESULTS_PER_CALL    default: 30 — confermato con anysite: costa 1 credit ogni 30
+//                            risultati, quindi chiederne fino a 30 non costa più di 25
 //   MAX_TIKTOK_POSTS        default: 10 — max video TikTok già raccolti da aggiungere per hashtag
 //   DELAY_BETWEEN_CALLS_MS  default: 2000
 //   LANGUAGE                default: "it"
@@ -63,7 +64,7 @@ const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-viral-t
 
 const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "5", 10);
 const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "5", 10);
-const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "25", 10);
+const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "30", 10);
 const MAX_TIKTOK_POSTS = parseInt(process.env.MAX_TIKTOK_POSTS ?? "10", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 const LANGUAGE = process.env.LANGUAGE ?? "it";
