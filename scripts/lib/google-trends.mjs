@@ -12,8 +12,15 @@
 // discover-trending-hashtags.mjs). Il chiamante deve continuare a funzionare
 // anche se questa fonte fallisce (vedi fetchGoogleTrendsKeywords in
 // sync-viral-trends.mjs).
-
-const TRENDS_RSS_URL = "https://trends.google.com/trends/trendingsearches/daily/rss";
+//
+// Il primo run reale (2026-07-08) ha dato 404 su questo path: era quello
+// vecchio (/trends/trendingsearches/daily/rss), dismesso col redesign di
+// Google Trends che ha sostituito le pagine sotto /trends/trendingsearches
+// con /trending. Il path RSS attuale è /trending/rss (stesso parametro
+// "geo") — non verificabile in modo definitivo da questo ambiente (rete
+// verso google.com bloccata anche per query dirette), va confermato dal
+// prossimo run reale del workflow.
+const TRENDS_RSS_URL = "https://trends.google.com/trending/rss";
 
 export async function fetchGoogleTrendsIT({ geo = "IT" } = {}) {
   const url = new URL(TRENDS_RSS_URL);
