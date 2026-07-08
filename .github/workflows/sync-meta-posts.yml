@@ -1,0 +1,17 @@
+name: Sync Meta Posts
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync post e insight dai canali cliente collegati via Meta
+        env:
+          META_SYNC_SECRET: ${{ secrets.META_SYNC_SECRET }}
+        run: |
+          curl -sf -X POST "https://trendzn.lovable.app/api/meta/sync-posts" \
+            -H "Authorization: Bearer ${META_SYNC_SECRET}"

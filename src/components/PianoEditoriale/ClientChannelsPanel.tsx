@@ -1,15 +1,27 @@
 import { useEffect, useState } from "react";
-import { Trash2, Plus } from "lucide-react";
+import { Trash2, Plus, Facebook } from "lucide-react";
 import {
   CHANNELS,
   type EditorialClientChannel,
+  type MetaConnectionStatus,
   listClientChannels,
   addClientChannel,
   deleteClientChannel,
+  listMetaConnectionStatus,
 } from "@/lib/editorialPlan";
+
+const META_ERROR_MESSAGES: Record<string, string> = {
+  denied: "Login Meta annullato dall'utente.",
+  state_mismatch: "Sessione di login scaduta, riprova.",
+  missing_code: "Login Meta incompleto, riprova.",
+  no_instagram_business_account:
+    "Nessun account Instagram Business/Creator collegato a una Pagina Facebook trovato su questo account Meta.",
+  exchange_failed: "Errore nel collegamento con Meta, riprova o contatta il supporto.",
+};
 
 export function ClientChannelsPanel() {
   const [channels, setChannels] = useState<EditorialClientChannel[]>([]);
+  const [metaConnections, setMetaConnections] = useState<MetaConnectionStatus[]>([]);
   const [loading, setLoading] = useState(true);
   const [canale, setCanale] = useState<string>(CHANNELS[0].code);
   const [handle, setHandle] = useState("");
@@ -17,15 +29,29 @@ export function ClientChannelsPanel() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const metaStatusParam =
+    typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
+  const metaConnected = metaStatusParam?.get("meta_connected");
+  const metaError = metaStatusParam?.get("meta_error");
+
   async function load() {
     setLoading(true);
-    setChannels(await listClientChannels());
+    const [channelsData, connectionsData] = await Promise.all([
+      listClientChannels(),
+      listMetaConnectionStatus().catch(() => []),
+    ]);
+    setChannels(channelsData);
+    setMetaConnections(connectionsData);
     setLoading(false);
   }
 
   useEffect(() => {
     load();
   }, []);
+
+  function connectionFor(channel: EditorialClientChannel): MetaConnectionStatus | undefined {
+    return metaConnections.find((c) => c.client_channel_id === channel.id);
+  }
 
   async function handleAdd(e: React.FormEvent) {
     e.preventDefault();
@@ -55,10 +81,34 @@ export function ClientChannelsPanel() {
   return (
     <div className="space-y-4">
       <p className="max-w-2xl text-sm text-muted-foreground">
-        Account ufficiali del cliente, usati per riconoscere automaticamente i post pubblicati importati da n8n.
+        Account ufficiali del cliente. I canali Instagram collegati via Meta leggono post e insight
+        reali dalla Graph API; gli altri restano riconosciuti automaticamente tra i post importati
+        da n8n.
       </p>
 
-      <form onSubmit={handleAdd} className="flex flex-wrap items-end gap-3 rounded-2xl border border-border bg-card/50 p-4">
+      {metaConnected && (
+        <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-600">
+          {metaConnected} canale/i Instagram collegato/i con successo.
+        </div>
+      )}
+      {metaError && (
+        <div className="rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-2 text-sm text-destructive">
+          {META_ERROR_MESSAGES[metaError] ?? "Errore nel collegamento con Meta."}
+        </div>
+      )}
+
+      <a
+        href="/api/meta/oauth-start"
+        className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card/50 px-3.5 py-2 text-sm font-medium transition hover:border-primary hover:text-primary"
+      >
+        <Facebook className="size-4" />
+        Connetti account Instagram/Facebook del cliente
+      </a>
+
+      <form
+        onSubmit={handleAdd}
+        className="flex flex-wrap items-end gap-3 rounded-2xl border border-border bg-card/50 p-4"
+      >
         <div className="flex flex-col gap-1">
           <label className="text-xs text-muted-foreground">Canale</label>
           <select
@@ -116,30 +166,50 @@ export function ClientChannelsPanel() {
                 <th className="px-4 py-2">Canale</th>
                 <th className="px-4 py-2">Handle</th>
                 <th className="px-4 py-2">URL</th>
+                <th className="px-4 py-2">Connessione Meta</th>
                 <th className="px-4 py-2" />
               </tr>
             </thead>
             <tbody>
-              {channels.map((c) => (
-                <tr key={c.id} className="border-t border-border">
-                  <td className="px-4 py-2 font-medium">{c.canale}</td>
-                  <td className="px-4 py-2">{c.handle}</td>
-                  <td className="px-4 py-2 truncate">
-                    <a href={c.url} target="_blank" rel="noreferrer" className="text-primary hover:underline">
-                      {c.url}
-                    </a>
-                  </td>
-                  <td className="px-4 py-2 text-right">
-                    <button
-                      onClick={() => handleDelete(c.id)}
-                      className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive"
-                      title="Elimina"
-                    >
-                      <Trash2 className="size-3.5" />
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {channels.map((c) => {
+                const connection = connectionFor(c);
+                return (
+                  <tr key={c.id} className="border-t border-border">
+                    <td className="px-4 py-2 font-medium">{c.canale}</td>
+                    <td className="px-4 py-2">{c.handle}</td>
+                    <td className="px-4 py-2 truncate">
+                      <a
+                        href={c.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary hover:underline"
+                      >
+                        {c.url}
+                      </a>
+                    </td>
+                    <td className="px-4 py-2">
+                      {!connection ? (
+                        <span className="text-xs text-muted-foreground">
+                          Non collegato (dati da n8n)
+                        </span>
+                      ) : connection.status === "active" ? (
+                        <span className="text-xs text-emerald-600">Connesso via Graph API</span>
+                      ) : (
+                        <span className="text-xs text-amber-600">Da ricollegare</span>
+                      )}
+                    </td>
+                    <td className="px-4 py-2 text-right">
+                      <button
+                        onClick={() => handleDelete(c.id)}
+                        className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-destructive hover:text-destructive"
+                        title="Elimina"
+                      >
+                        <Trash2 className="size-3.5" />
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

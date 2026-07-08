@@ -337,6 +337,25 @@ export async function deleteClientChannel(id: string): Promise<void> {
   if (error) throw error;
 }
 
+export interface MetaConnectionStatus {
+  client_channel_id: string;
+  platform: "instagram" | "facebook";
+  fb_page_name: string | null;
+  ig_username: string | null;
+  status: "active" | "needs_reauth";
+  token_expires_at: string;
+}
+
+// meta_connections è protetta da RLS (contiene access token): lo stato di
+// connessione per l'UI passa dall'endpoint server dedicato, che espone solo
+// i campi non sensibili.
+export async function listMetaConnectionStatus(): Promise<MetaConnectionStatus[]> {
+  const res = await fetch("/api/meta/connections-status");
+  const data = await res.json();
+  if (!data.ok) throw new Error(data.error ?? "Errore nel recupero delle connessioni Meta");
+  return data.connections ?? [];
+}
+
 const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 const PLATFORM_TO_CANALE: Record<string, string> = {

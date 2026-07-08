@@ -1,0 +1,19 @@
+name: Refresh Meta Tokens
+
+on:
+  schedule:
+    # I token utente Meta durano ~60gg: un controllo giornaliero è ampiamente
+    # sufficiente per rientrare nella finestra di refresh di 7gg lato server.
+    - cron: "0 4 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh token Meta in scadenza
+        env:
+          META_SYNC_SECRET: ${{ secrets.META_SYNC_SECRET }}
+        run: |
+          curl -sf -X POST "https://trendzn.lovable.app/api/meta/refresh-tokens" \
+            -H "Authorization: Bearer ${META_SYNC_SECRET}"
