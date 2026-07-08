@@ -1,0 +1,35 @@
+name: Sync Trend Virali
+
+on:
+  schedule:
+    # Una volta al giorno, qualche ora dopo la sync TikTok Trending IT
+    # (00:00/12:00 UTC) cosi' gli hashtag da convertire sono freschi.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      max_hashtags:
+        description: "Numero massimo di hashtag TikTok da processare (ognuno cerca su tutte le PLATFORMS)"
+        default: "5"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install @anthropic-ai/sdk
+
+      - name: Sync trend virali
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
+          PLATFORMS: "youtube,twitter,reddit,instagram,linkedin"
+          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '5' }}
+        run: node scripts/sync-viral-trends.mjs

@@ -9,9 +9,10 @@
 //
 // ATTENZIONE: solo il path di twitter (/api/twitter/search/posts) e' stato
 // confermato da un run reale. reddit/instagram/linkedin sono dedotti per
-// coerenza di naming (vedi ANYSITE_ENDPOINTS) e non ancora testati con un
-// token valido: il primo run potrebbe dare 404 su questi tre e richiedere
-// un aggiustamento dei path in base al log.
+// coerenza di naming (vedi ANYSITE_ENDPOINTS in scripts/lib/social-search.mjs,
+// condiviso con sync-viral-trends.mjs) e non ancora testati con un token
+// valido: il primo run potrebbe dare 404 su questi tre e richiedere un
+// aggiustamento dei path in base al log.
 //
 // Variabili d'ambiente:
 //   YOUTUBE_API_KEY         richiesta se "youtube" e' tra le PLATFORMS eseguite
@@ -33,9 +34,18 @@
 //
 // Eseguito da .github/workflows/sync-brand-mentions.yml su schedule.
 
-const ANYSITE_BASE = "https://api.anysite.io";
-const YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3/search";
-const YOUTUBE_VIDEOS_BASE = "https://www.googleapis.com/youtube/v3/videos";
+import {
+  ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS,
+  containsKeyword,
+  fetchVideoStatistics,
+  looksItalian,
+  normalizeAnysiteResult,
+  normalizeYouTubeResult,
+  searchAnysite,
+  searchYouTube,
+  sleep,
+} from "./lib/social-search.mjs";
+
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-brand-mentions";
 
 const KEYWORDS = (process.env.KEYWORDS ?? "hyundai,hyundai_italia")
@@ -62,80 +72,41 @@ if (PLATFORMS_TO_RUN.includes("youtube") && !youtubeApiKey) {
 const anysiteApiKey = process.env.ANYSITE_API_KEY;
 const ANYSITE_PLATFORMS = ["twitter", "reddit", "instagram", "linkedin"];
 if (PLATFORMS_TO_RUN.some((p) => ANYSITE_PLATFORMS.includes(p)) && !anysiteApiKey) {
-  console.error("Manca ANYSITE_API_KEY nell'ambiente (richiesta dalle piattaforme anysite in PLATFORMS).");
+  console.error(
+    "Manca ANYSITE_API_KEY nell'ambiente (richiesta dalle piattaforme anysite in PLATFORMS).",
+  );
   process.exit(1);
 }
 
-// nessun filtro lingua nativo noto per queste tre: applichiamo l'euristica
-// looksItalian() lato script (vedi fetchMentions).
-const ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS = ["reddit", "instagram", "linkedin"];
-
-// path/param anysite: confermati per twitter, dedotti per gli altri (vedi
-// PR #80). Non eseguiti di default: vedi nota in testa al file.
-const ANYSITE_ENDPOINTS = {
-  twitter: { path: "/api/twitter/search/posts", param: "query" },
-  reddit: { path: "/api/reddit/search/posts", param: "query" },
-  instagram: { path: "/api/instagram/search/posts", param: "query" },
-  linkedin: { path: "/api/linkedin/search/posts", param: "keywords" },
-};
-
 // Framework "Manual Sentiment Classification" dal MONITORING_GUIDE.md della skill.
 const POSITIVE_WORDS = [
-  "love", "great", "amazing", "best", "recommend", "recommended",
-  "consiglio", "consigliato", "fantastico", "ottimo", "top",
+  "love",
+  "great",
+  "amazing",
+  "best",
+  "recommend",
+  "recommended",
+  "consiglio",
+  "consigliato",
+  "fantastico",
+  "ottimo",
+  "top",
 ];
 const NEGATIVE_WORDS = [
-  "disappointed", "worst", "terrible", "awful", "broken", "refund", "problem",
-  "deluso", "pessimo", "rotto", "rimborso", "problema", "guasto",
+  "disappointed",
+  "worst",
+  "terrible",
+  "awful",
+  "broken",
+  "refund",
+  "problem",
+  "deluso",
+  "pessimo",
+  "rotto",
+  "rimborso",
+  "problema",
+  "guasto",
 ];
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-// anysite restituisce le date come timestamp Unix (secondi, es. "1782783856"),
-// non come stringhe ISO: passate cosi' com'erano a Postgres davano
-// "date/time field value out of range". Qui le normalizziamo tutte in ISO 8601.
-function toIsoDate(value) {
-  if (value == null || value === "") return null;
-  if (typeof value === "number" || /^\d+$/.test(String(value))) {
-    const d = new Date(Number(value) * 1000);
-    return Number.isNaN(d.getTime()) ? null : d.toISOString();
-  }
-  const d = new Date(value);
-  return Number.isNaN(d.getTime()) ? null : d.toISOString();
-}
-
-// Parole funzionali molto comuni in italiano, improbabili per caso in altre
-// lingue: euristica grezza per scartare contenuti chiaramente non italiani
-// dove anysite non offre un filtro lingua nativo (reddit/instagram/linkedin).
-const ITALIAN_STOPWORDS = new Set([
-  "il", "lo", "la", "gli", "le", "di", "che", "non", "è", "un", "una", "per",
-  "con", "sono", "questo", "questa", "della", "dei", "delle", "anche", "come",
-  "più", "ma", "se", "molto", "suo", "loro", "nuovo", "nuova", "grazie",
-]);
-
-function looksItalian(text) {
-  if (!text) return false;
-  const words = text.toLowerCase().match(/[a-zàèéìòù]+/g) ?? [];
-  if (words.length === 0) return false;
-  const hits = words.filter((w) => ITALIAN_STOPWORDS.has(w)).length;
-  return hits >= 2;
-}
-
-// Rete di sicurezza indipendente dalla piattaforma: alcuni endpoint (in
-// particolare quelli anysite con path/parametro dedotti e mai confermati da
-// documentazione reale, es. linkedin) possono restituire risultati che non
-// c'entrano nulla con la keyword cercata — probabile che il parametro di
-// ricerca venga ignorato server-side. Scarta qui qualunque mention il cui
-// contenuto non menzioni davvero la keyword (o la sua parola principale).
-function containsKeyword(content, keyword) {
-  if (!content) return false;
-  const text = content.toLowerCase();
-  const words = keyword.toLowerCase().split(/[\s_]+/).filter((w) => w.length > 2);
-  if (words.length === 0) return text.includes(keyword.toLowerCase());
-  return words.some((w) => text.includes(w));
-}
 
 function classifySentiment(text) {
   const t = (text ?? "").toLowerCase();
@@ -146,147 +117,29 @@ function classifySentiment(text) {
   return "neutral";
 }
 
-async function searchYouTube(keyword) {
-  const url = new URL(YOUTUBE_BASE);
-  url.searchParams.set("part", "snippet");
-  url.searchParams.set("q", keyword);
-  url.searchParams.set("type", "video");
-  url.searchParams.set("order", "date");
-  url.searchParams.set("maxResults", String(Math.min(MAX_RESULTS_PER_CALL, 50)));
-  url.searchParams.set("regionCode", REGION);
-  url.searchParams.set("relevanceLanguage", LANGUAGE);
-  url.searchParams.set("key", youtubeApiKey);
-
-  const res = await fetch(url);
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`YouTube search failed (${res.status}): ${body.slice(0, 200)}`);
-  }
-  const data = await res.json();
-  return data.items ?? [];
-}
-
-// search.list non include statistiche (viste/like/commenti): videos.list le
-// da' in un'unica chiamata batch per fino a 50 ID, costo 1 unita' di quota
-// totale (non per video) — molto piu' economico che chiamarla per ogni item.
-async function fetchVideoStatistics(videoIds) {
-  if (videoIds.length === 0) return new Map();
-
-  const url = new URL(YOUTUBE_VIDEOS_BASE);
-  url.searchParams.set("part", "statistics");
-  url.searchParams.set("id", videoIds.join(","));
-  url.searchParams.set("key", youtubeApiKey);
-
-  const res = await fetch(url);
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`YouTube videos.list failed (${res.status}): ${body.slice(0, 200)}`);
-  }
-  const data = await res.json();
-  return new Map((data.items ?? []).map((v) => [v.id, v.statistics ?? {}]));
-}
-
-function normalizeYouTubeResult(keyword, item, statsByVideoId) {
-  const videoId = item.id?.videoId ?? "";
-  const snippet = item.snippet ?? {};
-  const stats = statsByVideoId.get(videoId) ?? {};
-  const likes = Number(stats.likeCount ?? 0);
-  const comments = Number(stats.commentCount ?? 0);
-  const views = stats.viewCount != null ? Number(stats.viewCount) : null;
-
-  return {
-    platform: "youtube",
-    external_id: videoId || `youtube-${keyword}-${Math.random().toString(36).slice(2)}`,
-    url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : "",
-    author: snippet.channelTitle ?? null,
-    content: [snippet.title, snippet.description].filter(Boolean).join(" — "),
-    published_at: toIsoDate(snippet.publishedAt),
-    keyword_matched: keyword,
-    sentiment: classifySentiment(`${snippet.title ?? ""} ${snippet.description ?? ""}`),
-    engagement: likes + comments,
-    reach: views,
-    is_viral: likes + comments > 1000,
-    raw: item,
-  };
-}
-
-async function searchAnysite(platform, keyword) {
-  const { path, param } = ANYSITE_ENDPOINTS[platform];
-  const url = new URL(path, ANYSITE_BASE);
-
-  // Twitter/X supporta l'operatore lang: nella query stessa (sintassi nativa
-  // di ricerca X, inoltrata cosi' com'e' da anysite). E' l'unica delle 4
-  // piattaforme anysite con un filtro lingua noto e affidabile.
-  const query = platform === "twitter" ? `${keyword} lang:${LANGUAGE}` : keyword;
-
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "access-token": anysiteApiKey, "Content-Type": "application/json" },
-    body: JSON.stringify({ [param]: query, count: MAX_RESULTS_PER_CALL }),
-  });
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`anysite ${platform} search failed (${res.status}): ${body.slice(0, 200)}`);
-  }
-  const data = await res.json();
-  return Array.isArray(data) ? data : (data.results ?? data.data ?? data.items ?? []);
-}
-
-// item.author non e' sempre una stringa: linkedin restituisce un oggetto
-// ({@type, internal_id, name, alias, url, headline, image, ...}) che prima
-// finiva stringificato per intero nel campo autore. Qui estraiamo solo il
-// nome leggibile, qualunque sia la forma (stringa o oggetto annidato).
-function extractAuthorName(item) {
-  const candidates = [item.author, item.username, item.user?.username, item.channel];
-  for (const candidate of candidates) {
-    if (typeof candidate === "string" && candidate.trim()) return candidate;
-    if (candidate && typeof candidate === "object") {
-      const name = candidate.name ?? candidate.username ?? candidate.alias ?? candidate.handle;
-      if (typeof name === "string" && name.trim()) return name;
-    }
-  }
-  return null;
-}
-
-function normalizeAnysiteResult(platform, keyword, item) {
-  const externalId = String(item.id ?? item.post_id ?? item.external_id ?? item.url ?? "");
-  const url = item.url ?? item.link ?? item.permalink ?? "";
-  const content = item.text ?? item.content ?? item.caption ?? item.title ?? item.body ?? "";
-  const author = extractAuthorName(item);
-  const publishedAt = toIsoDate(item.published_at ?? item.created_at ?? item.date ?? null);
-  const likes = item.likes ?? item.like_count ?? 0;
-  const shares = item.shares ?? item.retweet_count ?? item.share_count ?? 0;
-  const comments = item.comments ?? item.comment_count ?? item.reply_count ?? 0;
-  const reach = item.followers ?? item.follower_count ?? item.reach ?? null;
-  const engagement = Number(likes) + Number(shares) + Number(comments);
-
-  return {
-    platform,
-    external_id: externalId || `${platform}-${keyword}-${Math.random().toString(36).slice(2)}`,
-    url,
-    author,
-    content,
-    published_at: publishedAt,
-    keyword_matched: keyword,
-    sentiment: classifySentiment(content),
-    engagement,
-    reach,
-    is_viral: engagement > 1000,
-    raw: item,
-  };
-}
-
 async function fetchMentions(platform, keyword) {
   let mentions;
 
   if (platform === "youtube") {
-    const items = await searchYouTube(keyword);
+    const items = await searchYouTube({
+      apiKey: youtubeApiKey,
+      keyword,
+      region: REGION,
+      language: LANGUAGE,
+      maxResults: MAX_RESULTS_PER_CALL,
+    });
     const videoIds = items.map((item) => item.id?.videoId).filter(Boolean);
-    const statsByVideoId = await fetchVideoStatistics(videoIds);
-    mentions = items.map((item) => normalizeYouTubeResult(keyword, item, statsByVideoId));
+    const statsByVideoId = await fetchVideoStatistics({ apiKey: youtubeApiKey, videoIds });
+    mentions = items.map((item) => normalizeYouTubeResult({ keyword, item, statsByVideoId }));
   } else {
-    const items = await searchAnysite(platform, keyword);
-    mentions = items.map((item) => normalizeAnysiteResult(platform, keyword, item));
+    const items = await searchAnysite({
+      apiKey: anysiteApiKey,
+      platform,
+      keyword,
+      language: LANGUAGE,
+      maxResults: MAX_RESULTS_PER_CALL,
+    });
+    mentions = items.map((item) => normalizeAnysiteResult({ platform, keyword, item }));
 
     // reddit/instagram/linkedin non hanno un filtro lingua nativo noto: scarta
     // qui i risultati che non sembrano italiani (vedi looksItalian).
@@ -295,7 +148,9 @@ async function fetchMentions(platform, keyword) {
     }
   }
 
-  return mentions.filter((m) => containsKeyword(m.content, keyword));
+  return mentions
+    .filter((m) => containsKeyword(m.content, keyword))
+    .map((m) => ({ ...m, sentiment: classifySentiment(m.content) }));
 }
 
 async function sendToHook(mentions, run) {
@@ -363,7 +218,9 @@ for (const r of summary) {
   if (r.error) {
     console.log(`  [${r.platform}] "${r.keyword}": ERRORE — ${r.error}`);
   } else {
-    console.log(`  [${r.platform}] "${r.keyword}": ${r.found} trovate → ${r.inserted} sincronizzate`);
+    console.log(
+      `  [${r.platform}] "${r.keyword}": ${r.found} trovate → ${r.inserted} sincronizzate`,
+    );
   }
 }
 console.log(`\nTotale mention sincronizzate (nuove o aggiornate): ${totalInserted}`);
