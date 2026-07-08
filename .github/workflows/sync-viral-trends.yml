@@ -23,11 +23,10 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: npm install @anthropic-ai/sdk
+        run: npm install wordsninja
 
       - name: Sync trend virali
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           ANYSITE_API_KEY: ${{ secrets.ANYSITE_API_KEY }}
           PLATFORMS: "youtube,twitter,reddit,instagram,linkedin"

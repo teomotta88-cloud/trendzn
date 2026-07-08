@@ -1,9 +1,10 @@
 -- Trend Virali: contenuti reali (non hashtag) trovati cercando, su
 -- Twitter/X, Reddit, Instagram, LinkedIn (anysite) e YouTube, la keyword
--- ottenuta trasformando ogni hashtag TikTok in trend (es. #empirestatebuilding
--- -> "Empire State Building") tramite Claude. Riusa la stessa logica di
--- ricerca/normalizzazione di brand_mentions ma senza sentiment/crisis-alert,
--- che non hanno senso per keyword generiche non legate a un brand.
+-- ottenuta separando le parole di ogni hashtag TikTok in trend offline
+-- (es. #empirestatebuilding -> "Empire State Building", vedi
+-- scripts/sync-viral-trends.mjs). Riusa la stessa logica di ricerca/
+-- normalizzazione di brand_mentions ma senza sentiment/crisis-alert, che
+-- non hanno senso per keyword generiche non legate a un brand.
 
 create table public.viral_trend_content (
   id uuid primary key default gen_random_uuid(),
