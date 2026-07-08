@@ -150,6 +150,7 @@ const NAV_ITEMS = [
   { to: "/linkedin", label: "LinkedIn" },
   { to: "/influencer-feed", label: "Influencer" },
   { to: "/tiktok-hashtag", label: "TikTok Trending" },
+  { to: "/tiktok-virali", label: "TikTok Virali" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
   { to: "/reputazione-brand", label: "Reputazione Brand" },
 ];

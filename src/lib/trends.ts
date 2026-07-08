@@ -21,6 +21,9 @@ export type AccountRef = {
   url: string;
   date?: string | null;
   caption?: string | null;
+  // Solo per post TikTok: numero di view estratto da RSS-Bridge. Instagram
+  // non espone metriche di engagement via RSS-Bridge, resta sempre null.
+  views?: number | null;
 };
 export type CanaleInspo = {
   id: string;
