@@ -211,9 +211,18 @@ export function normalizeAnysiteResult({ platform, keyword, item }) {
   const author = extractAuthorName(item);
   const publishedAt = toIsoDate(item.published_at ?? item.created_at ?? item.date ?? null);
   const likes = item.likes ?? item.like_count ?? 0;
-  const shares = item.shares ?? item.retweet_count ?? item.share_count ?? 0;
+  // Instagram (schema "@instagram_search_post", confermato da un export reale)
+  // usa "reshare_count", non "share_count"/"retweet_count" (quelli erano
+  // pensati per Twitter, mai verificati su un payload Instagram reale).
+  const shares = item.shares ?? item.retweet_count ?? item.share_count ?? item.reshare_count ?? 0;
   const comments = item.comments ?? item.comment_count ?? item.reply_count ?? 0;
-  const reach = item.followers ?? item.follower_count ?? item.reach ?? null;
+  // "reach" qui è in realtà le views del post: su Instagram il campo reale è
+  // "view_count" (confermato dallo stesso payload) — null per le foto (Instagram
+  // non traccia le views per contenuti statici, è corretto così), valorizzato
+  // per i Reels/video. "followers"/"follower_count" restavano come fallback
+  // per Twitter, dove "reach" = follower dell'autore ha senso; per Instagram
+  // non comparivano mai nel payload, quindi il campo risultava sempre nullo.
+  const reach = item.view_count ?? item.followers ?? item.follower_count ?? item.reach ?? null;
   const engagement = Number(likes) + Number(shares) + Number(comments);
 
   return {
