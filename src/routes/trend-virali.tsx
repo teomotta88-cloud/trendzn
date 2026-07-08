@@ -32,7 +32,7 @@ export const Route = createFileRoute("/trend-virali")({
       {
         name: "description",
         content:
-          "Contenuti reali ordinati per view ed engagement, trovati cercando su Twitter/X, Reddit, Instagram, LinkedIn e YouTube le keyword ricavate dagli hashtag TikTok in trend.",
+          "Contenuti reali ordinati per view ed engagement, trovati cercando su Twitter/X, Reddit, Instagram, LinkedIn e YouTube le keyword ricavate separando le parole degli hashtag TikTok in trend.",
       },
     ],
   }),
@@ -99,8 +99,9 @@ function Page() {
         <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Virali</h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
           Ogni hashtag TikTok in trend (pagina TikTok Trending) viene trasformato in una keyword di
-          ricerca leggibile tramite Claude, poi cercato su Twitter/X, Reddit, Instagram, LinkedIn e
-          YouTube. I contenuti trovati sono ordinati per view ed engagement reali — non per hashtag.
+          ricerca leggibile separandone le parole (es. #empirestatebuilding → "Empire State
+          Building"), poi cercato su Twitter/X, Reddit, Instagram, LinkedIn e YouTube. I contenuti
+          trovati sono ordinati per view ed engagement reali — non per hashtag.
         </p>
       </header>
 

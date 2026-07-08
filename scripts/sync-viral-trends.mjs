@@ -1,14 +1,15 @@
 // "Trend Virali": prende gli hashtag TikTok in trend (già sincronizzati
 // dalla pipeline tiktok-hashtag), li converte in keyword di ricerca
-// leggibili tramite Claude (es. "#empirestatebuilding" -> "Empire State
-// Building"), poi cerca quella keyword su YouTube + anysite (Twitter/
-// Reddit/Instagram/LinkedIn) — stessa logica di ricerca/normalizzazione di
+// leggibili separando le parole attaccate (es. "#empirestatebuilding" ->
+// "Empire State Building") tramite segmentazione offline a dizionario
+// (wordsninja, nessuna chiamata LLM/API — vedi hashtagsToKeywords), poi
+// cerca quella keyword su YouTube + anysite (Twitter/Reddit/Instagram/
+// LinkedIn) — stessa logica di ricerca/normalizzazione di
 // sync-brand-mentions.mjs (vedi scripts/lib/social-search.mjs) — e
 // sincronizza i contenuti trovati, con views/engagement reali, verso
 // viral_trend_content.
 //
 // Variabili d'ambiente:
-//   ANTHROPIC_API_KEY       richiesta, per la conversione hashtag -> keyword
 //   YOUTUBE_API_KEY         richiesta se "youtube" è tra le PLATFORMS
 //   ANYSITE_API_KEY         richiesta se una piattaforma anysite è tra le PLATFORMS
 //   PLATFORMS               csv, default: "youtube,twitter,reddit,instagram,linkedin"
@@ -22,7 +23,7 @@
 //
 // Eseguito da .github/workflows/sync-viral-trends.yml su schedule.
 
-import Anthropic from "@anthropic-ai/sdk";
+import WordsNinjaPack from "wordsninja";
 import {
   ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS,
   containsKeyword,
@@ -48,12 +49,6 @@ const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 const LANGUAGE = process.env.LANGUAGE ?? "it";
 const REGION = process.env.REGION ?? "IT";
 
-const anthropicApiKey = process.env.ANTHROPIC_API_KEY;
-if (!anthropicApiKey) {
-  console.error("Manca ANTHROPIC_API_KEY nell'ambiente.");
-  process.exit(1);
-}
-
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 if (PLATFORMS_TO_RUN.includes("youtube") && !youtubeApiKey) {
   console.error("Manca YOUTUBE_API_KEY nell'ambiente (richiesta da PLATFORMS include youtube).");
@@ -67,8 +62,6 @@ if (PLATFORMS_TO_RUN.some((p) => ANYSITE_PLATFORMS.includes(p)) && !anysiteApiKe
   process.exit(1);
 }
 
-const anthropic = new Anthropic({ apiKey: anthropicApiKey });
-
 async function fetchTopHashtags() {
   const res = await fetch(`${TOP_HASHTAGS_ENDPOINT}?limit=${MAX_HASHTAGS}`);
   if (!res.ok) {
@@ -79,33 +72,31 @@ async function fetchTopHashtags() {
   return data.hashtags ?? [];
 }
 
+const wordsNinja = new WordsNinjaPack();
+let wordsNinjaLoaded = false;
+
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 // Converte ogni hashtag TikTok in una keyword/frase di ricerca leggibile
-// (es. "#empirestatebuilding" -> "Empire State Building"), in un'unica
-// chiamata batch invece di una per hashtag.
+// separando le parole attaccate (es. "empirestatebuilding" -> "Empire State
+// Building") tramite segmentazione offline a dizionario — nessuna chiamata
+// LLM/API, nessun costo. Meno preciso di un LLM su nomi propri, acronimi o
+// parole non presenti nel dizionario (es. hashtag stilizzati come
+// "chkchkboom"), ma sufficiente per costruire una query di ricerca testuale.
 async function hashtagsToKeywords(hashtags) {
-  if (hashtags.length === 0) return [];
+  if (!wordsNinjaLoaded) {
+    await wordsNinja.loadDictionary();
+    wordsNinjaLoaded = true;
+  }
 
-  const response = await anthropic.messages.create({
-    model: "claude-opus-4-8",
-    max_tokens: 1024,
-    system:
-      "Converti hashtag TikTok in keyword di ricerca leggibili in linguaggio naturale, " +
-      "utili per cercare lo stesso argomento su Twitter/Reddit/Instagram/LinkedIn/YouTube. " +
-      'Esempio: "#empirestatebuilding" -> "Empire State Building". Mantieni acronimi noti ' +
-      "invariati. Rispondi SOLO con un array JSON di oggetti {hashtag, keyword}, senza altro testo.",
-    messages: [{ role: "user", content: JSON.stringify(hashtags) }],
+  return hashtags.map((hashtag) => {
+    const clean = hashtag.replace(/^#/, "");
+    const words = wordsNinja.splitSentence(clean);
+    const keyword = words.map(capitalize).join(" ");
+    return { hashtag, keyword: keyword || clean };
   });
-
-  const textBlock = response.content.find((b) => b.type === "text");
-  if (!textBlock) throw new Error("Risposta Claude senza contenuto testuale.");
-
-  const jsonText = textBlock.text
-    .trim()
-    .replace(/^```(?:json)?\n?/, "")
-    .replace(/\n?```$/, "");
-  const parsed = JSON.parse(jsonText);
-  if (!Array.isArray(parsed)) throw new Error("Risposta Claude non è un array JSON.");
-  return parsed.filter((p) => p && p.hashtag && p.keyword);
 }
 
 async function fetchContent(platform, keyword) {

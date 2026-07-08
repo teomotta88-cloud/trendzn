@@ -35,10 +35,11 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
     handlers: {
       // Riceve i contenuti raccolti dallo script GitHub Actions
       // (scripts/sync-viral-trends.mjs), che per ogni hashtag TikTok in
-      // trend cerca la keyword corrispondente (convertita via Claude) su
-      // YouTube + anysite, e li inserisce con supabaseAdmin — stesso pattern
-      // di sync-brand-mentions.ts ma senza sentiment/crisis-alert, che non
-      // hanno senso per keyword generiche non legate a un brand.
+      // trend cerca la keyword corrispondente (parole separate offline via
+      // wordsninja) su YouTube + anysite, e li inserisce con supabaseAdmin —
+      // stesso pattern di sync-brand-mentions.ts ma senza sentiment/
+      // crisis-alert, che non hanno senso per keyword generiche non legate
+      // a un brand.
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as {
