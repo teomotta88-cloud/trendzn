@@ -47,9 +47,17 @@ export async function listViralTrendContent(
   // caso si ripiega su created_at (quando NOI l'abbiamo sincronizzato per la
   // prima volta) invece di scartarlo o di lasciarlo passare sempre — un post
   // vecchio ma senza data nota non deve bypassare il filtro di recency.
+  //
+  // Soglia minima di engagement (1000, stessa usata da is_viral in
+  // normalizeAnysiteResult) per tagliare il rumore dei match deboli su
+  // Instagram — TikTok ha sempre engagement 0 (nessuna fonte gratuita per
+  // like/commenti, vedi fetchTikTokContent), quindi con questo filtro sparisce
+  // dal feed: non c'è modo di applicare la stessa soglia a una piattaforma
+  // che non ha questo dato.
   let query = supabase
     .from("viral_trend_content")
     .select("*")
+    .gt("engagement", 1000)
     .or(`published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`);
 
   if (filters.platform) query = query.eq("platform", filters.platform);
