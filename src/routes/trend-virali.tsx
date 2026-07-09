@@ -287,10 +287,15 @@ function Page() {
                 </p>
 
                 <div className="flex items-center gap-3 text-xs tabular-nums">
-                  <span className="inline-flex items-center gap-1">
-                    <Eye className="size-3 text-muted-foreground" />
-                    {formatCompactNumber(item.reach)}
-                  </span>
+                  {/* reach è null (non 0) per i post foto/carosello: Instagram non
+                      traccia le views per contenuti statici, non è un dato mancante
+                      da segnalare con un placeholder — l'indicatore va tolto del tutto. */}
+                  {item.reach != null && (
+                    <span className="inline-flex items-center gap-1">
+                      <Eye className="size-3 text-muted-foreground" />
+                      {formatCompactNumber(item.reach)}
+                    </span>
+                  )}
                   {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
                       "zero interazioni", non "dato non disponibile". */}
                   {item.platform !== "tiktok" && (

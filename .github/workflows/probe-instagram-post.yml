@@ -1,0 +1,34 @@
+name: Probe Instagram Post (diagnostico)
+
+# Workflow usa-e-getta: verifica se un post Instagram pubblico espone il
+# numero di like/commenti a un visitatore anonimo (senza login), aprendolo
+# con un browser reale (Playwright) invece di un fetch semplice — che
+# Instagram blocca subito. Nessuna pipeline lo usa ancora: serve solo a
+# raccogliere dati reali prima di decidere se costruirci sopra qualcosa.
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_url:
+        description: "URL completo del post Instagram pubblico da testare"
+        required: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Apri il post e stampa cosa si vede senza login
+        run: node scripts/probe-instagram-post.mjs "${{ github.event.inputs.post_url }}"
