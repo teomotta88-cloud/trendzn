@@ -1,0 +1,37 @@
+name: Recheck Viral Engagement (gratuito)
+
+# Ricontrolla like/commenti dei contenuti Instagram già scoperti da
+# sync-viral-trends.yml, via browsing pubblico anonimo (nessun credit
+# anysite, nessun login). Separato dalla discovery: può girare più spesso
+# perché non ha costo, a differenza della ricerca via anysite.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "Numero massimo di post Instagram da ricontrollare per run"
+        default: "150"
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Ricontrolla engagement Instagram
+        env:
+          MAX_POSTS: ${{ github.event.inputs.max_posts || '150' }}
+        run: node scripts/recheck-viral-engagement.mjs
