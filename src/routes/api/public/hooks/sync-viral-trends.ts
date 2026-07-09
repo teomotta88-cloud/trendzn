@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { computeViralityScore, VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin", "tiktok"] as const;
 type Platform = (typeof PLATFORMS)[number];
@@ -34,57 +35,6 @@ type IncomingRun = {
   started_at?: string;
   finished_at?: string;
 };
-
-// Finestra fissa (sempre 7 giorni, mai configurabile — vedi src/lib/viralTrends.ts)
-// sia per l'eleggibilità del contenuto nel feed sia per il calcolo della
-// variazione qui sotto: senza uno storico delle metriche non si può sapere
-// quanto un post è cresciuto, solo il suo valore attuale (per questo esiste
-// viral_trend_metrics_history, popolata in append, mai in upsert).
-const VIRALITY_WINDOW_DAYS = 7;
-const RECENCY_HALF_LIFE_HOURS = 48;
-
-type MetricsSnapshot = { engagement: number; reach: number | null; captured_at: string };
-
-// Punteggio di viralità: premia la crescita di views/engagement nella finestra
-// nota (non il valore assoluto — un post vecchio con molte view non è
-// "virale ora") più un bonus di recency rispetto alla pubblicazione. log1p
-// smorza gli outlier (un salto da 500k a 5M non deve pesare 10000x più di un
-// salto da 5 a 50) mantenendo comunque l'ordine di grandezza.
-function computeViralityScore({
-  engagement,
-  reach,
-  publishedAt,
-  oldest,
-}: {
-  engagement: number;
-  reach: number | null;
-  publishedAt: string;
-  oldest: MetricsSnapshot | null;
-}) {
-  const now = Date.now();
-  const elapsedHours = oldest
-    ? Math.max(1, (now - new Date(oldest.captured_at).getTime()) / 3_600_000)
-    : 1;
-
-  const deltaReach = oldest ? Math.max(0, (reach ?? 0) - (oldest.reach ?? 0)) : 0;
-  const deltaEngagement = oldest ? Math.max(0, engagement - oldest.engagement) : 0;
-
-  const velocityReach = Math.log1p(deltaReach) / elapsedHours;
-  const velocityEngagement = Math.log1p(deltaEngagement) / elapsedHours;
-  // Instagram non ha views per i post foto/carosello (reach resta null, non
-  // 0 — vedi normalizeAnysiteResult in scripts/lib/social-search.mjs): senza
-  // questo controllo engagement/max(reach,1) collassava a "engagement/1",
-  // cioè l'engagement grezzo (fino a decine di migliaia) invece di un
-  // rapporto, dominando l'intero punteggio per ogni post senza reach noto.
-  const engagementRate = reach != null && reach > 0 ? engagement / reach : 0;
-  const ageHours = Math.max(0, (now - new Date(publishedAt).getTime()) / 3_600_000);
-  const recencyBoost = Math.exp(-ageHours / RECENCY_HALF_LIFE_HOURS);
-
-  const viralityScore =
-    3 * velocityReach + 3 * velocityEngagement + 2 * engagementRate + 2 * recencyBoost;
-
-  return { viralityScore, deltaEngagement, deltaReach };
-}
 
 export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
   server: {
