@@ -25,6 +25,7 @@ export interface ViralTrendContent {
   reach: number | null;
   delta_engagement: number;
   delta_reach: number;
+  delta_since: string | null;
   delta_engagement_6h: number;
   is_viral: boolean;
   created_at: string;
