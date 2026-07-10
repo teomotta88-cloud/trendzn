@@ -1,0 +1,30 @@
+name: Probe Instagram Hashtag Campione Reale (diagnostico)
+
+# Workflow usa-e-getta: stima il tasso di successo reale della discovery
+# gratuita via pagina hashtag Instagram sui top-5 hashtag TikTok e i top-5
+# topic Google Trends attualmente prodotti dalla pipeline (non hashtag
+# scelti a caso) — serve prima di decidere se costruire la pipeline di
+# produzione (vedi probe-instagram-hashtags.mjs / probe-instagram-hashtag-fallback.mjs).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Testa hashtag reali senza login
+        run: node scripts/probe-instagram-hashtag-sample.mjs
