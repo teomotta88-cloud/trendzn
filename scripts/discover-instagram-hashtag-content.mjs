@@ -53,6 +53,18 @@ const MAX_POSTS_PER_HASHTAG = parseInt(process.env.MAX_POSTS_PER_HASHTAG ?? "100
 const RECENCY_WINDOW_DAYS = parseInt(process.env.RECENCY_WINDOW_DAYS ?? "7", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "1500", 10);
 
+// Instagram blocca (redirect login/challenge su ogni pagina-post successiva)
+// una sessione Playwright dopo troppe richieste di dettaglio consecutive —
+// confermato su un run reale: 0 blocchi nei primi ~500 (10 hashtag), poi
+// 100% bloccato dall'11° in poi. SHARD_COUNT/SHARD_INDEX permettono di
+// dividere gli hashtag monitorati tra più job del workflow (vedi
+// discover-instagram-hashtag-content.yml, matrix), ognuno con il proprio
+// runner (quindi IP) e la propria sessione Playwright pulita — dimezzando
+// (o dividendo per N) sia il numero di richieste per sessione sia il tempo
+// totale del run, invece di farle tutte in una sessione unica.
+const SHARD_COUNT = parseInt(process.env.SHARD_COUNT ?? "1", 10);
+const SHARD_INDEX = parseInt(process.env.SHARD_INDEX ?? "0", 10);
+
 // Nessun nuovo link da questi scroll consecutivi = pagina esaurita, non ha
 // senso continuare a scorrere (né aspettarsi mai di arrivare a MAX_POSTS_PER_HASHTAG
 // per hashtag con poco contenuto).
@@ -210,12 +222,25 @@ console.log("=== TRENDZN — Discovery gratuita Instagram via pagina hashtag ===
 const topics = await fetchMonitoredTopics();
 console.log(`Topic monitorati: ${topics.length}`);
 
-const attempts = topics
+const allAttempts = topics
   .map((topic) => ({ topic, hashtag: hashtagForTopic(topic) }))
-  .filter((a) => a.hashtag !== null);
+  .filter((a) => a.hashtag !== null)
+  // Ordine deterministico (l'API non garantisce un ordine stabile tra
+  // chiamate separate, una per job): senza questo, due job con
+  // SHARD_COUNT=2 potrebbero finire per processare hashtag sovrapposti o
+  // saltarne alcuni se l'ordine cambia da una chiamata all'altra.
+  .sort((a, b) => a.hashtag.localeCompare(b.hashtag));
 console.log(
-  `Hashtag da provare: ${attempts.length} (esclusi ${topics.length - attempts.length}: audio non ancora implementato o keyword Google Trends di più di ${MAX_GOOGLE_TRENDS_WORDS} parole)`,
+  `Hashtag da provare: ${allAttempts.length} (esclusi ${topics.length - allAttempts.length}: audio non ancora implementato o keyword Google Trends di più di ${MAX_GOOGLE_TRENDS_WORDS} parole)`,
 );
+
+const attempts =
+  SHARD_COUNT > 1 ? allAttempts.filter((_, i) => i % SHARD_COUNT === SHARD_INDEX) : allAttempts;
+if (SHARD_COUNT > 1) {
+  console.log(
+    `Shard ${SHARD_INDEX + 1}/${SHARD_COUNT}: ${attempts.length} hashtag assegnati a questo job`,
+  );
+}
 
 if (attempts.length === 0) {
   console.log("Nulla da provare.");
