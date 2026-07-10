@@ -70,3 +70,23 @@ export function computeTopicGrowth({
     engagementSignificant: engagement.significant,
   };
 }
+
+// Segnale di viralità marcata: non basta che uno dei due cresca, devono
+// crescere ENTRAMBI — più contenuti pubblicati E più interazioni totali su
+// quei contenuti, nella stessa finestra. Un hashtag con solo più contenuti
+// (tanti post mediocri) o solo più engagement (pochi post che esplodono, ma
+// il volume complessivo resta piatto) non basta: è la combinazione a essere
+// un segnale forte. Pura funzione di due numeri già calcolati da
+// computeTopicGrowth — nessun dato nuovo da salvare, va richiamata dove
+// servono entrambi i valori (vedi TopicCard in src/routes/trend-virali.tsx).
+export function isStrongGrowthSignal(
+  volumeGrowthPct: number | null,
+  engagementGrowthPct: number | null,
+): boolean {
+  return (
+    volumeGrowthPct != null &&
+    volumeGrowthPct >= GROWTH_THRESHOLD_PCT &&
+    engagementGrowthPct != null &&
+    engagementGrowthPct >= GROWTH_THRESHOLD_PCT
+  );
+}

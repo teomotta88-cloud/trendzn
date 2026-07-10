@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { Search, Eye, Heart, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { Search, Eye, Heart, TrendingUp, TrendingDown, Minus, Flame } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -23,7 +23,7 @@ import {
   type ViralTrendContent,
 } from "@/lib/viralTrends";
 import { listMonitoredTopics, type MonitoredTopic } from "@/lib/monitoredTopics";
-import { GROWTH_THRESHOLD_PCT } from "@/lib/topicGrowth";
+import { GROWTH_THRESHOLD_PCT, isStrongGrowthSignal } from "@/lib/topicGrowth";
 
 export const Route = createFileRoute("/trend-virali")({
   head: () => ({
@@ -137,26 +137,54 @@ function GrowthIndicator({ pct }: { pct: number | null }) {
   );
 }
 
+// "Marcata" = crescono ENTRAMBI volume ed engagement, non solo uno dei due
+// (vedi isStrongGrowthSignal in src/lib/topicGrowth.ts) — più contenuti
+// pubblicati E più interazioni totali su quei contenuti nella stessa
+// finestra è un segnale più forte di uno solo dei due che cresce da solo.
 function TopicCard({ topic }: { topic: MonitoredTopic }) {
   const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
+  const strongSignal = isStrongGrowthSignal(topic.volume_growth_pct, topic.engagement_growth_pct);
 
   return (
-    <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-3 py-2.5">
-      <div className="min-w-0">
-        <p className="truncate text-sm font-medium text-foreground">{label}</p>
-        <p className="text-[11px] text-muted-foreground">
-          {topic.latest_content_volume != null ? (
-            <>
-              {topic.latest_is_volume_exact ? "" : "~"}
-              {formatCompactNumber(topic.latest_content_volume)} contenuti
-              {topic.growth_platform === "instagram" ? " (campione Instagram)" : ""}
-            </>
-          ) : (
-            "Volume non ancora rilevato"
-          )}
-        </p>
+    <div
+      className={`flex flex-col gap-2 rounded-xl border px-3 py-2.5 ${
+        strongSignal ? "border-orange-500/60 bg-orange-500/5" : "border-border bg-card"
+      }`}
+    >
+      <div className="flex items-start justify-between gap-2">
+        <p className="min-w-0 truncate text-sm font-medium text-foreground">{label}</p>
+        {strongSignal && (
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange-600 dark:text-orange-400">
+            <Flame className="size-3" />
+            Viralità marcata
+          </span>
+        )}
       </div>
-      <GrowthIndicator pct={topic.volume_growth_pct} />
+
+      <p className="text-[11px] text-muted-foreground">
+        {topic.latest_content_volume != null ? (
+          <>
+            {topic.latest_is_volume_exact ? "" : "~"}
+            {formatCompactNumber(topic.latest_content_volume)} contenuti
+            {topic.growth_platform === "instagram" ? " (campione Instagram)" : ""}
+          </>
+        ) : (
+          "Volume non ancora rilevato"
+        )}
+      </p>
+
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+        <div className="flex items-center gap-1.5">
+          <span className="text-[10px] uppercase tracking-wide text-muted-foreground">Volumi</span>
+          <GrowthIndicator pct={topic.volume_growth_pct} />
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="text-[10px] uppercase tracking-wide text-muted-foreground">
+            Engagement
+          </span>
+          <GrowthIndicator pct={topic.engagement_growth_pct} />
+        </div>
+      </div>
     </div>
   );
 }
