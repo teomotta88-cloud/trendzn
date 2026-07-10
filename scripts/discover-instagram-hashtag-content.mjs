@@ -226,6 +226,11 @@ const session = await openInstagramMetricsSession();
 let succeeded = 0;
 let failed = 0;
 let totalContentSynced = 0;
+// Conteggio globale dei motivi di fallimento su fetchMetricsDetailed — se
+// "login-wall" domina verso la fine del run è un segnale di rate-limiting/
+// blocco lato Instagram dopo troppe richieste consecutive dalla stessa
+// sessione, non un problema di parsing del singolo post.
+const failReasonCounts = {};
 
 try {
   for (const { topic, hashtag } of attempts) {
@@ -248,10 +253,11 @@ try {
     console.log(`  ${result.links.length} contenuti trovati, recupero engagement e data...`);
     const contents = [];
     let skippedOld = 0;
+    const hashtagFailReasons = {};
     for (const url of result.links) {
       const externalId = extractExternalId(url);
       if (!externalId) continue;
-      const metrics = await session.fetchMetrics(url);
+      const { metrics, reason } = await session.fetchMetricsDetailed(url);
       if (metrics) {
         if (isWithinRecencyWindow(metrics.publishedAt)) {
           contents.push({
@@ -264,8 +270,18 @@ try {
         } else {
           skippedOld++;
         }
+      } else if (reason) {
+        hashtagFailReasons[reason] = (hashtagFailReasons[reason] ?? 0) + 1;
+        failReasonCounts[reason] = (failReasonCounts[reason] ?? 0) + 1;
       }
       await sleep(DELAY_MS);
+    }
+    const unreachable = Object.values(hashtagFailReasons).reduce((a, b) => a + b, 0);
+    if (unreachable > 0) {
+      const breakdown = Object.entries(hashtagFailReasons)
+        .map(([r, n]) => `${r}: ${n}`)
+        .join(", ");
+      console.log(`  Non raggiungibili: ${unreachable}/${result.links.length} (${breakdown})`);
     }
 
     // Volume ed engagement dell'hashtag riflettono SOLO i contenuti nella
@@ -293,3 +309,10 @@ try {
 console.log(
   `\n=== Riepilogo: ${succeeded}/${attempts.length} hashtag riusciti, ${failed} falliti, ${totalContentSynced} contenuti sincronizzati ===`,
 );
+const totalUnreachable = Object.values(failReasonCounts).reduce((a, b) => a + b, 0);
+if (totalUnreachable > 0) {
+  const breakdown = Object.entries(failReasonCounts)
+    .map(([r, n]) => `${r}: ${n}`)
+    .join(", ");
+  console.log(`Post non raggiungibili nell'intero run: ${totalUnreachable} (${breakdown})`);
+}
