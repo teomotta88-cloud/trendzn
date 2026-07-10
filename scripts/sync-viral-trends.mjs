@@ -166,6 +166,7 @@ async function registerMonitoredTopics(tiktokMappings, trendsMappings) {
     const data = await res.json();
     if (!data.ok) throw new Error(`monitor-topics error: ${data.error}`);
 
+    console.log(`Topic registrati per il monitoraggio: ${data.topics?.length ?? 0}`);
     return new Map((data.topics ?? []).map((t) => [`${t.topicType}:${t.value}`, t.id]));
   } catch (err) {
     console.error(
@@ -175,6 +176,13 @@ async function registerMonitoredTopics(tiktokMappings, trendsMappings) {
   }
 }
 
+// Log diagnostico temporaneo: il 10/07/2026 un run con MAX_HASHTAGS/MAX_TRENDS
+// a 15 ha restituito 0 risultati Instagram su 18/18 keyword cercate (incluse
+// keyword molto comuni come "Ronaldo" e "Ultimo") — searchAnysite() non ha
+// lanciato errori, quindi la richiesta è andata a buon fine: la perdita
+// avviene da qualche parte nei filtri sotto (lingua o keyword-nel-testo), non
+// nell'API. Questi conteggi servono a capire quale filtro azzera tutto,
+// prima di toccare la logica alla cieca.
 async function fetchInstagramContent(keyword) {
   const results = await searchAnysite({
     apiKey: anysiteApiKey,
@@ -186,12 +194,27 @@ async function fetchInstagramContent(keyword) {
   let items = results.map((item) =>
     normalizeAnysiteResult({ platform: "instagram", keyword, item }),
   );
+  const rawCount = items.length;
+  // Sia looksItalian() che containsKeyword() scartano subito un content
+  // vuoto: se normalizeAnysiteResult non trova nessuno dei campi noti
+  // (text/content/caption/title/body) nel payload anysite, ogni risultato
+  // ha content="" e viene perso qui, indipendentemente da lingua o keyword.
+  const withContentCount = items.filter((m) => m.content).length;
 
   if (ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS.includes("instagram")) {
     items = items.filter((m) => looksItalian(m.content));
   }
+  const afterLanguageCount = items.length;
 
-  return items.filter((m) => containsKeyword(m.content, keyword));
+  const final = items.filter((m) => containsKeyword(m.content, keyword));
+  console.log(
+    `    [diagnostica] anysite: ${rawCount} raw (${withContentCount} con content non vuoto) -> ${afterLanguageCount} dopo filtro lingua -> ${final.length} dopo filtro keyword-nel-testo`,
+  );
+  if (rawCount > 0 && final.length === 0) {
+    console.log(`    [diagnostica] primo raw item: ${JSON.stringify(results[0]).slice(0, 500)}`);
+  }
+
+  return final;
 }
 
 // Gli ID dei video TikTok sono "snowflake" (stesso schema usato in
