@@ -1,0 +1,35 @@
+name: Probe Instagram Hashtag (diagnostico)
+
+# Workflow usa-e-getta: verifica cosa espone pubblicamente (senza login) una
+# pagina di ricerca/hashtag di Instagram — post, link, eventuale engagement —
+# aprendola con un browser reale (Playwright). Nessuna pipeline lo usa
+# ancora: serve solo a raccogliere dati reali prima di decidere se costruirci
+# sopra qualcosa (alternativa/complemento alla ricerca via anysite).
+
+on:
+  workflow_dispatch:
+    inputs:
+      page_url:
+        description: "URL completo della pagina Instagram da testare (ricerca hashtag, /explore/tags/..., ecc.)"
+        required: true
+        default: "https://www.instagram.com/explore/search/keyword/?q=%23whattoeat"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Apri la pagina e stampa cosa si vede senza login
+        run: node scripts/probe-instagram-hashtag.mjs "${{ github.event.inputs.page_url }}"
