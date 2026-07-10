@@ -1,0 +1,36 @@
+name: Probe Instagram Hashtag Multipli (diagnostico)
+
+# Workflow usa-e-getta: confronta più hashtag Instagram fianco a fianco per
+# verificare se /explore/tags/<tag>/ (che fa redirect a /popular/<tag>/,
+# renderizzato lato server) espone in modo stabile link a reel reali senza
+# login, e se il numero accanto a ogni autore è coerente con un follower
+# count. Nessuna pipeline lo usa ancora: serve solo a raccogliere dati reali
+# prima di decidere se costruirci sopra una discovery gratuita per hashtag.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtags:
+        description: "Hashtag da testare, separati da virgola (senza #)"
+        required: true
+        default: "whattoeat,foodtiktok,recipe"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Confronta più hashtag senza login
+        run: node scripts/probe-instagram-hashtags.mjs "${{ github.event.inputs.hashtags }}"
