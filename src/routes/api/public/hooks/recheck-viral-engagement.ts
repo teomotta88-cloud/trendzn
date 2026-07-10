@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { computeViralityScore, VIRALITY_WINDOW_DAYS } from "@/lib/virality";
+import {
+  computeDeltaMetrics,
+  computePostVirality,
+  VIRALITY_WINDOW_DAYS,
+  VIRAL_DELTA_WINDOW_HOURS,
+} from "@/lib/virality";
 
 type IncomingUpdate = {
   platform: string;
@@ -15,8 +20,9 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
       // (browsing pubblico anonimo via Playwright, nessun credit anysite) per
       // contenuti Instagram già presenti in viral_trend_content. Aggiorna
       // engagement con likes+comments, inserisce uno snapshot in
-      // viral_trend_metrics_history e ricalcola virality_score — stesso
-      // meccanismo di sync-viral-trends.ts, stessa formula (src/lib/virality.ts).
+      // viral_trend_metrics_history e ricalcola la viralità del post —
+      // stesso meccanismo di sync-viral-trends.ts, stesse regole
+      // (src/lib/virality.ts).
       //
       // Nota: engagement qui è likes+comments, senza reshare (non recuperabile
       // da un visitatore anonimo — vedi instagram-public-metrics.mjs). Se il
@@ -33,6 +39,9 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
 
           const windowStart = new Date(
             Date.now() - VIRALITY_WINDOW_DAYS * 24 * 60 * 60 * 1000,
+          ).toISOString();
+          const viralWindowStart = new Date(
+            Date.now() - VIRAL_DELTA_WINDOW_HOURS * 60 * 60 * 1000,
           ).toISOString();
 
           let updated = 0;
@@ -62,20 +71,33 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
               .order("captured_at", { ascending: true })
               .limit(1);
 
-            const { viralityScore, deltaEngagement, deltaReach } = computeViralityScore({
+            const { data: oldestWithin6hRows } = await supabaseAdmin
+              .from("viral_trend_metrics_history")
+              .select("engagement, reach, captured_at")
+              .eq("content_id", row.id)
+              .gte("captured_at", viralWindowStart)
+              .order("captured_at", { ascending: true })
+              .limit(1);
+
+            const { deltaEngagement, deltaReach } = computeDeltaMetrics({
               engagement,
               reach: row.reach,
-              publishedAt: row.published_at ?? row.created_at,
               oldest: oldestRows?.[0] ?? null,
+            });
+
+            const { isViral, deltaEngagement6h } = computePostVirality({
+              engagement,
+              oldestWithin6h: oldestWithin6hRows?.[0] ?? null,
             });
 
             await supabaseAdmin
               .from("viral_trend_content")
               .update({
                 engagement,
-                virality_score: viralityScore,
                 delta_engagement: deltaEngagement,
                 delta_reach: deltaReach,
+                delta_engagement_6h: deltaEngagement6h,
+                is_viral: isViral,
               })
               .eq("id", row.id);
 

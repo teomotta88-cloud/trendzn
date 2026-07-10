@@ -229,7 +229,11 @@ async function fetchTikTokContent(hashtag, keyword) {
         keyword_matched: keyword,
         engagement: 0,
         reach: post.views ?? null,
-        is_viral: (post.views ?? 0) > 100_000,
+        // Nessun is_viral qui: la regola di viralità (Fase 7, vedi
+        // computePostVirality in src/lib/virality.ts) è basata su
+        // engagement, sempre 0 per TikTok — sync-viral-trends.ts la
+        // ricalcola comunque per ogni contenuto, un valore qui verrebbe
+        // sovrascritto subito.
         raw: null,
       };
     })

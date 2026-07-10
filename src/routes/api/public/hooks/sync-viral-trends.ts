@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { computeViralityScore, VIRALITY_WINDOW_DAYS } from "@/lib/virality";
+import {
+  computeDeltaMetrics,
+  computePostVirality,
+  VIRALITY_WINDOW_DAYS,
+  VIRAL_DELTA_WINDOW_HOURS,
+} from "@/lib/virality";
 
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin", "tiktok"] as const;
 type Platform = (typeof PLATFORMS)[number];
@@ -49,9 +54,10 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
       // TikTok), e li inserisce con supabaseAdmin — stesso pattern di
       // sync-brand-mentions.ts ma senza sentiment/crisis-alert, che non
       // hanno senso per keyword generiche non legate a un brand. Dopo
-      // l'upsert calcola anche il punteggio di viralità (vedi
-      // computeViralityScore sopra), confrontando col valore più vecchio
-      // noto negli ultimi 7 giorni in viral_trend_metrics_history.
+      // l'upsert calcola anche la viralità del post (vedi
+      // computePostVirality in src/lib/virality.ts): soglie esplicite
+      // (delta_engagement_6h > 1000 oppure engagement totale > 5000), non
+      // più un punteggio continuo.
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as {
@@ -104,15 +110,20 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
             }
             inserted = data?.length ?? 0;
 
-            // Uno snapshot per ogni post appena scritto, poi si ricalcola il
-            // punteggio di viralità confrontando col valore più vecchio noto
-            // nella finestra di 7 giorni (vedi computeViralityScore sopra).
-            // Alla prima volta che un post viene visto non esiste ancora uno
-            // snapshot precedente: il punteggio riflette solo recency ed
-            // engagement-rate, il delta di crescita comparirà dal prossimo
-            // sync in cui questo stesso post viene ritrovato.
+            // Uno snapshot per ogni post appena scritto, poi si ricalcolano
+            // due cose separate: la "Variazione (7gg)" mostrata in UI
+            // (computeDeltaMetrics, confrontando col valore più vecchio
+            // noto negli ultimi 7 giorni) e la viralità vera e propria
+            // (computePostVirality, finestra molto più stretta di 6 ore).
+            // Alla prima volta che un post viene visto non esiste ancora
+            // nessuno snapshot precedente in nessuna delle due finestre: i
+            // delta restano 0, compariranno dal prossimo sync in cui questo
+            // stesso post viene ritrovato.
             const windowStart = new Date(
               Date.now() - VIRALITY_WINDOW_DAYS * 24 * 60 * 60 * 1000,
+            ).toISOString();
+            const viralWindowStart = new Date(
+              Date.now() - VIRAL_DELTA_WINDOW_HOURS * 60 * 60 * 1000,
             ).toISOString();
 
             for (const row of data ?? []) {
@@ -130,19 +141,32 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 .order("captured_at", { ascending: true })
                 .limit(1);
 
-              const { viralityScore, deltaEngagement, deltaReach } = computeViralityScore({
+              const { data: oldestWithin6hRows } = await supabaseAdmin
+                .from("viral_trend_metrics_history")
+                .select("engagement, reach, captured_at")
+                .eq("content_id", row.id)
+                .gte("captured_at", viralWindowStart)
+                .order("captured_at", { ascending: true })
+                .limit(1);
+
+              const { deltaEngagement, deltaReach } = computeDeltaMetrics({
                 engagement: row.engagement,
                 reach: row.reach,
-                publishedAt: row.published_at ?? row.created_at,
                 oldest: oldestRows?.[0] ?? null,
+              });
+
+              const { isViral, deltaEngagement6h } = computePostVirality({
+                engagement: row.engagement,
+                oldestWithin6h: oldestWithin6hRows?.[0] ?? null,
               });
 
               await supabaseAdmin
                 .from("viral_trend_content")
                 .update({
-                  virality_score: viralityScore,
                   delta_engagement: deltaEngagement,
                   delta_reach: deltaReach,
+                  delta_engagement_6h: deltaEngagement6h,
+                  is_viral: isViral,
                 })
                 .eq("id", row.id);
             }
