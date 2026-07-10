@@ -108,6 +108,25 @@ function parseCount(text) {
   return Math.round(n);
 }
 
+// Il testo dopo "... on <data>: " è la didascalia vera e propria, tra
+// virgolette — usa lo stesso DATE_PATTERN già confermato per la data, così
+// non serve un secondo pattern da tenere allineato. Se il pattern data non
+// combacia (altra lingua, formato diverso) ripiega su tutto ciò che segue il
+// primo " - ": include ancora il nome autore, meno pulito ma comunque
+// sufficiente per un filtro lingua (vedi looksItalian in
+// discover-instagram-hashtag-content.mjs) — meglio di niente.
+function extractCaption(description) {
+  const dateMatch = description.match(DATE_PATTERN);
+  if (dateMatch) {
+    return description
+      .slice(dateMatch.index + dateMatch[0].length)
+      .trim()
+      .replace(/^"|"$/g, "");
+  }
+  const dashIndex = description.indexOf(" - ");
+  return dashIndex === -1 ? description : description.slice(dashIndex + 3).trim();
+}
+
 // Un solo browser per l'intera sessione di ricontrollo (aprirne uno per post
 // sarebbe molto più lento): fetchMetrics() apre e chiude solo la scheda.
 export async function openInstagramMetricsSession() {
@@ -159,8 +178,9 @@ export async function openInstagramMetricsSession() {
       if (likes == null || comments == null) return { metrics: null, reason: "count-parse-fail" };
 
       const publishedAt = isoDatetime ?? parseDescriptionDate(description);
+      const caption = extractCaption(description);
 
-      return { metrics: { likes, comments, publishedAt }, reason: null };
+      return { metrics: { likes, comments, publishedAt, caption }, reason: null };
     } catch (err) {
       console.error(`  Errore su ${url}: ${String(err)}`);
       return { metrics: null, reason: `error:${String(err)}` };
