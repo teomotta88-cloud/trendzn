@@ -118,19 +118,27 @@ export async function openInstagramMetricsSession() {
     viewport: { width: 1280, height: 900 },
   });
 
-  // null quando il post non è più raggiungibile pubblicamente (account
-  // diventato privato, post rimosso, formato del meta tag cambiato) — non
-  // deve mai interrompere il ricontrollo degli altri post del batch.
+  // Versione diagnostica: ritorna sempre { metrics, reason }, con reason
+  // popolato solo quando metrics è null — permette a chi chiama di capire
+  // SE e PERCHÉ un post ha fallito (login wall/challenge vs meta tag assente
+  // vs formato non riconosciuto), invece del solo null che nasconde la causa.
+  // fetchMetrics() sotto resta invariata per non rompere i chiamanti
+  // esistenti (recheck-viral-engagement.mjs), che si fidano di null =
+  // "post non raggiungibile" senza bisogno del motivo.
   //
   // publishedAt: prova prima l'elemento <time datetime="..."> (ISO, non
   // dipende dalla lingua — se Instagram lo espone è la fonte più affidabile),
   // poi ripiega sulla data testuale nella description. null se nessuna delle
   // due funziona: meglio "data sconosciuta" (il chiamante decide come
   // trattarla) che una data indovinata.
-  async function fetchMetrics(url) {
+  async function fetchMetricsDetailed(url) {
     const page = await context.newPage();
     try {
       await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+
+      if (/\/(accounts\/login|challenge)/.test(page.url())) {
+        return { metrics: null, reason: "login-wall" };
+      }
 
       const isoDatetime = await page
         .$eval("time[datetime]", (el) => el.getAttribute("datetime"))
@@ -141,24 +149,29 @@ export async function openInstagramMetricsSession() {
           el.getAttribute("content"),
         )
         .catch(() => null);
-      if (!description) return null;
+      if (!description) return { metrics: null, reason: "no-description" };
 
       const match = description.match(DESCRIPTION_PATTERN);
-      if (!match) return null;
+      if (!match) return { metrics: null, reason: "pattern-mismatch" };
 
       const likes = parseCount(match[1]);
       const comments = parseCount(match[2]);
-      if (likes == null || comments == null) return null;
+      if (likes == null || comments == null) return { metrics: null, reason: "count-parse-fail" };
 
       const publishedAt = isoDatetime ?? parseDescriptionDate(description);
 
-      return { likes, comments, publishedAt };
+      return { metrics: { likes, comments, publishedAt }, reason: null };
     } catch (err) {
       console.error(`  Errore su ${url}: ${String(err)}`);
-      return null;
+      return { metrics: null, reason: `error:${String(err)}` };
     } finally {
       await page.close();
     }
+  }
+
+  async function fetchMetrics(url) {
+    const { metrics } = await fetchMetricsDetailed(url);
+    return metrics;
   }
 
   async function close() {
@@ -169,5 +182,5 @@ export async function openInstagramMetricsSession() {
   // post/reel nella stessa sessione (es. la pagina hashtag per la discovery,
   // vedi scripts/discover-instagram-hashtag-content.mjs) — un solo browser
   // per l'intero run invece di aprirne uno per scopo.
-  return { context, fetchMetrics, close };
+  return { context, fetchMetrics, fetchMetricsDetailed, close };
 }
