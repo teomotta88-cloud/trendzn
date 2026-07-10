@@ -30,6 +30,11 @@ const candidates = [
     label: "web/search/topsearch JSON",
     url: `https://www.instagram.com/web/search/topsearch/?query=${encodeURIComponent("#" + tag)}`,
   },
+  {
+    label:
+      "explore/search/keyword (SPA — già visto fallire con 'Something went wrong' su #whattoeat)",
+    url: `https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent("#" + tag)}`,
+  },
 ];
 
 const browser = await chromium.launch({ headless: true });
