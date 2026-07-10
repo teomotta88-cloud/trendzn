@@ -2,9 +2,11 @@ name: Sync Trend Virali
 
 on:
   schedule:
-    # Una volta al giorno, qualche ora dopo la sync TikTok Trending IT
-    # (00:00/12:00 UTC) cosi' gli hashtag da convertire sono freschi.
-    - cron: "0 3 * * *"
+    # Ogni 6 ore: aumentato da una volta al giorno (Trend Virali v2) per una
+    # finestra di rilevazione più stretta. Coinvolge anysite (a pagamento,
+    # ~4x il costo precedente) — cadenza scelta esplicitamente dall'utente,
+    # vedi supabase/migrations/20260710120000_monitored_topics.sql.
+    - cron: "0 */6 * * *"
   workflow_dispatch:
     inputs:
       max_hashtags:

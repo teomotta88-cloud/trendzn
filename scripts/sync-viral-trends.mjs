@@ -45,7 +45,7 @@
 //
 // Eseguito da .github/workflows/sync-viral-trends.yml su schedule.
 
-import { hashtagToKeyword } from "./lib/word-segment.mjs";
+import { hashtagToKeyword, keywordToHashtag } from "./lib/word-segment.mjs";
 import { convertHashtagsToKeywords } from "./lib/openrouter.mjs";
 import { fetchGoogleTrendsIT } from "./lib/google-trends.mjs";
 import {
@@ -61,6 +61,7 @@ const TOP_HASHTAGS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/top-
 const TIKTOK_HASHTAG_POSTS_ENDPOINT =
   "https://trendzn.lovable.app/api/public/hooks/tiktok-hashtag-posts";
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-viral-trends";
+const MONITOR_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/monitor-topics";
 
 const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "5", 10);
 const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "5", 10);
@@ -130,6 +131,47 @@ async function fetchGoogleTrendsKeywords() {
   } catch (err) {
     console.error(`Google Trends fallito, proseguo solo con gli hashtag TikTok: ${String(err)}`);
     return [];
+  }
+}
+
+// Registra i topic dei top-5 di entrambe le fonti in monitored_topics
+// (vedi src/routes/api/public/hooks/monitor-topics.ts): ogni run "rinnova"
+// il monitoraggio dei topic ancora in classifica (last_seen_in_top5_at +
+// monitoring_stops_at aggiornati), quelli usciti dai top-5 smettono di
+// essere rinnovati e scadono da soli dopo 24h. Best-effort: se l'endpoint
+// fallisce, il resto della pipeline deve continuare comunque (i contenuti
+// verranno sincronizzati senza topic_id, recuperabile al prossimo run).
+async function registerMonitoredTopics(tiktokMappings, trendsMappings) {
+  const topics = [
+    ...tiktokMappings.map((m) => ({
+      topicType: "tiktok-hashtag",
+      value: m.hashtag,
+      derivedKeyword: m.keyword,
+    })),
+    ...trendsMappings.map((m) => ({
+      topicType: "google-trends",
+      value: m.keyword,
+      derivedHashtag: keywordToHashtag(m.keyword),
+    })),
+  ];
+  if (topics.length === 0) return new Map();
+
+  try {
+    const res = await fetch(MONITOR_TOPICS_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ topics }),
+    });
+    if (!res.ok) throw new Error(`monitor-topics failed (${res.status}): ${await res.text()}`);
+    const data = await res.json();
+    if (!data.ok) throw new Error(`monitor-topics error: ${data.error}`);
+
+    return new Map((data.topics ?? []).map((t) => [`${t.topicType}:${t.value}`, t.id]));
+  } catch (err) {
+    console.error(
+      `Registrazione monitored_topics fallita, proseguo senza topic_id: ${String(err)}`,
+    );
+    return new Map();
   }
 }
 
@@ -224,6 +266,12 @@ console.log(
   `Google Trends IT (top ${MAX_TRENDS}): ${trendsMappings.map((m) => m.keyword).join(", ") || "(nessuno)"}`,
 );
 
+// Registra TUTTI i top-5 di entrambe le fonti nel ciclo di vita di
+// monitoraggio (monitored_topics), prima del dedup qui sotto: il dedup
+// serve solo a evitare una ricerca doppia su Instagram, non deve escludere
+// un topic dal monitoraggio.
+const topicIds = await registerMonitoredTopics(tiktokMappings, trendsMappings);
+
 // Se TikTok e Google Trends convergono sullo stesso argomento non ha senso
 // cercarlo due volte su Instagram: tiene la keyword TikTok (già passata per
 // la conversione hashtag->keyword) e scarta il duplicato da Google Trends.
@@ -244,7 +292,7 @@ console.log("Piattaforme: instagram, tiktok (solo per topic da hashtag TikTok)")
 let totalInserted = 0;
 const summary = [];
 
-async function syncSource(hashtag, keyword, platform, discoverySource, fetchFn) {
+async function syncSource(hashtag, keyword, platform, discoverySource, topicId, fetchFn) {
   const startedAt = new Date().toISOString();
   console.log(`\n[${platform}/${discoverySource}] #${hashtag} -> "${keyword}"`);
   try {
@@ -252,7 +300,12 @@ async function syncSource(hashtag, keyword, platform, discoverySource, fetchFn) 
     console.log(`  Trovati ${contents.length} contenuti`);
 
     const result = await sendToHook(
-      contents.map((c) => ({ ...c, source_hashtag: hashtag, discovery_source: discoverySource })),
+      contents.map((c) => ({
+        ...c,
+        source_hashtag: hashtag,
+        discovery_source: discoverySource,
+        topic_id: topicId ?? null,
+      })),
       {
         source_hashtag: hashtag,
         keyword_matched: keyword,
@@ -295,14 +348,15 @@ async function syncSource(hashtag, keyword, platform, discoverySource, fetchFn) 
 }
 
 for (const { hashtag, keyword, discoverySource } of mappings) {
-  await syncSource(hashtag, keyword, "instagram", discoverySource, () =>
+  const topicId = topicIds.get(`${discoverySource}:${hashtag}`);
+  await syncSource(hashtag, keyword, "instagram", discoverySource, topicId, () =>
     fetchInstagramContent(keyword),
   );
   // I video TikTok riusati (fonte 1) esistono solo per l'hashtag TikTok
   // esatto raccolto dalla pipeline tiktok-hashtag: un topic Google Trends
   // (fonte 2) non è un hashtag TikTok, quindi non ha video da riusare qui.
   if (discoverySource === "tiktok-hashtag") {
-    await syncSource(hashtag, keyword, "tiktok", discoverySource, () =>
+    await syncSource(hashtag, keyword, "tiktok", discoverySource, topicId, () =>
       fetchTikTokContent(hashtag, keyword),
     );
   }

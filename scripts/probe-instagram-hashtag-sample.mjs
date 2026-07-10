@@ -15,20 +15,10 @@
 
 import { chromium } from "playwright";
 import { fetchGoogleTrendsIT } from "./lib/google-trends.mjs";
+import { keywordToHashtag } from "./lib/word-segment.mjs";
 
 const TOP_HASHTAGS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/top-tiktok-hashtags";
 const MAX_PER_SOURCE = 5;
-
-// Stessa euristica minimale usata per costruire un hashtag da una frase
-// Google Trends in linguaggio naturale (es. "Milan Napoli biglietti" ->
-// "milannapolibiglietti") — nessun LLM coinvolto, è solo per il probe.
-function keywordToHashtag(keyword) {
-  return keyword
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, "");
-}
 
 async function fetchTikTokHashtags() {
   try {

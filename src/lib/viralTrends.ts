@@ -4,7 +4,7 @@ import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 export const VIRAL_PLATFORMS = ["instagram", "tiktok"] as const;
 export type ViralPlatform = (typeof VIRAL_PLATFORMS)[number];
 
-export const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends"] as const;
+export const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
 export type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
 export { VIRALITY_WINDOW_DAYS };
@@ -20,6 +20,7 @@ export interface ViralTrendContent {
   source_hashtag: string;
   keyword_matched: string;
   discovery_source: DiscoverySource;
+  topic_id: string | null;
   engagement: number;
   reach: number | null;
   delta_engagement: number;

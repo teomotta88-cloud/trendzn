@@ -4,7 +4,7 @@ import { computeViralityScore, VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin", "tiktok"] as const;
 type Platform = (typeof PLATFORMS)[number];
 
-const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends"] as const;
+const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
 type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
 type IncomingContent = {
@@ -17,6 +17,7 @@ type IncomingContent = {
   source_hashtag: string;
   keyword_matched: string;
   discovery_source?: DiscoverySource;
+  topic_id?: string | null;
   engagement?: number;
   reach?: number | null;
   is_viral?: boolean;
@@ -76,6 +77,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 source_hashtag: c.source_hashtag,
                 keyword_matched: c.keyword_matched,
                 discovery_source: c.discovery_source ?? "tiktok-hashtag",
+                topic_id: c.topic_id ?? null,
                 engagement: c.engagement ?? 0,
                 reach: c.reach ?? null,
                 is_viral: c.is_viral ?? false,

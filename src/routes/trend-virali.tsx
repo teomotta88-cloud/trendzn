@@ -39,6 +39,9 @@ export const Route = createFileRoute("/trend-virali")({
 const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   "tiktok-hashtag": "TikTok",
   "google-trends": "Google Trends",
+  // Nessun contenuto reale ancora (predisposizione, Fase 9): la label serve
+  // solo a soddisfare il tipo, il filtro non produce risultati per ora.
+  "trending-audio": "Audio",
 };
 
 const SORT_LABELS: Record<SortBy, string> = {
