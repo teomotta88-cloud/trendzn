@@ -2,30 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { detectPlatform, embedUrl } from "@/lib/trends";
 import { ExternalLink, Instagram, Music2, Youtube, Globe, Linkedin, Play } from "lucide-react";
 
-// L'iframe viene montato solo quando la card entra nel viewport e
-// smontato quando ne esce: gli embed di Instagram/YouTube/LinkedIn partono
-// in autoplay muto a prescindere dalla permission "autoplay" (i browser
-// lo consentono comunque), quindi l'unico modo per evitare che tutti i
-// video carichino dati e suonino contemporaneamente è richiedere
-// l'iframe solo per i contenuti effettivamente visibili. Per TikTok si va
-// oltre: vedi TikTokEmbed, che mostra solo un frame di anteprima (caricato
-// subito per tutti i post in pagina, non solo quelli in viewport, perché è
-// leggero) finché l'utente non clicca play.
-function useVisible<T extends HTMLElement>(threshold = 0.5) {
-  const ref = useRef<T>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return [ref, visible] as const;
-}
-
 type LinkPreview = {
   title: string | null;
   description: string | null;
@@ -115,7 +91,9 @@ function LinkedInPreview({ url }: { url: string }) {
         <div className="flex flex-1 flex-col items-center justify-center gap-3 bg-[#0a66c2]/5 p-6 text-center">
           <Linkedin className="size-8 text-[#0a66c2]/60" />
           {preview.title && (
-            <p className="line-clamp-4 text-sm font-semibold leading-snug text-foreground">{preview.title}</p>
+            <p className="line-clamp-4 text-sm font-semibold leading-snug text-foreground">
+              {preview.title}
+            </p>
           )}
         </div>
       )}
@@ -125,9 +103,13 @@ function LinkedInPreview({ url }: { url: string }) {
           LinkedIn
         </div>
         {hasRealImage && preview.title && (
-          <p className="line-clamp-2 text-xs font-semibold leading-snug text-foreground">{preview.title}</p>
+          <p className="line-clamp-2 text-xs font-semibold leading-snug text-foreground">
+            {preview.title}
+          </p>
         )}
-        {preview.description && <p className="line-clamp-2 text-[11px] text-muted-foreground">{preview.description}</p>}
+        {preview.description && (
+          <p className="line-clamp-2 text-[11px] text-muted-foreground">{preview.description}</p>
+        )}
       </div>
     </a>
   );
@@ -265,7 +247,6 @@ function TikTokEmbed({ embed, url }: { embed: string; url: string }) {
 export function SocialEmbed({ url }: { url: string }) {
   const platform = detectPlatform(url);
   const embed = embedUrl(url);
-  const [visibleRef, visible] = useVisible<HTMLDivElement>();
 
   // LinkedIn: se abbiamo un embed reale (activity ID trovato), usalo.
   // Altrimenti fallback all'anteprima Open Graph.
@@ -291,18 +272,19 @@ export function SocialEmbed({ url }: { url: string }) {
 
   if (platform === "linkedin") {
     return (
-      <div ref={visibleRef} className="relative w-full overflow-hidden rounded-xl border border-border bg-white" style={{ minHeight: 570 }}>
-        {visible && (
-          <iframe
-            src={embed}
-            className="absolute inset-0 size-full"
-            height="570"
-            width="100%"
-            frameBorder={0}
-            allowFullScreen
-            title="Post LinkedIn"
-          />
-        )}
+      <div
+        className="relative w-full overflow-hidden rounded-xl border border-border bg-white"
+        style={{ minHeight: 570 }}
+      >
+        <iframe
+          src={embed}
+          className="absolute inset-0 size-full"
+          height="570"
+          width="100%"
+          frameBorder={0}
+          allowFullScreen
+          title="Post LinkedIn"
+        />
       </div>
     );
   }
@@ -314,17 +296,16 @@ export function SocialEmbed({ url }: { url: string }) {
   const aspect = platform === "youtube" ? "aspect-video" : "aspect-[9/16]";
 
   return (
-    <div ref={visibleRef} className={`relative ${aspect} w-full overflow-hidden rounded-xl border border-border bg-black`}>
-      {visible && (
-        <iframe
-          src={embed}
-          className="absolute inset-0 size-full"
-          scrolling="no"
-          allow="encrypted-media; picture-in-picture; web-share"
-          allowFullScreen
-          loading="lazy"
-        />
-      )}
+    <div
+      className={`relative ${aspect} w-full overflow-hidden rounded-xl border border-border bg-black`}
+    >
+      <iframe
+        src={embed}
+        className="absolute inset-0 size-full"
+        scrolling="no"
+        allow="encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+      />
     </div>
   );
 }
