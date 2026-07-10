@@ -6,6 +6,12 @@ name: Discover Instagram Hashtag Content (gratuito)
 # pagamento via anysite, non la sostituisce — copre solo una parte degli
 # hashtag (vedi scripts/discover-instagram-hashtag-content.mjs per il
 # tasso di successo atteso e i criteri di esclusione).
+#
+# timeout-minutes alzato a 180: con MAX_POSTS_PER_HASHTAG=100 (invece di 12)
+# ogni hashtag può richiedere fino a un centinaio di pagine singole
+# (engagement + data di ciascun contenuto) oltre allo scroll per trovarle —
+# il tempo reale dipende da quanti hashtag sono monitorati e da quanti
+# contenuti ciascuna pagina hashtag mostra davvero.
 
 on:
   schedule:
@@ -13,13 +19,16 @@ on:
   workflow_dispatch:
     inputs:
       max_posts_per_hashtag:
-        description: "Numero massimo di reel da ricontrollare per hashtag"
-        default: "12"
+        description: "Numero massimo di contenuti (post/carosello/Reel) da ricontrollare per hashtag"
+        default: "100"
+      recency_window_days:
+        description: "Solo contenuti pubblicati non oltre questa finestra (giorni)"
+        default: "7"
 
 jobs:
   discover:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 180
 
     steps:
       - uses: actions/checkout@v4
@@ -35,5 +44,6 @@ jobs:
 
       - name: Scopri contenuti Instagram via pagina hashtag
         env:
-          MAX_POSTS_PER_HASHTAG: ${{ github.event.inputs.max_posts_per_hashtag || '12' }}
+          MAX_POSTS_PER_HASHTAG: ${{ github.event.inputs.max_posts_per_hashtag || '100' }}
+          RECENCY_WINDOW_DAYS: ${{ github.event.inputs.recency_window_days || '7' }}
         run: node scripts/discover-instagram-hashtag-content.mjs

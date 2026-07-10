@@ -11,20 +11,34 @@
 // monte da questa tecnica (restano comunque cercate su Instagram tramite
 // anysite, che non ha questo limite).
 //
-// Per ogni hashtag provato: naviga la pagina, estrae i link a reel reali
-// trovati, e per ciascuno recupera anche like/commenti dalla stessa sessione
-// Playwright (stessa tecnica di scripts/lib/instagram-public-metrics.mjs,
-// riusata qui per non aprire un secondo browser) — un contenuto scoperto
-// così arriva già con engagement reale al primo giro, non deve aspettare il
-// prossimo ciclo di recheck-viral-engagement.mjs.
+// Per ogni hashtag provato: naviga la pagina (con scroll, per raccogliere
+// più contenuti di quanti ne mostri la prima schermata), estrae i link a
+// post/carosello/Reel trovati, e per ciascuno recupera like/commenti e data
+// di pubblicazione dalla stessa sessione Playwright (stessa tecnica di
+// scripts/lib/instagram-public-metrics.mjs, riusata qui per non aprire un
+// secondo browser) — un contenuto scoperto così arriva già con engagement
+// reale al primo giro, non deve aspettare il prossimo ciclo di
+// recheck-viral-engagement.mjs. Solo i contenuti pubblicati negli ultimi
+// RECENCY_WINDOW_DAYS entrano nel monitoraggio (volume ed engagement
+// dell'hashtag, vedi sotto) — un post vecchio ma ancora popolare nella
+// griglia "popular" non deve contare come segnale di viralità attuale.
+//
+// L'engagement totale dei contenuti recenti trovati per un hashtag viene
+// sommato e inviato a record-topic-volume.ts, che lo confronta con lo
+// snapshot precedente per calcolare il tasso di crescita (Fase 6, vedi
+// src/lib/topicGrowth.ts) — stesso meccanismo già usato per i volumi TikTok.
 //
 // Fallimenti (login wall, nessun risultato, hashtag non popolare) sono
 // attesi e gestiti con skip silenzioso, stesso approccio già validato per
 // recheck-viral-engagement.mjs — non bloccano il resto del giro.
 //
 // Variabili d'ambiente:
-//   MAX_POSTS_PER_HASHTAG   default: 12 — quanti reel ricontrollare per hashtag (la
-//                           pagina ne restituisce circa questo numero senza scroll)
+//   MAX_POSTS_PER_HASHTAG   default: 100 — quanti contenuti recuperare per hashtag
+//                           (con scroll: la pagina ne mostra ~12 senza, il resto
+//                           richiede caricamento progressivo, non garantito per
+//                           ogni hashtag — è un tetto, non una garanzia)
+//   RECENCY_WINDOW_DAYS     default: 7 — solo i contenuti pubblicati non oltre
+//                           questa finestra entrano nel monitoraggio
 //   DELAY_BETWEEN_CALLS_MS  default: 1500
 //
 // Eseguito da .github/workflows/discover-instagram-hashtag-content.yml su schedule.
@@ -35,8 +49,15 @@ const LIST_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/list-
 const SYNC_CONTENT_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-viral-trends";
 const RECORD_VOLUME_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/record-topic-volume";
 
-const MAX_POSTS_PER_HASHTAG = parseInt(process.env.MAX_POSTS_PER_HASHTAG ?? "12", 10);
+const MAX_POSTS_PER_HASHTAG = parseInt(process.env.MAX_POSTS_PER_HASHTAG ?? "100", 10);
+const RECENCY_WINDOW_DAYS = parseInt(process.env.RECENCY_WINDOW_DAYS ?? "7", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "1500", 10);
+
+// Nessun nuovo link da questi scroll consecutivi = pagina esaurita, non ha
+// senso continuare a scorrere (né aspettarsi mai di arrivare a MAX_POSTS_PER_HASHTAG
+// per hashtag con poco contenuto).
+const MAX_STAGNANT_SCROLLS = 3;
+const MAX_SCROLL_ROUNDS = 30;
 
 // Le keyword Google Trends multi-parola concatenate in un hashtag (vedi
 // keywordToHashtag) hanno un tasso di successo molto più basso — confermato
@@ -75,7 +96,21 @@ function extractExternalId(url) {
   return url.match(/\/(?:p|reel)\/([^/?]+)/)?.[1] ?? null;
 }
 
-async function findReelLinks(page, hashtag) {
+// null (data sconosciuta) è trattato come "fuori finestra": il punto 2 della
+// richiesta è "il monitoraggio è SOLO su quelli [pubblicati negli ultimi 7
+// giorni]" — un contenuto di cui non sappiamo la data non può rispettare
+// quel vincolo, va escluso piuttosto che incluso per errore.
+function isWithinRecencyWindow(publishedAt) {
+  if (!publishedAt) return false;
+  const ageMs = Date.now() - new Date(publishedAt).getTime();
+  return ageMs >= 0 && ageMs <= RECENCY_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+}
+
+// Raccoglie fino a MAX_POSTS_PER_HASHTAG link a post/carosello/Reel dalla
+// pagina hashtag, scorrendo finché ne arrivano di nuovi (o finché non si
+// esaurisce la pagina, vedi MAX_STAGNANT_SCROLLS) — senza scroll la pagina
+// ne mostra solo una dozzina.
+async function findPostLinks(page, hashtag) {
   const url = `https://www.instagram.com/explore/tags/${encodeURIComponent(hashtag)}/`;
   const response = await page
     .goto(url, { waitUntil: "domcontentloaded", timeout: 30000 })
@@ -87,17 +122,39 @@ async function findReelLinks(page, hashtag) {
     return { ok: false, reason: "login wall" };
   }
 
-  const links = await page.$$eval("a[href]", (nodes) =>
-    nodes
-      .map((n) => n.getAttribute("href"))
-      .filter((h) => h && (/^\/p\//.test(h) || /^\/reel\//.test(h))),
-  );
-  const uniqueLinks = [...new Set(links)].map(
-    (href) => new URL(href, "https://www.instagram.com").toString().split("?")[0],
-  );
-  if (uniqueLinks.length === 0) return { ok: false, reason: "nessun link trovato" };
+  const collected = new Set();
+  let stagnantRounds = 0;
 
-  return { ok: true, links: uniqueLinks.slice(0, MAX_POSTS_PER_HASHTAG) };
+  for (
+    let round = 0;
+    round < MAX_SCROLL_ROUNDS && collected.size < MAX_POSTS_PER_HASHTAG;
+    round++
+  ) {
+    const links = await page.$$eval("a[href]", (nodes) =>
+      nodes
+        .map((n) => n.getAttribute("href"))
+        .filter((h) => h && (/^\/p\//.test(h) || /^\/reel\//.test(h))),
+    );
+
+    const before = collected.size;
+    for (const href of links) {
+      collected.add(new URL(href, "https://www.instagram.com").toString().split("?")[0]);
+    }
+
+    if (collected.size === before) {
+      stagnantRounds++;
+      if (stagnantRounds >= MAX_STAGNANT_SCROLLS) break;
+    } else {
+      stagnantRounds = 0;
+    }
+
+    await page.mouse.wheel(0, 3000);
+    await page.waitForTimeout(1500);
+  }
+
+  if (collected.size === 0) return { ok: false, reason: "nessun link trovato" };
+
+  return { ok: true, links: [...collected].slice(0, MAX_POSTS_PER_HASHTAG) };
 }
 
 async function syncContent(topic, hashtag, contents) {
@@ -110,6 +167,7 @@ async function syncContent(topic, hashtag, contents) {
         platform: "instagram",
         external_id: c.externalId,
         url: c.url,
+        published_at: c.publishedAt,
         source_hashtag: hashtag,
         keyword_matched: topic.derived_keyword ?? topic.value,
         discovery_source: topic.topic_type,
@@ -175,7 +233,7 @@ try {
     const page = await session.context.newPage();
     let result;
     try {
-      result = await findReelLinks(page, hashtag);
+      result = await findPostLinks(page, hashtag);
     } finally {
       await page.close();
     }
@@ -187,26 +245,40 @@ try {
       continue;
     }
 
-    console.log(`  ${result.links.length} reel trovati, recupero engagement...`);
+    console.log(`  ${result.links.length} contenuti trovati, recupero engagement e data...`);
     const contents = [];
+    let skippedOld = 0;
     for (const url of result.links) {
       const externalId = extractExternalId(url);
       if (!externalId) continue;
       const metrics = await session.fetchMetrics(url);
       if (metrics) {
-        contents.push({ url, externalId, likes: metrics.likes, comments: metrics.comments });
+        if (isWithinRecencyWindow(metrics.publishedAt)) {
+          contents.push({
+            url,
+            externalId,
+            likes: metrics.likes,
+            comments: metrics.comments,
+            publishedAt: metrics.publishedAt,
+          });
+        } else {
+          skippedOld++;
+        }
       }
       await sleep(DELAY_MS);
     }
 
+    // Volume ed engagement dell'hashtag riflettono SOLO i contenuti nella
+    // finestra di monitoraggio (7gg), non tutto ciò che la pagina mostra —
+    // coerente con "il monitoraggio è solo su quelli".
     const totalEngagement = contents.reduce((sum, c) => sum + c.likes + c.comments, 0);
-    await recordVolume(topic, result.links.length, totalEngagement);
+    await recordVolume(topic, contents.length, totalEngagement);
 
     try {
       const syncResult = await syncContent(topic, hashtag, contents);
       totalContentSynced += syncResult.inserted ?? 0;
       console.log(
-        `  Engagement recuperato per ${contents.length}/${result.links.length}, sincronizzati ${syncResult.inserted ?? 0}`,
+        `  Nella finestra di ${RECENCY_WINDOW_DAYS}gg: ${contents.length}/${result.links.length} (${skippedOld} scartati per data vecchia/sconosciuta) -> ${syncResult.inserted ?? 0} sincronizzati`,
       );
       succeeded++;
     } catch (err) {
