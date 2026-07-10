@@ -218,6 +218,12 @@ function TopicToggleSection({ topics }: { topics: MonitoredTopic[] }) {
   );
 }
 
+// Contenuti mostrati inizialmente e ad ogni click su "Carica altri": tutti
+// gli embed vengono montati subito (nessun lazy-load a scroll, vedi
+// SocialEmbed), quindi il numero di card in pagina va limitato esplicitamente
+// per non caricare decine di iframe insieme.
+const PAGE_SIZE = 20;
+
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -228,6 +234,7 @@ function Page() {
   const [contentTypeFilter, setContentTypeFilter] = useState<ContentTypeFilter>("all");
   const [sortBy, setSortBy] = useState<SortBy>("virality");
   const [search, setSearch] = useState("");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const [topics, setTopics] = useState<MonitoredTopic[]>([]);
   const [topicsError, setTopicsError] = useState<string | null>(null);
@@ -283,6 +290,16 @@ function Page() {
     }
     return result;
   }, [items, sourceFilter, contentTypeFilter, search]);
+
+  // Ogni cambio di filtro/ricerca (o nuovo fetch) riparte dalla prima pagina:
+  // altrimenti "Carica altri" premuto prima potrebbe lasciare visibleCount
+  // più alto del nuovo risultato filtrato, mostrando comunque tutto invece
+  // di limitare come richiesto.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [items, sourceFilter, contentTypeFilter, search]);
+
+  const visible = filtered.slice(0, visibleCount);
 
   return (
     <div className="space-y-8">
@@ -412,7 +429,7 @@ function Page() {
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filtered.map((item) => (
+          {visible.map((item) => (
             <article
               key={item.id}
               className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60"
@@ -479,6 +496,18 @@ function Page() {
               </div>
             </article>
           ))}
+        </div>
+      )}
+
+      {!error && !loading && visibleCount < filtered.length && (
+        <div className="flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+            className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
+          >
+            Carica altri ({filtered.length - visibleCount} rimanenti)
+          </button>
         </div>
       )}
     </div>
