@@ -1,15 +1,16 @@
-// Recupera like/commenti pubblici di un post o Reel Instagram da un
-// visitatore anonimo (nessun login, nessuna sessione) leggendo il meta tag
-// "description"/"og:description" — quello che Instagram genera per le
-// anteprime di condivisione (WhatsApp/Facebook/Slack), nel formato:
+// Recupera like/commenti (e, quando possibile, la data di pubblicazione) di
+// un post/carosello/Reel Instagram da un visitatore anonimo (nessun login,
+// nessuna sessione) leggendo il meta tag "description"/"og:description" —
+// quello che Instagram genera per le anteprime di condivisione
+// (WhatsApp/Facebook/Slack), nel formato:
 // "28K likes, 94 comments - autore on 23 maggio 2026: "didascalia"".
 //
 // Verificato con un browser reale (Playwright, non un fetch semplice — un
-// fetch semplice viene bloccato subito): funziona identico su foto e Reel,
-// senza credit anysite, senza login. Copre SOLO like e commenti: Instagram
-// non mostra pubblicamente views né reshare a un visitatore anonimo, su
-// nessun tipo di contenuto — non è un limite di questa tecnica, la
-// piattaforma stessa non li espone a chi non è loggato (confermato su più
+// fetch semplice viene bloccato subito): funziona identico su foto/caroselli
+// e Reel, senza credit anysite, senza login. Copre SOLO like e commenti:
+// Instagram non mostra pubblicamente views né reshare a un visitatore
+// anonimo, su nessun tipo di contenuto — non è un limite di questa tecnica,
+// la piattaforma stessa non li espone a chi non è loggato (confermato su più
 // post e Reel reali, vedi scripts/probe-instagram-post.mjs per il diagnostico
 // usato per scoprirlo).
 //
@@ -23,6 +24,79 @@ import { chromium } from "playwright";
 // "28K likes, 94 comments - ..." / "27 likes, 0 comments - ..." (singolare
 // "like"/"comment" quando il numero è 1, gestito da likes?/comments?).
 const DESCRIPTION_PATTERN = /^([\d.,]+[KM]?)\s+likes?,\s*([\d.,]+[KM]?)\s+comments?\s*-/i;
+
+// Il resto della description ha il formato "... - autore on <data>: "didascalia""
+// — la data compare sia in stile USA ("May 23, 2026") sia in stile europeo
+// ("23 maggio 2026"), a seconda della lingua che Instagram assegna alla
+// richiesta anonima (non controllabile da qui). Copre inglese e italiano;
+// se il formato non combacia (altra lingua, cambio di formato lato
+// Instagram) parseDescriptionDate ritorna null — meglio "data sconosciuta"
+// che una data sbagliata.
+const DATE_PATTERN =
+  /\bon\s+([a-zàèéìòù]+\s+\d{1,2},?\s+\d{4}|\d{1,2}\s+[a-zàèéìòù]+\s+\d{4})\s*:/i;
+
+const MONTH_NAMES = {
+  january: 0,
+  jan: 0,
+  gennaio: 0,
+  february: 1,
+  feb: 1,
+  febbraio: 1,
+  march: 2,
+  mar: 2,
+  marzo: 2,
+  april: 3,
+  apr: 3,
+  aprile: 3,
+  may: 4,
+  maggio: 4,
+  june: 5,
+  jun: 5,
+  giugno: 5,
+  july: 6,
+  jul: 6,
+  luglio: 6,
+  august: 7,
+  aug: 7,
+  agosto: 7,
+  september: 8,
+  sep: 8,
+  sept: 8,
+  settembre: 8,
+  october: 9,
+  oct: 9,
+  ottobre: 9,
+  november: 10,
+  nov: 10,
+  novembre: 10,
+  december: 11,
+  dec: 11,
+  dicembre: 11,
+};
+
+function parseDescriptionDate(description) {
+  const match = description.match(DATE_PATTERN);
+  if (!match) return null;
+  const raw = match[1].toLowerCase().replace(",", "");
+
+  const us = raw.match(/^([a-zàèéìòù]+)\s+(\d{1,2})\s+(\d{4})$/);
+  const eu = raw.match(/^(\d{1,2})\s+([a-zàèéìòù]+)\s+(\d{4})$/);
+
+  let day, month, year;
+  if (us && MONTH_NAMES[us[1]] != null) {
+    [, , day, year] = us;
+    month = MONTH_NAMES[us[1]];
+  } else if (eu && MONTH_NAMES[eu[2]] != null) {
+    day = eu[1];
+    month = MONTH_NAMES[eu[2]];
+    year = eu[3];
+  } else {
+    return null;
+  }
+
+  const date = new Date(Date.UTC(Number(year), month, Number(day)));
+  return Number.isNaN(date.getTime()) ? null : date.toISOString();
+}
 
 function parseCount(text) {
   const match = text.replace(/,/g, "").match(/^([\d.]+)([KM]?)$/i);
@@ -47,10 +121,21 @@ export async function openInstagramMetricsSession() {
   // null quando il post non è più raggiungibile pubblicamente (account
   // diventato privato, post rimosso, formato del meta tag cambiato) — non
   // deve mai interrompere il ricontrollo degli altri post del batch.
+  //
+  // publishedAt: prova prima l'elemento <time datetime="..."> (ISO, non
+  // dipende dalla lingua — se Instagram lo espone è la fonte più affidabile),
+  // poi ripiega sulla data testuale nella description. null se nessuna delle
+  // due funziona: meglio "data sconosciuta" (il chiamante decide come
+  // trattarla) che una data indovinata.
   async function fetchMetrics(url) {
     const page = await context.newPage();
     try {
       await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+
+      const isoDatetime = await page
+        .$eval("time[datetime]", (el) => el.getAttribute("datetime"))
+        .catch(() => null);
+
       const description = await page
         .$eval('meta[name="description"], meta[property="og:description"]', (el) =>
           el.getAttribute("content"),
@@ -65,7 +150,9 @@ export async function openInstagramMetricsSession() {
       const comments = parseCount(match[2]);
       if (likes == null || comments == null) return null;
 
-      return { likes, comments };
+      const publishedAt = isoDatetime ?? parseDescriptionDate(description);
+
+      return { likes, comments, publishedAt };
     } catch (err) {
       console.error(`  Errore su ${url}: ${String(err)}`);
       return null;
