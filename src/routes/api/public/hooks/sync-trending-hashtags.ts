@@ -1,4 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { computeTopicGrowth, TOPIC_GROWTH_WINDOW_HOURS } from "@/lib/topicGrowth";
+
+// Storico più vecchio della finestra di crescita non serve più (Fase 6, vedi
+// src/lib/topicGrowth.ts): un po' di margine oltre le 24h della finestra,
+// per non perdere il riferimento se un run salta.
+const HISTORY_RETENTION_HOURS = 48;
 
 type IncomingHashtag = {
   hashtag: string;
@@ -101,7 +107,49 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
 
             if (historyRows.length > 0) {
               await supabaseAdmin.from("topic_metrics_history").insert(historyRows);
+
+              // Tasso di crescita (Fase 6, vedi src/lib/topicGrowth.ts):
+              // ricalcolato per ogni topic appena aggiornato, confrontando
+              // col volume più vecchio noto nella finestra di 24h.
+              const windowStart = new Date(
+                Date.now() - TOPIC_GROWTH_WINDOW_HOURS * 60 * 60 * 1000,
+              ).toISOString();
+
+              for (const row of historyRows) {
+                const { data: oldestRows } = await supabaseAdmin
+                  .from("topic_metrics_history")
+                  .select("content_volume, total_engagement, captured_at")
+                  .eq("topic_id", row.topic_id)
+                  .eq("platform", "tiktok")
+                  .gte("captured_at", windowStart)
+                  .order("captured_at", { ascending: true })
+                  .limit(1);
+
+                const growth = computeTopicGrowth({
+                  currentVolume: row.content_volume,
+                  currentEngagement: row.total_engagement,
+                  oldest: oldestRows?.[0] ?? null,
+                });
+
+                await supabaseAdmin
+                  .from("monitored_topics")
+                  .update({
+                    volume_growth_pct: growth.volumeGrowthPct,
+                    engagement_growth_pct: growth.engagementGrowthPct,
+                    growth_platform: "tiktok",
+                    growth_computed_at: new Date().toISOString(),
+                  })
+                  .eq("id", row.topic_id);
+              }
             }
+
+            const retentionStart = new Date(
+              Date.now() - HISTORY_RETENTION_HOURS * 60 * 60 * 1000,
+            ).toISOString();
+            await supabaseAdmin
+              .from("topic_metrics_history")
+              .delete()
+              .lt("captured_at", retentionStart);
           }
 
           return Response.json({ ok: true, inserted: data?.length ?? 0 });
