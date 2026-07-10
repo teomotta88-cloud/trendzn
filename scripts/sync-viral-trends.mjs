@@ -33,10 +33,10 @@
 //   ANYSITE_API_KEY         richiesta (usata per la ricerca Instagram)
 //   OPENROUTER_API_KEY      opzionale — se assente si usa solo il fallback offline
 //   OPENROUTER_MODEL        default: vedi DEFAULT_MODEL in scripts/lib/openrouter.mjs
-//   MAX_HASHTAGS            default: 5 — quanti hashtag TikTok in trend processare per run
-//                            (ogni hashtag genera una ricerca per piattaforma: tenerlo
-//                            basso limita il consumo di credit anysite)
-//   MAX_TRENDS              default: 5 — quante ricerche Google Trends IT processare per run
+//   MAX_HASHTAGS            default: 15 — quanti hashtag TikTok in trend processare per run
+//                            (ogni hashtag genera una ricerca per piattaforma: alzarlo aumenta
+//                            il consumo di credit anysite)
+//   MAX_TRENDS              default: 15 — quante ricerche Google Trends IT processare per run
 //   MAX_RESULTS_PER_CALL    default: 30 — confermato con anysite: costa 1 credit ogni 30
 //                            risultati, quindi chiederne fino a 30 non costa più di 25
 //   MAX_TIKTOK_POSTS        default: 10 — max video TikTok già raccolti da aggiungere per hashtag
@@ -63,8 +63,8 @@ const TIKTOK_HASHTAG_POSTS_ENDPOINT =
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-viral-trends";
 const MONITOR_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/monitor-topics";
 
-const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "5", 10);
-const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "5", 10);
+const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "15", 10);
+const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "15", 10);
 const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "30", 10);
 const MAX_TIKTOK_POSTS = parseInt(process.env.MAX_TIKTOK_POSTS ?? "10", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
@@ -134,10 +134,10 @@ async function fetchGoogleTrendsKeywords() {
   }
 }
 
-// Registra i topic dei top-5 di entrambe le fonti in monitored_topics
+// Registra i topic in classifica di entrambe le fonti in monitored_topics
 // (vedi src/routes/api/public/hooks/monitor-topics.ts): ogni run "rinnova"
 // il monitoraggio dei topic ancora in classifica (last_seen_in_top5_at +
-// monitoring_stops_at aggiornati), quelli usciti dai top-5 smettono di
+// monitoring_stops_at aggiornati), quelli usciti dalla classifica smettono di
 // essere rinnovati e scadono da soli dopo 24h. Best-effort: se l'endpoint
 // fallisce, il resto della pipeline deve continuare comunque (i contenuti
 // verranno sincronizzati senza topic_id, recuperabile al prossimo run).
@@ -266,7 +266,7 @@ console.log(
   `Google Trends IT (top ${MAX_TRENDS}): ${trendsMappings.map((m) => m.keyword).join(", ") || "(nessuno)"}`,
 );
 
-// Registra TUTTI i top-5 di entrambe le fonti nel ciclo di vita di
+// Registra TUTTI i topic in classifica di entrambe le fonti nel ciclo di vita di
 // monitoraggio (monitored_topics), prima del dedup qui sotto: il dedup
 // serve solo a evitare una ricerca doppia su Instagram, non deve escludere
 // un topic dal monitoraggio.

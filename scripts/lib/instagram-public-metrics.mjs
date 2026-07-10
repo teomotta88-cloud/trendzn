@@ -78,5 +78,9 @@ export async function openInstagramMetricsSession() {
     await browser.close();
   }
 
-  return { fetchMetrics, close };
+  // context esposto per chi deve anche navigare pagine diverse dai singoli
+  // post/reel nella stessa sessione (es. la pagina hashtag per la discovery,
+  // vedi scripts/discover-instagram-hashtag-content.mjs) — un solo browser
+  // per l'intero run invece di aprirne uno per scopo.
+  return { context, fetchMetrics, close };
 }

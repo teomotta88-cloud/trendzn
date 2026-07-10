@@ -10,7 +10,7 @@ import { createFileRoute } from "@tanstack/react-router";
  * ancora applicata.
  */
 
-const DEFAULT_LIMIT = 5;
+const DEFAULT_LIMIT = 15;
 const LOOKBACK_DAYS = 3;
 
 // "starhotels" è il tag di fallback hardcoded in sync-tiktok-hashtag.ts

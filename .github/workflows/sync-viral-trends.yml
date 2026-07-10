@@ -11,10 +11,10 @@ on:
     inputs:
       max_hashtags:
         description: "Numero massimo di hashtag TikTok da processare (ognuno cerca su Instagram + TikTok)"
-        default: "5"
+        default: "15"
       max_trends:
         description: "Numero massimo di ricerche Google Trends IT da processare (ognuna cerca solo su Instagram)"
-        default: "5"
+        default: "15"
 
 jobs:
   sync:
@@ -40,6 +40,6 @@ jobs:
           # Opzionale: se assente, la conversione hashtag -> keyword usa solo
           # il fallback offline (meno preciso su nomi propri/toponimi).
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '5' }}
-          MAX_TRENDS: ${{ github.event.inputs.max_trends || '5' }}
+          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '15' }}
+          MAX_TRENDS: ${{ github.event.inputs.max_trends || '15' }}
         run: node scripts/sync-viral-trends.mjs

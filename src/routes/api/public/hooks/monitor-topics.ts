@@ -15,11 +15,11 @@ export const Route = createFileRoute("/api/public/hooks/monitor-topics")({
     handlers: {
       // Ciclo di vita di monitoraggio per hashtag TikTok e keyword Google
       // Trends (vedi supabase/migrations/20260710120000_monitored_topics.sql):
-      // chiamato da sync-viral-trends.mjs ad ogni run con i top-5 attuali di
+      // chiamato da sync-viral-trends.mjs ad ogni run con la classifica attuale di
       // entrambe le fonti. Ogni topic ricevuto viene upsertato (per
       // topic_type+value): se già monitorato, aggiorna last_seen_in_top5_at e
       // ricalcola monitoring_stops_at = now()+24h (il topic resta "attivo"
-      // finché continua a rientrare nei top-5, poi per altre 24h dall'ultima
+      // finché continua a rientrare in classifica, poi per altre 24h dall'ultima
       // volta vista). I topic non più ricevuti semplicemente non vengono
       // toccati: passano da 'active' a 'expired' da soli quando la loro
       // monitoring_stops_at scade (vedi lo sweep sotto, eseguito ad ogni
