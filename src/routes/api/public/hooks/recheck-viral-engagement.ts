@@ -97,6 +97,7 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
                 delta_engagement: deltaEngagement,
                 delta_reach: deltaReach,
                 delta_engagement_6h: deltaEngagement6h,
+                delta_since: oldestRows?.[0]?.captured_at ?? null,
                 is_viral: isViral,
               })
               .eq("id", row.id);

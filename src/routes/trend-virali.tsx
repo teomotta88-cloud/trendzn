@@ -78,6 +78,24 @@ function formatDate(dateStr: string | null): string {
   }
 }
 
+// Intervallo reale coperto dal delta mostrato, non il tetto massimo della
+// finestra di eleggibilità (VIRALITY_WINDOW_DAYS = 7gg): delta_since è il
+// captured_at dello snapshot più vecchio usato da computeDeltaMetrics per
+// calcolare delta_engagement/delta_reach (vedi sync-viral-trends.ts e
+// recheck-viral-engagement.ts) — un post visto la prima volta 18 ore fa deve
+// mostrare "nelle ultime 18h", non "ultimi 7gg" anche se la finestra di
+// ricerca dello snapshot arriva fino a 7 giorni indietro.
+function formatSinceLabel(deltaSince: string | null): string {
+  if (!deltaSince) return `ultimi ${VIRALITY_WINDOW_DAYS}gg`;
+
+  const hours = (Date.now() - new Date(deltaSince).getTime()) / (1000 * 60 * 60);
+  if (hours < 1) return "nell'ultima ora";
+  if (hours < 24) return `nelle ultime ${Math.round(hours)}h`;
+
+  const days = Math.round(hours / 24);
+  return `negli ultimi ${days} giorn${days === 1 ? "o" : "i"}`;
+}
+
 // La variazione (crescita nella finestra di 7gg) è assente finché il
 // contenuto non è stato ritrovato in almeno un sync successivo al primo —
 // non è "zero crescita", è "ancora nessun secondo dato". Va distinto nella UI.
@@ -99,7 +117,7 @@ function VariationBadge({ item }: { item: ViralTrendContent }) {
       {hasReachGrowth && <span>+{formatCompactNumber(item.delta_reach)} views</span>}
       {hasEngagementGrowth && <span>+{formatCompactNumber(item.delta_engagement)} engagement</span>}
       <span className="text-emerald-600/70 dark:text-emerald-400/70">
-        (ultimi {VIRALITY_WINDOW_DAYS}gg)
+        ({formatSinceLabel(item.delta_since)})
       </span>
     </span>
   );
