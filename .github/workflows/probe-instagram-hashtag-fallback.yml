@@ -1,0 +1,36 @@
+name: Probe Instagram Hashtag Fallback (diagnostico)
+
+# Workflow usa-e-getta: quando /explore/tags/<hashtag>/ finisce su login
+# wall invece che sulla popular page (comportamento non garantito su tutti
+# gli hashtag, vedi probe-instagram-hashtags.mjs), prova strutture URL
+# alternative per lo stesso hashtag. Nessuna pipeline lo usa ancora: serve
+# solo a raccogliere dati reali prima di decidere se costruirci sopra un
+# fallback vero.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtag:
+        description: "Hashtag da testare, senza #"
+        required: true
+        default: "getoutside"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Prova strutture URL alternative senza login
+        run: node scripts/probe-instagram-hashtag-fallback.mjs "${{ github.event.inputs.hashtag }}"
