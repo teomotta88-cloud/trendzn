@@ -72,6 +72,9 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
               engagement_growth_pct: growth.engagementGrowthPct,
               growth_platform: body.platform,
               growth_computed_at: new Date().toISOString(),
+              latest_content_volume: body.contentVolume ?? null,
+              latest_total_engagement: body.totalEngagement ?? null,
+              latest_is_volume_exact: body.isVolumeExact ?? false,
             })
             .eq("id", body.topicId);
 

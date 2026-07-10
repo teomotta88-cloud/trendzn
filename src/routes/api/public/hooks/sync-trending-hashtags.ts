@@ -138,6 +138,9 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
                     engagement_growth_pct: growth.engagementGrowthPct,
                     growth_platform: "tiktok",
                     growth_computed_at: new Date().toISOString(),
+                    latest_content_volume: row.content_volume,
+                    latest_total_engagement: row.total_engagement,
+                    latest_is_volume_exact: row.is_volume_exact,
                   })
                   .eq("id", row.topic_id);
               }

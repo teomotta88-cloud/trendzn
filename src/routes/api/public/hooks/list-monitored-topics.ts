@@ -19,7 +19,7 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
           const { data, error } = await supabaseAdmin
             .from("monitored_topics")
             .select(
-              "id, topic_type, value, derived_hashtag, derived_keyword, volume_growth_pct, engagement_growth_pct, growth_platform, growth_computed_at",
+              "id, topic_type, value, derived_hashtag, derived_keyword, volume_growth_pct, engagement_growth_pct, growth_platform, growth_computed_at, latest_content_volume, latest_total_engagement, latest_is_volume_exact",
             )
             .eq("status", "active")
             .limit(500);
