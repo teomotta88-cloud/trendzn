@@ -99,3 +99,16 @@ export function hashtagToKeyword(hashtag) {
   const words = splitWords(clean);
   return words.map(capitalize).join(" ");
 }
+
+// Direzione inversa, per le keyword Google Trends (già in linguaggio
+// naturale, es. "Milan Napoli biglietti"): nessun LLM coinvolto, è solo una
+// normalizzazione deterministica ("milannapolibiglietti") per poter usare
+// anche la discovery gratuita via pagina hashtag Instagram/TikTok, che
+// richiede un vero hashtag senza spazi né accenti.
+export function keywordToHashtag(keyword) {
+  return keyword
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+}

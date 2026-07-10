@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { Search, Eye, Heart, TrendingUp } from "lucide-react";
+import { Search, Eye, Heart, TrendingUp, TrendingDown, Minus } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -8,6 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlatformIcon, SocialEmbed } from "@/components/SocialEmbed";
 import { formatCompactNumber } from "@/lib/format";
 import {
@@ -21,6 +22,8 @@ import {
   type ViralPlatform,
   type ViralTrendContent,
 } from "@/lib/viralTrends";
+import { listMonitoredTopics, type MonitoredTopic } from "@/lib/monitoredTopics";
+import { GROWTH_THRESHOLD_PCT } from "@/lib/topicGrowth";
 
 export const Route = createFileRoute("/trend-virali")({
   head: () => ({
@@ -39,6 +42,9 @@ export const Route = createFileRoute("/trend-virali")({
 const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   "tiktok-hashtag": "TikTok",
   "google-trends": "Google Trends",
+  // Nessun contenuto reale ancora (predisposizione, Fase 9): la label serve
+  // solo a soddisfare il tipo, il filtro non produce risultati per ora.
+  "trending-audio": "Audio",
 };
 
 const SORT_LABELS: Record<SortBy, string> = {
@@ -46,6 +52,17 @@ const SORT_LABELS: Record<SortBy, string> = {
   date: "Più recenti",
   engagement: "Engagement",
   views: "Views",
+};
+
+// "trending topic" raggruppa le due fonti di scoperta (TikTok, Google
+// Trends); "audio" è la fonte predisposta ma non ancora implementata (Fase
+// 9) — il filtro esiste già, semplicemente non produce risultati per ora.
+const CONTENT_TYPE_OPTIONS = ["all", "topic", "audio"] as const;
+type ContentTypeFilter = (typeof CONTENT_TYPE_OPTIONS)[number];
+const CONTENT_TYPE_LABELS: Record<ContentTypeFilter, string> = {
+  all: "Tutti i tipi",
+  topic: "Trending topic",
+  audio: "Audio",
 };
 
 function formatDate(dateStr: string | null): string {
@@ -88,6 +105,91 @@ function VariationBadge({ item }: { item: ViralTrendContent }) {
   );
 }
 
+// Percentuale calcolata solo se il campione è abbastanza grande da fidarsi
+// (vedi computeTopicGrowth in src/lib/topicGrowth.ts) — null non è "0% di
+// crescita", è "non ancora misurabile" e va distinto in UI. Sotto la soglia
+// dell'1% il topic è "non in aumento" (richiesta esplicita), non per forza
+// in calo: il colore neutro copre sia il caso piatto sia una lieve discesa.
+function GrowthIndicator({ pct }: { pct: number | null }) {
+  if (pct == null) {
+    return <span className="text-[11px] text-muted-foreground">Dati insufficienti</span>;
+  }
+  if (pct >= GROWTH_THRESHOLD_PCT) {
+    return (
+      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+        <TrendingUp className="size-3.5" />+{pct.toFixed(1)}%
+      </span>
+    );
+  }
+  if (pct <= -GROWTH_THRESHOLD_PCT) {
+    return (
+      <span className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
+        <TrendingDown className="size-3.5" />
+        {pct.toFixed(1)}%
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
+      <Minus className="size-3.5" />
+      non in aumento
+    </span>
+  );
+}
+
+function TopicCard({ topic }: { topic: MonitoredTopic }) {
+  const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
+
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-3 py-2.5">
+      <div className="min-w-0">
+        <p className="truncate text-sm font-medium text-foreground">{label}</p>
+        <p className="text-[11px] text-muted-foreground">
+          {topic.latest_content_volume != null ? (
+            <>
+              {topic.latest_is_volume_exact ? "" : "~"}
+              {formatCompactNumber(topic.latest_content_volume)} contenuti
+              {topic.growth_platform === "instagram" ? " (campione Instagram)" : ""}
+            </>
+          ) : (
+            "Volume non ancora rilevato"
+          )}
+        </p>
+      </div>
+      <GrowthIndicator pct={topic.volume_growth_pct} />
+    </div>
+  );
+}
+
+function TopicToggleSection({ topics }: { topics: MonitoredTopic[] }) {
+  const [view, setView] = useState<"tiktok-hashtag" | "google-trends">("tiktok-hashtag");
+
+  const shown = useMemo(() => topics.filter((t) => t.topic_type === view), [topics, view]);
+
+  return (
+    <section className="space-y-3">
+      <Tabs value={view} onValueChange={(v) => setView(v as typeof view)}>
+        <TabsList>
+          <TabsTrigger value="tiktok-hashtag">TikTok Trend</TabsTrigger>
+          <TabsTrigger value="google-trends">Google Trend</TabsTrigger>
+        </TabsList>
+      </Tabs>
+
+      {shown.length === 0 ? (
+        <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+          Nessun topic monitorato al momento per questa fonte.
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {shown.map((t) => (
+            <TopicCard key={t.id} topic={t} />
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -95,8 +197,12 @@ function Page() {
   const [platformFilter, setPlatformFilter] = useState<ViralPlatform | "all">("all");
   const [hashtagFilter, setHashtagFilter] = useState<string>("all");
   const [sourceFilter, setSourceFilter] = useState<DiscoverySource | "all">("all");
+  const [contentTypeFilter, setContentTypeFilter] = useState<ContentTypeFilter>("all");
   const [sortBy, setSortBy] = useState<SortBy>("virality");
   const [search, setSearch] = useState("");
+
+  const [topics, setTopics] = useState<MonitoredTopic[]>([]);
+  const [topicsError, setTopicsError] = useState<string | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -110,6 +216,12 @@ function Page() {
       .catch((err) => setError(err instanceof Error ? err.message : String(err)))
       .finally(() => setLoading(false));
   }, [platformFilter, hashtagFilter, sortBy]);
+
+  useEffect(() => {
+    listMonitoredTopics()
+      .then(setTopics)
+      .catch((err) => setTopicsError(err instanceof Error ? err.message : String(err)));
+  }, []);
 
   // Per gli item da Google Trends, source_hashtag contiene il termine di
   // ricerca stesso (non un hashtag): l'etichetta "#" va mostrata solo per
@@ -126,6 +238,11 @@ function Page() {
   const filtered = useMemo(() => {
     let result = items;
     if (sourceFilter !== "all") result = result.filter((i) => i.discovery_source === sourceFilter);
+    if (contentTypeFilter === "topic") {
+      result = result.filter((i) => i.discovery_source !== "trending-audio");
+    } else if (contentTypeFilter === "audio") {
+      result = result.filter((i) => i.discovery_source === "trending-audio");
+    }
     if (search) {
       const q = search.toLowerCase();
       result = result.filter(
@@ -137,7 +254,7 @@ function Page() {
       );
     }
     return result;
-  }, [items, sourceFilter, search]);
+  }, [items, sourceFilter, contentTypeFilter, search]);
 
   return (
     <div className="space-y-8">
@@ -151,6 +268,14 @@ function Page() {
           sync più vecchio in questa stessa finestra.
         </p>
       </header>
+
+      {topicsError ? (
+        <p className="text-sm text-destructive">
+          Errore nel caricamento dei topic monitorati: {topicsError}.
+        </p>
+      ) : (
+        <TopicToggleSection topics={topics} />
+      )}
 
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
         <div className="relative flex-1 min-w-[220px]">
@@ -205,6 +330,22 @@ function Page() {
             {DISCOVERY_SOURCES.map((s) => (
               <SelectItem key={s} value={s}>
                 {DISCOVERY_SOURCE_LABELS[s]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        <Select
+          value={contentTypeFilter}
+          onValueChange={(v) => setContentTypeFilter(v as ContentTypeFilter)}
+        >
+          <SelectTrigger className="w-44">
+            <SelectValue placeholder="Tipologia" />
+          </SelectTrigger>
+          <SelectContent>
+            {CONTENT_TYPE_OPTIONS.map((c) => (
+              <SelectItem key={c} value={c}>
+                {CONTENT_TYPE_LABELS[c]}
               </SelectItem>
             ))}
           </SelectContent>

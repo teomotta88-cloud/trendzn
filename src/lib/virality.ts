@@ -1,55 +1,66 @@
-// Formula di viralità e finestra temporale condivise tra sync-viral-trends.ts
-// (scoperta via anysite) e recheck-viral-engagement.ts (ricontrollo gratuito
-// via browsing pubblico anonimo, scripts/lib/instagram-public-metrics.mjs) —
-// estratte qui perché entrambi gli endpoint devono calcolare lo stesso
-// punteggio nello stesso modo, altrimenti un contenuto cambierebbe logica di
-// scoring a seconda di quale dei due lo ha aggiornato per ultimo.
+// Regole di viralità e finestre temporali condivise tra sync-viral-trends.ts
+// (scoperta via anysite e, tramite lo stesso hook, discover-instagram-hashtag-content.mjs)
+// e recheck-viral-engagement.ts (ricontrollo gratuito via browsing pubblico
+// anonimo) — estratte qui perché entrambi gli endpoint devono valutare la
+// viralità di un post nello stesso modo, altrimenti un contenuto
+// cambierebbe stato a seconda di quale dei due lo ha aggiornato per ultimo.
+//
+// Storia: fino a questa versione la viralità era un punteggio continuo
+// (velocity log1p-smorzata + engagement-rate + recency boost, vedi
+// virality_score). Sostituito su richiesta esplicita con due soglie
+// esplicite e leggibili, più facili da spiegare in UI di un punteggio
+// composito arbitrario.
 
-// Finestra fissa: sempre 7 giorni, sia per l'eleggibilità del contenuto nel
-// feed (vedi listViralTrendContent in viralTrends.ts) sia per il calcolo
-// della variazione qui sotto — cambiarli in modo scollegato renderebbe il
-// punteggio di viralità incoerente con quello che l'utente vede filtrato.
+// Finestra fissa per l'eleggibilità del contenuto nel feed (vedi
+// listViralTrendContent in viralTrends.ts) e per la "Variazione (7gg)"
+// mostrata in UI — indipendente dalla finestra di viralità qui sotto.
 export const VIRALITY_WINDOW_DAYS = 7;
 
-const RECENCY_HALF_LIFE_HOURS = 48;
+// Un post è virale se il suo engagement è cresciuto di oltre 1000 in al
+// massimo 6 ore, OPPURE se ha già superato 5000 di engagement totale
+// (indipendentemente dalla crescita recente — un post già molto grande
+// resta rilevante anche se nelle ultime 6h è stato piatto).
+export const VIRAL_DELTA_WINDOW_HOURS = 6;
+export const VIRAL_DELTA_THRESHOLD = 1000;
+export const VIRAL_TOTAL_THRESHOLD = 5000;
 
 export type MetricsSnapshot = { engagement: number; reach: number | null; captured_at: string };
 
-// Punteggio di viralità: premia la crescita di views/engagement nella finestra
-// nota (non il valore assoluto — un post vecchio con molte view non è
-// "virale ora") più un bonus di recency rispetto alla pubblicazione. log1p
-// smorza gli outlier (un salto da 500k a 5M non deve pesare 10000x più di un
-// salto da 5 a 50) mantenendo comunque l'ordine di grandezza. engagementRate
-// è 0 (non "engagement grezzo") quando reach non è disponibile — vedi
-// PR #105: senza questo controllo un post senza views note dominava il
-// punteggio indipendentemente dalla crescita reale.
-export function computeViralityScore({
+// Delta su 7 giorni per la "Variazione" mostrata in UI — non decide la
+// viralità (vedi computePostVirality sotto), è solo un'indicazione di quanto
+// è cresciuto un post da quando l'abbiamo visto la prima volta in finestra.
+export function computeDeltaMetrics({
   engagement,
   reach,
-  publishedAt,
   oldest,
 }: {
   engagement: number;
   reach: number | null;
-  publishedAt: string;
   oldest: MetricsSnapshot | null;
 }) {
-  const now = Date.now();
-  const elapsedHours = oldest
-    ? Math.max(1, (now - new Date(oldest.captured_at).getTime()) / 3_600_000)
-    : 1;
-
   const deltaReach = oldest ? Math.max(0, (reach ?? 0) - (oldest.reach ?? 0)) : 0;
   const deltaEngagement = oldest ? Math.max(0, engagement - oldest.engagement) : 0;
+  return { deltaEngagement, deltaReach };
+}
 
-  const velocityReach = Math.log1p(deltaReach) / elapsedHours;
-  const velocityEngagement = Math.log1p(deltaEngagement) / elapsedHours;
-  const engagementRate = reach != null && reach > 0 ? engagement / reach : 0;
-  const ageHours = Math.max(0, (now - new Date(publishedAt).getTime()) / 3_600_000);
-  const recencyBoost = Math.exp(-ageHours / RECENCY_HALF_LIFE_HOURS);
+// Viralità del singolo post: oldestWithin6h è lo snapshot più vecchio noto
+// nella finestra di VIRAL_DELTA_WINDOW_HOURS (query separata dai 7 giorni
+// usati da computeDeltaMetrics — un post sincronizzato ogni 6h avrà quasi
+// sempre uno snapshot a cavallo di questa finestra, ma non è garantito, es.
+// al primo avvistamento: in quel caso deltaEngagement6h resta 0, corretto,
+// non c'è ancora nessuna crescita da misurare).
+export function computePostVirality({
+  engagement,
+  oldestWithin6h,
+}: {
+  engagement: number;
+  oldestWithin6h: MetricsSnapshot | null;
+}) {
+  const deltaEngagement6h = oldestWithin6h
+    ? Math.max(0, engagement - oldestWithin6h.engagement)
+    : 0;
 
-  const viralityScore =
-    3 * velocityReach + 3 * velocityEngagement + 2 * engagementRate + 2 * recencyBoost;
+  const isViral = deltaEngagement6h > VIRAL_DELTA_THRESHOLD || engagement > VIRAL_TOTAL_THRESHOLD;
 
-  return { viralityScore, deltaEngagement, deltaReach };
+  return { isViral, deltaEngagement6h };
 }

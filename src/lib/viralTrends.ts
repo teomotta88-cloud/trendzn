@@ -4,7 +4,7 @@ import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 export const VIRAL_PLATFORMS = ["instagram", "tiktok"] as const;
 export type ViralPlatform = (typeof VIRAL_PLATFORMS)[number];
 
-export const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends"] as const;
+export const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
 export type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
 export { VIRALITY_WINDOW_DAYS };
@@ -20,11 +20,12 @@ export interface ViralTrendContent {
   source_hashtag: string;
   keyword_matched: string;
   discovery_source: DiscoverySource;
+  topic_id: string | null;
   engagement: number;
   reach: number | null;
   delta_engagement: number;
   delta_reach: number;
-  virality_score: number;
+  delta_engagement_6h: number;
   is_viral: boolean;
   created_at: string;
 }
@@ -72,7 +73,14 @@ export async function listViralTrendContent(
       query = query.order("reach", { ascending: false, nullsFirst: false });
       break;
     default:
-      query = query.order("virality_score", { ascending: false });
+      // Prima chi supera le soglie di viralità (vedi computePostVirality in
+      // src/lib/virality.ts), ordinati per crescita nelle ultime 6h; poi gli
+      // altri per engagement totale — sostituisce il punteggio continuo
+      // virality_score, rimosso su richiesta esplicita.
+      query = query
+        .order("is_viral", { ascending: false })
+        .order("delta_engagement_6h", { ascending: false })
+        .order("engagement", { ascending: false });
   }
 
   const { data, error } = await query.limit(300);

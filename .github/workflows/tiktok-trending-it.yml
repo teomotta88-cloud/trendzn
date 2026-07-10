@@ -2,8 +2,10 @@ name: TikTok Trending IT
 
 on:
   schedule:
-    # Ogni 12 ore (00:00 e 12:00 UTC)
-    - cron: "0 0,12 * * *"
+    # Ogni 4 ore: gratuito (nessun credit anysite coinvolto), aumentato da
+    # 12h per una finestra di rilevazione più stretta sui volumi TikTok
+    # (Trend Virali v2 — vedi supabase/migrations/20260710120000_monitored_topics.sql).
+    - cron: "0 */4 * * *"
   workflow_dispatch:
     inputs:
       max_hashtags:
