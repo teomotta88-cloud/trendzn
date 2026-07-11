@@ -22,7 +22,7 @@ import {
   type ViralPlatform,
   type ViralTrendContent,
 } from "@/lib/viralTrends";
-import { listMonitoredTopics, type MonitoredTopic } from "@/lib/monitoredTopics";
+import { isCurrentlyRanked, listMonitoredTopics, type MonitoredTopic } from "@/lib/monitoredTopics";
 import { GROWTH_THRESHOLD_PCT, isStrongGrowthSignal } from "@/lib/topicGrowth";
 
 export const Route = createFileRoute("/trend-virali")({
@@ -210,7 +210,13 @@ function TopicCard({ topic }: { topic: MonitoredTopic }) {
 function TopicToggleSection({ topics }: { topics: MonitoredTopic[] }) {
   const [view, setView] = useState<"tiktok-hashtag" | "google-trends">("tiktok-hashtag");
 
-  const shown = useMemo(() => topics.filter((t) => t.topic_type === view), [topics, view]);
+  // Solo i topic davvero ancora in classifica adesso, non quelli nel periodo
+  // di grazia (usciti dai top-N, ma ancora status='active' e monitorati in
+  // background per altre 24h) — vedi isCurrentlyRanked in monitoredTopics.ts.
+  const shown = useMemo(
+    () => topics.filter((t) => t.topic_type === view && isCurrentlyRanked(t)),
+    [topics, view],
+  );
 
   return (
     <section className="space-y-3">
