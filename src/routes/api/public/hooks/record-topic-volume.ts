@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { computeTopicGrowth, TOPIC_GROWTH_WINDOW_HOURS } from "@/lib/topicGrowth";
+import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 
 type Body = {
   topicId?: string;
@@ -19,9 +20,23 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
     handlers: {
       // Uno snapshot in topic_metrics_history per il calcolo del tasso di
       // crescita (Fase 6) — usato da scripts/discover-instagram-hashtag-content.mjs
-      // dopo ogni discovery via pagina hashtag (content_volume = numero di
-      // reel trovati in questo giro, is_volume_exact=false: è un campione,
-      // non il vero totale di Instagram, a differenza di quello di TikTok).
+      // dopo ogni discovery via pagina hashtag.
+      //
+      // Per Instagram NON ci si fida del content_volume/total_engagement
+      // calcolati dallo script sul singolo scrape: la pagina hashtag può
+      // riordinare quali post mostra tra un giro e l'altro (fino a 100 per
+      // run, ma non garantito che siano "gli stessi + eventuali nuovi"), e
+      // un delta ha senso solo se confronta una base di contenuti stabile
+      // nel tempo. Qui si ricalcola invece l'aggregato da TUTTO ciò che
+      // conosciamo per questo topic in viral_trend_content (accumulato via
+      // upsert da ogni discovery, tenuto aggiornato da
+      // recheck-viral-engagement.mjs ogni 6h, stessa finestra di recency del
+      // feed) — cresce solo quando arriva un post nuovo, cambia solo quando
+      // l'engagement di un post noto cambia davvero, si riduce solo quando
+      // un post esce dalla finestra di 7gg: mai per un caso di scraping.
+      // TikTok invece resta come inviato dal chiamante: postCount di
+      // Creative Center è già un conteggio reale sull'intero hashtag
+      // (is_volume_exact true), non derivato da una nostra tabella parziale.
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as Body;
@@ -34,12 +49,37 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
 
           const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
+          let contentVolume = body.contentVolume ?? null;
+          let totalEngagement = body.totalEngagement ?? null;
+
+          if (body.platform === "instagram") {
+            const since = new Date();
+            since.setDate(since.getDate() - VIRALITY_WINDOW_DAYS);
+            const sinceIso = since.toISOString();
+
+            const { data: contentRows, error: aggError } = await supabaseAdmin
+              .from("viral_trend_content")
+              .select("engagement")
+              .eq("topic_id", body.topicId)
+              .eq("platform", "instagram")
+              .or(
+                `published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`,
+              );
+
+            // Se l'aggregazione fallisce, ripiega sul numero inviato dallo
+            // script piuttosto che bloccare la registrazione dello snapshot.
+            if (!aggError && contentRows) {
+              contentVolume = contentRows.length;
+              totalEngagement = contentRows.reduce((sum, r) => sum + (r.engagement ?? 0), 0);
+            }
+          }
+
           const { error } = await supabaseAdmin.from("topic_metrics_history").insert({
             topic_id: body.topicId,
             platform: body.platform,
-            content_volume: body.contentVolume ?? null,
+            content_volume: contentVolume,
             is_volume_exact: body.isVolumeExact ?? false,
-            total_engagement: body.totalEngagement ?? null,
+            total_engagement: totalEngagement,
           });
 
           if (error) {
@@ -60,8 +100,8 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
             .limit(1);
 
           const growth = computeTopicGrowth({
-            currentVolume: body.contentVolume ?? null,
-            currentEngagement: body.totalEngagement ?? null,
+            currentVolume: contentVolume,
+            currentEngagement: totalEngagement,
             oldest: oldestRows?.[0] ?? null,
           });
 
@@ -72,8 +112,8 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
               engagement_growth_pct: growth.engagementGrowthPct,
               growth_platform: body.platform,
               growth_computed_at: new Date().toISOString(),
-              latest_content_volume: body.contentVolume ?? null,
-              latest_total_engagement: body.totalEngagement ?? null,
+              latest_content_volume: contentVolume,
+              latest_total_engagement: totalEngagement,
               latest_is_volume_exact: body.isVolumeExact ?? false,
             })
             .eq("id", body.topicId);
