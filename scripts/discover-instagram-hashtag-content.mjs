@@ -23,6 +23,12 @@
 // dell'hashtag, vedi sotto) — un post vecchio ma ancora popolare nella
 // griglia "popular" non deve contare come segnale di viralità attuale.
 //
+// Un hashtag "in trend su TikTok Italia" non implica che chi lo usa su
+// Instagram scriva in italiano — la pagina hashtag mostra contenuti di
+// chiunque, ovunque. Stessa euristica looksItalian() già usata dal percorso
+// anysite (sync-viral-trends.mjs) applicata qui alla didascalia estratta
+// dalla description (vedi extractCaption in instagram-public-metrics.mjs).
+//
 // L'engagement totale dei contenuti recenti trovati per un hashtag viene
 // sommato e inviato a record-topic-volume.ts, che lo confronta con lo
 // snapshot precedente per calcolare il tasso di crescita (Fase 6, vedi
@@ -44,6 +50,7 @@
 // Eseguito da .github/workflows/discover-instagram-hashtag-content.yml su schedule.
 
 import { openInstagramMetricsSession } from "./lib/instagram-public-metrics.mjs";
+import { looksItalian } from "./lib/social-search.mjs";
 
 const LIST_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/list-monitored-topics";
 const SYNC_CONTENT_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-viral-trends";
@@ -179,6 +186,7 @@ async function syncContent(topic, hashtag, contents) {
         platform: "instagram",
         external_id: c.externalId,
         url: c.url,
+        content: c.caption || null,
         published_at: c.publishedAt,
         source_hashtag: hashtag,
         keyword_matched: topic.derived_keyword ?? topic.value,
@@ -278,22 +286,26 @@ try {
     console.log(`  ${result.links.length} contenuti trovati, recupero engagement e data...`);
     const contents = [];
     let skippedOld = 0;
+    let skippedNotItalian = 0;
     const hashtagFailReasons = {};
     for (const url of result.links) {
       const externalId = extractExternalId(url);
       if (!externalId) continue;
       const { metrics, reason } = await session.fetchMetricsDetailed(url);
       if (metrics) {
-        if (isWithinRecencyWindow(metrics.publishedAt)) {
+        if (!isWithinRecencyWindow(metrics.publishedAt)) {
+          skippedOld++;
+        } else if (!looksItalian(metrics.caption)) {
+          skippedNotItalian++;
+        } else {
           contents.push({
             url,
             externalId,
             likes: metrics.likes,
             comments: metrics.comments,
             publishedAt: metrics.publishedAt,
+            caption: metrics.caption,
           });
-        } else {
-          skippedOld++;
         }
       } else if (reason) {
         hashtagFailReasons[reason] = (hashtagFailReasons[reason] ?? 0) + 1;
@@ -319,7 +331,7 @@ try {
       const syncResult = await syncContent(topic, hashtag, contents);
       totalContentSynced += syncResult.inserted ?? 0;
       console.log(
-        `  Nella finestra di ${RECENCY_WINDOW_DAYS}gg: ${contents.length}/${result.links.length} (${skippedOld} scartati per data vecchia/sconosciuta) -> ${syncResult.inserted ?? 0} sincronizzati`,
+        `  Nella finestra di ${RECENCY_WINDOW_DAYS}gg: ${contents.length}/${result.links.length} (${skippedOld} scartati per data vecchia/sconosciuta, ${skippedNotItalian} scartati per lingua non italiana) -> ${syncResult.inserted ?? 0} sincronizzati`,
       );
       succeeded++;
     } catch (err) {
