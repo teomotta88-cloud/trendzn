@@ -40,8 +40,11 @@ import { Route as ApiPublicHooksMonitorTopicsRouteImport } from './routes/api/pu
 import { Route as ApiPublicHooksListMonitoredTopicsRouteImport } from './routes/api/public/hooks/list-monitored-topics'
 import { Route as ApiPublicHooksListInstagramContentUrlsRouteImport } from './routes/api/public/hooks/list-instagram-content-urls'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
+import { Route as ApiPublicHooksGettySearchRouteImport } from './routes/api/public/hooks/getty-search'
+import { Route as ApiPublicHooksExtractKeywordsRouteImport } from './routes/api/public/hooks/extract-keywords'
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
+import { Route as ApiPublicHooksApproveJobRouteImport } from './routes/api/public/hooks/approve-job'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 
 const TrendViraliRoute = TrendViraliRouteImport.update({
@@ -214,6 +217,18 @@ const ApiPublicHooksLinkPreviewRoute =
     path: '/api/public/hooks/link-preview',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksGettySearchRoute =
+  ApiPublicHooksGettySearchRouteImport.update({
+    id: '/api/public/hooks/getty-search',
+    path: '/api/public/hooks/getty-search',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksExtractKeywordsRoute =
+  ApiPublicHooksExtractKeywordsRouteImport.update({
+    id: '/api/public/hooks/extract-keywords',
+    path: '/api/public/hooks/extract-keywords',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksDeleteTrendSubmissionRoute =
   ApiPublicHooksDeleteTrendSubmissionRouteImport.update({
     id: '/api/public/hooks/delete-trend-submission',
@@ -224,6 +239,12 @@ const ApiPublicHooksDeleteCanaleRoute =
   ApiPublicHooksDeleteCanaleRouteImport.update({
     id: '/api/public/hooks/delete-canale',
     path: '/api/public/hooks/delete-canale',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksApproveJobRoute =
+  ApiPublicHooksApproveJobRouteImport.update({
+    id: '/api/public/hooks/approve-job',
+    path: '/api/public/hooks/approve-job',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksAddClientChannelRoute =
@@ -250,8 +271,11 @@ export interface FileRoutesByFullPath {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
+  '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -286,8 +310,11 @@ export interface FileRoutesByTo {
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/reputazione-brand': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
+  '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -323,8 +350,11 @@ export interface FileRoutesById {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
+  '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -361,8 +391,11 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/extract-keywords'
+    | '/api/public/hooks/getty-search'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
@@ -397,8 +430,11 @@ export interface FileRouteTypes {
     | '/piano-editoriale'
     | '/reputazione-brand'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/extract-keywords'
+    | '/api/public/hooks/getty-search'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
@@ -433,8 +469,11 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/extract-keywords'
+    | '/api/public/hooks/getty-search'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
@@ -470,8 +509,11 @@ export interface RootRouteChildren {
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ReputazioneBrandIndexRoute: typeof ReputazioneBrandIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
+  ApiPublicHooksApproveJobRoute: typeof ApiPublicHooksApproveJobRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  ApiPublicHooksExtractKeywordsRoute: typeof ApiPublicHooksExtractKeywordsRoute
+  ApiPublicHooksGettySearchRoute: typeof ApiPublicHooksGettySearchRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksListInstagramContentUrlsRoute: typeof ApiPublicHooksListInstagramContentUrlsRoute
   ApiPublicHooksListMonitoredTopicsRoute: typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -709,6 +751,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksLinkPreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/getty-search': {
+      id: '/api/public/hooks/getty-search'
+      path: '/api/public/hooks/getty-search'
+      fullPath: '/api/public/hooks/getty-search'
+      preLoaderRoute: typeof ApiPublicHooksGettySearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/extract-keywords': {
+      id: '/api/public/hooks/extract-keywords'
+      path: '/api/public/hooks/extract-keywords'
+      fullPath: '/api/public/hooks/extract-keywords'
+      preLoaderRoute: typeof ApiPublicHooksExtractKeywordsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/delete-trend-submission': {
       id: '/api/public/hooks/delete-trend-submission'
       path: '/api/public/hooks/delete-trend-submission'
@@ -721,6 +777,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/delete-canale'
       fullPath: '/api/public/hooks/delete-canale'
       preLoaderRoute: typeof ApiPublicHooksDeleteCanaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/approve-job': {
+      id: '/api/public/hooks/approve-job'
+      path: '/api/public/hooks/approve-job'
+      fullPath: '/api/public/hooks/approve-job'
+      preLoaderRoute: typeof ApiPublicHooksApproveJobRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/add-client-channel': {
@@ -750,9 +813,12 @@ const rootRouteChildren: RootRouteChildren = {
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ReputazioneBrandIndexRoute: ReputazioneBrandIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
+  ApiPublicHooksApproveJobRoute: ApiPublicHooksApproveJobRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:
     ApiPublicHooksDeleteTrendSubmissionRoute,
+  ApiPublicHooksExtractKeywordsRoute: ApiPublicHooksExtractKeywordsRoute,
+  ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksListInstagramContentUrlsRoute:
     ApiPublicHooksListInstagramContentUrlsRoute,

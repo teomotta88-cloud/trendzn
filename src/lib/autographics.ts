@@ -172,6 +172,12 @@ export async function upsertTemplateConstraint(
 
 // --- Graphic jobs --------------------------------------------------------
 
+export async function getGraphicJob(id: string): Promise<GraphicJob | null> {
+  const { data, error } = await db.from("graphic_jobs").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return data;
+}
+
 export async function getJobForPost(postId: string): Promise<GraphicJob | null> {
   const { data, error } = await db
     .from("graphic_jobs")
