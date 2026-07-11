@@ -288,3 +288,69 @@ export async function selectGettyCandidate(jobId: string, candidateId: string): 
     .eq("id", candidateId);
   if (setError) throw setError;
 }
+
+// Sottoscrizione Realtime allo stato di un job e dei suoi formati: chiama
+// onChange a ogni INSERT/UPDATE/DELETE su graphic_jobs (questo id) o
+// graphic_job_formats (questo job_id). Ritorna una funzione di cleanup.
+export function subscribeToJob(jobId: string, onChange: () => void): () => void {
+  const channel = supabase
+    .channel(`graphic-job-${jobId}`)
+    .on(
+      "postgres_changes",
+      { event: "*", schema: "public", table: "graphic_jobs", filter: `id=eq.${jobId}` },
+      onChange,
+    )
+    .on(
+      "postgres_changes",
+      { event: "*", schema: "public", table: "graphic_job_formats", filter: `job_id=eq.${jobId}` },
+      onChange,
+    )
+    .subscribe();
+  return () => {
+    supabase.removeChannel(channel);
+  };
+}
+
+// --- Collegamento post <-> rubrica AutoGraphics --------------------------
+
+// Aggiorna solo editorial_posts.rubrica_id (FK verso rubriche aggiunta dalla
+// migration SBAM). Il campo testo libero editorial_posts.rubrica resta
+// invariato: sono due cose diverse (vedi migration).
+export async function setPostRubricaId(postId: string, rubricaId: string | null): Promise<void> {
+  const { error } = await db
+    .from("editorial_posts")
+    .update({ rubrica_id: rubricaId })
+    .eq("id", postId);
+  if (error) throw error;
+}
+
+// Crea il job per il post se non esiste, altrimenti aggiorna copy_payload e
+// riporta lo stato a pending_validation (una modifica al copy invalida un
+// eventuale ready_for_render/error precedente).
+export async function upsertGraphicJob(input: {
+  post_id: string;
+  rubrica_id: string;
+  copy_payload: Record<string, string>;
+}): Promise<GraphicJob> {
+  const existing = await getJobForPost(input.post_id);
+  if (existing) {
+    await updateGraphicJob(existing.id, {
+      copy_payload: input.copy_payload,
+      status: "pending_validation",
+      error_detail: null,
+    });
+    const refreshed = await getGraphicJob(existing.id);
+    if (!refreshed) throw new Error("Job non trovato dopo l'update");
+    // Se cambia la rubrica del job, la aggiorniamo separatamente (raro).
+    if (existing.rubrica_id !== input.rubrica_id) {
+      const { error } = await db
+        .from("graphic_jobs")
+        .update({ rubrica_id: input.rubrica_id, updated_at: new Date().toISOString() })
+        .eq("id", existing.id);
+      if (error) throw error;
+      return { ...refreshed, rubrica_id: input.rubrica_id };
+    }
+    return refreshed;
+  }
+  return createGraphicJob(input);
+}
