@@ -321,9 +321,14 @@ try {
       console.log(`  Non raggiungibili: ${unreachable}/${result.links.length} (${breakdown})`);
     }
 
-    // Volume ed engagement dell'hashtag riflettono SOLO i contenuti nella
-    // finestra di monitoraggio (7gg), non tutto ciò che la pagina mostra —
-    // coerente con "il monitoraggio è solo su quelli".
+    // Questi due numeri (calcolati sul solo scrape di questo giro) sono solo
+    // un fallback: record-topic-volume.ts, per instagram, ricalcola volume
+    // ed engagement dall'aggregato di TUTTO ciò che conosciamo per questo
+    // topic in viral_trend_content (accumulato via syncContent qui sopra +
+    // tenuto aggiornato da recheck-viral-engagement.mjs) — necessario perché
+    // la pagina hashtag non garantisce di mostrare "gli stessi post + quelli
+    // nuovi" ad ogni giro, quindi il solo scrape di un run non è una base di
+    // confronto stabile nel tempo.
     const totalEngagement = contents.reduce((sum, c) => sum + c.likes + c.comments, 0);
     await recordVolume(topic, contents.length, totalEngagement);
 
