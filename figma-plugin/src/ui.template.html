@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Inter, "Segoe UI", sans-serif;
+        font-size: 12px;
+        margin: 0;
+        padding: 12px;
+        color: #1a1a1a;
+      }
+      h2 {
+        font-size: 13px;
+        margin: 0 0 8px;
+      }
+      h3 {
+        font-size: 12px;
+        margin: 12px 0 4px;
+        color: #555;
+      }
+      fieldset {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        margin: 0 0 12px;
+        padding: 8px;
+      }
+      label {
+        display: block;
+        font-size: 11px;
+        color: #555;
+        margin-bottom: 2px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+      button {
+        padding: 6px 10px;
+        border: none;
+        border-radius: 4px;
+        background: #18a0fb;
+        color: white;
+        cursor: pointer;
+        font-size: 12px;
+        margin-right: 6px;
+      }
+      button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+      button.secondary {
+        background: #eee;
+        color: #1a1a1a;
+      }
+      .job-row {
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 6px;
+        margin-bottom: 6px;
+      }
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .job-post {
+        font-weight: 600;
+      }
+      .job-status {
+        font-size: 10px;
+        padding: 2px 6px;
+        border-radius: 10px;
+        background: #eee;
+      }
+      .job-status.rendering {
+        background: #fff3cd;
+      }
+      .job-status.done {
+        background: #d4edda;
+      }
+      .job-status.error {
+        background: #f8d7da;
+      }
+      .job-error {
+        color: #b02a37;
+        font-size: 11px;
+        margin-top: 4px;
+      }
+      .job-thumbs {
+        display: flex;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .thumb {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+      }
+      #log {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 6px;
+        height: 110px;
+        overflow-y: auto;
+        font-family: "SF Mono", Consolas, monospace;
+        font-size: 10px;
+        background: #fafafa;
+      }
+      .log-error {
+        color: #b02a37;
+      }
+      .log-warn {
+        color: #a86400;
+      }
+      .empty {
+        color: #888;
+      }
+      #job-list {
+        max-height: 260px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <h2>Connessione Supabase</h2>
+      <label for="supabase-url">Project URL</label>
+      <input id="supabase-url" type="text" placeholder="https://xxxx.supabase.co" />
+      <label for="supabase-key">Anon / publishable key</label>
+      <input id="supabase-key" type="password" placeholder="eyJhbGciOi..." />
+      <button id="btn-save-credentials">Salva credenziali</button>
+    </fieldset>
+
+    <div>
+      <button id="btn-load-jobs" class="secondary">Carica job</button>
+      <button id="btn-generate" disabled>Genera tutti</button>
+    </div>
+
+    <h3>Coda</h3>
+    <div id="job-list"><p class="empty">Nessun job caricato.</p></div>
+
+    <h3>Log</h3>
+    <div id="log"></div>
+
+    <script>
+      __SCRIPT__
+    </script>
+  </body>
+</html>

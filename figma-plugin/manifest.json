@@ -1,0 +1,13 @@
+{
+  "name": "SBAM AutoGraphics",
+  "id": "sbam-autographics-dev",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["https://*.supabase.co", "https://*.gettyimages.com", "https://media.gettyimages.com"],
+    "reasoning": "Legge/scrive graphic_jobs su Supabase (REST + Storage) e scarica i bozzetti Getty watermarked da usare come fill immagine nei template."
+  }
+}

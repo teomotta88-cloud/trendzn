@@ -17,9 +17,14 @@ import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
 import { PostMediaGallery } from "./PostMediaGallery";
 import { NewPostCard } from "./NewPostCard";
+import { AutoGraphicsPanel } from "./AutoGraphicsPanel";
 
 function formatDate(d: string) {
-  return new Date(`${d}T00:00:00`).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
+  return new Date(`${d}T00:00:00`).toLocaleDateString("it-IT", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
 }
 
 export function PostCard({
@@ -155,7 +160,9 @@ export function PostCard({
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-            <span className="font-semibold capitalize text-foreground">{formatDate(post.post_date)}</span>
+            <span className="font-semibold capitalize text-foreground">
+              {formatDate(post.post_date)}
+            </span>
             {post.rubrica && (
               <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
                 {post.rubrica}
@@ -166,9 +173,15 @@ export function PostCard({
                 {code}
               </span>
             ))}
-            {post.formato && <span className="rounded-md border border-border px-2 py-0.5 text-[10px]">{post.formato}</span>}
+            {post.formato && (
+              <span className="rounded-md border border-border px-2 py-0.5 text-[10px]">
+                {post.formato}
+              </span>
+            )}
           </div>
-          {post.topic && <h3 className="font-display text-sm font-semibold text-foreground">{post.topic}</h3>}
+          {post.topic && (
+            <h3 className="font-display text-sm font-semibold text-foreground">{post.topic}</h3>
+          )}
         </div>
         <div className="relative flex items-center gap-1.5">
           {publishedMatches.length > 0 && (
@@ -272,7 +285,9 @@ export function PostCard({
                   return (
                     <div key={code} className="space-y-1">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
+                        <span className="text-[10px] font-semibold text-muted-foreground">
+                          Copy {code}
+                        </span>
                         {code !== "IG" && post.canali.includes("IG") && (
                           <label className="flex items-center gap-1 text-[10px] text-muted-foreground">
                             <input
@@ -338,6 +353,8 @@ export function PostCard({
           {typeof post.budget_media === "number" && <span>Budget: €{post.budget_media}</span>}
         </div>
       )}
+
+      <AutoGraphicsPanel post={post} />
     </article>
   );
 }

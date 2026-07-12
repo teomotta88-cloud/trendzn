@@ -1,0 +1,16 @@
+{
+  "name": "sbam-autographics-figma-plugin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.ui.json"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.107.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.8.3"
+  }
+}
