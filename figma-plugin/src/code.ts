@@ -194,6 +194,18 @@ interface PopulateResult {
   errors: string[];
 }
 
+// Risolve il valore di un layer dinamico. I layer #photo* prendono di
+// default la foto Getty selezionata (salvata su graphic_jobs.getty_image_url,
+// non in copy_payload); un eventuale valore esplicito in copy_payload ha
+// comunque la precedenza, così si può forzare un'immagine diversa. Tutti gli
+// altri layer leggono solo da copy_payload.
+function resolveLayerValue(job: JobBundle, layerName: string): string | undefined {
+  const fromPayload = job.copy_payload[layerName];
+  if (fromPayload && fromPayload.trim()) return fromPayload;
+  if (layerName.startsWith("#photo") && job.getty_image_url) return job.getty_image_url;
+  return fromPayload;
+}
+
 async function populateDynamicLayers(
   instance: InstanceNode | FrameNode,
   job: JobBundle,
@@ -203,7 +215,7 @@ async function populateDynamicLayers(
 
   for (const layer of layers) {
     const layerName = layer.name;
-    const value = job.copy_payload[layerName];
+    const value = resolveLayerValue(job, layerName);
     const constraint = job.constraints.find((c) => c.layer_name === layerName);
 
     if (value == null || !value.trim()) {
