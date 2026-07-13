@@ -1,297 +1,359 @@
-# Trend Virali — Recap per una nuova sessione
+# Trend Virali v2 — Recap per una nuova sessione
 
-Questo documento spiega da zero il flusso "Trend Virali" (pagina `/trend-virali`):
-cosa fa, come è costruito, cosa riusa dalla pagina "Reputazione Brand", e i due
-problemi aperti da risolvere. Scritto per essere letto senza contesto pregresso.
+Questo documento sostituisce integralmente la versione precedente (v1, 2026-07-08):
+da allora il flusso è stato ricostruito da zero (v2) su richiesta esplicita
+dell'utente. Scritto per essere letto senza contesto pregresso — se stai
+riprendendo questo progetto in una sessione nuova, parti da qui.
 
-## Obiettivo del flusso
+## Obiettivo del progetto v2
 
-Trovare contenuti Instagram e TikTok **reali**, ordinati per **views/engagement
-reali**, partendo dagli hashtag TikTok che sono in trend in Italia in questo
-momento — indipendentemente dall'hashtag stesso (non è "tutti i post con
-#luglio", è "cosa sta girando ORA legato al tema di #luglio").
+Scoprire e monitorare hashtag/keyword "virali" da due fonti indipendenti
+(hashtag TikTok in trend, ricerche Google Trends per l'Italia), seguirne il
+ciclo di vita (quanto restano rilevanti), misurarne il tasso di crescita
+reale (non solo una % ingannevole), e mostrare in `/trend-virali` sia i
+topic in classifica sia i singoli post virali trovati su Instagram/TikTok
+che li riguardano.
 
-L'idea alla base: un hashtag TikTok in trend (es. `#lafavolapersempre`) non è
-una parola di ricerca comoda per altre piattaforme — va prima trasformato in
-una keyword leggibile ("La favola per sempre"), poi quella keyword viene
-cercata altrove per trovare contenuti reali con metriche reali.
+Principio guida ripetuto più volte dall'utente durante lo sviluppo: **le
+metriche devono riflettere una realtà stabile e confrontabile nel tempo**,
+non il rumore di una singola rilevazione — vale per la formula di crescita,
+per cosa resta visibile in UI, per i filtri di qualità (lingua) applicati ai
+contenuti.
 
-## Pipeline, passo per passo
+## Stato di avanzamento
+
+| Fase | Cosa | Stato |
+|---|---|---|
+| 1 | Schema: `monitored_topics`, `topic_metrics_history`, link `viral_trend_content.topic_id` | ✅ |
+| 2 | Motore ciclo di vita (top-N + grazia 24h) | ✅ |
+| 3 | Storico volumi TikTok (post_count/view_count reali) + cron più frequente | ✅ |
+| 4 | Discovery gratuita Instagram via pagina hashtag, in produzione | ✅ |
+| 4a | Probe su campione reale di hashtag prima di portarla in produzione | ✅ |
+| 5 | Cadenza anysite più frequente, collegata a `monitored_topics` | ✅ |
+| 6 | Tasso di crescita volumi/engagement a livello di topic | ✅ (rivisto più volte, vedi sotto) |
+| 7 | Regole di viralità post singoli a soglie esplicite | ✅ |
+| 8 | Redesign UI `/trend-virali` (toggle TikTok/Google Trends + feed post) | ✅ |
+| 9 | Predisposizione monitoraggio audio (solo schema, seed manuale) | ⬜ non iniziata |
+| 10 | Canali Inspo: rilevamento cross-canale (topic e audio) | ⬜ non iniziata, richiede uno spike di fattibilità sull'estrazione audio prima di poter stimare la fase |
+
+Il piano originale a 10 fasi è stato concordato con l'utente all'inizio del
+lavoro v2 e seguito in ordine. Le fasi 9 e 10 sono le uniche rimaste, a
+priorità bassa e con più incertezza (soprattutto la 10).
+
+## Architettura della pipeline
 
 ```
-1. TikTok Trending IT (pipeline già esistente, indipendente)
-   → hashtag reali in trend, salvati in trend_submissions
+Fonte 1: TikTok Creative Center (hashtag reali in trend, IT)
+  scripts/tiktok-cc-session.mjs / tiktok-cc-bootstrap-session.mjs
+  scripts/sync-trending-it.mjs (orchestratore)
+    → src/routes/api/public/hooks/sync-trending-hashtags.ts
+      → tabella tiktok_trending_hashtags (rank, post_count, view_count REALI)
+      → topic_metrics_history (platform=tiktok, is_volume_exact=true)
+  workflow: tiktok-trending-it.yml, ogni 4h
 
-2. top-tiktok-hashtags (endpoint)
-   → legge i 5 hashtag più frequenti degli ultimi 3 giorni da trend_submissions
+Fonte 2: Google Trends IT (ricerche in tendenza, già in linguaggio naturale)
+  scripts/lib/google-trends.mjs
 
-3. hashtag → keyword (scripts/sync-viral-trends.mjs)
-   → OpenRouter (LLM gratuito) con fallback offline a dizionario
+Entrambe le fonti confluiscono in:
+  scripts/sync-viral-trends.mjs (orchestratore principale)
+    1. legge top hashtag TikTok (top-tiktok-hashtags.ts, MAX_HASHTAGS=15)
+       e top Google Trends (MAX_TRENDS=15)
+    2. converte hashtag→keyword leggibile (hashtagsToKeywords: OpenRouter,
+       fallback offline word-segment.mjs) e keyword→hashtag derivato
+       (keywordToHashtag, solo se ≤2 parole — MAX_GOOGLE_TRENDS_WORDS)
+    3. registra tutti i topic in monitor-topics.ts (ciclo di vita)
+    4. per ogni topic: cerca la keyword su Instagram via anysite
+       (fetchInstagramContent — filtro looksItalian + containsKeyword),
+       e riusa i video TikTok già raccolti dalla Fonte 1 per lo stesso
+       hashtag esatto (fetchTikTokContent)
+    5. sincronizza tutto via sync-viral-trends.ts → viral_trend_content
+  workflow: sync-viral-trends.yml, ogni 6h
 
-4. ricerca della keyword
-   → Instagram via anysite (stessa infra di Reputazione Brand)
-   → TikTok riusando i video già raccolti dalla pipeline del punto 1
+Fonte 3: Discovery gratuita Instagram via pagina hashtag (complementare ad
+anysite, nessun credit, per i topic già monitorati da monitor-topics)
+  scripts/discover-instagram-hashtag-content.mjs
+    - naviga /explore/tags/<hashtag>/, scrolla fino a MAX_POSTS_PER_HASHTAG=100
+    - estrae link a post/carosello/Reel (non solo Reel)
+    - per ciascuno: scripts/lib/instagram-public-metrics.mjs
+      (fetchMetricsDetailed) legge il meta tag description (nessun login)
+      → likes, comments, publishedAt, caption (didascalia)
+    - filtro recency: solo pubblicati negli ultimi RECENCY_WINDOW_DAYS=7
+    - filtro lingua: looksItalian(caption) — scarta contenuti non italiani
+    - sincronizza via sync-viral-trends.ts (stesso endpoint della Fonte
+      principale), registra volume/engagement via record-topic-volume.ts
+  workflow: discover-instagram-hashtag-content.yml, ogni 6h, matrix a 2
+    shard (SHARD_COUNT/SHARD_INDEX) — vedi "Blocco Instagram" sotto
 
-5. sync-viral-trends (endpoint) → tabella viral_trend_content
-
-6. pagina /trend-virali → mostra i contenuti ordinati per views/engagement
+Ricontrollo periodico (gratuito, indipendente dalla discovery)
+  scripts/recheck-viral-engagement.mjs
+    - rivisita ogni post Instagram già noto nella finestra di 7gg
+    - aggiorna engagement (likes+comments) via recheck-viral-engagement.ts
+    - applica anche looksItalian(caption): cancella (non aggiorna) i post
+      che risultano non italiani — backfix retroattivo del filtro lingua
+      per contenuti sincronizzati prima che esistesse
+  workflow: recheck-viral-engagement.yml, ogni 6h
 ```
 
-### 1. Scoperta hashtag TikTok in trend
+## Schema del database (tabelle create/estese in questo lavoro)
 
-Pipeline **indipendente e preesistente**, non toccata in questo lavoro:
+- **`monitored_topics`** — hashtag TikTok / keyword Google Trends monitorati.
+  `status` 'active' mentre nei top-N, +24h di grazia dall'ultima volta vista
+  in classifica (`monitoring_stops_at`), poi 'expired'. `last_seen_in_top5_at`
+  aggiornato SOLO quando il topic è confermato nei top-N ad ogni sync — è il
+  campo usato per distinguere "davvero in classifica ora" da "in periodo di
+  grazia" (vedi `isCurrentlyRanked` sotto). Include già `trending-audio` come
+  `topic_type` per la Fase 9 (nessuna discovery reale ancora).
+- **`topic_metrics_history`** — snapshot di volume/engagement per topic nel
+  tempo, distingue `platform` (tiktok/instagram) e `is_volume_exact` (TikTok
+  = conteggio reale da Creative Center, Instagram = campione).
+- **`viral_trend_content`** — singoli post/contenuti. `topic_id` collega al
+  topic che li ha scoperti. `delta_engagement_6h` + `is_viral` (soglie, non
+  più uno score continuo). `delta_since` = timestamp dello snapshot di
+  riferimento usato per calcolare il delta mostrato in UI (non il tetto
+  massimo della finestra).
+- **`viral_trend_metrics_history`** — snapshot engagement/reach per singolo
+  post, usato per calcolare i delta (7gg per la UI, 6h per la viralità).
 
-- `scripts/discover-trending-hashtags.mjs` — legge gli hashtag in trend da
-  TikTok Creative Center (login richiesto, sessione persistita via cache di
-  GitHub Actions)
-- `scripts/scrape-tiktok-hashtag.mjs` — per ogni hashtag, apre
-  `tiktok.com/tag/<hashtag>` con Playwright e legge dal DOM gli URL dei video
-  mostrati. **Ora estrae anche le views** di ogni video (vedi "Problema 1"
-  sotto)
-- `scripts/sync-trending-it.mjs` — orchestratore, chiama i due sopra e scrive
-  su Supabase via l'endpoint `sync-tiktok-hashtag`
-- Workflow: `.github/workflows/tiktok-trending-it.yml`, ogni 12h
+Migration rilevanti, in ordine: `20260710120000_monitored_topics.sql`,
+`20260710150000_topic_growth.sql`, `20260710170000_post_virality_thresholds.sql`,
+`20260710190000_topic_latest_volume.sql`, `20260710200000_delta_since.sql`,
+`20260710210000_backfill_delta_since.sql`.
 
-Scrive in `trend_submissions` (`section = 'tiktok-hashtag'`), con `tags =
-[hashtag]`. **Attenzione**: questa stessa tabella/section è condivisa con uno
-scraper per il brand cliente Starhotels (`TIKTOK_HASHTAG=starhotels`, ogni 30
-min, workflow `tiktok-hashtag.yml`) — l'hashtag `starhotels` va sempre escluso
-quando si aggregano gli hashtag "in trend" (già fatto in `top-tiktok-hashtags.ts`).
+**Nota sui tipi TypeScript**: i tipi Supabase generati (`src/integrations/supabase/types.ts`)
+sono sempre un po' indietro rispetto alle migration appena mergiate — gli
+errori `tsc` su tabelle/colonne nuove non ancora note ai tipi sono attesi e
+si risolvono da soli quando i tipi vengono rigenerati dopo che la migration è
+applicata in produzione. Verificato ripetutamente in questo lavoro
+diffando il conteggio errori prima/dopo ogni PR: mai una regressione vera,
+sempre la stessa categoria.
 
-### 2. Endpoint `top-tiktok-hashtags`
+## Formule chiave
 
-`src/routes/api/public/hooks/top-tiktok-hashtags.ts` — legge da
-`trend_submissions` i tag più frequenti negli ultimi 3 giorni (esclude
-`starhotels`), ne restituisce i primi N (default 5, `MAX_HASHTAGS`).
+### Crescita a livello di topic — `src/lib/topicGrowth.ts`
 
-Perché non legge da `tiktok_trending_hashtags` (la tabella con rank/views
-della tabella-hashtag mostrata in cima a `/tiktok-hashtag`)? Perché non è mai
-stato confermato che quella migration sia applicata al DB di produzione;
-`trend_submissions` invece è sicuramente popolata e viva.
+Richiesta esplicita dell'utente: niente percentuale ingannevole su hashtag
+troppo piccoli (2 contenuti → +2 non è "+100%, viralità") o troppo grandi
+(10M contenuti, +1000 non è viralità anche se l'assoluto sembra grande).
 
-### 3. Conversione hashtag → keyword
+- Finestra fissa: `TOPIC_GROWTH_WINDOW_HOURS = 24`
+- Soglia di rumore: `MIN_ABSOLUTE_DELTA = 20` — sotto questo delta assoluto
+  (volumi o engagement) il risultato è `null` ("dati insufficienti"), non
+  una percentuale calcolata su un campione troppo piccolo
+- Soglia "in aumento": `GROWTH_THRESHOLD_PCT = 1` (1%)
+- Calcolata separatamente per `volumeGrowthPct` e `engagementGrowthPct`,
+  per topic+piattaforma (un hashtag TikTok può avere crescita sia da TikTok
+  che da Instagram, non comparabili tra loro)
+- `isStrongGrowthSignal()`: true solo se ENTRAMBE volume ED engagement
+  crescono ≥1% nella stessa finestra — "viralità marcata" (badge fiamma
+  arancione in UI), più forte di uno solo dei due che cresce
 
-`scripts/sync-viral-trends.mjs`, funzione `hashtagsToKeywords`:
+**Importante — fix del 2026-07-11**: per Instagram, `content_volume`/
+`total_engagement` NON vengono più calcolati dal singolo scrape di un run
+(`discover-instagram-hashtag-content.mjs` trova fino a 100 contenuti per
+giro, ma la pagina hashtag non garantisce di mostrare sempre "gli stessi +
+eventuali nuovi" — un run può perdere post ancora validi solo per come
+Instagram riordina la pagina). `record-topic-volume.ts` ricalcola invece
+l'aggregato da **tutto ciò che conosciamo per quel topic** in
+`viral_trend_content` (accumulato via upsert, tenuto aggiornato da
+`recheck-viral-engagement.mjs`), filtrato alla stessa finestra di recency
+del feed — una base di confronto stabile, non un campione che cambia ad
+ogni scrape. TikTok non ha questo problema: `post_count` è già un conteggio
+reale fornito da Creative Center.
 
-1. Prova `scripts/lib/openrouter.mjs` — chiama un modello **gratuito** su
-   OpenRouter (`meta-llama/llama-3.3-70b-instruct:free` di default, env
-   `OPENROUTER_MODEL`), un'unica chiamata batch per tutti gli hashtag.
-   Nessuna carta di credito richiesta per la chiave. **Problema noto**: il
-   modello free è spesso congestionato (429 "temporarily rate-limited
-   upstream") — capitato in entrambi i run reali fatti finora.
-2. Se OpenRouter non è configurato o fallisce, ripiega su
-   `scripts/lib/word-segment.mjs`: un segmentatore Viterbi scritto da zero,
-   offline, che combina un dizionario inglese (126k parole, da wordsninja) e
-   uno italiano (25k parole più frequenti, da
-   [hermitdave/FrequencyWords](https://github.com/hermitdave/FrequencyWords)).
-   Funziona bene su parole comuni ("lafavolapersempre" → "La favola per
-   sempre"), **fallisce sui nomi propri/toponimi** non a dizionario
-   ("torvergata" → "Tor Verg At A" invece di "Tor Vergata") — è per risolvere
-   proprio questo caso che è stato aggiunto OpenRouter.
+### Viralità del singolo post — `src/lib/virality.ts`
 
-### 4. Ricerca della keyword
+Sostituisce un vecchio punteggio continuo (`virality_score`, rimosso) con
+soglie esplicite, su richiesta esplicita ("sostituisci del tutto con le
+soglie"):
 
-**Instagram** — `fetchInstagramContent` in `sync-viral-trends.mjs`, usa
-`searchAnysite()` da `scripts/lib/social-search.mjs` (stessa funzione condivisa
-con Reputazione Brand, vedi sotto). Nessun filtro di data applicato qui.
+- `VIRAL_DELTA_WINDOW_HOURS = 6`, `VIRAL_DELTA_THRESHOLD = 1000`,
+  `VIRAL_TOTAL_THRESHOLD = 5000`
+- `isViral = deltaEngagement6h > 1000 OPPURE engagement totale > 5000`
+- `VIRALITY_WINDOW_DAYS = 7` — finestra di eleggibilità nel feed e per il
+  badge "Variazione" (delta_engagement/delta_reach su 7gg, mostrato con
+  l'intervallo reale via `delta_since`, non più un fisso "ultimi 7gg")
 
-**TikTok** — anysite **non supporta la ricerca TikTok per keyword** (verificato
-leggendo la loro documentazione). Quindi per TikTok non si cerca la keyword:
-si riusano i video già raccolti al passo 1 per lo **stesso hashtag esatto**
-(non la keyword derivata), tramite l'endpoint `tiktok-hashtag-posts.ts`. Le
-uniche metriche disponibili sono le views (se lo scraping del passo 1 le ha
-estratte con successo — vedi "Problema 1").
+### Topic "davvero in classifica" — `src/lib/monitoredTopics.ts`
 
-### 5. Scrittura su Supabase
+`isCurrentlyRanked()`: confronta `last_seen_in_top5_at` con la cadenza di
+sync (6h) + margine → `TOP5_FRESHNESS_HOURS = 7`. Oltre questa soglia il
+topic è ancora `status='active'` (periodo di grazia, continua ad essere
+monitorato in background) ma NON va più mostrato come "in classifica" nel
+toggle TikTok/Google Trend di `/trend-virali` — filtro applicato lato
+client, l'endpoint `list-monitored-topics` continua a restituire tutti gli
+`active` perché la discovery Instagram ne ha bisogno per continuare durante
+la grazia.
 
-`src/routes/api/public/hooks/sync-viral-trends.ts` — upsert su
-`viral_trend_content` (schema: `platform, external_id, url, author, content,
-published_at, source_hashtag, keyword_matched, engagement, reach, is_viral,
-raw`). **Fix recente**: anysite a volte restituisce lo stesso post due volte
-nello stesso batch, il che faceva fallire l'intero upsert Postgres ("ON
-CONFLICT DO UPDATE command cannot affect row a second time") — ora c'è un
-dedup per `platform:external_id` prima dell'upsert.
+## Filtro lingua italiana
 
-### 6. Pagina `/trend-virali`
+`looksItalian()` in `scripts/lib/social-search.mjs` — euristica a parole
+funzionali italiane comuni (richiede ≥2 hit), usata dove non esiste un
+filtro lingua nativo. Applicato in TRE punti:
+1. `sync-viral-trends.mjs` (percorso anysite) — già presente da prima
+2. `discover-instagram-hashtag-content.mjs` (percorso gratuito via hashtag)
+   — aggiunto perché un hashtag "in trend su TikTok Italia" non implica che
+   chi lo usa su Instagram scriva in italiano
+3. `recheck-viral-engagement.mjs` — backfix retroattivo: cancella (invece di
+   aggiornare) i post già sincronizzati prima del punto 2 che risultano non
+   italiani, rivisitando ogni post Instagram ogni 6h
 
-`src/routes/trend-virali.tsx` + `src/lib/viralTrends.ts`. Fetcha da
-`viral_trend_content`, filtro `created_at >= now() - sinceDays` (default 14
-giorni — **attenzione, vedi Problema 2**), ordina per `reach desc, engagement
-desc`. Filtri UI: piattaforma, hashtag di origine, intervallo giorni, ricerca
-testuale.
+Limite noto e accettato: didascalie molto brevi o solo emoji/hashtag
+possono dare un falso negativo (scartate anche se genuinamente italiane) —
+compromesso preferito a mostrare contenuto chiaramente non italiano.
 
-## Come funziona Reputazione Brand (infrastruttura condivisa)
+## UI `/trend-virali` (`src/routes/trend-virali.tsx`)
 
-`/reputazione-brand` è il flusso "gemello" più vecchio, da cui Trend Virali
-riusa la logica di ricerca. Serve capirlo perché **la stessa infrastruttura
-sostiene entrambe le feature**, e un fix a una spesso vale anche per l'altra.
+- **Toggle in cima**: "TikTok Trend" / "Google Trend" — card per ogni topic
+  monitorato con volume attuale, crescita volumi ed engagement
+  (`GrowthIndicator`), badge "Viralità marcata" se `isStrongGrowthSignal`.
+  Mostra solo topic con `isCurrentlyRanked() === true`.
+- **Feed dei post sotto**: filtri (piattaforma, hashtag origine, fonte,
+  tipologia trending-topic/audio, ricerca testuale), ordinamento
+  (viralità/data/engagement/views). Paginato: 20 alla volta
+  (`PAGE_SIZE`), bottone "Carica altri" (+20), si resetta ad ogni cambio
+  filtro.
+- **`SocialEmbed`**: niente più lazy-load a scroll (rimosso
+  l'`IntersectionObserver` che causava box neri prima del caricamento) per
+  Instagram/YouTube/LinkedIn — montano l'iframe subito. TikTok è diverso e
+  NON toccato: mostra sempre una thumbnail leggera via oEmbed, iframe vero
+  solo al click su play (meccanismo separato, già pensato per evitare
+  autoplay multipli).
 
-**Scopo**: monitorare le menzioni di un brand cliente (oggi: `hyundai`,
-`hyundai_italia`, keyword statiche) su Twitter/X, Reddit, Instagram, LinkedIn
-(via anysite) e YouTube (via Data API v3 ufficiale, gratuita), classificarne il
-sentiment, alertare su anomalie.
+## Il blocco Instagram ("login-wall") e come è stato affrontato
 
-**Pipeline**:
-- `scripts/sync-brand-mentions.mjs` — per ogni combinazione
-  piattaforma×keyword, cerca e normalizza i risultati usando le stesse
-  funzioni di `scripts/lib/social-search.mjs` usate da Trend Virali
-  (`searchAnysite`, `searchYouTube`, `normalizeAnysiteResult`,
-  `normalizeYouTubeResult`), poi aggiunge la classificazione sentiment
-  (`classifySentiment`, euristica a parole chiave positive/negative) — questo
-  è l'unico pezzo NON condiviso con Trend Virali, perché non ha senso per
-  keyword generiche non legate a un brand.
-- `src/routes/api/public/hooks/sync-brand-mentions.ts` — upsert su
-  `brand_mentions` (stesso schema di `viral_trend_content` + `sentiment` e
-  `category`), stesso dedup fix applicato di recente, più logica di crisis
-  alert (`brand_sentiment_alerts`): confronta il volume di oggi con la
-  baseline a 7 giorni per piattaforma, alert se >2-3x o se il sentiment
-  negativo supera il 30-50%.
-- Workflow: `.github/workflows/sync-brand-mentions.yml`, cron giornaliero.
+Un run reale con tutti gli hashtag monitorati in un'unica sessione
+Playwright ha mostrato Instagram bloccare (redirect su login/challenge su
+ogni richiesta successiva) dopo circa 500 richieste di dettaglio-post
+consecutive nella stessa sessione — 0 blocchi nei primi ~10 hashtag, 100%
+bloccato negli ultimi 3-4, sempre gli stessi per posizione in coda.
 
-**Pagina**: `src/routes/reputazione-brand.index.tsx` + `src/lib/brandReputation.ts`
-(`listMentions`) + componenti in `src/components/ReputazioneBrand/`
-(`MentionsTable`, `SentimentTrendChart`, `AlertBanner`). **Ordinamento
-attuale: solo `created_at desc`** — nessun ordinamento per engagement, a
-differenza di Trend Virali che ordina per `reach`/`engagement`. Filtri UI:
-piattaforma, sentiment, intervallo giorni (7/14/30/90).
+Diagnostica aggiunta prima di agire (`fetchMetricsDetailed` in
+`instagram-public-metrics.mjs` ritorna `{metrics, reason}` con motivo del
+fallimento: `login-wall`, `no-description`, `pattern-mismatch`,
+`count-parse-fail`, `error:...`), poi fix strutturale: il workflow
+`discover-instagram-hashtag-content.yml` è ora una **matrix a 2 shard**,
+ogni job su un runner (quindi sessione/IP) diverso con metà degli hashtag
+ciascuno (partizione deterministica via sort alfabetico, non l'ordine non
+garantito dell'API). **Non ancora verificato con un run reale post-fix** —
+vedi "Cosa verificare al prossimo avvio" sotto.
 
-**Perché è rilevante per Trend Virali**: `scripts/lib/social-search.mjs` è il
-cuore di ricerca condiviso da entrambi i flussi. Un fix ai path anysite (solo
-`/api/twitter/search/posts` è stato confermato reale da un run; reddit/
-instagram/linkedin sono dedotti per coerenza di naming e mai confermati da
-documentazione ufficiale — vedi commento `ANYSITE_ENDPOINTS` nel file) vale
-per entrambe le pipeline.
+## Limiti noti, non ancora risolti
 
-## Problema 1 — TikTok: niente engagement/views affidabili
+- **anysite Instagram search**: un run reale ha trovato 0/18 risultati per
+  ogni keyword cercata (anche keyword molto comuni). Diagnosticato che
+  `searchAnysite()` non lancia errori ma il post-processing (filtri lingua/
+  keyword) scarta tutto — probabile che `normalizeAnysiteResult()` non trovi
+  più il campo giusto nel payload anysite attuale. Log diagnostico già
+  aggiunto (`[diagnostica] anysite: X raw (...) -> ...`), root cause non
+  ancora confermata: serve leggere l'output del prossimo run reale.
+- **`extractCaption`** (parsing della didascalia dalla description
+  Instagram, usato per il filtro lingua) non è stato validato su tanti casi
+  reali quanto il resto — copre il formato osservato finora (IT+EN, con e
+  senza data riconosciuta), ma è la parte meno testata delle recenti
+  aggiunte.
+- **`list-instagram-content-urls.ts`** (usato da `recheck-viral-engagement.mjs`)
+  non pagina/ruota: se ci sono più di 150 post Instagram nella finestra di
+  7gg, gli stessi primi ~150 (ordine non esplicito, probabilmente per
+  inserimento) vengono sempre ricontrollati e quelli oltre non vengono mai
+  raggiunti. Non ancora un problema pratico ai volumi attuali, ma da tenere
+  d'occhio se il numero di contenuti cresce.
 
-L'utente lo definisce "inutile" così com'è. Le views TikTok vengono estratte
-in `scripts/scrape-tiktok-hashtag.mjs`, funzione `extractLinksWithViews`,
-best-effort:
+## Cosa verificare al prossimo avvio di una nuova sessione
 
-1. Prova i selettori `[data-e2e="video-views"]` e
-   `[data-e2e="common-Video-Count"]` vicino al link del video (il secondo è
-   confermato reale ma per la pagina **profilo utente**, da TikTokBridge.php
-   di RSS-Bridge — non è mai stato verificato se vale anche per la pagina
-   **hashtag**, che è quella usata qui)
-2. Fallback generico: cerca un testo tipo "129.5K" tra i discendenti del link
+1. **Log del prossimo run reale di "Discover Instagram Hashtag Content"**
+   (2 job separati dopo il fix a shard): il `login-wall` è sparito o molto
+   ridotto? Ogni shard copre ~metà degli hashtag senza sovrapposizioni?
+2. **Log dei prossimi 1-2 cicli di "Recheck Viral Engagement"**: compare la
+   voce "non italiani -> da cancellare" e il conteggio scende nei run
+   successivi (backfix che si esaurisce)?
+3. **Log del prossimo "Sync Trend Virali"**: il diagnostico anysite mostra
+   finalmente DOVE si perdono i risultati Instagram (0/18 ancora
+   irrisolto)?
+4. Se una check-in schedulata di questa sessione è ancora attiva (via
+   `send_later`/Routine), potrebbe già aver risposto ad alcuni di questi
+   punti — controllare la cronologia della conversazione prima di rifare
+   lavoro già fatto.
 
-**Non c'è mai stata conferma diretta** che questa estrazione funzioni sulla
-pagina hashtag reale — i log del workflow stampano `Views estratte per N/M
-video` ma quel numero non è stato ancora ispezionato in dettaglio in
-conversazione. Ipotesi da verificare nella prossima sessione:
+## Convenzioni di sviluppo osservate in questo lavoro
 
-- Controllare i log reali di `tiktok-hashtag.yml` / `tiktok-trending-it.yml`
-  per vedere quante views vengono davvero estratte (`grep "Views estratte"`)
-- Se il numero è sistematicamente basso/zero, i selettori vanno corretti —
-  serve ispezionare l'HTML reale della pagina hashtag (impossibile da questo
-  ambiente di sviluppo, rete verso tiktok.com bloccata: va fatto scaricando
-  l'HTML in un run reale, es. salvandolo come artifact, come già fatto altrove
-  nel progetto per il debug di TikTok Creative Center — vedi
-  `discover-trending-hashtags.mjs` per il pattern)
-- Anche quando le views ci sono, **manca comunque like/commenti** — TikTok
-  resta strutturalmente più povero di dati di Instagram, che invece riceve
-  `engagement` reale (like+share+commenti) da anysite
+- Branch di lavoro: `claude/viral-content-formula-social-wpbhx9` (su
+  entrambi i repo collegati, `trendzn` e `trendzn-starhotels`)
+- Prima di ogni nuova modifica: `git fetch origin main`, poi
+  `git checkout -B <branch> origin/main` — il branch feature viene sempre
+  ripartito da `main` aggiornato, mai accumulato su una base vecchia
+  (ogni PR precedente viene mergiata singolarmente prima di iniziare la
+  successiva)
+- Verifica prima di ogni commit: `npx eslint <file> --fix`, poi
+  `npx tsc --noEmit -p tsconfig.json` diffato contro un conteggio baseline
+  (`git stash` / `git stash pop` per confrontare prima/dopo — nuovi errori
+  sono accettabili solo se nella categoria "tabella/colonna non ancora nei
+  tipi generati"), poi `npx vite build` come controllo di compilazione
+  aggiuntivo (rigenera anche `routeTree.gen.ts` se serve)
+- `rm -f package-lock.json` dopo qualunque `npm install`/`vite build`
+  locale (il repo usa `bun.lock`)
+- Ogni modifica → commit descrittivo (perché, non cosa) → push → PR via
+  `mcp__github__create_pull_request` con summary/test plan → l'utente
+  mergia manualmente
+- **Non è possibile triggerare i workflow GitHub Actions da qui**:
+  `mcp__github__actions_run_trigger` ritorna sempre 403 "Resource not
+  accessible by integration" — l'utente deve lanciarli manualmente da
+  GitHub Actions dopo il merge
+- Migration SQL sempre come file in `supabase/migrations/`, mai applicate
+  direttamente al DB di produzione da questa sessione (un tentativo di
+  applicarle via MCP Supabase è stato esplicitamente negato dall'utente) —
+  passano dal merge della PR come tutto il resto
 
-**Decisione da prendere**: vale la pena investire per rendere affidabile
-l'estrazione views, o è più sensato togliere TikTok dal feed "Trend Virali"
-(tenerlo solo nella pagina `/tiktok-hashtag` esistente, che non pretende di
-ordinare per engagement)? L'utente ha detto "tiktok non ha dati di engagement
-e views, è inutile" — probabile che la risposta preferita sia la seconda, ma
-va confermato.
-
-## Problema 2 — Instagram: contenuti troppo vecchi
-
-`fetchInstagramContent` in `sync-viral-trends.mjs` non applica **nessun
-filtro di data** ai risultati di `searchAnysite()`: anysite restituisce
-risultati per rilevanza rispetto alla keyword, non necessariamente recenti, e
-lo script li accetta tutti.
-
-Il filtro `sinceDays` che esiste in `src/lib/viralTrends.ts`
-(`listViralTrendContent`) filtra su `created_at` (quando **noi** abbiamo
-sincronizzato la riga), non su `published_at` (quando il post è stato
-**pubblicato**) — quindi un post di un anno fa, sincronizzato oggi per la
-prima volta, passa comunque il filtro "ultimi 14 giorni" perché la riga in DB
-è stata creata oggi.
-
-**Fix plausibili per la prossima sessione** (da valutare, non ancora
-implementati):
-1. Scartare a monte (in `fetchInstagramContent`, prima di mandare tutto a
-   `sendToHook`) i risultati con `published_at` più vecchio di N giorni
-2. Cambiare il filtro in `listViralTrendContent` per usare `published_at`
-   invece di (o in aggiunta a) `created_at`
-3. Verificare se anysite offre un parametro di ordinamento/filtro data nella
-   request (`searchAnysite` in `scripts/lib/social-search.mjs` oggi manda solo
-   `{[param]: query, count: maxResults}` — nessun parametro di data)
-
-## Terza richiesta esplicita: ordinamento per data/engagement
-
-L'utente ha chiesto di poter ordinare per data O per engagement (oggi
-`/trend-virali` ordina *solo* per `reach desc, engagement desc`, senza
-possibilità di cambiare). Da aggiungere: un controllo UI (select/toggle,
-stesso pattern dei filtri già presenti in `trend-virali.tsx`) che cambi
-l'`order()` della query in `listViralTrendContent` tra:
-- `reach desc, engagement desc` (attuale, default)
-- `published_at desc` (più recenti prima)
-
-Nota: anche `/reputazione-brand` potrebbe beneficiare dello stesso
-miglioramento (oggi ordina solo per `created_at desc`, mai per engagement) —
-da valutare se estendere lì pure, dato che condivide l'infrastruttura.
-
-## File coinvolti (riferimento rapido)
+## Riferimento rapido ai file principali
 
 ```
 scripts/
-  sync-viral-trends.mjs          orchestratore Trend Virali
-  sync-brand-mentions.mjs        orchestratore Reputazione Brand
-  sync-tiktok-hashtag.mjs        scraper brand Starhotels (ogni 30 min)
-  sync-trending-it.mjs           orchestratore TikTok Trending IT (ogni 12h)
-  scrape-tiktok-hashtag.mjs      scraping pagina hashtag TikTok + views
-  discover-trending-hashtags.mjs discovery hashtag da TikTok Creative Center
+  sync-viral-trends.mjs                  orchestratore principale (TikTok+Google Trends → Instagram/TikTok)
+  sync-trending-it.mjs                   orchestratore TikTok Creative Center (hashtag reali IT)
+  discover-instagram-hashtag-content.mjs discovery gratuita via pagina hashtag Instagram (matrix 2 shard)
+  recheck-viral-engagement.mjs           ricontrollo gratuito engagement + backfix lingua
   lib/
-    social-search.mjs            ricerca/normalizzazione condivisa (anysite + YouTube)
-    word-segment.mjs             segmentatore offline EN+IT (fallback)
-    openrouter.mjs                conversione hashtag->keyword via LLM gratuito
+    social-search.mjs                    ricerca/normalizzazione anysite+YouTube, looksItalian, containsKeyword
+    instagram-public-metrics.mjs          fetchMetricsDetailed (likes/comments/data/caption, no login)
+    word-segment.mjs                     hashtagToKeyword / keywordToHashtag (offline, EN+IT)
+    openrouter.mjs                        conversione hashtag→keyword via LLM gratuito (con fallback)
+    google-trends.mjs                     ricerche Google Trends IT
 
 src/routes/api/public/hooks/
-  top-tiktok-hashtags.ts         top hashtag in trend (esclude starhotels)
-  tiktok-hashtag-posts.ts        video TikTok + views per un hashtag
-  sync-viral-trends.ts           upsert viral_trend_content (con dedup)
-  sync-tiktok-hashtag.ts         upsert trend_submissions (con view_count)
-  sync-brand-mentions.ts         upsert brand_mentions (con dedup)
-
-src/routes/
-  trend-virali.tsx               pagina Trend Virali
-  reputazione-brand.index.tsx    pagina Reputazione Brand
+  monitor-topics.ts                      ciclo di vita monitored_topics (upsert + sweep)
+  list-monitored-topics.ts               elenco topic monitorati (per UI e per discover script)
+  record-topic-volume.ts                 snapshot volumi/engagement + calcolo crescita
+  sync-viral-trends.ts                   upsert viral_trend_content (contenuti singoli)
+  sync-trending-hashtags.ts              upsert tiktok_trending_hashtags + storico volumi TikTok
+  recheck-viral-engagement.ts            aggiorna engagement post + cancella non italiani
+  list-instagram-content-urls.ts         elenco URL Instagram da ricontrollare
 
 src/lib/
-  viralTrends.ts                 data layer Trend Virali
-  brandReputation.ts             data layer Reputazione Brand
+  topicGrowth.ts                         formula di crescita a livello di topic
+  virality.ts                            soglie di viralità post singolo
+  viralTrends.ts                         data layer feed post (listViralTrendContent)
+  monitoredTopics.ts                     data layer topic monitorati (isCurrentlyRanked)
 
-src/components/ReputazioneBrand/
-  MentionsTable.tsx, SentimentTrendChart.tsx, AlertBanner.tsx
+src/routes/trend-virali.tsx               pagina principale
+src/components/SocialEmbed.tsx            embed social (no lazy-load tranne TikTok)
 
-supabase/migrations/
-  20260706160000_brand_reputation_monitoring.sql   brand_mentions e affini
-  20260708100000_viral_trend_content.sql           viral_trend_content
-  20260708150000_viral_trend_content_allow_tiktok.sql
-  20260708170000_trend_submissions_view_count.sql  views TikTok
-
-.github/workflows/
-  sync-viral-trends.yml          cron giornaliero (03:00 UTC)
-  sync-brand-mentions.yml        cron giornaliero
-  tiktok-trending-it.yml         cron ogni 12h
-  tiktok-hashtag.yml             cron ogni 30 min (brand Starhotels)
+supabase/migrations/                      vedi elenco sopra, tutte con timestamp 2026-0710-11
 ```
 
-## Stato attuale (2026-07-08)
+## Cronologia PR di questo lavoro (in ordine)
 
-- Pipeline **tecnicamente funzionante**: ultimo run reale ha sincronizzato 99
-  contenuti (54 Instagram + 45 TikTok) senza errori
-- OpenRouter fallisce sistematicamente con 429 sul modello gratuito di
-  default — il fallback funziona ma produce keyword peggiori sui nomi propri
-- Nessuna verifica ancora fatta su quante views TikTok vengono realmente
-  estratte con successo
-- Instagram non filtra per recency — contenuti vecchi mescolati a quelli
-  freschi
-- Nessun controllo UI per cambiare l'ordinamento (solo reach/engagement,
-  hardcoded)
+108–111: probe diagnostici Instagram (pre-v2, propedeutici).
+112: probe su campione reale hashtag + Fasi 1-3.
+113: recupero lavoro Fasi 1-8 dopo un merge anticipato di #112 (cherry-pick).
+114: diagnostica 0 risultati anysite Instagram.
+115: discovery Instagram — post oltre ai reel, filtro 7gg, 100/hashtag.
+116: `isStrongGrowthSignal` + fix UI (engagement growth non mostrato).
+117: rimozione lazy-load embed + paginazione feed post.
+118: diagnostica motivi post Instagram non raggiungibili (login-wall ecc.).
+119: intervallo reale nel badge variazione (non più "ultimi 7gg" fisso).
+120: discovery Instagram su 2 job paralleli (fix login-wall).
+121: backfill `delta_since` per contenuti pre-esistenti.
+122: filtro lingua italiana anche sulla discovery gratuita via hashtag.
+123: backfix lingua (recheck) + nasconde topic fuori classifica in UI.
+124: crescita Instagram su base di confronto stabile (DB) invece di scrape singolo.
+
+Tutte mergiate in `main` al momento della stesura di questo documento.
