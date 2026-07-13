@@ -39,48 +39,133 @@ export function toIsoDate(value) {
   return Number.isNaN(d.getTime()) ? null : d.toISOString();
 }
 
-// Parole funzionali molto comuni in italiano, improbabili per caso in altre
-// lingue: euristica grezza per scartare contenuti chiaramente non italiani
-// dove anysite non offre un filtro lingua nativo (reddit/instagram/linkedin).
-const ITALIAN_STOPWORDS = new Set([
+// Euristica grezza per scartare contenuti chiaramente non italiani dove
+// anysite non offre un filtro lingua nativo (reddit/instagram/linkedin) e
+// per la discovery gratuita via pagina hashtag Instagram.
+//
+// ATTENZIONE — lo spagnolo è la trappola: la versione precedente contava
+// stopword "italiane" ma molte (la, lo, le, un, una, con, se...) sono
+// IDENTICHE in spagnolo, quindi qualsiasi didascalia spagnola le superava.
+// Per distinguere davvero servono marker DISCRIMINANTI: parole comuni in
+// una lingua e assenti nell'altra. Contiamo separatamente i marker italiani
+// e quelli spagnoli e accettiamo solo se l'italiano prevale — le parole
+// condivise non compaiono in nessuna delle due liste, quindi non votano.
+
+// Comuni in italiano, assenti in spagnolo (es. "di"→"de", "che"→"que",
+// "per"→"por/para", "è"→"es", "come"→"como", "più"→"más").
+const ITALIAN_MARKERS = new Set([
   "il",
-  "lo",
-  "la",
   "gli",
-  "le",
   "di",
   "che",
   "non",
   "è",
-  "un",
-  "una",
   "per",
-  "con",
   "sono",
   "questo",
   "questa",
   "della",
   "dei",
   "delle",
+  "degli",
+  "nel",
+  "nella",
+  "negli",
   "anche",
   "come",
   "più",
   "ma",
-  "se",
   "molto",
-  "suo",
-  "loro",
   "nuovo",
   "nuova",
+  "perché",
+  "però",
+  "sempre",
   "grazie",
+  "ecco",
+  "quello",
+  "quella",
+  "hanno",
+  "siamo",
+  "dopo",
+  "senza",
+  "ogni",
+  "tutti",
+  "tutto",
+  "sulla",
+  "sui",
+  "dalla",
+  "quando",
+  "essere",
+  "fatto",
+  "così",
+  "già",
+  "ancora",
 ]);
+
+// Comuni in spagnolo, assenti in italiano (el/los/las, que, de, por, más,
+// y, es, para, muy, está, también...). Se pareggiano o superano i marker
+// italiani, il testo non è italiano.
+const SPANISH_MARKERS = new Set([
+  "el",
+  "los",
+  "las",
+  "que",
+  "de",
+  "por",
+  "más",
+  "mas",
+  "y",
+  "es",
+  "para",
+  "muy",
+  "pero",
+  "como",
+  "está",
+  "están",
+  "esta",
+  "estan",
+  "este",
+  "esto",
+  "eso",
+  "en",
+  "hay",
+  "también",
+  "tambien",
+  "porque",
+  "les",
+  "nos",
+  "cuando",
+  "desde",
+  "sobre",
+  "todos",
+  "todo",
+  "sus",
+  "fue",
+  "ser",
+  "hacer",
+  "según",
+  "segun",
+  "cual",
+  "ya",
+]);
+
+// Include gli accenti spagnoli (á í ó ú ñ ü) oltre a quelli italiani, così
+// parole come "más"/"está"/"también" vengono tokenizzate intere e non
+// spezzate sull'accento (altrimenti sfuggirebbero al conteggio spagnolo).
+const WORD_RE = /[a-zàèéìíòóùúáñü]+/g;
 
 export function looksItalian(text) {
   if (!text) return false;
-  const words = text.toLowerCase().match(/[a-zàèéìòù]+/g) ?? [];
+  const words = text.toLowerCase().match(WORD_RE) ?? [];
   if (words.length === 0) return false;
-  const hits = words.filter((w) => ITALIAN_STOPWORDS.has(w)).length;
-  return hits >= 2;
+  let italian = 0;
+  let spanish = 0;
+  for (const w of words) {
+    if (ITALIAN_MARKERS.has(w)) italian++;
+    else if (SPANISH_MARKERS.has(w)) spanish++;
+  }
+  return italian >= 2 && italian > spanish;
 }
 
 // Rete di sicurezza indipendente dalla piattaforma: alcuni endpoint (in

@@ -9,6 +9,12 @@ const DEFAULT_LIMIT = 150;
  * scripts/recheck-viral-engagement.mjs — gratuito, nessun credit anysite,
  * copre solo like/commenti (vedi scripts/lib/instagram-public-metrics.mjs).
  * Solo Instagram: la tecnica non è stata verificata su TikTok.
+ *
+ * Restituisce anche `content` (la didascalia già salvata): serve al
+ * ricontrollo per applicare retroattivamente il filtro lingua italiana
+ * anche quando Instagram blocca il re-fetch della pagina (login-wall) —
+ * in quel caso la didascalia salvata è l'unica base su cui decidere se il
+ * post va tenuto o cancellato.
  */
 export const Route = createFileRoute("/api/public/hooks/list-instagram-content-urls")({
   server: {
@@ -26,7 +32,7 @@ export const Route = createFileRoute("/api/public/hooks/list-instagram-content-u
 
           const { data, error } = await supabaseAdmin
             .from("viral_trend_content")
-            .select("platform, external_id, url")
+            .select("platform, external_id, url, content")
             .eq("platform", "instagram")
             .or(`published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`)
             .limit(limit);

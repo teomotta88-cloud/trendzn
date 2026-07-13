@@ -77,17 +77,27 @@ const updates = [];
 const deletions = [];
 let failed = 0;
 let skippedNotItalian = 0;
+let skippedNotItalianStored = 0;
 
 try {
   for (const item of items) {
     const { metrics } = await session.fetchMetricsDetailed(item.url);
-    if (!metrics) {
-      failed++;
-    } else if (!looksItalian(metrics.caption)) {
+    if (metrics) {
+      if (!looksItalian(metrics.caption)) {
+        deletions.push({ platform: item.platform, external_id: item.external_id });
+        skippedNotItalian++;
+      } else {
+        updates.push({ platform: item.platform, external_id: item.external_id, ...metrics });
+      }
+    } else if (item.content && !looksItalian(item.content)) {
+      // Re-fetch fallito (login-wall ecc.) ma la didascalia era già salvata:
+      // possiamo comunque applicare il filtro lingua e cancellare i post non
+      // italiani senza dover raggiungere di nuovo Instagram — così la pulizia
+      // retroattiva funziona anche quando il blocco impedisce il re-fetch.
       deletions.push({ platform: item.platform, external_id: item.external_id });
-      skippedNotItalian++;
+      skippedNotItalianStored++;
     } else {
-      updates.push({ platform: item.platform, external_id: item.external_id, ...metrics });
+      failed++;
     }
     await sleep(DELAY_MS);
   }
@@ -96,7 +106,7 @@ try {
 }
 
 console.log(
-  `Metriche recuperate: ${updates.length}/${items.length} (${failed} falliti/non pubblici, ${skippedNotItalian} non italiani -> da cancellare)`,
+  `Metriche recuperate: ${updates.length}/${items.length} (${failed} falliti/non pubblici, ${skippedNotItalian} non italiani da re-fetch + ${skippedNotItalianStored} non italiani da didascalia salvata -> da cancellare)`,
 );
 
 if (updates.length > 0 || deletions.length > 0) {
