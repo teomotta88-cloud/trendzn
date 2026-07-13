@@ -16,13 +16,21 @@ const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 // Catena di modelli con fallback: i modelli ":free" di OpenRouter vengono
 // spesso rate-limitati a monte (429) o ritirati (404), quindi si prova il
-// primo e, se non disponibile, si passa al successivo. Sovrascrivibile con
-// OPENROUTER_MODEL (uno o più modelli separati da virgola). Per la massima
-// affidabilità imposta come primo un modello economico a pagamento, es.
-// OPENROUTER_MODEL="openai/gpt-4o-mini,meta-llama/llama-3.3-70b-instruct:free".
+// primo e, se non disponibile (429/404/5xx), si passa al successivo. La lista
+// mescola provider diversi (Meta, DeepSeek, Google, Qwen, Mistral) così è
+// improbabile che siano tutti saturi nello stesso momento; le voci
+// eventualmente ritirate (404) vengono semplicemente saltate.
+//
+// Sovrascrivibile con OPENROUTER_MODEL (uno o più modelli separati da
+// virgola). La lista dei modelli gratuiti ruota nel tempo: se troppi finiscono
+// 404, aggiorna questa lista da https://openrouter.ai/models?max_price=0.
 const DEFAULT_MODELS = [
   "meta-llama/llama-3.3-70b-instruct:free",
+  "deepseek/deepseek-chat-v3-0324:free",
   "google/gemini-2.0-flash-exp:free",
+  "qwen/qwen-2.5-72b-instruct:free",
+  "mistralai/mistral-small-3.1-24b-instruct:free",
+  "meta-llama/llama-3.1-8b-instruct:free",
 ];
 
 function getModels(): string[] {
@@ -164,9 +172,9 @@ export const Route = createFileRoute("/api/public/hooks/extract-keywords")({
             {
               ok: false,
               error:
-                "Nessun modello OpenRouter disponibile per l'estrazione. " +
-                "Se usi modelli ':free' potrebbero essere rate-limitati: imposta OPENROUTER_MODEL " +
-                "su un modello economico (es. openai/gpt-4o-mini). Dettaglio: " +
+                "Tutti i modelli gratuiti OpenRouter sono momentaneamente non disponibili " +
+                "(rate limit a monte). Riprova tra poco, oppure aggiorna la lista OPENROUTER_MODEL. " +
+                "Dettaglio: " +
                 fallbackErrors.join(" | ").slice(0, 250),
             },
             { status: 502 },
