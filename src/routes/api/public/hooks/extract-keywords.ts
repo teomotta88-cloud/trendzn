@@ -1,38 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
-import Anthropic from "@anthropic-ai/sdk";
 
 // SBAM AutoGraphics: dal copy visual di un post "photo_card" estrae le keyword
 // da usare per la ricerca di una foto stock Getty (vedi getty-search.ts).
 // Keyword orientate al VISUAL (soggetti, ambientazione, mood), non alle parole
-// astratte del copy — e non allo Human-in-the-loop di approve-job.ts.
+// astratte del copy.
+//
+// Usa OpenRouter (API OpenAI-compatibile) invece dell'SDK Anthropic, per
+// coerenza col resto del progetto che già passa da OpenRouter per la
+// conversione hashtag->keyword (scripts/lib/openrouter.mjs). La API key va
+// nell'ambiente di deploy dell'app (secret runtime, es. Lovable/Cloudflare),
+// letta da process.env.OPENROUTER_API_KEY — NON è la stessa cosa dei secret
+// di GitHub Actions, che alimentano solo i workflow degli scraper.
 
-// Schema JSON "a mano" invece di un helper zod: evita di legare questa route
-// alla versione esatta di zod richiesta dall'SDK (zod/v4), che diverge da
-// quella usata altrove nel progetto (v3, per i form react-hook-form).
-const KEYWORDS_JSON_SCHEMA = {
-  type: "object",
-  properties: {
-    keywords_en: { type: "array", items: { type: "string" } },
-    keywords_it: { type: "array", items: { type: "string" } },
-  },
-  required: ["keywords_en", "keywords_it"],
-  additionalProperties: false,
-} as const;
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+// La lista dei modelli ":free" su OpenRouter ruota nel tempo: se questo
+// smette di funzionare, imposta OPENROUTER_MODEL nell'ambiente o aggiorna il
+// default (vedi https://openrouter.ai/models?max_price=0).
+const DEFAULT_MODEL = "meta-llama/llama-3.3-70b-instruct:free";
 
 interface KeywordsResult {
   keywords_en: string[];
   keywords_it: string[];
-}
-
-function isValidKeywordsResult(value: unknown): value is KeywordsResult {
-  if (!value || typeof value !== "object") return false;
-  const v = value as Record<string, unknown>;
-  const isStringArray = (a: unknown): a is string[] =>
-    Array.isArray(a) &&
-    a.length >= 3 &&
-    a.length <= 5 &&
-    a.every((s) => typeof s === "string" && s.trim());
-  return isStringArray(v.keywords_en) && isStringArray(v.keywords_it);
 }
 
 const SYSTEM_PROMPT = `Sei un assistente che trasforma il copy visual di un post social in keyword per la ricerca di foto stock.
@@ -40,30 +28,69 @@ Estrai SOLO elementi visivamente rappresentabili: soggetti concreti, ambientazio
 NON estrarre parole astratte del copy (slogan, call to action, nomi di prodotto, brand).
 Le keyword inglesi devono essere quelle più efficaci per la ricerca su una libreria di stock photography internazionale.
 Le keyword italiane sono la stessa lista adattata per un ricercatore che pensa in italiano, non una traduzione letterale parola per parola.
-Rispondi SOLO con l'oggetto JSON richiesto: esattamente 3-5 keyword per lingua, senza testo aggiuntivo.`;
+Rispondi SOLO con un oggetto JSON in questo formato esatto, senza markdown, senza spiegazioni:
+{"keywords_en": ["...", "..."], "keywords_it": ["...", "..."]}
+Esattamente 3-5 keyword per ciascuna lingua.`;
 
-async function extractKeywords(client: Anthropic, copy: string): Promise<KeywordsResult | null> {
-  const response = await client.messages.create({
-    model: "claude-sonnet-5",
-    max_tokens: 1024,
-    thinking: { type: "disabled" },
-    output_config: {
-      effort: "low",
-      format: { type: "json_schema", schema: KEYWORDS_JSON_SCHEMA },
-    },
-    system: SYSTEM_PROMPT,
-    messages: [{ role: "user", content: copy }],
-  });
+function isStringArray(value: unknown): value is string[] {
+  return (
+    Array.isArray(value) &&
+    value.length >= 3 &&
+    value.length <= 5 &&
+    value.every((s) => typeof s === "string" && s.trim().length > 0)
+  );
+}
 
-  const textBlock = response.content.find((b) => b.type === "text");
-  if (!textBlock || textBlock.type !== "text") return null;
-
+function parseKeywords(raw: string): KeywordsResult | null {
+  const cleaned = raw
+    .trim()
+    .replace(/^```(?:json)?\n?/, "")
+    .replace(/\n?```$/, "")
+    .trim();
   try {
-    const parsed: unknown = JSON.parse(textBlock.text);
-    return isValidKeywordsResult(parsed) ? parsed : null;
+    const parsed = JSON.parse(cleaned) as unknown;
+    if (!parsed || typeof parsed !== "object") return null;
+    const obj = parsed as Record<string, unknown>;
+    if (isStringArray(obj.keywords_en) && isStringArray(obj.keywords_it)) {
+      return { keywords_en: obj.keywords_en, keywords_it: obj.keywords_it };
+    }
+    return null;
   } catch {
     return null;
   }
+}
+
+async function extractKeywords(
+  apiKey: string,
+  model: string,
+  copy: string,
+): Promise<KeywordsResult | null> {
+  const res = await fetch(OPENROUTER_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model,
+      temperature: 0,
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: copy },
+      ],
+    }),
+    signal: AbortSignal.timeout(20000),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`OpenRouter ha risposto ${res.status}: ${body.slice(0, 200)}`);
+  }
+
+  const data = (await res.json()) as { choices?: Array<{ message?: { content?: string } }> };
+  const text = data.choices?.[0]?.message?.content;
+  if (!text) return null;
+  return parseKeywords(text);
 }
 
 export const Route = createFileRoute("/api/public/hooks/extract-keywords")({
@@ -77,19 +104,19 @@ export const Route = createFileRoute("/api/public/hooks/extract-keywords")({
             return Response.json({ ok: false, error: "copy è obbligatorio" }, { status: 400 });
           }
 
-          const apiKey = process.env.ANTHROPIC_API_KEY;
+          const apiKey = process.env.OPENROUTER_API_KEY;
           if (!apiKey) {
             return Response.json(
-              { ok: false, error: "ANTHROPIC_API_KEY non configurata" },
+              { ok: false, error: "OPENROUTER_API_KEY non configurata nell'ambiente dell'app" },
               { status: 500 },
             );
           }
-          const client = new Anthropic({ apiKey });
+          const model = process.env.OPENROUTER_MODEL || DEFAULT_MODEL;
 
-          let result = await extractKeywords(client, copy);
+          let result = await extractKeywords(apiKey, model, copy);
           if (!result) {
-            // Retry singolo: il modello a volte non rispetta lo schema al primo colpo.
-            result = await extractKeywords(client, copy);
+            // Retry singolo: i modelli free a volte non rispettano il formato.
+            result = await extractKeywords(apiKey, model, copy);
           }
           if (!result) {
             return Response.json(
