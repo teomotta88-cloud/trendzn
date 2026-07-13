@@ -24,6 +24,20 @@ interface GettyCandidateResult {
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
 
+// Decodifica le entità HTML più comuni nei titoli/URL estratti dal markup
+// (es. &#x27; -> ', &amp; -> &, &quot; -> "). Getty usa parecchie entità
+// numeriche negli attributi.
+function decodeHtmlEntities(input: string): string {
+  return input
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+}
+
 // Mappa i formati grafici di rubrica_formati/graphic_job_formats
 // sull'orientamento accettato dal filtro di ricerca Getty.
 function formatoToOrientation(formato: string | undefined): string | undefined {
@@ -69,18 +83,26 @@ function extractFromJsonLd(html: string): GettyCandidateResult[] {
         const image = (item as Record<string, unknown>)?.image ?? item;
         if (!image || typeof image !== "object") continue;
         const img = image as Record<string, unknown>;
-        const previewUrl =
+        // Preferisci i campi che contengono l'immagine vera (contentUrl /
+        // thumbnailUrl); `url` è la pagina di dettaglio, va usata solo per
+        // ricavare l'asset id, non come anteprima.
+        const rawPreview =
           (typeof img.contentUrl === "string" && img.contentUrl) ||
           (typeof img.thumbnailUrl === "string" && img.thumbnailUrl) ||
-          (typeof img.url === "string" && img.url);
+          "";
+        const rawDetail =
+          (typeof img.url === "string" && img.url) ||
+          (typeof img.contentUrl === "string" && img.contentUrl) ||
+          "";
+        const previewUrl = decodeHtmlEntities(rawPreview);
+        const detailUrl = decodeHtmlEntities(rawDetail);
         if (!previewUrl) continue;
-        const detailUrl = (typeof img.url === "string" && img.url) || previewUrl;
         const assetId = extractAssetIdFromUrl(detailUrl) ?? extractAssetIdFromUrl(previewUrl);
         if (!assetId) continue;
         results.push({
           asset_id: assetId,
           preview_url: previewUrl,
-          title: typeof img.name === "string" ? img.name : null,
+          title: typeof img.name === "string" ? decodeHtmlEntities(img.name) : null,
           orientamento: null,
         });
       }
@@ -94,18 +116,37 @@ function extractFromJsonLd(html: string): GettyCandidateResult[] {
 function extractFromImgTags(html: string): GettyCandidateResult[] {
   const results: GettyCandidateResult[] = [];
   const seen = new Set<string>();
-  const imgMatches = html.matchAll(/<img[^>]+src=["']([^"']+)["'][^>]*>/gi);
+  const imgMatches = html.matchAll(/<img\b[^>]*>/gi);
   for (const match of imgMatches) {
-    const src = match[1];
-    if (!src.includes("media.gettyimages.com")) continue;
-    const assetId = extractAssetIdFromUrl(src);
+    const tag = match[0];
+    // Nel lazy-loading l'URL vero può stare in data-src/data-srcset invece
+    // che in src (che spesso è un placeholder). Raccogli tutti i candidati e
+    // scegli il primo URL Getty reale, scartando i placeholder data:.
+    const urls: string[] = [];
+    const srcMatch = tag.match(/\bsrc=["']([^"']+)["']/i);
+    if (srcMatch) urls.push(srcMatch[1]);
+    const dataSrcMatch = tag.match(/\bdata-src=["']([^"']+)["']/i);
+    if (dataSrcMatch) urls.push(dataSrcMatch[1]);
+    const srcsetMatch = tag.match(/\b(?:data-)?srcset=["']([^"']+)["']/i);
+    if (srcsetMatch) {
+      // srcset = "url1 1x, url2 2x" -> prendi il primo URL
+      const first = srcsetMatch[1].split(",")[0]?.trim().split(/\s+/)[0];
+      if (first) urls.push(first);
+    }
+
+    const previewUrl = urls
+      .map(decodeHtmlEntities)
+      .find((u) => u.includes("media.gettyimages.com") && !u.startsWith("data:"));
+    if (!previewUrl) continue;
+
+    const assetId = extractAssetIdFromUrl(previewUrl);
     if (!assetId || seen.has(assetId)) continue;
     seen.add(assetId);
-    const altMatch = match[0].match(/alt=["']([^"']*)["']/i);
+    const altMatch = tag.match(/\balt=["']([^"']*)["']/i);
     results.push({
       asset_id: assetId,
-      preview_url: src,
-      title: altMatch ? altMatch[1] : null,
+      preview_url: previewUrl,
+      title: altMatch ? decodeHtmlEntities(altMatch[1]) : null,
       orientamento: null,
     });
   }
