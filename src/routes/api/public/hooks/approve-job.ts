@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   getGraphicJob,
   getRubrica,
-  listGettyCandidates,
+  listGraphicJobImages,
   listTemplateConstraints,
   updateGraphicJob,
 } from "@/lib/autographics";
@@ -60,20 +60,23 @@ export const Route = createFileRoute("/api/public/hooks/approve-job")({
             return Response.json({ ok: false, error: detail }, { status: 422 });
           }
 
-          if (rubrica.tipo_template === "photo_card") {
-            const candidates = await listGettyCandidates(jobId);
-            const selected = candidates.find((c) => c.selected);
-            if (!selected) {
+          // Ogni campo #image obbligatorio deve avere un'immagine attiva
+          // (selezione Getty o caricamento manuale) — un job può avere più
+          // campi immagine indipendenti (carousel), non solo uno.
+          const imageConstraints = constraints.filter((c) => c.layer_type === "image");
+          if (imageConstraints.length > 0) {
+            const images = await listGraphicJobImages(jobId);
+            const layersWithImage = new Set(images.map((i) => i.layer_name));
+            const missing = imageConstraints
+              .filter((c) => c.obbligatorio && !layersWithImage.has(c.layer_name))
+              .map((c) => c.layer_name);
+            if (missing.length > 0) {
               await updateGraphicJob(jobId, { status: "pending_image" });
               return Response.json(
-                { ok: false, error: "Seleziona una foto Getty prima di approvare" },
+                { ok: false, error: `Seleziona un'immagine per: ${missing.join(", ")}` },
                 { status: 409 },
               );
             }
-            await updateGraphicJob(jobId, {
-              getty_asset_id: selected.asset_id,
-              getty_image_url: selected.preview_url,
-            });
           }
 
           await updateGraphicJob(jobId, { status: "ready_for_render", error_detail: null });
