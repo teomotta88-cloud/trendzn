@@ -51,6 +51,10 @@ export interface TemplateConstraint {
   rubrica_id: string;
   layer_name: string;
   layer_type: LayerType;
+  // Card (slide) di appartenenza nell'editor rubriche: 1 = prima card. Non
+  // influisce sull'export (che lavora su un elenco piatto layer_name->valore),
+  // serve solo a ricostruire il raggruppamento in RubrichePanel.
+  card_index: number;
   max_chars: number | null;
   min_font_size: number | null;
   max_font_size: number | null;
@@ -159,6 +163,7 @@ export async function listTemplateConstraints(rubricaId: string): Promise<Templa
     .from("template_constraints")
     .select("*")
     .eq("rubrica_id", rubricaId)
+    .order("card_index")
     .order("layer_name");
   if (error) throw error;
   return data ?? [];
@@ -174,6 +179,25 @@ export async function upsertTemplateConstraint(
     .single();
   if (error) throw error;
   return data;
+}
+
+// Sostituisce tutti i campi di una rubrica in un colpo solo (delete + insert),
+// usata dall'editor visuale RubrichePanel dove l'utente ricompone
+// liberamente card e campi ad ogni salvataggio.
+export async function replaceTemplateConstraints(
+  rubricaId: string,
+  constraints: Array<Omit<TemplateConstraint, "id" | "rubrica_id" | "created_at">>,
+): Promise<TemplateConstraint[]> {
+  const { error: deleteError } = await db
+    .from("template_constraints")
+    .delete()
+    .eq("rubrica_id", rubricaId);
+  if (deleteError) throw deleteError;
+  if (constraints.length === 0) return [];
+  const rows = constraints.map((c) => ({ ...c, rubrica_id: rubricaId }));
+  const { data, error } = await db.from("template_constraints").insert(rows).select("*");
+  if (error) throw error;
+  return data ?? [];
 }
 
 // --- Graphic jobs --------------------------------------------------------

@@ -17,6 +17,7 @@ import { NewPostCard } from "@/components/PianoEditoriale/NewPostCard";
 import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeedPreview";
 import { PostNumberRail } from "@/components/PianoEditoriale/PostNumberRail";
 import { ClientChannelsPanel } from "@/components/PianoEditoriale/ClientChannelsPanel";
+import { RubrichePanel } from "@/components/PianoEditoriale/RubrichePanel";
 import { CanvaExportPanel } from "@/components/PianoEditoriale/CanvaExportPanel";
 
 export const Route = createFileRoute("/piano-editoriale/")({
@@ -169,7 +170,13 @@ function PianoEditorialePage() {
       </div>
 
       {tab === "canali" ? (
-        <ClientChannelsPanel />
+        <div className="space-y-8">
+          <ClientChannelsPanel />
+          <div className="border-t border-border pt-6">
+            <h2 className="mb-3 text-sm font-semibold text-foreground">Rubriche AutoGraphics</h2>
+            <RubrichePanel />
+          </div>
+        </div>
       ) : loading ? (
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
