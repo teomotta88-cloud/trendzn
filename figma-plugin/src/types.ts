@@ -20,6 +20,7 @@ export interface TemplateConstraint {
   id: string;
   rubrica_id: string;
   layer_name: string;
+  layer_type: "text" | "image";
   max_chars: number | null;
   min_font_size: number | null;
   max_font_size: number | null;

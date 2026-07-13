@@ -41,10 +41,13 @@ export interface RubricaFormato {
   created_at: string;
 }
 
+export type LayerType = "text" | "image";
+
 export interface TemplateConstraint {
   id: string;
   rubrica_id: string;
   layer_name: string;
+  layer_type: LayerType;
   max_chars: number | null;
   min_font_size: number | null;
   max_font_size: number | null;
