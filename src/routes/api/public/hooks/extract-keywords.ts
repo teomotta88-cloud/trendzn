@@ -13,10 +13,29 @@ import { createFileRoute } from "@tanstack/react-router";
 // di GitHub Actions, che alimentano solo i workflow degli scraper.
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-// La lista dei modelli ":free" su OpenRouter ruota nel tempo: se questo
-// smette di funzionare, imposta OPENROUTER_MODEL nell'ambiente o aggiorna il
-// default (vedi https://openrouter.ai/models?max_price=0).
-const DEFAULT_MODEL = "meta-llama/llama-3.3-70b-instruct:free";
+
+// Catena di modelli con fallback: i modelli ":free" di OpenRouter vengono
+// spesso rate-limitati a monte (429) o ritirati (404), quindi si prova il
+// primo e, se non disponibile, si passa al successivo. Sovrascrivibile con
+// OPENROUTER_MODEL (uno o più modelli separati da virgola). Per la massima
+// affidabilità imposta come primo un modello economico a pagamento, es.
+// OPENROUTER_MODEL="openai/gpt-4o-mini,meta-llama/llama-3.3-70b-instruct:free".
+const DEFAULT_MODELS = [
+  "meta-llama/llama-3.3-70b-instruct:free",
+  "google/gemini-2.0-flash-exp:free",
+];
+
+function getModels(): string[] {
+  const env = process.env.OPENROUTER_MODEL;
+  if (env) {
+    const list = env
+      .split(",")
+      .map((m) => m.trim())
+      .filter(Boolean);
+    if (list.length > 0) return list;
+  }
+  return DEFAULT_MODELS;
+}
 
 interface KeywordsResult {
   keywords_en: string[];
@@ -60,11 +79,21 @@ function parseKeywords(raw: string): KeywordsResult | null {
   }
 }
 
-async function extractKeywords(
-  apiKey: string,
-  model: string,
-  copy: string,
-): Promise<KeywordsResult | null> {
+// Codici HTTP che rendono sensato passare al modello successivo invece di
+// abortire: modello non disponibile (404), rate limit (429), errori provider
+// (5xx). Auth (401/403) e richiesta malformata (400) sono invece fatali.
+function shouldFallback(status: number): boolean {
+  return status === 404 || status === 429 || status >= 500;
+}
+
+interface ModelAttempt {
+  result: KeywordsResult | null;
+  // true = errore transitorio (prova il modello successivo)
+  fallback: boolean;
+  errorDetail?: string;
+}
+
+async function tryModel(apiKey: string, model: string, copy: string): Promise<ModelAttempt> {
   const res = await fetch(OPENROUTER_URL, {
     method: "POST",
     headers: {
@@ -84,13 +113,17 @@ async function extractKeywords(
 
   if (!res.ok) {
     const body = await res.text();
-    throw new Error(`OpenRouter ha risposto ${res.status}: ${body.slice(0, 200)}`);
+    const detail = `OpenRouter (${model}) ha risposto ${res.status}: ${body.slice(0, 200)}`;
+    if (shouldFallback(res.status)) return { result: null, fallback: true, errorDetail: detail };
+    // Errore fatale (auth, bad request): inutile provare altri modelli.
+    throw new Error(detail);
   }
 
   const data = (await res.json()) as { choices?: Array<{ message?: { content?: string } }> };
   const text = data.choices?.[0]?.message?.content;
-  if (!text) return null;
-  return parseKeywords(text);
+  if (!text)
+    return { result: null, fallback: true, errorDetail: `${model}: risposta senza contenuto` };
+  return { result: parseKeywords(text), fallback: false };
 }
 
 export const Route = createFileRoute("/api/public/hooks/extract-keywords")({
@@ -111,21 +144,33 @@ export const Route = createFileRoute("/api/public/hooks/extract-keywords")({
               { status: 500 },
             );
           }
-          const model = process.env.OPENROUTER_MODEL || DEFAULT_MODEL;
 
-          let result = await extractKeywords(apiKey, model, copy);
-          if (!result) {
-            // Retry singolo: i modelli free a volte non rispettano il formato.
-            result = await extractKeywords(apiKey, model, copy);
-          }
-          if (!result) {
-            return Response.json(
-              { ok: false, error: "Il modello non ha restituito keyword valide" },
-              { status: 502 },
-            );
+          const models = getModels();
+          const fallbackErrors: string[] = [];
+
+          for (const model of models) {
+            // Un retry per modello sul solo caso "JSON non conforme".
+            let attempt = await tryModel(apiKey, model, copy);
+            if (attempt.result === null && !attempt.fallback) {
+              attempt = await tryModel(apiKey, model, copy);
+            }
+            if (attempt.result) {
+              return Response.json({ ok: true, model, ...attempt.result });
+            }
+            if (attempt.errorDetail) fallbackErrors.push(attempt.errorDetail);
           }
 
-          return Response.json({ ok: true, ...result });
+          return Response.json(
+            {
+              ok: false,
+              error:
+                "Nessun modello OpenRouter disponibile per l'estrazione. " +
+                "Se usi modelli ':free' potrebbero essere rate-limitati: imposta OPENROUTER_MODEL " +
+                "su un modello economico (es. openai/gpt-4o-mini). Dettaglio: " +
+                fallbackErrors.join(" | ").slice(0, 250),
+            },
+            { status: 502 },
+          );
         } catch (err) {
           return Response.json({ ok: false, error: String(err).slice(0, 300) }, { status: 500 });
         }
