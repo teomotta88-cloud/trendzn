@@ -2,15 +2,21 @@ name: TikTok Trending IT
 
 on:
   schedule:
-    # Ogni 4 ore: gratuito (nessun credit anysite coinvolto), aumentato da
-    # 12h per una finestra di rilevazione più stretta sui volumi TikTok
-    # (Trend Virali v2 — vedi supabase/migrations/20260710120000_monitored_topics.sql).
-    - cron: "0 */4 * * *"
+    # Ogni ora, al minuto 0: gratuito (nessun credit anysite), portato da 4h a
+    # oraria per aggiornare volumi e classifica TikTok con la finestra più
+    # stretta possibile (richiesta esplicita). La tabella rank
+    # (tiktok_trending_hashtags) riceve TUTTI gli hashtag scoperti col loro
+    # rank ad ogni run, indipendentemente da max_hashtags — quest'ultimo
+    # limita solo per quanti hashtag si scaricano anche i video (scraping più
+    # pesante, con 45s di pausa l'uno): tenuto sostenibile per stare
+    # nell'ora e nel timeout, il monitoraggio dei 100 per rank non dipende da
+    # questo scraping ma dai metadati CC (post_count).
+    - cron: "0 * * * *"
   workflow_dispatch:
     inputs:
       max_hashtags:
-        description: "Numero massimo di hashtag da processare"
-        default: "10"
+        description: "Per quanti hashtag scaricare anche i video (la classifica/volumi copre comunque tutti)"
+        default: "30"
       max_posts_per_tag:
         description: "Max URL per hashtag"
         default: "12"
@@ -49,7 +55,7 @@ jobs:
 
       - name: Discover trending hashtags e scrapa contenuti
         env:
-          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '10' }}
+          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '30' }}
           MAX_POSTS_PER_TAG: ${{ github.event.inputs.max_posts_per_tag || '12' }}
           DELAY_BETWEEN_TAGS_MS: "45000"
           TIKTOK_CC_EMAIL: ${{ secrets.TIKTOK_CC_EMAIL }}
