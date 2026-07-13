@@ -24,8 +24,11 @@ export interface Rubrica {
   id: string;
   nome: string;
   tipo_template: TipoTemplate;
-  figma_file_key: string;
-  figma_component_id: string;
+  // Opzionali: servono solo alle rubriche che usano ancora il vecchio
+  // percorso plugin Figma. Le rubriche basate su Canva Bulk Create (il
+  // percorso corrente) non li valorizzano.
+  figma_file_key: string | null;
+  figma_component_id: string | null;
   attiva: boolean;
   created_at: string;
 }
@@ -356,4 +359,75 @@ export async function upsertGraphicJob(input: {
     return refreshed;
   }
   return createGraphicJob(input);
+}
+
+// --- Export CSV per Canva Bulk Create --------------------------------------
+
+// Un job pronto per l'export, coi valori già risolti per colonna: i layer di
+// tipo immagine prendono getty_image_url invece del copy_payload (identica
+// logica di risoluzione usata in precedenza dal plugin Figma).
+export interface ExportableJob {
+  job_id: string;
+  post_id: string;
+  post_date: string;
+  values: Record<string, string>;
+}
+
+// Job con status ready_for_render per una rubrica, filtrati sui post passati
+// (tipicamente quelli del mese corrente visualizzato in Piano Editoriale).
+// Ritorna anche i template_constraints della rubrica (servono per sapere
+// quali colonne includere e quali sono di tipo immagine).
+export async function listExportableJobs(
+  rubricaId: string,
+  postIds: string[],
+): Promise<{ jobs: ExportableJob[]; constraints: TemplateConstraint[] }> {
+  const constraints = await listTemplateConstraints(rubricaId);
+  if (postIds.length === 0) return { jobs: [], constraints };
+
+  const { data, error } = await db
+    .from("graphic_jobs")
+    .select("id, post_id, copy_payload, getty_image_url, editorial_posts(post_date)")
+    .eq("rubrica_id", rubricaId)
+    .eq("status", "ready_for_render")
+    .in("post_id", postIds);
+  if (error) throw error;
+
+  const jobs: ExportableJob[] = (data ?? []).map(
+    (row: {
+      id: string;
+      post_id: string;
+      copy_payload: Record<string, string>;
+      getty_image_url: string | null;
+      editorial_posts: { post_date: string } | null;
+    }) => {
+      const values: Record<string, string> = {};
+      for (const c of constraints) {
+        values[c.layer_name] =
+          c.layer_type === "image"
+            ? (row.getty_image_url ?? "")
+            : (row.copy_payload[c.layer_name] ?? "");
+      }
+      return {
+        job_id: row.id,
+        post_id: row.post_id,
+        post_date: row.editorial_posts?.post_date ?? "",
+        values,
+      };
+    },
+  );
+
+  return { jobs, constraints };
+}
+
+// Segna i job come esportati (riusa lo stato "done": in questa pipeline
+// significa "incluso in un export CSV per Canva", non "renderizzato" — non
+// c'è modo di sapere automaticamente se/quando l'utente ha effettivamente
+// completato il Bulk Create su Canva).
+export async function markJobsExported(jobIds: string[]): Promise<void> {
+  if (jobIds.length === 0) return;
+  const { error } = await db
+    .from("graphic_jobs")
+    .update({ status: "done", updated_at: new Date().toISOString() })
+    .in("id", jobIds);
+  if (error) throw error;
 }

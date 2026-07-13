@@ -1,4 +1,12 @@
-# SBAM AutoGraphics — Plugin Figma
+# SBAM AutoGraphics — Plugin Figma (percorso legacy)
+
+> **Non è più il percorso attivo.** Richiede di aprire Figma manualmente
+> (desktop o browser) per ogni sessione di render — incompatibile con
+> l'esigenza di generazione senza aprire alcuna app. Il percorso corrente
+> usa **Canva Bulk Create** (export CSV, no-code, nessuna app da aprire per
+> singolo post): vedi `../docs/sbam-autographics-canva.md`. Questo plugin
+> resta nel repo funzionante nel caso serva in futuro tornare a template
+> Figma, ma non riceve più sviluppo attivo.
 
 Plugin Figma che genera le grafiche finali dei post del Piano Editoriale a
 partire da template preimpostati per rubrica, popolandoli con il copy

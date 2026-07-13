@@ -1,16 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Sparkles, Search, Wand2, Download, Loader2, AlertTriangle } from "lucide-react";
+import { Sparkles, Search, Wand2, Loader2, AlertTriangle } from "lucide-react";
 import type { EditorialPost } from "@/lib/editorialPlan";
 import {
   type GettyCandidate,
   type GraphicJob,
-  type GraphicJobFormat,
   type Rubrica,
   type TemplateConstraint,
-  createGraphicJobFormatsFromRubrica,
   getJobForPost,
   listGettyCandidates,
-  listGraphicJobFormats,
   listRubriche,
   listTemplateConstraints,
   replaceGettyCandidates,
@@ -23,8 +20,10 @@ import {
 // SBAM AutoGraphics — pannello agganciato in fondo alla PostCard. Gestisce
 // tutto il flusso lato copywriter: scelta rubrica strutturata, composizione
 // del copy per layer con contatori live e blocco oltre max_chars, ricerca
-// foto Getty (per le rubriche photo_card), approvazione e stato del render
-// in tempo reale.
+// foto Getty (per le rubriche photo_card), approvazione. Il rendering vero e
+// proprio non avviene qui: un job approvato (ready_for_render) diventa
+// esportabile in CSV per Canva Bulk Create dal pannello "Export Canva Bulk
+// Create" in cima al Piano Editoriale (vedi CanvaExportPanel.tsx).
 
 async function callHook<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`/api/public/hooks/${path}`, {
@@ -51,9 +50,9 @@ function counterColor(len: number, max: number | null): string {
 const STATUS_LABEL: Record<string, string> = {
   pending_validation: "bozza",
   pending_image: "in attesa foto",
-  ready_for_render: "in coda al render",
+  ready_for_render: "pronto per l'export",
   rendering: "in rendering",
-  done: "completato",
+  done: "esportato in CSV",
   error: "errore",
 };
 
@@ -64,7 +63,6 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
   const [constraints, setConstraints] = useState<TemplateConstraint[]>([]);
   const [copyPayload, setCopyPayload] = useState<Record<string, string>>({});
   const [job, setJob] = useState<GraphicJob | null>(null);
-  const [formats, setFormats] = useState<GraphicJobFormat[]>([]);
   const [candidates, setCandidates] = useState<GettyCandidate[]>([]);
   const [keywords, setKeywords] = useState<string>("");
   const [busy, setBusy] = useState<string | null>(null);
@@ -76,11 +74,7 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
 
   const refreshJobState = useCallback(
     async (jobId: string) => {
-      const [fmts, cands] = await Promise.all([
-        listGraphicJobFormats(jobId),
-        listGettyCandidates(jobId),
-      ]);
-      setFormats(fmts);
+      const cands = await listGettyCandidates(jobId);
       setCandidates(cands);
       const fresh = await getJobForPost(post.id);
       if (fresh) setJob(fresh);
@@ -101,14 +95,12 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
           setJob(existing);
           setRubricaId(existing.rubrica_id);
           setCopyPayload(existing.copy_payload ?? {});
-          const [cons, fmts, cands] = await Promise.all([
+          const [cons, cands] = await Promise.all([
             listTemplateConstraints(existing.rubrica_id),
-            listGraphicJobFormats(existing.id),
             listGettyCandidates(existing.id),
           ]);
           if (cancelled) return;
           setConstraints(cons);
-          setFormats(fmts);
           setCandidates(cands);
         }
       } catch (err) {
@@ -224,10 +216,9 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
 
   async function runGettySearch(kwList: string[]) {
     if (!job) return;
-    const formato = formats[0]?.formato;
     const result = await callHook<{
       candidates: Array<Omit<GettyCandidate, "id" | "job_id" | "created_at" | "selected">>;
-    }>("getty-search", { keywords: kwList, formato });
+    }>("getty-search", { keywords: kwList });
     const saved = await replaceGettyCandidates(job.id, result.candidates);
     setCandidates(saved);
   }
@@ -270,11 +261,6 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
     setBusy("approve");
     setError(null);
     try {
-      // Assicura che i formati esistano già (li crea approve-job, ma li
-      // pre-creiamo per poter mostrare subito le righe di stato).
-      if (formats.length === 0) {
-        await createGraphicJobFormatsFromRubrica(job.id, job.rubrica_id);
-      }
       await callHook("approve-job", { job_id: job.id });
       await refreshJobState(job.id);
     } catch (err) {
@@ -307,7 +293,7 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
           {/* Rubrica strutturata (tabella rubriche) */}
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-              Rubrica (template Figma)
+              Rubrica (template Canva)
             </label>
             <select
               value={rubricaId}
@@ -324,7 +310,7 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
             {rubriche.length === 0 && (
               <p className="mt-1 text-[11px] text-muted-foreground">
                 Nessuna rubrica configurata. Registra le rubriche nella tabella{" "}
-                <code>rubriche</code> (vedi figma-plugin/README.md).
+                <code>rubriche</code> (vedi docs/sbam-autographics-canva.md).
               </p>
             )}
           </div>
@@ -501,43 +487,16 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
                 Approva e genera
               </button>
 
-              {formats.length > 0 && (
-                <div className="space-y-1">
-                  {formats.map((f) => (
-                    <div
-                      key={f.id}
-                      className="flex items-center justify-between gap-2 rounded-lg border border-border bg-background/60 px-2.5 py-1.5 text-[11px]"
-                    >
-                      <span className="font-medium text-foreground">{f.formato}</span>
-                      <span className="flex items-center gap-2">
-                        <span
-                          className={`rounded-full px-2 py-0.5 text-[10px] ${
-                            f.status === "done"
-                              ? "bg-green-500/15 text-green-600"
-                              : f.status === "error"
-                                ? "bg-destructive/15 text-destructive"
-                                : f.status === "rendering"
-                                  ? "bg-yellow-500/15 text-yellow-600"
-                                  : "bg-muted text-muted-foreground"
-                          }`}
-                        >
-                          {f.status}
-                        </span>
-                        {f.status === "done" && f.output_url && (
-                          <a
-                            href={f.output_url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1 text-primary hover:underline"
-                          >
-                            <Download className="size-3.5" />
-                            Scarica
-                          </a>
-                        )}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              {job.status === "ready_for_render" && (
+                <p className="text-[11px] text-muted-foreground">
+                  Pronto: sarà incluso nel prossimo export CSV per questa rubrica (vedi "Export
+                  Canva Bulk Create" in cima alla pagina).
+                </p>
+              )}
+              {job.status === "done" && (
+                <p className="text-[11px] text-muted-foreground">
+                  Esportato in CSV. Carica il file in Canva Bulk Create per generare la grafica.
+                </p>
               )}
 
               {job.status === "error" && job.error_detail && (

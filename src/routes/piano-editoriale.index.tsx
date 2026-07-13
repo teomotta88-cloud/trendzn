@@ -17,12 +17,16 @@ import { NewPostCard } from "@/components/PianoEditoriale/NewPostCard";
 import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeedPreview";
 import { PostNumberRail } from "@/components/PianoEditoriale/PostNumberRail";
 import { ClientChannelsPanel } from "@/components/PianoEditoriale/ClientChannelsPanel";
+import { CanvaExportPanel } from "@/components/PianoEditoriale/CanvaExportPanel";
 
 export const Route = createFileRoute("/piano-editoriale/")({
   head: () => ({
     meta: [
       { title: "Piano Editoriale" },
-      { name: "description", content: "Calendario editoriale mensile con copy, visual e approvazioni." },
+      {
+        name: "description",
+        content: "Calendario editoriale mensile con copy, visual e approvazioni.",
+      },
     ],
   }),
   component: PianoEditorialePage,
@@ -44,7 +48,9 @@ function PianoEditorialePage() {
   const postElsRef = useRef(new Map<string, HTMLDivElement>());
   const getPostEl = useCallback((id: string) => postElsRef.current.get(id) ?? null, []);
   const postsColumnRef = useRef<HTMLDivElement>(null);
-  const [approvalsByPost, setApprovalsByPost] = useState<Record<string, Record<ReviewComponent, boolean>>>({});
+  const [approvalsByPost, setApprovalsByPost] = useState<
+    Record<string, Record<ReviewComponent, boolean>>
+  >({});
   const [publishedCountByPost, setPublishedCountByPost] = useState<Record<string, number>>({});
   const postsRef = useRef<EditorialPost[]>([]);
 
@@ -60,7 +66,9 @@ function PianoEditorialePage() {
   }
 
   async function loadApprovals(postList: EditorialPost[]) {
-    const entries = await Promise.all(postList.map((p) => getApprovalStatus(p.id).then((a) => [p.id, a] as const)));
+    const entries = await Promise.all(
+      postList.map((p) => getApprovalStatus(p.id).then((a) => [p.id, a] as const)),
+    );
     setApprovalsByPost(Object.fromEntries(entries));
   }
 
@@ -99,7 +107,8 @@ function PianoEditorialePage() {
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">Piano Editoriale</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Componi i post mese per mese: copy, copy visual e visual, con approvazioni e commenti per ogni componente.
+            Componi i post mese per mese: copy, copy visual e visual, con approvazioni e commenti
+            per ogni componente.
           </p>
         </div>
         {plan && tab === "calendario" && !creating && (
@@ -165,6 +174,7 @@ function PianoEditorialePage() {
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
         <div ref={postsColumnRef} className="space-y-4">
+          <CanvaExportPanel posts={posts} />
           {plan && creating && (
             <NewPostCard
               planId={plan.id}
@@ -196,7 +206,9 @@ function PianoEditorialePage() {
                   onApprovalChange={() => loadApprovals(posts)}
                   onPublishedChange={() => loadPublished(posts)}
                   onProgrammatoChange={(programmato) =>
-                    setPosts((prev) => prev.map((post) => (post.id === p.id ? { ...post, programmato } : post)))
+                    setPosts((prev) =>
+                      prev.map((post) => (post.id === p.id ? { ...post, programmato } : post)),
+                    )
                   }
                 />
               </div>
