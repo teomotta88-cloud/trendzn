@@ -111,11 +111,14 @@ Figma — non finiscono mai nel codice del plugin).
 
 ## Setup delle API key
 
-- **Anthropic** (estrazione keyword): `ANTHROPIC_API_KEY` va nei secrets
-  dell'ambiente di deploy dell'app (Cloudflare/Lovable), letta da
-  `process.env.ANTHROPIC_API_KEY` in `src/routes/api/public/hooks/extract-keywords.ts`.
-  **Non** è una Supabase Edge Function: questo progetto non ne usa (vedi
-  nota architetturale sotto), quindi la key non va nei secrets di Supabase.
+- **OpenRouter** (estrazione keyword): `OPENROUTER_API_KEY` va nei secret
+  dell'ambiente di deploy dell'app (Lovable/Cloudflare), letta da
+  `process.env.OPENROUTER_API_KEY` in `src/routes/api/public/hooks/extract-keywords.ts`.
+  Attenzione: è il **secret runtime dell'app**, distinto dai secret di
+  GitHub Actions (quelli alimentano solo i workflow degli scraper, non il
+  runtime delle route). Opzionale: `OPENROUTER_MODEL` per sovrascrivere il
+  modello di default. **Non** è una Supabase Edge Function: questo progetto
+  non ne usa, quindi la key non va nei secret di Supabase.
 - **Getty Images**: nessuna API key configurata al momento. `getty-search.ts`
   interroga la pagina pubblica di ricerca di gettyimages.com (bozzetti
   watermarked) invece della REST API ufficiale — vedi il commento in testa
