@@ -1,6 +1,6 @@
 // "Trend Virali": due fonti indipendenti di topic "attuali" per l'Italia,
-// entrambe convertite in keyword di ricerca leggibili e cercate su Instagram
-// (anysite):
+// registrate nel ciclo di vita di monitoraggio (monitored_topics). La
+// conversione hashtag->keyword serve solo per l'etichetta leggibile del topic:
 //
 //  1. hashtag TikTok in trend (già sincronizzati dalla pipeline
 //     tiktok-hashtag), convertiti in keyword tramite un LLM gratuito su
@@ -14,48 +14,32 @@
 //     se fallisce si prosegue comunque solo con TikTok (vedi
 //     fetchGoogleTrendsKeywords).
 //
-// Ogni keyword (di entrambe le fonti) viene cercata su Instagram con
-// searchAnysite() — stessa logica di ricerca/normalizzazione di
-// sync-brand-mentions.mjs (vedi scripts/lib/social-search.mjs) — e i
-// contenuti trovati, con views/engagement reali, sincronizzati verso
-// viral_trend_content, taggati con discovery_source per sapere quale fonte
-// li ha scoperti.
-//
-// Il feed "Trend Virali" deve contenere solo Instagram e TikTok: anysite non
-// supporta la ricerca TikTok per keyword, quindi solo per gli hashtag TikTok
-// (fonte 1, non per i topic Google Trends, che non sono hashtag TikTok)
-// vengono aggiunti anche i video TikTok reali già raccolti dalla pipeline
-// tiktok-hashtag per quello stesso hashtag (endpoint tiktok-hashtag-posts) —
-// con le views se estratte durante lo scraping, ma senza engagement, non
-// disponibile per quella fonte (vedi fetchTikTokContent).
+// Questo script NON cerca più contenuti a pagamento (anysite rimosso): il suo
+// compito è la DISCOVERY dei topic e la registrazione nel ciclo di vita di
+// monitoraggio (monitored_topics). I contenuti Instagram arrivano interamente
+// dallo scraping gratuito della pagina hashtag
+// (discover-instagram-hashtag-content.mjs), non più da una ricerca per
+// keyword. Restano qui solo i video TikTok reali già raccolti dalla pipeline
+// tiktok-hashtag per lo stesso hashtag (endpoint tiktok-hashtag-posts) — con
+// le views se estratte durante lo scraping, senza engagement (non disponibile
+// per quella fonte, vedi fetchTikTokContent). La conversione hashtag->keyword
+// resta per l'etichetta leggibile del topic (derived_keyword), non è più sul
+// percorso critico della ricerca contenuti.
 //
 // Variabili d'ambiente:
-//   ANYSITE_API_KEY         richiesta (usata per la ricerca Instagram)
 //   OPENROUTER_API_KEY      opzionale — se assente si usa solo il fallback offline
 //   OPENROUTER_MODEL        default: vedi DEFAULT_MODEL in scripts/lib/openrouter.mjs
-//   MAX_HASHTAGS            default: 15 — quanti hashtag TikTok in trend processare per run
-//                            (ogni hashtag genera una ricerca per piattaforma: alzarlo aumenta
-//                            il consumo di credit anysite)
-//   MAX_TRENDS              default: 15 — quante ricerche Google Trends IT processare per run
-//   MAX_RESULTS_PER_CALL    default: 30 — confermato con anysite: costa 1 credit ogni 30
-//                            risultati, quindi chiederne fino a 30 non costa più di 25
+//   MAX_HASHTAGS            default: 15 — quanti hashtag TikTok in trend monitorare per run
+//   MAX_TRENDS              default: 15 — quante ricerche Google Trends IT monitorare per run
 //   MAX_TIKTOK_POSTS        default: 10 — max video TikTok già raccolti da aggiungere per hashtag
 //   DELAY_BETWEEN_CALLS_MS  default: 2000
-//   LANGUAGE                default: "it"
 //
 // Eseguito da .github/workflows/sync-viral-trends.yml su schedule.
 
 import { hashtagToKeyword, keywordToHashtag } from "./lib/word-segment.mjs";
 import { convertHashtagsToKeywords } from "./lib/openrouter.mjs";
 import { fetchGoogleTrendsIT } from "./lib/google-trends.mjs";
-import {
-  ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS,
-  containsKeyword,
-  looksItalian,
-  normalizeAnysiteResult,
-  searchAnysite,
-  sleep,
-} from "./lib/social-search.mjs";
+import { sleep } from "./lib/social-search.mjs";
 
 const TOP_HASHTAGS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/top-tiktok-hashtags";
 const TIKTOK_HASHTAG_POSTS_ENDPOINT =
@@ -65,19 +49,10 @@ const MONITOR_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/mo
 
 const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "15", 10);
 const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "15", 10);
-const MAX_RESULTS_PER_CALL = parseInt(process.env.MAX_RESULTS_PER_CALL ?? "30", 10);
 const MAX_TIKTOK_POSTS = parseInt(process.env.MAX_TIKTOK_POSTS ?? "10", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
-const LANGUAGE = process.env.LANGUAGE ?? "it";
 const openrouterApiKey = process.env.OPENROUTER_API_KEY;
 const openrouterModel = process.env.OPENROUTER_MODEL;
-
-const anysiteApiKey = process.env.ANYSITE_API_KEY;
-if (!anysiteApiKey) {
-  console.error("Manca ANYSITE_API_KEY nell'ambiente (richiesta per la ricerca Instagram).");
-  process.exit(1);
-}
-
 async function fetchTopHashtags() {
   const res = await fetch(`${TOP_HASHTAGS_ENDPOINT}?limit=${MAX_HASHTAGS}`);
   if (!res.ok) {
@@ -174,47 +149,6 @@ async function registerMonitoredTopics(tiktokMappings, trendsMappings) {
     );
     return new Map();
   }
-}
-
-// Log diagnostico temporaneo: il 10/07/2026 un run con MAX_HASHTAGS/MAX_TRENDS
-// a 15 ha restituito 0 risultati Instagram su 18/18 keyword cercate (incluse
-// keyword molto comuni come "Ronaldo" e "Ultimo") — searchAnysite() non ha
-// lanciato errori, quindi la richiesta è andata a buon fine: la perdita
-// avviene da qualche parte nei filtri sotto (lingua o keyword-nel-testo), non
-// nell'API. Questi conteggi servono a capire quale filtro azzera tutto,
-// prima di toccare la logica alla cieca.
-async function fetchInstagramContent(keyword) {
-  const results = await searchAnysite({
-    apiKey: anysiteApiKey,
-    platform: "instagram",
-    keyword,
-    language: LANGUAGE,
-    maxResults: MAX_RESULTS_PER_CALL,
-  });
-  let items = results.map((item) =>
-    normalizeAnysiteResult({ platform: "instagram", keyword, item }),
-  );
-  const rawCount = items.length;
-  // Sia looksItalian() che containsKeyword() scartano subito un content
-  // vuoto: se normalizeAnysiteResult non trova nessuno dei campi noti
-  // (text/content/caption/title/body) nel payload anysite, ogni risultato
-  // ha content="" e viene perso qui, indipendentemente da lingua o keyword.
-  const withContentCount = items.filter((m) => m.content).length;
-
-  if (ANYSITE_LANGUAGE_HEURISTIC_PLATFORMS.includes("instagram")) {
-    items = items.filter((m) => looksItalian(m.content));
-  }
-  const afterLanguageCount = items.length;
-
-  const final = items.filter((m) => containsKeyword(m.content, keyword));
-  console.log(
-    `    [diagnostica] anysite: ${rawCount} raw (${withContentCount} con content non vuoto) -> ${afterLanguageCount} dopo filtro lingua -> ${final.length} dopo filtro keyword-nel-testo`,
-  );
-  if (rawCount > 0 && final.length === 0) {
-    console.log(`    [diagnostica] primo raw item: ${JSON.stringify(results[0]).slice(0, 500)}`);
-  }
-
-  return final;
 }
 
 // Gli ID dei video TikTok sono "snowflake" (stesso schema usato in
@@ -314,7 +248,9 @@ if (mappings.length === 0) {
   process.exit(0);
 }
 
-console.log("Piattaforme: instagram, tiktok (solo per topic da hashtag TikTok)");
+console.log(
+  "Contenuti: solo video TikTok riusati (Instagram via discover-instagram-hashtag-content)",
+);
 
 let totalInserted = 0;
 const summary = [];
@@ -374,19 +310,17 @@ async function syncSource(hashtag, keyword, platform, discoverySource, topicId, 
   await sleep(DELAY_MS);
 }
 
+// Il contenuto Instagram NON viene più cercato qui via anysite (rimosso):
+// arriva dallo scraping gratuito della pagina hashtag
+// (discover-instagram-hashtag-content.mjs). Qui restano solo i video TikTok
+// reali già raccolti dalla pipeline tiktok-hashtag per lo stesso hashtag —
+// esistono solo per un hashtag TikTok esatto, non per un topic Google Trends.
 for (const { hashtag, keyword, discoverySource } of mappings) {
+  if (discoverySource !== "tiktok-hashtag") continue;
   const topicId = topicIds.get(`${discoverySource}:${hashtag}`);
-  await syncSource(hashtag, keyword, "instagram", discoverySource, topicId, () =>
-    fetchInstagramContent(keyword),
+  await syncSource(hashtag, keyword, "tiktok", discoverySource, topicId, () =>
+    fetchTikTokContent(hashtag, keyword),
   );
-  // I video TikTok riusati (fonte 1) esistono solo per l'hashtag TikTok
-  // esatto raccolto dalla pipeline tiktok-hashtag: un topic Google Trends
-  // (fonte 2) non è un hashtag TikTok, quindi non ha video da riusare qui.
-  if (discoverySource === "tiktok-hashtag") {
-    await syncSource(hashtag, keyword, "tiktok", discoverySource, topicId, () =>
-      fetchTikTokContent(hashtag, keyword),
-    );
-  }
 }
 
 console.log("\n=== RIEPILOGO ===");
