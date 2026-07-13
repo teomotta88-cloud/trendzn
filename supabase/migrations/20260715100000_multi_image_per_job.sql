@@ -14,12 +14,16 @@
 -- flusso: sono legacy dei job con un solo campo immagine creati prima di
 -- questa migration.
 
+-- IF NOT EXISTS / DO block ovunque possibile: la migration deve poter
+-- essere rieseguita in sicurezza se un run precedente si è fermato a metà
+-- (es. per un problema di copia/incolla nell'SQL editor).
+
 alter table public.getty_candidates
-  add column layer_name text not null default '';
+  add column if not exists layer_name text not null default '';
 
-create index getty_candidates_job_layer_idx on public.getty_candidates (job_id, layer_name);
+create index if not exists getty_candidates_job_layer_idx on public.getty_candidates (job_id, layer_name);
 
-create table public.graphic_job_images (
+create table if not exists public.graphic_job_images (
   id uuid primary key default gen_random_uuid(),
   job_id uuid not null references public.graphic_jobs(id) on delete cascade,
   layer_name text not null,
@@ -30,8 +34,16 @@ create table public.graphic_job_images (
   unique (job_id, layer_name)
 );
 
-create index graphic_job_images_job_id_idx on public.graphic_job_images (job_id);
+create index if not exists graphic_job_images_job_id_idx on public.graphic_job_images (job_id);
 
 alter table public.graphic_job_images enable row level security;
 
-create policy "public full access" on public.graphic_job_images for all using (true) with check (true);
+do $$
+begin
+  if not exists (
+    select 1 from pg_policies
+    where schemaname = 'public' and tablename = 'graphic_job_images' and policyname = 'public full access'
+  ) then
+    create policy "public full access" on public.graphic_job_images for all using (true) with check (true);
+  end if;
+end $$;
