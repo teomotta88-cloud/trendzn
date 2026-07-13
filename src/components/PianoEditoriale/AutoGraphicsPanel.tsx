@@ -154,6 +154,18 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
   });
   const canSave = rubricaId !== "" && validation.every((v) => !v.overMax && !v.requiredEmpty);
 
+  // Raggruppa i campi per card (slide), nello stesso ordine con cui arrivano
+  // da listTemplateConstraints (già ordinati per card_index): mantiene la
+  // suddivisione in card definita nell'editor rubriche invece di una lista
+  // piatta di layer.
+  const cardGroups: Array<{ cardIndex: number; items: typeof validation }> = [];
+  for (const v of validation) {
+    const ci = v.constraint.card_index;
+    const group = cardGroups.find((g) => g.cardIndex === ci);
+    if (group) group.items.push(v);
+    else cardGroups.push({ cardIndex: ci, items: [v] });
+  }
+
   async function handleSaveDraft() {
     if (!canSave || !selectedRubrica) return;
     setBusy("save");
@@ -321,61 +333,79 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
               <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                 Copy per layer
               </span>
-              {validation.map(({ constraint: c, isImage, overMax, requiredEmpty }) => {
-                const value = copyPayload[c.layer_name] ?? "";
-                // I layer immagine non si digitano: mostrano lo stato della
-                // foto Getty (gestita nella sezione sotto), non una textarea.
-                if (isImage) {
-                  return (
-                    <div key={c.id} className="space-y-1">
-                      <label className="text-[11px] font-medium text-foreground">
-                        {c.layer_name}
-                        {c.obbligatorio && <span className="text-destructive"> *</span>}
-                        <span className="ml-1 font-normal text-muted-foreground">(immagine)</span>
-                      </label>
-                      <p className="rounded-lg border border-dashed border-border bg-background/60 px-3 py-2 text-[11px] text-muted-foreground">
-                        {selectedCandidate
-                          ? "Foto Getty selezionata ✓ (vedi sotto)"
-                          : "Da popolare con la selezione Getty qui sotto dopo il salvataggio."}
-                      </p>
-                    </div>
-                  );
-                }
-                return (
-                  <div key={c.id} className="space-y-1">
-                    <div className="flex items-center justify-between gap-2">
-                      <label className="text-[11px] font-medium text-foreground">
-                        {c.layer_name}
-                        {c.obbligatorio && <span className="text-destructive"> *</span>}
-                      </label>
-                      {c.max_chars != null && (
-                        <span
-                          className={`text-[10px] tabular-nums ${counterColor(value.length, c.max_chars)}`}
-                        >
-                          {value.length}/{c.max_chars}
-                        </span>
-                      )}
-                    </div>
-                    <textarea
-                      value={value}
-                      onChange={(e) =>
-                        setCopyPayload((prev) => ({ ...prev, [c.layer_name]: e.target.value }))
-                      }
-                      className={`w-full rounded-lg border bg-background/60 px-3 py-2 text-[11px] leading-snug outline-none ${
-                        overMax || requiredEmpty
-                          ? "border-destructive"
-                          : "border-border focus:border-primary"
-                      } scrollbar-thin max-h-32 min-h-12 overflow-y-auto`}
-                      placeholder={`Testo per ${c.layer_name}…`}
-                    />
-                    {overMax && (
-                      <p className="text-[10px] text-destructive">
-                        Supera il limite di {c.max_chars} caratteri: accorcia prima di salvare.
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
+              {cardGroups.map((group) => (
+                <div
+                  key={group.cardIndex}
+                  className={
+                    cardGroups.length > 1
+                      ? "space-y-2 rounded-lg border border-border/60 p-2"
+                      : "space-y-2"
+                  }
+                >
+                  {cardGroups.length > 1 && (
+                    <span className="block text-[10px] font-semibold text-muted-foreground">
+                      Card {group.cardIndex}
+                    </span>
+                  )}
+                  {group.items.map(({ constraint: c, isImage, overMax, requiredEmpty }) => {
+                    const value = copyPayload[c.layer_name] ?? "";
+                    // I layer immagine non si digitano: mostrano lo stato della
+                    // foto Getty (gestita nella sezione sotto), non una textarea.
+                    if (isImage) {
+                      return (
+                        <div key={c.id} className="space-y-1">
+                          <label className="text-[11px] font-medium text-foreground">
+                            {c.layer_name}
+                            {c.obbligatorio && <span className="text-destructive"> *</span>}
+                            <span className="ml-1 font-normal text-muted-foreground">
+                              (immagine)
+                            </span>
+                          </label>
+                          <p className="rounded-lg border border-dashed border-border bg-background/60 px-3 py-2 text-[11px] text-muted-foreground">
+                            {selectedCandidate
+                              ? "Foto Getty selezionata ✓ (vedi sotto)"
+                              : "Da popolare con la selezione Getty qui sotto dopo il salvataggio."}
+                          </p>
+                        </div>
+                      );
+                    }
+                    return (
+                      <div key={c.id} className="space-y-1">
+                        <div className="flex items-center justify-between gap-2">
+                          <label className="text-[11px] font-medium text-foreground">
+                            {c.layer_name}
+                            {c.obbligatorio && <span className="text-destructive"> *</span>}
+                          </label>
+                          {c.max_chars != null && (
+                            <span
+                              className={`text-[10px] tabular-nums ${counterColor(value.length, c.max_chars)}`}
+                            >
+                              {value.length}/{c.max_chars}
+                            </span>
+                          )}
+                        </div>
+                        <textarea
+                          value={value}
+                          onChange={(e) =>
+                            setCopyPayload((prev) => ({ ...prev, [c.layer_name]: e.target.value }))
+                          }
+                          className={`w-full rounded-lg border bg-background/60 px-3 py-2 text-[11px] leading-snug outline-none ${
+                            overMax || requiredEmpty
+                              ? "border-destructive"
+                              : "border-border focus:border-primary"
+                          } scrollbar-thin max-h-32 min-h-12 overflow-y-auto`}
+                          placeholder={`Testo per ${c.layer_name}…`}
+                        />
+                        {overMax && (
+                          <p className="text-[10px] text-destructive">
+                            Supera il limite di {c.max_chars} caratteri: accorcia prima di salvare.
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
 
               <button
                 type="button"
