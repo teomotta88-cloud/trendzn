@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
+import { looksItalian } from "@/lib/language";
 
 export const VIRAL_PLATFORMS = ["instagram", "tiktok"] as const;
 export type ViralPlatform = (typeof VIRAL_PLATFORMS)[number];
@@ -86,5 +87,15 @@ export async function listViralTrendContent(
 
   const { data, error } = await query.limit(300);
   if (error) throw error;
-  return (data ?? []) as ViralTrendContent[];
+
+  // Filtro lingua in lettura: scarta i contenuti la cui didascalia non risulta
+  // italiana (vedi looksItalian). Serve a nascondere SUBITO i post spagnoli
+  // già in DB — sincronizzati prima del fix del filtro di ingestione o non
+  // ancora rimossi dal ricontrollo — senza aspettare che il workflow di
+  // pulizia li cancelli. I contenuti senza didascalia (content null) restano
+  // visibili: non abbiamo su cosa decidere e non vogliamo nascondere post
+  // potenzialmente legittimi.
+  return (data ?? []).filter(
+    (item) => !item.content || looksItalian(item.content),
+  ) as ViralTrendContent[];
 }
