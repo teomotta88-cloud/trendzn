@@ -42,6 +42,7 @@ import { Route as ApiPublicHooksListInstagramContentUrlsRouteImport } from './ro
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksGettySearchRouteImport } from './routes/api/public/hooks/getty-search'
 import { Route as ApiPublicHooksExtractKeywordsRouteImport } from './routes/api/public/hooks/extract-keywords'
+import { Route as ApiPublicHooksExportXlsxRouteImport } from './routes/api/public/hooks/export-xlsx'
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksApproveJobRouteImport } from './routes/api/public/hooks/approve-job'
@@ -229,6 +230,12 @@ const ApiPublicHooksExtractKeywordsRoute =
     path: '/api/public/hooks/extract-keywords',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksExportXlsxRoute =
+  ApiPublicHooksExportXlsxRouteImport.update({
+    id: '/api/public/hooks/export-xlsx',
+    path: '/api/public/hooks/export-xlsx',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksDeleteTrendSubmissionRoute =
   ApiPublicHooksDeleteTrendSubmissionRouteImport.update({
     id: '/api/public/hooks/delete-trend-submission',
@@ -274,6 +281,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -313,6 +321,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -353,6 +362,7 @@ export interface FileRoutesById {
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -394,6 +404,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/link-preview'
@@ -433,6 +444,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/link-preview'
@@ -472,6 +484,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/link-preview'
@@ -512,6 +525,7 @@ export interface RootRouteChildren {
   ApiPublicHooksApproveJobRoute: typeof ApiPublicHooksApproveJobRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  ApiPublicHooksExportXlsxRoute: typeof ApiPublicHooksExportXlsxRoute
   ApiPublicHooksExtractKeywordsRoute: typeof ApiPublicHooksExtractKeywordsRoute
   ApiPublicHooksGettySearchRoute: typeof ApiPublicHooksGettySearchRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
@@ -765,6 +779,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksExtractKeywordsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/export-xlsx': {
+      id: '/api/public/hooks/export-xlsx'
+      path: '/api/public/hooks/export-xlsx'
+      fullPath: '/api/public/hooks/export-xlsx'
+      preLoaderRoute: typeof ApiPublicHooksExportXlsxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/delete-trend-submission': {
       id: '/api/public/hooks/delete-trend-submission'
       path: '/api/public/hooks/delete-trend-submission'
@@ -817,6 +838,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:
     ApiPublicHooksDeleteTrendSubmissionRoute,
+  ApiPublicHooksExportXlsxRoute: ApiPublicHooksExportXlsxRoute,
   ApiPublicHooksExtractKeywordsRoute: ApiPublicHooksExtractKeywordsRoute,
   ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,

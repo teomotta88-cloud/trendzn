@@ -22,7 +22,7 @@ import {
 // del copy per layer con contatori live e blocco oltre max_chars, ricerca
 // foto Getty (per le rubriche photo_card), approvazione. Il rendering vero e
 // proprio non avviene qui: un job approvato (ready_for_render) diventa
-// esportabile in CSV per Canva Bulk Create dal pannello "Export Canva Bulk
+// esportabile in .xlsx per Canva Bulk Create dal pannello "Export Canva Bulk
 // Create" in cima al Piano Editoriale (vedi CanvaExportPanel.tsx).
 
 async function callHook<T>(path: string, body: unknown): Promise<T> {
@@ -52,7 +52,7 @@ const STATUS_LABEL: Record<string, string> = {
   pending_image: "in attesa foto",
   ready_for_render: "pronto per l'export",
   rendering: "in rendering",
-  done: "esportato in CSV",
+  done: "esportato in .xlsx",
   error: "errore",
 };
 
@@ -489,13 +489,13 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
 
               {job.status === "ready_for_render" && (
                 <p className="text-[11px] text-muted-foreground">
-                  Pronto: sarà incluso nel prossimo export CSV per questa rubrica (vedi "Export
+                  Pronto: sarà incluso nel prossimo export .xlsx per questa rubrica (vedi "Export
                   Canva Bulk Create" in cima alla pagina).
                 </p>
               )}
               {job.status === "done" && (
                 <p className="text-[11px] text-muted-foreground">
-                  Esportato in CSV. Carica il file in Canva Bulk Create per generare la grafica.
+                  Esportato in .xlsx. Carica il file in Canva Bulk Create per generare la grafica.
                 </p>
               )}
 
