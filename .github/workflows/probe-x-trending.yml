@@ -1,0 +1,37 @@
+name: Probe X.com Trending (diagnostico)
+
+# Workflow usa-e-getta: verifica cosa espone pubblicamente (senza login) la
+# pagina Trending di X.com — nomi dei trend, volumi, post, contatori di
+# engagement — aprendola con un browser reale (Playwright). Nessuna pipeline
+# lo usa: serve a decidere se X è una fonte utilizzabile prima di costruirci
+# sopra (stesso approccio "probe first" già usato per Instagram). X restringe
+# molto l'accesso anonimo, quindi è probabile un redirect al login: il probe
+# serve a confermarlo o smentirlo su dati reali.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtag:
+        description: "Hashtag opzionale (senza #) da sondare anche in ricerca, per vedere se post ed engagement sono visibili senza login"
+        required: false
+        default: ""
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Apri X.com Trending e stampa cosa si vede senza login
+        run: node scripts/probe-x-trending.mjs "${{ github.event.inputs.hashtag }}"
