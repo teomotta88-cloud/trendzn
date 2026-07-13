@@ -29,8 +29,8 @@
 // Variabili d'ambiente:
 //   OPENROUTER_API_KEY      opzionale — se assente si usa solo il fallback offline
 //   OPENROUTER_MODEL        default: vedi DEFAULT_MODEL in scripts/lib/openrouter.mjs
-//   MAX_HASHTAGS            default: 15 — quanti hashtag TikTok in trend monitorare per run
-//   MAX_TRENDS              default: 15 — quante ricerche Google Trends IT monitorare per run
+//   MAX_HASHTAGS            default: 100 — quanti hashtag TikTok in trend monitorare per run (per rank)
+//   MAX_TRENDS              default: 50 — quante ricerche Google Trends IT monitorare (per data più recente)
 //   MAX_TIKTOK_POSTS        default: 10 — max video TikTok già raccolti da aggiungere per hashtag
 //   DELAY_BETWEEN_CALLS_MS  default: 2000
 //
@@ -47,8 +47,8 @@ const TIKTOK_HASHTAG_POSTS_ENDPOINT =
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-viral-trends";
 const MONITOR_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/monitor-topics";
 
-const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "15", 10);
-const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "15", 10);
+const MAX_HASHTAGS = parseInt(process.env.MAX_HASHTAGS ?? "100", 10);
+const MAX_TRENDS = parseInt(process.env.MAX_TRENDS ?? "50", 10);
 const MAX_TIKTOK_POSTS = parseInt(process.env.MAX_TIKTOK_POSTS ?? "10", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 const openrouterApiKey = process.env.OPENROUTER_API_KEY;
@@ -102,7 +102,13 @@ async function hashtagsToKeywords(hashtags) {
 async function fetchGoogleTrendsKeywords() {
   try {
     const trends = await fetchGoogleTrendsIT();
-    return trends.slice(0, MAX_TRENDS).map((t) => ({ hashtag: t.title, keyword: t.title }));
+    // Ordina per data di tendenza più recente prima (pubDateMs), poi prende
+    // le prime MAX_TRENDS — quelli senza data nota (pubDateMs null) vanno in
+    // fondo. Il feed RSS è già grossomodo in quest'ordine, ma non è garantito.
+    const ordered = [...trends].sort(
+      (a, b) => (b.pubDateMs ?? -Infinity) - (a.pubDateMs ?? -Infinity),
+    );
+    return ordered.slice(0, MAX_TRENDS).map((t) => ({ hashtag: t.title, keyword: t.title }));
   } catch (err) {
     console.error(`Google Trends fallito, proseguo solo con gli hashtag TikTok: ${String(err)}`);
     return [];

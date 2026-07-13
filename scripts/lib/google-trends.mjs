@@ -41,9 +41,18 @@ function parseTrendsRss(xml) {
   for (const block of itemBlocks) {
     const title = extractTag(block, "title");
     if (!title) continue;
+    // pubDate = quando la ricerca è entrata in tendenza. Serve per ordinare
+    // "per più recente" a valle (vedi fetchGoogleTrendsKeywords in
+    // sync-viral-trends.mjs). Formato RFC-822 ("Sun, 13 Jul 2026 08:00:00
+    // ...") parsabile da new Date(); pubDateMs è null se manca o non parsa,
+    // così l'ordinamento può trattarlo come "meno recente".
+    const pubDate = extractTag(block, "pubDate");
+    const pubDateMs = pubDate ? Date.parse(pubDate) : NaN;
     items.push({
       title: decodeXmlEntities(title),
       approxTraffic: extractTag(block, "ht:approx_traffic"),
+      pubDate: pubDate ?? null,
+      pubDateMs: Number.isNaN(pubDateMs) ? null : pubDateMs,
     });
   }
   return items;

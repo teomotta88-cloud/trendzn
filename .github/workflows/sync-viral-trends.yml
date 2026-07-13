@@ -2,18 +2,19 @@ name: Sync Trend Virali
 
 on:
   schedule:
-    # Ogni 6 ore. Da quando anysite è stato rimosso questo run è solo
-    # discovery/registrazione topic (nessun costo a pagamento) — i contenuti
-    # arrivano dallo scraping gratuito delle pagine hashtag.
-    - cron: "0 */6 * * *"
+    # Ogni ora, al minuto 30: sfalsato dopo tiktok-trending-it.yml (minuto 0)
+    # così legge la classifica TikTok appena aggiornata. Da quando anysite è
+    # stato rimosso questo run è solo discovery/registrazione topic (nessun
+    # costo a pagamento), quindi la cadenza oraria non ha impatto di spesa.
+    - cron: "30 * * * *"
   workflow_dispatch:
     inputs:
       max_hashtags:
-        description: "Numero massimo di hashtag TikTok da monitorare"
-        default: "15"
+        description: "Numero massimo di hashtag TikTok da monitorare (per rank)"
+        default: "100"
       max_trends:
-        description: "Numero massimo di ricerche Google Trends IT da monitorare"
-        default: "15"
+        description: "Numero massimo di ricerche Google Trends IT da monitorare (per data più recente)"
+        default: "50"
 
 jobs:
   sync:
@@ -38,6 +39,6 @@ jobs:
           # Opzionale: se assente, la conversione hashtag -> keyword usa solo
           # il fallback offline (meno preciso su nomi propri/toponimi).
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '15' }}
-          MAX_TRENDS: ${{ github.event.inputs.max_trends || '15' }}
+          MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '100' }}
+          MAX_TRENDS: ${{ github.event.inputs.max_trends || '50' }}
         run: node scripts/sync-viral-trends.mjs
