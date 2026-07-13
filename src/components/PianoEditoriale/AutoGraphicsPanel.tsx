@@ -357,15 +357,28 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
     };
   }, [job, refreshJobState]);
 
+  // Crea subito il job (copy vuoto) appena si sceglie una rubrica, così i
+  // campi #image sono utilizzabili da subito — ricerca Getty e upload
+  // manuale non devono più aspettare "Salva bozza grafica", che resta solo
+  // per persistere il testo dei campi.
   async function handleSelectRubrica(id: string) {
     setError(null);
     setRubricaId(id);
     setCopyPayload({});
     setConstraints([]);
+    setJob(null);
+    setJobImages([]);
     if (!id) return;
     try {
-      const cons = await listTemplateConstraints(id);
+      const [cons, saved] = await Promise.all([
+        listTemplateConstraints(id),
+        setPostRubricaId(post.id, id).then(() =>
+          upsertGraphicJob({ post_id: post.id, rubrica_id: id, copy_payload: {} }),
+        ),
+      ]);
       setConstraints(cons);
+      setJob(saved);
+      await refreshJobState(saved.id);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     }
