@@ -42,6 +42,10 @@ export const Route = createFileRoute("/api/public/hooks/approve-job")({
           const constraints = await listTemplateConstraints(job.rubrica_id);
           const violations: string[] = [];
           for (const c of constraints) {
+            // I layer immagine non hanno testo nel copy_payload: la loro
+            // "obbligatorietà" è coperta dal controllo sulla foto Getty
+            // selezionata più sotto, non da questa validazione testuale.
+            if (c.layer_type === "image") continue;
             const value = job.copy_payload[c.layer_name];
             if (c.obbligatorio && (!value || !value.trim())) {
               violations.push(`${c.layer_name} è obbligatorio`);

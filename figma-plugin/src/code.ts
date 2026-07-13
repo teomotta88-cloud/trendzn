@@ -194,15 +194,19 @@ interface PopulateResult {
   errors: string[];
 }
 
-// Risolve il valore di un layer dinamico. I layer #photo* prendono di
-// default la foto Getty selezionata (salvata su graphic_jobs.getty_image_url,
-// non in copy_payload); un eventuale valore esplicito in copy_payload ha
-// comunque la precedenza, così si può forzare un'immagine diversa. Tutti gli
-// altri layer leggono solo da copy_payload.
+// Risolve il valore di un layer dinamico. I layer di tipo immagine (secondo
+// template_constraints.layer_type, a prescindere dal nome/lingua del layer)
+// prendono di default la foto Getty selezionata (salvata su
+// graphic_jobs.getty_image_url, non in copy_payload); un eventuale valore
+// esplicito in copy_payload ha comunque la precedenza, così si può forzare
+// un'immagine diversa. Fallback sul prefisso #photo per retro-compatibilità
+// coi vincoli creati prima della colonna layer_type.
 function resolveLayerValue(job: JobBundle, layerName: string): string | undefined {
   const fromPayload = job.copy_payload[layerName];
   if (fromPayload && fromPayload.trim()) return fromPayload;
-  if (layerName.startsWith("#photo") && job.getty_image_url) return job.getty_image_url;
+  const constraint = job.constraints.find((c) => c.layer_name === layerName);
+  const isImage = constraint?.layer_type === "image" || layerName.startsWith("#photo");
+  if (isImage && job.getty_image_url) return job.getty_image_url;
   return fromPayload;
 }
 

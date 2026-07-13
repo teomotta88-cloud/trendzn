@@ -149,12 +149,16 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
     }
   }
 
-  // Validazione lato UI: nessun layer obbligatorio vuoto, nessuno oltre max_chars.
+  // Validazione lato UI: solo i layer di TESTO possono bloccare il
+  // salvataggio (obbligatorio vuoto o oltre max_chars). I layer immagine si
+  // riempiono dalla selezione Getty dopo il salvataggio, quindi non entrano
+  // in questa validazione — altrimenti si crea un cortocircuito.
   const validation = constraints.map((c) => {
     const value = copyPayload[c.layer_name] ?? "";
-    const overMax = c.max_chars != null && value.length > c.max_chars;
-    const requiredEmpty = c.obbligatorio && !value.trim();
-    return { constraint: c, overMax, requiredEmpty };
+    const isImage = c.layer_type === "image";
+    const overMax = !isImage && c.max_chars != null && value.length > c.max_chars;
+    const requiredEmpty = !isImage && c.obbligatorio && !value.trim();
+    return { constraint: c, isImage, overMax, requiredEmpty };
   });
   const canSave = rubricaId !== "" && validation.every((v) => !v.overMax && !v.requiredEmpty);
 
@@ -178,13 +182,16 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
     }
   }
 
-  // Testo su cui basare l'estrazione keyword: preferisci il copy visual del
-  // post, poi il layer #body/#title, poi tutti i valori del copy_payload.
+  // Testo su cui basare l'estrazione keyword: il copy visual del post se c'è,
+  // altrimenti la concatenazione dei soli layer di TESTO (i layer immagine
+  // contengono URL, non testo utile).
   function sourceCopyForKeywords(): string {
     if (post.copy_visual?.trim()) return post.copy_visual;
-    const body = copyPayload["#body"] || copyPayload["#title"];
-    if (body?.trim()) return body;
-    return Object.values(copyPayload).filter(Boolean).join(". ");
+    const textValues = constraints
+      .filter((c) => c.layer_type !== "image")
+      .map((c) => copyPayload[c.layer_name])
+      .filter((v): v is string => !!v && v.trim().length > 0);
+    return textValues.join(". ");
   }
 
   async function handleExtractAndSearch() {
@@ -328,8 +335,26 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
               <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                 Copy per layer
               </span>
-              {validation.map(({ constraint: c, overMax, requiredEmpty }) => {
+              {validation.map(({ constraint: c, isImage, overMax, requiredEmpty }) => {
                 const value = copyPayload[c.layer_name] ?? "";
+                // I layer immagine non si digitano: mostrano lo stato della
+                // foto Getty (gestita nella sezione sotto), non una textarea.
+                if (isImage) {
+                  return (
+                    <div key={c.id} className="space-y-1">
+                      <label className="text-[11px] font-medium text-foreground">
+                        {c.layer_name}
+                        {c.obbligatorio && <span className="text-destructive"> *</span>}
+                        <span className="ml-1 font-normal text-muted-foreground">(immagine)</span>
+                      </label>
+                      <p className="rounded-lg border border-dashed border-border bg-background/60 px-3 py-2 text-[11px] text-muted-foreground">
+                        {selectedCandidate
+                          ? "Foto Getty selezionata ✓ (vedi sotto)"
+                          : "Da popolare con la selezione Getty qui sotto dopo il salvataggio."}
+                      </p>
+                    </div>
+                  );
+                }
                 return (
                   <div key={c.id} className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
@@ -355,11 +380,7 @@ export function AutoGraphicsPanel({ post }: { post: EditorialPost }) {
                           ? "border-destructive"
                           : "border-border focus:border-primary"
                       } scrollbar-thin max-h-32 min-h-12 overflow-y-auto`}
-                      placeholder={
-                        c.layer_name.startsWith("#photo") || c.layer_name.startsWith("#icon")
-                          ? "URL immagine (di norma popolato dalla selezione Getty)"
-                          : `Testo per ${c.layer_name}…`
-                      }
+                      placeholder={`Testo per ${c.layer_name}…`}
                     />
                     {overMax && (
                       <p className="text-[10px] text-destructive">
