@@ -10,37 +10,52 @@ import {
   markJobsExported,
 } from "@/lib/autographics";
 
-// SBAM AutoGraphics — export CSV per Canva Bulk Create. Sostituisce il
+// SBAM AutoGraphics — export .xlsx per Canva Bulk Create. Sostituisce il
 // vecchio percorso plugin Figma (che richiedeva di aprire l'app): qui il
-// copywriter sceglie una rubrica, scarica un CSV con una riga per post
-// approvato (colonne = i layer/campi della rubrica, con la foto Getty già
-// risolta come URL) e lo carica in Canva Bulk Create.
+// copywriter sceglie una rubrica e scarica un .xlsx — generato server-side
+// da /api/public/hooks/export-xlsx — con una riga per post approvato e le
+// foto Getty già incorporate come immagini vere nelle celle (non un URL
+// testuale: Canva Bulk Create riconosce come immagine solo un'immagine
+// incorporata nel file, stessa logica del flusso Google Sheets già in uso
+// in agenzia).
 
-function csvEscape(value: string): string {
-  if (/[",\n\r]/.test(value)) {
-    return `"${value.replace(/"/g, '""')}"`;
-  }
-  return value;
-}
-
-// Il nome colonna nel CSV non porta il prefisso "#" (convenzione Figma): in
-// Canva i placeholder tipo {{colonna}} non ne hanno bisogno.
+// Il nome colonna non porta il prefisso "#" (convenzione Figma): in Canva
+// i placeholder tipo {{colonna}} non ne hanno bisogno.
 function columnName(layerName: string): string {
   return layerName.replace(/^#/, "");
 }
 
-function buildCsv(jobs: ExportableJob[], constraints: TemplateConstraint[]): string {
-  const header = ["post_date", ...constraints.map((c) => columnName(c.layer_name))];
-  const rows = jobs.map((j) => [
-    j.post_date,
-    ...constraints.map((c) => j.values[c.layer_name] ?? ""),
-  ]);
-  return [header, ...rows].map((row) => row.map(csvEscape).join(",")).join("\r\n");
+async function requestXlsx(
+  sheetName: string,
+  jobs: ExportableJob[],
+  constraints: TemplateConstraint[],
+): Promise<Blob> {
+  const columns = ["post_date", ...constraints.map((c) => columnName(c.layer_name))];
+  const imageColumns = constraints
+    .filter((c) => c.layer_type === "image")
+    .map((c) => columnName(c.layer_name));
+  const rows = jobs.map((j) => ({
+    values: {
+      post_date: j.post_date,
+      ...Object.fromEntries(
+        constraints.map((c) => [columnName(c.layer_name), j.values[c.layer_name] ?? ""]),
+      ),
+    },
+  }));
+
+  const res = await fetch("/api/public/hooks/export-xlsx", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ sheetName, columns, imageColumns, rows }),
+  });
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Export fallito (${res.status}): ${text.slice(0, 200)}`);
+  }
+  return res.blob();
 }
 
-function downloadCsv(filename: string, content: string): void {
-  // BOM iniziale: senza, Excel interpreta male gli accenti nei valori italiani.
-  const blob = new Blob(["﻿" + content], { type: "text/csv;charset=utf-8;" });
+function downloadBlob(filename: string, blob: Blob): void {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
@@ -99,9 +114,9 @@ export function CanvaExportPanel({ posts }: { posts: EditorialPost[] }) {
     setError(null);
     try {
       const rubrica = rubriche.find((r) => r.id === rubricaId);
-      const csv = buildCsv(jobs, constraints);
-      const filename = `${rubrica?.nome ?? "export"}-${new Date().toISOString().slice(0, 10)}.csv`;
-      downloadCsv(filename, csv);
+      const sheetName = rubrica?.nome ?? "Export";
+      const blob = await requestXlsx(sheetName, jobs, constraints);
+      downloadBlob(`${sheetName}-${new Date().toISOString().slice(0, 10)}.xlsx`, blob);
       await markJobsExported(jobs.map((j) => j.job_id));
       const refreshed = await listExportableJobs(
         rubricaId,
@@ -144,7 +159,7 @@ export function CanvaExportPanel({ posts }: { posts: EditorialPost[] }) {
         className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 disabled:opacity-50"
       >
         {exporting ? <Loader2 className="size-4 animate-spin" /> : <Download className="size-4" />}
-        Esporta CSV ({jobs.length})
+        Esporta .xlsx ({jobs.length})
       </button>
       {error && <p className="w-full text-xs text-destructive">{error}</p>}
     </div>
