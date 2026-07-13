@@ -40,23 +40,24 @@ un'integrazione API/OAuth).
 
 ## Registrare una nuova rubrica
 
-Nessuna UI di amministrazione ancora: si inserisce via SQL (Supabase
-Studio → SQL editor).
+Dal Piano Editoriale → tab **"Canali cliente"** → sezione **"Rubriche
+AutoGraphics"** (componente `RubrichePanel`): "+ Nuova rubrica", nome, poi si
+compongono una o più **card** (una card = una slide, per i carousel
+multi-formato) con "+ Aggiungi campo" per tipo (`#title`, `#subtitle`,
+`#text`, `#image`). I campi dello stesso tipo — anche tra card diverse —
+vengono numerati in automatico e progressivamente su tutta la rubrica (es.
+primo `#title` ovunque si trovi → `#title1`, il successivo → `#title2`,
+indipendentemente da `#text1`, `#image1`, ecc.). `tipo_template` viene
+derivato automaticamente: `photo_card` se la rubrica ha almeno un campo
+`#image`, altrimenti `text_icon_card`. "Salva rubrica" scrive su `rubriche` e
+sostituisce interamente i `template_constraints` della rubrica.
 
-```sql
--- 1. La rubrica
-insert into rubriche (nome, tipo_template, attiva)
-values ('Nome rubrica', 'photo_card', true);
--- tipo_template: 'photo_card' (ha un campo foto Getty) | 'text_icon_card' (solo testo)
--- figma_file_key/figma_component_id: lasciali null, servono solo al percorso plugin Figma legacy.
-
--- 2. I campi (uno per colonna dell'export / placeholder nel Brand Template)
-insert into template_constraints (rubrica_id, layer_name, layer_type, max_chars, min_font_size, max_font_size, max_lines, obbligatorio)
-values
-  ((select id from rubriche where nome='Nome rubrica'), '#title', 'text', 60, null, null, 2, true),
-  ((select id from rubriche where nome='Nome rubrica'), '#body', 'text', 180, null, null, 5, true),
-  ((select id from rubriche where nome='Nome rubrica'), '#photo', 'image', null, null, null, null, true);
-```
+Non è più necessario l'inserimento via SQL manuale; resta comunque possibile
+per interventi diretti (Supabase Studio → SQL editor), lo schema è invariato
+(`rubriche` + `template_constraints`, con la nuova colonna
+`template_constraints.card_index` che traccia la card di appartenenza di ogni
+campo — ignorata dall'export, che lavora su un elenco piatto
+`layer_name -> valore`).
 
 Note:
 
