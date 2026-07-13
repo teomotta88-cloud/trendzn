@@ -1,18 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  createGraphicJobFormatsFromRubrica,
   getGraphicJob,
   getRubrica,
-  listGraphicJobFormats,
   listGettyCandidates,
   listTemplateConstraints,
   updateGraphicJob,
 } from "@/lib/autographics";
 
 // SBAM AutoGraphics: transizione pending_validation/pending_image ->
-// ready_for_render. Ultima validazione lato server prima che il job entri
-// nella coda del plugin Figma (il plugin resta comunque l'ultima linea di
-// difesa anti-overflow, vedi README figma-plugin/).
+// ready_for_render. Ultima validazione lato server prima che il job diventi
+// esportabile in CSV per Canva Bulk Create (vedi CanvaExportPanel.tsx).
 
 export const Route = createFileRoute("/api/public/hooks/approve-job")({
   server: {
@@ -79,20 +76,10 @@ export const Route = createFileRoute("/api/public/hooks/approve-job")({
             });
           }
 
-          let formats = await listGraphicJobFormats(jobId);
-          if (formats.length === 0) {
-            formats = await createGraphicJobFormatsFromRubrica(jobId, job.rubrica_id);
-          }
-          if (formats.length === 0) {
-            const detail = "Nessun formato attivo configurato per questa rubrica (rubrica_formati)";
-            await updateGraphicJob(jobId, { status: "error", error_detail: detail });
-            return Response.json({ ok: false, error: detail }, { status: 422 });
-          }
-
           await updateGraphicJob(jobId, { status: "ready_for_render", error_detail: null });
           const updated = await getGraphicJob(jobId);
 
-          return Response.json({ ok: true, job: updated, formats });
+          return Response.json({ ok: true, job: updated });
         } catch (err) {
           return Response.json({ ok: false, error: String(err).slice(0, 300) }, { status: 500 });
         }
