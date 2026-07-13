@@ -93,11 +93,32 @@ export interface GraphicJobFormat {
 export interface GettyCandidate {
   id: string;
   job_id: string;
+  // Campo immagine (layer_name del constraint, es. "#image1") a cui si
+  // riferisce questa ricerca: un job con più campi #image ha una ricerca e
+  // una selezione Getty indipendenti per ciascuno.
+  layer_name: string;
   asset_id: string;
   preview_url: string;
   title: string | null;
   orientamento: string | null;
   selected: boolean;
+  created_at: string;
+}
+
+export type ImageSource = "getty" | "upload";
+
+// L'immagine attualmente attiva per un campo #image di un job: o una foto
+// Getty selezionata tra i candidati, o un file caricato manualmente
+// dall'utente in alternativa alla ricerca Getty. Un solo record per
+// (job_id, layer_name): scegliere/caricare un'altra immagine sostituisce la
+// precedente.
+export interface GraphicJobImage {
+  id: string;
+  job_id: string;
+  layer_name: string;
+  source: ImageSource;
+  image_url: string;
+  asset_id: string | null;
   created_at: string;
 }
 
@@ -281,13 +302,19 @@ export async function createGraphicJobFormatsFromRubrica(
   return data ?? [];
 }
 
-// --- Candidati Getty -------------------------------------------------------
+// --- Candidati Getty ---------------------------------------------------
+// Ricerca e selezione sono scoped al singolo campo immagine (layer_name):
+// un job con #image1/#image2/#image3 ha tre ricerche indipendenti.
 
-export async function listGettyCandidates(jobId: string): Promise<GettyCandidate[]> {
+export async function listGettyCandidates(
+  jobId: string,
+  layerName: string,
+): Promise<GettyCandidate[]> {
   const { data, error } = await db
     .from("getty_candidates")
     .select("*")
     .eq("job_id", jobId)
+    .eq("layer_name", layerName)
     .order("created_at");
   if (error) throw error;
   return data ?? [];
@@ -295,28 +322,98 @@ export async function listGettyCandidates(jobId: string): Promise<GettyCandidate
 
 export async function replaceGettyCandidates(
   jobId: string,
-  candidates: Array<Omit<GettyCandidate, "id" | "job_id" | "created_at" | "selected">>,
+  layerName: string,
+  candidates: Array<
+    Omit<GettyCandidate, "id" | "job_id" | "layer_name" | "created_at" | "selected">
+  >,
 ): Promise<GettyCandidate[]> {
-  const { error: deleteError } = await db.from("getty_candidates").delete().eq("job_id", jobId);
+  const { error: deleteError } = await db
+    .from("getty_candidates")
+    .delete()
+    .eq("job_id", jobId)
+    .eq("layer_name", layerName);
   if (deleteError) throw deleteError;
   if (candidates.length === 0) return [];
-  const rows = candidates.map((c) => ({ ...c, job_id: jobId, selected: false }));
+  const rows = candidates.map((c) => ({
+    ...c,
+    job_id: jobId,
+    layer_name: layerName,
+    selected: false,
+  }));
   const { data, error } = await db.from("getty_candidates").insert(rows).select("*");
   if (error) throw error;
   return data ?? [];
 }
 
-export async function selectGettyCandidate(jobId: string, candidateId: string): Promise<void> {
+// Seleziona un candidato Getty per il campo e aggiorna in un colpo solo
+// graphic_job_images (l'immagine "attiva" per quel layer diventa questa).
+export async function selectGettyCandidate(
+  jobId: string,
+  layerName: string,
+  candidateId: string,
+): Promise<void> {
   const { error: clearError } = await db
     .from("getty_candidates")
     .update({ selected: false })
-    .eq("job_id", jobId);
+    .eq("job_id", jobId)
+    .eq("layer_name", layerName);
   if (clearError) throw clearError;
-  const { error: setError } = await db
+  const { data: selected, error: setError } = await db
     .from("getty_candidates")
     .update({ selected: true })
-    .eq("id", candidateId);
+    .eq("id", candidateId)
+    .select("*")
+    .single();
   if (setError) throw setError;
+  await upsertGraphicJobImage({
+    job_id: jobId,
+    layer_name: layerName,
+    source: "getty",
+    image_url: selected.preview_url,
+    asset_id: selected.asset_id,
+  });
+}
+
+// --- Immagine attiva per campo (graphic_job_images) ---------------------
+
+export async function listGraphicJobImages(jobId: string): Promise<GraphicJobImage[]> {
+  const { data, error } = await db.from("graphic_job_images").select("*").eq("job_id", jobId);
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function upsertGraphicJobImage(
+  input: Omit<GraphicJobImage, "id" | "created_at">,
+): Promise<GraphicJobImage> {
+  const { data, error } = await db
+    .from("graphic_job_images")
+    .upsert(input, { onConflict: "job_id,layer_name" })
+    .select("*")
+    .single();
+  if (error) throw error;
+  return data;
+}
+
+// Caricamento manuale in alternativa alla ricerca Getty: l'utente carica un
+// file per il campo, che diventa l'immagine attiva per quel layer (sostitusce
+// un'eventuale selezione Getty precedente sullo stesso campo).
+export async function uploadJobImage(
+  jobId: string,
+  layerName: string,
+  file: File,
+): Promise<GraphicJobImage> {
+  const ext = file.name.split(".").pop() || "bin";
+  const path = `uploads/${jobId}/${crypto.randomUUID()}.${ext}`;
+  const { error: uploadError } = await supabase.storage.from("graphics-output").upload(path, file);
+  if (uploadError) throw uploadError;
+  const { data: pub } = supabase.storage.from("graphics-output").getPublicUrl(path);
+  return upsertGraphicJobImage({
+    job_id: jobId,
+    layer_name: layerName,
+    source: "upload",
+    image_url: pub.publicUrl,
+    asset_id: null,
+  });
 }
 
 // Sottoscrizione Realtime allo stato di un job e dei suoi formati: chiama
@@ -388,8 +485,9 @@ export async function upsertGraphicJob(input: {
 // --- Export CSV per Canva Bulk Create --------------------------------------
 
 // Un job pronto per l'export, coi valori già risolti per colonna: i layer di
-// tipo immagine prendono getty_image_url invece del copy_payload (identica
-// logica di risoluzione usata in precedenza dal plugin Figma).
+// tipo immagine prendono l'immagine attiva per quel campo da
+// graphic_job_images (una per layer_name, non un'unica foto per job — un
+// job con #image1/#image2/#image3 ha tre immagini indipendenti).
 export interface ExportableJob {
   job_id: string;
   post_id: string;
@@ -410,35 +508,54 @@ export async function listExportableJobs(
 
   const { data, error } = await db
     .from("graphic_jobs")
-    .select("id, post_id, copy_payload, getty_image_url, editorial_posts(post_date)")
+    .select("id, post_id, copy_payload, editorial_posts(post_date)")
     .eq("rubrica_id", rubricaId)
     .eq("status", "ready_for_render")
     .in("post_id", postIds);
   if (error) throw error;
 
-  const jobs: ExportableJob[] = (data ?? []).map(
-    (row: {
-      id: string;
-      post_id: string;
-      copy_payload: Record<string, string>;
-      getty_image_url: string | null;
-      editorial_posts: { post_date: string } | null;
-    }) => {
-      const values: Record<string, string> = {};
-      for (const c of constraints) {
-        values[c.layer_name] =
-          c.layer_type === "image"
-            ? (row.getty_image_url ?? "")
-            : (row.copy_payload[c.layer_name] ?? "");
-      }
-      return {
-        job_id: row.id,
-        post_id: row.post_id,
-        post_date: row.editorial_posts?.post_date ?? "",
-        values,
-      };
-    },
-  );
+  const rows = (data ?? []) as Array<{
+    id: string;
+    post_id: string;
+    copy_payload: Record<string, string>;
+    editorial_posts: { post_date: string } | null;
+  }>;
+
+  const imagesByJob = new Map<string, Map<string, string>>();
+  const jobIds = rows.map((r) => r.id);
+  if (jobIds.length > 0) {
+    const { data: images, error: imgError } = await db
+      .from("graphic_job_images")
+      .select("job_id, layer_name, image_url")
+      .in("job_id", jobIds);
+    if (imgError) throw imgError;
+    for (const img of (images ?? []) as Array<{
+      job_id: string;
+      layer_name: string;
+      image_url: string;
+    }>) {
+      const perLayer = imagesByJob.get(img.job_id) ?? new Map<string, string>();
+      perLayer.set(img.layer_name, img.image_url);
+      imagesByJob.set(img.job_id, perLayer);
+    }
+  }
+
+  const jobs: ExportableJob[] = rows.map((row) => {
+    const perLayer = imagesByJob.get(row.id);
+    const values: Record<string, string> = {};
+    for (const c of constraints) {
+      values[c.layer_name] =
+        c.layer_type === "image"
+          ? (perLayer?.get(c.layer_name) ?? "")
+          : (row.copy_payload[c.layer_name] ?? "");
+    }
+    return {
+      job_id: row.id,
+      post_id: row.post_id,
+      post_date: row.editorial_posts?.post_date ?? "",
+      values,
+    };
+  });
 
   return { jobs, constraints };
 }
