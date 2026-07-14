@@ -1,3 +1,19 @@
 {
-  "canali": []
+  "canali": [
+    {
+      "id": "abruzzolivetv",
+      "name": "AbruzzoLive",
+      "urls": [
+        "https://x.com/ABRUZZOLIVETV"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "ABRUZZOLIVETV",
+          "url": "https://x.com/ABRUZZOLIVETV"
+        }
+      ]
+    }
+  ]
 }
