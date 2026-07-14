@@ -27,6 +27,7 @@ import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as AspiMonitoringIdRouteImport } from './routes/aspi-monitoring.$id'
 import { Route as ApiPublicHooksTriggerSyncCanaliFeedRouteImport } from './routes/api/public/hooks/trigger-sync-canali-feed'
+import { Route as ApiPublicHooksTriggerSyncAspiMonitoringRouteImport } from './routes/api/public/hooks/trigger-sync-aspi-monitoring'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
 import { Route as ApiPublicHooksTiktokOembedRouteImport } from './routes/api/public/hooks/tiktok-oembed'
 import { Route as ApiPublicHooksTiktokHashtagPostsRouteImport } from './routes/api/public/hooks/tiktok-hashtag-posts'
@@ -139,6 +140,12 @@ const ApiPublicHooksTriggerSyncCanaliFeedRoute =
   ApiPublicHooksTriggerSyncCanaliFeedRouteImport.update({
     id: '/api/public/hooks/trigger-sync-canali-feed',
     path: '/api/public/hooks/trigger-sync-canali-feed',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTriggerSyncAspiMonitoringRoute =
+  ApiPublicHooksTriggerSyncAspiMonitoringRouteImport.update({
+    id: '/api/public/hooks/trigger-sync-aspi-monitoring',
+    path: '/api/public/hooks/trigger-sync-aspi-monitoring',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksTopTiktokHashtagsRoute =
@@ -313,6 +320,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
 export interface FileRoutesByTo {
@@ -355,6 +363,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
 export interface FileRoutesById {
@@ -398,6 +407,7 @@ export interface FileRoutesById {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
 export interface FileRouteTypes {
@@ -442,6 +452,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -484,6 +495,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
   id:
     | '__root__'
@@ -526,6 +538,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
   fileRoutesById: FileRoutesById
 }
@@ -569,6 +582,7 @@ export interface RootRouteChildren {
   ApiPublicHooksTiktokHashtagPostsRoute: typeof ApiPublicHooksTiktokHashtagPostsRoute
   ApiPublicHooksTiktokOembedRoute: typeof ApiPublicHooksTiktokOembedRoute
   ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
+  ApiPublicHooksTriggerSyncAspiMonitoringRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   ApiPublicHooksTriggerSyncCanaliFeedRoute: typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
 
@@ -698,6 +712,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/trigger-sync-canali-feed'
       fullPath: '/api/public/hooks/trigger-sync-canali-feed'
       preLoaderRoute: typeof ApiPublicHooksTriggerSyncCanaliFeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/trigger-sync-aspi-monitoring': {
+      id: '/api/public/hooks/trigger-sync-aspi-monitoring'
+      path: '/api/public/hooks/trigger-sync-aspi-monitoring'
+      fullPath: '/api/public/hooks/trigger-sync-aspi-monitoring'
+      preLoaderRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/top-tiktok-hashtags': {
@@ -902,6 +923,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksTiktokHashtagPostsRoute: ApiPublicHooksTiktokHashtagPostsRoute,
   ApiPublicHooksTiktokOembedRoute: ApiPublicHooksTiktokOembedRoute,
   ApiPublicHooksTopTiktokHashtagsRoute: ApiPublicHooksTopTiktokHashtagsRoute,
+  ApiPublicHooksTriggerSyncAspiMonitoringRoute:
+    ApiPublicHooksTriggerSyncAspiMonitoringRoute,
   ApiPublicHooksTriggerSyncCanaliFeedRoute:
     ApiPublicHooksTriggerSyncCanaliFeedRoute,
 }

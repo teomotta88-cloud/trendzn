@@ -5,10 +5,15 @@ import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { FeedPageToggle, TrendzFeed } from "./feed.index";
 
 // Pagina duplicata da Canali Inspo (canali-inspo.index.tsx) con stessa logica ma
 // dati INDIPENDENTI: legge i canali dal file separato aspi-monitoring.json e
 // dalla sezione "aspi-monitoring" di trend_submissions. Parte vuota.
+//
+// Stessa struttura di /feed: un toggle Canali/Feed. La vista "canali" mostra la
+// griglia di account; la vista "feed" (riusa TrendzFeed) mostra i post appiattiti
+// in ordine cronologico, col pulsante "Sincronizza ora".
 
 export const Route = createFileRoute("/aspi-monitoring/")({
   head: () => ({
@@ -20,11 +25,28 @@ export const Route = createFileRoute("/aspi-monitoring/")({
       },
     ],
   }),
-  component: AspiMonitoringView,
+  component: AspiMonitoringPage,
 });
 
 const ASPI_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/aspi-monitoring.json";
+const ASPI_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-aspi-monitoring";
+
+function AspiMonitoringPage() {
+  const [tab, setTab] = useState<"feed" | "canali">("canali");
+  return tab === "canali" ? (
+    <AspiCanaliView tab={tab} setTab={setTab} />
+  ) : (
+    <TrendzFeed
+      tab={tab}
+      setTab={setTab}
+      jsonUrl={ASPI_JSON_URL}
+      dataKey="canali"
+      syncEndpoint={ASPI_SYNC_ENDPOINT}
+      canaliLabel="Canali"
+    />
+  );
+}
 
 function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web" {
   if (/instagram\.com/.test(url)) return "instagram";
@@ -63,7 +85,13 @@ function rowToCanale(row: DbRow): CanaleInspo {
   };
 }
 
-function AspiMonitoringView() {
+function AspiCanaliView({
+  tab,
+  setTab,
+}: {
+  tab: "feed" | "canali";
+  setTab: (t: "feed" | "canali") => void;
+}) {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [dbRows, setDbRows] = useState<DbRow[]>([]);
@@ -231,6 +259,10 @@ function AspiMonitoringView() {
           {deleteError}
         </div>
       )}
+
+      <div className="flex">
+        <FeedPageToggle tab={tab} setTab={setTab} canaliLabel="Canali" />
+      </div>
 
       {allCanali.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
