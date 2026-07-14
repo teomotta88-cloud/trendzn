@@ -1,0 +1,97 @@
+name: Probe RSS-Bridge X V2
+
+on:
+  workflow_dispatch:
+    inputs:
+      screen_name:
+        description: "X/Twitter screen name senza @"
+        required: true
+        default: "NASA"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start RSS-Bridge
+        run: |
+          docker run -d --name rssbridge -p 3000:80 rssbridge/rss-bridge:latest
+          sleep 8
+
+      - name: Configure TwitterV2Bridge token
+        env:
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          if [ -z "$TWITTER_BEARER_TOKEN" ]; then
+            echo "TWITTER_BEARER_TOKEN mancante nei GitHub Secrets"
+            exit 1
+          fi
+
+          docker exec rssbridge sh -lc '
+            set -e
+            cd /app 2>/dev/null || cd /var/www/html 2>/dev/null || cd /var/www/rss-bridge 2>/dev/null || pwd
+            echo "Working dir: $(pwd)"
+            ls -la | head
+            if [ -f config.default.ini.php ]; then
+              cp config.default.ini.php config.ini.php
+            elif [ ! -f config.ini.php ]; then
+              touch config.ini.php
+            fi
+          '
+
+          docker exec \
+            -e TWITTER_BEARER_TOKEN="$TWITTER_BEARER_TOKEN" \
+            rssbridge sh -lc '
+              cd /app 2>/dev/null || cd /var/www/html 2>/dev/null || cd /var/www/rss-bridge 2>/dev/null || pwd
+              cat >> config.ini.php <<EOF
+
+[TwitterV2Bridge]
+twitterv2apitoken = ${TWITTER_BEARER_TOKEN}
+EOF
+              echo "TwitterV2Bridge configurato in config.ini.php"
+            '
+
+      - name: Check RSS-Bridge homepage
+        run: |
+          curl -I "http://localhost:3000/" || true
+
+      - name: Probe TwitterV2Bridge by username
+        env:
+          SCREEN_NAME: ${{ github.event.inputs.screen_name }}
+        run: |
+          URL="http://localhost:3000/?action=display&bridge=TwitterV2&context=By+username&u=${SCREEN_NAME}&norep=on&noretweet=on&nopinned=on&maxresults=10&format=JSON"
+          echo "URL: $URL"
+          curl -sS "$URL" -o rssbridge-x-v2-response.json
+          echo "--- Response head ---"
+          head -c 5000 rssbridge-x-v2-response.json
+          echo ""
+          echo "--- Parsed summary ---"
+          node - <<'NODE'
+          const fs = require('fs');
+          const raw = fs.readFileSync('rssbridge-x-v2-response.json', 'utf8');
+          try {
+            const json = JSON.parse(raw);
+            console.log('keys:', Object.keys(json));
+            console.log('title:', json.title || null);
+            console.log('home_page_url:', json.home_page_url || null);
+            console.log('items:', Array.isArray(json.items) ? json.items.length : null);
+
+            if (Array.isArray(json.items)) {
+              for (const [i, item] of json.items.slice(0, 5).entries()) {
+                console.log(`\n#${i + 1}`);
+                console.log('id:', item.id || null);
+                console.log('title:', item.title || null);
+                console.log('url:', item.url || item.uri || null);
+                console.log('date:', item.date_published || item.date_modified || item.timestamp || null);
+                console.log('content preview:', String(item.content_html || item.content_text || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 240));
+              }
+            }
+          } catch (e) {
+            console.log('Risposta non JSON. Preview:');
+            console.log(raw.slice(0, 3000));
+          }
+          NODE
+
+      - name: Stop RSS-Bridge
+        if: always()
+        run: docker rm -f rssbridge || true
