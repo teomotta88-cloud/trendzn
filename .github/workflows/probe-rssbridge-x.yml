@@ -1,0 +1,60 @@
+name: Probe RSS-Bridge X
+
+on:
+  workflow_dispatch:
+    inputs:
+      screen_name:
+        description: "X/Twitter screen name senza @"
+        required: true
+        default: "NASA"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start RSS-Bridge
+        run: |
+          docker run -d --name rssbridge -p 3000:80 rssbridge/rss-bridge:latest
+          sleep 8
+
+      - name: Check RSS-Bridge homepage
+        run: |
+          curl -I "http://localhost:3000/" || true
+
+      - name: Probe TwitterBridge by username
+        env:
+          SCREEN_NAME: ${{ github.event.inputs.screen_name }}
+        run: |
+          URL="http://localhost:3000/?action=display&bridge=Twitter&context=By+username&u=${SCREEN_NAME}&norep=on&noretweet=on&nopinned=on&format=JSON"
+          echo "URL: $URL"
+          curl -sS "$URL" -o rssbridge-x-response.json
+          echo "--- Response head ---"
+          head -c 4000 rssbridge-x-response.json
+          echo ""
+          echo "--- Parsed summary ---"
+          node - <<'NODE'
+          const fs = require('fs');
+          const raw = fs.readFileSync('rssbridge-x-response.json', 'utf8');
+          try {
+            const json = JSON.parse(raw);
+            console.log('keys:', Object.keys(json));
+            console.log('name:', json.name || null);
+            console.log('items:', Array.isArray(json.items) ? json.items.length : null);
+            if (Array.isArray(json.items)) {
+              for (const [i, item] of json.items.slice(0, 5).entries()) {
+                console.log(`\n#${i + 1}`);
+                console.log('title:', item.title || null);
+                console.log('url:', item.url || item.uri || item.id || null);
+                console.log('date:', item.date_published || item.date_modified || item.timestamp || null);
+              }
+            }
+          } catch (e) {
+            console.log('Risposta non JSON. Preview:');
+            console.log(raw.slice(0, 2000));
+          }
+          NODE
+
+      - name: Stop RSS-Bridge
+        if: always()
+        run: docker rm -f rssbridge || true
