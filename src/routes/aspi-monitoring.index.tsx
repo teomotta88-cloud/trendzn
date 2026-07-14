@@ -1,19 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState, useEffect, useCallback } from "react";
+import { useMemo, useState, useEffect, useCallback, useRef } from "react";
+import ExcelJS from "exceljs";
 import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
-import { Search, Trash2 } from "lucide-react";
+import { Search, Trash2, Upload } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { FeedPageToggle, TrendzFeed } from "./feed.index";
-
-// Pagina duplicata da Canali Inspo (canali-inspo.index.tsx) con stessa logica ma
-// dati INDIPENDENTI: legge i canali dal file separato aspi-monitoring.json e
-// dalla sezione "aspi-monitoring" di trend_submissions. Parte vuota.
-//
-// Stessa struttura di /feed: un toggle Canali/Feed. La vista "canali" mostra la
-// griglia di account; la vista "feed" (riusa TrendzFeed) mostra i post appiattiti
-// in ordine cronologico, col pulsante "Sincronizza ora".
 
 export const Route = createFileRoute("/aspi-monitoring/")({
   head: () => ({
@@ -31,9 +24,26 @@ export const Route = createFileRoute("/aspi-monitoring/")({
 const ASPI_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/aspi-monitoring.json";
 const ASPI_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-aspi-monitoring";
+const SUBMIT_MANUAL_ENDPOINT = "/api/public/hooks/submit-manual";
+
+type BulkImportStatus = "idle" | "reading" | "importing" | "success" | "error";
+
+type BulkImportPreviewRow = {
+  title: string;
+  url: string;
+};
+
+type BulkImportResult = {
+  total: number;
+  imported: number;
+  skipped: number;
+  failed: number;
+  errors: string[];
+};
 
 function AspiMonitoringPage() {
   const [tab, setTab] = useState<"feed" | "canali">("canali");
+
   return tab === "canali" ? (
     <AspiCanaliView tab={tab} setTab={setTab} />
   ) : (
@@ -43,26 +53,169 @@ function AspiMonitoringPage() {
       jsonUrl={ASPI_JSON_URL}
       dataKey="canali"
       syncEndpoint={ASPI_SYNC_ENDPOINT}
-      canaliLabel="Canali"
+      canaliLabel="ASPI-monitoring"
     />
   );
 }
 
-function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "web" {
-  if (/instagram\.com/.test(url)) return "instagram";
-  if (/tiktok\.com/.test(url)) return "tiktok";
-  if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
+function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "linkedin" | "x" | "web" {
+  const normalized = url.toLowerCase();
+  if (/instagram\.com/.test(normalized)) return "instagram";
+  if (/tiktok\.com/.test(normalized)) return "tiktok";
+  if (/youtube\.com|youtu\.be/.test(normalized)) return "youtube";
+  if (/linkedin\.com/.test(normalized)) return "linkedin";
+  if (/x\.com|twitter\.com/.test(normalized)) return "x";
   return "web";
 }
 
 function extractHandle(url: string): string {
   try {
     const clean = url.replace(/\/$/, "").split("?")[0];
-    const parts = clean.split("/");
-    return parts[parts.length - 1].replace(/^@/, "") || url;
+    const parts = clean.split("/").filter(Boolean);
+    return parts[parts.length - 1]?.replace(/^@/, "") || url;
   } catch {
     return url;
   }
+}
+
+function normalizeUrl(value: string): string {
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
+function normalizeHeader(value: unknown): string {
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function getCellText(value: ExcelJS.CellValue): string {
+  if (value == null) return "";
+
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    return String(value).trim();
+  }
+
+  if (value instanceof Date) return value.toISOString();
+
+  if (typeof value === "object") {
+    if ("text" in value && value.text) return String(value.text).trim();
+    if ("hyperlink" in value && value.hyperlink) return String(value.hyperlink).trim();
+    if ("richText" in value && Array.isArray(value.richText)) {
+      return value.richText.map((item) => item.text).join("").trim();
+    }
+    if ("result" in value && value.result != null) return String(value.result).trim();
+  }
+
+  return String(value).trim();
+}
+
+async function readAspiExcel(file: File): Promise<BulkImportPreviewRow[]> {
+  const buffer = await file.arrayBuffer();
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.load(buffer);
+
+  const worksheet = workbook.getWorksheet("TOTALONE") ?? workbook.worksheets[0];
+  if (!worksheet) return [];
+
+  const headerRow = worksheet.getRow(1);
+  const headers = headerRow.values as ExcelJS.CellValue[];
+
+  let titleColumn = 1;
+  let urlColumn = 2;
+
+  headers.forEach((header, index) => {
+    const normalized = normalizeHeader(getCellText(header));
+    if (normalized === "nome canale" || normalized === "nome" || normalized === "canale") {
+      titleColumn = index;
+    }
+    if (normalized === "url" || normalized === "link") {
+      urlColumn = index;
+    }
+  });
+
+  const rows: BulkImportPreviewRow[] = [];
+  const seen = new Set<string>();
+
+  worksheet.eachRow((row, rowNumber) => {
+    if (rowNumber === 1) return;
+
+    const title = getCellText(row.getCell(titleColumn).value);
+    const url = normalizeUrl(getCellText(row.getCell(urlColumn).value));
+
+    if (!url) return;
+    if (!/^https?:\/\//i.test(url)) return;
+
+    const dedupeKey = url.toLowerCase().replace(/\/$/, "");
+    if (seen.has(dedupeKey)) return;
+    seen.add(dedupeKey);
+
+    rows.push({
+      title: title || extractHandle(url),
+      url,
+    });
+  });
+
+  return rows;
+}
+
+async function importRowsInBatches(rows: BulkImportPreviewRow[]): Promise<BulkImportResult> {
+  const result: BulkImportResult = {
+    total: rows.length,
+    imported: 0,
+    skipped: 0,
+    failed: 0,
+    errors: [],
+  };
+
+  const concurrency = 5;
+  let cursor = 0;
+
+  async function worker() {
+    while (cursor < rows.length) {
+      const row = rows[cursor];
+      cursor += 1;
+
+      try {
+        const res = await fetch(SUBMIT_MANUAL_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            section: "aspi-monitoring",
+            url: row.url,
+            title: row.title,
+            industry: null,
+          }),
+        });
+
+        let data: { ok?: boolean; error?: string } | null = null;
+        try {
+          data = await res.json();
+        } catch {
+          data = null;
+        }
+
+        if (res.ok && data?.ok) {
+          result.imported += 1;
+        } else if (res.status === 409) {
+          result.skipped += 1;
+        } else {
+          result.failed += 1;
+          result.errors.push(`${row.title}: ${data?.error || "errore durante l'import"}`);
+        }
+      } catch {
+        result.failed += 1;
+        result.errors.push(`${row.title}: errore di rete`);
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  return result;
 }
 
 type DbRow = {
@@ -76,6 +229,7 @@ type DbRow = {
 function rowToCanale(row: DbRow): CanaleInspo {
   const platform = detectPlatform(row.url);
   const handle = extractHandle(row.url);
+
   return {
     id: row.id,
     name: row.title ?? handle,
@@ -83,6 +237,107 @@ function rowToCanale(row: DbRow): CanaleInspo {
     descrizione: row.industry ?? null,
     accounts: [{ platform, handle, url: row.url }],
   };
+}
+
+function BulkImportButton({ onSuccess }: { onSuccess: () => void }) {
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [status, setStatus] = useState<BulkImportStatus>("idle");
+  const [result, setResult] = useState<BulkImportResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const busy = status === "reading" || status === "importing";
+
+  async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+
+    if (!file) return;
+
+    setResult(null);
+    setError(null);
+    setStatus("reading");
+
+    try {
+      const rows = await readAspiExcel(file);
+
+      if (rows.length === 0) {
+        setStatus("error");
+        setError("Nessun canale valido trovato nel file. Controlla che esistano le colonne 'Nome canale' e 'URL'.");
+        return;
+      }
+
+      const confirmed = window.confirm(
+        `Ho trovato ${rows.length} canali da importare in ASPI-monitoring. Procedo?`,
+      );
+
+      if (!confirmed) {
+        setStatus("idle");
+        return;
+      }
+
+      setStatus("importing");
+      const importResult = await importRowsInBatches(rows);
+      setResult(importResult);
+      setStatus(importResult.failed > 0 ? "error" : "success");
+      onSuccess();
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+      setError("Errore durante la lettura del file Excel.");
+    }
+  }
+
+  const label: Record<BulkImportStatus, string> = {
+    idle: "Importa Excel",
+    reading: "Leggo file…",
+    importing: "Importo…",
+    success: "Import completato",
+    error: "Import non completato",
+  };
+
+  return (
+    <div className="flex flex-col items-end gap-2">
+      <input
+        ref={inputRef}
+        type="file"
+        accept=".xlsx,.xls"
+        className="hidden"
+        onChange={handleFileChange}
+      />
+
+      <button
+        type="button"
+        disabled={busy}
+        onClick={() => inputRef.current?.click()}
+        className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3.5 py-2 text-sm font-medium text-foreground transition hover:border-primary disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        <Upload size={15} />
+        {label[status]}
+      </button>
+
+      {result && (
+        <div className="max-w-md rounded-lg border border-border bg-card/80 px-3 py-2 text-xs text-muted-foreground">
+          <span className="font-medium text-foreground">Import:</span> {result.imported} aggiunti, {result.skipped} già presenti, {result.failed} errori.
+          {result.errors.length > 0 && (
+            <details className="mt-1">
+              <summary className="cursor-pointer text-destructive">Dettaglio errori</summary>
+              <ul className="mt-1 list-disc space-y-1 pl-4">
+                {result.errors.slice(0, 10).map((item, index) => (
+                  <li key={`${item}-${index}`}>{item}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+        </div>
+      )}
+
+      {error && (
+        <div className="max-w-md rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-xs text-destructive">
+          {error}
+        </div>
+      )}
+    </div>
+  );
 }
 
 function AspiCanaliView({
@@ -99,6 +354,7 @@ function AspiCanaliView({
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
   const [confirmingId, setConfirmingId] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!confirmingId) return;
@@ -136,6 +392,11 @@ function AspiCanaliView({
     setTimeout(fetchJson, 1500);
   }, [fetchDb, fetchJson]);
 
+  const handleBulkSuccess = useCallback(() => {
+    fetchDb();
+    setTimeout(fetchJson, 1500);
+  }, [fetchDb, fetchJson]);
+
   const handleToDbId = useMemo(() => {
     const map = new Map<string, string>();
     dbRows.forEach((r) => {
@@ -145,17 +406,17 @@ function AspiCanaliView({
     return map;
   }, [dbRows]);
 
-  const [deleteError, setDeleteError] = useState<string | null>(null);
-
   const handleDeleteSupabase = useCallback(async (dbId: string) => {
     setConfirmingId(null);
     setDeleting(dbId);
+
     try {
       const res = await fetch("/api/public/hooks/delete-trend-submission", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: dbId }),
       });
+
       if (res.ok) {
         setDbRows((prev) => prev.filter((r) => r.id !== dbId));
       } else {
@@ -166,19 +427,21 @@ function AspiCanaliView({
       setDeleteError("Errore di rete. Riprova.");
       setTimeout(() => setDeleteError(null), 4000);
     }
+
     setDeleting(null);
   }, []);
 
-  // Elimina dal file aspi-monitoring.json (store dedicato, vedi delete-canale.ts).
   const handleDeleteJson = useCallback(async (canaleId: string) => {
     setConfirmingId(null);
     setDeleting(canaleId);
+
     try {
       const res = await fetch("/api/public/hooks/delete-canale", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ canaleId, store: "aspi-monitoring" }),
       });
+
       if (res.ok) {
         setJsonCanali((prev) => prev.filter((c) => c.id !== canaleId));
       } else {
@@ -189,6 +452,7 @@ function AspiCanaliView({
       setDeleteError("Errore di rete. Riprova.");
       setTimeout(() => setDeleteError(null), 4000);
     }
+
     setDeleting(null);
   }, []);
 
@@ -217,6 +481,7 @@ function AspiCanaliView({
     () =>
       allCanali.filter((c) => {
         if (plat && !c.accounts.some((a) => a.platform === plat)) return false;
+
         if (q) {
           const hay = (
             c.name +
@@ -225,22 +490,25 @@ function AspiCanaliView({
             " " +
             c.accounts.map((a) => a.handle).join(" ")
           ).toLowerCase();
+
           if (!hay.includes(q.toLowerCase())) return false;
         }
+
         return true;
       }),
     [allCanali, q, plat],
   );
 
-  if (loading)
+  if (loading) {
     return (
       <div className="space-y-8">
         <header className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">ASPI-monitoring</h1>
+          <p className="text-sm text-muted-foreground">Caricamento canali…</p>
         </header>
-        <div className="text-sm text-muted-foreground">Caricamento canali…</div>
       </div>
     );
+  }
 
   return (
     <div className="space-y-8">
@@ -248,32 +516,35 @@ function AspiCanaliView({
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">ASPI-monitoring</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Account social selezionati da monitorare. Caricali manualmente con "Aggiungi".
+            Account social selezionati da monitorare. Caricali manualmente con "Aggiungi" oppure importa un file Excel in bulk.
           </p>
         </div>
-        <ManualSubmitDialog section="aspi-monitoring" onSuccess={handleManualSuccess} />
+
+        <div className="flex flex-wrap items-start justify-end gap-2">
+          <BulkImportButton onSuccess={handleBulkSuccess} />
+          <ManualSubmitDialog section="aspi-monitoring" onSuccess={handleManualSuccess} />
+        </div>
       </header>
 
+      <div className="flex">
+        <FeedPageToggle tab={tab} setTab={setTab} canaliLabel="ASPI-monitoring" />
+      </div>
+
       {deleteError && (
-        <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-2 text-sm text-destructive">
+        <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
           {deleteError}
         </div>
       )}
 
-      <div className="flex">
-        <FeedPageToggle tab={tab} setTab={setTab} canaliLabel="Canali" />
-      </div>
-
       {allCanali.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
-          Nessun canale ancora. Aggiungine uno con "Aggiungi" — i post verranno monitorati
-          automaticamente (solo Instagram e TikTok).
+        <div className="rounded-2xl border border-border bg-card p-8 text-center text-sm text-muted-foreground">
+          Nessun canale ancora. Aggiungine uno con "Aggiungi" oppure importa un Excel.
         </div>
       ) : (
         <>
           <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
-            <div className="relative flex-1 min-w-[220px]">
-              <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+            <div className="relative min-w-[220px] flex-1">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
@@ -281,6 +552,7 @@ function AspiCanaliView({
                 className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
               />
             </div>
+
             <select
               value={plat}
               onChange={(e) => setPlat(e.target.value)}
@@ -293,12 +565,13 @@ function AspiCanaliView({
                 </option>
               ))}
             </select>
+
             <span className="ml-auto text-xs text-muted-foreground">
               {filtered.length} / {allCanali.length}
             </span>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filtered.map((c) => {
               const main = c.accounts[0];
               const initial =
@@ -312,26 +585,57 @@ function AspiCanaliView({
 
               const dbIdForCanale = isDb
                 ? c.id
-                : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ??
-                  null);
+                : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ?? null);
 
               const canDeleteJson = isJsonCanale;
               const canDeleteSupabase = !!dbIdForCanale && !isJsonCanale;
-
               const deletingThis = !!deleting && (deleting === dbIdForCanale || deleting === c.id);
+
+              const cardContent = (
+                <>
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                      {initial}
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <h2 className="truncate text-sm font-semibold text-foreground">{c.name}</h2>
+                      {main && <p className="truncate text-xs text-muted-foreground">@{main.handle}</p>}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {c.accounts.map((a, i) => (
+                      <span
+                        key={`${a.platform}-${a.handle}-${i}`}
+                        className="inline-flex items-center gap-1 rounded-full border border-border bg-background/60 px-2 py-1 text-[11px] text-muted-foreground"
+                      >
+                        <PlatformIcon platform={a.platform} />
+                        {a.platform}
+                      </span>
+                    ))}
+                  </div>
+
+                  {c.descrizione && (
+                    <p className="line-clamp-3 text-xs leading-relaxed text-muted-foreground">{c.descrizione}</p>
+                  )}
+                </>
+              );
 
               return (
                 <div key={c.id} className="group relative">
                   {canDeleteSupabase &&
                     (() => {
                       const isConfirming = confirmingId === dbIdForCanale;
+
                       return (
                         <button
-                          onClick={() =>
-                            isConfirming
-                              ? handleDeleteSupabase(dbIdForCanale!)
-                              : setConfirmingId(dbIdForCanale)
-                          }
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            isConfirming ? handleDeleteSupabase(dbIdForCanale!) : setConfirmingId(dbIdForCanale);
+                          }}
                           disabled={deletingThis}
                           className={
                             "absolute right-2 top-2 z-10 rounded-lg border p-1.5 text-xs font-medium transition " +
@@ -341,19 +645,24 @@ function AspiCanaliView({
                           }
                           title={isConfirming ? "Clicca di nuovo per confermare" : "Elimina"}
                         >
-                          <Trash2 className="size-3.5" />
+                          <Trash2 size={14} />
                           {isConfirming && "Confermi?"}
                         </button>
                       );
                     })()}
+
                   {canDeleteJson &&
                     (() => {
                       const isConfirming = confirmingId === c.id;
+
                       return (
                         <button
-                          onClick={() =>
-                            isConfirming ? handleDeleteJson(c.id) : setConfirmingId(c.id)
-                          }
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            isConfirming ? handleDeleteJson(c.id) : setConfirmingId(c.id);
+                          }}
                           disabled={deletingThis}
                           className={
                             "absolute right-2 top-2 z-10 rounded-lg border p-1.5 text-xs font-medium transition " +
@@ -363,58 +672,30 @@ function AspiCanaliView({
                           }
                           title={isConfirming ? "Clicca di nuovo per confermare" : "Elimina"}
                         >
-                          <Trash2 className="size-3.5" />
+                          <Trash2 size={14} />
                           {isConfirming && "Confermi?"}
                         </button>
                       );
                     })()}
-                  {(() => {
-                    const cardContent = (
-                      <>
-                        <div className="relative mx-auto flex aspect-square w-full max-w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/10">
-                          <div className="flex size-[88%] items-center justify-center rounded-full bg-card font-display text-3xl font-bold">
-                            {initial}
-                          </div>
-                        </div>
-                        <div className="text-center">
-                          <div className="truncate font-display text-sm font-semibold">
-                            @{main.handle}
-                          </div>
-                          <div className="mt-1 flex items-center justify-center gap-1.5 text-muted-foreground">
-                            {c.accounts.map((a, i) => (
-                              <PlatformIcon key={i} platform={a.platform} className="size-3.5" />
-                            ))}
-                          </div>
-                          {c.descrizione && (
-                            <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-muted-foreground">
-                              {c.descrizione}
-                            </p>
-                          )}
-                        </div>
-                      </>
-                    );
 
-                    const cardClassName =
-                      "flex flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary";
-
-                    if (isJsonCanale) {
-                      return (
-                        <Link
-                          to="/aspi-monitoring/$id"
-                          params={{ id: c.id }}
-                          className={cardClassName}
-                        >
-                          {cardContent}
-                        </Link>
-                      );
-                    }
-
-                    return (
-                      <a href={main.url} target="_blank" rel="noreferrer" className={cardClassName}>
-                        {cardContent}
-                      </a>
-                    );
-                  })()}
+                  {isJsonCanale ? (
+                    <Link
+                      to="/aspi-monitoring/$id"
+                      params={{ id: c.id }}
+                      className="flex min-h-[150px] flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
+                    >
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    <a
+                      href={main?.url ?? c.urls[0]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex min-h-[150px] flex-col gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
+                    >
+                      {cardContent}
+                    </a>
+                  )}
                 </div>
               );
             })}
