@@ -1,0 +1,41 @@
+name: Sync ASPI Monitoring
+
+# Copia di sync-canali-feed.yml per la pagina ASPI-monitoring. Sfalsato al
+# minuto 30 per non scrivere su GitHub in contemporanea all'altro sync.
+
+on:
+  schedule:
+    - cron: "30 */3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Attendi che RSS-Bridge sia pronto
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge non ha risposto in tempo" >&2
+          exit 1
+
+      - name: Sync ASPI-monitoring via RSS-Bridge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RSS_BRIDGE_BASE: http://localhost:3000/
+        run: node scripts/sync-aspi-monitoring.mjs

@@ -2,11 +2,20 @@ import { createFileRoute } from "@tanstack/react-router";
 import { decodeBase64Utf8 } from "@/lib/base64";
 
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
-const TRENDS_PATH = "src/data/trends.json";
 const MAX_ATTEMPTS = 5;
 
-async function readTrendsJson(token: string) {
-  const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
+// Due store possibili: quello storico di Canali Inspo (trends.json, chiave
+// canali_inspo) e quello separato di ASPI-monitoring (aspi-monitoring.json,
+// chiave canali). Il client passa `store` per scegliere; default = canali-inspo
+// per retrocompatibilità.
+const STORES = {
+  "canali-inspo": { path: "src/data/trends.json", key: "canali_inspo" },
+  "aspi-monitoring": { path: "src/data/aspi-monitoring.json", key: "canali" },
+} as const;
+type StoreName = keyof typeof STORES;
+
+async function readJson(token: string, path: string) {
+  const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`, {
     headers: {
       Authorization: `token ${token}`,
       Accept: "application/vnd.github.v3+json",
@@ -17,8 +26,8 @@ async function readTrendsJson(token: string) {
     throw new Error(`read_failed_${res.status}`);
   }
   const file = await res.json();
-  const trends = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
-  return { trends, sha: file.sha as string };
+  const json = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
+  return { json, sha: file.sha as string };
 }
 
 export const Route = createFileRoute("/api/public/hooks/delete-canale")({
@@ -26,10 +35,15 @@ export const Route = createFileRoute("/api/public/hooks/delete-canale")({
     handlers: {
       POST: async ({ request }) => {
         try {
-          const { canaleId } = (await request.json()) as { canaleId: string };
+          const { canaleId, store: storeName } = (await request.json()) as {
+            canaleId: string;
+            store?: StoreName;
+          };
           if (!canaleId) {
             return Response.json({ ok: false, error: "canaleId mancante" }, { status: 400 });
           }
+
+          const store = STORES[storeName ?? "canali-inspo"] ?? STORES["canali-inspo"];
 
           const token = process.env.GITHUB_TOKEN;
           if (!token) {
@@ -42,22 +56,18 @@ export const Route = createFileRoute("/api/public/hooks/delete-canale")({
           // silenziosamente la cancellazione e il canale resta lì per sempre,
           // pur sembrando "non eliminabile" solo per quell'account specifico.
           for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-            const { trends, sha } = await readTrendsJson(token);
+            const { json, sha } = await readJson(token, store.path);
+            const arr = (json[store.key] ?? []) as { id: string }[];
 
-            const before = trends.canali_inspo.length;
-            trends.canali_inspo = trends.canali_inspo.filter(
-              (c: { id: string }) => c.id !== canaleId,
-            );
+            const before = arr.length;
+            json[store.key] = arr.filter((c) => c.id !== canaleId);
 
-            if (trends.canali_inspo.length === before) {
-              return Response.json(
-                { ok: false, error: "canale non trovato" },
-                { status: 404 },
-              );
+            if (json[store.key].length === before) {
+              return Response.json({ ok: false, error: "canale non trovato" }, { status: 404 });
             }
 
             const writeRes = await fetch(
-              `https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`,
+              `https://api.github.com/repos/${GITHUB_REPO}/contents/${store.path}`,
               {
                 method: "PUT",
                 headers: {
@@ -67,9 +77,7 @@ export const Route = createFileRoute("/api/public/hooks/delete-canale")({
                 },
                 body: JSON.stringify({
                   message: `chore: elimina canale ${canaleId} [trendzn-bot]`,
-                  content: btoa(
-                    unescape(encodeURIComponent(JSON.stringify(trends, null, 2))),
-                  ),
+                  content: btoa(unescape(encodeURIComponent(JSON.stringify(json, null, 2)))),
                   sha,
                 }),
               },
@@ -86,10 +94,7 @@ export const Route = createFileRoute("/api/public/hooks/delete-canale")({
             }
 
             const err = await writeRes.text();
-            return Response.json(
-              { ok: false, error: err.slice(0, 100) },
-              { status: 500 },
-            );
+            return Response.json({ ok: false, error: err.slice(0, 100) }, { status: 500 });
           }
 
           return Response.json(
@@ -97,10 +102,7 @@ export const Route = createFileRoute("/api/public/hooks/delete-canale")({
             { status: 500 },
           );
         } catch (err) {
-          return Response.json(
-            { ok: false, error: String(err).slice(0, 100) },
-            { status: 500 },
-          );
+          return Response.json({ ok: false, error: String(err).slice(0, 100) }, { status: 500 });
         }
       },
     },
