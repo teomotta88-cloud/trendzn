@@ -599,6 +599,21 @@
           "url": "https://www.linkedin.com/company/ilmessaggero"
         }
       ]
+    },
+    {
+      "id": "posts",
+      "name": "LiguriaDay",
+      "urls": [
+        "https://www.linkedin.com/company/liguriaday/posts?feedView=all"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "linkedin",
+          "handle": "posts",
+          "url": "https://www.linkedin.com/company/liguriaday/posts?feedView=all"
+        }
+      ]
     }
   ]
 }
