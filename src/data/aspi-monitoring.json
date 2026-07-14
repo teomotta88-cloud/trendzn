@@ -314,6 +314,21 @@
           "url": "https://www.facebook.com/AostaNews24new"
         }
       ]
+    },
+    {
+      "id": "azione",
+      "name": "Azione",
+      "urls": [
+        "https://www.facebook.com/Azione"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "Azione",
+          "url": "https://www.facebook.com/Azione"
+        }
+      ]
     }
   ]
 }
