@@ -254,6 +254,21 @@
           "url": "https://www.instagram.com/umbertodannuntiis"
         }
       ]
+    },
+    {
+      "id": "agenitalia-it",
+      "name": "agenitalia.it",
+      "urls": [
+        "https://www.facebook.com/agenitalia.it"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "agenitalia.it",
+          "url": "https://www.facebook.com/agenitalia.it"
+        }
+      ]
     }
   ]
 }
