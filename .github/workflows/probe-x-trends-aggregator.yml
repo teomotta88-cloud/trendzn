@@ -1,0 +1,30 @@
+name: Probe X Trends Aggregator (diagnostico)
+
+# Workflow usa-e-getta: X.com blocca l'accesso anonimo, quindi per la lista
+# dei trend X in Italia + i volumi si punta a un aggregatore pubblico. Questo
+# probe apre getdaytrends.com/italy e trends24.in/italy con un browser reale e
+# stampa cosa espongono (nomi trend, volumi, struttura), per scegliere quale
+# usare e con quali selettori costruire la pipeline. Nessuna pipeline lo usa.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Sonda gli aggregatori di trend X
+        run: node scripts/probe-x-trends-aggregator.mjs
