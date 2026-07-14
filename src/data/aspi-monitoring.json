@@ -359,6 +359,21 @@
           "url": "https://www.facebook.com/DPCgov"
         }
       ]
+    },
+    {
+      "id": "estatountravaglio",
+      "name": "EstatoUnTravaglio",
+      "urls": [
+        "https://www.facebook.com/EstatoUnTravaglio"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "EstatoUnTravaglio",
+          "url": "https://www.facebook.com/EstatoUnTravaglio"
+        }
+      ]
     }
   ]
 }
