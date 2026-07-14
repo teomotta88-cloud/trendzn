@@ -4,16 +4,7 @@
 // GitHub. Store INDIPENDENTE da trends.json così i due workflow di sync non si
 // pestano i piedi sulla stessa risorsa GitHub.
 //
-// Solo Instagram e TikTok vengono monitorati (limite di RSS-Bridge, come per
-// Canali Inspo): Facebook e X non sono recuperabili senza account/API dedicata.
-//
-// Variabili d'ambiente:
-//   GITHUB_TOKEN     richiesta, token con permesso "contents: write" sul repo
-//   RSS_BRIDGE_BASE  opzionale, URL base dell'istanza RSS-Bridge (default: il
-//                    service container lanciato dal workflow)
-//
-// Eseguito da .github/workflows/sync-aspi-monitoring.yml su schedule (ogni 3h)
-// o manualmente via workflow_dispatch.
+// Solo Instagram e TikTok vengono monitorati.
 
 const REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/aspi-monitoring.json";
@@ -35,8 +26,10 @@ async function readStore() {
   const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${TRENDS_PATH}`, {
     headers: ghHeaders,
   });
-  if (!res.ok)
+  if (!res.ok) {
     throw new Error(`Lettura aspi-monitoring.json fallita: ${res.status} ${await res.text()}`);
+  }
+
   const data = await res.json();
   const store = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8"));
   return { store, sha: data.sha };
@@ -53,8 +46,10 @@ async function writeStore(store, sha) {
       sha,
     }),
   });
-  if (!res.ok)
+
+  if (!res.ok) {
     throw new Error(`Scrittura aspi-monitoring.json fallita: ${res.status} ${await res.text()}`);
+  }
 }
 
 function normalizeHandle(handle) {
@@ -62,7 +57,7 @@ function normalizeHandle(handle) {
 }
 
 function isPostUrl(url) {
-  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/watch/.test(url);
+  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch/.test(url);
 }
 
 function detectPlatform(url) {
@@ -72,69 +67,61 @@ function detectPlatform(url) {
   return "web";
 }
 
+function extractTikTokVideoId(url) {
+  const match = url.match(/tiktok\.com\/@[^/]+\/(?:video|photo)\/(\d+)/);
+  return match?.[1] || null;
+}
+
+function dateFromTikTokVideoId(url) {
+  const videoId = extractTikTokVideoId(url);
+  if (!videoId) return null;
+
+  try {
+    const id = BigInt(videoId);
+    const timestampSeconds = Number(id >> 32n);
+
+    if (!Number.isFinite(timestampSeconds) || timestampSeconds <= 0) return null;
+
+    const date = new Date(timestampSeconds * 1000);
+
+    // Guardrail: evita date assurde se TikTok cambia formato o l'ID non è valido.
+    const min = new Date("2016-01-01T00:00:00.000Z").getTime();
+    const max = Date.now() + 24 * 60 * 60 * 1000;
+
+    if (date.getTime() < min || date.getTime() > max) return null;
+
+    return date.toISOString();
+  } catch {
+    return null;
+  }
+}
+
+function getItemDate(item, url, platform) {
+  return (
+    item.date_modified ||
+    item.date_published ||
+    item.published ||
+    item.updated ||
+    (platform === "tiktok" ? dateFromTikTokVideoId(url) : null) ||
+    null
+  );
+}
+
 // "content_html" contiene la caption integrale; "title" arriva troncato.
 function fullCaption(item) {
   const html = item.content_html || "";
   const text = html
-    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<br\s*\/?/gi, "\n")
     .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'")
-    .replace(/&rsquo;/g, "’")
-    .replace(/&lsquo;/g, "‘")
-    .replace(/&rdquo;/g, "”")
-    .replace(/&ldquo;/g, "“")
-    .replace(/&ndash;/g, "–")
-    .replace(/&mdash;/g, "—")
-    .replace(/&hellip;/g, "…")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
-    .replace(/&[a-z]+;/gi, (entity) => {
-      const map = {
-        "&agrave;": "à",
-        "&aacute;": "á",
-        "&acirc;": "â",
-        "&atilde;": "ã",
-        "&auml;": "ä",
-        "&aring;": "å",
-        "&egrave;": "è",
-        "&eacute;": "é",
-        "&ecirc;": "ê",
-        "&euml;": "ë",
-        "&igrave;": "ì",
-        "&iacute;": "í",
-        "&icirc;": "î",
-        "&iuml;": "ï",
-        "&ograve;": "ò",
-        "&oacute;": "ó",
-        "&ocirc;": "ô",
-        "&otilde;": "õ",
-        "&ouml;": "ö",
-        "&ugrave;": "ù",
-        "&uacute;": "ú",
-        "&ucirc;": "û",
-        "&uuml;": "ü",
-        "&ntilde;": "ñ",
-        "&ccedil;": "ç",
-        "&szlig;": "ß",
-        "&Agrave;": "À",
-        "&Aacute;": "Á",
-        "&Egrave;": "È",
-        "&Eacute;": "É",
-        "&Igrave;": "Ì",
-        "&Iacute;": "Í",
-        "&Ograve;": "Ò",
-        "&Oacute;": "Ó",
-        "&Ugrave;": "Ù",
-        "&Uacute;": "Ú",
-      };
-      return map[entity] ?? entity;
-    })
     .trim();
+
   return text || (item.title || "").trim() || null;
 }
 
@@ -149,12 +136,16 @@ function parseCompactNumber(str) {
     .trim()
     .replace(/,/g, "")
     .match(/^([\d.]+)\s*([KMB])?$/i);
+
   if (!match) return null;
+
   const n = parseFloat(match[1]);
   const suffix = (match[2] || "").toUpperCase();
+
   if (suffix === "K") return Math.round(n * 1_000);
   if (suffix === "M") return Math.round(n * 1_000_000);
   if (suffix === "B") return Math.round(n * 1_000_000_000);
+
   return Math.round(n);
 }
 
@@ -165,12 +156,15 @@ function extractTikTokViews(item) {
 
 async function fetchFeed(platform, handle) {
   const url = rssBridgeUrl(platform, handle);
+
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+
     if (!res.ok) {
       console.error(`Feed ${platform}/${handle} fallito: ${res.status}`);
       return [];
     }
+
     const data = await res.json();
     return data.items ?? [];
   } catch (err) {
@@ -182,18 +176,30 @@ async function fetchFeed(platform, handle) {
 // --- Main ---
 const { store, sha } = await readStore();
 if (!Array.isArray(store.canali)) store.canali = [];
+
 const list = store.canali;
 
-// Normalizza handle (rimuovi @)
+// Normalizza handle e prova a valorizzare le date mancanti dei TikTok già salvati.
+let modified = false;
+
 for (const canale of list) {
-  for (const account of canale.accounts) {
+  for (const account of canale.accounts || []) {
     if (account.handle) account.handle = normalizeHandle(account.handle);
+
+    const platform = account.platform || detectPlatform(account.url || "");
+    if (platform === "tiktok" && isPostUrl(account.url || "") && !account.date) {
+      const inferredDate = dateFromTikTokVideoId(account.url);
+      if (inferredDate) {
+        account.date = inferredDate;
+        modified = true;
+      }
+    }
   }
 }
 
-// Handle univoci Instagram/TikTok da monitorare
+// Handle univoci Instagram/TikTok da monitorare.
 const handles = list
-  .flatMap((c) => c.accounts)
+  .flatMap((c) => c.accounts || [])
   .filter((a) => a.platform === "instagram" || a.platform === "tiktok")
   .filter((a, i, arr) => arr.findIndex((x) => x.handle === a.handle) === i)
   .map((a) => ({ handle: normalizeHandle(a.handle), platform: a.platform }));
@@ -208,18 +214,18 @@ for (const { handle, platform } of handles) {
 
 console.log(`Trovati ${allItems.length} item totali nei feed.`);
 
-let modified = false;
-
 for (const item of allItems) {
   const url = (item.url || item.id || "").trim();
   if (!url || !isPostUrl(url)) continue;
 
+  const postPlatform = detectPlatform(url);
   const handle = normalizeHandle(item.author?.name || "") || null;
 
-  const canale = list.find((c) => c.accounts.some((a) => a.handle === handle));
+  const canale = list.find((c) => c.accounts?.some((a) => a.handle === handle));
   if (!canale) continue;
 
   const existing = canale.accounts.find((a) => a.url === url);
+
   if (existing) {
     if (!existing.caption) {
       const caption = fullCaption(item);
@@ -228,6 +234,15 @@ for (const item of allItems) {
         modified = true;
       }
     }
+
+    if (!existing.date) {
+      const date = getItemDate(item, url, existing.platform || postPlatform);
+      if (date) {
+        existing.date = date;
+        modified = true;
+      }
+    }
+
     if (existing.views == null && existing.platform === "tiktok") {
       const views = extractTikTokViews(item);
       if (views != null) {
@@ -235,12 +250,12 @@ for (const item of allItems) {
         modified = true;
       }
     }
+
     continue;
   }
 
-  const date = item.date_modified || item.date_published || null;
+  const date = getItemDate(item, url, postPlatform);
   const caption = fullCaption(item);
-  const postPlatform = detectPlatform(url);
 
   canale.accounts.push({
     platform: postPlatform,
