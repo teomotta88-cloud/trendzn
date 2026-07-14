@@ -539,6 +539,21 @@
           "url": "https://www.tiktok.com/@azione.it"
         }
       ]
+    },
+    {
+      "id": "geopop",
+      "name": "GeoPop",
+      "urls": [
+        "https://www.tiktok.com/@geopop"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "tiktok",
+          "handle": "geopop",
+          "url": "https://www.tiktok.com/@geopop"
+        }
+      ]
     }
   ]
 }
