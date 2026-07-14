@@ -344,6 +344,21 @@
           "url": "https://www.facebook.com/chilhavisto"
         }
       ]
+    },
+    {
+      "id": "dpcgov",
+      "name": "DPCgov",
+      "urls": [
+        "https://www.facebook.com/DPCgov"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "DPCgov",
+          "url": "https://www.facebook.com/DPCgov"
+        }
+      ]
     }
   ]
 }
