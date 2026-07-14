@@ -584,6 +584,21 @@
           "url": "https://www.linkedin.com/company/il-giornale-d-italia"
         }
       ]
+    },
+    {
+      "id": "ilmessaggero",
+      "name": "Il Messaggero",
+      "urls": [
+        "https://www.linkedin.com/company/ilmessaggero"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "linkedin",
+          "handle": "ilmessaggero",
+          "url": "https://www.linkedin.com/company/ilmessaggero"
+        }
+      ]
     }
   ]
 }
