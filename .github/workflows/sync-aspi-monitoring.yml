@@ -1,11 +1,11 @@
 name: Sync ASPI Monitoring
 
-# Copia di sync-canali-feed.yml per la pagina ASPI-monitoring. Sfalsato al
+# Copia di sync-canali-feed.yml per la pagina ASPI-monitoring. Ogni ora, al
 # minuto 30 per non scrivere su GitHub in contemporanea all'altro sync.
 
 on:
   schedule:
-    - cron: "30 */3 * * *"
+    - cron: "30 * * * *"
   workflow_dispatch: {}
 
 jobs:

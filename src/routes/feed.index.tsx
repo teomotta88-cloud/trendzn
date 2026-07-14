@@ -8,7 +8,15 @@ export const Route = createFileRoute("/feed/")({
   component: FeedPage,
 });
 
-export function FeedPageToggle({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed" | "canali") => void }) {
+export function FeedPageToggle({
+  tab,
+  setTab,
+  canaliLabel = "Canali Inspo",
+}: {
+  tab: "feed" | "canali";
+  setTab: (t: "feed" | "canali") => void;
+  canaliLabel?: string;
+}) {
   return (
     <div style={{ display: "flex", gap: 4 }}>
       {(["canali", "feed"] as const).map((t) => (
@@ -27,7 +35,7 @@ export function FeedPageToggle({ tab, setTab }: { tab: "feed" | "canali"; setTab
             transition: "all 0.15s",
           }}
         >
-          {t === "canali" ? "Canali Inspo" : "Feed"}
+          {t === "canali" ? canaliLabel : "Feed"}
         </button>
       ))}
     </div>
@@ -36,10 +44,15 @@ export function FeedPageToggle({ tab, setTab }: { tab: "feed" | "canali"; setTab
 
 function FeedPage() {
   const [tab, setTab] = useState<"feed" | "canali">("canali");
-  return tab === "canali" ? <CanaliInspoView tab={tab} setTab={setTab} /> : <TrendzFeed tab={tab} setTab={setTab} />;
+  return tab === "canali" ? (
+    <CanaliInspoView tab={tab} setTab={setTab} />
+  ) : (
+    <TrendzFeed tab={tab} setTab={setTab} />
+  );
 }
 
-const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
+const TRENDS_JSON_URL =
+  "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 const N8N_WEBHOOK = "https://trendzn.app.n8n.cloud/webhook/trendzn-sync";
 const GITHUB_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-canali-feed";
@@ -58,9 +71,7 @@ interface Canale {
   accounts: Account[];
 }
 
-interface TrendsData {
-  canali_inspo: Canale[];
-}
+type TrendsData = Record<string, Canale[]>;
 
 interface Post {
   url: string;
@@ -201,11 +212,12 @@ function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
 
 type TrendSection = "trend-real-time" | "trend-attuali" | "trend-evergreen";
 
-const TREND_SECTIONS: { section: TrendSection; label: string; icon: typeof Zap; color: string }[] = [
-  { section: "trend-real-time", label: "Real Time", icon: Zap, color: "#d97706" },
-  { section: "trend-attuali", label: "Attuali", icon: Flame, color: "#dc2626" },
-  { section: "trend-evergreen", label: "Evergreen", icon: InfinityIcon, color: "#16a34a" },
-];
+const TREND_SECTIONS: { section: TrendSection; label: string; icon: typeof Zap; color: string }[] =
+  [
+    { section: "trend-real-time", label: "Real Time", icon: Zap, color: "#d97706" },
+    { section: "trend-attuali", label: "Attuali", icon: Flame, color: "#dc2626" },
+    { section: "trend-evergreen", label: "Evergreen", icon: InfinityIcon, color: "#16a34a" },
+  ];
 
 function MarkAsTrendButtons({
   post,
@@ -341,7 +353,11 @@ function PostCard({
           {canaleName}
         </span>
         {dateStr && (
-          <span style={{ fontSize: 11, color: "#cbd5e1", marginLeft: "auto", whiteSpace: "nowrap" }}>{dateStr}</span>
+          <span
+            style={{ fontSize: 11, color: "#cbd5e1", marginLeft: "auto", whiteSpace: "nowrap" }}
+          >
+            {dateStr}
+          </span>
         )}
         <a
           href={post.url}
@@ -371,8 +387,18 @@ function PostCard({
               <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
           )}
-          {(platform === "web" || (platform !== "instagram" && platform !== "tiktok" && platform !== "youtube")) && (
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          {(platform === "web" ||
+            (platform !== "instagram" && platform !== "tiktok" && platform !== "youtube")) && (
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
               <polyline points="15 3 21 3 21 9" />
               <line x1="10" y1="14" x2="21" y2="3" />
@@ -424,7 +450,15 @@ function PostCard({
   );
 }
 
-function FilterPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+function FilterPill({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
   return (
     <button
       onClick={onClick}
@@ -512,7 +546,21 @@ function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: s
 const PAGE_SIZE = 12;
 const EMPTY_MARKED: Set<TrendSection> = new Set();
 
-function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed" | "canali") => void }) {
+export function TrendzFeed({
+  tab,
+  setTab,
+  jsonUrl = TRENDS_JSON_URL,
+  dataKey = "canali_inspo",
+  syncEndpoint = GITHUB_SYNC_ENDPOINT,
+  canaliLabel,
+}: {
+  tab: "feed" | "canali";
+  setTab: (t: "feed" | "canali") => void;
+  jsonUrl?: string;
+  dataKey?: string;
+  syncEndpoint?: string;
+  canaliLabel?: string;
+}) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
@@ -522,13 +570,13 @@ function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed
   const [markedByUrl, setMarkedByUrl] = useState<Record<string, Set<TrendSection>>>({});
 
   useEffect(() => {
-    fetch(TRENDS_JSON_URL)
+    fetch(jsonUrl)
       .then((r) => r.json())
       .then((decoded) => {
         setData(decoded);
       })
       .catch(() => setError("Impossibile caricare il feed."));
-  }, []);
+  }, [jsonUrl]);
 
   useEffect(() => {
     supabase
@@ -565,11 +613,15 @@ function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed
     setVisibleCount(PAGE_SIZE);
   }, [platformFilter, search, sortOrder]);
 
-  if (error) return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
-  if (!data) return <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>;
+  if (error)
+    return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
+  if (!data)
+    return (
+      <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>
+    );
 
   const allPosts: Post[] = [];
-  for (const canale of data.canali_inspo || []) {
+  for (const canale of data[dataKey] || []) {
     const name = canale.name || canale.id || "";
     for (const account of canale.accounts || []) {
       if (isPostUrl(account.url)) {
@@ -616,12 +668,12 @@ function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed
           </p>
         </div>
         <div className="flex gap-2">
-          <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Sincronizza ora" />
+          <SyncButton endpoint={syncEndpoint} label="↻ Sincronizza ora" />
         </div>
       </header>
 
       <div className="flex">
-        <FeedPageToggle tab={tab} setTab={setTab} />
+        <FeedPageToggle tab={tab} setTab={setTab} canaliLabel={canaliLabel} />
       </div>
 
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
@@ -656,7 +708,10 @@ function TrendzFeed({ tab, setTab }: { tab: "feed" | "canali"; setTab: (t: "feed
         <div className="py-16 text-center text-sm text-muted-foreground">Nessun post trovato.</div>
       ) : (
         <>
-          <div className="grid gap-5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}>
+          <div
+            className="grid gap-5"
+            style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}
+          >
             {visiblePosts.map((post, i) => (
               <PostCard
                 key={`${post.url}-${i}`}
