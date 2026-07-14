@@ -494,6 +494,21 @@
           "url": "https://www.facebook.com/blogdistelleedintornidirobertalabonia"
         }
       ]
+    },
+    {
+      "id": "rainews",
+      "name": "Rainews",
+      "urls": [
+        "https://www.tiktok.com/@rainews?lang=it-IT"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "tiktok",
+          "handle": "rainews",
+          "url": "https://www.tiktok.com/@rainews?lang=it-IT"
+        }
+      ]
     }
   ]
 }
