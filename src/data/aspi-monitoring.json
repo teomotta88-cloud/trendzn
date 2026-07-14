@@ -299,6 +299,21 @@
           "url": "https://www.facebook.com/AnsaNapoli"
         }
       ]
+    },
+    {
+      "id": "aostanews24new",
+      "name": "AostaNews24",
+      "urls": [
+        "https://www.facebook.com/AostaNews24new"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "AostaNews24new",
+          "url": "https://www.facebook.com/AostaNews24new"
+        }
+      ]
     }
   ]
 }
