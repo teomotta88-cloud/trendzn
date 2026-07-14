@@ -329,6 +329,21 @@
           "url": "https://www.facebook.com/Azione"
         }
       ]
+    },
+    {
+      "id": "chilhavisto",
+      "name": "chilhavisto",
+      "urls": [
+        "https://www.facebook.com/chilhavisto"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "web",
+          "handle": "chilhavisto",
+          "url": "https://www.facebook.com/chilhavisto"
+        }
+      ]
     }
   ]
 }
