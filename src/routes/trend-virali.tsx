@@ -12,6 +12,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlatformIcon, SocialEmbed } from "@/components/SocialEmbed";
 import { formatCompactNumber } from "@/lib/format";
 import {
+  computeTopicVerdict,
   DISCOVERY_SOURCES,
   listViralTrendContent,
   SORT_OPTIONS,
@@ -19,11 +20,12 @@ import {
   VIRALITY_WINDOW_DAYS,
   type DiscoverySource,
   type SortBy,
+  type TopicVerdict,
   type ViralPlatform,
   type ViralTrendContent,
 } from "@/lib/viralTrends";
 import { isCurrentlyRanked, listMonitoredTopics, type MonitoredTopic } from "@/lib/monitoredTopics";
-import { GROWTH_THRESHOLD_PCT, isStrongGrowthSignal } from "@/lib/topicGrowth";
+import { GROWTH_THRESHOLD_PCT } from "@/lib/topicGrowth";
 
 export const Route = createFileRoute("/trend-virali")({
   head: () => ({
@@ -155,28 +157,56 @@ function GrowthIndicator({ pct }: { pct: number | null }) {
   );
 }
 
-// "Marcata" = crescono ENTRAMBI volume ed engagement, non solo uno dei due
-// (vedi isStrongGrowthSignal in src/lib/topicGrowth.ts) — più contenuti
-// pubblicati E più interazioni totali su quei contenuti nella stessa
-// finestra è un segnale più forte di uno solo dei due che cresce da solo.
-function TopicCard({ topic }: { topic: MonitoredTopic }) {
+// Verdetto di viralità del topic (vedi computeTopicVerdict in
+// src/lib/viralTrends.ts): "produce" se almeno un contenuto sta accelerando
+// ora, "si scalda" se c'è crescita ma nessun contenuto ancora virale,
+// "piatto" altrimenti. Sostituisce il vecchio badge "Viralità marcata", che
+// richiedeva la crescita di volume ED engagement totali e quindi premiava il
+// volume di pubblicazione invece del singolo contenuto che esplode.
+const VERDICT_META: Record<TopicVerdict, { label: string; className: string; Icon: typeof Flame }> =
+  {
+    producing: {
+      label: "Produce virale",
+      className: "bg-orange-500/15 text-orange-600 dark:text-orange-400",
+      Icon: Flame,
+    },
+    warming: {
+      label: "Si scalda",
+      className: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+      Icon: TrendingUp,
+    },
+    flat: {
+      label: "Nessun virale ora",
+      className: "bg-muted text-muted-foreground",
+      Icon: Minus,
+    },
+  };
+
+function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
+  const { label, className, Icon } = VERDICT_META[verdict];
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${className}`}
+    >
+      <Icon className="size-3" />
+      {label}
+    </span>
+  );
+}
+
+function TopicCard({ topic, verdict }: { topic: MonitoredTopic; verdict: TopicVerdict }) {
   const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
-  const strongSignal = isStrongGrowthSignal(topic.volume_growth_pct, topic.engagement_growth_pct);
+  const producing = verdict === "producing";
 
   return (
     <div
       className={`flex flex-col gap-2 rounded-xl border px-3 py-2.5 ${
-        strongSignal ? "border-orange-500/60 bg-orange-500/5" : "border-border bg-card"
+        producing ? "border-orange-500/60 bg-orange-500/5" : "border-border bg-card"
       }`}
     >
       <div className="flex items-start justify-between gap-2">
         <p className="min-w-0 truncate text-sm font-medium text-foreground">{label}</p>
-        {strongSignal && (
-          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange-600 dark:text-orange-400">
-            <Flame className="size-3" />
-            Viralità marcata
-          </span>
-        )}
+        <VerdictBadge verdict={verdict} />
       </div>
 
       <p className="text-[11px] text-muted-foreground">
@@ -207,7 +237,13 @@ function TopicCard({ topic }: { topic: MonitoredTopic }) {
   );
 }
 
-function TopicToggleSection({ topics }: { topics: MonitoredTopic[] }) {
+function TopicToggleSection({
+  topics,
+  contentByTopic,
+}: {
+  topics: MonitoredTopic[];
+  contentByTopic: Map<string, ViralTrendContent[]>;
+}) {
   const [view, setView] = useState<"tiktok-hashtag" | "google-trends">("tiktok-hashtag");
 
   // Solo i topic davvero ancora in classifica adesso, non quelli nel periodo
@@ -234,7 +270,11 @@ function TopicToggleSection({ topics }: { topics: MonitoredTopic[] }) {
       ) : (
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((t) => (
-            <TopicCard key={t.id} topic={t} />
+            <TopicCard
+              key={t.id}
+              topic={t}
+              verdict={computeTopicVerdict(contentByTopic.get(t.value) ?? [])}
+            />
           ))}
         </div>
       )}
@@ -262,6 +302,7 @@ function Page() {
 
   const [topics, setTopics] = useState<MonitoredTopic[]>([]);
   const [topicsError, setTopicsError] = useState<string | null>(null);
+  const [topicContent, setTopicContent] = useState<ViralTrendContent[]>([]);
 
   useEffect(() => {
     setLoading(true);
@@ -281,6 +322,31 @@ function Page() {
       .then(setTopics)
       .catch((err) => setTopicsError(err instanceof Error ? err.message : String(err)));
   }, []);
+
+  // Contenuti per il verdetto dei topic: fetch senza filtri di
+  // piattaforma/hashtag, così il verdetto in cima resta stabile mentre
+  // l'utente filtra il feed sotto. Fase 1: derivato dal feed già caricato; la
+  // Fase 2 lo sposterà server-side in topic_signals con un livello di
+  // confidenza.
+  useEffect(() => {
+    listViralTrendContent({ sortBy: "virality" })
+      .then(setTopicContent)
+      .catch(() => setTopicContent([]));
+  }, []);
+
+  // I contenuti sono raggruppati per source_hashtag, che per i topic da
+  // hashtag TikTok coincide con l'hashtag (topic.value) e per i topic Google
+  // Trends col termine di ricerca (anch'esso topic.value): la stessa chiave
+  // vale per entrambe le fonti.
+  const contentByTopic = useMemo(() => {
+    const map = new Map<string, ViralTrendContent[]>();
+    for (const c of topicContent) {
+      const arr = map.get(c.source_hashtag);
+      if (arr) arr.push(c);
+      else map.set(c.source_hashtag, [c]);
+    }
+    return map;
+  }, [topicContent]);
 
   // Per gli item da Google Trends, source_hashtag contiene il termine di
   // ricerca stesso (non un hashtag): l'etichetta "#" va mostrata solo per
@@ -343,7 +409,7 @@ function Page() {
           Errore nel caricamento dei topic monitorati: {topicsError}.
         </p>
       ) : (
-        <TopicToggleSection topics={topics} />
+        <TopicToggleSection topics={topics} contentByTopic={contentByTopic} />
       )}
 
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">

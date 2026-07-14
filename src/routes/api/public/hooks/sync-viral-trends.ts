@@ -55,9 +55,11 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
       // sync-brand-mentions.ts ma senza sentiment/crisis-alert, che non
       // hanno senso per keyword generiche non legate a un brand. Dopo
       // l'upsert calcola anche la viralità del post (vedi
-      // computePostVirality in src/lib/virality.ts): soglie esplicite
-      // (delta_engagement_6h > 1000 oppure engagement totale > 5000), non
-      // più un punteggio continuo.
+      // computePostVirality in src/lib/virality.ts): il post è virale se il
+      // suo segnale (engagement, o VIEWS per TikTok) sta accelerando nelle
+      // ultime ~6h oltre la soglia della piattaforma. Non più uno stato
+      // "sticky" su soglia assoluta: la viralità decade quando il post smette
+      // di correre.
       POST: async ({ request }) => {
         try {
           const body = (await request.json()) as {
@@ -103,7 +105,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
             const { data, error } = await supabaseAdmin
               .from("viral_trend_content")
               .upsert(rows, { onConflict: "platform,external_id" })
-              .select("id, engagement, reach, published_at, created_at");
+              .select("id, platform, engagement, reach, published_at, created_at");
 
             if (error) {
               return Response.json({ ok: false, error: error.message }, { status: 500 });
@@ -155,8 +157,10 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 oldest: oldestRows?.[0] ?? null,
               });
 
-              const { isViral, deltaEngagement6h } = computePostVirality({
+              const { isViral, deltaSignal6h } = computePostVirality({
+                platform: row.platform,
                 engagement: row.engagement,
+                reach: row.reach,
                 oldestWithin6h: oldestWithin6hRows?.[0] ?? null,
               });
 
@@ -165,7 +169,10 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 .update({
                   delta_engagement: deltaEngagement,
                   delta_reach: deltaReach,
-                  delta_engagement_6h: deltaEngagement6h,
+                  // Velocità del segnale di viralità nelle ultime 6h: per
+                  // TikTok è la crescita delle views, non dell'engagement
+                  // (colonna non ancora rinominata — vedi computePostVirality).
+                  delta_engagement_6h: deltaSignal6h,
                   delta_since: oldestRows?.[0]?.captured_at ?? null,
                   is_viral: isViral,
                 })

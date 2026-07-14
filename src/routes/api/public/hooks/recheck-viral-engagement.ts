@@ -105,8 +105,10 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
               oldest: oldestRows?.[0] ?? null,
             });
 
-            const { isViral, deltaEngagement6h } = computePostVirality({
+            const { isViral, deltaSignal6h } = computePostVirality({
+              platform: u.platform,
               engagement,
+              reach: row.reach,
               oldestWithin6h: oldestWithin6hRows?.[0] ?? null,
             });
 
@@ -116,7 +118,9 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
                 engagement,
                 delta_engagement: deltaEngagement,
                 delta_reach: deltaReach,
-                delta_engagement_6h: deltaEngagement6h,
+                // Solo Instagram passa di qui: il segnale è l'engagement, il
+                // valore coincide con la velocità dell'engagement a 6h.
+                delta_engagement_6h: deltaSignal6h,
                 delta_since: oldestRows?.[0]?.captured_at ?? null,
                 is_viral: isViral,
                 // Prima di questo ricontrollo il percorso di discovery

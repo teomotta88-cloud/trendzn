@@ -35,6 +35,35 @@ export interface ViralTrendContent {
 export const SORT_OPTIONS = ["virality", "date", "engagement", "views"] as const;
 export type SortBy = (typeof SORT_OPTIONS)[number];
 
+// Soglia di rumore sulle views per ammettere un contenuto TikTok nel feed —
+// l'equivalente di "engagement > 1000" per le piattaforme con like/commenti.
+// Da calibrare su dati reali (i video in trend hanno facilmente decine di
+// migliaia di views).
+export const TIKTOK_MIN_VIEWS = 10000;
+
+// Verdetto di viralità del topic: "questo trend sta producendo contenuti
+// virali?". Derivato dai contenuti del topic (Fase 1: calcolo client-side sui
+// contenuti già caricati, nessuna tabella dedicata — la Fase 2 lo sposterà
+// server-side in topic_signals, con un livello di confidenza per distinguere
+// "piatto" da "copertura parziale").
+//
+// È volutamente basato sulla CODA ALTA della distribuzione, non sulla somma:
+// basta UN contenuto che sta accelerando ora perché il trend stia "producendo
+// virale" — che è esattamente la domanda. La vecchia regola (volume ED
+// engagement totali in crescita) premiava invece il volume di pubblicazione e
+// mancava il singolo post che esplode senza nuovi post.
+export const TOPIC_VERDICTS = ["producing", "warming", "flat"] as const;
+export type TopicVerdict = (typeof TOPIC_VERDICTS)[number];
+
+export function computeTopicVerdict(content: ViralTrendContent[]): TopicVerdict {
+  // Almeno un contenuto sta correndo davvero adesso.
+  if (content.some((c) => c.is_viral)) return "producing";
+  // Nessun contenuto ancora virale, ma c'è crescita in corso (views o
+  // engagement) su qualche post: si sta scaldando.
+  if (content.some((c) => c.delta_reach > 0 || c.delta_engagement > 0)) return "warming";
+  return "flat";
+}
+
 export async function listViralTrendContent(
   filters: { platform?: ViralPlatform; sourceHashtag?: string; sortBy?: SortBy } = {},
 ): Promise<ViralTrendContent[]> {
@@ -47,16 +76,19 @@ export async function listViralTrendContent(
   // prima volta) invece di scartarlo o di lasciarlo passare sempre — un post
   // vecchio ma senza data nota non deve bypassare il filtro di recency.
   //
-  // Soglia minima di engagement (1000, stessa usata da is_viral in
-  // normalizeAnysiteResult) per tagliare il rumore dei match deboli su
-  // Instagram — TikTok ha sempre engagement 0 (nessuna fonte gratuita per
-  // like/commenti, vedi fetchTikTokContent), quindi con questo filtro sparisce
-  // dal feed: non c'è modo di applicare la stessa soglia a una piattaforma
-  // che non ha questo dato.
+  // Soglia minima di rumore PER PIATTAFORMA (le due .or() si combinano in AND):
+  // engagement > 1000 dove abbiamo like/commenti, VIEWS > TIKTOK_MIN_VIEWS su
+  // TikTok — che ha sempre engagement 0 (nessuna fonte gratuita per
+  // like/commenti, vedi fetchTikTokContent) e prima veniva escluso in toto dal
+  // feed. Ora TikTok entra col suo segnale nativo. Un post TikTok senza views
+  // estratte (reach null) resta fuori: senza segnale non possiamo dire nulla
+  // sulla sua viralità.
   let query = supabase
     .from("viral_trend_content")
     .select("*")
-    .gt("engagement", 1000)
+    .or(
+      `and(platform.neq.tiktok,engagement.gt.1000),and(platform.eq.tiktok,reach.gt.${TIKTOK_MIN_VIEWS})`,
+    )
     .or(`published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`);
 
   if (filters.platform) query = query.eq("platform", filters.platform);
@@ -75,14 +107,18 @@ export async function listViralTrendContent(
       query = query.order("reach", { ascending: false, nullsFirst: false });
       break;
     default:
-      // Prima chi supera le soglie di viralità (vedi computePostVirality in
-      // src/lib/virality.ts), ordinati per crescita nelle ultime 6h; poi gli
-      // altri per engagement totale — sostituisce il punteggio continuo
-      // virality_score, rimosso su richiesta esplicita.
+      // Prima chi sta accelerando ORA (is_viral, che ora decade — vedi
+      // computePostVirality in src/lib/virality.ts), poi per velocità del
+      // segnale nelle ultime 6h (delta_engagement_6h: per TikTok è la crescita
+      // delle views), infine per grandezza assoluta come spareggio —
+      // engagement dove esiste, altrimenti reach (TikTok). Un post grande ma
+      // ormai piatto non è più "virale": scende sotto quelli che corrono, ma
+      // resta raggiungibile con l'ordinamento per engagement/views.
       query = query
         .order("is_viral", { ascending: false })
         .order("delta_engagement_6h", { ascending: false })
-        .order("engagement", { ascending: false });
+        .order("engagement", { ascending: false })
+        .order("reach", { ascending: false, nullsFirst: false });
   }
 
   const { data, error } = await query.limit(300);
