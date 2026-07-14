@@ -3,6 +3,8 @@ import { decodeBase64Utf8 } from "@/lib/base64";
 
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
+// Store separato della pagina ASPI-monitoring (duplicato di Canali Inspo).
+const ASPI_PATH = "src/data/aspi-monitoring.json";
 
 const VALID_SECTIONS = [
   "trend-real-time",
@@ -11,6 +13,7 @@ const VALID_SECTIONS = [
   "canali-inspo",
   "linkedin",
   "influencer",
+  "aspi-monitoring",
 ] as const;
 
 type Section = (typeof VALID_SECTIONS)[number];
@@ -74,6 +77,7 @@ const CATEGORY_LABEL: Record<Section, string> = {
   "canali-inspo": "Canali Inspo",
   linkedin: "LinkedIn",
   influencer: "Influencer",
+  "aspi-monitoring": "ASPI-monitoring",
 };
 
 async function syncCanaleToGitHub(url: string, title: string | null): Promise<string> {
@@ -130,19 +134,22 @@ async function syncCanaleToGitHub(url: string, title: string | null): Promise<st
       accounts: [{ platform, handle, url: normalizedUrl }],
     });
 
-    const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
-      method: "PUT",
-      headers: {
-        Authorization: `token ${token}`,
-        "Content-Type": "application/json",
-        "User-Agent": "trendzn-bot",
+    const writeRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+          "Content-Type": "application/json",
+          "User-Agent": "trendzn-bot",
+        },
+        body: JSON.stringify({
+          message: `chore: aggiungi canale ${handle} [trendzn-manual]`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
+          sha: file.sha,
+        }),
       },
-      body: JSON.stringify({
-        message: `chore: aggiungi canale ${handle} [trendzn-manual]`,
-        content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
-        sha: file.sha,
-      }),
-    });
+    );
 
     if (writeRes.ok) return "ok";
     const err = await writeRes.text();
@@ -215,19 +222,104 @@ async function syncInfluencerToGitHub(
       accounts: [{ platform, handle, url: normalizedUrl }],
     });
 
-    const writeRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`, {
-      method: "PUT",
+    const writeRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${TRENDS_PATH}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+          "Content-Type": "application/json",
+          "User-Agent": "trendzn-bot",
+        },
+        body: JSON.stringify({
+          message: `chore: aggiungi influencer ${handle} [trendzn-manual]`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
+          sha: file.sha,
+        }),
+      },
+    );
+
+    if (writeRes.ok) return "ok";
+    const err = await writeRes.text();
+    return `write_failed: ${err.slice(0, 100)}`;
+  } catch (err) {
+    return `exception: ${String(err).slice(0, 100)}`;
+  }
+}
+
+// Come syncCanaleToGitHub ma sullo store separato di ASPI-monitoring
+// (aspi-monitoring.json, chiave "canali"), che parte vuoto.
+async function syncAspiToGitHub(url: string, title: string | null): Promise<string> {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return "no_token";
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${ASPI_PATH}`, {
       headers: {
         Authorization: `token ${token}`,
-        "Content-Type": "application/json",
+        Accept: "application/vnd.github.v3+json",
         "User-Agent": "trendzn-bot",
       },
-      body: JSON.stringify({
-        message: `chore: aggiungi influencer ${handle} [trendzn-manual]`,
-        content: btoa(unescape(encodeURIComponent(JSON.stringify(trends, null, 2)))),
-        sha: file.sha,
-      }),
     });
+    if (!res.ok) return `read_failed_${res.status}`;
+
+    const file = await res.json();
+    const store = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
+    if (!Array.isArray(store.canali)) store.canali = [];
+
+    function detectPlatformLocal(u: string) {
+      if (/instagram\.com/.test(u)) return "instagram";
+      if (/tiktok\.com/.test(u)) return "tiktok";
+      if (/youtube\.com|youtu\.be/.test(u)) return "youtube";
+      if (/linkedin\.com/.test(u)) return "linkedin";
+      return "web";
+    }
+    function extractHandleLocal(u: string) {
+      try {
+        const clean = u.replace(/\/$/, "").split("?")[0];
+        const parts = clean.split("/");
+        return parts[parts.length - 1].replace(/^@/, "") || u;
+      } catch {
+        return u;
+      }
+    }
+
+    const normalizedUrl = normalizeUrl(url);
+    const base = urlBase(normalizedUrl);
+    const platform = detectPlatformLocal(normalizedUrl);
+    const handle = extractHandleLocal(normalizedUrl);
+    const name = title || handle;
+    const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
+    const exists = (store.canali as { accounts: { url: string }[] }[]).some((c) =>
+      c.accounts.some((a) => urlBase(a.url) === base),
+    );
+    if (exists) return "already_exists";
+
+    store.canali.push({
+      id,
+      name,
+      urls: [normalizedUrl],
+      descrizione: null,
+      accounts: [{ platform, handle, url: normalizedUrl }],
+    });
+
+    const writeRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${ASPI_PATH}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+          "Content-Type": "application/json",
+          "User-Agent": "trendzn-bot",
+        },
+        body: JSON.stringify({
+          message: `chore: aggiungi canale ASPI ${handle} [trendzn-manual]`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(store, null, 2)))),
+          sha: file.sha,
+        }),
+      },
+    );
 
     if (writeRes.ok) return "ok";
     const err = await writeRes.text();
@@ -275,11 +367,16 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
             .maybeSingle();
 
           if (existing) {
-            return Response.json({ ok: false, error: "Questo URL è già presente" }, { status: 409 });
+            return Response.json(
+              { ok: false, error: "Questo URL è già presente" },
+              { status: 409 },
+            );
           }
 
           const derivedTitle =
-            section === "canali-inspo" || section === "influencer" ? title || extractHandleFromUrl(cleanUrl) : title;
+            section === "canali-inspo" || section === "influencer" || section === "aspi-monitoring"
+              ? title || extractHandleFromUrl(cleanUrl)
+              : title;
 
           const { data: inserted, error } = await supabaseAdmin
             .from("trend_submissions")
@@ -304,6 +401,9 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
           let syncResult: string | null = null;
           if (section === "canali-inspo") {
             syncResult = await syncCanaleToGitHub(cleanUrl, derivedTitle);
+          }
+          if (section === "aspi-monitoring") {
+            syncResult = await syncAspiToGitHub(cleanUrl, derivedTitle);
           }
           if (section === "influencer") {
             // industry = Nome Influencer, derivedTitle = Cliente (fallback handle se vuoto)

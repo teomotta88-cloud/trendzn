@@ -22,8 +22,10 @@ import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editori
 import { Route as InfluencerIndexRouteImport } from './routes/influencer.index'
 import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
+import { Route as AspiMonitoringIndexRouteImport } from './routes/aspi-monitoring.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
+import { Route as AspiMonitoringIdRouteImport } from './routes/aspi-monitoring.$id'
 import { Route as ApiPublicHooksTriggerSyncCanaliFeedRouteImport } from './routes/api/public/hooks/trigger-sync-canali-feed'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
 import { Route as ApiPublicHooksTiktokOembedRouteImport } from './routes/api/public/hooks/tiktok-oembed'
@@ -113,6 +115,11 @@ const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
   path: '/canali-inspo/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AspiMonitoringIndexRoute = AspiMonitoringIndexRouteImport.update({
+  id: '/aspi-monitoring/',
+  path: '/aspi-monitoring/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InfluencerIdRoute = InfluencerIdRouteImport.update({
   id: '/influencer/$id',
   path: '/influencer/$id',
@@ -121,6 +128,11 @@ const InfluencerIdRoute = InfluencerIdRouteImport.update({
 const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
   id: '/canali-inspo/$id',
   path: '/canali-inspo/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AspiMonitoringIdRoute = AspiMonitoringIdRouteImport.update({
+  id: '/aspi-monitoring/$id',
+  path: '/aspi-monitoring/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicHooksTriggerSyncCanaliFeedRoute =
@@ -270,8 +282,10 @@ export interface FileRoutesByFullPath {
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
+  '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
@@ -310,8 +324,10 @@ export interface FileRoutesByTo {
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
+  '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/aspi-monitoring': typeof AspiMonitoringIndexRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
   '/feed': typeof FeedIndexRoute
   '/influencer': typeof InfluencerIndexRoute
@@ -351,8 +367,10 @@ export interface FileRoutesById {
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
+  '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
@@ -393,8 +411,10 @@ export interface FileRouteTypes {
     | '/trend-evergreen'
     | '/trend-real-time'
     | '/trend-virali'
+    | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
     | '/influencer/$id'
+    | '/aspi-monitoring/'
     | '/canali-inspo/'
     | '/feed/'
     | '/influencer/'
@@ -433,8 +453,10 @@ export interface FileRouteTypes {
     | '/trend-evergreen'
     | '/trend-real-time'
     | '/trend-virali'
+    | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
     | '/influencer/$id'
+    | '/aspi-monitoring'
     | '/canali-inspo'
     | '/feed'
     | '/influencer'
@@ -473,8 +495,10 @@ export interface FileRouteTypes {
     | '/trend-evergreen'
     | '/trend-real-time'
     | '/trend-virali'
+    | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
     | '/influencer/$id'
+    | '/aspi-monitoring/'
     | '/canali-inspo/'
     | '/feed/'
     | '/influencer/'
@@ -514,8 +538,10 @@ export interface RootRouteChildren {
   TrendEvergreenRoute: typeof TrendEvergreenRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
   TrendViraliRoute: typeof TrendViraliRoute
+  AspiMonitoringIdRoute: typeof AspiMonitoringIdRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
   InfluencerIdRoute: typeof InfluencerIdRoute
+  AspiMonitoringIndexRoute: typeof AspiMonitoringIndexRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
   FeedIndexRoute: typeof FeedIndexRoute
   InfluencerIndexRoute: typeof InfluencerIndexRoute
@@ -639,6 +665,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CanaliInspoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aspi-monitoring/': {
+      id: '/aspi-monitoring/'
+      path: '/aspi-monitoring'
+      fullPath: '/aspi-monitoring/'
+      preLoaderRoute: typeof AspiMonitoringIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/influencer/$id': {
       id: '/influencer/$id'
       path: '/influencer/$id'
@@ -651,6 +684,13 @@ declare module '@tanstack/react-router' {
       path: '/canali-inspo/$id'
       fullPath: '/canali-inspo/$id'
       preLoaderRoute: typeof CanaliInspoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aspi-monitoring/$id': {
+      id: '/aspi-monitoring/$id'
+      path: '/aspi-monitoring/$id'
+      fullPath: '/aspi-monitoring/$id'
+      preLoaderRoute: typeof AspiMonitoringIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/trigger-sync-canali-feed': {
@@ -826,8 +866,10 @@ const rootRouteChildren: RootRouteChildren = {
   TrendEvergreenRoute: TrendEvergreenRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,
   TrendViraliRoute: TrendViraliRoute,
+  AspiMonitoringIdRoute: AspiMonitoringIdRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
   InfluencerIdRoute: InfluencerIdRoute,
+  AspiMonitoringIndexRoute: AspiMonitoringIndexRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
   FeedIndexRoute: FeedIndexRoute,
   InfluencerIndexRoute: InfluencerIndexRoute,
