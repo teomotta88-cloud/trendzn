@@ -408,6 +408,69 @@ export type Database = {
           },
         ]
       }
+      monitored_topics: {
+        Row: {
+          created_at: string
+          derived_hashtag: string | null
+          derived_keyword: string | null
+          engagement_growth_pct: number | null
+          first_seen_in_top5_at: string
+          growth_computed_at: string | null
+          growth_platform: string | null
+          id: string
+          last_seen_in_top5_at: string
+          latest_content_volume: number | null
+          latest_is_volume_exact: boolean
+          latest_total_engagement: number | null
+          monitoring_stops_at: string
+          status: string
+          topic_type: string
+          updated_at: string
+          value: string
+          volume_growth_pct: number | null
+        }
+        Insert: {
+          created_at?: string
+          derived_hashtag?: string | null
+          derived_keyword?: string | null
+          engagement_growth_pct?: number | null
+          first_seen_in_top5_at?: string
+          growth_computed_at?: string | null
+          growth_platform?: string | null
+          id?: string
+          last_seen_in_top5_at?: string
+          latest_content_volume?: number | null
+          latest_is_volume_exact?: boolean
+          latest_total_engagement?: number | null
+          monitoring_stops_at?: string
+          status?: string
+          topic_type: string
+          updated_at?: string
+          value: string
+          volume_growth_pct?: number | null
+        }
+        Update: {
+          created_at?: string
+          derived_hashtag?: string | null
+          derived_keyword?: string | null
+          engagement_growth_pct?: number | null
+          first_seen_in_top5_at?: string
+          growth_computed_at?: string | null
+          growth_platform?: string | null
+          id?: string
+          last_seen_in_top5_at?: string
+          latest_content_volume?: number | null
+          latest_is_volume_exact?: boolean
+          latest_total_engagement?: number | null
+          monitoring_stops_at?: string
+          status?: string
+          topic_type?: string
+          updated_at?: string
+          value?: string
+          volume_growth_pct?: number | null
+        }
+        Relationships: []
+      }
       tiktok_trending_hashtags: {
         Row: {
           captured_at: string
@@ -449,6 +512,85 @@ export type Database = {
           view_count?: number | null
         }
         Relationships: []
+      }
+      topic_metrics_history: {
+        Row: {
+          captured_at: string
+          content_volume: number | null
+          id: string
+          is_volume_exact: boolean
+          platform: string
+          topic_id: string
+          total_engagement: number | null
+        }
+        Insert: {
+          captured_at?: string
+          content_volume?: number | null
+          id?: string
+          is_volume_exact?: boolean
+          platform: string
+          topic_id: string
+          total_engagement?: number | null
+        }
+        Update: {
+          captured_at?: string
+          content_volume?: number | null
+          id?: string
+          is_volume_exact?: boolean
+          platform?: string
+          topic_id?: string
+          total_engagement?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "topic_metrics_history_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      topic_signals: {
+        Row: {
+          computed_at: string
+          engagement_growth_pct: number | null
+          is_volume_exact: boolean
+          latest_content_volume: number | null
+          latest_total_engagement: number | null
+          platform: string
+          topic_id: string
+          volume_growth_pct: number | null
+        }
+        Insert: {
+          computed_at?: string
+          engagement_growth_pct?: number | null
+          is_volume_exact?: boolean
+          latest_content_volume?: number | null
+          latest_total_engagement?: number | null
+          platform: string
+          topic_id: string
+          volume_growth_pct?: number | null
+        }
+        Update: {
+          computed_at?: string
+          engagement_growth_pct?: number | null
+          is_volume_exact?: boolean
+          latest_content_volume?: number | null
+          latest_total_engagement?: number | null
+          platform?: string
+          topic_id?: string
+          volume_growth_pct?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "topic_signals_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       trend_submissions: {
         Row: {
@@ -504,7 +646,9 @@ export type Database = {
           content: string | null
           created_at: string
           delta_engagement: number
+          delta_engagement_6h: number
           delta_reach: number
+          delta_since: string | null
           discovery_source: string
           engagement: number
           external_id: string
@@ -516,6 +660,7 @@ export type Database = {
           raw: Json | null
           reach: number | null
           source_hashtag: string
+          topic_id: string | null
           url: string
           virality_score: number
         }
@@ -524,7 +669,9 @@ export type Database = {
           content?: string | null
           created_at?: string
           delta_engagement?: number
+          delta_engagement_6h?: number
           delta_reach?: number
+          delta_since?: string | null
           discovery_source?: string
           engagement?: number
           external_id: string
@@ -536,6 +683,7 @@ export type Database = {
           raw?: Json | null
           reach?: number | null
           source_hashtag: string
+          topic_id?: string | null
           url: string
           virality_score?: number
         }
@@ -544,7 +692,9 @@ export type Database = {
           content?: string | null
           created_at?: string
           delta_engagement?: number
+          delta_engagement_6h?: number
           delta_reach?: number
+          delta_since?: string | null
           discovery_source?: string
           engagement?: number
           external_id?: string
@@ -556,10 +706,19 @@ export type Database = {
           raw?: Json | null
           reach?: number | null
           source_hashtag?: string
+          topic_id?: string | null
           url?: string
           virality_score?: number
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "viral_trend_content_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       viral_trend_metrics_history: {
         Row: {

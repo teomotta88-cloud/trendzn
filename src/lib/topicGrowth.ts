@@ -14,10 +14,24 @@
 
 export const TOPIC_GROWTH_WINDOW_HOURS = 24;
 
-// Sotto questo delta assoluto (in entrambe le direzioni) il campione è
-// troppo piccolo per fidarsi di una percentuale — vale sia per il volume
-// contenuti sia per l'engagement, stessa soglia per semplicità.
-const MIN_ABSOLUTE_DELTA = 20;
+// Fase 3 — il tasso è normalizzato nel tempo. Prima si confrontava col
+// riferimento "più vecchio ENTRO 24h", ma la distanza reale variava (6h..24h a
+// seconda della cadenza e dei run saltati): +1% su 6h e +1% su 24h sono tassi
+// diversissimi trattati identici. Ora il delta osservato viene proiettato a un
+// tasso su finestra fissa di 24h (delta / ore_trascorse × 24), così due topic
+// campionati a distanza diversa sono confrontabili.
+//
+// Serve una separazione minima tra i due snapshot per fidarsi della
+// proiezione: sotto MIN_ELAPSED_HOURS (primo avvistamento, o due run troppo
+// ravvicinati) il risultato è null ("non ancora misurabile"), non un tasso
+// gonfiato dall'estrapolazione su una finestra minuscola.
+const MIN_ELAPSED_HOURS = 3;
+
+// Soglia di rumore PER-METRICA (non più un unico 20 per entrambe): un delta di
+// 20 è significativo su un conteggio di post, è rumore su una somma di
+// engagement che vive nell'ordine delle migliaia. Da calibrare su dati reali.
+const MIN_VOLUME_DELTA = 20;
+const MIN_ENGAGEMENT_DELTA = 500;
 
 // Sotto questa percentuale un topic è "non in aumento" (richiesta esplicita
 // dell'utente: "tasso di crescita inferiore all'1%").
@@ -36,19 +50,25 @@ export type TopicGrowth = {
   engagementSignificant: boolean;
 };
 
-// null = non ancora misurabile: nessun riferimento (prima rilevazione per
-// questo topic+piattaforma) o delta assoluto sotto la soglia di rumore.
+// null = non ancora misurabile: nessun riferimento (prima rilevazione), finestra
+// troppo stretta per normalizzare, o delta assoluto sotto la soglia di rumore
+// della metrica.
 function growthFor(
   current: number | null,
   reference: number | null,
+  elapsedHours: number,
+  minAbsoluteDelta: number,
 ): { pct: number | null; significant: boolean } {
   if (current == null || reference == null) return { pct: null, significant: false };
+  if (elapsedHours < MIN_ELAPSED_HOURS) return { pct: null, significant: false };
 
   const delta = current - reference;
-  if (Math.abs(delta) < MIN_ABSOLUTE_DELTA) return { pct: null, significant: false };
+  if (Math.abs(delta) < minAbsoluteDelta) return { pct: null, significant: false };
   if (reference <= 0) return { pct: null, significant: false };
 
-  return { pct: (delta / reference) * 100, significant: true };
+  const rawPct = (delta / reference) * 100;
+  const normalizedPct = rawPct * (TOPIC_GROWTH_WINDOW_HOURS / elapsedHours);
+  return { pct: normalizedPct, significant: true };
 }
 
 export function computeTopicGrowth({
@@ -60,8 +80,22 @@ export function computeTopicGrowth({
   currentEngagement: number | null;
   oldest: TopicMetricsPoint | null;
 }): TopicGrowth {
-  const volume = growthFor(currentVolume, oldest?.content_volume ?? null);
-  const engagement = growthFor(currentEngagement, oldest?.total_engagement ?? null);
+  const elapsedHours = oldest
+    ? (Date.now() - new Date(oldest.captured_at).getTime()) / (1000 * 60 * 60)
+    : 0;
+
+  const volume = growthFor(
+    currentVolume,
+    oldest?.content_volume ?? null,
+    elapsedHours,
+    MIN_VOLUME_DELTA,
+  );
+  const engagement = growthFor(
+    currentEngagement,
+    oldest?.total_engagement ?? null,
+    elapsedHours,
+    MIN_ENGAGEMENT_DELTA,
+  );
 
   return {
     volumeGrowthPct: volume.pct,

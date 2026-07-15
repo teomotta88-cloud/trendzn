@@ -52,15 +52,27 @@ export const TIKTOK_MIN_VIEWS = 10000;
 // virale" — che è esattamente la domanda. La vecchia regola (volume ED
 // engagement totali in crescita) premiava invece il volume di pubblicazione e
 // mancava il singolo post che esplode senza nuovi post.
-export const TOPIC_VERDICTS = ["producing", "warming", "flat"] as const;
+//
+// "unknown" (Fase 3) distingue "non ancora misurabile" da "piatto": un topic
+// senza contenuti in vista E senza alcun segnale registrato è un primo
+// avvistamento o una copertura assente — non l'abbiamo guardato e trovato
+// quieto, semplicemente non abbiamo dati. Dirlo "piatto" sarebbe una falsa
+// certezza.
+export const TOPIC_VERDICTS = ["producing", "warming", "flat", "unknown"] as const;
 export type TopicVerdict = (typeof TOPIC_VERDICTS)[number];
 
-export function computeTopicVerdict(content: ViralTrendContent[]): TopicVerdict {
+export function computeTopicVerdict(
+  content: ViralTrendContent[],
+  opts: { hasSignals?: boolean } = {},
+): TopicVerdict {
   // Almeno un contenuto sta correndo davvero adesso.
   if (content.some((c) => c.is_viral)) return "producing";
   // Nessun contenuto ancora virale, ma c'è crescita in corso (views o
   // engagement) su qualche post: si sta scaldando.
   if (content.some((c) => c.delta_reach > 0 || c.delta_engagement > 0)) return "warming";
+  // Nessun contenuto in vista e nessun segnale: non "piatto", ma "non ancora
+  // misurabile" (primo avvistamento / copertura assente).
+  if (content.length === 0 && !opts.hasSignals) return "unknown";
   return "flat";
 }
 
