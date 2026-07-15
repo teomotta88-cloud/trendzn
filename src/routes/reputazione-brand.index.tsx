@@ -33,6 +33,43 @@ export const Route = createFileRoute("/reputazione-brand/")({
 });
 
 const DAYS_RANGE_OPTIONS = [7, 14, 30, 90] as const;
+const KEYWORDS_STORAGE_KEY = "reputazione-brand:keywords";
+const DEFAULT_KEYWORDS = ["hyundai"];
+
+function normalizeKeyword(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+function splitKeywordInput(value: string): string[] {
+  return value
+    .split(/[;,\n]/)
+    .map(normalizeKeyword)
+    .filter(Boolean);
+}
+
+function mentionMatchesKeyword(mention: BrandMention, keyword: string): boolean {
+  const q = normalizeKeyword(keyword);
+  if (!q) return true;
+
+  const haystack = [
+    mention.keyword_matched,
+    mention.content,
+    mention.author,
+    mention.url,
+    mention.category,
+    mention.platform,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return haystack.includes(q);
+}
+
+function mentionMatchesAnyKeyword(mention: BrandMention, keywords: string[]): boolean {
+  if (keywords.length === 0) return true;
+  return keywords.some((keyword) => mentionMatchesKeyword(mention, keyword));
+}
 
 function ReputazioneBrandPage() {
   const [mentions, setMentions] = useState<BrandMention[]>([]);
@@ -43,9 +80,54 @@ function ReputazioneBrandPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const [keywordInput, setKeywordInput] = useState("");
+  const [keywords, setKeywords] = useState<string[]>(DEFAULT_KEYWORDS);
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(KEYWORDS_STORAGE_KEY);
+      if (!stored) return;
+
+      const parsed = JSON.parse(stored);
+      if (!Array.isArray(parsed)) return;
+
+      const normalized = Array.from(
+        new Set(parsed.map((item) => normalizeKeyword(String(item))).filter(Boolean)),
+      );
+
+      setKeywords(normalized.length > 0 ? normalized : DEFAULT_KEYWORDS);
+    } catch {
+      setKeywords(DEFAULT_KEYWORDS);
+    }
+  }, []);
+
+  function persistKeywords(next: string[]) {
+    const normalized = Array.from(new Set(next.map(normalizeKeyword).filter(Boolean)));
+    setKeywords(normalized);
+    window.localStorage.setItem(KEYWORDS_STORAGE_KEY, JSON.stringify(normalized));
+  }
+
+  function handleAddKeywords() {
+    const nextKeywords = splitKeywordInput(keywordInput);
+    if (nextKeywords.length === 0) return;
+
+    persistKeywords([...keywords, ...nextKeywords]);
+    setKeywordInput("");
+  }
+
+  function handleRemoveKeyword(keyword: string) {
+    persistKeywords(keywords.filter((item) => item !== keyword));
+  }
+
+  function handleResetKeywords() {
+    persistKeywords(DEFAULT_KEYWORDS);
+    setKeywordInput("");
+  }
+
   async function load() {
     setLoading(true);
     setError(null);
+
     try {
       const [mentionsData, alertsData] = await Promise.all([
         listMentions({
@@ -55,6 +137,7 @@ function ReputazioneBrandPage() {
         }),
         listUnresolvedAlerts(),
       ]);
+
       setMentions(mentionsData);
       setAlerts(alertsData);
     } catch (err) {
@@ -68,7 +151,15 @@ function ReputazioneBrandPage() {
     load();
   }, [platformFilter, sentimentFilter, daysRange]);
 
-  const trendSeries = useMemo(() => buildDailySentimentSeries(mentions, daysRange), [mentions, daysRange]);
+  const filteredMentions = useMemo(
+    () => mentions.filter((mention) => mentionMatchesAnyKeyword(mention, keywords)),
+    [mentions, keywords],
+  );
+
+  const trendSeries = useMemo(
+    () => buildDailySentimentSeries(filteredMentions, daysRange),
+    [filteredMentions, daysRange],
+  );
 
   async function handleResolve(id: string) {
     await resolveAlert(id);
@@ -87,10 +178,96 @@ function ReputazioneBrandPage() {
       <AlertBanner alerts={alerts} onResolve={handleResolve} />
 
       <div className="rounded-lg border p-4">
-        <h2 className="mb-2 text-sm font-medium text-muted-foreground">
-          Andamento sentiment ({daysRange} giorni)
-        </h2>
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 className="text-sm font-medium text-muted-foreground">
+              Andamento sentiment ({daysRange} giorni)
+            </h2>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Filtro keyword in logica OR: almeno una keyword deve comparire nella mention.
+            </p>
+          </div>
+
+          <span className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
+            {filteredMentions.length} / {mentions.length} menzioni
+          </span>
+        </div>
+
         <SentimentTrendChart data={trendSeries} />
+      </div>
+
+      <div className="rounded-lg border p-4">
+        <div className="mb-3 flex flex-col gap-1">
+          <h2 className="text-sm font-medium">Keyword monitorate</h2>
+          <p className="text-xs text-muted-foreground">
+            Aggiungi una o più keyword separate da virgola, punto e virgola o invio. Le keyword sono
+            applicate con logica OR.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2">
+          <input
+            value={keywordInput}
+            onChange={(e) => setKeywordInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                handleAddKeywords();
+              }
+            }}
+            placeholder="Es. hyundai, kia, ioniq"
+            className="min-w-[240px] flex-1 rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+          />
+
+          <button
+            type="button"
+            onClick={handleAddKeywords}
+            disabled={!keywordInput.trim()}
+            className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            Aggiungi keyword
+          </button>
+
+          <button
+            type="button"
+            onClick={handleResetKeywords}
+            className="rounded-md border px-4 py-2 text-sm text-muted-foreground transition hover:border-primary hover:text-foreground"
+          >
+            Ripristina Hyundai
+          </button>
+        </div>
+
+        <div className="mt-3 flex flex-wrap gap-2">
+          {keywords.length === 0 ? (
+            <span className="text-xs text-muted-foreground">
+              Nessuna keyword attiva: vengono mostrate tutte le menzioni.
+            </span>
+          ) : (
+            keywords.map((keyword) => {
+              const count = mentions.filter((mention) => mentionMatchesKeyword(mention, keyword)).length;
+
+              return (
+                <span
+                  key={keyword}
+                  className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1.5 text-sm"
+                >
+                  <span>{keyword}</span>
+                  <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-semibold text-slate-600">
+                    {count}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => handleRemoveKeyword(keyword)}
+                    title={`Rimuovi ${keyword}`}
+                    className="text-muted-foreground transition hover:text-destructive"
+                  >
+                    ×
+                  </button>
+                </span>
+              );
+            })
+          )}
+        </div>
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
@@ -107,21 +284,27 @@ function ReputazioneBrandPage() {
           </SelectContent>
         </Select>
 
-        <Select value={platformFilter} onValueChange={(v) => setPlatformFilter(v as Platform | "all")}>
+        <Select
+          value={platformFilter}
+          onValueChange={(v) => setPlatformFilter(v as Platform | "all")}
+        >
           <SelectTrigger className="w-44">
             <SelectValue placeholder="Piattaforma" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">Tutte le piattaforme</SelectItem>
             {PLATFORMS.map((p) => (
-              <SelectItem key={p} value={p} className="capitalize">
+              <SelectItem className="capitalize" key={p} value={p}>
                 {p}
               </SelectItem>
             ))}
           </SelectContent>
         </Select>
 
-        <Select value={sentimentFilter} onValueChange={(v) => setSentimentFilter(v as Sentiment | "all")}>
+        <Select
+          value={sentimentFilter}
+          onValueChange={(v) => setSentimentFilter(v as Sentiment | "all")}
+        >
           <SelectTrigger className="w-44">
             <SelectValue placeholder="Sentiment" />
           </SelectTrigger>
@@ -142,7 +325,7 @@ function ReputazioneBrandPage() {
       ) : loading ? (
         <p className="text-sm text-muted-foreground">Caricamento…</p>
       ) : (
-        <MentionsTable mentions={mentions} />
+        <MentionsTable mentions={filteredMentions} />
       )}
     </div>
   );
