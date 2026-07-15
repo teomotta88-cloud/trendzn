@@ -18,7 +18,7 @@
 //   YOUTUBE_API_KEY         richiesta se "youtube" e' tra le PLATFORMS eseguite
 //   ANYSITE_API_KEY         richiesta se una piattaforma anysite e' tra le PLATFORMS eseguite
 //   PLATFORMS               csv, default: "youtube" (opzioni: youtube,twitter,reddit,instagram,linkedin)
-//   KEYWORDS                csv, default: "hyundai,hyundai_italia"
+//   KEYWORDS                csv, default: ""
 //   MAX_RESULTS_PER_CALL    default: 25 (ogni risultato consuma quota/credit)
 //   DELAY_BETWEEN_CALLS_MS  default: 2000
 //   LANGUAGE                default: "it" — usato come bias nativo (youtube/twitter)
@@ -48,7 +48,7 @@ import {
 
 const SYNC_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-brand-mentions";
 
-const KEYWORDS = (process.env.KEYWORDS ?? "hyundai,hyundai_italia")
+const KEYWORDS = (process.env.KEYWORDS ?? "morandi,ponte morandi,autostrade")
   .split(",")
   .map((k) => k.trim())
   .filter(Boolean);
