@@ -553,6 +553,7 @@ export function TrendzFeed({
   dataKey = "canali_inspo",
   syncEndpoint = GITHUB_SYNC_ENDPOINT,
   canaliLabel,
+  enableDateFilter = false,
 }: {
   tab: "feed" | "canali";
   setTab: (t: "feed" | "canali") => void;
@@ -560,12 +561,15 @@ export function TrendzFeed({
   dataKey?: string;
   syncEndpoint?: string;
   canaliLabel?: string;
+  enableDateFilter?: boolean;
 }) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOrder>("recenti");
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [markedByUrl, setMarkedByUrl] = useState<Record<string, Set<TrendSection>>>({});
 
@@ -611,7 +615,7 @@ export function TrendzFeed({
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [platformFilter, search, sortOrder]);
+  }, [platformFilter, search, sortOrder, dateFrom, dateTo]);
 
   if (error)
     return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
@@ -643,6 +647,12 @@ export function TrendzFeed({
     return sortOrder === "recenti" ? db - da : da - db;
   });
 
+  // Intervallo di date di pubblicazione (solo se il filtro è abilitato). "Da" =
+  // inizio giornata, "A" = fine giornata, così l'intervallo è inclusivo su
+  // entrambi gli estremi. I post senza data vengono esclusi quando è attivo.
+  const fromTime = enableDateFilter && dateFrom ? new Date(`${dateFrom}T00:00:00`).getTime() : null;
+  const toTime = enableDateFilter && dateTo ? new Date(`${dateTo}T23:59:59.999`).getTime() : null;
+
   const filtered = sorted.filter((p) => {
     const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
     const q = search.toLowerCase();
@@ -651,7 +661,16 @@ export function TrendzFeed({
       p.handle?.toLowerCase().includes(q) ||
       p.canaleName?.toLowerCase().includes(q) ||
       p.caption?.toLowerCase().includes(q);
-    return matchPlatform && matchSearch;
+
+    let matchDate = true;
+    if (fromTime !== null || toTime !== null) {
+      const t = p.date ? new Date(p.date).getTime() : NaN;
+      if (Number.isNaN(t)) matchDate = false;
+      else if (fromTime !== null && t < fromTime) matchDate = false;
+      else if (toTime !== null && t > toTime) matchDate = false;
+    }
+
+    return matchPlatform && matchSearch && matchDate;
   });
 
   const visiblePosts = filtered.slice(0, visibleCount);
@@ -701,6 +720,37 @@ export function TrendzFeed({
           <option value="recenti">Più recenti</option>
           <option value="meno_recenti">Meno recenti</option>
         </select>
+        {enableDateFilter && (
+          <div className="flex flex-wrap items-center gap-2">
+            <label className="text-xs text-muted-foreground">Dal</label>
+            <input
+              type="date"
+              value={dateFrom}
+              max={dateTo || undefined}
+              onChange={(e) => setDateFrom(e.target.value)}
+              className="rounded-lg border border-border bg-background/60 py-2 px-3 text-sm text-muted-foreground outline-none focus:border-primary"
+            />
+            <label className="text-xs text-muted-foreground">al</label>
+            <input
+              type="date"
+              value={dateTo}
+              min={dateFrom || undefined}
+              onChange={(e) => setDateTo(e.target.value)}
+              className="rounded-lg border border-border bg-background/60 py-2 px-3 text-sm text-muted-foreground outline-none focus:border-primary"
+            />
+            {(dateFrom || dateTo) && (
+              <button
+                onClick={() => {
+                  setDateFrom("");
+                  setDateTo("");
+                }}
+                className="rounded-lg border border-border px-2.5 py-2 text-xs text-muted-foreground transition hover:border-primary hover:text-foreground"
+              >
+                Azzera
+              </button>
+            )}
+          </div>
+        )}
         <span className="ml-auto text-xs text-muted-foreground">{filtered.length} post</span>
       </div>
 

@@ -1,6 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { detectPlatform, embedUrl } from "@/lib/trends";
-import { ExternalLink, Instagram, Music2, Youtube, Globe, Linkedin, Play } from "lucide-react";
+import {
+  ExternalLink,
+  Instagram,
+  Music2,
+  Youtube,
+  Globe,
+  Linkedin,
+  Play,
+  Facebook,
+  Twitter,
+} from "lucide-react";
 
 type LinkPreview = {
   title: string | null;
@@ -316,5 +326,7 @@ export function PlatformIcon({ platform, className }: { platform: string; classN
   if (platform === "tiktok") return <Music2 className={cls} />;
   if (platform === "youtube") return <Youtube className={cls} />;
   if (platform === "linkedin") return <Linkedin className={cls} />;
+  if (platform === "facebook") return <Facebook className={cls} />;
+  if (platform === "x" || platform === "twitter") return <Twitter className={cls} />;
   return <Globe className={cls} />;
 }

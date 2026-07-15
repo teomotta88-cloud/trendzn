@@ -24,7 +24,7 @@ export const Route = createFileRoute("/aspi-monitoring/")({
 const ASPI_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/aspi-monitoring.json";
 const ASPI_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-aspi-monitoring";
-const SUBMIT_MANUAL_ENDPOINT = "/api/public/hooks/submit-manual";
+const BULK_IMPORT_ENDPOINT = "/api/public/hooks/import-aspi-bulk";
 
 type BulkImportStatus = "idle" | "reading" | "importing" | "success" | "error";
 
@@ -54,11 +54,14 @@ function AspiMonitoringPage() {
       dataKey="canali"
       syncEndpoint={ASPI_SYNC_ENDPOINT}
       canaliLabel="ASPI-monitoring"
+      enableDateFilter
     />
   );
 }
 
-function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "linkedin" | "x" | "web" {
+function detectPlatform(
+  url: string,
+): "instagram" | "tiktok" | "youtube" | "linkedin" | "x" | "web" {
   const normalized = url.toLowerCase();
   if (/instagram\.com/.test(normalized)) return "instagram";
   if (/tiktok\.com/.test(normalized)) return "tiktok";
@@ -106,7 +109,10 @@ function getCellText(value: ExcelJS.CellValue): string {
     if ("text" in value && value.text) return String(value.text).trim();
     if ("hyperlink" in value && value.hyperlink) return String(value.hyperlink).trim();
     if ("richText" in value && Array.isArray(value.richText)) {
-      return value.richText.map((item) => item.text).join("").trim();
+      return value.richText
+        .map((item) => item.text)
+        .join("")
+        .trim();
     }
     if ("result" in value && value.result != null) return String(value.result).trim();
   }
@@ -163,6 +169,10 @@ async function readAspiExcel(file: File): Promise<BulkImportPreviewRow[]> {
   return rows;
 }
 
+// Invia TUTTE le righe in una sola richiesta all'endpoint bulk, che le scrive
+// in un unico commit su aspi-monitoring.json (con retry sullo sha). Molto più
+// robusto del vecchio approccio 1-riga-per-commit, che su ~271 canali generava
+// centinaia di commit e conflitti di scrittura concorrenti.
 async function importRowsInBatches(rows: BulkImportPreviewRow[]): Promise<BulkImportResult> {
   const result: BulkImportResult = {
     total: rows.length,
@@ -172,49 +182,32 @@ async function importRowsInBatches(rows: BulkImportPreviewRow[]): Promise<BulkIm
     errors: [],
   };
 
-  const concurrency = 5;
-  let cursor = 0;
+  try {
+    const res = await fetch(BULK_IMPORT_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: rows.map((r) => ({ name: r.title, url: r.url })) }),
+    });
 
-  async function worker() {
-    while (cursor < rows.length) {
-      const row = rows[cursor];
-      cursor += 1;
-
-      try {
-        const res = await fetch(SUBMIT_MANUAL_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            section: "aspi-monitoring",
-            url: row.url,
-            title: row.title,
-            industry: null,
-          }),
-        });
-
-        let data: { ok?: boolean; error?: string } | null = null;
-        try {
-          data = await res.json();
-        } catch {
-          data = null;
-        }
-
-        if (res.ok && data?.ok) {
-          result.imported += 1;
-        } else if (res.status === 409) {
-          result.skipped += 1;
-        } else {
-          result.failed += 1;
-          result.errors.push(`${row.title}: ${data?.error || "errore durante l'import"}`);
-        }
-      } catch {
-        result.failed += 1;
-        result.errors.push(`${row.title}: errore di rete`);
-      }
+    let data: { ok?: boolean; added?: number; skipped?: number; error?: string } | null = null;
+    try {
+      data = await res.json();
+    } catch {
+      data = null;
     }
+
+    if (res.ok && data?.ok) {
+      result.imported = data.added ?? 0;
+      result.skipped = data.skipped ?? 0;
+    } else {
+      result.failed = rows.length;
+      result.errors.push(data?.error || "errore durante l'import");
+    }
+  } catch {
+    result.failed = rows.length;
+    result.errors.push("errore di rete durante l'import");
   }
 
-  await Promise.all(Array.from({ length: concurrency }, () => worker()));
   return result;
 }
 
@@ -262,7 +255,9 @@ function BulkImportButton({ onSuccess }: { onSuccess: () => void }) {
 
       if (rows.length === 0) {
         setStatus("error");
-        setError("Nessun canale valido trovato nel file. Controlla che esistano le colonne 'Nome canale' e 'URL'.");
+        setError(
+          "Nessun canale valido trovato nel file. Controlla che esistano le colonne 'Nome canale' e 'URL'.",
+        );
         return;
       }
 
@@ -317,7 +312,8 @@ function BulkImportButton({ onSuccess }: { onSuccess: () => void }) {
 
       {result && (
         <div className="max-w-md rounded-lg border border-border bg-card/80 px-3 py-2 text-xs text-muted-foreground">
-          <span className="font-medium text-foreground">Import:</span> {result.imported} aggiunti, {result.skipped} già presenti, {result.failed} errori.
+          <span className="font-medium text-foreground">Import:</span> {result.imported} aggiunti,{" "}
+          {result.skipped} già presenti, {result.failed} errori.
           {result.errors.length > 0 && (
             <details className="mt-1">
               <summary className="cursor-pointer text-destructive">Dettaglio errori</summary>
@@ -516,7 +512,8 @@ function AspiCanaliView({
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">ASPI-monitoring</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Account social selezionati da monitorare. Caricali manualmente con "Aggiungi" oppure importa un file Excel in bulk.
+            Account social selezionati da monitorare. Caricali manualmente con "Aggiungi" oppure
+            importa un file Excel in bulk.
           </p>
         </div>
 
@@ -585,7 +582,8 @@ function AspiCanaliView({
 
               const dbIdForCanale = isDb
                 ? c.id
-                : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ?? null);
+                : (c.accounts.map((a) => handleToDbId.get(a.handle.toLowerCase())).find(Boolean) ??
+                  null);
 
               const canDeleteJson = isJsonCanale;
               const canDeleteSupabase = !!dbIdForCanale && !isJsonCanale;
@@ -600,7 +598,9 @@ function AspiCanaliView({
 
                     <div className="min-w-0 flex-1">
                       <h2 className="truncate text-sm font-semibold text-foreground">{c.name}</h2>
-                      {main && <p className="truncate text-xs text-muted-foreground">@{main.handle}</p>}
+                      {main && (
+                        <p className="truncate text-xs text-muted-foreground">@{main.handle}</p>
+                      )}
                     </div>
                   </div>
 
@@ -617,7 +617,9 @@ function AspiCanaliView({
                   </div>
 
                   {c.descrizione && (
-                    <p className="line-clamp-3 text-xs leading-relaxed text-muted-foreground">{c.descrizione}</p>
+                    <p className="line-clamp-3 text-xs leading-relaxed text-muted-foreground">
+                      {c.descrizione}
+                    </p>
                   )}
                 </>
               );
@@ -634,7 +636,8 @@ function AspiCanaliView({
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            isConfirming ? handleDeleteSupabase(dbIdForCanale!) : setConfirmingId(dbIdForCanale);
+                            if (isConfirming) handleDeleteSupabase(dbIdForCanale!);
+                            else setConfirmingId(dbIdForCanale);
                           }}
                           disabled={deletingThis}
                           className={
@@ -661,7 +664,8 @@ function AspiCanaliView({
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            isConfirming ? handleDeleteJson(c.id) : setConfirmingId(c.id);
+                            if (isConfirming) handleDeleteJson(c.id);
+                            else setConfirmingId(c.id);
                           }}
                           disabled={deletingThis}
                           className={
