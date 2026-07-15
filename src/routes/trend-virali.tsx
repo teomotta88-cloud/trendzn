@@ -1,6 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { Search, Eye, Heart, TrendingUp, TrendingDown, Minus, Flame } from "lucide-react";
+import {
+  Search,
+  Eye,
+  Heart,
+  TrendingUp,
+  TrendingDown,
+  Minus,
+  Flame,
+  CircleDashed,
+} from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -187,6 +196,11 @@ const VERDICT_META: Record<TopicVerdict, { label: string; className: string; Ico
       className: "bg-muted text-muted-foreground",
       Icon: Minus,
     },
+    unknown: {
+      label: "Dati insufficienti",
+      className: "bg-muted/60 text-muted-foreground",
+      Icon: CircleDashed,
+    },
   };
 
 function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
@@ -212,7 +226,14 @@ function SignalRow({ signal }: { signal: TopicPlatformSignal }) {
         <span className="text-[11px] font-medium text-foreground">
           {SIGNAL_PLATFORM_LABEL[signal.platform]}
         </span>
-        <span className="rounded bg-muted px-1 py-0.5 text-[9px] uppercase tracking-wide text-muted-foreground">
+        <span
+          className="rounded bg-muted px-1 py-0.5 text-[9px] uppercase tracking-wide text-muted-foreground"
+          title={
+            sampled
+              ? "Campione della pagina hashtag, non il totale reale — copertura parziale possibile"
+              : "Conteggio reale sull'intero hashtag (Creative Center)"
+          }
+        >
           {sampled ? "campione" : "esatto"}
         </span>
         {signal.latest_content_volume != null && (
@@ -306,7 +327,9 @@ function TopicToggleSection({
             <TopicCard
               key={t.id}
               topic={t}
-              verdict={computeTopicVerdict(contentByTopic.get(t.value) ?? [])}
+              verdict={computeTopicVerdict(contentByTopic.get(t.value) ?? [], {
+                hasSignals: t.signals.length > 0,
+              })}
             />
           ))}
         </div>
