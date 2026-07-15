@@ -43,6 +43,7 @@ import { Route as ApiPublicHooksMonitorTopicsRouteImport } from './routes/api/pu
 import { Route as ApiPublicHooksListMonitoredTopicsRouteImport } from './routes/api/public/hooks/list-monitored-topics'
 import { Route as ApiPublicHooksListInstagramContentUrlsRouteImport } from './routes/api/public/hooks/list-instagram-content-urls'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
+import { Route as ApiPublicHooksImportAspiBulkRouteImport } from './routes/api/public/hooks/import-aspi-bulk'
 import { Route as ApiPublicHooksGettySearchRouteImport } from './routes/api/public/hooks/getty-search'
 import { Route as ApiPublicHooksExtractKeywordsRouteImport } from './routes/api/public/hooks/extract-keywords'
 import { Route as ApiPublicHooksExportXlsxRouteImport } from './routes/api/public/hooks/export-xlsx'
@@ -237,6 +238,12 @@ const ApiPublicHooksLinkPreviewRoute =
     path: '/api/public/hooks/link-preview',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksImportAspiBulkRoute =
+  ApiPublicHooksImportAspiBulkRouteImport.update({
+    id: '/api/public/hooks/import-aspi-bulk',
+    path: '/api/public/hooks/import-aspi-bulk',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksGettySearchRoute =
   ApiPublicHooksGettySearchRouteImport.update({
     id: '/api/public/hooks/getty-search',
@@ -305,6 +312,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
+  '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -348,6 +356,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
+  '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -392,6 +401,7 @@ export interface FileRoutesById {
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
+  '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -437,6 +447,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
+    | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
@@ -480,6 +491,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
+    | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
@@ -523,6 +535,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
+    | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
@@ -567,6 +580,7 @@ export interface RootRouteChildren {
   ApiPublicHooksExportXlsxRoute: typeof ApiPublicHooksExportXlsxRoute
   ApiPublicHooksExtractKeywordsRoute: typeof ApiPublicHooksExtractKeywordsRoute
   ApiPublicHooksGettySearchRoute: typeof ApiPublicHooksGettySearchRoute
+  ApiPublicHooksImportAspiBulkRoute: typeof ApiPublicHooksImportAspiBulkRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
   ApiPublicHooksListInstagramContentUrlsRoute: typeof ApiPublicHooksListInstagramContentUrlsRoute
   ApiPublicHooksListMonitoredTopicsRoute: typeof ApiPublicHooksListMonitoredTopicsRoute
@@ -826,6 +840,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksLinkPreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/import-aspi-bulk': {
+      id: '/api/public/hooks/import-aspi-bulk'
+      path: '/api/public/hooks/import-aspi-bulk'
+      fullPath: '/api/public/hooks/import-aspi-bulk'
+      preLoaderRoute: typeof ApiPublicHooksImportAspiBulkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/getty-search': {
       id: '/api/public/hooks/getty-search'
       path: '/api/public/hooks/getty-search'
@@ -904,6 +925,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksExportXlsxRoute: ApiPublicHooksExportXlsxRoute,
   ApiPublicHooksExtractKeywordsRoute: ApiPublicHooksExtractKeywordsRoute,
   ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
+  ApiPublicHooksImportAspiBulkRoute: ApiPublicHooksImportAspiBulkRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksListInstagramContentUrlsRoute:
     ApiPublicHooksListInstagramContentUrlsRoute,
