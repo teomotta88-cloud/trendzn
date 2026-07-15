@@ -54,7 +54,6 @@ function FeedPage() {
 const TRENDS_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
-const N8N_WEBHOOK = "https://trendzn.app.n8n.cloud/webhook/trendzn-sync";
 const GITHUB_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-canali-feed";
 
 interface Account {
@@ -83,7 +82,7 @@ interface Post {
 }
 
 function isPostUrl(url: string): boolean {
-  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\//.test(url);
+  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\/|\/status\//.test(url);
 }
 
 function decodeHtmlEntities(str: string): string {
@@ -96,6 +95,8 @@ function getPlatform(url: string): string {
   if (/instagram\.com/.test(url)) return "instagram";
   if (/tiktok\.com/.test(url)) return "tiktok";
   if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
+  if (/linkedin\.com/.test(url)) return "linkedin";
+  if (/x\.com|twitter\.com/.test(url)) return "x";
   return "web";
 }
 
@@ -122,11 +123,29 @@ function formatDate(dateStr: string | null): string {
   }
 }
 
+function normalizeKeyword(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+function postMatchesKeyword(post: Post, keyword: string): boolean {
+  const q = normalizeKeyword(keyword);
+  if (!q) return false;
+
+  const haystack = [post.caption, post.handle, post.canaleName]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return haystack.includes(q);
+}
+
 function PlatformBadge({ platform }: { platform: string }) {
   const colors: Record<string, { bg: string; text: string }> = {
     instagram: { bg: "#f0e6f6", text: "#7c3aed" },
     tiktok: { bg: "#e8f0fe", text: "#1a73e8" },
     youtube: { bg: "#fce8e8", text: "#d93025" },
+    linkedin: { bg: "#e8f3ff", text: "#0a66c2" },
+    x: { bg: "#e5e7eb", text: "#111827" },
     web: { bg: "#f0f4f8", text: "#64748b" },
   };
   const c = colors[platform] || colors.web;
@@ -134,6 +153,8 @@ function PlatformBadge({ platform }: { platform: string }) {
     instagram: "Instagram",
     tiktok: "TikTok",
     youtube: "YouTube",
+    linkedin: "LinkedIn",
+    x: "X",
     web: "Web",
   };
   return (
@@ -247,7 +268,6 @@ function MarkAsTrendButtons({
       if (res.ok && data.ok) {
         onMarked(section);
       } else if (res.status === 409) {
-        // già presente: la consideriamo comunque marcata
         onMarked(section);
       }
     } catch {
@@ -313,7 +333,7 @@ function PostCard({
   onMarked: (section: TrendSection) => void;
 }) {
   const embedUrl = getEmbedUrl(post.url);
-  const platform = getPlatform(post.url);
+  const platform = post.platform || getPlatform(post.url);
   const heights: Record<string, number> = { instagram: 480, tiktok: 560, youtube: 315 };
   const h = heights[platform] || 400;
   const dateStr = formatDate(post.date);
@@ -372,38 +392,20 @@ function PostCard({
             flexShrink: 0,
           }}
         >
-          {platform === "instagram" && (
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-            </svg>
-          )}
-          {platform === "tiktok" && (
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z" />
-            </svg>
-          )}
-          {platform === "youtube" && (
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-            </svg>
-          )}
-          {(platform === "web" ||
-            (platform !== "instagram" && platform !== "tiktok" && platform !== "youtube")) && (
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-              <polyline points="15 3 21 3 21 9" />
-              <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-          )}
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
         </a>
       </div>
 
@@ -554,6 +556,7 @@ export function TrendzFeed({
   syncEndpoint = GITHUB_SYNC_ENDPOINT,
   canaliLabel,
   enableDateFilter = false,
+  enableKeywordMonitor = false,
 }: {
   tab: "feed" | "canali";
   setTab: (t: "feed" | "canali") => void;
@@ -562,6 +565,7 @@ export function TrendzFeed({
   syncEndpoint?: string;
   canaliLabel?: string;
   enableDateFilter?: boolean;
+  enableKeywordMonitor?: boolean;
 }) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -572,6 +576,14 @@ export function TrendzFeed({
   const [dateTo, setDateTo] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [markedByUrl, setMarkedByUrl] = useState<Record<string, Set<TrendSection>>>({});
+
+  const keywordStorageKey = `${dataKey}:monitored-keywords`;
+  const keywordSeenStorageKey = `${dataKey}:keyword-seen-urls`;
+
+  const [keywordInput, setKeywordInput] = useState("");
+  const [monitoredKeywords, setMonitoredKeywords] = useState<string[]>([]);
+  const [activeKeyword, setActiveKeyword] = useState<string | null>(null);
+  const [seenByKeyword, setSeenByKeyword] = useState<Record<string, string[]>>({});
 
   useEffect(() => {
     fetch(jsonUrl)
@@ -605,6 +617,20 @@ export function TrendzFeed({
       });
   }, []);
 
+  useEffect(() => {
+    if (!enableKeywordMonitor) return;
+
+    try {
+      const storedKeywords = window.localStorage.getItem(keywordStorageKey);
+      const storedSeen = window.localStorage.getItem(keywordSeenStorageKey);
+
+      if (storedKeywords) setMonitoredKeywords(JSON.parse(storedKeywords));
+      if (storedSeen) setSeenByKeyword(JSON.parse(storedSeen));
+    } catch {
+      // localStorage non disponibile o dati corrotti: ignoriamo
+    }
+  }, [enableKeywordMonitor, keywordStorageKey, keywordSeenStorageKey]);
+
   const handleMarked = (url: string, section: TrendSection) => {
     setMarkedByUrl((prev) => {
       const set = new Set(prev[url] ?? []);
@@ -615,7 +641,7 @@ export function TrendzFeed({
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [platformFilter, search, sortOrder, dateFrom, dateTo]);
+  }, [platformFilter, search, sortOrder, dateFrom, dateTo, activeKeyword]);
 
   if (error)
     return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
@@ -647,11 +673,65 @@ export function TrendzFeed({
     return sortOrder === "recenti" ? db - da : da - db;
   });
 
-  // Intervallo di date di pubblicazione (solo se il filtro è abilitato). "Da" =
-  // inizio giornata, "A" = fine giornata, così l'intervallo è inclusivo su
-  // entrambi gli estremi. I post senza data vengono esclusi quando è attivo.
   const fromTime = enableDateFilter && dateFrom ? new Date(`${dateFrom}T00:00:00`).getTime() : null;
   const toTime = enableDateFilter && dateTo ? new Date(`${dateTo}T23:59:59.999`).getTime() : null;
+
+  function getKeywordPostUrls(keyword: string): string[] {
+    return allPosts.filter((post) => postMatchesKeyword(post, keyword)).map((post) => post.url);
+  }
+
+  function getNewKeywordCount(keyword: string): number {
+    const currentUrls = getKeywordPostUrls(keyword);
+    const seenUrls = new Set(seenByKeyword[keyword] ?? []);
+    return currentUrls.filter((url) => !seenUrls.has(url)).length;
+  }
+
+  function persistKeywords(next: string[]) {
+    setMonitoredKeywords(next);
+    window.localStorage.setItem(keywordStorageKey, JSON.stringify(next));
+  }
+
+  function persistSeen(next: Record<string, string[]>) {
+    setSeenByKeyword(next);
+    window.localStorage.setItem(keywordSeenStorageKey, JSON.stringify(next));
+  }
+
+  function handleAddKeyword() {
+    const keyword = normalizeKeyword(keywordInput);
+    if (!keyword) return;
+
+    if (monitoredKeywords.includes(keyword)) {
+      setActiveKeyword(keyword);
+      setKeywordInput("");
+      return;
+    }
+
+    persistKeywords([...monitoredKeywords, keyword]);
+    setActiveKeyword(keyword);
+    setKeywordInput("");
+  }
+
+  function handleSelectKeyword(keyword: string) {
+    const nextActiveKeyword = activeKeyword === keyword ? null : keyword;
+    setActiveKeyword(nextActiveKeyword);
+
+    const urls = getKeywordPostUrls(keyword);
+    persistSeen({
+      ...seenByKeyword,
+      [keyword]: Array.from(new Set([...(seenByKeyword[keyword] ?? []), ...urls])),
+    });
+  }
+
+  function handleRemoveKeyword(keyword: string) {
+    const nextKeywords = monitoredKeywords.filter((item) => item !== keyword);
+    const nextSeen = { ...seenByKeyword };
+    delete nextSeen[keyword];
+
+    persistKeywords(nextKeywords);
+    persistSeen(nextSeen);
+
+    if (activeKeyword === keyword) setActiveKeyword(null);
+  }
 
   const filtered = sorted.filter((p) => {
     const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
@@ -662,6 +742,8 @@ export function TrendzFeed({
       p.canaleName?.toLowerCase().includes(q) ||
       p.caption?.toLowerCase().includes(q);
 
+    const matchKeyword = !activeKeyword || postMatchesKeyword(p, activeKeyword);
+
     let matchDate = true;
     if (fromTime !== null || toTime !== null) {
       const t = p.date ? new Date(p.date).getTime() : NaN;
@@ -670,7 +752,7 @@ export function TrendzFeed({
       else if (toTime !== null && t > toTime) matchDate = false;
     }
 
-    return matchPlatform && matchSearch && matchDate;
+    return matchPlatform && matchSearch && matchKeyword && matchDate;
   });
 
   const visiblePosts = filtered.slice(0, visibleCount);
@@ -683,7 +765,7 @@ export function TrendzFeed({
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">Feed</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Post recenti dai canali monitorati su Instagram e TikTok.
+            Post recenti dai canali monitorati su Instagram, TikTok, LinkedIn e X.
           </p>
         </div>
         <div className="flex gap-2">
@@ -696,6 +778,75 @@ export function TrendzFeed({
       </div>
 
       <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
+        {enableKeywordMonitor && (
+          <div className="flex w-full flex-wrap items-center gap-2 border-b border-border/60 pb-3">
+            <input
+              value={keywordInput}
+              onChange={(e) => setKeywordInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleAddKeyword();
+              }}
+              placeholder="Inserisci keyword da monitorare…"
+              className="min-w-[220px] flex-1 rounded-lg border border-border bg-background/60 px-3 py-2 text-sm outline-none focus:border-primary"
+            />
+
+            <button
+              onClick={handleAddKeyword}
+              disabled={!keywordInput.trim()}
+              className="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Monitora keyword
+            </button>
+
+            {activeKeyword && (
+              <button
+                onClick={() => setActiveKeyword(null)}
+                className="rounded-full border border-border px-3 py-2 text-xs text-muted-foreground transition hover:border-primary hover:text-foreground"
+              >
+                Mostra tutti
+              </button>
+            )}
+
+            {monitoredKeywords.length > 0 && (
+              <div className="flex w-full flex-wrap gap-2 pt-1">
+                {monitoredKeywords.map((keyword) => {
+                  const newCount = getNewKeywordCount(keyword);
+                  const active = activeKeyword === keyword;
+
+                  return (
+                    <div key={keyword} className="group relative inline-flex items-center">
+                      <button
+                        onClick={() => handleSelectKeyword(keyword)}
+                        className={
+                          "relative rounded-full px-4 py-2 pr-8 text-sm font-medium transition " +
+                          (active
+                            ? "bg-slate-900 text-white"
+                            : "border border-border bg-card text-foreground hover:border-primary")
+                        }
+                      >
+                        {keyword}
+                        {newCount > 0 && (
+                          <span className="absolute -right-1 -top-1 min-w-5 rounded-full bg-red-600 px-1.5 py-0.5 text-[10px] font-bold leading-none text-white">
+                            {newCount}
+                          </span>
+                        )}
+                      </button>
+
+                      <button
+                        onClick={() => handleRemoveKeyword(keyword)}
+                        title="Rimuovi keyword"
+                        className="absolute right-2 text-xs text-muted-foreground opacity-60 transition hover:text-red-600 group-hover:opacity-100"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
         <input
           placeholder="Cerca canale, account o nella caption…"
           value={search}
