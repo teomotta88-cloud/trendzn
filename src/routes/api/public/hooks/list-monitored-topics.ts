@@ -20,10 +20,15 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
         try {
           const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
+          // Fase 2: i segnali di crescita vivono ora in topic_signals, una
+          // riga per (topic, piattaforma) — embeddati qui via la FK
+          // topic_id → monitored_topics. Ogni topic torna con l'array
+          // `signals` (0, 1 o 2 righe: TikTok e/o Instagram), niente più
+          // singolo valore clobberato.
           const { data, error } = await supabaseAdmin
             .from("monitored_topics")
             .select(
-              "id, topic_type, value, derived_hashtag, derived_keyword, volume_growth_pct, engagement_growth_pct, growth_platform, growth_computed_at, latest_content_volume, latest_total_engagement, latest_is_volume_exact, last_seen_in_top5_at",
+              "id, topic_type, value, derived_hashtag, derived_keyword, last_seen_in_top5_at, topic_signals(platform, volume_growth_pct, engagement_growth_pct, latest_content_volume, latest_total_engagement, is_volume_exact, computed_at)",
             )
             .eq("status", "active")
             .limit(500);
@@ -32,7 +37,28 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
             return Response.json({ ok: false, error: error.message }, { status: 500 });
           }
 
-          return Response.json({ ok: true, topics: data ?? [] });
+          // topic_signals non è ancora nei tipi Supabase generati: la forma è
+          // nota e stabile (definita dalla migration), la normalizziamo qui.
+          type Row = {
+            id: string;
+            topic_type: string;
+            value: string;
+            derived_hashtag: string | null;
+            derived_keyword: string | null;
+            last_seen_in_top5_at: string;
+            topic_signals: unknown[] | null;
+          };
+          const topics = ((data ?? []) as unknown as Row[]).map((t) => ({
+            id: t.id,
+            topic_type: t.topic_type,
+            value: t.value,
+            derived_hashtag: t.derived_hashtag,
+            derived_keyword: t.derived_keyword,
+            last_seen_in_top5_at: t.last_seen_in_top5_at,
+            signals: t.topic_signals ?? [],
+          }));
+
+          return Response.json({ ok: true, topics });
         } catch (err) {
           return Response.json({ ok: false, error: String(err).slice(0, 200) }, { status: 500 });
         }

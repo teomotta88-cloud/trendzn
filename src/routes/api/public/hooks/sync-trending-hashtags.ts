@@ -131,18 +131,23 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
                   oldest: oldestRows?.[0] ?? null,
                 });
 
-                await supabaseAdmin
-                  .from("monitored_topics")
-                  .update({
+                // Fase 2: il segnale TikTok finisce nella riga (topic, tiktok)
+                // di topic_signals invece che sulle colonne singole di
+                // monitored_topics — niente più clobbering col segnale
+                // Instagram (record-topic-volume.ts).
+                await supabaseAdmin.from("topic_signals").upsert(
+                  {
+                    topic_id: row.topic_id,
+                    platform: "tiktok" as const,
                     volume_growth_pct: growth.volumeGrowthPct,
                     engagement_growth_pct: growth.engagementGrowthPct,
-                    growth_platform: "tiktok",
-                    growth_computed_at: new Date().toISOString(),
                     latest_content_volume: row.content_volume,
                     latest_total_engagement: row.total_engagement,
-                    latest_is_volume_exact: row.is_volume_exact,
-                  })
-                  .eq("id", row.topic_id);
+                    is_volume_exact: row.is_volume_exact,
+                    computed_at: new Date().toISOString(),
+                  },
+                  { onConflict: "topic_id,platform" },
+                );
               }
             }
 

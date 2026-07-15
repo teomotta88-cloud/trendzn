@@ -16,12 +16,26 @@
 // mostrata in UI — indipendente dalla finestra di viralità qui sotto.
 export const VIRALITY_WINDOW_DAYS = 7;
 
-// Un post è virale se il suo engagement è cresciuto di oltre 1000 in al
-// massimo 6 ore, OPPURE se ha già superato 5000 di engagement totale
-// (indipendentemente dalla crescita recente — un post già molto grande
-// resta rilevante anche se nelle ultime 6h è stato piatto).
+// La viralità del post è ora definita come "il segnale sta accelerando ORA":
+// il segnale è cresciuto di più della soglia nelle ultime ~6h. Prima c'era
+// anche un OR "engagement totale > 5000" che rendeva un post virale PER
+// SEMPRE dentro la finestra di 7gg — un contenuto esploso giorni fa teneva il
+// topic "virale" anche quando ormai piatto. Rimosso: la viralità deve
+// decadere quando il post smette di correre (vedi computePostVirality).
+//
+// Ogni piattaforma usa il miglior segnale gratuito disponibile: engagement
+// (like+commenti) dove lo abbiamo, VIEWS su TikTok — dove non esiste una
+// fonte gratuita per like/commenti (vedi fetchTikTokContent in
+// scripts/sync-viral-trends.mjs). Le soglie sono quindi per-segnale (le views
+// vivono su una scala molto più grande dell'engagement) e vanno calibrate su
+// dati reali.
 export const VIRAL_DELTA_WINDOW_HOURS = 6;
-export const VIRAL_DELTA_THRESHOLD = 1000;
+export const VIRAL_ENGAGEMENT_DELTA_THRESHOLD = 1000;
+export const VIRAL_VIEWS_DELTA_THRESHOLD = 20000;
+
+// Soglia assoluta "post notevole": NON decide più is_viral (che ora decade),
+// resta come riferimento per far emergere comunque un contenuto già grande
+// negli ordinamenti secondari se servirà.
 export const VIRAL_TOTAL_THRESHOLD = 5000;
 
 export type MetricsSnapshot = { engagement: number; reach: number | null; captured_at: string };
@@ -43,24 +57,43 @@ export function computeDeltaMetrics({
   return { deltaEngagement, deltaReach };
 }
 
-// Viralità del singolo post: oldestWithin6h è lo snapshot più vecchio noto
-// nella finestra di VIRAL_DELTA_WINDOW_HOURS (query separata dai 7 giorni
-// usati da computeDeltaMetrics — un post sincronizzato ogni 6h avrà quasi
-// sempre uno snapshot a cavallo di questa finestra, ma non è garantito, es.
-// al primo avvistamento: in quel caso deltaEngagement6h resta 0, corretto,
-// non c'è ancora nessuna crescita da misurare).
+// Viralità del singolo post, in base alla VELOCITÀ del segnale nelle ultime
+// ~6h. Il segnale è engagement dove esiste, views su TikTok (platform ===
+// "tiktok"). oldestWithin6h è lo snapshot più vecchio noto nella finestra di
+// VIRAL_DELTA_WINDOW_HOURS (query separata dai 7 giorni di computeDeltaMetrics).
+//
+// deltaSignal6h resta 0 in due casi, entrambi corretti: al primo avvistamento
+// (nessuno snapshot precedente in finestra) e quando il post non viene più
+// ricampionato da oltre 6h — in quel caso non sta accelerando ORA, quindi non
+// è virale ora. È così che la viralità decade da sola, senza uno stato
+// "sticky" da resettare.
+//
+// Il valore viene poi scritto nella colonna storica delta_engagement_6h: per
+// TikTok contiene la velocità delle views, non dell'engagement. Il nome della
+// colonna resta invariato per non richiedere una migration in questa fase
+// (verrà rinominato in delta_signal_6h nella Fase 2).
 export function computePostVirality({
+  platform,
   engagement,
+  reach,
   oldestWithin6h,
 }: {
+  platform: string;
   engagement: number;
+  reach: number | null;
   oldestWithin6h: MetricsSnapshot | null;
 }) {
-  const deltaEngagement6h = oldestWithin6h
-    ? Math.max(0, engagement - oldestWithin6h.engagement)
-    : 0;
+  const usesViews = platform === "tiktok";
+  const signalNow = usesViews ? (reach ?? 0) : engagement;
+  const signalRef = usesViews
+    ? (oldestWithin6h?.reach ?? null)
+    : (oldestWithin6h?.engagement ?? null);
 
-  const isViral = deltaEngagement6h > VIRAL_DELTA_THRESHOLD || engagement > VIRAL_TOTAL_THRESHOLD;
+  const deltaSignal6h = signalRef != null ? Math.max(0, signalNow - signalRef) : 0;
 
-  return { isViral, deltaEngagement6h };
+  const threshold = usesViews ? VIRAL_VIEWS_DELTA_THRESHOLD : VIRAL_ENGAGEMENT_DELTA_THRESHOLD;
+
+  const isViral = deltaSignal6h > threshold;
+
+  return { isViral, deltaSignal6h };
 }

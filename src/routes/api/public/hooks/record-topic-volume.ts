@@ -105,18 +105,22 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
             oldest: oldestRows?.[0] ?? null,
           });
 
-          await supabaseAdmin
-            .from("monitored_topics")
-            .update({
+          // Fase 2: il segnale finisce nella riga (topic, instagram) di
+          // topic_signals invece che sulle colonne singole di monitored_topics
+          // — così non sovrascrive più il segnale TikTok e viceversa.
+          await supabaseAdmin.from("topic_signals").upsert(
+            {
+              topic_id: body.topicId,
+              platform: body.platform,
               volume_growth_pct: growth.volumeGrowthPct,
               engagement_growth_pct: growth.engagementGrowthPct,
-              growth_platform: body.platform,
-              growth_computed_at: new Date().toISOString(),
               latest_content_volume: contentVolume,
               latest_total_engagement: totalEngagement,
-              latest_is_volume_exact: body.isVolumeExact ?? false,
-            })
-            .eq("id", body.topicId);
+              is_volume_exact: body.isVolumeExact ?? false,
+              computed_at: new Date().toISOString(),
+            },
+            { onConflict: "topic_id,platform" },
+          );
 
           const retentionStart = new Date(
             Date.now() - HISTORY_RETENTION_HOURS * 60 * 60 * 1000,
