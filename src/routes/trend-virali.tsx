@@ -24,7 +24,14 @@ import {
   type ViralPlatform,
   type ViralTrendContent,
 } from "@/lib/viralTrends";
-import { isCurrentlyRanked, listMonitoredTopics, type MonitoredTopic } from "@/lib/monitoredTopics";
+import {
+  isCurrentlyRanked,
+  listMonitoredTopics,
+  SIGNAL_PLATFORM_LABEL,
+  signalConfidence,
+  type MonitoredTopic,
+  type TopicPlatformSignal,
+} from "@/lib/monitoredTopics";
 import { GROWTH_THRESHOLD_PCT } from "@/lib/topicGrowth";
 
 export const Route = createFileRoute("/trend-virali")({
@@ -194,9 +201,50 @@ function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
   );
 }
 
+// Un segnale di crescita per piattaforma (Fase 2): TikTok e Instagram non si
+// sovrascrivono più, si mostrano affiancati con la loro confidenza — "esatto"
+// (conteggio reale Creative Center) vs "campione" (pagina hashtag Instagram).
+function SignalRow({ signal }: { signal: TopicPlatformSignal }) {
+  const sampled = signalConfidence(signal) === "sampled";
+  return (
+    <div className="flex flex-col gap-1 rounded-lg border border-border/60 bg-background/40 px-2 py-1.5">
+      <div className="flex items-center gap-1.5">
+        <span className="text-[11px] font-medium text-foreground">
+          {SIGNAL_PLATFORM_LABEL[signal.platform]}
+        </span>
+        <span className="rounded bg-muted px-1 py-0.5 text-[9px] uppercase tracking-wide text-muted-foreground">
+          {sampled ? "campione" : "esatto"}
+        </span>
+        {signal.latest_content_volume != null && (
+          <span className="ml-auto text-[10px] tabular-nums text-muted-foreground">
+            {sampled ? "~" : ""}
+            {formatCompactNumber(signal.latest_content_volume)} contenuti
+          </span>
+        )}
+      </div>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5">
+        <div className="flex items-center gap-1">
+          <span className="text-[9px] uppercase tracking-wide text-muted-foreground">Volumi</span>
+          <GrowthIndicator pct={signal.volume_growth_pct} />
+        </div>
+        <div className="flex items-center gap-1">
+          <span className="text-[9px] uppercase tracking-wide text-muted-foreground">
+            Engagement
+          </span>
+          <GrowthIndicator pct={signal.engagement_growth_pct} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TopicCard({ topic, verdict }: { topic: MonitoredTopic; verdict: TopicVerdict }) {
   const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
   const producing = verdict === "producing";
+  // TikTok (esatto) prima di Instagram (campione).
+  const signals = [...topic.signals].sort((a, b) =>
+    a.platform === b.platform ? 0 : a.platform === "tiktok" ? -1 : 1,
+  );
 
   return (
     <div
@@ -209,30 +257,15 @@ function TopicCard({ topic, verdict }: { topic: MonitoredTopic; verdict: TopicVe
         <VerdictBadge verdict={verdict} />
       </div>
 
-      <p className="text-[11px] text-muted-foreground">
-        {topic.latest_content_volume != null ? (
-          <>
-            {topic.latest_is_volume_exact ? "" : "~"}
-            {formatCompactNumber(topic.latest_content_volume)} contenuti
-            {topic.growth_platform === "instagram" ? " (campione Instagram)" : ""}
-          </>
-        ) : (
-          "Volume non ancora rilevato"
-        )}
-      </p>
-
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-        <div className="flex items-center gap-1.5">
-          <span className="text-[10px] uppercase tracking-wide text-muted-foreground">Volumi</span>
-          <GrowthIndicator pct={topic.volume_growth_pct} />
+      {signals.length === 0 ? (
+        <p className="text-[11px] text-muted-foreground">Nessun segnale ancora rilevato</p>
+      ) : (
+        <div className="flex flex-col gap-1.5">
+          {signals.map((s) => (
+            <SignalRow key={s.platform} signal={s} />
+          ))}
         </div>
-        <div className="flex items-center gap-1.5">
-          <span className="text-[10px] uppercase tracking-wide text-muted-foreground">
-            Engagement
-          </span>
-          <GrowthIndicator pct={topic.engagement_growth_pct} />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

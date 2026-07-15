@@ -9,20 +9,44 @@
 export const MONITORED_TOPIC_TYPES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
 export type MonitoredTopicType = (typeof MONITORED_TOPIC_TYPES)[number];
 
+export const SIGNAL_PLATFORMS = ["tiktok", "instagram"] as const;
+export type SignalPlatform = (typeof SIGNAL_PLATFORMS)[number];
+
+export const SIGNAL_PLATFORM_LABEL: Record<SignalPlatform, string> = {
+  tiktok: "TikTok",
+  instagram: "Instagram",
+};
+
+// Un segnale di crescita per (topic, piattaforma) — Fase 2. TikTok riporta un
+// conteggio reale sull'intero hashtag (is_volume_exact=true, "esatto");
+// Instagram solo un campione della pagina hashtag (false, "campione").
+export interface TopicPlatformSignal {
+  platform: SignalPlatform;
+  volume_growth_pct: number | null;
+  engagement_growth_pct: number | null;
+  latest_content_volume: number | null;
+  latest_total_engagement: number | null;
+  is_volume_exact: boolean;
+  computed_at: string;
+}
+
+// Confidenza del segnale, derivata da is_volume_exact alla fonte (vedi
+// topic_signals / topic_metrics_history): un volume esatto e uno campionato
+// non vanno letti con lo stesso peso.
+export function signalConfidence(signal: TopicPlatformSignal): "exact" | "sampled" {
+  return signal.is_volume_exact ? "exact" : "sampled";
+}
+
 export interface MonitoredTopic {
   id: string;
   topic_type: MonitoredTopicType;
   value: string;
   derived_hashtag: string | null;
   derived_keyword: string | null;
-  volume_growth_pct: number | null;
-  engagement_growth_pct: number | null;
-  growth_platform: "tiktok" | "instagram" | null;
-  growth_computed_at: string | null;
-  latest_content_volume: number | null;
-  latest_total_engagement: number | null;
-  latest_is_volume_exact: boolean;
   last_seen_in_top5_at: string;
+  // Fase 2: 0-2 righe (TikTok e/o Instagram), niente più valore singolo che
+  // le due piattaforme si sovrascrivevano a vicenda.
+  signals: TopicPlatformSignal[];
 }
 
 export async function listMonitoredTopics(): Promise<MonitoredTopic[]> {
