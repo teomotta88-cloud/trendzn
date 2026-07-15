@@ -54,6 +54,7 @@ function AspiMonitoringPage() {
       dataKey="canali"
       syncEndpoint={ASPI_SYNC_ENDPOINT}
       canaliLabel="ASPI-monitoring"
+      enableDateFilter
     />
   );
 }
