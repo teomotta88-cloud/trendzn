@@ -320,6 +320,7 @@ export type Database = {
           post_date: string
           programmato: boolean
           rubrica: string | null
+          rubrica_id: string | null
           topic: string | null
           visual_type: string | null
           visual_url: string | null
@@ -338,6 +339,7 @@ export type Database = {
           post_date: string
           programmato?: boolean
           rubrica?: string | null
+          rubrica_id?: string | null
           topic?: string | null
           visual_type?: string | null
           visual_url?: string | null
@@ -356,6 +358,7 @@ export type Database = {
           post_date?: string
           programmato?: boolean
           rubrica?: string | null
+          rubrica_id?: string | null
           topic?: string | null
           visual_type?: string | null
           visual_url?: string | null
@@ -366,6 +369,13 @@ export type Database = {
             columns: ["plan_id"]
             isOneToOne: false
             referencedRelation: "editorial_plans"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_posts_rubrica_id_fkey"
+            columns: ["rubrica_id"]
+            isOneToOne: false
+            referencedRelation: "rubriche"
             referencedColumns: ["id"]
           },
         ]
@@ -404,6 +414,376 @@ export type Database = {
             columns: ["matched_post_id"]
             isOneToOne: false
             referencedRelation: "editorial_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      getty_candidates: {
+        Row: {
+          asset_id: string
+          created_at: string
+          id: string
+          job_id: string
+          layer_name: string
+          orientamento: string | null
+          preview_url: string
+          selected: boolean
+          title: string | null
+        }
+        Insert: {
+          asset_id: string
+          created_at?: string
+          id?: string
+          job_id: string
+          layer_name?: string
+          orientamento?: string | null
+          preview_url: string
+          selected?: boolean
+          title?: string | null
+        }
+        Update: {
+          asset_id?: string
+          created_at?: string
+          id?: string
+          job_id?: string
+          layer_name?: string
+          orientamento?: string | null
+          preview_url?: string
+          selected?: boolean
+          title?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "getty_candidates_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "graphic_jobs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      graphic_job_formats: {
+        Row: {
+          created_at: string
+          error_detail: string | null
+          figma_component_id: string | null
+          formato: string
+          height_px: number | null
+          id: string
+          job_id: string
+          output_url: string | null
+          status: string
+          updated_at: string
+          width_px: number | null
+        }
+        Insert: {
+          created_at?: string
+          error_detail?: string | null
+          figma_component_id?: string | null
+          formato: string
+          height_px?: number | null
+          id?: string
+          job_id: string
+          output_url?: string | null
+          status?: string
+          updated_at?: string
+          width_px?: number | null
+        }
+        Update: {
+          created_at?: string
+          error_detail?: string | null
+          figma_component_id?: string | null
+          formato?: string
+          height_px?: number | null
+          id?: string
+          job_id?: string
+          output_url?: string | null
+          status?: string
+          updated_at?: string
+          width_px?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "graphic_job_formats_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "graphic_jobs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      graphic_job_images: {
+        Row: {
+          asset_id: string | null
+          created_at: string
+          id: string
+          image_url: string
+          job_id: string
+          layer_name: string
+          source: string
+        }
+        Insert: {
+          asset_id?: string | null
+          created_at?: string
+          id?: string
+          image_url: string
+          job_id: string
+          layer_name: string
+          source: string
+        }
+        Update: {
+          asset_id?: string | null
+          created_at?: string
+          id?: string
+          image_url?: string
+          job_id?: string
+          layer_name?: string
+          source?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "graphic_job_images_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "graphic_jobs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      graphic_jobs: {
+        Row: {
+          copy_payload: Json
+          created_at: string
+          error_detail: string | null
+          getty_asset_id: string | null
+          getty_image_url: string | null
+          id: string
+          post_id: string
+          rubrica_id: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          copy_payload?: Json
+          created_at?: string
+          error_detail?: string | null
+          getty_asset_id?: string | null
+          getty_image_url?: string | null
+          id?: string
+          post_id: string
+          rubrica_id: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          copy_payload?: Json
+          created_at?: string
+          error_detail?: string | null
+          getty_asset_id?: string | null
+          getty_image_url?: string | null
+          id?: string
+          post_id?: string
+          rubrica_id?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "graphic_jobs_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_posts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "graphic_jobs_rubrica_id_fkey"
+            columns: ["rubrica_id"]
+            isOneToOne: false
+            referencedRelation: "rubriche"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      monitored_topics: {
+        Row: {
+          created_at: string
+          derived_hashtag: string | null
+          derived_keyword: string | null
+          engagement_growth_pct: number | null
+          first_seen_in_top5_at: string
+          growth_computed_at: string | null
+          growth_platform: string | null
+          id: string
+          last_seen_in_top5_at: string
+          latest_content_volume: number | null
+          latest_is_volume_exact: boolean
+          latest_total_engagement: number | null
+          monitoring_stops_at: string
+          status: string
+          topic_type: string
+          updated_at: string
+          value: string
+          volume_growth_pct: number | null
+        }
+        Insert: {
+          created_at?: string
+          derived_hashtag?: string | null
+          derived_keyword?: string | null
+          engagement_growth_pct?: number | null
+          first_seen_in_top5_at?: string
+          growth_computed_at?: string | null
+          growth_platform?: string | null
+          id?: string
+          last_seen_in_top5_at?: string
+          latest_content_volume?: number | null
+          latest_is_volume_exact?: boolean
+          latest_total_engagement?: number | null
+          monitoring_stops_at?: string
+          status?: string
+          topic_type: string
+          updated_at?: string
+          value: string
+          volume_growth_pct?: number | null
+        }
+        Update: {
+          created_at?: string
+          derived_hashtag?: string | null
+          derived_keyword?: string | null
+          engagement_growth_pct?: number | null
+          first_seen_in_top5_at?: string
+          growth_computed_at?: string | null
+          growth_platform?: string | null
+          id?: string
+          last_seen_in_top5_at?: string
+          latest_content_volume?: number | null
+          latest_is_volume_exact?: boolean
+          latest_total_engagement?: number | null
+          monitoring_stops_at?: string
+          status?: string
+          topic_type?: string
+          updated_at?: string
+          value?: string
+          volume_growth_pct?: number | null
+        }
+        Relationships: []
+      }
+      rubrica_formati: {
+        Row: {
+          attivo: boolean
+          created_at: string
+          figma_component_id: string | null
+          formato: string
+          height_px: number
+          id: string
+          rubrica_id: string
+          width_px: number
+        }
+        Insert: {
+          attivo?: boolean
+          created_at?: string
+          figma_component_id?: string | null
+          formato: string
+          height_px: number
+          id?: string
+          rubrica_id: string
+          width_px: number
+        }
+        Update: {
+          attivo?: boolean
+          created_at?: string
+          figma_component_id?: string | null
+          formato?: string
+          height_px?: number
+          id?: string
+          rubrica_id?: string
+          width_px?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "rubrica_formati_rubrica_id_fkey"
+            columns: ["rubrica_id"]
+            isOneToOne: false
+            referencedRelation: "rubriche"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      rubriche: {
+        Row: {
+          attiva: boolean
+          created_at: string
+          figma_component_id: string | null
+          figma_file_key: string | null
+          id: string
+          nome: string
+          tipo_template: string
+        }
+        Insert: {
+          attiva?: boolean
+          created_at?: string
+          figma_component_id?: string | null
+          figma_file_key?: string | null
+          id?: string
+          nome: string
+          tipo_template: string
+        }
+        Update: {
+          attiva?: boolean
+          created_at?: string
+          figma_component_id?: string | null
+          figma_file_key?: string | null
+          id?: string
+          nome?: string
+          tipo_template?: string
+        }
+        Relationships: []
+      }
+      template_constraints: {
+        Row: {
+          card_index: number
+          created_at: string
+          id: string
+          layer_name: string
+          layer_type: string
+          max_chars: number | null
+          max_font_size: number | null
+          max_lines: number | null
+          min_font_size: number | null
+          obbligatorio: boolean
+          rubrica_id: string
+        }
+        Insert: {
+          card_index?: number
+          created_at?: string
+          id?: string
+          layer_name: string
+          layer_type?: string
+          max_chars?: number | null
+          max_font_size?: number | null
+          max_lines?: number | null
+          min_font_size?: number | null
+          obbligatorio?: boolean
+          rubrica_id: string
+        }
+        Update: {
+          card_index?: number
+          created_at?: string
+          id?: string
+          layer_name?: string
+          layer_type?: string
+          max_chars?: number | null
+          max_font_size?: number | null
+          max_lines?: number | null
+          min_font_size?: number | null
+          obbligatorio?: boolean
+          rubrica_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "template_constraints_rubrica_id_fkey"
+            columns: ["rubrica_id"]
+            isOneToOne: false
+            referencedRelation: "rubriche"
             referencedColumns: ["id"]
           },
         ]
@@ -449,6 +829,85 @@ export type Database = {
           view_count?: number | null
         }
         Relationships: []
+      }
+      topic_metrics_history: {
+        Row: {
+          captured_at: string
+          content_volume: number | null
+          id: string
+          is_volume_exact: boolean
+          platform: string
+          topic_id: string
+          total_engagement: number | null
+        }
+        Insert: {
+          captured_at?: string
+          content_volume?: number | null
+          id?: string
+          is_volume_exact?: boolean
+          platform: string
+          topic_id: string
+          total_engagement?: number | null
+        }
+        Update: {
+          captured_at?: string
+          content_volume?: number | null
+          id?: string
+          is_volume_exact?: boolean
+          platform?: string
+          topic_id?: string
+          total_engagement?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "topic_metrics_history_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      topic_signals: {
+        Row: {
+          computed_at: string
+          engagement_growth_pct: number | null
+          is_volume_exact: boolean
+          latest_content_volume: number | null
+          latest_total_engagement: number | null
+          platform: string
+          topic_id: string
+          volume_growth_pct: number | null
+        }
+        Insert: {
+          computed_at?: string
+          engagement_growth_pct?: number | null
+          is_volume_exact?: boolean
+          latest_content_volume?: number | null
+          latest_total_engagement?: number | null
+          platform: string
+          topic_id: string
+          volume_growth_pct?: number | null
+        }
+        Update: {
+          computed_at?: string
+          engagement_growth_pct?: number | null
+          is_volume_exact?: boolean
+          latest_content_volume?: number | null
+          latest_total_engagement?: number | null
+          platform?: string
+          topic_id?: string
+          volume_growth_pct?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "topic_signals_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       trend_submissions: {
         Row: {
@@ -504,7 +963,9 @@ export type Database = {
           content: string | null
           created_at: string
           delta_engagement: number
+          delta_engagement_6h: number
           delta_reach: number
+          delta_since: string | null
           discovery_source: string
           engagement: number
           external_id: string
@@ -516,15 +977,17 @@ export type Database = {
           raw: Json | null
           reach: number | null
           source_hashtag: string
+          topic_id: string | null
           url: string
-          virality_score: number
         }
         Insert: {
           author?: string | null
           content?: string | null
           created_at?: string
           delta_engagement?: number
+          delta_engagement_6h?: number
           delta_reach?: number
+          delta_since?: string | null
           discovery_source?: string
           engagement?: number
           external_id: string
@@ -536,15 +999,17 @@ export type Database = {
           raw?: Json | null
           reach?: number | null
           source_hashtag: string
+          topic_id?: string | null
           url: string
-          virality_score?: number
         }
         Update: {
           author?: string | null
           content?: string | null
           created_at?: string
           delta_engagement?: number
+          delta_engagement_6h?: number
           delta_reach?: number
+          delta_since?: string | null
           discovery_source?: string
           engagement?: number
           external_id?: string
@@ -556,10 +1021,18 @@ export type Database = {
           raw?: Json | null
           reach?: number | null
           source_hashtag?: string
+          topic_id?: string | null
           url?: string
-          virality_score?: number
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "viral_trend_content_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       viral_trend_metrics_history: {
         Row: {
