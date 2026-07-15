@@ -55,6 +55,7 @@ function AspiMonitoringPage() {
       syncEndpoint={ASPI_SYNC_ENDPOINT}
       canaliLabel="ASPI-monitoring"
       enableDateFilter
+      enableKeywordMonitor
     />
   );
 }
@@ -169,10 +170,6 @@ async function readAspiExcel(file: File): Promise<BulkImportPreviewRow[]> {
   return rows;
 }
 
-// Invia TUTTE le righe in una sola richiesta all'endpoint bulk, che le scrive
-// in un unico commit su aspi-monitoring.json (con retry sullo sha). Molto più
-// robusto del vecchio approccio 1-riga-per-commit, che su ~271 canali generava
-// centinaia di commit e conflitti di scrittura concorrenti.
 async function importRowsInBatches(rows: BulkImportPreviewRow[]): Promise<BulkImportResult> {
   const result: BulkImportResult = {
     total: rows.length,
