@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import pptxgen from "pptxgenjs";
-import sharp from "sharp";
 
 interface FeedPptPost {
   url: string;
