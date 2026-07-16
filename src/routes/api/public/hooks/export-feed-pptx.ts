@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import pptxgen from "pptxgenjs";
+import sharp from "sharp";
 
 interface FeedPptPost {
   url: string;
@@ -27,6 +28,21 @@ function cleanText(value: unknown): string {
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&ograve;/g, "ò")
+    .replace(/&egrave;/g, "è")
+    .replace(/&Egrave;/g, "È")
+    .replace(/&agrave;/g, "à")
+    .replace(/&Agrave;/g, "À")
+    .replace(/&igrave;/g, "ì")
+    .replace(/&Igrave;/g, "Ì")
+    .replace(/&ugrave;/g, "ù")
+    .replace(/&Ugrave;/g, "Ù")
+    .replace(/&eacute;/g, "é")
+    .replace(/&Eacute;/g, "É")
+    .replace(/&rsquo;/g, "’")
+    .replace(/&lsquo;/g, "‘")
+    .replace(/&rdquo;/g, "”")
+    .replace(/&ldquo;/g, "“")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -66,12 +82,14 @@ function getPlatformLabel(platform?: string | null): string {
 }
 
 function safeFileName(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9\-_]+/gi, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 80) || "feed-export";
+  return (
+    value
+      .toLowerCase()
+      .replace(/[^a-z0-9\-_]+/gi, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "")
+      .slice(0, 80) || "feed-export"
+  );
 }
 
 function absolutizeUrl(url: string, baseUrl: string): string {
@@ -106,6 +124,7 @@ async function getPreviewImageUrl(post: FeedPptPost): Promise<string | null> {
 
   try {
     const res = await fetch(post.url, {
+      redirect: "follow",
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
@@ -127,23 +146,40 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
 
   try {
     const res = await fetch(url, {
+      redirect: "follow",
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
-        Accept: "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+        Accept: "image/jpeg,image/png,image/webp,image/avif,image/*,*/*;q=0.8",
+        Referer: "https://www.instagram.com/",
       },
     });
 
+    console.log("PPT image original URL:", url);
+    console.log("PPT image final URL:", res.url);
+    console.log("PPT image status:", res.status, res.statusText);
+    console.log("PPT image content-type:", res.headers.get("content-type"));
+
     if (!res.ok) return null;
 
-    const contentType = res.headers.get("content-type") || "image/jpeg";
-    if (!contentType.startsWith("image/")) return null;
+    const contentType = res.headers.get("content-type") || "";
 
-    const arrayBuffer = await res.arrayBuffer();
-    const base64 = Buffer.from(arrayBuffer).toString("base64");
+    if (!contentType.startsWith("image/")) {
+      console.warn("PPT image response is not an image:", contentType, url);
+      return null;
+    }
 
-    return `data:${contentType};base64,${base64}`;
-  } catch {
+    const inputBuffer = Buffer.from(await res.arrayBuffer());
+    if (!inputBuffer.length) return null;
+
+    const jpegBuffer = await sharp(inputBuffer)
+      .rotate()
+      .jpeg({ quality: 85 })
+      .toBuffer();
+
+    return `data:image/jpeg;base64,${jpegBuffer.toString("base64")}`;
+  } catch (err) {
+    console.warn("PPT image download/convert failed:", String(err), url);
     return null;
   }
 }
@@ -170,6 +206,13 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           const keyword = cleanText(body.keyword || "keyword");
           const title = cleanText(body.title || `Post feed keyword: ${keyword}`);
           const posts = Array.isArray(body.posts) ? body.posts : [];
+
+          console.log("PPT export posts:", posts.length);
+          console.log(
+            "PPT export posts with imageUrl:",
+            posts.filter((p) => !!p.imageUrl).length,
+          );
+          console.log("PPT first post imageUrl:", posts[0]?.imageUrl || null);
 
           if (!keyword) {
             return Response.json(
@@ -548,6 +591,8 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
             },
           });
         } catch (err) {
+          console.error("PPT export error:", err);
+
           return Response.json(
             { ok: false, error: String(err).slice(0, 500) },
             { status: 500 },
