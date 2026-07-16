@@ -546,6 +546,7 @@ function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: s
 }
 
 const PAGE_SIZE = 12;
+const EXPORT_FEED_PPTX_ENDPOINT = "/api/public/hooks/export-feed-pptx";
 const EMPTY_MARKED: Set<TrendSection> = new Set();
 
 export function TrendzFeed({
