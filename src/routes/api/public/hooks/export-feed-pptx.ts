@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import pptxgen from "pptxgenjs";
-import sharp from "sharp";
 
 interface FeedPptPost {
   url: string;
@@ -20,6 +19,7 @@ interface ExportFeedPptxBody {
 
 function cleanText(value: unknown): string {
   if (typeof value !== "string") return "";
+
   return value
     .replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;/g, " ")
@@ -29,6 +29,7 @@ function cleanText(value: unknown): string {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&ograve;/g, "ò")
+    .replace(/&Ograve;/g, "Ò")
     .replace(/&egrave;/g, "è")
     .replace(/&Egrave;/g, "È")
     .replace(/&agrave;/g, "à")
@@ -136,7 +137,8 @@ async function getPreviewImageUrl(post: FeedPptPost): Promise<string | null> {
 
     const html = await res.text();
     return extractOgImage(html, post.url);
-  } catch {
+  } catch (err) {
+    console.warn("PPT preview image lookup failed:", String(err));
     return null;
   }
 }
@@ -150,7 +152,7 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
-        Accept: "image/jpeg,image/png,image/webp,image/avif,image/*,*/*;q=0.8",
+        Accept: "image/jpeg,image/png,image/*,*/*;q=0.8",
         Referer: "https://www.instagram.com/",
       },
     });
@@ -163,23 +165,30 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
     if (!res.ok) return null;
 
     const contentType = res.headers.get("content-type") || "";
+    const mime = contentType.split(";")[0].trim().toLowerCase();
 
-    if (!contentType.startsWith("image/")) {
-      console.warn("PPT image response is not an image:", contentType, url);
+    if (!mime.startsWith("image/")) {
+      console.warn("PPT image response is not an image:", mime, url);
       return null;
     }
 
-    const inputBuffer = Buffer.from(await res.arrayBuffer());
-    if (!inputBuffer.length) return null;
+    if (!["image/jpeg", "image/jpg", "image/png"].includes(mime)) {
+      console.warn("PPT unsupported image mime:", mime, url);
+      return null;
+    }
 
-    const jpegBuffer = await sharp(inputBuffer)
-      .rotate()
-      .jpeg({ quality: 85 })
-      .toBuffer();
+    const arrayBuffer = await res.arrayBuffer();
+    if (!arrayBuffer.byteLength) {
+      console.warn("PPT image empty file:", url);
+      return null;
+    }
 
-    return `data:image/jpeg;base64,${jpegBuffer.toString("base64")}`;
+    const base64 = Buffer.from(arrayBuffer).toString("base64");
+    const normalizedMime = mime === "image/jpg" ? "image/jpeg" : mime;
+
+    return `data:${normalizedMime};base64,${base64}`;
   } catch (err) {
-    console.warn("PPT image download/convert failed:", String(err), url);
+    console.warn("PPT image download failed:", String(err), url);
     return null;
   }
 }
