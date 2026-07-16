@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import pptxgen from "pptxgenjs";
+import sharp from "sharp";
 
 interface FeedPptPost {
   url: string;
@@ -128,8 +129,9 @@ async function getPreviewImageUrl(post: FeedPptPost): Promise<string | null> {
       redirect: "follow",
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
         Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
       },
     });
 
@@ -151,9 +153,12 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
       redirect: "follow",
       headers: {
         "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
-        Accept: "image/jpeg,image/png,image/*,*/*;q=0.8",
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+        Accept:
+          "image/avif,image/webp,image/apng,image/png,image/jpeg,image/*,*/*;q=0.8",
         Referer: "https://www.instagram.com/",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache",
       },
     });
 
@@ -162,7 +167,10 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
     console.log("PPT image status:", res.status, res.statusText);
     console.log("PPT image content-type:", res.headers.get("content-type"));
 
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.warn("PPT image download failed:", res.status, res.statusText, url);
+      return null;
+    }
 
     const contentType = res.headers.get("content-type") || "";
     const mime = contentType.split(";")[0].trim().toLowerCase();
@@ -172,23 +180,26 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
       return null;
     }
 
-    if (!["image/jpeg", "image/jpg", "image/png"].includes(mime)) {
-      console.warn("PPT unsupported image mime:", mime, url);
-      return null;
-    }
+    const inputBuffer = Buffer.from(await res.arrayBuffer());
 
-    const arrayBuffer = await res.arrayBuffer();
-    if (!arrayBuffer.byteLength) {
+    if (!inputBuffer.length) {
       console.warn("PPT image empty file:", url);
       return null;
     }
 
-    const base64 = Buffer.from(arrayBuffer).toString("base64");
-    const normalizedMime = mime === "image/jpg" ? "image/jpeg" : mime;
+    if (mime === "image/jpeg" || mime === "image/jpg") {
+      return `data:image/jpeg;base64,${inputBuffer.toString("base64")}`;
+    }
 
-    return `data:${normalizedMime};base64,${base64}`;
+    if (mime === "image/png") {
+      return `data:image/png;base64,${inputBuffer.toString("base64")}`;
+    }
+
+    const pngBuffer = await sharp(inputBuffer).rotate().png().toBuffer();
+
+    return `data:image/png;base64,${pngBuffer.toString("base64")}`;
   } catch (err) {
-    console.warn("PPT image download failed:", String(err), url);
+    console.warn("PPT image download/convert failed:", String(err), url);
     return null;
   }
 }
@@ -327,7 +338,9 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           }, {});
 
           const byChannel = posts.reduce<Record<string, number>>((acc, post) => {
-            const name = cleanText(post.canaleName || post.handle || "Canale non disponibile");
+            const name = cleanText(
+              post.canaleName || post.handle || "Canale non disponibile",
+            );
             acc[name] = (acc[name] || 0) + 1;
             return acc;
           }, {});
@@ -408,7 +421,9 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
             slide.background = { color: "FFFFFF" };
 
             const platform = getPlatformLabel(post.platform);
-            const channel = cleanText(post.canaleName || post.handle || "Canale non disponibile");
+            const channel = cleanText(
+              post.canaleName || post.handle || "Canale non disponibile",
+            );
             const handle = cleanText(post.handle || "");
             const caption = cleanText(post.caption || "Testo non disponibile");
             const date = formatDate(post.date);
