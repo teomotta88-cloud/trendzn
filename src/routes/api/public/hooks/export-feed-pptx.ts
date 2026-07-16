@@ -8,6 +8,7 @@ interface FeedPptPost {
   canaleName?: string | null;
   date?: string | null;
   caption?: string | null;
+  imageUrl?: string | null;
 }
 
 interface ExportFeedPptxBody {
@@ -73,6 +74,80 @@ function safeFileName(value: string): string {
     .slice(0, 80) || "feed-export";
 }
 
+function absolutizeUrl(url: string, baseUrl: string): string {
+  try {
+    return new URL(url, baseUrl).toString();
+  } catch {
+    return url;
+  }
+}
+
+function extractOgImage(html: string, pageUrl: string): string | null {
+  const patterns = [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["'][^>]*>/i,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["'][^>]*>/i,
+    /<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image:secure_url["'][^>]*>/i,
+  ];
+
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    if (match?.[1]) return absolutizeUrl(match[1], pageUrl);
+  }
+
+  return null;
+}
+
+async function getPreviewImageUrl(post: FeedPptPost): Promise<string | null> {
+  if (post.imageUrl) return post.imageUrl;
+  if (!post.url) return null;
+
+  try {
+    const res = await fetch(post.url, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      },
+    });
+
+    if (!res.ok) return null;
+
+    const html = await res.text();
+    return extractOgImage(html, post.url);
+  } catch {
+    return null;
+  }
+}
+
+async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
+  if (!url) return null;
+
+  try {
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+        Accept: "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+      },
+    });
+
+    if (!res.ok) return null;
+
+    const contentType = res.headers.get("content-type") || "image/jpeg";
+    if (!contentType.startsWith("image/")) return null;
+
+    const arrayBuffer = await res.arrayBuffer();
+    const base64 = Buffer.from(arrayBuffer).toString("base64");
+
+    return `data:${contentType};base64,${base64}`;
+  } catch {
+    return null;
+  }
+}
+
 function addFooter(slide: pptxgen.Slide, index: number, total: number) {
   slide.addText(`ASPI Monitoring · ${index}/${total}`, {
     x: 0.5,
@@ -125,7 +200,6 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
 
           const totalSlides = posts.length + 2;
 
-          // Cover
           const cover = pptx.addSlide();
           cover.background = { color: "0F172A" };
           cover.addText("ASPI Monitoring", {
@@ -182,7 +256,6 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           );
           addFooter(cover, 1, totalSlides);
 
-          // Summary
           const summary = pptx.addSlide();
           summary.background = { color: "F8FAFC" };
           summary.addText("Riepilogo", {
@@ -277,8 +350,7 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           });
           addFooter(summary, 2, totalSlides);
 
-          // Slides post
-          posts.forEach((post, index) => {
+          for (const [index, post] of posts.entries()) {
             const slideNumber = index + 3;
             const slide = pptx.addSlide();
             slide.background = { color: "FFFFFF" };
@@ -355,7 +427,7 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
               color: "0F172A",
             });
 
-            slide.addText(truncate(caption, 1700), {
+            slide.addText(truncate(caption, 1450), {
               x: 0.6,
               y: 1.85,
               w: 7.4,
@@ -368,11 +440,44 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
               margin: 0.08,
             });
 
+            const previewImageUrl = await getPreviewImageUrl(post);
+            const imageData = await imageUrlToDataUri(previewImageUrl);
+
+            if (imageData) {
+              slide.addImage({
+                data: imageData,
+                x: 8.55,
+                y: 1.45,
+                w: 4.15,
+                h: 2.55,
+              });
+            } else {
+              slide.addShape(pptx.ShapeType.roundRect, {
+                x: 8.55,
+                y: 1.45,
+                w: 4.15,
+                h: 2.55,
+                rectRadius: 0.08,
+                fill: { color: "F1F5F9" },
+                line: { color: "E2E8F0", width: 1 },
+              });
+
+              slide.addText("Anteprima media non disponibile", {
+                x: 8.85,
+                y: 2.55,
+                w: 3.55,
+                h: 0.35,
+                fontSize: 11,
+                color: "64748B",
+                align: "center",
+              });
+            }
+
             slide.addShape(pptx.ShapeType.roundRect, {
               x: 8.55,
-              y: 1.45,
+              y: 4.25,
               w: 4.15,
-              h: 4.9,
+              h: 2.1,
               rectRadius: 0.08,
               fill: { color: "F8FAFC" },
               line: { color: "E2E8F0", width: 1 },
@@ -380,52 +485,49 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
 
             slide.addText("Dettagli", {
               x: 8.85,
-              y: 1.8,
+              y: 4.5,
               w: 3.4,
-              h: 0.3,
-              fontSize: 13,
+              h: 0.25,
+              fontSize: 12,
               bold: true,
               color: "0F172A",
             });
 
-            slide.addText(`Piattaforma\n${platform}`, {
+            slide.addText(`Piattaforma: ${platform}`, {
               x: 8.85,
-              y: 2.35,
+              y: 4.9,
               w: 3.4,
-              h: 0.65,
-              fontSize: 11,
+              h: 0.25,
+              fontSize: 10,
               color: "334155",
-              breakLine: false,
             });
 
-            slide.addText(`Canale\n${channel}`, {
+            slide.addText(`Canale: ${channel}`, {
               x: 8.85,
-              y: 3.15,
+              y: 5.25,
               w: 3.4,
-              h: 0.8,
-              fontSize: 11,
+              h: 0.35,
+              fontSize: 10,
               color: "334155",
-              breakLine: false,
               fit: "shrink",
             });
 
-            slide.addText(`Data\n${date}`, {
+            slide.addText(`Data: ${date}`, {
               x: 8.85,
-              y: 4.1,
+              y: 5.65,
               w: 3.4,
-              h: 0.65,
-              fontSize: 11,
+              h: 0.25,
+              fontSize: 10,
               color: "334155",
-              breakLine: false,
             });
 
             if (url) {
               slide.addText("Apri post originale", {
                 x: 8.85,
-                y: 5.35,
+                y: 6.0,
                 w: 3.3,
-                h: 0.35,
-                fontSize: 12,
+                h: 0.25,
+                fontSize: 11,
                 bold: true,
                 color: "2563EB",
                 hyperlink: { url },
@@ -433,7 +535,7 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
             }
 
             addFooter(slide, slideNumber, totalSlides);
-          });
+          }
 
           const buffer = await pptx.write({ outputType: "arraybuffer" });
           const filename = `${safeFileName(`aspi-feed-${keyword}`)}.pptx`;
