@@ -107,6 +107,113 @@ function getItemDate(item, url, platform) {
   );
 }
 
+function absolutizeUrl(url, baseUrl) {
+  if (!url) return null;
+
+  try {
+    return new URL(url, baseUrl).toString();
+  } catch {
+    return url;
+  }
+}
+
+function cleanImageUrl(url) {
+  if (!url || typeof url !== "string") return null;
+
+  const cleaned = url
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim();
+
+  if (!/^https?:\/\//i.test(cleaned)) return null;
+
+  return cleaned;
+}
+
+function extractImageFromHtml(html, baseUrl) {
+  if (!html || typeof html !== "string") return null;
+
+  const patterns = [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["'][^>]*>/i,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["'][^>]*>/i,
+    /<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["'][^>]*>/i,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image:secure_url["'][^>]*>/i,
+    /<img[^>]+src=["']([^"']+)["'][^>]*>/i,
+  ];
+
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    const imageUrl = cleanImageUrl(absolutizeUrl(match?.[1], baseUrl));
+    if (imageUrl) return imageUrl;
+  }
+
+  return null;
+}
+
+function extractImageFromItem(item, pageUrl) {
+  const candidates = [
+    item.image,
+    item.image_url,
+    item.thumbnail,
+    item.thumbnail_url,
+    item.media_url,
+    item.media?.url,
+    item.media?.thumbnail,
+    item.enclosure?.url,
+  ];
+
+  if (Array.isArray(item.enclosures)) {
+    for (const enclosure of item.enclosures) {
+      candidates.push(enclosure?.url);
+    }
+  }
+
+  if (Array.isArray(item.attachments)) {
+    for (const attachment of item.attachments) {
+      candidates.push(attachment?.url);
+    }
+  }
+
+  for (const candidate of candidates) {
+    const imageUrl = cleanImageUrl(absolutizeUrl(candidate, pageUrl));
+    if (imageUrl) return imageUrl;
+  }
+
+  return extractImageFromHtml(item.content_html || item.summary || item.content || "", pageUrl);
+}
+
+async function fetchPagePreviewImage(pageUrl) {
+  if (!pageUrl) return null;
+
+  try {
+    const res = await fetch(pageUrl, {
+      signal: AbortSignal.timeout(12000),
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      },
+    });
+
+    if (!res.ok) return null;
+
+    const html = await res.text();
+    return extractImageFromHtml(html, pageUrl);
+  } catch {
+    return null;
+  }
+}
+
+async function getPostImageUrl(item, pageUrl) {
+  const fromItem = extractImageFromItem(item, pageUrl);
+  if (fromItem) return fromItem;
+
+  return await fetchPagePreviewImage(pageUrl);
+}
+
 // "content_html" contiene la caption integrale; "title" arriva troncato.
 function fullCaption(item) {
   const html = item.content_html || "";
@@ -234,6 +341,18 @@ for (const item of allItems) {
         modified = true;
       }
     }
+      if (existing.imageUrl === undefined) {
+      existing.imageUrl = null;
+      modified = true;
+    }
+
+    if (!existing.imageUrl) {
+      const imageUrl = await getPostImageUrl(item, url);
+      if (imageUrl) {
+        existing.imageUrl = imageUrl;
+        modified = true;
+      }
+    }
 
     if (!existing.date) {
       const date = getItemDate(item, url, existing.platform || postPlatform);
@@ -256,6 +375,7 @@ for (const item of allItems) {
 
   const date = getItemDate(item, url, postPlatform);
   const caption = fullCaption(item);
+  const imageUrl = await getPostImageUrl(item, url);
 
   canale.accounts.push({
     platform: postPlatform,
@@ -263,6 +383,7 @@ for (const item of allItems) {
     url,
     date,
     caption,
+    imageUrl,
     views: postPlatform === "tiktok" ? extractTikTokViews(item) : null,
   });
 
