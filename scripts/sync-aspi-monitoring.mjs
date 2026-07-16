@@ -28,7 +28,9 @@ async function readStore() {
   });
 
   if (!metaRes.ok) {
-    throw new Error(`Lettura metadata aspi-monitoring.json fallita: ${metaRes.status} ${await metaRes.text()}`);
+    throw new Error(
+      `Lettura metadata aspi-monitoring.json fallita: ${metaRes.status} ${await metaRes.text()}`,
+    );
   }
 
   const meta = await metaRes.json();
@@ -45,7 +47,9 @@ async function readStore() {
   });
 
   if (!rawRes.ok) {
-    throw new Error(`Lettura raw aspi-monitoring.json fallita: ${rawRes.status} ${await rawRes.text()}`);
+    throw new Error(
+      `Lettura raw aspi-monitoring.json fallita: ${rawRes.status} ${await rawRes.text()}`,
+    );
   }
 
   const raw = await rawRes.text();
@@ -67,33 +71,9 @@ async function readStore() {
   return { store, sha };
 }
 
-  const raw = await res.text();
-
-  if (!raw.trim()) {
-    return { canali: [] };
-  }
-
-  const parsed = JSON.parse(raw);
-
-  if (!parsed || typeof parsed !== "object") {
-    return { canali: [] };
-  }
-
-  if (!Array.isArray(parsed.canali)) {
-    parsed.canali = [];
-  }
-
-  return parsed;
-}
-
-
-  const data = await res.json();
-  const store = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8"));
-  return { store, sha: data.sha };
-}
-
 async function writeStore(store, sha) {
   const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
+
   const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${TRENDS_PATH}`, {
     method: "PUT",
     headers: { ...ghHeaders, "Content-Type": "application/json" },
@@ -141,7 +121,6 @@ function dateFromTikTokVideoId(url) {
 
     const date = new Date(timestampSeconds * 1000);
 
-    // Guardrail: evita date assurde se TikTok cambia formato o l'ID non è valido.
     const min = new Date("2016-01-01T00:00:00.000Z").getTime();
     const max = Date.now() + 24 * 60 * 60 * 1000;
 
@@ -174,14 +153,23 @@ function absolutizeUrl(url, baseUrl) {
   }
 }
 
+function decodeHtmlEntities(value) {
+  if (!value || typeof value !== "string") return "";
+
+  return value
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)));
+}
+
 function cleanImageUrl(url) {
   if (!url || typeof url !== "string") return null;
 
-  const cleaned = url
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .trim();
+  const cleaned = decodeHtmlEntities(url).trim();
 
   if (!/^https?:\/\//i.test(cleaned)) return null;
 
@@ -274,16 +262,10 @@ async function getPostImageUrl(item, pageUrl) {
 // "content_html" contiene la caption integrale; "title" arriva troncato.
 function fullCaption(item) {
   const html = item.content_html || "";
-  const text = html
-    .replace(/<br\s*\/?/gi, "\n")
+
+  const text = decodeHtmlEntities(html)
     .replace(/<[^>]+>/g, "")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
     .trim();
 
   return text || (item.title || "").trim() || null;
@@ -342,13 +324,17 @@ const { store, sha } = await readStore();
 if (!Array.isArray(store.canali)) store.canali = [];
 
 const list = store.canali;
-
-// Normalizza handle e prova a valorizzare le date mancanti dei TikTok già salvati.
 let modified = false;
 
+// Normalizza handle, date TikTok mancanti e campo imageUrl sui post già salvati.
 for (const canale of list) {
   for (const account of canale.accounts || []) {
     if (account.handle) account.handle = normalizeHandle(account.handle);
+
+    if (account.imageUrl === undefined && isPostUrl(account.url || "")) {
+      account.imageUrl = null;
+      modified = true;
+    }
 
     const platform = account.platform || detectPlatform(account.url || "");
     if (platform === "tiktok" && isPostUrl(account.url || "") && !account.date) {
@@ -365,7 +351,8 @@ for (const canale of list) {
 const handles = list
   .flatMap((c) => c.accounts || [])
   .filter((a) => a.platform === "instagram" || a.platform === "tiktok")
-  .filter((a, i, arr) => arr.findIndex((x) => x.handle === a.handle) === i)
+  .filter((a) => a.handle)
+  .filter((a, i, arr) => arr.findIndex((x) => x.handle === a.handle && x.platform === a.platform) === i)
   .map((a) => ({ handle: normalizeHandle(a.handle), platform: a.platform }));
 
 console.log(`Monitoro ${handles.length} account.`);
@@ -398,7 +385,8 @@ for (const item of allItems) {
         modified = true;
       }
     }
-      if (existing.imageUrl === undefined) {
+
+    if (existing.imageUrl === undefined) {
       existing.imageUrl = null;
       modified = true;
     }
