@@ -23,23 +23,49 @@ const ghHeaders = {
 };
 
 async function readStore() {
+  const metaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${TRENDS_PATH}`, {
+    headers: ghHeaders,
+  });
+
+  if (!metaRes.ok) {
+    throw new Error(`Lettura metadata aspi-monitoring.json fallita: ${metaRes.status} ${await metaRes.text()}`);
+  }
+
+  const meta = await metaRes.json();
+  const sha = meta.sha;
+
   const branch = process.env.GITHUB_REF_NAME || "main";
   const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${TRENDS_PATH}?t=${Date.now()}`;
 
-  const res = await fetch(rawUrl, {
+  const rawRes = await fetch(rawUrl, {
     headers: {
       "User-Agent": "aspi-monitoring-sync",
       Accept: "application/json,text/plain,*/*",
     },
   });
 
-  if (res.status === 404) {
-    return { canali: [] };
+  if (!rawRes.ok) {
+    throw new Error(`Lettura raw aspi-monitoring.json fallita: ${rawRes.status} ${await rawRes.text()}`);
   }
 
-  if (!res.ok) {
-    throw new Error(`Errore lettura raw JSON: ${res.status} ${res.statusText}`);
+  const raw = await rawRes.text();
+
+  if (!raw.trim()) {
+    return { store: { canali: [] }, sha };
   }
+
+  const store = JSON.parse(raw);
+
+  if (!store || typeof store !== "object") {
+    return { store: { canali: [] }, sha };
+  }
+
+  if (!Array.isArray(store.canali)) {
+    store.canali = [];
+  }
+
+  return { store, sha };
+}
 
   const raw = await res.text();
 
