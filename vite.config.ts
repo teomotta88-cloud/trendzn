@@ -12,16 +12,4 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-
-  vite: {
-    ssr: {
-      external: ["sharp"],
-    },
-
-    build: {
-      rollupOptions: {
-        external: ["sharp"],
-      },
-    },
-  },
-});  
+});
