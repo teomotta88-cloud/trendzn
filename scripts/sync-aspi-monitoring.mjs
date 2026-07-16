@@ -23,12 +23,43 @@ const ghHeaders = {
 };
 
 async function readStore() {
-  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${TRENDS_PATH}`, {
-    headers: ghHeaders,
+  const branch = process.env.GITHUB_REF_NAME || "main";
+  const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${TRENDS_PATH}?t=${Date.now()}`;
+
+  const res = await fetch(rawUrl, {
+    headers: {
+      "User-Agent": "aspi-monitoring-sync",
+      Accept: "application/json,text/plain,*/*",
+    },
   });
-  if (!res.ok) {
-    throw new Error(`Lettura aspi-monitoring.json fallita: ${res.status} ${await res.text()}`);
+
+  if (res.status === 404) {
+    return { canali: [] };
   }
+
+  if (!res.ok) {
+    throw new Error(`Errore lettura raw JSON: ${res.status} ${res.statusText}`);
+  }
+
+  const raw = await res.text();
+
+  if (!raw.trim()) {
+    return { canali: [] };
+  }
+
+  const parsed = JSON.parse(raw);
+
+  if (!parsed || typeof parsed !== "object") {
+    return { canali: [] };
+  }
+
+  if (!Array.isArray(parsed.canali)) {
+    parsed.canali = [];
+  }
+
+  return parsed;
+}
+
 
   const data = await res.json();
   const store = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8"));
