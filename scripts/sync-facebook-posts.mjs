@@ -202,6 +202,25 @@ async function tryCloseFirstPopup(page) {
   return false;
 }
 
+// Diagnostica: nessuna visibilità su COSA succede quando trovati 0 post in
+// produzione (a differenza del probe, che logga tutto). La logghiamo qui
+// per capire dai log reali se è un wall di login, DOM senza articoli, o
+// altro — invece di indovinare.
+async function logPageDiagnostics(page, label) {
+  const dialogCount = await page
+    .$$('div[role="dialog"]')
+    .then((els) => els.length)
+    .catch(() => -1);
+  const articleCount = await page
+    .$$('[role="article"]')
+    .then((els) => els.length)
+    .catch(() => -1);
+  const title = await page.title().catch(() => null);
+  console.log(
+    `    [diag ${label}] dialogs=${dialogCount} articles=${articleCount} title=${JSON.stringify(title)}`,
+  );
+}
+
 async function hasBlockingWall(page) {
   const dialogs = await page.$$('div[role="dialog"]');
   for (const d of dialogs) {
@@ -268,6 +287,13 @@ function stripTrackingParams(url) {
   }
 }
 
+function slugifyForFilename(url) {
+  return url
+    .replace(/^https?:\/\//, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .slice(0, 60);
+}
+
 async function fetchLatestFacebookPosts(browser, pageUrl) {
   const context = await browser.newContext({
     userAgent:
@@ -289,6 +315,7 @@ async function fetchLatestFacebookPosts(browser, pageUrl) {
     await page.waitForTimeout(2500);
     await tryCloseFirstPopup(page);
     await page.waitForTimeout(1000);
+    await logPageDiagnostics(page, "dopo-popup");
 
     let scrolls = 0;
     let lastCount = 0;
@@ -308,7 +335,19 @@ async function fetchLatestFacebookPosts(browser, pageUrl) {
       }
     }
 
-    return await page.evaluate(extractPosts);
+    await logPageDiagnostics(page, "fine-scroll");
+
+    const posts = await page.evaluate(extractPosts);
+
+    // Nessuna visibilità su PERCHÉ una pagina restituisce 0 post in
+    // produzione: salviamo uno screenshot solo in questo caso, per non
+    // accumulare decine di screenshot inutili ad ogni run.
+    if (posts.length === 0) {
+      const screenshotPath = `sync-facebook-empty-${slugifyForFilename(pageUrl)}.png`;
+      await page.screenshot({ path: screenshotPath }).catch(() => {});
+    }
+
+    return posts;
   } catch (err) {
     console.error(`Errore su ${pageUrl}: ${String(err)}`);
     return [];
