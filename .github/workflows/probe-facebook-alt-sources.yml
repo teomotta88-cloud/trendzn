@@ -1,0 +1,50 @@
+name: Probe Facebook Alt Sources
+
+# Diagnostica manuale: l'approccio attuale (www.facebook.com + Playwright,
+# vedi probe-facebook-page.mjs) trova in modo affidabile solo l'ultimo post.
+# Verifica se RSS-Bridge (FacebookBridge, già usato per IG/TikTok) o
+# mbasic.facebook.com permettono di recuperare più post (fino a 5).
+# Lancialo da Actions → "Probe Facebook Alt Sources" → Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: "Pagine Facebook da testare (handle, separati da virgola)"
+        required: false
+        default: "agenitalia.it,chilhavisto,AnsaNapoli,salviniofficial"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Attendi che RSS-Bridge sia pronto
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge non ha risposto in tempo" >&2
+          exit 1
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Esegui probe
+        env:
+          RSS_BRIDGE_BASE: http://localhost:3000/
+          PROBE_PAGES: ${{ inputs.pages }}
+        run: node scripts/probe-facebook-alt-sources.mjs
