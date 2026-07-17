@@ -2,20 +2,36 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { detectPlatform } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
+import {
+  DateRangeFilter,
+  computeDateRange,
+  isWithinDateRange,
+  type DatePreset,
+} from "@/components/DateRangeFilter";
 import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
 export const Route = createFileRoute("/influencer/$id")({
   head: () => ({
-    meta: [{ title: "Influencer — Trendzn" }, { name: "description", content: "Profilo influencer monitorato." }],
+    meta: [
+      { title: "Influencer — Trendzn" },
+      { name: "description", content: "Profilo influencer monitorato." },
+    ],
   }),
   component: Page,
 });
 
-const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomatta88-cloud/trendzn/main/src/data/trends.json";
+const TRENDS_JSON_URL =
+  "https://raw.githubusercontent.com/teomatta88-cloud/trendzn/main/src/data/trends.json";
 
 const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
 
-type AccountRef = { platform: string; handle: string; url: string; date?: string | null; caption?: string | null };
+type AccountRef = {
+  platform: string;
+  handle: string;
+  url: string;
+  date?: string | null;
+  caption?: string | null;
+};
 type InfluencerProfile = {
   id: string;
   name: string;
@@ -24,8 +40,6 @@ type InfluencerProfile = {
   descrizione: string | null;
   accounts: AccountRef[];
 };
-
-type DatePreset = "tutto" | "7g" | "30g" | "90g" | "custom";
 
 function formatDate(dateStr: string | null | undefined): string {
   if (!dateStr) return "";
@@ -38,70 +52,6 @@ function formatDate(dateStr: string | null | undefined): string {
   } catch {
     return "";
   }
-}
-
-function FilterPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium transition ${
-        active
-          ? "bg-foreground text-background"
-          : "border border-border bg-background/50 text-muted-foreground hover:border-primary"
-      }`}
-    >
-      {label}
-    </button>
-  );
-}
-
-function DateRangeFilter({
-  preset,
-  setPreset,
-  customFrom,
-  setCustomFrom,
-  customTo,
-  setCustomTo,
-}: {
-  preset: DatePreset;
-  setPreset: (p: DatePreset) => void;
-  customFrom: string;
-  setCustomFrom: (v: string) => void;
-  customTo: string;
-  setCustomTo: (v: string) => void;
-}) {
-  const presets: { key: DatePreset; label: string }[] = [
-    { key: "tutto", label: "Tutto" },
-    { key: "7g", label: "Ultima settimana" },
-    { key: "30g", label: "Ultimo mese" },
-    { key: "90g", label: "Ultimi 3 mesi" },
-  ];
-
-  return (
-    <div className="flex flex-wrap items-center gap-2">
-      {presets.map((p) => (
-        <FilterPill key={p.key} label={p.label} active={preset === p.key} onClick={() => setPreset(p.key)} />
-      ))}
-      <FilterPill label="Personalizzato" active={preset === "custom"} onClick={() => setPreset("custom")} />
-      {preset === "custom" && (
-        <div className="flex items-center gap-1.5">
-          <input
-            type="date"
-            value={customFrom}
-            onChange={(e) => setCustomFrom(e.target.value)}
-            className="rounded-lg border border-border bg-background/60 px-2 py-1 text-xs text-foreground outline-none focus:border-primary"
-          />
-          <span className="text-xs text-muted-foreground">→</span>
-          <input
-            type="date"
-            value={customTo}
-            onChange={(e) => setCustomTo(e.target.value)}
-            className="rounded-lg border border-border bg-background/60 px-2 py-1 text-xs text-foreground outline-none focus:border-primary"
-          />
-        </div>
-      )}
-    </div>
-  );
 }
 
 const PAGE_SIZE = 9;
@@ -122,7 +72,9 @@ function Page() {
     fetch(TRENDS_JSON_URL)
       .then((r) => r.json())
       .then((decoded) => {
-        const found = (decoded.influencer_profiles as InfluencerProfile[] | undefined)?.find((c) => c.id === id);
+        const found = (decoded.influencer_profiles as InfluencerProfile[] | undefined)?.find(
+          (c) => c.id === id,
+        );
         if (!found) {
           setError("Profilo non trovato");
         } else {
@@ -143,37 +95,23 @@ function Page() {
     });
   }, [profile]);
 
-  const dateRange = useMemo(() => {
-    const now = new Date();
-    if (datePreset === "tutto") return null;
-    if (datePreset === "custom") {
-      const from = customFrom ? new Date(customFrom) : null;
-      const to = customTo ? new Date(customTo + "T23:59:59") : null;
-      if (!from && !to) return null;
-      return { from, to };
-    }
-    const days = datePreset === "7g" ? 7 : datePreset === "30g" ? 30 : 90;
-    const from = new Date(now);
-    from.setDate(from.getDate() - days);
-    return { from, to: now };
-  }, [datePreset, customFrom, customTo]);
+  const dateRange = useMemo(
+    () => computeDateRange(datePreset, customFrom, customTo),
+    [datePreset, customFrom, customTo],
+  );
 
   const filteredPosts = useMemo(() => {
     let result = allPosts;
 
     if (search) {
       const q = search.toLowerCase();
-      result = result.filter((a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q));
+      result = result.filter(
+        (a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q),
+      );
     }
 
     if (dateRange) {
-      result = result.filter((a) => {
-        if (!a.date) return false;
-        const d = new Date(a.date);
-        if (dateRange.from && d < dateRange.from) return false;
-        if (dateRange.to && d > dateRange.to) return false;
-        return true;
-      });
+      result = result.filter((a) => isWithinDateRange(a.date, dateRange));
     }
 
     return result;
@@ -315,7 +253,10 @@ function Page() {
               {visiblePosts.map((a, i) => {
                 const dateLabel = formatDate(a.date);
                 return (
-                  <article key={i} className="space-y-2 rounded-2xl border border-border bg-card p-3">
+                  <article
+                    key={i}
+                    className="space-y-2 rounded-2xl border border-border bg-card p-3"
+                  >
                     <SocialEmbed url={a.url} />
                     <div className="flex items-center justify-between px-1 text-xs">
                       <span className="inline-flex items-center gap-1 text-muted-foreground">
@@ -323,7 +264,12 @@ function Page() {
                         {detectPlatform(a.url)}
                       </span>
                       {dateLabel && <span className="text-muted-foreground">{dateLabel}</span>}
-                      <a href={a.url} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+                      <a
+                        href={a.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary hover:underline"
+                      >
                         Apri ↗
                       </a>
                     </div>

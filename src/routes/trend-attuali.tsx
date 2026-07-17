@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
-import { trendAttuali } from "@/lib/trends";
+import { trendAttuali, extractTikTokPostDate } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
@@ -21,6 +21,8 @@ type DbRow = {
   industry: string | null;
   tags: string[] | null;
   raw_email: string | null;
+  posted_at: string | null;
+  created_at: string;
 };
 
 function rowToTrendItem(row: DbRow): TrendItem {
@@ -34,6 +36,8 @@ function rowToTrendItem(row: DbRow): TrendItem {
     canali: null,
     rawEmail: row.raw_email ?? null,
     tags: row.tags ?? null,
+    postedAt: row.posted_at ?? extractTikTokPostDate(row.url),
+    insertedAt: row.created_at,
   };
 }
 
@@ -44,7 +48,7 @@ function Page() {
   const fetchRows = useCallback(() => {
     supabase
       .from("trend_submissions")
-      .select("id, url, title, category, industry, tags, raw_email")
+      .select("id, url, title, category, industry, tags, raw_email, posted_at, created_at")
       .eq("section", "trend-attuali")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
@@ -71,7 +75,8 @@ function Page() {
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Attuali</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Da realizzare entro 1-2 settimane. Trend social (TT o IG) con durata un po' più lunga.{"\n"}
+            Da realizzare entro 1-2 settimane. Trend social (TT o IG) con durata un po' più lunga.
+            {"\n"}
             Possono essere sia light shooting sia post "normali" (card, carousel).
           </p>
         </div>

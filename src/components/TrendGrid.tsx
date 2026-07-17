@@ -2,7 +2,26 @@ import { useMemo, useState } from "react";
 import type { TrendItem } from "@/lib/trends";
 import { detectPlatform, extractUsername } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "./SocialEmbed";
+import {
+  DateRangeFilter,
+  computeDateRange,
+  isWithinDateRange,
+  type DatePreset,
+} from "./DateRangeFilter";
 import { Search, X, Trash2 } from "lucide-react";
+
+function formatDate(dateStr: string | null | undefined): string {
+  if (!dateStr) return "";
+  try {
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    }).format(new Date(dateStr));
+  } catch {
+    return "";
+  }
+}
 
 type Props = {
   items: TrendItem[];
@@ -21,14 +40,35 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
   const [platform, setPlatform] = useState<string>("");
   const [deleting, setDeleting] = useState<string | null>(null);
 
+  const [postedPreset, setPostedPreset] = useState<DatePreset>("tutto");
+  const [postedFrom, setPostedFrom] = useState("");
+  const [postedTo, setPostedTo] = useState("");
+  const postedRange = useMemo(
+    () => computeDateRange(postedPreset, postedFrom, postedTo),
+    [postedPreset, postedFrom, postedTo],
+  );
+
+  const [insertedPreset, setInsertedPreset] = useState<DatePreset>("tutto");
+  const [insertedFrom, setInsertedFrom] = useState("");
+  const [insertedTo, setInsertedTo] = useState("");
+  const insertedRange = useMemo(
+    () => computeDateRange(insertedPreset, insertedFrom, insertedTo),
+    [insertedPreset, insertedFrom, insertedTo],
+  );
+
   const categories = useMemo(() => unique(items.map((i) => i.category)), [items]);
   const industries = useMemo(() => unique(items.map((i) => i.industry)), [items]);
-  const platforms = useMemo(() => unique(items.flatMap((i) => i.links.map(detectPlatform))), [items]);
+  const platforms = useMemo(
+    () => unique(items.flatMap((i) => i.links.map(detectPlatform))),
+    [items],
+  );
 
   const filtered = items.filter((i) => {
     if (category && i.category !== category) return false;
     if (industry && i.industry !== industry) return false;
     if (platform && !i.links.some((l) => detectPlatform(l) === platform)) return false;
+    if (!isWithinDateRange(i.postedAt, postedRange)) return false;
+    if (!isWithinDateRange(i.insertedAt, insertedRange)) return false;
     if (query) {
       const hay = [
         i.nome_trend,
@@ -49,7 +89,14 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
     return true;
   });
 
-  const hasFilters = !!(query || category || industry || platform);
+  const hasFilters = !!(
+    query ||
+    category ||
+    industry ||
+    platform ||
+    postedPreset !== "tutto" ||
+    insertedPreset !== "tutto"
+  );
 
   async function handleDelete(url: string) {
     const id = dbIds[url];
@@ -96,6 +143,12 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
               setCategory("");
               setIndustry("");
               setPlatform("");
+              setPostedPreset("tutto");
+              setPostedFrom("");
+              setPostedTo("");
+              setInsertedPreset("tutto");
+              setInsertedFrom("");
+              setInsertedTo("");
             }}
             className="inline-flex items-center gap-1 rounded-lg border border-border px-3 py-2 text-xs text-muted-foreground hover:text-foreground"
           >
@@ -105,6 +158,27 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
         <span className="ml-auto text-xs text-muted-foreground">
           {filtered.length} / {items.length}
         </span>
+      </div>
+
+      <div className="flex flex-col gap-2 rounded-2xl border border-border bg-card/50 p-4 backdrop-blur">
+        <DateRangeFilter
+          label="Data del post:"
+          preset={postedPreset}
+          setPreset={setPostedPreset}
+          customFrom={postedFrom}
+          setCustomFrom={setPostedFrom}
+          customTo={postedTo}
+          setCustomTo={setPostedTo}
+        />
+        <DateRangeFilter
+          label="Data di inserimento:"
+          preset={insertedPreset}
+          setPreset={setInsertedPreset}
+          customFrom={insertedFrom}
+          setCustomFrom={setInsertedFrom}
+          customTo={insertedTo}
+          setCustomTo={setInsertedTo}
+        />
       </div>
 
       {filtered.length === 0 ? (
@@ -141,10 +215,13 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
                   <h3 className="font-display text-base font-semibold leading-snug text-foreground">
                     {item.nome_trend ?? "—"}
                   </h3>
-                  {item.descrizione && <p className="text-xs text-muted-foreground line-clamp-3">{item.descrizione}</p>}
+                  {item.descrizione && (
+                    <p className="text-xs text-muted-foreground line-clamp-3">{item.descrizione}</p>
+                  )}
                   {item.applicazione && (
                     <p className="text-xs text-foreground/80">
-                      <span className="text-muted-foreground">Applicazione:</span> {item.applicazione}
+                      <span className="text-muted-foreground">Applicazione:</span>{" "}
+                      {item.applicazione}
                     </p>
                   )}
                   <div className="flex flex-wrap items-center gap-2 pt-1">
@@ -166,6 +243,12 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
                       </a>
                     ))}
                   </div>
+                  {(item.postedAt || item.insertedAt) && (
+                    <div className="flex flex-wrap gap-x-3 gap-y-0.5 pt-1 text-[10px] text-muted-foreground">
+                      {item.postedAt && <span>Pubblicato: {formatDate(item.postedAt)}</span>}
+                      {item.insertedAt && <span>Inserito: {formatDate(item.insertedAt)}</span>}
+                    </div>
+                  )}
                 </div>
               </article>
             );
