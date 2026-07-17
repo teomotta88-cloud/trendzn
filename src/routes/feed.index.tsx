@@ -62,6 +62,7 @@ interface Account {
   url: string;
   date?: string | null;
   caption?: string | null;
+  imageUrl?: string | null;
 }
 
 interface Canale {
@@ -79,6 +80,7 @@ interface Post {
   canaleName: string;
   date: string | null;
   caption: string | null;
+  imageUrl: string | null;
 }
 
 function isPostUrl(url: string): boolean {
@@ -663,6 +665,7 @@ export function TrendzFeed({
           canaleName: name,
           date: account.date ?? null,
           caption: account.caption ?? null,
+          imageUrl: account.imageUrl ?? null,
         });
       }
     }
@@ -735,54 +738,55 @@ export function TrendzFeed({
   }
 
   async function handleExportPptx(postsToExport: Post[], exportKeyword: string) {
-  const keyword = normalizeKeyword(exportKeyword);
+    const keyword = normalizeKeyword(exportKeyword);
 
-  if (!keyword) {
-    window.alert("Inserisci o seleziona una keyword prima di esportare il PPT.");
-    return;
-  }
-
-  if (postsToExport.length === 0) {
-    window.alert("Nessun post da esportare per questa keyword.");
-    return;
-  }
-
-  try {
-    const res = await fetch(EXPORT_FEED_PPTX_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        keyword,
-        title: `Feed ASPI Monitoring - ${keyword}`,
-        posts: postsToExport.map((post) => ({
-          url: post.url,
-          handle: post.handle,
-          platform: post.platform,
-          canaleName: post.canaleName,
-          date: post.date,
-          caption: post.caption,
-        })),
-      }),
-    });
-
-    if (!res.ok) {
-      const error = await res.json().catch(() => null);
-      throw new Error(error?.error || "Errore durante la generazione del PPT");
+    if (!keyword) {
+      window.alert("Inserisci o seleziona una keyword prima di esportare il PPT.");
+      return;
     }
 
-    const blob = await res.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `aspi-feed-${keyword}.pptx`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    window.URL.revokeObjectURL(url);
-  } catch (err) {
-    window.alert(String(err));
+    if (postsToExport.length === 0) {
+      window.alert("Nessun post da esportare per questa keyword.");
+      return;
+    }
+
+    try {
+      const res = await fetch(EXPORT_FEED_PPTX_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          keyword,
+          title: `Feed ASPI Monitoring - ${keyword}`,
+          posts: postsToExport.map((post) => ({
+            url: post.url,
+            handle: post.handle,
+            platform: post.platform,
+            canaleName: post.canaleName,
+            date: post.date,
+            caption: post.caption,
+            imageUrl: post.imageUrl,
+          })),
+        }),
+      });
+
+      if (!res.ok) {
+        const error = await res.json().catch(() => null);
+        throw new Error(error?.error || "Errore durante la generazione del PPT");
+      }
+
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `aspi-feed-${keyword}.pptx`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      window.alert(String(err));
+    }
   }
-}
 
   const filtered = sorted.filter((p) => {
     const matchPlatform = platformFilter === "tutti" || p.platform === platformFilter;
@@ -809,12 +813,10 @@ export function TrendzFeed({
   const visiblePosts = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
   const platforms = ["tutti", ...new Set(allPosts.map((p) => p.platform))];
-  
-const pptKeyword = activeKeyword || search.trim();
-const pptPosts = pptKeyword
-  ? sorted.filter((post) => postMatchesKeyword(post, pptKeyword))
-  : [];
-const canExportPptx = pptKeyword.trim().length > 0 && pptPosts.length > 0;
+
+  const pptKeyword = activeKeyword || search.trim();
+  const pptPosts = pptKeyword ? sorted.filter((post) => postMatchesKeyword(post, pptKeyword)) : [];
+  const canExportPptx = pptKeyword.trim().length > 0 && pptPosts.length > 0;
 
   return (
     <div className="space-y-8">
@@ -910,19 +912,19 @@ const canExportPptx = pptKeyword.trim().length > 0 && pptPosts.length > 0;
           onChange={(e) => setSearch(e.target.value)}
           className="flex-1 min-w-[200px] rounded-lg border border-border bg-background/60 py-2 px-3 text-sm outline-none focus:border-primary"
         />
-        
+
         <button
-  onClick={() => handleExportPptx(pptPosts, pptKeyword)}
-  disabled={!canExportPptx}
-  className="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
-  title={
-    canExportPptx
-      ? `Esporta ${pptPosts.length} post in PPT`
-      : "Inserisci una keyword nella ricerca o seleziona una keyword monitorata"
-  }
->
-  Esporta PPT{canExportPptx ? ` (${pptPosts.length})` : ""}
-</button>
+          onClick={() => handleExportPptx(pptPosts, pptKeyword)}
+          disabled={!canExportPptx}
+          className="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+          title={
+            canExportPptx
+              ? `Esporta ${pptPosts.length} post in PPT`
+              : "Inserisci una keyword nella ricerca o seleziona una keyword monitorata"
+          }
+        >
+          Esporta PPT{canExportPptx ? ` (${pptPosts.length})` : ""}
+        </button>
 
         <div className="flex gap-2 flex-wrap">
           {platforms.map((p) => (

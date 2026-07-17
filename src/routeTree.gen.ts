@@ -47,6 +47,7 @@ import { Route as ApiPublicHooksImportAspiBulkRouteImport } from './routes/api/p
 import { Route as ApiPublicHooksGettySearchRouteImport } from './routes/api/public/hooks/getty-search'
 import { Route as ApiPublicHooksExtractKeywordsRouteImport } from './routes/api/public/hooks/extract-keywords'
 import { Route as ApiPublicHooksExportXlsxRouteImport } from './routes/api/public/hooks/export-xlsx'
+import { Route as ApiPublicHooksExportFeedPptxRouteImport } from './routes/api/public/hooks/export-feed-pptx'
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksApproveJobRouteImport } from './routes/api/public/hooks/approve-job'
@@ -262,6 +263,12 @@ const ApiPublicHooksExportXlsxRoute =
     path: '/api/public/hooks/export-xlsx',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksExportFeedPptxRoute =
+  ApiPublicHooksExportFeedPptxRouteImport.update({
+    id: '/api/public/hooks/export-feed-pptx',
+    path: '/api/public/hooks/export-feed-pptx',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksDeleteTrendSubmissionRoute =
   ApiPublicHooksDeleteTrendSubmissionRouteImport.update({
     id: '/api/public/hooks/delete-trend-submission',
@@ -309,6 +316,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
@@ -353,6 +361,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
@@ -398,6 +407,7 @@ export interface FileRoutesById {
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
@@ -444,6 +454,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/export-feed-pptx'
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
@@ -488,6 +499,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/export-feed-pptx'
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
@@ -532,6 +544,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
+    | '/api/public/hooks/export-feed-pptx'
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
     | '/api/public/hooks/getty-search'
@@ -577,6 +590,7 @@ export interface RootRouteChildren {
   ApiPublicHooksApproveJobRoute: typeof ApiPublicHooksApproveJobRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
+  ApiPublicHooksExportFeedPptxRoute: typeof ApiPublicHooksExportFeedPptxRoute
   ApiPublicHooksExportXlsxRoute: typeof ApiPublicHooksExportXlsxRoute
   ApiPublicHooksExtractKeywordsRoute: typeof ApiPublicHooksExtractKeywordsRoute
   ApiPublicHooksGettySearchRoute: typeof ApiPublicHooksGettySearchRoute
@@ -868,6 +882,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksExportXlsxRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/export-feed-pptx': {
+      id: '/api/public/hooks/export-feed-pptx'
+      path: '/api/public/hooks/export-feed-pptx'
+      fullPath: '/api/public/hooks/export-feed-pptx'
+      preLoaderRoute: typeof ApiPublicHooksExportFeedPptxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/delete-trend-submission': {
       id: '/api/public/hooks/delete-trend-submission'
       path: '/api/public/hooks/delete-trend-submission'
@@ -922,6 +943,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:
     ApiPublicHooksDeleteTrendSubmissionRoute,
+  ApiPublicHooksExportFeedPptxRoute: ApiPublicHooksExportFeedPptxRoute,
   ApiPublicHooksExportXlsxRoute: ApiPublicHooksExportXlsxRoute,
   ApiPublicHooksExtractKeywordsRoute: ApiPublicHooksExtractKeywordsRoute,
   ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
@@ -953,3 +975,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
