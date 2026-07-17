@@ -39,7 +39,6 @@ import {
   SIGNAL_PLATFORM_LABEL,
   signalConfidence,
   type MonitoredTopic,
-  type TopicPlatformSignal,
 } from "@/lib/monitoredTopics";
 import { GROWTH_THRESHOLD_PCT } from "@/lib/topicGrowth";
 
@@ -215,51 +214,40 @@ function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
   );
 }
 
-// Un segnale di crescita per piattaforma (Fase 2): TikTok e Instagram non si
-// sovrascrivono più, si mostrano affiancati con la loro confidenza — "esatto"
-// (conteggio reale Creative Center) vs "campione" (pagina hashtag Instagram).
-function SignalRow({ signal }: { signal: TopicPlatformSignal }) {
-  const sampled = signalConfidence(signal) === "sampled";
-  return (
-    <div className="flex flex-col gap-1 rounded-lg border border-border/60 bg-background/40 px-2 py-1.5">
-      <div className="flex items-center gap-1.5">
-        <span className="text-[11px] font-medium text-foreground">
-          {SIGNAL_PLATFORM_LABEL[signal.platform]}
-        </span>
-        <span
-          className="rounded bg-muted px-1 py-0.5 text-[9px] uppercase tracking-wide text-muted-foreground"
-          title={
-            sampled
-              ? "Campione della pagina hashtag, non il totale reale — copertura parziale possibile"
-              : "Conteggio reale sull'intero hashtag (Creative Center)"
-          }
-        >
-          {sampled ? "campione" : "esatto"}
-        </span>
-        {signal.latest_content_volume != null && (
-          <span className="ml-auto text-[10px] tabular-nums text-muted-foreground">
-            {sampled ? "~" : ""}
-            {formatCompactNumber(signal.latest_content_volume)} contenuti
-          </span>
-        )}
-      </div>
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5">
-        <div className="flex items-center gap-1">
-          <span className="text-[9px] uppercase tracking-wide text-muted-foreground">Volumi</span>
-          <GrowthIndicator pct={signal.volume_growth_pct} />
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="text-[9px] uppercase tracking-wide text-muted-foreground">
-            Engagement
-          </span>
-          <GrowthIndicator pct={signal.engagement_growth_pct} />
-        </div>
-      </div>
-    </div>
-  );
+type RankedTopicType = "tiktok-hashtag" | "google-trends";
+type TopicView = RankedTopicType | "content";
+
+const TOPIC_VIEW_LABELS: Record<TopicView, string> = {
+  "tiktok-hashtag": "TikTok Trend",
+  "google-trends": "Google Trend",
+  content: "Contenuti",
+};
+
+// Nessun "rank" reale esiste ancora per Google Trends (solo TikTok
+// Creative Center lo fornisce, e nemmeno quello è esposto oggi da
+// list-monitored-topics) — come proxy si ordina per il volume più alto
+// disponibile tra i segnali del topic (il più esatto se ce n'è più di uno),
+// così la classifica numerata riflette comunque "quanto è grande il topic
+// adesso", non l'ordine di arrivo dall'API.
+function topicRankValue(topic: MonitoredTopic): number {
+  let best = -1;
+  for (const s of topic.signals) {
+    if (s.latest_content_volume != null && s.latest_content_volume > best) {
+      best = s.latest_content_volume;
+    }
+  }
+  return best;
 }
 
-function TopicCard({ topic, verdict }: { topic: MonitoredTopic; verdict: TopicVerdict }) {
+function TopicRankingRow({
+  rank,
+  topic,
+  verdict,
+}: {
+  rank: number;
+  topic: MonitoredTopic;
+  verdict: TopicVerdict;
+}) {
   const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
   const producing = verdict === "producing";
   // TikTok (esatto) prima di Instagram (campione).
@@ -268,73 +256,90 @@ function TopicCard({ topic, verdict }: { topic: MonitoredTopic; verdict: TopicVe
   );
 
   return (
-    <div
-      className={`flex flex-col gap-2 rounded-xl border px-3 py-2.5 ${
+    <li
+      className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 ${
         producing ? "border-orange-500/60 bg-orange-500/5" : "border-border bg-card"
       }`}
     >
-      <div className="flex items-start justify-between gap-2">
-        <p className="min-w-0 truncate text-sm font-medium text-foreground">{label}</p>
-        <VerdictBadge verdict={verdict} />
-      </div>
-
-      {signals.length === 0 ? (
-        <p className="text-[11px] text-muted-foreground">Nessun segnale ancora rilevato</p>
-      ) : (
-        <div className="flex flex-col gap-1.5">
-          {signals.map((s) => (
-            <SignalRow key={s.platform} signal={s} />
-          ))}
+      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-semibold tabular-nums text-muted-foreground">
+        {rank}
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="truncate text-sm font-medium text-foreground">{label}</p>
+          <VerdictBadge verdict={verdict} />
         </div>
-      )}
-    </div>
+        {signals.length === 0 ? (
+          <p className="mt-0.5 text-[11px] text-muted-foreground">Nessun segnale ancora rilevato</p>
+        ) : (
+          <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1">
+            {signals.map((s) => {
+              const sampled = signalConfidence(s) === "sampled";
+              return (
+                <div key={s.platform} className="flex items-center gap-1.5">
+                  <span className="text-[11px] font-medium text-foreground">
+                    {SIGNAL_PLATFORM_LABEL[s.platform]}
+                  </span>
+                  {s.latest_content_volume != null && (
+                    <span className="text-[11px] tabular-nums text-muted-foreground">
+                      {sampled ? "~" : ""}
+                      {formatCompactNumber(s.latest_content_volume)}
+                    </span>
+                  )}
+                  <GrowthIndicator pct={s.volume_growth_pct} />
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </li>
   );
 }
 
-function TopicToggleSection({
+function TopicRankingList({
   topics,
+  view,
   contentByTopic,
 }: {
   topics: MonitoredTopic[];
+  view: RankedTopicType;
   contentByTopic: Map<string, ViralTrendContent[]>;
 }) {
-  const [view, setView] = useState<"tiktok-hashtag" | "google-trends">("tiktok-hashtag");
-
   // Solo i topic davvero ancora in classifica adesso, non quelli nel periodo
   // di grazia (usciti dai top-N, ma ancora status='active' e monitorati in
   // background per altre 24h) — vedi isCurrentlyRanked in monitoredTopics.ts.
+  // Ordinati per volume decrescente per dare una classifica numerata stabile
+  // invece della griglia libera di prima.
   const shown = useMemo(
-    () => topics.filter((t) => t.topic_type === view && isCurrentlyRanked(t)),
+    () =>
+      topics
+        .filter((t) => t.topic_type === view && isCurrentlyRanked(t))
+        .sort((a, b) => topicRankValue(b) - topicRankValue(a)),
     [topics, view],
   );
 
-  return (
-    <section className="space-y-3">
-      <Tabs value={view} onValueChange={(v) => setView(v as typeof view)}>
-        <TabsList>
-          <TabsTrigger value="tiktok-hashtag">TikTok Trend</TabsTrigger>
-          <TabsTrigger value="google-trends">Google Trend</TabsTrigger>
-        </TabsList>
-      </Tabs>
+  if (shown.length === 0) {
+    return (
+      <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+        Nessun topic monitorato al momento per questa fonte.
+      </p>
+    );
+  }
 
-      {shown.length === 0 ? (
-        <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-          Nessun topic monitorato al momento per questa fonte.
-        </p>
-      ) : (
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {shown.map((t) => (
-            <TopicCard
-              key={t.id}
-              topic={t}
-              verdict={computeTopicVerdict(contentByTopic.get(t.value) ?? [], {
-                hasSignals: t.signals.length > 0,
-              })}
-            />
-          ))}
-        </div>
-      )}
-    </section>
+  return (
+    <ol className="space-y-1.5">
+      {shown.map((t, i) => (
+        <TopicRankingRow
+          key={t.id}
+          rank={i + 1}
+          topic={t}
+          verdict={computeTopicVerdict(contentByTopic.get(t.value) ?? [], {
+            hasSignals: t.signals.length > 0,
+          })}
+        />
+      ))}
+    </ol>
   );
 }
 
@@ -359,6 +364,7 @@ function Page() {
   const [topics, setTopics] = useState<MonitoredTopic[]>([]);
   const [topicsError, setTopicsError] = useState<string | null>(null);
   const [topicContent, setTopicContent] = useState<ViralTrendContent[]>([]);
+  const [view, setView] = useState<TopicView>("tiktok-hashtag");
 
   useEffect(() => {
     setLoading(true);
@@ -460,201 +466,221 @@ function Page() {
         </p>
       </header>
 
-      {topicsError ? (
-        <p className="text-sm text-destructive">
-          Errore nel caricamento dei topic monitorati: {topicsError}.
-        </p>
-      ) : (
-        <TopicToggleSection topics={topics} contentByTopic={contentByTopic} />
-      )}
-
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
-        <div className="relative flex-1 min-w-[220px]">
-          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Cerca per contenuto, autore, keyword o hashtag…"
-            className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
-          />
-        </div>
-
-        <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortBy)}>
-          <SelectTrigger className="w-44">
-            <SelectValue placeholder="Ordina per" />
-          </SelectTrigger>
-          <SelectContent>
-            {SORT_OPTIONS.map((s) => (
-              <SelectItem key={s} value={s}>
-                {SORT_LABELS[s]}
-              </SelectItem>
+      <section className="space-y-3">
+        <Tabs value={view} onValueChange={(v) => setView(v as TopicView)}>
+          <TabsList>
+            {(["tiktok-hashtag", "google-trends", "content"] as const).map((v) => (
+              <TabsTrigger key={v} value={v}>
+                {TOPIC_VIEW_LABELS[v]}
+              </TabsTrigger>
             ))}
-          </SelectContent>
-        </Select>
+          </TabsList>
+        </Tabs>
 
-        <Select
-          value={platformFilter}
-          onValueChange={(v) => setPlatformFilter(v as ViralPlatform | "all")}
-        >
-          <SelectTrigger className="w-44">
-            <SelectValue placeholder="Piattaforma" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Tutte le piattaforme</SelectItem>
-            {VIRAL_PLATFORMS.map((p) => (
-              <SelectItem key={p} value={p} className="capitalize">
-                {p}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        {view !== "content" &&
+          (topicsError ? (
+            <p className="text-sm text-destructive">
+              Errore nel caricamento dei topic monitorati: {topicsError}.
+            </p>
+          ) : (
+            <TopicRankingList topics={topics} view={view} contentByTopic={contentByTopic} />
+          ))}
+      </section>
 
-        <Select
-          value={sourceFilter}
-          onValueChange={(v) => setSourceFilter(v as DiscoverySource | "all")}
-        >
-          <SelectTrigger className="w-44">
-            <SelectValue placeholder="Fonte del topic" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Tutte le fonti</SelectItem>
-            {DISCOVERY_SOURCES.map((s) => (
-              <SelectItem key={s} value={s}>
-                {DISCOVERY_SOURCE_LABELS[s]}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+      {view === "content" && (
+        <>
+          <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
+            <div className="relative flex-1 min-w-[220px]">
+              <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+              <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Cerca per contenuto, autore, keyword o hashtag…"
+                className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
+              />
+            </div>
 
-        <Select
-          value={contentTypeFilter}
-          onValueChange={(v) => setContentTypeFilter(v as ContentTypeFilter)}
-        >
-          <SelectTrigger className="w-44">
-            <SelectValue placeholder="Tipologia" />
-          </SelectTrigger>
-          <SelectContent>
-            {CONTENT_TYPE_OPTIONS.map((c) => (
-              <SelectItem key={c} value={c}>
-                {CONTENT_TYPE_LABELS[c]}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+            <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortBy)}>
+              <SelectTrigger className="w-44">
+                <SelectValue placeholder="Ordina per" />
+              </SelectTrigger>
+              <SelectContent>
+                {SORT_OPTIONS.map((s) => (
+                  <SelectItem key={s} value={s}>
+                    {SORT_LABELS[s]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
 
-        {hashtagOptions.length > 0 && (
-          <Select value={hashtagFilter} onValueChange={setHashtagFilter}>
-            <SelectTrigger className="w-48">
-              <SelectValue placeholder="Hashtag di origine" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Tutti gli hashtag</SelectItem>
-              {hashtagOptions.map(([h, source]) => (
-                <SelectItem key={h} value={h}>
-                  {source === "tiktok-hashtag" ? `#${h}` : h}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        )}
-
-        <span className="ml-auto text-xs text-muted-foreground">{filtered.length} contenuti</span>
-      </div>
-
-      {error ? (
-        <p className="text-sm text-destructive">
-          Errore nel caricamento: {error}. Probabile causa: la migration non è ancora stata
-          applicata al database (tabella viral_trend_content mancante).
-        </p>
-      ) : loading ? (
-        <div className="text-sm text-muted-foreground">Caricamento…</div>
-      ) : filtered.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
-          Nessun contenuto ancora. Il workflow "Sync Trend Virali" popola questa pagina una volta al
-          giorno a partire dagli hashtag TikTok in trend e dalle ricerche Google Trends IT.
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {visible.map((item) => (
-            <article
-              key={item.id}
-              className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60"
+            <Select
+              value={platformFilter}
+              onValueChange={(v) => setPlatformFilter(v as ViralPlatform | "all")}
             >
-              <SocialEmbed url={item.url} />
+              <SelectTrigger className="w-44">
+                <SelectValue placeholder="Piattaforma" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Tutte le piattaforme</SelectItem>
+                {VIRAL_PLATFORMS.map((p) => (
+                  <SelectItem key={p} value={p} className="capitalize">
+                    {p}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
 
-              <div className="space-y-2 px-1 pb-2">
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="inline-flex items-center gap-1 text-xs font-medium capitalize text-foreground">
-                    <PlatformIcon platform={item.platform} className="size-3.5" />
-                    {item.platform}
-                  </span>
-                  <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">
-                    {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
-                  </span>
-                  <span className="ml-auto text-[10px] text-muted-foreground">
-                    {formatDate(item.published_at ?? item.created_at)}
-                  </span>
-                </div>
+            <Select
+              value={sourceFilter}
+              onValueChange={(v) => setSourceFilter(v as DiscoverySource | "all")}
+            >
+              <SelectTrigger className="w-44">
+                <SelectValue placeholder="Fonte del topic" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Tutte le fonti</SelectItem>
+                {DISCOVERY_SOURCES.map((s) => (
+                  <SelectItem key={s} value={s}>
+                    {DISCOVERY_SOURCE_LABELS[s]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
 
-                {item.author && (
-                  <p className="text-xs font-semibold text-foreground">{item.author}</p>
-                )}
+            <Select
+              value={contentTypeFilter}
+              onValueChange={(v) => setContentTypeFilter(v as ContentTypeFilter)}
+            >
+              <SelectTrigger className="w-44">
+                <SelectValue placeholder="Tipologia" />
+              </SelectTrigger>
+              <SelectContent>
+                {CONTENT_TYPE_OPTIONS.map((c) => (
+                  <SelectItem key={c} value={c}>
+                    {CONTENT_TYPE_LABELS[c]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
 
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block hover:underline"
+            {hashtagOptions.length > 0 && (
+              <Select value={hashtagFilter} onValueChange={setHashtagFilter}>
+                <SelectTrigger className="w-48">
+                  <SelectValue placeholder="Hashtag di origine" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Tutti gli hashtag</SelectItem>
+                  {hashtagOptions.map(([h, source]) => (
+                    <SelectItem key={h} value={h}>
+                      {source === "tiktok-hashtag" ? `#${h}` : h}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            )}
+
+            <span className="ml-auto text-xs text-muted-foreground">
+              {filtered.length} contenuti
+            </span>
+          </div>
+
+          {error ? (
+            <p className="text-sm text-destructive">
+              Errore nel caricamento: {error}. Probabile causa: la migration non è ancora stata
+              applicata al database (tabella viral_trend_content mancante).
+            </p>
+          ) : loading ? (
+            <div className="text-sm text-muted-foreground">Caricamento…</div>
+          ) : filtered.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+              Nessun contenuto ancora. Il workflow "Sync Trend Virali" popola questa pagina una
+              volta al giorno a partire dagli hashtag TikTok in trend e dalle ricerche Google Trends
+              IT.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {visible.map((item) => (
+                <article
+                  key={item.id}
+                  className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60"
                 >
-                  <p className="line-clamp-3 text-xs text-muted-foreground">
-                    {item.content || item.url}
-                  </p>
-                </a>
+                  <SocialEmbed url={item.url} />
 
-                <p className="text-[10px] text-muted-foreground">
-                  {item.discovery_source === "tiktok-hashtag"
-                    ? `#${item.source_hashtag}`
-                    : item.source_hashtag}{" "}
-                  → {item.keyword_matched}
-                </p>
+                  <div className="space-y-2 px-1 pb-2">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 text-xs font-medium capitalize text-foreground">
+                        <PlatformIcon platform={item.platform} className="size-3.5" />
+                        {item.platform}
+                      </span>
+                      <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">
+                        {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
+                      </span>
+                      <span className="ml-auto text-[10px] text-muted-foreground">
+                        {formatDate(item.published_at ?? item.created_at)}
+                      </span>
+                    </div>
 
-                <div className="flex items-center gap-3 text-xs tabular-nums">
-                  {/* reach è null (non 0) per i post foto/carosello: Instagram non
+                    {item.author && (
+                      <p className="text-xs font-semibold text-foreground">{item.author}</p>
+                    )}
+
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="block hover:underline"
+                    >
+                      <p className="line-clamp-3 text-xs text-muted-foreground">
+                        {item.content || item.url}
+                      </p>
+                    </a>
+
+                    <p className="text-[10px] text-muted-foreground">
+                      {item.discovery_source === "tiktok-hashtag"
+                        ? `#${item.source_hashtag}`
+                        : item.source_hashtag}{" "}
+                      → {item.keyword_matched}
+                    </p>
+
+                    <div className="flex items-center gap-3 text-xs tabular-nums">
+                      {/* reach è null (non 0) per i post foto/carosello: Instagram non
                       traccia le views per contenuti statici, non è un dato mancante
                       da segnalare con un placeholder — l'indicatore va tolto del tutto. */}
-                  {item.reach != null && (
-                    <span className="inline-flex items-center gap-1">
-                      <Eye className="size-3 text-muted-foreground" />
-                      {formatCompactNumber(item.reach)}
-                    </span>
-                  )}
-                  {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
+                      {item.reach != null && (
+                        <span className="inline-flex items-center gap-1">
+                          <Eye className="size-3 text-muted-foreground" />
+                          {formatCompactNumber(item.reach)}
+                        </span>
+                      )}
+                      {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
                       "zero interazioni", non "dato non disponibile". */}
-                  {item.platform !== "tiktok" && (
-                    <span className="inline-flex items-center gap-1">
-                      <Heart className="size-3 text-muted-foreground" />
-                      {formatCompactNumber(item.engagement)}
-                    </span>
-                  )}
-                </div>
+                      {item.platform !== "tiktok" && (
+                        <span className="inline-flex items-center gap-1">
+                          <Heart className="size-3 text-muted-foreground" />
+                          {formatCompactNumber(item.engagement)}
+                        </span>
+                      )}
+                    </div>
 
-                <VariationBadge item={item} />
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
+                    <VariationBadge item={item} />
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
 
-      {!error && !loading && visibleCount < filtered.length && (
-        <div className="flex justify-center">
-          <button
-            type="button"
-            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-            className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
-          >
-            Carica altri ({filtered.length - visibleCount} rimanenti)
-          </button>
-        </div>
+          {!error && !loading && visibleCount < filtered.length && (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
+              >
+                Carica altri ({filtered.length - visibleCount} rimanenti)
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
