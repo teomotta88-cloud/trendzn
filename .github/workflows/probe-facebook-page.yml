@@ -1,0 +1,36 @@
+name: Probe Facebook Page (diagnostico)
+
+# Workflow usa-e-getta: verifica quanti post di una Pagina Facebook pubblica
+# sono leggibili SENZA login prima del wall non chiudibile (chiude il primo
+# popup, scrolla finché non appare il wall bloccante, poi legge dal DOM url,
+# data visibile, copy e media dei post trovati). Nessuna pipeline lo usa
+# ancora: serve solo a validare la strada prima di costruire la sync FB in
+# ASPI-monitoring.
+
+on:
+  workflow_dispatch:
+    inputs:
+      page_url:
+        description: "URL completo della Pagina Facebook pubblica da testare"
+        required: false
+        default: "https://www.facebook.com/AssociazioneMiDimostro"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Apri la pagina e leggi i post visibili senza login
+        run: node scripts/probe-facebook-page.mjs "${{ github.event.inputs.page_url }}"
