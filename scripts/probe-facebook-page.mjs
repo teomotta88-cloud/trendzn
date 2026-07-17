@@ -6,24 +6,29 @@
 // Comportamento osservato su facebook.com/<pagina>:
 // 1. Al caricamento appare un popup di login CHIUDIBILE (bottone "Chiudi").
 // 2. Dopo un po' di scroll ne appare un secondo, NON chiudibile, che blocca
-//    ulteriori caricamenti — ma i post già arrivati nel DOM restano leggibili.
+//    ulteriori caricamenti — ma i post già arrivati nel DOM restano leggibili
+//    (in alcune run il wall non compare affatto entro MAX_SCROLLS).
 //
-// Quindi: chiudiamo il primo popup, scrolliamo un numero limitato di volte
-// per caricare più post possibile, ci fermiamo quando rileviamo il wall
-// definitivo (o dopo N tentativi), poi leggiamo dal DOM tutto ciò che
-// somiglia a un post: link permalink, testo, data visibile, media.
-//
-// Fase 2 (enrichment): per i primi post trovati, apriamo il permalink diretto
-// e controlliamo se espone JSON-LD / meta og: più puliti (stesso approccio già
-// usato in probe-instagram-post.mjs).
+// V2, dopo la prima run reale (6 scroll → un solo post utile su 3 elementi
+// [role="article"] trovati, gli altri 2 erano widget vuoti, non post):
+// - MAX_SCROLLS alzato e attese più lunghe: il caricamento lazy in headless
+//   sembra più lento che in un browser reale.
+// - navigator.webdriver mascherato: Facebook potrebbe limitare
+//   deliberatamente il contenuto mostrato a browser riconosciuti come
+//   automatizzati (pagina comunque pubblica, nessun bypass di login/paywall).
+// - L'enrichment sul permalink è stato rimosso: nella run reale non ha
+//   prodotto nulla (0 JSON-LD, 0 meta) — i dati buoni (permalink, data,
+//   copy, immagine del post) arrivano tutti dalla pagina indice.
+// - extractPosts ora scarta direttamente gli elementi senza permalink, così
+//   il conteggio riportato è quello dei post reali, non del rumore ARIA.
 //
 // Uso: node scripts/probe-facebook-page.mjs <url-pagina-facebook>
 
 import { chromium } from "playwright";
 
 const pageUrl = process.argv[2] || "https://www.facebook.com/AssociazioneMiDimostro";
-const MAX_SCROLLS = 6;
-const SCROLL_WAIT_MS = 2200;
+const MAX_SCROLLS = 20;
+const SCROLL_WAIT_MS = 3000;
 
 function log(...args) {
   console.log(...args);
@@ -74,7 +79,8 @@ function extractPosts() {
 
   const articles = Array.from(document.querySelectorAll('[role="article"]'));
 
-  return articles.map((el, idx) => {
+  const posts = [];
+  for (const el of articles) {
     const links = Array.from(el.querySelectorAll("a[href]"));
 
     // Il link permalink è quello (spesso vicino all'header) il cui href
@@ -89,10 +95,17 @@ function extractPosts() {
       }
     }
 
-    const permalinkHref = permalinkEl ? permalinkEl.href : null;
-    const dateText = permalinkEl
-      ? (permalinkEl.getAttribute("aria-label") || permalinkEl.textContent || "").trim()
-      : null;
+    // Scartiamo subito gli elementi [role="article"] senza permalink: sono
+    // widget/placeholder che condividono il ruolo ARIA ma non sono post
+    // (osservato nella prima run: 2 elementi su 3 erano completamente vuoti).
+    if (!permalinkEl) continue;
+
+    const permalinkHref = permalinkEl.href;
+    const dateText = (
+      permalinkEl.getAttribute("aria-label") ||
+      permalinkEl.textContent ||
+      ""
+    ).trim();
 
     // Testo del post: cerchiamo il blocco con più testo "leggibile" (non link
     // singoli tipo "Mi piace"/"Commenta"), tipicamente div[dir="auto"].
@@ -104,25 +117,38 @@ function extractPosts() {
     const img = el.querySelector("img[src]");
     const video = el.querySelector("video");
 
-    return {
-      index: idx,
+    posts.push({
+      index: posts.length,
       permalinkHref,
       dateText,
       copy: copy ? copy.slice(0, 300) : null,
       mediaImage: img ? img.src : null,
       hasVideo: !!video,
       rawTextLength: el.textContent?.length ?? 0,
-    };
-  });
+    });
+  }
+  return posts;
 }
 
 async function probeIndexPage(browser) {
-  const page = await browser.newPage({
+  const context = await browser.newContext({
     userAgent:
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
     viewport: { width: 1280, height: 1400 },
     locale: "it-IT",
   });
+
+  // Maschera i segnali più comuni di automazione: Facebook potrebbe
+  // mostrare meno contenuto (o caricarlo più lentamente) a un browser
+  // riconosciuto come headless/Playwright. La pagina resta comunque
+  // pubblica: non aggiriamo nessun login, solo la rilevazione del bot.
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => false });
+    Object.defineProperty(navigator, "languages", { get: () => ["it-IT", "it", "en-US", "en"] });
+    Object.defineProperty(navigator, "plugins", { get: () => [1, 2, 3, 4, 5] });
+  });
+
+  const page = await context.newPage();
 
   log(`Navigo verso: ${pageUrl}`);
   const response = await page
@@ -138,6 +164,9 @@ async function probeIndexPage(browser) {
   await tryCloseFirstPopup(page);
 
   let scrolls = 0;
+  let lastPostCount = 0;
+  let stagnantRounds = 0;
+
   while (scrolls < MAX_SCROLLS) {
     const blocked = await hasBlockingWall(page);
     if (blocked) {
@@ -147,14 +176,30 @@ async function probeIndexPage(browser) {
     await page.mouse.wheel(0, 1800);
     await page.waitForTimeout(SCROLL_WAIT_MS);
     scrolls++;
-    log(`  scroll #${scrolls} eseguito`);
+
+    const currentCount = await page.evaluate(extractPosts).then((p) => p.length);
+    log(`  scroll #${scrolls} eseguito — post reali nel DOM finora: ${currentCount}`);
+
+    // Se per 4 scroll di fila non arrivano nuovi post, probabilmente non ce
+    // ne sono altri da caricare (o siamo bloccati in altro modo): ci
+    // fermiamo prima di MAX_SCROLLS invece di continuare a vuoto.
+    if (currentCount === lastPostCount) {
+      stagnantRounds++;
+      if (stagnantRounds >= 4) {
+        log(`  nessun nuovo post dopo ${stagnantRounds} scroll consecutivi — mi fermo.`);
+        break;
+      }
+    } else {
+      stagnantRounds = 0;
+      lastPostCount = currentCount;
+    }
   }
 
   const finalBlocked = await hasBlockingWall(page);
   log(`\nWall bloccante presente a fine scroll: ${finalBlocked}`);
 
   const posts = await page.evaluate(extractPosts);
-  log(`\n=== Post individuati nel DOM: ${posts.length} ===`);
+  log(`\n=== Post reali individuati nel DOM: ${posts.length} ===`);
   for (const p of posts) {
     log(`\n#${p.index}`);
     log("  permalink:", p.permalinkHref);
@@ -173,68 +218,16 @@ async function probeIndexPage(browser) {
       }))
       .filter((m) => m.property && /og:|description/i.test(m.property)),
   );
-  log("\n=== Meta tag della pagina (og:) ===");
+  log("\n=== Meta tag della pagina (og:, solo informativi — non per-post) ===");
   log(JSON.stringify(pageMeta, null, 2));
 
-  await page.close();
-  return posts.filter((p) => p.permalinkHref);
-}
-
-async function probePermalink(browser, url, label) {
-  const page = await browser.newPage({
-    userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-    viewport: { width: 1280, height: 900 },
-    locale: "it-IT",
-  });
-
-  log(`\n--- Enrichment: apro permalink [${label}] ---`);
-  log(url);
-  const response = await page
-    .goto(url, { waitUntil: "domcontentloaded", timeout: 30000 })
-    .catch((e) => {
-      log("Errore di navigazione:", e.message);
-      return null;
-    });
-  log("Status HTTP:", response ? response.status() : "(nessuna risposta)");
-  await page.waitForTimeout(2000);
-  await tryCloseFirstPopup(page);
-
-  const ldJson = await page.$$eval('script[type="application/ld+json"]', (nodes) =>
-    nodes.map((n) => n.textContent),
-  );
-  log(`JSON-LD trovati: ${ldJson.length}`);
-  for (const j of ldJson) {
-    try {
-      log(JSON.stringify(JSON.parse(j), null, 2).slice(0, 1500));
-    } catch {
-      log(j.slice(0, 400));
-    }
-  }
-
-  const meta = await page.$$eval("meta", (nodes) =>
-    nodes
-      .map((n) => ({
-        property: n.getAttribute("property") || n.getAttribute("name"),
-        content: n.getAttribute("content"),
-      }))
-      .filter((m) => m.property && /og:|article:|description|published/i.test(m.property)),
-  );
-  log("Meta tag rilevanti:");
-  log(JSON.stringify(meta, null, 2));
-
-  await page.close();
+  await context.close();
+  return posts;
 }
 
 const browser = await chromium.launch({ headless: true });
 try {
-  const posts = await probeIndexPage(browser);
-
-  const toEnrich = posts.slice(0, 3);
-  for (const p of toEnrich) {
-    await probePermalink(browser, p.permalinkHref, `post #${p.index}`);
-  }
-
+  await probeIndexPage(browser);
   log("\n=== Fine probe ===");
 } finally {
   await browser.close();
