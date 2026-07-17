@@ -300,7 +300,55 @@ async function fetchImageBuffer(url: string): Promise<{ buffer: Buffer; mime: st
   return null;
 }
 
-async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
+// pptxgenjs (v3.12.0, quella installata) NON misura mai le dimensioni reali
+// di un'immagine passata come base64 (`data`): nel suo stesso sorgente
+// (addImageDefinition) c'è un `FIXME: Measure actual image when no
+// intWidth/intHeight params passed` mai implementato — l'opzione `sizing:
+// contain` quindi non ha alcuna dimensione reale su cui basare il calcolo e
+// non produce alcun effetto. Misuriamo noi le dimensioni leggendo i byte
+// dell'immagine (nessuna libreria nuova: PNG le ha nell'header IHDR a
+// offset fisso, JPEG nel marker SOF), e calcoliamo a mano il box "contain"
+// da passare come x/y/w/h espliciti.
+function getPngDimensions(buffer: Buffer): { width: number; height: number } | null {
+  // Firma PNG (8 byte) + chunk IHDR: lunghezza(4) + "IHDR"(4) + width(4) + height(4)
+  if (buffer.length < 24) return null;
+  const isPng =
+    buffer[0] === 0x89 && buffer[1] === 0x50 && buffer[2] === 0x4e && buffer[3] === 0x47;
+  if (!isPng) return null;
+  return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+}
+
+function getJpegDimensions(buffer: Buffer): { width: number; height: number } | null {
+  if (buffer.length < 4 || buffer[0] !== 0xff || buffer[1] !== 0xd8) return null;
+  let offset = 2;
+  while (offset + 9 < buffer.length) {
+    if (buffer[offset] !== 0xff) {
+      offset++;
+      continue;
+    }
+    const marker = buffer[offset + 1];
+    // Marker SOFn (Start Of Frame) che portano le dimensioni; escludiamo i
+    // marker DHT/JPG/DAC (0xC4, 0xC8, 0xCC) che non sono SOF veri.
+    const isSof =
+      marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc;
+    if (isSof) {
+      const height = buffer.readUInt16BE(offset + 5);
+      const width = buffer.readUInt16BE(offset + 7);
+      return { width, height };
+    }
+    const segmentLength = buffer.readUInt16BE(offset + 2);
+    offset += 2 + segmentLength;
+  }
+  return null;
+}
+
+interface ImageForSlide {
+  dataUri: string;
+  width: number;
+  height: number;
+}
+
+async function imageUrlToSlideImage(url?: string | null): Promise<ImageForSlide | null> {
   if (!url) return null;
 
   const fetched = await fetchImageBuffer(url);
@@ -309,29 +357,79 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
   const { buffer, mime } = fetched;
 
   try {
+    let finalBuffer: Buffer;
+    let finalMime: "image/jpeg" | "image/png";
+
     if (mime === "image/jpeg" || mime === "image/jpg") {
-      return `data:image/jpeg;base64,${buffer.toString("base64")}`;
+      finalBuffer = buffer;
+      finalMime = "image/jpeg";
+    } else if (mime === "image/png") {
+      finalBuffer = buffer;
+      finalMime = "image/png";
+    } else {
+      const pngBuffer = await convertToPngBuffer(
+        buffer.buffer.slice(
+          buffer.byteOffset,
+          buffer.byteOffset + buffer.byteLength,
+        ) as ArrayBuffer,
+        mime,
+      );
+      if (!pngBuffer) {
+        console.warn("PPT image unsupported format after conversion attempt:", mime, url);
+        return null;
+      }
+      finalBuffer = pngBuffer;
+      finalMime = "image/png";
     }
 
-    if (mime === "image/png") {
-      return `data:image/png;base64,${buffer.toString("base64")}`;
-    }
+    const dims =
+      finalMime === "image/png" ? getPngDimensions(finalBuffer) : getJpegDimensions(finalBuffer);
 
-    const pngBuffer = await convertToPngBuffer(
-      buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength) as ArrayBuffer,
-      mime,
-    );
-
-    if (!pngBuffer) {
-      console.warn("PPT image unsupported format after conversion attempt:", mime, url);
+    if (!dims || !dims.width || !dims.height) {
+      console.warn("PPT image dimension parsing failed:", finalMime, url);
       return null;
     }
 
-    return `data:image/png;base64,${pngBuffer.toString("base64")}`;
+    return {
+      dataUri: `data:${finalMime};base64,${finalBuffer.toString("base64")}`,
+      width: dims.width,
+      height: dims.height,
+    };
   } catch (err) {
     console.warn("PPT image convert failed:", String(err), url);
     return null;
   }
+}
+
+// Calcola il box "contain": stesse proporzioni dell'immagine originale,
+// centrato dentro il riquadro (boxX/boxY/boxW/boxH), senza deformarla.
+function computeContainBox(
+  imgWidth: number,
+  imgHeight: number,
+  boxX: number,
+  boxY: number,
+  boxW: number,
+  boxH: number,
+): { x: number; y: number; w: number; h: number } {
+  const imgRatio = imgWidth / imgHeight;
+  const boxRatio = boxW / boxH;
+
+  let w: number;
+  let h: number;
+  if (imgRatio > boxRatio) {
+    w = boxW;
+    h = boxW / imgRatio;
+  } else {
+    h = boxH;
+    w = boxH * imgRatio;
+  }
+
+  return {
+    x: boxX + (boxW - w) / 2,
+    y: boxY + (boxH - h) / 2,
+    w,
+    h,
+  };
 }
 
 function addFooter(slide: pptxgen.Slide, index: number, total: number) {
@@ -625,22 +723,31 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
             });
 
             const previewImageUrl = await getPreviewImageUrl(post);
-            const imageData = await imageUrlToDataUri(previewImageUrl);
+            const slideImage = await imageUrlToSlideImage(previewImageUrl);
 
-            if (imageData) {
+            if (slideImage) {
               // Le foto dei post sono quasi sempre verticali/quadrate
-              // (IG 4:5, reel 9:16), mentre il riquadro è orizzontale: senza
-              // `sizing: contain` pptxgenjs stira l'immagine per riempire
-              // esattamente il box, distorcendola. `contain` mantiene le
-              // proporzioni originali, lasciando margini uguali (sullo
-              // sfondo bianco dello slide) invece di deformarla.
+              // (IG 4:5, reel 9:16), mentre il riquadro è orizzontale.
+              // pptxgenjs NON misura le dimensioni reali di un'immagine
+              // passata come base64 (FIXME nel suo stesso sorgente), quindi
+              // la sua opzione `sizing: contain` non ha effetto: calcoliamo
+              // noi il box che preserva le proporzioni originali (margini
+              // sullo sfondo bianco invece di deformare l'immagine) e lo
+              // passiamo come x/y/w/h espliciti.
+              const box = computeContainBox(
+                slideImage.width,
+                slideImage.height,
+                8.55,
+                1.45,
+                4.15,
+                2.55,
+              );
               slide.addImage({
-                data: imageData,
-                x: 8.55,
-                y: 1.45,
-                w: 4.15,
-                h: 2.55,
-                sizing: { type: "contain", w: 4.15, h: 2.55 },
+                data: slideImage.dataUri,
+                x: box.x,
+                y: box.y,
+                w: box.w,
+                h: box.h,
               });
             } else {
               slide.addShape(pptx.ShapeType.roundRect, {
