@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import pptxgen from "pptxgenjs";
+import decodeWebp, { init as initWebpDecode } from "@jsquash/webp/decode";
+import decodeAvif, { init as initAvifDecode } from "@jsquash/avif/decode";
+import encodePng, { init as initPngEncode } from "@jsquash/png/encode";
 
 interface FeedPptPost {
   url: string;
@@ -144,6 +147,85 @@ async function getPreviewImageUrl(post: FeedPptPost): Promise<string | null> {
   }
 }
 
+// Le librerie @jsquash/* sono puro WebAssembly (nessun eval/codice dinamico),
+// compatibili con l'ambiente di deploy in produzione (Cloudflare Workers via
+// Nitro), a differenza di `sharp` che usa binari nativi e non può girarci.
+// Il bundling automatico dei file .wasm come WebAssembly.Module (come farebbe
+// l'esbuild di Wrangler) non è affidabile sotto Vite/Nitro in questo progetto:
+// scarichiamo quindi i binari .wasm dalla CDN npm (stessa versione dei
+// pacchetti installati) con un fetch() ordinario — già usato per le immagini
+// stesse — e li compiliamo a runtime, invece di dipendere dal bundler.
+const JSQUASH_WEBP_VERSION = "1.5.0";
+const JSQUASH_AVIF_VERSION = "2.1.1";
+const JSQUASH_PNG_VERSION = "3.1.1";
+
+async function fetchWasmModule(cdnPath: string): Promise<WebAssembly.Module> {
+  const res = await fetch(`https://cdn.jsdelivr.net/npm/${cdnPath}`);
+  if (!res.ok) throw new Error(`wasm_fetch_failed_${res.status}: ${cdnPath}`);
+  const bytes = await res.arrayBuffer();
+  return WebAssembly.compile(bytes);
+}
+
+// Init memoizzato: una sola fetch+compile per istanza del Worker, riusata per
+// tutte le immagini della stessa richiesta di export (che ne contiene molte).
+let webpDecodeReady: Promise<void> | null = null;
+function ensureWebpDecodeReady(): Promise<void> {
+  if (!webpDecodeReady) {
+    webpDecodeReady = fetchWasmModule(
+      `@jsquash/webp@${JSQUASH_WEBP_VERSION}/codec/dec/webp_dec.wasm`,
+    ).then((module) => initWebpDecode(module));
+  }
+  return webpDecodeReady;
+}
+
+let avifDecodeReady: Promise<void> | null = null;
+function ensureAvifDecodeReady(): Promise<void> {
+  if (!avifDecodeReady) {
+    avifDecodeReady = fetchWasmModule(
+      `@jsquash/avif@${JSQUASH_AVIF_VERSION}/codec/dec/avif_dec.wasm`,
+    ).then((module) => initAvifDecode(module));
+  }
+  return avifDecodeReady;
+}
+
+let pngEncodeReady: Promise<unknown> | null = null;
+function ensurePngEncodeReady(): Promise<unknown> {
+  if (!pngEncodeReady) {
+    pngEncodeReady = fetchWasmModule(
+      `@jsquash/png@${JSQUASH_PNG_VERSION}/codec/pkg/squoosh_png_bg.wasm`,
+    ).then((module) => initPngEncode(module));
+  }
+  return pngEncodeReady;
+}
+
+// Converte webp/avif in png passando da ImageData grezza (decode → encode).
+// Ritorna null per formati non gestiti (es. gif) invece di far fallire tutto
+// l'export: il chiamante mostra il placeholder "anteprima non disponibile".
+async function convertToPngBuffer(buffer: ArrayBuffer, mime: string): Promise<Buffer | null> {
+  try {
+    let imageData: ImageData;
+
+    if (mime === "image/webp") {
+      await ensureWebpDecodeReady();
+      imageData = await decodeWebp(buffer);
+    } else if (mime === "image/avif") {
+      await ensureAvifDecodeReady();
+      const decoded = await decodeAvif(buffer);
+      if (!decoded) throw new Error("avif_decode_returned_null");
+      imageData = decoded;
+    } else {
+      return null;
+    }
+
+    await ensurePngEncodeReady();
+    const pngBuffer = await encodePng(imageData);
+    return Buffer.from(pngBuffer);
+  } catch (err) {
+    console.warn("PPT image WASM conversion failed:", String(err), mime);
+    return null;
+  }
+}
+
 async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
   if (!url) return null;
 
@@ -153,8 +235,10 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
-        Accept:
-          "image/avif,image/webp,image/apng,image/png,image/jpeg,image/*,*/*;q=0.8",
+        // Preferiamo jpeg/png (già supportati nativamente da PPTX, nessuna
+        // conversione necessaria); molte CDN rispettano l'ordine e li servono
+        // direttamente. webp/avif restano accettati: li convertiamo comunque.
+        Accept: "image/jpeg,image/png,image/webp,image/avif,image/apng,image/*,*/*;q=0.8",
         Referer: "https://www.instagram.com/",
         "Accept-Language": "en-US,en;q=0.9",
         "Cache-Control": "no-cache",
@@ -194,7 +278,18 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
       return `data:image/png;base64,${inputBuffer.toString("base64")}`;
     }
 
-    const pngBuffer = await sharp(inputBuffer).rotate().png().toBuffer();
+    const pngBuffer = await convertToPngBuffer(
+      inputBuffer.buffer.slice(
+        inputBuffer.byteOffset,
+        inputBuffer.byteOffset + inputBuffer.byteLength,
+      ) as ArrayBuffer,
+      mime,
+    );
+
+    if (!pngBuffer) {
+      console.warn("PPT image unsupported format after conversion attempt:", mime, url);
+      return null;
+    }
 
     return `data:image/png;base64,${pngBuffer.toString("base64")}`;
   } catch (err) {
@@ -227,24 +322,15 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           const posts = Array.isArray(body.posts) ? body.posts : [];
 
           console.log("PPT export posts:", posts.length);
-          console.log(
-            "PPT export posts with imageUrl:",
-            posts.filter((p) => !!p.imageUrl).length,
-          );
+          console.log("PPT export posts with imageUrl:", posts.filter((p) => !!p.imageUrl).length);
           console.log("PPT first post imageUrl:", posts[0]?.imageUrl || null);
 
           if (!keyword) {
-            return Response.json(
-              { ok: false, error: "Keyword obbligatoria" },
-              { status: 400 },
-            );
+            return Response.json({ ok: false, error: "Keyword obbligatoria" }, { status: 400 });
           }
 
           if (posts.length === 0) {
-            return Response.json(
-              { ok: false, error: "Nessun post da esportare" },
-              { status: 400 },
-            );
+            return Response.json({ ok: false, error: "Nessun post da esportare" }, { status: 400 });
           }
 
           const pptx = new pptxgen();
@@ -337,9 +423,7 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           }, {});
 
           const byChannel = posts.reduce<Record<string, number>>((acc, post) => {
-            const name = cleanText(
-              post.canaleName || post.handle || "Canale non disponibile",
-            );
+            const name = cleanText(post.canaleName || post.handle || "Canale non disponibile");
             acc[name] = (acc[name] || 0) + 1;
             return acc;
           }, {});
@@ -420,9 +504,7 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
             slide.background = { color: "FFFFFF" };
 
             const platform = getPlatformLabel(post.platform);
-            const channel = cleanText(
-              post.canaleName || post.handle || "Canale non disponibile",
-            );
+            const channel = cleanText(post.canaleName || post.handle || "Canale non disponibile");
             const handle = cleanText(post.handle || "");
             const caption = cleanText(post.caption || "Testo non disponibile");
             const date = formatDate(post.date);
@@ -616,10 +698,7 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
         } catch (err) {
           console.error("PPT export error:", err);
 
-          return Response.json(
-            { ok: false, error: String(err).slice(0, 500) },
-            { status: 500 },
-          );
+          return Response.json({ ok: false, error: String(err).slice(0, 500) }, { status: 500 });
         }
       },
     },
