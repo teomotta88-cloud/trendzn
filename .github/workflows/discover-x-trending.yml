@@ -1,0 +1,36 @@
+name: Discover X Trending
+
+# Discovery gratuita dei trend X Italia (x.com/explore/tabs/trending, da
+# account autenticato — vedi scripts/discover-x-trending.mjs). Registra i
+# trend in monitored_topics: la ricerca dei contenuti su Instagram e le
+# regole di viralità sono già gestite dalla pipeline esistente
+# (discover-instagram-hashtag-content.mjs), che raccoglie automaticamente
+# anche i topic di questa fonte una volta monitorati.
+
+on:
+  schedule:
+    # Stessa cadenza oraria di TikTok Trending IT.
+    - cron: "0 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Scopri i trend X e registrali
+        env:
+          RETTIWT_API_KEY: ${{ secrets.RETTIWT_API_KEY }}
+        run: node scripts/discover-x-trending.mjs

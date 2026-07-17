@@ -18,6 +18,7 @@
 // Richiede RETTIWT_API_KEY nell'ambiente.
 
 import { chromium } from "playwright";
+import { decodeCookieString, toPlaywrightCookies } from "./lib/x-auth-cookies.mjs";
 
 const API_KEY = process.env.RETTIWT_API_KEY;
 const TRENDING_URL = "https://x.com/explore/tabs/trending";
@@ -25,26 +26,6 @@ const TRENDING_URL = "https://x.com/explore/tabs/trending";
 if (!API_KEY) {
   console.error("Manca RETTIWT_API_KEY nei secrets/env.");
   process.exit(1);
-}
-
-function decodeCookieString(apiKey) {
-  return Buffer.from(apiKey, "base64").toString("ascii");
-}
-
-function toPlaywrightCookies(cookieString) {
-  return cookieString
-    .split(";")
-    .map((entry) => entry.trim())
-    .filter(Boolean)
-    .map((entry) => {
-      const idx = entry.indexOf("=");
-      if (idx < 1) return null;
-      const name = entry.slice(0, idx).trim();
-      const value = entry.slice(idx + 1).trim();
-      if (!name || !value) return null;
-      return { name, value, domain: ".x.com", path: "/" };
-    })
-    .filter(Boolean);
 }
 
 function detectLoginWall(finalUrl, bodyText) {

@@ -5,7 +5,12 @@ import { looksItalian } from "@/lib/language";
 export const VIRAL_PLATFORMS = ["instagram", "tiktok"] as const;
 export type ViralPlatform = (typeof VIRAL_PLATFORMS)[number];
 
-export const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
+export const DISCOVERY_SOURCES = [
+  "tiktok-hashtag",
+  "google-trends",
+  "trending-audio",
+  "x-trending",
+] as const;
 export type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
 export { VIRALITY_WINDOW_DAYS };
