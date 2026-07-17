@@ -226,63 +226,99 @@ async function convertToPngBuffer(buffer: ArrayBuffer, mime: string): Promise<Bu
   }
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Instagram in particolare blocca/rallenta in modo intermittente il fetch
+// anonimo di /media?size=l (a volte risponde con una pagina di login invece
+// dell'immagine, altre volte fallisce senza motivo apparente) — coerente con
+// quanto osservato in tutta la pipeline di scraping social di questo
+// progetto. Un retry con piccolo backoff recupera una parte concreta di
+// questi casi transitori, senza rallentare percettibilmente l'export.
+const IMAGE_FETCH_ATTEMPTS = 3;
+const IMAGE_FETCH_RETRY_DELAYS_MS = [400, 1000];
+
+async function fetchImageBuffer(url: string): Promise<{ buffer: Buffer; mime: string } | null> {
+  for (let attempt = 1; attempt <= IMAGE_FETCH_ATTEMPTS; attempt++) {
+    try {
+      const res = await fetch(url, {
+        redirect: "follow",
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+          // Preferiamo jpeg/png (già supportati nativamente da PPTX, nessuna
+          // conversione necessaria); molte CDN rispettano l'ordine e li
+          // servono direttamente. webp/avif restano accettati e convertiti.
+          Accept: "image/jpeg,image/png,image/webp,image/avif,image/apng,image/*,*/*;q=0.8",
+          Referer: "https://www.instagram.com/",
+          "Accept-Language": "en-US,en;q=0.9",
+          "Cache-Control": "no-cache",
+        },
+      });
+
+      console.log(
+        `PPT image fetch [tentativo ${attempt}/${IMAGE_FETCH_ATTEMPTS}]:`,
+        url,
+        "→",
+        res.status,
+        res.statusText,
+        "| content-type:",
+        res.headers.get("content-type"),
+        "| final URL:",
+        res.url,
+      );
+
+      if (!res.ok) {
+        throw new Error(`http_${res.status}`);
+      }
+
+      const contentType = res.headers.get("content-type") || "";
+      const mime = contentType.split(";")[0].trim().toLowerCase();
+
+      if (!mime.startsWith("image/")) {
+        throw new Error(`not_an_image_${mime || "unknown"}`);
+      }
+
+      const buffer = Buffer.from(await res.arrayBuffer());
+      if (!buffer.length) {
+        throw new Error("empty_body");
+      }
+
+      return { buffer, mime };
+    } catch (err) {
+      const isLastAttempt = attempt === IMAGE_FETCH_ATTEMPTS;
+      console.warn(
+        `PPT image fetch failed [tentativo ${attempt}/${IMAGE_FETCH_ATTEMPTS}]:`,
+        String(err),
+        url,
+      );
+      if (isLastAttempt) return null;
+      await sleep(IMAGE_FETCH_RETRY_DELAYS_MS[attempt - 1] ?? 1000);
+    }
+  }
+  return null;
+}
+
 async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
   if (!url) return null;
 
+  const fetched = await fetchImageBuffer(url);
+  if (!fetched) return null;
+
+  const { buffer, mime } = fetched;
+
   try {
-    const res = await fetch(url, {
-      redirect: "follow",
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
-        // Preferiamo jpeg/png (già supportati nativamente da PPTX, nessuna
-        // conversione necessaria); molte CDN rispettano l'ordine e li servono
-        // direttamente. webp/avif restano accettati: li convertiamo comunque.
-        Accept: "image/jpeg,image/png,image/webp,image/avif,image/apng,image/*,*/*;q=0.8",
-        Referer: "https://www.instagram.com/",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Cache-Control": "no-cache",
-      },
-    });
-
-    console.log("PPT image original URL:", url);
-    console.log("PPT image final URL:", res.url);
-    console.log("PPT image status:", res.status, res.statusText);
-    console.log("PPT image content-type:", res.headers.get("content-type"));
-
-    if (!res.ok) {
-      console.warn("PPT image download failed:", res.status, res.statusText, url);
-      return null;
-    }
-
-    const contentType = res.headers.get("content-type") || "";
-    const mime = contentType.split(";")[0].trim().toLowerCase();
-
-    if (!mime.startsWith("image/")) {
-      console.warn("PPT image response is not an image:", mime, url);
-      return null;
-    }
-
-    const inputBuffer = Buffer.from(await res.arrayBuffer());
-
-    if (!inputBuffer.length) {
-      console.warn("PPT image empty file:", url);
-      return null;
-    }
-
     if (mime === "image/jpeg" || mime === "image/jpg") {
-      return `data:image/jpeg;base64,${inputBuffer.toString("base64")}`;
+      return `data:image/jpeg;base64,${buffer.toString("base64")}`;
     }
 
     if (mime === "image/png") {
-      return `data:image/png;base64,${inputBuffer.toString("base64")}`;
+      return `data:image/png;base64,${buffer.toString("base64")}`;
     }
 
     const pngBuffer = await convertToPngBuffer(
-      inputBuffer.buffer.slice(
-        inputBuffer.byteOffset,
-        inputBuffer.byteOffset + inputBuffer.byteLength,
-      ) as ArrayBuffer,
+      buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength) as ArrayBuffer,
       mime,
     );
 
@@ -293,7 +329,7 @@ async function imageUrlToDataUri(url?: string | null): Promise<string | null> {
 
     return `data:image/png;base64,${pngBuffer.toString("base64")}`;
   } catch (err) {
-    console.warn("PPT image download/convert failed:", String(err), url);
+    console.warn("PPT image convert failed:", String(err), url);
     return null;
   }
 }
@@ -592,12 +628,19 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
             const imageData = await imageUrlToDataUri(previewImageUrl);
 
             if (imageData) {
+              // Le foto dei post sono quasi sempre verticali/quadrate
+              // (IG 4:5, reel 9:16), mentre il riquadro è orizzontale: senza
+              // `sizing: contain` pptxgenjs stira l'immagine per riempire
+              // esattamente il box, distorcendola. `contain` mantiene le
+              // proporzioni originali, lasciando margini uguali (sullo
+              // sfondo bianco dello slide) invece di deformarla.
               slide.addImage({
                 data: imageData,
                 x: 8.55,
                 y: 1.45,
                 w: 4.15,
                 h: 2.55,
+                sizing: { type: "contain", w: 4.15, h: 2.55 },
               });
             } else {
               slide.addShape(pptx.ShapeType.roundRect, {
