@@ -79,6 +79,7 @@ function getPlatformLabel(platform?: string | null): string {
     linkedin: "LinkedIn",
     x: "X",
     twitter: "X",
+    facebook: "Facebook",
     web: "Web",
   };
 

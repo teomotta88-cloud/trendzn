@@ -84,7 +84,9 @@ interface Post {
 }
 
 function isPostUrl(url: string): boolean {
-  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch\/|\/tv\/|\/status\//.test(url);
+  return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/videos\/|\/photo\/|\/photos\/|\/watch\/|\/tv\/|\/status\/|\/posts\/|permalink\.php|story_fbid=/.test(
+    url,
+  );
 }
 
 function decodeHtmlEntities(str: string): string {
@@ -148,6 +150,7 @@ function PlatformBadge({ platform }: { platform: string }) {
     youtube: { bg: "#fce8e8", text: "#d93025" },
     linkedin: { bg: "#e8f3ff", text: "#0a66c2" },
     x: { bg: "#e5e7eb", text: "#111827" },
+    facebook: { bg: "#e7f0ff", text: "#1877f2" },
     web: { bg: "#f0f4f8", text: "#64748b" },
   };
   const c = colors[platform] || colors.web;
@@ -157,6 +160,7 @@ function PlatformBadge({ platform }: { platform: string }) {
     youtube: "YouTube",
     linkedin: "LinkedIn",
     x: "X",
+    facebook: "Facebook",
     web: "Web",
   };
   return (
@@ -413,6 +417,17 @@ function PostCard({
 
       {embedUrl ? (
         <LazyEmbed embedUrl={embedUrl} height={h} />
+      ) : post.imageUrl ? (
+        // Facebook non ha un embed pubblico semplice (servirebbe un App ID e
+        // la review della Graph API): mostriamo l'anteprima immagine reale
+        // del post già catturata dal sync, con link cliccabile sopra.
+        <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
+          <img
+            src={post.imageUrl}
+            alt=""
+            style={{ display: "block", width: "100%", maxHeight: h, objectFit: "cover" }}
+          />
+        </a>
       ) : (
         <a
           href={post.url}

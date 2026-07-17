@@ -1,0 +1,39 @@
+name: Sync Facebook Posts
+
+# A differenza di IG/TikTok (RSS-Bridge), Facebook richiede un browser reale
+# (Playwright) — più lento/pesante, quindi cadenza più bassa (ogni 2 ore) e
+# minuto diverso da sync-canali-feed (:00) e sync-aspi-monitoring (:30) per
+# non scrivere su aspi-monitoring.json in contemporanea.
+#
+# Limite noto: la pagina Facebook mostra in modo affidabile solo il post più
+# recente per visita anonima, non un feed scorrevole (vedi commento in testa
+# a scripts/sync-facebook-posts.mjs). Con poll ogni 2 ore si accumula comunque
+# la (quasi) totalità dei post nel tempo.
+
+on:
+  schedule:
+    - cron: "45 */2 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Sync post Facebook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/sync-facebook-posts.mjs
