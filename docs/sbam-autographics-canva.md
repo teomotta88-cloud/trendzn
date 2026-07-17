@@ -74,19 +74,54 @@ Note:
 - `max_chars`/`max_lines`/`obbligatorio` restano usati per la validazione
   live nel pannello di composizione.
 
-## Preparare il Brand Template su Canva
+## Preparare il Brand Template su Canva (con Data Field — evita di rimappare ogni volta)
+
+Se il template non usa **Data Field** con nome, Bulk Create prova a indovinare
+la colonna giusta per ogni elemento ("Auto-match") o costringe a trascinare a
+mano ogni colonna sull'elemento corrispondente **ad ogni singolo caricamento**
+di un nuovo .xlsx — anche se il template non è cambiato. Taggando gli
+elementi come Data Field con un nome fisso, il collegamento fa parte della
+definizione del Brand Template stesso (non della singola sessione di Bulk
+Create): finché i nomi dei Data Field coincidono con le colonne dello .xlsx
+esportato da trendzn, "Auto-match" (o il collegamento già esistente) dovrebbe
+risolversi da solo ad ogni nuovo export, senza dover ritrascinare nulla.
 
 1. Disegna la card su Canva, poi pubblicala come **Brand Template**
    ("⋯" sul design → "Pubblica come modello brand", o crealo direttamente
-   da **Brand → Modelli del brand**).
+   da **Brand → Modelli del brand**). Serve un ruolo di "brand designer" o
+   admin del Team per aggiungere Data Field e pubblicare un Brand Template.
 2. Apri il template **da Brand → Modelli del brand** (non dai tuoi progetti
    normali: editare l'originale non aggiorna il template pubblicato).
-3. Con **Bulk Create** (App → cerca "Bulk Create") collegato al template,
-   carica il primo .xlsx di prova generato da trendzn: Canva mostra come
-   mappa ogni colonna a un elemento del design. Verifica in particolare che
-   la colonna immagine venga riconosciuta come tale (grazie all'immagine
-   incorporata, non a un URL, questo dovrebbe funzionare senza passaggi
-   aggiuntivi).
+3. Per ogni elemento dinamico (testo o immagine), selezionalo e usa **Data
+   Field** dal pannello per taggarlo con un nome. **Il nome deve coincidere
+   esattamente (maiuscole/minuscole comprese) con il nome colonna prodotto
+   dall'export**, cioè `layer_name` **senza** il prefisso `#` — lo stesso
+   nome che si imposta in `RubrichePanel` quando si compone la rubrica. I
+   campi sono numerati automaticamente per tipo su tutta la rubrica (es. il
+   primo `#title` ovunque si trovi diventa colonna/Data Field `title1`, il
+   successivo `title2`, ecc. — vedi sopra, sezione "Registrare una nuova
+   rubrica"): usa lo stesso nome numerato esatto per il Data Field
+   corrispondente. Ripubblica il template dopo aver aggiunto i Data Field.
+4. Con **Bulk Create** (App → cerca "Bulk Create") collegato al template,
+   carica il primo .xlsx di prova generato da trendzn e premi **"Auto-match
+   fields"**: con i nomi allineati dovrebbe collegare tutto da solo, colonna
+   immagine inclusa (riconosciuta come immagine grazie all'incorporamento
+   nella cella, non a un URL). La colonna `post_date` (sempre presente in
+   testa all'export, non è un campo di rubrica) non ha un Data Field
+   corrispondente: lasciala semplicemente non collegata, non causa errori.
+5. Verifica **una sola volta** che il collegamento risulti corretto: dai test
+   successivi, ricaricando un nuovo .xlsx con le stesse colonne sullo stesso
+   template, il collegamento dovrebbe restare valido senza richiedere di
+   ripetere il drag&drop manuale. Se dopo questa modifica capita ancora di
+   dover rimappare, è probabile che i nomi non coincidano esattamente
+   (spazi, maiuscole, o un campo rinominato in `RubrichePanel` senza
+   ripubblicare il template) — controlla lì per primo.
+
+Nota: questo risolve solo la parte "ricollegare i dati ogni volta". Restano
+comunque manuali il caricamento dello .xlsx su Canva e lo scaricamento dei
+PNG generati (vedi "Limiti noti" sotto) — per eliminare anche questi due
+passaggi serve l'Autofill API di Canva, che richiede però un piano Canva
+Enterprise (non Teams); non ancora perseguito per questo motivo.
 
 ## Limiti noti
 
