@@ -62,6 +62,7 @@ const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   // Nessun contenuto reale ancora (predisposizione, Fase 9): la label serve
   // solo a soddisfare il tipo, il filtro non produce risultati per ora.
   "trending-audio": "Audio",
+  "x-trending": "X",
 };
 
 const SORT_LABELS: Record<SortBy, string> = {
@@ -214,12 +215,13 @@ function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
   );
 }
 
-type RankedTopicType = "tiktok-hashtag" | "google-trends";
+type RankedTopicType = "tiktok-hashtag" | "google-trends" | "x-trending";
 type TopicView = RankedTopicType | "content";
 
 const TOPIC_VIEW_LABELS: Record<TopicView, string> = {
   "tiktok-hashtag": "TikTok Trend",
   "google-trends": "Google Trend",
+  "x-trending": "X Trend",
   content: "Contenuti",
 };
 
@@ -269,7 +271,16 @@ function TopicRankingRow({
           <p className="truncate text-sm font-medium text-foreground">{label}</p>
           <VerdictBadge verdict={verdict} />
         </div>
-        {signals.length === 0 ? (
+        {topic.topic_type === "x-trending" ? (
+          // X non fornisce qui alcun volume/conteggio utilizzabile (solo
+          // rank + categoria in pagina) — su richiesta esplicita questa
+          // fonte non traccia crescita/segnali come le altre due, mostra
+          // solo la categoria vista da X (assente per i trend senza una
+          // categoria reale, es. "Trending in Italy").
+          <span className="mt-0.5 inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+            {topic.category ?? "Nessuna categoria"}
+          </span>
+        ) : signals.length === 0 ? (
           <p className="mt-0.5 text-[11px] text-muted-foreground">Nessun segnale ancora rilevato</p>
         ) : (
           <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -458,18 +469,18 @@ function Page() {
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Virali</h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
-          Topic scoperti da due fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
-          leggibile, es. #empirestatebuilding → "Empire State Building") e ricerche in tendenza
-          Google Trends per l'Italia — poi cercati su Instagram. Contenuti sempre degli ultimi{" "}
-          {VIRALITY_WINDOW_DAYS} giorni, con la variazione di view/engagement rilevata rispetto al
-          sync più vecchio in questa stessa finestra.
+          Topic scoperti da tre fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
+          leggibile, es. #empirestatebuilding → "Empire State Building"), ricerche in tendenza
+          Google Trends per l'Italia e trend X.com — poi cercati su Instagram. Contenuti sempre
+          degli ultimi {VIRALITY_WINDOW_DAYS} giorni, con la variazione di view/engagement rilevata
+          rispetto al sync più vecchio in questa stessa finestra.
         </p>
       </header>
 
       <section className="space-y-3">
         <Tabs value={view} onValueChange={(v) => setView(v as TopicView)}>
           <TabsList>
-            {(["tiktok-hashtag", "google-trends", "content"] as const).map((v) => (
+            {(["tiktok-hashtag", "google-trends", "x-trending", "content"] as const).map((v) => (
               <TabsTrigger key={v} value={v}>
                 {TOPIC_VIEW_LABELS[v]}
               </TabsTrigger>

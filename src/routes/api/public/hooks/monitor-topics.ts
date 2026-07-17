@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const TOPIC_TYPES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
+const TOPIC_TYPES = ["tiktok-hashtag", "google-trends", "trending-audio", "x-trending"] as const;
 type TopicType = (typeof TOPIC_TYPES)[number];
 
 type IncomingTopic = {
@@ -8,6 +8,9 @@ type IncomingTopic = {
   value: string;
   derivedHashtag?: string | null;
   derivedKeyword?: string | null;
+  // Categoria mostrata da X accanto al trend (es. "Politics") — solo
+  // topic_type='x-trending', ignorata per le altre fonti.
+  category?: string | null;
 };
 
 export const Route = createFileRoute("/api/public/hooks/monitor-topics")({
@@ -58,6 +61,7 @@ export const Route = createFileRoute("/api/public/hooks/monitor-topics")({
                   value: t.value,
                   derived_hashtag: t.derivedHashtag ?? null,
                   derived_keyword: t.derivedKeyword ?? null,
+                  category: t.category ?? null,
                   first_seen_in_top5_at: existing?.first_seen_in_top5_at ?? nowIso,
                   last_seen_in_top5_at: nowIso,
                   monitoring_stops_at: monitoringStopsAt,

@@ -6,7 +6,12 @@
 // (derived_hashtag/derived_keyword): tenerlo dietro un endpoint dedicato
 // lascia libertà di cambiare forma senza toccare il client.
 
-export const MONITORED_TOPIC_TYPES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
+export const MONITORED_TOPIC_TYPES = [
+  "tiktok-hashtag",
+  "google-trends",
+  "trending-audio",
+  "x-trending",
+] as const;
 export type MonitoredTopicType = (typeof MONITORED_TOPIC_TYPES)[number];
 
 export const SIGNAL_PLATFORMS = ["tiktok", "instagram"] as const;
@@ -43,6 +48,9 @@ export interface MonitoredTopic {
   value: string;
   derived_hashtag: string | null;
   derived_keyword: string | null;
+  // Categoria mostrata da X accanto al trend (es. "Politics") — solo per
+  // topic_type='x-trending', sempre null per le altre fonti.
+  category: string | null;
   last_seen_in_top5_at: string;
   // Fase 2: 0-2 righe (TikTok e/o Instagram), niente più valore singolo che
   // le due piattaforme si sovrascrivevano a vicenda.

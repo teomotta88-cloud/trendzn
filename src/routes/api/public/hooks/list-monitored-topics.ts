@@ -28,7 +28,7 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
           const { data, error } = await supabaseAdmin
             .from("monitored_topics")
             .select(
-              "id, topic_type, value, derived_hashtag, derived_keyword, last_seen_in_top5_at, topic_signals(platform, volume_growth_pct, engagement_growth_pct, latest_content_volume, latest_total_engagement, is_volume_exact, computed_at)",
+              "id, topic_type, value, derived_hashtag, derived_keyword, category, last_seen_in_top5_at, topic_signals(platform, volume_growth_pct, engagement_growth_pct, latest_content_volume, latest_total_engagement, is_volume_exact, computed_at)",
             )
             .eq("status", "active")
             .limit(500);
@@ -45,6 +45,7 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
             value: string;
             derived_hashtag: string | null;
             derived_keyword: string | null;
+            category: string | null;
             last_seen_in_top5_at: string;
             topic_signals: unknown[] | null;
           };
@@ -54,6 +55,7 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
             value: t.value,
             derived_hashtag: t.derived_hashtag,
             derived_keyword: t.derived_keyword,
+            category: t.category,
             last_seen_in_top5_at: t.last_seen_in_top5_at,
             signals: t.topic_signals ?? [],
           }));

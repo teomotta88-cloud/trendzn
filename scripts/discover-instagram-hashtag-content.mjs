@@ -107,6 +107,19 @@ function hashtagForTopic(topic) {
     if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
     return topic.derived_hashtag;
   }
+  if (topic.topic_type === "x-trending") {
+    // Un trend X a una parola (hashtag nativo o nome singolo, es. "Roggero")
+    // è già utilizzabile direttamente come hashtag, nessun limite di parole
+    // (stesso trattamento di tiktok-hashtag). Per le frasi di più parole vale
+    // lo stesso ragionamento di google-trends: solo l'hashtag derivato da al
+    // più MAX_GOOGLE_TRENDS_WORDS parole ha un tasso di successo accettabile
+    // (vedi discover-x-trending.mjs, che calcola derived_hashtag solo in
+    // quel caso).
+    const wordCount = topic.value.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount <= 1) return topic.value;
+    if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
+    return topic.derived_hashtag;
+  }
   // trending-audio: nessuna discovery ancora implementata (predisposizione, Fase 9).
   return null;
 }

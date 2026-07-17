@@ -9,7 +9,12 @@ import {
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin", "tiktok"] as const;
 type Platform = (typeof PLATFORMS)[number];
 
-const DISCOVERY_SOURCES = ["tiktok-hashtag", "google-trends", "trending-audio"] as const;
+const DISCOVERY_SOURCES = [
+  "tiktok-hashtag",
+  "google-trends",
+  "trending-audio",
+  "x-trending",
+] as const;
 type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
 type IncomingContent = {
