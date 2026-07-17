@@ -106,6 +106,18 @@ function isPostUrl(url) {
   return /\/(posts|videos|reel|photos|watch|permalink\.php)\b|story_fbid=/i.test(url);
 }
 
+// Gli account salvati in aspi-monitoring.json NON hanno platform: "facebook"
+// per la pagina (arrivano da un import generico che li tagga "web"): li
+// riconosciamo dall'host dell'URL, non dal campo platform.
+function isFacebookUrl(url) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "").replace(/^m\./, "");
+    return host === "facebook.com" || host === "fb.com";
+  } catch {
+    return false;
+  }
+}
+
 const MONTHS_IT = {
   gennaio: 0,
   febbraio: 1,
@@ -312,7 +324,7 @@ const list = store.canali;
 const facebookAccounts = [];
 for (const canale of list) {
   for (const account of canale.accounts || []) {
-    if (account.platform === "facebook" && account.url) {
+    if (account.url && isFacebookUrl(account.url)) {
       // L'URL del canale è la pagina Facebook stessa (non un post): la
       // distinguiamo dai post già salvati (quelli hanno isPostUrl(url)===true).
       if (!isPostUrl(account.url)) {
