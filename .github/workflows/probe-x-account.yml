@@ -24,7 +24,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # rettiwt-api 7.1.x dichiara "engines": { "node": "^22.21.0" } — con
+          # Node 20 (usato dal resto del progetto) le chiamate falliscono con
+          # un generico "Unknown error" lato FetcherService, non un errore di
+          # auth: verosimilmente un'incompatibilità runtime (fetch/undici),
+          # non un problema di account o di schema X.
+          node-version: "22"
 
       - name: Installa rettiwt-api (solo per il probe)
         env:
