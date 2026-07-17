@@ -13,6 +13,16 @@ export type TrendItem = {
   // contenuto arrivato via mail (caption, descrizione, ecc).
   rawEmail?: string | null;
   tags?: string[] | null;
+  // Data di pubblicazione del post sulla piattaforma originale — nota solo
+  // per TikTok (estratta dall'ID, vedi extractTikTokPostDate), null altrove
+  // (Instagram non la espone senza login, i vecchi item da trends.json non
+  // ce l'hanno). Distinta da insertedAt: "quando è stato pubblicato" vs
+  // "quando è arrivato in trendzn".
+  postedAt?: string | null;
+  // Data di inserimento in trendzn (created_at di trend_submissions per gli
+  // item da Supabase). Null per gli item statici da trends.json, che non
+  // hanno mai avuto un timestamp di inserimento.
+  insertedAt?: string | null;
 };
 
 export type AccountRef = {
@@ -49,7 +59,29 @@ export function extractUsername(url: string): string | null {
   return null;
 }
 
-export function detectPlatform(url: string): "instagram" | "tiktok" | "youtube" | "linkedin" | "web" {
+// I 32 bit più significativi di un ID TikTok "snowflake" codificano il
+// timestamp Unix (in secondi) di creazione del post — stessa tecnica già
+// usata per il backfill di trend_submissions.posted_at (vedi migration
+// 20260623150000_add_posted_at_tiktok_hashtag.sql). Copre sia /video/ che
+// /photo/ (stesso schema ID), come già fa embedUrl qui sotto. Ritorna null
+// per qualunque altra piattaforma: nessuna fonte gratuita equivalente
+// esiste per Instagram/YouTube/LinkedIn senza login.
+export function extractTikTokPostDate(url: string): string | null {
+  const match = url.match(/tiktok\.com\/@[^/]+\/(?:video|photo)\/(\d+)/);
+  if (!match) return null;
+  try {
+    const id = BigInt(match[1]);
+    const seconds = Number(id >> 32n);
+    if (!Number.isFinite(seconds) || seconds <= 0) return null;
+    return new Date(seconds * 1000).toISOString();
+  } catch {
+    return null;
+  }
+}
+
+export function detectPlatform(
+  url: string,
+): "instagram" | "tiktok" | "youtube" | "linkedin" | "web" {
   if (/instagram\.com/.test(url)) return "instagram";
   if (/tiktok\.com/.test(url)) return "tiktok";
   if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
@@ -73,9 +105,11 @@ export function embedUrl(url: string): string | null {
   // - "-activity-1234567890-" dentro un URL /posts/...
   // In tutti i casi, l'URL embed risultante usa lo stesso schema con il tipo corretto.
   const liEmbed = url.match(/urn:li:(share|activity|ugcPost):(\d+)/);
-  if (liEmbed) return `https://www.linkedin.com/embed/feed/update/urn:li:${liEmbed[1]}:${liEmbed[2]}`;
+  if (liEmbed)
+    return `https://www.linkedin.com/embed/feed/update/urn:li:${liEmbed[1]}:${liEmbed[2]}`;
   const liActivity = url.match(/-activity-(\d+)-/);
-  if (liActivity) return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${liActivity[1]}`;
+  if (liActivity)
+    return `https://www.linkedin.com/embed/feed/update/urn:li:activity:${liActivity[1]}`;
 
   return null;
 }
