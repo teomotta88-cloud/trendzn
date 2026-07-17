@@ -10,6 +10,7 @@ export const DISCOVERY_SOURCES = [
   "google-trends",
   "trending-audio",
   "x-trending",
+  "canali-inspo",
 ] as const;
 export type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
@@ -35,6 +36,11 @@ export interface ViralTrendContent {
   delta_engagement_6h: number;
   is_viral: boolean;
   created_at: string;
+  // Valorizzati solo per i post Canali Inspo che fanno parte di un cluster
+  // cross-profilo promosso a trend (3+ canali diversi sullo stesso
+  // argomento) — null per tutti gli altri contenuti.
+  cross_profile_topic: string | null;
+  cross_profile_channel_count: number | null;
 }
 
 export const SORT_OPTIONS = ["virality", "date", "engagement", "views"] as const;

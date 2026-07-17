@@ -1,0 +1,35 @@
+name: Discover Canali Inspo Content
+
+# Applica le regole di viralità ai post Instagram dei Canali Inspo (già
+# raccolti da RSS-Bridge in trends.json, senza engagement) e rileva i trend
+# cross-profilo (3+ canali diversi sullo stesso argomento) — vedi
+# scripts/discover-canali-inspo-content.mjs.
+
+on:
+  schedule:
+    # Stessa cadenza di Discover Instagram Hashtag Content.
+    - cron: "20 */6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Scopri viralità + trend cross-profilo Canali Inspo
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+        run: node scripts/discover-canali-inspo-content.mjs

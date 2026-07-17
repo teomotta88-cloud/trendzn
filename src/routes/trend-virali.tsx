@@ -63,6 +63,7 @@ const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   // solo a soddisfare il tipo, il filtro non produce risultati per ora.
   "trending-audio": "Audio",
   "x-trending": "X",
+  "canali-inspo": "Canali Inspo",
 };
 
 const SORT_LABELS: Record<SortBy, string> = {
@@ -216,14 +217,20 @@ function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
 }
 
 type RankedTopicType = "tiktok-hashtag" | "google-trends" | "x-trending";
-type TopicView = RankedTopicType | "content";
+type TopicView = RankedTopicType | "content" | "canali-inspo";
 
 const TOPIC_VIEW_LABELS: Record<TopicView, string> = {
   "tiktok-hashtag": "TikTok Trend",
   "google-trends": "Google Trend",
   "x-trending": "X Trend",
   content: "Contenuti",
+  "canali-inspo": "Dai Canali Inspo",
 };
+
+const RANKED_TOPIC_VIEWS = ["tiktok-hashtag", "google-trends", "x-trending"] as const;
+function isRankedTopicView(view: TopicView): view is RankedTopicType {
+  return (RANKED_TOPIC_VIEWS as readonly string[]).includes(view);
+}
 
 // Nessun "rank" reale esiste ancora per Google Trends (solo TikTok
 // Creative Center lo fornisce, e nemmeno quello è esposto oggi da
@@ -354,6 +361,76 @@ function TopicRankingList({
   );
 }
 
+// Card di un singolo contenuto, riusata sia nel tab "Contenuti" sia nel tab
+// "Dai Canali Inspo". Il badge del trend cross-profilo (3+ canali diversi
+// sullo stesso argomento, vedi discover-canali-inspo-content.mjs) compare
+// ovunque sia valorizzato, non solo nel tab Canali Inspo — un post del
+// genere può comparire anche nel feed generale "Contenuti".
+function ContentCard({ item }: { item: ViralTrendContent }) {
+  return (
+    <article className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60">
+      <SocialEmbed url={item.url} />
+
+      <div className="space-y-2 px-1 pb-2">
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="inline-flex items-center gap-1 text-xs font-medium capitalize text-foreground">
+            <PlatformIcon platform={item.platform} className="size-3.5" />
+            {item.platform}
+          </span>
+          <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">
+            {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
+          </span>
+          <span className="ml-auto text-[10px] text-muted-foreground">
+            {formatDate(item.published_at ?? item.created_at)}
+          </span>
+        </div>
+
+        {item.author && <p className="text-xs font-semibold text-foreground">{item.author}</p>}
+
+        <a href={item.url} target="_blank" rel="noreferrer" className="block hover:underline">
+          <p className="line-clamp-3 text-xs text-muted-foreground">{item.content || item.url}</p>
+        </a>
+
+        <p className="text-[10px] text-muted-foreground">
+          {item.discovery_source === "tiktok-hashtag"
+            ? `#${item.source_hashtag}`
+            : item.source_hashtag}{" "}
+          → {item.keyword_matched}
+        </p>
+
+        {item.cross_profile_topic && (
+          <span className="inline-flex items-center gap-1 rounded-lg bg-orange-500/10 px-2 py-1 text-[11px] font-medium text-orange-600 dark:text-orange-400">
+            <Flame className="size-3.5 shrink-0" />
+            Trend condiviso da {item.cross_profile_channel_count} canali: {item.cross_profile_topic}
+          </span>
+        )}
+
+        <div className="flex items-center gap-3 text-xs tabular-nums">
+          {/* reach è null (non 0) per i post foto/carosello: Instagram non
+          traccia le views per contenuti statici, non è un dato mancante
+          da segnalare con un placeholder — l'indicatore va tolto del tutto. */}
+          {item.reach != null && (
+            <span className="inline-flex items-center gap-1">
+              <Eye className="size-3 text-muted-foreground" />
+              {formatCompactNumber(item.reach)}
+            </span>
+          )}
+          {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
+          "zero interazioni", non "dato non disponibile". */}
+          {item.platform !== "tiktok" && (
+            <span className="inline-flex items-center gap-1">
+              <Heart className="size-3 text-muted-foreground" />
+              {formatCompactNumber(item.engagement)}
+            </span>
+          )}
+        </div>
+
+        <VariationBadge item={item} />
+      </div>
+    </article>
+  );
+}
+
 // Contenuti mostrati inizialmente e ad ogni click su "Carica altri": tutti
 // gli embed vengono montati subito (nessun lazy-load a scroll, vedi
 // SocialEmbed), quindi il numero di card in pagina va limitato esplicitamente
@@ -433,6 +510,14 @@ function Page() {
     return Array.from(bySourceHashtag.entries()).sort(([a], [b]) => a.localeCompare(b));
   }, [items]);
 
+  // Tab "Dai Canali Inspo": stesso array items già caricato (nessun fetch in
+  // più), solo filtrato per fonte — coerente col fatto che items non è mai
+  // filtrato per discovery_source lato server.
+  const canaliInspoItems = useMemo(
+    () => items.filter((i) => i.discovery_source === "canali-inspo"),
+    [items],
+  );
+
   const filtered = useMemo(() => {
     let result = items;
     if (sourceFilter !== "all") result = result.filter((i) => i.discovery_source === sourceFilter);
@@ -480,7 +565,9 @@ function Page() {
       <section className="space-y-3">
         <Tabs value={view} onValueChange={(v) => setView(v as TopicView)}>
           <TabsList>
-            {(["tiktok-hashtag", "google-trends", "x-trending", "content"] as const).map((v) => (
+            {(
+              ["tiktok-hashtag", "google-trends", "x-trending", "canali-inspo", "content"] as const
+            ).map((v) => (
               <TabsTrigger key={v} value={v}>
                 {TOPIC_VIEW_LABELS[v]}
               </TabsTrigger>
@@ -488,7 +575,7 @@ function Page() {
           </TabsList>
         </Tabs>
 
-        {view !== "content" &&
+        {isRankedTopicView(view) &&
           (topicsError ? (
             <p className="text-sm text-destructive">
               Errore nel caricamento dei topic monitorati: {topicsError}.
@@ -497,6 +584,28 @@ function Page() {
             <TopicRankingList topics={topics} view={view} contentByTopic={contentByTopic} />
           ))}
       </section>
+
+      {view === "canali-inspo" && (
+        <>
+          {error ? (
+            <p className="text-sm text-destructive">Errore nel caricamento: {error}.</p>
+          ) : loading ? (
+            <div className="text-sm text-muted-foreground">Caricamento…</div>
+          ) : canaliInspoItems.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+              Nessun post virale dai Canali Inspo ancora. Il workflow "Discover Canali Inspo
+              Content" (ogni 6h) applica le regole di viralità ai post già raccolti e rileva i trend
+              condivisi da più profili.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {canaliInspoItems.map((item) => (
+                <ContentCard key={item.id} item={item} />
+              ))}
+            </div>
+          )}
+        </>
+      )}
 
       {view === "content" && (
         <>
@@ -611,71 +720,7 @@ function Page() {
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {visible.map((item) => (
-                <article
-                  key={item.id}
-                  className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60"
-                >
-                  <SocialEmbed url={item.url} />
-
-                  <div className="space-y-2 px-1 pb-2">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="inline-flex items-center gap-1 text-xs font-medium capitalize text-foreground">
-                        <PlatformIcon platform={item.platform} className="size-3.5" />
-                        {item.platform}
-                      </span>
-                      <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">
-                        {DISCOVERY_SOURCE_LABELS[item.discovery_source]}
-                      </span>
-                      <span className="ml-auto text-[10px] text-muted-foreground">
-                        {formatDate(item.published_at ?? item.created_at)}
-                      </span>
-                    </div>
-
-                    {item.author && (
-                      <p className="text-xs font-semibold text-foreground">{item.author}</p>
-                    )}
-
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="block hover:underline"
-                    >
-                      <p className="line-clamp-3 text-xs text-muted-foreground">
-                        {item.content || item.url}
-                      </p>
-                    </a>
-
-                    <p className="text-[10px] text-muted-foreground">
-                      {item.discovery_source === "tiktok-hashtag"
-                        ? `#${item.source_hashtag}`
-                        : item.source_hashtag}{" "}
-                      → {item.keyword_matched}
-                    </p>
-
-                    <div className="flex items-center gap-3 text-xs tabular-nums">
-                      {/* reach è null (non 0) per i post foto/carosello: Instagram non
-                      traccia le views per contenuti statici, non è un dato mancante
-                      da segnalare con un placeholder — l'indicatore va tolto del tutto. */}
-                      {item.reach != null && (
-                        <span className="inline-flex items-center gap-1">
-                          <Eye className="size-3 text-muted-foreground" />
-                          {formatCompactNumber(item.reach)}
-                        </span>
-                      )}
-                      {/* TikTok non ha una fonte gratuita per l'engagement: 0 significherebbe
-                      "zero interazioni", non "dato non disponibile". */}
-                      {item.platform !== "tiktok" && (
-                        <span className="inline-flex items-center gap-1">
-                          <Heart className="size-3 text-muted-foreground" />
-                          {formatCompactNumber(item.engagement)}
-                        </span>
-                      )}
-                    </div>
-
-                    <VariationBadge item={item} />
-                  </div>
-                </article>
+                <ContentCard key={item.id} item={item} />
               ))}
             </div>
           )}

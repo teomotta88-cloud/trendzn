@@ -14,6 +14,7 @@ const DISCOVERY_SOURCES = [
   "google-trends",
   "trending-audio",
   "x-trending",
+  "canali-inspo",
 ] as const;
 type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
@@ -32,6 +33,10 @@ type IncomingContent = {
   reach?: number | null;
   is_viral?: boolean;
   raw?: unknown;
+  // Valorizzati solo per i post Canali Inspo che fanno parte di un cluster
+  // cross-profilo promosso a trend (vedi discover-canali-inspo-content.mjs).
+  cross_profile_topic?: string | null;
+  cross_profile_channel_count?: number | null;
 };
 
 type IncomingRun = {
@@ -95,6 +100,8 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 reach: c.reach ?? null,
                 is_viral: c.is_viral ?? false,
                 raw: c.raw ?? null,
+                cross_profile_topic: c.cross_profile_topic ?? null,
+                cross_profile_channel_count: c.cross_profile_channel_count ?? null,
               }));
 
             // anysite può restituire lo stesso post più volte nella stessa
