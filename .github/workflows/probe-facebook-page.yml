@@ -34,3 +34,12 @@ jobs:
 
       - name: Apri la pagina e leggi i post visibili senza login
         run: node scripts/probe-facebook-page.mjs "${{ github.event.inputs.page_url }}"
+
+      - name: Carica screenshot diagnostici
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: probe-facebook-screenshots
+          path: probe-facebook-*.png
+          if-no-files-found: warn
+          retention-days: 7
