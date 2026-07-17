@@ -53,19 +53,21 @@ function summarizeTweet(tweet, index) {
   const createdAt =
     tweet?.createdAt || tweet?.created_at || tweet?.date || tweet?.legacy?.created_at || null;
 
-  const metrics = tweet?.statistics || tweet?.stats || tweet?.public_metrics || tweet?.legacy || {};
-
+  // rettiwt-api espone le metriche come campi piatti direttamente sull'oggetto
+  // Tweet (dist/models/data/Tweet.js), non annidati: confermato leggendo la
+  // sorgente reale della libreria (7.1.2), non tramite guess sui nomi.
   console.log(`\n  #${index + 1}`);
   console.log("  id:", id);
   console.log("  url:", id ? `https://x.com/${TARGET}/status/${id}` : null);
   console.log("  date:", createdAt);
   console.log("  text:", text ? String(text).replace(/\s+/g, " ").slice(0, 220) : null);
   console.log("  metrics:", {
-    likes: metrics.likeCount ?? metrics.favorite_count ?? metrics.likes ?? null,
-    reposts: metrics.retweetCount ?? metrics.retweet_count ?? metrics.retweets ?? null,
-    replies: metrics.replyCount ?? metrics.reply_count ?? metrics.replies ?? null,
-    quotes: metrics.quoteCount ?? metrics.quote_count ?? metrics.quotes ?? null,
-    views: metrics.viewCount ?? metrics.views ?? null,
+    likes: tweet?.likeCount ?? null,
+    reposts: tweet?.retweetCount ?? null,
+    replies: tweet?.replyCount ?? null,
+    quotes: tweet?.quoteCount ?? null,
+    views: tweet?.viewCount ?? null,
+    bookmarks: tweet?.bookmarkCount ?? null,
   });
 }
 
@@ -137,23 +139,12 @@ await tryCall("tweet.search({ fromUsers: [lowercase] })", async () => {
   });
 });
 
-// Variante 3: query search classica X/Twitter.
-await tryCall('tweet.search("from:screenName")', async () => {
-  return await rettiwt.tweet.search({
-    query: `from:${TARGET}`,
-    count: 10,
-  });
-});
+// Nota: le varianti con query stringa ("from:screenName" / "from:@screenName")
+// sono state rimosse: verificato sui log reali che rettiwt-api/X con
+// `query: "from:..."` restituisce tweet non filtrati per utente (dati
+// irrilevanti). Solo `fromUsers: [...]` filtra correttamente.
 
-// Variante 4: query search con @.
-await tryCall('tweet.search("from:@screenName")', async () => {
-  return await rettiwt.tweet.search({
-    query: `from:@${TARGET}`,
-    count: 10,
-  });
-});
-
-// Variante 5: se la libreria espone un metodo timeline/lista tweet utente.
+// Variante 3: se la libreria espone un metodo timeline/lista tweet utente.
 if (typeof rettiwt.tweet.timeline === "function") {
   await tryCall("tweet.timeline(screenName)", async () => {
     return await rettiwt.tweet.timeline(TARGET, 10);
