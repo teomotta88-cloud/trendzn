@@ -37,3 +37,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/sync-facebook-posts.mjs
+
+      - name: Carica screenshot diagnostici (solo pagine con 0 post trovati)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-facebook-empty-screenshots
+          path: sync-facebook-empty-*.png
+          retention-days: 7
+          if-no-files-found: ignore
