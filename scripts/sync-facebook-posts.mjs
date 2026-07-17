@@ -281,6 +281,11 @@ function stripTrackingParams(url) {
     const u = new URL(url);
     u.searchParams.delete("__cft__[0]");
     u.searchParams.delete("__tn__");
+    // comment_id/reply_comment_id sono un deep-link a un commento dello
+    // STESSO post, non un post diverso: confermato su log reali (stesso
+    // pfbid/reel salvato due volte, con e senza questi parametri).
+    u.searchParams.delete("comment_id");
+    u.searchParams.delete("reply_comment_id");
     return u.toString();
   } catch {
     return url;
@@ -356,9 +361,47 @@ async function fetchLatestFacebookPosts(browser, pageUrl) {
   }
 }
 
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function randomDelayMs(minMs, maxMs) {
+  return minMs + Math.floor(Math.random() * (maxMs - minMs));
+}
+
 // --- Main ---
 const { store } = await readStore();
 const list = store.canali;
+let modified = false;
+
+// Deduplica/normalizza post Facebook già salvati con comment_id nell'URL
+// (bug corretto sopra in stripTrackingParams: stesso post salvato due volte,
+// con e senza ?comment_id=..., prima di questo fix).
+for (const canale of list) {
+  const seen = new Set();
+  const cleaned = [];
+  for (const account of canale.accounts || []) {
+    if (account.platform === "facebook" && isPostUrl(account.url || "")) {
+      const normalizedUrl = stripTrackingParams(account.url);
+      if (normalizedUrl !== account.url) {
+        account.url = normalizedUrl;
+        modified = true;
+      }
+      if (seen.has(account.url)) {
+        modified = true;
+        continue;
+      }
+      seen.add(account.url);
+    }
+    cleaned.push(account);
+  }
+  canale.accounts = cleaned;
+}
 
 const facebookAccounts = [];
 for (const canale of list) {
@@ -377,14 +420,28 @@ console.log(`Monitoro ${facebookAccounts.length} pagine Facebook.`);
 
 if (facebookAccounts.length === 0) {
   console.log("Nessuna pagina Facebook da monitorare, esco.");
+  if (modified) await writeStore(store);
   process.exit(0);
 }
 
+// Confermato sui log reali: dopo ~8 pagine visitate in rapida sequenza
+// dallo stesso IP del runner, Facebook inizia a servire una pagina
+// generica bloccata (titolo "Facebook", 0 articoli) per il resto del run.
+// Mescoliamo l'ordine ad ogni run (così nel tempo tutte le pagine passano
+// dalla "finestra sicura" iniziale, non sempre le stesse prime 8) e
+// aggiungiamo una pausa tra una pagina e l'altra per ridurre il pattern
+// di richieste a raffica.
+const shuffledAccounts = shuffle(facebookAccounts);
+const INTER_PAGE_DELAY_MS = [3000, 6000];
+
 const browser = await chromium.launch({ headless: true });
-let modified = false;
 
 try {
-  for (const { canale, pageUrl, handle } of facebookAccounts) {
+  for (let i = 0; i < shuffledAccounts.length; i++) {
+    const { canale, pageUrl, handle } = shuffledAccounts[i];
+    if (i > 0) {
+      await new Promise((r) => setTimeout(r, randomDelayMs(...INTER_PAGE_DELAY_MS)));
+    }
     console.log(`Controllo ${pageUrl}...`);
     const posts = await fetchLatestFacebookPosts(browser, pageUrl);
     console.log(`  trovati ${posts.length} post reali.`);
