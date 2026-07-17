@@ -33,6 +33,16 @@ export const VIRAL_DELTA_WINDOW_HOURS = 6;
 export const VIRAL_ENGAGEMENT_DELTA_THRESHOLD = 1000;
 export const VIRAL_VIEWS_DELTA_THRESHOLD = 20000;
 
+// Seconda soglia, in OR con quella assoluta sopra: un post è virale anche se
+// il segnale è cresciuto di oltre il 10% rispetto al controllo precedente
+// (oldestWithin6h), indipendentemente dalla sua grandezza assoluta — cattura
+// un post che sta accelerando forte in proporzione anche quando non ancora
+// abbastanza grande da superare la soglia assoluta. Richiede una baseline
+// minima (VIRAL_RELATIVE_GROWTH_MIN_BASELINE) per non far scattare il 10% su
+// numeri piccolissimi (2 -> 3 è "+50%" ma è rumore, non un segnale reale).
+export const VIRAL_RELATIVE_GROWTH_THRESHOLD_PCT = 10;
+export const VIRAL_RELATIVE_GROWTH_MIN_BASELINE = 50;
+
 // Soglia assoluta "post notevole": NON decide più is_viral (che ora decade),
 // resta come riferimento per far emergere comunque un contenuto già grande
 // negli ordinamenti secondari se servirà.
@@ -93,7 +103,17 @@ export function computePostVirality({
 
   const threshold = usesViews ? VIRAL_VIEWS_DELTA_THRESHOLD : VIRAL_ENGAGEMENT_DELTA_THRESHOLD;
 
-  const isViral = deltaSignal6h > threshold;
+  // Percentuale solo se la baseline è abbastanza grande da fidarsi (vedi
+  // VIRAL_RELATIVE_GROWTH_MIN_BASELINE) — altrimenti null, non un numero
+  // gonfiato da un campione minuscolo.
+  const deltaSignalPct =
+    signalRef != null && signalRef >= VIRAL_RELATIVE_GROWTH_MIN_BASELINE
+      ? (deltaSignal6h / signalRef) * 100
+      : null;
 
-  return { isViral, deltaSignal6h };
+  const isViral =
+    deltaSignal6h > threshold ||
+    (deltaSignalPct != null && deltaSignalPct > VIRAL_RELATIVE_GROWTH_THRESHOLD_PCT);
+
+  return { isViral, deltaSignal6h, deltaSignalPct };
 }
