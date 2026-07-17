@@ -130,6 +130,35 @@ function extractPosts() {
   return posts;
 }
 
+// Diagnostica testuale sullo stato della pagina in un dato momento: titolo,
+// quanti dialog ARIA sono presenti (visibili/chiudibili o no), e un estratto
+// del testo visibile — utile a distinguere "nessun post caricato" da "la
+// pagina sta mostrando un wall/errore che il codice non riconosce ancora".
+async function logPageDiagnostics(page, label) {
+  const info = await page
+    .evaluate(() => {
+      const dialogs = Array.from(document.querySelectorAll('div[role="dialog"]'));
+      return {
+        title: document.title,
+        dialogCount: dialogs.length,
+        dialogsVisible: dialogs.filter((d) => d.getClientRects().length > 0).length,
+        articleCount: document.querySelectorAll('[role="article"]').length,
+        bodySnippet: (document.body?.innerText || "").replace(/\s+/g, " ").trim().slice(0, 400),
+      };
+    })
+    .catch(() => null);
+
+  if (!info) {
+    log(`  [diagnostica: ${label}] valutazione pagina fallita`);
+    return;
+  }
+  log(`  [diagnostica: ${label}]`);
+  log(`    titolo pagina: ${info.title}`);
+  log(`    dialog ARIA: ${info.dialogCount} (${info.dialogsVisible} visibili)`);
+  log(`    elementi [role="article"]: ${info.articleCount}`);
+  log(`    testo visibile (primi 400 char): ${info.bodySnippet}`);
+}
+
 async function probeIndexPage(browser) {
   const context = await browser.newContext({
     userAgent:
@@ -160,8 +189,25 @@ async function probeIndexPage(browser) {
   log("Status HTTP:", response ? response.status() : "(nessuna risposta)");
   await page.waitForTimeout(2500);
 
+  await logPageDiagnostics(page, "subito dopo il caricamento");
+  await page
+    .screenshot({ path: "probe-facebook-01-caricamento.png", fullPage: false })
+    .catch((e) => {
+      log("Screenshot fallito:", e.message);
+    });
+
   log("\nProvo a chiudere il popup di login iniziale...");
-  await tryCloseFirstPopup(page);
+  const closed = await tryCloseFirstPopup(page);
+  if (!closed) {
+    log("  nessun popup chiudibile trovato con i selettori noti.");
+  }
+  await page.waitForTimeout(1000);
+  await logPageDiagnostics(page, "dopo il tentativo di chiusura popup");
+  await page
+    .screenshot({ path: "probe-facebook-02-dopo-popup.png", fullPage: false })
+    .catch((e) => {
+      log("Screenshot fallito:", e.message);
+    });
 
   let scrolls = 0;
   let lastPostCount = 0;
@@ -197,6 +243,12 @@ async function probeIndexPage(browser) {
 
   const finalBlocked = await hasBlockingWall(page);
   log(`\nWall bloccante presente a fine scroll: ${finalBlocked}`);
+  await logPageDiagnostics(page, "a fine scroll");
+  await page
+    .screenshot({ path: "probe-facebook-03-fine-scroll.png", fullPage: false })
+    .catch((e) => {
+      log("Screenshot fallito:", e.message);
+    });
 
   const posts = await page.evaluate(extractPosts);
   log(`\n=== Post reali individuati nel DOM: ${posts.length} ===`);

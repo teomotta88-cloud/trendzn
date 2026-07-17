@@ -11,6 +11,10 @@ on:
         description: "Screen name X da testare (senza @)"
         required: false
         default: "X"
+      rettiwt_version:
+        description: "Versione di rettiwt-api da testare (vuoto = latest, es. 7.0.3 per una precedente)"
+        required: false
+        default: ""
 
 jobs:
   probe:
@@ -23,7 +27,16 @@ jobs:
           node-version: "20"
 
       - name: Installa rettiwt-api (solo per il probe)
-        run: npm install rettiwt-api --no-save
+        env:
+          RETTIWT_VERSION: ${{ inputs.rettiwt_version }}
+        run: |
+          if [ -n "$RETTIWT_VERSION" ]; then
+            npm install "rettiwt-api@$RETTIWT_VERSION" --no-save
+          else
+            npm install rettiwt-api --no-save
+          fi
+          echo "Versione effettivamente installata:"
+          npm list rettiwt-api
 
       - name: Esegui probe
         env:

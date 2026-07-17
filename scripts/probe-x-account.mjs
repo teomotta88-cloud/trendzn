@@ -1,10 +1,15 @@
+import { createRequire } from "module";
 import { Rettiwt } from "rettiwt-api";
+
+const require = createRequire(import.meta.url);
+const rettiwtVersion = require("rettiwt-api/package.json").version;
 
 const API_KEY = process.env.RETTIWT_API_KEY;
 const TARGET_RAW = process.env.PROBE_SCREEN_NAME || "NASA";
 const TARGET = TARGET_RAW.replace(/^@/, "").trim();
 
 console.log("=== Probe X account ===");
+console.log(`rettiwt-api versione installata: ${rettiwtVersion}`);
 console.log(`target: @${TARGET}`);
 console.log(`API_KEY presente: ${API_KEY ? `sì (${API_KEY.length} char)` : "NO"}`);
 
@@ -46,11 +51,7 @@ function summarizeTweet(tweet, index) {
     null;
 
   const createdAt =
-    tweet?.createdAt ||
-    tweet?.created_at ||
-    tweet?.date ||
-    tweet?.legacy?.created_at ||
-    null;
+    tweet?.createdAt || tweet?.created_at || tweet?.date || tweet?.legacy?.created_at || null;
 
   const metrics = tweet?.statistics || tweet?.stats || tweet?.public_metrics || tweet?.legacy || {};
 
@@ -91,7 +92,10 @@ async function tryCall(label, fn) {
       return result;
     }
 
-    console.log("  result keys:", result && typeof result === "object" ? Object.keys(result) : null);
+    console.log(
+      "  result keys:",
+      result && typeof result === "object" ? Object.keys(result) : null,
+    );
     console.log("  result preview:", JSON.stringify(result, null, 2).slice(0, 2000));
     return result;
   } catch (err) {
