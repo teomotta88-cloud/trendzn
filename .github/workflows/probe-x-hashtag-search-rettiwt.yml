@@ -1,0 +1,36 @@
+name: Probe X Hashtag Search (rettiwt-api)
+
+# Diagnostica manuale: verifica se, DATO un hashtag/keyword già noto come
+# trend (da un'altra fonte, es. l'aggregatore di Probe X Trends Aggregator),
+# rettiwt-api riesce a recuperare post X reali con engagement (like, retweet,
+# reply, views) tramite l'account dedicato (secret RETTIWT_API_KEY, lo stesso
+# già in produzione per ASPI-monitoring). Lancialo da Actions →
+# "Probe X Hashtag Search (rettiwt-api)" → Run workflow, poi guarda il log.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtags:
+        description: "Hashtag/keyword da testare, separati da virgola (senza #)"
+        required: false
+        default: "juventus,inter,roma"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Stesso vincolo di Probe X Account: rettiwt-api 7.1.x richiede
+          # Node ^22.21.0.
+          node-version: "22"
+
+      - name: Installa rettiwt-api (solo per il probe)
+        run: npm install rettiwt-api --no-save
+
+      - name: Esegui probe
+        env:
+          RETTIWT_API_KEY: ${{ secrets.RETTIWT_API_KEY }}
+        run: node scripts/probe-x-hashtag-search-rettiwt.mjs "${{ inputs.hashtags }}"
