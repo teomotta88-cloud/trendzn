@@ -1,0 +1,33 @@
+name: Probe X Trending (autenticato)
+
+# Diagnostica manuale: probe-x-trending.mjs ha confermato che x.com/explore/tabs/trending
+# blocca l'accesso anonimo (redirect login). Questo probe riprova DA LOGGATI,
+# riusando i cookie del già collaudato account X dedicato (secret
+# RETTIWT_API_KEY, lo stesso di ASPI-monitoring) iniettati in un browser
+# Playwright vero. Lancialo da Actions → "Probe X Trending (autenticato)" →
+# Run workflow, poi guarda il log.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Sonda la pagina trending X da loggati
+        env:
+          RETTIWT_API_KEY: ${{ secrets.RETTIWT_API_KEY }}
+        run: node scripts/probe-x-trending-authenticated.mjs
