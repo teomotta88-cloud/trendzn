@@ -1,0 +1,35 @@
+name: Sync X Posts
+
+# Usa un account X dedicato (secret RETTIWT_API_KEY, libreria rettiwt-api,
+# validata via Probe X Account) per leggere i post recenti degli account X
+# monitorati in ASPI-monitoring. rettiwt-api 7.1.x richiede Node ^22.21.0
+# (vedi probe-x-account.yml). Minuto :15, diverso da sync-aspi-monitoring
+# (:30) e sync-facebook-posts (:45), per non scrivere su
+# aspi-monitoring.json in contemporanea.
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Installa rettiwt-api
+        run: npm install rettiwt-api --no-save
+
+      - name: Sync post X
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RETTIWT_API_KEY: ${{ secrets.RETTIWT_API_KEY }}
+        run: node scripts/sync-x-posts.mjs
