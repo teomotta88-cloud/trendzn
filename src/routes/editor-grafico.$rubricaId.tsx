@@ -11,6 +11,7 @@ import {
 } from "@/lib/autographics";
 import { listTemplateElements, type TemplateElement } from "@/lib/designElements";
 import { DesignEditor } from "@/components/DesignEditor/DesignEditor";
+import { GOOGLE_FONTS_STYLESHEET_URL } from "@/components/DesignEditor/constants";
 
 // Editor grafico interno (sostituisce progressivamente Figma plugin/Canva
 // Bulk Create, vedi docs/sbam-autographics-canva.md): disegna qui il design
@@ -22,6 +23,15 @@ import { DesignEditor } from "@/components/DesignEditor/DesignEditor";
 export const Route = createFileRoute("/editor-grafico/$rubricaId")({
   head: () => ({
     meta: [{ title: "Editor grafico — TRENDZN" }],
+    // Il render finale cattura il DOM vero (design-capture.ts): i font del
+    // set curato devono essere davvero caricati dal browser, non solo
+    // referenziati per nome, altrimenti sia l'editor sia l'export
+    // userebbero silenziosamente un font di fallback. crossOrigin è
+    // necessario perché html-to-image, in fase di cattura, deve poter
+    // leggere .cssRules di questo stylesheet per incorporare i @font-face
+    // nell'SVG esportato — senza crossOrigin il browser lo tratta come
+    // "opaco" e lancia SecurityError su qualunque lettura di .cssRules.
+    links: [{ rel: "stylesheet", href: GOOGLE_FONTS_STYLESHEET_URL, crossOrigin: "anonymous" }],
   }),
   component: Page,
 });

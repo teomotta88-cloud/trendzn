@@ -3,9 +3,10 @@ import { supabase } from "@/integrations/supabase/client";
 // Data layer dell'editor grafico interno (Fase 2 del percorso deciso al
 // posto di Figma/Canva, vedi docs/sbam-autographics-canva.md): CRUD di
 // template_elements, l'albero di elementi posizionati che l'editor visuale
-// mostra e modifica, e che src/lib/design-render.ts consuma per produrre il
-// PNG finale. Stesso pattern di autographics.ts: tabella non ancora nei tipi
-// generati del client Supabase, quindi cast invece di rigenerare types.ts.
+// mostra e modifica, e che viene catturato in PNG lato client da
+// src/lib/design-capture.ts. Stesso pattern di autographics.ts: tabella non
+// ancora nei tipi generati del client Supabase, quindi cast invece di
+// rigenerare types.ts.
 const db = supabase as any;
 
 export type ElementTipo = "text" | "image" | "icon" | "shape";

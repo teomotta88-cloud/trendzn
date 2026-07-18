@@ -6,11 +6,23 @@ import {
   type TemplateElement,
   type TemplateElementInput,
 } from "@/lib/designElements";
+import { captureNodeToPngBlob } from "@/lib/design-capture";
 import type { RubricaFormato } from "@/lib/autographics";
 import { ElementBox, type EditorElement } from "./ElementBox";
 import { PropertiesPanel } from "./PropertiesPanel";
 import { Toolbar } from "./Toolbar";
 import { MAX_EDITOR_CANVAS_PX } from "./constants";
+
+// Aspetta il prossimo repaint effettivo del browser (due rAF innestati,
+// pattern standard per "aspetta che React abbia committato E il browser
+// abbia disegnato"): serve dopo aver deselezionato l'elemento prima di
+// catturare il canvas, altrimenti il bordo di selezione finirebbe
+// nell'immagine esportata.
+function waitForNextPaint(): Promise<void> {
+  return new Promise((resolve) =>
+    requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+  );
+}
 
 interface DesignEditorProps {
   rubricaId: string;
@@ -109,6 +121,7 @@ export function DesignEditor({
   const [renderError, setRenderError] = useState<string | null>(null);
 
   const elementRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const canvasRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef(0);
 
   const selected = elements.find((el) => el.id === selectedId) ?? null;
@@ -197,32 +210,17 @@ export function DesignEditor({
     setRendering(true);
     setRenderError(null);
     setPreviewUrl(null);
+    setSelectedId(null);
     try {
-      const values: Record<string, string> = {};
-      for (const el of elements) {
-        if (!el.layer_name) continue;
-        if (el.tipo === "image") {
-          values[el.layer_name] = (el.style.previewSrc as string) || "";
-        } else if (el.tipo === "text") {
-          values[el.layer_name] = `${el.layer_name}`;
-        }
-      }
-      const storedElements = elements.map((el) => toStoredElement(el, scale));
-      const res = await fetch("/api/public/hooks/render-design", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          width: formato.width_px,
-          height: formato.height_px,
-          elements: storedElements,
-          values,
-        }),
-      });
-      if (!res.ok) {
-        const body = await res.json().catch(() => null);
-        throw new Error(body?.error || `Errore ${res.status}`);
-      }
-      const blob = await res.blob();
+      // Cattura il DOM del canvas com'è mostrato a schermo (Fase 2/3): i
+      // campi testo dinamici mostrano il nome del layer come segnaposto, i
+      // campi immagine dinamici mostrano previewSrc se impostato. La
+      // generazione bulk reale (Fase 5) sostituirà questi valori con quelli
+      // veri del job prima di catturare, stesso identico meccanismo.
+      await waitForNextPaint();
+      if (!canvasRef.current) throw new Error("Canvas non disponibile");
+      const pixelRatio = 1 / scale;
+      const blob = await captureNodeToPngBlob(canvasRef.current, pixelRatio);
       setPreviewUrl(URL.createObjectURL(blob));
     } catch (err) {
       setRenderError(err instanceof Error ? err.message : String(err));
@@ -265,6 +263,7 @@ export function DesignEditor({
         {saveError && <p className="text-xs text-destructive">{saveError}</p>}
 
         <div
+          ref={canvasRef}
           className="relative overflow-hidden rounded-xl border border-border bg-white shadow-sm"
           style={{ width: displayWidth, height: displayHeight }}
           onMouseDown={(e) => {

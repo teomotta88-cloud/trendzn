@@ -26,12 +26,10 @@ interface ElementBoxProps {
   onChangeText: (value: string) => void;
 }
 
-// Rappresenta un elemento sul canvas dell'editor. Le stesse proprietà CSS
-// usate qui (position/left/top/width/height/transform, fontFamily/fontSize/
-// color/textAlign per il testo, objectFit/borderRadius per le immagini)
-// rispecchiano deliberatamente quelle prodotte da buildTree in
-// src/lib/design-render.ts: quello che si vede qui è quello che esce dal
-// render finale (a meno della scala px, gestita a parte).
+// Rappresenta un elemento sul canvas dell'editor. Il render finale (vedi
+// src/lib/design-capture.ts) cattura direttamente questo stesso DOM — non
+// esiste una reimplementazione separata del layout: quello che si vede qui
+// è, letteralmente, quello che esce dall'export.
 export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function ElementBox(
   { element, selected, onSelect, onChangeText },
   ref,
@@ -127,7 +125,14 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
   }
 
   if (element.tipo === "image") {
-    const src = typeof s.src === "string" ? s.src : null;
+    // Un campo immagine dinamico (layer_name impostato) non ha un valore
+    // reale finché non esiste un job: previewSrc è solo per vedere/catturare
+    // qualcosa di sensato nell'editor, sostituito dal valore vero in fase di
+    // generazione bulk (Fase 5). src (fissa) e previewSrc non coesistono mai
+    // realmente: src è per immagini fisse (logo), previewSrc per i campi
+    // dinamici — se entrambe assenti, placeholder.
+    const src =
+      typeof s.src === "string" ? s.src : typeof s.previewSrc === "string" ? s.previewSrc : null;
     return (
       <div
         ref={ref}
@@ -143,6 +148,7 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
           <img
             src={src}
             alt=""
+            crossOrigin="anonymous"
             style={{
               width: "100%",
               height: "100%",
