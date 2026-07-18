@@ -1,10 +1,11 @@
 import { ArrowDown, ArrowUp, ChevronsDown, ChevronsUp, Trash2 } from "lucide-react";
-import { CURATED_FONTS, CURATED_ICONS } from "./constants";
+import { CURATED_ICONS } from "./constants";
 import type { EditorElement } from "./ElementBox";
 
 interface PropertiesPanelProps {
   element: EditorElement | null;
   layerNameSuggestions: string[];
+  fontOptions: string[];
   onChange: (patch: Partial<EditorElement>) => void;
   onChangeStyle: (patch: Record<string, unknown>) => void;
   onDelete: () => void;
@@ -36,6 +37,7 @@ function NumberField({
 export function PropertiesPanel({
   element,
   layerNameSuggestions,
+  fontOptions,
   onChange,
   onChangeStyle,
   onDelete,
@@ -158,7 +160,7 @@ export function PropertiesPanel({
               onChange={(e) => onChangeStyle({ fontFamily: e.target.value })}
               className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
             >
-              {CURATED_FONTS.map((f) => (
+              {fontOptions.map((f) => (
                 <option key={f} value={f}>
                   {f}
                 </option>

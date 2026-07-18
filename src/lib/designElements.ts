@@ -113,3 +113,16 @@ export async function uploadCustomFont(
   if (error) throw error;
   return data;
 }
+
+export function getCustomFontPublicUrl(storagePath: string): string {
+  return supabase.storage.from("custom-fonts").getPublicUrl(storagePath).data.publicUrl;
+}
+
+export async function deleteCustomFont(font: CustomFont): Promise<void> {
+  const { error: storageError } = await supabase.storage
+    .from("custom-fonts")
+    .remove([font.storage_path]);
+  if (storageError) throw storageError;
+  const { error } = await db.from("custom_fonts").delete().eq("id", font.id);
+  if (error) throw error;
+}

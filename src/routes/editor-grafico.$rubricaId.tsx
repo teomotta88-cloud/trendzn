@@ -9,9 +9,16 @@ import {
   type Rubrica,
   type RubricaFormato,
 } from "@/lib/autographics";
-import { listTemplateElements, type TemplateElement } from "@/lib/designElements";
+import {
+  listTemplateElements,
+  listCustomFonts,
+  type TemplateElement,
+  type CustomFont,
+} from "@/lib/designElements";
 import { DesignEditor } from "@/components/DesignEditor/DesignEditor";
-import { GOOGLE_FONTS_STYLESHEET_URL } from "@/components/DesignEditor/constants";
+import { CustomFontsPanel } from "@/components/DesignEditor/CustomFontsPanel";
+import { useCustomFontFaces } from "@/components/DesignEditor/useCustomFontFaces";
+import { CURATED_FONTS, GOOGLE_FONTS_STYLESHEET_URL } from "@/components/DesignEditor/constants";
 
 // Editor grafico interno (sostituisce progressivamente Figma plugin/Canva
 // Bulk Create, vedi docs/sbam-autographics-canva.md): disegna qui il design
@@ -116,6 +123,7 @@ function Page() {
   const [selectedFormatoId, setSelectedFormatoId] = useState<string | null>(null);
   const [elements, setElements] = useState<TemplateElement[] | null>(null);
   const [layerNameSuggestions, setLayerNameSuggestions] = useState<string[]>([]);
+  const [customFonts, setCustomFonts] = useState<CustomFont[]>([]);
   const [loading, setLoading] = useState(true);
   const [showNewFormato, setShowNewFormato] = useState(false);
 
@@ -126,10 +134,14 @@ function Page() {
     setShowNewFormato(false);
   }
 
+  async function loadCustomFonts() {
+    setCustomFonts(await listCustomFonts());
+  }
+
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const [r] = await Promise.all([getRubrica(rubricaId), loadFormati()]);
+      const [r] = await Promise.all([getRubrica(rubricaId), loadFormati(), loadCustomFonts()]);
       const constraints = await listTemplateConstraints(rubricaId);
       setRubrica(r);
       setLayerNameSuggestions(constraints.map((c) => c.layer_name));
@@ -137,6 +149,17 @@ function Page() {
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricaId]);
+
+  // I font custom vanno effettivamente caricati dal browser (non solo
+  // referenziati per nome) sia per l'editor a schermo sia per la cattura
+  // dell'export, che legge i @font-face del documento — vedi
+  // useCustomFontFaces.ts.
+  useCustomFontFaces(customFonts);
+
+  const fontOptions = [
+    ...CURATED_FONTS,
+    ...customFonts.map((f) => f.family_name).filter((name, idx, arr) => arr.indexOf(name) === idx),
+  ];
 
   const selectedFormato = formati.find((f) => f.id === selectedFormatoId) ?? null;
 
@@ -206,6 +229,8 @@ function Page() {
 
       {showNewFormato && <NewFormatoForm rubricaId={rubricaId} onCreated={loadFormati} />}
 
+      <CustomFontsPanel fonts={customFonts} onChange={loadCustomFonts} />
+
       {!selectedFormato ? (
         <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
           Nessun formato configurato per questa rubrica. Aggiungine uno per iniziare a disegnare.
@@ -219,6 +244,7 @@ function Page() {
           formato={selectedFormato}
           initialElements={elements}
           layerNameSuggestions={layerNameSuggestions}
+          fontOptions={fontOptions}
         />
       )}
     </div>

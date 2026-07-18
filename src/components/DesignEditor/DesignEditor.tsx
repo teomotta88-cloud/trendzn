@@ -29,6 +29,7 @@ interface DesignEditorProps {
   formato: RubricaFormato;
   initialElements: TemplateElement[];
   layerNameSuggestions: string[];
+  fontOptions: string[];
 }
 
 function newLocalId(): string {
@@ -102,6 +103,7 @@ export function DesignEditor({
   formato,
   initialElements,
   layerNameSuggestions,
+  fontOptions,
 }: DesignEditorProps) {
   const scale = useMemo(
     () => computeScale(formato.width_px, formato.height_px),
@@ -359,6 +361,7 @@ export function DesignEditor({
       <PropertiesPanel
         element={selected}
         layerNameSuggestions={layerNameSuggestions}
+        fontOptions={fontOptions}
         onChange={(patch) => selectedId && updateElement(selectedId, patch)}
         onChangeStyle={updateSelectedStyle}
         onDelete={deleteSelected}
