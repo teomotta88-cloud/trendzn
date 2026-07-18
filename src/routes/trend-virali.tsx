@@ -436,7 +436,7 @@ function ContentCard({ item }: { item: ViralTrendContent }) {
 // se il singolo embed è lazy (vedi LazyEmbed in SocialEmbed.tsx, che rimanda
 // il montaggio dell'iframe/fetch a quando la card entra in viewport): il
 // limite qui evita di mettere in pagina centinaia di card insieme.
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 8;
 
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
