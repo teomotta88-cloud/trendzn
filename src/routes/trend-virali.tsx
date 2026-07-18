@@ -18,7 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PlatformIcon, SocialEmbed } from "@/components/SocialEmbed";
+import { LazyEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { formatCompactNumber } from "@/lib/format";
 import {
   computeTopicVerdict,
@@ -369,7 +369,7 @@ function TopicRankingList({
 function ContentCard({ item }: { item: ViralTrendContent }) {
   return (
     <article className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60">
-      <SocialEmbed url={item.url} />
+      <LazyEmbed url={item.url} />
 
       <div className="space-y-2 px-1 pb-2">
         <div className="flex flex-wrap items-center gap-1.5">
@@ -431,10 +431,11 @@ function ContentCard({ item }: { item: ViralTrendContent }) {
   );
 }
 
-// Contenuti mostrati inizialmente e ad ogni click su "Carica altri": tutti
-// gli embed vengono montati subito (nessun lazy-load a scroll, vedi
-// SocialEmbed), quindi il numero di card in pagina va limitato esplicitamente
-// per non caricare decine di iframe insieme.
+// Contenuti mostrati inizialmente e ad ogni click su "Carica altri". Il DOM
+// delle card non è comunque leggero (una per ogni contenuto filtrato) anche
+// se il singolo embed è lazy (vedi LazyEmbed in SocialEmbed.tsx, che rimanda
+// il montaggio dell'iframe/fetch a quando la card entra in viewport): il
+// limite qui evita di mettere in pagina centinaia di card insieme.
 const PAGE_SIZE = 20;
 
 function Page() {
@@ -448,6 +449,7 @@ function Page() {
   const [sortBy, setSortBy] = useState<SortBy>("virality");
   const [search, setSearch] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [canaliInspoVisibleCount, setCanaliInspoVisibleCount] = useState(PAGE_SIZE);
 
   const [topics, setTopics] = useState<MonitoredTopic[]>([]);
   const [topicsError, setTopicsError] = useState<string | null>(null);
@@ -517,6 +519,14 @@ function Page() {
     () => items.filter((i) => i.discovery_source === "canali-inspo"),
     [items],
   );
+
+  // Stesso motivo del reset di visibleCount sopra: un nuovo fetch (o il primo
+  // caricamento) non deve ereditare un conteggio più alto del nuovo elenco.
+  useEffect(() => {
+    setCanaliInspoVisibleCount(PAGE_SIZE);
+  }, [items]);
+
+  const canaliInspoVisible = canaliInspoItems.slice(0, canaliInspoVisibleCount);
 
   const filtered = useMemo(() => {
     let result = items;
@@ -598,11 +608,25 @@ function Page() {
               condivisi da più profili.
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {canaliInspoItems.map((item) => (
-                <ContentCard key={item.id} item={item} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {canaliInspoVisible.map((item) => (
+                  <ContentCard key={item.id} item={item} />
+                ))}
+              </div>
+
+              {canaliInspoVisibleCount < canaliInspoItems.length && (
+                <div className="flex justify-center">
+                  <button
+                    type="button"
+                    onClick={() => setCanaliInspoVisibleCount((c) => c + PAGE_SIZE)}
+                    className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
+                  >
+                    Carica altri ({canaliInspoItems.length - canaliInspoVisibleCount} rimanenti)
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </>
       )}
