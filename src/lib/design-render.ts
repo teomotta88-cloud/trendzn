@@ -13,10 +13,22 @@ import * as LucideIcons from "lucide-react";
 // wasm come base64 e non necessita di init manuale), @resvg/resvg-wasm
 // rasterizza l'SVG in PNG.
 //
-// Il suo .wasm va invece inizializzato esplicitamente: non viene bundlato in
-// modo affidabile da Vite/Nitro in questo progetto (stesso problema già
-// documentato per @jsquash/* in export-feed-pptx.ts) — lo scarichiamo dalla
-// CDN npm a runtime, stessa convenzione.
+// ATTENZIONE — verificato con `wrangler dev` reale (non solo build/tsc):
+// questo pattern (fetch del .wasm da CDN + compilazione a runtime, stessa
+// convenzione già in uso per i codec @jsquash/* in export-feed-pptx.ts) NON
+// funziona sul vero runtime Cloudflare Workers — la compilazione dinamica di
+// WebAssembly a runtime è bloccata dall'embedder ("Wasm code generation
+// disallowed"). Ho provato l'alternativa corretta (import statico del
+// .wasm, gestito a build time da Nitro/unwasm invece che compilato a
+// runtime) ma con l'attuale setup Vite/Nitro di questo progetto produce un
+// bundle di deploy corrotto (unwasm genera anche un piccolo file
+// "*.wasm" che in realtà è uno stub JS di re-export, e la raccolta asset di
+// Nitro per Cloudflare lo carica come se fosse binario vero, causando un
+// errore di compilazione lato Cloudflare). Ho lasciato qui il pattern che
+// almeno builda con successo, ma **questo motore non è ancora garantito
+// funzionante in produzione**: richiede un giro dedicato a risolvere il
+// bundling wasm (o un cambio di architettura, es. rasterizzare via Canvas
+// 2D lato browser invece che qui). Vedi la relazione nella conversazione.
 const RESVG_WASM_VERSION = "2.6.2";
 
 async function fetchWasmModule(cdnPath: string): Promise<WebAssembly.Module> {
