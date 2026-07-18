@@ -36,6 +36,7 @@ import { Route as ApiPublicHooksSyncTrendingHashtagsRouteImport } from './routes
 import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/api/public/hooks/sync-tiktok-hashtag'
 import { Route as ApiPublicHooksSyncBrandMentionsRouteImport } from './routes/api/public/hooks/sync-brand-mentions'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
+import { Route as ApiPublicHooksRenderDesignRouteImport } from './routes/api/public/hooks/render-design'
 import { Route as ApiPublicHooksRecordTopicVolumeRouteImport } from './routes/api/public/hooks/record-topic-volume'
 import { Route as ApiPublicHooksRecheckViralEngagementRouteImport } from './routes/api/public/hooks/recheck-viral-engagement'
 import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public/hooks/poll-gmail'
@@ -198,6 +199,12 @@ const ApiPublicHooksSubmitManualRoute =
     path: '/api/public/hooks/submit-manual',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksRenderDesignRoute =
+  ApiPublicHooksRenderDesignRouteImport.update({
+    id: '/api/public/hooks/render-design',
+    path: '/api/public/hooks/render-design',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksRecordTopicVolumeRoute =
   ApiPublicHooksRecordTopicVolumeRouteImport.update({
     id: '/api/public/hooks/record-topic-volume',
@@ -328,6 +335,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/recheck-viral-engagement': typeof ApiPublicHooksRecheckViralEngagementRoute
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
+  '/api/public/hooks/render-design': typeof ApiPublicHooksRenderDesignRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -373,6 +381,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/recheck-viral-engagement': typeof ApiPublicHooksRecheckViralEngagementRoute
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
+  '/api/public/hooks/render-design': typeof ApiPublicHooksRenderDesignRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -419,6 +428,7 @@ export interface FileRoutesById {
   '/api/public/hooks/poll-gmail': typeof ApiPublicHooksPollGmailRoute
   '/api/public/hooks/recheck-viral-engagement': typeof ApiPublicHooksRecheckViralEngagementRoute
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
+  '/api/public/hooks/render-design': typeof ApiPublicHooksRenderDesignRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -466,6 +476,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/recheck-viral-engagement'
     | '/api/public/hooks/record-topic-volume'
+    | '/api/public/hooks/render-design'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-tiktok-hashtag'
@@ -511,6 +522,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/recheck-viral-engagement'
     | '/api/public/hooks/record-topic-volume'
+    | '/api/public/hooks/render-design'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-tiktok-hashtag'
@@ -556,6 +568,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/poll-gmail'
     | '/api/public/hooks/recheck-viral-engagement'
     | '/api/public/hooks/record-topic-volume'
+    | '/api/public/hooks/render-design'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-tiktok-hashtag'
@@ -602,6 +615,7 @@ export interface RootRouteChildren {
   ApiPublicHooksPollGmailRoute: typeof ApiPublicHooksPollGmailRoute
   ApiPublicHooksRecheckViralEngagementRoute: typeof ApiPublicHooksRecheckViralEngagementRoute
   ApiPublicHooksRecordTopicVolumeRoute: typeof ApiPublicHooksRecordTopicVolumeRoute
+  ApiPublicHooksRenderDesignRoute: typeof ApiPublicHooksRenderDesignRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
   ApiPublicHooksSyncBrandMentionsRoute: typeof ApiPublicHooksSyncBrandMentionsRoute
   ApiPublicHooksSyncTiktokHashtagRoute: typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -805,6 +819,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksSubmitManualRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/render-design': {
+      id: '/api/public/hooks/render-design'
+      path: '/api/public/hooks/render-design'
+      fullPath: '/api/public/hooks/render-design'
+      preLoaderRoute: typeof ApiPublicHooksRenderDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/record-topic-volume': {
       id: '/api/public/hooks/record-topic-volume'
       path: '/api/public/hooks/record-topic-volume'
@@ -958,6 +979,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksRecheckViralEngagementRoute:
     ApiPublicHooksRecheckViralEngagementRoute,
   ApiPublicHooksRecordTopicVolumeRoute: ApiPublicHooksRecordTopicVolumeRoute,
+  ApiPublicHooksRenderDesignRoute: ApiPublicHooksRenderDesignRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
   ApiPublicHooksSyncBrandMentionsRoute: ApiPublicHooksSyncBrandMentionsRoute,
   ApiPublicHooksSyncTiktokHashtagRoute: ApiPublicHooksSyncTiktokHashtagRoute,
