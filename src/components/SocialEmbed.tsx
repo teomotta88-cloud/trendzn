@@ -320,6 +320,43 @@ export function SocialEmbed({ url }: { url: string }) {
   );
 }
 
+// Monta <SocialEmbed> solo quando la card entra (quasi) in viewport, invece
+// che subito al render: senza, una griglia di 20+ card caricherebbe altrettanti
+// iframe Instagram/YouTube (e le fetch oEmbed/LinkedIn) tutti insieme al primo
+// render della pagina, anche per le card fuori schermo. rootMargin anticipa il
+// mount di un tratto prima che la card sia visibile, per uno scroll più fluido.
+// Una volta montato resta tale (l'observer si disconnette): niente
+// rimontaggio/richiesta di rete ripetuta se l'utente scrolla avanti e indietro.
+export function LazyEmbed({ url }: { url: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || visible) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  if (visible) return <SocialEmbed url={url} />;
+
+  return (
+    <div
+      ref={ref}
+      className="flex aspect-[9/16] w-full items-center justify-center rounded-xl border border-border bg-card/50"
+    />
+  );
+}
+
 export function PlatformIcon({ platform, className }: { platform: string; className?: string }) {
   const cls = className ?? "size-4";
   if (platform === "instagram") return <Instagram className={cls} />;
