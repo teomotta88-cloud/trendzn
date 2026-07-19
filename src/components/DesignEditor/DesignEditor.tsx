@@ -12,6 +12,7 @@ import { ElementBox, type EditorElement } from "./ElementBox";
 import { PropertiesPanel } from "./PropertiesPanel";
 import { Toolbar } from "./Toolbar";
 import { useHistory } from "./useHistory";
+import { computeSnap, type SnapGuides } from "./snapping";
 import { MAX_EDITOR_CANVAS_PX } from "./constants";
 
 // Le modifiche continue (digitazione in un campo numerico, trascinamento di
@@ -133,6 +134,7 @@ export function DesignEditor({
   const elementRefs = useRef<Map<string, HTMLDivElement>>(new Map());
   const canvasRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef(0);
+  const [guides, setGuides] = useState<SnapGuides>({ vertical: [], horizontal: [] });
 
   const selected = elements.find((el) => el.id === selectedId) ?? null;
   const targetEl = selectedId ? (elementRefs.current.get(selectedId) ?? null) : null;
@@ -356,6 +358,23 @@ export function DesignEditor({
                 }}
               />
             ))}
+          {/* Linee magnetiche (Fase 6): overlay puramente visivo, non
+              intercetta il mouse (pointer-events: none) — lo snap vero
+              avviene in onDrag/computeSnap, queste sono solo il feedback. */}
+          {guides.vertical.map((x) => (
+            <div
+              key={`v-${x}`}
+              className="pointer-events-none absolute inset-y-0 w-px bg-pink-500"
+              style={{ left: x }}
+            />
+          ))}
+          {guides.horizontal.map((y) => (
+            <div
+              key={`h-${y}`}
+              className="pointer-events-none absolute inset-x-0 h-px bg-pink-500"
+              style={{ top: y }}
+            />
+          ))}
         </div>
 
         {targetEl && (
@@ -368,11 +387,20 @@ export function DesignEditor({
             throttleDrag={0}
             throttleResize={0}
             throttleRotate={0}
-            onDrag={({ target, left, top }) => {
-              (target as HTMLElement).style.left = `${left}px`;
-              (target as HTMLElement).style.top = `${top}px`;
+            onDrag={({ target, left, top, width, height }) => {
+              const others = elements
+                .filter((el) => el.id !== selectedId)
+                .map((el) => ({ x: el.x, y: el.y, width: el.width, height: el.height }));
+              const snap = computeSnap({ x: left, y: top, width, height }, others, {
+                width: displayWidth,
+                height: displayHeight,
+              });
+              (target as HTMLElement).style.left = `${snap.x}px`;
+              (target as HTMLElement).style.top = `${snap.y}px`;
+              setGuides(snap.guides);
             }}
             onDragEnd={({ target }) => {
+              setGuides({ vertical: [], horizontal: [] });
               if (!selectedId) return;
               updateElement(selectedId, {
                 x: parseFloat((target as HTMLElement).style.left) || 0,
