@@ -35,6 +35,7 @@ function waitForNextPaint(): Promise<void> {
 interface DesignEditorProps {
   rubricaId: string;
   formato: RubricaFormato;
+  cardIndex: number;
   initialElements: TemplateElement[];
   layerNameSuggestions: string[];
   fontOptions: string[];
@@ -109,6 +110,7 @@ function defaultStyleFor(tipo: EditorElement["tipo"]): Record<string, unknown> {
 export function DesignEditor({
   rubricaId,
   formato,
+  cardIndex,
   initialElements,
   layerNameSuggestions,
   fontOptions,
@@ -224,6 +226,7 @@ export function DesignEditor({
       await replaceTemplateElements(
         rubricaId,
         formato.formato,
+        cardIndex,
         elements.map((el) => toStoredElement(el, scale)),
       );
     } catch (err) {

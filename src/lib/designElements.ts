@@ -16,6 +16,10 @@ export interface TemplateElement {
   rubrica_id: string;
   // null = comune a tutti i formati della rubrica.
   formato: string | null;
+  // Frame/card del carousel (Fase 8): 1 = primo frame. Ogni frame ha il suo
+  // set di elementi indipendente, nessun concetto di elemento condiviso tra
+  // frame per ora (a differenza di formato, che ammette null = comune).
+  card_index: number;
   // null = contenuto fisso del design (non sostituito dai dati del job).
   layer_name: string | null;
   tipo: ElementTipo;
@@ -32,15 +36,20 @@ export interface TemplateElement {
 
 export type NewTemplateElement = Omit<TemplateElement, "id" | "created_at" | "updated_at">;
 
-// Input di replaceTemplateElements: rubrica_id/formato li imposta la
-// funzione stessa (sono l'ambito su cui opera, non proprietà del singolo
+// Input di replaceTemplateElements: rubrica_id/formato/card_index li imposta
+// la funzione stessa (sono l'ambito su cui opera, non proprietà del singolo
 // elemento lato chiamante).
-export type TemplateElementInput = Omit<NewTemplateElement, "rubrica_id" | "formato">;
+export type TemplateElementInput = Omit<
+  NewTemplateElement,
+  "rubrica_id" | "formato" | "card_index"
+>;
 
-// Elementi di una rubrica per un formato: include sia quelli specifici del
-// formato sia quelli comuni (formato = null), così l'editor li mostra
-// assieme quando si lavora su un formato specifico.
-export async function listTemplateElements(
+// Tutti gli elementi di una rubrica per un formato, di TUTTI i frame
+// (include sia quelli specifici del formato sia quelli comuni, formato =
+// null) — il chiamante raggruppa per card_index invece di fare una query
+// per frame, così cambiare frame nell'editor non richiede un nuovo round
+// trip.
+export async function listTemplateElementsAllCards(
   rubricaId: string,
   formato: string | null,
 ): Promise<TemplateElement[]> {
@@ -49,30 +58,58 @@ export async function listTemplateElements(
     .select("*")
     .eq("rubrica_id", rubricaId)
     .or(formato ? `formato.is.null,formato.eq.${formato}` : "formato.is.null")
+    .order("card_index", { ascending: true })
     .order("z_index", { ascending: true });
   if (error) throw error;
   return data ?? [];
 }
 
 // Sostituisce tutti gli elementi di una rubrica per un dato ambito (formato
-// specifico o null = comuni), stesso pattern "delete poi insert" di
+// + frame specifici), stesso pattern "delete poi insert" di
 // replaceTemplateConstraints in autographics.ts: l'editor visuale ricompone
 // liberamente il design ad ogni salvataggio, non ha senso un merge riga per
-// riga.
+// riga. Non tocca gli elementi degli altri frame/formati della stessa
+// rubrica.
 export async function replaceTemplateElements(
   rubricaId: string,
   formato: string | null,
+  cardIndex: number,
   elements: TemplateElementInput[],
 ): Promise<TemplateElement[]> {
-  let deleteQuery = db.from("template_elements").delete().eq("rubrica_id", rubricaId);
+  let deleteQuery = db
+    .from("template_elements")
+    .delete()
+    .eq("rubrica_id", rubricaId)
+    .eq("card_index", cardIndex);
   deleteQuery = formato ? deleteQuery.eq("formato", formato) : deleteQuery.is("formato", null);
   const { error: deleteError } = await deleteQuery;
   if (deleteError) throw deleteError;
   if (elements.length === 0) return [];
-  const rows = elements.map((el) => ({ ...el, rubrica_id: rubricaId, formato }));
+  const rows = elements.map((el) => ({
+    ...el,
+    rubrica_id: rubricaId,
+    formato,
+    card_index: cardIndex,
+  }));
   const { data, error } = await db.from("template_elements").insert(rows).select("*");
   if (error) throw error;
   return data ?? [];
+}
+
+// Elimina un intero frame (tutti i suoi elementi) per un formato.
+export async function deleteTemplateCard(
+  rubricaId: string,
+  formato: string | null,
+  cardIndex: number,
+): Promise<void> {
+  let query = db
+    .from("template_elements")
+    .delete()
+    .eq("rubrica_id", rubricaId)
+    .eq("card_index", cardIndex);
+  query = formato ? query.eq("formato", formato) : query.is("formato", null);
+  const { error } = await query;
+  if (error) throw error;
 }
 
 // --- Font custom -----------------------------------------------------

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowLeft, Plus } from "lucide-react";
+import { ArrowLeft, Plus, Trash2 } from "lucide-react";
 import {
   getRubrica,
   listRubricaFormati,
@@ -10,7 +10,8 @@ import {
   type RubricaFormato,
 } from "@/lib/autographics";
 import {
-  listTemplateElements,
+  listTemplateElementsAllCards,
+  deleteTemplateCard,
   listCustomFonts,
   type TemplateElement,
   type CustomFont,
@@ -121,7 +122,8 @@ function Page() {
   const [rubrica, setRubrica] = useState<Rubrica | null>(null);
   const [formati, setFormati] = useState<RubricaFormato[]>([]);
   const [selectedFormatoId, setSelectedFormatoId] = useState<string | null>(null);
-  const [elements, setElements] = useState<TemplateElement[] | null>(null);
+  const [allCardElements, setAllCardElements] = useState<TemplateElement[] | null>(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(1);
   const [layerNameSuggestions, setLayerNameSuggestions] = useState<string[]>([]);
   const [customFonts, setCustomFonts] = useState<CustomFont[]>([]);
   const [loading, setLoading] = useState(true);
@@ -165,16 +167,55 @@ function Page() {
 
   useEffect(() => {
     if (!selectedFormato) {
-      setElements(null);
+      setAllCardElements(null);
       return;
     }
-    setElements(null);
-    listTemplateElements(rubricaId, selectedFormato.formato).then(setElements);
+    setAllCardElements(null);
+    setActiveCardIndex(1);
+    listTemplateElementsAllCards(rubricaId, selectedFormato.formato).then(setAllCardElements);
     // selectedFormato deriva da formati (già in scope) tramite .find(): usare
     // solo id/formato come dipendenze evita un re-fetch a ogni render in cui
     // formati non è cambiato ma la entry .find() è una nuova reference.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricaId, selectedFormato?.id, selectedFormato?.formato]);
+
+  // Frame/card presenti per questo formato (carousel, Fase 8): sempre almeno
+  // il frame 1, anche se il design è ancora vuoto, altrimenti non ci sarebbe
+  // nessuna tab su cui cliccare per iniziare a disegnare.
+  const cardIndexes = allCardElements
+    ? Array.from(new Set(allCardElements.map((el) => el.card_index))).sort((a, b) => a - b)
+    : [];
+  if (cardIndexes.length === 0) cardIndexes.push(1);
+  // Un frame appena aggiunto non ha ancora elementi salvati, quindi non
+  // comparirebbe in cardIndexes finché non si salva: lo si include comunque
+  // nella tab bar finché è quello attivo.
+  const displayCardIndexes = cardIndexes.includes(activeCardIndex)
+    ? cardIndexes
+    : [...cardIndexes, activeCardIndex].sort((a, b) => a - b);
+
+  const currentCardElements = (allCardElements ?? []).filter(
+    (el) => el.card_index === activeCardIndex,
+  );
+
+  function handleAddFrame() {
+    const nextIndex = Math.max(...cardIndexes) + 1;
+    setActiveCardIndex(nextIndex);
+  }
+
+  async function handleDeleteFrame(cardIndex: number) {
+    if (!selectedFormato) return;
+    if (cardIndexes.length <= 1) return;
+    if (!window.confirm(`Eliminare il frame ${cardIndex}? L'azione non è reversibile.`)) return;
+    await deleteTemplateCard(rubricaId, selectedFormato.formato, cardIndex);
+    const refreshed = await listTemplateElementsAllCards(rubricaId, selectedFormato.formato);
+    setAllCardElements(refreshed);
+    if (activeCardIndex === cardIndex) {
+      const remaining = Array.from(new Set(refreshed.map((el) => el.card_index))).sort(
+        (a, b) => a - b,
+      );
+      setActiveCardIndex(remaining[0] ?? 1);
+    }
+  }
 
   if (loading) {
     return <div className="p-8 text-sm text-muted-foreground">Caricamento…</div>;
@@ -235,17 +276,57 @@ function Page() {
         <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
           Nessun formato configurato per questa rubrica. Aggiungine uno per iniziare a disegnare.
         </div>
-      ) : elements === null ? (
+      ) : allCardElements === null ? (
         <div className="text-sm text-muted-foreground">Caricamento design…</div>
       ) : (
-        <DesignEditor
-          key={selectedFormato.id}
-          rubricaId={rubricaId}
-          formato={selectedFormato}
-          initialElements={elements}
-          layerNameSuggestions={layerNameSuggestions}
-          fontOptions={fontOptions}
-        />
+        <>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-xs text-muted-foreground">Frame (carousel):</span>
+            {displayCardIndexes.map((idx) => (
+              <div key={idx} className="group relative">
+                <button
+                  type="button"
+                  onClick={() => setActiveCardIndex(idx)}
+                  className={`rounded-lg border px-3 py-1.5 text-xs ${
+                    idx === activeCardIndex
+                      ? "border-primary bg-primary/10 text-primary"
+                      : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+                  }`}
+                >
+                  Frame {idx}
+                </button>
+                {displayCardIndexes.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteFrame(idx)}
+                    title="Elimina frame"
+                    className="absolute -right-1.5 -top-1.5 hidden size-4 items-center justify-center rounded-full bg-destructive text-destructive-foreground group-hover:flex"
+                  >
+                    <Trash2 className="size-2.5" />
+                  </button>
+                )}
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={handleAddFrame}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-border px-3 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary"
+            >
+              <Plus className="size-3.5" />
+              Aggiungi frame
+            </button>
+          </div>
+
+          <DesignEditor
+            key={`${selectedFormato.id}-${activeCardIndex}`}
+            rubricaId={rubricaId}
+            formato={selectedFormato}
+            cardIndex={activeCardIndex}
+            initialElements={currentCardElements}
+            layerNameSuggestions={layerNameSuggestions}
+            fontOptions={fontOptions}
+          />
+        </>
       )}
     </div>
   );
