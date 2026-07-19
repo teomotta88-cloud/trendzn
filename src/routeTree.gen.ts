@@ -52,6 +52,7 @@ import { Route as ApiPublicHooksExportXlsxRouteImport } from './routes/api/publi
 import { Route as ApiPublicHooksExportFeedPptxRouteImport } from './routes/api/public/hooks/export-feed-pptx'
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
+import { Route as ApiPublicHooksCheckTokenHealthRouteImport } from './routes/api/public/hooks/check-token-health'
 import { Route as ApiPublicHooksApproveJobRouteImport } from './routes/api/public/hooks/approve-job'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 
@@ -294,6 +295,12 @@ const ApiPublicHooksDeleteCanaleRoute =
     path: '/api/public/hooks/delete-canale',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksCheckTokenHealthRoute =
+  ApiPublicHooksCheckTokenHealthRouteImport.update({
+    id: '/api/public/hooks/check-token-health',
+    path: '/api/public/hooks/check-token-health',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksApproveJobRoute =
   ApiPublicHooksApproveJobRouteImport.update({
     id: '/api/public/hooks/approve-job',
@@ -328,6 +335,7 @@ export interface FileRoutesByFullPath {
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
+  '/api/public/hooks/check-token-health': typeof ApiPublicHooksCheckTokenHealthRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
@@ -375,6 +383,7 @@ export interface FileRoutesByTo {
   '/reputazione-brand': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
+  '/api/public/hooks/check-token-health': typeof ApiPublicHooksCheckTokenHealthRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
@@ -423,6 +432,7 @@ export interface FileRoutesById {
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
+  '/api/public/hooks/check-token-health': typeof ApiPublicHooksCheckTokenHealthRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
@@ -472,6 +482,7 @@ export interface FileRouteTypes {
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/approve-job'
+    | '/api/public/hooks/check-token-health'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/export-feed-pptx'
@@ -519,6 +530,7 @@ export interface FileRouteTypes {
     | '/reputazione-brand'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/approve-job'
+    | '/api/public/hooks/check-token-health'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/export-feed-pptx'
@@ -566,6 +578,7 @@ export interface FileRouteTypes {
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/approve-job'
+    | '/api/public/hooks/check-token-health'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/export-feed-pptx'
@@ -614,6 +627,7 @@ export interface RootRouteChildren {
   ReputazioneBrandIndexRoute: typeof ReputazioneBrandIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
   ApiPublicHooksApproveJobRoute: typeof ApiPublicHooksApproveJobRoute
+  ApiPublicHooksCheckTokenHealthRoute: typeof ApiPublicHooksCheckTokenHealthRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
   ApiPublicHooksExportFeedPptxRoute: typeof ApiPublicHooksExportFeedPptxRoute
@@ -944,6 +958,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksDeleteCanaleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/check-token-health': {
+      id: '/api/public/hooks/check-token-health'
+      path: '/api/public/hooks/check-token-health'
+      fullPath: '/api/public/hooks/check-token-health'
+      preLoaderRoute: typeof ApiPublicHooksCheckTokenHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/approve-job': {
       id: '/api/public/hooks/approve-job'
       path: '/api/public/hooks/approve-job'
@@ -982,6 +1003,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReputazioneBrandIndexRoute: ReputazioneBrandIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksApproveJobRoute: ApiPublicHooksApproveJobRoute,
+  ApiPublicHooksCheckTokenHealthRoute: ApiPublicHooksCheckTokenHealthRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:
     ApiPublicHooksDeleteTrendSubmissionRoute,

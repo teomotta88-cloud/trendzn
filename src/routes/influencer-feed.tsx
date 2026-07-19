@@ -2,13 +2,20 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Zap, Flame, Infinity as InfinityIcon, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { TokenHealthAlert } from "@/components/TokenHealthAlert";
 import { InfluencerView } from "./influencer.index";
 
 export const Route = createFileRoute("/influencer-feed")({
   component: InfluencerPage,
 });
 
-export function InfluencerToggle({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: "feed" | "profili") => void }) {
+export function InfluencerToggle({
+  tab,
+  setTab,
+}: {
+  tab: "feed" | "profili";
+  setTab: (t: "feed" | "profili") => void;
+}) {
   return (
     <div style={{ display: "flex", gap: 4 }}>
       {(["profili", "feed"] as const).map((t) => (
@@ -36,9 +43,11 @@ export function InfluencerToggle({ tab, setTab }: { tab: "feed" | "profili"; set
 
 function InfluencerPage() {
   const [tab, setTab] = useState<"feed" | "profili">("profili");
-  return tab === "profili"
-    ? <InfluencerView tab={tab} setTab={setTab} />
-    : <InfluencerFeed tab={tab} setTab={setTab} />;
+  return tab === "profili" ? (
+    <InfluencerView tab={tab} setTab={setTab} />
+  ) : (
+    <InfluencerFeed tab={tab} setTab={setTab} />
+  );
 }
 
 const TRENDS_JSON_URL =
@@ -210,11 +219,12 @@ function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
 
 type TrendSection = "trend-real-time" | "trend-attuali" | "trend-evergreen";
 
-const TREND_SECTIONS: { section: TrendSection; label: string; icon: typeof Zap; color: string }[] = [
-  { section: "trend-real-time", label: "Real Time", icon: Zap, color: "#d97706" },
-  { section: "trend-attuali", label: "Attuali", icon: Flame, color: "#dc2626" },
-  { section: "trend-evergreen", label: "Evergreen", icon: InfinityIcon, color: "#16a34a" },
-];
+const TREND_SECTIONS: { section: TrendSection; label: string; icon: typeof Zap; color: string }[] =
+  [
+    { section: "trend-real-time", label: "Real Time", icon: Zap, color: "#d97706" },
+    { section: "trend-attuali", label: "Attuali", icon: Flame, color: "#dc2626" },
+    { section: "trend-evergreen", label: "Evergreen", icon: InfinityIcon, color: "#16a34a" },
+  ];
 
 function MarkAsTrendButtons({
   post,
@@ -265,12 +275,18 @@ function MarkAsTrendButtons({
             disabled={isLoading}
             title={isMarked ? `Già in ${label}` : `Marca come ${label}`}
             style={{
-              flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 4,
-              padding: "5px 6px", borderRadius: 8,
+              flex: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 4,
+              padding: "5px 6px",
+              borderRadius: 8,
               border: "1px solid " + (isMarked ? color : "#e2e8f0"),
               background: isMarked ? color + "1a" : "#fff",
               color: isMarked ? color : "#64748b",
-              fontSize: 11, fontWeight: 600,
+              fontSize: 11,
+              fontWeight: 600,
               cursor: isLoading ? "default" : "pointer",
               transition: "all 0.15s",
             }}
@@ -349,7 +365,9 @@ function PostCard({
           </span>
         )}
         {dateStr && (
-          <span style={{ fontSize: 11, color: "#cbd5e1", marginLeft: "auto", whiteSpace: "nowrap" }}>
+          <span
+            style={{ fontSize: 11, color: "#cbd5e1", marginLeft: "auto", whiteSpace: "nowrap" }}
+          >
             {dateStr}
           </span>
         )}
@@ -366,7 +384,14 @@ function PostCard({
             flexShrink: 0,
           }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
             <path d="M15 3h6v6" />
             <path d="M10 14L21 3" />
@@ -417,7 +442,15 @@ function PostCard({
   );
 }
 
-function FilterPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+function FilterPill({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
   return (
     <button
       onClick={onClick}
@@ -469,10 +502,16 @@ function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: s
     error: "Errore — riprova",
   };
   const bg: Record<SyncStatus, string> = {
-    idle: "#f1f5f9", loading: "#e2e8f0", success: "#dcfce7", error: "#fee2e2",
+    idle: "#f1f5f9",
+    loading: "#e2e8f0",
+    success: "#dcfce7",
+    error: "#fee2e2",
   };
   const color: Record<SyncStatus, string> = {
-    idle: "#475569", loading: "#94a3b8", success: "#16a34a", error: "#dc2626",
+    idle: "#475569",
+    loading: "#94a3b8",
+    success: "#16a34a",
+    error: "#dc2626",
   };
 
   return (
@@ -523,9 +562,18 @@ function DateRangeFilter({
     <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
         {presets.map((p) => (
-          <FilterPill key={p.key} label={p.label} active={preset === p.key} onClick={() => setPreset(p.key)} />
+          <FilterPill
+            key={p.key}
+            label={p.label}
+            active={preset === p.key}
+            onClick={() => setPreset(p.key)}
+          />
         ))}
-        <FilterPill label="Personalizzato" active={preset === "custom"} onClick={() => setPreset("custom")} />
+        <FilterPill
+          label="Personalizzato"
+          active={preset === "custom"}
+          onClick={() => setPreset("custom")}
+        />
       </div>
       {preset === "custom" && (
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -565,7 +613,13 @@ function DateRangeFilter({
 const PAGE_SIZE = 12;
 const EMPTY_MARKED: Set<TrendSection> = new Set();
 
-function InfluencerFeed({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: "feed" | "profili") => void }) {
+function InfluencerFeed({
+  tab,
+  setTab,
+}: {
+  tab: "feed" | "profili";
+  setTab: (t: "feed" | "profili") => void;
+}) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
@@ -583,7 +637,10 @@ function InfluencerFeed({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: 
     supabase
       .from("trend_submissions")
       .select("url, section")
-      .in("section", TREND_SECTIONS.map((t) => t.section))
+      .in(
+        "section",
+        TREND_SECTIONS.map((t) => t.section),
+      )
       .eq("status", "approved")
       .then(({ data: rows }) => {
         if (!rows) return;
@@ -638,7 +695,9 @@ function InfluencerFeed({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: 
   if (error)
     return <div style={{ padding: 40, color: "#ef4444", textAlign: "center" }}>{error}</div>;
   if (!data)
-    return <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>;
+    return (
+      <div style={{ padding: 40, color: "#94a3b8", textAlign: "center" }}>Caricamento feed…</div>
+    );
 
   const allPosts: Post[] = [];
   for (const profile of data.influencer_profiles || []) {
@@ -701,8 +760,9 @@ function InfluencerFeed({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: 
             Post recenti dagli influencer monitorati su Instagram e TikTok.
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col items-end gap-2">
           <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Sincronizza ora" />
+          <TokenHealthAlert tokenName="GITHUB_TOKEN" />
         </div>
       </header>
 
@@ -750,7 +810,10 @@ function InfluencerFeed({ tab, setTab }: { tab: "feed" | "profili"; setTab: (t: 
         <div className="py-16 text-center text-sm text-muted-foreground">Nessun post trovato.</div>
       ) : (
         <>
-          <div className="grid gap-5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}>
+          <div
+            className="grid gap-5"
+            style={{ gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))" }}
+          >
             {visiblePosts.map((post, i) => (
               <PostCard
                 key={`${post.url}-${i}`}
