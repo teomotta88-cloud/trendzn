@@ -3,6 +3,7 @@ import { AlertTriangle, Loader2, Upload } from "lucide-react";
 import { callHook } from "@/lib/hooks-client";
 import { replaceTemplateElements, type TemplateElementInput } from "@/lib/designElements";
 import type { RubricaFormato } from "@/lib/autographics";
+import { TokenHealthAlert } from "@/components/TokenHealthAlert";
 
 interface FigmaImportResult {
   width: number;
@@ -74,6 +75,7 @@ export function FigmaImportPanel({
         In Figma: tasto destro sul frame → "Copy link to selection", poi incolla qui. Sostituisce
         gli elementi del frame {cardIndex} corrente.
       </p>
+      <TokenHealthAlert tokenName="FIGMA_ACCESS_TOKEN" />
       <div className="flex flex-wrap items-center gap-2">
         <input
           value={link}

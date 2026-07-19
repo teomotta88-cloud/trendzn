@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Zap, Flame, Infinity as InfinityIcon, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { TokenHealthAlert } from "@/components/TokenHealthAlert";
 import { CanaliInspoView } from "./canali-inspo.index";
 
 export const Route = createFileRoute("/feed/")({
@@ -842,8 +843,9 @@ export function TrendzFeed({
             Post recenti dai canali monitorati su Instagram, TikTok, LinkedIn e X.
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col items-end gap-2">
           <SyncButton endpoint={syncEndpoint} label="↻ Sincronizza ora" />
+          <TokenHealthAlert tokenName="GITHUB_TOKEN" />
         </div>
       </header>
 
