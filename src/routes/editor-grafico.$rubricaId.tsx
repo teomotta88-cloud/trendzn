@@ -319,6 +319,7 @@ function Page() {
             rubricaId={rubricaId}
             formato={selectedFormato}
             cardIndex={activeCardIndex}
+            fontOptions={fontOptions}
             onImported={() => {
               handleFrameSaved(activeCardIndex);
               setFigmaImportVersion((v) => v + 1);
