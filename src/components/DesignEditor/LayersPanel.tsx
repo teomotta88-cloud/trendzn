@@ -43,12 +43,12 @@ function labelFor(el: EditorElement): string {
 
 export function LayersPanel({
   elements,
-  selectedId,
+  selectedIds,
   onSelect,
 }: {
   elements: EditorElement[];
-  selectedId: string | null;
-  onSelect: (id: string) => void;
+  selectedIds: string[];
+  onSelect: (id: string, e: { shiftKey: boolean }) => void;
 }) {
   const sorted = [...elements].sort((a, b) => b.z_index - a.z_index);
 
@@ -67,9 +67,9 @@ export function LayersPanel({
             <button
               key={el.id}
               type="button"
-              onClick={() => onSelect(el.id)}
+              onClick={(e) => onSelect(el.id, e)}
               className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-xs transition ${
-                el.id === selectedId
+                selectedIds.includes(el.id)
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:bg-muted"
               }`}

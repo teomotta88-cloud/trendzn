@@ -151,7 +151,11 @@ export function DesignEditor({
     initialElements.map((el) => toEditorElement(el, scale)),
   );
   const elements = history.state;
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  // Selezione multipla (Fase 10, raggruppamento elementi): selectedIds è la
+  // fonte di verità, selectedId (derivato) resta per i flussi che hanno
+  // senso solo su un elemento singolo (pannello proprietà, riordino).
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const selectedId = selectedIds.length === 1 ? selectedIds[0] : null;
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [rendering, setRendering] = useState(false);
@@ -165,6 +169,75 @@ export function DesignEditor({
 
   const selected = elements.find((el) => el.id === selectedId) ?? null;
   const targetEl = selectedId ? (elementRefs.current.get(selectedId) ?? null) : null;
+  const targetEls =
+    selectedIds.length > 1
+      ? (selectedIds.map((id) => elementRefs.current.get(id)).filter(Boolean) as HTMLDivElement[])
+      : [];
+
+  // Gruppi (Fase 10): il groupId vive dentro style, niente colonna nuova —
+  // spostare UN membro del gruppo sposta tutti gli altri. Nessuna
+  // propagazione per resize/rotate in questa prima versione (stesso taglio
+  // di scopo deliberato già fatto per lo snap, che resta solo sul drag).
+  function groupIdOf(el: EditorElement): string | null {
+    const gid = (el.style as Record<string, unknown>).groupId;
+    return typeof gid === "string" ? gid : null;
+  }
+
+  // L'unità effettiva su cui agisce un click: se l'elemento appartiene a un
+  // gruppo, tutti i membri del gruppo; altrimenti solo l'elemento stesso.
+  function unitFor(id: string): string[] {
+    const el = elements.find((e) => e.id === id);
+    const gid = el ? groupIdOf(el) : null;
+    if (!gid) return [id];
+    return elements.filter((e) => groupIdOf(e) === gid).map((e) => e.id);
+  }
+
+  function handleElementSelect(id: string, e: { shiftKey: boolean }) {
+    const unit = unitFor(id);
+    if (e.shiftKey) {
+      setSelectedIds((prev) => {
+        const allInUnitSelected = unit.every((u) => prev.includes(u));
+        if (allInUnitSelected) return prev.filter((p) => !unit.includes(p));
+        return Array.from(new Set([...prev, ...unit]));
+      });
+    } else {
+      setSelectedIds(unit);
+    }
+  }
+
+  const canGroup = selectedIds.length >= 2;
+  const ungroupTargetId = (() => {
+    if (selectedIds.length < 2) return null;
+    const gids = new Set(
+      selectedIds.map((id) => {
+        const el = elements.find((e) => e.id === id);
+        return el ? groupIdOf(el) : null;
+      }),
+    );
+    if (gids.size !== 1) return null;
+    const [gid] = gids;
+    return gid;
+  })();
+
+  function groupSelected() {
+    if (!canGroup) return;
+    const gid = crypto.randomUUID();
+    const next = elements.map((el) =>
+      selectedIds.includes(el.id) ? { ...el, style: { ...el.style, groupId: gid } } : el,
+    );
+    history.commit(next);
+  }
+
+  function ungroupSelected() {
+    if (!ungroupTargetId) return;
+    const next = elements.map((el) => {
+      if (!selectedIds.includes(el.id)) return el;
+      const style = { ...el.style };
+      delete style.groupId;
+      return { ...el, style };
+    });
+    history.commit(next);
+  }
 
   useEffect(() => {
     onElementsChange?.(elements);
@@ -208,13 +281,13 @@ export function DesignEditor({
       },
     ];
     history.commit(next);
-    setSelectedId(id);
+    setSelectedIds([id]);
   }
 
   function deleteSelected() {
-    if (!selectedId) return;
-    history.commit(elements.filter((el) => el.id !== selectedId));
-    setSelectedId(null);
+    if (selectedIds.length === 0) return;
+    history.commit(elements.filter((el) => !selectedIds.includes(el.id)));
+    setSelectedIds([]);
   }
 
   function reorderSelected(direction: "up" | "down" | "front" | "back") {
@@ -271,7 +344,7 @@ export function DesignEditor({
     setRendering(true);
     setRenderError(null);
     setPreviewUrl(null);
-    setSelectedId(null);
+    setSelectedIds([]);
     try {
       // Cattura il DOM del canvas com'è mostrato a schermo (Fase 2/3): i
       // campi testo dinamici mostrano il nome del layer come segnaposto, i
@@ -383,7 +456,7 @@ export function DesignEditor({
           className="relative overflow-hidden rounded-xl border border-border bg-white shadow-sm"
           style={{ width: displayWidth, height: displayHeight }}
           onMouseDown={(e) => {
-            if (e.target === e.currentTarget) setSelectedId(null);
+            if (e.target === e.currentTarget) setSelectedIds([]);
           }}
         >
           {[...elements]
@@ -392,8 +465,8 @@ export function DesignEditor({
               <ElementBox
                 key={el.id}
                 element={el}
-                selected={el.id === selectedId}
-                onSelect={() => setSelectedId(el.id)}
+                selected={selectedIds.includes(el.id)}
+                onSelect={(e) => handleElementSelect(el.id, e)}
                 onChangeText={(value) =>
                   updateElement(el.id, {
                     style: { ...el.style, text: value },
@@ -482,6 +555,43 @@ export function DesignEditor({
           />
         )}
 
+        {/* Trascinamento di un gruppo/selezione multipla (Fase 10): solo
+            drag, niente resize/rotate/snap in questa prima versione — la
+            selezione singola sopra resta l'unico modo per ridimensionare o
+            ruotare, anche un elemento che fa parte di un gruppo. */}
+        {targetEls.length > 1 && (
+          <Moveable
+            target={targetEls}
+            draggable
+            throttleDrag={0}
+            onDragGroup={({ events }) => {
+              events.forEach((ev) => {
+                const t = ev.target as HTMLElement;
+                t.style.left = `${ev.left}px`;
+                t.style.top = `${ev.top}px`;
+              });
+            }}
+            onDragGroupEnd={({ events }) => {
+              const updates = new Map<string, { x: number; y: number }>();
+              for (const ev of events) {
+                const entry = Array.from(elementRefs.current.entries()).find(
+                  ([, node]) => node === ev.target,
+                );
+                if (!entry) continue;
+                const t = ev.target as HTMLElement;
+                updates.set(entry[0], {
+                  x: parseFloat(t.style.left) || 0,
+                  y: parseFloat(t.style.top) || 0,
+                });
+              }
+              const next = elements.map((el) =>
+                updates.has(el.id) ? { ...el, ...updates.get(el.id)! } : el,
+              );
+              history.commit(next);
+            }}
+          />
+        )}
+
         {renderError && <p className="text-xs text-destructive">{renderError}</p>}
 
         {previewUrl && (
@@ -499,20 +609,53 @@ export function DesignEditor({
       </div>
 
       <div className="flex flex-col gap-4">
-        <LayersPanel
-          elements={elements}
-          selectedId={selectedId}
-          onSelect={(id) => setSelectedId(id)}
-        />
-        <PropertiesPanel
-          element={selected}
-          layerNameSuggestions={layerNameSuggestions}
-          fontOptions={fontOptions}
-          onChange={(patch) => selectedId && updateElement(selectedId, patch, true)}
-          onChangeStyle={updateSelectedStyle}
-          onDelete={deleteSelected}
-          onReorder={reorderSelected}
-        />
+        <LayersPanel elements={elements} selectedIds={selectedIds} onSelect={handleElementSelect} />
+        {selectedIds.length > 1 ? (
+          <div className="space-y-2 rounded-2xl border border-border bg-card/50 p-3">
+            <p className="text-xs font-medium text-muted-foreground">
+              {selectedIds.length} elementi selezionati
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={groupSelected}
+                className="rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary"
+              >
+                Raggruppa
+              </button>
+              {ungroupTargetId && (
+                <button
+                  type="button"
+                  onClick={ungroupSelected}
+                  className="rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary"
+                >
+                  Separa gruppo
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={deleteSelected}
+                className="rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-destructive hover:text-destructive"
+              >
+                Elimina
+              </button>
+            </div>
+            <p className="text-[11px] text-muted-foreground">
+              Un gruppo si sposta insieme trascinando uno qualsiasi dei suoi elementi. Ridimensiona
+              e ruota restano solo sulla selezione singola.
+            </p>
+          </div>
+        ) : (
+          <PropertiesPanel
+            element={selected}
+            layerNameSuggestions={layerNameSuggestions}
+            fontOptions={fontOptions}
+            onChange={(patch) => selectedId && updateElement(selectedId, patch, true)}
+            onChangeStyle={updateSelectedStyle}
+            onDelete={deleteSelected}
+            onReorder={reorderSelected}
+          />
+        )}
       </div>
     </div>
   );
