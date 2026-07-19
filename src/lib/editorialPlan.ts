@@ -38,6 +38,14 @@ export interface EditorialPost {
   copy_visual: string | null;
   visual_url: string | null;
   visual_type: string | null;
+  // Ultima rubrica/formato usati dal wizard di composizione post per
+  // generare il visual di questo post: null finché non è mai stato creato
+  // un visual con l'editor grafico. visual_media_ids ricorda quali righe di
+  // editorial_post_media appartengono all'ultimo salvataggio del wizard, per
+  // poterle rimpiazzare senza toccare file caricati manualmente dall'utente.
+  visual_rubrica_id: string | null;
+  visual_formato: string | null;
+  visual_media_ids: string[];
   disclaimer: string | null;
   obiettivo_media: string | null;
   budget_media: number | null;
@@ -90,7 +98,11 @@ export async function getOrCreatePlan(year: number, month: number): Promise<Edit
     .maybeSingle();
   if (existing) return existing;
 
-  const { data: created, error } = await db.from("editorial_plans").insert({ year, month }).select("*").single();
+  const { data: created, error } = await db
+    .from("editorial_plans")
+    .insert({ year, month })
+    .select("*")
+    .single();
   if (error) throw error;
   return created;
 }
@@ -105,7 +117,9 @@ export async function listPosts(planId: string): Promise<EditorialPost[]> {
   return data ?? [];
 }
 
-export async function createPost(input: Omit<EditorialPost, "id" | "created_at">): Promise<EditorialPost> {
+export async function createPost(
+  input: Omit<EditorialPost, "id" | "created_at">,
+): Promise<EditorialPost> {
   const { data, error } = await db.from("editorial_posts").insert(input).select("*").single();
   if (error) throw error;
   return data;
@@ -115,13 +129,25 @@ export async function updatePost(
   id: string,
   fields: Partial<Omit<EditorialPost, "id" | "plan_id" | "created_at">>,
 ): Promise<EditorialPost> {
-  const { data, error } = await db.from("editorial_posts").update(fields).eq("id", id).select("*").single();
+  const { data, error } = await db
+    .from("editorial_posts")
+    .update(fields)
+    .eq("id", id)
+    .select("*")
+    .single();
   if (error) throw error;
   return data;
 }
 
-export async function updatePostText(id: string, field: "copy_visual", value: string | null): Promise<void> {
-  const { error } = await db.from("editorial_posts").update({ [field]: value }).eq("id", id);
+export async function updatePostText(
+  id: string,
+  field: "copy_visual",
+  value: string | null,
+): Promise<void> {
+  const { error } = await db
+    .from("editorial_posts")
+    .update({ [field]: value })
+    .eq("id", id);
   if (error) throw error;
 }
 
@@ -212,21 +238,38 @@ export async function deletePost(id: string): Promise<void> {
 }
 
 export async function getApprovalStatus(postId: string): Promise<Record<ReviewComponent, boolean>> {
-  const { data, error } = await db.from("editorial_post_approvals").select("component").eq("post_id", postId);
+  const { data, error } = await db
+    .from("editorial_post_approvals")
+    .select("component")
+    .eq("post_id", postId);
   if (error) throw error;
-  const status: Record<ReviewComponent, boolean> = { copy: false, copy_visual: false, visual: false };
+  const status: Record<ReviewComponent, boolean> = {
+    copy: false,
+    copy_visual: false,
+    visual: false,
+  };
   (data ?? []).forEach((r: { component: ReviewComponent }) => {
     status[r.component] = true;
   });
   return status;
 }
 
-export async function toggleApproval(postId: string, component: ReviewComponent, approved: boolean): Promise<void> {
+export async function toggleApproval(
+  postId: string,
+  component: ReviewComponent,
+  approved: boolean,
+): Promise<void> {
   if (approved) {
-    const { error } = await db.from("editorial_post_approvals").delete().eq("post_id", postId).eq("component", component);
+    const { error } = await db
+      .from("editorial_post_approvals")
+      .delete()
+      .eq("post_id", postId)
+      .eq("component", component);
     if (error) throw error;
   } else {
-    const { error } = await db.from("editorial_post_approvals").insert({ post_id: postId, component });
+    const { error } = await db
+      .from("editorial_post_approvals")
+      .insert({ post_id: postId, component });
     if (error) throw error;
   }
 }
@@ -292,10 +335,19 @@ export async function deleteMedia(id: string): Promise<void> {
   if (error) throw error;
 }
 
-export async function swapMediaPosition(a: EditorialPostMedia, b: EditorialPostMedia): Promise<void> {
-  const { error: errA } = await db.from("editorial_post_media").update({ position: b.position }).eq("id", a.id);
+export async function swapMediaPosition(
+  a: EditorialPostMedia,
+  b: EditorialPostMedia,
+): Promise<void> {
+  const { error: errA } = await db
+    .from("editorial_post_media")
+    .update({ position: b.position })
+    .eq("id", a.id);
   if (errA) throw errA;
-  const { error: errB } = await db.from("editorial_post_media").update({ position: a.position }).eq("id", b.id);
+  const { error: errB } = await db
+    .from("editorial_post_media")
+    .update({ position: a.position })
+    .eq("id", b.id);
   if (errB) throw errB;
 }
 
@@ -316,8 +368,14 @@ export async function listClientChannels(): Promise<EditorialClientChannel[]> {
   return data ?? [];
 }
 
-export async function addClientChannel(input: Omit<EditorialClientChannel, "id" | "created_at">): Promise<EditorialClientChannel> {
-  const { data, error } = await db.from("editorial_client_channels").insert(input).select("*").single();
+export async function addClientChannel(
+  input: Omit<EditorialClientChannel, "id" | "created_at">,
+): Promise<EditorialClientChannel> {
+  const { data, error } = await db
+    .from("editorial_client_channels")
+    .insert(input)
+    .select("*")
+    .single();
   if (error) throw error;
 
   // Scrive il canale anche in trends.json (chiave "canali_cliente") cosi'
@@ -337,7 +395,8 @@ export async function deleteClientChannel(id: string): Promise<void> {
   if (error) throw error;
 }
 
-const TRENDS_JSON_URL = "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
+const TRENDS_JSON_URL =
+  "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 
 const PLATFORM_TO_CANALE: Record<string, string> = {
   instagram: "IG",
@@ -373,7 +432,11 @@ interface TrendsClienteChannel {
 async function fetchTrendsJsonCanaliCliente(): Promise<TrendsClienteChannel[]> {
   const res = await fetch(TRENDS_JSON_URL);
   if (!res.ok) {
-    console.error("[fetchTrendsJsonCanaliCliente] richiesta a GitHub fallita:", res.status, await res.text());
+    console.error(
+      "[fetchTrendsJsonCanaliCliente] richiesta a GitHub fallita:",
+      res.status,
+      await res.text(),
+    );
     return [];
   }
   const trends = await res.json();
@@ -416,7 +479,9 @@ export async function syncPublishedPostsFromTrendsJson(): Promise<void> {
 
   for (const channel of channels) {
     for (const account of channel.accounts) {
-      const accountDate = account.date || (account.platform === "tiktok" ? deriveTikTokDateFromUrl(account.url) : null);
+      const accountDate =
+        account.date ||
+        (account.platform === "tiktok" ? deriveTikTokDateFromUrl(account.url) : null);
       if (!accountDate || !account.caption) continue;
       const canale = PLATFORM_TO_CANALE[account.platform];
       if (!canale) {
@@ -434,7 +499,11 @@ export async function syncPublishedPostsFromTrendsJson(): Promise<void> {
 
       if (existing?.matched_post_id) continue;
 
-      const matchedPostId = await matchPublishedPostFromCaption(canale, publishedDate, account.caption);
+      const matchedPostId = await matchPublishedPostFromCaption(
+        canale,
+        publishedDate,
+        account.caption,
+      );
       console.log("[sync]", canale, publishedDate, account.url, "-> matchedPostId:", matchedPostId);
 
       const { error } = await db.from("editorial_published_posts").upsert(

@@ -10,6 +10,7 @@ import { captureNodeToPngBlob } from "@/lib/design-capture";
 import type { RubricaFormato } from "@/lib/autographics";
 import { ElementBox, type EditorElement } from "./ElementBox";
 import { PropertiesPanel } from "./PropertiesPanel";
+import { LayersPanel } from "./LayersPanel";
 import { Toolbar } from "./Toolbar";
 import { useHistory } from "./useHistory";
 import { computeSnap, type SnapGuides } from "./snapping";
@@ -497,15 +498,22 @@ export function DesignEditor({
         )}
       </div>
 
-      <PropertiesPanel
-        element={selected}
-        layerNameSuggestions={layerNameSuggestions}
-        fontOptions={fontOptions}
-        onChange={(patch) => selectedId && updateElement(selectedId, patch, true)}
-        onChangeStyle={updateSelectedStyle}
-        onDelete={deleteSelected}
-        onReorder={reorderSelected}
-      />
+      <div className="flex flex-col gap-4">
+        <LayersPanel
+          elements={elements}
+          selectedId={selectedId}
+          onSelect={(id) => setSelectedId(id)}
+        />
+        <PropertiesPanel
+          element={selected}
+          layerNameSuggestions={layerNameSuggestions}
+          fontOptions={fontOptions}
+          onChange={(patch) => selectedId && updateElement(selectedId, patch, true)}
+          onChangeStyle={updateSelectedStyle}
+          onDelete={deleteSelected}
+          onReorder={reorderSelected}
+        />
+      </div>
     </div>
   );
 }

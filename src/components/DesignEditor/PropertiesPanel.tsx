@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { uploadEditorImage } from "@/lib/designElements";
 import { removeBackground } from "@/lib/background-removal";
-import { CURATED_ICONS } from "./constants";
+import { IconPicker } from "./IconPicker";
 import type { EditorElement } from "./ElementBox";
 
 interface PropertiesPanelProps {
@@ -339,6 +339,16 @@ export function PropertiesPanel({
               className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
             />
           </label>
+          {element.layer_name && (
+            <label className="flex items-center gap-2 text-xs text-muted-foreground">
+              <input
+                type="checkbox"
+                checked={!!style.autoRemoveBackground}
+                onChange={(e) => onChangeStyle({ autoRemoveBackground: e.target.checked })}
+              />
+              Rimuovi sfondo automaticamente quando questo campo viene compilato
+            </label>
+          )}
           <div className="grid grid-cols-2 gap-2">
             <label className="flex flex-col gap-1 text-xs text-muted-foreground">
               Adattamento
@@ -364,17 +374,10 @@ export function PropertiesPanel({
         <div className="space-y-2 border-t border-border/70 pt-3">
           <label className="flex flex-col gap-1 text-xs text-muted-foreground">
             Icona
-            <select
+            <IconPicker
               value={style.name || "Circle"}
-              onChange={(e) => onChangeStyle({ name: e.target.value })}
-              className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
-            >
-              {CURATED_ICONS.map((name) => (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              ))}
-            </select>
+              onChange={(name) => onChangeStyle({ name })}
+            />
           </label>
           <div className="grid grid-cols-2 gap-2">
             <label className="flex flex-col gap-1 text-xs text-muted-foreground">
