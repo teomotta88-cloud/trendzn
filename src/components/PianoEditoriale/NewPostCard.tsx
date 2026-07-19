@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import { type EditorialPost, createPost, updatePost, addMedia, CHANNELS, SAME_AS_IG_FLAG } from "@/lib/editorialPlan";
+import {
+  type EditorialPost,
+  createPost,
+  updatePost,
+  addMedia,
+  CHANNELS,
+  SAME_AS_IG_FLAG,
+} from "@/lib/editorialPlan";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground outline-none focus:border-primary";
@@ -35,7 +42,9 @@ export function NewPostCard({
   const [topic, setTopic] = useState(editPost?.topic ?? "");
   const [canali, setCanali] = useState<string[]>(editPost?.canali ?? []);
   const [formato, setFormato] = useState(editPost?.formato ?? "");
-  const [channelCopies, setChannelCopies] = useState<Record<string, string>>(editPost?.channel_copies ?? {});
+  const [channelCopies, setChannelCopies] = useState<Record<string, string>>(
+    editPost?.channel_copies ?? {},
+  );
   const [copyVisual, setCopyVisual] = useState(editPost?.copy_visual ?? "");
   const [disclaimer, setDisclaimer] = useState(editPost?.disclaimer ?? "");
   const [obiettivo, setObiettivo] = useState(editPost?.obiettivo_media ?? "");
@@ -72,6 +81,9 @@ export function NewPostCard({
             ...fields,
             visual_url: null,
             visual_type: null,
+            visual_rubrica_id: null,
+            visual_formato: null,
+            visual_media_ids: [],
             programmato: false,
           });
       for (const file of files) {
@@ -86,17 +98,36 @@ export function NewPostCard({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 rounded-2xl border border-primary/50 bg-card p-4">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-3 rounded-2xl border border-primary/50 bg-card p-4"
+    >
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-4">
           <Field label="Data *">
-            <input type="date" required value={date} onChange={(e) => setDate(e.target.value)} className={inputCls} />
+            <input
+              type="date"
+              required
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className={inputCls}
+            />
           </Field>
           <Field label="Rubrica">
-            <input value={rubrica} onChange={(e) => setRubrica(e.target.value)} className={inputCls} placeholder="es. Edutainment" />
+            <input
+              value={rubrica}
+              onChange={(e) => setRubrica(e.target.value)}
+              className={inputCls}
+              placeholder="es. Edutainment"
+            />
           </Field>
           <Field label="Formato">
-            <input value={formato} onChange={(e) => setFormato(e.target.value)} className={inputCls} placeholder="es. Carousel" />
+            <input
+              value={formato}
+              onChange={(e) => setFormato(e.target.value)}
+              className={inputCls}
+              placeholder="es. Carousel"
+            />
           </Field>
         </div>
         <button
@@ -111,7 +142,12 @@ export function NewPostCard({
       </div>
 
       <Field label="Topic">
-        <input value={topic} onChange={(e) => setTopic(e.target.value)} className={inputCls} placeholder="es. HydraFit Zero" />
+        <input
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
+          className={inputCls}
+          placeholder="es. HydraFit Zero"
+        />
       </Field>
 
       <Field label="Canali">
@@ -123,7 +159,9 @@ export function NewPostCard({
                 key={c.code}
                 type="button"
                 onClick={() =>
-                  setCanali((prev) => (active ? prev.filter((x) => x !== c.code) : [...prev, c.code]))
+                  setCanali((prev) =>
+                    active ? prev.filter((x) => x !== c.code) : [...prev, c.code],
+                  )
                 }
                 className={`rounded-full border px-2.5 py-1 text-[11px] font-medium transition ${
                   active
@@ -141,16 +179,22 @@ export function NewPostCard({
 
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Copy</span>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Copy
+          </span>
           {canali.length === 0 ? (
-            <p className="text-[11px] text-muted-foreground">Seleziona almeno un canale per inserire il copy.</p>
+            <p className="text-[11px] text-muted-foreground">
+              Seleziona almeno un canale per inserire il copy.
+            </p>
           ) : (
             canali.map((code) => {
               const sameAsIG = code !== "IG" && channelCopies[code] === SAME_AS_IG_FLAG;
               return (
                 <div key={code} className="space-y-1">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[10px] font-semibold text-muted-foreground">Copy {code}</span>
+                    <span className="text-[10px] font-semibold text-muted-foreground">
+                      Copy {code}
+                    </span>
                     {code !== "IG" && canali.includes("IG") && (
                       <label className="flex items-center gap-1 text-[10px] text-muted-foreground">
                         <input
@@ -184,7 +228,9 @@ export function NewPostCard({
         </div>
 
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Copy Visual</span>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Copy Visual
+          </span>
           <textarea
             value={copyVisual}
             onChange={(e) => setCopyVisual(e.target.value)}
@@ -194,7 +240,9 @@ export function NewPostCard({
         </div>
 
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Visual</span>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Visual
+          </span>
           <label className="cursor-pointer flex items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
             Aggiungi file
             <input
@@ -205,19 +253,36 @@ export function NewPostCard({
               onChange={(e) => setFiles(e.target.files ? Array.from(e.target.files) : [])}
             />
           </label>
-          {files.length > 0 && <p className="text-[11px] text-muted-foreground">{files.length} file selezionati</p>}
+          {files.length > 0 && (
+            <p className="text-[11px] text-muted-foreground">{files.length} file selezionati</p>
+          )}
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-3 border-t border-border pt-3 sm:grid-cols-3">
         <Field label="Obiettivo media">
-          <input value={obiettivo} onChange={(e) => setObiettivo(e.target.value)} className={inputCls} placeholder="es. Traffico al sito" />
+          <input
+            value={obiettivo}
+            onChange={(e) => setObiettivo(e.target.value)}
+            className={inputCls}
+            placeholder="es. Traffico al sito"
+          />
         </Field>
         <Field label="Budget media (€)">
-          <input type="number" value={budget} onChange={(e) => setBudget(e.target.value)} className={inputCls} placeholder="es. 800" />
+          <input
+            type="number"
+            value={budget}
+            onChange={(e) => setBudget(e.target.value)}
+            className={inputCls}
+            placeholder="es. 800"
+          />
         </Field>
         <Field label="Disclaimer">
-          <input value={disclaimer} onChange={(e) => setDisclaimer(e.target.value)} className={inputCls} />
+          <input
+            value={disclaimer}
+            onChange={(e) => setDisclaimer(e.target.value)}
+            className={inputCls}
+          />
         </Field>
       </div>
 

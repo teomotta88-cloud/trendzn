@@ -352,7 +352,9 @@ export function PostCard({
               className="inline-flex items-center gap-1.5 rounded-lg border border-primary px-2.5 py-1 text-[11px] font-medium text-primary transition hover:bg-primary/10"
             >
               <Wand2 className="size-3.5" />
-              Crea visual con editor grafico
+              {post.visual_rubrica_id
+                ? "Modifica visual con editor grafico"
+                : "Crea visual con editor grafico"}
             </button>
             <PostMediaGallery key={mediaRefreshKey} postId={post.id} />
             <GettyLicensingLinks key={mediaRefreshKey} postId={post.id} />
@@ -364,7 +366,10 @@ export function PostCard({
         post={post}
         open={wizardOpen}
         onOpenChange={setWizardOpen}
-        onUploaded={() => setMediaRefreshKey((k) => k + 1)}
+        onUploaded={() => {
+          setMediaRefreshKey((k) => k + 1);
+          onUpdated?.();
+        }}
       />
 
       {(post.disclaimer || post.obiettivo_media || typeof post.budget_media === "number") && (

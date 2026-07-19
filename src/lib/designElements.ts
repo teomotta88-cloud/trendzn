@@ -112,6 +112,65 @@ export async function deleteTemplateCard(
   if (error) throw error;
 }
 
+// --- Visual di un post (wizard di composizione, "modifica visual") -----
+// A differenza di template_elements (condiviso da tutte le istanze di una
+// rubrica, con segnaposto), post_visual_elements è l'istanza EFFETTIVA del
+// design per un post specifico: valori reali già inseriti dal wizard, così
+// riaprire "modifica visual" può ripartire dall'ultimo stato invece che dal
+// template vuoto.
+
+export interface PostVisualElement {
+  id: string;
+  post_id: string;
+  card_index: number;
+  layer_name: string | null;
+  tipo: ElementTipo;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  rotation: number;
+  z_index: number;
+  style: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
+export type PostVisualElementInput = Omit<
+  PostVisualElement,
+  "id" | "post_id" | "created_at" | "updated_at"
+>;
+
+export async function listPostVisualElements(postId: string): Promise<PostVisualElement[]> {
+  const { data, error } = await db
+    .from("post_visual_elements")
+    .select("*")
+    .eq("post_id", postId)
+    .order("card_index", { ascending: true })
+    .order("z_index", { ascending: true });
+  if (error) throw error;
+  return data ?? [];
+}
+
+// Sostituisce TUTTI gli elementi del visual di un post (tutti i frame in un
+// colpo solo): il wizard ricompone liberamente il design ad ogni
+// salvataggio, stesso pattern "delete poi insert" di replaceTemplateElements.
+export async function replacePostVisualElements(
+  postId: string,
+  elements: PostVisualElementInput[],
+): Promise<PostVisualElement[]> {
+  const { error: deleteError } = await db
+    .from("post_visual_elements")
+    .delete()
+    .eq("post_id", postId);
+  if (deleteError) throw deleteError;
+  if (elements.length === 0) return [];
+  const rows = elements.map((el) => ({ ...el, post_id: postId }));
+  const { data, error } = await db.from("post_visual_elements").insert(rows).select("*");
+  if (error) throw error;
+  return data ?? [];
+}
+
 // --- Font custom -----------------------------------------------------
 
 export interface CustomFont {

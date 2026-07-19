@@ -10,7 +10,7 @@ import {
   Wand2,
 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { type EditorialPost, addMedia } from "@/lib/editorialPlan";
+import { type EditorialPost, addMedia, deleteMedia, updatePost } from "@/lib/editorialPlan";
 import {
   type Rubrica,
   type RubricaFormato,
@@ -21,13 +21,17 @@ import {
 } from "@/lib/autographics";
 import {
   type CustomFont,
+  type PostVisualElementInput,
   type TemplateElement,
   type TemplateElementInput,
   listCustomFonts,
+  listPostVisualElements,
   listTemplateElementsAllCards,
+  replacePostVisualElements,
   uploadEditorImage,
 } from "@/lib/designElements";
 import { callHook } from "@/lib/hooks-client";
+import { removeBackground } from "@/lib/background-removal";
 import {
   computeScale,
   DesignEditor,
@@ -286,7 +290,10 @@ export function VisualWizardModal({
     if (!open) return;
     listRubriche(true).then(setRubriche);
     listCustomFonts().then(setCustomFonts);
-  }, [open]);
+    // Post con un visual già creato: riparte dalla rubrica usata l'ultima
+    // volta invece che dal passo di selezione.
+    if (post.visual_rubrica_id) setRubricaId(post.visual_rubrica_id);
+  }, [open, post.visual_rubrica_id]);
 
   useEffect(() => {
     if (!rubricaId) {
@@ -299,7 +306,9 @@ export function VisualWizardModal({
       setFormatoId((prev) =>
         list.some((f) => f.id === prev)
           ? prev
-          : (list.find((f) => f.formato === post.formato)?.id ?? list[0]?.id ?? ""),
+          : (list.find((f) => f.formato === (post.visual_formato ?? post.formato))?.id ??
+            list[0]?.id ??
+            ""),
       );
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -321,6 +330,53 @@ export function VisualWizardModal({
       .catch((err) => setElementsError(err instanceof Error ? err.message : String(err)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricaId, selectedFormato?.id, selectedFormato?.formato]);
+
+  // "Modifica visual": se il post ha già un visual creato con il wizard,
+  // salta setup/compose e riapre direttamente la rifinitura con l'ultimo
+  // stato salvato (post_visual_elements), invece di ripartire dal template
+  // vuoto. Si attiva una sola volta (guardia su step === "setup") appena
+  // rubrica/formato/template sono pronti.
+  useEffect(() => {
+    if (!open || step !== "setup") return;
+    if (!post.visual_rubrica_id || rubricaId !== post.visual_rubrica_id) return;
+    if (allElements === null) return;
+    let cancelled = false;
+    (async () => {
+      const existing = await listPostVisualElements(post.id);
+      if (cancelled || existing.length === 0) return;
+      const byCard: Record<number, TemplateElement[]> = {};
+      for (const el of existing) {
+        const shaped: TemplateElement = {
+          id: el.id,
+          rubrica_id: rubricaId,
+          formato: selectedFormato?.formato ?? null,
+          card_index: el.card_index,
+          layer_name: el.layer_name,
+          tipo: el.tipo,
+          x: el.x,
+          y: el.y,
+          width: el.width,
+          height: el.height,
+          rotation: el.rotation,
+          z_index: el.z_index,
+          style: el.style,
+          created_at: el.created_at,
+          updated_at: el.updated_at,
+        };
+        byCard[el.card_index] = [...(byCard[el.card_index] ?? []), shaped];
+      }
+      setMaterializedByCard(byCard);
+      setTweakedByCard({});
+      const idxs = Object.keys(byCard)
+        .map(Number)
+        .sort((a, b) => a - b);
+      setActiveCardIndex(idxs[0] ?? 1);
+      setStep("tweak");
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [open, step, post.visual_rubrica_id, post.id, rubricaId, allElements, selectedFormato]);
 
   const cardIndexes = allElements
     ? Array.from(new Set(allElements.map((el) => el.card_index))).sort((a, b) => a - b)
@@ -350,10 +406,29 @@ export function VisualWizardModal({
     return job.id;
   }
 
+  // Rimozione sfondo automatica per default sull'elemento (impostata
+  // nell'editor grafico, PropertiesPanel > campo immagine dinamico): se il
+  // template dell'elemento associato a questo layer_name la richiede, la
+  // applica subito qui, prima che il campo venga considerato compilato —
+  // l'utente non deve più ricordarsi di farlo a mano per ogni post.
+  function fieldWantsAutoRemoveBg(layerName: string): boolean {
+    const el = (allElements ?? []).find(
+      (e) => e.card_index === activeCardIndex && e.layer_name === layerName && e.tipo === "image",
+    );
+    return !!(el?.style as Record<string, unknown> | undefined)?.autoRemoveBackground;
+  }
+
+  async function applyAutoBackgroundRemoval(layerName: string, url: string): Promise<string> {
+    if (!fieldWantsAutoRemoveBg(layerName)) return url;
+    const blob = await removeBackground(url);
+    return uploadEditorImage(blob, "png");
+  }
+
   async function handleUploadImageField(layerName: string, file: File) {
     setUploadingField(layerName);
     try {
-      const url = await uploadEditorImage(file);
+      let url = await uploadEditorImage(file);
+      url = await applyAutoBackgroundRemoval(layerName, url);
       setValues((prev) => ({ ...prev, [layerName]: url }));
       const jid = await ensureJob();
       await upsertGraphicJobImage({
@@ -372,15 +447,21 @@ export function VisualWizardModal({
     layerName: string,
     candidate: { asset_id: string; preview_url: string },
   ) {
-    setValues((prev) => ({ ...prev, [layerName]: candidate.preview_url }));
-    const jid = await ensureJob();
-    await upsertGraphicJobImage({
-      job_id: jid,
-      layer_name: layerName,
-      source: "getty",
-      image_url: candidate.preview_url,
-      asset_id: candidate.asset_id,
-    });
+    setUploadingField(layerName);
+    try {
+      const url = await applyAutoBackgroundRemoval(layerName, candidate.preview_url);
+      setValues((prev) => ({ ...prev, [layerName]: url }));
+      const jid = await ensureJob();
+      await upsertGraphicJobImage({
+        job_id: jid,
+        layer_name: layerName,
+        source: "getty",
+        image_url: url,
+        asset_id: candidate.asset_id,
+      });
+    } finally {
+      setUploadingField(null);
+    }
   }
 
   function handleFinishCompose() {
@@ -432,14 +513,51 @@ export function VisualWizardModal({
         capturedBlobsRef.current.push(blob);
       }
       setCaptureCardIndex(null);
+
+      // Sostituisce il visual precedente invece di accumularlo: elimina solo
+      // le immagini caricate dall'ULTIMO salvataggio del wizard (tracciate
+      // in visual_media_ids), non gli eventuali file aggiunti a mano
+      // dall'utente nella galleria.
+      if (post.visual_media_ids.length > 0) {
+        setGenerationLabel("Rimuovo il visual precedente…");
+        await Promise.allSettled(post.visual_media_ids.map((id) => deleteMedia(id)));
+      }
+
       setGenerationLabel("Carico i visual nel post…");
+      const newMediaIds: string[] = [];
       for (let i = 0; i < capturedBlobsRef.current.length; i++) {
         const file = new File([capturedBlobsRef.current[i]], `visual-frame-${i + 1}.png`, {
           type: "image/png",
         });
-        await addMedia(post.id, file);
+        const media = await addMedia(post.id, file);
+        newMediaIds.push(media.id);
       }
-      setUploadedCount(capturedBlobsRef.current.length);
+
+      // Persiste il design EFFETTIVO (valori reali, non i segnaposto del
+      // template) per poter riaprire "modifica visual" senza ripartire da
+      // zero — vedi post_visual_elements.
+      const allFrameElements: PostVisualElementInput[] = cardIndexes.flatMap((idx) =>
+        elementsForTweak(idx).map((el) => ({
+          card_index: idx,
+          layer_name: el.layer_name,
+          tipo: el.tipo,
+          x: el.x,
+          y: el.y,
+          width: el.width,
+          height: el.height,
+          rotation: el.rotation,
+          z_index: el.z_index,
+          style: el.style,
+        })),
+      );
+      await replacePostVisualElements(post.id, allFrameElements);
+      await updatePost(post.id, {
+        visual_rubrica_id: rubricaId,
+        visual_formato: selectedFormato.formato,
+        visual_media_ids: newMediaIds,
+      });
+
+      setUploadedCount(newMediaIds.length);
       setStep("done");
       onUploaded?.();
     } catch (err) {
@@ -456,7 +574,7 @@ export function VisualWizardModal({
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Sparkles className="size-4 text-primary" />
-            Crea il visual del post
+            {post.visual_rubrica_id ? "Modifica il visual del post" : "Crea il visual del post"}
           </DialogTitle>
         </DialogHeader>
 
