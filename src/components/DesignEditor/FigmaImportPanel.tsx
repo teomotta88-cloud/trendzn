@@ -72,6 +72,7 @@ export function FigmaImportPanel({
   onImported: () => void;
 }) {
   const [link, setLink] = useState("");
+  const [pastedJson, setPastedJson] = useState("");
   const [fetching, setFetching] = useState(false);
   const [result, setResult] = useState<FigmaImportResult | null>(null);
   const [fontReplacements, setFontReplacements] = useState<Record<string, string>>({});
@@ -84,6 +85,16 @@ export function FigmaImportPanel({
     return fontsUsedIn(result.frames).filter((f) => !available.has(f.toLowerCase()));
   }, [result, fontOptions]);
 
+  function applyResult(data: FigmaImportResult) {
+    setResult(data);
+    const defaults: Record<string, string> = {};
+    const available = new Set(fontOptions.map((f) => f.toLowerCase()));
+    for (const font of fontsUsedIn(data.frames)) {
+      if (!available.has(font.toLowerCase())) defaults[font] = fontOptions[0] ?? "Inter";
+    }
+    setFontReplacements(defaults);
+  }
+
   async function handleFetch() {
     if (!link.trim()) return;
     setFetching(true);
@@ -92,15 +103,38 @@ export function FigmaImportPanel({
     setFontReplacements({});
     try {
       const data = await callHook<FigmaImportResult>("figma-import", { link: link.trim() });
-      setResult(data);
-      const defaults: Record<string, string> = {};
-      const available = new Set(fontOptions.map((f) => f.toLowerCase()));
-      for (const font of fontsUsedIn(data.frames)) {
-        if (!available.has(font.toLowerCase())) defaults[font] = fontOptions[0] ?? "Inter";
-      }
-      setFontReplacements(defaults);
+      applyResult(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setFetching(false);
+    }
+  }
+
+  // Percorso alternativo al link, per quando il piano Figma del team che
+  // possiede il file limita fortemente la REST API (vedi TokenHealthAlert
+  // e il commento in cima a figma-import.ts): l'utente esegue il plugin
+  // "trendzn - Esporta template" dentro Figma (figma-export-plugin/, gira
+  // sulla Plugin API, nessun limite legato al piano) e incolla qui il JSON
+  // che produce.
+  async function handleFetchFromJson() {
+    if (!pastedJson.trim()) return;
+    setFetching(true);
+    setError(null);
+    setResult(null);
+    setFontReplacements({});
+    try {
+      const nodeJson = JSON.parse(pastedJson);
+      const data = await callHook<FigmaImportResult>("figma-import", { nodeJson });
+      applyResult(data);
+    } catch (err) {
+      setError(
+        err instanceof SyntaxError
+          ? "JSON non valido: controlla di aver copiato tutto il testo dal plugin."
+          : err instanceof Error
+            ? err.message
+            : String(err),
+      );
     } finally {
       setFetching(false);
     }
@@ -121,6 +155,7 @@ export function FigmaImportPanel({
       }
       setResult(null);
       setLink("");
+      setPastedJson("");
       onImported();
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
@@ -163,6 +198,39 @@ export function FigmaImportPanel({
           Leggi da Figma
         </button>
       </div>
+
+      <details className="rounded-lg border border-border p-2 text-[11px] text-muted-foreground">
+        <summary className="cursor-pointer select-none">
+          Il piano Figma del file limita l'API? Incolla il JSON del plugin
+        </summary>
+        <div className="mt-2 space-y-1.5">
+          <p>
+            Esegui il plugin "trendzn - Esporta template" dentro Figma (gira sulla Plugin API, senza
+            il limite di richieste/mese della REST API sui file di un team con piano
+            Starter/gratuito — vedi <code>figma-export-plugin/README.md</code> nel repo per
+            l'installazione), copia il JSON che produce e incollalo qui sotto.
+          </p>
+          <textarea
+            value={pastedJson}
+            onChange={(e) => setPastedJson(e.target.value)}
+            placeholder='{"id": "...", "type": "FRAME", ...}'
+            className="h-24 w-full rounded-lg border border-border bg-background/60 px-2.5 py-1.5 font-mono text-[10px] outline-none focus:border-primary"
+          />
+          <button
+            type="button"
+            onClick={handleFetchFromJson}
+            disabled={fetching || !pastedJson.trim()}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-50"
+          >
+            {fetching ? (
+              <Loader2 className="size-3.5 animate-spin" />
+            ) : (
+              <Upload className="size-3.5" />
+            )}
+            Leggi JSON
+          </button>
+        </div>
+      </details>
 
       {error && (
         <p className="flex items-start gap-1.5 text-[11px] text-destructive">

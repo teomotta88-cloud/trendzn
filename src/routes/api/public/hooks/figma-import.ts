@@ -109,7 +109,13 @@ interface FigmaFill {
   type: string;
   visible?: boolean;
   color?: FigmaColor;
+  // gradientHandlePositions: forma REST API. gradientTransform: forma
+  // Plugin API (usata dal JSON del plugin export, vedi
+  // figma-export-plugin/) — la Plugin API non espone le handle position,
+  // solo la matrice di trasformazione. Al massimo una delle due è
+  // presente a seconda di quale fonte ha prodotto il JSON.
   gradientHandlePositions?: { x: number; y: number }[];
+  gradientTransform?: [[number, number, number], [number, number, number]];
   gradientStops?: { position: number; color: FigmaColor }[];
 }
 
@@ -148,7 +154,18 @@ interface FigmaNode {
   };
   effects?: FigmaEffect[];
   children?: FigmaNode[];
+  // rotation: radianti, forma REST API. rotationDegrees: gradi, forma
+  // Plugin API (JSON del plugin export) — al massimo uno dei due è
+  // presente. Vedi anche pluginExportDataUrl più sotto.
   rotation?: number;
+  rotationDegrees?: number;
+  // Presente solo nel JSON prodotto da figma-export-plugin/: l'immagine o
+  // il vettore di QUESTO nodo, già esportato localmente dal plugin (data
+  // URL base64) senza nessuna chiamata alla REST API di Figma — usato al
+  // posto di scaricare l'export da api.figma.com/v1/images, che è
+  // esattamente ciò che bypassa il limite di richieste/mese dei file su
+  // un team con piano Starter/gratuito.
+  pluginExportDataUrl?: string;
 }
 
 interface MappedElement {
@@ -163,6 +180,10 @@ interface MappedElement {
   z_index: number;
   style: Record<string, unknown>;
   exportFormat: "png" | "svg" | null;
+  // Se il nodo Figma di origine aveva pluginExportDataUrl (JSON prodotto
+  // dal plugin, non dalla REST API): l'immagine è già qui, il chiamante
+  // non deve fare l'export batch via REST per questo nodo.
+  inlineDataUrl: string | null;
 }
 
 export interface MappedFrame {
@@ -259,12 +280,28 @@ function pickVisiblePaintFill(fills: FigmaFill[] | undefined): FigmaFill | null 
   return null;
 }
 
-function gradientAngleFromHandles(handles: { x: number; y: number }[] | undefined): number {
-  if (!handles || handles.length < 2) return 90;
-  const dx = handles[1].x - handles[0].x;
-  const dy = handles[1].y - handles[0].y;
+function angleFromDirection(dx: number, dy: number): number {
   const deg = (Math.atan2(dx, -dy) * 180) / Math.PI;
   return Math.round(deg < 0 ? deg + 360 : deg);
+}
+
+// handles: forma REST API (gradientHandlePositions, 3 punti normalizzati).
+// transform: forma Plugin API (gradientTransform, matrice 2x3) — la
+// direzione del gradiente è l'immagine del vettore (1,0) sotto la parte
+// lineare della matrice, cioè (a, c) con transform = [[a,b,tx],[c,d,ty]].
+// Le due forme non coesistono mai sullo stesso fill (dipende da quale
+// fonte ha prodotto il JSON), ma la formula finale (atan2 su un vettore
+// direzione in coordinate schermo y-down) è la stessa in entrambi i casi.
+function gradientAngleFromFill(fill: FigmaFill): number {
+  if (fill.gradientHandlePositions && fill.gradientHandlePositions.length >= 2) {
+    const [h0, h1] = fill.gradientHandlePositions;
+    return angleFromDirection(h1.x - h0.x, h1.y - h0.y);
+  }
+  if (fill.gradientTransform) {
+    const [[a, ,], [c, ,]] = fill.gradientTransform;
+    return angleFromDirection(a, c);
+  }
+  return 90;
 }
 
 function stopsToCssList(stops: { position: number; color: FigmaColor }[]): string {
@@ -292,15 +329,16 @@ function fillStyleFromNode(
   const stops = fill.gradientStops ?? [];
   if (stops.length === 0) return {};
   if (fill.type === "GRADIENT_LINEAR") {
+    const angle = gradientAngleFromFill(fill);
     if (stops.length === 2 && !textMode) {
       return {
         fillType: "linear",
         gradientFrom: colorToHex(stops[0].color),
         gradientTo: colorToHex(stops[1].color),
-        gradientAngle: gradientAngleFromHandles(fill.gradientHandlePositions),
+        gradientAngle: angle,
       };
     }
-    const css = `linear-gradient(${gradientAngleFromHandles(fill.gradientHandlePositions)}deg, ${stopsToCssList(stops)})`;
+    const css = `linear-gradient(${angle}deg, ${stopsToCssList(stops)})`;
     return textMode ? { color: colorToHex(stops[0].color) } : { fillCss: css };
   }
   if (fill.type === "GRADIENT_RADIAL") {
@@ -431,7 +469,16 @@ function flatten(
   if (!box) return;
 
   const explicit = explicitLayerName(node.name);
-  const rotationDeg = node.rotation ? Math.round((-node.rotation * 180) / Math.PI) : 0;
+  // rotationDegrees (Plugin API, JSON del plugin export) è già in gradi;
+  // rotation (REST API) è in radianti. Stessa convenzione di segno
+  // assunta per entrambi (nessuna delle due verificata contro un
+  // elemento realmente ruotato in un ambiente Figma vero).
+  const rotationDeg =
+    typeof node.rotationDegrees === "number"
+      ? Math.round(-node.rotationDegrees)
+      : node.rotation
+        ? Math.round((-node.rotation * 180) / Math.PI)
+        : 0;
   const base = {
     figmaNodeId: node.id,
     x: box.x - originX,
@@ -454,6 +501,7 @@ function flatten(
       layer_name: layerName,
       tipo: "text",
       exportFormat: null,
+      inlineDataUrl: null,
       style: {
         text: layerName ? undefined : node.characters,
         fontFamily: node.style?.fontFamily ?? "Inter",
@@ -479,6 +527,7 @@ function flatten(
         layer_name: layerName,
         tipo: "image",
         exportFormat: "png",
+        inlineDataUrl: node.pluginExportDataUrl ?? null,
         style: {
           objectFit: "cover",
           borderRadius: node.cornerRadius ?? 0,
@@ -497,6 +546,7 @@ function flatten(
       layer_name: null,
       tipo: "shape",
       exportFormat: null,
+      inlineDataUrl: null,
       style: {
         ...(Object.keys(paintStyle).length > 0 ? paintStyle : { fillColor: "transparent" }),
         borderRadius: node.type === "ELLIPSE" ? 9999 : (node.cornerRadius ?? 0),
@@ -520,6 +570,7 @@ function flatten(
     layer_name: layerName,
     tipo: "image",
     exportFormat: "svg",
+    inlineDataUrl: node.pluginExportDataUrl ?? null,
     style: {
       objectFit: "contain",
       isVector: true,
@@ -715,6 +766,18 @@ export async function pngHasSignificantTransparency(bytes: Uint8Array): Promise<
   return transparentSamples / totalSamples > 0.05;
 }
 
+// Decodifica un data URL base64 (prodotto da figma-export-plugin/ tramite
+// figma.base64Encode, senza nessuna chiamata di rete) nei byte grezzi, per
+// poterli passare a pngHasSignificantTransparency esattamente come i byte
+// scaricati via fetch nel percorso REST.
+function dataUrlToBytes(dataUrl: string): Uint8Array {
+  const base64 = dataUrl.slice(dataUrl.indexOf(",") + 1);
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return bytes;
+}
+
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -790,15 +853,171 @@ async function fetchFigmaJson<T>(url: string, token: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
+// Condiviso dai due percorsi (link REST e JSON incollato dal plugin, vedi
+// POST handler sotto): risolve le immagini mancanti (via REST solo se
+// restExport è passato — nel percorso plugin è null, gli elementi hanno
+// già inlineDataUrl e non serve nessuna chiamata a Figma), rileva la
+// rimozione sfondo automatica e costruisce la risposta finale.
+async function resolveImagesAndBuildResponse(
+  frames: MappedFrame[],
+  restExport: { fileKey: string; token: string } | null,
+): Promise<Response> {
+  const pngIds = new Set<string>();
+  const svgIds = new Set<string>();
+  for (const frame of frames) {
+    for (const el of frame.elements) {
+      if (el.inlineDataUrl) continue;
+      if (el.exportFormat === "png") pngIds.add(el.figmaNodeId);
+      if (el.exportFormat === "svg") svgIds.add(el.figmaNodeId);
+    }
+  }
+
+  const imageUrls: Record<string, string> = {};
+  if (restExport) {
+    const { fileKey, token } = restExport;
+    async function exportBatch(ids: Set<string>, format: "png" | "svg") {
+      if (ids.size === 0) return;
+      const idsParam = [...ids].map(encodeURIComponent).join(",");
+      const imagesData = await fetchFigmaJson<{
+        err: string | null;
+        images: Record<string, string | null>;
+      }>(`https://api.figma.com/v1/images/${fileKey}?ids=${idsParam}&format=${format}`, token);
+      if (imagesData.err) {
+        throw new Error(`Export ${format} Figma fallito: ${imagesData.err}`);
+      }
+      for (const [id, url] of Object.entries(imagesData.images)) {
+        if (url) imageUrls[id] = url;
+      }
+    }
+    await exportBatch(pngIds, "png");
+    await exportBatch(svgIds, "svg");
+  }
+
+  // Rimozione sfondo automatica ricevuta da Figma: se la foto placeholder
+  // di un campo immagine dinamico è già trasparente (il designer l'ha già
+  // ritagliata), imposta da sé autoRemoveBackground per quel campo — best
+  // effort, un fallimento di fetch/parsing non deve far fallire l'import.
+  const autoRemoveBgIds = new Set<string>();
+  await Promise.all(
+    frames.flatMap((frame) =>
+      frame.elements
+        .filter((m) => m.tipo === "image" && m.exportFormat === "png" && m.layer_name)
+        .map(async (m) => {
+          try {
+            let bytes: Uint8Array | null = null;
+            if (m.inlineDataUrl) {
+              bytes = dataUrlToBytes(m.inlineDataUrl);
+            } else if (imageUrls[m.figmaNodeId]) {
+              const res = await fetch(imageUrls[m.figmaNodeId], {
+                signal: AbortSignal.timeout(8000),
+              });
+              if (res.ok) bytes = new Uint8Array(await res.arrayBuffer());
+            }
+            if (bytes && (await pngHasSignificantTransparency(bytes))) {
+              autoRemoveBgIds.add(m.figmaNodeId);
+            }
+          } catch {
+            // best-effort, vedi commento sopra
+          }
+        }),
+    ),
+  );
+
+  const resultFrames = frames.map((frame) => ({
+    name: frame.name,
+    width: frame.width,
+    height: frame.height,
+    elements: frame.elements.map((m) => {
+      const { figmaNodeId, exportFormat, inlineDataUrl, ...rest } = m;
+      if (exportFormat) {
+        const url = inlineDataUrl ?? imageUrls[figmaNodeId] ?? null;
+        const autoRemoveBg = autoRemoveBgIds.has(figmaNodeId) ? { autoRemoveBackground: true } : {};
+        // Un campo dinamico (layer_name impostato) mostra la foto di
+        // Figma solo come ANTEPRIMA (previewSrc) in attesa della foto
+        // vera scelta post per post nel wizard — mai come src "fissa":
+        // ImageActions/materializeElements scrivono la sostituzione in
+        // previewSrc/src rispettivamente, ma ElementBox legge sempre src
+        // PER PRIMO se presente, quindi un src piazzato qui da Figma
+        // resterebbe bloccato per sempre sopra qualunque nuova foto
+        // caricata per quel campo (bug segnalato dall'utente). Solo gli
+        // elementi fissi (layer_name null, es. un'immagine "!logo") usano
+        // src.
+        return {
+          ...rest,
+          style: rest.layer_name
+            ? { ...rest.style, previewSrc: url, ...autoRemoveBg }
+            : { ...rest.style, src: url },
+        };
+      }
+      return rest;
+    }),
+  }));
+
+  return Response.json({
+    ok: true,
+    frames: resultFrames,
+    elementsCount: resultFrames.reduce((sum, f) => sum + f.elements.length, 0),
+  });
+}
+
+function isPlausibleFigmaNode(value: unknown): value is FigmaNode {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    typeof (value as { type?: unknown }).type === "string"
+  );
+}
+
 export const Route = createFileRoute("/api/public/hooks/figma-import")({
   server: {
     handlers: {
       POST: async ({ request }) => {
         try {
-          const body = (await request.json()) as { link?: string };
+          const body = (await request.json()) as { link?: string; nodeJson?: unknown };
+
+          // Percorso plugin (figma-export-plugin/): il JSON è già il nodo
+          // radice serializzato localmente, niente link/token/chiamate
+          // REST — vedi il commento in cima al file sul limite del piano
+          // Starter che questo percorso bypassa del tutto.
+          if (body.nodeJson !== undefined) {
+            if (!isPlausibleFigmaNode(body.nodeJson)) {
+              return Response.json(
+                {
+                  ok: false,
+                  error: 'JSON non valido: manca (o non è una stringa) il campo "type".',
+                },
+                { status: 400 },
+              );
+            }
+            const root = body.nodeJson;
+            if (!CONTAINER_TYPES.has(root.type)) {
+              return Response.json(
+                {
+                  ok: false,
+                  error: `Il JSON incollato è un ${root.type}, non un frame/sezione. Riesporta selezionando un frame in Figma.`,
+                },
+                { status: 400 },
+              );
+            }
+            if (!root.absoluteBoundingBox) {
+              return Response.json(
+                {
+                  ok: false,
+                  error: "Il nodo nel JSON non ha dimensioni valide (absoluteBoundingBox).",
+                },
+                { status: 400 },
+              );
+            }
+            const frames = mapFigmaTreeToFrames(root);
+            return await resolveImagesAndBuildResponse(frames, null);
+          }
+
           const link = body.link?.trim();
           if (!link) {
-            return Response.json({ ok: false, error: "link è obbligatorio" }, { status: 400 });
+            return Response.json(
+              { ok: false, error: "link o nodeJson è obbligatorio" },
+              { status: 400 },
+            );
           }
           const parsed = parseFigmaLink(link);
           if (!parsed) {
@@ -852,104 +1071,7 @@ export const Route = createFileRoute("/api/public/hooks/figma-import")({
           }
 
           const frames = mapFigmaTreeToFrames(root);
-
-          const pngIds = new Set<string>();
-          const svgIds = new Set<string>();
-          for (const frame of frames) {
-            for (const el of frame.elements) {
-              if (el.exportFormat === "png") pngIds.add(el.figmaNodeId);
-              if (el.exportFormat === "svg") svgIds.add(el.figmaNodeId);
-            }
-          }
-
-          const imageUrls: Record<string, string> = {};
-          async function exportBatch(ids: Set<string>, format: "png" | "svg") {
-            if (ids.size === 0) return;
-            const idsParam = [...ids].map(encodeURIComponent).join(",");
-            const imagesData = await fetchFigmaJson<{
-              err: string | null;
-              images: Record<string, string | null>;
-            }>(
-              // token è già stato validato non-null più sopra in questa
-              // stessa richiesta; la chiusura di exportBatch non conserva
-              // quel narrowing agli occhi di TypeScript.
-              `https://api.figma.com/v1/images/${fileKey}?ids=${idsParam}&format=${format}`,
-              token!,
-            );
-            if (imagesData.err) {
-              throw new Error(`Export ${format} Figma fallito: ${imagesData.err}`);
-            }
-            for (const [id, url] of Object.entries(imagesData.images)) {
-              if (url) imageUrls[id] = url;
-            }
-          }
-          await exportBatch(pngIds, "png");
-          await exportBatch(svgIds, "svg");
-
-          // Rimozione sfondo automatica ricevuta da Figma: se la foto
-          // placeholder di un campo immagine dinamico è già trasparente
-          // (il designer l'ha già ritagliata), imposta da sé
-          // autoRemoveBackground per quel campo — best-effort, un
-          // fallimento di fetch/parsing non deve far fallire l'import.
-          const autoRemoveBgIds = new Set<string>();
-          await Promise.all(
-            frames.flatMap((frame) =>
-              frame.elements
-                .filter((m) => m.tipo === "image" && m.exportFormat === "png" && m.layer_name)
-                .map(async (m) => {
-                  const url = imageUrls[m.figmaNodeId];
-                  if (!url) return;
-                  try {
-                    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
-                    if (!res.ok) return;
-                    const bytes = new Uint8Array(await res.arrayBuffer());
-                    if (await pngHasSignificantTransparency(bytes)) {
-                      autoRemoveBgIds.add(m.figmaNodeId);
-                    }
-                  } catch {
-                    // best-effort, vedi commento sopra
-                  }
-                }),
-            ),
-          );
-
-          const resultFrames = frames.map((frame) => ({
-            name: frame.name,
-            width: frame.width,
-            height: frame.height,
-            elements: frame.elements.map((m) => {
-              const { figmaNodeId, exportFormat, ...rest } = m;
-              if (exportFormat) {
-                const url = imageUrls[figmaNodeId] ?? null;
-                const autoRemoveBg = autoRemoveBgIds.has(figmaNodeId)
-                  ? { autoRemoveBackground: true }
-                  : {};
-                // Un campo dinamico (layer_name impostato) mostra la foto
-                // di Figma solo come ANTEPRIMA (previewSrc) in attesa della
-                // foto vera scelta post per post nel wizard — mai come src
-                // "fissa": ImageActions/materializeElements scrivono la
-                // sostituzione in previewSrc/src rispettivamente, ma
-                // ElementBox legge sempre src PER PRIMO se presente, quindi
-                // un src piazzato qui da Figma resterebbe bloccato per
-                // sempre sopra qualunque nuova foto caricata per quel campo
-                // (bug segnalato dall'utente). Solo gli elementi fissi
-                // (layer_name null, es. un'immagine "!logo") usano src.
-                return {
-                  ...rest,
-                  style: rest.layer_name
-                    ? { ...rest.style, previewSrc: url, ...autoRemoveBg }
-                    : { ...rest.style, src: url },
-                };
-              }
-              return rest;
-            }),
-          }));
-
-          return Response.json({
-            ok: true,
-            frames: resultFrames,
-            elementsCount: resultFrames.reduce((sum, f) => sum + f.elements.length, 0),
-          });
+          return await resolveImagesAndBuildResponse(frames, { fileKey, token });
         } catch (err) {
           return Response.json({ ok: false, error: String(err).slice(0, 300) }, { status: 500 });
         }
