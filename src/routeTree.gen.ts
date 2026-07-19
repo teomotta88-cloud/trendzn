@@ -46,6 +46,7 @@ import { Route as ApiPublicHooksListInstagramContentUrlsRouteImport } from './ro
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksImportAspiBulkRouteImport } from './routes/api/public/hooks/import-aspi-bulk'
 import { Route as ApiPublicHooksGettySearchRouteImport } from './routes/api/public/hooks/getty-search'
+import { Route as ApiPublicHooksFigmaImportRouteImport } from './routes/api/public/hooks/figma-import'
 import { Route as ApiPublicHooksExtractKeywordsRouteImport } from './routes/api/public/hooks/extract-keywords'
 import { Route as ApiPublicHooksExportXlsxRouteImport } from './routes/api/public/hooks/export-xlsx'
 import { Route as ApiPublicHooksExportFeedPptxRouteImport } from './routes/api/public/hooks/export-feed-pptx'
@@ -257,6 +258,12 @@ const ApiPublicHooksGettySearchRoute =
     path: '/api/public/hooks/getty-search',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksFigmaImportRoute =
+  ApiPublicHooksFigmaImportRouteImport.update({
+    id: '/api/public/hooks/figma-import',
+    path: '/api/public/hooks/figma-import',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksExtractKeywordsRoute =
   ApiPublicHooksExtractKeywordsRouteImport.update({
     id: '/api/public/hooks/extract-keywords',
@@ -326,6 +333,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
+  '/api/public/hooks/figma-import': typeof ApiPublicHooksFigmaImportRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -372,6 +380,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
+  '/api/public/hooks/figma-import': typeof ApiPublicHooksFigmaImportRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -419,6 +428,7 @@ export interface FileRoutesById {
   '/api/public/hooks/export-feed-pptx': typeof ApiPublicHooksExportFeedPptxRoute
   '/api/public/hooks/export-xlsx': typeof ApiPublicHooksExportXlsxRoute
   '/api/public/hooks/extract-keywords': typeof ApiPublicHooksExtractKeywordsRoute
+  '/api/public/hooks/figma-import': typeof ApiPublicHooksFigmaImportRoute
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
@@ -467,6 +477,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/export-feed-pptx'
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
+    | '/api/public/hooks/figma-import'
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
@@ -513,6 +524,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/export-feed-pptx'
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
+    | '/api/public/hooks/figma-import'
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
@@ -559,6 +571,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/export-feed-pptx'
     | '/api/public/hooks/export-xlsx'
     | '/api/public/hooks/extract-keywords'
+    | '/api/public/hooks/figma-import'
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
@@ -606,6 +619,7 @@ export interface RootRouteChildren {
   ApiPublicHooksExportFeedPptxRoute: typeof ApiPublicHooksExportFeedPptxRoute
   ApiPublicHooksExportXlsxRoute: typeof ApiPublicHooksExportXlsxRoute
   ApiPublicHooksExtractKeywordsRoute: typeof ApiPublicHooksExtractKeywordsRoute
+  ApiPublicHooksFigmaImportRoute: typeof ApiPublicHooksFigmaImportRoute
   ApiPublicHooksGettySearchRoute: typeof ApiPublicHooksGettySearchRoute
   ApiPublicHooksImportAspiBulkRoute: typeof ApiPublicHooksImportAspiBulkRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
@@ -888,6 +902,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksGettySearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/figma-import': {
+      id: '/api/public/hooks/figma-import'
+      path: '/api/public/hooks/figma-import'
+      fullPath: '/api/public/hooks/figma-import'
+      preLoaderRoute: typeof ApiPublicHooksFigmaImportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/extract-keywords': {
       id: '/api/public/hooks/extract-keywords'
       path: '/api/public/hooks/extract-keywords'
@@ -967,6 +988,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksExportFeedPptxRoute: ApiPublicHooksExportFeedPptxRoute,
   ApiPublicHooksExportXlsxRoute: ApiPublicHooksExportXlsxRoute,
   ApiPublicHooksExtractKeywordsRoute: ApiPublicHooksExtractKeywordsRoute,
+  ApiPublicHooksFigmaImportRoute: ApiPublicHooksFigmaImportRoute,
   ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
   ApiPublicHooksImportAspiBulkRoute: ApiPublicHooksImportAspiBulkRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,

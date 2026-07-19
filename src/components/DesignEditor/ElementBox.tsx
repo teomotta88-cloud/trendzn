@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState, type MouseEvent } from "react";
 import * as LucideIcons from "lucide-react";
 import type { ElementTipo } from "@/lib/designElements";
 import { boxShadowCss, dropShadowFilterCss, textShadowCss } from "./shadow";
@@ -23,7 +23,7 @@ export interface EditorElement {
 interface ElementBoxProps {
   element: EditorElement;
   selected: boolean;
-  onSelect: () => void;
+  onSelect: (e: MouseEvent) => void;
   onChangeText: (value: string) => void;
 }
 

@@ -18,6 +18,7 @@ import {
 } from "@/lib/designElements";
 import { DesignEditor } from "@/components/DesignEditor/DesignEditor";
 import { CustomFontsPanel } from "@/components/DesignEditor/CustomFontsPanel";
+import { FigmaImportPanel } from "@/components/DesignEditor/FigmaImportPanel";
 import { useCustomFontFaces } from "@/components/DesignEditor/useCustomFontFaces";
 import {
   CURATED_FONTS,
@@ -307,6 +308,13 @@ function Page() {
         <div className="text-sm text-muted-foreground">Caricamento design…</div>
       ) : (
         <>
+          <FigmaImportPanel
+            rubricaId={rubricaId}
+            formato={selectedFormato}
+            cardIndex={activeCardIndex}
+            onImported={() => handleFrameSaved(activeCardIndex)}
+          />
+
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs text-muted-foreground">Frame (carousel):</span>
             {displayCardIndexes.map((idx) => (
