@@ -16,6 +16,7 @@ import {
 import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
 import { PostMediaGallery } from "./PostMediaGallery";
+import { GettyLicensingLinks } from "./GettyLicensingLinks";
 import { NewPostCard } from "./NewPostCard";
 import { VisualWizardModal } from "./VisualWizardModal";
 
@@ -354,6 +355,7 @@ export function PostCard({
               Crea visual con editor grafico
             </button>
             <PostMediaGallery key={mediaRefreshKey} postId={post.id} />
+            <GettyLicensingLinks key={mediaRefreshKey} postId={post.id} />
           </div>
         </PostReviewBlock>
       </div>

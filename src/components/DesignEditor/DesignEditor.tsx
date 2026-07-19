@@ -54,6 +54,10 @@ interface DesignEditorProps {
   // stile), così il wizard può tenere traccia delle modifiche live per frame
   // senza dover leggere lo stato interno di useHistory.
   onElementsChange?: (elements: EditorElement[]) => void;
+  // Chiamato dopo un salvataggio riuscito su template_elements: il
+  // chiamante può usarlo per rinfrescare la propria lista di frame (es. un
+  // frame appena creato smette di essere "solo locale" una volta salvato).
+  onSaved?: () => void;
 }
 
 function newLocalId(): string {
@@ -133,6 +137,7 @@ export function DesignEditor({
   autoCapture = false,
   onFrameCaptured,
   onElementsChange,
+  onSaved,
 }: DesignEditorProps) {
   const scale = useMemo(
     () => computeScale(formato.width_px, formato.height_px),
@@ -253,6 +258,7 @@ export function DesignEditor({
         cardIndex,
         elements.map((el) => toStoredElement(el, scale)),
       );
+      onSaved?.();
     } catch (err) {
       setSaveError(err instanceof Error ? err.message : String(err));
     } finally {
