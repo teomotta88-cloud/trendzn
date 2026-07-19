@@ -2,6 +2,7 @@ import { forwardRef, useEffect, useRef, useState, type MouseEvent } from "react"
 import * as LucideIcons from "lucide-react";
 import type { ElementTipo } from "@/lib/designElements";
 import { boxShadowCss, dropShadowFilterCss, textShadowCss } from "./shadow";
+import { blendModeCss, borderCss, opacityValue, resolveFillCss } from "./paint";
 
 // Un elemento nello stato dell'editor: stesse colonne di template_elements,
 // ma x/y/width/height/style.fontSize sono in "px di visualizzazione"
@@ -47,6 +48,18 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editingText]);
 
+  function stopEditing(commit: boolean) {
+    if (commit) onChangeText(draft);
+    setEditingText(false);
+  }
+
+  // style è un jsonb libero (le proprietà dipendono da element.tipo): un
+  // singolo cast qui invece di propagare `any` nel tipo condiviso.
+  const s = element.style as Record<string, any>;
+
+  // Bordo, opacità e blend mode si applicano allo stesso modo a tutti i
+  // tipi di elemento (stessa idea di shadow.ts per l'ombra): in baseStyle
+  // invece che ripetuti in ogni branch.
   const baseStyle: React.CSSProperties = {
     position: "absolute",
     left: element.x,
@@ -56,16 +69,10 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
     transform: element.rotation ? `rotate(${element.rotation}deg)` : undefined,
     outline: selected ? "2px solid var(--primary, #6366f1)" : "1px dashed transparent",
     cursor: "move",
+    border: borderCss(s),
+    opacity: opacityValue(s),
+    mixBlendMode: blendModeCss(s) as React.CSSProperties["mixBlendMode"],
   };
-
-  function stopEditing(commit: boolean) {
-    if (commit) onChangeText(draft);
-    setEditingText(false);
-  }
-
-  // style è un jsonb libero (le proprietà dipendono da element.tipo): un
-  // singolo cast qui invece di propagare `any` nel tipo condiviso.
-  const s = element.style as Record<string, any>;
 
   if (element.tipo === "text") {
     return (
@@ -79,6 +86,10 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
           fontWeight: s.fontWeight ?? 400,
           color: s.color || "#000000",
           lineHeight: s.lineHeight ?? 1.2,
+          letterSpacing: typeof s.letterSpacing === "number" ? `${s.letterSpacing}px` : undefined,
+          textTransform: s.textTransform || undefined,
+          textDecoration: s.textDecoration || undefined,
+          fontVariant: s.fontVariant || undefined,
           textAlign: s.align || "left",
           justifyContent:
             s.align === "center" ? "center" : s.align === "right" ? "flex-end" : "flex-start",
@@ -203,7 +214,7 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
       ref={ref}
       style={{
         ...baseStyle,
-        backgroundColor: s.fill || "#cccccc",
+        background: resolveFillCss(s),
         borderRadius: s.borderRadius ?? 0,
         boxShadow: boxShadowCss(s),
       }}

@@ -29,17 +29,37 @@ import { createFileRoute } from "@tanstack/react-router";
 // Le forme (rettangoli/ellissi senza fill immagine) restano sempre fisse,
 // non sono mai campi dinamici.
 //
+// Component/istanze: se un'istanza contiene testo o un'immagine (segno che è
+// un componente "composto" tipo bottone/badge/card, non una singola icona),
+// viene attraversata come un contenitore invece che appiattita in un'unica
+// immagine — Figma restituisce già i valori con eventuali override
+// applicati nell'albero di /v1/files/:key/nodes, quindi i figli entrano
+// come elementi normali (testo/forma/immagine/icona) senza bisogno di una
+// logica di override separata. Un'istanza puramente vettoriale (nessun
+// figlio TEXT o immagine, es. un vero simbolo icona) resta invece
+// appiattita come prima.
+//
+// Riempimento, bordo, opacità, blend mode: i fill a gradiente (lineare,
+// radiale) vengono convertiti in una funzione CSS equivalente; un fill
+// angolare/a diamante o con più di 2 stop non ha un editor dedicato nel
+// nostro pannello proprietà, ma viene comunque reso correttamente via
+// style.fillCss (un override "grezzo": editabile solo sostituendolo con un
+// gradiente semplice a 2 colori, non modificabile stop per stop). Lo
+// stroke (bordo) supporta solo un colore singolo — un bordo a gradiente in
+// Figma usa il colore del primo stop. Il blend mode usa direttamente i
+// nomi CSS mix-blend-mode (stesso set di Figma, salvo PASS_THROUGH).
+//
 // Cosa NON fa (limiti noti, documentati invece di finti al 100%):
 // - I gruppi/frame annidati (nel caso single-frame) vengono attraversati ma
 //   non riprodotti come gruppi nel nostro editor (serve un secondo passaggio
 //   manuale con "Raggruppa" se si vuole lo stesso raggruppamento).
 // - "Icona" vs "vettore" è una distinzione euristica: COMPONENT/INSTANCE
-//   (spesso simboli icona in un design system) diventano "icon", il resto
-//   dei nodi vettoriali (VECTOR/STAR/LINE/BOOLEAN_OPERATION/...) diventa
-//   "vector" — in entrambi i casi il nostro editor non ha un tipo elemento
-//   "vettore" nativo (path editabili), quindi vengono importati come
-//   elemento immagine con un export SVG (nitido a qualunque dimensione,
-//   diversamente da un PNG appiattito) e style.isVector = true.
+//   atomici (spesso simboli icona in un design system) diventano "icon", il
+//   resto dei nodi vettoriali (VECTOR/STAR/LINE/BOOLEAN_OPERATION/...)
+//   diventa "vector" — in entrambi i casi il nostro editor non ha un tipo
+//   elemento "vettore" nativo (path editabili), quindi vengono importati
+//   come elemento immagine con un export SVG (nitido a qualunque
+//   dimensione, diversamente da un PNG appiattito) e style.isVector = true.
 // - La rotazione è convertita da radianti (Figma) a gradi CSS assumendo la
 //   convenzione standard di Figma (radianti antiorari) — non verificato
 //   contro un file reale in questo ambiente, ricontrollare gli elementi
@@ -47,6 +67,13 @@ import { createFileRoute } from "@tanstack/react-router";
 // - Il controllo font (fatto lato client in FigmaImportPanel, che conosce i
 //   font disponibili in trendzn) confronta solo il nome della famiglia,
 //   non lo specifico peso/stile.
+// - Testo multi-stile nello stesso blocco (override per intervallo di
+//   caratteri in Figma) non è supportato: il nostro elemento testo è un
+//   blocco unico con uno stile solo, prende lo stile del primo carattere.
+// - Auto-layout, componenti/varianti come concetto riutilizzabile, boolean
+//   operation come path editabile e prototipazione non hanno equivalente
+//   nel nostro editor (che genera immagini statiche, non un layout
+//   reattivo) e non vengono importati.
 
 interface FigmaColor {
   r: number;
@@ -59,6 +86,8 @@ interface FigmaFill {
   type: string;
   visible?: boolean;
   color?: FigmaColor;
+  gradientHandlePositions?: { x: number; y: number }[];
+  gradientStops?: { position: number; color: FigmaColor }[];
 }
 
 interface FigmaEffect {
@@ -76,6 +105,11 @@ interface FigmaNode {
   visible?: boolean;
   absoluteBoundingBox?: { x: number; y: number; width: number; height: number };
   fills?: FigmaFill[];
+  strokes?: FigmaFill[];
+  strokeWeight?: number;
+  strokeDashes?: number[];
+  opacity?: number;
+  blendMode?: string;
   cornerRadius?: number;
   characters?: string;
   style?: {
@@ -83,6 +117,11 @@ interface FigmaNode {
     fontWeight?: number;
     fontSize?: number;
     textAlignHorizontal?: string;
+    letterSpacing?: number;
+    lineHeightPx?: number;
+    lineHeightPercentFontSize?: number;
+    textCase?: string;
+    textDecoration?: string;
   };
   effects?: FigmaEffect[];
   children?: FigmaNode[];
@@ -161,14 +200,181 @@ function explicitLayerName(name: string): { forced: string | null } | null {
 }
 
 const CONTAINER_TYPES = new Set(["FRAME", "GROUP", "SECTION", "CANVAS"]);
+// COMPONENT/COMPONENT_SET/INSTANCE: bucket "icon" quando restano un nodo
+// foglia (vedi hasCompoundDescendant più sotto per quando invece vengono
+// attraversati come contenitore). Tutto il resto che non è TEXT/RECTANGLE/
+// ELLIPSE (VECTOR, STAR, LINE, BOOLEAN_OPERATION, ma anche qualunque altro
+// tipo di nodo Figma non gestito esplicitamente) cade nel bucket "vector"
+// come fallback generico.
 const ICON_LIKE_TYPES = new Set(["COMPONENT", "COMPONENT_SET", "INSTANCE"]);
-const VECTOR_LIKE_TYPES = new Set([
-  "VECTOR",
-  "STAR",
-  "LINE",
-  "REGULAR_POLYGON",
-  "BOOLEAN_OPERATION",
-]);
+
+// Un'istanza/componente con almeno un discendente TEXT o un'immagine
+// bitmap è quasi certamente un componente "composto" (bottone, badge, card)
+// dove ogni pezzo deve restare un campo modificabile separato — va quindi
+// attraversata come contenitore, non appiattita in una singola icona SVG.
+function hasCompoundDescendant(node: FigmaNode): boolean {
+  for (const child of node.children ?? []) {
+    if (child.visible === false) continue;
+    if (child.type === "TEXT") return true;
+    if (
+      (child.type === "RECTANGLE" || child.type === "ELLIPSE") &&
+      child.fills?.some((f) => f.type === "IMAGE" && f.visible !== false)
+    ) {
+      return true;
+    }
+    if (hasCompoundDescendant(child)) return true;
+  }
+  return false;
+}
+
+function pickVisiblePaintFill(fills: FigmaFill[] | undefined): FigmaFill | null {
+  if (!fills) return null;
+  for (let i = fills.length - 1; i >= 0; i--) {
+    const f = fills[i];
+    if (f.visible !== false && f.type !== "IMAGE") return f;
+  }
+  return null;
+}
+
+function gradientAngleFromHandles(handles: { x: number; y: number }[] | undefined): number {
+  if (!handles || handles.length < 2) return 90;
+  const dx = handles[1].x - handles[0].x;
+  const dy = handles[1].y - handles[0].y;
+  const deg = (Math.atan2(dx, -dy) * 180) / Math.PI;
+  return Math.round(deg < 0 ? deg + 360 : deg);
+}
+
+function stopsToCssList(stops: { position: number; color: FigmaColor }[]): string {
+  return stops.map((s) => `${colorToHex(s.color)} ${Math.round(s.position * 100)}%`).join(", ");
+}
+
+// textMode true: usato per il colore del testo (niente fillType/fillCss,
+// solo "color" — un testo con fill a gradiente non è supportato dal nostro
+// editor, si usa il colore del primo stop come approssimazione).
+// textMode false: usato per il riempimento di forme/immagini. Un gradiente
+// a 2 stop lineare/radiale popola i campi strutturati editabili dal
+// pannello proprietà; qualunque altro caso (>2 stop, angolare, a diamante)
+// finisce in fillCss, un override CSS grezzo — reso correttamente ma
+// modificabile solo sostituendolo con un gradiente semplice.
+function fillStyleFromNode(
+  fills: FigmaFill[] | undefined,
+  textMode: boolean,
+): Record<string, unknown> {
+  const fill = pickVisiblePaintFill(fills);
+  if (!fill) return {};
+  if (fill.type === "SOLID") {
+    const hex = fill.color ? colorToHex(fill.color) : "#000000";
+    return textMode ? { color: hex } : { fillColor: hex };
+  }
+  const stops = fill.gradientStops ?? [];
+  if (stops.length === 0) return {};
+  if (fill.type === "GRADIENT_LINEAR") {
+    if (stops.length === 2 && !textMode) {
+      return {
+        fillType: "linear",
+        gradientFrom: colorToHex(stops[0].color),
+        gradientTo: colorToHex(stops[1].color),
+        gradientAngle: gradientAngleFromHandles(fill.gradientHandlePositions),
+      };
+    }
+    const css = `linear-gradient(${gradientAngleFromHandles(fill.gradientHandlePositions)}deg, ${stopsToCssList(stops)})`;
+    return textMode ? { color: colorToHex(stops[0].color) } : { fillCss: css };
+  }
+  if (fill.type === "GRADIENT_RADIAL") {
+    if (stops.length === 2 && !textMode) {
+      return {
+        fillType: "radial",
+        gradientFrom: colorToHex(stops[0].color),
+        gradientTo: colorToHex(stops[1].color),
+      };
+    }
+    const css = `radial-gradient(circle, ${stopsToCssList(stops)})`;
+    return textMode ? { color: colorToHex(stops[0].color) } : { fillCss: css };
+  }
+  if (fill.type === "GRADIENT_ANGULAR") {
+    const css = `conic-gradient(${stopsToCssList(stops)})`;
+    return textMode ? { color: colorToHex(stops[0].color) } : { fillCss: css };
+  }
+  if (fill.type === "GRADIENT_DIAMOND") {
+    // Nessun equivalente CSS per un gradiente a diamante: approssimato con
+    // un gradiente lineare sugli stessi stop, non identico ma più fedele
+    // di un singolo colore piatto.
+    const css = `linear-gradient(90deg, ${stopsToCssList(stops)})`;
+    return textMode ? { color: colorToHex(stops[0].color) } : { fillCss: css };
+  }
+  return {};
+}
+
+// Bordo CSS: solo colore singolo, un bordo a gradiente in Figma usa il
+// colore del primo stop (border-image con un gradiente vero è possibile in
+// CSS ma non vale la complessità per un caso limite).
+function strokeStyleFromNode(node: FigmaNode): Record<string, unknown> {
+  const stroke = pickVisiblePaintFill(node.strokes);
+  const weight = node.strokeWeight;
+  if (!stroke || !weight) return {};
+  const color =
+    stroke.type === "SOLID"
+      ? stroke.color
+        ? colorToHex(stroke.color)
+        : "#000000"
+      : stroke.gradientStops?.[0]?.color
+        ? colorToHex(stroke.gradientStops[0].color)
+        : "#000000";
+  return {
+    borderColor: color,
+    borderWidth: weight,
+    borderDashed: Array.isArray(node.strokeDashes) && node.strokeDashes.length > 0,
+  };
+}
+
+// NORMAL/PASS_THROUGH sono il default di Figma (nessun blend mode
+// applicato): omessi per non sporcare lo style con un valore ridondante.
+function blendModeFromFigma(mode: string | undefined): string | undefined {
+  if (!mode || mode === "NORMAL" || mode === "PASS_THROUGH") return undefined;
+  return mode.toLowerCase().replace(/_/g, "-");
+}
+
+function opacityBlendStyle(node: FigmaNode): Record<string, unknown> {
+  const out: Record<string, unknown> = {};
+  if (typeof node.opacity === "number" && node.opacity < 1) out.opacity = node.opacity;
+  const blend = blendModeFromFigma(node.blendMode);
+  if (blend) out.blendMode = blend;
+  return out;
+}
+
+const TEXT_CASE_TRANSFORM: Record<string, string> = {
+  UPPER: "uppercase",
+  LOWER: "lowercase",
+  TITLE: "capitalize",
+};
+const TEXT_CASE_VARIANT = new Set(["SMALL_CAPS", "SMALL_CAPS_FORCED"]);
+const TEXT_DECORATION_MAP: Record<string, string> = {
+  UNDERLINE: "underline",
+  STRIKETHROUGH: "line-through",
+};
+
+// Testo multi-stile (override per intervallo di caratteri) non è
+// supportato: legge solo lo stile "di base" del nodo TEXT, come per
+// fontFamily/fontSize/fontWeight già prima di questa modifica.
+function textAdvancedStyle(style: FigmaNode["style"]): Record<string, unknown> {
+  if (!style) return {};
+  const out: Record<string, unknown> = {};
+  if (typeof style.letterSpacing === "number" && style.letterSpacing !== 0) {
+    out.letterSpacing = style.letterSpacing;
+  }
+  if (typeof style.lineHeightPx === "number" && style.fontSize) {
+    out.lineHeight = Number((style.lineHeightPx / style.fontSize).toFixed(2));
+  } else if (typeof style.lineHeightPercentFontSize === "number") {
+    out.lineHeight = Number((style.lineHeightPercentFontSize / 100).toFixed(2));
+  }
+  const textCase = style.textCase;
+  if (textCase && TEXT_CASE_TRANSFORM[textCase]) out.textTransform = TEXT_CASE_TRANSFORM[textCase];
+  if (textCase && TEXT_CASE_VARIANT.has(textCase)) out.fontVariant = "small-caps";
+  if (style.textDecoration && TEXT_DECORATION_MAP[style.textDecoration]) {
+    out.textDecoration = TEXT_DECORATION_MAP[style.textDecoration];
+  }
+  return out;
+}
 
 // Attraversamento in profondità di UN frame: i contenitori annidati
 // (frame/gruppo/sezione) non diventano un elemento, si scende nei figli; i
@@ -186,7 +392,12 @@ function flatten(
 ): void {
   if (node.visible === false) return;
 
-  if (CONTAINER_TYPES.has(node.type) && node.children && node.children.length > 0) {
+  const isContainer = CONTAINER_TYPES.has(node.type);
+  const isCompoundInstance =
+    ICON_LIKE_TYPES.has(node.type) &&
+    (node.children?.length ?? 0) > 0 &&
+    hasCompoundDescendant(node);
+  if ((isContainer || isCompoundInstance) && node.children && node.children.length > 0) {
     for (const child of node.children) {
       flatten(child, originX, originY, zCounter, nameCounters, out);
     }
@@ -209,8 +420,12 @@ function flatten(
   };
   const shadowStyle = shadowStyleFromEffects(node.effects);
 
+  const strokeStyle = strokeStyleFromNode(node);
+  const appearanceStyle = opacityBlendStyle(node);
+
   if (node.type === "TEXT") {
     const layerName = explicit ? explicit.forced : nextAutoName(nameCounters, "title");
+    const textFill = fillStyleFromNode(node.fills, true);
     out.push({
       ...base,
       layer_name: layerName,
@@ -221,11 +436,12 @@ function flatten(
         fontFamily: node.style?.fontFamily ?? "Inter",
         fontSize: node.style?.fontSize ?? 24,
         fontWeight: node.style?.fontWeight ?? 400,
-        color: node.fills?.find((f) => f.type === "SOLID" && f.visible !== false)?.color
-          ? colorToHex(node.fills.find((f) => f.type === "SOLID")!.color!)
-          : "#000000",
+        color: (textFill.color as string | undefined) ?? "#000000",
         align: (node.style?.textAlignHorizontal ?? "LEFT").toLowerCase(),
         ...shadowStyle,
+        ...strokeStyle,
+        ...appearanceStyle,
+        ...textAdvancedStyle(node.style),
       },
     });
     return;
@@ -240,32 +456,40 @@ function flatten(
         layer_name: layerName,
         tipo: "image",
         exportFormat: "png",
-        style: { objectFit: "cover", borderRadius: node.cornerRadius ?? 0, ...shadowStyle },
+        style: {
+          objectFit: "cover",
+          borderRadius: node.cornerRadius ?? 0,
+          ...shadowStyle,
+          ...strokeStyle,
+          ...appearanceStyle,
+        },
       });
       return;
     }
     // Forma piena (rettangolo/ellisse senza immagine): sempre fissa, mai
     // un campo dinamico, indipendentemente da "#"/"!" nel nome.
-    const solidFill = node.fills?.find((f) => f.type === "SOLID" && f.visible !== false);
+    const paintStyle = fillStyleFromNode(node.fills, false);
     out.push({
       ...base,
       layer_name: null,
       tipo: "shape",
       exportFormat: null,
       style: {
-        fill: solidFill?.color ? colorToHex(solidFill.color) : "transparent",
+        ...(Object.keys(paintStyle).length > 0 ? paintStyle : { fillColor: "transparent" }),
         borderRadius: node.type === "ELLIPSE" ? 9999 : (node.cornerRadius ?? 0),
         ...shadowStyle,
+        ...strokeStyle,
+        ...appearanceStyle,
       },
     });
     return;
   }
 
-  // Icone (component/instance, tipicamente simboli di un design system) e
-  // vettori generici (path, stelle, linee, booleani): esportati come SVG
-  // (nitido a qualunque dimensione) invece che PNG appiattito. Il nostro
-  // editor non ha un tipo "vettore" nativo: entrano come "image" con
-  // style.isVector = true.
+  // Icone (component/instance atomici, senza discendenti composti — vedi
+  // hasCompoundDescendant) e vettori generici (path, stelle, linee,
+  // booleani): esportati come SVG (nitido a qualunque dimensione) invece
+  // che PNG appiattito. Il nostro editor non ha un tipo "vettore" nativo:
+  // entrano come "image" con style.isVector = true.
   const bucket: NamingBucket = ICON_LIKE_TYPES.has(node.type) ? "icon" : "vector";
   const layerName = explicit ? explicit.forced : nextAutoName(nameCounters, bucket);
   out.push({
@@ -273,7 +497,13 @@ function flatten(
     layer_name: layerName,
     tipo: "image",
     exportFormat: "svg",
-    style: { objectFit: "contain", isVector: true, ...shadowStyle },
+    style: {
+      objectFit: "contain",
+      isVector: true,
+      ...shadowStyle,
+      ...strokeStyle,
+      ...appearanceStyle,
+    },
   });
 }
 
