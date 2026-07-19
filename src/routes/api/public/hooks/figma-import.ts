@@ -3,10 +3,16 @@ import { createFileRoute } from "@tanstack/react-router";
 // Import di uno o più frame Figma nell'editor grafico interno: usa la REST
 // API pubblica di Figma (non lo scraping fatto per Getty, qui esiste
 // un'API ufficiale) per leggere l'albero di nodi e mapparlo su
-// template_elements. Richiede un Personal Access Token Figma (qualunque
-// piano, anche gratuito, basta avere accesso in visualizzazione al file)
-// configurato come FIGMA_ACCESS_TOKEN nell'ambiente dell'app — stesso
-// pattern di OPENROUTER_API_KEY/GITHUB_TOKEN altrove in questo progetto.
+// template_elements. Richiede un Personal Access Token Figma configurato
+// come FIGMA_ACCESS_TOKEN nell'ambiente dell'app — stesso pattern di
+// OPENROUTER_API_KEY/GITHUB_TOKEN altrove in questo progetto. ATTENZIONE:
+// il piano Figma del TEAM a cui appartiene il file conta, non solo il
+// token — un file su un team con piano Starter/gratuito ha un tetto API
+// di poche richieste AL MESE (verificato: header
+// X-Figma-Rate-Limit-Type: low, Retry-After di giorni, non minuti), non
+// il solito rate limit per-minuto. Ogni import ne consuma 2-3 (nodes +
+// export PNG/SVG), quindi si esaurisce in fretta. Serve un piano Figma a
+// pagamento per il team del file per un uso reale di questa funzione.
 //
 // Rilevamento frame multipli (carousel): se il link incollato punta a un
 // contenitore (pagina/sezione/gruppo) i cui figli diretti sono almeno due
@@ -718,32 +724,64 @@ function sleep(ms: number): Promise<void> {
 // retry con il ritardo indicato da Retry-After (se presente, altrimenti un
 // default breve) copre il caso comune senza rischiare di allungare troppo
 // una richiesta già fallita in modo permanente.
+function formatDurationSeconds(seconds: number): string {
+  if (seconds < 60) return `${Math.round(seconds)} secondi`;
+  const minutes = seconds / 60;
+  if (minutes < 60) return `${Math.round(minutes)} minuti`;
+  const hours = minutes / 60;
+  if (hours < 48) return `${Math.round(hours)} ore`;
+  return `${Math.round((hours / 24) * 10) / 10} giorni`;
+}
+
+// X-Figma-Rate-Limit-Type: "low" (o un Retry-After di ore/giorni) NON è il
+// solito limite "troppe richieste ravvicinate" che un retry risolve: è un
+// tetto STRUTTURALE legato al piano Figma del team a cui appartiene il
+// file (verificato: un file su un team piano Starter/gratuito ha un tetto
+// di poche richieste API AL MESE, non al minuto — ogni "Leggi da Figma"
+// ne consuma 2-3 tra nodes/png/svg, quindi si esaurisce in fretta). In
+// questo caso un retry automatico non ha alcun senso (l'attesa è di ore o
+// giorni) e "riprova tra un minuto" sarebbe un messaggio sbagliato.
+function isStructuralRateLimit(rateLimitType: string | null, retryAfterSeconds: number): boolean {
+  return rateLimitType === "low" || (Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 30);
+}
+
 async function fetchFigmaJson<T>(url: string, token: string): Promise<T> {
   const headers = { "X-Figma-Token": token };
   let res = await fetch(url, { headers });
   if (res.status === 429) {
-    const retryAfterHeader = res.headers.get("Retry-After");
-    const retryAfterMs = retryAfterHeader ? Number(retryAfterHeader) * 1000 : 5000;
-    await sleep(Number.isFinite(retryAfterMs) ? Math.min(retryAfterMs, 15000) : 5000);
-    res = await fetch(url, { headers });
+    const retryAfterSeconds = Number(res.headers.get("Retry-After"));
+    const rateLimitType = res.headers.get("X-Figma-Rate-Limit-Type");
+    if (!isStructuralRateLimit(rateLimitType, retryAfterSeconds)) {
+      await sleep(
+        Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
+          ? retryAfterSeconds * 1000
+          : 5000,
+      );
+      res = await fetch(url, { headers });
+    }
   }
   if (!res.ok) {
     if (res.status === 429) {
-      // Header di diagnosi del rate limit (documentati da Figma ma non
-      // sempre tutti presenti a seconda del piano/endpoint): li includiamo
-      // così com'è invece di indovinarne il valore, per capire subito piano
-      // e tipo di limite coinvolti se ricapita.
-      const details = [
-        ["Retry-After", res.headers.get("Retry-After")],
-        ["X-Figma-Plan-Tier", res.headers.get("X-Figma-Plan-Tier")],
-        ["X-Figma-Rate-Limit-Type", res.headers.get("X-Figma-Rate-Limit-Type")],
-        ["X-Figma-Upgrade-Link", res.headers.get("X-Figma-Upgrade-Link")],
-      ]
-        .filter(([, value]) => value != null)
-        .map(([label, value]) => `${label}: ${value}`)
-        .join(", ");
+      const retryAfterSeconds = Number(res.headers.get("Retry-After"));
+      const rateLimitType = res.headers.get("X-Figma-Rate-Limit-Type");
+      const planTier = res.headers.get("X-Figma-Plan-Tier");
+      const upgradeLink = res.headers.get("X-Figma-Upgrade-Link");
+      const waitText =
+        Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
+          ? formatDurationSeconds(retryAfterSeconds)
+          : "qualche istante";
+      if (isStructuralRateLimit(rateLimitType, retryAfterSeconds)) {
+        throw new Error(
+          `Limite dell'API Figma per il piano di questo file${planTier ? ` (piano "${planTier}")` : ""}: ` +
+            `Figma restringe fortemente l'accesso via API per i file su un team con piano gratuito/Starter ` +
+            `(poche richieste al mese, non al minuto). Prossimo tentativo possibile tra ${waitText}.` +
+            (upgradeLink
+              ? ` Per un import senza questo limite serve un piano Figma a pagamento per il team di questo file: ${upgradeLink}`
+              : ""),
+        );
+      }
       throw new Error(
-        `Figma ha temporaneamente limitato le richieste (troppi import ravvicinati con lo stesso token). Riprova tra un minuto.${details ? ` [${details}]` : ""}`,
+        `Figma ha temporaneamente limitato le richieste (troppi import ravvicinati con lo stesso token). Riprova tra ${waitText}.`,
       );
     }
     const body = await res.text();
