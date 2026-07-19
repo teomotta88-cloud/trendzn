@@ -517,10 +517,14 @@ export function VisualWizardModal({
       // Sostituisce il visual precedente invece di accumularlo: elimina solo
       // le immagini caricate dall'ULTIMO salvataggio del wizard (tracciate
       // in visual_media_ids), non gli eventuali file aggiunti a mano
-      // dall'utente nella galleria.
-      if (post.visual_media_ids.length > 0) {
+      // dall'utente nella galleria. Fallback a [] se la colonna non è
+      // ancora presente sul post (migrazione post_visual_elements non
+      // ancora applicata al DB reale — senza questa guardia post.visual_media_ids
+      // sarebbe undefined e .length farebbe crashare la generazione).
+      const previousMediaIds = post.visual_media_ids ?? [];
+      if (previousMediaIds.length > 0) {
         setGenerationLabel("Rimuovo il visual precedente…");
-        await Promise.allSettled(post.visual_media_ids.map((id) => deleteMedia(id)));
+        await Promise.allSettled(previousMediaIds.map((id) => deleteMedia(id)));
       }
 
       setGenerationLabel("Carico i visual nel post…");

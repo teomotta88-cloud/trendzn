@@ -39,6 +39,21 @@ import { createFileRoute } from "@tanstack/react-router";
 // figlio TEXT o immagine, es. un vero simbolo icona) resta invece
 // appiattita come prima.
 //
+// Effetti ricevuti automaticamente da Figma per i campi dinamici immagine:
+// - Ombra (DROP_SHADOW): letta dal nodo foglia stesso, come sempre — se in
+//   Figma l'ombra è applicata a un gruppo/frame che contiene l'immagine
+//   invece che all'immagine stessa, NON viene propagata ai figli (limite
+//   noto, vedi sotto).
+// - Rimozione sfondo: Figma non ha un "effetto" API per questo, ma se la
+//   foto placeholder del campo è già stata ritagliata a mano dal designer
+//   (il PNG esportato ha già una trasparenza reale, non solo bordi
+//   anti-aliasati — vedi pngHasSignificantTransparency), lo interpretiamo
+//   come segnale che anche le foto vere caricate per quel campo nel wizard
+//   devono avere lo sfondo rimosso automaticamente, e impostiamo da soli
+//   style.autoRemoveBackground. Richiede di scaricare il PNG esportato e
+//   ispezionarne i byte (Cloudflare Workers non ha Canvas/Image): best
+//   effort, un fallimento qui non fa fallire l'import.
+//
 // Riempimento, bordo, opacità, blend mode: i fill a gradiente (lineare,
 // radiale) vengono convertiti in una funzione CSS equivalente; un fill
 // angolare/a diamante o con più di 2 stop non ha un editor dedicato nel
@@ -52,7 +67,9 @@ import { createFileRoute } from "@tanstack/react-router";
 // Cosa NON fa (limiti noti, documentati invece di finti al 100%):
 // - I gruppi/frame annidati (nel caso single-frame) vengono attraversati ma
 //   non riprodotti come gruppi nel nostro editor (serve un secondo passaggio
-//   manuale con "Raggruppa" se si vuole lo stesso raggruppamento).
+//   manuale con "Raggruppa" se si vuole lo stesso raggruppamento) — e un
+//   effetto (ombra) applicato al gruppo/frame invece che al singolo
+//   elemento non viene propagato ai figli, solo letto dal nodo foglia.
 // - "Icona" vs "vettore" è una distinzione euristica: COMPONENT/INSTANCE
 //   atomici (spesso simboli icona in un design system) diventano "icon", il
 //   resto dei nodi vettoriali (VECTOR/STAR/LINE/BOOLEAN_OPERATION/...)
@@ -563,6 +580,135 @@ export function mapFigmaTreeToFrames(root: FigmaNode): MappedFrame[] {
   ];
 }
 
+// Rileva se un PNG esportato da Figma ha già una trasparenza reale (non
+// solo bordi anti-aliasati): se il designer ha già "ritagliato" la foto
+// placeholder di un campo dinamico in Figma, è un segnale che anche le
+// foto vere caricate per quel campo nel wizard dovrebbero avere lo sfondo
+// rimosso automaticamente (style.autoRemoveBackground) — evita di dover
+// impostarlo a mano ogni volta nell'editor. Implementato senza librerie
+// (Cloudflare Workers non ha Canvas/Image): parse dei chunk PNG, inflate
+// zlib dei chunk IDAT via DecompressionStream("deflate") (IDAT è
+// zlib-wrapped, RFC 1950 — è il formato "deflate" delle Compression
+// Streams, non "deflate-raw"), poi un un-filter degli scanline secondo la
+// spec PNG (§ Filtering) e un campionamento del canale alpha.
+// Limiti noti: solo bit depth 8 (il caso quasi universale per un export
+// Figma); colorType 3 (palette) approssimato solo dalla presenza di un
+// chunk tRNS, senza decodificare i pixel; qualunque errore di parsing
+// ritorna false (nessun auto-flag) invece di far fallire l'import.
+export async function pngHasSignificantTransparency(bytes: Uint8Array): Promise<boolean> {
+  if (bytes.length < 8 || bytes[0] !== 0x89 || bytes[1] !== 0x50 || bytes[2] !== 0x4e) {
+    return false;
+  }
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  let offset = 8;
+  let width = 0;
+  let height = 0;
+  let bitDepth = 8;
+  let colorType = 2;
+  let hasTrns = false;
+  const idatParts: Uint8Array[] = [];
+  while (offset + 8 <= bytes.length) {
+    const len = view.getUint32(offset);
+    const type = String.fromCharCode(
+      bytes[offset + 4],
+      bytes[offset + 5],
+      bytes[offset + 6],
+      bytes[offset + 7],
+    );
+    const dataStart = offset + 8;
+    if (dataStart + len > bytes.length) break;
+    if (type === "IHDR") {
+      width = view.getUint32(dataStart);
+      height = view.getUint32(dataStart + 4);
+      bitDepth = bytes[dataStart + 8];
+      colorType = bytes[dataStart + 9];
+    } else if (type === "tRNS") {
+      hasTrns = true;
+    } else if (type === "IDAT") {
+      idatParts.push(bytes.subarray(dataStart, dataStart + len));
+    } else if (type === "IEND") {
+      break;
+    }
+    offset = dataStart + len + 4;
+  }
+
+  const hasAlphaChannel = colorType === 4 || colorType === 6;
+  if (!hasAlphaChannel && !hasTrns) return false; // strutturalmente opaco
+  if (colorType === 3) return hasTrns; // palette: approssimazione, vedi sopra
+  if (!hasAlphaChannel || bitDepth !== 8 || width === 0 || height === 0 || idatParts.length === 0) {
+    return false;
+  }
+
+  const compressed = new Uint8Array(idatParts.reduce((n, p) => n + p.length, 0));
+  {
+    let o = 0;
+    for (const part of idatParts) {
+      compressed.set(part, o);
+      o += part.length;
+    }
+  }
+
+  const ds = new DecompressionStream("deflate");
+  const writer = ds.writable.getWriter();
+  void writer.write(compressed);
+  void writer.close();
+  const raw = new Uint8Array(await new Response(ds.readable).arrayBuffer());
+
+  const channels = colorType === 6 ? 4 : 2;
+  const rowBytes = width * channels;
+  let pos = 0;
+  let prevRow = new Uint8Array(rowBytes);
+  let transparentSamples = 0;
+  let totalSamples = 0;
+  for (let y = 0; y < height && pos < raw.length; y++) {
+    const filterType = raw[pos];
+    pos += 1;
+    const row = raw.subarray(pos, pos + rowBytes);
+    pos += rowBytes;
+    const out = new Uint8Array(rowBytes);
+    for (let i = 0; i < rowBytes; i++) {
+      const a = i >= channels ? out[i - channels] : 0;
+      const b = prevRow[i];
+      const c = i >= channels ? prevRow[i - channels] : 0;
+      let pred = 0;
+      switch (filterType) {
+        case 1:
+          pred = a;
+          break;
+        case 2:
+          pred = b;
+          break;
+        case 3:
+          pred = Math.floor((a + b) / 2);
+          break;
+        case 4: {
+          const p = a + b - c;
+          const pa = Math.abs(p - a);
+          const pb = Math.abs(p - b);
+          const pc = Math.abs(p - c);
+          pred = pa <= pb && pa <= pc ? a : pb <= pc ? b : c;
+          break;
+        }
+        default:
+          pred = 0;
+      }
+      out[i] = (row[i] + pred) & 0xff;
+    }
+    // Campiona una riga ogni 4 e un pixel ogni 2 per non decodificare per
+    // intero immagini grandi solo per un controllo euristico.
+    if (y % 4 === 0) {
+      for (let x = 0; x < width; x += 2) {
+        const alpha = out[x * channels + (channels - 1)];
+        totalSamples += 1;
+        if (alpha < 10) transparentSamples += 1;
+      }
+    }
+    prevRow = out;
+  }
+  if (totalSamples === 0) return false;
+  return transparentSamples / totalSamples > 0.05;
+}
+
 async function fetchFigmaJson<T>(url: string, token: string): Promise<T> {
   const res = await fetch(url, { headers: { "X-Figma-Token": token } });
   if (!res.ok) {
@@ -668,6 +814,33 @@ export const Route = createFileRoute("/api/public/hooks/figma-import")({
           await exportBatch(pngIds, "png");
           await exportBatch(svgIds, "svg");
 
+          // Rimozione sfondo automatica ricevuta da Figma: se la foto
+          // placeholder di un campo immagine dinamico è già trasparente
+          // (il designer l'ha già ritagliata), imposta da sé
+          // autoRemoveBackground per quel campo — best-effort, un
+          // fallimento di fetch/parsing non deve far fallire l'import.
+          const autoRemoveBgIds = new Set<string>();
+          await Promise.all(
+            frames.flatMap((frame) =>
+              frame.elements
+                .filter((m) => m.tipo === "image" && m.exportFormat === "png" && m.layer_name)
+                .map(async (m) => {
+                  const url = imageUrls[m.figmaNodeId];
+                  if (!url) return;
+                  try {
+                    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+                    if (!res.ok) return;
+                    const bytes = new Uint8Array(await res.arrayBuffer());
+                    if (await pngHasSignificantTransparency(bytes)) {
+                      autoRemoveBgIds.add(m.figmaNodeId);
+                    }
+                  } catch {
+                    // best-effort, vedi commento sopra
+                  }
+                }),
+            ),
+          );
+
           const resultFrames = frames.map((frame) => ({
             name: frame.name,
             width: frame.width,
@@ -675,7 +848,26 @@ export const Route = createFileRoute("/api/public/hooks/figma-import")({
             elements: frame.elements.map((m) => {
               const { figmaNodeId, exportFormat, ...rest } = m;
               if (exportFormat) {
-                return { ...rest, style: { ...rest.style, src: imageUrls[figmaNodeId] ?? null } };
+                const url = imageUrls[figmaNodeId] ?? null;
+                const autoRemoveBg = autoRemoveBgIds.has(figmaNodeId)
+                  ? { autoRemoveBackground: true }
+                  : {};
+                // Un campo dinamico (layer_name impostato) mostra la foto
+                // di Figma solo come ANTEPRIMA (previewSrc) in attesa della
+                // foto vera scelta post per post nel wizard — mai come src
+                // "fissa": ImageActions/materializeElements scrivono la
+                // sostituzione in previewSrc/src rispettivamente, ma
+                // ElementBox legge sempre src PER PRIMO se presente, quindi
+                // un src piazzato qui da Figma resterebbe bloccato per
+                // sempre sopra qualunque nuova foto caricata per quel campo
+                // (bug segnalato dall'utente). Solo gli elementi fissi
+                // (layer_name null, es. un'immagine "!logo") usano src.
+                return {
+                  ...rest,
+                  style: rest.layer_name
+                    ? { ...rest.style, previewSrc: url, ...autoRemoveBg }
+                    : { ...rest.style, src: url },
+                };
               }
               return rest;
             }),
