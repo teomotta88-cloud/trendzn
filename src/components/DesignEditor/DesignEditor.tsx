@@ -1,6 +1,6 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Moveable from "react-moveable";
-import { Download, Loader2, Save } from "lucide-react";
+import { Download, Loader2, Redo2, Save, Undo2 } from "lucide-react";
 import {
   replaceTemplateElements,
   type TemplateElement,
@@ -11,7 +11,14 @@ import type { RubricaFormato } from "@/lib/autographics";
 import { ElementBox, type EditorElement } from "./ElementBox";
 import { PropertiesPanel } from "./PropertiesPanel";
 import { Toolbar } from "./Toolbar";
+import { useHistory } from "./useHistory";
 import { MAX_EDITOR_CANVAS_PX } from "./constants";
+
+// Le modifiche continue (digitazione in un campo numerico, trascinamento di
+// un color picker) vengono raggruppate in un solo passo di undo se avvengono
+// entro questa finestra dall'ultima — evita di dover premere Ctrl+Z una
+// volta per ogni carattere digitato.
+const HISTORY_DEBOUNCE_MS = 400;
 
 // Aspetta il prossimo repaint effettivo del browser (due rAF innestati,
 // pattern standard per "aspetta che React abbia committato E il browser
@@ -112,9 +119,10 @@ export function DesignEditor({
   const displayWidth = formato.width_px * scale;
   const displayHeight = formato.height_px * scale;
 
-  const [elements, setElements] = useState<EditorElement[]>(() =>
+  const history = useHistory<EditorElement[]>(
     initialElements.map((el) => toEditorElement(el, scale)),
   );
+  const elements = history.state;
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -129,23 +137,29 @@ export function DesignEditor({
   const selected = elements.find((el) => el.id === selectedId) ?? null;
   const targetEl = selectedId ? (elementRefs.current.get(selectedId) ?? null) : null;
 
-  function updateElement(id: string, patch: Partial<EditorElement>) {
-    setElements((prev) => prev.map((el) => (el.id === id ? { ...el, ...patch } : el)));
+  // debounce=true raggruppa modifiche ravvicinate (digitazione, drag di uno
+  // slider) in un solo passo di undo — vedi useHistory.ts. Le azioni
+  // discrete (fine drag/resize/rotate, upload, rimozione sfondo, aggiungi/
+  // elimina) committano subito passando debounce=false (default).
+  function updateElement(id: string, patch: Partial<EditorElement>, debounce = false) {
+    const next = elements.map((el) => (el.id === id ? { ...el, ...patch } : el));
+    history.commit(next, debounce ? { debounceMs: HISTORY_DEBOUNCE_MS } : undefined);
   }
 
-  function updateSelectedStyle(patch: Record<string, unknown>) {
+  function updateSelectedStyle(patch: Record<string, unknown>, debounce = true) {
     if (!selectedId) return;
-    setElements((prev) =>
-      prev.map((el) => (el.id === selectedId ? { ...el, style: { ...el.style, ...patch } } : el)),
+    const next = elements.map((el) =>
+      el.id === selectedId ? { ...el, style: { ...el.style, ...patch } } : el,
     );
+    history.commit(next, debounce ? { debounceMs: HISTORY_DEBOUNCE_MS } : undefined);
   }
 
   function addElement(tipo: EditorElement["tipo"]) {
     const id = newLocalId();
     const size = tipo === "text" ? { width: 240, height: 60 } : { width: 160, height: 160 };
     const maxZ = elements.reduce((max, el) => Math.max(max, el.z_index), 0);
-    setElements((prev) => [
-      ...prev,
+    const next = [
+      ...elements,
       {
         id,
         layer_name: null,
@@ -158,13 +172,14 @@ export function DesignEditor({
         z_index: maxZ + 1,
         style: defaultStyleFor(tipo),
       },
-    ]);
+    ];
+    history.commit(next);
     setSelectedId(id);
   }
 
   function deleteSelected() {
     if (!selectedId) return;
-    setElements((prev) => prev.filter((el) => el.id !== selectedId));
+    history.commit(elements.filter((el) => el.id !== selectedId));
     setSelectedId(null);
   }
 
@@ -188,8 +203,16 @@ export function DesignEditor({
     if (swapIdx < 0 || swapIdx >= sorted.length) return;
     const a = sorted[idx];
     const b = sorted[swapIdx];
-    updateElement(a.id, { z_index: b.z_index });
-    updateElement(b.id, { z_index: a.z_index });
+    // Le due z_index vanno scambiate in un solo commit: due updateElement()
+    // in sequenza calcolerebbero entrambi il "next" a partire dallo stesso
+    // `elements` (chiusura non ancora aggiornata dal primo), perdendo il
+    // primo cambiamento.
+    const next = elements.map((el) => {
+      if (el.id === a.id) return { ...el, z_index: b.z_index };
+      if (el.id === b.id) return { ...el, z_index: a.z_index };
+      return el;
+    });
+    history.commit(next);
   }
 
   async function handleSave() {
@@ -231,12 +254,54 @@ export function DesignEditor({
     }
   }
 
+  // Ctrl+Z / Ctrl+Y (e Cmd su Mac, Ctrl+Shift+Z come redo alternativo) —
+  // globali sull'editor, non solo sui campi con focus: è un tool "a canvas"
+  // come Figma/Canva, non un editor di documento, quindi Ctrl+Z deve
+  // funzionare anche con focus su un input numerico del pannello proprietà.
+  // Unica eccezione: mentre si sta scrivendo nel box di editing inline del
+  // testo (l'unica <textarea> dell'editor), lasciamo fare all'undo nativo
+  // del browser sul campo di testo.
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      const isUndo = (e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === "z";
+      const isRedo =
+        ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "y") ||
+        ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "z");
+      if (!isUndo && !isRedo) return;
+      if (document.activeElement?.tagName === "TEXTAREA") return;
+      e.preventDefault();
+      if (isUndo) history.undo();
+      else history.redo();
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_280px]">
       <div className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Toolbar onAdd={addElement} />
           <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={history.undo}
+              disabled={!history.canUndo}
+              title="Annulla (Ctrl+Z)"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-40"
+            >
+              <Undo2 className="size-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={history.redo}
+              disabled={!history.canRedo}
+              title="Ripristina (Ctrl+Y)"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-40"
+            >
+              <Redo2 className="size-3.5" />
+            </button>
             <button
               type="button"
               onClick={handlePreview}
@@ -362,7 +427,7 @@ export function DesignEditor({
         element={selected}
         layerNameSuggestions={layerNameSuggestions}
         fontOptions={fontOptions}
-        onChange={(patch) => selectedId && updateElement(selectedId, patch)}
+        onChange={(patch) => selectedId && updateElement(selectedId, patch, true)}
         onChangeStyle={updateSelectedStyle}
         onDelete={deleteSelected}
         onReorder={reorderSelected}
