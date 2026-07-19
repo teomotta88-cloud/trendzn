@@ -11,12 +11,7 @@ const db = supabase as any;
 export type TipoTemplate = "photo_card" | "text_icon_card";
 
 export type GraphicJobStatus =
-  | "pending_validation"
-  | "pending_image"
-  | "ready_for_render"
-  | "rendering"
-  | "done"
-  | "error";
+  "pending_validation" | "pending_image" | "ready_for_render" | "rendering" | "done" | "error";
 
 export type GraphicJobFormatStatus = "pending" | "rendering" | "done" | "error";
 
@@ -149,6 +144,17 @@ export async function updateRubrica(
   fields: Partial<Omit<Rubrica, "id" | "created_at">>,
 ): Promise<void> {
   const { error } = await db.from("rubriche").update(fields).eq("id", id);
+  if (error) throw error;
+}
+
+// graphic_jobs.rubrica_id non ha "on delete cascade" (a differenza di
+// rubrica_formati/template_constraints/template_elements): senza cancellarli
+// prima, l'eliminazione della rubrica fallirebbe con una violazione di
+// foreign key non appena esiste almeno un job collegato.
+export async function deleteRubrica(id: string): Promise<void> {
+  const { error: jobsError } = await db.from("graphic_jobs").delete().eq("rubrica_id", id);
+  if (jobsError) throw jobsError;
+  const { error } = await db.from("rubriche").delete().eq("id", id);
   if (error) throw error;
 }
 

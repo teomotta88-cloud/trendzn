@@ -17,7 +17,6 @@ import { PostReviewBlock } from "./PostReviewBlock";
 import { EditableText } from "./EditableText";
 import { PostMediaGallery } from "./PostMediaGallery";
 import { NewPostCard } from "./NewPostCard";
-import { AutoGraphicsPanel } from "./AutoGraphicsPanel";
 import { VisualWizardModal } from "./VisualWizardModal";
 
 function formatDate(d: string) {
@@ -373,8 +372,6 @@ export function PostCard({
           {typeof post.budget_media === "number" && <span>Budget: €{post.budget_media}</span>}
         </div>
       )}
-
-      <AutoGraphicsPanel post={post} />
     </article>
   );
 }
