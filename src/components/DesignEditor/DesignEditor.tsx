@@ -1,6 +1,6 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Moveable from "react-moveable";
-import { Download, Loader2, Save } from "lucide-react";
+import { Download, Loader2, Redo2, Save, Undo2 } from "lucide-react";
 import {
   replaceTemplateElements,
   type TemplateElement,
@@ -11,7 +11,15 @@ import type { RubricaFormato } from "@/lib/autographics";
 import { ElementBox, type EditorElement } from "./ElementBox";
 import { PropertiesPanel } from "./PropertiesPanel";
 import { Toolbar } from "./Toolbar";
+import { useHistory } from "./useHistory";
+import { computeSnap, type SnapGuides } from "./snapping";
 import { MAX_EDITOR_CANVAS_PX } from "./constants";
+
+// Le modifiche continue (digitazione in un campo numerico, trascinamento di
+// un color picker) vengono raggruppate in un solo passo di undo se avvengono
+// entro questa finestra dall'ultima — evita di dover premere Ctrl+Z una
+// volta per ogni carattere digitato.
+const HISTORY_DEBOUNCE_MS = 400;
 
 // Aspetta il prossimo repaint effettivo del browser (due rAF innestati,
 // pattern standard per "aspetta che React abbia committato E il browser
@@ -27,9 +35,25 @@ function waitForNextPaint(): Promise<void> {
 interface DesignEditorProps {
   rubricaId: string;
   formato: RubricaFormato;
+  cardIndex: number;
   initialElements: TemplateElement[];
   layerNameSuggestions: string[];
   fontOptions: string[];
+  // Wizard di composizione post (Fase 9): quando il "salvataggio" reale è
+  // un'altra azione (caricare il PNG catturato nel visual del post, non
+  // sovrascrivere il template condiviso), il chiamante nasconde "Salva
+  // design" e usa autoCapture/onFrameCaptured/onElementsChange invece del
+  // normale ciclo salva-su-template.
+  hideSaveButton?: boolean;
+  // Se true, genera automaticamente la cattura PNG subito dopo il mount
+  // (una volta che il DOM ha fatto il primo paint) — usato dal wizard per
+  // catturare ogni frame in sequenza senza richiedere un click manuale.
+  autoCapture?: boolean;
+  onFrameCaptured?: (blob: Blob) => void;
+  // Notifica il chiamante ad ogni modifica degli elementi (drag/resize/testo/
+  // stile), così il wizard può tenere traccia delle modifiche live per frame
+  // senza dover leggere lo stato interno di useHistory.
+  onElementsChange?: (elements: EditorElement[]) => void;
 }
 
 function newLocalId(): string {
@@ -40,11 +64,11 @@ function newLocalId(): string {
 // motore di rendering) e i px mostrati nell'editor: un solo fattore di scala
 // uniforme, applicato anche a fontSize/strokeWidth, così quello che si vede
 // a schermo corrisponde proporzionalmente a quello che esce dal render.
-function computeScale(widthPx: number, heightPx: number) {
+export function computeScale(widthPx: number, heightPx: number) {
   return Math.min(MAX_EDITOR_CANVAS_PX / widthPx, MAX_EDITOR_CANVAS_PX / heightPx, 1);
 }
 
-function toEditorElement(el: TemplateElement, scale: number): EditorElement {
+export function toEditorElement(el: TemplateElement, scale: number): EditorElement {
   const style = { ...el.style } as Record<string, unknown>;
   if (typeof style.fontSize === "number") style.fontSize = style.fontSize * scale;
   if (typeof style.strokeWidth === "number") style.strokeWidth = style.strokeWidth * scale;
@@ -62,7 +86,7 @@ function toEditorElement(el: TemplateElement, scale: number): EditorElement {
   };
 }
 
-function toStoredElement(el: EditorElement, scale: number): TemplateElementInput {
+export function toStoredElement(el: EditorElement, scale: number): TemplateElementInput {
   const style = { ...el.style } as Record<string, unknown>;
   if (typeof style.fontSize === "number") style.fontSize = style.fontSize / scale;
   if (typeof style.strokeWidth === "number") style.strokeWidth = style.strokeWidth / scale;
@@ -101,9 +125,14 @@ function defaultStyleFor(tipo: EditorElement["tipo"]): Record<string, unknown> {
 export function DesignEditor({
   rubricaId,
   formato,
+  cardIndex,
   initialElements,
   layerNameSuggestions,
   fontOptions,
+  hideSaveButton = false,
+  autoCapture = false,
+  onFrameCaptured,
+  onElementsChange,
 }: DesignEditorProps) {
   const scale = useMemo(
     () => computeScale(formato.width_px, formato.height_px),
@@ -112,9 +141,10 @@ export function DesignEditor({
   const displayWidth = formato.width_px * scale;
   const displayHeight = formato.height_px * scale;
 
-  const [elements, setElements] = useState<EditorElement[]>(() =>
+  const history = useHistory<EditorElement[]>(
     initialElements.map((el) => toEditorElement(el, scale)),
   );
+  const elements = history.state;
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -125,27 +155,39 @@ export function DesignEditor({
   const elementRefs = useRef<Map<string, HTMLDivElement>>(new Map());
   const canvasRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef(0);
+  const [guides, setGuides] = useState<SnapGuides>({ vertical: [], horizontal: [] });
 
   const selected = elements.find((el) => el.id === selectedId) ?? null;
   const targetEl = selectedId ? (elementRefs.current.get(selectedId) ?? null) : null;
 
-  function updateElement(id: string, patch: Partial<EditorElement>) {
-    setElements((prev) => prev.map((el) => (el.id === id ? { ...el, ...patch } : el)));
+  useEffect(() => {
+    onElementsChange?.(elements);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [elements]);
+
+  // debounce=true raggruppa modifiche ravvicinate (digitazione, drag di uno
+  // slider) in un solo passo di undo — vedi useHistory.ts. Le azioni
+  // discrete (fine drag/resize/rotate, upload, rimozione sfondo, aggiungi/
+  // elimina) committano subito passando debounce=false (default).
+  function updateElement(id: string, patch: Partial<EditorElement>, debounce = false) {
+    const next = elements.map((el) => (el.id === id ? { ...el, ...patch } : el));
+    history.commit(next, debounce ? { debounceMs: HISTORY_DEBOUNCE_MS } : undefined);
   }
 
-  function updateSelectedStyle(patch: Record<string, unknown>) {
+  function updateSelectedStyle(patch: Record<string, unknown>, debounce = true) {
     if (!selectedId) return;
-    setElements((prev) =>
-      prev.map((el) => (el.id === selectedId ? { ...el, style: { ...el.style, ...patch } } : el)),
+    const next = elements.map((el) =>
+      el.id === selectedId ? { ...el, style: { ...el.style, ...patch } } : el,
     );
+    history.commit(next, debounce ? { debounceMs: HISTORY_DEBOUNCE_MS } : undefined);
   }
 
   function addElement(tipo: EditorElement["tipo"]) {
     const id = newLocalId();
     const size = tipo === "text" ? { width: 240, height: 60 } : { width: 160, height: 160 };
     const maxZ = elements.reduce((max, el) => Math.max(max, el.z_index), 0);
-    setElements((prev) => [
-      ...prev,
+    const next = [
+      ...elements,
       {
         id,
         layer_name: null,
@@ -158,13 +200,14 @@ export function DesignEditor({
         z_index: maxZ + 1,
         style: defaultStyleFor(tipo),
       },
-    ]);
+    ];
+    history.commit(next);
     setSelectedId(id);
   }
 
   function deleteSelected() {
     if (!selectedId) return;
-    setElements((prev) => prev.filter((el) => el.id !== selectedId));
+    history.commit(elements.filter((el) => el.id !== selectedId));
     setSelectedId(null);
   }
 
@@ -188,8 +231,16 @@ export function DesignEditor({
     if (swapIdx < 0 || swapIdx >= sorted.length) return;
     const a = sorted[idx];
     const b = sorted[swapIdx];
-    updateElement(a.id, { z_index: b.z_index });
-    updateElement(b.id, { z_index: a.z_index });
+    // Le due z_index vanno scambiate in un solo commit: due updateElement()
+    // in sequenza calcolerebbero entrambi il "next" a partire dallo stesso
+    // `elements` (chiusura non ancora aggiornata dal primo), perdendo il
+    // primo cambiamento.
+    const next = elements.map((el) => {
+      if (el.id === a.id) return { ...el, z_index: b.z_index };
+      if (el.id === b.id) return { ...el, z_index: a.z_index };
+      return el;
+    });
+    history.commit(next);
   }
 
   async function handleSave() {
@@ -199,6 +250,7 @@ export function DesignEditor({
       await replaceTemplateElements(
         rubricaId,
         formato.formato,
+        cardIndex,
         elements.map((el) => toStoredElement(el, scale)),
       );
     } catch (err) {
@@ -224,6 +276,7 @@ export function DesignEditor({
       const pixelRatio = 1 / scale;
       const blob = await captureNodeToPngBlob(canvasRef.current, pixelRatio);
       setPreviewUrl(URL.createObjectURL(blob));
+      onFrameCaptured?.(blob);
     } catch (err) {
       setRenderError(err instanceof Error ? err.message : String(err));
     } finally {
@@ -231,12 +284,64 @@ export function DesignEditor({
     }
   }
 
+  // Cattura automatica (wizard, Fase 9): al mount di questo frame, genera la
+  // PNG senza richiedere il click manuale su "Genera anteprima" — ogni
+  // DesignEditor del wizard viene rimontato una volta per frame (stesso
+  // pattern key={cardIndex} della route /editor-grafico), quindi "al mount"
+  // equivale a "per questo frame".
+  useEffect(() => {
+    if (autoCapture) handlePreview();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Ctrl+Z / Ctrl+Y (e Cmd su Mac, Ctrl+Shift+Z come redo alternativo) —
+  // globali sull'editor, non solo sui campi con focus: è un tool "a canvas"
+  // come Figma/Canva, non un editor di documento, quindi Ctrl+Z deve
+  // funzionare anche con focus su un input numerico del pannello proprietà.
+  // Unica eccezione: mentre si sta scrivendo nel box di editing inline del
+  // testo (l'unica <textarea> dell'editor), lasciamo fare all'undo nativo
+  // del browser sul campo di testo.
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      const isUndo = (e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === "z";
+      const isRedo =
+        ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "y") ||
+        ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "z");
+      if (!isUndo && !isRedo) return;
+      if (document.activeElement?.tagName === "TEXTAREA") return;
+      e.preventDefault();
+      if (isUndo) history.undo();
+      else history.redo();
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_280px]">
       <div className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Toolbar onAdd={addElement} />
           <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={history.undo}
+              disabled={!history.canUndo}
+              title="Annulla (Ctrl+Z)"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-40"
+            >
+              <Undo2 className="size-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={history.redo}
+              disabled={!history.canRedo}
+              title="Ripristina (Ctrl+Y)"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-40"
+            >
+              <Redo2 className="size-3.5" />
+            </button>
             <button
               type="button"
               onClick={handlePreview}
@@ -250,15 +355,17 @@ export function DesignEditor({
               )}
               Genera anteprima
             </button>
-            <button
-              type="button"
-              onClick={handleSave}
-              disabled={saving}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:opacity-60"
-            >
-              <Save className="size-3.5" />
-              {saving ? "Salvo…" : "Salva design"}
-            </button>
+            {!hideSaveButton && (
+              <button
+                type="button"
+                onClick={handleSave}
+                disabled={saving}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:opacity-60"
+              >
+                <Save className="size-3.5" />
+                {saving ? "Salvo…" : "Salva design"}
+              </button>
+            )}
           </div>
         </div>
 
@@ -291,6 +398,23 @@ export function DesignEditor({
                 }}
               />
             ))}
+          {/* Linee magnetiche (Fase 6): overlay puramente visivo, non
+              intercetta il mouse (pointer-events: none) — lo snap vero
+              avviene in onDrag/computeSnap, queste sono solo il feedback. */}
+          {guides.vertical.map((x) => (
+            <div
+              key={`v-${x}`}
+              className="pointer-events-none absolute inset-y-0 w-px bg-pink-500"
+              style={{ left: x }}
+            />
+          ))}
+          {guides.horizontal.map((y) => (
+            <div
+              key={`h-${y}`}
+              className="pointer-events-none absolute inset-x-0 h-px bg-pink-500"
+              style={{ top: y }}
+            />
+          ))}
         </div>
 
         {targetEl && (
@@ -303,11 +427,20 @@ export function DesignEditor({
             throttleDrag={0}
             throttleResize={0}
             throttleRotate={0}
-            onDrag={({ target, left, top }) => {
-              (target as HTMLElement).style.left = `${left}px`;
-              (target as HTMLElement).style.top = `${top}px`;
+            onDrag={({ target, left, top, width, height }) => {
+              const others = elements
+                .filter((el) => el.id !== selectedId)
+                .map((el) => ({ x: el.x, y: el.y, width: el.width, height: el.height }));
+              const snap = computeSnap({ x: left, y: top, width, height }, others, {
+                width: displayWidth,
+                height: displayHeight,
+              });
+              (target as HTMLElement).style.left = `${snap.x}px`;
+              (target as HTMLElement).style.top = `${snap.y}px`;
+              setGuides(snap.guides);
             }}
             onDragEnd={({ target }) => {
+              setGuides({ vertical: [], horizontal: [] });
               if (!selectedId) return;
               updateElement(selectedId, {
                 x: parseFloat((target as HTMLElement).style.left) || 0,
@@ -362,7 +495,7 @@ export function DesignEditor({
         element={selected}
         layerNameSuggestions={layerNameSuggestions}
         fontOptions={fontOptions}
-        onChange={(patch) => selectedId && updateElement(selectedId, patch)}
+        onChange={(patch) => selectedId && updateElement(selectedId, patch, true)}
         onChangeStyle={updateSelectedStyle}
         onDelete={deleteSelected}
         onReorder={reorderSelected}

@@ -413,6 +413,43 @@ export function PropertiesPanel({
           />
         </div>
       )}
+
+      <div className="space-y-2 border-t border-border/70 pt-3">
+        <p className="text-xs font-medium text-muted-foreground">Ombra</p>
+        <div className="grid grid-cols-2 gap-2">
+          <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+            Colore
+            <input
+              type="color"
+              value={style.shadowColor || "#000000"}
+              onChange={(e) => onChangeStyle({ shadowColor: e.target.value })}
+              className="h-8 w-full rounded-lg border border-border bg-background/60"
+            />
+          </label>
+          <NumberField
+            label="Opacità (0-100)"
+            value={Math.round((style.shadowOpacity ?? 0.5) * 100)}
+            onChange={(v) => onChangeStyle({ shadowOpacity: Math.min(100, Math.max(0, v)) / 100 })}
+          />
+        </div>
+        <div className="grid grid-cols-3 gap-2">
+          <NumberField
+            label="Sfocatura"
+            value={style.shadowBlur ?? 0}
+            onChange={(v) => onChangeStyle({ shadowBlur: Math.max(0, v) })}
+          />
+          <NumberField
+            label="Offset X"
+            value={style.shadowOffsetX ?? 0}
+            onChange={(v) => onChangeStyle({ shadowOffsetX: v })}
+          />
+          <NumberField
+            label="Offset Y"
+            value={style.shadowOffsetY ?? 0}
+            onChange={(v) => onChangeStyle({ shadowOffsetY: v })}
+          />
+        </div>
+      </div>
     </div>
   );
 }
