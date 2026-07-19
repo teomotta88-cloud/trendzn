@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 import * as LucideIcons from "lucide-react";
 import type { ElementTipo } from "@/lib/designElements";
+import { boxShadowCss, dropShadowFilterCss, textShadowCss } from "./shadow";
 
 // Un elemento nello stato dell'editor: stesse colonne di template_elements,
 // ma x/y/width/height/style.fontSize sono in "px di visualizzazione"
@@ -83,6 +84,7 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
             s.align === "center" ? "center" : s.align === "right" ? "flex-end" : "flex-start",
           whiteSpace: "pre-wrap",
           overflow: "hidden",
+          textShadow: textShadowCss(s),
         }}
         onMouseDown={onSelect}
         onDoubleClick={(e) => {
@@ -134,34 +136,38 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
     const src =
       typeof s.src === "string" ? s.src : typeof s.previewSrc === "string" ? s.previewSrc : null;
     return (
-      <div
-        ref={ref}
-        style={{
-          ...baseStyle,
-          borderRadius: s.borderRadius ?? 0,
-          overflow: "hidden",
-          background: "#e2e8f0",
-        }}
-        onMouseDown={onSelect}
-      >
-        {src ? (
-          <img
-            src={src}
-            alt=""
-            crossOrigin="anonymous"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: s.objectFit || "cover",
-              pointerEvents: "none",
-            }}
-          />
-        ) : (
-          <div className="flex h-full w-full flex-col items-center justify-center gap-1 text-[10px] text-muted-foreground">
-            <LucideIcons.Image className="size-5 opacity-60" />
-            {element.layer_name && <span>{element.layer_name}</span>}
-          </div>
-        )}
+      // Due div: quello esterno (ref, posizione/rotazione/ombra) e uno
+      // interno con overflow:hidden per il border-radius — un box-shadow
+      // sullo stesso nodo con overflow hidden verrebbe tagliato via.
+      <div ref={ref} style={{ ...baseStyle, boxShadow: boxShadowCss(s) }} onMouseDown={onSelect}>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            borderRadius: s.borderRadius ?? 0,
+            overflow: "hidden",
+            background: "#e2e8f0",
+          }}
+        >
+          {src ? (
+            <img
+              src={src}
+              alt=""
+              crossOrigin="anonymous"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: s.objectFit || "cover",
+                pointerEvents: "none",
+              }}
+            />
+          ) : (
+            <div className="flex h-full w-full flex-col items-center justify-center gap-1 text-[10px] text-muted-foreground">
+              <LucideIcons.Image className="size-5 opacity-60" />
+              {element.layer_name && <span>{element.layer_name}</span>}
+            </div>
+          )}
+        </div>
       </div>
     );
   }
@@ -171,7 +177,13 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
     return (
       <div
         ref={ref}
-        style={{ ...baseStyle, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{
+          ...baseStyle,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          filter: dropShadowFilterCss(s),
+        }}
         onMouseDown={onSelect}
       >
         {IconComponent && (
@@ -193,6 +205,7 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
         ...baseStyle,
         backgroundColor: s.fill || "#cccccc",
         borderRadius: s.borderRadius ?? 0,
+        boxShadow: boxShadowCss(s),
       }}
       onMouseDown={onSelect}
     />
