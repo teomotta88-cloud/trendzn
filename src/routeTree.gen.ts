@@ -24,6 +24,7 @@ import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as AspiMonitoringIndexRouteImport } from './routes/aspi-monitoring.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
+import { Route as EditorGraficoRubricaIdRouteImport } from './routes/editor-grafico.$rubricaId'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as AspiMonitoringIdRouteImport } from './routes/aspi-monitoring.$id'
 import { Route as ApiPublicHooksTriggerSyncCanaliFeedRouteImport } from './routes/api/public/hooks/trigger-sync-canali-feed'
@@ -126,6 +127,11 @@ const AspiMonitoringIndexRoute = AspiMonitoringIndexRouteImport.update({
 const InfluencerIdRoute = InfluencerIdRouteImport.update({
   id: '/influencer/$id',
   path: '/influencer/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EditorGraficoRubricaIdRoute = EditorGraficoRubricaIdRouteImport.update({
+  id: '/editor-grafico/$rubricaId',
+  path: '/editor-grafico/$rubricaId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
@@ -305,6 +311,7 @@ export interface FileRoutesByFullPath {
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
@@ -350,6 +357,7 @@ export interface FileRoutesByTo {
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
   '/aspi-monitoring': typeof AspiMonitoringIndexRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
@@ -396,6 +404,7 @@ export interface FileRoutesById {
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
@@ -443,6 +452,7 @@ export interface FileRouteTypes {
     | '/trend-virali'
     | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
+    | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
     | '/aspi-monitoring/'
     | '/canali-inspo/'
@@ -488,6 +498,7 @@ export interface FileRouteTypes {
     | '/trend-virali'
     | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
+    | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
     | '/aspi-monitoring'
     | '/canali-inspo'
@@ -533,6 +544,7 @@ export interface FileRouteTypes {
     | '/trend-virali'
     | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
+    | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
     | '/aspi-monitoring/'
     | '/canali-inspo/'
@@ -579,6 +591,7 @@ export interface RootRouteChildren {
   TrendViraliRoute: typeof TrendViraliRoute
   AspiMonitoringIdRoute: typeof AspiMonitoringIdRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
+  EditorGraficoRubricaIdRoute: typeof EditorGraficoRubricaIdRoute
   InfluencerIdRoute: typeof InfluencerIdRoute
   AspiMonitoringIndexRoute: typeof AspiMonitoringIndexRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
@@ -719,6 +732,13 @@ declare module '@tanstack/react-router' {
       path: '/influencer/$id'
       fullPath: '/influencer/$id'
       preLoaderRoute: typeof InfluencerIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/editor-grafico/$rubricaId': {
+      id: '/editor-grafico/$rubricaId'
+      path: '/editor-grafico/$rubricaId'
+      fullPath: '/editor-grafico/$rubricaId'
+      preLoaderRoute: typeof EditorGraficoRubricaIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/canali-inspo/$id': {
@@ -931,6 +951,7 @@ const rootRouteChildren: RootRouteChildren = {
   TrendViraliRoute: TrendViraliRoute,
   AspiMonitoringIdRoute: AspiMonitoringIdRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
+  EditorGraficoRubricaIdRoute: EditorGraficoRubricaIdRoute,
   InfluencerIdRoute: InfluencerIdRoute,
   AspiMonitoringIndexRoute: AspiMonitoringIndexRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,

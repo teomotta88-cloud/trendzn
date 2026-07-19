@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Trash2, Plus, Pencil, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Trash2, Plus, Pencil, X, Palette } from "lucide-react";
 import {
   type Rubrica,
   type TemplateConstraint,
@@ -443,13 +444,23 @@ export function RubrichePanel() {
                     </button>
                   </td>
                   <td className="px-4 py-2 text-right">
-                    <button
-                      onClick={() => startEdit(r)}
-                      className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary"
-                      title="Modifica"
-                    >
-                      <Pencil className="size-3.5" />
-                    </button>
+                    <div className="inline-flex gap-1.5">
+                      <Link
+                        to="/editor-grafico/$rubricaId"
+                        params={{ rubricaId: r.id }}
+                        className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary"
+                        title="Editor grafico"
+                      >
+                        <Palette className="size-3.5" />
+                      </Link>
+                      <button
+                        onClick={() => startEdit(r)}
+                        className="rounded-lg border border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary"
+                        title="Modifica"
+                      >
+                        <Pencil className="size-3.5" />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
