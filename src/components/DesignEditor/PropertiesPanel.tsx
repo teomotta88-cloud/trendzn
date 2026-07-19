@@ -13,6 +13,7 @@ import { uploadEditorImage } from "@/lib/designElements";
 import { removeBackground } from "@/lib/background-removal";
 import { IconPicker } from "./IconPicker";
 import type { EditorElement } from "./ElementBox";
+import { resolveFillCss, type FillType } from "./paint";
 
 interface PropertiesPanelProps {
   element: EditorElement | null;
@@ -309,6 +310,58 @@ export function PropertiesPanel({
               </select>
             </label>
           </div>
+          <div className="grid grid-cols-2 gap-2">
+            <NumberField
+              label="Spaziatura lettere (px)"
+              value={style.letterSpacing ?? 0}
+              onChange={(v) => onChangeStyle({ letterSpacing: v })}
+            />
+            <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+              Interlinea
+              <input
+                type="number"
+                step="0.1"
+                value={style.lineHeight ?? 1.2}
+                onChange={(e) => onChangeStyle({ lineHeight: Number(e.target.value) || 1.2 })}
+                className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
+              />
+            </label>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+              Maiuscole/minuscole
+              <select
+                value={style.textTransform || "none"}
+                onChange={(e) =>
+                  onChangeStyle({
+                    textTransform: e.target.value === "none" ? undefined : e.target.value,
+                  })
+                }
+                className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
+              >
+                <option value="none">Normale</option>
+                <option value="uppercase">MAIUSCOLO</option>
+                <option value="lowercase">minuscolo</option>
+                <option value="capitalize">Ogni Parola</option>
+              </select>
+            </label>
+            <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+              Decorazione
+              <select
+                value={style.textDecoration || "none"}
+                onChange={(e) =>
+                  onChangeStyle({
+                    textDecoration: e.target.value === "none" ? undefined : e.target.value,
+                  })
+                }
+                className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
+              >
+                <option value="none">Nessuna</option>
+                <option value="underline">Sottolineato</option>
+                <option value="line-through">Barrato</option>
+              </select>
+            </label>
+          </div>
         </div>
       )}
 
@@ -400,15 +453,76 @@ export function PropertiesPanel({
 
       {element.tipo === "shape" && (
         <div className="space-y-2 border-t border-border/70 pt-3">
+          {/* Se fillCss è impostato (gradiente importato da Figma con >2
+              stop o non lineare/radiale, non rappresentabile in questa UI
+              semplificata) il tipo di default mostrato è "gradiente
+              lineare": solo un'indicazione visiva, il rendering resta
+              quello di fillCss finché l'utente non tocca un campo. */}
           <label className="flex flex-col gap-1 text-xs text-muted-foreground">
-            Colore riempimento
-            <input
-              type="color"
-              value={style.fill || "#cccccc"}
-              onChange={(e) => onChangeStyle({ fill: e.target.value })}
-              className="h-8 w-full rounded-lg border border-border bg-background/60"
-            />
+            Tipo riempimento
+            <select
+              value={(style.fillType as FillType) || (style.fillCss ? "linear" : "solid")}
+              onChange={(e) =>
+                onChangeStyle({ fillType: e.target.value as FillType, fillCss: undefined })
+              }
+              className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
+            >
+              <option value="solid">Tinta unita</option>
+              <option value="linear">Gradiente lineare</option>
+              <option value="radial">Gradiente radiale</option>
+            </select>
           </label>
+          {(style.fillType || (style.fillCss ? "linear" : "solid")) === "solid" ? (
+            <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+              Colore riempimento
+              <input
+                type="color"
+                value={style.fillColor || style.fill || "#cccccc"}
+                onChange={(e) =>
+                  onChangeStyle({ fillColor: e.target.value, fill: undefined, fillCss: undefined })
+                }
+                className="h-8 w-full rounded-lg border border-border bg-background/60"
+              />
+            </label>
+          ) : (
+            <>
+              <div className="grid grid-cols-2 gap-2">
+                <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+                  Da
+                  <input
+                    type="color"
+                    value={style.gradientFrom || "#ffffff"}
+                    onChange={(e) =>
+                      onChangeStyle({ gradientFrom: e.target.value, fillCss: undefined })
+                    }
+                    className="h-8 w-full rounded-lg border border-border bg-background/60"
+                  />
+                </label>
+                <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+                  A
+                  <input
+                    type="color"
+                    value={style.gradientTo || "#000000"}
+                    onChange={(e) =>
+                      onChangeStyle({ gradientTo: e.target.value, fillCss: undefined })
+                    }
+                    className="h-8 w-full rounded-lg border border-border bg-background/60"
+                  />
+                </label>
+              </div>
+              {style.fillType === "linear" && (
+                <NumberField
+                  label="Angolo (°)"
+                  value={style.gradientAngle ?? 90}
+                  onChange={(v) => onChangeStyle({ gradientAngle: v, fillCss: undefined })}
+                />
+              )}
+              <div
+                className="h-8 w-full rounded-lg border border-border"
+                style={{ background: resolveFillCss(style) }}
+              />
+            </>
+          )}
           <NumberField
             label="Raggio bordo"
             value={style.borderRadius ?? 0}
@@ -416,6 +530,74 @@ export function PropertiesPanel({
           />
         </div>
       )}
+
+      <div className="space-y-2 border-t border-border/70 pt-3">
+        <p className="text-xs font-medium text-muted-foreground">Bordo</p>
+        <div className="grid grid-cols-2 gap-2">
+          <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+            Colore
+            <input
+              type="color"
+              value={style.borderColor || "#000000"}
+              onChange={(e) => onChangeStyle({ borderColor: e.target.value })}
+              className="h-8 w-full rounded-lg border border-border bg-background/60"
+            />
+          </label>
+          <NumberField
+            label="Spessore (0 = nessuno)"
+            value={style.borderWidth ?? 0}
+            onChange={(v) => onChangeStyle({ borderWidth: Math.max(0, v) })}
+          />
+        </div>
+        <label className="flex items-center gap-2 text-xs text-muted-foreground">
+          <input
+            type="checkbox"
+            checked={!!style.borderDashed}
+            onChange={(e) => onChangeStyle({ borderDashed: e.target.checked })}
+          />
+          Tratteggiato
+        </label>
+      </div>
+
+      <div className="space-y-2 border-t border-border/70 pt-3">
+        <p className="text-xs font-medium text-muted-foreground">Aspetto</p>
+        <div className="grid grid-cols-2 gap-2">
+          <NumberField
+            label="Opacità (0-100)"
+            value={Math.round((style.opacity ?? 1) * 100)}
+            onChange={(v) => onChangeStyle({ opacity: Math.min(100, Math.max(0, v)) / 100 })}
+          />
+          <label className="flex flex-col gap-1 text-xs text-muted-foreground">
+            Blend mode
+            <select
+              value={style.blendMode || "normal"}
+              onChange={(e) =>
+                onChangeStyle({
+                  blendMode: e.target.value === "normal" ? undefined : e.target.value,
+                })
+              }
+              className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
+            >
+              <option value="normal">Normale</option>
+              <option value="multiply">Moltiplica</option>
+              <option value="screen">Scherma</option>
+              <option value="overlay">Overlay</option>
+              <option value="darken">Scurisci</option>
+              <option value="lighten">Schiarisci</option>
+              <option value="color-dodge">Scherma colore</option>
+              <option value="color-burn">Brucia colore</option>
+              <option value="hard-light">Luce intensa</option>
+              <option value="soft-light">Luce soffusa</option>
+              <option value="difference">Differenza</option>
+              <option value="exclusion">Esclusione</option>
+              <option value="hue">Tonalità</option>
+              <option value="saturation">Saturazione</option>
+              <option value="color">Colore</option>
+              <option value="luminosity">Luminosità</option>
+            </select>
+          </label>
+        </div>
+      </div>
 
       <div className="space-y-2 border-t border-border/70 pt-3">
         <p className="text-xs font-medium text-muted-foreground">Ombra</p>
