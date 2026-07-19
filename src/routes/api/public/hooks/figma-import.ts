@@ -709,9 +709,30 @@ export async function pngHasSignificantTransparency(bytes: Uint8Array): Promise<
   return transparentSamples / totalSamples > 0.05;
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Il rate limit di Figma (429) è per-token, non per-utente: import ripetuti
+// ravvicinati (es. durante un test) lo esauriscono facilmente. Un solo
+// retry con il ritardo indicato da Retry-After (se presente, altrimenti un
+// default breve) copre il caso comune senza rischiare di allungare troppo
+// una richiesta già fallita in modo permanente.
 async function fetchFigmaJson<T>(url: string, token: string): Promise<T> {
-  const res = await fetch(url, { headers: { "X-Figma-Token": token } });
+  const headers = { "X-Figma-Token": token };
+  let res = await fetch(url, { headers });
+  if (res.status === 429) {
+    const retryAfterHeader = res.headers.get("Retry-After");
+    const retryAfterMs = retryAfterHeader ? Number(retryAfterHeader) * 1000 : 5000;
+    await sleep(Number.isFinite(retryAfterMs) ? Math.min(retryAfterMs, 15000) : 5000);
+    res = await fetch(url, { headers });
+  }
   if (!res.ok) {
+    if (res.status === 429) {
+      throw new Error(
+        "Figma ha temporaneamente limitato le richieste (troppi import ravvicinati con lo stesso token). Riprova tra un minuto.",
+      );
+    }
     const body = await res.text();
     throw new Error(`Figma API ha risposto ${res.status}: ${body.slice(0, 300)}`);
   }
