@@ -1,47 +1,104 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { AlertTriangle, Loader2, Upload } from "lucide-react";
 import { callHook } from "@/lib/hooks-client";
 import { replaceTemplateElements, type TemplateElementInput } from "@/lib/designElements";
 import type { RubricaFormato } from "@/lib/autographics";
 import { TokenHealthAlert } from "@/components/TokenHealthAlert";
 
-interface FigmaImportResult {
+interface FigmaImportFrame {
+  name: string;
   width: number;
   height: number;
-  elementsCount: number;
   elements: TemplateElementInput[];
 }
 
-// Import di un frame Figma nel frame corrente dell'editor (vedi
-// figma-import.ts per la logica di mappatura e i limiti noti). L'utente
-// incolla il link "Copy link to selection" di un frame Figma; l'import
-// SOSTITUISCE gli elementi del frame corrente, stesso comportamento di
-// "Salva design" — non si somma al design esistente.
+interface FigmaImportResult {
+  frames: FigmaImportFrame[];
+  elementsCount: number;
+}
+
+function fontsUsedIn(frames: FigmaImportFrame[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const frame of frames) {
+    for (const el of frame.elements) {
+      if (el.tipo !== "text") continue;
+      const family = (el.style as Record<string, unknown>).fontFamily;
+      if (typeof family === "string" && !seen.has(family)) {
+        seen.add(family);
+        out.push(family);
+      }
+    }
+  }
+  return out;
+}
+
+function applyFontReplacements(
+  frames: FigmaImportFrame[],
+  replacements: Record<string, string>,
+): FigmaImportFrame[] {
+  if (Object.keys(replacements).length === 0) return frames;
+  return frames.map((frame) => ({
+    ...frame,
+    elements: frame.elements.map((el) => {
+      if (el.tipo !== "text") return el;
+      const style = el.style as Record<string, unknown>;
+      const family = style.fontFamily;
+      if (typeof family === "string" && replacements[family]) {
+        return { ...el, style: { ...style, fontFamily: replacements[family] } };
+      }
+      return el;
+    }),
+  }));
+}
+
+// Import di uno o più frame Figma nel design della rubrica (vedi
+// figma-import.ts per la logica di mappatura, il rilevamento multi-frame e i
+// limiti noti). L'utente incolla il link "Copy link to selection" di un
+// frame o di una sezione/gruppo con più frame (ognuno diventa una card del
+// carousel). L'import SOSTITUISCE gli elementi delle card coinvolte, stesso
+// comportamento di "Salva design" — non si somma al design esistente.
 export function FigmaImportPanel({
   rubricaId,
   formato,
   cardIndex,
+  fontOptions,
   onImported,
 }: {
   rubricaId: string;
   formato: RubricaFormato;
   cardIndex: number;
+  fontOptions: string[];
   onImported: () => void;
 }) {
   const [link, setLink] = useState("");
   const [fetching, setFetching] = useState(false);
   const [result, setResult] = useState<FigmaImportResult | null>(null);
+  const [fontReplacements, setFontReplacements] = useState<Record<string, string>>({});
   const [applying, setApplying] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const missingFonts = useMemo(() => {
+    if (!result) return [];
+    const available = new Set(fontOptions.map((f) => f.toLowerCase()));
+    return fontsUsedIn(result.frames).filter((f) => !available.has(f.toLowerCase()));
+  }, [result, fontOptions]);
 
   async function handleFetch() {
     if (!link.trim()) return;
     setFetching(true);
     setError(null);
     setResult(null);
+    setFontReplacements({});
     try {
       const data = await callHook<FigmaImportResult>("figma-import", { link: link.trim() });
       setResult(data);
+      const defaults: Record<string, string> = {};
+      const available = new Set(fontOptions.map((f) => f.toLowerCase()));
+      for (const font of fontsUsedIn(data.frames)) {
+        if (!available.has(font.toLowerCase())) defaults[font] = fontOptions[0] ?? "Inter";
+      }
+      setFontReplacements(defaults);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
@@ -54,7 +111,14 @@ export function FigmaImportPanel({
     setApplying(true);
     setError(null);
     try {
-      await replaceTemplateElements(rubricaId, formato.formato, cardIndex, result.elements);
+      const frames = applyFontReplacements(result.frames, fontReplacements);
+      if (frames.length === 1) {
+        await replaceTemplateElements(rubricaId, formato.formato, cardIndex, frames[0].elements);
+      } else {
+        for (let i = 0; i < frames.length; i++) {
+          await replaceTemplateElements(rubricaId, formato.formato, i + 1, frames[i].elements);
+        }
+      }
       setResult(null);
       setLink("");
       onImported();
@@ -65,15 +129,17 @@ export function FigmaImportPanel({
     }
   }
 
-  const dimensionsMismatch =
-    result && (result.width !== formato.width_px || result.height !== formato.height_px);
+  const mismatchedFrames = (result?.frames ?? []).filter(
+    (f) => f.width !== formato.width_px || f.height !== formato.height_px,
+  );
 
   return (
     <div className="space-y-2 rounded-xl border border-dashed border-border p-3">
-      <p className="text-xs font-medium text-muted-foreground">Importa un frame da Figma</p>
+      <p className="text-xs font-medium text-muted-foreground">Importa da Figma</p>
       <p className="text-[11px] text-muted-foreground">
-        In Figma: tasto destro sul frame → "Copy link to selection", poi incolla qui. Sostituisce
-        gli elementi del frame {cardIndex} corrente.
+        In Figma: tasto destro sul frame (o su una sezione con più frame) → "Copy link to
+        selection", poi incolla qui. Un link con più frame crea/sostituisce le card del carousel in
+        ordine; un link a un singolo frame sostituisce solo il frame {cardIndex} corrente.
       </p>
       <TokenHealthAlert tokenName="FIGMA_ACCESS_TOKEN" />
       <div className="flex flex-wrap items-center gap-2">
@@ -106,17 +172,50 @@ export function FigmaImportPanel({
       )}
 
       {result && (
-        <div className="space-y-1.5 rounded-lg border border-primary/40 bg-primary/5 p-2">
+        <div className="space-y-2 rounded-lg border border-primary/40 bg-primary/5 p-2">
           <p className="text-[11px] text-foreground">
-            Trovati {result.elementsCount} elementi nel frame Figma ({result.width}×{result.height}
-            ).
+            {result.frames.length > 1
+              ? `Trovati ${result.frames.length} frame (${result.elementsCount} elementi totali).`
+              : `Trovati ${result.elementsCount} elementi nel frame (${result.frames[0].width}×${result.frames[0].height}).`}
           </p>
-          {dimensionsMismatch && (
+          {mismatchedFrames.length > 0 && (
             <p className="text-[11px] text-destructive">
-              Attenzione: il formato attuale è {formato.width_px}×{formato.height_px}, diverso dal
-              frame Figma. Le posizioni verranno importate comunque in px assoluti.
+              Attenzione: il formato attuale è {formato.width_px}×{formato.height_px}, diverso da{" "}
+              {mismatchedFrames.map((f) => `"${f.name}" (${f.width}×${f.height})`).join(", ")}. Le
+              posizioni verranno importate comunque in px assoluti.
             </p>
           )}
+
+          {missingFonts.length > 0 && (
+            <div className="space-y-1.5 rounded-lg border border-yellow-500/40 bg-yellow-500/5 p-2">
+              <p className="flex items-start gap-1.5 text-[11px] text-yellow-700">
+                <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />
+                {missingFonts.length === 1
+                  ? "Un font usato in Figma non è disponibile in trendzn. Scegli con cosa sostituirlo:"
+                  : "Alcuni font usati in Figma non sono disponibili in trendzn. Scegli con cosa sostituirli:"}
+              </p>
+              {missingFonts.map((font) => (
+                <div key={font} className="flex items-center gap-2 text-[11px]">
+                  <span className="min-w-0 flex-1 truncate text-foreground">{font}</span>
+                  <span>→</span>
+                  <select
+                    value={fontReplacements[font] ?? fontOptions[0] ?? "Inter"}
+                    onChange={(e) =>
+                      setFontReplacements((prev) => ({ ...prev, [font]: e.target.value }))
+                    }
+                    className="rounded-lg border border-border bg-background/60 px-2 py-1 text-[11px] outline-none focus:border-primary"
+                  >
+                    {fontOptions.map((f) => (
+                      <option key={f} value={f}>
+                        {f}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ))}
+            </div>
+          )}
+
           <button
             type="button"
             onClick={handleApply}
@@ -124,7 +223,9 @@ export function FigmaImportPanel({
             className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:opacity-60"
           >
             {applying ? <Loader2 className="size-3.5 animate-spin" /> : null}
-            Importa nel frame {cardIndex} (sostituisce il design attuale)
+            {result.frames.length > 1
+              ? `Importa ${result.frames.length} frame (crea/sostituisce le card 1-${result.frames.length})`
+              : `Importa nel frame ${cardIndex} (sostituisce il design attuale)`}
           </button>
         </div>
       )}
