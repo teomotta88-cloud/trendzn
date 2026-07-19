@@ -111,6 +111,7 @@ export function VisualWizardModal({
   const [captureCardIndex, setCaptureCardIndex] = useState<number | null>(null);
   const [generationPass, setGenerationPass] = useState(0);
   const [uploadedCount, setUploadedCount] = useState(0);
+  const [elementsError, setElementsError] = useState<string | null>(null);
   const capturedBlobsRef = useRef<Blob[]>([]);
   const captureResolveRef = useRef<((blob: Blob) => void) | null>(null);
 
@@ -171,10 +172,14 @@ export function VisualWizardModal({
   useEffect(() => {
     if (!rubricaId || !selectedFormato) {
       setAllElements(null);
+      setElementsError(null);
       return;
     }
     setAllElements(null);
-    listTemplateElementsAllCards(rubricaId, selectedFormato.formato).then(setAllElements);
+    setElementsError(null);
+    listTemplateElementsAllCards(rubricaId, selectedFormato.formato)
+      .then(setAllElements)
+      .catch((err) => setElementsError(err instanceof Error ? err.message : String(err)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricaId, selectedFormato?.id, selectedFormato?.formato]);
 
@@ -318,7 +323,8 @@ export function VisualWizardModal({
               </div>
             )}
 
-            {selectedFormato && allElements === null && (
+            {elementsError && <p className="text-xs text-destructive">Errore: {elementsError}</p>}
+            {selectedFormato && !elementsError && allElements === null && (
               <p className="text-xs text-muted-foreground">Carico il template…</p>
             )}
             {selectedFormato && allElements !== null && cardIndexes.length === 0 && (

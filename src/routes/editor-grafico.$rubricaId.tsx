@@ -19,7 +19,11 @@ import {
 import { DesignEditor } from "@/components/DesignEditor/DesignEditor";
 import { CustomFontsPanel } from "@/components/DesignEditor/CustomFontsPanel";
 import { useCustomFontFaces } from "@/components/DesignEditor/useCustomFontFaces";
-import { CURATED_FONTS, GOOGLE_FONTS_STYLESHEET_URL } from "@/components/DesignEditor/constants";
+import {
+  CURATED_FONTS,
+  GOOGLE_FONTS_STYLESHEET_URL,
+  SOCIAL_FORMAT_PRESETS,
+} from "@/components/DesignEditor/constants";
 
 // Editor grafico interno (sostituisce progressivamente Figma plugin/Canva
 // Bulk Create, vedi docs/sbam-autographics-canva.md): disegna qui il design
@@ -45,25 +49,21 @@ export const Route = createFileRoute("/editor-grafico/$rubricaId")({
 });
 
 function NewFormatoForm({ rubricaId, onCreated }: { rubricaId: string; onCreated: () => void }) {
-  const [formato, setFormato] = useState("feed_1x1");
-  const [width, setWidth] = useState("1080");
-  const [height, setHeight] = useState("1080");
+  const [presetIndex, setPresetIndex] = useState(0);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const preset = SOCIAL_FORMAT_PRESETS[presetIndex];
 
   async function handleCreate() {
-    const w = Number(width);
-    const h = Number(height);
-    if (!formato.trim() || !w || !h) return;
     setSaving(true);
     setError(null);
     try {
       await upsertRubricaFormato({
         rubrica_id: rubricaId,
-        formato: formato.trim(),
+        formato: preset.formato,
         figma_component_id: null,
-        width_px: w,
-        height_px: h,
+        width_px: preset.width,
+        height_px: preset.height,
         attivo: true,
       });
       onCreated();
@@ -77,31 +77,18 @@ function NewFormatoForm({ rubricaId, onCreated }: { rubricaId: string; onCreated
   return (
     <div className="flex flex-wrap items-end gap-2 rounded-xl border border-dashed border-border p-3">
       <label className="flex flex-col gap-1 text-xs text-muted-foreground">
-        Nome formato
-        <input
-          value={formato}
-          onChange={(e) => setFormato(e.target.value)}
-          placeholder="feed_1x1"
-          className="w-32 rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
-        />
-      </label>
-      <label className="flex flex-col gap-1 text-xs text-muted-foreground">
-        Larghezza px
-        <input
-          value={width}
-          onChange={(e) => setWidth(e.target.value)}
-          inputMode="numeric"
-          className="w-24 rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
-        />
-      </label>
-      <label className="flex flex-col gap-1 text-xs text-muted-foreground">
-        Altezza px
-        <input
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-          inputMode="numeric"
-          className="w-24 rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
-        />
+        Formato social
+        <select
+          value={presetIndex}
+          onChange={(e) => setPresetIndex(Number(e.target.value))}
+          className="w-64 rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
+        >
+          {SOCIAL_FORMAT_PRESETS.map((p, idx) => (
+            <option key={p.formato} value={idx}>
+              {p.label} ({p.width}×{p.height})
+            </option>
+          ))}
+        </select>
       </label>
       <button
         type="button"
@@ -123,6 +110,7 @@ function Page() {
   const [formati, setFormati] = useState<RubricaFormato[]>([]);
   const [selectedFormatoId, setSelectedFormatoId] = useState<string | null>(null);
   const [allCardElements, setAllCardElements] = useState<TemplateElement[] | null>(null);
+  const [elementsError, setElementsError] = useState<string | null>(null);
   const [activeCardIndex, setActiveCardIndex] = useState(1);
   const [layerNameSuggestions, setLayerNameSuggestions] = useState<string[]>([]);
   const [customFonts, setCustomFonts] = useState<CustomFont[]>([]);
@@ -168,11 +156,15 @@ function Page() {
   useEffect(() => {
     if (!selectedFormato) {
       setAllCardElements(null);
+      setElementsError(null);
       return;
     }
     setAllCardElements(null);
+    setElementsError(null);
     setActiveCardIndex(1);
-    listTemplateElementsAllCards(rubricaId, selectedFormato.formato).then(setAllCardElements);
+    listTemplateElementsAllCards(rubricaId, selectedFormato.formato)
+      .then(setAllCardElements)
+      .catch((err) => setElementsError(err instanceof Error ? err.message : String(err)));
     // selectedFormato deriva da formati (già in scope) tramite .find(): usare
     // solo id/formato come dipendenze evita un re-fetch a ogni render in cui
     // formati non è cambiato ma la entry .find() è una nuova reference.
@@ -206,14 +198,18 @@ function Page() {
     if (!selectedFormato) return;
     if (cardIndexes.length <= 1) return;
     if (!window.confirm(`Eliminare il frame ${cardIndex}? L'azione non è reversibile.`)) return;
-    await deleteTemplateCard(rubricaId, selectedFormato.formato, cardIndex);
-    const refreshed = await listTemplateElementsAllCards(rubricaId, selectedFormato.formato);
-    setAllCardElements(refreshed);
-    if (activeCardIndex === cardIndex) {
-      const remaining = Array.from(new Set(refreshed.map((el) => el.card_index))).sort(
-        (a, b) => a - b,
-      );
-      setActiveCardIndex(remaining[0] ?? 1);
+    try {
+      await deleteTemplateCard(rubricaId, selectedFormato.formato, cardIndex);
+      const refreshed = await listTemplateElementsAllCards(rubricaId, selectedFormato.formato);
+      setAllCardElements(refreshed);
+      if (activeCardIndex === cardIndex) {
+        const remaining = Array.from(new Set(refreshed.map((el) => el.card_index))).sort(
+          (a, b) => a - b,
+        );
+        setActiveCardIndex(remaining[0] ?? 1);
+      }
+    } catch (err) {
+      setElementsError(err instanceof Error ? err.message : String(err));
     }
   }
 
@@ -275,6 +271,10 @@ function Page() {
       {!selectedFormato ? (
         <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
           Nessun formato configurato per questa rubrica. Aggiungine uno per iniziare a disegnare.
+        </div>
+      ) : elementsError ? (
+        <div className="rounded-2xl border border-destructive/40 bg-destructive/5 p-4 text-sm text-destructive">
+          Errore nel caricamento del design: {elementsError}
         </div>
       ) : allCardElements === null ? (
         <div className="text-sm text-muted-foreground">Caricamento design…</div>

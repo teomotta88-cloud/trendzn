@@ -57,3 +57,29 @@ export const CURATED_ICONS = [
 // qui si calcola solo un fattore di scala per mostrarli comodamente a
 // schermo — vedi scaleForFormat in DesignEditor.tsx.
 export const MAX_EDITOR_CANVAS_PX = 480;
+
+// Formati social preimpostati: l'utente sceglie da qui invece di inserire
+// nome/larghezza/altezza a mano (fonte di formati incoerenti tra rubriche).
+// "formato" è lo slug salvato su rubrica_formati.formato.
+export interface SocialFormatPreset {
+  label: string;
+  formato: string;
+  width: number;
+  height: number;
+}
+
+export const SOCIAL_FORMAT_PRESETS: SocialFormatPreset[] = [
+  { label: "Feed 1:1 (Instagram/Facebook)", formato: "feed_1x1", width: 1080, height: 1080 },
+  { label: "Feed 4:5 (Instagram/Facebook)", formato: "feed_4x5", width: 1080, height: 1350 },
+  {
+    label: "Story/Reels 9:16 (Instagram/Facebook)",
+    formato: "story_9x16",
+    width: 1080,
+    height: 1920,
+  },
+  { label: "Feed orizzontale 1.91:1", formato: "feed_landscape_1.91x1", width: 1080, height: 566 },
+  { label: "Post LinkedIn 1.91:1", formato: "linkedin_1.91x1", width: 1200, height: 627 },
+  { label: "Post X/Twitter 16:9", formato: "twitter_16x9", width: 1200, height: 675 },
+  { label: "Copertina Facebook", formato: "facebook_cover", width: 820, height: 312 },
+  { label: "Copertina YouTube/thumbnail 16:9", formato: "youtube_16x9", width: 1280, height: 720 },
+];

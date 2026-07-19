@@ -18,7 +18,6 @@ import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeed
 import { PostNumberRail } from "@/components/PianoEditoriale/PostNumberRail";
 import { ClientChannelsPanel } from "@/components/PianoEditoriale/ClientChannelsPanel";
 import { RubrichePanel } from "@/components/PianoEditoriale/RubrichePanel";
-import { CanvaExportPanel } from "@/components/PianoEditoriale/CanvaExportPanel";
 
 export const Route = createFileRoute("/piano-editoriale/")({
   head: () => ({
@@ -181,7 +180,6 @@ function PianoEditorialePage() {
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
         <div ref={postsColumnRef} className="space-y-4">
-          <CanvaExportPanel posts={posts} />
           {plan && creating && (
             <NewPostCard
               planId={plan.id}
