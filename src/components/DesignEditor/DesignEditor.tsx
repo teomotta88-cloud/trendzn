@@ -39,6 +39,21 @@ interface DesignEditorProps {
   initialElements: TemplateElement[];
   layerNameSuggestions: string[];
   fontOptions: string[];
+  // Wizard di composizione post (Fase 9): quando il "salvataggio" reale è
+  // un'altra azione (caricare il PNG catturato nel visual del post, non
+  // sovrascrivere il template condiviso), il chiamante nasconde "Salva
+  // design" e usa autoCapture/onFrameCaptured/onElementsChange invece del
+  // normale ciclo salva-su-template.
+  hideSaveButton?: boolean;
+  // Se true, genera automaticamente la cattura PNG subito dopo il mount
+  // (una volta che il DOM ha fatto il primo paint) — usato dal wizard per
+  // catturare ogni frame in sequenza senza richiedere un click manuale.
+  autoCapture?: boolean;
+  onFrameCaptured?: (blob: Blob) => void;
+  // Notifica il chiamante ad ogni modifica degli elementi (drag/resize/testo/
+  // stile), così il wizard può tenere traccia delle modifiche live per frame
+  // senza dover leggere lo stato interno di useHistory.
+  onElementsChange?: (elements: EditorElement[]) => void;
 }
 
 function newLocalId(): string {
@@ -49,11 +64,11 @@ function newLocalId(): string {
 // motore di rendering) e i px mostrati nell'editor: un solo fattore di scala
 // uniforme, applicato anche a fontSize/strokeWidth, così quello che si vede
 // a schermo corrisponde proporzionalmente a quello che esce dal render.
-function computeScale(widthPx: number, heightPx: number) {
+export function computeScale(widthPx: number, heightPx: number) {
   return Math.min(MAX_EDITOR_CANVAS_PX / widthPx, MAX_EDITOR_CANVAS_PX / heightPx, 1);
 }
 
-function toEditorElement(el: TemplateElement, scale: number): EditorElement {
+export function toEditorElement(el: TemplateElement, scale: number): EditorElement {
   const style = { ...el.style } as Record<string, unknown>;
   if (typeof style.fontSize === "number") style.fontSize = style.fontSize * scale;
   if (typeof style.strokeWidth === "number") style.strokeWidth = style.strokeWidth * scale;
@@ -71,7 +86,7 @@ function toEditorElement(el: TemplateElement, scale: number): EditorElement {
   };
 }
 
-function toStoredElement(el: EditorElement, scale: number): TemplateElementInput {
+export function toStoredElement(el: EditorElement, scale: number): TemplateElementInput {
   const style = { ...el.style } as Record<string, unknown>;
   if (typeof style.fontSize === "number") style.fontSize = style.fontSize / scale;
   if (typeof style.strokeWidth === "number") style.strokeWidth = style.strokeWidth / scale;
@@ -114,6 +129,10 @@ export function DesignEditor({
   initialElements,
   layerNameSuggestions,
   fontOptions,
+  hideSaveButton = false,
+  autoCapture = false,
+  onFrameCaptured,
+  onElementsChange,
 }: DesignEditorProps) {
   const scale = useMemo(
     () => computeScale(formato.width_px, formato.height_px),
@@ -140,6 +159,11 @@ export function DesignEditor({
 
   const selected = elements.find((el) => el.id === selectedId) ?? null;
   const targetEl = selectedId ? (elementRefs.current.get(selectedId) ?? null) : null;
+
+  useEffect(() => {
+    onElementsChange?.(elements);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [elements]);
 
   // debounce=true raggruppa modifiche ravvicinate (digitazione, drag di uno
   // slider) in un solo passo di undo — vedi useHistory.ts. Le azioni
@@ -252,12 +276,23 @@ export function DesignEditor({
       const pixelRatio = 1 / scale;
       const blob = await captureNodeToPngBlob(canvasRef.current, pixelRatio);
       setPreviewUrl(URL.createObjectURL(blob));
+      onFrameCaptured?.(blob);
     } catch (err) {
       setRenderError(err instanceof Error ? err.message : String(err));
     } finally {
       setRendering(false);
     }
   }
+
+  // Cattura automatica (wizard, Fase 9): al mount di questo frame, genera la
+  // PNG senza richiedere il click manuale su "Genera anteprima" — ogni
+  // DesignEditor del wizard viene rimontato una volta per frame (stesso
+  // pattern key={cardIndex} della route /editor-grafico), quindi "al mount"
+  // equivale a "per questo frame".
+  useEffect(() => {
+    if (autoCapture) handlePreview();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Ctrl+Z / Ctrl+Y (e Cmd su Mac, Ctrl+Shift+Z come redo alternativo) —
   // globali sull'editor, non solo sui campi con focus: è un tool "a canvas"
@@ -320,15 +355,17 @@ export function DesignEditor({
               )}
               Genera anteprima
             </button>
-            <button
-              type="button"
-              onClick={handleSave}
-              disabled={saving}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:opacity-60"
-            >
-              <Save className="size-3.5" />
-              {saving ? "Salvo…" : "Salva design"}
-            </button>
+            {!hideSaveButton && (
+              <button
+                type="button"
+                onClick={handleSave}
+                disabled={saving}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:opacity-60"
+              >
+                <Save className="size-3.5" />
+                {saving ? "Salvo…" : "Salva design"}
+              </button>
+            )}
           </div>
         </div>
 

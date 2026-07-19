@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Trash2, Pencil, Clock, Link2 } from "lucide-react";
+import { Trash2, Pencil, Clock, Link2, Wand2 } from "lucide-react";
 import {
   type EditorialPost,
   type ReviewComponent,
@@ -18,6 +18,7 @@ import { EditableText } from "./EditableText";
 import { PostMediaGallery } from "./PostMediaGallery";
 import { NewPostCard } from "./NewPostCard";
 import { AutoGraphicsPanel } from "./AutoGraphicsPanel";
+import { VisualWizardModal } from "./VisualWizardModal";
 
 function formatDate(d: string) {
   return new Date(`${d}T00:00:00`).toLocaleDateString("it-IT", {
@@ -60,6 +61,8 @@ export function PostCard({
   const [visualContentHeight, setVisualContentHeight] = useState<number>();
   const [publishedMatches, setPublishedMatches] = useState<PublishedPostMatch[]>([]);
   const [showPublishedUrl, setShowPublishedUrl] = useState(false);
+  const [wizardOpen, setWizardOpen] = useState(false);
+  const [mediaRefreshKey, setMediaRefreshKey] = useState(0);
 
   async function refreshPublishedMatches() {
     setPublishedMatches(await getPublishedMatches(post.id));
@@ -342,9 +345,26 @@ export function PostCard({
           onToggle={() => handleToggle("visual")}
           contentRef={visualContentRef}
         >
-          <PostMediaGallery postId={post.id} />
+          <div className="space-y-2">
+            <button
+              type="button"
+              onClick={() => setWizardOpen(true)}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-primary px-2.5 py-1 text-[11px] font-medium text-primary transition hover:bg-primary/10"
+            >
+              <Wand2 className="size-3.5" />
+              Crea visual con editor grafico
+            </button>
+            <PostMediaGallery key={mediaRefreshKey} postId={post.id} />
+          </div>
         </PostReviewBlock>
       </div>
+
+      <VisualWizardModal
+        post={post}
+        open={wizardOpen}
+        onOpenChange={setWizardOpen}
+        onUploaded={() => setMediaRefreshKey((k) => k + 1)}
+      />
 
       {(post.disclaimer || post.obiettivo_media || typeof post.budget_media === "number") && (
         <div className="flex flex-wrap gap-3 border-t border-border pt-2 text-[11px] text-muted-foreground">

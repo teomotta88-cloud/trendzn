@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, X } from "lucide-react";
 import { type EditorialPostMedia } from "@/lib/editorialPlan";
 
 function isVideo(url: string, type: string | null) {
@@ -31,7 +31,19 @@ export function MediaLightbox({
   if (!current) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4" onClick={onClose}>
+    <div
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4"
+      onClick={onClose}
+    >
+      <a
+        href={current.url}
+        download
+        onClick={(e) => e.stopPropagation()}
+        className="absolute right-16 top-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
+        title="Scarica"
+      >
+        <Download className="size-5" />
+      </a>
       <button
         onClick={onClose}
         className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
@@ -55,9 +67,18 @@ export function MediaLightbox({
 
       <div className="max-h-full max-w-full" onClick={(e) => e.stopPropagation()}>
         {isVideo(current.url, current.type) ? (
-          <video src={current.url} controls autoPlay className="max-h-[85vh] max-w-full rounded-lg object-contain" />
+          <video
+            src={current.url}
+            controls
+            autoPlay
+            className="max-h-[85vh] max-w-full rounded-lg object-contain"
+          />
         ) : (
-          <img src={current.url} alt="" className="max-h-[85vh] max-w-full rounded-lg object-contain" />
+          <img
+            src={current.url}
+            alt=""
+            className="max-h-[85vh] max-w-full rounded-lg object-contain"
+          />
         )}
       </div>
 
