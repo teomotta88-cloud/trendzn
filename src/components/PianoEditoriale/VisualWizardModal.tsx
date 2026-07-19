@@ -4,6 +4,7 @@ import {
   ChevronRight,
   ImageIcon,
   Loader2,
+  Search,
   Sparkles,
   Upload,
   Wand2,
@@ -15,6 +16,8 @@ import {
   type RubricaFormato,
   listRubriche,
   listRubricaFormati,
+  upsertGraphicJob,
+  upsertGraphicJobImage,
 } from "@/lib/autographics";
 import {
   type CustomFont,
@@ -24,6 +27,7 @@ import {
   listTemplateElementsAllCards,
   uploadEditorImage,
 } from "@/lib/designElements";
+import { callHook } from "@/lib/hooks-client";
 import {
   computeScale,
   DesignEditor,
@@ -65,6 +69,139 @@ function wrapAsTemplateElement(
 interface TemplateField {
   layerName: string;
   tipo: "text" | "image";
+}
+
+interface GettyCandidateResult {
+  asset_id: string;
+  preview_url: string;
+  title: string | null;
+  orientamento: string | null;
+}
+
+// Campo immagine del wizard (Fase 9 follow-up): ricerca Getty (stessa API
+// getty-search già usata da AutoGraphicsPanel, senza però creare/mostrare un
+// job visibile) + upload manuale. La selezione Getty viene comunque
+// registrata su graphic_job_images (source: "getty", con asset_id) tramite
+// onPickGetty, così il link per scaricare la foto in HD può essere mostrato
+// altrove nella UI del post (vedi GettyLicensingLinks) senza dover
+// reinventare uno storage parallelo.
+function GettyImageField({
+  layerName,
+  value,
+  uploading,
+  onPickGetty,
+  onUpload,
+}: {
+  layerName: string;
+  value: string | undefined;
+  uploading: boolean;
+  onPickGetty: (candidate: GettyCandidateResult) => void;
+  onUpload: (file: File) => void;
+}) {
+  const [keywords, setKeywords] = useState("");
+  const [candidates, setCandidates] = useState<GettyCandidateResult[]>([]);
+  const [searching, setSearching] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSearch() {
+    const kwList = keywords
+      .split(",")
+      .map((k) => k.trim())
+      .filter(Boolean);
+    if (kwList.length === 0) {
+      setError("Inserisci almeno una keyword.");
+      return;
+    }
+    setSearching(true);
+    setError(null);
+    try {
+      const result = await callHook<{ candidates: GettyCandidateResult[] }>("getty-search", {
+        keywords: kwList,
+      });
+      setCandidates(result.candidates);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setSearching(false);
+    }
+  }
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center gap-2">
+        {value ? (
+          <img src={value} alt="" className="size-12 rounded border border-border object-cover" />
+        ) : (
+          <div className="flex size-12 items-center justify-center rounded border border-dashed border-border text-muted-foreground">
+            <ImageIcon className="size-4" />
+          </div>
+        )}
+        <label className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
+          {uploading ? <Loader2 className="size-3 animate-spin" /> : <Upload className="size-3" />}
+          Carica immagine
+          <input
+            type="file"
+            accept="image/*"
+            className="hidden"
+            disabled={uploading}
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) onUpload(file);
+              e.target.value = "";
+            }}
+          />
+        </label>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <input
+          value={keywords}
+          onChange={(e) => setKeywords(e.target.value)}
+          placeholder={`keyword per ${layerName}, separate da virgola…`}
+          className="flex-1 rounded-lg border border-border bg-background/60 px-2.5 py-1.5 text-[11px] outline-none focus:border-primary"
+        />
+        <button
+          type="button"
+          onClick={handleSearch}
+          disabled={searching}
+          className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-50"
+        >
+          {searching ? <Loader2 className="size-3 animate-spin" /> : <Search className="size-3" />}
+          Cerca su Getty
+        </button>
+      </div>
+
+      {candidates.length > 0 && (
+        <div className="grid grid-cols-4 gap-1.5">
+          {candidates.map((c) => (
+            <button
+              key={c.asset_id}
+              type="button"
+              onClick={() => onPickGetty(c)}
+              title={c.title ?? c.asset_id}
+              className={`overflow-hidden rounded-lg border-2 transition ${
+                value === c.preview_url
+                  ? "border-primary"
+                  : "border-transparent hover:border-border"
+              }`}
+            >
+              <img
+                src={c.preview_url}
+                alt={c.title ?? ""}
+                className="aspect-square w-full object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {error && <p className="text-[10px] text-destructive">{error}</p>}
+      <p className="text-[10px] text-muted-foreground">
+        Le anteprime Getty sono bozzetti con watermark. Il link per scaricare la foto scelta in HD
+        compare nella galleria "Visual" del post dopo il salvataggio.
+      </p>
+    </div>
+  );
 }
 
 function fieldsForCard(elements: TemplateElement[], cardIndex: number): TemplateField[] {
@@ -112,6 +249,7 @@ export function VisualWizardModal({
   const [generationPass, setGenerationPass] = useState(0);
   const [uploadedCount, setUploadedCount] = useState(0);
   const [elementsError, setElementsError] = useState<string | null>(null);
+  const [jobId, setJobId] = useState<string | null>(null);
   const capturedBlobsRef = useRef<Blob[]>([]);
   const captureResolveRef = useRef<((blob: Blob) => void) | null>(null);
 
@@ -141,6 +279,7 @@ export function VisualWizardModal({
     setGenerateError(null);
     setCaptureCardIndex(null);
     setUploadedCount(0);
+    setJobId(null);
   }, [open]);
 
   useEffect(() => {
@@ -196,14 +335,52 @@ export function VisualWizardModal({
   const currentCardIdxPos = cardIndexes.indexOf(activeCardIndex);
   const isLastCard = currentCardIdxPos === cardIndexes.length - 1;
 
+  // Il job serve solo come "contenitore" per registrare quale immagine
+  // (Getty o caricata a mano) è associata a ciascun campo del post — non ha
+  // più una UI propria (AutoGraphicsPanel è nascosto), riusa lo storage già
+  // esistente invece di introdurne uno parallelo.
+  async function ensureJob(): Promise<string> {
+    if (jobId) return jobId;
+    const job = await upsertGraphicJob({
+      post_id: post.id,
+      rubrica_id: rubricaId,
+      copy_payload: {},
+    });
+    setJobId(job.id);
+    return job.id;
+  }
+
   async function handleUploadImageField(layerName: string, file: File) {
     setUploadingField(layerName);
     try {
       const url = await uploadEditorImage(file);
       setValues((prev) => ({ ...prev, [layerName]: url }));
+      const jid = await ensureJob();
+      await upsertGraphicJobImage({
+        job_id: jid,
+        layer_name: layerName,
+        source: "upload",
+        image_url: url,
+        asset_id: null,
+      });
     } finally {
       setUploadingField(null);
     }
+  }
+
+  async function handlePickGetty(
+    layerName: string,
+    candidate: { asset_id: string; preview_url: string },
+  ) {
+    setValues((prev) => ({ ...prev, [layerName]: candidate.preview_url }));
+    const jid = await ensureJob();
+    await upsertGraphicJobImage({
+      job_id: jid,
+      layer_name: layerName,
+      source: "getty",
+      image_url: candidate.preview_url,
+      asset_id: candidate.asset_id,
+    });
   }
 
   function handleFinishCompose() {
@@ -378,38 +555,13 @@ export function VisualWizardModal({
                         className="w-full rounded-lg border border-border bg-background/60 px-3 py-2 text-sm outline-none focus:border-primary"
                       />
                     ) : (
-                      <div className="flex items-center gap-2">
-                        {values[field.layerName] ? (
-                          <img
-                            src={values[field.layerName]}
-                            alt=""
-                            className="size-12 rounded border border-border object-cover"
-                          />
-                        ) : (
-                          <div className="flex size-12 items-center justify-center rounded border border-dashed border-border text-muted-foreground">
-                            <ImageIcon className="size-4" />
-                          </div>
-                        )}
-                        <label className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-[11px] text-muted-foreground hover:border-primary hover:text-primary">
-                          {uploadingField === field.layerName ? (
-                            <Loader2 className="size-3 animate-spin" />
-                          ) : (
-                            <Upload className="size-3" />
-                          )}
-                          Carica immagine
-                          <input
-                            type="file"
-                            accept="image/*"
-                            className="hidden"
-                            disabled={uploadingField === field.layerName}
-                            onChange={(e) => {
-                              const file = e.target.files?.[0];
-                              if (file) handleUploadImageField(field.layerName, file);
-                              e.target.value = "";
-                            }}
-                          />
-                        </label>
-                      </div>
+                      <GettyImageField
+                        layerName={field.layerName}
+                        value={values[field.layerName]}
+                        uploading={uploadingField === field.layerName}
+                        onPickGetty={(candidate) => handlePickGetty(field.layerName, candidate)}
+                        onUpload={(file) => handleUploadImageField(field.layerName, file)}
+                      />
                     )}
                   </div>
                 ))}

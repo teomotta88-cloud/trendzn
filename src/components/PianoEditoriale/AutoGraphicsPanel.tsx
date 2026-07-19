@@ -19,6 +19,7 @@ import {
   uploadJobImage,
   upsertGraphicJob,
 } from "@/lib/autographics";
+import { callHook } from "@/lib/hooks-client";
 
 // SBAM AutoGraphics — pannello agganciato in fondo alla PostCard. Gestisce
 // tutto il flusso lato copywriter: scelta rubrica strutturata, composizione
@@ -29,19 +30,6 @@ import {
 // approvato (ready_for_render) diventa esportabile in .xlsx per Canva Bulk
 // Create dal pannello "Export Canva Bulk Create" in cima al Piano
 // Editoriale (vedi CanvaExportPanel.tsx).
-
-async function callHook<T>(path: string, body: unknown): Promise<T> {
-  const res = await fetch(`/api/public/hooks/${path}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  const json = (await res.json()) as T & { ok?: boolean; error?: string };
-  if (!res.ok || json.ok === false) {
-    throw new Error(json.error || `Richiesta ${path} fallita (${res.status})`);
-  }
-  return json;
-}
 
 // Soglia visiva del contatore caratteri: verde < 80%, giallo < 100%, rosso ≥.
 function counterColor(len: number, max: number | null): string {

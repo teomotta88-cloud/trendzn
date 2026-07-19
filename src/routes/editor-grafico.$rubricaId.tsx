@@ -112,6 +112,12 @@ function Page() {
   const [allCardElements, setAllCardElements] = useState<TemplateElement[] | null>(null);
   const [elementsError, setElementsError] = useState<string | null>(null);
   const [activeCardIndex, setActiveCardIndex] = useState(1);
+  // Frame appena creati con "Aggiungi frame" ma non ancora salvati: non
+  // hanno righe in template_elements, quindi non comparirebbero in
+  // cardIndexes (derivato da allCardElements). Senza questo stato, appena si
+  // naviga via da un frame nuovo la sua tab spariva (bug segnalato
+  // dall'utente: "posso solo eliminare i frame e non posso navigare").
+  const [pendingCardIndexes, setPendingCardIndexes] = useState<number[]>([]);
   const [layerNameSuggestions, setLayerNameSuggestions] = useState<string[]>([]);
   const [customFonts, setCustomFonts] = useState<CustomFont[]>([]);
   const [loading, setLoading] = useState(true);
@@ -162,6 +168,7 @@ function Page() {
     setAllCardElements(null);
     setElementsError(null);
     setActiveCardIndex(1);
+    setPendingCardIndexes([]);
     listTemplateElementsAllCards(rubricaId, selectedFormato.formato)
       .then(setAllCardElements)
       .catch((err) => setElementsError(err instanceof Error ? err.message : String(err)));
@@ -178,24 +185,44 @@ function Page() {
     ? Array.from(new Set(allCardElements.map((el) => el.card_index))).sort((a, b) => a - b)
     : [];
   if (cardIndexes.length === 0) cardIndexes.push(1);
-  // Un frame appena aggiunto non ha ancora elementi salvati, quindi non
-  // comparirebbe in cardIndexes finché non si salva: lo si include comunque
-  // nella tab bar finché è quello attivo.
-  const displayCardIndexes = cardIndexes.includes(activeCardIndex)
-    ? cardIndexes
-    : [...cardIndexes, activeCardIndex].sort((a, b) => a - b);
+  // Frame salvati + frame nuovi non ancora salvati (pendingCardIndexes):
+  // tutti restano visibili nella tab bar indipendentemente da quale sia
+  // attivo in questo momento.
+  const displayCardIndexes = Array.from(new Set([...cardIndexes, ...pendingCardIndexes])).sort(
+    (a, b) => a - b,
+  );
 
   const currentCardElements = (allCardElements ?? []).filter(
     (el) => el.card_index === activeCardIndex,
   );
 
   function handleAddFrame() {
-    const nextIndex = Math.max(...cardIndexes) + 1;
+    const nextIndex = Math.max(0, ...cardIndexes, ...pendingCardIndexes) + 1;
+    setPendingCardIndexes((prev) => [...prev, nextIndex]);
     setActiveCardIndex(nextIndex);
+  }
+
+  async function handleFrameSaved(cardIndex: number) {
+    if (!selectedFormato) return;
+    setPendingCardIndexes((prev) => prev.filter((idx) => idx !== cardIndex));
+    try {
+      const refreshed = await listTemplateElementsAllCards(rubricaId, selectedFormato.formato);
+      setAllCardElements(refreshed);
+    } catch (err) {
+      setElementsError(err instanceof Error ? err.message : String(err));
+    }
   }
 
   async function handleDeleteFrame(cardIndex: number) {
     if (!selectedFormato) return;
+    if (displayCardIndexes.length <= 1) return;
+    // Un frame appena aggiunto e mai salvato non ha righe su template_elements:
+    // basta dimenticarlo localmente, senza conferma né chiamata al backend.
+    if (!cardIndexes.includes(cardIndex)) {
+      setPendingCardIndexes((prev) => prev.filter((idx) => idx !== cardIndex));
+      if (activeCardIndex === cardIndex) setActiveCardIndex(cardIndexes[0] ?? 1);
+      return;
+    }
     if (cardIndexes.length <= 1) return;
     if (!window.confirm(`Eliminare il frame ${cardIndex}? L'azione non è reversibile.`)) return;
     try {
@@ -325,6 +352,7 @@ function Page() {
             initialElements={currentCardElements}
             layerNameSuggestions={layerNameSuggestions}
             fontOptions={fontOptions}
+            onSaved={() => handleFrameSaved(activeCardIndex)}
           />
         </>
       )}
