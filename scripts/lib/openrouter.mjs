@@ -56,6 +56,22 @@ function stripJsonFences(text) {
     .replace(/\n?```$/, "");
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Quando TUTTI i modelli della lista falliscono (429/404 diffusi sulla free
+// tier, capita interi round di monitoraggio), conviene aspettare e
+// riprovare l'intera lista invece di arrendersi subito: i rate limit
+// gratuiti di OpenRouter sono per-minuto/per-giorno, quindi qualche minuto
+// di attesa può bastare a liberare capacità su almeno un modello. Non è un
+// retry "a oltranza" vero e proprio (bloccherebbe il job a tempo
+// indeterminato) ma un numero di round bounded con backoff, pensato per
+// stare ben dentro il timeout-minutes del workflow chiamante.
+const RETRY_ROUNDS = parseInt(process.env.OPENROUTER_RETRY_ROUNDS ?? "4", 10);
+const RETRY_BASE_DELAY_MS = parseInt(process.env.OPENROUTER_RETRY_BASE_DELAY_MS ?? "20000", 10);
+const RETRY_MAX_DELAY_MS = 3 * 60 * 1000;
+
 async function callModel(model, messages, apiKey) {
   const res = await fetch(OPENROUTER_URL, {
     method: "POST",
@@ -88,21 +104,33 @@ async function chatCompletionWithFallback(messages, { apiKey, model, parse }) {
   const models = resolveModels(model);
   const errors = [];
 
-  for (const m of models) {
-    for (let attempt = 0; attempt < 2; attempt++) {
-      const { text, errorDetail } = await callModel(m, messages, apiKey);
-      if (errorDetail) {
-        errors.push(errorDetail);
-        break; // errore di trasporto/rate-limit: non ha senso ritentare lo stesso modello
+  for (let round = 0; round <= RETRY_ROUNDS; round++) {
+    for (const m of models) {
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const { text, errorDetail } = await callModel(m, messages, apiKey);
+        if (errorDetail) {
+          errors.push(`round ${round + 1}: ${errorDetail}`);
+          break; // errore di trasporto/rate-limit: non ha senso ritentare lo stesso modello
+        }
+        const parsed = parse(text);
+        if (parsed !== null) return parsed;
+        errors.push(`round ${round + 1}: ${m}: risposta non nel formato atteso (tentativo ${attempt + 1})`);
       }
-      const parsed = parse(text);
-      if (parsed !== null) return parsed;
-      errors.push(`${m}: risposta non nel formato atteso (tentativo ${attempt + 1})`);
+    }
+
+    if (round < RETRY_ROUNDS) {
+      const delay = Math.min(RETRY_BASE_DELAY_MS * 2 ** round, RETRY_MAX_DELAY_MS);
+      console.log(
+        `OpenRouter: tutti i modelli falliti al round ${round + 1}/${RETRY_ROUNDS + 1}, ` +
+          `riprovo tra ${Math.round(delay / 1000)}s...`,
+      );
+      await sleep(delay);
     }
   }
 
   throw new Error(
-    `Tutti i modelli OpenRouter hanno fallito. Dettaglio: ${errors.join(" | ").slice(0, 500)}`,
+    `Tutti i modelli OpenRouter hanno fallito dopo ${RETRY_ROUNDS + 1} round. ` +
+      `Dettaglio: ${errors.join(" | ").slice(0, 500)}`,
   );
 }
 
