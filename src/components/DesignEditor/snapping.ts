@@ -36,11 +36,22 @@ export function computeSnap(
   others: Box[],
   canvas: { width: number; height: number },
 ): { x: number; y: number; guides: SnapGuides } {
-  const xCandidates = [0, canvas.width / 2, canvas.width];
-  const yCandidates = [0, canvas.height / 2, canvas.height];
+  // Due elenchi separati, non uno solo: un bordo (0, canvas.width, il bordo
+  // di un altro elemento) deve poter agganciare solo il bordo corrispondente
+  // dell'elemento trascinato (sinistra/destra o alto/basso), MAI il suo
+  // centro — altrimenti un bordo del frame che capita vicino al centro
+  // dell'elemento lo aggancia lì, spostandolo fuori posto invece di
+  // allinearne il bordo (bug osservato: il centro "saltava" sul bordo del
+  // frame invece che il bordo dell'elemento).
+  const edgeCandidatesX = [0, canvas.width];
+  const centerCandidatesX = [canvas.width / 2];
+  const edgeCandidatesY = [0, canvas.height];
+  const centerCandidatesY = [canvas.height / 2];
   for (const o of others) {
-    xCandidates.push(o.x, o.x + o.width / 2, o.x + o.width);
-    yCandidates.push(o.y, o.y + o.height / 2, o.y + o.height);
+    edgeCandidatesX.push(o.x, o.x + o.width);
+    centerCandidatesX.push(o.x + o.width / 2);
+    edgeCandidatesY.push(o.y, o.y + o.height);
+    centerCandidatesY.push(o.y + o.height / 2);
   }
 
   const movingLeft = moving.x;
@@ -52,9 +63,9 @@ export function computeSnap(
 
   let snappedX = moving.x;
   const vertical: number[] = [];
-  const leftSnap = closestCandidate(movingLeft, xCandidates);
-  const centerXSnap = closestCandidate(movingCenterX, xCandidates);
-  const rightSnap = closestCandidate(movingRight, xCandidates);
+  const leftSnap = closestCandidate(movingLeft, edgeCandidatesX);
+  const centerXSnap = closestCandidate(movingCenterX, centerCandidatesX);
+  const rightSnap = closestCandidate(movingRight, edgeCandidatesX);
   if (centerXSnap !== null) {
     snappedX = centerXSnap - moving.width / 2;
     vertical.push(centerXSnap);
@@ -68,9 +79,9 @@ export function computeSnap(
 
   let snappedY = moving.y;
   const horizontal: number[] = [];
-  const topSnap = closestCandidate(movingTop, yCandidates);
-  const centerYSnap = closestCandidate(movingCenterY, yCandidates);
-  const bottomSnap = closestCandidate(movingBottom, yCandidates);
+  const topSnap = closestCandidate(movingTop, edgeCandidatesY);
+  const centerYSnap = closestCandidate(movingCenterY, centerCandidatesY);
+  const bottomSnap = closestCandidate(movingBottom, edgeCandidatesY);
   if (centerYSnap !== null) {
     snappedY = centerYSnap - moving.height / 2;
     horizontal.push(centerYSnap);
