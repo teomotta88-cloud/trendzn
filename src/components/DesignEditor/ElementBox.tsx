@@ -157,7 +157,12 @@ export const ElementBox = forwardRef<HTMLDivElement, ElementBoxProps>(function E
             height: "100%",
             borderRadius: s.borderRadius ?? 0,
             overflow: "hidden",
-            background: "#e2e8f0",
+            // Grigio SOLO da placeholder (nessuna immagine ancora): con
+            // un'immagine caricata deve restare trasparente, altrimenti la
+            // trasparenza reale (es. rimozione sfondo automatica) mostra
+            // questo grigio invece del contenuto sotto, sia a schermo che
+            // nell'export catturato (bug segnalato dall'utente).
+            background: src ? "transparent" : "#e2e8f0",
           }}
         >
           {src ? (
