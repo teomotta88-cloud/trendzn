@@ -119,6 +119,13 @@ function Page() {
   // naviga via da un frame nuovo la sua tab spariva (bug segnalato
   // dall'utente: "posso solo eliminare i frame e non posso navigare").
   const [pendingCardIndexes, setPendingCardIndexes] = useState<number[]>([]);
+  // L'import da Figma sostituisce gli elementi via replaceTemplateElements
+  // bypassando lo stato interno di DesignEditor (inizializzato una sola
+  // volta da initialElements): senza forzare un remount, il frame importato
+  // resta invisibile finché non si ricarica la pagina (bug segnalato
+  // dall'utente). handleFrameSaved da solo non basta perché la key di
+  // DesignEditor non dipende da allCardElements.
+  const [figmaImportVersion, setFigmaImportVersion] = useState(0);
   const [layerNameSuggestions, setLayerNameSuggestions] = useState<string[]>([]);
   const [customFonts, setCustomFonts] = useState<CustomFont[]>([]);
   const [loading, setLoading] = useState(true);
@@ -312,7 +319,10 @@ function Page() {
             rubricaId={rubricaId}
             formato={selectedFormato}
             cardIndex={activeCardIndex}
-            onImported={() => handleFrameSaved(activeCardIndex)}
+            onImported={() => {
+              handleFrameSaved(activeCardIndex);
+              setFigmaImportVersion((v) => v + 1);
+            }}
           />
 
           <div className="flex flex-wrap items-center gap-2">
@@ -353,7 +363,7 @@ function Page() {
           </div>
 
           <DesignEditor
-            key={`${selectedFormato.id}-${activeCardIndex}`}
+            key={`${selectedFormato.id}-${activeCardIndex}-${figmaImportVersion}`}
             rubricaId={rubricaId}
             formato={selectedFormato}
             cardIndex={activeCardIndex}

@@ -128,18 +128,32 @@ async function checkFigmaToken(): Promise<TokenCheckResult> {
   const token = process.env.FIGMA_ACCESS_TOKEN;
   if (!token) return notConfigured(name, label);
   try {
+    // /v1/me richiede lo scope "Current user: Read", che però NON è tra
+    // quelli che chiediamo di selezionare all'utente (solo "File content:
+    // Read-only", l'unico scope che serve davvero a figma-import.ts). Un
+    // token con solo quello scope risponde 403 su /v1/me pur funzionando
+    // perfettamente sugli endpoint file/nodes/images: qui distinguiamo
+    // quel 403-per-scope (falso allarme) da un token davvero scaduto o
+    // revocato, guardando il messaggio d'errore restituito da Figma.
     const res = await fetch("https://api.figma.com/v1/me", {
       headers: { "X-Figma-Token": token },
       signal: AbortSignal.timeout(8000),
     });
-    if (!res.ok) {
-      return invalidResult(
+    if (res.ok) return okResult(name, label, "Token valido.", FIGMA_TOKEN_EXPECTED_EXPIRY);
+    const body = await res.text();
+    if (res.status === 403 && /scope/i.test(body)) {
+      return okResult(
         name,
         label,
-        `Figma ha risposto ${res.status} (token scaduto o revocato?).`,
+        "Token valido per l'import file (scope limitato a File content, come richiesto).",
+        FIGMA_TOKEN_EXPECTED_EXPIRY,
       );
     }
-    return okResult(name, label, "Token valido.", FIGMA_TOKEN_EXPECTED_EXPIRY);
+    return invalidResult(
+      name,
+      label,
+      `Figma ha risposto ${res.status} (token scaduto o revocato?).`,
+    );
   } catch (err) {
     return errorResult(name, label, err);
   }
