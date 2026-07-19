@@ -729,8 +729,21 @@ async function fetchFigmaJson<T>(url: string, token: string): Promise<T> {
   }
   if (!res.ok) {
     if (res.status === 429) {
+      // Header di diagnosi del rate limit (documentati da Figma ma non
+      // sempre tutti presenti a seconda del piano/endpoint): li includiamo
+      // così com'è invece di indovinarne il valore, per capire subito piano
+      // e tipo di limite coinvolti se ricapita.
+      const details = [
+        ["Retry-After", res.headers.get("Retry-After")],
+        ["X-Figma-Plan-Tier", res.headers.get("X-Figma-Plan-Tier")],
+        ["X-Figma-Rate-Limit-Type", res.headers.get("X-Figma-Rate-Limit-Type")],
+        ["X-Figma-Upgrade-Link", res.headers.get("X-Figma-Upgrade-Link")],
+      ]
+        .filter(([, value]) => value != null)
+        .map(([label, value]) => `${label}: ${value}`)
+        .join(", ");
       throw new Error(
-        "Figma ha temporaneamente limitato le richieste (troppi import ravvicinati con lo stesso token). Riprova tra un minuto.",
+        `Figma ha temporaneamente limitato le richieste (troppi import ravvicinati con lo stesso token). Riprova tra un minuto.${details ? ` [${details}]` : ""}`,
       );
     }
     const body = await res.text();
