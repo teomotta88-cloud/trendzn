@@ -1,4 +1,16 @@
-import { ArrowDown, ArrowUp, ChevronsDown, ChevronsUp, Trash2 } from "lucide-react";
+import { useState } from "react";
+import {
+  ArrowDown,
+  ArrowUp,
+  ChevronsDown,
+  ChevronsUp,
+  Loader2,
+  Trash2,
+  Upload,
+  Wand2,
+} from "lucide-react";
+import { uploadEditorImage } from "@/lib/designElements";
+import { removeBackground } from "@/lib/background-removal";
 import { CURATED_ICONS } from "./constants";
 import type { EditorElement } from "./ElementBox";
 
@@ -31,6 +43,92 @@ function NumberField({
         className="rounded-lg border border-border bg-background/60 px-2 py-1.5 text-xs outline-none focus:border-primary"
       />
     </label>
+  );
+}
+
+// Upload immagine libera + rimozione sfondo automatica (Fase 4). Componente
+// a parte (non inline in PropertiesPanel) perché ha bisogno di stato locale
+// (busy/error) — PropertiesPanel ritorna presto se non c'è un elemento
+// selezionato, il che romperebbe le regole degli hook se li chiamasse lì.
+function ImageActions({
+  currentSrc,
+  targetField,
+  onChangeStyle,
+}: {
+  currentSrc: string;
+  targetField: "src" | "previewSrc";
+  onChangeStyle: (patch: Record<string, unknown>) => void;
+}) {
+  const [busy, setBusy] = useState<"upload" | "bg-removal" | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleUpload(file: File) {
+    setBusy("upload");
+    setError(null);
+    try {
+      const url = await uploadEditorImage(file, file.name.split(".").pop() || "png");
+      onChangeStyle({ [targetField]: url });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  async function handleRemoveBackground() {
+    if (!currentSrc) return;
+    setBusy("bg-removal");
+    setError(null);
+    try {
+      const blob = await removeBackground(currentSrc);
+      const url = await uploadEditorImage(blob, "png");
+      onChangeStyle({ [targetField]: url });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  return (
+    <div className="space-y-1.5">
+      <div className="flex flex-wrap gap-1.5">
+        <label className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary">
+          {busy === "upload" ? (
+            <Loader2 className="size-3.5 animate-spin" />
+          ) : (
+            <Upload className="size-3.5" />
+          )}
+          Carica immagine
+          <input
+            type="file"
+            accept="image/*"
+            className="hidden"
+            disabled={busy !== null}
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) handleUpload(file);
+              e.target.value = "";
+            }}
+          />
+        </label>
+        <button
+          type="button"
+          onClick={handleRemoveBackground}
+          disabled={busy !== null || !currentSrc}
+          className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-50"
+          title={!currentSrc ? "Nessuna immagine da elaborare" : "Rimuovi sfondo automaticamente"}
+        >
+          {busy === "bg-removal" ? (
+            <Loader2 className="size-3.5 animate-spin" />
+          ) : (
+            <Wand2 className="size-3.5" />
+          )}
+          Rimuovi sfondo
+        </button>
+      </div>
+      {error && <p className="text-xs text-destructive">{error}</p>}
+    </div>
   );
 }
 
@@ -216,6 +314,11 @@ export function PropertiesPanel({
 
       {element.tipo === "image" && (
         <div className="space-y-2 border-t border-border/70 pt-3">
+          <ImageActions
+            currentSrc={(style.src as string) || (style.previewSrc as string) || ""}
+            targetField={element.layer_name ? "previewSrc" : "src"}
+            onChangeStyle={onChangeStyle}
+          />
           {!element.layer_name && (
             <label className="flex flex-col gap-1 text-xs text-muted-foreground">
               URL immagine fissa (es. logo)

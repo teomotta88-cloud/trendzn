@@ -126,3 +126,15 @@ export async function deleteCustomFont(font: CustomFont): Promise<void> {
   const { error } = await db.from("custom_fonts").delete().eq("id", font.id);
   if (error) throw error;
 }
+
+// --- Immagini editor (upload libero + rimozione sfondo, Fase 4) --------
+// Riusa il bucket graphics-output già esistente (stesso bucket pubblico dei
+// PNG generati dai job), sotto un prefisso dedicato: sono comunque asset
+// grafici prodotti/usati dall'editor, non serve un bucket a parte.
+
+export async function uploadEditorImage(file: Blob, extension = "png"): Promise<string> {
+  const path = `editor-uploads/${crypto.randomUUID()}.${extension}`;
+  const { error } = await supabase.storage.from("graphics-output").upload(path, file);
+  if (error) throw error;
+  return supabase.storage.from("graphics-output").getPublicUrl(path).data.publicUrl;
+}
