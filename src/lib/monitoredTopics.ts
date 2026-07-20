@@ -11,15 +11,20 @@ export const MONITORED_TOPIC_TYPES = [
   "google-trends",
   "trending-audio",
   "x-trending",
+  "reddit-trending",
+  "youtube-trending",
 ] as const;
 export type MonitoredTopicType = (typeof MONITORED_TOPIC_TYPES)[number];
 
-export const SIGNAL_PLATFORMS = ["tiktok", "instagram"] as const;
+export const SIGNAL_PLATFORMS = ["tiktok", "instagram", "reddit", "youtube", "google-trends"] as const;
 export type SignalPlatform = (typeof SIGNAL_PLATFORMS)[number];
 
 export const SIGNAL_PLATFORM_LABEL: Record<SignalPlatform, string> = {
   tiktok: "TikTok",
   instagram: "Instagram",
+  reddit: "Reddit",
+  youtube: "YouTube",
+  "google-trends": "Google Trends",
 };
 
 // Un segnale di crescita per (topic, piattaforma) — Fase 2. TikTok riporta un

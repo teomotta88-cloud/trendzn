@@ -11,6 +11,8 @@ export const DISCOVERY_SOURCES = [
   "trending-audio",
   "x-trending",
   "canali-inspo",
+  "reddit-trending",
+  "youtube-trending",
 ] as const;
 export type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 

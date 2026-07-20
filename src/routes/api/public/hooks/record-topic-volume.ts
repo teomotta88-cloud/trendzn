@@ -4,7 +4,7 @@ import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 
 type Body = {
   topicId?: string;
-  platform?: "tiktok" | "instagram";
+  platform?: "tiktok" | "instagram" | "reddit" | "youtube" | "google-trends";
   contentVolume?: number | null;
   isVolumeExact?: boolean;
   totalEngagement?: number | null;

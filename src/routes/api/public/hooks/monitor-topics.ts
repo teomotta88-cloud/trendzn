@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const TOPIC_TYPES = ["tiktok-hashtag", "google-trends", "trending-audio", "x-trending"] as const;
+const TOPIC_TYPES = [
+  "tiktok-hashtag",
+  "google-trends",
+  "trending-audio",
+  "x-trending",
+  "reddit-trending",
+  "youtube-trending",
+] as const;
 type TopicType = (typeof TOPIC_TYPES)[number];
 
 type IncomingTopic = {
