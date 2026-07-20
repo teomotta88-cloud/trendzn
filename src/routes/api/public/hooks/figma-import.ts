@@ -223,6 +223,20 @@ function colorToHex(c: FigmaColor): string {
   return `#${hex(c.r)}${hex(c.g)}${hex(c.b)}`;
 }
 
+// A differenza di colorToHex (che ignora sempre l'alpha, corretto per un
+// riempimento solido dove l'opacità del nodo è gestita a parte), gli stop
+// di un gradiente hanno spesso un'alpha diversa da stop a stop — un
+// classico "vignetta"/overlay nero trasparente->opaco ha ENTRAMBI gli
+// stop con lo stesso RGB e alpha diversa: convertirli con colorToHex li
+// renderizzerebbe come due colori identici, cioè un gradiente che sembra
+// una tinta piena (bug segnalato dall'utente). Usata solo per gli stop
+// del gradiente, mai per fillColor/testo/bordo/ombra.
+function colorToRgba(c: FigmaColor): string {
+  const to255 = (v: number) => Math.round(Math.max(0, Math.min(1, v)) * 255);
+  const a = Math.max(0, Math.min(1, c.a));
+  return `rgba(${to255(c.r)}, ${to255(c.g)}, ${to255(c.b)}, ${Number(a.toFixed(3))})`;
+}
+
 function shadowStyleFromEffects(effects: FigmaEffect[] | undefined): Record<string, unknown> {
   const shadow = effects?.find((e) => e.type === "DROP_SHADOW" && e.visible !== false);
   if (!shadow) return {};
@@ -313,18 +327,33 @@ function gradientAngleFromFill(fill: FigmaFill): number {
   return 90;
 }
 
+// rgba, non hex: uno stop può avere alpha diversa dagli altri (vedi
+// colorToRgba) e questa lista finisce sempre in fillCss (mai nei campi
+// hex strutturati, che non hanno un canale alpha).
 function stopsToCssList(stops: { position: number; color: FigmaColor }[]): string {
-  return stops.map((s) => `${colorToHex(s.color)} ${Math.round(s.position * 100)}%`).join(", ");
+  return stops.map((s) => `${colorToRgba(s.color)} ${Math.round(s.position * 100)}%`).join(", ");
+}
+
+// I campi strutturati gradientFrom/gradientTo sono editati con
+// <input type="color">, che non ha un canale alpha: uno stop con alpha
+// < 1 (es. una vignetta nero-trasparente -> nero-opaco, dove i due stop
+// hanno lo stesso RGB e differiscono SOLO nell'alpha) non è rappresentabile
+// lì — va sempre instradato su fillCss (rgba) invece, altrimenti
+// diventerebbe un colore piatto (bug segnalato dall'utente: "i gradient
+// vengono importati come forma con colore fisso").
+function stopsAreFullyOpaque(stops: { position: number; color: FigmaColor }[]): boolean {
+  return stops.every((s) => s.color.a >= 0.999);
 }
 
 // textMode true: usato per il colore del testo (niente fillType/fillCss,
 // solo "color" — un testo con fill a gradiente non è supportato dal nostro
 // editor, si usa il colore del primo stop come approssimazione).
 // textMode false: usato per il riempimento di forme/immagini. Un gradiente
-// a 2 stop lineare/radiale popola i campi strutturati editabili dal
-// pannello proprietà; qualunque altro caso (>2 stop, angolare, a diamante)
-// finisce in fillCss, un override CSS grezzo — reso correttamente ma
-// modificabile solo sostituendolo con un gradiente semplice.
+// a 2 stop lineare/radiale, con entrambi gli stop pienamente opachi, popola
+// i campi strutturati editabili dal pannello proprietà; qualunque altro
+// caso (>2 stop, angolare, a diamante, o uno stop con alpha < 1) finisce
+// in fillCss, un override CSS grezzo — reso correttamente ma modificabile
+// solo sostituendolo con un gradiente semplice.
 function fillStyleFromNode(
   fills: FigmaFill[] | undefined,
   textMode: boolean,
@@ -339,7 +368,7 @@ function fillStyleFromNode(
   if (stops.length === 0) return {};
   if (fill.type === "GRADIENT_LINEAR") {
     const angle = gradientAngleFromFill(fill);
-    if (stops.length === 2 && !textMode) {
+    if (stops.length === 2 && !textMode && stopsAreFullyOpaque(stops)) {
       return {
         fillType: "linear",
         gradientFrom: colorToHex(stops[0].color),
@@ -351,7 +380,7 @@ function fillStyleFromNode(
     return textMode ? { color: colorToHex(stops[0].color) } : { fillCss: css };
   }
   if (fill.type === "GRADIENT_RADIAL") {
-    if (stops.length === 2 && !textMode) {
+    if (stops.length === 2 && !textMode && stopsAreFullyOpaque(stops)) {
       return {
         fillType: "radial",
         gradientFrom: colorToHex(stops[0].color),
