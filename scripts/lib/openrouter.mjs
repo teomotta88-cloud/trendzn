@@ -331,3 +331,57 @@ export async function clusterCaptionsByTopic(captions, { apiKey, groqApiKey, mod
     }))
     .filter((c) => c.indices.length >= 2);
 }
+
+// Raggruppa etichette di trend provenienti da fonti INDIPENDENTI (TikTok,
+// Google Trends, X, Canali Inspo — vedi scripts/match-cross-source-trends.mjs)
+// che parlano dello stesso argomento reale, anche se fraseggiate in modo
+// completamente diverso da fonte a fonte (es. "Mondiali 2026" su Canali
+// Inspo vs "mondiali calcio 2026" su Google Trends): a differenza di
+// clusterCaptionsByTopic sopra, qui non c'è nessuna chiave testuale comune
+// da sfruttare, serve comprensione semantica. `items` è un array di
+// {label, source}; ritorna solo i gruppi di 2+ indici (un'etichetta senza
+// corrispondenza altrove non è un gruppo cross-fonte).
+export async function matchTopicsAcrossSources(items, { apiKey, groqApiKey, model } = {}) {
+  const messages = [
+    {
+      role: "system",
+      content:
+        "Ricevi un elenco numerato di etichette di trend/argomenti in tendenza in Italia, " +
+        "ciascuna proveniente da una fonte diversa (indicata tra parentesi). Trova i gruppi di " +
+        "etichette che si riferiscono chiaramente allo STESSO argomento/evento/persona reale, " +
+        "anche se scritte in modo diverso da fonte a fonte (es. abbreviazioni, lingue diverse, " +
+        "hashtag vs frase naturale). NON raggruppare argomenti solo genericamente simili (stesso " +
+        "settore/categoria ma eventi diversi). Per ogni gruppo di 2 o più etichette sullo stesso " +
+        "argomento, restituisci l'etichetta più chiara e leggibile tra quelle del gruppo. Ignora " +
+        "completamente le etichette che non condividono l'argomento con nessun'altra: non " +
+        'inventare gruppi da un solo elemento. Rispondi SOLO con un array JSON ' +
+        '[{"label": "...", "indices": [0, 3, 7]}], senza altro testo, senza markdown, senza ' +
+        "spiegazioni. Se non trovi nessun gruppo, rispondi [].",
+    },
+    {
+      role: "user",
+      content: JSON.stringify(
+        items.map((it, i) => ({ index: i, label: `${it.label} (${it.source})` })),
+      ),
+    },
+  ];
+
+  const parse = (text) => {
+    try {
+      const parsed = JSON.parse(stripJsonFences(text));
+      return Array.isArray(parsed) ? parsed : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const parsed = await chatCompletionWithFallback(messages, { apiKey, groqApiKey, model, parse });
+
+  return parsed
+    .filter((g) => g?.label && Array.isArray(g.indices) && g.indices.length >= 2)
+    .map((g) => ({
+      label: String(g.label).trim(),
+      indices: g.indices.filter((i) => Number.isInteger(i) && i >= 0 && i < items.length),
+    }))
+    .filter((g) => g.indices.length >= 2);
+}

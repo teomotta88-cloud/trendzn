@@ -309,12 +309,20 @@ function angleFromDirection(dx: number, dy: number): number {
 }
 
 // handles: forma REST API (gradientHandlePositions, 3 punti normalizzati).
-// transform: forma Plugin API (gradientTransform, matrice 2x3) — la
-// direzione del gradiente è l'immagine del vettore (1,0) sotto la parte
-// lineare della matrice, cioè (a, c) con transform = [[a,b,tx],[c,d,ty]].
-// Le due forme non coesistono mai sullo stesso fill (dipende da quale
-// fonte ha prodotto il JSON), ma la formula finale (atan2 su un vettore
-// direzione in coordinate schermo y-down) è la stessa in entrambi i casi.
+// transform: forma Plugin API (gradientTransform, matrice 2x3). Le due
+// forme non coesistono mai sullo stesso fill (dipende da quale fonte ha
+// prodotto il JSON), ma la formula finale (atan2 su un vettore direzione
+// in coordinate schermo y-down) è la stessa in entrambi i casi.
+//
+// gradientTransform mappa lo spazio UV del gradiente (u=0 -> stop 0%,
+// u=1 -> stop 100%, lungo l'asse u) nello spazio locale del nodo: la
+// direzione dello stop 0% verso lo stop 100% è quindi l'immagine del
+// vettore (-1, 0) sotto la parte lineare della matrice, cioè -(a, c) con
+// transform = [[a,b,tx],[c,d,ty]] — non +(a,c) come sembrerebbe naturale
+// (l'immagine di (1,0)), che dà il verso ESATTAMENTE opposto. Verificato
+// su un caso reale (vignetta nero trasparente->opaco, gradientTransform
+// [[~0,1,0],[-1,~0,1]]): col segno + risultava trasparente in basso e
+// opaco in alto, invertito rispetto al design originale in Figma.
 function gradientAngleFromFill(fill: FigmaFill): number {
   if (fill.gradientHandlePositions && fill.gradientHandlePositions.length >= 2) {
     const [h0, h1] = fill.gradientHandlePositions;
@@ -322,7 +330,7 @@ function gradientAngleFromFill(fill: FigmaFill): number {
   }
   if (fill.gradientTransform) {
     const [[a, ,], [c, ,]] = fill.gradientTransform;
-    return angleFromDirection(a, c);
+    return angleFromDirection(-a, -c);
   }
   return 90;
 }

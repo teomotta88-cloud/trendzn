@@ -164,6 +164,39 @@ export type Database = {
         }
         Relationships: []
       }
+      cross_source_trends: {
+        Row: {
+          canali_inspo_topic: string | null
+          computed_at: string
+          id: string
+          label: string
+          source_count: number
+          sources: string[]
+          tier: string | null
+          topic_ids: string[]
+        }
+        Insert: {
+          canali_inspo_topic?: string | null
+          computed_at?: string
+          id?: string
+          label: string
+          source_count: number
+          sources: string[]
+          tier?: string | null
+          topic_ids?: string[]
+        }
+        Update: {
+          canali_inspo_topic?: string | null
+          computed_at?: string
+          id?: string
+          label?: string
+          source_count?: number
+          sources?: string[]
+          tier?: string | null
+          topic_ids?: string[]
+        }
+        Relationships: []
+      }
       editorial_client_channels: {
         Row: {
           canale: string
@@ -962,6 +995,8 @@ export type Database = {
           author: string | null
           content: string | null
           created_at: string
+          cross_profile_channel_count: number | null
+          cross_profile_topic: string | null
           delta_engagement: number
           delta_engagement_6h: number
           delta_reach: number
@@ -984,6 +1019,8 @@ export type Database = {
           author?: string | null
           content?: string | null
           created_at?: string
+          cross_profile_channel_count?: number | null
+          cross_profile_topic?: string | null
           delta_engagement?: number
           delta_engagement_6h?: number
           delta_reach?: number
@@ -1006,6 +1043,8 @@ export type Database = {
           author?: string | null
           content?: string | null
           created_at?: string
+          cross_profile_channel_count?: number | null
+          cross_profile_topic?: string | null
           delta_engagement?: number
           delta_engagement_6h?: number
           delta_reach?: number
