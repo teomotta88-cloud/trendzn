@@ -180,6 +180,18 @@ async function discoverFromCreativeCenter() {
 
     if (found.size === 0) {
       await saveDebugArtifacts(page, `tiktok-cc-empty-${Date.now()}`);
+    } else if (capturedResponses.length === 0) {
+      // Il ranking vero arriva SOLO dalle risposte JSON delle chiamate XHR
+      // della dashboard (via extractHashtagObjectsFromJson) — se sono zero
+      // ma found.size > 0, l'unica fonte è stato il fallback DOM (testo
+      // generico a forma di hashtag, senza rank/volumi): sintomo di una
+      // dashboard non pienamente caricata (sessione degradata, cambio di
+      // struttura della pagina, account senza accesso alla vista completa)
+      // anche se isLoggedIn() non l'ha rilevato (controlla solo che l'URL
+      // non sia /login). Salviamo comunque uno screenshot per capire cosa
+      // vede davvero la pagina, invece di continuare a indovinare dai soli
+      // hashtag trovati.
+      await saveDebugArtifacts(page, `tiktok-cc-no-json-responses-${Date.now()}`);
     }
 
     await persistSession(context);
