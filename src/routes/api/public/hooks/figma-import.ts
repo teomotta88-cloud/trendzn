@@ -70,6 +70,15 @@ import { createFileRoute } from "@tanstack/react-router";
 // Figma usa il colore del primo stop. Il blend mode usa direttamente i
 // nomi CSS mix-blend-mode (stesso set di Figma, salvo PASS_THROUGH).
 //
+// Sfondo del frame stesso: se il fill (tinta unita o gradiente) è
+// impostato sul FRAME importato come card, non su un rettangolo figlio
+// (il modo più comune per uno sfondo full-bleed in Figma), viene comunque
+// catturato come un elemento "shape" sintetico dietro a tutto il resto
+// (vedi frameBackgroundElement) — altrimenti andrebbe perso del tutto,
+// dato che flatten() tratta i FRAME solo come contenitori. Limite noto:
+// solo tinta unita/gradiente, un fill IMMAGINE sul frame stesso (non su
+// un rettangolo figlio) non viene ancora catturato.
+//
 // Cosa NON fa (limiti noti, documentati invece di finti al 100%):
 // - I gruppi/frame annidati (nel caso single-frame) vengono attraversati ma
 //   non riprodotti come gruppi nel nostro editor (serve un secondo passaggio
@@ -590,6 +599,46 @@ function extractTrailingNumber(name: string): number | null {
 // Figma, decide se è un import multi-frame o singolo e produce le card
 // mappate. Isolata dal resto per poter essere testata senza un vero account
 // Figma (vedi script di verifica usato in fase di sviluppo).
+// Un FRAME importato come card ha spesso il suo sfondo (tinta unita o
+// gradiente) impostato come fill DEL FRAME STESSO, non su un rettangolo
+// figlio — è il modo più comune per creare uno sfondo full-bleed in
+// Figma. flatten() non lo vede mai (tratta i FRAME solo come contenitori,
+// legge fills/effects solo sui nodi foglia): senza questo la card
+// importata perde lo sfondo e mostra il bianco di default del canvas
+// dell'editor — bug segnalato dall'utente come "i gradienti vengono
+// importati in tinta unita" (in realtà lo sfondo del frame, gradiente o
+// tinta unita che fosse, non veniva importato affatto). z_index -1 per
+// restare sempre dietro a tutti gli altri elementi della card. Limite
+// noto: solo tinta unita/gradiente — un eventuale fill IMMAGINE sul
+// frame stesso (non su un rettangolo figlio) non viene ancora catturato.
+function frameBackgroundElement(
+  node: FigmaNode,
+  box: { width: number; height: number },
+): MappedElement | null {
+  if (node.type !== "FRAME") return null;
+  const paintStyle = fillStyleFromNode(node.fills, false);
+  if (Object.keys(paintStyle).length === 0) return null;
+  return {
+    figmaNodeId: `${node.id}-frame-background`,
+    layer_name: null,
+    tipo: "shape",
+    x: 0,
+    y: 0,
+    width: box.width,
+    height: box.height,
+    rotation: 0,
+    z_index: -1,
+    style: {
+      ...paintStyle,
+      borderRadius: node.cornerRadius ?? 0,
+      ...strokeStyleFromNode(node),
+      ...opacityBlendStyle(node),
+    },
+    exportFormat: null,
+    inlineDataUrl: null,
+  };
+}
+
 export function mapFigmaTreeToFrames(root: FigmaNode): MappedFrame[] {
   const directChildren = (root.children ?? []).filter((c) => c.visible !== false);
   const childFrames = directChildren.filter((c) => c.type === "FRAME");
@@ -606,6 +655,8 @@ export function mapFigmaTreeToFrames(root: FigmaNode): MappedFrame[] {
     return ordered.map((frame) => {
       const box = frame.absoluteBoundingBox!;
       const elements: MappedElement[] = [];
+      const background = frameBackgroundElement(frame, box);
+      if (background) elements.push(background);
       const zCounter = { value: 0 };
       const nameCounters: Record<string, number> = {};
       for (const child of frame.children ?? []) {
@@ -622,6 +673,8 @@ export function mapFigmaTreeToFrames(root: FigmaNode): MappedFrame[] {
 
   const rootBox = root.absoluteBoundingBox!;
   const elements: MappedElement[] = [];
+  const rootBackground = frameBackgroundElement(root, rootBox);
+  if (rootBackground) elements.push(rootBackground);
   const zCounter = { value: 0 };
   const nameCounters: Record<string, number> = {};
   for (const child of root.children ?? []) {
