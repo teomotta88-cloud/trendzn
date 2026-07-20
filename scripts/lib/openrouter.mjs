@@ -1,25 +1,43 @@
-// Due usi di un LLM gratuito su OpenRouter (https://openrouter.ai/api/v1/chat/completions,
-// compatibile OpenAI): conversione hashtag -> keyword (risolve nomi propri e
-// toponimi che un dizionario offline, scripts/lib/word-segment.mjs, non può
-// risolvere, es. "torvergata" -> "Tor Vergata") e raggruppamento di
-// didascalie per argomento (Canali Inspo, vedi clusterCaptionsByTopic).
+// Due usi di un LLM gratuito (conversione hashtag -> keyword e raggruppamento
+// di didascalie per argomento, vedi clusterCaptionsByTopic) su DUE provider
+// con free tier senza carta di credito: Groq (console.groq.com, endpoint
+// compatibile OpenAI) e OpenRouter (openrouter.ai, stesso formato).
 //
-// OpenRouter offre modelli con suffisso ":free" a costo zero (nessuna carta
-// di credito richiesta per la registrazione), con limite 20 richieste/minuto
-// e 50/giorno finché non si sono acquistati almeno 10$ di credito una
-// tantum. Il limite è condiviso da TUTTO ciò che usa la stessa chiave in
-// questo progetto (conversione hashtag, clustering Canali Inspo, estrazione
-// keyword SBAM) — un singolo modello satura spesso (verificato dal vivo: 429
-// "temporarily rate-limited upstream" su llama-3.3-70b), quindi entrambe le
-// funzioni di questo file provano una LISTA di modelli in sequenza invece di
-// uno solo, stesso pattern già in uso in extract-keywords.ts (SBAM).
+// Groq va provato per primo: free tier molto più ampio (14.400 richieste/
+// giorno, 30/minuto, verificato) contro i 50/giorno di OpenRouter prima di
+// aver acquistato 10$ di credito una tantum. OpenRouter resta come secondo
+// livello di fallback per diversificare ulteriormente.
 //
-// ATTENZIONE: la lista dei modelli gratuiti ruota nel tempo (alcuni vengono
-// ritirati, altri aggiunti) — se troppi finiscono 404, aggiornare
-// DEFAULT_MODELS da https://openrouter.ai/models?max_price=0.
+// ATTENZIONE (lezione imparata dal vivo): la lista dei modelli gratuiti di
+// ENTRAMBI i provider ruota nel tempo — modelli ritirati dal free tier
+// (OpenRouter, 404 "unavailable for free") o deprecati (Groq, es. la
+// deprecazione di giugno 2026 di llama-3.3-70b-versatile/llama-3.1-8b-instant)
+// capitano regolarmente. Per questo NON usiamo più una lista statica di
+// slug come unica fonte: la scopriamo dal vivo ad ogni chiamata via gli
+// endpoint pubblici /models di ciascun provider (che girano dentro il job
+// GitHub Actions, con internet pieno — questo repo può interrogarli anche
+// se il fetch da altri ambienti verso i siti web di OpenRouter/Groq è
+// bloccato da anti-bot). DEFAULT_MODELS resta solo come ultima rete di
+// sicurezza se la discovery di OpenRouter stessa fallisce (rete giù, ecc.).
+//
+// Il limite è condiviso da TUTTO ciò che usa la stessa chiave in questo
+// progetto (conversione hashtag, clustering Canali Inspo, estrazione
+// keyword SBAM) — un singolo modello satura spesso, quindi entrambe le
+// funzioni di questo file provano una LISTA di candidati (provider+modello)
+// in sequenza invece di uno solo.
+
+const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
+const GROQ_MODELS_URL = "https://api.groq.com/openai/v1/models";
+// Modelli Groq non adatti a un task di chat/istruzioni generiche (audio in/
+// out, classificatori di moderazione) — vanno esclusi dai candidati.
+const GROQ_EXCLUDE_PATTERN = /whisper|tts|guard|moderation/i;
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models";
 
+// Ultima rete di sicurezza SOLO per OpenRouter, se la discovery via
+// OPENROUTER_MODELS_URL fallisce (rete giù, risposta malformata) — non
+// garantita aggiornata, vedi ATTENZIONE sopra.
 const DEFAULT_MODELS = [
   "meta-llama/llama-3.3-70b-instruct:free",
   "deepseek/deepseek-chat-v3-0324:free",
@@ -29,24 +47,92 @@ const DEFAULT_MODELS = [
   "meta-llama/llama-3.1-8b-instruct:free",
 ];
 
-// Codici HTTP che rendono sensato passare al modello successivo invece di
+// Codici HTTP che rendono sensato passare al candidato successivo invece di
 // abortire: modello non disponibile (404), rate limit (429), errori
-// provider (5xx). Auth (401/403) e richiesta malformata (400) sono fatali,
-// riproverebbero con lo stesso esito su ogni modello.
+// provider (5xx). Auth (401/403) e richiesta malformata (400) sono fatali
+// per QUEL provider, ma non impediscono di provare l'altro provider.
 function shouldFallback(status) {
   return status === 404 || status === 429 || status >= 500;
 }
 
-// `model` (stringa, anche comma-separated per più modelli) ha priorità se
-// passato dal chiamante (es. da OPENROUTER_MODEL nell'ambiente) — altrimenti
-// la lista di default.
-function resolveModels(model) {
-  if (!model) return DEFAULT_MODELS;
+// `model` (stringa, anche comma-separated) ha priorità se passato dal
+// chiamante (es. da OPENROUTER_MODEL nell'ambiente) — bypassa la discovery
+// dinamica per OpenRouter, resta un escape hatch manuale.
+function resolveStaticModels(model) {
+  if (!model) return null;
   const list = model
     .split(",")
     .map((m) => m.trim())
     .filter(Boolean);
-  return list.length > 0 ? list : DEFAULT_MODELS;
+  return list.length > 0 ? list : null;
+}
+
+async function discoverGroqModels(groqApiKey) {
+  const res = await fetch(GROQ_MODELS_URL, {
+    headers: { Authorization: `Bearer ${groqApiKey}` },
+  });
+  if (!res.ok) throw new Error(`Groq /models ha risposto ${res.status}`);
+  const data = await res.json();
+  const models = (data.data ?? [])
+    .map((m) => m.id)
+    .filter((id) => id && !GROQ_EXCLUDE_PATTERN.test(id));
+  if (models.length === 0) throw new Error("Nessun modello chat disponibile su Groq");
+  return models;
+}
+
+async function discoverOpenRouterFreeModels() {
+  const res = await fetch(OPENROUTER_MODELS_URL);
+  if (!res.ok) throw new Error(`OpenRouter /models ha risposto ${res.status}`);
+  const data = await res.json();
+  const free = (data.data ?? [])
+    .filter(
+      (m) =>
+        m.id?.endsWith(":free") &&
+        Number(m.pricing?.prompt ?? 1) === 0 &&
+        Number(m.pricing?.completion ?? 1) === 0,
+    )
+    .map((m) => m.id);
+  if (free.length === 0) throw new Error("Nessun modello :free trovato su OpenRouter");
+  return free;
+}
+
+// Costruisce la lista di candidati (provider + modello) da provare in
+// sequenza: prima tutti i modelli Groq disponibili (free tier più ampio),
+// poi quelli OpenRouter — scoperti dal vivo, con fallback alla lista
+// statica solo se la discovery OpenRouter stessa fallisce. Ogni lista è
+// troncata a un tetto ragionevole: evita che un catalogo enorme (centinaia
+// di modelli non-free su OpenRouter, filtrati ma comunque potenzialmente
+// numerosi) dilati troppo il tempo di un singolo round.
+const MAX_CANDIDATES_PER_PROVIDER = 15;
+
+async function buildCandidates({ apiKey, groqApiKey, model }) {
+  const candidates = [];
+
+  if (groqApiKey) {
+    try {
+      const groqModels = await discoverGroqModels(groqApiKey);
+      for (const m of groqModels.slice(0, MAX_CANDIDATES_PER_PROVIDER)) {
+        candidates.push({ provider: "groq", model: m });
+      }
+    } catch (err) {
+      console.log(`Discovery modelli Groq fallita (salto Groq per questa chiamata): ${err}`);
+    }
+  }
+
+  if (apiKey) {
+    const staticOverride = resolveStaticModels(model);
+    const orModels =
+      staticOverride ??
+      (await discoverOpenRouterFreeModels().catch((err) => {
+        console.log(`Discovery modelli OpenRouter fallita, uso la lista statica: ${err}`);
+        return DEFAULT_MODELS;
+      }));
+    for (const m of orModels.slice(0, MAX_CANDIDATES_PER_PROVIDER)) {
+      candidates.push({ provider: "openrouter", model: m });
+    }
+  }
+
+  return candidates;
 }
 
 function stripJsonFences(text) {
@@ -60,23 +146,28 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// Quando TUTTI i modelli della lista falliscono (429/404 diffusi sulla free
-// tier, capita interi round di monitoraggio), conviene aspettare e
-// riprovare l'intera lista invece di arrendersi subito: i rate limit
-// gratuiti di OpenRouter sono per-minuto/per-giorno, quindi qualche minuto
-// di attesa può bastare a liberare capacità su almeno un modello. Non è un
-// retry "a oltranza" vero e proprio (bloccherebbe il job a tempo
-// indeterminato) ma un numero di round bounded con backoff, pensato per
-// stare ben dentro il timeout-minutes del workflow chiamante.
+// Quando TUTTI i candidati falliscono (capitato più volte in monitoraggio,
+// prima di aggiungere Groq, con OpenRouter da solo), conviene aspettare e
+// riprovare l'intera lista invece di arrendersi subito — utile contro
+// saturazioni temporanee (429), inutile contro modelli ritirati in modo
+// permanente (404), ma la discovery dinamica sopra dovrebbe già escludere
+// questi ultimi ad ogni round. Non è un retry "a oltranza" vero e proprio
+// (bloccherebbe il job a tempo indeterminato) ma un numero di round bounded
+// con backoff, pensato per stare ben dentro il timeout-minutes del workflow
+// chiamante.
 const RETRY_ROUNDS = parseInt(process.env.OPENROUTER_RETRY_ROUNDS ?? "4", 10);
 const RETRY_BASE_DELAY_MS = parseInt(process.env.OPENROUTER_RETRY_BASE_DELAY_MS ?? "20000", 10);
 const RETRY_MAX_DELAY_MS = 3 * 60 * 1000;
 
-async function callModel(model, messages, apiKey) {
-  const res = await fetch(OPENROUTER_URL, {
+async function callModel(candidate, messages, keys) {
+  const { provider, model } = candidate;
+  const url = provider === "groq" ? GROQ_URL : OPENROUTER_URL;
+  const authKey = provider === "groq" ? keys.groqApiKey : keys.apiKey;
+
+  const res = await fetch(url, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${apiKey}`,
+      Authorization: `Bearer ${authKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ model, messages, temperature: 0 }),
@@ -84,44 +175,52 @@ async function callModel(model, messages, apiKey) {
 
   if (!res.ok) {
     const body = await res.text();
-    const detail = `OpenRouter (${model}) ha risposto ${res.status}: ${body.slice(0, 200)}`;
+    const detail = `${provider} (${model}) ha risposto ${res.status}: ${body.slice(0, 200)}`;
     if (shouldFallback(res.status)) return { text: null, errorDetail: detail };
-    // Errore fatale (auth, richiesta malformata): inutile provare altri modelli.
-    throw new Error(detail);
+    // Errore fatale (auth, richiesta malformata) per QUESTO provider: inutile
+    // ritentare lo stesso modello, ma si passa comunque al candidato
+    // successivo (altro modello o altro provider) invece di abortire tutto.
+    return { text: null, errorDetail: detail };
   }
 
   const data = await res.json();
   const text = data.choices?.[0]?.message?.content;
-  if (!text) return { text: null, errorDetail: `${model}: risposta senza contenuto testuale` };
+  if (!text) return { text: null, errorDetail: `${provider} (${model}): risposta senza contenuto testuale` };
   return { text, errorDetail: null };
 }
 
-// Prova una lista di modelli in sequenza, un retry per modello sul solo caso
-// "risposta presente ma non nel formato atteso" (parse(text) ritorna null) —
-// stesso pattern già in uso in extract-keywords.ts. `parse` non deve
-// lanciare: ritorna il risultato o null.
-async function chatCompletionWithFallback(messages, { apiKey, model, parse }) {
-  const models = resolveModels(model);
+// Prova una lista di candidati (provider + modello) in sequenza, un retry
+// per candidato sul solo caso "risposta presente ma non nel formato atteso"
+// (parse(text) ritorna null) — stesso pattern già in uso in
+// extract-keywords.ts. `parse` non deve lanciare: ritorna il risultato o null.
+async function chatCompletionWithFallback(messages, { apiKey, groqApiKey, model, parse }) {
+  const candidates = await buildCandidates({ apiKey, groqApiKey, model });
+  if (candidates.length === 0) {
+    throw new Error("Nessuna API key configurata (né Groq né OpenRouter) o nessun candidato disponibile.");
+  }
+
   const errors = [];
 
   for (let round = 0; round <= RETRY_ROUNDS; round++) {
-    for (const m of models) {
+    for (const candidate of candidates) {
       for (let attempt = 0; attempt < 2; attempt++) {
-        const { text, errorDetail } = await callModel(m, messages, apiKey);
+        const { text, errorDetail } = await callModel(candidate, messages, { apiKey, groqApiKey });
         if (errorDetail) {
           errors.push(`round ${round + 1}: ${errorDetail}`);
-          break; // errore di trasporto/rate-limit: non ha senso ritentare lo stesso modello
+          break; // errore di trasporto/rate-limit: non ha senso ritentare lo stesso candidato
         }
         const parsed = parse(text);
         if (parsed !== null) return parsed;
-        errors.push(`round ${round + 1}: ${m}: risposta non nel formato atteso (tentativo ${attempt + 1})`);
+        errors.push(
+          `round ${round + 1}: ${candidate.provider} (${candidate.model}): risposta non nel formato atteso (tentativo ${attempt + 1})`,
+        );
       }
     }
 
     if (round < RETRY_ROUNDS) {
       const delay = Math.min(RETRY_BASE_DELAY_MS * 2 ** round, RETRY_MAX_DELAY_MS);
       console.log(
-        `OpenRouter: tutti i modelli falliti al round ${round + 1}/${RETRY_ROUNDS + 1}, ` +
+        `Tutti i candidati falliti al round ${round + 1}/${RETRY_ROUNDS + 1}, ` +
           `riprovo tra ${Math.round(delay / 1000)}s...`,
       );
       await sleep(delay);
@@ -129,7 +228,7 @@ async function chatCompletionWithFallback(messages, { apiKey, model, parse }) {
   }
 
   throw new Error(
-    `Tutti i modelli OpenRouter hanno fallito dopo ${RETRY_ROUNDS + 1} round. ` +
+    `Tutti i candidati (Groq + OpenRouter) hanno fallito dopo ${RETRY_ROUNDS + 1} round. ` +
       `Dettaglio: ${errors.join(" | ").slice(0, 500)}`,
   );
 }
@@ -138,7 +237,7 @@ async function chatCompletionWithFallback(messages, { apiKey, model, parse }) {
 // un'unica chiamata batch (es. "#torvergata" -> "Tor Vergata"). Lancia in
 // caso di errore: il chiamante decide se e come ripiegare (vedi
 // hashtagsToKeywordsWithFallback in sync-viral-trends.mjs).
-export async function convertHashtagsToKeywords(hashtags, { apiKey, model } = {}) {
+export async function convertHashtagsToKeywords(hashtags, { apiKey, groqApiKey, model } = {}) {
   const messages = [
     {
       role: "system",
@@ -161,7 +260,7 @@ export async function convertHashtagsToKeywords(hashtags, { apiKey, model } = {}
     }
   };
 
-  const parsed = await chatCompletionWithFallback(messages, { apiKey, model, parse });
+  const parsed = await chatCompletionWithFallback(messages, { apiKey, groqApiKey, model, parse });
 
   const byHashtag = new Map(
     parsed.filter((p) => p?.hashtag && p?.keyword).map((p) => [p.hashtag, p.keyword]),
@@ -169,7 +268,7 @@ export async function convertHashtagsToKeywords(hashtags, { apiKey, model } = {}
   const missing = hashtags.filter((h) => !byHashtag.has(h));
   if (missing.length > 0) {
     throw new Error(
-      `OpenRouter non ha convertito tutti gli hashtag (mancanti: ${missing.join(", ")}).`,
+      `Nessun modello ha convertito tutti gli hashtag (mancanti: ${missing.join(", ")}).`,
     );
   }
 
@@ -191,7 +290,7 @@ export async function convertHashtagsToKeywords(hashtags, { apiKey, model } = {}
 // appartengano davvero a profili diversi (non lo stesso profilo due volte) e
 // che le didascalie raggruppate siano davvero simili tra loro (textSimilarity,
 // per scartare etichette troppo generiche tipo "Attualità").
-export async function clusterCaptionsByTopic(captions, { apiKey, model } = {}) {
+export async function clusterCaptionsByTopic(captions, { apiKey, groqApiKey, model } = {}) {
   const messages = [
     {
       role: "system",
@@ -222,7 +321,7 @@ export async function clusterCaptionsByTopic(captions, { apiKey, model } = {}) {
     }
   };
 
-  const parsed = await chatCompletionWithFallback(messages, { apiKey, model, parse });
+  const parsed = await chatCompletionWithFallback(messages, { apiKey, groqApiKey, model, parse });
 
   return parsed
     .filter((c) => c?.topic && Array.isArray(c.indices) && c.indices.length >= 2)

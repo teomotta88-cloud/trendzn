@@ -36,8 +36,10 @@ jobs:
 
       - name: Sync trend virali
         env:
-          # Opzionale: se assente, la conversione hashtag -> keyword usa solo
-          # il fallback offline (meno preciso su nomi propri/toponimi).
+          # Entrambe opzionali: se assenti, la conversione hashtag -> keyword
+          # usa solo il fallback offline (meno preciso su nomi propri/
+          # toponimi). Groq provato per primo (free tier più ampio).
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MAX_HASHTAGS: ${{ github.event.inputs.max_hashtags || '100' }}
           MAX_TRENDS: ${{ github.event.inputs.max_trends || '50' }}
