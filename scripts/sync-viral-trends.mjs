@@ -4,10 +4,10 @@
 //
 //  1. hashtag TikTok in trend (già sincronizzati dalla pipeline
 //     tiktok-hashtag), convertiti in keyword tramite un LLM gratuito su
-//     OpenRouter (scripts/lib/openrouter.mjs) — con fallback automatico alla
-//     segmentazione offline a dizionario inglese+italiano
-//     (scripts/lib/word-segment.mjs) se OPENROUTER_API_KEY non è configurata
-//     o la chiamata fallisce.
+//     Groq/OpenRouter (scripts/lib/openrouter.mjs) — con fallback automatico
+//     alla segmentazione offline a dizionario inglese+italiano
+//     (scripts/lib/word-segment.mjs) se nessuna delle due chiavi è
+//     configurata o la chiamata fallisce.
 //  2. ricerche in tendenza Google Trends per l'Italia (scripts/lib/google-trends.mjs)
 //     — indipendente dal workflow hashtag TikTok, già in linguaggio naturale
 //     (nessuna conversione hashtag->keyword necessaria). Fonte non ufficiale:
@@ -27,8 +27,9 @@
 // percorso critico della ricerca contenuti.
 //
 // Variabili d'ambiente:
-//   OPENROUTER_API_KEY      opzionale — se assente si usa solo il fallback offline
-//   OPENROUTER_MODEL        default: vedi DEFAULT_MODEL in scripts/lib/openrouter.mjs
+//   GROQ_API_KEY            opzionale — provato per primo (free tier più ampio), se assente si passa a OpenRouter
+//   OPENROUTER_API_KEY      opzionale — se entrambe assenti si usa solo il fallback offline
+//   OPENROUTER_MODEL        override manuale, comma-separated — bypassa la discovery dinamica dei modelli OpenRouter
 //   MAX_HASHTAGS            default: 100 — quanti hashtag TikTok in trend monitorare per run (per rank)
 //   MAX_TRENDS              default: 50 — quante ricerche Google Trends IT monitorare (per data più recente)
 //   MAX_TIKTOK_POSTS        default: 10 — max video TikTok già raccolti da aggiungere per hashtag
@@ -53,6 +54,7 @@ const MAX_TIKTOK_POSTS = parseInt(process.env.MAX_TIKTOK_POSTS ?? "10", 10);
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "2000", 10);
 const openrouterApiKey = process.env.OPENROUTER_API_KEY;
 const openrouterModel = process.env.OPENROUTER_MODEL;
+const groqApiKey = process.env.GROQ_API_KEY;
 async function fetchTopHashtags() {
   const res = await fetch(`${TOP_HASHTAGS_ENDPOINT}?limit=${MAX_HASHTAGS}`);
   if (!res.ok) {
@@ -77,18 +79,19 @@ function hashtagsToKeywordsOffline(hashtags) {
 // fallisce (rate limit, modello ritirato, errore di rete, ecc.) — il resto
 // della pipeline deve continuare a funzionare comunque.
 async function hashtagsToKeywords(hashtags) {
-  if (!openrouterApiKey) {
-    console.log("OPENROUTER_API_KEY non configurata, uso la segmentazione offline.");
+  if (!groqApiKey && !openrouterApiKey) {
+    console.log("Né GROQ_API_KEY né OPENROUTER_API_KEY configurate, uso la segmentazione offline.");
     return hashtagsToKeywordsOffline(hashtags);
   }
 
   try {
     return await convertHashtagsToKeywords(hashtags, {
       apiKey: openrouterApiKey,
+      groqApiKey,
       model: openrouterModel,
     });
   } catch (err) {
-    console.error(`OpenRouter fallito, ripiego sulla segmentazione offline: ${String(err)}`);
+    console.error(`Groq/OpenRouter falliti, ripiego sulla segmentazione offline: ${String(err)}`);
     return hashtagsToKeywordsOffline(hashtags);
   }
 }

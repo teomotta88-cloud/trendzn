@@ -47,6 +47,7 @@ const MIN_CLUSTER_SIMILARITY = parseFloat(process.env.MIN_CLUSTER_SIMILARITY ?? 
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || undefined;
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -210,15 +211,19 @@ if (accepted.length === 0) {
 
 // --- Trend cross-profilo ---
 const crossProfileByUrl = new Map();
-if (!OPENROUTER_API_KEY) {
-  console.log("\nOPENROUTER_API_KEY assente: salto il rilevamento trend cross-profilo.");
+if (!GROQ_API_KEY && !OPENROUTER_API_KEY) {
+  console.log("\nNé GROQ_API_KEY né OPENROUTER_API_KEY configurate: salto il rilevamento trend cross-profilo.");
 } else {
   try {
     const clusters = await clusterCaptionsByTopic(
       accepted.map((a) => a.caption),
-      { apiKey: OPENROUTER_API_KEY, ...(OPENROUTER_MODEL ? { model: OPENROUTER_MODEL } : {}) },
+      {
+        apiKey: OPENROUTER_API_KEY,
+        groqApiKey: GROQ_API_KEY,
+        ...(OPENROUTER_MODEL ? { model: OPENROUTER_MODEL } : {}),
+      },
     );
-    console.log(`\nCluster proposti da OpenRouter: ${clusters.length}`);
+    console.log(`\nCluster proposti dall'LLM: ${clusters.length}`);
 
     for (const cluster of clusters) {
       const posts = cluster.indices.map((i) => accepted[i]);
