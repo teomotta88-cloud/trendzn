@@ -19,7 +19,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LazyEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { formatCompactNumber } from "@/lib/format";
 import {
@@ -251,7 +250,15 @@ function contentMatchesTopicFilter(item: ViralTrendContent, filter: ActiveTopicF
   return false;
 }
 
-type RankedTopicType = "tiktok-hashtag" | "google-trends" | "x-trending";
+// Ordine mostrato nel dropdown "Classifiche per fonte" della sidebar.
+const RANKED_TOPIC_TYPES = [
+  "x-trending",
+  "tiktok-hashtag",
+  "google-trends",
+  "reddit-trending",
+  "youtube-trending",
+] as const;
+type RankedTopicType = (typeof RANKED_TOPIC_TYPES)[number];
 
 // Nessun "rank" reale esiste ancora per Google Trends (solo TikTok
 // Creative Center lo fornisce, e nemmeno quello è esposto oggi da
@@ -437,13 +444,15 @@ function CanaliInspoTopicList({
   );
 }
 
-const SIDEBAR_SOURCES = ["canali-inspo", "x-trending", "tiktok-hashtag", "google-trends"] as const;
+const SIDEBAR_SOURCES = ["canali-inspo", ...RANKED_TOPIC_TYPES] as const;
 type SidebarSource = (typeof SIDEBAR_SOURCES)[number];
 const SIDEBAR_SOURCE_LABELS: Record<SidebarSource, string> = {
   "canali-inspo": "Canali Inspo",
   "x-trending": "X",
   "tiktok-hashtag": "TikTok",
-  "google-trends": "Google",
+  "google-trends": "Google Trends",
+  "reddit-trending": "Reddit",
+  "youtube-trending": "YouTube",
 };
 
 function TrendSidebar({
@@ -453,8 +462,12 @@ function TrendSidebar({
   topicsError,
   contentByTopic,
   crossProfileTopics,
+  crossSourceTrends,
+  crossSourceLoading,
+  crossSourceError,
   onSelectTopic,
   onSelectCanaliInspoTopic,
+  onSelectCrossSourceTrend,
 }: {
   sidebarSource: SidebarSource;
   setSidebarSource: (s: SidebarSource) => void;
@@ -462,37 +475,56 @@ function TrendSidebar({
   topicsError: string | null;
   contentByTopic: Map<string, ViralTrendContent[]>;
   crossProfileTopics: { topic: string; channelCount: number; postCount: number }[];
+  crossSourceTrends: CrossSourceTrend[];
+  crossSourceLoading: boolean;
+  crossSourceError: string | null;
   onSelectTopic: (topic: MonitoredTopic) => void;
   onSelectCanaliInspoTopic: (topic: string) => void;
+  onSelectCrossSourceTrend: (trend: CrossSourceTrend) => void;
 }) {
   return (
-    <aside className="w-full shrink-0 space-y-3 lg:w-80">
-      <h2 className="text-sm font-semibold text-foreground">Classifiche per fonte</h2>
-
-      <Tabs value={sidebarSource} onValueChange={(v) => setSidebarSource(v as SidebarSource)}>
-        <TabsList className="grid w-full grid-cols-2 gap-1 sm:grid-cols-4 lg:grid-cols-2">
-          {SIDEBAR_SOURCES.map((s) => (
-            <TabsTrigger key={s} value={s} className="text-xs">
-              {SIDEBAR_SOURCE_LABELS[s]}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-      </Tabs>
-
-      {sidebarSource === "canali-inspo" ? (
-        <CanaliInspoTopicList topics={crossProfileTopics} onSelect={onSelectCanaliInspoTopic} />
-      ) : topicsError ? (
-        <p className="text-sm text-destructive">
-          Errore nel caricamento dei topic monitorati: {topicsError}.
-        </p>
-      ) : (
-        <TopicRankingList
-          topics={topics}
-          view={sidebarSource}
-          contentByTopic={contentByTopic}
-          onSelect={onSelectTopic}
+    <aside className="w-full shrink-0 space-y-6 lg:w-80">
+      <section className="space-y-3">
+        <h2 className="text-sm font-semibold text-foreground">Trendzning Now</h2>
+        <TrendzningNowView
+          trends={crossSourceTrends}
+          loading={crossSourceLoading}
+          error={crossSourceError}
+          onSelect={onSelectCrossSourceTrend}
         />
-      )}
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-sm font-semibold text-foreground">Classifiche per fonte</h2>
+
+        <Select value={sidebarSource} onValueChange={(v) => setSidebarSource(v as SidebarSource)}>
+          <SelectTrigger className="w-full">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {SIDEBAR_SOURCES.map((s) => (
+              <SelectItem key={s} value={s}>
+                {SIDEBAR_SOURCE_LABELS[s]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {sidebarSource === "canali-inspo" ? (
+          <CanaliInspoTopicList topics={crossProfileTopics} onSelect={onSelectCanaliInspoTopic} />
+        ) : topicsError ? (
+          <p className="text-sm text-destructive">
+            Errore nel caricamento dei topic monitorati: {topicsError}.
+          </p>
+        ) : (
+          <TopicRankingList
+            topics={topics}
+            view={sidebarSource}
+            contentByTopic={contentByTopic}
+            onSelect={onSelectTopic}
+          />
+        )}
+      </section>
     </aside>
   );
 }
@@ -579,15 +611,15 @@ function TrendzningNowView({
   }
   if (sorted.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+      <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
         Nessun trend rilevato ancora. Il workflow "Match Trend Cross-Fonte" (ogni 6h) confronta le
-        keyword di TikTok, Google Trends, X e Canali Inspo e segnala quelle condivise da più fonti.
-      </div>
+        keyword di tutte le fonti e segnala quelle condivise da più di una.
+      </p>
     );
   }
 
   return (
-    <ol className="space-y-2">
+    <ol className="max-h-[22rem] space-y-2 overflow-y-auto pr-1">
       {sorted.map((t) => (
         <CrossSourceTrendRow key={t.id} trend={t} onSelect={() => onSelect(t)} />
       ))}
@@ -671,12 +703,6 @@ function ContentCard({ item }: { item: ViralTrendContent }) {
 // limite qui evita di mettere in pagina centinaia di card insieme.
 const PAGE_SIZE = 8;
 
-type MainTab = "trendzning-now" | "content";
-const MAIN_TAB_LABELS: Record<MainTab, string> = {
-  "trendzning-now": "Trendzning Now",
-  content: "Contenuti",
-};
-
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -697,7 +723,6 @@ function Page() {
   const [crossSourceLoading, setCrossSourceLoading] = useState(true);
   const [crossSourceError, setCrossSourceError] = useState<string | null>(null);
 
-  const [mainTab, setMainTab] = useState<MainTab>("trendzning-now");
   const [sidebarSource, setSidebarSource] = useState<SidebarSource>("canali-inspo");
   const [activeTopicFilter, setActiveTopicFilter] = useState<ActiveTopicFilter | null>(null);
 
@@ -799,7 +824,6 @@ function Page() {
       canaliInspoTopic: null,
     });
     setSourceFilter("all");
-    setMainTab("content");
   }
 
   function selectCanaliInspoTopic(topic: string) {
@@ -810,7 +834,6 @@ function Page() {
       canaliInspoTopic: topic,
     });
     setSourceFilter("all");
-    setMainTab("content");
   }
 
   function selectCrossSourceTrend(trend: CrossSourceTrend) {
@@ -821,7 +844,6 @@ function Page() {
       canaliInspoTopic: trend.canali_inspo_topic,
     });
     setSourceFilter("all");
-    setMainTab("content");
   }
 
   const filtered = useMemo(() => {
@@ -863,38 +885,18 @@ function Page() {
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Virali</h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
-          Topic scoperti da tre fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
+          Topic scoperti da più fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
           leggibile, es. #empirestatebuilding → "Empire State Building"), ricerche in tendenza
-          Google Trends per l'Italia e trend X.com — poi cercati su Instagram. Contenuti sempre
-          degli ultimi {VIRALITY_WINDOW_DAYS} giorni, con la variazione di view/engagement rilevata
-          rispetto al sync più vecchio in questa stessa finestra.
+          Google Trends per l'Italia, trend X.com, post in crescita su Reddit e YouTube Trending —
+          poi cercati su Instagram. Contenuti sempre degli ultimi {VIRALITY_WINDOW_DAYS} giorni, con
+          la variazione di view/engagement rilevata rispetto al sync più vecchio in questa stessa
+          finestra.
         </p>
       </header>
 
       <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
         <div className="min-w-0 flex-1 space-y-4">
-          <Tabs value={mainTab} onValueChange={(v) => setMainTab(v as MainTab)}>
-            <TabsList>
-              {(["trendzning-now", "content"] as const).map((v) => (
-                <TabsTrigger key={v} value={v}>
-                  {MAIN_TAB_LABELS[v]}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </Tabs>
-
-          {mainTab === "trendzning-now" && (
-            <TrendzningNowView
-              trends={crossSourceTrends}
-              loading={crossSourceLoading}
-              error={crossSourceError}
-              onSelect={selectCrossSourceTrend}
-            />
-          )}
-
-          {mainTab === "content" && (
-            <>
-              {activeTopicFilter && (
+          {activeTopicFilter && (
                 <div className="flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs">
                   <span className="text-muted-foreground">Filtrato per:</span>
                   <span className="font-medium text-foreground">{activeTopicFilter.label}</span>
@@ -1025,18 +1027,16 @@ function Page() {
                 </div>
               )}
 
-              {!error && !loading && visibleCount < filtered.length && (
-                <div className="flex justify-center">
-                  <button
-                    type="button"
-                    onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-                    className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
-                  >
-                    Carica altri ({filtered.length - visibleCount} rimanenti)
-                  </button>
-                </div>
-              )}
-            </>
+          {!error && !loading && visibleCount < filtered.length && (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
+              >
+                Carica altri ({filtered.length - visibleCount} rimanenti)
+              </button>
+            </div>
           )}
         </div>
 
@@ -1047,8 +1047,12 @@ function Page() {
           topicsError={topicsError}
           contentByTopic={contentByTopic}
           crossProfileTopics={crossProfileTopics}
+          crossSourceTrends={crossSourceTrends}
+          crossSourceLoading={crossSourceLoading}
+          crossSourceError={crossSourceError}
           onSelectTopic={selectTopic}
           onSelectCanaliInspoTopic={selectCanaliInspoTopic}
+          onSelectCrossSourceTrend={selectCrossSourceTrend}
         />
       </div>
     </div>
