@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const VALID_SOURCES = ["tiktok-hashtag", "google-trends", "x-trending", "canali-inspo"] as const;
+const VALID_SOURCES = [
+  "tiktok-hashtag",
+  "google-trends",
+  "x-trending",
+  "reddit-trending",
+  "youtube-trending",
+  "canali-inspo",
+] as const;
 const VALID_TIERS = ["hot", "spicy", "super_spicy"] as const;
 
 type IncomingGroup = {
@@ -10,6 +17,12 @@ type IncomingGroup = {
   sources: string[];
   topicIds?: string[];
   canaliInspoTopic?: string | null;
+  // true se almeno uno dei topic del gruppo sta accelerando ora (vedi
+  // computeAcceleration in src/lib/topicAcceleration.ts) — dimensione
+  // indipendente dal numero di fonti (sourceCount/tier): un gruppo può
+  // essere condiviso da molte fonti ma stabile, o da poche ma in forte
+  // accelerazione.
+  isAccelerating?: boolean;
 };
 
 export const Route = createFileRoute("/api/public/hooks/sync-cross-source-trends")({
@@ -39,6 +52,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-cross-source-trends
               sources: g.sources,
               topic_ids: Array.isArray(g.topicIds) ? g.topicIds : [],
               canali_inspo_topic: g.canaliInspoTopic ?? null,
+              is_accelerating: g.isAccelerating ?? false,
             }));
 
           const { supabaseAdmin } = await import("@/integrations/supabase/client.server");

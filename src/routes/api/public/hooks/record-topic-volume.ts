@@ -4,7 +4,7 @@ import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 
 type Body = {
   topicId?: string;
-  platform?: "tiktok" | "instagram";
+  platform?: "tiktok" | "instagram" | "reddit" | "youtube" | "google-trends";
   contentVolume?: number | null;
   isVolumeExact?: boolean;
   totalEngagement?: number | null;
@@ -14,6 +14,12 @@ type Body = {
 // src/lib/topicGrowth.ts): un po' di margine oltre le 24h della finestra,
 // per non perdere il riferimento se un run salta.
 const HISTORY_RETENTION_HOURS = 48;
+
+// topic_growth_history (Fase E) tiene un tasso già calcolato per riga, non
+// uno snapshot di volumi — molto più leggero di topic_metrics_history, può
+// permettersi più margine per dare spazio al backtest del lag cross-fonte
+// in una fase successiva.
+const GROWTH_HISTORY_RETENTION_DAYS = 14;
 
 export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
   server: {
@@ -108,6 +114,7 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
           // Fase 2: il segnale finisce nella riga (topic, instagram) di
           // topic_signals invece che sulle colonne singole di monitored_topics
           // — così non sovrascrive più il segnale TikTok e viceversa.
+          const computedAt = new Date().toISOString();
           await supabaseAdmin.from("topic_signals").upsert(
             {
               topic_id: body.topicId,
@@ -117,10 +124,23 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
               latest_content_volume: contentVolume,
               latest_total_engagement: totalEngagement,
               is_volume_exact: body.isVolumeExact ?? false,
-              computed_at: new Date().toISOString(),
+              computed_at: computedAt,
             },
             { onConflict: "topic_id,platform" },
           );
+
+          // Fase E: log append-only dello stesso tasso appena scritto in
+          // topic_signals — serve per calcolare l'accelerazione (confronto
+          // tra due letture successive, vedi src/lib/topicAcceleration.ts),
+          // che topic_signals da solo non permette perché tiene solo
+          // l'ultimo valore.
+          await supabaseAdmin.from("topic_growth_history").insert({
+            topic_id: body.topicId,
+            platform: body.platform,
+            volume_growth_pct: growth.volumeGrowthPct,
+            engagement_growth_pct: growth.engagementGrowthPct,
+            computed_at: computedAt,
+          });
 
           const retentionStart = new Date(
             Date.now() - HISTORY_RETENTION_HOURS * 60 * 60 * 1000,
@@ -129,6 +149,14 @@ export const Route = createFileRoute("/api/public/hooks/record-topic-volume")({
             .from("topic_metrics_history")
             .delete()
             .lt("captured_at", retentionStart);
+
+          const growthHistoryRetentionStart = new Date(
+            Date.now() - GROWTH_HISTORY_RETENTION_DAYS * 24 * 60 * 60 * 1000,
+          ).toISOString();
+          await supabaseAdmin
+            .from("topic_growth_history")
+            .delete()
+            .lt("computed_at", growthHistoryRetentionStart);
 
           return Response.json({ ok: true });
         } catch (err) {

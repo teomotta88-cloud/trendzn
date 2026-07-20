@@ -10,6 +10,7 @@ import {
   Flame,
   CircleDashed,
   X,
+  Zap,
 } from "lucide-react";
 import {
   Select,
@@ -71,6 +72,8 @@ const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   "trending-audio": "Audio",
   "x-trending": "X",
   "canali-inspo": "Canali Inspo",
+  "reddit-trending": "Reddit",
+  "youtube-trending": "YouTube",
 };
 
 const SORT_LABELS: Record<SortBy, string> = {
@@ -495,10 +498,13 @@ function TrendSidebar({
 }
 
 // Riga di un trend condiviso da più fonti (o solo Canali Inspo) nella tab
-// "Trendzning Now" — vedi scripts/match-cross-source-trends.mjs. Due tag
+// "Trendzning Now" — vedi scripts/match-cross-source-trends.mjs. Tre tag
 // indipendenti e non esclusivi: "Dai Canali Inspo" quando quella fonte fa
-// parte del gruppo, il tier (peperoncini) quando il gruppo copre 2+ fonti —
-// un trend può avere entrambi insieme.
+// parte del gruppo, il tier (peperoncini) quando il gruppo copre 2+ fonti,
+// "In accelerazione" (fulmine) quando ALMENO UNO dei topic del gruppo sta
+// accelerando ora — dimensione diversa dal tier: un trend può essere
+// condiviso da molte fonti ma stabile, o da poche ma in forte accelerazione.
+// Un trend può avere tutti e tre insieme.
 function CrossSourceTrendRow({
   trend,
   onSelect,
@@ -521,6 +527,11 @@ function CrossSourceTrendRow({
           {trend.tier && (
             <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange-600 dark:text-orange-400">
               {"🌶️".repeat(TIER_CHILI_COUNT[trend.tier])} {TIER_LABEL[trend.tier]}
+            </span>
+          )}
+          {trend.is_accelerating && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-violet-600 dark:text-violet-400">
+              <Zap className="size-3" /> In accelerazione
             </span>
           )}
           {fromCanaliInspo && (

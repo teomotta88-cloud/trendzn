@@ -1,0 +1,29 @@
+name: Discover Google Trends Interest
+
+# Magnitudine reale (interest-over-time) per i topic Google Trends già
+# monitorati — vedi scripts/discover-google-trends-interest.mjs. Non scopre
+# nuovi topic (resta a sync-viral-trends.mjs), misura solo quelli esistenti.
+#
+# Cadenza ogni 3h: l'interesse di ricerca cambia più lentamente della
+# viralità social, e l'endpoint non ufficiale usato qui applica un
+# rate-limit più severo delle altre fonti — meglio restare prudenti.
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Misura l'interesse reale dei topic Google Trends
+        run: node scripts/discover-google-trends-interest.mjs

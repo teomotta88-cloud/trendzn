@@ -12,6 +12,12 @@ type IncomingUpdate = {
   likes: number;
   comments: number;
   caption?: string | null;
+  // Fase F: backfill retroattivo, stesso principio già usato per caption
+  // sotto — i post sincronizzati prima che fetchMetricsDetailed estraesse
+  // l'audio (vedi instagram-public-metrics.mjs) lo ricevono qui al primo
+  // ricontrollo successivo, senza bisogno di nessuna migration di dati.
+  audioName?: string | null;
+  audioUrl?: string | null;
 };
 
 type IncomingDeletion = {
@@ -128,6 +134,8 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
                 // sempre null) — la riempie qui, retroattivamente, quando
                 // disponibile.
                 ...(u.caption ? { content: u.caption } : {}),
+                ...(u.audioName ? { audio_name: u.audioName } : {}),
+                ...(u.audioUrl ? { audio_url: u.audioUrl } : {}),
               })
               .eq("id", row.id);
 

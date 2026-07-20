@@ -18,7 +18,7 @@ export const Route = createFileRoute("/api/public/hooks/list-cross-source-trends
           const { data, error } = await supabaseAdmin
             .from("cross_source_trends")
             .select(
-              "id, label, source_count, tier, sources, topic_ids, canali_inspo_topic, computed_at",
+              "id, label, source_count, tier, sources, topic_ids, canali_inspo_topic, is_accelerating, computed_at",
             )
             .order("source_count", { ascending: false })
             .limit(200);

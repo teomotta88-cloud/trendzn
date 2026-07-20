@@ -120,6 +120,25 @@ function hashtagForTopic(topic) {
     if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
     return topic.derived_hashtag;
   }
+  if (topic.topic_type === "reddit-trending") {
+    // Stesso trattamento di x-trending: un titolo a una parola è già un
+    // hashtag utilizzabile, oltre le 2 parole (la maggioranza dei titoli
+    // Reddit) solo l'hashtag derivato ha un tasso di successo accettabile —
+    // vedi toTopicFields in discover-reddit-trending.mjs, che calcola
+    // derived_hashtag con la stessa regola.
+    const wordCount = topic.value.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount <= 1) return topic.value;
+    if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
+    return topic.derived_hashtag;
+  }
+  if (topic.topic_type === "youtube-trending") {
+    // Stesso trattamento di reddit-trending/x-trending — vedi toTopicFields
+    // in discover-youtube-trending.mjs.
+    const wordCount = topic.value.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount <= 1) return topic.value;
+    if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
+    return topic.derived_hashtag;
+  }
   // trending-audio: nessuna discovery ancora implementata (predisposizione, Fase 9).
   return null;
 }
@@ -207,6 +226,8 @@ async function syncContent(topic, hashtag, contents) {
         topic_id: topic.id,
         engagement: c.likes + c.comments,
         reach: null,
+        audio_name: c.audioName ?? null,
+        audio_url: c.audioUrl ?? null,
       })),
       run: {
         source_hashtag: hashtag,
@@ -318,6 +339,8 @@ try {
             comments: metrics.comments,
             publishedAt: metrics.publishedAt,
             caption: metrics.caption,
+            audioName: metrics.audioName,
+            audioUrl: metrics.audioUrl,
           });
         }
       } else if (reason) {

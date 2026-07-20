@@ -6,20 +6,27 @@
 // (derived_hashtag/derived_keyword): tenerlo dietro un endpoint dedicato
 // lascia libertà di cambiare forma senza toccare il client.
 
+import type { Acceleration } from "@/lib/topicAcceleration";
+
 export const MONITORED_TOPIC_TYPES = [
   "tiktok-hashtag",
   "google-trends",
   "trending-audio",
   "x-trending",
+  "reddit-trending",
+  "youtube-trending",
 ] as const;
 export type MonitoredTopicType = (typeof MONITORED_TOPIC_TYPES)[number];
 
-export const SIGNAL_PLATFORMS = ["tiktok", "instagram"] as const;
+export const SIGNAL_PLATFORMS = ["tiktok", "instagram", "reddit", "youtube", "google-trends"] as const;
 export type SignalPlatform = (typeof SIGNAL_PLATFORMS)[number];
 
 export const SIGNAL_PLATFORM_LABEL: Record<SignalPlatform, string> = {
   tiktok: "TikTok",
   instagram: "Instagram",
+  reddit: "Reddit",
+  youtube: "YouTube",
+  "google-trends": "Google Trends",
 };
 
 // Un segnale di crescita per (topic, piattaforma) — Fase 2. TikTok riporta un
@@ -55,6 +62,13 @@ export interface MonitoredTopic {
   // Fase 2: 0-2 righe (TikTok e/o Instagram), niente più valore singolo che
   // le due piattaforme si sovrascrivevano a vicenda.
   signals: TopicPlatformSignal[];
+  // Fase E: una riga per piattaforma con almeno due letture di crescita
+  // successive (vedi src/lib/topicAcceleration.ts) — vuoto finché non c'è
+  // ancora abbastanza storico. La corroborazione cross-fonte (stesso
+  // fenomeno raccontato da più fonti) vive in cross_source_trends
+  // (src/lib/crossSourceTrends.ts), calcolata via matching semantico LLM,
+  // non qui.
+  acceleration: Acceleration[];
 }
 
 export async function listMonitoredTopics(): Promise<MonitoredTopic[]> {

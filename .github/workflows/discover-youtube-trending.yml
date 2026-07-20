@@ -1,0 +1,32 @@
+name: Discover YouTube Trending
+
+# Discovery gratuita di YouTube Trending IT + Shorts in rapida crescita — vedi
+# scripts/discover-youtube-trending.mjs. Nessun Playwright: solo YouTube Data
+# API v3 (stessa chiave già in uso per sync-brand-mentions.mjs).
+#
+# Cadenza ogni 2h: abbastanza frequente da misurare la velocity delle views
+# sugli short candidati (serve più di uno snapshot per calcolare una
+# crescita), senza sforare la quota di search.list (100 unità/chiamata,
+# una sola chiamata a run).
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Scopri Trending IT + Shorts e registrali
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/discover-youtube-trending.mjs

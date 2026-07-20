@@ -11,6 +11,8 @@ export const DISCOVERY_SOURCES = [
   "trending-audio",
   "x-trending",
   "canali-inspo",
+  "reddit-trending",
+  "youtube-trending",
 ] as const;
 export type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
@@ -41,6 +43,12 @@ export interface ViralTrendContent {
   // argomento) — null per tutti gli altri contenuti.
   cross_profile_topic: string | null;
   cross_profile_channel_count: number | null;
+  // Fase F: nome traccia + URL audio del Reel, estratti dalla stessa pagina
+  // già visitata per like/commenti (vedi fetchMetricsDetailed in
+  // scripts/lib/instagram-public-metrics.mjs) — null per contenuti non-Reel
+  // o quando Instagram non espone il link.
+  audio_name: string | null;
+  audio_url: string | null;
 }
 
 export const SORT_OPTIONS = ["virality", "date", "engagement", "views"] as const;

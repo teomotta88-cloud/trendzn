@@ -6,6 +6,11 @@ import { computeTopicGrowth, TOPIC_GROWTH_WINDOW_HOURS } from "@/lib/topicGrowth
 // per non perdere il riferimento se un run salta.
 const HISTORY_RETENTION_HOURS = 48;
 
+// topic_growth_history (Fase E) tiene un tasso già calcolato per riga —
+// molto più leggero di topic_metrics_history, retention più lunga per dare
+// margine al backtest del lag cross-fonte in una fase successiva.
+const GROWTH_HISTORY_RETENTION_DAYS = 14;
+
 type IncomingHashtag = {
   hashtag: string;
   rank: number | null;
@@ -135,6 +140,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
                 // di topic_signals invece che sulle colonne singole di
                 // monitored_topics — niente più clobbering col segnale
                 // Instagram (record-topic-volume.ts).
+                const computedAt = new Date().toISOString();
                 await supabaseAdmin.from("topic_signals").upsert(
                   {
                     topic_id: row.topic_id,
@@ -144,10 +150,20 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
                     latest_content_volume: row.content_volume,
                     latest_total_engagement: row.total_engagement,
                     is_volume_exact: row.is_volume_exact,
-                    computed_at: new Date().toISOString(),
+                    computed_at: computedAt,
                   },
                   { onConflict: "topic_id,platform" },
                 );
+
+                // Fase E: stesso log append-only di record-topic-volume.ts,
+                // per l'accelerazione (vedi src/lib/topicAcceleration.ts).
+                await supabaseAdmin.from("topic_growth_history").insert({
+                  topic_id: row.topic_id,
+                  platform: "tiktok" as const,
+                  volume_growth_pct: growth.volumeGrowthPct,
+                  engagement_growth_pct: growth.engagementGrowthPct,
+                  computed_at: computedAt,
+                });
               }
             }
 
@@ -158,6 +174,14 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
               .from("topic_metrics_history")
               .delete()
               .lt("captured_at", retentionStart);
+
+            const growthHistoryRetentionStart = new Date(
+              Date.now() - GROWTH_HISTORY_RETENTION_DAYS * 24 * 60 * 60 * 1000,
+            ).toISOString();
+            await supabaseAdmin
+              .from("topic_growth_history")
+              .delete()
+              .lt("computed_at", growthHistoryRetentionStart);
           }
 
           return Response.json({ ok: true, inserted: data?.length ?? 0 });

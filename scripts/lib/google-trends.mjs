@@ -71,3 +71,86 @@ function decodeXmlEntities(text) {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'");
 }
+
+// Magnitudine reale di una keyword già monitorata (Fase 4/D): l'RSS sopra dà
+// solo "è nel top-25 sì/no", nessun numero. Qui si usa lo stesso flusso a due
+// chiamate delle librerie non ufficiali stile pytrends (Google Trends non ha
+// un endpoint pubblico diretto per l'interest-over-time):
+//   1. /explore restituisce un token + i parametri esatti da rimandare al
+//      passo 2, specifici per la combinazione keyword+geo+finestra richiesta
+//      (il token non è riusabile per un'altra keyword).
+//   2. /widgetdata/multiline, con quel token, restituisce la serie storica
+//      vera (interest_over_time, indice relativo 0-100).
+// Entrambe le risposte hanno un prefisso anti-hijacking ")]}'," da rimuovere
+// prima del JSON.parse — stesso trucco usato da pytrends e da altre API
+// interne Google.
+//
+// ATTENZIONE: stesso profilo di rischio dell'RSS sopra (endpoint interno non
+// documentato, può cambiare senza preavviso) — il chiamante deve continuare
+// a funzionare anche se questa funzione fallisce per una singola keyword
+// (vedi discover-google-trends-interest.mjs, che logga e prosegue con le
+// altre invece di interrompere il run).
+const EXPLORE_URL = "https://trends.google.com/trends/api/explore";
+const WIDGET_DATA_URL = "https://trends.google.com/trends/api/widgetdata/multiline";
+const ANTI_HIJACK_PREFIX = ")]}',";
+
+function stripAntiHijackPrefix(text) {
+  return text.startsWith(ANTI_HIJACK_PREFIX) ? text.slice(ANTI_HIJACK_PREFIX.length) : text;
+}
+
+export async function fetchInterestOverTime({ keyword, geo = "IT", timeRange = "now 7-d" } = {}) {
+  const exploreReq = {
+    comparisonItem: [{ keyword, geo, time: timeRange }],
+    category: 0,
+    property: "",
+  };
+
+  const exploreUrl = new URL(EXPLORE_URL);
+  exploreUrl.searchParams.set("hl", "it");
+  exploreUrl.searchParams.set("tz", "-60");
+  exploreUrl.searchParams.set("req", JSON.stringify(exploreReq));
+
+  const exploreRes = await fetch(exploreUrl, {
+    headers: { "User-Agent": "Mozilla/5.0 (compatible; trendzn-bot/1.0)" },
+  });
+  if (!exploreRes.ok) {
+    throw new Error(`Google Trends explore failed (${exploreRes.status})`);
+  }
+  const exploreData = JSON.parse(stripAntiHijackPrefix(await exploreRes.text()));
+
+  const timeseriesWidget = (exploreData.widgets ?? []).find((w) => w.id === "TIMESERIES");
+  if (!timeseriesWidget) {
+    throw new Error("Google Trends: widget TIMESERIES non trovato nella risposta explore");
+  }
+
+  const widgetUrl = new URL(WIDGET_DATA_URL);
+  widgetUrl.searchParams.set("hl", "it");
+  widgetUrl.searchParams.set("tz", "-60");
+  widgetUrl.searchParams.set("req", JSON.stringify(timeseriesWidget.request));
+  widgetUrl.searchParams.set("token", timeseriesWidget.token);
+
+  const widgetRes = await fetch(widgetUrl, {
+    headers: { "User-Agent": "Mozilla/5.0 (compatible; trendzn-bot/1.0)" },
+  });
+  if (!widgetRes.ok) {
+    throw new Error(`Google Trends widgetdata failed (${widgetRes.status})`);
+  }
+  const widgetData = JSON.parse(stripAntiHijackPrefix(await widgetRes.text()));
+
+  const points = widgetData.default?.timelineData ?? [];
+  return points.map((p) => ({
+    // "time" è un timestamp unix in secondi, come stringa.
+    timestampMs: Number(p.time) * 1000,
+    // value è un array (un elemento per ogni comparisonItem: qui sempre 1
+    // keyword sola, quindi sempre value[0]) — indice relativo 0-100.
+    value: Array.isArray(p.value) ? (p.value[0] ?? null) : null,
+  }));
+}
+
+// Ultimo punto noto della serie (il più recente) — quello che interessa per
+// uno snapshot "adesso" in topic_metrics_history, non l'intera serie
+// storica (vedi discover-google-trends-interest.mjs).
+export function latestInterestValue(points) {
+  if (!points || points.length === 0) return null;
+  return points[points.length - 1]?.value ?? null;
+}

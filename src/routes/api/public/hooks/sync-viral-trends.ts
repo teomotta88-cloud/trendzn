@@ -15,6 +15,8 @@ const DISCOVERY_SOURCES = [
   "trending-audio",
   "x-trending",
   "canali-inspo",
+  "reddit-trending",
+  "youtube-trending",
 ] as const;
 type DiscoverySource = (typeof DISCOVERY_SOURCES)[number];
 
@@ -37,6 +39,12 @@ type IncomingContent = {
   // cross-profilo promosso a trend (vedi discover-canali-inspo-content.mjs).
   cross_profile_topic?: string | null;
   cross_profile_channel_count?: number | null;
+  // Fase F: nome della traccia audio e link a /reels/audio/<id>/, estratti
+  // dalla pagina del singolo Reel (vedi scripts/lib/instagram-reel-audio.mjs)
+  // — null per i contenuti non-Reel (foto/carosello) o quando l'estrazione
+  // fallisce (non tutti i Reel espongono il link, es. audio non attribuito).
+  audio_name?: string | null;
+  audio_url?: string | null;
 };
 
 type IncomingRun = {
@@ -102,6 +110,8 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 raw: c.raw ?? null,
                 cross_profile_topic: c.cross_profile_topic ?? null,
                 cross_profile_channel_count: c.cross_profile_channel_count ?? null,
+                audio_name: c.audio_name ?? null,
+                audio_url: c.audio_url ?? null,
               }));
 
             // anysite può restituire lo stesso post più volte nella stessa

@@ -1,0 +1,32 @@
+name: Discover Reddit Trending
+
+# Discovery gratuita dei post in crescita (rising) su un elenco curato di
+# subreddit italiani (src/data/trends.json -> reddit_subreddits) — vedi
+# scripts/discover-reddit-trending.mjs. Nessun login/Playwright necessario:
+# l'endpoint .json pubblico di Reddit basta.
+#
+# Cadenza oraria (stessa di Discover X Trending): più frequente delle altre
+# fonti (TikTok/Google Trends ogni 4-6h) perché il valore di Reddit qui è
+# l'anticipo rispetto a TikTok/Instagram italiani — un controllo raro lo
+# vanificherebbe. (Cron standard non esprime "ogni 90 minuti" in modo pulito
+# su un solo campo minuti, che va 0-59 — oraria è il compromesso più semplice.)
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Scopri i post rising e registrali
+        run: node scripts/discover-reddit-trending.mjs
