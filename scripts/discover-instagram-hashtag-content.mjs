@@ -226,6 +226,8 @@ async function syncContent(topic, hashtag, contents) {
         topic_id: topic.id,
         engagement: c.likes + c.comments,
         reach: null,
+        audio_name: c.audioName ?? null,
+        audio_url: c.audioUrl ?? null,
       })),
       run: {
         source_hashtag: hashtag,
@@ -337,6 +339,8 @@ try {
             comments: metrics.comments,
             publishedAt: metrics.publishedAt,
             caption: metrics.caption,
+            audioName: metrics.audioName,
+            audioUrl: metrics.audioUrl,
           });
         }
       } else if (reason) {

@@ -194,6 +194,8 @@ try {
       publishedAt,
       likes: metrics.likes,
       comments: metrics.comments,
+      audioName: metrics.audioName,
+      audioUrl: metrics.audioUrl,
     });
   }
 } finally {
@@ -267,6 +269,8 @@ const contents = accepted.map((a) => {
     discovery_source: "canali-inspo",
     engagement: a.likes + a.comments,
     reach: null,
+    audio_name: a.audioName ?? null,
+    audio_url: a.audioUrl ?? null,
     ...(crossProfile
       ? {
           cross_profile_topic: crossProfile.topic,

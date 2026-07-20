@@ -150,6 +150,15 @@ export async function openInstagramMetricsSession() {
   // poi ripiega sulla data testuale nella description. null se nessuna delle
   // due funziona: meglio "data sconosciuta" (il chiamante decide come
   // trattarla) che una data indovinata.
+  //
+  // audioName/audioUrl (Fase F): estratti dalla STESSA pagina già caricata
+  // per like/commenti — nessuna richiesta aggiuntiva. Il link alla traccia
+  // audio di un Reel è sempre nella forma /reels/audio/<id>/ (selettore
+  // stabile per prefisso di href, a differenza delle classi CSS di
+  // Instagram che cambiano spesso) — assente sui contenuti non-Reel
+  // (foto/carosello) o quando Instagram non attribuisce l'audio: in
+  // entrambi i casi il risultato è null, non un errore (vedi $eval
+  // .catch(() => null) sotto, stesso trattamento già usato per isoDatetime).
   async function fetchMetricsDetailed(url) {
     const page = await context.newPage();
     try {
@@ -180,7 +189,16 @@ export async function openInstagramMetricsSession() {
       const publishedAt = isoDatetime ?? parseDescriptionDate(description);
       const caption = extractCaption(description);
 
-      return { metrics: { likes, comments, publishedAt, caption }, reason: null };
+      const audio = await page
+        .$eval('a[href^="/reels/audio/"]', (el) => ({
+          name: el.textContent?.trim() || null,
+          href: el.getAttribute("href"),
+        }))
+        .catch(() => null);
+      const audioName = audio?.name ?? null;
+      const audioUrl = audio?.href ? new URL(audio.href, "https://www.instagram.com").toString() : null;
+
+      return { metrics: { likes, comments, publishedAt, caption, audioName, audioUrl }, reason: null };
     } catch (err) {
       console.error(`  Errore su ${url}: ${String(err)}`);
       return { metrics: null, reason: `error:${String(err)}` };
