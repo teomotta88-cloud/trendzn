@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { computeAcceleration, canonicalKeyFor, buildCorroboration } from "@/lib/topicAcceleration";
+import { computeAcceleration } from "@/lib/topicAcceleration";
 
 /**
  * Elenco dei topic attualmente monitorati (status='active', vedi
@@ -16,10 +16,12 @@ import { computeAcceleration, canonicalKeyFor, buildCorroboration } from "@/lib/
  *
  * Fase E: oltre ai segnali "grezzi" (signals, invariato), ogni topic torna
  * anche con `acceleration` (la crescita sta accelerando o rallentando,
- * rispetto alla lettura precedente — vedi topicAcceleration.ts) e
- * `corroboration` (quante fonti indipendenti raccontano lo stesso fenomeno
- * in accelerazione coerente, calcolato raggruppando TUTTI i topic attivi
- * per chiave canonica prima di rispondere).
+ * rispetto alla lettura precedente — vedi topicAcceleration.ts), letta da
+ * scripts/match-cross-source-trends.mjs per marcare come "in accelerazione"
+ * i gruppi cross-fonte che trova (vedi cross_source_trends.is_accelerating)
+ * — la corroborazione cross-fonte vera e propria (che topic raccontano lo
+ * stesso fenomeno) resta a quel matching semantico via LLM, non a questo
+ * endpoint.
  */
 export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")({
   server: {
@@ -102,39 +104,17 @@ export const Route = createFileRoute("/api/public/hooks/list-monitored-topics")(
             }
           }
 
-          // Corroborazione: raggruppa TUTTI i topic attivi per chiave
-          // canonica (vedi canonicalKeyFor — solo hashtag TikTok e topic con
-          // derived_hashtag entrano in un gruppo, gli altri restano fuori
-          // dalla corroborazione automatica in questa prima iterazione).
-          const corroborationInputs = rows.map((t) => {
-            const accelerations = accelerationByTopic.get(t.id) ?? [];
-            return {
-              id: t.id,
-              topic_type: t.topic_type,
-              canonicalKey: canonicalKeyFor(t),
-              isAccelerating: accelerations.some((a) => a.trend === "accelerating"),
-            };
-          });
-          const corroborationByKey = buildCorroboration(corroborationInputs);
-          const canonicalKeyById = new Map(
-            corroborationInputs.map((t) => [t.id, t.canonicalKey]),
-          );
-
-          const topics = rows.map((t) => {
-            const canonicalKey = canonicalKeyById.get(t.id) ?? null;
-            return {
-              id: t.id,
-              topic_type: t.topic_type,
-              value: t.value,
-              derived_hashtag: t.derived_hashtag,
-              derived_keyword: t.derived_keyword,
-              category: t.category,
-              last_seen_in_top5_at: t.last_seen_in_top5_at,
-              signals: t.topic_signals ?? [],
-              acceleration: accelerationByTopic.get(t.id) ?? [],
-              corroboration: canonicalKey ? (corroborationByKey.get(canonicalKey) ?? null) : null,
-            };
-          });
+          const topics = rows.map((t) => ({
+            id: t.id,
+            topic_type: t.topic_type,
+            value: t.value,
+            derived_hashtag: t.derived_hashtag,
+            derived_keyword: t.derived_keyword,
+            category: t.category,
+            last_seen_in_top5_at: t.last_seen_in_top5_at,
+            signals: t.topic_signals ?? [],
+            acceleration: accelerationByTopic.get(t.id) ?? [],
+          }));
 
           return Response.json({ ok: true, topics });
         } catch (err) {

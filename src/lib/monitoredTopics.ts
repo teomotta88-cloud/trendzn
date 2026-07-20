@@ -6,7 +6,7 @@
 // (derived_hashtag/derived_keyword): tenerlo dietro un endpoint dedicato
 // lascia libertà di cambiare forma senza toccare il client.
 
-import type { Acceleration, Corroboration } from "@/lib/topicAcceleration";
+import type { Acceleration } from "@/lib/topicAcceleration";
 
 export const MONITORED_TOPIC_TYPES = [
   "tiktok-hashtag",
@@ -64,13 +64,11 @@ export interface MonitoredTopic {
   signals: TopicPlatformSignal[];
   // Fase E: una riga per piattaforma con almeno due letture di crescita
   // successive (vedi src/lib/topicAcceleration.ts) — vuoto finché non c'è
-  // ancora abbastanza storico.
+  // ancora abbastanza storico. La corroborazione cross-fonte (stesso
+  // fenomeno raccontato da più fonti) vive in cross_source_trends
+  // (src/lib/crossSourceTrends.ts), calcolata via matching semantico LLM,
+  // non qui.
   acceleration: Acceleration[];
-  // Fase E: null se il topic non ha una chiave canonica (titoli lunghi
-  // Reddit/YouTube, vedi canonicalKeyFor) o se è l'unica fonte per quella
-  // chiave — altrimenti quante fonti indipendenti raccontano lo stesso
-  // fenomeno e se è "credibile" (≥2 in accelerazione coerente).
-  corroboration: Corroboration | null;
 }
 
 export async function listMonitoredTopics(): Promise<MonitoredTopic[]> {

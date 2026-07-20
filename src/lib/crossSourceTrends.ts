@@ -26,6 +26,11 @@ export interface CrossSourceTrend {
   sources: string[];
   topic_ids: string[];
   canali_inspo_topic: string | null;
+  // true se almeno uno dei topic del gruppo sta accelerando ora (vedi
+  // computeAcceleration in src/lib/topicAcceleration.ts) — indipendente dal
+  // tier: un gruppo può essere condiviso da molte fonti ma stabile, o da
+  // poche ma in forte accelerazione.
+  is_accelerating: boolean;
   computed_at: string;
 }
 
