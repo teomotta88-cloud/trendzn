@@ -136,6 +136,12 @@ export const Route = createFileRoute("/api/public/hooks/recheck-viral-engagement
                 ...(u.caption ? { content: u.caption } : {}),
                 ...(u.audioName ? { audio_name: u.audioName } : {}),
                 ...(u.audioUrl ? { audio_url: u.audioUrl } : {}),
+                // Fix rotazione list-instagram-content-urls.ts (limite noto
+                // ora risolto): senza questo, un post ricontrollato qui non
+                // si "sposta in fondo alla coda" e list-instagram-content-urls.ts
+                // (ordinata per updated_at crescente) continuerebbe a
+                // riproporlo prima di contenuti mai ricontrollati.
+                updated_at: new Date().toISOString(),
               })
               .eq("id", row.id);
 

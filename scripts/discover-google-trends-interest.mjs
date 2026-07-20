@@ -23,11 +23,20 @@
 // più alto delle altre fonti apposta, e un fallimento su una singola keyword
 // non deve mai bloccare le altre.
 //
+// Circuit breaker: N fallimenti CONSECUTIVI (non sparsi) interrompono il
+// run prima di arrivare in fondo alla lista — un singolo topic che fallisce
+// (keyword strana, errore isolato) non deve fermare gli altri, ma una
+// sequenza di fallimenti di fila è il segnale tipico di un rate-limit
+// scattato a metà run: da lì in poi ogni ulteriore tentativo ha probabilità
+// altissima di fallire comunque, quindi continuare spreca solo tempo e
+// aggrava il rate-limit invece di aggirarlo.
+//
 // Variabili d'ambiente:
-//   MAX_TOPICS_PER_RUN       default: 15 — quanti topic google-trends
-//                            misurare al massimo in un run (limita sia il
-//                            tempo totale sia il rischio di rate-limit)
-//   DELAY_BETWEEN_CALLS_MS   default: 4000
+//   MAX_TOPICS_PER_RUN         default: 15 — quanti topic google-trends
+//                              misurare al massimo in un run (limita sia il
+//                              tempo totale sia il rischio di rate-limit)
+//   DELAY_BETWEEN_CALLS_MS     default: 4000
+//   MAX_CONSECUTIVE_FAILURES   default: 3
 //
 // Eseguito da .github/workflows/discover-google-trends-interest.yml su schedule.
 
@@ -38,6 +47,7 @@ const RECORD_VOLUME_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/rec
 
 const MAX_TOPICS_PER_RUN = parseInt(process.env.MAX_TOPICS_PER_RUN ?? "15", 10);
 const DELAY_BETWEEN_CALLS_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "4000", 10);
+const MAX_CONSECUTIVE_FAILURES = parseInt(process.env.MAX_CONSECUTIVE_FAILURES ?? "3", 10);
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -77,6 +87,8 @@ console.log(`Topic Google Trends da misurare: ${topics.length}`);
 
 let measured = 0;
 let failed = 0;
+let consecutiveFailures = 0;
+let abortedEarly = false;
 
 for (let i = 0; i < topics.length; i++) {
   const topic = topics[i];
@@ -88,14 +100,25 @@ for (let i = 0; i < topics.length; i++) {
     if (interestValue == null) {
       console.log("  Nessun punto restituito, salto.");
       failed++;
+      consecutiveFailures++;
     } else {
       console.log(`  Interesse attuale: ${interestValue}/100 (${points.length} punti nella serie).`);
       await recordSignal(topic.id, interestValue);
       measured++;
+      consecutiveFailures = 0;
     }
   } catch (err) {
     console.error(`  Errore: ${String(err)}`);
     failed++;
+    consecutiveFailures++;
+  }
+
+  if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
+    console.error(
+      `\n${consecutiveFailures} fallimenti consecutivi, probabile rate-limit: interrompo il run (restavano ${topics.length - i - 1} topic da misurare, riproveranno al prossimo giro).`,
+    );
+    abortedEarly = true;
+    break;
   }
 
   if (i < topics.length - 1) {
@@ -103,4 +126,6 @@ for (let i = 0; i < topics.length; i++) {
   }
 }
 
-console.log(`\n=== Fine === Misurati: ${measured} · Falliti: ${failed}`);
+console.log(
+  `\n=== Fine === Misurati: ${measured} · Falliti: ${failed}${abortedEarly ? " · interrotto in anticipo (rate-limit sospetto)" : ""}`,
+);

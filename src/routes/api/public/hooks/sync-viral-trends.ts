@@ -45,6 +45,12 @@ type IncomingContent = {
   // fallisce (non tutti i Reel espongono il link, es. audio non attribuito).
   audio_name?: string | null;
   audio_url?: string | null;
+  // Fingerprint acustico (Chromaprint, calcolato inline durante lo
+  // scraping mentre l'URL del video CDN è ancora valido — vedi
+  // scripts/lib/audio-fingerprint.mjs) — solo per un sottoinsieme dei Reel
+  // Canali Inspo con audio_url "isolato" (nessun altro Reel noto con lo
+  // stesso audio_url), null per tutti gli altri.
+  audio_fingerprint?: number[] | null;
 };
 
 type IncomingRun = {
@@ -112,6 +118,12 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 cross_profile_channel_count: c.cross_profile_channel_count ?? null,
                 audio_name: c.audio_name ?? null,
                 audio_url: c.audio_url ?? null,
+                audio_fingerprint: c.audio_fingerprint ?? null,
+                // Fix rotazione list-instagram-content-urls.ts: ogni scrittura
+                // reale del contenuto aggiorna updated_at esplicitamente
+                // (nessun trigger DB, stesso pattern già in uso per
+                // monitored_topics.updated_at).
+                updated_at: new Date().toISOString(),
               }));
 
             // anysite può restituire lo stesso post più volte nella stessa
