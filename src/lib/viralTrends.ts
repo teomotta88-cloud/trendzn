@@ -50,12 +50,15 @@ export interface ViralTrendContent {
   audio_name: string | null;
   audio_url: string | null;
   // Valorizzati solo per i Reel Canali Inspo il cui audio ricorre su 3+
-  // Reel diversi pubblicati da 2+ canali distinti (match esatto su
-  // audio_url, vedi sync-audio-trends.ts) — null altrimenti, compreso il
-  // caso di un audio riscaricato/ricaricato con un audio_url diverso, che
-  // questo match non può riconoscere come lo stesso suono.
+  // Reel diversi pubblicati da 2+ canali distinti — null altrimenti.
   audio_trend_reel_count: number | null;
   audio_trend_channel_count: number | null;
+  // 'exact' = stesso audio_url (deterministico), 'fingerprint' = stesso
+  // audio riconosciuto per similarità acustica pur con audio_url diverso
+  // (euristico, soglia dichiaratamente da calibrare — vedi
+  // src/lib/audioFingerprintSimilarity.ts) — null se il Reel non fa parte
+  // di nessun cluster.
+  audio_trend_matched_by: "exact" | "fingerprint" | null;
 }
 
 export const SORT_OPTIONS = ["virality", "date", "engagement", "views"] as const;

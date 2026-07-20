@@ -198,7 +198,22 @@ export async function openInstagramMetricsSession() {
       const audioName = audio?.name ?? null;
       const audioUrl = audio?.href ? new URL(audio.href, "https://www.instagram.com").toString() : null;
 
-      return { metrics: { likes, comments, publishedAt, caption, audioName, audioUrl }, reason: null };
+      // videoUrl (rilevamento audio via fingerprint, Canali Inspo): l'URL
+      // CDN diretto del video, presente sul <video> solo per i Reel — a
+      // differenza di audioName/audioUrl NON viene mai salvato su
+      // viral_trend_content (l'URL firmato scade in tempi brevi, inutile
+      // conservarlo): usato subito, nella stessa run, da chi chiama questa
+      // funzione per calcolare il fingerprint mentre l'URL è ancora valido
+      // (vedi scripts/lib/audio-fingerprint.mjs). null per i contenuti
+      // non-Reel o quando il tag <video> non è (ancora) nel DOM.
+      const videoUrl = await page
+        .$eval("video", (el) => el.currentSrc || el.src || null)
+        .catch(() => null);
+
+      return {
+        metrics: { likes, comments, publishedAt, caption, audioName, audioUrl, videoUrl },
+        reason: null,
+      };
     } catch (err) {
       console.error(`  Errore su ${url}: ${String(err)}`);
       return { metrics: null, reason: `error:${String(err)}` };

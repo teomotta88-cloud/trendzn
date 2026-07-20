@@ -1,12 +1,14 @@
 // Trend Virali: rileva "audio in trend" tra i Reel dei Canali Inspo — 3+
-// Reel diversi con lo stesso audio_url, da almeno 2 canali distinti (vedi
-// sync-audio-trends.ts per la logica esatta e i limiti noti del match per
-// URL, che non cattura un audio ricaricato come "originale" da un altro
-// utente).
+// Reel diversi con lo stesso audio, da almeno 2 canali distinti. Due
+// passate lato server (vedi sync-audio-trends.ts): match esatto su
+// audio_url (deterministico), poi fingerprint acustico (Chromaprint,
+// euristico) solo sui Reel che il match esatto non è riuscito a
+// raggruppare — recupera il caso di un audio ricaricato come "originale"
+// da un altro utente, che il match esatto per definizione non vede.
 //
 // Nessuno scraping qui: aggrega solo ciò che discover-canali-inspo-content.mjs
-// ha già raccolto (audio_name/audio_url, Fase F) — per questo lo script è
-// solo una chiamata all'endpoint, niente Playwright.
+// ha già raccolto (audio_name/audio_url/audio_fingerprint) — per questo lo
+// script è solo una chiamata all'endpoint, niente Playwright.
 //
 // Eseguito da .github/workflows/sync-audio-trends.yml su schedule, dopo
 // Discover Canali Inspo Content.
@@ -22,5 +24,8 @@ if (!res.ok) {
 }
 const result = await res.json();
 console.log(
-  `Gruppi audio analizzati: ${result.audioGroups ?? 0} · Reel promossi a "in trend": ${result.promoted ?? 0} · Reel resettati: ${result.reset ?? 0}`,
+  `Match esatto: ${result.audioUrlGroups ?? 0} gruppi audio_url, ${result.exactPromoted ?? 0} Reel promossi, ${result.exactReset ?? 0} resettati.`,
+);
+console.log(
+  `Match fingerprint: ${result.fingerprintCandidates ?? 0} Reel candidati (audio isolato dal match esatto), ${result.fingerprintPromoted ?? 0} promossi.`,
 );
