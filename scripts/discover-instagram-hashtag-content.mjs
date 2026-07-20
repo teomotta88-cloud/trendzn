@@ -131,6 +131,14 @@ function hashtagForTopic(topic) {
     if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
     return topic.derived_hashtag;
   }
+  if (topic.topic_type === "youtube-trending") {
+    // Stesso trattamento di reddit-trending/x-trending — vedi toTopicFields
+    // in discover-youtube-trending.mjs.
+    const wordCount = topic.value.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount <= 1) return topic.value;
+    if (wordCount > MAX_GOOGLE_TRENDS_WORDS || !topic.derived_hashtag) return null;
+    return topic.derived_hashtag;
+  }
   // trending-audio: nessuna discovery ancora implementata (predisposizione, Fase 9).
   return null;
 }

@@ -65,8 +65,6 @@ const DISCOVERY_SOURCE_LABELS: Record<DiscoverySource, string> = {
   "x-trending": "X",
   "canali-inspo": "Canali Inspo",
   "reddit-trending": "Reddit",
-  // Nessun contenuto reale ancora (Fase C non implementata): la label serve
-  // solo a soddisfare il tipo, il filtro non produce risultati per ora.
   "youtube-trending": "YouTube",
 };
 
