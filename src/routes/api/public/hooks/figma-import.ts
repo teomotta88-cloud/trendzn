@@ -1271,6 +1271,231 @@ export function normalizeExporterNode(raw: unknown, parentCumulative: Mat2x3): F
   return out;
 }
 
+// --- Adattatore per un terzo formato di export (plugin di terzi non
+// identificato per nome nei metadati, riconoscibile da "plugin_version":
+// "2.0") --- Diverso sia da "JSON Exporter" sopra sia dal nostro
+// figma-export-plugin/:
+// - Il JSON incollato non è un nodo Figma ma un involucro
+//   { plugin_version, pages: [{ frames: [...] }] }: le "frames" di
+//   pages[0] sono i veri nodi radice (di solito una sola SECTION).
+// - Stessa tecnica di ricostruzione posizione di "JSON Exporter" (x/y
+//   locali + relativeTransform da comporre), ma qui "opacity" vive come
+//   proprietà SEPARATA sul fill/effetto invece che dentro color.a — va
+//   fusa a mano. Il nodo radice di pagina (SECTION) usa "background" al
+//   posto di "fills" per il proprio sfondo.
+// - Stile testo su proprietà piatte ma con nomi diversi da "JSON
+//   Exporter": fontFamily/fontWeight sono già stringa/numero diretti
+//   (niente euristica peso-stile), letterSpacing/lineHeight sono già in
+//   px (niente {unit,value}), textAlign invece di textAlignHorizontal.
+// - Novità importante: molti nodi foglia hanno "exportedImage" (un PNG in
+//   base64, il nodo già appiattito con fill/ombra/gradiente inclusi),
+//   ANCHE quando "fills" è vuoto — risolve il limite di "JSON Exporter"
+//   sulle foto mancanti. Per i rettangoli/ellissi senza nessun fill
+//   strutturato (il caso "foto mai assegnata" nel file originale, non un
+//   limite del plugin) va sintetizzato un fill IMAGE finto, altrimenti
+//   flatten() più sopra li tratterebbe come forma piena trasparente
+//   invece che come campo immagine (perdendo l'immagine già pronta). Un
+//   GRUPPO con maschera viene esportato dal plugin come UN SOLO
+//   exportedImage composito sul nodo GROUP stesso (i figli — la maschera
+//   vettoriale e la foto sottostante — restano nel JSON ma senza
+//   immagine propria): in quel caso il gruppo va trattato come foglia
+//   invece che come contenitore, altrimenti si perderebbe la foto
+//   mascherata e si vedrebbe solo la sagoma della maschera.
+export function looksLikePagesExportFormat(value: unknown): boolean {
+  if (typeof value !== "object" || value === null) return false;
+  return Array.isArray((value as Record<string, unknown>).pages);
+}
+
+// Nodo radice da passare al normalizzatore: se pages[0] ha un solo frame
+// lo usa direttamente, altrimenti li avvolge in una SECTION sintetica
+// (stesso approccio della "Selezione multipla" di
+// figma-export-plugin/src/code.ts per una selezione con più frame).
+export function extractPagesFormatRoot(value: Record<string, unknown>): unknown {
+  const pages = value.pages;
+  if (!Array.isArray(pages) || pages.length === 0) return null;
+  const page = pages[0];
+  if (typeof page !== "object" || page === null) return null;
+  const frames = (page as Record<string, unknown>).frames;
+  if (!Array.isArray(frames) || frames.length === 0) return null;
+  if (frames.length === 1) return frames[0];
+  return {
+    id: "trendzn-pages-root",
+    name: (page as Record<string, unknown>).name ?? "Pagina",
+    type: "SECTION",
+    children: frames,
+  };
+}
+
+function normalizePagesFormatColor(
+  raw: unknown,
+  fillOpacity: number | undefined,
+): FigmaColor | undefined {
+  if (typeof raw !== "object" || raw === null) return undefined;
+  const c = raw as Record<string, unknown>;
+  if (typeof c.r !== "number" || typeof c.g !== "number" || typeof c.b !== "number")
+    return undefined;
+  // "a" diretto su color esiste solo per gradientStops/effetti in questo
+  // formato; per i fill SOLID l'opacità vive sul fill stesso ed è fusa
+  // qui per restare compatibile con colorToHex/shadowStyleFromEffects,
+  // che leggono solo color.a.
+  const a = typeof c.a === "number" ? c.a : typeof fillOpacity === "number" ? fillOpacity : 1;
+  return { r: c.r, g: c.g, b: c.b, a };
+}
+
+function normalizePagesFormatFill(raw: unknown): FigmaFill | null {
+  if (typeof raw !== "object" || raw === null) return null;
+  const f = raw as Record<string, unknown>;
+  if (typeof f.type !== "string") return null;
+  const fillOpacity = typeof f.opacity === "number" ? f.opacity : undefined;
+  const out: FigmaFill = { type: f.type, visible: f.visible !== false };
+  const color = normalizePagesFormatColor(f.color, fillOpacity);
+  if (color) out.color = color;
+  if (Array.isArray(f.gradientStops)) {
+    out.gradientStops = (f.gradientStops as unknown[])
+      .map((s) => {
+        if (typeof s !== "object" || s === null) return null;
+        const stop = s as Record<string, unknown>;
+        const stopColor = normalizePagesFormatColor(stop.color, undefined);
+        if (!stopColor || typeof stop.position !== "number") return null;
+        return { position: stop.position, color: stopColor };
+      })
+      .filter((s): s is { position: number; color: FigmaColor } => s !== null);
+  }
+  if (isMat2x3(f.gradientTransform)) out.gradientTransform = f.gradientTransform;
+  return out;
+}
+
+function normalizePagesFormatFills(raw: unknown): FigmaFill[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const out = raw.map(normalizePagesFormatFill).filter((f): f is FigmaFill => f !== null);
+  return out.length > 0 ? out : [];
+}
+
+function normalizePagesFormatEffects(raw: unknown): FigmaEffect[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  return raw
+    .map((e) => {
+      if (typeof e !== "object" || e === null) return null;
+      const eff = e as Record<string, unknown>;
+      if (typeof eff.type !== "string") return null;
+      const out: FigmaEffect = { type: eff.type, visible: eff.visible !== false };
+      const color = normalizePagesFormatColor(eff.color, undefined);
+      if (color) out.color = color;
+      if (typeof eff.radius === "number") out.radius = eff.radius;
+      if (typeof eff.offset === "object" && eff.offset !== null) {
+        const o = eff.offset as Record<string, unknown>;
+        if (typeof o.x === "number" && typeof o.y === "number") out.offset = { x: o.x, y: o.y };
+      }
+      return out;
+    })
+    .filter((e): e is FigmaEffect => e !== null);
+}
+
+function normalizePagesFormatTextStyle(raw: Record<string, unknown>): FigmaNode["style"] {
+  return {
+    fontFamily: typeof raw.fontFamily === "string" ? raw.fontFamily : "Inter",
+    fontWeight: typeof raw.fontWeight === "number" ? raw.fontWeight : 400,
+    fontSize: typeof raw.fontSize === "number" ? raw.fontSize : 24,
+    textAlignHorizontal: typeof raw.textAlign === "string" ? raw.textAlign : undefined,
+    letterSpacing: typeof raw.letterSpacing === "number" ? raw.letterSpacing : undefined,
+    lineHeightPx: typeof raw.lineHeight === "number" ? raw.lineHeight : undefined,
+    textCase: typeof raw.textCase === "string" ? raw.textCase : undefined,
+    textDecoration: typeof raw.textDecoration === "string" ? raw.textDecoration : undefined,
+  };
+}
+
+export function normalizePagesFormatNode(raw: unknown, parentCumulative: Mat2x3): FigmaNode | null {
+  if (typeof raw !== "object" || raw === null) return null;
+  const n = raw as Record<string, unknown>;
+  if (typeof n.type !== "string") return null;
+
+  const ownMat: Mat2x3 = isMat2x3(n.relativeTransform)
+    ? n.relativeTransform
+    : [
+        [1, 0, typeof n.x === "number" ? n.x : 0],
+        [0, 1, typeof n.y === "number" ? n.y : 0],
+      ];
+  const cumulative = composeMat(parentCumulative, ownMat);
+  const width = typeof n.width === "number" ? n.width : 0;
+  const height = typeof n.height === "number" ? n.height : 0;
+
+  // Il nodo radice di pagina (SECTION) usa "background" al posto di
+  // "fills" (vedi commento in cima alla sezione); tutti gli altri nodi
+  // usano "fills" normalmente.
+  const fills = normalizePagesFormatFills(n.fills ?? n.background);
+
+  const exportedImage = typeof n.exportedImage === "string" ? n.exportedImage : undefined;
+  const pluginExportDataUrl = exportedImage ? `data:image/png;base64,${exportedImage}` : undefined;
+
+  // Rettangolo/ellisse SENZA nessun fill strutturato ma con un'immagine
+  // già esportata: senza questo fill sintetico, il codice più sopra (che
+  // cerca un fill IMAGE vero prima di trattare il nodo come campo
+  // immagine) lo tratterebbe come forma piena trasparente, perdendo
+  // un'immagine che in realtà è già pronta in pluginExportDataUrl. Se il
+  // nodo ha GIÀ un fill vero (SOLID/GRADIENT), invece, va lasciato
+  // stare: questo plugin esporta "exportedImage" su quasi ogni nodo
+  // (anche forme piene/gradienti che renderizzano già correttamente da
+  // sole), e un fill IMAGE aggiunto sopra li trasformerebbe per errore
+  // in campi immagine dinamici invece che restare forme decorative fisse.
+  const needsSyntheticImageFill =
+    (n.type === "RECTANGLE" || n.type === "ELLIPSE") &&
+    !!pluginExportDataUrl &&
+    (fills ?? []).length === 0;
+  const finalFills = needsSyntheticImageFill
+    ? [...(fills ?? []), { type: "IMAGE", visible: true }]
+    : fills;
+
+  // Gruppo con maschera: il plugin esporta "exportedImage" su QUALUNQUE
+  // gruppo (non solo quelli mascherati), quindi non basta la sua presenza
+  // da sola per decidere di appiattire — un gruppo puramente organizzativo
+  // (es. testo + icona raggruppati) NON va appiattito, altrimenti si perde
+  // il testo modificabile. Il segnale specifico di un gruppo mascherato è
+  // avere tra i figli DIRETTI un rettangolo/ellisse senza nessun fill
+  // strutturato (l'immagine sotto la maschera, che il plugin non riesce a
+  // rappresentare separatamente): solo in quel caso il composito del
+  // gruppo è l'unico modo di recuperare l'immagine, e si tratta il gruppo
+  // come foglia invece di scendere nei figli.
+  const rawChildren = Array.isArray(n.children) ? (n.children as unknown[]) : [];
+  const hasUnresolvedImageChild = rawChildren.some((child) => {
+    if (typeof child !== "object" || child === null) return false;
+    const c = child as Record<string, unknown>;
+    return (
+      (c.type === "RECTANGLE" || c.type === "ELLIPSE") &&
+      !(Array.isArray(c.fills) && c.fills.length > 0)
+    );
+  });
+  const isFlattenedGroup = n.type === "GROUP" && !!pluginExportDataUrl && hasUnresolvedImageChild;
+
+  const out: FigmaNode = {
+    id: typeof n.id === "string" ? n.id : `pages-export-${Math.random().toString(36).slice(2)}`,
+    name: typeof n.name === "string" ? n.name : n.type,
+    type: n.type,
+    visible: n.visible !== false,
+    absoluteBoundingBox: { x: cumulative[0][2], y: cumulative[1][2], width, height },
+    fills: finalFills,
+    strokes: normalizePagesFormatFills(n.strokes),
+    strokeWeight: typeof n.strokeWeight === "number" ? n.strokeWeight : undefined,
+    opacity: typeof n.opacity === "number" ? n.opacity : undefined,
+    cornerRadius: typeof n.cornerRadius === "number" ? n.cornerRadius : undefined,
+    effects: normalizePagesFormatEffects(n.effects),
+    rotationDegrees: typeof n.rotation === "number" ? n.rotation : undefined,
+    pluginExportDataUrl,
+  };
+
+  if (n.type === "TEXT") {
+    out.characters = typeof n.characters === "string" ? n.characters : undefined;
+    out.style = normalizePagesFormatTextStyle(n);
+  }
+
+  if (Array.isArray(n.children) && !isFlattenedGroup) {
+    out.children = (n.children as unknown[])
+      .map((child) => normalizePagesFormatNode(child, cumulative))
+      .filter((c): c is FigmaNode => c !== null);
+  }
+
+  return out;
+}
+
 function isPlausibleFigmaNode(value: unknown): value is FigmaNode {
   return (
     typeof value === "object" &&
@@ -1291,7 +1516,28 @@ export const Route = createFileRoute("/api/public/hooks/figma-import")({
           // REST — vedi il commento in cima al file sul limite del piano
           // Starter che questo percorso bypassa del tutto.
           if (body.nodeJson !== undefined) {
-            if (!isPlausibleFigmaNode(body.nodeJson)) {
+            // Tre formati possibili: il nostro figma-export-plugin/ (già in
+            // forma FigmaNode, con absoluteBoundingBox), il plugin Community
+            // di terzi "JSON Exporter" (relativeTransform + x/y locali,
+            // niente absoluteBoundingBox) o l'involucro { pages: [{ frames
+            // }] } di un terzo plugin (vedi normalizeExporterNode e
+            // normalizePagesFormatNode più sopra per le differenze). Il
+            // formato pages/frames va spacchettato PRIMA del controllo
+            // "type", perché l'involucro stesso non ne ha uno.
+            const isPagesFormat = looksLikePagesExportFormat(body.nodeJson);
+            const nodeJsonRaw = isPagesFormat
+              ? extractPagesFormatRoot(body.nodeJson as Record<string, unknown>)
+              : body.nodeJson;
+            if (isPagesFormat && nodeJsonRaw === null) {
+              return Response.json(
+                {
+                  ok: false,
+                  error: "Il JSON incollato non contiene nessun frame in pages[0].frames.",
+                },
+                { status: 400 },
+              );
+            }
+            if (!isPlausibleFigmaNode(nodeJsonRaw)) {
               return Response.json(
                 {
                   ok: false,
@@ -1300,14 +1546,11 @@ export const Route = createFileRoute("/api/public/hooks/figma-import")({
                 { status: 400 },
               );
             }
-            // Due formati possibili: il nostro figma-export-plugin/ (già
-            // in forma FigmaNode, con absoluteBoundingBox) oppure il
-            // plugin Community di terzi "JSON Exporter" (relativeTransform
-            // + x/y locali, niente absoluteBoundingBox) — vedi
-            // normalizeExporterNode più sopra per le differenze.
-            const root = looksLikeExporterFormatNode(body.nodeJson)
-              ? normalizeExporterNode(body.nodeJson, identityMat())
-              : body.nodeJson;
+            const root = isPagesFormat
+              ? normalizePagesFormatNode(nodeJsonRaw, identityMat())
+              : looksLikeExporterFormatNode(nodeJsonRaw)
+                ? normalizeExporterNode(nodeJsonRaw, identityMat())
+                : nodeJsonRaw;
             if (!root) {
               return Response.json(
                 { ok: false, error: "Il JSON incollato non è un nodo Figma valido." },
