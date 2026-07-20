@@ -9,6 +9,7 @@ import {
   Minus,
   Flame,
   CircleDashed,
+  X,
 } from "lucide-react";
 import {
   Select,
@@ -41,6 +42,12 @@ import {
   type MonitoredTopic,
 } from "@/lib/monitoredTopics";
 import { GROWTH_THRESHOLD_PCT } from "@/lib/topicGrowth";
+import {
+  listCrossSourceTrends,
+  TIER_CHILI_COUNT,
+  TIER_LABEL,
+  type CrossSourceTrend,
+} from "@/lib/crossSourceTrends";
 
 export const Route = createFileRoute("/trend-virali")({
   head: () => ({
@@ -216,21 +223,32 @@ function VerdictBadge({ verdict }: { verdict: TopicVerdict }) {
   );
 }
 
-type RankedTopicType = "tiktok-hashtag" | "google-trends" | "x-trending";
-type TopicView = RankedTopicType | "content" | "canali-inspo";
-
-const TOPIC_VIEW_LABELS: Record<TopicView, string> = {
-  "tiktok-hashtag": "TikTok Trend",
-  "google-trends": "Google Trend",
-  "x-trending": "X Trend",
-  content: "Contenuti",
-  "canali-inspo": "Dai Canali Inspo",
-};
-
-const RANKED_TOPIC_VIEWS = ["tiktok-hashtag", "google-trends", "x-trending"] as const;
-function isRankedTopicView(view: TopicView): view is RankedTopicType {
-  return (RANKED_TOPIC_VIEWS as readonly string[]).includes(view);
+// Filtro attivo sui contenuti quando l'utente clicca una keyword (in
+// sidebar o in "Trendzning Now") invece di scrivere nella ricerca testuale —
+// tre modi di abbinamento perché le fonti non condividono tutte la stessa
+// chiave (vedi topic_id per TikTok/Google/X, cross_profile_topic per Canali
+// Inspo). Combinati in OR: un contenuto passa se soddisfa almeno uno.
+interface ActiveTopicFilter {
+  label: string;
+  topicIds: string[];
+  sourceHashtag: string | null;
+  canaliInspoTopic: string | null;
 }
+
+function contentMatchesTopicFilter(item: ViralTrendContent, filter: ActiveTopicFilter): boolean {
+  if (filter.topicIds.length > 0 && item.topic_id && filter.topicIds.includes(item.topic_id)) {
+    return true;
+  }
+  if (filter.sourceHashtag != null && item.source_hashtag === filter.sourceHashtag) {
+    return true;
+  }
+  if (filter.canaliInspoTopic != null && item.cross_profile_topic === filter.canaliInspoTopic) {
+    return true;
+  }
+  return false;
+}
+
+type RankedTopicType = "tiktok-hashtag" | "google-trends" | "x-trending";
 
 // Nessun "rank" reale esiste ancora per Google Trends (solo TikTok
 // Creative Center lo fornisce, e nemmeno quello è esposto oggi da
@@ -252,10 +270,12 @@ function TopicRankingRow({
   rank,
   topic,
   verdict,
+  onSelect,
 }: {
   rank: number;
   topic: MonitoredTopic;
   verdict: TopicVerdict;
+  onSelect: () => void;
 }) {
   const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
   const producing = verdict === "producing";
@@ -265,52 +285,58 @@ function TopicRankingRow({
   );
 
   return (
-    <li
-      className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 ${
-        producing ? "border-orange-500/60 bg-orange-500/5" : "border-border bg-card"
-      }`}
-    >
-      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-semibold tabular-nums text-muted-foreground">
-        {rank}
-      </span>
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2">
-          <p className="truncate text-sm font-medium text-foreground">{label}</p>
-          <VerdictBadge verdict={verdict} />
-        </div>
-        {topic.topic_type === "x-trending" ? (
-          // X non fornisce qui alcun volume/conteggio utilizzabile (solo
-          // rank + categoria in pagina) — su richiesta esplicita questa
-          // fonte non traccia crescita/segnali come le altre due, mostra
-          // solo la categoria vista da X (assente per i trend senza una
-          // categoria reale, es. "Trending in Italy").
-          <span className="mt-0.5 inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
-            {topic.category ?? "Nessuna categoria"}
-          </span>
-        ) : signals.length === 0 ? (
-          <p className="mt-0.5 text-[11px] text-muted-foreground">Nessun segnale ancora rilevato</p>
-        ) : (
-          <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1">
-            {signals.map((s) => {
-              const sampled = signalConfidence(s) === "sampled";
-              return (
-                <div key={s.platform} className="flex items-center gap-1.5">
-                  <span className="text-[11px] font-medium text-foreground">
-                    {SIGNAL_PLATFORM_LABEL[s.platform]}
-                  </span>
-                  {s.latest_content_volume != null && (
-                    <span className="text-[11px] tabular-nums text-muted-foreground">
-                      {sampled ? "~" : ""}
-                      {formatCompactNumber(s.latest_content_volume)}
-                    </span>
-                  )}
-                  <GrowthIndicator pct={s.volume_growth_pct} />
-                </div>
-              );
-            })}
+    <li>
+      <button
+        type="button"
+        onClick={onSelect}
+        className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-left transition hover:border-primary/60 ${
+          producing ? "border-orange-500/60 bg-orange-500/5" : "border-border bg-card"
+        }`}
+      >
+        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-semibold tabular-nums text-muted-foreground">
+          {rank}
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <p className="truncate text-sm font-medium text-foreground">{label}</p>
+            <VerdictBadge verdict={verdict} />
           </div>
-        )}
-      </div>
+          {topic.topic_type === "x-trending" ? (
+            // X non fornisce qui alcun volume/conteggio utilizzabile (solo
+            // rank + categoria in pagina) — su richiesta esplicita questa
+            // fonte non traccia crescita/segnali come le altre due, mostra
+            // solo la categoria vista da X (assente per i trend senza una
+            // categoria reale, es. "Trending in Italy").
+            <span className="mt-0.5 inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+              {topic.category ?? "Nessuna categoria"}
+            </span>
+          ) : signals.length === 0 ? (
+            <p className="mt-0.5 text-[11px] text-muted-foreground">
+              Nessun segnale ancora rilevato
+            </p>
+          ) : (
+            <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1">
+              {signals.map((s) => {
+                const sampled = signalConfidence(s) === "sampled";
+                return (
+                  <div key={s.platform} className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-medium text-foreground">
+                      {SIGNAL_PLATFORM_LABEL[s.platform]}
+                    </span>
+                    {s.latest_content_volume != null && (
+                      <span className="text-[11px] tabular-nums text-muted-foreground">
+                        {sampled ? "~" : ""}
+                        {formatCompactNumber(s.latest_content_volume)}
+                      </span>
+                    )}
+                    <GrowthIndicator pct={s.volume_growth_pct} />
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </button>
     </li>
   );
 }
@@ -319,10 +345,12 @@ function TopicRankingList({
   topics,
   view,
   contentByTopic,
+  onSelect,
 }: {
   topics: MonitoredTopic[];
   view: RankedTopicType;
   contentByTopic: Map<string, ViralTrendContent[]>;
+  onSelect: (topic: MonitoredTopic) => void;
 }) {
   // Solo i topic davvero ancora in classifica adesso, non quelli nel periodo
   // di grazia (usciti dai top-N, ma ancora status='active' e monitorati in
@@ -346,7 +374,7 @@ function TopicRankingList({
   }
 
   return (
-    <ol className="space-y-1.5">
+    <ol className="max-h-[36rem] space-y-1.5 overflow-y-auto pr-1">
       {shown.map((t, i) => (
         <TopicRankingRow
           key={t.id}
@@ -355,17 +383,211 @@ function TopicRankingList({
           verdict={computeTopicVerdict(contentByTopic.get(t.value) ?? [], {
             hasSignals: t.signals.length > 0,
           })}
+          onSelect={() => onSelect(t)}
         />
       ))}
     </ol>
   );
 }
 
-// Card di un singolo contenuto, riusata sia nel tab "Contenuti" sia nel tab
-// "Dai Canali Inspo". Il badge del trend cross-profilo (3+ canali diversi
-// sullo stesso argomento, vedi discover-canali-inspo-content.mjs) compare
-// ovunque sia valorizzato, non solo nel tab Canali Inspo — un post del
-// genere può comparire anche nel feed generale "Contenuti".
+// Classifica Canali Inspo nella sidebar: non esiste un rank/volume reale
+// come per le altre 3 fonti (nessun conteggio ufficiale), quindi si ordina
+// per numero di canali distinti (il segnale più forte di un trend cross-
+// profilo) poi per numero di post.
+function CanaliInspoTopicList({
+  topics,
+  onSelect,
+}: {
+  topics: { topic: string; channelCount: number; postCount: number }[];
+  onSelect: (topic: string) => void;
+}) {
+  if (topics.length === 0) {
+    return (
+      <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+        Nessun trend cross-profilo rilevato al momento.
+      </p>
+    );
+  }
+
+  return (
+    <ol className="max-h-[36rem] space-y-1.5 overflow-y-auto pr-1">
+      {topics.map((t, i) => (
+        <li key={t.topic}>
+          <button
+            type="button"
+            onClick={() => onSelect(t.topic)}
+            className="flex w-full items-center gap-3 rounded-xl border border-border bg-card px-3 py-2.5 text-left transition hover:border-primary/60"
+          >
+            <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-semibold tabular-nums text-muted-foreground">
+              {i + 1}
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-medium text-foreground">{t.topic}</p>
+              <p className="mt-0.5 text-[11px] text-muted-foreground">
+                {t.channelCount} canali · {t.postCount} post
+              </p>
+            </div>
+          </button>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+const SIDEBAR_SOURCES = ["canali-inspo", "x-trending", "tiktok-hashtag", "google-trends"] as const;
+type SidebarSource = (typeof SIDEBAR_SOURCES)[number];
+const SIDEBAR_SOURCE_LABELS: Record<SidebarSource, string> = {
+  "canali-inspo": "Canali Inspo",
+  "x-trending": "X",
+  "tiktok-hashtag": "TikTok",
+  "google-trends": "Google",
+};
+
+function TrendSidebar({
+  sidebarSource,
+  setSidebarSource,
+  topics,
+  topicsError,
+  contentByTopic,
+  crossProfileTopics,
+  onSelectTopic,
+  onSelectCanaliInspoTopic,
+}: {
+  sidebarSource: SidebarSource;
+  setSidebarSource: (s: SidebarSource) => void;
+  topics: MonitoredTopic[];
+  topicsError: string | null;
+  contentByTopic: Map<string, ViralTrendContent[]>;
+  crossProfileTopics: { topic: string; channelCount: number; postCount: number }[];
+  onSelectTopic: (topic: MonitoredTopic) => void;
+  onSelectCanaliInspoTopic: (topic: string) => void;
+}) {
+  return (
+    <aside className="w-full shrink-0 space-y-3 lg:w-80">
+      <h2 className="text-sm font-semibold text-foreground">Classifiche per fonte</h2>
+
+      <Tabs value={sidebarSource} onValueChange={(v) => setSidebarSource(v as SidebarSource)}>
+        <TabsList className="grid w-full grid-cols-2 gap-1 sm:grid-cols-4 lg:grid-cols-2">
+          {SIDEBAR_SOURCES.map((s) => (
+            <TabsTrigger key={s} value={s} className="text-xs">
+              {SIDEBAR_SOURCE_LABELS[s]}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
+
+      {sidebarSource === "canali-inspo" ? (
+        <CanaliInspoTopicList topics={crossProfileTopics} onSelect={onSelectCanaliInspoTopic} />
+      ) : topicsError ? (
+        <p className="text-sm text-destructive">
+          Errore nel caricamento dei topic monitorati: {topicsError}.
+        </p>
+      ) : (
+        <TopicRankingList
+          topics={topics}
+          view={sidebarSource}
+          contentByTopic={contentByTopic}
+          onSelect={onSelectTopic}
+        />
+      )}
+    </aside>
+  );
+}
+
+// Riga di un trend condiviso da più fonti (o solo Canali Inspo) nella tab
+// "Trendzning Now" — vedi scripts/match-cross-source-trends.mjs. Due tag
+// indipendenti e non esclusivi: "Dai Canali Inspo" quando quella fonte fa
+// parte del gruppo, il tier (peperoncini) quando il gruppo copre 2+ fonti —
+// un trend può avere entrambi insieme.
+function CrossSourceTrendRow({
+  trend,
+  onSelect,
+}: {
+  trend: CrossSourceTrend;
+  onSelect: () => void;
+}) {
+  const fromCanaliInspo = trend.sources.includes("canali-inspo");
+  const otherSources = trend.sources.filter((s) => s !== "canali-inspo");
+
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={onSelect}
+        className="flex w-full flex-col gap-2 rounded-xl border border-border bg-card px-4 py-3 text-left transition hover:border-primary/60"
+      >
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="text-sm font-semibold text-foreground">{trend.label}</p>
+          {trend.tier && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange-600 dark:text-orange-400">
+              {"🌶️".repeat(TIER_CHILI_COUNT[trend.tier])} {TIER_LABEL[trend.tier]}
+            </span>
+          )}
+          {fromCanaliInspo && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+              Dai Canali Inspo
+            </span>
+          )}
+        </div>
+        {otherSources.length > 0 && (
+          <p className="text-[11px] text-muted-foreground">
+            Presente anche su{" "}
+            {otherSources.map((s) => DISCOVERY_SOURCE_LABELS[s as DiscoverySource]).join(", ")}
+          </p>
+        )}
+      </button>
+    </li>
+  );
+}
+
+function TrendzningNowView({
+  trends,
+  loading,
+  error,
+  onSelect,
+}: {
+  trends: CrossSourceTrend[];
+  loading: boolean;
+  error: string | null;
+  onSelect: (trend: CrossSourceTrend) => void;
+}) {
+  // Più fonti condivise prima (i tre peperoncini in cima), a parità i trend
+  // Canali Inspo isolati (source_count=1) restano in coda: sono comunque
+  // sempre mostrati (tag "Dai Canali Inspo"), solo meno in evidenza dei
+  // trend confermati da più fonti indipendenti.
+  const sorted = useMemo(
+    () => [...trends].sort((a, b) => b.source_count - a.source_count),
+    [trends],
+  );
+
+  if (error) {
+    return <p className="text-sm text-destructive">Errore nel caricamento: {error}.</p>;
+  }
+  if (loading) {
+    return <div className="text-sm text-muted-foreground">Caricamento…</div>;
+  }
+  if (sorted.length === 0) {
+    return (
+      <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+        Nessun trend rilevato ancora. Il workflow "Match Trend Cross-Fonte" (ogni 6h) confronta le
+        keyword di TikTok, Google Trends, X e Canali Inspo e segnala quelle condivise da più fonti.
+      </div>
+    );
+  }
+
+  return (
+    <ol className="space-y-2">
+      {sorted.map((t) => (
+        <CrossSourceTrendRow key={t.id} trend={t} onSelect={() => onSelect(t)} />
+      ))}
+    </ol>
+  );
+}
+
+// Card di un singolo contenuto, riusata sia nella tab "Trendzning Now" (via
+// filtro) sia in "Contenuti". Il badge del trend cross-profilo (3+ canali
+// diversi sullo stesso argomento, vedi discover-canali-inspo-content.mjs)
+// compare ovunque sia valorizzato, non solo per i post Canali Inspo.
 function ContentCard({ item }: { item: ViralTrendContent }) {
   return (
     <article className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-3 transition hover:border-primary/60">
@@ -438,6 +660,12 @@ function ContentCard({ item }: { item: ViralTrendContent }) {
 // limite qui evita di mettere in pagina centinaia di card insieme.
 const PAGE_SIZE = 8;
 
+type MainTab = "trendzning-now" | "content";
+const MAIN_TAB_LABELS: Record<MainTab, string> = {
+  "trendzning-now": "Trendzning Now",
+  content: "Contenuti",
+};
+
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -449,12 +677,18 @@ function Page() {
   const [sortBy, setSortBy] = useState<SortBy>("virality");
   const [search, setSearch] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [canaliInspoVisibleCount, setCanaliInspoVisibleCount] = useState(PAGE_SIZE);
 
   const [topics, setTopics] = useState<MonitoredTopic[]>([]);
   const [topicsError, setTopicsError] = useState<string | null>(null);
   const [topicContent, setTopicContent] = useState<ViralTrendContent[]>([]);
-  const [view, setView] = useState<TopicView>("tiktok-hashtag");
+
+  const [crossSourceTrends, setCrossSourceTrends] = useState<CrossSourceTrend[]>([]);
+  const [crossSourceLoading, setCrossSourceLoading] = useState(true);
+  const [crossSourceError, setCrossSourceError] = useState<string | null>(null);
+
+  const [mainTab, setMainTab] = useState<MainTab>("trendzning-now");
+  const [sidebarSource, setSidebarSource] = useState<SidebarSource>("canali-inspo");
+  const [activeTopicFilter, setActiveTopicFilter] = useState<ActiveTopicFilter | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -473,6 +707,15 @@ function Page() {
     listMonitoredTopics()
       .then(setTopics)
       .catch((err) => setTopicsError(err instanceof Error ? err.message : String(err)));
+  }, []);
+
+  useEffect(() => {
+    setCrossSourceLoading(true);
+    setCrossSourceError(null);
+    listCrossSourceTrends()
+      .then(setCrossSourceTrends)
+      .catch((err) => setCrossSourceError(err instanceof Error ? err.message : String(err)))
+      .finally(() => setCrossSourceLoading(false));
   }, []);
 
   // Contenuti per il verdetto dei topic: fetch senza filtri di
@@ -512,30 +755,15 @@ function Page() {
     return Array.from(bySourceHashtag.entries()).sort(([a], [b]) => a.localeCompare(b));
   }, [items]);
 
-  // Tab "Dai Canali Inspo": stesso array items già caricato (nessun fetch in
-  // più), solo filtrato per fonte — coerente col fatto che items non è mai
-  // filtrato per discovery_source lato server.
-  const canaliInspoItems = useMemo(
-    () => items.filter((i) => i.discovery_source === "canali-inspo"),
-    [items],
-  );
-
-  // Stesso motivo del reset di visibleCount sopra: un nuovo fetch (o il primo
-  // caricamento) non deve ereditare un conteggio più alto del nuovo elenco.
-  useEffect(() => {
-    setCanaliInspoVisibleCount(PAGE_SIZE);
-  }, [items]);
-
-  const canaliInspoVisible = canaliInspoItems.slice(0, canaliInspoVisibleCount);
-
   // Elenco dei trend cross-profilo distinti tra i post Canali Inspo caricati
   // (3+ canali sullo stesso argomento, rilevati da discover-canali-inspo-content.mjs
   // via clustering LLM — vedi cross_profile_topic/cross_profile_channel_count).
-  // Derivato lato client dagli stessi item già caricati, nessun fetch in più.
+  // Alimenta il pannello "Canali Inspo" della sidebar. Derivato lato client
+  // dagli stessi item già caricati, nessun fetch in più.
   const crossProfileTopics = useMemo(() => {
     const byTopic = new Map<string, { channelCount: number; postCount: number }>();
-    for (const item of canaliInspoItems) {
-      if (!item.cross_profile_topic) continue;
+    for (const item of items) {
+      if (item.discovery_source !== "canali-inspo" || !item.cross_profile_topic) continue;
       const existing = byTopic.get(item.cross_profile_topic);
       if (existing) {
         existing.postCount += 1;
@@ -549,10 +777,47 @@ function Page() {
     return Array.from(byTopic.entries())
       .map(([topic, stats]) => ({ topic, ...stats }))
       .sort((a, b) => b.channelCount - a.channelCount || b.postCount - a.postCount);
-  }, [canaliInspoItems]);
+  }, [items]);
+
+  function selectTopic(topic: MonitoredTopic) {
+    const label = topic.topic_type === "tiktok-hashtag" ? `#${topic.value}` : topic.value;
+    setActiveTopicFilter({
+      label,
+      topicIds: [topic.id],
+      sourceHashtag: topic.value,
+      canaliInspoTopic: null,
+    });
+    setSourceFilter("all");
+    setMainTab("content");
+  }
+
+  function selectCanaliInspoTopic(topic: string) {
+    setActiveTopicFilter({
+      label: topic,
+      topicIds: [],
+      sourceHashtag: null,
+      canaliInspoTopic: topic,
+    });
+    setSourceFilter("all");
+    setMainTab("content");
+  }
+
+  function selectCrossSourceTrend(trend: CrossSourceTrend) {
+    setActiveTopicFilter({
+      label: trend.label,
+      topicIds: trend.topic_ids,
+      sourceHashtag: null,
+      canaliInspoTopic: trend.canali_inspo_topic,
+    });
+    setSourceFilter("all");
+    setMainTab("content");
+  }
 
   const filtered = useMemo(() => {
     let result = items;
+    if (activeTopicFilter) {
+      result = result.filter((i) => contentMatchesTopicFilter(i, activeTopicFilter));
+    }
     if (sourceFilter !== "all") result = result.filter((i) => i.discovery_source === sourceFilter);
     if (contentTypeFilter === "topic") {
       result = result.filter((i) => i.discovery_source !== "trending-audio");
@@ -570,7 +835,7 @@ function Page() {
       );
     }
     return result;
-  }, [items, sourceFilter, contentTypeFilter, search]);
+  }, [items, activeTopicFilter, sourceFilter, contentTypeFilter, search]);
 
   // Ogni cambio di filtro/ricerca (o nuovo fetch) riparte dalla prima pagina:
   // altrimenti "Carica altri" premuto prima potrebbe lasciare visibleCount
@@ -578,7 +843,7 @@ function Page() {
   // di limitare come richiesto.
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [items, sourceFilter, contentTypeFilter, search]);
+  }, [items, activeTopicFilter, sourceFilter, contentTypeFilter, search]);
 
   const visible = filtered.slice(0, visibleCount);
 
@@ -595,218 +860,186 @@ function Page() {
         </p>
       </header>
 
-      <section className="space-y-3">
-        <Tabs value={view} onValueChange={(v) => setView(v as TopicView)}>
-          <TabsList>
-            {(
-              ["tiktok-hashtag", "google-trends", "x-trending", "canali-inspo", "content"] as const
-            ).map((v) => (
-              <TabsTrigger key={v} value={v}>
-                {TOPIC_VIEW_LABELS[v]}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+        <div className="min-w-0 flex-1 space-y-4">
+          <Tabs value={mainTab} onValueChange={(v) => setMainTab(v as MainTab)}>
+            <TabsList>
+              {(["trendzning-now", "content"] as const).map((v) => (
+                <TabsTrigger key={v} value={v}>
+                  {MAIN_TAB_LABELS[v]}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
 
-        {isRankedTopicView(view) &&
-          (topicsError ? (
-            <p className="text-sm text-destructive">
-              Errore nel caricamento dei topic monitorati: {topicsError}.
-            </p>
-          ) : (
-            <TopicRankingList topics={topics} view={view} contentByTopic={contentByTopic} />
-          ))}
-      </section>
+          {mainTab === "trendzning-now" && (
+            <TrendzningNowView
+              trends={crossSourceTrends}
+              loading={crossSourceLoading}
+              error={crossSourceError}
+              onSelect={selectCrossSourceTrend}
+            />
+          )}
 
-      {view === "canali-inspo" && (
-        <>
-          {error ? (
-            <p className="text-sm text-destructive">Errore nel caricamento: {error}.</p>
-          ) : loading ? (
-            <div className="text-sm text-muted-foreground">Caricamento…</div>
-          ) : canaliInspoItems.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
-              Nessun post virale dai Canali Inspo ancora. Il workflow "Discover Canali Inspo
-              Content" (ogni 6h) applica le regole di viralità ai post già raccolti e rileva i trend
-              condivisi da più profili.
-            </div>
-          ) : (
+          {mainTab === "content" && (
             <>
-              {crossProfileTopics.length > 0 && (
-                <div className="space-y-2 rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
-                  <h2 className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
-                    <Flame className="size-4 shrink-0 text-orange-600 dark:text-orange-400" />
-                    Trend cross-profilo rilevati ({crossProfileTopics.length})
-                  </h2>
-                  <ul className="flex flex-wrap gap-2">
-                    {crossProfileTopics.map(({ topic, channelCount, postCount }) => (
-                      <li
-                        key={topic}
-                        className="inline-flex items-center gap-1 rounded-lg bg-orange-500/10 px-2.5 py-1 text-xs font-medium text-orange-600 dark:text-orange-400"
-                      >
-                        {topic}
-                        <span className="text-orange-600/70 dark:text-orange-400/70">
-                          · {channelCount} canali · {postCount} post
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+              {activeTopicFilter && (
+                <div className="flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs">
+                  <span className="text-muted-foreground">Filtrato per:</span>
+                  <span className="font-medium text-foreground">{activeTopicFilter.label}</span>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTopicFilter(null)}
+                    aria-label="Rimuovi filtro"
+                    className="ml-auto flex size-5 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    <X className="size-3.5" />
+                  </button>
                 </div>
               )}
 
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {canaliInspoVisible.map((item) => (
-                  <ContentCard key={item.id} item={item} />
-                ))}
+              <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
+                <div className="relative flex-1 min-w-[220px]">
+                  <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder="Cerca per contenuto, autore, keyword o hashtag…"
+                    className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
+                  />
+                </div>
+
+                <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortBy)}>
+                  <SelectTrigger className="w-44">
+                    <SelectValue placeholder="Ordina per" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {SORT_OPTIONS.map((s) => (
+                      <SelectItem key={s} value={s}>
+                        {SORT_LABELS[s]}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                <Select
+                  value={platformFilter}
+                  onValueChange={(v) => setPlatformFilter(v as ViralPlatform | "all")}
+                >
+                  <SelectTrigger className="w-44">
+                    <SelectValue placeholder="Piattaforma" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Tutte le piattaforme</SelectItem>
+                    {VIRAL_PLATFORMS.map((p) => (
+                      <SelectItem key={p} value={p} className="capitalize">
+                        {p}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                <Select
+                  value={sourceFilter}
+                  onValueChange={(v) => setSourceFilter(v as DiscoverySource | "all")}
+                >
+                  <SelectTrigger className="w-44">
+                    <SelectValue placeholder="Fonte del topic" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Tutte le fonti</SelectItem>
+                    {DISCOVERY_SOURCES.map((s) => (
+                      <SelectItem key={s} value={s}>
+                        {DISCOVERY_SOURCE_LABELS[s]}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                <Select
+                  value={contentTypeFilter}
+                  onValueChange={(v) => setContentTypeFilter(v as ContentTypeFilter)}
+                >
+                  <SelectTrigger className="w-44">
+                    <SelectValue placeholder="Tipologia" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {CONTENT_TYPE_OPTIONS.map((c) => (
+                      <SelectItem key={c} value={c}>
+                        {CONTENT_TYPE_LABELS[c]}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                {hashtagOptions.length > 0 && (
+                  <Select value={hashtagFilter} onValueChange={setHashtagFilter}>
+                    <SelectTrigger className="w-48">
+                      <SelectValue placeholder="Hashtag di origine" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">Tutti gli hashtag</SelectItem>
+                      {hashtagOptions.map(([h, source]) => (
+                        <SelectItem key={h} value={h}>
+                          {source === "tiktok-hashtag" ? `#${h}` : h}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                )}
+
+                <span className="ml-auto text-xs text-muted-foreground">
+                  {filtered.length} contenuti
+                </span>
               </div>
 
-              {canaliInspoVisibleCount < canaliInspoItems.length && (
+              {error ? (
+                <p className="text-sm text-destructive">
+                  Errore nel caricamento: {error}. Probabile causa: la migration non è ancora stata
+                  applicata al database (tabella viral_trend_content mancante).
+                </p>
+              ) : loading ? (
+                <div className="text-sm text-muted-foreground">Caricamento…</div>
+              ) : filtered.length === 0 ? (
+                <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
+                  Nessun contenuto ancora. Il workflow "Sync Trend Virali" popola questa pagina una
+                  volta al giorno a partire dagli hashtag TikTok in trend e dalle ricerche Google
+                  Trends IT.
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                  {visible.map((item) => (
+                    <ContentCard key={item.id} item={item} />
+                  ))}
+                </div>
+              )}
+
+              {!error && !loading && visibleCount < filtered.length && (
                 <div className="flex justify-center">
                   <button
                     type="button"
-                    onClick={() => setCanaliInspoVisibleCount((c) => c + PAGE_SIZE)}
+                    onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
                     className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
                   >
-                    Carica altri ({canaliInspoItems.length - canaliInspoVisibleCount} rimanenti)
+                    Carica altri ({filtered.length - visibleCount} rimanenti)
                   </button>
                 </div>
               )}
             </>
           )}
-        </>
-      )}
+        </div>
 
-      {view === "content" && (
-        <>
-          <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-card/50 p-4">
-            <div className="relative flex-1 min-w-[220px]">
-              <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-              <input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Cerca per contenuto, autore, keyword o hashtag…"
-                className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
-              />
-            </div>
-
-            <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortBy)}>
-              <SelectTrigger className="w-44">
-                <SelectValue placeholder="Ordina per" />
-              </SelectTrigger>
-              <SelectContent>
-                {SORT_OPTIONS.map((s) => (
-                  <SelectItem key={s} value={s}>
-                    {SORT_LABELS[s]}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            <Select
-              value={platformFilter}
-              onValueChange={(v) => setPlatformFilter(v as ViralPlatform | "all")}
-            >
-              <SelectTrigger className="w-44">
-                <SelectValue placeholder="Piattaforma" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Tutte le piattaforme</SelectItem>
-                {VIRAL_PLATFORMS.map((p) => (
-                  <SelectItem key={p} value={p} className="capitalize">
-                    {p}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            <Select
-              value={sourceFilter}
-              onValueChange={(v) => setSourceFilter(v as DiscoverySource | "all")}
-            >
-              <SelectTrigger className="w-44">
-                <SelectValue placeholder="Fonte del topic" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Tutte le fonti</SelectItem>
-                {DISCOVERY_SOURCES.map((s) => (
-                  <SelectItem key={s} value={s}>
-                    {DISCOVERY_SOURCE_LABELS[s]}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            <Select
-              value={contentTypeFilter}
-              onValueChange={(v) => setContentTypeFilter(v as ContentTypeFilter)}
-            >
-              <SelectTrigger className="w-44">
-                <SelectValue placeholder="Tipologia" />
-              </SelectTrigger>
-              <SelectContent>
-                {CONTENT_TYPE_OPTIONS.map((c) => (
-                  <SelectItem key={c} value={c}>
-                    {CONTENT_TYPE_LABELS[c]}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {hashtagOptions.length > 0 && (
-              <Select value={hashtagFilter} onValueChange={setHashtagFilter}>
-                <SelectTrigger className="w-48">
-                  <SelectValue placeholder="Hashtag di origine" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Tutti gli hashtag</SelectItem>
-                  {hashtagOptions.map(([h, source]) => (
-                    <SelectItem key={h} value={h}>
-                      {source === "tiktok-hashtag" ? `#${h}` : h}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            )}
-
-            <span className="ml-auto text-xs text-muted-foreground">
-              {filtered.length} contenuti
-            </span>
-          </div>
-
-          {error ? (
-            <p className="text-sm text-destructive">
-              Errore nel caricamento: {error}. Probabile causa: la migration non è ancora stata
-              applicata al database (tabella viral_trend_content mancante).
-            </p>
-          ) : loading ? (
-            <div className="text-sm text-muted-foreground">Caricamento…</div>
-          ) : filtered.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-border p-12 text-center text-sm text-muted-foreground">
-              Nessun contenuto ancora. Il workflow "Sync Trend Virali" popola questa pagina una
-              volta al giorno a partire dagli hashtag TikTok in trend e dalle ricerche Google Trends
-              IT.
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {visible.map((item) => (
-                <ContentCard key={item.id} item={item} />
-              ))}
-            </div>
-          )}
-
-          {!error && !loading && visibleCount < filtered.length && (
-            <div className="flex justify-center">
-              <button
-                type="button"
-                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-                className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
-              >
-                Carica altri ({filtered.length - visibleCount} rimanenti)
-              </button>
-            </div>
-          )}
-        </>
-      )}
+        <TrendSidebar
+          sidebarSource={sidebarSource}
+          setSidebarSource={setSidebarSource}
+          topics={topics}
+          topicsError={topicsError}
+          contentByTopic={contentByTopic}
+          crossProfileTopics={crossProfileTopics}
+          onSelectTopic={selectTopic}
+          onSelectCanaliInspoTopic={selectCanaliInspoTopic}
+        />
+      </div>
     </div>
   );
 }

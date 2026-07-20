@@ -1,0 +1,37 @@
+name: Match Trend Cross-Fonte
+
+# Trova le keyword/trend condivisi da più fonti indipendenti (TikTok/Google
+# Trends/X trending + Canali Inspo) via LLM (Groq/OpenRouter, vedi
+# matchTopicsAcrossSources in scripts/lib/openrouter.mjs) — alimenta la tab
+# "Trendzning Now" di /trend-virali. Vedi scripts/match-cross-source-trends.mjs.
+
+on:
+  schedule:
+    # 20 minuti dopo Discover Canali Inspo Content (cron "20 */6"), la fonte
+    # più lenta: le dà il tempo di finire così il match usa dati freschi da
+    # tutte e 4 le fonti. Coincide comunque con un run orario di Sync Trend
+    # Virali e Discover X Trending.
+    - cron: "40 */6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Nessuna dipendenza da installare: solo fetch nativo verso gli
+      # endpoint pubblici e verso Groq/OpenRouter, nessun pacchetto npm
+      # esterno né browser.
+
+      - name: Match trend cross-fonte
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node scripts/match-cross-source-trends.mjs

@@ -35,6 +35,7 @@ import { Route as ApiPublicHooksTiktokHashtagPostsRouteImport } from './routes/a
 import { Route as ApiPublicHooksSyncViralTrendsRouteImport } from './routes/api/public/hooks/sync-viral-trends'
 import { Route as ApiPublicHooksSyncTrendingHashtagsRouteImport } from './routes/api/public/hooks/sync-trending-hashtags'
 import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/api/public/hooks/sync-tiktok-hashtag'
+import { Route as ApiPublicHooksSyncCrossSourceTrendsRouteImport } from './routes/api/public/hooks/sync-cross-source-trends'
 import { Route as ApiPublicHooksSyncBrandMentionsRouteImport } from './routes/api/public/hooks/sync-brand-mentions'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksRecordTopicVolumeRouteImport } from './routes/api/public/hooks/record-topic-volume'
@@ -43,6 +44,8 @@ import { Route as ApiPublicHooksPollGmailRouteImport } from './routes/api/public
 import { Route as ApiPublicHooksMonitorTopicsRouteImport } from './routes/api/public/hooks/monitor-topics'
 import { Route as ApiPublicHooksListMonitoredTopicsRouteImport } from './routes/api/public/hooks/list-monitored-topics'
 import { Route as ApiPublicHooksListInstagramContentUrlsRouteImport } from './routes/api/public/hooks/list-instagram-content-urls'
+import { Route as ApiPublicHooksListCrossSourceTrendsRouteImport } from './routes/api/public/hooks/list-cross-source-trends'
+import { Route as ApiPublicHooksListCanaliInspoTopicsRouteImport } from './routes/api/public/hooks/list-canali-inspo-topics'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksImportAspiBulkRouteImport } from './routes/api/public/hooks/import-aspi-bulk'
 import { Route as ApiPublicHooksGettySearchRouteImport } from './routes/api/public/hooks/getty-search'
@@ -194,6 +197,12 @@ const ApiPublicHooksSyncTiktokHashtagRoute =
     path: '/api/public/hooks/sync-tiktok-hashtag',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksSyncCrossSourceTrendsRoute =
+  ApiPublicHooksSyncCrossSourceTrendsRouteImport.update({
+    id: '/api/public/hooks/sync-cross-source-trends',
+    path: '/api/public/hooks/sync-cross-source-trends',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksSyncBrandMentionsRoute =
   ApiPublicHooksSyncBrandMentionsRouteImport.update({
     id: '/api/public/hooks/sync-brand-mentions',
@@ -239,6 +248,18 @@ const ApiPublicHooksListInstagramContentUrlsRoute =
   ApiPublicHooksListInstagramContentUrlsRouteImport.update({
     id: '/api/public/hooks/list-instagram-content-urls',
     path: '/api/public/hooks/list-instagram-content-urls',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksListCrossSourceTrendsRoute =
+  ApiPublicHooksListCrossSourceTrendsRouteImport.update({
+    id: '/api/public/hooks/list-cross-source-trends',
+    path: '/api/public/hooks/list-cross-source-trends',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksListCanaliInspoTopicsRoute =
+  ApiPublicHooksListCanaliInspoTopicsRouteImport.update({
+    id: '/api/public/hooks/list-canali-inspo-topics',
+    path: '/api/public/hooks/list-canali-inspo-topics',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksLinkPreviewRoute =
@@ -345,6 +366,8 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/list-canali-inspo-topics': typeof ApiPublicHooksListCanaliInspoTopicsRoute
+  '/api/public/hooks/list-cross-source-trends': typeof ApiPublicHooksListCrossSourceTrendsRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
   '/api/public/hooks/monitor-topics': typeof ApiPublicHooksMonitorTopicsRoute
@@ -353,6 +376,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
+  '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
   '/api/public/hooks/sync-trending-hashtags': typeof ApiPublicHooksSyncTrendingHashtagsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
@@ -393,6 +417,8 @@ export interface FileRoutesByTo {
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/list-canali-inspo-topics': typeof ApiPublicHooksListCanaliInspoTopicsRoute
+  '/api/public/hooks/list-cross-source-trends': typeof ApiPublicHooksListCrossSourceTrendsRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
   '/api/public/hooks/monitor-topics': typeof ApiPublicHooksMonitorTopicsRoute
@@ -401,6 +427,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
+  '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
   '/api/public/hooks/sync-trending-hashtags': typeof ApiPublicHooksSyncTrendingHashtagsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
@@ -442,6 +469,8 @@ export interface FileRoutesById {
   '/api/public/hooks/getty-search': typeof ApiPublicHooksGettySearchRoute
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/list-canali-inspo-topics': typeof ApiPublicHooksListCanaliInspoTopicsRoute
+  '/api/public/hooks/list-cross-source-trends': typeof ApiPublicHooksListCrossSourceTrendsRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
   '/api/public/hooks/list-monitored-topics': typeof ApiPublicHooksListMonitoredTopicsRoute
   '/api/public/hooks/monitor-topics': typeof ApiPublicHooksMonitorTopicsRoute
@@ -450,6 +479,7 @@ export interface FileRoutesById {
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
+  '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
   '/api/public/hooks/sync-trending-hashtags': typeof ApiPublicHooksSyncTrendingHashtagsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
@@ -492,6 +522,8 @@ export interface FileRouteTypes {
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/list-canali-inspo-topics'
+    | '/api/public/hooks/list-cross-source-trends'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
     | '/api/public/hooks/monitor-topics'
@@ -500,6 +532,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-brand-mentions'
+    | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-tiktok-hashtag'
     | '/api/public/hooks/sync-trending-hashtags'
     | '/api/public/hooks/sync-viral-trends'
@@ -540,6 +573,8 @@ export interface FileRouteTypes {
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/list-canali-inspo-topics'
+    | '/api/public/hooks/list-cross-source-trends'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
     | '/api/public/hooks/monitor-topics'
@@ -548,6 +583,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-brand-mentions'
+    | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-tiktok-hashtag'
     | '/api/public/hooks/sync-trending-hashtags'
     | '/api/public/hooks/sync-viral-trends'
@@ -588,6 +624,8 @@ export interface FileRouteTypes {
     | '/api/public/hooks/getty-search'
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/list-canali-inspo-topics'
+    | '/api/public/hooks/list-cross-source-trends'
     | '/api/public/hooks/list-instagram-content-urls'
     | '/api/public/hooks/list-monitored-topics'
     | '/api/public/hooks/monitor-topics'
@@ -596,6 +634,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-brand-mentions'
+    | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-tiktok-hashtag'
     | '/api/public/hooks/sync-trending-hashtags'
     | '/api/public/hooks/sync-viral-trends'
@@ -637,6 +676,8 @@ export interface RootRouteChildren {
   ApiPublicHooksGettySearchRoute: typeof ApiPublicHooksGettySearchRoute
   ApiPublicHooksImportAspiBulkRoute: typeof ApiPublicHooksImportAspiBulkRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
+  ApiPublicHooksListCanaliInspoTopicsRoute: typeof ApiPublicHooksListCanaliInspoTopicsRoute
+  ApiPublicHooksListCrossSourceTrendsRoute: typeof ApiPublicHooksListCrossSourceTrendsRoute
   ApiPublicHooksListInstagramContentUrlsRoute: typeof ApiPublicHooksListInstagramContentUrlsRoute
   ApiPublicHooksListMonitoredTopicsRoute: typeof ApiPublicHooksListMonitoredTopicsRoute
   ApiPublicHooksMonitorTopicsRoute: typeof ApiPublicHooksMonitorTopicsRoute
@@ -645,6 +686,7 @@ export interface RootRouteChildren {
   ApiPublicHooksRecordTopicVolumeRoute: typeof ApiPublicHooksRecordTopicVolumeRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
   ApiPublicHooksSyncBrandMentionsRoute: typeof ApiPublicHooksSyncBrandMentionsRoute
+  ApiPublicHooksSyncCrossSourceTrendsRoute: typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   ApiPublicHooksSyncTiktokHashtagRoute: typeof ApiPublicHooksSyncTiktokHashtagRoute
   ApiPublicHooksSyncTrendingHashtagsRoute: typeof ApiPublicHooksSyncTrendingHashtagsRoute
   ApiPublicHooksSyncViralTrendsRoute: typeof ApiPublicHooksSyncViralTrendsRoute
@@ -839,6 +881,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksSyncTiktokHashtagRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/sync-cross-source-trends': {
+      id: '/api/public/hooks/sync-cross-source-trends'
+      path: '/api/public/hooks/sync-cross-source-trends'
+      fullPath: '/api/public/hooks/sync-cross-source-trends'
+      preLoaderRoute: typeof ApiPublicHooksSyncCrossSourceTrendsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/sync-brand-mentions': {
       id: '/api/public/hooks/sync-brand-mentions'
       path: '/api/public/hooks/sync-brand-mentions'
@@ -893,6 +942,20 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/list-instagram-content-urls'
       fullPath: '/api/public/hooks/list-instagram-content-urls'
       preLoaderRoute: typeof ApiPublicHooksListInstagramContentUrlsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/list-cross-source-trends': {
+      id: '/api/public/hooks/list-cross-source-trends'
+      path: '/api/public/hooks/list-cross-source-trends'
+      fullPath: '/api/public/hooks/list-cross-source-trends'
+      preLoaderRoute: typeof ApiPublicHooksListCrossSourceTrendsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/list-canali-inspo-topics': {
+      id: '/api/public/hooks/list-canali-inspo-topics'
+      path: '/api/public/hooks/list-canali-inspo-topics'
+      fullPath: '/api/public/hooks/list-canali-inspo-topics'
+      preLoaderRoute: typeof ApiPublicHooksListCanaliInspoTopicsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/link-preview': {
@@ -1014,6 +1077,10 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
   ApiPublicHooksImportAspiBulkRoute: ApiPublicHooksImportAspiBulkRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
+  ApiPublicHooksListCanaliInspoTopicsRoute:
+    ApiPublicHooksListCanaliInspoTopicsRoute,
+  ApiPublicHooksListCrossSourceTrendsRoute:
+    ApiPublicHooksListCrossSourceTrendsRoute,
   ApiPublicHooksListInstagramContentUrlsRoute:
     ApiPublicHooksListInstagramContentUrlsRoute,
   ApiPublicHooksListMonitoredTopicsRoute:
@@ -1025,6 +1092,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksRecordTopicVolumeRoute: ApiPublicHooksRecordTopicVolumeRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
   ApiPublicHooksSyncBrandMentionsRoute: ApiPublicHooksSyncBrandMentionsRoute,
+  ApiPublicHooksSyncCrossSourceTrendsRoute:
+    ApiPublicHooksSyncCrossSourceTrendsRoute,
   ApiPublicHooksSyncTiktokHashtagRoute: ApiPublicHooksSyncTiktokHashtagRoute,
   ApiPublicHooksSyncTrendingHashtagsRoute:
     ApiPublicHooksSyncTrendingHashtagsRoute,
