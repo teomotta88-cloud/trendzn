@@ -11,6 +11,7 @@ import {
   CircleDashed,
   X,
   Zap,
+  Music,
 } from "lucide-react";
 import {
   Select,
@@ -667,6 +668,13 @@ function ContentCard({ item }: { item: ViralTrendContent }) {
           <span className="inline-flex items-center gap-1 rounded-lg bg-orange-500/10 px-2 py-1 text-[11px] font-medium text-orange-600 dark:text-orange-400">
             <Flame className="size-3.5 shrink-0" />
             Trend condiviso da {item.cross_profile_channel_count} canali: {item.cross_profile_topic}
+          </span>
+        )}
+
+        {item.audio_trend_channel_count != null && (
+          <span className="inline-flex items-center gap-1 rounded-lg bg-violet-500/10 px-2 py-1 text-[11px] font-medium text-violet-600 dark:text-violet-400">
+            <Music className="size-3.5 shrink-0" />
+            Audio in trend: {item.audio_trend_reel_count} Reel su {item.audio_trend_channel_count} canali
           </span>
         )}
 

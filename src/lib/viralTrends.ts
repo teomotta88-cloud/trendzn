@@ -49,6 +49,13 @@ export interface ViralTrendContent {
   // o quando Instagram non espone il link.
   audio_name: string | null;
   audio_url: string | null;
+  // Valorizzati solo per i Reel Canali Inspo il cui audio ricorre su 3+
+  // Reel diversi pubblicati da 2+ canali distinti (match esatto su
+  // audio_url, vedi sync-audio-trends.ts) — null altrimenti, compreso il
+  // caso di un audio riscaricato/ricaricato con un audio_url diverso, che
+  // questo match non può riconoscere come lo stesso suono.
+  audio_trend_reel_count: number | null;
+  audio_trend_channel_count: number | null;
 }
 
 export const SORT_OPTIONS = ["virality", "date", "engagement", "views"] as const;

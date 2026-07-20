@@ -1,0 +1,28 @@
+name: Sync Audio Trends
+
+# Rileva "audio in trend" tra i Reel dei Canali Inspo (3+ Reel con lo stesso
+# audio, da 2+ canali distinti) — vedi scripts/sync-audio-trends.mjs. Nessuno
+# scraping: solo aggregazione di dati già raccolti, schedulato dopo Discover
+# Canali Inspo Content (:20 ogni 6h) e prima di Match Trend Cross-Fonte
+# (:40 ogni 6h), che non dipende da questo risultato ma così restano in
+# ordine leggibile nei log.
+
+on:
+  schedule:
+    - cron: "30 */6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Rileva audio in trend
+        run: node scripts/sync-audio-trends.mjs
