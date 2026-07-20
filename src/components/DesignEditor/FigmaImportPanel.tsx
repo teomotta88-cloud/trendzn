@@ -208,7 +208,10 @@ export function FigmaImportPanel({
             Esegui il plugin "trendzn - Esporta template" dentro Figma (gira sulla Plugin API, senza
             il limite di richieste/mese della REST API sui file di un team con piano
             Starter/gratuito — vedi <code>figma-export-plugin/README.md</code> nel repo per
-            l'installazione), copia il JSON che produce e incollalo qui sotto.
+            l'installazione), copia il JSON che produce e incollalo qui sotto. Funziona anche con il
+            JSON del plugin Community "JSON Exporter", con un limite noto: i riquadri foto importano
+            senza immagine (vanno riagganciati a mano), perché quel plugin non include i byte delle
+            foto nell'export.
           </p>
           <textarea
             value={pastedJson}

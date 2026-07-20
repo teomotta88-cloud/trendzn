@@ -1013,6 +1013,264 @@ async function resolveImagesAndBuildResponse(
   });
 }
 
+// --- Adattatore per il formato di export del plugin Community "JSON
+// Exporter" (di terzi, non il nostro figma-export-plugin/) ---
+// Differenze rispetto al formato che il resto di questo file si aspetta
+// (sia REST API che il nostro plugin):
+// - Nessun absoluteBoundingBox: solo x/y/width/height LOCALI (rispetto al
+//   genitore) più relativeTransform (matrice 2x3 genitore<-figlio, stessa
+//   forma di gradientTransform). Bisogna ricostruire la posizione assoluta
+//   componendo le matrici dalla radice in giù.
+// - rotation è una proprietà piatta in GRADI (Plugin API), da rinominare
+//   in rotationDegrees per non essere confusa con FigmaNode.rotation
+//   (REST API, radianti).
+// - Lo stile del testo (fontFamily/fontSize/textCase/...) è su proprietà
+//   piatte del nodo TEXT, non dentro node.style — va assemblato a mano,
+//   con la stessa euristica peso-font e conversione letterSpacing/
+//   lineHeight già usate in figma-export-plugin/src/code.ts.
+// Limite noto e NON risolvibile lato server: questo exporter non include i
+// byte delle immagini per i fill di tipo IMAGE (fills: [] su un rettangolo
+// che in Figma mostra una foto) — quei campi importano senza immagine e
+// vanno riagganciati a mano. Il nostro figma-export-plugin/ non ha questo
+// limite (esporta i byte via node.exportAsync).
+type Mat2x3 = [[number, number, number], [number, number, number]];
+
+export function identityMat(): Mat2x3 {
+  return [
+    [1, 0, 0],
+    [0, 1, 0],
+  ];
+}
+
+// Compone A∘B (applica prima B, poi A): B mappa nodo-locale -> genitore-
+// locale, A mappa genitore-locale -> radice. Il risultato mappa nodo-
+// locale -> radice, e la sua colonna di traslazione è la posizione
+// assoluta dell'origine (0,0) del nodo.
+function composeMat(a: Mat2x3, b: Mat2x3): Mat2x3 {
+  return [
+    [
+      a[0][0] * b[0][0] + a[0][1] * b[1][0],
+      a[0][0] * b[0][1] + a[0][1] * b[1][1],
+      a[0][0] * b[0][2] + a[0][1] * b[1][2] + a[0][2],
+    ],
+    [
+      a[1][0] * b[0][0] + a[1][1] * b[1][0],
+      a[1][0] * b[0][1] + a[1][1] * b[1][1],
+      a[1][0] * b[0][2] + a[1][1] * b[1][2] + a[1][2],
+    ],
+  ];
+}
+
+function isMat2x3(value: unknown): value is Mat2x3 {
+  return (
+    Array.isArray(value) &&
+    value.length === 2 &&
+    value.every(
+      (row) => Array.isArray(row) && row.length === 3 && row.every((n) => typeof n === "number"),
+    )
+  );
+}
+
+// Un nodo in questo formato non ha mai absoluteBoundingBox ma ha
+// relativeTransform (o quantomeno x/y numerici): distingue il formato
+// "JSON Exporter" da quello REST/nostro-plugin già gestito altrove.
+export function looksLikeExporterFormatNode(value: unknown): boolean {
+  if (typeof value !== "object" || value === null) return false;
+  const v = value as Record<string, unknown>;
+  if (v.absoluteBoundingBox) return false;
+  return isMat2x3(v.relativeTransform) || (typeof v.x === "number" && typeof v.y === "number");
+}
+
+// Stessa euristica di figma-export-plugin/src/code.ts (weightFromStyleName),
+// duplicata qui per lo stesso motivo: non importabile da un modulo diverso,
+// e comunque va applicata a un nome-stile che qui arriva già come stringa
+// dal JSON invece che dalla Plugin API in diretta.
+const EXPORTER_WEIGHT_BY_STYLE_NAME: Record<string, number> = {
+  Thin: 100,
+  Hairline: 100,
+  ExtraLight: 200,
+  "Extra Light": 200,
+  UltraLight: 200,
+  Light: 300,
+  Regular: 400,
+  Normal: 400,
+  Book: 400,
+  Medium: 500,
+  SemiBold: 600,
+  "Semi Bold": 600,
+  DemiBold: 600,
+  Bold: 700,
+  ExtraBold: 800,
+  "Extra Bold": 800,
+  UltraBold: 800,
+  Black: 900,
+  Heavy: 900,
+};
+
+function exporterWeightFromStyleName(styleName: string): number {
+  const clean = styleName.replace(/italic/gi, "").trim();
+  return EXPORTER_WEIGHT_BY_STYLE_NAME[clean] ?? 400;
+}
+
+function normalizeExporterColor(raw: unknown): FigmaColor | undefined {
+  if (typeof raw !== "object" || raw === null) return undefined;
+  const c = raw as Record<string, unknown>;
+  if (typeof c.r !== "number" || typeof c.g !== "number" || typeof c.b !== "number")
+    return undefined;
+  // I fill SOLID di questo formato non hanno "a" (colorToHex la ignora
+  // comunque); i fill GRADIENT_* e gli effetti DROP_SHADOW ce l'hanno già.
+  return { r: c.r, g: c.g, b: c.b, a: typeof c.a === "number" ? c.a : 1 };
+}
+
+function normalizeExporterFill(raw: unknown): FigmaFill | null {
+  if (typeof raw !== "object" || raw === null) return null;
+  const f = raw as Record<string, unknown>;
+  if (typeof f.type !== "string") return null;
+  const out: FigmaFill = { type: f.type, visible: f.visible !== false };
+  const color = normalizeExporterColor(f.color);
+  if (color) out.color = color;
+  if (Array.isArray(f.gradientStops)) {
+    out.gradientStops = (f.gradientStops as unknown[])
+      .map((s) => {
+        if (typeof s !== "object" || s === null) return null;
+        const stop = s as Record<string, unknown>;
+        const stopColor = normalizeExporterColor(stop.color);
+        if (!stopColor || typeof stop.position !== "number") return null;
+        return { position: stop.position, color: stopColor };
+      })
+      .filter((s): s is { position: number; color: FigmaColor } => s !== null);
+  }
+  if (isMat2x3(f.gradientTransform)) out.gradientTransform = f.gradientTransform;
+  return out;
+}
+
+function normalizeExporterFills(raw: unknown): FigmaFill[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const out = raw.map(normalizeExporterFill).filter((f): f is FigmaFill => f !== null);
+  return out.length > 0 ? out : [];
+}
+
+function normalizeExporterEffects(raw: unknown): FigmaEffect[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  return raw
+    .map((e) => {
+      if (typeof e !== "object" || e === null) return null;
+      const eff = e as Record<string, unknown>;
+      if (typeof eff.type !== "string") return null;
+      const out: FigmaEffect = { type: eff.type, visible: eff.visible !== false };
+      const color = normalizeExporterColor(eff.color);
+      if (color) out.color = color;
+      if (typeof eff.radius === "number") out.radius = eff.radius;
+      if (typeof eff.offset === "object" && eff.offset !== null) {
+        const o = eff.offset as Record<string, unknown>;
+        if (typeof o.x === "number" && typeof o.y === "number") out.offset = { x: o.x, y: o.y };
+      }
+      return out;
+    })
+    .filter((e): e is FigmaEffect => e !== null);
+}
+
+// Stile testo assemblato dalle proprietà piatte del nodo TEXT (vedi
+// commento in cima alla sezione): stessa conversione letterSpacing/
+// lineHeight di figma-export-plugin/src/code.ts, applicata qui invece che
+// nel plugin perché questo JSON arriva già "piatto" da una fonte esterna.
+function normalizeExporterTextStyle(raw: Record<string, unknown>): FigmaNode["style"] {
+  const fontNameRaw = raw.fontName;
+  const fontName =
+    typeof fontNameRaw === "object" && fontNameRaw !== null
+      ? (fontNameRaw as { family?: unknown; style?: unknown })
+      : null;
+  const fontFamily = typeof fontName?.family === "string" ? fontName.family : "Inter";
+  const fontWeight =
+    typeof fontName?.style === "string" ? exporterWeightFromStyleName(fontName.style) : 400;
+  const fontSize = typeof raw.fontSize === "number" ? raw.fontSize : 24;
+  const textAlignHorizontal =
+    typeof raw.textAlignHorizontal === "string" ? raw.textAlignHorizontal : undefined;
+  const textCase = typeof raw.textCase === "string" ? raw.textCase : undefined;
+  const textDecoration = typeof raw.textDecoration === "string" ? raw.textDecoration : undefined;
+
+  let letterSpacing: number | undefined;
+  if (typeof raw.letterSpacing === "object" && raw.letterSpacing !== null) {
+    const ls = raw.letterSpacing as Record<string, unknown>;
+    if (typeof ls.value === "number") {
+      letterSpacing = ls.unit === "PIXELS" ? ls.value : (ls.value / 100) * fontSize;
+    }
+  }
+
+  let lineHeightPx: number | undefined;
+  let lineHeightPercentFontSize: number | undefined;
+  if (typeof raw.lineHeight === "object" && raw.lineHeight !== null) {
+    const lh = raw.lineHeight as Record<string, unknown>;
+    if (typeof lh.value === "number") {
+      if (lh.unit === "PIXELS") lineHeightPx = lh.value;
+      else if (lh.unit === "PERCENT") lineHeightPercentFontSize = lh.value;
+    }
+  }
+
+  return {
+    fontFamily,
+    fontWeight,
+    fontSize,
+    textAlignHorizontal,
+    letterSpacing,
+    lineHeightPx,
+    lineHeightPercentFontSize,
+    textCase,
+    textDecoration,
+  };
+}
+
+// Ricostruisce l'intero sottoalbero in forma FigmaNode: absoluteBoundingBox
+// è calcolato componendo relativeTransform dalla radice passata (trattata
+// come origine) in giù, così le coordinate finali restano coerenti con
+// quelle che flatten()/mapFigmaTreeToFrames si aspettano (vedi origin
+// sottratto per-frame in quelle funzioni).
+export function normalizeExporterNode(raw: unknown, parentCumulative: Mat2x3): FigmaNode | null {
+  if (typeof raw !== "object" || raw === null) return null;
+  const n = raw as Record<string, unknown>;
+  if (typeof n.type !== "string") return null;
+
+  const ownMat: Mat2x3 = isMat2x3(n.relativeTransform)
+    ? n.relativeTransform
+    : [
+        [1, 0, typeof n.x === "number" ? n.x : 0],
+        [0, 1, typeof n.y === "number" ? n.y : 0],
+      ];
+  const cumulative = composeMat(parentCumulative, ownMat);
+  const width = typeof n.width === "number" ? n.width : 0;
+  const height = typeof n.height === "number" ? n.height : 0;
+
+  const out: FigmaNode = {
+    id: typeof n.id === "string" ? n.id : `exporter-${Math.random().toString(36).slice(2)}`,
+    name: typeof n.name === "string" ? n.name : n.type,
+    type: n.type,
+    visible: n.visible !== false,
+    absoluteBoundingBox: { x: cumulative[0][2], y: cumulative[1][2], width, height },
+    fills: normalizeExporterFills(n.fills),
+    strokes: normalizeExporterFills(n.strokes),
+    strokeWeight: typeof n.strokeWeight === "number" ? n.strokeWeight : undefined,
+    strokeDashes: Array.isArray(n.dashPattern) ? (n.dashPattern as number[]) : undefined,
+    opacity: typeof n.opacity === "number" ? n.opacity : undefined,
+    blendMode: typeof n.blendMode === "string" ? n.blendMode : undefined,
+    cornerRadius: typeof n.cornerRadius === "number" ? n.cornerRadius : undefined,
+    effects: normalizeExporterEffects(n.effects),
+    rotationDegrees: typeof n.rotation === "number" ? n.rotation : undefined,
+  };
+
+  if (n.type === "TEXT") {
+    out.characters = typeof n.characters === "string" ? n.characters : undefined;
+    out.style = normalizeExporterTextStyle(n);
+  }
+
+  if (Array.isArray(n.children)) {
+    out.children = (n.children as unknown[])
+      .map((child) => normalizeExporterNode(child, cumulative))
+      .filter((c): c is FigmaNode => c !== null);
+  }
+
+  return out;
+}
+
 function isPlausibleFigmaNode(value: unknown): value is FigmaNode {
   return (
     typeof value === "object" &&
@@ -1042,7 +1300,20 @@ export const Route = createFileRoute("/api/public/hooks/figma-import")({
                 { status: 400 },
               );
             }
-            const root = body.nodeJson;
+            // Due formati possibili: il nostro figma-export-plugin/ (già
+            // in forma FigmaNode, con absoluteBoundingBox) oppure il
+            // plugin Community di terzi "JSON Exporter" (relativeTransform
+            // + x/y locali, niente absoluteBoundingBox) — vedi
+            // normalizeExporterNode più sopra per le differenze.
+            const root = looksLikeExporterFormatNode(body.nodeJson)
+              ? normalizeExporterNode(body.nodeJson, identityMat())
+              : body.nodeJson;
+            if (!root) {
+              return Response.json(
+                { ok: false, error: "Il JSON incollato non è un nodo Figma valido." },
+                { status: 400 },
+              );
+            }
             if (!CONTAINER_TYPES.has(root.type)) {
               return Response.json(
                 {
