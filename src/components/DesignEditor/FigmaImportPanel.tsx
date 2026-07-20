@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { AlertTriangle, Loader2, Upload } from "lucide-react";
 import { callHook } from "@/lib/hooks-client";
 import { replaceTemplateElements, type TemplateElementInput } from "@/lib/designElements";
@@ -74,6 +74,7 @@ export function FigmaImportPanel({
   const [link, setLink] = useState("");
   const [pastedJson, setPastedJson] = useState("");
   const [fetching, setFetching] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [result, setResult] = useState<FigmaImportResult | null>(null);
   const [fontReplacements, setFontReplacements] = useState<Record<string, string>>({});
   const [applying, setApplying] = useState(false);
@@ -114,23 +115,24 @@ export function FigmaImportPanel({
   // Percorso alternativo al link, per quando il piano Figma del team che
   // possiede il file limita fortemente la REST API (vedi TokenHealthAlert
   // e il commento in cima a figma-import.ts): l'utente esegue il plugin
-  // "trendzn - Esporta template" dentro Figma (figma-export-plugin/, gira
-  // sulla Plugin API, nessun limite legato al piano) e incolla qui il JSON
-  // che produce.
-  async function handleFetchFromJson() {
-    if (!pastedJson.trim()) return;
+  // "trendzn - Esporta template" (o un plugin Community compatibile, vedi
+  // testo di aiuto sotto) dentro Figma e fornisce qui il JSON che produce,
+  // incollandolo o caricando il file scaricato — condividono la stessa
+  // logica di parsing/invio, solo la fonte del testo cambia.
+  async function importFromJsonText(text: string) {
+    if (!text.trim()) return;
     setFetching(true);
     setError(null);
     setResult(null);
     setFontReplacements({});
     try {
-      const nodeJson = JSON.parse(pastedJson);
+      const nodeJson = JSON.parse(text);
       const data = await callHook<FigmaImportResult>("figma-import", { nodeJson });
       applyResult(data);
     } catch (err) {
       setError(
         err instanceof SyntaxError
-          ? "JSON non valido: controlla di aver copiato tutto il testo dal plugin."
+          ? "JSON non valido: controlla di aver copiato/caricato tutto il testo dal plugin."
           : err instanceof Error
             ? err.message
             : String(err),
@@ -138,6 +140,20 @@ export function FigmaImportPanel({
     } finally {
       setFetching(false);
     }
+  }
+
+  // Alcuni plugin producono un file da qualche MB (immagini incluse in
+  // base64): copiare/incollare a mano un testo così grande è fragile (il
+  // "Copy" del plugin o l'editor con cui si apre il file possono troncare
+  // la selezione). Leggere il file scelto direttamente evita del tutto
+  // il giro attraverso appunti/textarea.
+  async function handleFileSelected(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    const text = await file.text();
+    setPastedJson(text);
+    await importFromJsonText(text);
   }
 
   async function handleApply() {
@@ -201,20 +217,48 @@ export function FigmaImportPanel({
 
       <details className="rounded-lg border border-border p-2 text-[11px] text-muted-foreground">
         <summary className="cursor-pointer select-none">
-          Il piano Figma del file limita l'API? Incolla il JSON del plugin
+          Il piano Figma del file limita l'API? Carica/incolla il JSON del plugin
         </summary>
         <div className="mt-2 space-y-1.5">
           <p>
             Esegui il plugin "trendzn - Esporta template" dentro Figma (gira sulla Plugin API, senza
             il limite di richieste/mese della REST API sui file di un team con piano
             Starter/gratuito — vedi <code>figma-export-plugin/README.md</code> nel repo per
-            l'installazione), copia il JSON che produce e incollalo qui sotto. Funziona anche con il
-            JSON di alcuni plugin Community di terzi: "JSON Exporter" (limite noto: i riquadri foto
-            importano senza immagine, perché quel plugin non include i byte delle foto nell'export —
-            vanno riagganciati a mano) e i plugin che esportano un JSON con "pages"/"frames" e
-            immagini incluse in base64 (in questo caso le foto vengono importate correttamente nella
-            maggior parte dei casi).
+            l'installazione), poi carica o incolla qui sotto il JSON che produce. Funziona anche con
+            il JSON di alcuni plugin Community di terzi: "JSON Exporter" (limite noto: i riquadri
+            foto importano senza immagine, perché quel plugin non include i byte delle foto
+            nell'export — vanno riagganciati a mano) e i plugin che esportano un JSON con
+            "pages"/"frames" e immagini incluse in base64 (in questo caso le foto vengono importate
+            correttamente nella maggior parte dei casi). Per i file grandi con immagini incluse usa
+            "Carica file JSON" invece di copiare/incollare a mano: eviti che un copia-incolla enorme
+            si tronchi per errore.
           </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="application/json,.json"
+              onChange={handleFileSelected}
+              className="hidden"
+            />
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={fetching}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-50"
+            >
+              {fetching ? (
+                <Loader2 className="size-3.5 animate-spin" />
+              ) : (
+                <Upload className="size-3.5" />
+              )}
+              Carica file JSON
+            </button>
+            <span className="text-[11px] text-muted-foreground">
+              consigliato per file grandi (con immagini incluse): evita di doverli copiare/incollare
+              a mano
+            </span>
+          </div>
           <textarea
             value={pastedJson}
             onChange={(e) => setPastedJson(e.target.value)}
@@ -223,7 +267,7 @@ export function FigmaImportPanel({
           />
           <button
             type="button"
-            onClick={handleFetchFromJson}
+            onClick={() => importFromJsonText(pastedJson)}
             disabled={fetching || !pastedJson.trim()}
             className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary disabled:opacity-50"
           >
@@ -232,7 +276,7 @@ export function FigmaImportPanel({
             ) : (
               <Upload className="size-3.5" />
             )}
-            Leggi JSON
+            Leggi JSON incollato
           </button>
         </div>
       </details>
