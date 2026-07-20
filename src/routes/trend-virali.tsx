@@ -528,6 +528,29 @@ function Page() {
 
   const canaliInspoVisible = canaliInspoItems.slice(0, canaliInspoVisibleCount);
 
+  // Elenco dei trend cross-profilo distinti tra i post Canali Inspo caricati
+  // (3+ canali sullo stesso argomento, rilevati da discover-canali-inspo-content.mjs
+  // via clustering LLM — vedi cross_profile_topic/cross_profile_channel_count).
+  // Derivato lato client dagli stessi item già caricati, nessun fetch in più.
+  const crossProfileTopics = useMemo(() => {
+    const byTopic = new Map<string, { channelCount: number; postCount: number }>();
+    for (const item of canaliInspoItems) {
+      if (!item.cross_profile_topic) continue;
+      const existing = byTopic.get(item.cross_profile_topic);
+      if (existing) {
+        existing.postCount += 1;
+      } else {
+        byTopic.set(item.cross_profile_topic, {
+          channelCount: item.cross_profile_channel_count ?? 0,
+          postCount: 1,
+        });
+      }
+    }
+    return Array.from(byTopic.entries())
+      .map(([topic, stats]) => ({ topic, ...stats }))
+      .sort((a, b) => b.channelCount - a.channelCount || b.postCount - a.postCount);
+  }, [canaliInspoItems]);
+
   const filtered = useMemo(() => {
     let result = items;
     if (sourceFilter !== "all") result = result.filter((i) => i.discovery_source === sourceFilter);
@@ -609,6 +632,28 @@ function Page() {
             </div>
           ) : (
             <>
+              {crossProfileTopics.length > 0 && (
+                <div className="space-y-2 rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
+                  <h2 className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                    <Flame className="size-4 shrink-0 text-orange-600 dark:text-orange-400" />
+                    Trend cross-profilo rilevati ({crossProfileTopics.length})
+                  </h2>
+                  <ul className="flex flex-wrap gap-2">
+                    {crossProfileTopics.map(({ topic, channelCount, postCount }) => (
+                      <li
+                        key={topic}
+                        className="inline-flex items-center gap-1 rounded-lg bg-orange-500/10 px-2.5 py-1 text-xs font-medium text-orange-600 dark:text-orange-400"
+                      >
+                        {topic}
+                        <span className="text-orange-600/70 dark:text-orange-400/70">
+                          · {channelCount} canali · {postCount} post
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {canaliInspoVisible.map((item) => (
                   <ContentCard key={item.id} item={item} />
