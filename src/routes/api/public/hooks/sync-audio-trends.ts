@@ -99,10 +99,17 @@ export const Route = createFileRoute("/api/public/hooks/sync-audio-trends")({
           // Union-find "quasi-lineare" (array padre + path compression):
           // per ogni coppia con similarità sopra soglia, unisce i due
           // gruppi — dataset atteso piccolo (Reel Canali Inspo di 7gg con
-          // fingerprint calcolato), il confronto O(n²) è accettabile.
-          const candidates = rows.filter(
+          // fingerprint calcolato, limitati a MAX_FINGERPRINTS_PER_RUN per
+          // giro in discover-canali-inspo-content.mjs), il confronto O(n²)
+          // è accettabile. Tetto di sicurezza comunque presente: se il
+          // numero di candidati crescesse molto (più fonti di fingerprint
+          // in futuro), il confronto si ferma ai più recenti invece di
+          // crescere senza limite nel tempo di esecuzione dell'hook.
+          const MAX_FINGERPRINT_CANDIDATES = 300;
+          const allCandidates = rows.filter(
             (r) => !exactQualifiedIds.has(r.id) && r.audio_fingerprint != null && r.audio_fingerprint.length > 0,
           );
+          const candidates = allCandidates.slice(0, MAX_FINGERPRINT_CANDIDATES);
 
           const parent = candidates.map((_, i) => i);
           function find(i: number): number {
