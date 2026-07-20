@@ -13,21 +13,25 @@ name: Discover Instagram Hashtag Content (gratuito)
 # il tempo reale dipende da quanti hashtag sono monitorati e da quanti
 # contenuti ciascuna pagina hashtag mostra davvero.
 #
-# 8 job in matrix (shard) invece di 2: la soglia di blocco osservata era ~10
-# hashtag (~500 richieste) per sessione Playwright prima che Instagram
-# iniziasse a bloccare al 100% (redirect login/challenge su ogni pagina-post
-# successiva) — ma i topic monitorati sono cresciuti nel tempo (Sync Trend
-# Virali ne registra continuamente di nuovi) fino a ~130-150/run, cioè
-# 65-75 per shard con SHARD_COUNT=2: ben oltre la soglia sicura, coerente
-# col login-wall quasi totale osservato in monitoraggio su più run
-# consecutivi. Con 8 shard si torna a ~16-19 hashtag/sessione, vicino alla
-# soglia empirica. Ogni shard gira su un runner (quindi sessione/IP)
-# diverso — vedi SHARD_COUNT/SHARD_INDEX in
+# 16 job in matrix (shard): la soglia di blocco osservata era ~10 hashtag
+# (~500 richieste) per sessione Playwright prima che Instagram iniziasse a
+# bloccare al 100% (redirect login/challenge su ogni pagina-post
+# successiva). Con SHARD_COUNT=2 (~65-75 hashtag/shard, i topic monitorati
+# sono cresciuti nel tempo) il login-wall era quasi totale. Con
+# SHARD_COUNT=8 (~24 hashtag/shard, ~190 hashtag/run osservati) i
+# contenuti sincronizzati sono saliti da 2-5 a 11-15 a run (misurato su 2
+# run reali) — miglioramento chiaro ma non risolutivo, la maggioranza degli
+# hashtag continua a fallire. Con 16 shard si scende a ~12 hashtag/sessione,
+# vicino alla soglia empirica. Repo pubblico: i minuti Actions sono
+# illimitati e gratuiti (verificato via get_workflow_run_usage, 0 minuti
+# fatturabili), quindi salire di shard non ha costo. Ogni shard gira su un
+# runner (quindi sessione/IP) diverso — vedi SHARD_COUNT/SHARD_INDEX in
 # discover-instagram-hashtag-content.mjs. Se il login-wall persiste anche
-# con 8 shard, il problema non è più (solo) di volume per sessione ma di
-# reputazione IP del pool di runner GitHub Actions nel suo complesso — va
-# rivalutato con proxy o sessione autenticata invece di aumentare ancora lo
-# sharding.
+# con 16 shard, il problema non è più (solo) di volume per sessione ma di
+# reputazione IP del pool di runner GitHub Actions nel suo complesso — a
+# quel punto un ulteriore aumento dello sharding avrebbe rendimenti
+# calanti e andrebbe rivalutata un'alternativa (proxy o sessione
+# autenticata, entrambe con budget dedicato, scartate per ora).
 
 on:
   schedule:
@@ -48,7 +52,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
     steps:
       - uses: actions/checkout@v4
@@ -66,6 +70,6 @@ jobs:
         env:
           MAX_POSTS_PER_HASHTAG: ${{ github.event.inputs.max_posts_per_hashtag || '100' }}
           RECENCY_WINDOW_DAYS: ${{ github.event.inputs.recency_window_days || '7' }}
-          SHARD_COUNT: 8
+          SHARD_COUNT: 16
           SHARD_INDEX: ${{ matrix.shard }}
         run: node scripts/discover-instagram-hashtag-content.mjs
