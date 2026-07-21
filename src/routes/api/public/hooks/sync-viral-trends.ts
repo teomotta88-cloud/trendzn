@@ -113,7 +113,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-viral-trends")({
                 engagement: c.engagement ?? 0,
                 reach: c.reach ?? null,
                 is_viral: c.is_viral ?? false,
-                raw: c.raw ?? null,
+                raw: (c.raw ?? null) as import("@/integrations/supabase/types").Json,
                 cross_profile_topic: c.cross_profile_topic ?? null,
                 cross_profile_channel_count: c.cross_profile_channel_count ?? null,
                 audio_name: c.audio_name ?? null,

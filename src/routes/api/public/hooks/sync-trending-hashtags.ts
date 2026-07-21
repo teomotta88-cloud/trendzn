@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { computeTopicGrowth, TOPIC_GROWTH_WINDOW_HOURS } from "@/lib/topicGrowth";
+import type { Json } from "@/integrations/supabase/types";
 
 // Storico più vecchio della finestra di crescita non serve più (Fase 6, vedi
 // src/lib/topicGrowth.ts): un po' di margine oltre le 24h della finestra,

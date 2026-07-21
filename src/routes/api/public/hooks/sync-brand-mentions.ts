@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { Json } from "@/integrations/supabase/types";
 
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin"] as const;
 type Platform = (typeof PLATFORMS)[number];
