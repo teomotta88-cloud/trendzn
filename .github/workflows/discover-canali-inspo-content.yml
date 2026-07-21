@@ -3,7 +3,11 @@ name: Discover Canali Inspo Content
 # Applica le regole di viralità ai post Instagram dei Canali Inspo (già
 # raccolti da RSS-Bridge in trends.json, senza engagement) e rileva i trend
 # cross-profilo (3+ canali diversi sullo stesso argomento) — vedi
-# scripts/discover-canali-inspo-content.mjs.
+# scripts/discover-canali-inspo-content.mjs. Calcola anche, per un
+# sottoinsieme limitato di Reel, il fingerprint acustico dell'audio
+# (Chromaprint/fpcalc — vedi scripts/lib/audio-fingerprint.mjs), per
+# riconoscere lo stesso audio anche quando è stato ricaricato con un URL
+# diverso.
 
 on:
   schedule:
@@ -27,6 +31,9 @@ jobs:
         run: |
           npm install playwright
           npx playwright install --with-deps chromium
+
+      - name: Install fpcalc (Chromaprint)
+        run: sudo apt-get update && sudo apt-get install -y libchromaprint-tools
 
       - name: Scopri viralità + trend cross-profilo Canali Inspo
         env:

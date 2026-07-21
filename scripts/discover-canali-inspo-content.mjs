@@ -30,6 +30,7 @@ import { openInstagramMetricsSession } from "./lib/instagram-public-metrics.mjs"
 import { looksItalian } from "./lib/social-search.mjs";
 import { textSimilarity } from "./lib/text-similarity.mjs";
 import { clusterCaptionsByTopic } from "./lib/openrouter.mjs";
+import { computeAudioFingerprint } from "./lib/audio-fingerprint.mjs";
 
 const TRENDS_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
@@ -44,6 +45,20 @@ const MIN_CROSS_PROFILE_CHANNELS = parseInt(process.env.MIN_CROSS_PROFILE_CHANNE
 // sullo stesso evento reale spesso condividono solo poche parole chiave, non
 // intere frasi.
 const MIN_CLUSTER_SIMILARITY = parseFloat(process.env.MIN_CLUSTER_SIMILARITY ?? "0.12");
+
+// Rilevamento "audio in trend" via fingerprint acustico (vedi
+// lib/audio-fingerprint.mjs) — completa il match esatto su audio_url già
+// fatto da sync-audio-trends.ts, per i casi in cui lo stesso audio è stato
+// ricaricato con un URL diverso (audio "originale" ripubblicato). Calcolato
+// QUI, inline, mentre l'URL del video CDN è ancora fresco (scade in fretta,
+// non si può rimandare a un run successivo) — non su ogni Reel: scaricare
+// un video intero è molto più pesante di una richiesta HTML, nella stessa
+// sessione che già oggi può finire in login-wall dopo troppe richieste
+// consecutive. MAX_FINGERPRINTS_PER_RUN tiene il costo aggiuntivo per giro
+// limitato e prevedibile; nessuna preferenza per "audio isolati" (che
+// ridurrebbe gli sprechi ma richiederebbe un'altra query prima di ogni
+// tentativo): il tetto per-run basta da solo a limitare il rischio.
+const MAX_FINGERPRINTS_PER_RUN = parseInt(process.env.MAX_FINGERPRINTS_PER_RUN ?? "20", 10);
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || undefined;
@@ -154,6 +169,8 @@ const accepted = [];
 let unreachable = 0;
 let skippedOld = 0;
 let skippedNotItalian = 0;
+let fingerprintsComputed = 0;
+let fingerprintsFailed = 0;
 
 try {
   for (const candidate of preFiltered) {
@@ -185,6 +202,20 @@ try {
       continue;
     }
 
+    let audioFingerprint = null;
+    if (metrics.audioUrl && metrics.videoUrl && fingerprintsComputed < MAX_FINGERPRINTS_PER_RUN) {
+      try {
+        audioFingerprint = await computeAudioFingerprint(metrics.videoUrl);
+        fingerprintsComputed++;
+        console.log(
+          `  [${candidate.channelName}] fingerprint audio calcolato (${audioFingerprint.length} frame)`,
+        );
+      } catch (err) {
+        fingerprintsFailed++;
+        console.log(`  [${candidate.channelName}] fingerprint audio fallito (non bloccante): ${String(err)}`);
+      }
+    }
+
     accepted.push({
       channelId: candidate.channelId,
       channelName: candidate.channelName,
@@ -196,6 +227,7 @@ try {
       comments: metrics.comments,
       audioName: metrics.audioName,
       audioUrl: metrics.audioUrl,
+      audioFingerprint,
     });
   }
 } finally {
@@ -203,7 +235,7 @@ try {
 }
 
 console.log(
-  `\nAccettati: ${accepted.length}/${preFiltered.length} (${unreachable} non raggiungibili, ${skippedOld} fuori finestra ${RECENCY_WINDOW_DAYS}gg, ${skippedNotItalian} non italiani)`,
+  `\nAccettati: ${accepted.length}/${preFiltered.length} (${unreachable} non raggiungibili, ${skippedOld} fuori finestra ${RECENCY_WINDOW_DAYS}gg, ${skippedNotItalian} non italiani) — fingerprint audio: ${fingerprintsComputed} calcolati, ${fingerprintsFailed} falliti`,
 );
 
 if (accepted.length === 0) {
@@ -271,6 +303,7 @@ const contents = accepted.map((a) => {
     reach: null,
     audio_name: a.audioName ?? null,
     audio_url: a.audioUrl ?? null,
+    audio_fingerprint: a.audioFingerprint ?? null,
     ...(crossProfile
       ? {
           cross_profile_topic: crossProfile.topic,

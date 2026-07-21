@@ -15,6 +15,15 @@ const DEFAULT_LIMIT = 150;
  * anche quando Instagram blocca il re-fetch della pagina (login-wall) —
  * in quel caso la didascalia salvata è l'unica base su cui decidere se il
  * post va tenuto o cancellato.
+ *
+ * Ordinato per updated_at crescente (fix di un limite noto: quando i
+ * contenuti nella finestra superano `limit`, senza un ordine esplicito la
+ * query restituiva sempre lo stesso sottoinsieme — i contenuti oltre quel
+ * numero non venivano MAI ricontrollati). updated_at viene aggiornato ad
+ * ogni scrittura reale del contenuto (sync-viral-trends.ts,
+ * recheck-viral-engagement.ts): i contenuti mai ricontrollati, o
+ * ricontrollati da più tempo, escono sempre per primi — nel tempo la
+ * rotazione raggiunge tutti i contenuti, non solo i primi per ordine fisico.
  */
 export const Route = createFileRoute("/api/public/hooks/list-instagram-content-urls")({
   server: {
@@ -35,6 +44,7 @@ export const Route = createFileRoute("/api/public/hooks/list-instagram-content-u
             .select("platform, external_id, url, content")
             .eq("platform", "instagram")
             .or(`published_at.gte.${sinceIso},and(published_at.is.null,created_at.gte.${sinceIso})`)
+            .order("updated_at", { ascending: true })
             .limit(limit);
 
           if (error) {
