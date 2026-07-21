@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { Json } from "@/integrations/supabase/types";
 
 const PLATFORMS = ["twitter", "reddit", "instagram", "youtube", "linkedin"] as const;
 type Platform = (typeof PLATFORMS)[number];
@@ -69,7 +70,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-brand-mentions")({
                 engagement: m.engagement ?? 0,
                 reach: m.reach ?? null,
                 is_viral: m.is_viral ?? false,
-                raw: m.raw ?? null,
+                raw: (m.raw ?? null) as Json,
               }));
 
             // anysite può restituire lo stesso post più volte nella stessa
