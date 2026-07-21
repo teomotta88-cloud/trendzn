@@ -1197,8 +1197,10 @@ export type Database = {
       }
       viral_trend_content: {
         Row: {
+          audio_fingerprint: number[] | null
           audio_name: string | null
           audio_trend_channel_count: number | null
+          audio_trend_matched_by: string | null
           audio_trend_reel_count: number | null
           audio_url: string | null
           author: string | null
@@ -1222,11 +1224,14 @@ export type Database = {
           reach: number | null
           source_hashtag: string
           topic_id: string | null
+          updated_at: string
           url: string
         }
         Insert: {
+          audio_fingerprint?: number[] | null
           audio_name?: string | null
           audio_trend_channel_count?: number | null
+          audio_trend_matched_by?: string | null
           audio_trend_reel_count?: number | null
           audio_url?: string | null
           author?: string | null
@@ -1250,11 +1255,14 @@ export type Database = {
           reach?: number | null
           source_hashtag: string
           topic_id?: string | null
+          updated_at?: string
           url: string
         }
         Update: {
+          audio_fingerprint?: number[] | null
           audio_name?: string | null
           audio_trend_channel_count?: number | null
+          audio_trend_matched_by?: string | null
           audio_trend_reel_count?: number | null
           audio_url?: string | null
           author?: string | null
@@ -1278,6 +1286,7 @@ export type Database = {
           reach?: number | null
           source_hashtag?: string
           topic_id?: string | null
+          updated_at?: string
           url?: string
         }
         Relationships: [
