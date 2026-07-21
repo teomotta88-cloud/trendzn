@@ -37,6 +37,7 @@ import { Route as ApiPublicHooksSyncTrendingHashtagsRouteImport } from './routes
 import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/api/public/hooks/sync-tiktok-hashtag'
 import { Route as ApiPublicHooksSyncCrossSourceTrendsRouteImport } from './routes/api/public/hooks/sync-cross-source-trends'
 import { Route as ApiPublicHooksSyncBrandMentionsRouteImport } from './routes/api/public/hooks/sync-brand-mentions'
+import { Route as ApiPublicHooksSyncAudioTrendsRouteImport } from './routes/api/public/hooks/sync-audio-trends'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksRecordTopicVolumeRouteImport } from './routes/api/public/hooks/record-topic-volume'
 import { Route as ApiPublicHooksRecheckViralEngagementRouteImport } from './routes/api/public/hooks/recheck-viral-engagement'
@@ -209,6 +210,12 @@ const ApiPublicHooksSyncBrandMentionsRoute =
     path: '/api/public/hooks/sync-brand-mentions',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksSyncAudioTrendsRoute =
+  ApiPublicHooksSyncAudioTrendsRouteImport.update({
+    id: '/api/public/hooks/sync-audio-trends',
+    path: '/api/public/hooks/sync-audio-trends',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksSubmitManualRoute =
   ApiPublicHooksSubmitManualRouteImport.update({
     id: '/api/public/hooks/submit-manual',
@@ -375,6 +382,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/recheck-viral-engagement': typeof ApiPublicHooksRecheckViralEngagementRoute
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -426,6 +434,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/recheck-viral-engagement': typeof ApiPublicHooksRecheckViralEngagementRoute
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -478,6 +487,7 @@ export interface FileRoutesById {
   '/api/public/hooks/recheck-viral-engagement': typeof ApiPublicHooksRecheckViralEngagementRoute
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
+  '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -531,6 +541,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/recheck-viral-engagement'
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/sync-audio-trends'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-tiktok-hashtag'
@@ -582,6 +593,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/recheck-viral-engagement'
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/sync-audio-trends'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-tiktok-hashtag'
@@ -633,6 +645,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/recheck-viral-engagement'
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
+    | '/api/public/hooks/sync-audio-trends'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-tiktok-hashtag'
@@ -685,6 +698,7 @@ export interface RootRouteChildren {
   ApiPublicHooksRecheckViralEngagementRoute: typeof ApiPublicHooksRecheckViralEngagementRoute
   ApiPublicHooksRecordTopicVolumeRoute: typeof ApiPublicHooksRecordTopicVolumeRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
+  ApiPublicHooksSyncAudioTrendsRoute: typeof ApiPublicHooksSyncAudioTrendsRoute
   ApiPublicHooksSyncBrandMentionsRoute: typeof ApiPublicHooksSyncBrandMentionsRoute
   ApiPublicHooksSyncCrossSourceTrendsRoute: typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   ApiPublicHooksSyncTiktokHashtagRoute: typeof ApiPublicHooksSyncTiktokHashtagRoute
@@ -895,6 +909,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksSyncBrandMentionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/sync-audio-trends': {
+      id: '/api/public/hooks/sync-audio-trends'
+      path: '/api/public/hooks/sync-audio-trends'
+      fullPath: '/api/public/hooks/sync-audio-trends'
+      preLoaderRoute: typeof ApiPublicHooksSyncAudioTrendsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/submit-manual': {
       id: '/api/public/hooks/submit-manual'
       path: '/api/public/hooks/submit-manual'
@@ -1091,6 +1112,7 @@ const rootRouteChildren: RootRouteChildren = {
     ApiPublicHooksRecheckViralEngagementRoute,
   ApiPublicHooksRecordTopicVolumeRoute: ApiPublicHooksRecordTopicVolumeRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
+  ApiPublicHooksSyncAudioTrendsRoute: ApiPublicHooksSyncAudioTrendsRoute,
   ApiPublicHooksSyncBrandMentionsRoute: ApiPublicHooksSyncBrandMentionsRoute,
   ApiPublicHooksSyncCrossSourceTrendsRoute:
     ApiPublicHooksSyncCrossSourceTrendsRoute,
