@@ -65,7 +65,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-trending-hashtags")
             trend_points: item.trend,
             region,
             period_days: periodDays,
-            raw: item.raw ?? null,
+            raw: (item.raw ?? null) as Json,
           }));
 
           const { data, error } = await supabaseAdmin

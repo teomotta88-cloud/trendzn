@@ -474,11 +474,9 @@ export const Route = createFileRoute("/api/public/hooks/export-feed-pptx")({
           pptx.company = "ASPI Monitoring";
           pptx.subject = `Feed export keyword: ${keyword}`;
           pptx.title = title;
-          pptx.lang = "it-IT";
           pptx.theme = {
             headFontFace: "Aptos Display",
             bodyFontFace: "Aptos",
-            lang: "it-IT",
           };
 
           const totalSlides = posts.length + 2;
