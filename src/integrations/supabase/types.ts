@@ -169,6 +169,7 @@ export type Database = {
           canali_inspo_topic: string | null
           computed_at: string
           id: string
+          is_accelerating: boolean
           label: string
           source_count: number
           sources: string[]
@@ -179,6 +180,7 @@ export type Database = {
           canali_inspo_topic?: string | null
           computed_at?: string
           id?: string
+          is_accelerating?: boolean
           label: string
           source_count: number
           sources: string[]
@@ -189,11 +191,39 @@ export type Database = {
           canali_inspo_topic?: string | null
           computed_at?: string
           id?: string
+          is_accelerating?: boolean
           label?: string
           source_count?: number
           sources?: string[]
           tier?: string | null
           topic_ids?: string[]
+        }
+        Relationships: []
+      }
+      custom_fonts: {
+        Row: {
+          created_at: string
+          family_name: string
+          id: string
+          storage_path: string
+          style: string
+          weight: number
+        }
+        Insert: {
+          created_at?: string
+          family_name: string
+          id?: string
+          storage_path: string
+          style?: string
+          weight?: number
+        }
+        Update: {
+          created_at?: string
+          family_name?: string
+          id?: string
+          storage_path?: string
+          style?: string
+          weight?: number
         }
         Relationships: []
       }
@@ -355,6 +385,9 @@ export type Database = {
           rubrica: string | null
           rubrica_id: string | null
           topic: string | null
+          visual_formato: string | null
+          visual_media_ids: string[]
+          visual_rubrica_id: string | null
           visual_type: string | null
           visual_url: string | null
         }
@@ -374,6 +407,9 @@ export type Database = {
           rubrica?: string | null
           rubrica_id?: string | null
           topic?: string | null
+          visual_formato?: string | null
+          visual_media_ids?: string[]
+          visual_rubrica_id?: string | null
           visual_type?: string | null
           visual_url?: string | null
         }
@@ -393,6 +429,9 @@ export type Database = {
           rubrica?: string | null
           rubrica_id?: string | null
           topic?: string | null
+          visual_formato?: string | null
+          visual_media_ids?: string[]
+          visual_rubrica_id?: string | null
           visual_type?: string | null
           visual_url?: string | null
         }
@@ -407,6 +446,13 @@ export type Database = {
           {
             foreignKeyName: "editorial_posts_rubrica_id_fkey"
             columns: ["rubrica_id"]
+            isOneToOne: false
+            referencedRelation: "rubriche"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_posts_visual_rubrica_id_fkey"
+            columns: ["visual_rubrica_id"]
             isOneToOne: false
             referencedRelation: "rubriche"
             referencedColumns: ["id"]
@@ -639,6 +685,7 @@ export type Database = {
       }
       monitored_topics: {
         Row: {
+          category: string | null
           created_at: string
           derived_hashtag: string | null
           derived_keyword: string | null
@@ -659,6 +706,7 @@ export type Database = {
           volume_growth_pct: number | null
         }
         Insert: {
+          category?: string | null
           created_at?: string
           derived_hashtag?: string | null
           derived_keyword?: string | null
@@ -679,6 +727,7 @@ export type Database = {
           volume_growth_pct?: number | null
         }
         Update: {
+          category?: string | null
           created_at?: string
           derived_hashtag?: string | null
           derived_keyword?: string | null
@@ -699,6 +748,65 @@ export type Database = {
           volume_growth_pct?: number | null
         }
         Relationships: []
+      }
+      post_visual_elements: {
+        Row: {
+          card_index: number
+          created_at: string
+          height: number
+          id: string
+          layer_name: string | null
+          post_id: string
+          rotation: number
+          style: Json
+          tipo: string
+          updated_at: string
+          width: number
+          x: number
+          y: number
+          z_index: number
+        }
+        Insert: {
+          card_index?: number
+          created_at?: string
+          height: number
+          id?: string
+          layer_name?: string | null
+          post_id: string
+          rotation?: number
+          style?: Json
+          tipo: string
+          updated_at?: string
+          width: number
+          x: number
+          y: number
+          z_index?: number
+        }
+        Update: {
+          card_index?: number
+          created_at?: string
+          height?: number
+          id?: string
+          layer_name?: string | null
+          post_id?: string
+          rotation?: number
+          style?: Json
+          tipo?: string
+          updated_at?: string
+          width?: number
+          x?: number
+          y?: number
+          z_index?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "post_visual_elements_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_posts"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       rubrica_formati: {
         Row: {
@@ -821,6 +929,68 @@ export type Database = {
           },
         ]
       }
+      template_elements: {
+        Row: {
+          card_index: number
+          created_at: string
+          formato: string | null
+          height: number
+          id: string
+          layer_name: string | null
+          rotation: number
+          rubrica_id: string
+          style: Json
+          tipo: string
+          updated_at: string
+          width: number
+          x: number
+          y: number
+          z_index: number
+        }
+        Insert: {
+          card_index?: number
+          created_at?: string
+          formato?: string | null
+          height?: number
+          id?: string
+          layer_name?: string | null
+          rotation?: number
+          rubrica_id: string
+          style?: Json
+          tipo: string
+          updated_at?: string
+          width?: number
+          x?: number
+          y?: number
+          z_index?: number
+        }
+        Update: {
+          card_index?: number
+          created_at?: string
+          formato?: string | null
+          height?: number
+          id?: string
+          layer_name?: string | null
+          rotation?: number
+          rubrica_id?: string
+          style?: Json
+          tipo?: string
+          updated_at?: string
+          width?: number
+          x?: number
+          y?: number
+          z_index?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "template_elements_rubrica_id_fkey"
+            columns: ["rubrica_id"]
+            isOneToOne: false
+            referencedRelation: "rubriche"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       tiktok_trending_hashtags: {
         Row: {
           captured_at: string
@@ -862,6 +1032,41 @@ export type Database = {
           view_count?: number | null
         }
         Relationships: []
+      }
+      topic_growth_history: {
+        Row: {
+          computed_at: string
+          engagement_growth_pct: number | null
+          id: string
+          platform: string
+          topic_id: string
+          volume_growth_pct: number | null
+        }
+        Insert: {
+          computed_at?: string
+          engagement_growth_pct?: number | null
+          id?: string
+          platform: string
+          topic_id: string
+          volume_growth_pct?: number | null
+        }
+        Update: {
+          computed_at?: string
+          engagement_growth_pct?: number | null
+          id?: string
+          platform?: string
+          topic_id?: string
+          volume_growth_pct?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "topic_growth_history_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "monitored_topics"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       topic_metrics_history: {
         Row: {
@@ -992,6 +1197,10 @@ export type Database = {
       }
       viral_trend_content: {
         Row: {
+          audio_name: string | null
+          audio_trend_channel_count: number | null
+          audio_trend_reel_count: number | null
+          audio_url: string | null
           author: string | null
           content: string | null
           created_at: string
@@ -1016,6 +1225,10 @@ export type Database = {
           url: string
         }
         Insert: {
+          audio_name?: string | null
+          audio_trend_channel_count?: number | null
+          audio_trend_reel_count?: number | null
+          audio_url?: string | null
           author?: string | null
           content?: string | null
           created_at?: string
@@ -1040,6 +1253,10 @@ export type Database = {
           url: string
         }
         Update: {
+          audio_name?: string | null
+          audio_trend_channel_count?: number | null
+          audio_trend_reel_count?: number | null
+          audio_url?: string | null
           author?: string | null
           content?: string | null
           created_at?: string
