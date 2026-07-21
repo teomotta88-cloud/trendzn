@@ -65,8 +65,8 @@ export function TrendingHashtagsTable({
       .eq("period_days", 7)
       .order("rank", { ascending: true, nullsFirst: false })
       .limit(15)
-      .then(({ data }: { data: TrendingHashtagRow[] | null }) => {
-        if (data) setRows(data);
+      .then(({ data }) => {
+        if (data) setRows(data as unknown as TrendingHashtagRow[]);
         setLoading(false);
       });
   }, []);
