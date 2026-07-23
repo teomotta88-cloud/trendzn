@@ -14,6 +14,7 @@ on:
     # Stessa cadenza di Discover Instagram Hashtag Content.
     - cron: "20 */6 * * *"
   workflow_dispatch: {}
+  workflow_call: {}
 
 jobs:
   discover:

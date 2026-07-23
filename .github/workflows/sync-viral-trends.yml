@@ -15,6 +15,7 @@ on:
       max_trends:
         description: "Numero massimo di ricerche Google Trends IT da monitorare (per data più recente)"
         default: "50"
+  workflow_call: {}
 
 jobs:
   sync:
