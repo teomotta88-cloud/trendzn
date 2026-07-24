@@ -113,6 +113,62 @@ async function checkTwitterBearer() {
   }
 }
 
+async function checkReddit() {
+  const clientId = process.env.REDDIT_CLIENT_ID;
+  const clientSecret = process.env.REDDIT_CLIENT_SECRET;
+  if (!clientId || !clientSecret)
+    return {
+      name: "REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET",
+      configured: false,
+      valid: null,
+      detail: "non configurato",
+    };
+  try {
+    const basicAuth = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+    const res = await fetch("https://www.reddit.com/api/v1/access_token", {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basicAuth}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "trendzn-bot/1.0 (discovery trend virali, uso non commerciale)",
+      },
+      body: "grant_type=client_credentials",
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      return {
+        name: "REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET",
+        configured: true,
+        valid: false,
+        detail: `OAuth token Reddit ha risposto ${res.status}: ${body.slice(0, 200)}`,
+      };
+    }
+    const data = await res.json();
+    if (!data.access_token) {
+      return {
+        name: "REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET",
+        configured: true,
+        valid: false,
+        detail: "risposta OAuth senza access_token",
+      };
+    }
+    return {
+      name: "REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET",
+      configured: true,
+      valid: true,
+      detail: "credenziali valide",
+    };
+  } catch (err) {
+    return {
+      name: "REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET",
+      configured: true,
+      valid: false,
+      detail: String(err).slice(0, 200),
+    };
+  }
+}
+
 function checkUnverifiable(name, reason) {
   const configured = !!process.env[name];
   return {
@@ -126,6 +182,7 @@ function checkUnverifiable(name, reason) {
 results.push(await checkYouTube());
 results.push(await checkAnysite());
 results.push(await checkTwitterBearer());
+results.push(await checkReddit());
 results.push(
   checkUnverifiable(
     "RETTIWT_API_KEY",

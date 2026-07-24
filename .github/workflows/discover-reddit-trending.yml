@@ -2,8 +2,10 @@ name: Discover Reddit Trending
 
 # Discovery gratuita dei post in crescita (rising) su un elenco curato di
 # subreddit italiani (src/data/trends.json -> reddit_subreddits) — vedi
-# scripts/discover-reddit-trending.mjs. Nessun login/Playwright necessario:
-# l'endpoint .json pubblico di Reddit basta.
+# scripts/discover-reddit-trending.mjs. Usa l'API OAuth app-only di Reddit
+# (REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET, app tipo "script" da
+# https://www.reddit.com/prefs/apps): l'endpoint pubblico .json non è più
+# praticabile da IP datacenter (403 sistematico da GitHub Actions).
 #
 # Cadenza oraria (stessa di Discover X Trending): più frequente delle altre
 # fonti (TikTok/Google Trends ogni 4-6h) perché il valore di Reddit qui è
@@ -30,4 +32,7 @@ jobs:
           node-version: "20"
 
       - name: Scopri i post rising e registrali
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
         run: node scripts/discover-reddit-trending.mjs
