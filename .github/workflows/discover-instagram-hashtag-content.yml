@@ -44,6 +44,7 @@ on:
       recency_window_days:
         description: "Solo contenuti pubblicati non oltre questa finestra (giorni)"
         default: "7"
+  workflow_call: {}
 
 jobs:
   discover:

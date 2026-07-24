@@ -1,0 +1,117 @@
+name: Run Discovery Pipeline
+
+# Orchestratore: fa girare tutta la pipeline di discovery Trend Virali in un
+# solo run, nell'ordine di dipendenza reale (non uno stagger a orario fisso
+# come i singoli cron) — pensato per essere lanciato on-demand dal pulsante
+# "Aggiorna trend ora" in /trend-virali (vedi
+# src/routes/api/public/hooks/trigger-discovery-pipeline.ts) o manualmente
+# da qui.
+#
+# Ogni job richiama il workflow esistente corrispondente come reusable
+# workflow (`uses: ./...`, `secrets: inherit`) — nessuna logica duplicata,
+# gli stessi script/secret/timeout di sempre. `needs:` fa aspettare il
+# COMPLETAMENTO del job precedente, non solo l'avvio: a differenza dei cron
+# sfalsati per minuto (che sperano semplicemente che il run precedente sia
+# già finito), qui la dipendenza è garantita.
+#
+# Grafo di dipendenza (aggiornato secondo i dati reali dei singoli
+# workflow, non uno schema fisso a "fasi"):
+#
+#   sync-canali-feed ─────────────────────┐
+#   tiktok-trending-it ─┐                 │
+#   discover-x-trending ┤                 │
+#   discover-reddit-trending ┤            │
+#   discover-youtube-trending ┘           │
+#         │                               │
+#         ▼                               ▼
+#   sync-viral-trends           discover-canali-inspo-content
+#         │                               │
+#         ├──────────────┐                │
+#         ▼              ▼                ▼
+#   discover-google-  discover-      sync-audio-trends
+#   trends-interest    instagram-
+#         │            hashtag-           │
+#         │            content            │
+#         │              │                │
+#         └──────┬───────┴────────────────┤
+#                ▼                        ▼
+#      match-cross-source-trends   recheck-viral-engagement
+#
+# (discover-instagram-hashtag-content cerca TUTTI i topic monitorati, quindi
+# aspetta tutte e 5 le fonti che scoprono topic; match-cross-source-trends
+# aspetta le stesse 5 fonti + Google Trends interest + Canali Inspo, per
+# corroborare con dati il più freschi possibile; recheck-viral-engagement
+# aspetta solo chi scrive contenuti Instagram veri.)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  sync-canali-feed:
+    uses: ./.github/workflows/sync-canali-feed.yml
+    secrets: inherit
+
+  tiktok-trending-it:
+    uses: ./.github/workflows/tiktok-trending-it.yml
+    secrets: inherit
+
+  discover-x-trending:
+    uses: ./.github/workflows/discover-x-trending.yml
+    secrets: inherit
+
+  discover-reddit-trending:
+    uses: ./.github/workflows/discover-reddit-trending.yml
+    secrets: inherit
+
+  discover-youtube-trending:
+    uses: ./.github/workflows/discover-youtube-trending.yml
+    secrets: inherit
+
+  sync-viral-trends:
+    needs: tiktok-trending-it
+    uses: ./.github/workflows/sync-viral-trends.yml
+    secrets: inherit
+
+  discover-google-trends-interest:
+    needs: sync-viral-trends
+    uses: ./.github/workflows/discover-google-trends-interest.yml
+    secrets: inherit
+
+  discover-instagram-hashtag-content:
+    needs:
+      - tiktok-trending-it
+      - sync-viral-trends
+      - discover-x-trending
+      - discover-reddit-trending
+      - discover-youtube-trending
+    uses: ./.github/workflows/discover-instagram-hashtag-content.yml
+    secrets: inherit
+
+  discover-canali-inspo-content:
+    needs: sync-canali-feed
+    uses: ./.github/workflows/discover-canali-inspo-content.yml
+    secrets: inherit
+
+  sync-audio-trends:
+    needs: discover-canali-inspo-content
+    uses: ./.github/workflows/sync-audio-trends.yml
+    secrets: inherit
+
+  recheck-viral-engagement:
+    needs:
+      - discover-instagram-hashtag-content
+      - discover-canali-inspo-content
+    uses: ./.github/workflows/recheck-viral-engagement.yml
+    secrets: inherit
+
+  match-cross-source-trends:
+    needs:
+      - tiktok-trending-it
+      - sync-viral-trends
+      - discover-x-trending
+      - discover-reddit-trending
+      - discover-youtube-trending
+      - discover-google-trends-interest
+      - discover-canali-inspo-content
+    uses: ./.github/workflows/match-cross-source-trends.yml
+    secrets: inherit

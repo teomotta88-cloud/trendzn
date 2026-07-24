@@ -20,6 +20,7 @@ on:
       max_posts_per_tag:
         description: "Max URL per hashtag"
         default: "12"
+  workflow_call: {}
 
 jobs:
   scrape:

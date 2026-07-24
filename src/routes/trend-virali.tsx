@@ -12,6 +12,7 @@ import {
   X,
   Zap,
   Music,
+  RefreshCw,
 } from "lucide-react";
 import {
   Select,
@@ -718,6 +719,73 @@ function ContentCard({ item }: { item: ViralTrendContent }) {
 // limite qui evita di mettere in pagina centinaia di card insieme.
 const PAGE_SIZE = 8;
 
+type PipelineStatus = "idle" | "loading" | "success" | "error" | "already-running";
+
+const PIPELINE_BUTTON_LABEL: Record<PipelineStatus, string> = {
+  idle: "Aggiorna trend ora",
+  loading: "Avvio in corso…",
+  success: "Avviata",
+  error: "Errore, riprova",
+  "already-running": "Già in corso",
+};
+
+// Avvia .github/workflows/run-discovery-pipeline.yml (l'orchestratore che fa
+// girare tutte le fonti di discovery nell'ordine corretto in un solo run,
+// vedi src/routes/api/public/hooks/trigger-discovery-pipeline.ts) invece di
+// aspettare i cron sfalsati. Il link "Segui su GitHub Actions" compare solo
+// dopo un avvio riuscito (o se ce n'era già uno in corso): il dispatch API
+// non restituisce l'ID del run, solo l'URL della pagina dei run del
+// workflow — non punta al run specifico, ma è comunque dove osservarlo.
+function DiscoveryPipelineButton() {
+  const [status, setStatus] = useState<PipelineStatus>("idle");
+  const [runsUrl, setRunsUrl] = useState<string | null>(null);
+
+  async function handleClick() {
+    setStatus("loading");
+    setRunsUrl(null);
+    try {
+      const res = await fetch("/api/public/hooks/trigger-discovery-pipeline", { method: "POST" });
+      const data = await res.json();
+      if (res.status === 409) {
+        setStatus("already-running");
+        setRunsUrl(data.htmlUrl ?? null);
+      } else if (data.ok) {
+        setStatus("success");
+        setRunsUrl(data.runsUrl ?? null);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+    setTimeout(() => setStatus("idle"), 6000);
+  }
+
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <button
+        type="button"
+        onClick={handleClick}
+        disabled={status === "loading"}
+        className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/60 disabled:opacity-60"
+      >
+        <RefreshCw className={`size-3.5 ${status === "loading" ? "animate-spin" : ""}`} />
+        {PIPELINE_BUTTON_LABEL[status]}
+      </button>
+      {runsUrl && (status === "success" || status === "already-running") && (
+        <a
+          href={runsUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="text-xs text-muted-foreground underline hover:text-foreground"
+        >
+          Segui su GitHub Actions
+        </a>
+      )}
+    </div>
+  );
+}
+
 function Page() {
   const [items, setItems] = useState<ViralTrendContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -898,7 +966,10 @@ function Page() {
   return (
     <div className="space-y-8">
       <header className="space-y-2">
-        <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Virali</h1>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend Virali</h1>
+          <DiscoveryPipelineButton />
+        </div>
         <p className="max-w-2xl text-sm text-muted-foreground">
           Topic scoperti da più fonti indipendenti — hashtag TikTok in trend (convertiti in keyword
           leggibile, es. #empirestatebuilding → "Empire State Building"), ricerche in tendenza
