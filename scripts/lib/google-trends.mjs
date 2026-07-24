@@ -98,6 +98,18 @@ function stripAntiHijackPrefix(text) {
   return text.startsWith(ANTI_HIJACK_PREFIX) ? text.slice(ANTI_HIJACK_PREFIX.length) : text;
 }
 
+// Il chiamante (discover-google-trends-interest.mjs) deve distinguere un
+// 429 (rate-limit, vale la pena ritentare con un'attesa più lunga) da un
+// altro errore (keyword strana, risposta malformata: ritentare non serve) —
+// da qui il "status" esposto sull'errore invece di un Error generico.
+export class GoogleTrendsError extends Error {
+  constructor(message, status) {
+    super(message);
+    this.name = "GoogleTrendsError";
+    this.status = status;
+  }
+}
+
 export async function fetchInterestOverTime({ keyword, geo = "IT", timeRange = "now 7-d" } = {}) {
   const exploreReq = {
     comparisonItem: [{ keyword, geo, time: timeRange }],
@@ -114,7 +126,7 @@ export async function fetchInterestOverTime({ keyword, geo = "IT", timeRange = "
     headers: { "User-Agent": "Mozilla/5.0 (compatible; trendzn-bot/1.0)" },
   });
   if (!exploreRes.ok) {
-    throw new Error(`Google Trends explore failed (${exploreRes.status})`);
+    throw new GoogleTrendsError(`Google Trends explore failed (${exploreRes.status})`, exploreRes.status);
   }
   const exploreData = JSON.parse(stripAntiHijackPrefix(await exploreRes.text()));
 
@@ -133,7 +145,7 @@ export async function fetchInterestOverTime({ keyword, geo = "IT", timeRange = "
     headers: { "User-Agent": "Mozilla/5.0 (compatible; trendzn-bot/1.0)" },
   });
   if (!widgetRes.ok) {
-    throw new Error(`Google Trends widgetdata failed (${widgetRes.status})`);
+    throw new GoogleTrendsError(`Google Trends widgetdata failed (${widgetRes.status})`, widgetRes.status);
   }
   const widgetData = JSON.parse(stripAntiHijackPrefix(await widgetRes.text()));
 

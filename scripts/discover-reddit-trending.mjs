@@ -24,6 +24,16 @@
 // altre fonti perché il valore di Reddit qui è l'anticipo: un controllo
 // ogni 4h come TikTok vanificherebbe il vantaggio.
 //
+// AUTENTICAZIONE OAuth (non più l'endpoint pubblico www.reddit.com/*.json):
+// dal 2023 Reddit blocca con 403 sistematico le richieste anonime da IP
+// datacenter/cloud (incluso GitHub Actions) sugli endpoint .json pubblici,
+// indipendentemente da User-Agent o frequenza — verificato: 100% di
+// fallimento su ogni singolo run dal primo giorno. oauth.reddit.com con un
+// token app-only (client_credentials, nessun account utente richiesto) ha
+// un profilo di accesso separato e non è soggetto allo stesso blocco IP.
+// Serve creare un'app "script" su https://www.reddit.com/prefs/apps e
+// impostare REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET come secret del repo.
+//
 // Eseguito da .github/workflows/discover-reddit-trending.yml su schedule.
 
 import { keywordToHashtag } from "./lib/word-segment.mjs";
@@ -32,6 +42,18 @@ const TRENDS_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/trends.json";
 const MONITOR_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/monitor-topics";
 const RECORD_VOLUME_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/record-topic-volume";
+const REDDIT_TOKEN_URL = "https://www.reddit.com/api/v1/access_token";
+const REDDIT_USER_AGENT = "trendzn-bot/1.0 (discovery trend virali, uso non commerciale)";
+
+const REDDIT_CLIENT_ID = process.env.REDDIT_CLIENT_ID;
+const REDDIT_CLIENT_SECRET = process.env.REDDIT_CLIENT_SECRET;
+if (!REDDIT_CLIENT_ID || !REDDIT_CLIENT_SECRET) {
+  console.error(
+    "Mancano REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET nell'ambiente: crea un'app \"script\" su " +
+      "https://www.reddit.com/prefs/apps e imposta i due secret nel repo GitHub.",
+  );
+  process.exit(1);
+}
 
 // Fallback se trends.json non ha ancora la chiave reddit_subreddits (es.
 // primo deploy prima che qualcuno la popoli manualmente) — piccola lista di
@@ -92,16 +114,39 @@ function toTopicFields(rawTitle) {
   return { value, derivedHashtag: keywordToHashtag(value) };
 }
 
-async function fetchRisingPosts(subreddit) {
-  const url = `https://www.reddit.com/r/${encodeURIComponent(subreddit)}/rising.json?limit=${POSTS_PER_SUBREDDIT}`;
-  // Reddit richiede uno User-Agent descrittivo (linee guida ufficiali API):
-  // senza, o con lo UA di default di fetch, risponde spesso 429 anche su
-  // richieste anonime poco frequenti.
-  const res = await fetch(url, {
-    headers: { "User-Agent": "trendzn-bot/1.0 (discovery trend virali, uso non commerciale)" },
+// Token app-only valido ~1h (Reddit lo dichiara in expires_in): ne basta uno
+// per l'intero run, richiesto pigramente alla prima subreddit e riusato.
+let cachedAccessToken = null;
+
+async function getAccessToken() {
+  if (cachedAccessToken) return cachedAccessToken;
+
+  const basicAuth = Buffer.from(`${REDDIT_CLIENT_ID}:${REDDIT_CLIENT_SECRET}`).toString("base64");
+  const res = await fetch(REDDIT_TOKEN_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${basicAuth}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+      "User-Agent": REDDIT_USER_AGENT,
+    },
+    body: "grant_type=client_credentials",
     signal: AbortSignal.timeout(15000),
   });
-  if (!res.ok) throw new Error(`r/${subreddit}/rising.json fallito: ${res.status}`);
+  if (!res.ok) throw new Error(`OAuth token Reddit fallito: ${res.status} ${await res.text()}`);
+  const data = await res.json();
+  if (!data.access_token) throw new Error("OAuth token Reddit: risposta senza access_token");
+  cachedAccessToken = data.access_token;
+  return cachedAccessToken;
+}
+
+async function fetchRisingPosts(subreddit) {
+  const token = await getAccessToken();
+  const url = `https://oauth.reddit.com/r/${encodeURIComponent(subreddit)}/rising?limit=${POSTS_PER_SUBREDDIT}`;
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${token}`, "User-Agent": REDDIT_USER_AGENT },
+    signal: AbortSignal.timeout(15000),
+  });
+  if (!res.ok) throw new Error(`r/${subreddit}/rising fallito: ${res.status}`);
   const data = await res.json();
   return (data?.data?.children ?? []).map((c) => c.data).filter(Boolean);
 }

@@ -35,22 +35,48 @@
 //   MAX_TOPICS_PER_RUN         default: 15 — quanti topic google-trends
 //                              misurare al massimo in un run (limita sia il
 //                              tempo totale sia il rischio di rate-limit)
-//   DELAY_BETWEEN_CALLS_MS     default: 4000
+//   DELAY_BETWEEN_CALLS_MS     default: 8000
 //   MAX_CONSECUTIVE_FAILURES   default: 3
+//   RATE_LIMIT_RETRY_DELAY_MS  default: 20000 — su un 429 (a differenza di
+//                              altri errori) vale la pena aspettare più a
+//                              lungo e ritentare UNA volta la stessa keyword
+//                              prima di contarla come fallimento: il 429 di
+//                              Google Trends osservato in produzione arriva
+//                              spesso già alla prima chiamata del run, un
+//                              sintomo di rate-limit a raffica (burst) più
+//                              che di un blocco permanente dell'IP — un
+//                              respiro più lungo ha una chance concreta di
+//                              farlo rientrare.
 //
 // Eseguito da .github/workflows/discover-google-trends-interest.yml su schedule.
 
-import { fetchInterestOverTime, latestInterestValue } from "./lib/google-trends.mjs";
+import { fetchInterestOverTime, latestInterestValue, GoogleTrendsError } from "./lib/google-trends.mjs";
 
 const LIST_TOPICS_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/list-monitored-topics";
 const RECORD_VOLUME_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/record-topic-volume";
 
 const MAX_TOPICS_PER_RUN = parseInt(process.env.MAX_TOPICS_PER_RUN ?? "15", 10);
-const DELAY_BETWEEN_CALLS_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "4000", 10);
+const DELAY_BETWEEN_CALLS_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "8000", 10);
 const MAX_CONSECUTIVE_FAILURES = parseInt(process.env.MAX_CONSECUTIVE_FAILURES ?? "3", 10);
+const RATE_LIMIT_RETRY_DELAY_MS = parseInt(process.env.RATE_LIMIT_RETRY_DELAY_MS ?? "20000", 10);
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Un solo retry, solo sul 429: gli altri errori (keyword strana, risposta
+// malformata) non traggono beneficio da un secondo tentativo identico.
+async function fetchInterestWithRetry(topic) {
+  try {
+    return await fetchInterestOverTime({ keyword: topic.value, geo: "IT" });
+  } catch (err) {
+    if (err instanceof GoogleTrendsError && err.status === 429) {
+      console.log(`  429, riprovo tra ${RATE_LIMIT_RETRY_DELAY_MS / 1000}s...`);
+      await sleep(RATE_LIMIT_RETRY_DELAY_MS);
+      return await fetchInterestOverTime({ keyword: topic.value, geo: "IT" });
+    }
+    throw err;
+  }
 }
 
 async function fetchGoogleTrendsTopics() {
@@ -95,7 +121,7 @@ for (let i = 0; i < topics.length; i++) {
   console.log(`\n[${i + 1}/${topics.length}] "${topic.value}"`);
 
   try {
-    const points = await fetchInterestOverTime({ keyword: topic.value, geo: "IT" });
+    const points = await fetchInterestWithRetry(topic);
     const interestValue = latestInterestValue(points);
     if (interestValue == null) {
       console.log("  Nessun punto restituito, salto.");

@@ -4,10 +4,17 @@
 //
 // 1. Trending IT classico: videos.list(chart=mostPopular, regionCode=IT) —
 //    la classifica ufficiale "di tendenza" di YouTube per l'Italia.
-// 2. Shorts candidati: search.list(videoDuration=short, order=viewCount,
-//    pubblicati nelle ultime SHORTS_LOOKBACK_HOURS) — short recenti che
-//    stanno già raccogliendo molte views, candidati alla "velocity" (vedi
-//    sotto).
+// 2. Shorts candidati: search.list(videoDuration=short, order=date,
+//    pubblicati nelle ultime SHORTS_LOOKBACK_HOURS) su un pool ampio,
+//    ordinati poi lato client per viewCount — short recenti che stanno già
+//    raccogliendo molte views, candidati alla "velocity" (vedi sotto).
+//    (In produzione order=viewCount combinato con publishedAfter recente
+//    dava sistematicamente 0 risultati: l'indice di ricerca di YouTube non
+//    aggiorna il ranking per viewCount abbastanza in fretta per i video
+//    pubblicati nelle ultime 48h, quindi quella combinazione di filtri non
+//    trova mai nulla. order=date pesca invece tutto ciò che è stato
+//    pubblicato nella finestra, e l'ordinamento per popolarità reale si fa
+//    dopo aver recuperato le statistiche.)
 //
 // "Shorts velocity" non è un concetto YouTube ufficiale: è lo stesso
 // meccanismo già in uso per TikTok/Reddit applicato qui — un singolo video
@@ -26,7 +33,15 @@
 // Variabili d'ambiente:
 //   YOUTUBE_API_KEY        richiesta (stessa già usata da sync-brand-mentions.mjs)
 //   MAX_TRENDING_VIDEOS    default: 15
-//   MAX_SHORTS_CANDIDATES  default: 15
+//   MAX_SHORTS_CANDIDATES  default: 15 — quanti candidati finali tenere dopo
+//                          l'ordinamento per viewCount
+//   SHORTS_SEARCH_POOL     default: 50 (max consentito da search.list) —
+//                          quanti short recenti recuperare PRIMA di
+//                          ordinarli per viewCount e tagliare a
+//                          MAX_SHORTS_CANDIDATES: un pool più ampio del
+//                          risultato finale serve perché order=date non
+//                          garantisce che i più virali siano tra i primi
+//                          MAX_SHORTS_CANDIDATES pubblicati
 //   SHORTS_LOOKBACK_HOURS  default: 48 — solo short pubblicati entro questa
 //                          finestra sono candidati "early", non contenuti
 //                          già vecchi ma ancora popolari
@@ -49,6 +64,7 @@ if (!API_KEY) {
 
 const MAX_TRENDING_VIDEOS = parseInt(process.env.MAX_TRENDING_VIDEOS ?? "15", 10);
 const MAX_SHORTS_CANDIDATES = parseInt(process.env.MAX_SHORTS_CANDIDATES ?? "15", 10);
+const SHORTS_SEARCH_POOL = parseInt(process.env.SHORTS_SEARCH_POOL ?? "50", 10);
 const SHORTS_LOOKBACK_HOURS = parseInt(process.env.SHORTS_LOOKBACK_HOURS ?? "48", 10);
 
 // Stessa soglia già usata per Google Trends/X/Reddit multi-parola: oltre le
@@ -99,11 +115,11 @@ async function fetchShortsCandidates() {
   url.searchParams.set("part", "snippet");
   url.searchParams.set("type", "video");
   url.searchParams.set("videoDuration", "short");
-  url.searchParams.set("order", "viewCount");
+  url.searchParams.set("order", "date");
   url.searchParams.set("regionCode", "IT");
   url.searchParams.set("relevanceLanguage", "it");
   url.searchParams.set("publishedAfter", publishedAfter);
-  url.searchParams.set("maxResults", String(MAX_SHORTS_CANDIDATES));
+  url.searchParams.set("maxResults", String(SHORTS_SEARCH_POOL));
   url.searchParams.set("key", API_KEY);
 
   const res = await fetch(url);
@@ -117,7 +133,7 @@ async function fetchShortsCandidates() {
     videoIds: items.map((item) => item.id.videoId),
   });
 
-  return items.map((item) => {
+  const withStats = items.map((item) => {
     const videoId = item.id.videoId;
     const s = stats.get(videoId) ?? {};
     return {
@@ -128,6 +144,13 @@ async function fetchShortsCandidates() {
       commentCount: s.commentCount != null ? Number(s.commentCount) : null,
     };
   });
+
+  // order=date ha già recuperato il pool: la selezione dei candidati "in
+  // rapida crescita" avviene qui, ordinando per popolarità reale invece che
+  // per data di pubblicazione.
+  return withStats
+    .sort((a, b) => (b.viewCount ?? 0) - (a.viewCount ?? 0))
+    .slice(0, MAX_SHORTS_CANDIDATES);
 }
 
 async function registerTopic(fields) {
