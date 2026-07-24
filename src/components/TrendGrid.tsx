@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { TrendItem } from "@/lib/trends";
 import { detectPlatform, extractUsername } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "./SocialEmbed";
@@ -33,12 +33,19 @@ function unique(values: (string | null | undefined)[]) {
   return Array.from(new Set(values.filter((v): v is string => !!v && v.trim().length > 0))).sort();
 }
 
+// Contenuti mostrati inizialmente e ad ogni click su "Carica altri" — senza
+// questo limite, con centinaia di trend accumulati la griglia montava ogni
+// SocialEmbed insieme (stesso motivo del limite già in uso in
+// /trend-virali, vedi PAGE_SIZE in src/routes/trend-virali.tsx).
+const PAGE_SIZE = 8;
+
 export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string>("");
   const [industry, setIndustry] = useState<string>("");
   const [platform, setPlatform] = useState<string>("");
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const [postedPreset, setPostedPreset] = useState<DatePreset>("tutto");
   const [postedFrom, setPostedFrom] = useState("");
@@ -88,6 +95,16 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
     }
     return true;
   });
+
+  // Ogni cambio di filtro/ricerca (o nuovi item, es. dopo un caricamento)
+  // riparte dalla prima pagina: altrimenti "Carica altri" premuto prima
+  // potrebbe lasciare visibleCount più alto del nuovo risultato filtrato,
+  // mostrando comunque tutto invece di limitare come richiesto.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [items, query, category, industry, platform, postedRange, insertedRange]);
+
+  const visible = filtered.slice(0, visibleCount);
 
   const hasFilters = !!(
     query ||
@@ -187,7 +204,7 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filtered.map((item, idx) => {
+          {visible.map((item, idx) => {
             const url = item.links[0];
             const isDb = !!dbIds[url];
             return (
@@ -253,6 +270,18 @@ export function TrendGrid({ items, dbIds = {}, onDelete }: Props) {
               </article>
             );
           })}
+        </div>
+      )}
+
+      {visibleCount < filtered.length && (
+        <div className="flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+            className="rounded-lg border border-border bg-card px-5 py-2 text-sm font-medium text-foreground transition hover:border-primary/60"
+          >
+            Carica altri ({filtered.length - visibleCount} rimanenti)
+          </button>
         </div>
       )}
     </div>
