@@ -1,0 +1,34 @@
+name: Probe Instagram Profile Feed (diagnostico)
+
+# Workflow usa-e-getta: verifica quanti post della griglia di un profilo
+# Instagram pubblico riusciamo a vedere da visitatore anonimo (senza login),
+# e quanto indietro nel tempo arriviamo scrollando, prima che scatti il
+# login-wall. Serve a capire se il "check one-shot dell'ultimo anno" del
+# piano collab-detection è fattibile così com'è o va ridimensionato.
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile_url:
+        description: "URL completo del profilo Instagram pubblico da testare"
+        required: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Apri il profilo e conta i post raggiungibili
+        run: node scripts/probe-instagram-profile-feed.mjs "${{ github.event.inputs.profile_url }}"
