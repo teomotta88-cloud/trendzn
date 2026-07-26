@@ -1,0 +1,35 @@
+name: Probe Instagram Collab (diagnostico)
+
+# Workflow usa-e-getta: verifica quali segnali di un post Instagram pubblico
+# permettono di distinguere un post "collab" (due account co-autori) da un
+# post normale, aprendolo con un browser reale (Playwright) da visitatore
+# anonimo. Nessuna pipeline lo usa ancora: serve solo a raccogliere dati
+# reali (su un post noto in collab e uno normale) prima di decidere se
+# costruirci sopra un'estrazione vera.
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_url:
+        description: "URL completo del post Instagram pubblico da testare"
+        required: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Apri il post e stampa i segnali di collab
+        run: node scripts/probe-instagram-collab.mjs "${{ github.event.inputs.post_url }}"
