@@ -1,0 +1,55 @@
+name: Probe Instagram RSS-Bridge Collab (diagnostico)
+
+# Workflow usa-e-getta: verifica se RSS-Bridge (già in produzione per i
+# Canali Inspo, vedi sync-canali-feed.yml) riesce a fornire la lista dei post
+# recenti di un account Instagram — via alternativa dopo che
+# probe-instagram-profile-feed.mjs ha scoperto che la pagina profilo blocca
+# subito i visitatori anonimi con un login-wall. Ogni post trovato viene poi
+# analizzato con lo stesso rilevatore collab già validato sui singoli post.
+
+on:
+  workflow_dispatch:
+    inputs:
+      handle:
+        description: "Handle Instagram da testare (senza @), es. namedsport"
+        required: true
+      max_posts:
+        description: "Numero massimo di post da analizzare per il collab"
+        required: false
+        default: "10"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Attendi che RSS-Bridge sia pronto
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge non ha risposto in tempo" >&2
+          exit 1
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Recupera i post via RSS-Bridge e verifica i collab
+        env:
+          RSS_BRIDGE_BASE: http://localhost:3000/
+        run: node scripts/probe-instagram-rssbridge-collab.mjs "${{ github.event.inputs.handle }}" "${{ github.event.inputs.max_posts }}"
