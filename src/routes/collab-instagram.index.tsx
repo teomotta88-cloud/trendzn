@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Select,
   SelectContent,
@@ -56,16 +57,16 @@ function formatFollowers(value: number | null): string {
   return String(value);
 }
 
-function ProfileAvatar({ profile }: { profile: MonitoredProfile }) {
+function ProfileAvatar({ profile, size = "size-8" }: { profile: MonitoredProfile; size?: string }) {
   return profile.profile_pic_url ? (
     <img
       src={profile.profile_pic_url}
       alt={profile.username}
-      className="size-8 rounded-full object-cover"
+      className={`${size} shrink-0 rounded-full object-cover`}
       referrerPolicy="no-referrer"
     />
   ) : (
-    <div className="size-8 rounded-full bg-muted" />
+    <div className={`${size} shrink-0 rounded-full bg-muted`} />
   );
 }
 
@@ -157,7 +158,7 @@ function CollabInstagramPage() {
   }
 
   return (
-    <div className="mx-auto max-w-5xl space-y-8 p-6">
+    <div className="mx-auto max-w-6xl space-y-8 p-6">
       <div>
         <h1 className="text-2xl font-semibold">Collab Instagram</h1>
         <p className="text-sm text-muted-foreground">
@@ -266,52 +267,73 @@ function CollabInstagramPage() {
         {loading ? (
           <p className="text-sm text-muted-foreground">Caricamento…</p>
         ) : (
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Username</TableHead>
-                <TableHead>Industry</TableHead>
-                <TableHead>Follower</TableHead>
-                <TableHead>Collab nella finestra</TableHead>
-                <TableHead>Ultimo check</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
+          <div className="flex flex-col gap-6 lg:flex-row">
+            <div className="grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {rankedInfluencers.map((p) => (
-                <TableRow key={p.id}>
-                  <TableCell>
-                    <Link
-                      to="/collab-instagram/$username"
-                      params={{ username: p.username }}
-                      className="flex items-center gap-2 font-medium text-primary hover:underline"
-                    >
-                      <ProfileAvatar profile={p} />@{p.username}
-                    </Link>
-                  </TableCell>
-                  <TableCell>
-                    <div className="flex flex-wrap gap-1">
-                      {(industryMap.get(p.username) ?? []).map((ind) => (
-                        <Badge key={ind} variant="secondary">
-                          {ind}
-                        </Badge>
-                      ))}
+                <Link
+                  key={p.id}
+                  to="/collab-instagram/$username"
+                  params={{ username: p.username }}
+                  className="block rounded-xl border border-border p-4 transition-colors hover:border-primary"
+                >
+                  <div className="flex items-center gap-3">
+                    <ProfileAvatar profile={p} size="size-12" />
+                    <div className="min-w-0">
+                      <p className="truncate font-medium">@{p.username}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {formatFollowers(p.followers_count)} follower
+                      </p>
                     </div>
-                  </TableCell>
-                  <TableCell>{formatFollowers(p.followers_count)}</TableCell>
-                  <TableCell>{collabCounts.get(p.username) ?? 0}</TableCell>
-                  <TableCell>{formatLastChecked(p.last_checked_at)}</TableCell>
-                </TableRow>
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-1">
+                    {(industryMap.get(p.username) ?? []).map((ind) => (
+                      <Badge key={ind} variant="secondary">
+                        {ind}
+                      </Badge>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">
+                      {collabCounts.get(p.username) ?? 0}
+                    </span>{" "}
+                    collab nella finestra
+                  </p>
+                </Link>
               ))}
               {rankedInfluencers.length === 0 && (
-                <TableRow>
-                  <TableCell colSpan={5} className="text-muted-foreground">
-                    Nessun influencer trovato ancora — verranno scoperti automaticamente dai collab
-                    dei brand monitorati.
-                  </TableCell>
-                </TableRow>
+                <p className="col-span-full text-sm text-muted-foreground">
+                  Nessun influencer trovato ancora — verranno scoperti automaticamente dai collab
+                  dei brand monitorati.
+                </p>
               )}
-            </TableBody>
-          </Table>
+            </div>
+
+            <Card className="w-full shrink-0 lg:w-72">
+              <CardHeader>
+                <CardTitle className="text-base">Classifica per collab</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-1">
+                {rankedInfluencers.length === 0 && (
+                  <p className="text-sm text-muted-foreground">Nessun influencer ancora.</p>
+                )}
+                {rankedInfluencers.map((p, index) => (
+                  <Link
+                    key={p.id}
+                    to="/collab-instagram/$username"
+                    params={{ username: p.username }}
+                    className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-muted"
+                  >
+                    <span className="w-5 shrink-0 text-sm text-muted-foreground">{index + 1}</span>
+                    <ProfileAvatar profile={p} size="size-6" />
+                    <span className="min-w-0 flex-1 truncate text-sm">@{p.username}</span>
+                    <span className="shrink-0 text-sm font-medium">
+                      {collabCounts.get(p.username) ?? 0}
+                    </span>
+                  </Link>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
         )}
       </div>
     </div>
