@@ -22,6 +22,7 @@
 import { chromium } from "playwright";
 import { fetchRecentPosts } from "./lib/instagram-rssbridge-feed.mjs";
 import { detectCollaborators } from "./lib/instagram-collab-detector.mjs";
+import { fetchProfileStats } from "./lib/instagram-profile-stats.mjs";
 
 const HOOK_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-instagram-collab";
 
@@ -103,10 +104,20 @@ async function checkProfile(context, profile) {
   const collabsFound = posts.filter((p) => p.collaborators.length >= 2).length;
   console.log(`  ${posts.length} post analizzati, ${collabsFound} in collab`);
 
+  const { stats: profileStats, reason: profileStatsReason } = await fetchProfileStats(
+    context,
+    profile.username,
+  );
+  if (profileStatsReason) {
+    console.log(`  Follower/foto profilo non recuperati: ${profileStatsReason}`);
+  }
+
   const result = await sendResults({
     profileId: profile.id,
     username: profile.username,
     posts,
+    followersCount: profileStats?.followersCount ?? null,
+    profilePicUrl: profileStats?.profilePicUrl ?? null,
     run: {
       postsFound: posts.length,
       collabsFound,

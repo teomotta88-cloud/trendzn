@@ -79,12 +79,16 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
             profileId?: string;
             username?: string;
             posts?: IncomingPost[];
+            followersCount?: number | null;
+            profilePicUrl?: string | null;
             run?: IncomingRun;
           };
 
           const profileId = body.profileId;
           const ownerUsername = body.username;
           const posts = Array.isArray(body.posts) ? body.posts : [];
+          const followersCount = body.followersCount ?? null;
+          const profilePicUrl = body.profilePicUrl ?? null;
           const run = body.run ?? {};
 
           if (!profileId || !ownerUsername) {
@@ -151,6 +155,17 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
                 .upsert(collabRows, { onConflict: "post_id,username", ignoreDuplicates: true });
             }
 
+            // La scoperta/promozione di nuovi profili monitorati avviene
+            // SOLO controllando un brand: se il profilo controllato è già
+            // un influencer, i suoi collaboratori vengono comunque salvati
+            // sopra (instagram_post_collaborators, per il conteggio e il
+            // feed di QUESTO influencer) ma non generano nuovi profili
+            // monitorati — è esattamente il meccanismo che, combinato con un
+            // vecchio bug di rilevamento, ha causato una cascata
+            // incontrollata di falsi influencer (un influencer scopriva
+            // altri "influencer" a raffica dai suoi stessi post).
+            if (profileRow?.kind !== "brand") continue;
+
             for (const username of collaborators) {
               if (username === ownerUsername) continue;
               if (looksLikeSameBrandFamily(ownerUsername, username)) continue;
@@ -164,6 +179,9 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
           // come kind='brand' (es. una collab tra due brand clienti), non
           // lo tocchiamo per niente: resta un brand, e non gli assegniamo
           // un'industry "da influencer" che non gli competerebbe.
+          //
+          // Questo blocco gira solo se il profilo controllato è un brand
+          // (newInfluencerUsernames resta vuoto altrimenti, vedi sopra).
           for (const username of newInfluencerUsernames) {
             const { data: existing } = await supabaseAdmin
               .from("instagram_monitored_profiles")
@@ -181,11 +199,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
               });
             }
 
-            // L'industry si propaga solo se il profilo controllato è un
-            // brand con industry assegnata: un influencer non ha
-            // un'industry propria da propagare a un altro influencer con
-            // cui collabora.
-            if (profileRow?.kind === "brand" && profileRow.industry) {
+            if (profileRow?.industry) {
               await supabaseAdmin
                 .from("instagram_influencer_industries")
                 .upsert(
@@ -201,6 +215,12 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
             .update({
               last_checked_at: nowIso,
               first_checked_at: profileRow?.first_checked_at ?? nowIso,
+              // null quando la pagina profilo non è stata leggibile in
+              // questa run (login-wall/errore transitorio): non sovrascrive
+              // il valore precedente in quel caso, solo se il worker ha
+              // effettivamente trovato un valore nuovo.
+              ...(followersCount != null ? { followers_count: followersCount } : {}),
+              ...(profilePicUrl ? { profile_pic_url: profilePicUrl } : {}),
             })
             .eq("id", profileId);
 

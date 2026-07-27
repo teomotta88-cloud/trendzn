@@ -12,6 +12,8 @@ export interface MonitoredProfile {
   check_interval_minutes: number;
   first_checked_at: string | null;
   last_checked_at: string | null;
+  followers_count: number | null;
+  profile_pic_url: string | null;
   created_at: string;
 }
 
@@ -40,6 +42,21 @@ export async function listMonitoredProfiles(): Promise<MonitoredProfile[]> {
     .order("created_at", { ascending: false });
   if (error) throw error;
   return (data ?? []) as MonitoredProfile[];
+}
+
+// Un solo profilo, per l'header della pagina feed di un influencer (avatar +
+// follower) — null se lo username non è (ancora) un profilo monitorato, es.
+// un collaboratore visto solo su un post di un brand ma non ancora promosso.
+export async function getMonitoredProfileByUsername(
+  username: string,
+): Promise<MonitoredProfile | null> {
+  const { data, error } = await supabase
+    .from("instagram_monitored_profiles")
+    .select("*")
+    .eq("username", username)
+    .maybeSingle();
+  if (error) throw error;
+  return (data ?? null) as MonitoredProfile | null;
 }
 
 // Un brand caricato manualmente con la sua industry: il worker di sync
