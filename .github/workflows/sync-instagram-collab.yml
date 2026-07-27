@@ -2,13 +2,13 @@ name: Sync Instagram Collab
 
 # Controlla i profili Instagram monitorati (brand caricati + influencer
 # scoperti automaticamente via collab) e rileva nuovi post/collaborazioni.
-# Un cron orario è innocuo per i profili a bassa cadenza di pubblicazione:
+# Ogni 6 ore è innocuo per i profili a bassa cadenza di pubblicazione:
 # l'hook sync-instagram-collab filtra da solo i profili non ancora "dovuti"
 # in base al loro check_interval_minutes.
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch: {}
 
 jobs:
