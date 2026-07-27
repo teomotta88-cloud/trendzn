@@ -2,8 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SocialEmbed } from "@/components/SocialEmbed";
-import { listCollabPostsForUsername, type CollabPost } from "@/lib/instagramCollab";
+import { listPostsForUsername, type CollabPost } from "@/lib/instagramCollab";
 
 export const Route = createFileRoute("/collab-instagram/$username")({
   head: ({ params }) => ({
@@ -21,8 +22,11 @@ function formatDate(value: string | null): string {
   }).format(new Date(value));
 }
 
+type FeedFilter = "collab" | "all";
+
 function InfluencerCollabFeedPage() {
   const { username } = Route.useParams();
+  const [filter, setFilter] = useState<FeedFilter>("collab");
   const [posts, setPosts] = useState<CollabPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -30,11 +34,11 @@ function InfluencerCollabFeedPage() {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    listCollabPostsForUsername(username)
+    listPostsForUsername(username, { collabOnly: filter === "collab" })
       .then(setPosts)
       .catch((err) => setError(err instanceof Error ? err.message : String(err)))
       .finally(() => setLoading(false));
-  }, [username]);
+  }, [username, filter]);
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 p-6">
@@ -46,11 +50,20 @@ function InfluencerCollabFeedPage() {
         Torna a Collab Instagram
       </Link>
 
-      <div>
-        <h1 className="text-2xl font-semibold">@{username}</h1>
-        <p className="text-sm text-muted-foreground">
-          {posts.length} post in collaborazione rilevati finora.
-        </p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-semibold">@{username}</h1>
+          <p className="text-sm text-muted-foreground">
+            {posts.length} {filter === "collab" ? "post in collaborazione" : "post"} rilevati
+            finora.
+          </p>
+        </div>
+        <Tabs value={filter} onValueChange={(v) => setFilter(v as FeedFilter)}>
+          <TabsList>
+            <TabsTrigger value="collab">Solo collab</TabsTrigger>
+            <TabsTrigger value="all">Tutti i post</TabsTrigger>
+          </TabsList>
+        </Tabs>
       </div>
 
       {error && <p className="text-sm text-destructive">{error}</p>}
@@ -58,7 +71,9 @@ function InfluencerCollabFeedPage() {
         <p className="text-sm text-muted-foreground">Caricamento…</p>
       ) : posts.length === 0 ? (
         <p className="text-sm text-muted-foreground">
-          Nessun post in collaborazione ancora rilevato per questo profilo.
+          {filter === "collab"
+            ? "Nessun post in collaborazione ancora rilevato per questo profilo."
+            : "Nessun post ancora rilevato per questo profilo."}
         </p>
       ) : (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">

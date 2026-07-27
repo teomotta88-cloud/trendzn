@@ -160,14 +160,18 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
 
           // Promuove i nuovi collaboratori a profili monitorati
           // (kind='influencer'), solo se non già presenti — non tocca
-          // profili già monitorati (potrebbero già essere un brand, es. una
-          // collab tra due brand clienti).
+          // profili già monitorati. Se il collaboratore è già monitorato
+          // come kind='brand' (es. una collab tra due brand clienti), non
+          // lo tocchiamo per niente: resta un brand, e non gli assegniamo
+          // un'industry "da influencer" che non gli competerebbe.
           for (const username of newInfluencerUsernames) {
             const { data: existing } = await supabaseAdmin
               .from("instagram_monitored_profiles")
-              .select("id")
+              .select("id, kind")
               .eq("username", username)
               .maybeSingle();
+
+            if (existing?.kind === "brand") continue;
 
             if (!existing) {
               await supabaseAdmin.from("instagram_monitored_profiles").insert({
