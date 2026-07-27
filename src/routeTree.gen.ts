@@ -21,20 +21,24 @@ import { Route as ReputazioneBrandIndexRouteImport } from './routes/reputazione-
 import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editoriale.index'
 import { Route as InfluencerIndexRouteImport } from './routes/influencer.index'
 import { Route as FeedIndexRouteImport } from './routes/feed.index'
+import { Route as CollabInstagramIndexRouteImport } from './routes/collab-instagram.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as AspiMonitoringIndexRouteImport } from './routes/aspi-monitoring.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as EditorGraficoRubricaIdRouteImport } from './routes/editor-grafico.$rubricaId'
+import { Route as CollabInstagramUsernameRouteImport } from './routes/collab-instagram.$username'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as AspiMonitoringIdRouteImport } from './routes/aspi-monitoring.$id'
 import { Route as ApiPublicHooksTriggerSyncCanaliFeedRouteImport } from './routes/api/public/hooks/trigger-sync-canali-feed'
 import { Route as ApiPublicHooksTriggerSyncAspiMonitoringRouteImport } from './routes/api/public/hooks/trigger-sync-aspi-monitoring'
+import { Route as ApiPublicHooksTriggerDiscoveryPipelineRouteImport } from './routes/api/public/hooks/trigger-discovery-pipeline'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
 import { Route as ApiPublicHooksTiktokOembedRouteImport } from './routes/api/public/hooks/tiktok-oembed'
 import { Route as ApiPublicHooksTiktokHashtagPostsRouteImport } from './routes/api/public/hooks/tiktok-hashtag-posts'
 import { Route as ApiPublicHooksSyncViralTrendsRouteImport } from './routes/api/public/hooks/sync-viral-trends'
 import { Route as ApiPublicHooksSyncTrendingHashtagsRouteImport } from './routes/api/public/hooks/sync-trending-hashtags'
 import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/api/public/hooks/sync-tiktok-hashtag'
+import { Route as ApiPublicHooksSyncInstagramCollabRouteImport } from './routes/api/public/hooks/sync-instagram-collab'
 import { Route as ApiPublicHooksSyncCrossSourceTrendsRouteImport } from './routes/api/public/hooks/sync-cross-source-trends'
 import { Route as ApiPublicHooksSyncBrandMentionsRouteImport } from './routes/api/public/hooks/sync-brand-mentions'
 import { Route as ApiPublicHooksSyncAudioTrendsRouteImport } from './routes/api/public/hooks/sync-audio-trends'
@@ -120,6 +124,11 @@ const FeedIndexRoute = FeedIndexRouteImport.update({
   path: '/feed/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CollabInstagramIndexRoute = CollabInstagramIndexRouteImport.update({
+  id: '/collab-instagram/',
+  path: '/collab-instagram/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
   id: '/canali-inspo/',
   path: '/canali-inspo/',
@@ -138,6 +147,11 @@ const InfluencerIdRoute = InfluencerIdRouteImport.update({
 const EditorGraficoRubricaIdRoute = EditorGraficoRubricaIdRouteImport.update({
   id: '/editor-grafico/$rubricaId',
   path: '/editor-grafico/$rubricaId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CollabInstagramUsernameRoute = CollabInstagramUsernameRouteImport.update({
+  id: '/collab-instagram/$username',
+  path: '/collab-instagram/$username',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
@@ -160,6 +174,12 @@ const ApiPublicHooksTriggerSyncAspiMonitoringRoute =
   ApiPublicHooksTriggerSyncAspiMonitoringRouteImport.update({
     id: '/api/public/hooks/trigger-sync-aspi-monitoring',
     path: '/api/public/hooks/trigger-sync-aspi-monitoring',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTriggerDiscoveryPipelineRoute =
+  ApiPublicHooksTriggerDiscoveryPipelineRouteImport.update({
+    id: '/api/public/hooks/trigger-discovery-pipeline',
+    path: '/api/public/hooks/trigger-discovery-pipeline',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksTopTiktokHashtagsRoute =
@@ -196,6 +216,12 @@ const ApiPublicHooksSyncTiktokHashtagRoute =
   ApiPublicHooksSyncTiktokHashtagRouteImport.update({
     id: '/api/public/hooks/sync-tiktok-hashtag',
     path: '/api/public/hooks/sync-tiktok-hashtag',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksSyncInstagramCollabRoute =
+  ApiPublicHooksSyncInstagramCollabRouteImport.update({
+    id: '/api/public/hooks/sync-instagram-collab',
+    path: '/api/public/hooks/sync-instagram-collab',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksSyncCrossSourceTrendsRoute =
@@ -353,10 +379,12 @@ export interface FileRoutesByFullPath {
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
+  '/collab-instagram/': typeof CollabInstagramIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
@@ -385,12 +413,14 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
+  '/api/public/hooks/sync-instagram-collab': typeof ApiPublicHooksSyncInstagramCollabRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
   '/api/public/hooks/sync-trending-hashtags': typeof ApiPublicHooksSyncTrendingHashtagsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
@@ -405,10 +435,12 @@ export interface FileRoutesByTo {
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
   '/aspi-monitoring': typeof AspiMonitoringIndexRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
+  '/collab-instagram': typeof CollabInstagramIndexRoute
   '/feed': typeof FeedIndexRoute
   '/influencer': typeof InfluencerIndexRoute
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
@@ -437,12 +469,14 @@ export interface FileRoutesByTo {
   '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
+  '/api/public/hooks/sync-instagram-collab': typeof ApiPublicHooksSyncInstagramCollabRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
   '/api/public/hooks/sync-trending-hashtags': typeof ApiPublicHooksSyncTrendingHashtagsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
@@ -458,10 +492,12 @@ export interface FileRoutesById {
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
+  '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
+  '/collab-instagram/': typeof CollabInstagramIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
@@ -490,12 +526,14 @@ export interface FileRoutesById {
   '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
+  '/api/public/hooks/sync-instagram-collab': typeof ApiPublicHooksSyncInstagramCollabRoute
   '/api/public/hooks/sync-tiktok-hashtag': typeof ApiPublicHooksSyncTiktokHashtagRoute
   '/api/public/hooks/sync-trending-hashtags': typeof ApiPublicHooksSyncTrendingHashtagsRoute
   '/api/public/hooks/sync-viral-trends': typeof ApiPublicHooksSyncViralTrendsRoute
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
@@ -512,10 +550,12 @@ export interface FileRouteTypes {
     | '/trend-virali'
     | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
+    | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
     | '/aspi-monitoring/'
     | '/canali-inspo/'
+    | '/collab-instagram/'
     | '/feed/'
     | '/influencer/'
     | '/piano-editoriale/'
@@ -544,12 +584,14 @@ export interface FileRouteTypes {
     | '/api/public/hooks/sync-audio-trends'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
+    | '/api/public/hooks/sync-instagram-collab'
     | '/api/public/hooks/sync-tiktok-hashtag'
     | '/api/public/hooks/sync-trending-hashtags'
     | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
   fileRoutesByTo: FileRoutesByTo
@@ -564,10 +606,12 @@ export interface FileRouteTypes {
     | '/trend-virali'
     | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
+    | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
     | '/aspi-monitoring'
     | '/canali-inspo'
+    | '/collab-instagram'
     | '/feed'
     | '/influencer'
     | '/piano-editoriale'
@@ -596,12 +640,14 @@ export interface FileRouteTypes {
     | '/api/public/hooks/sync-audio-trends'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
+    | '/api/public/hooks/sync-instagram-collab'
     | '/api/public/hooks/sync-tiktok-hashtag'
     | '/api/public/hooks/sync-trending-hashtags'
     | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
   id:
@@ -616,10 +662,12 @@ export interface FileRouteTypes {
     | '/trend-virali'
     | '/aspi-monitoring/$id'
     | '/canali-inspo/$id'
+    | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
     | '/aspi-monitoring/'
     | '/canali-inspo/'
+    | '/collab-instagram/'
     | '/feed/'
     | '/influencer/'
     | '/piano-editoriale/'
@@ -648,12 +696,14 @@ export interface FileRouteTypes {
     | '/api/public/hooks/sync-audio-trends'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
+    | '/api/public/hooks/sync-instagram-collab'
     | '/api/public/hooks/sync-tiktok-hashtag'
     | '/api/public/hooks/sync-trending-hashtags'
     | '/api/public/hooks/sync-viral-trends'
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
   fileRoutesById: FileRoutesById
@@ -669,10 +719,12 @@ export interface RootRouteChildren {
   TrendViraliRoute: typeof TrendViraliRoute
   AspiMonitoringIdRoute: typeof AspiMonitoringIdRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
+  CollabInstagramUsernameRoute: typeof CollabInstagramUsernameRoute
   EditorGraficoRubricaIdRoute: typeof EditorGraficoRubricaIdRoute
   InfluencerIdRoute: typeof InfluencerIdRoute
   AspiMonitoringIndexRoute: typeof AspiMonitoringIndexRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
+  CollabInstagramIndexRoute: typeof CollabInstagramIndexRoute
   FeedIndexRoute: typeof FeedIndexRoute
   InfluencerIndexRoute: typeof InfluencerIndexRoute
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
@@ -701,12 +753,14 @@ export interface RootRouteChildren {
   ApiPublicHooksSyncAudioTrendsRoute: typeof ApiPublicHooksSyncAudioTrendsRoute
   ApiPublicHooksSyncBrandMentionsRoute: typeof ApiPublicHooksSyncBrandMentionsRoute
   ApiPublicHooksSyncCrossSourceTrendsRoute: typeof ApiPublicHooksSyncCrossSourceTrendsRoute
+  ApiPublicHooksSyncInstagramCollabRoute: typeof ApiPublicHooksSyncInstagramCollabRoute
   ApiPublicHooksSyncTiktokHashtagRoute: typeof ApiPublicHooksSyncTiktokHashtagRoute
   ApiPublicHooksSyncTrendingHashtagsRoute: typeof ApiPublicHooksSyncTrendingHashtagsRoute
   ApiPublicHooksSyncViralTrendsRoute: typeof ApiPublicHooksSyncViralTrendsRoute
   ApiPublicHooksTiktokHashtagPostsRoute: typeof ApiPublicHooksTiktokHashtagPostsRoute
   ApiPublicHooksTiktokOembedRoute: typeof ApiPublicHooksTiktokOembedRoute
   ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
+  ApiPublicHooksTriggerDiscoveryPipelineRoute: typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   ApiPublicHooksTriggerSyncAspiMonitoringRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   ApiPublicHooksTriggerSyncCanaliFeedRoute: typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
 }
@@ -797,6 +851,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FeedIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/collab-instagram/': {
+      id: '/collab-instagram/'
+      path: '/collab-instagram'
+      fullPath: '/collab-instagram/'
+      preLoaderRoute: typeof CollabInstagramIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/canali-inspo/': {
       id: '/canali-inspo/'
       path: '/canali-inspo'
@@ -825,6 +886,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EditorGraficoRubricaIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/collab-instagram/$username': {
+      id: '/collab-instagram/$username'
+      path: '/collab-instagram/$username'
+      fullPath: '/collab-instagram/$username'
+      preLoaderRoute: typeof CollabInstagramUsernameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/canali-inspo/$id': {
       id: '/canali-inspo/$id'
       path: '/canali-inspo/$id'
@@ -851,6 +919,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/trigger-sync-aspi-monitoring'
       fullPath: '/api/public/hooks/trigger-sync-aspi-monitoring'
       preLoaderRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/trigger-discovery-pipeline': {
+      id: '/api/public/hooks/trigger-discovery-pipeline'
+      path: '/api/public/hooks/trigger-discovery-pipeline'
+      fullPath: '/api/public/hooks/trigger-discovery-pipeline'
+      preLoaderRoute: typeof ApiPublicHooksTriggerDiscoveryPipelineRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/top-tiktok-hashtags': {
@@ -893,6 +968,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/sync-tiktok-hashtag'
       fullPath: '/api/public/hooks/sync-tiktok-hashtag'
       preLoaderRoute: typeof ApiPublicHooksSyncTiktokHashtagRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/sync-instagram-collab': {
+      id: '/api/public/hooks/sync-instagram-collab'
+      path: '/api/public/hooks/sync-instagram-collab'
+      fullPath: '/api/public/hooks/sync-instagram-collab'
+      preLoaderRoute: typeof ApiPublicHooksSyncInstagramCollabRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/sync-cross-source-trends': {
@@ -1077,10 +1159,12 @@ const rootRouteChildren: RootRouteChildren = {
   TrendViraliRoute: TrendViraliRoute,
   AspiMonitoringIdRoute: AspiMonitoringIdRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
+  CollabInstagramUsernameRoute: CollabInstagramUsernameRoute,
   EditorGraficoRubricaIdRoute: EditorGraficoRubricaIdRoute,
   InfluencerIdRoute: InfluencerIdRoute,
   AspiMonitoringIndexRoute: AspiMonitoringIndexRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
+  CollabInstagramIndexRoute: CollabInstagramIndexRoute,
   FeedIndexRoute: FeedIndexRoute,
   InfluencerIndexRoute: InfluencerIndexRoute,
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
@@ -1116,6 +1200,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksSyncBrandMentionsRoute: ApiPublicHooksSyncBrandMentionsRoute,
   ApiPublicHooksSyncCrossSourceTrendsRoute:
     ApiPublicHooksSyncCrossSourceTrendsRoute,
+  ApiPublicHooksSyncInstagramCollabRoute:
+    ApiPublicHooksSyncInstagramCollabRoute,
   ApiPublicHooksSyncTiktokHashtagRoute: ApiPublicHooksSyncTiktokHashtagRoute,
   ApiPublicHooksSyncTrendingHashtagsRoute:
     ApiPublicHooksSyncTrendingHashtagsRoute,
@@ -1123,6 +1209,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksTiktokHashtagPostsRoute: ApiPublicHooksTiktokHashtagPostsRoute,
   ApiPublicHooksTiktokOembedRoute: ApiPublicHooksTiktokOembedRoute,
   ApiPublicHooksTopTiktokHashtagsRoute: ApiPublicHooksTopTiktokHashtagsRoute,
+  ApiPublicHooksTriggerDiscoveryPipelineRoute:
+    ApiPublicHooksTriggerDiscoveryPipelineRoute,
   ApiPublicHooksTriggerSyncAspiMonitoringRoute:
     ApiPublicHooksTriggerSyncAspiMonitoringRoute,
   ApiPublicHooksTriggerSyncCanaliFeedRoute:
@@ -1131,3 +1219,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
