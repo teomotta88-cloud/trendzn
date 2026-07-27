@@ -17,7 +17,12 @@
 
 import { chromium } from "playwright";
 
-const handle = process.argv[2];
+// trim + rimozione di un eventuale "@": un handle con spazi/simboli attorno
+// (facile da introdurre incollando l'input in workflow_dispatch) altrimenti
+// finisce url-encoded dentro la query RSS-Bridge (es. "factanza " ->
+// "u=factanza%20") e la richiesta fallisce silenziosamente, senza errore
+// esplicito — solo un item fittizio senza post reali.
+const handle = process.argv[2]?.trim().replace(/^@/, "");
 const maxPosts = Number(process.argv[3] || 10);
 if (!handle) {
   console.error("Uso: node scripts/probe-instagram-rssbridge-collab.mjs <handle> [maxPosts]");
