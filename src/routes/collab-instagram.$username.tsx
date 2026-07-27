@@ -4,7 +4,12 @@ import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SocialEmbed } from "@/components/SocialEmbed";
-import { listPostsForUsername, type CollabPost } from "@/lib/instagramCollab";
+import {
+  getMonitoredProfileByUsername,
+  listPostsForUsername,
+  type CollabPost,
+  type MonitoredProfile,
+} from "@/lib/instagramCollab";
 
 export const Route = createFileRoute("/collab-instagram/$username")({
   head: ({ params }) => ({
@@ -24,12 +29,26 @@ function formatDate(value: string | null): string {
 
 type FeedFilter = "collab" | "all";
 
+function formatFollowers(value: number | null): string {
+  if (value == null) return "";
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}M follower`;
+  if (value >= 1_000) return `${(value / 1_000).toFixed(1).replace(/\.0$/, "")}K follower`;
+  return `${value} follower`;
+}
+
 function InfluencerCollabFeedPage() {
   const { username } = Route.useParams();
   const [filter, setFilter] = useState<FeedFilter>("collab");
   const [posts, setPosts] = useState<CollabPost[]>([]);
+  const [profile, setProfile] = useState<MonitoredProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    getMonitoredProfileByUsername(username)
+      .then(setProfile)
+      .catch(() => setProfile(null));
+  }, [username]);
 
   useEffect(() => {
     setLoading(true);
@@ -51,12 +70,26 @@ function InfluencerCollabFeedPage() {
       </Link>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-semibold">@{username}</h1>
-          <p className="text-sm text-muted-foreground">
-            {posts.length} {filter === "collab" ? "post in collaborazione" : "post"} rilevati
-            finora.
-          </p>
+        <div className="flex items-center gap-3">
+          {profile?.profile_pic_url ? (
+            <img
+              src={profile.profile_pic_url}
+              alt={username}
+              className="size-14 rounded-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          ) : (
+            <div className="size-14 rounded-full bg-muted" />
+          )}
+          <div>
+            <h1 className="text-2xl font-semibold">@{username}</h1>
+            <p className="text-sm text-muted-foreground">
+              {posts.length} {filter === "collab" ? "post in collaborazione" : "post"} rilevati
+              finora
+              {profile?.followers_count != null && ` · ${formatFollowers(profile.followers_count)}`}
+              .
+            </p>
+          </div>
         </div>
         <Tabs value={filter} onValueChange={(v) => setFilter(v as FeedFilter)}>
           <TabsList>

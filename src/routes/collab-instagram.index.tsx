@@ -49,6 +49,26 @@ const WINDOW_OPTIONS: { value: CollabWindow; label: string }[] = [
   { value: "1y", label: "Ultimo anno" },
 ];
 
+function formatFollowers(value: number | null): string {
+  if (value == null) return "—";
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
+  if (value >= 1_000) return `${(value / 1_000).toFixed(1).replace(/\.0$/, "")}K`;
+  return String(value);
+}
+
+function ProfileAvatar({ profile }: { profile: MonitoredProfile }) {
+  return profile.profile_pic_url ? (
+    <img
+      src={profile.profile_pic_url}
+      alt={profile.username}
+      className="size-8 rounded-full object-cover"
+      referrerPolicy="no-referrer"
+    />
+  ) : (
+    <div className="size-8 rounded-full bg-muted" />
+  );
+}
+
 function formatLastChecked(value: string | null): string {
   // null = non ancora controllato: il worker (sync-instagram-collab.yml,
   // cron orario + workflow_dispatch manuale) lo considera "dovuto" fin da
@@ -182,20 +202,26 @@ function CollabInstagramPage() {
             <TableRow>
               <TableHead>Username</TableHead>
               <TableHead>Industry</TableHead>
+              <TableHead>Follower</TableHead>
               <TableHead>Ultimo check</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {brands.map((b) => (
               <TableRow key={b.id}>
-                <TableCell>@{b.username}</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <ProfileAvatar profile={b} />@{b.username}
+                  </div>
+                </TableCell>
                 <TableCell>{b.industry}</TableCell>
+                <TableCell>{formatFollowers(b.followers_count)}</TableCell>
                 <TableCell>{formatLastChecked(b.last_checked_at)}</TableCell>
               </TableRow>
             ))}
             {brands.length === 0 && (
               <TableRow>
-                <TableCell colSpan={3} className="text-muted-foreground">
+                <TableCell colSpan={4} className="text-muted-foreground">
                   Nessun brand aggiunto ancora.
                 </TableCell>
               </TableRow>
@@ -245,6 +271,7 @@ function CollabInstagramPage() {
               <TableRow>
                 <TableHead>Username</TableHead>
                 <TableHead>Industry</TableHead>
+                <TableHead>Follower</TableHead>
                 <TableHead>Collab nella finestra</TableHead>
                 <TableHead>Ultimo check</TableHead>
               </TableRow>
@@ -256,9 +283,9 @@ function CollabInstagramPage() {
                     <Link
                       to="/collab-instagram/$username"
                       params={{ username: p.username }}
-                      className="font-medium text-primary hover:underline"
+                      className="flex items-center gap-2 font-medium text-primary hover:underline"
                     >
-                      @{p.username}
+                      <ProfileAvatar profile={p} />@{p.username}
                     </Link>
                   </TableCell>
                   <TableCell>
@@ -270,13 +297,14 @@ function CollabInstagramPage() {
                       ))}
                     </div>
                   </TableCell>
+                  <TableCell>{formatFollowers(p.followers_count)}</TableCell>
                   <TableCell>{collabCounts.get(p.username) ?? 0}</TableCell>
                   <TableCell>{formatLastChecked(p.last_checked_at)}</TableCell>
                 </TableRow>
               ))}
               {rankedInfluencers.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={4} className="text-muted-foreground">
+                  <TableCell colSpan={5} className="text-muted-foreground">
                     Nessun influencer trovato ancora — verranno scoperti automaticamente dai collab
                     dei brand monitorati.
                   </TableCell>
