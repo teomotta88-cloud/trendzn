@@ -21,6 +21,7 @@
 // reale, perché non è documentato da Instagram.
 
 import { chromium } from "playwright";
+import { detectCollaborators } from "./lib/instagram-collab-detector.mjs";
 
 const url = process.argv[2];
 if (!url) {
@@ -47,7 +48,9 @@ try {
   console.log("URL finale:", page.url());
 
   if (/\/(accounts\/login|challenge)/.test(page.url())) {
-    console.log("\nBLOCCATO: Instagram ha reindirizzato a login/challenge, nessun dato leggibile anonimamente.");
+    console.log(
+      "\nBLOCCATO: Instagram ha reindirizzato a login/challenge, nessun dato leggibile anonimamente.",
+    );
   }
 
   await page.waitForTimeout(3000);
@@ -120,7 +123,10 @@ try {
   // genera alt text descrittivi tipo "Photo by X on ...", "Photo shared by
   // X and Y") ---
   const altTexts = await page.$$eval("img", (nodes) =>
-    nodes.map((n) => n.getAttribute("alt")).filter(Boolean).slice(0, 10),
+    nodes
+      .map((n) => n.getAttribute("alt"))
+      .filter(Boolean)
+      .slice(0, 10),
   );
   console.log("\n=== Alt text delle immagini (prime 10) ===");
   console.log(JSON.stringify(altTexts, null, 2));
@@ -130,22 +136,34 @@ try {
   console.log("\n=== Primi 3000 caratteri del testo visibile della pagina ===");
   console.log(bodyText.slice(0, 3000));
 
-  // --- 7. Verdetto EURISTICO, da validare con dati reali ---
-  // Ipotesi da confermare: se ci sono >= 2 link a profilo distinti "in cima"
-  // (entro i primi ~600px, sopra la didascalia/i commenti) è probabile un
-  // collab; con 1 solo è un post normale. La soglia 600 e la definizione di
-  // "in cima" vanno tarate guardando l'output qui sopra su post reali (uno
-  // sicuramente in collab, uno sicuramente no) prima di fidarsi di questo
-  // numero.
-  const topProfiles = dedup.filter((p) => p.top < 600 && p.top > -50);
-  console.log("\n=== Verdetto euristico (SPERIMENTALE, da tarare) ===");
-  console.log(`Profili distinti entro i primi 600px: ${topProfiles.length}`);
-  console.log(JSON.stringify(topProfiles, null, 2));
+  // --- 7. Verdetto usando la stessa funzione condivisa del worker di sync
+  // (scripts/lib/instagram-collab-detector.mjs), per non avere logiche
+  // diverse tra probe diagnostico e pipeline reale — ancorata alla
+  // posizione dell'elemento <time datetime> del post, non a un numero fisso
+  // di pixel (vedi commento nel file della lib per il bug che questo fix
+  // risolve: i commentatori scambiati per collaboratori sui post con
+  // didascalia corta). ---
+  const timeTop = await page
+    .$eval("time[datetime]", (el) => el.getBoundingClientRect().top)
+    .catch(() => null);
+  console.log("\n=== Posizione dell'elemento <time datetime> (confine header) ===");
   console.log(
-    topProfiles.length >= 2
-      ? "→ Possibile COLLAB (più di un account nell'header) — verificare a occhio."
-      : "→ Probabile autore singolo — verificare a occhio.",
+    timeTop != null ? `top: ${timeTop}` : "(nessun <time datetime> trovato, uso il fallback)",
   );
+
+  const { collaborators, reason } = await detectCollaborators(page);
+  console.log("\n=== Verdetto (stessa logica del worker di sync) ===");
+  if (reason) {
+    console.log(`Non valutabile: ${reason}`);
+  } else {
+    console.log(`Collaboratori rilevati: ${collaborators.length}`);
+    console.log(JSON.stringify(collaborators, null, 2));
+    console.log(
+      collaborators.length >= 2
+        ? "→ Possibile COLLAB (più di un account nell'header) — verificare a occhio."
+        : "→ Probabile autore singolo — verificare a occhio.",
+    );
+  }
 } finally {
   await browser.close();
 }
