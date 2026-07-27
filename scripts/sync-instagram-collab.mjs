@@ -105,7 +105,6 @@ async function checkProfile(context, profile) {
   console.log(`  ${posts.length} post analizzati, ${collabsFound} in collab`);
 
   const { stats: profileStats, reason: profileStatsReason } = await fetchProfileStats(
-    context,
     profile.username,
   );
   if (profileStatsReason) {
