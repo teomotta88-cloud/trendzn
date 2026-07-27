@@ -130,10 +130,20 @@ export async function getCollabCounts(window: CollabWindow): Promise<Map<string,
   return counts;
 }
 
-// Tutti i post in collab (>=2 collaboratori distinti) in cui questo username
-// compare — sia come owner (post pubblicato direttamente da lui) sia come
-// collaboratore taggato sul post di un altro profilo monitorato.
-export async function listCollabPostsForUsername(username: string): Promise<CollabPost[]> {
+// Tutti i post in cui questo username compare — sia come owner (post
+// pubblicato direttamente da lui) sia come collaboratore taggato sul post
+// di un altro profilo monitorato. Ogni post analizzato ha sempre almeno una
+// riga in instagram_post_collaborators (l'owner stesso, anche sui post non
+// in collab), quindi questa query copre già "tutti i post" senza bisogno di
+// interrogare anche owner_username separatamente.
+//
+// collabOnly=true (default) filtra ai soli post con >=2 collaboratori
+// distinti, cioè quelli davvero "in collaborazione" — il filtro richiesto
+// nell'elenco dell'influencer.
+export async function listPostsForUsername(
+  username: string,
+  { collabOnly = true }: { collabOnly?: boolean } = {},
+): Promise<CollabPost[]> {
   const { data: collabRows, error } = await supabase
     .from("instagram_post_collaborators")
     .select("post_id")
@@ -163,7 +173,12 @@ export async function listCollabPostsForUsername(username: string): Promise<Coll
     collaboratorsByPost.set(row.post_id, list);
   }
 
-  return (posts ?? [])
-    .map((p) => ({ ...p, collaborators: collaboratorsByPost.get(p.id) ?? [] }))
-    .filter((p) => p.collaborators.length >= 2);
+  const withCollaborators = (posts ?? []).map((p) => ({
+    ...p,
+    collaborators: collaboratorsByPost.get(p.id) ?? [],
+  }));
+
+  return collabOnly
+    ? withCollaborators.filter((p) => p.collaborators.length >= 2)
+    : withCollaborators;
 }

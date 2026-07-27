@@ -49,8 +49,12 @@ const WINDOW_OPTIONS: { value: CollabWindow; label: string }[] = [
   { value: "1y", label: "Ultimo anno" },
 ];
 
-function formatDate(value: string | null): string {
-  if (!value) return "mai";
+function formatLastChecked(value: string | null): string {
+  // null = non ancora controllato: il worker (sync-instagram-collab.yml,
+  // cron orario + workflow_dispatch manuale) lo considera "dovuto" fin da
+  // subito, quindi partirà al prossimo scatto dell'ora, non serve un
+  // backfill immediato.
+  if (!value) return "in attesa del primo check";
   return new Intl.DateTimeFormat("it-IT", {
     day: "numeric",
     month: "short",
@@ -186,7 +190,7 @@ function CollabInstagramPage() {
               <TableRow key={b.id}>
                 <TableCell>@{b.username}</TableCell>
                 <TableCell>{b.industry}</TableCell>
-                <TableCell>{formatDate(b.last_checked_at)}</TableCell>
+                <TableCell>{formatLastChecked(b.last_checked_at)}</TableCell>
               </TableRow>
             ))}
             {brands.length === 0 && (
@@ -267,7 +271,7 @@ function CollabInstagramPage() {
                     </div>
                   </TableCell>
                   <TableCell>{collabCounts.get(p.username) ?? 0}</TableCell>
-                  <TableCell>{formatDate(p.last_checked_at)}</TableCell>
+                  <TableCell>{formatLastChecked(p.last_checked_at)}</TableCell>
                 </TableRow>
               ))}
               {rankedInfluencers.length === 0 && (
