@@ -25,26 +25,42 @@ import { detectCollaborators } from "./lib/instagram-collab-detector.mjs";
 
 const HOOK_ENDPOINT = "https://trendzn.lovable.app/api/public/hooks/sync-instagram-collab";
 
+// Timeout esplicito: senza, una richiesta bloccata (hook lento/non
+// risponde) fa restare lo script in attesa fino al timeout dell'intero job
+// (20 minuti, vedi .github/workflows/sync-instagram-collab.yml) invece di
+// fallire in modo leggibile — stessa prudenza già usata per RSS-Bridge in
+// scripts/lib/instagram-rssbridge-feed.mjs.
+const HOOK_TIMEOUT_MS = 20000;
+
+async function callHook(init) {
+  const res = await fetch(HOOK_ENDPOINT, { ...init, signal: AbortSignal.timeout(HOOK_TIMEOUT_MS) });
+  const text = await res.text();
+  const body = (() => {
+    try {
+      return JSON.parse(text);
+    } catch {
+      return null;
+    }
+  })();
+  return { res, body, text };
+}
+
 async function fetchDueProfiles() {
-  const res = await fetch(HOOK_ENDPOINT);
-  const body = await res.json().catch(() => null);
+  const { res, body, text } = await callHook();
   if (!res.ok || !body?.ok) {
-    throw new Error(
-      `GET profili dovuti fallita (${res.status}): ${body?.error ?? (await res.text())}`,
-    );
+    throw new Error(`GET profili dovuti fallita (${res.status}): ${body?.error ?? text}`);
   }
   return body.profiles ?? [];
 }
 
 async function sendResults(payload) {
-  const res = await fetch(HOOK_ENDPOINT, {
+  const { res, body, text } = await callHook({
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  const body = await res.json().catch(() => null);
   if (!res.ok || !body?.ok) {
-    throw new Error(`POST risultati fallita (${res.status}): ${body?.error ?? (await res.text())}`);
+    throw new Error(`POST risultati fallita (${res.status}): ${body?.error ?? text}`);
   }
   return body;
 }
