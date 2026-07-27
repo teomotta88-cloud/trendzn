@@ -1,0 +1,48 @@
+name: Sync Instagram Collab
+
+# Controlla i profili Instagram monitorati (brand caricati + influencer
+# scoperti automaticamente via collab) e rileva nuovi post/collaborazioni.
+# Un cron orario è innocuo per i profili a bassa cadenza di pubblicazione:
+# l'hook sync-instagram-collab filtra da solo i profili non ancora "dovuti"
+# in base al loro check_interval_minutes.
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Attendi che RSS-Bridge sia pronto
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge non ha risposto in tempo" >&2
+          exit 1
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Sync collab Instagram
+        env:
+          RSS_BRIDGE_BASE: http://localhost:3000/
+        run: node scripts/sync-instagram-collab.mjs
