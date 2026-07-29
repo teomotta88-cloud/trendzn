@@ -46,6 +46,15 @@ name: Run Discovery Pipeline
 on:
   workflow_dispatch: {}
 
+# Il permesso effettivo di un job richiamato via `uses:` non può superare
+# quello del workflow chiamante (qui, di default, sola lettura) — senza
+# questo blocco, sync-canali-feed.yml (che dichiara `contents: write` per
+# committare trends.json sincronizzato) fallisce la validazione con
+# "requesting 'contents: write', but is only allowed 'contents: read'"
+# ancora prima che parta un solo job.
+permissions:
+  contents: write
+
 jobs:
   sync-canali-feed:
     uses: ./.github/workflows/sync-canali-feed.yml
