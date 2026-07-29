@@ -3,11 +3,11 @@ import { VIRALITY_WINDOW_DAYS } from "@/lib/virality";
 import { fingerprintSimilarity, FINGERPRINT_MATCH_THRESHOLD } from "@/lib/audioFingerprintSimilarity";
 
 // Soglie esplicite richieste: 3+ Reel diversi con lo stesso audio, da
-// almeno 2 canali Canali Inspo distinti — stessa forma della soglia già
-// usata per il trend cross-profilo testuale (MIN_CROSS_PROFILE_CHANNELS in
+// almeno 3 canali Canali Inspo distinti — stessa soglia già usata per il
+// trend cross-profilo testuale (MIN_CROSS_PROFILE_CHANNELS in
 // discover-canali-inspo-content.mjs).
 const MIN_REEL_COUNT = 3;
-const MIN_CHANNEL_COUNT = 2;
+const MIN_CHANNEL_COUNT = 3;
 
 // Due passate, in ordine di affidabilità:
 //   1. Match ESATTO su audio_url — deterministico, copre il caso comune
