@@ -1,7 +1,7 @@
 -- Trend Virali: rilevamento "audio in trend" tra i Reel dei Canali Inspo —
 -- 3+ Reel diversi che usano lo stesso audio_url (Fase F,
 -- 20260720120000_viral_trend_content_reel_audio.sql), pubblicati da almeno
--- 2 canali distinti, nella stessa finestra di 7gg già usata per il feed
+-- 3 canali distinti, nella stessa finestra di 7gg già usata per il feed
 -- (VIRALITY_WINDOW_DAYS).
 --
 -- Stesso pattern già in uso per il trend cross-profilo testuale
