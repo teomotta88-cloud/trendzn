@@ -9,24 +9,30 @@
 //   TikTok:    tiktok.com/tag/<tag>  (o /tags/<tag>)
 //   X:         x.com/hashtag/<tag>   (o twitter.com)
 //
-// Tre tecniche completamente diverse, una per piattaforma:
-//   - Instagram: scraping pubblico via Playwright della pagina hashtag
-//     (nessun login), stessa tecnica già in produzione per la discovery Trend
-//     Virali — vedi discover-instagram-hashtag-content.mjs, di cui questo
-//     script riusa scripts/lib/instagram-public-metrics.mjs invece di
-//     duplicarne la logica di parsing.
-//   - TikTok: scripts/scrape-tiktok-hashtag.mjs (già in produzione per la
-//     card "TikTok Trending", vedi sync-tiktok-hashtag.mjs) — riusato
-//     direttamente. Limite noto di questa tecnica: solo url + views, nessuna
-//     caption/data (la pagina hashtag di TikTok non le espone via DOM
-//     pubblico in modo affidabile).
-//   - X: rettiwt-api con l'account dedicato già in produzione per gli
-//     account X di ASPI-monitoring (vedi sync-x-posts.mjs), qui con
-//     tweet.search({ hashtags: [...] }) invece di { fromUsers: [...] }.
+// Per ogni post si cerca di recuperare: data di pubblicazione, utente che
+// l'ha pubblicato, caption, geotag (se presente). Copertura reale per
+// piattaforma (dettagli e affidabilità nei commenti delle rispettive
+// sezioni più sotto):
+//   - Instagram: tutti e quattro. Data/autore/caption confermati (stessa
+//     tecnica già in produzione per la discovery Trend Virali, vedi
+//     discover-instagram-hashtag-content.mjs — questo script riusa
+//     scripts/lib/instagram-public-metrics.mjs invece di duplicarne il
+//     parsing). Il geotag è stato aggiunto qui per la prima volta e NON è
+//     stato verificato su un post geotaggato reale.
+//   - TikTok: autore e data derivati dall'URL/ID del video (100% affidabili,
+//     nessuna richiesta aggiuntiva). La caption è un tentativo best-effort
+//     via meta tag della pagina video, mai verificato su un video reale. Il
+//     geotag non è disponibile con questa tecnica: resta sempre null.
+//   - X: data/autore/caption confermati (rettiwt-api, stesso account già in
+//     produzione per gli account X di ASPI-monitoring, vedi sync-x-posts.mjs,
+//     qui con tweet.search({ hashtags: [...] }) invece di
+//     { fromUsers: [...] }). Il geotag non è mai stato verificato come
+//     campo disponibile nel modello Tweet di rettiwt-api: resta sempre null.
 //
 // Nessuna delle tre tecniche richiede credit anysite. Instagram e X restano
-// "best effort" (login-wall/blocchi possibili, vedi i commenti nei rispettivi
-// moduli riusati) — un fallimento su un singolo hashtag non blocca gli altri.
+// "best effort" anche per i dati confermati (login-wall/blocchi possibili,
+// vedi i commenti nei rispettivi moduli riusati) — un fallimento su un
+// singolo hashtag o un singolo post non blocca gli altri.
 
 import { openInstagramMetricsSession } from "./lib/instagram-public-metrics.mjs";
 import { scrapeHashtag as scrapeTikTokHashtag } from "./scrape-tiktok-hashtag.mjs";
@@ -177,6 +183,9 @@ function trimToMax(canale, platform, max) {
   }
 }
 
+// handle = utente che ha pubblicato il singolo post (non l'hashtag: un
+// hashtag raggruppa post di autori diversi) — fallback al tag SOLO se
+// l'autore non è stato recuperabile, per non lasciare mai handle vuoto.
 function addPosts(canale, platform, tag, posts) {
   let added = 0;
   for (const post of posts) {
@@ -185,10 +194,11 @@ function addPosts(canale, platform, tag, posts) {
     if (exists) continue;
     canale.accounts.push({
       platform,
-      handle: tag,
+      handle: post.author || tag,
       url: post.url,
       date: post.date ?? null,
       caption: post.caption ?? null,
+      location: post.location ?? null,
       views: post.views ?? null,
     });
     added++;
@@ -276,7 +286,13 @@ if (byPlatform.instagram.length > 0) {
       for (const url of links) {
         const { metrics } = await session.fetchMetricsDetailed(url);
         if (metrics) {
-          posts.push({ url, date: metrics.publishedAt, caption: metrics.caption });
+          posts.push({
+            url,
+            date: metrics.publishedAt,
+            caption: metrics.caption,
+            author: metrics.author,
+            location: metrics.location,
+          });
         }
         await sleep(DELAY_MS);
       }
@@ -292,19 +308,87 @@ if (byPlatform.instagram.length > 0) {
 }
 
 // --- TikTok ---
+// scrapeTikTokHashtag() dà solo url + views (limite noto della pagina
+// hashtag, vedi scrape-tiktok-hashtag.mjs). Da lì recuperiamo comunque
+// gratis, senza richieste extra:
+//   - autore: già nell'URL del video (tiktok.com/@utente/video/<id>)
+//   - data: già codificata nell'ID del video (stessa tecnica, proven, già
+//     usata in sync-bluserena-monitoring.mjs per i post TikTok da RSS-Bridge)
+// La caption resta l'unico dato che richiede una richiesta aggiuntiva: si
+// prova a leggerla dal meta tag og:description della pagina del singolo
+// video (convenzione web comune) — MAI verificato su un video TikTok reale
+// da qui (nessun accesso rete per testarlo), quindi resta un tentativo best
+// effort con fallback a null, non una tecnica confermata come le altre.
+function tiktokAuthorFromUrl(url) {
+  return url.match(/\/@([^/]+)\/video\//)?.[1] ?? null;
+}
+
+function tiktokDateFromVideoId(url) {
+  const videoId = url.match(/\/video\/(\d+)/)?.[1];
+  if (!videoId) return null;
+  try {
+    const id = BigInt(videoId);
+    const timestampSeconds = Number(id >> 32n);
+    if (!Number.isFinite(timestampSeconds) || timestampSeconds <= 0) return null;
+    const date = new Date(timestampSeconds * 1000);
+    const min = new Date("2016-01-01T00:00:00.000Z").getTime();
+    const max = Date.now() + 24 * 60 * 60 * 1000;
+    if (date.getTime() < min || date.getTime() > max) return null;
+    return date.toISOString();
+  } catch {
+    return null;
+  }
+}
+
+async function tiktokCaption(browser, url) {
+  const page = await browser.newPage();
+  try {
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
+    return await page
+      .$eval('meta[property="og:description"], meta[name="description"]', (el) =>
+        el.getAttribute("content"),
+      )
+      .catch(() => null);
+  } catch {
+    return null;
+  } finally {
+    await page.close();
+  }
+}
+
 if (byPlatform.tiktok.length > 0) {
   console.log(`\n--- TikTok (${byPlatform.tiktok.length} hashtag) ---`);
-  for (const { canale, tag } of byPlatform.tiktok) {
-    console.log(`#${tag}`);
-    let posts = [];
-    try {
-      posts = await scrapeTikTokHashtag(tag);
-    } catch (err) {
-      console.error(`  errore: ${String(err?.message || err)}`);
+  const { chromium } = await import("playwright");
+  const browser = await chromium.launch({ headless: true });
+  try {
+    for (const { canale, tag } of byPlatform.tiktok) {
+      console.log(`#${tag}`);
+      let found = [];
+      try {
+        found = await scrapeTikTokHashtag(tag);
+      } catch (err) {
+        console.error(`  errore: ${String(err?.message || err)}`);
+      }
+
+      const posts = [];
+      for (const { url, views } of found) {
+        const caption = await tiktokCaption(browser, url);
+        posts.push({
+          url,
+          author: tiktokAuthorFromUrl(url),
+          date: tiktokDateFromVideoId(url),
+          caption,
+          views: views ?? null,
+        });
+        await sleep(DELAY_MS);
+      }
+
+      const added = addPosts(canale, "tiktok", tag, posts);
+      if (added > 0) modified = true;
+      console.log(`  ${found.length} video trovati, ${added} nuovi post aggiunti.`);
     }
-    const added = addPosts(canale, "tiktok", tag, posts);
-    if (added > 0) modified = true;
-    console.log(`  ${posts.length} video trovati, ${added} nuovi post aggiunti.`);
+  } finally {
+    await browser.close();
   }
 }
 
@@ -329,12 +413,20 @@ if (byPlatform.x.length > 0) {
         console.error(`  errore: ${String(err?.message || err)}`);
         continue;
       }
+      // author: tweet.tweetBy.userName, campo verificato leggendo
+      // node_modules/rettiwt-api/dist/models/data/Tweet.d.ts (vedi
+      // probe-x-hashtag-search-rettiwt.mjs). location resta sempre null:
+      // rettiwt-api non espone un campo di geolocalizzazione confermato sul
+      // modello Tweet — da verificare con un probe dedicato prima di
+      // provare a leggerlo, non un'omissione distratta.
       const posts = tweets
         .filter((t) => t?.url)
         .map((t) => ({
           url: t.url,
           date: t.createdAt || null,
           caption: t.fullText || null,
+          author: t.tweetBy?.userName || null,
+          location: null,
           views: t.viewCount ?? null,
         }));
       const added = addPosts(canale, "x", tag, posts);
