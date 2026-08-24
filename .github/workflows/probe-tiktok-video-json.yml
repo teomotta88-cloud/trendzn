@@ -1,0 +1,34 @@
+name: Probe TikTok Video JSON (diagnostico)
+
+# Script diagnostico usa-e-getta: vedi scripts/probe-tiktok-video-json.mjs —
+# serve a verificare la struttura reale del JSON che TikTok incorpora in una
+# pagina video (per il geotag, richiesto per sync-bluserena-hashtags.mjs)
+# prima di fidarsi di un'estrazione mai testata dal vivo. Solo
+# workflow_dispatch: non è pensato per girare su schedule.
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URL video TikTok da ispezionare (separati da virgola)"
+        required: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installa Playwright
+        run: npm install playwright --no-save
+
+      - name: Installa Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Dump struttura JSON pagina video
+        run: node scripts/probe-tiktok-video-json.mjs "${{ github.event.inputs.urls }}"
