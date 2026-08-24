@@ -19,20 +19,21 @@
 //     scripts/lib/instagram-public-metrics.mjs invece di duplicarne il
 //     parsing). Il geotag è stato aggiunto qui per la prima volta e NON è
 //     stato verificato su un post geotaggato reale.
-//   - TikTok: autore e data derivati dall'URL/ID del video (100% affidabili,
-//     nessuna richiesta aggiuntiva). La caption è un tentativo best-effort
-//     via meta tag della pagina video, mai verificato su un video reale. Il
-//     geotag non è disponibile con questa tecnica: resta sempre null.
+//   - TikTok: tutti e quattro, CONFERMATI su un video reale geotaggato con
+//     scripts/probe-tiktok-video-json.mjs (24/08/2026) — vedi i commenti
+//     nella sezione TikTok più sotto per i dettagli e il video usato. Autore
+//     e data hanno anche un fallback dall'URL/ID quando la pagina video non
+//     è raggiungibile (login-wall, confermato reale nello stesso probe).
 //   - X: data/autore/caption confermati (rettiwt-api, stesso account già in
 //     produzione per gli account X di ASPI-monitoring, vedi sync-x-posts.mjs,
 //     qui con tweet.search({ hashtags: [...] }) invece di
 //     { fromUsers: [...] }). Il geotag non è mai stato verificato come
 //     campo disponibile nel modello Tweet di rettiwt-api: resta sempre null.
 //
-// Nessuna delle tre tecniche richiede credit anysite. Instagram e X restano
-// "best effort" anche per i dati confermati (login-wall/blocchi possibili,
-// vedi i commenti nei rispettivi moduli riusati) — un fallimento su un
-// singolo hashtag o un singolo post non blocca gli altri.
+// Nessuna delle tre tecniche richiede credit anysite. Tutte restano "best
+// effort" anche per i dati confermati (login-wall/blocchi possibili su
+// Instagram e TikTok, vedi i commenti nelle rispettive sezioni) — un
+// fallimento su un singolo hashtag o un singolo post non blocca gli altri.
 
 import { openInstagramMetricsSession } from "./lib/instagram-public-metrics.mjs";
 import { scrapeHashtag as scrapeTikTokHashtag } from "./scrape-tiktok-hashtag.mjs";
@@ -309,20 +310,40 @@ if (byPlatform.instagram.length > 0) {
 
 // --- TikTok ---
 // scrapeTikTokHashtag() dà solo url + views (limite noto della pagina
-// hashtag, vedi scrape-tiktok-hashtag.mjs). Da lì recuperiamo comunque
-// gratis, senza richieste extra:
-//   - autore: già nell'URL del video (tiktok.com/@utente/video/<id>)
-//   - data: già codificata nell'ID del video (stessa tecnica, proven, già
-//     usata in sync-bluserena-monitoring.mjs per i post TikTok da RSS-Bridge)
-// La caption resta l'unico dato che richiede una richiesta aggiuntiva: si
-// prova a leggerla dal meta tag og:description della pagina del singolo
-// video (convenzione web comune) — MAI verificato su un video TikTok reale
-// da qui (nessun accesso rete per testarlo), quindi resta un tentativo best
-// effort con fallback a null, non una tecnica confermata come le altre.
+// hashtag, vedi scrape-tiktok-hashtag.mjs). Autore/data/caption/geotag si
+// leggono dalla pagina del singolo video, dal blob JSON che TikTok
+// incorpora server-side in ogni pagina (script
+// #__UNIVERSAL_DATA_FOR_REHYDRATION__, path
+// __DEFAULT_SCOPE__["webapp.video-detail"].itemInfo.itemStruct) — CONFERMATO
+// con scripts/probe-tiktok-video-json.mjs su un video reale geotaggato
+// (24/08/2026, https://www.tiktok.com/@iannacconefamilyofficia/video/7676876746549103905):
+//   itemStruct.author.uniqueId  -> stesso valore già ottenuto dall'URL
+//   itemStruct.createTime       -> timestamp Unix (secondi), preferito alla
+//                                   stima dall'ID video (che nel probe è
+//                                   risultata sfasata di ~4 secondi — normale
+//                                   per un ID stile snowflake, ma createTime
+//                                   dal JSON è la fonte esatta quando la
+//                                   pagina è raggiungibile)
+//   itemStruct.desc             -> caption (stringa vuota per il video di
+//                                   prova, che non ne aveva una — campo
+//                                   comunque confermato)
+//   itemStruct.poi.name / .address / .city -> geotag, es. "Villaggio Il
+//                                   Valentino Castellaneta Marina" /
+//                                   "Villaggio Valentino, Castellaneta,
+//                                   Italia" / "Taranto"
+// Login-wall confermato anch'esso nello stesso probe (un secondo video,
+// stessa run, ha dato pagina "Log in | TikTok" invece del video): come per
+// Instagram, resta un limite reale della tecnica anonima, non un bug — il
+// video va semplicemente perso per quel giro, rilevato esplicitamente sotto
+// invece di fallire silenziosamente su un JSON assente.
 function tiktokAuthorFromUrl(url) {
   return url.match(/\/@([^/]+)\/video\//)?.[1] ?? null;
 }
 
+// Fallback SOLO se la pagina video non è raggiungibile (login-wall) e quindi
+// non c'è nessun itemStruct.createTime da leggere: approssimato di pochi
+// secondi rispetto al reale (verificato nel probe), comunque preferibile a
+// nessuna data.
 function tiktokDateFromVideoId(url) {
   const videoId = url.match(/\/video\/(\d+)/)?.[1];
   if (!videoId) return null;
@@ -340,17 +361,49 @@ function tiktokDateFromVideoId(url) {
   }
 }
 
-async function tiktokCaption(browser, url) {
+async function tiktokVideoDetails(browser, url) {
   const page = await browser.newPage();
   try {
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
-    return await page
-      .$eval('meta[property="og:description"], meta[name="description"]', (el) =>
-        el.getAttribute("content"),
-      )
+
+    const title = await page.title().catch(() => "");
+    if (/log in/i.test(title)) {
+      return { caption: null, date: null, author: null, location: null, reason: "login-wall" };
+    }
+
+    const raw = await page
+      .$eval("#__UNIVERSAL_DATA_FOR_REHYDRATION__", (el) => el.textContent)
       .catch(() => null);
-  } catch {
-    return null;
+    if (!raw) {
+      return { caption: null, date: null, author: null, location: null, reason: "no-json" };
+    }
+
+    let itemStruct;
+    try {
+      const data = JSON.parse(raw);
+      itemStruct = data?.__DEFAULT_SCOPE__?.["webapp.video-detail"]?.itemInfo?.itemStruct ?? null;
+    } catch {
+      itemStruct = null;
+    }
+    if (!itemStruct) {
+      return { caption: null, date: null, author: null, location: null, reason: "no-itemStruct" };
+    }
+
+    const author = itemStruct.author?.uniqueId ?? null;
+    const date =
+      typeof itemStruct.createTime === "number"
+        ? new Date(itemStruct.createTime * 1000).toISOString()
+        : null;
+    const caption = itemStruct.desc || null;
+
+    const poi = itemStruct.poi;
+    const location = poi?.name
+      ? [poi.name, poi.city].filter(Boolean).join(" · ")
+      : null;
+
+    return { caption, date, author, location, reason: null };
+  } catch (err) {
+    return { caption: null, date: null, author: null, location: null, reason: `error:${String(err)}` };
   } finally {
     await page.close();
   }
@@ -371,13 +424,16 @@ if (byPlatform.tiktok.length > 0) {
       }
 
       const posts = [];
+      let loginWallCount = 0;
       for (const { url, views } of found) {
-        const caption = await tiktokCaption(browser, url);
+        const details = await tiktokVideoDetails(browser, url);
+        if (details.reason === "login-wall") loginWallCount++;
         posts.push({
           url,
-          author: tiktokAuthorFromUrl(url),
-          date: tiktokDateFromVideoId(url),
-          caption,
+          author: details.author ?? tiktokAuthorFromUrl(url),
+          date: details.date ?? tiktokDateFromVideoId(url),
+          caption: details.caption,
+          location: details.location,
           views: views ?? null,
         });
         await sleep(DELAY_MS);
@@ -385,7 +441,11 @@ if (byPlatform.tiktok.length > 0) {
 
       const added = addPosts(canale, "tiktok", tag, posts);
       if (added > 0) modified = true;
-      console.log(`  ${found.length} video trovati, ${added} nuovi post aggiunti.`);
+      console.log(
+        `  ${found.length} video trovati, ${added} nuovi post aggiunti` +
+          (loginWallCount > 0 ? ` (${loginWallCount} bloccati da login-wall)` : "") +
+          ".",
+      );
     }
   } finally {
     await browser.close();
