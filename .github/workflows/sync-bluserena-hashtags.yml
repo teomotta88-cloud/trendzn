@@ -1,0 +1,44 @@
+name: Sync Bluserena Hashtags
+
+# Monitora le pagine hashtag Instagram/TikTok/X aggiunte alla pagina
+# Bluserena-monitoring — complementare a "Sync Bluserena Monitoring" (che
+# copre solo i profili IG/TikTok). Vedi scripts/sync-bluserena-hashtags.mjs.
+#
+# Node 22 (non 20): richiesto da rettiwt-api 7.1.x, stesso vincolo già
+# documentato in sync-x-posts.yml.
+#
+# Cron a un orario diverso dagli altri sync sullo stesso file
+# (canali-inspo :00, aspi-monitoring :30, bluserena-monitoring :45) e ogni 3
+# ore invece che ogni ora: la parte Instagram è a rischio login-wall dopo
+# troppe richieste ravvicinate (stessa soglia empirica documentata in
+# discover-instagram-hashtag-content.yml), meno run = meno rischio.
+
+on:
+  schedule:
+    - cron: "15 */3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Installa Playwright e rettiwt-api
+        run: npm install playwright rettiwt-api --no-save
+
+      - name: Installa Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Sync hashtag Bluserena-monitoring
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RETTIWT_API_KEY: ${{ secrets.RETTIWT_API_KEY }}
+        run: node scripts/sync-bluserena-hashtags.mjs

@@ -67,12 +67,34 @@ function urlBase(url: string): string {
   }
 }
 
+// Come in bluserena-monitoring.index.tsx/.$id.tsx e sync-bluserena-hashtags.mjs:
+// riconosce una pagina hashtag dalla forma del path (Instagram
+// /explore/tags/<tag>/, TikTok /tag(s)/<tag>, X /hashtag/<tag>). Serve QUI
+// perché per una pagina hashtag il tag è l'ULTIMO segmento del path
+// (/explore/tags/travel -> "travel"), non il primo come per un profilo — se
+// extractHandle prendesse sempre segs[0] estrarrebbe "explore" invece di
+// "travel".
+function hashtagTag(segs: string[], platform: string): string | null {
+  if (platform === "instagram" && segs[0] === "explore" && segs[1] === "tags" && segs[2]) {
+    return segs[2];
+  }
+  if (platform === "tiktok" && (segs[0] === "tag" || segs[0] === "tags") && segs[1]) {
+    return segs[1];
+  }
+  if (platform === "x" && segs[0] === "hashtag" && segs[1]) {
+    return segs[1];
+  }
+  return null;
+}
+
 // Handle "leggibile" per la card e per il match del sync (IG/TikTok). Per
 // LinkedIn preferiamo lo slug company/in; per gli altri il primo segmento utile.
 function extractHandle(url: string, platform: string): string {
   try {
     const u = new URL(url);
     const segs = u.pathname.split("/").filter(Boolean);
+    const tag = hashtagTag(segs, platform);
+    if (tag) return tag;
     if (platform === "linkedin") {
       const idx = segs.findIndex((s) => s === "company" || s === "in" || s === "school");
       if (idx >= 0 && segs[idx + 1]) return segs[idx + 1];

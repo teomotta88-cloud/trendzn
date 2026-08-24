@@ -93,6 +93,28 @@ function normalizeHandle(handle) {
   return handle?.startsWith("@") ? handle.slice(1) : handle;
 }
 
+// Un canale "hashtag" (Instagram /explore/tags/<tag>/, TikTok /tag(s)/<tag>,
+// X /hashtag/<tag> — aggiungibile da bluserena-monitoring.index.tsx) viene
+// creato con la STESSA struttura di un canale-profilo: urls[0] = la pagina
+// stessa, accounts[0] = { platform, handle, url } con lo stesso URL come
+// "seed". Senza questo controllo, il ciclo qui sotto lo scambierebbe per un
+// profilo IG/TikTok chiamato come l'hashtag (es. #travel -> utente "travel")
+// e lo monitorerebbe con RSS-Bridge Username invece che lasciarlo a
+// sync-bluserena-hashtags.mjs, che lo gestisce con la tecnica corretta.
+function isHashtagUrl(url) {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.replace(/^www\./, "");
+    const path = u.pathname.replace(/\/$/, "");
+    if (/instagram\.com$/.test(host)) return /^\/explore\/tags\/[^/]+$/.test(path);
+    if (/tiktok\.com$/.test(host)) return /^\/tags?\/[^/]+$/.test(path);
+    if (/^(x\.com|twitter\.com)$/.test(host)) return /^\/hashtag\/[^/]+$/.test(path);
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 function isPostUrl(url) {
   return /\/p\/|\/reel\/|\/reels\/|\/video\/|\/photo\/|\/watch/.test(url);
 }
@@ -347,8 +369,10 @@ for (const canale of list) {
   }
 }
 
-// Handle univoci Instagram/TikTok da monitorare.
+// Handle univoci Instagram/TikTok da monitorare — esclusi i canali-hashtag
+// (vedi isHashtagUrl), gestiti da sync-bluserena-hashtags.mjs.
 const handles = list
+  .filter((c) => !isHashtagUrl(c.urls?.[0] ?? ""))
   .flatMap((c) => c.accounts || [])
   .filter((a) => a.platform === "instagram" || a.platform === "tiktok")
   .filter((a) => a.handle)

@@ -127,6 +127,22 @@ function extractCaption(description) {
   return dashIndex === -1 ? description : description.slice(dashIndex + 3).trim();
 }
 
+// Lo username dell'autore compare nella stessa description, tra il trattino
+// dopo "likes, comments" e "on <data>:" — es. "28K likes, 94 comments -
+// NOMEUTENTE on 23 maggio 2026: ...". Riusa DESCRIPTION_PATTERN e
+// DATE_PATTERN già confermati per non introdurre un terzo pattern da tenere
+// allineato: null solo se uno dei due non combacia (già gestito a monte in
+// fetchMetricsDetailed, che a quel punto non chiamerebbe questa funzione).
+function extractAuthor(description) {
+  const likesMatch = description.match(DESCRIPTION_PATTERN);
+  if (!likesMatch) return null;
+  const afterLikes = description.slice(likesMatch.index + likesMatch[0].length);
+  const dateMatch = afterLikes.match(DATE_PATTERN);
+  if (!dateMatch) return null;
+  const author = afterLikes.slice(0, dateMatch.index).trim();
+  return author || null;
+}
+
 // Un solo browser per l'intera sessione di ricontrollo (aprirne uno per post
 // sarebbe molto più lento): fetchMetrics() apre e chiude solo la scheda.
 export async function openInstagramMetricsSession() {
@@ -188,6 +204,18 @@ export async function openInstagramMetricsSession() {
 
       const publishedAt = isoDatetime ?? parseDescriptionDate(description);
       const caption = extractCaption(description);
+      const author = extractAuthor(description);
+
+      // Geotag (Fase G, sync-bluserena-hashtags.mjs): il pill di localizzazione
+      // sopra il post, quando presente, è un link a /explore/locations/<id>/.
+      // A DIFFERENZA di likes/comments/data/caption/audio sopra, questo
+      // selettore NON è stato verificato su un post geotaggato reale (nessun
+      // accesso a un browser/rete per farlo da qui) — è la struttura nota di
+      // Instagram, ma va confermata sul primo post reale che lo usa. null se
+      // assente o se il selettore non regge più.
+      const location = await page
+        .$eval('a[href^="/explore/locations/"]', (el) => el.textContent?.trim() || null)
+        .catch(() => null);
 
       const audio = await page
         .$eval('a[href^="/reels/audio/"]', (el) => ({
@@ -211,7 +239,17 @@ export async function openInstagramMetricsSession() {
         .catch(() => null);
 
       return {
-        metrics: { likes, comments, publishedAt, caption, audioName, audioUrl, videoUrl },
+        metrics: {
+          likes,
+          comments,
+          publishedAt,
+          caption,
+          author,
+          location,
+          audioName,
+          audioUrl,
+          videoUrl,
+        },
         reason: null,
       };
     } catch (err) {

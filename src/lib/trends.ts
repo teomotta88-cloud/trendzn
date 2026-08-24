@@ -34,6 +34,11 @@ export type AccountRef = {
   // Solo per post TikTok: numero di view estratto da RSS-Bridge. Instagram
   // non espone metriche di engagement via RSS-Bridge, resta sempre null.
   views?: number | null;
+  // Geotag del post (nome del luogo), quando la piattaforma/tecnica di
+  // raccolta lo espone — solo Instagram per ora (sync-bluserena-hashtags.mjs),
+  // best-effort: null se il post non è geotaggato o se la piattaforma non lo
+  // rende pubblicamente disponibile senza login (TikTok, X).
+  location?: string | null;
 };
 export type CanaleInspo = {
   id: string;
