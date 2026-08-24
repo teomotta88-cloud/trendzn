@@ -1,0 +1,42 @@
+name: Sync Bluserena Monitoring
+
+# Copia di sync-aspi-monitoring.yml per la pagina Bluserena-monitoring. Ogni
+# ora, al minuto 45 per non scrivere su GitHub in contemporanea agli altri sync
+# (canali-inspo al minuto 0, aspi-monitoring al minuto 30).
+
+on:
+  schedule:
+    - cron: "45 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Attendi che RSS-Bridge sia pronto
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge non ha risposto in tempo" >&2
+          exit 1
+
+      - name: Sync Bluserena-monitoring via RSS-Bridge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RSS_BRIDGE_BASE: http://localhost:3000/
+        run: node scripts/sync-bluserena-monitoring.mjs

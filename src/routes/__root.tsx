@@ -162,6 +162,7 @@ const NAV_ITEMS = [
   { to: "/trend-virali", label: "Trend Virali" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
   { to: "/aspi-monitoring", label: "ASPI-monitoring" },
+  { to: "/bluserena-monitoring", label: "Bluserena-monitoring" },
   // { to: "/reputazione-brand", label: "Reputazione Brand" },
   { to: "/collab-instagram", label: "Collab Instagram" },
 ];

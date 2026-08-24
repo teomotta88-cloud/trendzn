@@ -5,6 +5,8 @@ const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/trends.json";
 // Store separato della pagina ASPI-monitoring (duplicato di Canali Inspo).
 const ASPI_PATH = "src/data/aspi-monitoring.json";
+// Store separato della pagina Bluserena-monitoring (duplicato di ASPI-monitoring).
+const BLUSERENA_PATH = "src/data/bluserena-monitoring.json";
 
 const VALID_SECTIONS = [
   "trend-real-time",
@@ -14,6 +16,7 @@ const VALID_SECTIONS = [
   "linkedin",
   "influencer",
   "aspi-monitoring",
+  "bluserena-monitoring",
 ] as const;
 
 type Section = (typeof VALID_SECTIONS)[number];
@@ -78,6 +81,7 @@ const CATEGORY_LABEL: Record<Section, string> = {
   linkedin: "LinkedIn",
   influencer: "Influencer",
   "aspi-monitoring": "ASPI-monitoring",
+  "bluserena-monitoring": "Bluserena-monitoring",
 };
 
 async function syncCanaleToGitHub(url: string, title: string | null): Promise<string> {
@@ -329,6 +333,91 @@ async function syncAspiToGitHub(url: string, title: string | null): Promise<stri
   }
 }
 
+// Come syncAspiToGitHub ma sullo store separato di Bluserena-monitoring
+// (bluserena-monitoring.json, chiave "canali"), che parte vuoto.
+async function syncBluserenaToGitHub(url: string, title: string | null): Promise<string> {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return "no_token";
+
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${BLUSERENA_PATH}`,
+      {
+        headers: {
+          Authorization: `token ${token}`,
+          Accept: "application/vnd.github.v3+json",
+          "User-Agent": "trendzn-bot",
+        },
+      },
+    );
+    if (!res.ok) return `read_failed_${res.status}`;
+
+    const file = await res.json();
+    const store = JSON.parse(decodeBase64Utf8(file.content.replace(/\n/g, "")));
+    if (!Array.isArray(store.canali)) store.canali = [];
+
+    function detectPlatformLocal(u: string) {
+      if (/instagram\.com/.test(u)) return "instagram";
+      if (/tiktok\.com/.test(u)) return "tiktok";
+      if (/youtube\.com|youtu\.be/.test(u)) return "youtube";
+      if (/linkedin\.com/.test(u)) return "linkedin";
+      return "web";
+    }
+    function extractHandleLocal(u: string) {
+      try {
+        const clean = u.replace(/\/$/, "").split("?")[0];
+        const parts = clean.split("/");
+        return parts[parts.length - 1].replace(/^@/, "") || u;
+      } catch {
+        return u;
+      }
+    }
+
+    const normalizedUrl = normalizeUrl(url);
+    const base = urlBase(normalizedUrl);
+    const platform = detectPlatformLocal(normalizedUrl);
+    const handle = extractHandleLocal(normalizedUrl);
+    const name = title || handle;
+    const id = handle.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+
+    const exists = (store.canali as { accounts: { url: string }[] }[]).some((c) =>
+      c.accounts.some((a) => urlBase(a.url) === base),
+    );
+    if (exists) return "already_exists";
+
+    store.canali.push({
+      id,
+      name,
+      urls: [normalizedUrl],
+      descrizione: null,
+      accounts: [{ platform, handle, url: normalizedUrl }],
+    });
+
+    const writeRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/${BLUSERENA_PATH}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+          "Content-Type": "application/json",
+          "User-Agent": "trendzn-bot",
+        },
+        body: JSON.stringify({
+          message: `chore: aggiungi canale Bluserena ${handle} [trendzn-manual]`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(store, null, 2)))),
+          sha: file.sha,
+        }),
+      },
+    );
+
+    if (writeRes.ok) return "ok";
+    const err = await writeRes.text();
+    return `write_failed: ${err.slice(0, 100)}`;
+  } catch (err) {
+    return `exception: ${String(err).slice(0, 100)}`;
+  }
+}
+
 export const Route = createFileRoute("/api/public/hooks/submit-manual")({
   server: {
     handlers: {
@@ -374,7 +463,10 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
           }
 
           const derivedTitle =
-            section === "canali-inspo" || section === "influencer" || section === "aspi-monitoring"
+            section === "canali-inspo" ||
+            section === "influencer" ||
+            section === "aspi-monitoring" ||
+            section === "bluserena-monitoring"
               ? title || extractHandleFromUrl(cleanUrl)
               : title;
 
@@ -404,6 +496,9 @@ export const Route = createFileRoute("/api/public/hooks/submit-manual")({
           }
           if (section === "aspi-monitoring") {
             syncResult = await syncAspiToGitHub(cleanUrl, derivedTitle);
+          }
+          if (section === "bluserena-monitoring") {
+            syncResult = await syncBluserenaToGitHub(cleanUrl, derivedTitle);
           }
           if (section === "influencer") {
             // industry = Nome Influencer, derivedTitle = Cliente (fallback handle se vuoto)

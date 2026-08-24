@@ -4,13 +4,14 @@ import { decodeBase64Utf8 } from "@/lib/base64";
 const GITHUB_REPO = "teomotta88-cloud/trendzn";
 const MAX_ATTEMPTS = 5;
 
-// Due store possibili: quello storico di Canali Inspo (trends.json, chiave
-// canali_inspo) e quello separato di ASPI-monitoring (aspi-monitoring.json,
-// chiave canali). Il client passa `store` per scegliere; default = canali-inspo
-// per retrocompatibilità.
+// Store possibili: quello storico di Canali Inspo (trends.json, chiave
+// canali_inspo) e quelli separati di ASPI-monitoring e Bluserena-monitoring
+// (rispettivi JSON dedicati, chiave canali). Il client passa `store` per
+// scegliere; default = canali-inspo per retrocompatibilità.
 const STORES = {
   "canali-inspo": { path: "src/data/trends.json", key: "canali_inspo" },
   "aspi-monitoring": { path: "src/data/aspi-monitoring.json", key: "canali" },
+  "bluserena-monitoring": { path: "src/data/bluserena-monitoring.json", key: "canali" },
 } as const;
 type StoreName = keyof typeof STORES;
 
