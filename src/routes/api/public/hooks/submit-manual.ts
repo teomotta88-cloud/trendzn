@@ -361,6 +361,7 @@ async function syncBluserenaToGitHub(url: string, title: string | null): Promise
       if (/tiktok\.com/.test(u)) return "tiktok";
       if (/youtube\.com|youtu\.be/.test(u)) return "youtube";
       if (/linkedin\.com/.test(u)) return "linkedin";
+      if (/x\.com|twitter\.com/.test(u)) return "x";
       return "web";
     }
     function extractHandleLocal(u: string) {

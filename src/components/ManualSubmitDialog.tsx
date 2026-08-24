@@ -8,7 +8,8 @@ type Section =
   | "canali-inspo"
   | "linkedin"
   | "influencer"
-  | "aspi-monitoring";
+  | "aspi-monitoring"
+  | "bluserena-monitoring";
 
 type FieldConfig = {
   key: "industry" | "title";
@@ -34,6 +35,14 @@ const SECTION_FIELDS: Record<Section, FieldConfig[]> = {
   ],
   "aspi-monitoring": [
     { key: "title", label: "Nome canale", placeholder: "es. Profilo aziendale", required: false },
+  ],
+  "bluserena-monitoring": [
+    {
+      key: "title",
+      label: "Nome canale",
+      placeholder: "es. Profilo aziendale o hashtag",
+      required: false,
+    },
   ],
   linkedin: [
     { key: "industry", label: "Catalogazione", placeholder: "es. Digital Agency", required: false },
@@ -71,8 +80,21 @@ export function ManualSubmitDialog({
 
   const fields = SECTION_FIELDS[section];
   const isProfileBased = PROFILE_BASED_SECTIONS.includes(section);
-  const urlLabel = isProfileBased ? "URL profilo *" : "URL post / profilo *";
-  const urlPlaceholder = isProfileBased ? "https://www.instagram.com/nomeaccount/" : "https://...";
+  // Bluserena-monitoring accetta sia profili sia pagine hashtag (Instagram,
+  // TikTok, X) — vedi sync-bluserena-hashtags.mjs — quindi né il testo
+  // "solo profilo" né "post/profilo" degli altri casi è corretto qui.
+  const urlLabel =
+    section === "bluserena-monitoring"
+      ? "URL profilo o pagina hashtag *"
+      : isProfileBased
+        ? "URL profilo *"
+        : "URL post / profilo *";
+  const urlPlaceholder =
+    section === "bluserena-monitoring"
+      ? "https://www.instagram.com/nomeaccount/ oppure /explore/tags/hashtag/"
+      : isProfileBased
+        ? "https://www.instagram.com/nomeaccount/"
+        : "https://...";
 
   function reset() {
     setUrl("");

@@ -20,6 +20,24 @@ export const Route = createFileRoute("/bluserena-monitoring/$id")({
 
 const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
 
+// Riconosce le pagine hashtag (Instagram /explore/tags/<tag>/, TikTok
+// /tag/<tag>, X /hashtag/<tag>) per distinguerle dai profili in fase di
+// visualizzazione — stessa tecnica usata in bluserena-monitoring.index.tsx e
+// da sync-bluserena-hashtags.mjs lato server.
+function isHashtagUrl(url: string): boolean {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.replace(/^www\./, "");
+    const path = u.pathname.replace(/\/$/, "");
+    if (/instagram\.com$/.test(host)) return /^\/explore\/tags\/[^/]+$/.test(path);
+    if (/tiktok\.com$/.test(host)) return /^\/tags?\/[^/]+$/.test(path);
+    if (/^(x\.com|twitter\.com)$/.test(host)) return /^\/hashtag\/[^/]+$/.test(path);
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 function formatDate(dateStr: string | null | undefined): string {
   if (!dateStr) return "";
   try {
@@ -103,7 +121,10 @@ function Page() {
           </div>
         </div>
         <div className="flex-1 space-y-3 text-center sm:text-left">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">@{canale.name}</h1>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">
+            {isHashtagUrl(canale.urls[0] ?? "") ? "#" : "@"}
+            {canale.name}
+          </h1>
           {canale.descrizione && (
             <p className="text-sm text-muted-foreground sm:text-base">{canale.descrizione}</p>
           )}
@@ -151,8 +172,8 @@ function Page() {
             <p className="text-sm text-muted-foreground">
               Nessun post ancora per questo canale.
               <br />
-              Il monitoraggio raccoglie i post pubblicati (solo Instagram e TikTok) al prossimo
-              giro.
+              Il monitoraggio raccoglie i contenuti recenti al prossimo giro (profili: solo
+              Instagram e TikTok; pagine hashtag: Instagram, TikTok e X).
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-2">
               {profileLinks.map((a, i) => (
@@ -164,7 +185,7 @@ function Page() {
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90"
                 >
                   <PlatformIcon platform={a.platform} className="size-4" />
-                  Apri profilo {a.platform}
+                  Apri su {a.platform}
                 </a>
               ))}
             </div>

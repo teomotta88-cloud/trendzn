@@ -87,6 +87,24 @@ function extractHandle(url: string): string {
   }
 }
 
+// Riconosce le pagine hashtag (Instagram /explore/tags/<tag>/, TikTok
+// /tag/<tag>, X /hashtag/<tag>) per distinguerle dai profili in fase di
+// visualizzazione — nessun campo extra nello store, la forma del path basta
+// (stessa tecnica usata da sync-bluserena-hashtags.mjs lato server).
+function isHashtagUrl(url: string): boolean {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.replace(/^www\./, "");
+    const path = u.pathname.replace(/\/$/, "");
+    if (/instagram\.com$/.test(host)) return /^\/explore\/tags\/[^/]+$/.test(path);
+    if (/tiktok\.com$/.test(host)) return /^\/tags?\/[^/]+$/.test(path);
+    if (/^(x\.com|twitter\.com)$/.test(host)) return /^\/hashtag\/[^/]+$/.test(path);
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 function normalizeUrl(value: string): string {
   const trimmed = value.trim();
   if (!trimmed) return "";
@@ -514,8 +532,8 @@ function BluserenaCanaliView({
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">Bluserena-monitoring</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Account social selezionati da monitorare. Caricali manualmente con "Aggiungi" oppure
-            importa un file Excel in bulk.
+            Account social selezionati da monitorare, oppure pagine hashtag di Instagram, TikTok e
+            X. Caricali manualmente con "Aggiungi" oppure importa un file Excel in bulk.
           </p>
         </div>
 
@@ -573,6 +591,11 @@ function BluserenaCanaliView({
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filtered.map((c) => {
               const main = c.accounts[0];
+              // isHashtag si basa su c.urls[0] (l'URL originale inserito),
+              // non su main.url: più esplicito da leggere, ed è comunque la
+              // stessa fonte usata per creare main al momento dell'inserimento.
+              const isHashtag = isHashtagUrl(c.urls[0] ?? "");
+              const displayHandle = main?.handle || extractHandle(c.urls[0] ?? "");
               const initial =
                 c.name
                   .replace(/[^a-zA-Z0-9]/g, "")
@@ -600,8 +623,11 @@ function BluserenaCanaliView({
 
                     <div className="min-w-0 flex-1">
                       <h2 className="truncate text-sm font-semibold text-foreground">{c.name}</h2>
-                      {main && (
-                        <p className="truncate text-xs text-muted-foreground">@{main.handle}</p>
+                      {displayHandle && (
+                        <p className="truncate text-xs text-muted-foreground">
+                          {isHashtag ? "#" : "@"}
+                          {displayHandle}
+                        </p>
                       )}
                     </div>
                   </div>
