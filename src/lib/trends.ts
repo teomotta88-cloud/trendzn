@@ -35,9 +35,9 @@ export type AccountRef = {
   // non espone metriche di engagement via RSS-Bridge, resta sempre null.
   views?: number | null;
   // Geotag del post (nome del luogo), quando la piattaforma/tecnica di
-  // raccolta lo espone — solo Instagram per ora (sync-bluserena-hashtags.mjs),
-  // best-effort: null se il post non è geotaggato o se la piattaforma non lo
-  // rende pubblicamente disponibile senza login (TikTok, X).
+  // raccolta lo espone — Instagram e TikTok (sync-bluserena-hashtags.mjs),
+  // non X (nessun campo di geolocalizzazione confermato in rettiwt-api).
+  // best-effort: null se il post non è geotaggato o non raggiungibile.
   location?: string | null;
 };
 export type CanaleInspo = {
