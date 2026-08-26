@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { detectPlatform, type CanaleInspo } from "@/lib/trends";
 import { bluserenaCanali } from "@/lib/bluserenaMonitoring";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
-import { ArrowLeft, ExternalLink, MapPin, Search } from "lucide-react";
+import { ArrowLeft, ExternalLink, Heart, MapPin, MessageCircle, Search } from "lucide-react";
 
 // Dettaglio canale Bluserena-monitoring — copia di aspi-monitoring.$id.tsx,
 // legge dallo store dedicato (bluserenaCanali, bundlato da bluserena-monitoring.json).
@@ -220,13 +220,25 @@ function Page() {
                         Apri ↗
                       </a>
                     </div>
-                    {(a.handle || a.location) && (
+                    {(a.handle || a.location || a.likes != null || a.comments != null) && (
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-1 text-[11px] text-muted-foreground">
                         {a.handle && <span>@{a.handle}</span>}
                         {a.location && (
                           <span className="inline-flex items-center gap-1">
                             <MapPin className="size-3" />
                             {a.location}
+                          </span>
+                        )}
+                        {a.likes != null && (
+                          <span className="inline-flex items-center gap-1">
+                            <Heart className="size-3" />
+                            {a.likes}
+                          </span>
+                        )}
+                        {a.comments != null && (
+                          <span className="inline-flex items-center gap-1">
+                            <MessageCircle className="size-3" />
+                            {a.comments}
                           </span>
                         )}
                       </div>

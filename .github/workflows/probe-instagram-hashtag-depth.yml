@@ -1,0 +1,35 @@
+name: Probe Instagram Hashtag Depth (diagnostico)
+
+# Workflow usa-e-getta: misura quanto indietro nel tempo riesce ad arrivare
+# uno scroll molto profondo sulla pagina hashtag di Instagram, per capire se
+# è una fonte utilizzabile (anche solo parzialmente) per il backfill storico
+# 2025 richiesto dal confronto YoY di Bluserena-monitoring. Nessuna pipeline
+# lo usa: solo diagnostica manuale (vedi scripts/probe-instagram-hashtag-depth.mjs).
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtag:
+        description: "Hashtag Instagram da testare (senza #)"
+        required: true
+        default: "bluserena"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Scroll in profondità e misura la copertura storica
+        run: node scripts/probe-instagram-hashtag-depth.mjs "${{ github.event.inputs.hashtag }}"

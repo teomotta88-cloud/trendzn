@@ -9,7 +9,9 @@
 const REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/bluserena-monitoring.json";
 const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
-const MAX_POSTS_PER_CHANNEL = 15;
+// Nessun limite di retention: a differenza di ASPI/canali-inspo, Bluserena
+// deve conservare tutto lo storico (serve per il confronto YoY), quindi qui
+// non si scarta mai il post più vecchio per fare spazio a uno nuovo.
 
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
@@ -455,11 +457,6 @@ for (const item of allItems) {
     imageUrl,
     views: postPlatform === "tiktok" ? extractTikTokViews(item) : null,
   });
-
-  const posts = canale.accounts.filter((a) => isPostUrl(a.url));
-  if (posts.length > MAX_POSTS_PER_CHANNEL) {
-    canale.accounts = canale.accounts.filter((a) => a.url !== posts[0].url);
-  }
 
   modified = true;
 }
