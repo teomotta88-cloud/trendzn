@@ -20,6 +20,10 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Secrets / local-only config
+.env
+.claude/settings.local.json
+
 # Sessione TikTok Creative Center (cookie di login: mai da committare,
 # vive solo nella cache di GitHub Actions o in locale per il bootstrap)
 .tiktok-session/
