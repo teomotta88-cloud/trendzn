@@ -9,14 +9,23 @@
 //   1. Apify (clockworks/tiktok-hashtag-scraper) — prima scelta, già
 //      validata (probe-tiktok-hashtag-apify-depth.mjs: 400 post fino al
 //      2020, engagement reale). Costa per RISULTATO restituito.
-//   2. ScrapeCreators (/v1/tiktok/search/hashtag) — backup, usato SOLO
-//      quando Apify esaurisce il credito disponibile. Costa 1 credito a
-//      CHIAMATA (non per risultato): con 100 crediti gratuiti non scadenti
-//      copre molti più giri di Apify a parità di budget. La loro stessa
-//      documentazione conferma lo stesso fenomeno osservato con Apify:
-//      "TikTok can return duplicate results for this search" — nessuna
-//      fonte, a quanto pare, ha un cursore stabile su questo tipo di
-//      ricerca.
+//   2. ScrapeCreators (/v1/tiktok/search/hashtag) — backup, usato quando
+//      Apify fallisce (in pratica: quando esaurisce il credito, ma vedi
+//      nota sotto sul perché si passa alla fonte successiva su QUALSIASI
+//      errore, non solo quello). Costa 1 credito a CHIAMATA (non per
+//      risultato): con 100 crediti gratuiti non scadenti copre molti più
+//      giri di Apify a parità di budget. La loro stessa documentazione
+//      conferma lo stesso fenomeno osservato con Apify: "TikTok can return
+//      duplicate results for this search" — nessuna fonte, a quanto pare,
+//      ha un cursore stabile su questo tipo di ricerca.
+//
+// Verificato su un run reale (26/08/2026): quando Apify esaurisce il
+// credito, l'errore restituito è un generico {"error":{"type":"run-failed",
+// "message":"Actor run did not succeed..."}} (HTTP 400) — indistinguibile
+// testualmente da un fallimento per qualsiasi altra causa. Per questo lo
+// script passa alla fonte successiva su QUALSIASI errore della fonte
+// attiva, non solo su un presunto "errore di credito" riconosciuto dal
+// testo (approccio provato e scartato: vedi commit precedenti).
 //
 // Regola di stop invariata: 3 chiamate CONSECUTIVE (attraverso l'intero
 // processo, non per singola fonte) senza nessun post NUOVO nelle finestre
@@ -172,16 +181,15 @@ async function writeStore(store) {
   throw new Error("Troppi conflitti di scrittura su bluserena-monitoring.json.");
 }
 
-// Euristica per riconoscere un errore di credito/budget esaurito (non
-// documentato in modo identico da entrambi i servizi): non provato dal vivo
-// su un account Apify realmente a zero credito, quindi cerca pattern
-// testuali generici invece di un solo status code — se questa euristica
-// dovesse non riconoscere l'errore reale, lo si vede comunque nel log (viene
-// sempre stampato il testo esatto della risposta) e va corretta.
-function looksLikeCreditLimitError(status, text) {
-  if (status === 402) return true;
-  return /credit|balance|insufficient|quota|usage limit|out of funds/i.test(text ?? "");
-}
+// NON si prova a riconoscere "è un errore di credito esaurito" dal testo
+// della risposta: verificato su un run reale che, quando Apify esaurisce il
+// credito, l'errore restituito è un generico
+// {"error":{"type":"run-failed","message":"Actor run did not succeed..."}}
+// (HTTP 400) — indistinguibile testualmente da un fallimento per qualsiasi
+// altra ragione. Per questo QUALSIASI errore della fonte attiva fa passare
+// alla fonte successiva, se disponibile: non abbiamo un modo affidabile per
+// distinguere "credito finito" da altri fallimenti, quindi non ha senso
+// continuare a insistere sulla stessa fonte comunque.
 
 // --- Apify ---
 async function callApify() {
@@ -193,9 +201,7 @@ async function callApify() {
   });
   const text = await res.text();
   if (!res.ok) {
-    const err = new Error(`Apify: ${res.status} ${text}`);
-    err.creditLimit = looksLikeCreditLimitError(res.status, text);
-    throw err;
+    throw new Error(`Apify: ${res.status} ${text}`);
   }
   const items = JSON.parse(text);
   return { items: items.map(mapApifyItem), costUsd: items.length * APIFY_COST_PER_ITEM_USD };
@@ -228,9 +234,7 @@ async function callScrapeCreators() {
   const res = await fetch(url, { headers: { "x-api-key": scrapeCreatorsKey } });
   const text = await res.text();
   if (!res.ok) {
-    const err = new Error(`ScrapeCreators: ${res.status} ${text}`);
-    err.creditLimit = looksLikeCreditLimitError(res.status, text);
-    throw err;
+    throw new Error(`ScrapeCreators: ${res.status} ${text}`);
   }
   const data = JSON.parse(text);
   const list = data.aweme_list ?? data.videos ?? [];
@@ -322,15 +326,16 @@ while (call < MAX_CALLS) {
   try {
     result = await source.call();
   } catch (err) {
-    console.error(`  Errore: ${err.message}`);
-    if (err.creditLimit) {
-      console.log(`  Sembra credito esaurito su ${source.name}, passo alla fonte successiva.`);
-      sourceIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
-      call--; // la chiamata fallita non conta sul tetto massimo, non ha prodotto nulla
-      continue;
+    console.error(`  Errore su ${source.name}: ${err.message}`);
+    const nextIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
+    call--; // la chiamata fallita non conta sul tetto massimo, non ha prodotto nulla
+    if (nextIdx === -1) {
+      stopReason = "fonti esaurite";
+      break;
     }
-    stopReason = "errore";
-    break;
+    console.log(`  Passo alla fonte successiva: ${SOURCES[nextIdx].name}.`);
+    sourceIdx = nextIdx;
+    continue;
   }
 
   totalCostUsd += result.costUsd;
