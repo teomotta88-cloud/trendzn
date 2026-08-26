@@ -7,6 +7,12 @@ name: Probe TikTok Hashtag API Depth (diagnostico)
 # conteggio manuale di almeno 360 contenuti reali) è un limite reale
 # dell'hashtag o solo della tecnica di scroll anonimo — vedi
 # scripts/probe-tiktok-hashtag-api-depth.py.
+#
+# Primo tentativo (chromium, ms_token auto-generato): bloccato subito da
+# TikTok come sessione bot, zero video. La libreria stessa suggerisce
+# browser='webkit' o un ms_token reale come prossimi tentativi — entrambi
+# selezionabili qui (default webkit; ms_token via secret TIKTOK_MS_TOKEN,
+# mai passato in chiaro).
 
 on:
   workflow_dispatch:
@@ -19,6 +25,15 @@ on:
         description: "Numero massimo di video da richiedere in paginazione"
         required: false
         default: "500"
+      browser:
+        description: "Browser Playwright da usare per la sessione TikTokApi"
+        required: false
+        default: "webkit"
+        type: choice
+        options:
+          - webkit
+          - chromium
+          - firefox
 
 jobs:
   probe:
@@ -35,9 +50,16 @@ jobs:
       - name: Install TikTokApi + Playwright
         run: |
           pip install TikTokApi
-          python -m playwright install --with-deps chromium
+          python -m playwright install --with-deps ${{ github.event.inputs.browser }}
 
       - name: Misura la copertura storica via paginazione API
         env:
           MAX_VIDEOS: ${{ github.event.inputs.max_videos }}
+          TIKTOK_BROWSER: ${{ github.event.inputs.browser }}
+          # Opzionale: se il repo ha un secret TIKTOK_MS_TOKEN configurato
+          # (Settings -> Secrets and variables -> Actions), viene usato al
+          # posto della generazione automatica, molto meno affidabile con
+          # TikTok che rileva sessioni bot senza un token reale (vedi
+          # commento in probe-tiktok-hashtag-api-depth.py).
+          ms_token: ${{ secrets.TIKTOK_MS_TOKEN }}
         run: python scripts/probe-tiktok-hashtag-api-depth.py "${{ github.event.inputs.hashtag }}"
