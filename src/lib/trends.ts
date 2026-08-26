@@ -39,11 +39,14 @@ export type AccountRef = {
   // best-effort: null se il post non è geotaggato o se la piattaforma non lo
   // rende pubblicamente disponibile senza login (TikTok, X).
   location?: string | null;
-  // Solo per post Instagram da pagina hashtag (sync-bluserena-hashtags.mjs),
-  // estratti dalla stessa description usata per data/caption/autore — null
-  // per TikTok/X, che non li espongono con le tecniche attuali.
+  // likes/comments: per Instagram da pagina hashtag (sync-bluserena-hashtags.mjs,
+  // estratti dalla description del post) o per TikTok da backfill Apify
+  // (backfill-tiktok-hashtag-apify.mjs, diggCount/commentCount) — null dove
+  // la tecnica di raccolta non li espone (es. X).
   likes?: number | null;
   comments?: number | null;
+  // Solo TikTok via backfill Apify (shareCount) — nessun'altra tecnica lo espone.
+  shares?: number | null;
 };
 export type CanaleInspo = {
   id: string;
