@@ -1,0 +1,394 @@
+// Backfill storico dei post TikTok di un hashtag già monitorato in
+// Bluserena-monitoring. Evoluzione di backfill-tiktok-hashtag-apify.mjs:
+// stessa idea (chiamare un servizio a pagamento a ripetizione, accumulare i
+// post nuovi, fermarsi da solo quando non emergono più novità nelle finestre
+// di interesse per il confronto YoY — vedi i probe scripts/probe-tiktok-
+// hashtag-*.{mjs,py} per la storia di come si è arrivati a questa scelta),
+// ma con DUE fonti in cascata invece di una sola:
+//
+//   1. Apify (clockworks/tiktok-hashtag-scraper) — prima scelta, già
+//      validata (probe-tiktok-hashtag-apify-depth.mjs: 400 post fino al
+//      2020, engagement reale). Costa per RISULTATO restituito.
+//   2. ScrapeCreators (/v1/tiktok/search/hashtag) — backup, usato SOLO
+//      quando Apify esaurisce il credito disponibile. Costa 1 credito a
+//      CHIAMATA (non per risultato): con 100 crediti gratuiti non scadenti
+//      copre molti più giri di Apify a parità di budget. La loro stessa
+//      documentazione conferma lo stesso fenomeno osservato con Apify:
+//      "TikTok can return duplicate results for this search" — nessuna
+//      fonte, a quanto pare, ha un cursore stabile su questo tipo di
+//      ricerca.
+//
+// Regola di stop invariata: 3 chiamate CONSECUTIVE (attraverso l'intero
+// processo, non per singola fonte) senza nessun post NUOVO nelle finestre
+// di interesse fermano la ricerca — da lì in poi si prosegue solo con lo
+// scraping DIY quotidiano (sync-bluserena-hashtags.mjs).
+//
+// Novità rispetto alla versione solo-Apify: oltre ad aggiungere i post mai
+// visti, questo script ARRICCHISCE i post già presenti nello store (es.
+// trovati in precedenza dallo scraping DIY, quindi tipicamente senza
+// like/commenti/condivisioni/views) con i campi mancanti, quando la fonte
+// a pagamento li restituisce per lo stesso URL. Un post arricchito non
+// conta come "nuovo" ai fini della soglia di stop (quella soglia misura la
+// scoperta di post mai visti, non l'arricchimento di quelli già noti).
+//
+// Nessuna creazione di nuovi canali: arricchisce SOLO un hashtag già
+// presente nello store — se il canale non esiste, esce con errore.
+//
+// Uso: node scripts/backfill-tiktok-hashtag.mjs <hashtag>
+// Richiede GITHUB_TOKEN sempre, APIFY_API_TOKEN e/o SCRAPECREATORS_API_KEY
+// (basta una delle due per partire; se manca la seconda e la prima esaurisce
+// il credito, lo script si ferma con un messaggio chiaro invece di crashare).
+// Env opzionali: vedi backfill-tiktok-hashtag-apify.mjs (stessi nomi:
+// RESULTS_PER_CALL, STAGNANT_CALLS_TO_STOP, MAX_CALLS,
+// DELAY_BETWEEN_CALLS_MS, WINDOW_A_START/END, WINDOW_B_START/END).
+
+const REPO = "teomotta88-cloud/trendzn";
+const STORE_PATH = "src/data/bluserena-monitoring.json";
+const MAX_ATTEMPTS = 5;
+const APIFY_ACTOR = "clockworks~tiktok-hashtag-scraper";
+const APIFY_COST_PER_ITEM_USD = 0.005; // $5 / 1000 risultati, pricing pubblico dell'actor
+
+const RESULTS_PER_CALL = parseInt(process.env.RESULTS_PER_CALL ?? "400", 10);
+const STAGNANT_CALLS_TO_STOP = parseInt(process.env.STAGNANT_CALLS_TO_STOP ?? "3", 10);
+const MAX_CALLS = parseInt(process.env.MAX_CALLS ?? "10", 10);
+const DELAY_BETWEEN_CALLS_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "30000", 10);
+
+const WINDOW_A = {
+  start: new Date(process.env.WINDOW_A_START ?? "2025-07-01T00:00:00Z"),
+  end: new Date(process.env.WINDOW_A_END ?? "2025-08-31T23:59:59Z"),
+};
+const WINDOW_B = {
+  start: new Date(process.env.WINDOW_B_START ?? "2026-07-01T00:00:00Z"),
+  end: new Date(process.env.WINDOW_B_END ?? "2026-08-31T23:59:59Z"),
+};
+
+function inWindows(date) {
+  if (!date) return false;
+  const t = date.getTime();
+  return (
+    (t >= WINDOW_A.start.getTime() && t <= WINDOW_A.end.getTime()) ||
+    (t >= WINDOW_B.start.getTime() && t <= WINDOW_B.end.getTime())
+  );
+}
+
+const tag = process.argv[2];
+if (!tag) {
+  console.error("Uso: node scripts/backfill-tiktok-hashtag.mjs <hashtag>");
+  process.exit(1);
+}
+
+const apifyToken = process.env.APIFY_API_TOKEN;
+const scrapeCreatorsKey = process.env.SCRAPECREATORS_API_KEY;
+if (!apifyToken && !scrapeCreatorsKey) {
+  console.error("Serve almeno una fonte configurata: APIFY_API_TOKEN o SCRAPECREATORS_API_KEY.");
+  process.exit(1);
+}
+
+const githubToken = process.env.GITHUB_TOKEN;
+if (!githubToken) {
+  console.error("Manca GITHUB_TOKEN nell'ambiente.");
+  process.exit(1);
+}
+
+const ghHeaders = {
+  Authorization: `token ${githubToken}`,
+  Accept: "application/vnd.github.v3+json",
+};
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Stesso criterio usato lato UI e da sync-bluserena-hashtags.mjs: riconosce
+// una pagina hashtag dalla FORMA del path, nessun campo extra nello store.
+function hashtagInfo(url) {
+  let u;
+  try {
+    u = new URL(url);
+  } catch {
+    return null;
+  }
+  const host = u.hostname.replace(/^www\./, "");
+  const path = u.pathname.replace(/\/$/, "");
+  const ttMatch = /^\/tags?\/([^/]+)$/.exec(path);
+  if (/tiktok\.com$/.test(host) && ttMatch) {
+    return { platform: "tiktok", tag: decodeURIComponent(ttMatch[1]) };
+  }
+  return null;
+}
+
+async function readStore() {
+  const metaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
+    headers: ghHeaders,
+  });
+  if (!metaRes.ok) {
+    throw new Error(
+      `Lettura metadata bluserena-monitoring.json fallita: ${metaRes.status} ${await metaRes.text()}`,
+    );
+  }
+  const meta = await metaRes.json();
+  const sha = meta.sha;
+
+  const branch = process.env.GITHUB_REF_NAME || "main";
+  const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${STORE_PATH}?t=${Date.now()}`;
+  const rawRes = await fetch(rawUrl, {
+    headers: { "User-Agent": "backfill-tiktok-hashtag", Accept: "application/json,text/plain,*/*" },
+  });
+  if (!rawRes.ok) {
+    throw new Error(
+      `Lettura raw bluserena-monitoring.json fallita: ${rawRes.status} ${await rawRes.text()}`,
+    );
+  }
+
+  const raw = await rawRes.text();
+  const store = raw.trim() ? JSON.parse(raw) : { canali: [] };
+  if (!Array.isArray(store.canali)) store.canali = [];
+  return { store, sha };
+}
+
+// Stesso pattern retry-su-conflitto di sync-bluserena-hashtags.mjs.
+async function writeStore(store) {
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const { sha } = await readStore();
+    const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
+
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
+      method: "PUT",
+      headers: { ...ghHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `chore: backfill storico hashtag TikTok #${tag} [trendzn-bot]`,
+        content,
+        sha,
+      }),
+    });
+
+    if (res.ok) return;
+    if ((res.status === 409 || res.status === 422) && attempt < MAX_ATTEMPTS) {
+      console.log(`Conflitto di scrittura (tentativo ${attempt}/${MAX_ATTEMPTS}), rileggo e riprovo...`);
+      continue;
+    }
+    throw new Error(`Scrittura bluserena-monitoring.json fallita: ${res.status} ${await res.text()}`);
+  }
+  throw new Error("Troppi conflitti di scrittura su bluserena-monitoring.json.");
+}
+
+// Euristica per riconoscere un errore di credito/budget esaurito (non
+// documentato in modo identico da entrambi i servizi): non provato dal vivo
+// su un account Apify realmente a zero credito, quindi cerca pattern
+// testuali generici invece di un solo status code — se questa euristica
+// dovesse non riconoscere l'errore reale, lo si vede comunque nel log (viene
+// sempre stampato il testo esatto della risposta) e va corretta.
+function looksLikeCreditLimitError(status, text) {
+  if (status === 402) return true;
+  return /credit|balance|insufficient|quota|usage limit|out of funds/i.test(text ?? "");
+}
+
+// --- Apify ---
+async function callApify() {
+  const url = `https://api.apify.com/v2/acts/${APIFY_ACTOR}/run-sync-get-dataset-items?timeout=280`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apifyToken}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ hashtags: [tag], resultsPerPage: RESULTS_PER_CALL }),
+  });
+  const text = await res.text();
+  if (!res.ok) {
+    const err = new Error(`Apify: ${res.status} ${text}`);
+    err.creditLimit = looksLikeCreditLimitError(res.status, text);
+    throw err;
+  }
+  const items = JSON.parse(text);
+  return { items: items.map(mapApifyItem), costUsd: items.length * APIFY_COST_PER_ITEM_USD };
+}
+
+function mapApifyItem(item) {
+  if (!item.webVideoUrl) return null;
+  return {
+    platform: "tiktok",
+    handle: item.authorMeta?.name ?? item.authorMeta?.nickName ?? null,
+    url: item.webVideoUrl,
+    date:
+      item.createTimeISO ?? (item.createTime ? new Date(item.createTime * 1000).toISOString() : null),
+    caption: item.text ?? null,
+    location: null,
+    views: item.playCount ?? null,
+    likes: item.diggCount ?? null,
+    comments: item.commentCount ?? null,
+    shares: item.shareCount ?? null,
+  };
+}
+
+// --- ScrapeCreators ---
+// Parametro query per l'hashtag NON confermato su un run reale (nessun
+// accesso di rete per testarlo da qui): "hashtag" è la lettura più
+// plausibile della documentazione ufficiale, ma se la chiamata fallisce con
+// 400 è il primo sospetto da controllare.
+async function callScrapeCreators() {
+  const url = `https://api.scrapecreators.com/v1/tiktok/search/hashtag?hashtag=${encodeURIComponent(tag)}`;
+  const res = await fetch(url, { headers: { "x-api-key": scrapeCreatorsKey } });
+  const text = await res.text();
+  if (!res.ok) {
+    const err = new Error(`ScrapeCreators: ${res.status} ${text}`);
+    err.creditLimit = looksLikeCreditLimitError(res.status, text);
+    throw err;
+  }
+  const data = JSON.parse(text);
+  const list = data.aweme_list ?? data.videos ?? [];
+  if (data.credits_remaining != null) {
+    console.log(`  (ScrapeCreators: ${data.credits_remaining} crediti residui)`);
+  }
+  return { items: list.map(mapScrapeCreatorsItem), costUsd: 0 }; // 1 credito/chiamata, non per risultato
+}
+
+function mapScrapeCreatorsItem(item) {
+  const url = item.share_url ?? (item.aweme_id ? `https://www.tiktok.com/@${item.author?.unique_id}/video/${item.aweme_id}` : null);
+  if (!url) return null;
+  return {
+    platform: "tiktok",
+    handle: item.author?.unique_id ?? item.author?.nickname ?? null,
+    url,
+    date: item.create_time ? new Date(item.create_time * 1000).toISOString() : null,
+    caption: item.desc ?? null,
+    location: null,
+    views: item.statistics?.play_count ?? null,
+    likes: item.statistics?.digg_count ?? null,
+    comments: item.statistics?.comment_count ?? null,
+    shares: item.statistics?.share_count ?? null,
+  };
+}
+
+const SOURCES = [
+  { name: "Apify", enabled: !!apifyToken, call: callApify },
+  { name: "ScrapeCreators", enabled: !!scrapeCreatorsKey, call: callScrapeCreators },
+];
+
+// Aggiorna un post già presente con i campi che gli mancano (mai sovrascrive
+// un valore già presente) — non conta come "nuovo" post.
+function enrichExisting(existing, fresh) {
+  let changed = false;
+  for (const field of ["date", "caption", "location", "views", "likes", "comments", "shares", "handle"]) {
+    if ((existing[field] == null || existing[field] === "") && fresh[field] != null) {
+      existing[field] = fresh[field];
+      changed = true;
+    }
+  }
+  return changed;
+}
+
+// --- Main ---
+console.log(`=== Backfill storico TikTok: #${tag} ===`);
+console.log(
+  `Parametri: ${RESULTS_PER_CALL} risultati/chiamata (Apify), stop dopo ${STAGNANT_CALLS_TO_STOP} chiamate consecutive senza novità nelle finestre, tetto massimo ${MAX_CALLS} chiamate totali.`,
+);
+console.log(
+  `Finestre: ${WINDOW_A.start.toISOString().slice(0, 10)}..${WINDOW_A.end.toISOString().slice(0, 10)} e ${WINDOW_B.start.toISOString().slice(0, 10)}..${WINDOW_B.end.toISOString().slice(0, 10)}`,
+);
+console.log(
+  `Fonti disponibili: ${SOURCES.filter((s) => s.enabled).map((s) => s.name).join(" -> ") || "nessuna"}\n`,
+);
+
+const { store } = await readStore();
+const canale = store.canali.find((c) => {
+  const info = hashtagInfo(c.urls?.[0] ?? "");
+  return info && info.tag.toLowerCase() === tag.toLowerCase();
+});
+
+if (!canale) {
+  console.error(
+    `Nessun canale hashtag TikTok #${tag} trovato in ${STORE_PATH}. Aggiungilo prima dall'app, poi rilancia questo script.`,
+  );
+  process.exit(1);
+}
+
+let sourceIdx = SOURCES.findIndex((s) => s.enabled);
+let stagnantCalls = 0;
+let call = 0;
+let totalNewPosts = 0;
+let totalEnriched = 0;
+let totalNewInWindows = 0;
+let totalCostUsd = 0;
+let stopReason = "saturazione";
+
+while (call < MAX_CALLS) {
+  if (sourceIdx === -1 || sourceIdx >= SOURCES.length) {
+    stopReason = "fonti esaurite";
+    break;
+  }
+  const source = SOURCES[sourceIdx];
+  call++;
+  console.log(`--- Chiamata ${call}/${MAX_CALLS} (fonte: ${source.name}) ---`);
+
+  let result;
+  try {
+    result = await source.call();
+  } catch (err) {
+    console.error(`  Errore: ${err.message}`);
+    if (err.creditLimit) {
+      console.log(`  Sembra credito esaurito su ${source.name}, passo alla fonte successiva.`);
+      sourceIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
+      call--; // la chiamata fallita non conta sul tetto massimo, non ha prodotto nulla
+      continue;
+    }
+    stopReason = "errore";
+    break;
+  }
+
+  totalCostUsd += result.costUsd;
+  console.log(`  ${result.items.length} video restituiti.`);
+
+  let newThisCall = 0;
+  let enrichedThisCall = 0;
+  let newInWindowsThisCall = 0;
+  for (const post of result.items) {
+    if (!post) continue;
+    const existing = canale.accounts.find((a) => a.url === post.url);
+    if (existing) {
+      if (enrichExisting(existing, post)) enrichedThisCall++;
+      continue;
+    }
+    canale.accounts.push(post);
+    newThisCall++;
+    if (inWindows(post.date ? new Date(post.date) : null)) newInWindowsThisCall++;
+  }
+  totalNewPosts += newThisCall;
+  totalEnriched += enrichedThisCall;
+  totalNewInWindows += newInWindowsThisCall;
+  console.log(
+    `  ${newThisCall} post nuovi (${newInWindowsThisCall} nelle finestre di interesse), ${enrichedThisCall} post esistenti arricchiti.`,
+  );
+
+  if (newThisCall > 0 || enrichedThisCall > 0) {
+    await writeStore(store);
+    console.log("  Store aggiornato su GitHub.");
+  }
+
+  if (newInWindowsThisCall === 0) {
+    stagnantCalls++;
+    console.log(
+      `  Nessun post nuovo nelle finestre (${stagnantCalls}/${STAGNANT_CALLS_TO_STOP} chiamate consecutive vuote).`,
+    );
+    if (stagnantCalls >= STAGNANT_CALLS_TO_STOP) {
+      stopReason = "saturazione";
+      break;
+    }
+  } else {
+    stagnantCalls = 0;
+  }
+
+  if (call === MAX_CALLS) {
+    stopReason = "tetto massimo chiamate";
+    break;
+  }
+
+  await sleep(DELAY_BETWEEN_CALLS_MS);
+}
+
+console.log("\n=== Riepilogo ===");
+console.log(`Motivo di stop: ${stopReason}`);
+console.log(`Chiamate totali effettuate: ${call}`);
+console.log(`Post nuovi aggiunti: ${totalNewPosts} (di cui ${totalNewInWindows} nelle finestre di interesse)`);
+console.log(`Post esistenti arricchiti con dati mancanti: ${totalEnriched}`);
+console.log(`Costo stimato (solo Apify, ScrapeCreators è a credito fisso/chiamata): ~$${totalCostUsd.toFixed(2)}`);
+console.log(
+  "\nQuando questo script si ferma per saturazione o fonti esaurite, il monitoraggio prosegue solo con lo scraping DIY quotidiano (sync-bluserena-hashtags.yml).",
+);
