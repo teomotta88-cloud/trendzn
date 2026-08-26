@@ -18,7 +18,7 @@ export const Route = createFileRoute("/bluserena-monitoring/$id")({
   component: Page,
 });
 
-const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv)\//i;
+const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv|status)\//i;
 
 // Riconosce le pagine hashtag (Instagram /explore/tags/<tag>/, TikTok
 // /tag/<tag>, X /hashtag/<tag>) per distinguerle dai profili in fase di

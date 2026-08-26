@@ -6,7 +6,7 @@ import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2, Upload } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { FeedPageToggle, TrendzFeed } from "./feed.index";
+import { FeedPageToggle, TrendzFeed, SyncButton } from "./feed.index";
 
 // Duplicato di aspi-monitoring.index.tsx per la pagina "Bluserena-monitoring" —
 // stessa logica, store INDIPENDENTE (bluserena-monitoring.json, sezione
@@ -29,6 +29,7 @@ export const Route = createFileRoute("/bluserena-monitoring/")({
 const BLUSERENA_JSON_URL =
   "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/src/data/bluserena-monitoring.json";
 const BLUSERENA_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-bluserena-monitoring";
+const BLUSERENA_HASHTAG_SYNC_ENDPOINT = "/api/public/hooks/trigger-sync-bluserena-hashtags";
 const BULK_IMPORT_ENDPOINT = "/api/public/hooks/import-bluserena-bulk";
 
 type BulkImportStatus = "idle" | "reading" | "importing" | "success" | "error";
@@ -538,6 +539,7 @@ function BluserenaCanaliView({
         </div>
 
         <div className="flex flex-wrap items-start justify-end gap-2">
+          <SyncButton endpoint={BLUSERENA_HASHTAG_SYNC_ENDPOINT} label="↻ Sincronizza hashtag" />
           <BulkImportButton onSuccess={handleBulkSuccess} />
           <ManualSubmitDialog section="bluserena-monitoring" onSuccess={handleManualSuccess} />
         </div>

@@ -502,7 +502,7 @@ function FilterPill({
 type SyncStatus = "idle" | "loading" | "success" | "error";
 type SortOrder = "recenti" | "meno_recenti";
 
-function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: string }) {
+export function SyncButton({ endpoint, label: idleLabel }: { endpoint: string; label: string }) {
   const [status, setStatus] = useState<SyncStatus>("idle");
 
   const handleSync = async () => {

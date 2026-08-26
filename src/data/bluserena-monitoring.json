@@ -1,3 +1,13 @@
 {
-  "canali": []
+  "canali": [
+    {
+      "id": "bluserena",
+      "name": "bluserena",
+      "urls": ["https://www.tiktok.com/tag/bluserena"],
+      "descrizione": null,
+      "accounts": [
+        { "platform": "tiktok", "handle": "bluserena", "url": "https://www.tiktok.com/tag/bluserena" }
+      ]
+    }
+  ]
 }

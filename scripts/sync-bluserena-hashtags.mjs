@@ -236,6 +236,11 @@ if (hashtagChannels.length === 0) {
 
 let modified = false;
 
+// Riepilogo di fine run per hashtag: i singoli console.log per hashtag sono
+// facili da perdere nei log di GitHub Actions se un login-wall o un errore
+// falliscono silenziosamente per un solo hashtag in mezzo a molti altri.
+const runSummary = [];
+
 // --- Instagram ---
 if (byPlatform.instagram.length > 0) {
   console.log(`\n--- Instagram (${byPlatform.instagram.length} hashtag) ---`);
@@ -245,6 +250,7 @@ if (byPlatform.instagram.length > 0) {
       console.log(`#${tag}`);
       const page = await session.context.newPage();
       let links = [];
+      let failed = false;
       try {
         const url = `https://www.instagram.com/explore/tags/${encodeURIComponent(tag)}/`;
         const response = await page
@@ -276,6 +282,7 @@ if (byPlatform.instagram.length > 0) {
           }
           links = [...collected].slice(0, MAX_POSTS_PER_INSTAGRAM_HASHTAG);
         } else {
+          failed = true;
           console.log("  FALLITO (login wall o nessuna risposta)");
         }
       } finally {
@@ -300,6 +307,7 @@ if (byPlatform.instagram.length > 0) {
       const added = addPosts(canale, "instagram", tag, posts);
       if (added > 0) modified = true;
       console.log(`  ${links.length} link trovati, ${added} nuovi post aggiunti.`);
+      runSummary.push({ platform: "instagram", tag, found: links.length, added, failed });
       await sleep(DELAY_MS);
     }
   } finally {
@@ -364,9 +372,11 @@ if (byPlatform.tiktok.length > 0) {
     for (const { canale, tag } of byPlatform.tiktok) {
       console.log(`#${tag}`);
       let found = [];
+      let failed = false;
       try {
         found = await scrapeTikTokHashtag(tag);
       } catch (err) {
+        failed = true;
         console.error(`  errore: ${String(err?.message || err)}`);
       }
 
@@ -386,6 +396,7 @@ if (byPlatform.tiktok.length > 0) {
       const added = addPosts(canale, "tiktok", tag, posts);
       if (added > 0) modified = true;
       console.log(`  ${found.length} video trovati, ${added} nuovi post aggiunti.`);
+      runSummary.push({ platform: "tiktok", tag, found: found.length, added, failed });
     }
   } finally {
     await browser.close();
@@ -411,6 +422,7 @@ if (byPlatform.x.length > 0) {
         tweets = result?.list ?? [];
       } catch (err) {
         console.error(`  errore: ${String(err?.message || err)}`);
+        runSummary.push({ platform: "x", tag, found: 0, added: 0, failed: true });
         continue;
       }
       // author: tweet.tweetBy.userName, campo verificato leggendo
@@ -432,7 +444,23 @@ if (byPlatform.x.length > 0) {
       const added = addPosts(canale, "x", tag, posts);
       if (added > 0) modified = true;
       console.log(`  ${tweets.length} tweet trovati, ${added} nuovi post aggiunti.`);
+      runSummary.push({ platform: "x", tag, found: tweets.length, added, failed: false });
     }
+  }
+}
+
+// --- Riepilogo ---
+if (runSummary.length > 0) {
+  console.log("\n=== Riepilogo run ===");
+  for (const r of runSummary) {
+    const status = r.failed ? "FALLITO" : "ok";
+    console.log(
+      `  [${status}] ${r.platform} #${r.tag}: ${r.found} trovati, ${r.added} nuovi post`,
+    );
+  }
+  const failedCount = runSummary.filter((r) => r.failed).length;
+  if (failedCount > 0) {
+    console.log(`\n${failedCount}/${runSummary.length} hashtag falliti in questo run.`);
   }
 }
 
