@@ -20,9 +20,13 @@
 //     parsing). Il geotag è stato aggiunto qui per la prima volta e NON è
 //     stato verificato su un post geotaggato reale.
 //   - TikTok: autore e data derivati dall'URL/ID del video (100% affidabili,
-//     nessuna richiesta aggiuntiva). La caption è un tentativo best-effort
-//     via meta tag della pagina video, mai verificato su un video reale. Il
-//     geotag non è disponibile con questa tecnica: resta sempre null.
+//     confermato su un run reale su #bluserena il 26/08/2026). La caption
+//     via meta tag della pagina video era risultata sempre null sullo stesso
+//     run (15/15): causa individuata nello User-Agent headless di default,
+//     che TikTok riconosce servendo una pagina di login al posto del video
+//     (vedi REAL_CHROME_UA più sotto) — fix applicato, in attesa di
+//     riverifica su un nuovo run reale. Il geotag non è disponibile con
+//     questa tecnica: resta sempre null.
 //   - X: data/autore/caption confermati (rettiwt-api, stesso account già in
 //     produzione per gli account X di ASPI-monitoring, vedi sync-x-posts.mjs,
 //     qui con tweet.search({ hashtags: [...] }) invece di
@@ -324,9 +328,12 @@ if (byPlatform.instagram.length > 0) {
 //     usata in sync-bluserena-monitoring.mjs per i post TikTok da RSS-Bridge)
 // La caption resta l'unico dato che richiede una richiesta aggiuntiva: si
 // prova a leggerla dal meta tag og:description della pagina del singolo
-// video (convenzione web comune) — MAI verificato su un video TikTok reale
-// da qui (nessun accesso rete per testarlo), quindi resta un tentativo best
-// effort con fallback a null, non una tecnica confermata come le altre.
+// video (convenzione web comune). Su un run reale su #bluserena era sempre
+// null (15/15): la pagina newPage() senza User-Agent esplicito riceveva la
+// schermata di login di TikTok al posto del video. Fix: stesso
+// REAL_CHROME_UA già usato con successo in scrape-tiktok-hashtag.mjs — da
+// riconfermare con un nuovo run reale, resta comunque un fallback a null se
+// il meta tag non fosse presente per altri motivi.
 function tiktokAuthorFromUrl(url) {
   return url.match(/\/@([^/]+)\/video\//)?.[1] ?? null;
 }
@@ -348,8 +355,16 @@ function tiktokDateFromVideoId(url) {
   }
 }
 
+// Senza uno User-Agent "da browser vero" esplicito, Playwright usa lo UA di
+// default headless: TikTok lo riconosce e serve una pagina di login al posto
+// del video (verificato: con lo UA di default la caption risultava sempre
+// null su 15/15 post reali). Stesso UA già usato con successo per la pagina
+// hashtag in scrape-tiktok-hashtag.mjs.
+const REAL_CHROME_UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
+
 async function tiktokCaption(browser, url) {
-  const page = await browser.newPage();
+  const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
   try {
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
     return await page
