@@ -1,0 +1,40 @@
+name: Backfill TikTok Hashtag Apify
+
+# Arricchisce lo storico di un hashtag TikTok già monitorato in
+# Bluserena-monitoring chiamando Apify (clockworks/tiktok-hashtag-scraper) a
+# ripetizione finché non emergono più post nuovi nelle finestre di interesse
+# per il confronto YoY (default lug-ago 2025 e lug-ago 2026) — vedi
+# scripts/backfill-tiktok-hashtag-apify.mjs per la logica completa e il
+# perché di questo approccio (la ricerca hashtag di TikTok è un risultato
+# live, non un archivio con cursore stabile: run ripetuti trovano cose
+# diverse). Richiede il secret APIFY_API_TOKEN.
+#
+# Solo manuale per ora (non schedulato): è un arricchimento storico una
+# tantum/periodico, non il monitoraggio quotidiano (che resta gratuito via
+# scroll/API, vedi sync-bluserena-hashtags.yml).
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtag:
+        description: "Hashtag TikTok gia' monitorato da arricchire (senza #)"
+        required: true
+        default: "bluserena"
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Backfill storico via Apify
+        env:
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/backfill-tiktok-hashtag-apify.mjs "${{ github.event.inputs.hashtag }}"
