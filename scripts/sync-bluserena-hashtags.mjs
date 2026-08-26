@@ -13,12 +13,13 @@
 // l'ha pubblicato, caption, geotag (se presente). Copertura reale per
 // piattaforma (dettagli e affidabilità nei commenti delle rispettive
 // sezioni più sotto):
-//   - Instagram: tutti e quattro. Data/autore/caption confermati (stessa
-//     tecnica già in produzione per la discovery Trend Virali, vedi
+//   - Instagram: tutti e quattro, più likes/comments (stessa tecnica già in
+//     produzione per la discovery Trend Virali, vedi
 //     discover-instagram-hashtag-content.mjs — questo script riusa
 //     scripts/lib/instagram-public-metrics.mjs invece di duplicarne il
-//     parsing). Il geotag è stato aggiunto qui per la prima volta e NON è
-//     stato verificato su un post geotaggato reale.
+//     parsing, che estrae già likes/comments insieme al resto). Il geotag è
+//     stato aggiunto qui per la prima volta e NON è stato verificato su un
+//     post geotaggato reale.
 //   - TikTok: autore e data derivati dall'URL/ID del video (100% affidabili,
 //     confermato su un run reale su #bluserena il 26/08/2026). La caption
 //     via meta tag della pagina video era risultata sempre null sullo stesso
@@ -45,7 +46,9 @@ import { Rettiwt } from "rettiwt-api";
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const MAX_ATTEMPTS = 5;
-const MAX_POSTS_PER_CHANNEL = 15;
+// Nessun limite di retention sui post salvati: serve conservare tutto lo
+// storico per il confronto YoY, quindi qui non si scarta mai il post più
+// vecchio per fare spazio a uno nuovo (a differenza di ASPI/canali-inspo).
 // Instagram: la stessa soglia empirica documentata in
 // discover-instagram-hashtag-content.mjs (~10 hashtag/sessione prima del
 // login-wall) — qui gli hashtag sono curati a mano da un utente, non decine
@@ -171,22 +174,6 @@ function hashtagInfo(url) {
   return null;
 }
 
-// Tiene solo gli MAX_POSTS_PER_CHANNEL post più recenti di QUESTA piattaforma
-// nel canale, buttando i più vecchi — stesso approccio di trimToMax in
-// sync-x-posts.mjs, generalizzato: qui un canale hashtag ha post di UNA sola
-// piattaforma (quella dell'hashtag), ma il filtro per platform evita di
-// toccare eventuali altri account se il canale venisse riusato in futuro.
-function trimToMax(canale, platform, max) {
-  const posts = canale.accounts
-    .filter((a) => a.platform === platform)
-    .sort((a, b) => new Date(a.date || 0).getTime() - new Date(b.date || 0).getTime());
-
-  while (posts.length > max) {
-    const oldest = posts.shift();
-    canale.accounts = canale.accounts.filter((a) => a.url !== oldest.url);
-  }
-}
-
 // handle = utente che ha pubblicato il singolo post (non l'hashtag: un
 // hashtag raggruppa post di autori diversi) — fallback al tag SOLO se
 // l'autore non è stato recuperabile, per non lasciare mai handle vuoto.
@@ -204,10 +191,11 @@ function addPosts(canale, platform, tag, posts) {
       caption: post.caption ?? null,
       location: post.location ?? null,
       views: post.views ?? null,
+      likes: post.likes ?? null,
+      comments: post.comments ?? null,
     });
     added++;
   }
-  if (added > 0) trimToMax(canale, platform, MAX_POSTS_PER_CHANNEL);
   return added;
 }
 
@@ -303,6 +291,8 @@ if (byPlatform.instagram.length > 0) {
             caption: metrics.caption,
             author: metrics.author,
             location: metrics.location,
+            likes: metrics.likes,
+            comments: metrics.comments,
           });
         }
         await sleep(DELAY_MS);
