@@ -2267,12 +2267,17 @@
           "url": "https://www.tiktok.com/@meryealessiosavarese1/video/7677663175633931552",
           "date": "2026-08-24T18:14:23.000Z",
           "caption": "Risposta a @Caterina Albaran3rde ",
-          "location": null,
+          "location": "Cala Serena",
           "views": 52300,
           "likes": 556,
           "comments": 35,
           "shares": 13,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "mare"
+          ]
         },
         {
           "platform": "tiktok",
@@ -3679,7 +3684,14 @@
           "likes": 604,
           "comments": 101,
           "shares": 192,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "hotel",
+            "relax",
+            "servizio"
+          ]
         },
         {
           "platform": "tiktok",
