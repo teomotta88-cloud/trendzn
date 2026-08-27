@@ -1,4 +1,4 @@
-// Backfill storico dei post TikTok di un hashtag già monitorato in
+// Backfill storico dei post TikTok degli hashtag già monitorati in
 // Bluserena-monitoring. Evoluzione di backfill-tiktok-hashtag-apify.mjs:
 // stessa idea (chiamare un servizio a pagamento a ripetizione, accumulare i
 // post nuovi, fermarsi da solo quando non emergono più novità nelle finestre
@@ -31,13 +31,14 @@
 // aveva mostrato "20/20 nuovi ogni chiamata" per 8 chiamate di fila SOLO per
 // il bug dell'URL non normalizzato: una volta ricontrollato per video ID
 // reale, quelle 8 chiamate avevano trovato 0 post davvero nuovi — la
-// saturazione era già arrivata alla seconda chiamata): si fanno sempre
-// almeno MIN_CALLS chiamate (default 2); da lì in poi, alla prima chiamata
-// senza nessun post NUOVO nelle finestre di interesse ci si ferma; se anche
-// la chiamata MIN_CALLS trova ancora qualcosa, se ne fa una sola in più
-// (tetto MAX_CALLS, default 3) e poi ci si ferma comunque. Vale attraverso
-// l'intero processo multi-fonte, non per singola fonte. Da lì in poi si
-// prosegue solo con lo scraping DIY quotidiano (sync-bluserena-hashtags.mjs).
+// saturazione era già arrivata alla seconda chiamata): per OGNI hashtag si
+// fanno sempre almeno MIN_CALLS chiamate (default 2); da lì in poi, alla
+// prima chiamata senza nessun post NUOVO nelle finestre di interesse ci si
+// ferma per quell'hashtag; se anche la chiamata MIN_CALLS trova ancora
+// qualcosa, se ne fa una sola in più (tetto MAX_CALLS, default 3) e poi ci
+// si ferma comunque. Quando TUTTI gli hashtag sono stati processati, il
+// monitoraggio prosegue solo con lo scraping DIY quotidiano
+// (sync-bluserena-hashtags.mjs).
 //
 // Novità rispetto alla versione solo-Apify: oltre ad aggiungere i post mai
 // visti, questo script ARRICCHISCE i post già presenti nello store (es.
@@ -47,13 +48,17 @@
 // conta come "nuovo" ai fini della soglia di stop (quella soglia misura la
 // scoperta di post mai visti, non l'arricchimento di quelli già noti).
 //
-// Nessuna creazione di nuovi canali: arricchisce SOLO un hashtag già
-// presente nello store — se il canale non esiste, esce con errore.
+// Nessuna creazione di nuovi canali: arricchisce SOLO hashtag già presenti
+// nello store.
 //
-// Uso: node scripts/backfill-tiktok-hashtag.mjs <hashtag>
+// Uso:
+//   node scripts/backfill-tiktok-hashtag.mjs <hashtag>   — un solo hashtag
+//   node scripts/backfill-tiktok-hashtag.mjs             — TUTTI gli hashtag
+//     TikTok già presenti nello store, uno dopo l'altro nello stesso run,
+//     con una pausa tra un hashtag e il successivo.
 // Richiede GITHUB_TOKEN sempre, APIFY_API_TOKEN e/o SCRAPECREATORS_API_KEY
 // (basta una delle due per partire; se manca la seconda e la prima esaurisce
-// il credito, lo script si ferma con un messaggio chiaro invece di crashare).
+// il credito, lo script passa alla successiva invece di crashare).
 // Env opzionali: RESULTS_PER_CALL, MIN_CALLS, MAX_CALLS,
 // DELAY_BETWEEN_CALLS_MS, WINDOW_A_START/END, WINDOW_B_START/END.
 
@@ -64,12 +69,12 @@ const APIFY_ACTOR = "clockworks~tiktok-hashtag-scraper";
 const APIFY_COST_PER_ITEM_USD = 0.005; // $5 / 1000 risultati, pricing pubblico dell'actor
 
 const RESULTS_PER_CALL = parseInt(process.env.RESULTS_PER_CALL ?? "400", 10);
-// Si fanno sempre almeno MIN_CALLS chiamate; da lì in poi ci si ferma alla
-// prima chiamata senza post nuovi nelle finestre (non serve più attendere
-// chiamate consecutive vuote, vedi commento in testa al file). MAX_CALLS è
-// il tetto assoluto: con MIN_CALLS=2 e MAX_CALLS=3 si fa al massimo UNA
-// chiamata in più oltre al minimo, se la seconda aveva ancora trovato
-// qualcosa.
+// Si fanno sempre almeno MIN_CALLS chiamate per hashtag; da lì in poi ci si
+// ferma alla prima chiamata senza post nuovi nelle finestre (non serve più
+// attendere chiamate consecutive vuote, vedi commento in testa al file).
+// MAX_CALLS è il tetto assoluto per hashtag: con MIN_CALLS=2 e MAX_CALLS=3
+// si fa al massimo UNA chiamata in più oltre al minimo, se la seconda aveva
+// ancora trovato qualcosa.
 const MIN_CALLS = parseInt(process.env.MIN_CALLS ?? "2", 10);
 const MAX_CALLS = parseInt(process.env.MAX_CALLS ?? "3", 10);
 const DELAY_BETWEEN_CALLS_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "30000", 10);
@@ -92,11 +97,10 @@ function inWindows(date) {
   );
 }
 
-const tag = process.argv[2];
-if (!tag) {
-  console.error("Uso: node scripts/backfill-tiktok-hashtag.mjs <hashtag>");
-  process.exit(1);
-}
+// Argomento opzionale: se assente (o stringa vuota, come quando il workflow
+// GitHub Actions passa un input non compilato), si processano TUTTI gli
+// hashtag TikTok già presenti nello store invece di uno solo.
+const requestedTag = process.argv[2] || null;
 
 const apifyToken = process.env.APIFY_API_TOKEN;
 const scrapeCreatorsKey = process.env.SCRAPECREATORS_API_KEY;
@@ -185,7 +189,7 @@ async function readStore() {
 }
 
 // Stesso pattern retry-su-conflitto di sync-bluserena-hashtags.mjs.
-async function writeStore(store) {
+async function writeStore(store, tag) {
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     const { sha } = await readStore();
     const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
@@ -221,7 +225,7 @@ async function writeStore(store) {
 // continuare a insistere sulla stessa fonte comunque.
 
 // --- Apify ---
-async function callApify() {
+async function callApify(tag) {
   const url = `https://api.apify.com/v2/acts/${APIFY_ACTOR}/run-sync-get-dataset-items?timeout=280`;
   const res = await fetch(url, {
     method: "POST",
@@ -257,8 +261,9 @@ function mapApifyItem(item) {
 // Parametro "hashtag" (singolare) confermato su un run reale
 // (probe-scrapecreators-multi-hashtag.mjs): un hashtag per chiamata, non
 // supporta liste/comma-separated (restituisce un match spurio senza errore,
-// quindi va usato un solo hashtag alla volta senza eccezioni).
-async function callScrapeCreators() {
+// quindi va usato un solo hashtag alla volta senza eccezioni — per questo
+// il modo "tutti gli hashtag" qui sotto itera le chiamate, non le raggruppa).
+async function callScrapeCreators(tag) {
   const url = `https://api.scrapecreators.com/v1/tiktok/search/hashtag?hashtag=${encodeURIComponent(tag)}`;
   const res = await fetch(url, { headers: { "x-api-key": scrapeCreatorsKey } });
   const text = await res.text();
@@ -310,10 +315,95 @@ function enrichExisting(existing, fresh) {
   return changed;
 }
 
+// Esegue il backfill per UN hashtag/canale. Muta canale.accounts e scrive lo
+// store (via writeStore) a ogni chiamata che produce novità. sourceIdx
+// parte sempre dalla prima fonte abilitata: se una fonte esaurisce il
+// credito su un hashtag, per quello successivo si riparte comunque da capo
+// (magari nel frattempo il credito è tornato, e comunque il costo di
+// riprovare una fonte già esaurita è un solo errore veloce).
+async function backfillHashtag(tag, canale, store) {
+  let sourceIdx = SOURCES.findIndex((s) => s.enabled);
+  let call = 0;
+  let totalNewPosts = 0;
+  let totalEnriched = 0;
+  let totalNewInWindows = 0;
+  let totalCostUsd = 0;
+  let stopReason = "saturazione";
+
+  while (call < MAX_CALLS) {
+    if (sourceIdx === -1 || sourceIdx >= SOURCES.length) {
+      stopReason = "fonti esaurite";
+      break;
+    }
+    const source = SOURCES[sourceIdx];
+    call++;
+    console.log(`--- Chiamata ${call}/${MAX_CALLS} (fonte: ${source.name}) ---`);
+
+    let result;
+    try {
+      result = await source.call(tag);
+    } catch (err) {
+      console.error(`  Errore su ${source.name}: ${err.message}`);
+      const nextIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
+      call--; // la chiamata fallita non conta sul tetto massimo, non ha prodotto nulla
+      if (nextIdx === -1) {
+        stopReason = "fonti esaurite";
+        break;
+      }
+      console.log(`  Passo alla fonte successiva: ${SOURCES[nextIdx].name}.`);
+      sourceIdx = nextIdx;
+      continue;
+    }
+
+    totalCostUsd += result.costUsd;
+    console.log(`  ${result.items.length} video restituiti.`);
+
+    let newThisCall = 0;
+    let enrichedThisCall = 0;
+    let newInWindowsThisCall = 0;
+    for (const post of result.items) {
+      if (!post) continue;
+      const existing = canale.accounts.find((a) => a.url === post.url);
+      if (existing) {
+        if (enrichExisting(existing, post)) enrichedThisCall++;
+        continue;
+      }
+      canale.accounts.push(post);
+      newThisCall++;
+      if (inWindows(post.date ? new Date(post.date) : null)) newInWindowsThisCall++;
+    }
+    totalNewPosts += newThisCall;
+    totalEnriched += enrichedThisCall;
+    totalNewInWindows += newInWindowsThisCall;
+    console.log(
+      `  ${newThisCall} post nuovi (${newInWindowsThisCall} nelle finestre di interesse), ${enrichedThisCall} post esistenti arricchiti.`,
+    );
+
+    if (newThisCall > 0 || enrichedThisCall > 0) {
+      await writeStore(store, tag);
+      console.log("  Store aggiornato su GitHub.");
+    }
+
+    if (call >= MIN_CALLS && newInWindowsThisCall === 0) {
+      console.log(`  Nessun post nuovo nelle finestre dopo almeno ${MIN_CALLS} chiamate, mi fermo qui.`);
+      stopReason = "saturazione";
+      break;
+    }
+
+    if (call === MAX_CALLS) {
+      stopReason = "tetto massimo chiamate";
+      break;
+    }
+
+    await sleep(DELAY_BETWEEN_CALLS_MS);
+  }
+
+  return { call, totalNewPosts, totalEnriched, totalNewInWindows, totalCostUsd, stopReason };
+}
+
 // --- Main ---
-console.log(`=== Backfill storico TikTok: #${tag} ===`);
 console.log(
-  `Parametri: ${RESULTS_PER_CALL} risultati/chiamata (Apify), minimo ${MIN_CALLS} chiamate poi stop alla prima senza novità nelle finestre, tetto massimo ${MAX_CALLS} chiamate totali.`,
+  `Parametri: ${RESULTS_PER_CALL} risultati/chiamata (Apify), minimo ${MIN_CALLS} chiamate poi stop alla prima senza novità nelle finestre, tetto massimo ${MAX_CALLS} chiamate per hashtag.`,
 );
 console.log(
   `Finestre: ${WINDOW_A.start.toISOString().slice(0, 10)}..${WINDOW_A.end.toISOString().slice(0, 10)} e ${WINDOW_B.start.toISOString().slice(0, 10)}..${WINDOW_B.end.toISOString().slice(0, 10)}`,
@@ -323,100 +413,52 @@ console.log(
 );
 
 const { store } = await readStore();
-const canale = store.canali.find((c) => {
-  const info = hashtagInfo(c.urls?.[0] ?? "");
-  return info && info.tag.toLowerCase() === tag.toLowerCase();
-});
 
-if (!canale) {
-  console.error(
-    `Nessun canale hashtag TikTok #${tag} trovato in ${STORE_PATH}. Aggiungilo prima dall'app, poi rilancia questo script.`,
-  );
-  process.exit(1);
+const hashtagCanali = store.canali
+  .map((c) => ({ canale: c, info: hashtagInfo(c.urls?.[0] ?? "") }))
+  .filter((x) => x.info);
+
+let targets;
+if (requestedTag) {
+  const match = hashtagCanali.find((x) => x.info.tag.toLowerCase() === requestedTag.toLowerCase());
+  if (!match) {
+    console.error(
+      `Nessun canale hashtag TikTok #${requestedTag} trovato in ${STORE_PATH}. Aggiungilo prima dall'app, poi rilancia questo script.`,
+    );
+    process.exit(1);
+  }
+  targets = [match];
+} else {
+  targets = hashtagCanali;
+  console.log(`Nessun hashtag specificato: processo tutti i ${targets.length} hashtag TikTok nello store.\n`);
 }
 
-let sourceIdx = SOURCES.findIndex((s) => s.enabled);
-let call = 0;
-let totalNewPosts = 0;
-let totalEnriched = 0;
-let totalNewInWindows = 0;
-let totalCostUsd = 0;
-let stopReason = "saturazione";
+const results = [];
+for (let i = 0; i < targets.length; i++) {
+  const { canale, info } = targets[i];
+  console.log(`\n=== [${i + 1}/${targets.length}] Backfill storico TikTok: #${info.tag} ===`);
+  const summary = await backfillHashtag(info.tag, canale, store);
+  results.push({ tag: info.tag, ...summary });
 
-while (call < MAX_CALLS) {
-  if (sourceIdx === -1 || sourceIdx >= SOURCES.length) {
-    stopReason = "fonti esaurite";
-    break;
+  if (i < targets.length - 1) {
+    await sleep(DELAY_BETWEEN_CALLS_MS);
   }
-  const source = SOURCES[sourceIdx];
-  call++;
-  console.log(`--- Chiamata ${call}/${MAX_CALLS} (fonte: ${source.name}) ---`);
+}
 
-  let result;
-  try {
-    result = await source.call();
-  } catch (err) {
-    console.error(`  Errore su ${source.name}: ${err.message}`);
-    const nextIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
-    call--; // la chiamata fallita non conta sul tetto massimo, non ha prodotto nulla
-    if (nextIdx === -1) {
-      stopReason = "fonti esaurite";
-      break;
-    }
-    console.log(`  Passo alla fonte successiva: ${SOURCES[nextIdx].name}.`);
-    sourceIdx = nextIdx;
-    continue;
-  }
-
-  totalCostUsd += result.costUsd;
-  console.log(`  ${result.items.length} video restituiti.`);
-
-  let newThisCall = 0;
-  let enrichedThisCall = 0;
-  let newInWindowsThisCall = 0;
-  for (const post of result.items) {
-    if (!post) continue;
-    const existing = canale.accounts.find((a) => a.url === post.url);
-    if (existing) {
-      if (enrichExisting(existing, post)) enrichedThisCall++;
-      continue;
-    }
-    canale.accounts.push(post);
-    newThisCall++;
-    if (inWindows(post.date ? new Date(post.date) : null)) newInWindowsThisCall++;
-  }
-  totalNewPosts += newThisCall;
-  totalEnriched += enrichedThisCall;
-  totalNewInWindows += newInWindowsThisCall;
+console.log("\n\n=== Riepilogo complessivo ===");
+for (const r of results) {
   console.log(
-    `  ${newThisCall} post nuovi (${newInWindowsThisCall} nelle finestre di interesse), ${enrichedThisCall} post esistenti arricchiti.`,
+    `#${r.tag}: ${r.call} chiamate, ${r.totalNewPosts} post nuovi (${r.totalNewInWindows} nelle finestre), ${r.totalEnriched} arricchiti, stop per "${r.stopReason}", costo Apify ~$${r.totalCostUsd.toFixed(2)}`,
   );
-
-  if (newThisCall > 0 || enrichedThisCall > 0) {
-    await writeStore(store);
-    console.log("  Store aggiornato su GitHub.");
-  }
-
-  if (call >= MIN_CALLS && newInWindowsThisCall === 0) {
-    console.log(`  Nessun post nuovo nelle finestre dopo almeno ${MIN_CALLS} chiamate, mi fermo qui.`);
-    stopReason = "saturazione";
-    break;
-  }
-
-  if (call === MAX_CALLS) {
-    stopReason = "tetto massimo chiamate";
-    break;
-  }
-
-  await sleep(DELAY_BETWEEN_CALLS_MS);
 }
-
-console.log("\n=== Riepilogo ===");
-console.log(`Motivo di stop: ${stopReason}`);
-console.log(`Chiamate totali effettuate: ${call}`);
-console.log(`Post nuovi aggiunti: ${totalNewPosts} (di cui ${totalNewInWindows} nelle finestre di interesse)`);
-console.log(`Post esistenti arricchiti con dati mancanti: ${totalEnriched}`);
-console.log(`Costo stimato (solo Apify, ScrapeCreators è a credito fisso/chiamata): ~$${totalCostUsd.toFixed(2)}`);
+const grandTotalNew = results.reduce((sum, r) => sum + r.totalNewPosts, 0);
+const grandTotalInWindows = results.reduce((sum, r) => sum + r.totalNewInWindows, 0);
+const grandTotalEnriched = results.reduce((sum, r) => sum + r.totalEnriched, 0);
+const grandTotalCost = results.reduce((sum, r) => sum + r.totalCostUsd, 0);
+const grandTotalCalls = results.reduce((sum, r) => sum + r.call, 0);
 console.log(
-  "\nQuando questo script si ferma per saturazione o fonti esaurite, il monitoraggio prosegue solo con lo scraping DIY quotidiano (sync-bluserena-hashtags.yml).",
+  `\nTotale: ${targets.length} hashtag, ${grandTotalCalls} chiamate, ${grandTotalNew} post nuovi (${grandTotalInWindows} nelle finestre), ${grandTotalEnriched} arricchiti, costo Apify stimato ~$${grandTotalCost.toFixed(2)} (ScrapeCreators: 1 credito/chiamata, vedi log sopra per i crediti residui).`,
+);
+console.log(
+  "\nQuando un hashtag si ferma per saturazione o fonti esaurite, il suo monitoraggio prosegue solo con lo scraping DIY quotidiano (sync-bluserena-hashtags.yml).",
 );
