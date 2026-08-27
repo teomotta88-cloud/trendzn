@@ -27,10 +27,17 @@
 // attiva, non solo su un presunto "errore di credito" riconosciuto dal
 // testo (approccio provato e scartato: vedi commit precedenti).
 //
-// Regola di stop invariata: 3 chiamate CONSECUTIVE (attraverso l'intero
-// processo, non per singola fonte) senza nessun post NUOVO nelle finestre
-// di interesse fermano la ricerca — da lì in poi si prosegue solo con lo
-// scraping DIY quotidiano (sync-bluserena-hashtags.mjs).
+// Regola di stop (rivista dopo l'analisi del run reale su #bluserena, che
+// aveva mostrato "20/20 nuovi ogni chiamata" per 8 chiamate di fila SOLO per
+// il bug dell'URL non normalizzato: una volta ricontrollato per video ID
+// reale, quelle 8 chiamate avevano trovato 0 post davvero nuovi — la
+// saturazione era già arrivata alla seconda chiamata): si fanno sempre
+// almeno MIN_CALLS chiamate (default 2); da lì in poi, alla prima chiamata
+// senza nessun post NUOVO nelle finestre di interesse ci si ferma; se anche
+// la chiamata MIN_CALLS trova ancora qualcosa, se ne fa una sola in più
+// (tetto MAX_CALLS, default 3) e poi ci si ferma comunque. Vale attraverso
+// l'intero processo multi-fonte, non per singola fonte. Da lì in poi si
+// prosegue solo con lo scraping DIY quotidiano (sync-bluserena-hashtags.mjs).
 //
 // Novità rispetto alla versione solo-Apify: oltre ad aggiungere i post mai
 // visti, questo script ARRICCHISCE i post già presenti nello store (es.
@@ -47,9 +54,8 @@
 // Richiede GITHUB_TOKEN sempre, APIFY_API_TOKEN e/o SCRAPECREATORS_API_KEY
 // (basta una delle due per partire; se manca la seconda e la prima esaurisce
 // il credito, lo script si ferma con un messaggio chiaro invece di crashare).
-// Env opzionali: vedi backfill-tiktok-hashtag-apify.mjs (stessi nomi:
-// RESULTS_PER_CALL, STAGNANT_CALLS_TO_STOP, MAX_CALLS,
-// DELAY_BETWEEN_CALLS_MS, WINDOW_A_START/END, WINDOW_B_START/END).
+// Env opzionali: RESULTS_PER_CALL, MIN_CALLS, MAX_CALLS,
+// DELAY_BETWEEN_CALLS_MS, WINDOW_A_START/END, WINDOW_B_START/END.
 
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
@@ -58,8 +64,14 @@ const APIFY_ACTOR = "clockworks~tiktok-hashtag-scraper";
 const APIFY_COST_PER_ITEM_USD = 0.005; // $5 / 1000 risultati, pricing pubblico dell'actor
 
 const RESULTS_PER_CALL = parseInt(process.env.RESULTS_PER_CALL ?? "400", 10);
-const STAGNANT_CALLS_TO_STOP = parseInt(process.env.STAGNANT_CALLS_TO_STOP ?? "3", 10);
-const MAX_CALLS = parseInt(process.env.MAX_CALLS ?? "10", 10);
+// Si fanno sempre almeno MIN_CALLS chiamate; da lì in poi ci si ferma alla
+// prima chiamata senza post nuovi nelle finestre (non serve più attendere
+// chiamate consecutive vuote, vedi commento in testa al file). MAX_CALLS è
+// il tetto assoluto: con MIN_CALLS=2 e MAX_CALLS=3 si fa al massimo UNA
+// chiamata in più oltre al minimo, se la seconda aveva ancora trovato
+// qualcosa.
+const MIN_CALLS = parseInt(process.env.MIN_CALLS ?? "2", 10);
+const MAX_CALLS = parseInt(process.env.MAX_CALLS ?? "3", 10);
 const DELAY_BETWEEN_CALLS_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "30000", 10);
 
 const WINDOW_A = {
@@ -301,7 +313,7 @@ function enrichExisting(existing, fresh) {
 // --- Main ---
 console.log(`=== Backfill storico TikTok: #${tag} ===`);
 console.log(
-  `Parametri: ${RESULTS_PER_CALL} risultati/chiamata (Apify), stop dopo ${STAGNANT_CALLS_TO_STOP} chiamate consecutive senza novità nelle finestre, tetto massimo ${MAX_CALLS} chiamate totali.`,
+  `Parametri: ${RESULTS_PER_CALL} risultati/chiamata (Apify), minimo ${MIN_CALLS} chiamate poi stop alla prima senza novità nelle finestre, tetto massimo ${MAX_CALLS} chiamate totali.`,
 );
 console.log(
   `Finestre: ${WINDOW_A.start.toISOString().slice(0, 10)}..${WINDOW_A.end.toISOString().slice(0, 10)} e ${WINDOW_B.start.toISOString().slice(0, 10)}..${WINDOW_B.end.toISOString().slice(0, 10)}`,
@@ -324,7 +336,6 @@ if (!canale) {
 }
 
 let sourceIdx = SOURCES.findIndex((s) => s.enabled);
-let stagnantCalls = 0;
 let call = 0;
 let totalNewPosts = 0;
 let totalEnriched = 0;
@@ -386,17 +397,10 @@ while (call < MAX_CALLS) {
     console.log("  Store aggiornato su GitHub.");
   }
 
-  if (newInWindowsThisCall === 0) {
-    stagnantCalls++;
-    console.log(
-      `  Nessun post nuovo nelle finestre (${stagnantCalls}/${STAGNANT_CALLS_TO_STOP} chiamate consecutive vuote).`,
-    );
-    if (stagnantCalls >= STAGNANT_CALLS_TO_STOP) {
-      stopReason = "saturazione";
-      break;
-    }
-  } else {
-    stagnantCalls = 0;
+  if (call >= MIN_CALLS && newInWindowsThisCall === 0) {
+    console.log(`  Nessun post nuovo nelle finestre dopo almeno ${MIN_CALLS} chiamate, mi fermo qui.`);
+    stopReason = "saturazione";
+    break;
   }
 
   if (call === MAX_CALLS) {
