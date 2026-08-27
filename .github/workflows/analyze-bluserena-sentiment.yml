@@ -1,0 +1,48 @@
+name: Analyze Bluserena Sentiment & Topic
+
+# Analizza i post Bluserena-monitoring tramite Groq + OpenRouter per:
+# - Sentiment (positive/negative/neutral)
+# - Topic extraction (hashtag/argomenti)
+# - Location matching (resort names)
+# - Audio analysis (TikTok, future)
+#
+# Executato manualmente o su schedule (giornaliero).
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (non scrivere su GitHub)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      min_confidence:
+        description: "Confidence threshold (0-1)"
+        required: false
+        default: "0.6"
+  schedule:
+    - cron: "0 3 * * *"  # Giornaliero alle 3 AM UTC
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Analizza sentiment e topic Bluserena
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          MIN_CONFIDENCE: ${{ github.event.inputs.min_confidence || '0.6' }}
+        run: node scripts/analyze-bluserena-sentiment-topic.mjs
