@@ -51,6 +51,8 @@
 // RESULTS_PER_CALL, STAGNANT_CALLS_TO_STOP, MAX_CALLS,
 // DELAY_BETWEEN_CALLS_MS, WINDOW_A_START/END, WINDOW_B_START/END).
 
+import { normalizePostUrl, isSamePost } from "./lib/post-identity.mjs";
+
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const MAX_ATTEMPTS = 5;
@@ -106,23 +108,6 @@ const ghHeaders = {
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-// ScrapeCreators restituisce share_url con parametri di tracciamento
-// (_r, u_code, _d, ecc.) GENERATI A CASO a ogni chiamata, anche per lo
-// STESSO identico video — verificato su un run reale: la stessa chiamata
-// ripetuta 10 volte ha prodotto 10 URL diversi per il video già visto alla
-// prima chiamata, mai deduplicati perché il confronto era per stringa
-// esatta. La query string non fa parte dell'identità del video (l'ID è nel
-// path), quindi va rimossa sia quando si salva l'URL sia quando si
-// confronta con quelli già nello store.
-function normalizeTikTokUrl(url) {
-  try {
-    const u = new URL(url);
-    return `${u.origin}${u.pathname.replace(/\/$/, "")}`;
-  } catch {
-    return url;
-  }
 }
 
 // Stesso criterio usato lato UI e da sync-bluserena-hashtags.mjs: riconosce
@@ -229,7 +214,7 @@ function mapApifyItem(item) {
   return {
     platform: "tiktok",
     handle: item.authorMeta?.name ?? item.authorMeta?.nickName ?? null,
-    url: normalizeTikTokUrl(item.webVideoUrl),
+    url: normalizePostUrl(item.webVideoUrl),
     date:
       item.createTimeISO ?? (item.createTime ? new Date(item.createTime * 1000).toISOString() : null),
     caption: item.text ?? null,
@@ -269,7 +254,7 @@ function mapScrapeCreatorsItem(item) {
   return {
     platform: "tiktok",
     handle: item.author?.unique_id ?? item.author?.nickname ?? null,
-    url: normalizeTikTokUrl(rawUrl),
+    url: normalizePostUrl(rawUrl),
     date: item.create_time ? new Date(item.create_time * 1000).toISOString() : null,
     caption: item.desc ?? null,
     location: null,
@@ -365,7 +350,7 @@ while (call < MAX_CALLS) {
   let newInWindowsThisCall = 0;
   for (const post of result.items) {
     if (!post) continue;
-    const existing = canale.accounts.find((a) => a.url === post.url);
+    const existing = canale.accounts.find((a) => isSamePost(a, post));
     if (existing) {
       if (enrichExisting(existing, post)) enrichedThisCall++;
       continue;

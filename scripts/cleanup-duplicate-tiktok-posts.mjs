@@ -5,16 +5,22 @@
 // _d, ecc. — anche per lo STESSO video, mai deduplicati perché il confronto
 // era per stringa esatta sull'URL completo).
 //
-// Per ogni gruppo di duplicati (stesso URL una volta rimossa la query
-// string) FONDE i campi invece di tenerne uno a caso: se una copia ha la
-// caption e un'altra ha i likes, il risultato finale ha entrambi. Questo
-// script si limita a pulire lo storico esistente — la causa (dedup senza
-// normalizzare l'URL) è già corretta in backfill-tiktok-hashtag.mjs, quindi
-// non dovrebbe servire rilanciarlo di nuovo dopo questa pulizia.
+// Due post sono considerati lo stesso (vedi scripts/lib/post-identity.mjs)
+// se l'URL normalizzato combacia OPPURE se caption, autore e data di
+// pubblicazione sono tutti e tre uguali — utile per i casi in cui l'URL
+// differisce per un motivo diverso dalla query string di tracciamento già
+// noto. Per ogni gruppo di duplicati FONDE i campi invece di tenerne uno a
+// caso: se una copia ha la caption e un'altra ha i likes, il risultato
+// finale ha entrambi. Questo script si limita a pulire lo storico
+// esistente — la causa (dedup senza normalizzare l'URL) è già corretta in
+// backfill-tiktok-hashtag.mjs, quindi non dovrebbe servire rilanciarlo di
+// nuovo dopo questa pulizia.
 //
 // Uso: node scripts/cleanup-duplicate-tiktok-posts.mjs
 // Richiede GITHUB_TOKEN nell'ambiente. Processa TUTTI i canali dello store
 // (non solo un hashtag), scrive solo se trova davvero duplicati.
+
+import { normalizePostUrl, isSamePost } from "./lib/post-identity.mjs";
 
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
@@ -31,22 +37,10 @@ const ghHeaders = {
   Accept: "application/vnd.github.v3+json",
 };
 
-// Stessa logica di normalizzazione introdotta in backfill-tiktok-hashtag.mjs
-// (normalizeTikTokUrl) ma applicata a qualunque URL, non solo TikTok: la
-// query string non fa mai parte dell'identità di un post in questo store.
-function normalizeUrl(url) {
-  try {
-    const u = new URL(url);
-    return `${u.origin}${u.pathname.replace(/\/$/, "")}`;
-  } catch {
-    return url;
-  }
-}
-
 const MERGE_FIELDS = ["date", "caption", "location", "views", "likes", "comments", "shares", "handle"];
 
 function mergeDuplicates(group) {
-  const merged = { ...group[0], url: normalizeUrl(group[0].url) };
+  const merged = { ...group[0], url: normalizePostUrl(group[0].url) };
   for (const dup of group.slice(1)) {
     for (const field of MERGE_FIELDS) {
       if ((merged[field] == null || merged[field] === "") && dup[field] != null) {
@@ -111,6 +105,21 @@ async function writeStore(store) {
   throw new Error("Troppi conflitti di scrittura su bluserena-monitoring.json.");
 }
 
+// Raggruppa per isSamePost (URL normalizzato OPPURE caption+autore+data
+// tutti uguali) invece di una semplice chiave esatta: due post nello stesso
+// gruppo non condividono per forza lo stesso identico criterio a coppie,
+// quindi un confronto a coppie (accettabile: poche centinaia di post per
+// canale) invece di un Map con chiave singola.
+function clusterPosts(accounts) {
+  const clusters = [];
+  for (const account of accounts) {
+    const cluster = clusters.find((c) => c.some((existing) => isSamePost(existing, account)));
+    if (cluster) cluster.push(account);
+    else clusters.push([account]);
+  }
+  return clusters;
+}
+
 // --- Main ---
 console.log("=== Pulizia duplicati Bluserena-monitoring ===\n");
 
@@ -119,24 +128,19 @@ let totalRemoved = 0;
 
 for (const canale of store.canali) {
   const before = canale.accounts.length;
-  const groups = new Map();
-  for (const account of canale.accounts) {
-    const key = normalizeUrl(account.url);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(account);
-  }
+  const clusters = clusterPosts(canale.accounts);
 
-  const duplicateGroups = [...groups.values()].filter((g) => g.length > 1);
-  if (duplicateGroups.length === 0) {
+  const duplicateClusters = clusters.filter((c) => c.length > 1);
+  if (duplicateClusters.length === 0) {
     console.log(`Canale "${canale.id}": nessun duplicato (${before} post).`);
     continue;
   }
 
-  canale.accounts = [...groups.values()].map(mergeDuplicates);
+  canale.accounts = clusters.map(mergeDuplicates);
   const removed = before - canale.accounts.length;
   totalRemoved += removed;
   console.log(
-    `Canale "${canale.id}": ${duplicateGroups.length} video duplicati trovati, ${removed} righe rimosse (${before} -> ${canale.accounts.length} post).`,
+    `Canale "${canale.id}": ${duplicateClusters.length} video duplicati trovati, ${removed} righe rimosse (${before} -> ${canale.accounts.length} post).`,
   );
 }
 

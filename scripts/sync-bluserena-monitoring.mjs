@@ -6,6 +6,8 @@
 //
 // Solo Instagram e TikTok vengono monitorati.
 
+import { isSamePost } from "./lib/post-identity.mjs";
+
 const REPO = "teomotta88-cloud/trendzn";
 const TRENDS_PATH = "src/data/bluserena-monitoring.json";
 const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
@@ -397,19 +399,21 @@ for (const item of allItems) {
 
   const postPlatform = detectPlatform(url);
   const handle = normalizeHandle(item.author?.name || "") || null;
+  const date = getItemDate(item, url, postPlatform);
+  const caption = fullCaption(item);
 
   const canale = list.find((c) => c.accounts?.some((a) => a.handle === handle));
   if (!canale) continue;
 
-  const existing = canale.accounts.find((a) => a.url === url);
+  // isSamePost (scripts/lib/post-identity.mjs): URL normalizzato OPPURE
+  // caption+autore+data tutti uguali — stesso criterio usato in
+  // backfill-tiktok-hashtag.mjs e sync-bluserena-hashtags.mjs.
+  const existing = canale.accounts.find((a) => isSamePost(a, { platform: postPlatform, handle, url, date, caption }));
 
   if (existing) {
-    if (!existing.caption) {
-      const caption = fullCaption(item);
-      if (caption) {
-        existing.caption = caption;
-        modified = true;
-      }
+    if (!existing.caption && caption) {
+      existing.caption = caption;
+      modified = true;
     }
 
     if (existing.imageUrl === undefined) {
@@ -425,12 +429,9 @@ for (const item of allItems) {
       }
     }
 
-    if (!existing.date) {
-      const date = getItemDate(item, url, existing.platform || postPlatform);
-      if (date) {
-        existing.date = date;
-        modified = true;
-      }
+    if (!existing.date && date) {
+      existing.date = date;
+      modified = true;
     }
 
     if (existing.views == null && existing.platform === "tiktok") {
@@ -444,8 +445,6 @@ for (const item of allItems) {
     continue;
   }
 
-  const date = getItemDate(item, url, postPlatform);
-  const caption = fullCaption(item);
   const imageUrl = await getPostImageUrl(item, url);
 
   canale.accounts.push({

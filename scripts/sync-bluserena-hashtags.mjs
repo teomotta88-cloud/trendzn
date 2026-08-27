@@ -41,6 +41,7 @@
 
 import { openInstagramMetricsSession } from "./lib/instagram-public-metrics.mjs";
 import { scrapeHashtag as scrapeTikTokHashtag } from "./scrape-tiktok-hashtag.mjs";
+import { isSamePost } from "./lib/post-identity.mjs";
 import { Rettiwt } from "rettiwt-api";
 
 const REPO = "teomotta88-cloud/trendzn";
@@ -181,14 +182,21 @@ function addPosts(canale, platform, tag, posts) {
   let added = 0;
   for (const post of posts) {
     if (!post.url) continue;
-    const exists = canale.accounts.some((a) => a.url === post.url);
-    if (exists) continue;
-    canale.accounts.push({
+    const candidate = {
       platform,
       handle: post.author || tag,
       url: post.url,
       date: post.date ?? null,
       caption: post.caption ?? null,
+    };
+    // isSamePost (scripts/lib/post-identity.mjs): URL normalizzato OPPURE
+    // caption+autore+data tutti uguali — non solo URL esatto, stesso
+    // criterio usato in backfill-tiktok-hashtag.mjs e nel cleanup una
+    // tantum dei duplicati.
+    const exists = canale.accounts.some((a) => isSamePost(a, candidate));
+    if (exists) continue;
+    canale.accounts.push({
+      ...candidate,
       location: post.location ?? null,
       views: post.views ?? null,
       likes: post.likes ?? null,
