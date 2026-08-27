@@ -4,7 +4,8 @@ import ExcelJS from "exceljs";
 import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
-import { Search, Trash2, Upload } from "lucide-react";
+import { BluserenaBackfillStats } from "@/components/BluserenaBackfillStats";
+import { Search, Trash2, Upload, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { FeedPageToggle, TrendzFeed, SyncButton } from "./feed.index";
 
@@ -545,9 +546,20 @@ function BluserenaCanaliView({
         </div>
       </header>
 
-      <div className="flex">
-        <FeedPageToggle tab={tab} setTab={setTab} canaliLabel="Bluserena-monitoring" />
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex">
+          <FeedPageToggle tab={tab} setTab={setTab} canaliLabel="Bluserena-monitoring" />
+        </div>
+        <Link to="/ai-intelligence" className="inline-flex items-center gap-2 text-xs font-medium text-primary hover:underline">
+          <BarChart3 className="size-3.5" />
+          Dashboard AI Intelligence
+        </Link>
       </div>
+
+      {/* Backfill Statistics */}
+      {tab === "canali" && allCanali.length > 0 && (
+        <BluserenaBackfillStats />
+      )}
 
       {deleteError && (
         <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">

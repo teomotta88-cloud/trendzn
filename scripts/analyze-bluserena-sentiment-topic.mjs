@@ -147,10 +147,74 @@ async function writeStore(store, sha) {
   }
 }
 
+// Analizza metadati audio (TikTok sound name, IG audio, ecc.)
+async function analyzeAudio(post) {
+  const hasAudioUrl = !!post.audioUrl;
+  const hasAudioName = !!post.audioName;
+
+  if (!hasAudioUrl && !hasAudioName) {
+    return null;
+  }
+
+  const audioContext = [];
+  if (post.audioName) audioContext.push(`Audio name: ${post.audioName}`);
+  if (post.audioUrl) audioContext.push(`Audio URL: ${post.audioUrl}`);
+
+  const prompt = `
+Analizza questo audio metadata da post social resort:
+${audioContext.join("\n")}
+Caption del post: "${post.caption || ""}"
+
+Rispondi in JSON con:
+1. audioSentiment: "positive" | "negative" | "neutral" (sentimento suggerito dall'audio)
+2. audioGenre: stringa breve (es: "relaxing", "upbeat", "wedding", "travel")
+3. audioRelevance: "high" | "medium" | "low" (quanto l'audio è rilevante al tema resort/vacanza)
+4. confidence: numero 0-1
+
+Rispondi SOLO con JSON valido, senza markdown.
+Esempio: {"audioSentiment": "positive", "audioGenre": "upbeat", "audioRelevance": "high", "confidence": 0.7}
+  `.trim();
+
+  const messages = [
+    {
+      role: "user",
+      content: prompt,
+    },
+  ];
+
+  const parse = (text) => {
+    try {
+      const json = JSON.parse(text.trim());
+      if (!json.audioSentiment) return null;
+      return json;
+    } catch {
+      return null;
+    }
+  };
+
+  try {
+    const result = await chatCompletionWithFallback(messages, {
+      apiKey,
+      groqApiKey,
+      parse,
+    });
+
+    return {
+      sentiment: result.audioSentiment,
+      genre: result.audioGenre || "unknown",
+      relevance: result.audioRelevance || "unknown",
+      confidence: result.confidence || 0,
+    };
+  } catch (err) {
+    console.error(`Errore audio analysis post ${post.url}: ${err.message}`);
+    return null;
+  }
+}
+
 // Analizza un singolo post per sentiment, topic, location
 async function analyzePost(post) {
   if (!post.caption && !post.url) {
-    return { sentiment: null, topics: [], locations: [] };
+    return { sentiment: null, topics: [], locations: [], audioAnalysis: null };
   }
 
   const caption = post.caption || "";
@@ -194,15 +258,22 @@ Esempio: {"sentiment": "positive", "topics": ["vacanza", "mare"], "locations": [
       parse,
     });
 
+    // Analizza audio se disponibile (per TikTok/IG Reels)
+    let audioAnalysis = null;
+    if ((post.audioUrl || post.audioName) && post.platform === "tiktok") {
+      audioAnalysis = await analyzeAudio(post);
+    }
+
     return {
       sentiment: result.sentiment,
       topics: result.topics || [],
       locations: result.locations || [],
       confidence: result.confidence || 0,
+      audioAnalysis,
     };
   } catch (err) {
     console.error(`Errore analisi post ${post.url}: ${err.message}`);
-    return { sentiment: null, topics: [], locations: [] };
+    return { sentiment: null, topics: [], locations: [], audioAnalysis: null };
   }
 }
 
@@ -213,7 +284,9 @@ function applyAnalysis(post, analysis) {
   if (analysis.locations && analysis.locations.length > 0) {
     post.location = analysis.locations[0]; // prendi primo match
   }
-  // Nota: audioAnalysis potrebbe essere aggiunto qui se processassimo audio
+  if (analysis.audioAnalysis) {
+    post.audioAnalysis = JSON.stringify(analysis.audioAnalysis);
+  }
 }
 
 // Main
