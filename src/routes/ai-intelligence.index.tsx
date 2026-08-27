@@ -17,7 +17,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
-import { Calendar, Filter, Smile, Tag, MapPin } from "lucide-react";
+import { Calendar, Filter, Smile, Tag, MapPin, X } from "lucide-react";
 
 export const Route = createFileRoute("/ai-intelligence")({
   head: () => ({
@@ -55,23 +55,48 @@ interface TimelineData {
   neutral: number;
 }
 
-function aggregateData(canali: CanaleInspo[], startDate?: string, endDate?: string) {
+interface AggregationFilters {
+  startDate?: string;
+  endDate?: string;
+  sentiments?: Set<Sentiment>;
+  topics?: Set<string>;
+  location?: string;
+}
+
+function aggregateData(canali: CanaleInspo[], filters: AggregationFilters) {
   const allPosts: AccountRef[] = [];
   for (const canale of canali) {
     allPosts.push(...(canale.accounts || []));
   }
 
-  // Filter by date if provided
-  let posts = allPosts;
-  if (startDate || endDate) {
-    posts = posts.filter((p) => {
-      if (!p.date) return false;
+  // Apply all filters
+  let posts = allPosts.filter((p) => {
+    // Date filter
+    if (p.date) {
       const d = p.date.slice(0, 10);
-      if (startDate && d < startDate) return false;
-      if (endDate && d > endDate) return false;
-      return true;
-    });
-  }
+      if (filters.startDate && d < filters.startDate) return false;
+      if (filters.endDate && d > filters.endDate) return false;
+    } else {
+      if (filters.startDate || filters.endDate) return false;
+    }
+
+    // Sentiment filter
+    if (filters.sentiments && filters.sentiments.size > 0) {
+      if (!p.sentiment || !filters.sentiments.has(p.sentiment)) return false;
+    }
+
+    // Topics filter - post must have at least one matching topic
+    if (filters.topics && filters.topics.size > 0) {
+      if (!p.topics || !Array.isArray(p.topics)) return false;
+      const hasMatchingTopic = p.topics.some((t) => filters.topics!.has(t));
+      if (!hasMatchingTopic) return false;
+    }
+
+    // Location filter
+    if (filters.location && p.location !== filters.location) return false;
+
+    return true;
+  });
 
   // Sentiment stats
   const sentimentStats: SentimentStats = {
@@ -146,8 +171,11 @@ const SENTIMENT_COLORS = {
 function AIIntelligencePage() {
   const [dateRange, setDateRange] = useState({ start: "", end: "" });
   const [selectedResort, setSelectedResort] = useState("");
+  const [selectedSentiments, setSelectedSentiments] = useState<Set<Sentiment>>(new Set());
+  const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
+  const [expandedTopics, setExpandedTopics] = useState(false);
 
-  // Collect all unique locations from data
+  // Collect all unique locations and topics
   const allLocations = useMemo(() => {
     const locs = new Set<string>();
     for (const canale of bluserenaCanali) {
@@ -158,23 +186,67 @@ function AIIntelligencePage() {
     return Array.from(locs).sort();
   }, []);
 
-  // Aggregate data based on filters
+  // Collect all topics for filter
+  const allTopics = useMemo(() => {
+    const topics = new Set<string>();
+    for (const canale of bluserenaCanali) {
+      for (const account of canale.accounts || []) {
+        if (account.topics && Array.isArray(account.topics)) {
+          for (const topic of account.topics) {
+            topics.add(topic);
+          }
+        }
+      }
+    }
+    return Array.from(topics).sort();
+  }, []);
+
+  // Aggregate data based on all filters
   const aggregated = useMemo(
-    () => aggregateData(bluserenaCanali, dateRange.start, dateRange.end),
-    [dateRange],
+    () =>
+      aggregateData(bluserenaCanali, {
+        startDate: dateRange.start,
+        endDate: dateRange.end,
+        sentiments: selectedSentiments.size > 0 ? selectedSentiments : undefined,
+        topics: selectedTopics.size > 0 ? selectedTopics : undefined,
+        location: selectedResort || undefined,
+      }),
+    [dateRange, selectedSentiments, selectedTopics, selectedResort],
   );
 
   const topicData = aggregated.topicArray.slice(0, 10);
-  const locationData = selectedResort
-    ? aggregated.locationArray.filter((l) => l.location === selectedResort)
-    : aggregated.locationArray.slice(0, 8);
+  const locationData = aggregated.locationArray.slice(0, 8);
 
   const sentimentPieData = [
     { name: "Positivo", value: aggregated.sentimentStats.positive },
     { name: "Neutrale", value: aggregated.sentimentStats.neutral },
     { name: "Negativo", value: aggregated.sentimentStats.negative },
     { name: "Non analizzato", value: aggregated.sentimentStats.unanalyzed },
-  ];
+  ].filter((d) => d.value > 0);
+
+  const toggleSentiment = (sentiment: Sentiment) => {
+    setSelectedSentiments((prev) => {
+      const next = new Set(prev);
+      if (next.has(sentiment)) {
+        next.delete(sentiment);
+      } else {
+        next.add(sentiment);
+      }
+      return next;
+    });
+  };
+
+  const toggleTopic = (topic: string) => {
+    setSelectedTopics((prev) => {
+      const next = new Set(prev);
+      if (next.has(topic)) {
+        next.delete(topic);
+      } else {
+        next.add(topic);
+      }
+      return next;
+    });
+  };
 
   return (
     <div className="space-y-8">
@@ -187,11 +259,13 @@ function AIIntelligencePage() {
       </header>
 
       {/* Filters */}
-      <div className="rounded-xl border border-border bg-card p-4 space-y-3">
+      <div className="rounded-xl border border-border bg-card p-4 space-y-4">
         <div className="flex items-center gap-2 text-sm font-medium">
           <Filter className="size-4" />
           Filtri
         </div>
+
+        {/* Date and location */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="block text-xs font-medium text-muted-foreground mb-1">
@@ -233,6 +307,79 @@ function AIIntelligencePage() {
             </select>
           </div>
         </div>
+
+        {/* Sentiment filter */}
+        <div>
+          <label className="block text-xs font-medium text-muted-foreground mb-2">Sentimento</label>
+          <div className="flex flex-wrap gap-2">
+            {["positive", "neutral", "negative"].map((s) => {
+              const sentiment = s as Sentiment;
+              const isSelected = selectedSentiments.has(sentiment);
+              const colorClass =
+                sentiment === "positive"
+                  ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
+                  : sentiment === "negative"
+                    ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                    : "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400";
+
+              return (
+                <button
+                  key={sentiment}
+                  onClick={() => toggleSentiment(sentiment)}
+                  className={`px-3 py-1.5 text-xs rounded-full font-medium transition ${
+                    isSelected
+                      ? colorClass
+                      : "bg-muted text-muted-foreground hover:bg-muted/80"
+                  }`}
+                >
+                  {sentiment === "positive" ? "😊 Positivo" : sentiment === "negative" ? "😞 Negativo" : "😐 Neutrale"}
+                </button>
+              );
+            })}
+            {selectedSentiments.size > 0 && (
+              <button
+                onClick={() => setSelectedSentiments(new Set())}
+                className="px-2 py-1.5 text-xs text-muted-foreground hover:text-foreground"
+              >
+                Reset
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Topics filter */}
+        {allTopics.length > 0 && (
+          <div>
+            <button
+              onClick={() => setExpandedTopics(!expandedTopics)}
+              className="text-xs font-medium text-muted-foreground hover:text-foreground mb-2 flex items-center gap-1"
+            >
+              Topic ({selectedTopics.size > 0 ? `${selectedTopics.size} selezionati` : "tutti disponibili"})
+              {expandedTopics ? "▼" : "▶"}
+            </button>
+            {expandedTopics && (
+              <div className="flex flex-wrap gap-2 p-2 bg-muted/30 rounded-lg max-h-32 overflow-y-auto">
+                {allTopics.slice(0, 20).map((topic) => {
+                  const isSelected = selectedTopics.has(topic);
+                  return (
+                    <button
+                      key={topic}
+                      onClick={() => toggleTopic(topic)}
+                      className={`px-2.5 py-1 text-xs rounded-full font-medium transition ${
+                        isSelected
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted text-muted-foreground hover:bg-muted/80"
+                      }`}
+                    >
+                      {topic}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="text-xs text-muted-foreground">
           Totale post analizzati: <strong>{aggregated.totalPosts}</strong>
         </div>
@@ -363,27 +510,59 @@ function AIIntelligencePage() {
           )}
         </div>
 
+        {/* Topic list */}
+        <div className="rounded-xl border border-border bg-card p-4 lg:col-span-2">
+          <h3 className="flex items-center gap-2 text-sm font-semibold mb-4">
+            <Tag className="size-4" />
+            Tutti i Topic ({aggregated.topicArray.length})
+          </h3>
+          {aggregated.topicArray.length > 0 ? (
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {aggregated.topicArray.map((topic, idx) => (
+                <div key={idx} className="flex items-center justify-between gap-2 text-sm">
+                  <span className="text-muted-foreground truncate">{topic.topic}</span>
+                  <div className="flex items-center gap-2">
+                    <div className="h-1.5 w-32 bg-gradient-to-r from-primary/20 to-primary rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-primary"
+                        style={{
+                          width: `${(topic.count / Math.max(...aggregated.topicArray.map((t) => t.count), 1)) * 100}%`,
+                        }}
+                      />
+                    </div>
+                    <span className="text-xs font-medium text-foreground w-6 text-right">{topic.count}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-muted-foreground text-center py-4">
+              Nessun topic nel filtro selezionato
+            </p>
+          )}
+        </div>
+
         {/* Location distribution */}
         <div className="rounded-xl border border-border bg-card p-4 lg:col-span-2">
           <h3 className="flex items-center gap-2 text-sm font-semibold mb-4">
             <MapPin className="size-4" />
-            Location Distribution
+            Location Distribution ({aggregated.locationArray.length})
           </h3>
-          {locationData.length > 0 ? (
-            <div className="space-y-2">
-              {locationData.map((loc, idx) => (
-                <div key={idx} className="flex items-center justify-between gap-2">
-                  <span className="text-sm text-muted-foreground truncate">{loc.location}</span>
+          {aggregated.locationArray.length > 0 ? (
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {aggregated.locationArray.map((loc, idx) => (
+                <div key={idx} className="flex items-center justify-between gap-2 text-sm">
+                  <span className="text-muted-foreground truncate">{loc.location}</span>
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-48 bg-gradient-to-r from-primary/20 to-primary rounded-full overflow-hidden">
+                    <div className="h-1.5 w-32 bg-gradient-to-r from-primary/20 to-primary rounded-full overflow-hidden">
                       <div
                         className="h-full bg-primary"
                         style={{
-                          width: `${(loc.count / Math.max(...locationData.map((l) => l.count), 1)) * 100}%`,
+                          width: `${(loc.count / Math.max(...aggregated.locationArray.map((l) => l.count), 1)) * 100}%`,
                         }}
                       />
                     </div>
-                    <span className="text-xs font-medium text-foreground w-8 text-right">{loc.count}</span>
+                    <span className="text-xs font-medium text-foreground w-6 text-right">{loc.count}</span>
                   </div>
                 </div>
               ))}
