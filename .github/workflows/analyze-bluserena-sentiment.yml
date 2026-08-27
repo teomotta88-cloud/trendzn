@@ -26,6 +26,9 @@ on:
   schedule:
     - cron: "0 3 * * *"  # Giornaliero alle 3 AM UTC
 
+permissions:
+  contents: write
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
