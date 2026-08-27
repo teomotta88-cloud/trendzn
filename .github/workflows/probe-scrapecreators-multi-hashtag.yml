@@ -1,0 +1,37 @@
+name: Probe ScrapeCreators Multi-Hashtag (diagnostico)
+
+# Workflow usa-e-getta: verifica se l'endpoint ScrapeCreators
+# /v1/tiktok/search/hashtag accetta piu' hashtag in una sola chiamata,
+# provando un paio di formati plausibili (comma-separated, parametro
+# ripetuto, nome parametro plurale) - vedi
+# scripts/probe-scrapecreators-multi-hashtag.mjs. Nessuna scrittura su
+# store, consuma pochi crediti ScrapeCreators (1 per formato provato).
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtag1:
+        description: "Primo hashtag di test (senza #)"
+        required: true
+        default: "bluserena"
+      hashtag2:
+        description: "Secondo hashtag di test (senza #)"
+        required: true
+        default: "isernia"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Prova formati multi-hashtag
+        env:
+          SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
+        run: node scripts/probe-scrapecreators-multi-hashtag.mjs "${{ github.event.inputs.hashtag1 }}" "${{ github.event.inputs.hashtag2 }}"
