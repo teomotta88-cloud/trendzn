@@ -193,7 +193,7 @@ async function callModel(candidate, messages, keys) {
 // per candidato sul solo caso "risposta presente ma non nel formato atteso"
 // (parse(text) ritorna null) — stesso pattern già in uso in
 // extract-keywords.ts. `parse` non deve lanciare: ritorna il risultato o null.
-async function chatCompletionWithFallback(messages, { apiKey, groqApiKey, model, parse }) {
+export async function chatCompletionWithFallback(messages, { apiKey, groqApiKey, model, parse }) {
   const candidates = await buildCandidates({ apiKey, groqApiKey, model });
   if (candidates.length === 0) {
     throw new Error("Nessuna API key configurata (né Groq né OpenRouter) o nessun candidato disponibile.");
