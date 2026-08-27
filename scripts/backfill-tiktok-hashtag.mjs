@@ -108,6 +108,23 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// ScrapeCreators restituisce share_url con parametri di tracciamento
+// (_r, u_code, _d, ecc.) GENERATI A CASO a ogni chiamata, anche per lo
+// STESSO identico video — verificato su un run reale: la stessa chiamata
+// ripetuta 10 volte ha prodotto 10 URL diversi per il video già visto alla
+// prima chiamata, mai deduplicati perché il confronto era per stringa
+// esatta. La query string non fa parte dell'identità del video (l'ID è nel
+// path), quindi va rimossa sia quando si salva l'URL sia quando si
+// confronta con quelli già nello store.
+function normalizeTikTokUrl(url) {
+  try {
+    const u = new URL(url);
+    return `${u.origin}${u.pathname.replace(/\/$/, "")}`;
+  } catch {
+    return url;
+  }
+}
+
 // Stesso criterio usato lato UI e da sync-bluserena-hashtags.mjs: riconosce
 // una pagina hashtag dalla FORMA del path, nessun campo extra nello store.
 function hashtagInfo(url) {
@@ -212,7 +229,7 @@ function mapApifyItem(item) {
   return {
     platform: "tiktok",
     handle: item.authorMeta?.name ?? item.authorMeta?.nickName ?? null,
-    url: item.webVideoUrl,
+    url: normalizeTikTokUrl(item.webVideoUrl),
     date:
       item.createTimeISO ?? (item.createTime ? new Date(item.createTime * 1000).toISOString() : null),
     caption: item.text ?? null,
@@ -225,10 +242,10 @@ function mapApifyItem(item) {
 }
 
 // --- ScrapeCreators ---
-// Parametro query per l'hashtag NON confermato su un run reale (nessun
-// accesso di rete per testarlo da qui): "hashtag" è la lettura più
-// plausibile della documentazione ufficiale, ma se la chiamata fallisce con
-// 400 è il primo sospetto da controllare.
+// Parametro "hashtag" (singolare) confermato su un run reale
+// (probe-scrapecreators-multi-hashtag.mjs): un hashtag per chiamata, non
+// supporta liste/comma-separated (restituisce un match spurio senza errore,
+// quindi va usato un solo hashtag alla volta senza eccezioni).
 async function callScrapeCreators() {
   const url = `https://api.scrapecreators.com/v1/tiktok/search/hashtag?hashtag=${encodeURIComponent(tag)}`;
   const res = await fetch(url, { headers: { "x-api-key": scrapeCreatorsKey } });
@@ -245,12 +262,14 @@ async function callScrapeCreators() {
 }
 
 function mapScrapeCreatorsItem(item) {
-  const url = item.share_url ?? (item.aweme_id ? `https://www.tiktok.com/@${item.author?.unique_id}/video/${item.aweme_id}` : null);
-  if (!url) return null;
+  const rawUrl =
+    item.share_url ??
+    (item.aweme_id ? `https://www.tiktok.com/@${item.author?.unique_id}/video/${item.aweme_id}` : null);
+  if (!rawUrl) return null;
   return {
     platform: "tiktok",
     handle: item.author?.unique_id ?? item.author?.nickname ?? null,
-    url,
+    url: normalizeTikTokUrl(rawUrl),
     date: item.create_time ? new Date(item.create_time * 1000).toISOString() : null,
     caption: item.desc ?? null,
     location: null,

@@ -1,0 +1,31 @@
+name: Cleanup Duplicate TikTok Posts
+
+# Workflow una tantum: rimuove i post duplicati in bluserena-monitoring.json
+# causati da un bug ora corretto in backfill-tiktok-hashtag.mjs (ScrapeCreators
+# restituisce share_url con parametri di tracciamento casuali a ogni chiamata,
+# anche per lo stesso video). Vedi scripts/cleanup-duplicate-tiktok-posts.mjs.
+# Fonde i campi dei duplicati invece di scartarli, poi tiene una riga per
+# video. Non dovrebbe servire rilanciarlo dopo il primo utilizzo, a meno che
+# non riemergano duplicati per qualche altra causa.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Rimuovi duplicati
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/cleanup-duplicate-tiktok-posts.mjs
