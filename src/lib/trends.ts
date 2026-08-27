@@ -25,6 +25,8 @@ export type TrendItem = {
   insertedAt?: string | null;
 };
 
+export type Sentiment = "positive" | "negative" | "neutral";
+
 export type AccountRef = {
   platform: string;
   handle: string;
@@ -47,6 +49,14 @@ export type AccountRef = {
   comments?: number | null;
   // Solo TikTok via backfill Apify (shareCount) — nessun'altra tecnica lo espone.
   shares?: number | null;
+  // Analisi AI: sentiment del post (positive/negative/neutral) calcolato da
+  // LLM (Groq/OpenRouter) sulla caption. Null se non analizzato.
+  sentiment?: Sentiment | null;
+  // Topic/hashtag estratti dalla caption tramite LLM. Array vuoto se non trovati.
+  topics?: string[] | null;
+  // Audio analysis metadata per TikTok/Instagram Reels (opzionale, deprecato se non usato)
+  audioUrl?: string | null;
+  audioAnalysis?: string | null;
 };
 export type CanaleInspo = {
   id: string;

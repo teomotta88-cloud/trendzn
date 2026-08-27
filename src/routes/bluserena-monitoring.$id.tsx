@@ -12,6 +12,8 @@ import {
   MessageCircle,
   Search,
   Share2,
+  Smile,
+  Tag,
 } from "lucide-react";
 
 // Dettaglio canale Bluserena-monitoring — copia di aspi-monitoring.$id.tsx,
@@ -273,6 +275,50 @@ function Page() {
                       <p className="line-clamp-3 px-1 pb-1 text-[11px] leading-relaxed text-muted-foreground">
                         {a.caption}
                       </p>
+                    )}
+                    {(a.sentiment || (a.topics && a.topics.length > 0)) && (
+                      <div className="space-y-2 px-1 pt-2 border-t border-border/50">
+                        {a.sentiment && (
+                          <div className="flex items-center gap-1.5">
+                            <Smile className="size-3 text-muted-foreground" />
+                            <span
+                              className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium ${
+                                a.sentiment === "positive"
+                                  ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
+                                  : a.sentiment === "negative"
+                                    ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                                    : "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400"
+                              }`}
+                            >
+                              {a.sentiment === "positive"
+                                ? "😊 Positivo"
+                                : a.sentiment === "negative"
+                                  ? "😞 Negativo"
+                                  : "😐 Neutrale"}
+                            </span>
+                          </div>
+                        )}
+                        {a.topics && a.topics.length > 0 && (
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            <Tag className="size-3 text-muted-foreground" />
+                            <div className="flex flex-wrap gap-1">
+                              {a.topics.slice(0, 3).map((topic, tidx) => (
+                                <span
+                                  key={tidx}
+                                  className="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary"
+                                >
+                                  {topic}
+                                </span>
+                              ))}
+                              {a.topics.length > 3 && (
+                                <span className="inline-flex items-center rounded-full bg-primary/5 px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+                                  +{a.topics.length - 3}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     )}
                   </article>
                 );
