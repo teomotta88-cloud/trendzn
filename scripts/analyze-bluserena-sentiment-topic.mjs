@@ -121,7 +121,15 @@ async function readStore() {
   const store = raw.trim() ? JSON.parse(raw) : { canali: [] };
   if (!Array.isArray(store.canali)) store.canali = [];
 
-  return { store, sha };
+  // Crea mappa di post precedenti per merge intelligente (preserva sentiment/topics/location)
+  const previousStore = {};
+  for (const canale of store.canali) {
+    for (const account of canale.accounts || []) {
+      previousStore[account.url] = account;
+    }
+  }
+
+  return { store, sha, previousStore };
 }
 
 async function writeStore(store, sha) {
@@ -277,13 +285,30 @@ Esempio: {"sentiment": "positive", "topics": ["vacanza", "mare"], "locations": [
   }
 }
 
-// Applica risultati analisi al post
-function applyAnalysis(post, analysis) {
+// Applica risultati analisi al post, preservando dati precedenti se non sovrascrivibili
+function applyAnalysis(post, analysis, previousPost) {
+  // Se non abbiamo analisi valida, preserva i dati precedenti
+  if (!analysis || analysis.confidence < MIN_CONFIDENCE) {
+    if (previousPost) {
+      post.sentiment = previousPost.sentiment;
+      post.topics = previousPost.topics;
+      post.location = previousPost.location;
+      post.audioAnalysis = previousPost.audioAnalysis;
+    }
+    return;
+  }
+
+  // Applica nuova analisi
   post.sentiment = analysis.sentiment;
   post.topics = analysis.topics.length > 0 ? analysis.topics : undefined;
+
+  // Per location: usa quella nuova se trovata, altrimenti preserva la vecchia
   if (analysis.locations && analysis.locations.length > 0) {
-    post.location = analysis.locations[0]; // prendi primo match
+    post.location = analysis.locations[0];
+  } else if (previousPost?.location) {
+    post.location = previousPost.location;
   }
+
   if (analysis.audioAnalysis) {
     post.audioAnalysis = JSON.stringify(analysis.audioAnalysis);
   }
@@ -297,7 +322,7 @@ console.log(`Min confidence threshold: ${MIN_CONFIDENCE}`);
 console.log(`Batch size: ${BATCH_SIZE}`);
 if (DRY_RUN) console.log("(DRY_RUN mode attivo - nessuna modifica su GitHub)");
 
-const { store, sha } = await readStore();
+const { store, sha, previousStore } = await readStore();
 
 let totalAnalyzed = 0;
 let totalUpdated = 0;
@@ -323,8 +348,9 @@ for (const canale of store.canali) {
     let batchUpdated = 0;
     for (let j = 0; j < batch.length; j++) {
       const analysis = results[j];
+      const previousPost = previousStore[batch[j].url];
+      applyAnalysis(batch[j], analysis, previousPost);
       if (analysis.confidence >= MIN_CONFIDENCE) {
-        applyAnalysis(batch[j], analysis);
         batchUpdated++;
       }
     }
