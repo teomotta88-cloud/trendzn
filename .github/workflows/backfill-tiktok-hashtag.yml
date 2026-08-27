@@ -13,19 +13,23 @@ name: Backfill TikTok Hashtag
 # tantum/periodico, non il monitoraggio quotidiano (che resta gratuito via
 # scroll/API, vedi sync-bluserena-hashtags.yml). Quando questo si ferma per
 # saturazione, il monitoraggio prosegue solo con quello.
+#
+# Campo hashtag vuoto = processa TUTTI gli hashtag TikTok gia' presenti
+# nello store, uno dopo l'altro nello stesso run (vedi
+# scripts/backfill-tiktok-hashtag.mjs) invece di uno alla volta.
 
 on:
   workflow_dispatch:
     inputs:
       hashtag:
-        description: "Hashtag TikTok gia' monitorato da arricchire (senza #)"
-        required: true
-        default: "bluserena"
+        description: "Hashtag TikTok da arricchire (senza #) - lascia vuoto per farli tutti"
+        required: false
+        default: ""
 
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     permissions:
       contents: write
 
