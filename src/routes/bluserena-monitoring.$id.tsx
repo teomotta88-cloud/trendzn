@@ -16,6 +16,7 @@ import {
   Tag,
   Check,
   AlertCircle,
+  Zap,
 } from "lucide-react";
 import { verifyBluserenaPost, type VerificationStatus } from "@/lib/trends";
 
@@ -393,7 +394,7 @@ function Page() {
                         {a.caption}
                       </p>
                     )}
-                    {(a.sentiment || (a.topics && a.topics.length > 0)) && (
+                    {(a.sentiment || (a.topics && a.topics.length > 0) || a.ocrData || a.ocrInsights) && (
                       <div className="space-y-2 px-1 pt-2 border-t border-border/50">
                         {a.sentiment && (
                           <div className="flex items-center gap-1.5">
@@ -433,6 +434,26 @@ function Page() {
                                 </span>
                               )}
                             </div>
+                          </div>
+                        )}
+                        {(a.ocrData || a.ocrInsights) && (
+                          <div className="flex flex-col gap-1.5">
+                            <div className="flex items-center gap-1.5">
+                              <Zap className="size-3 text-amber-600 dark:text-amber-500" />
+                              <span className="text-[10px] font-medium text-amber-700 dark:text-amber-400">
+                                OCR Analysis
+                              </span>
+                            </div>
+                            {a.ocrData?.textOnScreen && (
+                              <p className="text-[9px] text-muted-foreground px-1 py-0.5 bg-muted/50 rounded italic">
+                                Text: "{a.ocrData.textOnScreen.slice(0, 60)}{a.ocrData.textOnScreen.length > 60 ? "..." : ""}"
+                              </p>
+                            )}
+                            {a.ocrInsights && (
+                              <p className="text-[9px] text-muted-foreground px-1 py-0.5">
+                                {a.ocrInsights.slice(0, 80)}{a.ocrInsights.length > 80 ? "..." : ""}
+                              </p>
+                            )}
                           </div>
                         )}
                       </div>

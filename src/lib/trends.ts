@@ -58,6 +58,14 @@ export type AccountRef = {
   // Audio analysis metadata per TikTok/Instagram Reels (opzionale, deprecato se non usato)
   audioUrl?: string | null;
   audioAnalysis?: string | null;
+  // OCR analysis: testo estratto dai frame video durante Phase 2
+  ocrData?: {
+    textOnScreen?: string | null;
+    confidence?: number;
+    frames?: string[];
+  } | null;
+  // Insights estratti da OCR + caption combinati
+  ocrInsights?: string | null;
   // Verifica Bluserena: il post contiene "bluserena" o un nome/hashtag resort?
   // "confirmed" se sì, "unconfirmed" se no. Modificabile manualmente via UI.
   verificationStatus?: VerificationStatus;
