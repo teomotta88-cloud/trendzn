@@ -5,6 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { Octokit } from "@octokit/rest";
+import FormData from "form-data";
 import { chatCompletionWithFallback } from "./lib/openrouter.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -69,23 +70,76 @@ async function extractAudio(videoPath, audioPath) {
   }
 }
 
-async function transcribeAudio(audioPath) {
+async function transcribeAudio(audioPath, groqApiKey) {
   console.log(`  🎤 Transcribing audio...`);
 
-  try {
-    // Groq Whisper API transcription (requires GROQ_API_KEY)
-    // For MVP: Returns empty if audio not processable
+  if (!groqApiKey) {
     return {
       success: false,
       transcript: null,
-      reason: "Whisper API not implemented",
+      reason: "GROQ_API_KEY not set",
       confidence: 0,
     };
+  }
+
+  try {
+    if (!fs.existsSync(audioPath)) {
+      return {
+        success: false,
+        transcript: null,
+        reason: "Audio file not found",
+        confidence: 0,
+      };
+    }
+
+    const audioBuffer = fs.readFileSync(audioPath);
+    const formData = new FormData();
+    formData.append("file", audioBuffer, { filename: "audio.mp3", contentType: "audio/mpeg" });
+    formData.append("model", "whisper-large-v3");
+
+    const response = await fetch("https://api.groq.com/openai/v1/audio/transcriptions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${groqApiKey}`,
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      console.log(`    ⚠️  Groq Whisper failed (${response.status}): ${err.slice(0, 100)}`);
+      return {
+        success: false,
+        transcript: null,
+        reason: `Groq API error: ${response.status}`,
+        confidence: 0,
+      };
+    }
+
+    const result = await response.json();
+    const transcript = result.text || "";
+
+    if (!transcript || transcript.trim().length === 0) {
+      return {
+        success: false,
+        transcript: null,
+        reason: "No speech detected in audio",
+        confidence: 0,
+      };
+    }
+
+    return {
+      success: true,
+      transcript: transcript.trim(),
+      reason: "OK",
+      confidence: 0.9,
+    };
   } catch (err) {
+    console.log(`    ⚠️  Transcription error: ${String(err).slice(0, 100)}`);
     return {
       success: false,
       transcript: null,
-      reason: "Transcription failed",
+      reason: `Error: ${err.message}`,
       confidence: 0,
     };
   }
@@ -214,7 +268,7 @@ async function analyzeBlueserenaAudio() {
             const extractRes = await extractAudio(vidPath, audioPath);
 
             if (extractRes.success) {
-              transcribeRes = await transcribeAudio(audioPath);
+              transcribeRes = await transcribeAudio(audioPath, groqApiKey);
               audioNote = transcribeRes.success
                 ? `Transcript: "${transcribeRes.transcript?.slice(0, 50)}..."`
                 : "Audio extracted but transcription failed";

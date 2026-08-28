@@ -6,6 +6,7 @@ import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { Octokit } from "@octokit/rest";
 import { chatCompletionWithFallback } from "./lib/openrouter.mjs";
+import Tesseract from "tesseract.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,23 +34,129 @@ function isInDateRange(dateStr) {
   }
 }
 
-async function extractOCRText(videoUrl) {
-  console.log(`  [OCR] Attempting text extraction from video...`);
+async function downloadVideoAndExtractOCR(videoUrl) {
+  console.log(`  📥 Downloading video for OCR...`);
+
+  const tempDir = path.join(path.dirname(import.meta.url), "..", ".tmp", "ocr");
+  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
+
+  const videoPath = path.join(tempDir, `${Date.now()}.mp4`);
 
   try {
-    // In production: download video → extract frame with ffmpeg → run Tesseract.js
-    // For MVP: Placeholder (requires ffmpeg + tesseract.js)
-    // TODO: Integrate with ffmpeg + tesseract.js for real OCR
+    const { execSync } = await import("child_process");
+    // Download video with yt-dlp
+    execSync(`yt-dlp -f best -o "${videoPath}" "${videoUrl}"`, {
+      stdio: "pipe",
+      timeout: 30000,
+    });
 
-    // Return empty/unavailable status (fallback to caption analysis)
+    if (!fs.existsSync(videoPath)) {
+      console.log(`    ⚠️  Video download produced no file`);
+      return {
+        textOnScreen: null,
+        confidence: 0.0,
+        frames: [],
+        available: false,
+      };
+    }
+
+    // Extract OCR from downloaded video
+    const ocrResult = await extractOCRText(videoPath);
+
+    // Cleanup video
+    try {
+      fs.unlinkSync(videoPath);
+    } catch {}
+
+    return ocrResult;
+  } catch (err) {
+    console.log(`    ⚠️  Video download failed: ${String(err).slice(0, 100)}`);
+    // Cleanup
+    try {
+      if (fs.existsSync(videoPath)) fs.unlinkSync(videoPath);
+    } catch {}
     return {
       textOnScreen: null,
       confidence: 0.0,
       frames: [],
       available: false,
     };
+  }
+}
+
+async function extractFrameAndOCR(videoPath, frameOutputPath) {
+  console.log(`    [OCR] Extracting frame from video...`);
+
+  try {
+    const { execSync } = await import("child_process");
+    // Extract frame at 5 seconds or middle of video
+    execSync(
+      `ffmpeg -i "${videoPath}" -vf "select=eq(n\\,round(5*fps/1))" -vframes 1 "${frameOutputPath}" -y 2>/dev/null || ffmpeg -i "${videoPath}" -vframes 1 "${frameOutputPath}" -y 2>/dev/null`,
+      { stdio: "pipe", timeout: 15000 }
+    );
+    return fs.existsSync(frameOutputPath);
   } catch (err) {
-    console.log(`    ⚠️  OCR extraction unavailable: ${String(err).slice(0, 50)}`);
+    console.log(`    ⚠️  Frame extraction failed: ${String(err).slice(0, 50)}`);
+    return false;
+  }
+}
+
+async function extractOCRText(videoPath) {
+  console.log(`  [OCR] Attempting text extraction from video...`);
+
+  try {
+    const frameDir = path.join(path.dirname(videoPath), "frames");
+    if (!fs.existsSync(frameDir)) fs.mkdirSync(frameDir, { recursive: true });
+
+    const frameOutputPath = path.join(frameDir, `frame_${Date.now()}.png`);
+    const frameExtracted = await extractFrameAndOCR(videoPath, frameOutputPath);
+
+    if (!frameExtracted) {
+      console.log(`    ⚠️  Could not extract frame from video`);
+      return {
+        textOnScreen: null,
+        confidence: 0.0,
+        frames: [],
+        available: false,
+      };
+    }
+
+    console.log(`    [OCR] Running Tesseract on extracted frame...`);
+    const result = await Tesseract.recognize(frameOutputPath, "eng", {
+      logger: (m) => {
+        if (m.status === "recognizing text") {
+          process.stdout.write(`\r    [OCR] Progress: ${Math.round(m.progress * 100)}%`);
+        }
+      },
+    });
+
+    if (process.stdout.isTTY) console.log(""); // newline after progress
+
+    const text = result.data.text?.trim() || "";
+    const confidence = result.data.confidence || 0;
+
+    // Cleanup
+    try {
+      fs.unlinkSync(frameOutputPath);
+    } catch {}
+
+    if (!text || text.length < 3) {
+      return {
+        textOnScreen: null,
+        confidence: 0.0,
+        frames: [],
+        available: false,
+      };
+    }
+
+    return {
+      textOnScreen: text,
+      confidence: confidence / 100, // normalize to 0-1
+      frames: [frameOutputPath],
+      available: true,
+    };
+  } catch (err) {
+    console.log(`\n    ⚠️  OCR extraction failed: ${String(err).slice(0, 80)}`);
     return {
       textOnScreen: null,
       confidence: 0.0,
@@ -164,8 +271,8 @@ async function analyzeBlueserenaOCR() {
           `\n  🔍 Analyzing: ${account.url} (${new Date(account.date).toLocaleDateString()})`
         );
 
-        // Extract OCR (with fallback)
-        const ocrData = await extractOCRText(account.url);
+        // Download video and extract OCR (with fallback)
+        const ocrData = await downloadVideoAndExtractOCR(account.url);
 
         if (!ocrData.available) {
           console.log(`    ℹ️  OCR unavailable (ffmpeg/tesseract.js), using caption-only analysis`);
