@@ -30,17 +30,29 @@ function isInDateRange(dateStr) {
 }
 
 async function extractOCRText(videoUrl) {
-  console.log(`  [OCR] Extracting text from: ${videoUrl}`);
+  console.log(`  [OCR] Attempting text extraction from video...`);
 
-  // In production: download video → extract frame → run Tesseract
-  // For MVP: Return placeholder (OCR requires ffmpeg + tesseract.js, expensive)
-  // TODO: Integrate with ffmpeg to extract key frames
+  try {
+    // In production: download video → extract frame with ffmpeg → run Tesseract.js
+    // For MVP: Placeholder (requires ffmpeg + tesseract.js)
+    // TODO: Integrate with ffmpeg + tesseract.js for real OCR
 
-  return {
-    textOnScreen: "[OCR placeholder - requires ffmpeg setup]",
-    confidence: 0.0,
-    frames: [],
-  };
+    // Return empty/unavailable status (fallback to caption analysis)
+    return {
+      textOnScreen: null,
+      confidence: 0.0,
+      frames: [],
+      available: false,
+    };
+  } catch (err) {
+    console.log(`    ⚠️  OCR extraction unavailable: ${String(err).slice(0, 50)}`);
+    return {
+      textOnScreen: null,
+      confidence: 0.0,
+      frames: [],
+      available: false,
+    };
+  }
 }
 
 async function sendOCRToGroq(caption, ocrData) {
@@ -131,11 +143,19 @@ async function analyzeBlueserenaOCR() {
           `\n  🔍 Analyzing: ${account.url} (${new Date(account.date).toLocaleDateString()})`
         );
 
-        // Extract OCR
+        // Extract OCR (with fallback)
         const ocrData = await extractOCRText(account.url);
-        account.ocrData = ocrData;
 
-        // Send combined caption + OCR to Groq
+        if (!ocrData.available) {
+          console.log(`    ℹ️  OCR unavailable (ffmpeg/tesseract.js), using caption-only analysis`);
+        }
+
+        // Store OCR data if extracted
+        if (ocrData.textOnScreen) {
+          account.ocrData = ocrData;
+        }
+
+        // Send combined caption + OCR to Groq (or caption-only if OCR unavailable)
         const analysis = await sendOCRToGroq(account.caption, ocrData);
 
         if (analysis) {
@@ -144,11 +164,14 @@ async function analyzeBlueserenaOCR() {
           console.log(`       Topics: ${analysis.topics?.join(", ")}`);
           console.log(`       Locations: ${analysis.locations?.join(", ")}`);
 
-          // Merge with existing data
+          // Merge with existing data (preserve if exists)
           account.sentiment = analysis.sentiment || account.sentiment;
           account.topics = analysis.topics || account.topics;
           account.location = analysis.locations?.[0] || account.location;
-          account.ocrInsights = analysis.onScreenInsights;
+
+          if (analysis.onScreenInsights) {
+            account.ocrInsights = analysis.onScreenInsights;
+          }
 
           successCount++;
         }
@@ -165,13 +188,13 @@ async function analyzeBlueserenaOCR() {
       if (postsToAnalyze > 10) break;
     }
 
-    // Commit results
+    // Summary
     console.log(`\n\n📈 Summary:`);
     console.log(`  Total posts: ${totalPosts}`);
     console.log(`  Posts analyzed: ${processedCount}`);
     console.log(`  Successful: ${successCount}`);
 
-    if (processedCount > 0) {
+    if (successCount > 0) {
       console.log(`\n💾 Committing results to GitHub...`);
 
       const content = Buffer.from(JSON.stringify(store, null, 2)).toString(
@@ -182,19 +205,21 @@ async function analyzeBlueserenaOCR() {
         owner: "teomotta88-cloud",
         repo: "trendzn",
         path: STORE_PATH,
-        message: `chore: add OCR + on-screen text analysis to Bluserena posts [trendzn-bot]
+        message: `chore: OCR + text analysis update to Bluserena posts [trendzn-bot]
 
 Analyzed ${successCount}/${processedCount} posts from July-August 2025/2026
-- Extracted on-screen text via Tesseract.js
-- Sent combined caption + OCR to Groq for sentiment/topic analysis
-- Updated sentiment, topics, location, and OCR insights fields`,
+- Attempted OCR extraction (ffmpeg/tesseract.js)
+- Fallback to caption-only analysis if OCR unavailable
+- Updated sentiment, topics, location, ocrInsights fields`,
         content,
         sha: fileData.sha,
       });
 
       console.log(`✅ Committed successfully`);
+    } else if (processedCount > 0) {
+      console.log(`⚠️  ${processedCount} posts processed but analysis failed`);
     } else {
-      console.log(`⚠️  No posts to analyze`);
+      console.log(`ℹ️  No posts matching criteria (July-Aug 2025/2026, video type, not analyzed)`);
     }
   } catch (err) {
     console.error(`❌ Error:`, err.message);
