@@ -74,6 +74,37 @@ function Page() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [search, setSearch] = useState("");
   const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("all");
+  const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
+
+  const toggleVerificationStatus = async (postUrl: string, currentStatus: VerificationStatus) => {
+    if (!canale) return;
+
+    const newStatus: VerificationStatus = currentStatus === "confirmed" ? "unconfirmed" : "confirmed";
+    setUpdatingUrl(postUrl);
+
+    try {
+      const res = await fetch("/api/public/hooks/update-bluserena-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          channelId: canale.id,
+          postUrl,
+          verificationStatus: newStatus,
+        }),
+      });
+
+      if (res.ok) {
+        // Ricarica la pagina per mostrare il cambiamento
+        window.location.reload();
+      } else {
+        console.error("Errore aggiornamento verifica:", await res.text());
+      }
+    } catch (err) {
+      console.error("Errore aggiornamento verifica:", err);
+    } finally {
+      setUpdatingUrl(null);
+    }
+  };
 
   const allPosts = useMemo(() => {
     if (!canale) return [];
@@ -291,19 +322,30 @@ function Page() {
                           Apri ↗
                         </a>
                       </div>
-                      {/* Verification badge */}
+                      {/* Verification badge - clickable to toggle */}
                       <div className="flex items-center gap-1">
-                        {status === "confirmed" ? (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
-                            <Check className="size-3" />
-                            BS Confirmed
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-yellow-100 px-2 py-0.5 text-[10px] font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
-                            <AlertCircle className="size-3" />
-                            BS Unconfirmed
-                          </span>
-                        )}
+                        <button
+                          onClick={() => toggleVerificationStatus(a.url, status)}
+                          disabled={updatingUrl === a.url}
+                          className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium transition hover:opacity-80 disabled:opacity-50 ${
+                            status === "confirmed"
+                              ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
+                              : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
+                          }`}
+                          title="Click to toggle verification status"
+                        >
+                          {status === "confirmed" ? (
+                            <>
+                              <Check className="size-3" />
+                              BS Confirmed
+                            </>
+                          ) : (
+                            <>
+                              <AlertCircle className="size-3" />
+                              BS Unconfirmed
+                            </>
+                          )}
+                        </button>
                       </div>
                     </div>
                     {(a.handle ||
