@@ -1,0 +1,46 @@
+name: Bluserena OCR + On-Screen Text Analysis
+
+on:
+  schedule:
+    # Ogni lunedì alle 02:00 UTC (4:00 CEST, orario notturno)
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze-ocr:
+    runs-on: ubuntu-latest
+    name: Extract on-screen text + analyze via Groq
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci --only=production
+
+      - name: Run OCR analysis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node scripts/analyze-bluserena-ocr.mjs
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "❌ OCR analysis failed"
+          exit 1
+
+      - name: Notify on success
+        if: success()
+        run: echo "✅ OCR analysis completed"

@@ -1,0 +1,55 @@
+name: Bluserena Audio Analysis + Speech-to-Text
+
+on:
+  schedule:
+    # Ogni mercoledì alle 02:00 UTC (after sentiment + OCR analysis)
+    - cron: "0 2 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze-audio:
+    runs-on: ubuntu-latest
+    name: Extract audio + transcribe + analyze engagement
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg yt-dlp > /dev/null 2>&1 || echo "ffmpeg/yt-dlp install skipped"
+
+      - name: Install Node dependencies
+        run: npm ci --only=production
+
+      - name: Run audio analysis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node scripts/analyze-bluserena-audio.mjs
+
+      - name: Cleanup artifacts
+        if: always()
+        run: rm -rf .tmp/audio
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "❌ Audio analysis failed"
+          exit 1
+
+      - name: Notify on success
+        if: success()
+        run: echo "✅ Audio analysis completed"

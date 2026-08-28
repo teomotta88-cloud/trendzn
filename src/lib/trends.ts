@@ -55,9 +55,22 @@ export type AccountRef = {
   sentiment?: Sentiment | null;
   // Topic/hashtag estratti dalla caption tramite LLM. Array vuoto se non trovati.
   topics?: string[] | null;
-  // Audio analysis metadata per TikTok/Instagram Reels (opzionale, deprecato se non usato)
+  // Audio analysis metadata per TikTok/Instagram Reels (Phase 3)
   audioUrl?: string | null;
-  audioAnalysis?: string | null;
+  audioAnalysis?: {
+    transcript?: string | null;
+    sentiment?: string | null;
+    engagement?: number | null;
+    analyzedAt?: string | null;
+  } | null;
+  // OCR analysis: testo estratto dai frame video durante Phase 2
+  ocrData?: {
+    textOnScreen?: string | null;
+    confidence?: number;
+    frames?: string[];
+  } | null;
+  // Insights estratti da OCR + caption combinati
+  ocrInsights?: string | null;
   // Verifica Bluserena: il post contiene "bluserena" o un nome/hashtag resort?
   // "confirmed" se sì, "unconfirmed" se no. Modificabile manualmente via UI.
   verificationStatus?: VerificationStatus;

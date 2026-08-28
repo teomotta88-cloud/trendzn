@@ -16,6 +16,8 @@ import {
   Tag,
   Check,
   AlertCircle,
+  Zap,
+  Headphones,
 } from "lucide-react";
 import { verifyBluserenaPost, type VerificationStatus } from "@/lib/trends";
 
@@ -393,7 +395,7 @@ function Page() {
                         {a.caption}
                       </p>
                     )}
-                    {(a.sentiment || (a.topics && a.topics.length > 0)) && (
+                    {(a.sentiment || (a.topics && a.topics.length > 0) || a.ocrData || a.ocrInsights || a.audioAnalysis) && (
                       <div className="space-y-2 px-1 pt-2 border-t border-border/50">
                         {a.sentiment && (
                           <div className="flex items-center gap-1.5">
@@ -433,6 +435,59 @@ function Page() {
                                 </span>
                               )}
                             </div>
+                          </div>
+                        )}
+                        {(a.ocrData || a.ocrInsights) && (
+                          <div className="flex flex-col gap-1.5">
+                            <div className="flex items-center gap-1.5">
+                              <Zap className="size-3 text-amber-600 dark:text-amber-500" />
+                              <span className="text-[10px] font-medium text-amber-700 dark:text-amber-400">
+                                OCR Analysis
+                              </span>
+                            </div>
+                            {a.ocrData?.textOnScreen && (
+                              <p className="text-[9px] text-muted-foreground px-1 py-0.5 bg-muted/50 rounded italic">
+                                Text: "{a.ocrData.textOnScreen.slice(0, 60)}{a.ocrData.textOnScreen.length > 60 ? "..." : ""}"
+                              </p>
+                            )}
+                            {a.ocrInsights && (
+                              <p className="text-[9px] text-muted-foreground px-1 py-0.5">
+                                {a.ocrInsights.slice(0, 80)}{a.ocrInsights.length > 80 ? "..." : ""}
+                              </p>
+                            )}
+                          </div>
+                        )}
+                        {a.audioAnalysis && (
+                          <div className="flex flex-col gap-1.5">
+                            <div className="flex items-center gap-1.5">
+                              <Headphones className="size-3 text-purple-600 dark:text-purple-500" />
+                              <span className="text-[10px] font-medium text-purple-700 dark:text-purple-400">
+                                Audio Analysis
+                              </span>
+                            </div>
+                            {a.audioAnalysis.engagement != null && (
+                              <div className="flex items-center gap-1">
+                                <div className="w-12 h-1 bg-muted rounded-full overflow-hidden">
+                                  <div
+                                    className="h-full bg-gradient-to-r from-purple-500 to-purple-600"
+                                    style={{ width: `${Math.min(100, (a.audioAnalysis.engagement ?? 0) * 10)}%` }}
+                                  />
+                                </div>
+                                <span className="text-[9px] text-muted-foreground">
+                                  Engagement: {a.audioAnalysis.engagement}/10
+                                </span>
+                              </div>
+                            )}
+                            {a.audioAnalysis.sentiment && (
+                              <p className="text-[9px] text-muted-foreground px-1 py-0.5">
+                                Audio: {a.audioAnalysis.sentiment}
+                              </p>
+                            )}
+                            {a.audioAnalysis.transcript && (
+                              <p className="text-[9px] text-muted-foreground px-1 py-0.5 bg-muted/50 rounded italic">
+                                Transcript: "{a.audioAnalysis.transcript.slice(0, 70)}{a.audioAnalysis.transcript.length > 70 ? "..." : ""}"
+                              </p>
+                            )}
                           </div>
                         )}
                       </div>
