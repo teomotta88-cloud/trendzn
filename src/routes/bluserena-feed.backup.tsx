@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
 
-export const Route = createFileRoute("/bluserena-feed/")({
+export const Route = createFileRoute("/bluserena-feed/backup")({
   head: () => ({
     meta: [
       { title: "Bluserena Feed — Advanced" },

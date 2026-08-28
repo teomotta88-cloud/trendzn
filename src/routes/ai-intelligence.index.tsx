@@ -19,7 +19,7 @@ import {
 } from "recharts";
 import { Calendar, Filter, Smile, Tag, MapPin, X } from "lucide-react";
 
-export const Route = createFileRoute("/ai-intelligence")({
+export const Route = createFileRoute("/ai-intelligence/")({
   head: () => ({
     meta: [
       { title: "AI Intelligence — Bluserena" },
