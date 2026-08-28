@@ -14,6 +14,10 @@ const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const TEMP_DIR = path.join(__dirname, "..", ".tmp", "audio");
 
+// API keys
+const apiKey = process.env.OPENROUTER_API_KEY;
+const groqApiKey = process.env.GROQ_API_KEY;
+
 // Intervallo date per analisi (luglio-agosto 2025 e 2026)
 const DATE_RANGES = [
   { start: new Date("2025-07-01"), end: new Date("2025-08-31") },
@@ -87,7 +91,7 @@ async function transcribeAudio(audioPath) {
   }
 }
 
-async function sendAudioToGroq(caption, transcription, audioInsights) {
+async function sendAudioToGroq(caption, transcription, audioInsights, apiKey, groqApiKey) {
   const combined = `
 Caption: ${caption}
 Audio transcript: ${transcription || "[No speech detected]"}
@@ -103,15 +107,29 @@ Analizza questo contenuto audio + caption e dammi:
 Rispondi in JSON: {"sentiment": "...", "topics": [...], "locations": [...], "audioSentiment": "...", "engagement": 5}
 `;
 
+  const parse = (text) => {
+    try {
+      const json = JSON.parse(text.trim());
+      if (!json.sentiment) return null;
+      return json;
+    } catch {
+      return null;
+    }
+  };
+
   try {
     const response = await chatCompletionWithFallback([
       {
         role: "user",
         content: combined,
       },
-    ]);
+    ], {
+      apiKey,
+      groqApiKey,
+      parse,
+    });
 
-    return JSON.parse(response);
+    return response;
   } catch (err) {
     console.error(`    [ERROR] Groq audio analysis failed:`, err.message);
     return null;
@@ -173,8 +191,8 @@ async function analyzeBlueserenaAudio() {
 
         postsToAnalyze++;
 
-        if (postsToAnalyze > 5) {
-          console.log(`  ⚠️  Limiting to 5 videos per run (cost + time control)`);
+        if (postsToAnalyze > 100) {
+          console.log(`  ⚠️  Limiting to 100 videos per run (cost + time control)`);
           break;
         }
 
@@ -220,7 +238,9 @@ async function analyzeBlueserenaAudio() {
         const analysis = await sendAudioToGroq(
           account.caption,
           transcribeRes.transcript,
-          audioNote
+          audioNote,
+          apiKey,
+          groqApiKey
         );
 
         if (analysis) {
@@ -254,7 +274,7 @@ async function analyzeBlueserenaAudio() {
         }
       }
 
-      if (postsToAnalyze > 5) break;
+      if (postsToAnalyze > 100) break;
     }
 
     // Summary
