@@ -227,13 +227,25 @@ async function analyzePost(post) {
 
   const caption = post.caption || "";
 
+  // Includi OCR text se disponibile
+  let ocrContext = "";
+  if (post.ocrData?.textOnScreen) {
+    ocrContext = `\nTesto on-screen (OCR): "${post.ocrData.textOnScreen}"`;
+  }
+
+  // Includi audio transcript se disponibile
+  let audioContext = "";
+  if (post.audioAnalysis?.transcript) {
+    audioContext = `\nTranscript audio: "${post.audioAnalysis.transcript}"`;
+  }
+
   const prompt = `
-Analizza questo post social da resort italiano:
-Caption: "${caption}"
+Analizza questo post social da resort italiano utilizzando TUTTI i dati disponibili:
+Caption: "${caption}"${ocrContext}${audioContext}
 URL: ${post.url}
 
 Rispondi in JSON con:
-1. sentiment: "positive" | "negative" | "neutral" (sentimento generale del post)
+1. sentiment: "positive" | "negative" | "neutral" (sentimento generale considerando caption, OCR e audio)
 2. topics: array di argomenti/hashtag principali (es: ["vacanza", "mare", "relax"])
 3. locations: array di nomi di resort/posti menzionati (cerca ${RESORTS.join(", ")})
 4. confidence: numero 0-1 della fiducia nell'analisi
@@ -330,8 +342,9 @@ let totalUpdated = 0;
 for (const canale of store.canali) {
   console.log(`\nCanale: ${canale.name} (${canale.accounts?.length ?? 0} post)`);
 
+  // Analizza TUTTI i post nella finestra temporale (rigenera sentiment/topics usando OCR + audio)
   const accountsToAnalyze = (canale.accounts || []).filter(
-    (a) => inWindow(a.date) && a.caption && (!a.sentiment || !a.topics),
+    (a) => inWindow(a.date) && a.caption,
   );
 
   if (accountsToAnalyze.length === 0) {
