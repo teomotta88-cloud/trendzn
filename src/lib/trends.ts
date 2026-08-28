@@ -26,6 +26,7 @@ export type TrendItem = {
 };
 
 export type Sentiment = "positive" | "negative" | "neutral";
+export type VerificationStatus = "confirmed" | "unconfirmed";
 
 export type AccountRef = {
   platform: string;
@@ -57,6 +58,9 @@ export type AccountRef = {
   // Audio analysis metadata per TikTok/Instagram Reels (opzionale, deprecato se non usato)
   audioUrl?: string | null;
   audioAnalysis?: string | null;
+  // Verifica Bluserena: il post contiene "bluserena" o un nome/hashtag resort?
+  // "confirmed" se sì, "unconfirmed" se no. Modificabile manualmente via UI.
+  verificationStatus?: VerificationStatus;
 };
 export type CanaleInspo = {
   id: string;
@@ -110,6 +114,49 @@ export function detectPlatform(
   if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
   if (/linkedin\.com/.test(url)) return "linkedin";
   return "web";
+}
+
+// Resort Bluserena per verifica: nomi e hashtag
+export const BLUSERENA_RESORTS = [
+  { name: "Bluserena", hashtag: "bluserena" },
+  { name: "Cala Serena", hashtag: "calaserena" },
+  { name: "Serena Majestic", hashtag: "serenamajestic" },
+  { name: "Serena Majestic Hotel", hashtag: "serenamajestic" },
+  { name: "Torreserena", hashtag: "torreserena" },
+  { name: "Torre Serena", hashtag: "torreserena" },
+  { name: "Serenusa", hashtag: "serenusa" },
+  { name: "Serena Hotel", hashtag: "serenahotel" },
+  { name: "Calanè", hashtag: "calane" },
+  { name: "GranSerena", hashtag: "granserena" },
+  { name: "Sibari Green", hashtag: "sibarigreen" },
+  { name: "Valentino", hashtag: "valentino" },
+  { name: "Kalidia", hashtag: "kalidia" },
+  { name: "Alborèa", hashtag: "alborea" },
+  { name: "Ethra", hashtag: "ethra" },
+  { name: "Is Serenas", hashtag: "isserenas" },
+];
+
+// Verifica se il post è confermato (contiene bluserena o nome/hashtag resort)
+export function verifyBluserenaPost(caption: string | null | undefined): VerificationStatus {
+  if (!caption) return "unconfirmed";
+
+  const lower = caption.toLowerCase();
+
+  // Verifica "bluserena"
+  if (lower.includes("bluserena") || lower.includes("#bluserena")) return "confirmed";
+
+  // Verifica resort
+  for (const resort of BLUSERENA_RESORTS) {
+    if (
+      lower.includes(resort.name.toLowerCase()) ||
+      lower.includes(`#${resort.hashtag}`) ||
+      lower.includes(resort.hashtag)
+    ) {
+      return "confirmed";
+    }
+  }
+
+  return "unconfirmed";
 }
 
 export function embedUrl(url: string): string | null {
