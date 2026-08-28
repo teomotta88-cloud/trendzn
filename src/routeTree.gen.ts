@@ -24,15 +24,21 @@ import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CollabInstagramIndexRouteImport } from './routes/collab-instagram.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as BluserenaMonitoringIndexRouteImport } from './routes/bluserena-monitoring.index'
+import { Route as BluserenaFeedIndexRouteImport } from './routes/bluserena-feed.index'
 import { Route as AspiMonitoringIndexRouteImport } from './routes/aspi-monitoring.index'
+import { Route as AiIntelligenceIndexRouteImport } from './routes/ai-intelligence.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as EditorGraficoRubricaIdRouteImport } from './routes/editor-grafico.$rubricaId'
 import { Route as CollabInstagramUsernameRouteImport } from './routes/collab-instagram.$username'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
 import { Route as BluserenaMonitoringIdRouteImport } from './routes/bluserena-monitoring.$id'
+import { Route as BluserenaFeedBackupRouteImport } from './routes/bluserena-feed.backup'
 import { Route as AspiMonitoringIdRouteImport } from './routes/aspi-monitoring.$id'
+import { Route as ApiPublicHooksUpdateBluserenaVerificationRouteImport } from './routes/api/public/hooks/update-bluserena-verification'
+import { Route as ApiPublicHooksUpdateBluserenaPostMetadataRouteImport } from './routes/api/public/hooks/update-bluserena-post-metadata'
 import { Route as ApiPublicHooksTriggerSyncCanaliFeedRouteImport } from './routes/api/public/hooks/trigger-sync-canali-feed'
 import { Route as ApiPublicHooksTriggerSyncBluserenaMonitoringRouteImport } from './routes/api/public/hooks/trigger-sync-bluserena-monitoring'
+import { Route as ApiPublicHooksTriggerSyncBluserenaHashtagsRouteImport } from './routes/api/public/hooks/trigger-sync-bluserena-hashtags'
 import { Route as ApiPublicHooksTriggerSyncAspiMonitoringRouteImport } from './routes/api/public/hooks/trigger-sync-aspi-monitoring'
 import { Route as ApiPublicHooksTriggerDiscoveryPipelineRouteImport } from './routes/api/public/hooks/trigger-discovery-pipeline'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
@@ -66,6 +72,7 @@ import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './route
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksCheckTokenHealthRouteImport } from './routes/api/public/hooks/check-token-health'
 import { Route as ApiPublicHooksApproveJobRouteImport } from './routes/api/public/hooks/approve-job'
+import { Route as ApiPublicHooksAnalyzeBluserenaBackfillStatsRouteImport } from './routes/api/public/hooks/analyze-bluserena-backfill-stats'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
 
 const TrendViraliRoute = TrendViraliRouteImport.update({
@@ -138,14 +145,25 @@ const CanaliInspoIndexRoute = CanaliInspoIndexRouteImport.update({
   path: '/canali-inspo/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BluserenaMonitoringIndexRoute = BluserenaMonitoringIndexRouteImport.update({
-  id: '/bluserena-monitoring/',
-  path: '/bluserena-monitoring/',
+const BluserenaMonitoringIndexRoute =
+  BluserenaMonitoringIndexRouteImport.update({
+    id: '/bluserena-monitoring/',
+    path: '/bluserena-monitoring/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BluserenaFeedIndexRoute = BluserenaFeedIndexRouteImport.update({
+  id: '/bluserena-feed/',
+  path: '/bluserena-feed/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AspiMonitoringIndexRoute = AspiMonitoringIndexRouteImport.update({
   id: '/aspi-monitoring/',
   path: '/aspi-monitoring/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiIntelligenceIndexRoute = AiIntelligenceIndexRouteImport.update({
+  id: '/ai-intelligence/',
+  path: '/ai-intelligence/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InfluencerIdRoute = InfluencerIdRouteImport.update({
@@ -173,11 +191,28 @@ const BluserenaMonitoringIdRoute = BluserenaMonitoringIdRouteImport.update({
   path: '/bluserena-monitoring/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BluserenaFeedBackupRoute = BluserenaFeedBackupRouteImport.update({
+  id: '/bluserena-feed/backup',
+  path: '/bluserena-feed/backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AspiMonitoringIdRoute = AspiMonitoringIdRouteImport.update({
   id: '/aspi-monitoring/$id',
   path: '/aspi-monitoring/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicHooksUpdateBluserenaVerificationRoute =
+  ApiPublicHooksUpdateBluserenaVerificationRouteImport.update({
+    id: '/api/public/hooks/update-bluserena-verification',
+    path: '/api/public/hooks/update-bluserena-verification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksUpdateBluserenaPostMetadataRoute =
+  ApiPublicHooksUpdateBluserenaPostMetadataRouteImport.update({
+    id: '/api/public/hooks/update-bluserena-post-metadata',
+    path: '/api/public/hooks/update-bluserena-post-metadata',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksTriggerSyncCanaliFeedRoute =
   ApiPublicHooksTriggerSyncCanaliFeedRouteImport.update({
     id: '/api/public/hooks/trigger-sync-canali-feed',
@@ -188,6 +223,12 @@ const ApiPublicHooksTriggerSyncBluserenaMonitoringRoute =
   ApiPublicHooksTriggerSyncBluserenaMonitoringRouteImport.update({
     id: '/api/public/hooks/trigger-sync-bluserena-monitoring',
     path: '/api/public/hooks/trigger-sync-bluserena-monitoring',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTriggerSyncBluserenaHashtagsRoute =
+  ApiPublicHooksTriggerSyncBluserenaHashtagsRouteImport.update({
+    id: '/api/public/hooks/trigger-sync-bluserena-hashtags',
+    path: '/api/public/hooks/trigger-sync-bluserena-hashtags',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksTriggerSyncAspiMonitoringRoute =
@@ -387,6 +428,12 @@ const ApiPublicHooksApproveJobRoute =
     path: '/api/public/hooks/approve-job',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute =
+  ApiPublicHooksAnalyzeBluserenaBackfillStatsRouteImport.update({
+    id: '/api/public/hooks/analyze-bluserena-backfill-stats',
+    path: '/api/public/hooks/analyze-bluserena-backfill-stats',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksAddClientChannelRoute =
   ApiPublicHooksAddClientChannelRouteImport.update({
     id: '/api/public/hooks/add-client-channel',
@@ -404,12 +451,15 @@ export interface FileRoutesByFullPath {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
+  '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/ai-intelligence/': typeof AiIntelligenceIndexRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
+  '/bluserena-feed/': typeof BluserenaFeedIndexRoute
   '/bluserena-monitoring/': typeof BluserenaMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/collab-instagram/': typeof CollabInstagramIndexRoute
@@ -418,6 +468,7 @@ export interface FileRoutesByFullPath {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/check-token-health': typeof ApiPublicHooksCheckTokenHealthRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
@@ -451,8 +502,11 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
+  '/api/public/hooks/trigger-sync-bluserena-hashtags': typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
   '/api/public/hooks/trigger-sync-bluserena-monitoring': typeof ApiPublicHooksTriggerSyncBluserenaMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  '/api/public/hooks/update-bluserena-post-metadata': typeof ApiPublicHooksUpdateBluserenaPostMetadataRoute
+  '/api/public/hooks/update-bluserena-verification': typeof ApiPublicHooksUpdateBluserenaVerificationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -464,12 +518,15 @@ export interface FileRoutesByTo {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
+  '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/ai-intelligence': typeof AiIntelligenceIndexRoute
   '/aspi-monitoring': typeof AspiMonitoringIndexRoute
+  '/bluserena-feed': typeof BluserenaFeedIndexRoute
   '/bluserena-monitoring': typeof BluserenaMonitoringIndexRoute
   '/canali-inspo': typeof CanaliInspoIndexRoute
   '/collab-instagram': typeof CollabInstagramIndexRoute
@@ -478,6 +535,7 @@ export interface FileRoutesByTo {
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/reputazione-brand': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/check-token-health': typeof ApiPublicHooksCheckTokenHealthRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
@@ -511,8 +569,11 @@ export interface FileRoutesByTo {
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
+  '/api/public/hooks/trigger-sync-bluserena-hashtags': typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
   '/api/public/hooks/trigger-sync-bluserena-monitoring': typeof ApiPublicHooksTriggerSyncBluserenaMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  '/api/public/hooks/update-bluserena-post-metadata': typeof ApiPublicHooksUpdateBluserenaPostMetadataRoute
+  '/api/public/hooks/update-bluserena-verification': typeof ApiPublicHooksUpdateBluserenaVerificationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -525,12 +586,15 @@ export interface FileRoutesById {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
+  '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/ai-intelligence/': typeof AiIntelligenceIndexRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
+  '/bluserena-feed/': typeof BluserenaFeedIndexRoute
   '/bluserena-monitoring/': typeof BluserenaMonitoringIndexRoute
   '/canali-inspo/': typeof CanaliInspoIndexRoute
   '/collab-instagram/': typeof CollabInstagramIndexRoute
@@ -539,6 +603,7 @@ export interface FileRoutesById {
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
+  '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
   '/api/public/hooks/approve-job': typeof ApiPublicHooksApproveJobRoute
   '/api/public/hooks/check-token-health': typeof ApiPublicHooksCheckTokenHealthRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
@@ -572,8 +637,11 @@ export interface FileRoutesById {
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
+  '/api/public/hooks/trigger-sync-bluserena-hashtags': typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
   '/api/public/hooks/trigger-sync-bluserena-monitoring': typeof ApiPublicHooksTriggerSyncBluserenaMonitoringRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  '/api/public/hooks/update-bluserena-post-metadata': typeof ApiPublicHooksUpdateBluserenaPostMetadataRoute
+  '/api/public/hooks/update-bluserena-verification': typeof ApiPublicHooksUpdateBluserenaVerificationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -587,12 +655,15 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
+    | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
     | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
+    | '/ai-intelligence/'
     | '/aspi-monitoring/'
+    | '/bluserena-feed/'
     | '/bluserena-monitoring/'
     | '/canali-inspo/'
     | '/collab-instagram/'
@@ -601,6 +672,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/analyze-bluserena-backfill-stats'
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/check-token-health'
     | '/api/public/hooks/delete-canale'
@@ -634,8 +706,11 @@ export interface FileRouteTypes {
     | '/api/public/hooks/top-tiktok-hashtags'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
+    | '/api/public/hooks/trigger-sync-bluserena-hashtags'
     | '/api/public/hooks/trigger-sync-bluserena-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
+    | '/api/public/hooks/update-bluserena-post-metadata'
+    | '/api/public/hooks/update-bluserena-verification'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -647,12 +722,15 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
+    | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
     | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
+    | '/ai-intelligence'
     | '/aspi-monitoring'
+    | '/bluserena-feed'
     | '/bluserena-monitoring'
     | '/canali-inspo'
     | '/collab-instagram'
@@ -661,6 +739,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale'
     | '/reputazione-brand'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/analyze-bluserena-backfill-stats'
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/check-token-health'
     | '/api/public/hooks/delete-canale'
@@ -694,8 +773,11 @@ export interface FileRouteTypes {
     | '/api/public/hooks/top-tiktok-hashtags'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
+    | '/api/public/hooks/trigger-sync-bluserena-hashtags'
     | '/api/public/hooks/trigger-sync-bluserena-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
+    | '/api/public/hooks/update-bluserena-post-metadata'
+    | '/api/public/hooks/update-bluserena-verification'
   id:
     | '__root__'
     | '/'
@@ -707,12 +789,15 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
+    | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
     | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
+    | '/ai-intelligence/'
     | '/aspi-monitoring/'
+    | '/bluserena-feed/'
     | '/bluserena-monitoring/'
     | '/canali-inspo/'
     | '/collab-instagram/'
@@ -721,6 +806,7 @@ export interface FileRouteTypes {
     | '/piano-editoriale/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
+    | '/api/public/hooks/analyze-bluserena-backfill-stats'
     | '/api/public/hooks/approve-job'
     | '/api/public/hooks/check-token-health'
     | '/api/public/hooks/delete-canale'
@@ -754,8 +840,11 @@ export interface FileRouteTypes {
     | '/api/public/hooks/top-tiktok-hashtags'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
+    | '/api/public/hooks/trigger-sync-bluserena-hashtags'
     | '/api/public/hooks/trigger-sync-bluserena-monitoring'
     | '/api/public/hooks/trigger-sync-canali-feed'
+    | '/api/public/hooks/update-bluserena-post-metadata'
+    | '/api/public/hooks/update-bluserena-verification'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -768,12 +857,15 @@ export interface RootRouteChildren {
   TrendRealTimeRoute: typeof TrendRealTimeRoute
   TrendViraliRoute: typeof TrendViraliRoute
   AspiMonitoringIdRoute: typeof AspiMonitoringIdRoute
+  BluserenaFeedBackupRoute: typeof BluserenaFeedBackupRoute
   BluserenaMonitoringIdRoute: typeof BluserenaMonitoringIdRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
   CollabInstagramUsernameRoute: typeof CollabInstagramUsernameRoute
   EditorGraficoRubricaIdRoute: typeof EditorGraficoRubricaIdRoute
   InfluencerIdRoute: typeof InfluencerIdRoute
+  AiIntelligenceIndexRoute: typeof AiIntelligenceIndexRoute
   AspiMonitoringIndexRoute: typeof AspiMonitoringIndexRoute
+  BluserenaFeedIndexRoute: typeof BluserenaFeedIndexRoute
   BluserenaMonitoringIndexRoute: typeof BluserenaMonitoringIndexRoute
   CanaliInspoIndexRoute: typeof CanaliInspoIndexRoute
   CollabInstagramIndexRoute: typeof CollabInstagramIndexRoute
@@ -782,6 +874,7 @@ export interface RootRouteChildren {
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ReputazioneBrandIndexRoute: typeof ReputazioneBrandIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
+  ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute: typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
   ApiPublicHooksApproveJobRoute: typeof ApiPublicHooksApproveJobRoute
   ApiPublicHooksCheckTokenHealthRoute: typeof ApiPublicHooksCheckTokenHealthRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
@@ -815,8 +908,11 @@ export interface RootRouteChildren {
   ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
   ApiPublicHooksTriggerDiscoveryPipelineRoute: typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   ApiPublicHooksTriggerSyncAspiMonitoringRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
+  ApiPublicHooksTriggerSyncBluserenaHashtagsRoute: typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
   ApiPublicHooksTriggerSyncBluserenaMonitoringRoute: typeof ApiPublicHooksTriggerSyncBluserenaMonitoringRoute
   ApiPublicHooksTriggerSyncCanaliFeedRoute: typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  ApiPublicHooksUpdateBluserenaPostMetadataRoute: typeof ApiPublicHooksUpdateBluserenaPostMetadataRoute
+  ApiPublicHooksUpdateBluserenaVerificationRoute: typeof ApiPublicHooksUpdateBluserenaVerificationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -926,11 +1022,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BluserenaMonitoringIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bluserena-feed/': {
+      id: '/bluserena-feed/'
+      path: '/bluserena-feed'
+      fullPath: '/bluserena-feed/'
+      preLoaderRoute: typeof BluserenaFeedIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aspi-monitoring/': {
       id: '/aspi-monitoring/'
       path: '/aspi-monitoring'
       fullPath: '/aspi-monitoring/'
       preLoaderRoute: typeof AspiMonitoringIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-intelligence/': {
+      id: '/ai-intelligence/'
+      path: '/ai-intelligence'
+      fullPath: '/ai-intelligence/'
+      preLoaderRoute: typeof AiIntelligenceIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/influencer/$id': {
@@ -968,11 +1078,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BluserenaMonitoringIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bluserena-feed/backup': {
+      id: '/bluserena-feed/backup'
+      path: '/bluserena-feed/backup'
+      fullPath: '/bluserena-feed/backup'
+      preLoaderRoute: typeof BluserenaFeedBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aspi-monitoring/$id': {
       id: '/aspi-monitoring/$id'
       path: '/aspi-monitoring/$id'
       fullPath: '/aspi-monitoring/$id'
       preLoaderRoute: typeof AspiMonitoringIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/update-bluserena-verification': {
+      id: '/api/public/hooks/update-bluserena-verification'
+      path: '/api/public/hooks/update-bluserena-verification'
+      fullPath: '/api/public/hooks/update-bluserena-verification'
+      preLoaderRoute: typeof ApiPublicHooksUpdateBluserenaVerificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/update-bluserena-post-metadata': {
+      id: '/api/public/hooks/update-bluserena-post-metadata'
+      path: '/api/public/hooks/update-bluserena-post-metadata'
+      fullPath: '/api/public/hooks/update-bluserena-post-metadata'
+      preLoaderRoute: typeof ApiPublicHooksUpdateBluserenaPostMetadataRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/trigger-sync-canali-feed': {
@@ -987,6 +1118,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/trigger-sync-bluserena-monitoring'
       fullPath: '/api/public/hooks/trigger-sync-bluserena-monitoring'
       preLoaderRoute: typeof ApiPublicHooksTriggerSyncBluserenaMonitoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/trigger-sync-bluserena-hashtags': {
+      id: '/api/public/hooks/trigger-sync-bluserena-hashtags'
+      path: '/api/public/hooks/trigger-sync-bluserena-hashtags'
+      fullPath: '/api/public/hooks/trigger-sync-bluserena-hashtags'
+      preLoaderRoute: typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/trigger-sync-aspi-monitoring': {
@@ -1220,6 +1358,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksApproveJobRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/analyze-bluserena-backfill-stats': {
+      id: '/api/public/hooks/analyze-bluserena-backfill-stats'
+      path: '/api/public/hooks/analyze-bluserena-backfill-stats'
+      fullPath: '/api/public/hooks/analyze-bluserena-backfill-stats'
+      preLoaderRoute: typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/add-client-channel': {
       id: '/api/public/hooks/add-client-channel'
       path: '/api/public/hooks/add-client-channel'
@@ -1240,12 +1385,15 @@ const rootRouteChildren: RootRouteChildren = {
   TrendRealTimeRoute: TrendRealTimeRoute,
   TrendViraliRoute: TrendViraliRoute,
   AspiMonitoringIdRoute: AspiMonitoringIdRoute,
+  BluserenaFeedBackupRoute: BluserenaFeedBackupRoute,
   BluserenaMonitoringIdRoute: BluserenaMonitoringIdRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
   CollabInstagramUsernameRoute: CollabInstagramUsernameRoute,
   EditorGraficoRubricaIdRoute: EditorGraficoRubricaIdRoute,
   InfluencerIdRoute: InfluencerIdRoute,
+  AiIntelligenceIndexRoute: AiIntelligenceIndexRoute,
   AspiMonitoringIndexRoute: AspiMonitoringIndexRoute,
+  BluserenaFeedIndexRoute: BluserenaFeedIndexRoute,
   BluserenaMonitoringIndexRoute: BluserenaMonitoringIndexRoute,
   CanaliInspoIndexRoute: CanaliInspoIndexRoute,
   CollabInstagramIndexRoute: CollabInstagramIndexRoute,
@@ -1254,6 +1402,8 @@ const rootRouteChildren: RootRouteChildren = {
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ReputazioneBrandIndexRoute: ReputazioneBrandIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
+  ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute:
+    ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute,
   ApiPublicHooksApproveJobRoute: ApiPublicHooksApproveJobRoute,
   ApiPublicHooksCheckTokenHealthRoute: ApiPublicHooksCheckTokenHealthRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
@@ -1265,7 +1415,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksFigmaImportRoute: ApiPublicHooksFigmaImportRoute,
   ApiPublicHooksGettySearchRoute: ApiPublicHooksGettySearchRoute,
   ApiPublicHooksImportAspiBulkRoute: ApiPublicHooksImportAspiBulkRoute,
-  ApiPublicHooksImportBluserenaBulkRoute: ApiPublicHooksImportBluserenaBulkRoute,
+  ApiPublicHooksImportBluserenaBulkRoute:
+    ApiPublicHooksImportBluserenaBulkRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
   ApiPublicHooksListCanaliInspoTopicsRoute:
     ApiPublicHooksListCanaliInspoTopicsRoute,
@@ -1298,10 +1449,16 @@ const rootRouteChildren: RootRouteChildren = {
     ApiPublicHooksTriggerDiscoveryPipelineRoute,
   ApiPublicHooksTriggerSyncAspiMonitoringRoute:
     ApiPublicHooksTriggerSyncAspiMonitoringRoute,
+  ApiPublicHooksTriggerSyncBluserenaHashtagsRoute:
+    ApiPublicHooksTriggerSyncBluserenaHashtagsRoute,
   ApiPublicHooksTriggerSyncBluserenaMonitoringRoute:
     ApiPublicHooksTriggerSyncBluserenaMonitoringRoute,
   ApiPublicHooksTriggerSyncCanaliFeedRoute:
     ApiPublicHooksTriggerSyncCanaliFeedRoute,
+  ApiPublicHooksUpdateBluserenaPostMetadataRoute:
+    ApiPublicHooksUpdateBluserenaPostMetadataRoute,
+  ApiPublicHooksUpdateBluserenaVerificationRoute:
+    ApiPublicHooksUpdateBluserenaVerificationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
