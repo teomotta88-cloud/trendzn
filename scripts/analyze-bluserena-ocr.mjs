@@ -44,10 +44,12 @@ async function downloadVideoAndExtractOCR(videoUrl) {
 
   try {
     const { execSync } = await import("child_process");
-    // Download video with yt-dlp
-    execSync(`yt-dlp -f best -o "${videoPath}" "${videoUrl}"`, {
+    // Download video with yt-dlp (longer timeout for TikTok)
+    const cmd = `yt-dlp --no-warnings -f best -o "${videoPath}" --socket-timeout 30 "${videoUrl}" 2>&1`;
+    execSync(cmd, {
       stdio: "pipe",
-      timeout: 30000,
+      timeout: 120000, // 2 minutes timeout
+      maxBuffer: 10 * 1024 * 1024,
     });
 
     if (!fs.existsSync(videoPath)) {
