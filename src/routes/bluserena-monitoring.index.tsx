@@ -5,6 +5,7 @@ import type { CanaleInspo } from "@/lib/trends";
 import { PlatformIcon } from "@/components/SocialEmbed";
 import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { BluserenaBackfillStats } from "@/components/BluserenaBackfillStats";
+import { BluserenaFeedAdvanced } from "@/components/BluserenaFeedAdvanced";
 import { Search, Trash2, Upload, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { FeedPageToggle, TrendzFeed, SyncButton } from "./feed.index";
@@ -54,15 +55,10 @@ function BluserenaMonitoringPage() {
   return tab === "canali" ? (
     <BluserenaCanaliView tab={tab} setTab={setTab} />
   ) : (
-    <TrendzFeed
+    <BluserenaFeedAdvanced
       tab={tab}
       setTab={setTab}
       jsonUrl={BLUSERENA_JSON_URL}
-      dataKey="canali"
-      syncEndpoint={BLUSERENA_SYNC_ENDPOINT}
-      canaliLabel="Bluserena-monitoring"
-      enableDateFilter
-      enableKeywordMonitor
     />
   );
 }
