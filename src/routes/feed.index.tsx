@@ -181,6 +181,10 @@ function PlatformBadge({ platform }: { platform: string }) {
   );
 }
 
+// L'iframe viene montato quando la card entra (quasi) in viewport e SMONTATO
+// quando se ne allontana: prima restava montato per sempre, così scorrendo il
+// feed si accumulavano centinaia di iframe Instagram/TikTok/YouTube attivi e
+// la pagina si bloccava (memoria + CPU), sia su desktop che su mobile.
 function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -191,19 +195,18 @@ function LazyEmbed({ embedUrl, height }: { embedUrl: string; height: number }) {
     if (!el) return;
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        const isNear = entries[0].isIntersecting;
+        setVisible(isNear);
+        if (!isNear) setLoaded(false);
       },
-      { rootMargin: "300px" },
+      { rootMargin: "600px 0px" },
     );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div ref={ref} style={{ position: "relative", background: "#f8f9fa", minHeight: height }}>
+    <div ref={ref} style={{ position: "relative", background: "#f8f9fa", height }}>
       {!loaded && (
         <div
           style={{
