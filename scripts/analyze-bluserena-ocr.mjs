@@ -60,17 +60,20 @@ async function extractOCRText(videoUrl) {
 }
 
 async function sendOCRToGroq(caption, ocrData, apiKey, groqApiKey) {
+  let ocrContext = ocrData?.textOnScreen ? `On-screen text: ${ocrData.textOnScreen}` : "On-screen text: [not available]";
+
   const combined = `
 Caption: ${caption}
-On-screen text: ${ocrData.textOnScreen}
+${ocrContext}
 
 Analizza questo contenuto e dammi:
 1. Sentiment: positive|negative|neutral
 2. Topics: estrai argomenti principali (lista)
 3. Location hints: nomi di resort/posti
-4. Key insights da testo on-screen
+4. Key insights
 
-Rispondi in JSON: {"sentiment": "...", "topics": [...], "locations": [...], "onScreenInsights": "..."}
+Rispondi SOLO con JSON valido, senza markdown:
+{"sentiment": "positive|negative|neutral", "topics": [...], "locations": [...], "onScreenInsights": "..."}
 `;
 
   const parse = (text) => {
