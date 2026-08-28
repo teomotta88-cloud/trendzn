@@ -48,7 +48,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
         try {
           const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-          const { data: profiles, error } = await supabaseAdmin
+          const { data: profiles, error } = await (supabaseAdmin as any)
             .from("instagram_monitored_profiles")
             .select("id, username, kind, industry, check_interval_minutes, last_checked_at")
             .eq("active", true);
@@ -100,7 +100,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
 
           const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-          const { data: profileRow } = await supabaseAdmin
+          const { data: profileRow } = await (supabaseAdmin as any)
             .from("instagram_monitored_profiles")
             .select("id, kind, industry, first_checked_at")
             .eq("id", profileId)
@@ -112,7 +112,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
           const shortcodes = posts.map((p) => p.shortcode);
           const { data: existingRows } =
             shortcodes.length > 0
-              ? await supabaseAdmin
+              ? await (supabaseAdmin as any)
                   .from("instagram_posts")
                   .select("shortcode")
                   .in("shortcode", shortcodes)
@@ -124,7 +124,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
           const newInfluencerUsernames = new Set<string>();
 
           for (const post of posts) {
-            const { data: postRow, error: postError } = await supabaseAdmin
+            const { data: postRow, error: postError } = await (supabaseAdmin as any)
               .from("instagram_posts")
               .upsert(
                 {
@@ -150,7 +150,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
                 post_id: postRow.id,
                 username,
               }));
-              await supabaseAdmin
+              await (supabaseAdmin as any)
                 .from("instagram_post_collaborators")
                 .upsert(collabRows, { onConflict: "post_id,username", ignoreDuplicates: true });
             }
@@ -183,7 +183,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
           // Questo blocco gira solo se il profilo controllato è un brand
           // (newInfluencerUsernames resta vuoto altrimenti, vedi sopra).
           for (const username of newInfluencerUsernames) {
-            const { data: existing } = await supabaseAdmin
+            const { data: existing } = await (supabaseAdmin as any)
               .from("instagram_monitored_profiles")
               .select("id, kind")
               .eq("username", username)
@@ -192,7 +192,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
             if (existing?.kind === "brand") continue;
 
             if (!existing) {
-              await supabaseAdmin.from("instagram_monitored_profiles").insert({
+              await (supabaseAdmin as any).from("instagram_monitored_profiles").insert({
                 username,
                 kind: "influencer",
                 discovered_via_profile_id: profileId,
@@ -200,7 +200,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
             }
 
             if (profileRow?.industry) {
-              await supabaseAdmin
+              await (supabaseAdmin as any)
                 .from("instagram_influencer_industries")
                 .upsert(
                   { influencer_username: username, industry: profileRow.industry },
@@ -210,7 +210,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
           }
 
           const nowIso = new Date().toISOString();
-          await supabaseAdmin
+          await (supabaseAdmin as any)
             .from("instagram_monitored_profiles")
             .update({
               last_checked_at: nowIso,
@@ -224,7 +224,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
             })
             .eq("id", profileId);
 
-          await supabaseAdmin.from("instagram_monitoring_runs").insert({
+          await (supabaseAdmin as any).from("instagram_monitoring_runs").insert({
             profile_id: profileId,
             posts_found: run.postsFound ?? posts.length,
             new_posts: run.newPosts ?? newPostsCount,
