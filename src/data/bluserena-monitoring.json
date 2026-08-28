@@ -22,9 +22,9 @@
           "shares": 1,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "relax",
-            "hotel"
+            "Giuseppe Forte",
+            "serenamajestic",
+            "bluserena"
           ]
         },
         {
@@ -33,7 +33,7 @@
           "url": "https://www.tiktok.com/@terryamato/video/7677945703301254433",
           "date": "2026-08-25T12:30:40.000Z",
           "caption": "#vacanza ##bluserena ",
-          "location": null,
+          "location": "#vacanza",
           "views": 9592,
           "imageUrl": null,
           "likes": 51,
@@ -43,7 +43,8 @@
           "topics": [
             "vacanza",
             "bluserena"
-          ]
+          ],
+          "ocrInsights": "In questo contesto, il contenuto sembra essere una descrizione di un'esperienza vacanze o di un luogo relativamente piacevole, probabilmente a Bluserena (una località italiana). Il tag #vacanza indica che il contenuto riguarda un'esperienza di vacanza. Non è presente informazione su un'immagine o un'altra immagine visiva, quindi le insights riguardanti il contesto on-screen sono mancanti."
         },
         {
           "platform": "tiktok",
@@ -57,12 +58,14 @@
           "likes": 14,
           "comments": 7,
           "shares": 4,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "relax",
-            "luxury"
-          ]
+            "fashion",
+            "blouse",
+            "brand_promotion",
+            "serena_majestic"
+          ],
+          "ocrInsights": "No on-screen text available."
         },
         {
           "platform": "tiktok",
@@ -72,7 +75,9 @@
           "caption": null,
           "location": null,
           "views": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -86,13 +91,13 @@
           "likes": 47,
           "comments": 8,
           "shares": 1,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "resort"
-          ]
+            "social media",
+            "mention",
+            "hashtag"
+          ],
+          "ocrInsights": "The caption mentions @Giuseppe Forte and the hashtag #bluserena, with no on‑screen text. No explicit positive or negative language is present, so sentiment is neutral. Main topics are a personal tag and a campaign/brand hashtag. No location cues are given, so locations list is empty. The post likely serves as a social‑media mention or promotion."
         },
         {
           "platform": "tiktok",
@@ -100,7 +105,7 @@
           "url": "https://www.tiktok.com/@mirkosport_/video/7677333268605209889",
           "date": "2026-08-23T20:54:06.000Z",
           "caption": "#mirkosport #viralvideos #estate #bluserena #sardegna ",
-          "location": "Bluserena",
+          "location": "Sardegna",
           "views": 19482,
           "imageUrl": null,
           "likes": 335,
@@ -108,9 +113,13 @@
           "shares": 70,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "sports",
+            "viral videos",
+            "real estate",
+            "Blue Arena",
+            "Sardinia"
+          ],
+          "ocrInsights": "The post combines sport‑related hashtags with viral video and real‑estate tags, highlighting a location in Sardinia (likely a resort or venue called Blue Arena). The overall tone is upbeat, aiming to attract attention to a sporty or leisure event and possibly promote property or tourism in the area."
         },
         {
           "platform": "tiktok",
@@ -120,7 +129,10 @@
           "caption": null,
           "location": null,
           "views": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -128,7 +140,7 @@
           "url": "https://www.tiktok.com/@pennisi.l/video/7677324428421729569",
           "date": "2026-08-23T20:19:48.000Z",
           "caption": "#bluserena #animazione #resort #villaggio #mare ",
-          "location": "Bluserena",
+          "location": "Blue Serena (resort)",
           "views": 5494,
           "imageUrl": null,
           "likes": 85,
@@ -136,11 +148,13 @@
           "shares": 15,
           "sentiment": "positive",
           "topics": [
-            "animazione",
             "resort",
+            "animazione",
             "villaggio",
-            "mare"
-          ]
+            "mare",
+            "bluserena"
+          ],
+          "ocrInsights": "The post uses upbeat hashtags to highlight a leisure experience at a seaside resort, emphasizing entertainment (animazione), village‑style atmosphere, and the sea. It suggests a positive, promotional vibe aimed at attracting visitors to the Blue Serena resort."
         },
         {
           "platform": "tiktok",
@@ -148,20 +162,21 @@
           "url": "https://www.tiktok.com/@terryamato/video/7678084294501289249",
           "date": "2026-08-25T21:28:28.000Z",
           "caption": "#vacanza #bluserena #scherzare  #rientro #rientroacasa ",
-          "location": "Bluserena",
+          "location": "Blue Serena",
           "views": 10012,
           "imageUrl": null,
           "likes": 42,
           "comments": 5,
           "shares": 12,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "bluserena",
-            "scherzare",
-            "rientro",
-            "rientroacasa"
-          ]
+            "vacation",
+            "travel",
+            "humor",
+            "return home",
+            "Blue Serena resort"
+          ],
+          "ocrInsights": "The post celebrates a recent vacation, likely spent at the Blue Serena resort, with a playful tone, and notes the transition back home."
         },
         {
           "platform": "tiktok",
@@ -169,7 +184,7 @@
           "url": "https://www.tiktok.com/@pennisi.l/video/7677323744783682849",
           "date": "2026-08-23T20:17:09.000Z",
           "caption": "#serenella #resort #bluserena #mare #animazione ",
-          "location": "Bluserena",
+          "location": "Serenella",
           "views": 3813,
           "imageUrl": null,
           "likes": 46,
@@ -177,9 +192,13 @@
           "shares": 10,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "serenità",
+            "resort",
+            "bluserena",
+            "mare",
+            "animazione"
+          ],
+          "ocrInsights": "Il contenuto promuove un soggiorno in un resort (probabilmente chiamato Serenella) associato al marchio Bluserena, enfatizzando la tranquillità, il mare e le attività di animazione. L'uso di hashtag suggerisce un intento di marketing rivolto a chi cerca vacanze rilassanti e divertenti al mare."
         },
         {
           "platform": "tiktok",
@@ -189,7 +208,9 @@
           "caption": null,
           "location": null,
           "views": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -199,7 +220,9 @@
           "caption": null,
           "location": null,
           "views": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -209,7 +232,9 @@
           "caption": null,
           "location": null,
           "views": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -223,14 +248,15 @@
           "likes": 27,
           "comments": 26,
           "shares": 2,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
             "recensione",
             "bluserena",
             "calaserena",
             "sardegna",
             "viaggi"
-          ]
+          ],
+          "ocrInsights": "Il post è una risposta a un utente (@giù81) e utilizza hashtag legati a una recensione di un luogo in Sardegna, probabilmente un resort o struttura chiamata Blù Serena o Calaserena. Il tono è neutro, mirato a interagire con il commentatore e a migliorare la visibilità tramite hashtag di viaggio e località."
         },
         {
           "platform": "tiktok",
@@ -240,7 +266,9 @@
           "caption": null,
           "location": null,
           "views": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -252,7 +280,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -264,7 +295,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No caption or on-screen text provided; therefore sentiment is neutral, and no topics or location hints can be extracted."
         },
         {
           "platform": "tiktok",
@@ -276,7 +310,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -297,7 +334,7 @@
           "url": "https://www.tiktok.com/@janyesanty/video/7676967856428322080",
           "date": "2026-08-22T21:16:07.000Z",
           "caption": "Siamo sicuri che i video pubblicati non avessero un secondo fine ? Per noi @bluserena sempre al TOP⭐️⭐️⭐️⭐️⭐️#vacanze #mare #resort #bluserena #holidays ",
-          "location": "Bluserena",
+          "location": "Blueserena",
           "views": 121171,
           "likes": 1125,
           "comments": 201,
@@ -305,9 +342,13 @@
           "shares": 208,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "video marketing",
+            "customer satisfaction",
+            "vacation",
+            "sea",
+            "resort experience"
+          ],
+          "ocrInsights": "The caption expresses strong positive sentiment toward Blueserena, highlighting its top-tier status with a 5-star rating. It references published videos, implying they serve a promotional purpose, and reinforces the resort’s appeal as a vacation destination by using hashtags related to holidays, sea, and resort."
         },
         {
           "platform": "tiktok",
@@ -315,11 +356,16 @@
           "url": "https://www.tiktok.com/@bluserena/video/7671257380243459350",
           "date": "2026-08-07T11:56:33.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -327,11 +373,16 @@
           "url": "https://www.tiktok.com/@_dieghito97_/video/7661274794402352416",
           "date": "2026-07-11T14:19:01.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -343,7 +394,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non c'è alcun contenuto da analizzare; pertanto il sentimento è neutro, non sono presenti argomenti, luoghi o approfondimenti."
         },
         {
           "platform": "tiktok",
@@ -355,7 +409,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -363,11 +419,16 @@
           "url": "https://www.tiktok.com/@emanuela.marco.ca/video/7675638458722880801",
           "date": "2026-08-19T07:17:22.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -379,7 +440,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non è stato fornito alcun testo né didascalia da analizzare; pertanto non è possibile identificare sentimenti specifici, argomenti, né riferimenti a località. In assenza di contenuto, il sentiment è considerato neutro e non ci sono insight da estrarre."
         },
         {
           "platform": "tiktok",
@@ -399,7 +463,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675656934535564576",
           "date": "2026-08-19T08:29:04.000Z",
           "caption": "#divertimentopurobambini #bluserena #bluserenaviaggi4stelle #stupendo ",
-          "location": "Bluserena",
+          "location": "Blue Lagoon",
           "views": 63945,
           "likes": 222,
           "comments": 35,
@@ -407,11 +471,12 @@
           "shares": 55,
           "sentiment": "positive",
           "topics": [
-            "bambini",
-            "divertimento",
-            "vacanza",
-            "family"
-          ]
+            "children's entertainment",
+            "4-star resort",
+            "travel",
+            "brand promotion"
+          ],
+          "ocrInsights": "The post highlights a 4‑star resort that offers pure fun for children, emphasizing a positive, enjoyable experience."
         },
         {
           "platform": "tiktok",
@@ -423,7 +488,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -431,11 +498,16 @@
           "url": "https://www.tiktok.com/@bluserena/video/7671249816613129494",
           "date": "2026-08-07T11:27:12.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -447,7 +519,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Nessun contenuto disponibile; sentiment neutro, nessun argomento, nessuna location, nessun insight."
         },
         {
           "platform": "tiktok",
@@ -459,7 +534,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -471,7 +548,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non è stato fornito alcun contenuto da analizzare (caption nullo e testo on‑screen non disponibile). In assenza di informazioni, il sentiment è neutro, non emergono argomenti né riferimenti a località, perciò le liste sono vuote."
         },
         {
           "platform": "tiktok",
@@ -483,7 +563,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -495,7 +577,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Nessun caption o testo a schermo fornito; dati insufficienti per l'analisi."
         },
         {
           "platform": "tiktok",
@@ -507,7 +592,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -519,7 +606,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -527,11 +616,16 @@
           "url": "https://www.tiktok.com/@francescosabatino/video/7673786664568769825",
           "date": "2026-08-14T07:31:28.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -543,7 +637,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Nessun contenuto fornito per l'analisi."
         },
         {
           "platform": "tiktok",
@@ -555,7 +652,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -575,11 +675,16 @@
           "url": "https://www.tiktok.com/@enzobottone88/video/7674284822642117921",
           "date": "2026-08-15T15:44:34.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -591,7 +696,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non è stato fornito alcun testo o caption da analizzare; pertanto il sentiment è neutro, non emergono argomenti né riferimenti a luoghi, e non ci sono insight rilevabili."
         },
         {
           "platform": "tiktok",
@@ -599,11 +707,16 @@
           "url": "https://www.tiktok.com/@angelazoglio/video/7669390275059502369",
           "date": "2026-08-02T11:11:14.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -615,7 +728,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non è stato fornito alcun testo né immagine da analizzare; di conseguenza non è possibile identificare sentiment, argomenti o luoghi. In assenza di dati, il sentiment è considerato neutro e non ci sono insight da estrarre."
         },
         {
           "platform": "tiktok",
@@ -627,7 +743,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -635,11 +753,16 @@
           "url": "https://www.tiktok.com/@aestetich94/video/7658557347933015328",
           "date": "2026-07-04T06:33:56.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -647,11 +770,16 @@
           "url": "https://www.tiktok.com/@bluserena/video/7668299492235431190",
           "date": "2026-07-30T12:38:26.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -663,7 +791,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -675,7 +805,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -687,7 +819,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -699,7 +833,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -711,7 +848,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -723,7 +862,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -735,7 +876,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -747,7 +890,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -759,7 +905,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -771,7 +919,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No content available for analysis."
         },
         {
           "platform": "tiktok",
@@ -807,7 +958,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No caption or on-screen text available for analysis."
         },
         {
           "platform": "tiktok",
@@ -815,11 +969,16 @@
           "url": "https://www.tiktok.com/@bluserena/video/7665325963508485398",
           "date": "2026-07-22T12:19:37.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -831,7 +990,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -843,7 +1004,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -855,7 +1018,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -867,7 +1032,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -879,7 +1046,9 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -887,11 +1056,16 @@
           "url": "https://www.tiktok.com/@bluserena/video/7663533527446621473",
           "date": "2026-07-17T16:24:03.000Z",
           "caption": null,
-          "location": null,
+          "location": "null",
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "null"
+          ],
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
         },
         {
           "platform": "tiktok",
@@ -903,7 +1077,10 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non essendoci alcun contenuto nella didascalia né testo sullo schermo, non è possibile estrarre sentiment, argomenti o luoghi. Il risultato è quindi neutro e le liste sono vuote."
         },
         {
           "platform": "tiktok",
@@ -911,7 +1088,7 @@
           "url": "https://www.tiktok.com/@bluserena/video/7671255265337003286",
           "date": "2026-08-18T12:30:00.000Z",
           "caption": "Chi dice che sia facile, mente. \n\n#Bluserena #SibariGreenResort #DreamTeam #Calabria@Giuseppe Forte @Jordy Chiafele ",
-          "location": "Bluserena",
+          "location": "Sibari Green Resort",
           "views": 8546,
           "likes": 167,
           "comments": 10,
@@ -919,10 +1096,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "resort",
-            "team",
-            "hard work"
-          ]
+            "Bluserena",
+            "Sibari Green Resort",
+            "Dream Team",
+            "Calabria"
+          ],
+          "ocrInsights": "In questo contenuto, il sentimento sembra positivo perché il testo indica un team di professionisti (Dream Team) che lavora insieme in un resort (Sibari Green Resort) nella regione di Calabria. I hints sulle location sono Sibari Green Resort e Calabria."
         },
         {
           "platform": "tiktok",
@@ -930,7 +1109,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666938366255992096",
           "date": "2026-07-26T20:36:38.000Z",
           "caption": "Risposta a @user184966 Grazie alle Bellissime parole di vincenzo... TI RIVOGLIAMO è forse la frase più bella di questa settimana... siete stati tutti una grande Famiglia, Grazie a Sibari per averci ospitati nel vostro paradiso ci rivedremo Sicuramente❤️🥰 #sibarigreenresort #GRAZIESIBARI #bluserena @bluserena #paratiiiiiiiiiii #virale ",
-          "location": "Sibari Green Resort",
+          "location": "Sibari",
           "views": 7624,
           "likes": 69,
           "comments": 14,
@@ -938,11 +1117,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "sibarigreenresort",
-            "GRAZIESIBARI",
-            "bluserena",
-            "virale"
-          ]
+            "ringraziamento",
+            "ospitalità",
+            "comunità",
+            "esperienza positiva",
+            "interazione sociale"
+          ],
+          "ocrInsights": "Nessun testo disponibile a schermo"
         },
         {
           "platform": "tiktok",
@@ -958,9 +1139,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "bluserena"
-          ]
+            "vacation",
+            "beach",
+            "travel"
+          ],
+          "ocrInsights": "The caption suggests a positive, relaxed vacation vibe centered around a beach or seaside resort named Bluserena. No on-screen text is available to add further context."
         },
         {
           "platform": "tiktok",
@@ -978,8 +1161,10 @@
           "topics": [
             "vacanze",
             "villaggio",
-            "bluserena"
-          ]
+            "relax",
+            "estate"
+          ],
+          "ocrInsights": "Nessun testo disponibile"
         },
         {
           "platform": "tiktok",
@@ -987,7 +1172,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675662478197460257",
           "date": "2026-08-19T08:50:40.000Z",
           "caption": "#divertimentopurobambini #bluserena #bluserenaviaggi4stelle #stupendo #vacanzaitaliana ",
-          "location": "Bluserena",
+          "location": "Italy",
           "views": 1829,
           "likes": 19,
           "comments": 3,
@@ -995,11 +1180,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "divertimento",
-            "bambini",
-            "vacanza",
-            "hotel 4 stelle"
-          ]
+            "child entertainment",
+            "beach",
+            "4-star travel",
+            "Italian vacation"
+          ],
+          "ocrInsights": "The post promotes a family-friendly, 4‑star Italian vacation with a focus on children’s entertainment and beach activities, using upbeat hashtags to convey a wonderful experience."
         },
         {
           "platform": "tiktok",
@@ -1007,7 +1193,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675649450190130465",
           "date": "2026-08-19T08:00:07.000Z",
           "caption": "#bluserena #bluserenaviaggi4stelle ##vacanzaitaliana #stupendo #maritoemoglie ",
-          "location": "Bluserena",
+          "location": "Blu Serena",
           "views": 1170,
           "likes": 28,
           "comments": 2,
@@ -1015,10 +1201,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "bluserena",
-            "viaggi4stelle",
-            "vacanzaitaliana"
+            "vacation",
+            "travel",
+            "Italian vacation",
+            "couple travel",
+            "4-star resort"
           ]
         },
         {
@@ -1035,9 +1222,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "BluSerena",
+            "brand promotion",
+            "social media marketing"
+          ],
+          "ocrInsights": "No on-screen text available."
         },
         {
           "platform": "tiktok",
@@ -1050,7 +1239,13 @@
           "likes": 86,
           "comments": 0,
           "shares": 82,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [
+            "social media reply",
+            "user mention"
+          ],
+          "ocrInsights": "User is responding to @Salvatore Sarturell"
         },
         {
           "platform": "tiktok",
@@ -1071,7 +1266,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7676951526513904928",
           "date": "2026-08-22T20:12:48.000Z",
           "caption": "#amore #maritomoglie #persempre #villaggiobluserena #bluserena ",
-          "location": "Bluserena",
+          "location": "Villaggio Blue Rena",
           "views": 1157,
           "likes": 22,
           "comments": 0,
@@ -1079,11 +1274,16 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "matrimonio",
-            "coppia",
-            "amore",
-            "vacanza"
-          ]
+            "love",
+            "marriage",
+            "forever",
+            "wedding",
+            "resort",
+            "travel",
+            "honeymoon",
+            "couple"
+          ],
+          "ocrInsights": "The caption uses romantic hashtags (#amore, #maritomoglie, #persempre) to celebrate a couple’s love, likely a wedding or anniversary. The inclusion of #villaggiobluserena and #bluserena points to a specific resort destination, suggesting the post is promoting or documenting a stay at the Villaggio Blue Rena resort. The overall tone is celebratory and positive, aiming to attract other couples interested in romantic getaways or wedding venues."
         },
         {
           "platform": "tiktok",
@@ -1096,7 +1296,10 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "Non c'è contenuto da analizzare; quindi sentiment neutro, nessun argomento, nessuna location e nessuna insight."
         },
         {
           "platform": "tiktok",
@@ -1104,7 +1307,7 @@
           "url": "https://www.tiktok.com/@eugy.valli/video/7672147574463286561",
           "date": "2026-08-09T21:31:02.000Z",
           "caption": "Tutta la vita Bluserena 😍🥰 #andiamoneiperte #neiperte #perte #foryou #fyp ",
-          "location": "Bluserena",
+          "location": "Bluerena (presumibile resort o località balneare)",
           "views": 1013,
           "likes": 18,
           "comments": 0,
@@ -1112,11 +1315,14 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "relax",
-            "resort",
-            "mare"
-          ]
+            "travel",
+            "vacation",
+            "romance",
+            "social media",
+            "TikTok trends",
+            "Italian youth culture"
+          ],
+          "ocrInsights": "Il messaggio esprime entusiasmo e affetto verso una destinazione chiamata \"Bluerena\", suggerendo un'esperienza di vacanza piacevole e romantica. Gli hashtag indicano l'intento di raggiungere un pubblico giovane su TikTok, promuovendo la meta come luogo ideale per coppie o amici. La presenza di cuori e occhi a cuore rafforza il tono positivo e l'aspettativa di divertimento."
         },
         {
           "platform": "tiktok",
@@ -1130,11 +1336,11 @@
           "comments": 1,
           "shares": 1,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "Valentino Bluserena"
+          ],
+          "ocrInsights": "The caption \"Valentino Bluserena\" appears to be a name or title. Without additional context or on‑screen text, the sentiment cannot be determined definitively, but it does not convey negativity, so it is classified as neutral. The main topic is the person or entity named Valentino Bluserena. No location or resort names are present. Key insight: the content is centered on this name; lack of further information limits deeper analysis."
         },
         {
           "platform": "tiktok",
@@ -1176,10 +1382,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
-          ]
+            "travel",
+            "vacation",
+            "Italian vacation",
+            "social media engagement"
+          ],
+          "ocrInsights": "No on-screen text provided."
         },
         {
           "platform": "tiktok",
@@ -1195,9 +1403,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "Fortnite",
+            "TikTok India",
+            "gaming",
+            "content creator"
+          ],
+          "ocrInsights": "The post is a TikTok video likely featuring gameplay or commentary about Fortnite, posted by user BLUSERENA. The caption and hashtags suggest a positive, enthusiastic tone aimed at the Indian TikTok community. No specific location is mentioned."
         },
         {
           "platform": "tiktok",
@@ -1210,7 +1421,9 @@
           "likes": 8,
           "comments": 0,
           "shares": 0,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
@@ -1218,7 +1431,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7677283327610473760",
           "date": "2026-08-23T17:40:22.000Z",
           "caption": "#finitalapacchia #finitalestate #villaggiobluserena #finitolapensionecompleta #allinclusive ",
-          "location": "Cala Serena",
+          "location": "Villaggio Blu Serena",
           "views": 37600,
           "likes": 200,
           "comments": 13,
@@ -1226,9 +1439,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "vacation",
+            "all-inclusive",
+            "resort",
+            "travel",
+            "Italy"
+          ],
+          "ocrInsights": "The post promotes an all-inclusive resort experience in Italy, highlighting the brand Finita La Pacchia and Villaggio Blu Serena as key destinations."
         },
         {
           "platform": "tiktok",
@@ -1236,7 +1453,7 @@
           "url": "https://www.tiktok.com/@nunzia.mas/video/7673273472021269793",
           "date": "2026-08-12T22:20:05.000Z",
           "caption": "#babydance #bluserena #puglia #vacanze #torreserena @bluserena ",
-          "location": "Torreserena",
+          "location": "Bluserena",
           "views": 29300,
           "likes": 580,
           "comments": 7,
@@ -1244,11 +1461,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "babydance",
-            "vacanze",
-            "puglia",
-            "intrattenimento"
-          ]
+            "baby dance",
+            "vacation",
+            "family-friendly resort",
+            "Puglia",
+            "Italy"
+          ],
+          "ocrInsights": "The post promotes a family-friendly resort experience in Puglia, Italy, highlighting a playful baby dance activity and encouraging vacation visits to Bluserena in Torreserena."
         },
         {
           "platform": "tiktok",
@@ -1264,10 +1483,15 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "viaggi",
-            "vacanza",
-            "Sardegna"
-          ]
+            "Risposta",
+            "@Stefania Franci",
+            "#calaserena",
+            "#bluserena",
+            "#viaggi",
+            "#agenziaviaggi",
+            "#sardegna"
+          ],
+          "ocrInsights": "In questo contenuto, non è presente alcun messaggio visibile o immagini che potrebbero fornire informazioni sul luogo o sulla situazione. Quindi, non è possibile identificare hint su località."
         },
         {
           "platform": "tiktok",
@@ -1283,12 +1507,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
+            "bluserena",
+            "pescara",
             "esperienza",
             "bellissima"
-          ]
+          ],
+          "ocrInsights": "No on-screen text available."
         },
         {
           "platform": "tiktok",
@@ -1301,7 +1525,10 @@
           "likes": 6793,
           "comments": 0,
           "shares": 2992,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No on-screen text provided for analysis."
         },
         {
           "platform": "tiktok",
@@ -1314,7 +1541,10 @@
           "likes": 22,
           "comments": 1,
           "shares": 6,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": [],
+          "ocrInsights": "No on-screen text available for analysis."
         },
         {
           "platform": "tiktok",
@@ -1328,12 +1558,13 @@
           "comments": 5,
           "shares": 24,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "social",
-            "interazione",
-            "domanda"
-          ]
+            "social interaction",
+            "curiosity",
+            "casual conversation"
+          ],
+          "ocrInsights": "The speaker is playfully asking what the girls are doing, indicating a light‑hearted, informal interaction."
         },
         {
           "platform": "tiktok",
@@ -1349,11 +1580,14 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "viaggio",
-            "virale",
-            "estate"
-          ]
+            "viral content",
+            "travel",
+            "social media",
+            "celebration",
+            "airplane emoji",
+            "fire emoji"
+          ],
+          "ocrInsights": "On-screen text not available"
         },
         {
           "platform": "tiktok",
@@ -1361,7 +1595,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675275046843190561",
           "date": "2026-08-18T07:47:18.000Z",
           "caption": "#bluserena #bluserenaviaggi4stelle #vacanzaitaliana #meravugliosa ",
-          "location": "Bluserena",
+          "location": "bluserena",
           "views": 1176,
           "likes": 20,
           "comments": 0,
@@ -1369,11 +1603,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "viaggio",
-            "meraviglia"
-          ]
+            "bluserena",
+            "bluserenaviaggi4stelle",
+            "vacanzaitaliana",
+            "meravugliosa"
+          ],
+          "ocrInsights": "In questo contenuto, il sentimento sembra positivo perché il tag #bluserena e altri simili indicano un'esperienza di vacanza positiva. Le principali argomenti sembrano riguardare un resort o un'azienda di vacanze con il nome di Bluserena e Bluserenaviaggi4stelle. Non sono presenti hint su luoghi specifici, solo il nome del resort. Alcuni commenti indicano un'impressione meravigliosa dell'esperienza."
         },
         {
           "platform": "tiktok",
@@ -1381,7 +1616,7 @@
           "url": "https://www.tiktok.com/@emanuela.marco.ca/video/7676137769248230689",
           "date": "2026-08-20T15:35:00.000Z",
           "caption": "#neiperteeeeeeeeeeeeeee #estate #bluserena #vacanzaitaliana #virale ",
-          "location": "Bluserena",
+          "location": "Italia",
           "views": 1410,
           "likes": 9,
           "comments": 0,
@@ -1389,10 +1624,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
-          ]
+            "estate (summer)",
+            "vacanza italiana",
+            "viral content",
+            "brand Bluserena",
+            "personal excitement"
+          ],
+          "ocrInsights": "Il post trasmette entusiasmo per una vacanza estiva in Italia, probabilmente legata al resort o al brand Bluserena, con l'obiettivo di diventare virale sui social."
         },
         {
           "platform": "tiktok",
@@ -1408,10 +1646,15 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "puglia",
-            "mare"
-          ]
+            "vacation",
+            "beach",
+            "resort",
+            "travel",
+            "Puglia",
+            "Italy",
+            "summer"
+          ],
+          "ocrInsights": "The post highlights a sunny beach vacation at Torre Serena resort in Puglia, Italy, with a positive tone and emphasis on relaxation and scenic beauty."
         },
         {
           "platform": "tiktok",
@@ -1419,18 +1662,25 @@
           "url": "https://www.tiktok.com/@simycry/video/7672317670280219937",
           "date": "2026-08-10T08:31:07.000Z",
           "caption": "Vacanza finita 🥲.                               #vacanze #bluserena #fyp #voliamoneixte✈🦁🔝💯💥 #trend ",
-          "location": "Bluserena",
+          "location": "bluserena",
           "views": 56300,
           "likes": 325,
           "comments": 50,
           "shares": 251,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "vacanza",
+            "fine vacanza",
             "viaggio",
-            "nostalgia"
-          ]
+            "trend",
+            "social media",
+            "bluserena",
+            "fyp",
+            "emoji di viaggio",
+            "emoji di leone"
+          ],
+          "ocrInsights": "Nessun testo on-screen disponibile; il caption esprime tristezza per la fine delle vacanze, usa hashtag per aumentare la visibilità e include emoji di viaggio e leone, suggerendo un possibile riferimento a un resort o destinazione chiamata 'bluserena'."
         },
         {
           "platform": "tiktok",
@@ -1438,7 +1688,7 @@
           "url": "https://www.tiktok.com/@pepelive84/video/7675104725015989536",
           "date": "2026-08-17T20:46:17.000Z",
           "caption": "#food #bluserenavalentino  #vacanze ",
-          "location": "Blu Serena Valentino",
+          "location": "Bluserenavalentino",
           "views": 851,
           "likes": 5,
           "comments": 2,
@@ -1447,8 +1697,10 @@
           "sentiment": "positive",
           "topics": [
             "food",
+            "Bluserenavalentino",
             "vacanze"
-          ]
+          ],
+          "ocrInsights": "In questo caso, il contenuto sembra essere un'immagine o un'esposizione visiva associata a un'etichetta di Instagram. Non è possibile determinare il sentimento o i luoghi specifici solo basandosi su questo input. Tuttavia, i temi apparentemente sono relativi a cibo, un marchio di abbigliamento (Bluserenavalentino) e una vacanza. La maggior parte dei commenti su questo tipo di contenuto sono positivi, poiché il pubblico sembra essere interessato a vedere immagini di cibo e luoghi di vacanza."
         },
         {
           "platform": "tiktok",
@@ -1456,19 +1708,20 @@
           "url": "https://www.tiktok.com/@17.07.m2/video/7674342359554919713",
           "date": "2026-08-15T19:27:54.000Z",
           "caption": "❤️‍🩹❤️‍🩹 #amiciadistanza #mancate #bluserena",
-          "location": "Bluserena",
+          "location": "Blue Riviera",
           "views": 1049,
           "likes": 136,
           "comments": 24,
           "shares": 7,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
-            "amici",
-            "distanza",
-            "mancate",
-            "bluserena"
-          ]
+            "friendship",
+            "distance",
+            "missing",
+            "healing"
+          ],
+          "ocrInsights": "The caption uses healing heart emojis and hashtags indicating longing for friends at a distance, likely referencing a place called Blue Riviera. It conveys a hopeful, affectionate tone despite the distance."
         },
         {
           "platform": "tiktok",
@@ -1476,7 +1729,7 @@
           "url": "https://www.tiktok.com/@tony_vacant3/video/7663532722010262817",
           "date": "2026-07-17T16:20:59.000Z",
           "caption": "Serenella Parade\n@bluserena ",
-          "location": "Bluserena",
+          "location": "Serenella",
           "views": 5215,
           "likes": 71,
           "comments": 2,
@@ -1484,12 +1737,14 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "fashion",
             "parade",
-            "vacanza",
-            "resort",
-            "musica",
-            "estate"
-          ]
+            "brand promotion",
+            "style",
+            "music",
+            "performance"
+          ],
+          "ocrInsights": "The caption 'Serenella Parade' paired with the @bluserena handle implies a celebratory fashion or lifestyle event, likely showcasing a new collection or brand experience. The tone is upbeat and promotional, suggesting positive brand perception and audience engagement despite the lack of on‑screen text."
         },
         {
           "platform": "tiktok",
@@ -1497,7 +1752,7 @@
           "url": "https://www.tiktok.com/@annapicazio5/video/7677709714905517345",
           "date": "2026-08-24T21:14:58.000Z",
           "caption": "Si torna sempre dove si e stati bene #estate2026 #sibarigreenresort \n#bluserena ",
-          "location": "Bluserena",
+          "location": "Sibari Green Resort",
           "views": 1019,
           "likes": 11,
           "comments": 4,
@@ -1505,10 +1760,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "viaggio",
             "estate",
-            "sibarigreenresort",
-            "bluserena"
-          ]
+            "vacanza",
+            "resort",
+            "memoria"
+          ],
+          "ocrInsights": "Nessun testo disponibile"
         },
         {
           "platform": "tiktok",
@@ -1516,7 +1774,7 @@
           "url": "https://www.tiktok.com/@giorgiadorso3/video/7676841983159045408",
           "date": "2026-08-22T13:07:43.000Z",
           "caption": "#fyp #viral #bluserena #party #villaggio ",
-          "location": "Bluserena",
+          "location": "bluserena",
           "views": 444,
           "likes": 10,
           "comments": 0,
@@ -1524,9 +1782,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
-          ]
+            "party",
+            "blue pool",
+            "viral content",
+            "social media"
+          ],
+          "ocrInsights": "No on-screen text available."
         },
         {
           "platform": "tiktok",
@@ -1534,20 +1795,22 @@
           "url": "https://www.tiktok.com/@enzobottone88/video/7676768943385611553",
           "date": "2026-08-22T08:24:21.000Z",
           "caption": "Risposta a @Francesco Gervasio #viaggi #sardegna #villasimius #calaserena #bluserena ",
-          "location": "Cala Serena",
+          "location": "Sardegna",
           "views": 9283,
           "likes": 58,
           "comments": 4,
           "shares": 15,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "viaggi",
-            "sardegna",
-            "villasimius",
-            "calaserena",
-            "bluserena"
-          ]
+            "Sardegna",
+            "Villasimius",
+            "Cala Serena",
+            "Blu Serena",
+            "social media reply"
+          ],
+          "ocrInsights": "Il post è una risposta a un altro utente e utilizza hashtag legati al viaggio in Sardegna, in particolare alla zona di Villasimius e alle località balneari Cala Serena e Blu Serena, suggerendo un tono positivo e promozionale verso queste mete."
         },
         {
           "platform": "tiktok",
@@ -1555,7 +1818,7 @@
           "url": "https://www.tiktok.com/@_jjaasminn_/video/7675434375231573280",
           "date": "2026-08-18T18:05:30.000Z",
           "caption": "🌄\n#fypp #viral_video #bluserenavillage #puglia ",
-          "location": "Bluserena",
+          "location": "Bluserena Village",
           "views": 1029,
           "likes": 75,
           "comments": 40,
@@ -1563,11 +1826,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "puglia",
-            "sunrise",
-            "relax"
-          ]
+            "travel",
+            "tourism",
+            "viral video",
+            "sunrise scenery",
+            "Italian destinations"
+          ],
+          "ocrInsights": "Il video probabilmente mostra una splendida alba in Puglia, evidenziando il resort Bluserena Village. L'uso dell'emoji 🌄 e degli hashtag suggerisce un contenuto positivo e promozionale, mirato a diventare virale e a far conoscere la località come meta turistica."
         },
         {
           "platform": "tiktok",
@@ -1583,9 +1848,10 @@
           "imageUrl": null,
           "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "fine",
-            "ricomincio"
+            "vacation",
+            "post-vacation chores",
+            "cleaning",
+            "routine restart"
           ]
         },
         {
@@ -1599,7 +1865,9 @@
           "likes": 86,
           "comments": 6,
           "shares": 16,
-          "imageUrl": null
+          "imageUrl": null,
+          "sentiment": "neutral",
+          "topics": []
         },
         {
           "platform": "tiktok",
