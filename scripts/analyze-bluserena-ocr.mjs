@@ -13,6 +13,10 @@ const __dirname = path.dirname(__filename);
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 
+// API keys
+const apiKey = process.env.OPENROUTER_API_KEY;
+const groqApiKey = process.env.GROQ_API_KEY;
+
 // Intervallo date per analisi (luglio-agosto 2025 e 2026)
 const DATE_RANGES = [
   { start: new Date("2025-07-01"), end: new Date("2025-08-31") },
@@ -55,7 +59,7 @@ async function extractOCRText(videoUrl) {
   }
 }
 
-async function sendOCRToGroq(caption, ocrData) {
+async function sendOCRToGroq(caption, ocrData, apiKey, groqApiKey) {
   const combined = `
 Caption: ${caption}
 On-screen text: ${ocrData.textOnScreen}
@@ -69,15 +73,29 @@ Analizza questo contenuto e dammi:
 Rispondi in JSON: {"sentiment": "...", "topics": [...], "locations": [...], "onScreenInsights": "..."}
 `;
 
+  const parse = (text) => {
+    try {
+      const json = JSON.parse(text.trim());
+      if (!json.sentiment) return null;
+      return json;
+    } catch {
+      return null;
+    }
+  };
+
   try {
     const response = await chatCompletionWithFallback([
       {
         role: "user",
         content: combined,
       },
-    ]);
+    ], {
+      apiKey,
+      groqApiKey,
+      parse,
+    });
 
-    return JSON.parse(response);
+    return response;
   } catch (err) {
     console.error(`    [ERROR] Groq analysis failed:`, err.message);
     return null;
@@ -134,8 +152,8 @@ async function analyzeBlueserenaOCR() {
 
         postsToAnalyze++;
 
-        if (postsToAnalyze > 10) {
-          console.log(`  ⚠️  Limiting to 10 posts per run (cost control)`);
+        if (postsToAnalyze > 100) {
+          console.log(`  ⚠️  Limiting to 100 posts per run (cost control)`);
           break;
         }
 
@@ -156,7 +174,7 @@ async function analyzeBlueserenaOCR() {
         }
 
         // Send combined caption + OCR to Groq (or caption-only if OCR unavailable)
-        const analysis = await sendOCRToGroq(account.caption, ocrData);
+        const analysis = await sendOCRToGroq(account.caption, ocrData, apiKey, groqApiKey);
 
         if (analysis) {
           console.log(`    ✅ Analysis complete`);
@@ -185,7 +203,7 @@ async function analyzeBlueserenaOCR() {
         }
       }
 
-      if (postsToAnalyze > 10) break;
+      if (postsToAnalyze > 100) break;
     }
 
     // Summary
