@@ -37,7 +37,7 @@ function isInDateRange(dateStr) {
 async function downloadVideoAndExtractOCR(videoUrl) {
   console.log(`  📥 Downloading video for OCR...`);
 
-  const tempDir = path.join(path.dirname(import.meta.url), "..", ".tmp", "ocr");
+  const tempDir = path.join(__dirname, "..", ".tmp", "ocr");
   if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
 
   const videoPath = path.join(tempDir, `${Date.now()}.mp4`);
