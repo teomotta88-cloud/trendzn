@@ -14,7 +14,10 @@ import {
   Share2,
   Smile,
   Tag,
+  Check,
+  AlertCircle,
 } from "lucide-react";
+import { verifyBluserenaPost, type VerificationStatus } from "@/lib/trends";
 
 // Dettaglio canale Bluserena-monitoring — copia di aspi-monitoring.$id.tsx,
 // legge dallo store dedicato (bluserenaCanali, bundlato da bluserena-monitoring.json).
@@ -30,6 +33,7 @@ export const Route = createFileRoute("/bluserena-monitoring/$id")({
 });
 
 const POST_URL_RE = /\/(p|reel|reels|video|photo|watch|tv|status)\//i;
+type VerificationFilter = "all" | "confirmed" | "unconfirmed";
 
 // Riconosce le pagine hashtag (Instagram /explore/tags/<tag>/, TikTok
 // /tag/<tag>, X /hashtag/<tag>) per distinguerle dai profili in fase di
@@ -69,6 +73,38 @@ function Page() {
   const canale: CanaleInspo | undefined = bluserenaCanali.find((c) => String(c.id) === String(id));
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [search, setSearch] = useState("");
+  const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("all");
+  const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
+
+  const toggleVerificationStatus = async (postUrl: string, currentStatus: VerificationStatus) => {
+    if (!canale) return;
+
+    const newStatus: VerificationStatus = currentStatus === "confirmed" ? "unconfirmed" : "confirmed";
+    setUpdatingUrl(postUrl);
+
+    try {
+      const res = await fetch("/api/public/hooks/update-bluserena-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          channelId: canale.id,
+          postUrl,
+          verificationStatus: newStatus,
+        }),
+      });
+
+      if (res.ok) {
+        // Ricarica la pagina per mostrare il cambiamento
+        window.location.reload();
+      } else {
+        console.error("Errore aggiornamento verifica:", await res.text());
+      }
+    } catch (err) {
+      console.error("Errore aggiornamento verifica:", err);
+    } finally {
+      setUpdatingUrl(null);
+    }
+  };
 
   const allPosts = useMemo(() => {
     if (!canale) return [];
@@ -81,12 +117,26 @@ function Page() {
   }, [canale]);
 
   const filteredPosts = useMemo(() => {
-    if (!search) return allPosts;
-    const q = search.toLowerCase();
-    return allPosts.filter(
-      (a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q),
-    );
-  }, [allPosts, search]);
+    let posts = allPosts;
+
+    // Filtro search
+    if (search) {
+      const q = search.toLowerCase();
+      posts = posts.filter(
+        (a) => a.caption?.toLowerCase().includes(q) || a.handle?.toLowerCase().includes(q),
+      );
+    }
+
+    // Filtro verification
+    if (verificationFilter !== "all") {
+      posts = posts.filter((a) => {
+        const status = a.verificationStatus || verifyBluserenaPost(a.caption);
+        return status === verificationFilter;
+      });
+    }
+
+    return posts;
+  }, [allPosts, search, verificationFilter]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
@@ -158,22 +208,61 @@ function Page() {
       </header>
 
       <section className="space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="font-display text-xl font-semibold">Ultimi contenuti</h2>
-          {allPosts.length > 0 && (
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
-                <input
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  placeholder="Cerca nelle caption…"
-                  className="w-56 rounded-lg border border-border bg-background/60 py-1.5 pl-8 pr-3 text-xs outline-none focus:border-primary"
-                />
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="font-display text-xl font-semibold">Ultimi contenuti</h2>
+            {allPosts.length > 0 && (
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder="Cerca nelle caption…"
+                    className="w-56 rounded-lg border border-border bg-background/60 py-1.5 pl-8 pr-3 text-xs outline-none focus:border-primary"
+                  />
+                </div>
+                <span className="text-xs text-muted-foreground">
+                  {Math.min(visibleCount, filteredPosts.length)} / {filteredPosts.length}
+                </span>
               </div>
-              <span className="text-xs text-muted-foreground">
-                {Math.min(visibleCount, filteredPosts.length)} / {filteredPosts.length}
-              </span>
+            )}
+          </div>
+
+          {/* Verification filter */}
+          {allPosts.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-muted-foreground">Verifica BS:</span>
+              <button
+                onClick={() => setVerificationFilter("all")}
+                className={`px-2.5 py-1 text-xs rounded-full font-medium transition ${
+                  verificationFilter === "all"
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                }`}
+              >
+                Tutti
+              </button>
+              <button
+                onClick={() => setVerificationFilter("confirmed")}
+                className={`px-2.5 py-1 text-xs rounded-full font-medium transition flex items-center gap-1 ${
+                  verificationFilter === "confirmed"
+                    ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                }`}
+              >
+                <Check className="size-3" /> Confermati
+              </button>
+              <button
+                onClick={() => setVerificationFilter("unconfirmed")}
+                className={`px-2.5 py-1 text-xs rounded-full font-medium transition flex items-center gap-1 ${
+                  verificationFilter === "unconfirmed"
+                    ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                }`}
+              >
+                <AlertCircle className="size-3" /> Non confermati
+              </button>
             </div>
           )}
         </div>
@@ -210,26 +299,54 @@ function Page() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {visiblePosts.map((a, i) => {
                 const dateLabel = formatDate(a.date);
+                const status = a.verificationStatus || verifyBluserenaPost(a.caption);
                 return (
                   <article
                     key={i}
                     className="space-y-2 rounded-2xl border border-border bg-card p-3"
                   >
                     <SocialEmbed url={a.url} />
-                    <div className="flex items-center justify-between px-1 text-xs">
-                      <span className="inline-flex items-center gap-1 text-muted-foreground">
-                        <PlatformIcon platform={detectPlatform(a.url)} className="size-3" />
-                        {detectPlatform(a.url)}
-                      </span>
-                      {dateLabel && <span className="text-muted-foreground">{dateLabel}</span>}
-                      <a
-                        href={a.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-primary hover:underline"
-                      >
-                        Apri ↗
-                      </a>
+                    <div className="flex flex-col gap-2 px-1">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="inline-flex items-center gap-1 text-muted-foreground">
+                          <PlatformIcon platform={detectPlatform(a.url)} className="size-3" />
+                          {detectPlatform(a.url)}
+                        </span>
+                        {dateLabel && <span className="text-muted-foreground">{dateLabel}</span>}
+                        <a
+                          href={a.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          Apri ↗
+                        </a>
+                      </div>
+                      {/* Verification badge - clickable to toggle */}
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => toggleVerificationStatus(a.url, status)}
+                          disabled={updatingUrl === a.url}
+                          className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium transition hover:opacity-80 disabled:opacity-50 ${
+                            status === "confirmed"
+                              ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
+                              : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
+                          }`}
+                          title="Click to toggle verification status"
+                        >
+                          {status === "confirmed" ? (
+                            <>
+                              <Check className="size-3" />
+                              BS Confirmed
+                            </>
+                          ) : (
+                            <>
+                              <AlertCircle className="size-3" />
+                              BS Unconfirmed
+                            </>
+                          )}
+                        </button>
+                      </div>
                     </div>
                     {(a.handle ||
                       a.location ||
