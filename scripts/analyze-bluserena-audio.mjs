@@ -33,41 +33,58 @@ function isInDateRange(dateStr) {
 async function downloadVideo(videoUrl, outputPath) {
   console.log(`  📥 Downloading: ${videoUrl}`);
 
-  // In production: use yt-dlp or ffmpeg to download
-  // For MVP: placeholder (requires external binaries)
-  // TODO: Integrate with yt-dlp for video download
-
-  return {
-    success: false,
-    reason: "yt-dlp not configured in MVP",
-  };
+  try {
+    const { execSync } = await import("child_process");
+    execSync(`yt-dlp -f best -o "${outputPath}" "${videoUrl}"`, {
+      stdio: "pipe",
+      timeout: 30000,
+    });
+    return { success: true };
+  } catch (err) {
+    console.log(`    ⚠️  yt-dlp not available or download failed: ${String(err).slice(0, 50)}`);
+    return { success: false, reason: "yt-dlp unavailable" };
+  }
 }
 
 async function extractAudio(videoPath, audioPath) {
   console.log(`  🎵 Extracting audio...`);
 
-  // In production: ffmpeg -i video.mp4 -q:a 0 -map a audio.mp3
-  // For MVP: placeholder (requires ffmpeg)
-  // TODO: Add ffmpeg support
-
-  return {
-    success: false,
-    reason: "ffmpeg not configured in MVP",
-  };
+  try {
+    const { execSync } = await import("child_process");
+    execSync(`ffmpeg -i "${videoPath}" -q:a 0 -map a "${audioPath}" -y 2>&1 | grep -i "error" || true`, {
+      stdio: "pipe",
+      timeout: 30000,
+    });
+    if (fs.existsSync(audioPath)) {
+      return { success: true };
+    }
+    return { success: false, reason: "ffmpeg output file not created" };
+  } catch (err) {
+    console.log(`    ⚠️  ffmpeg not available or extraction failed`);
+    return { success: false, reason: "ffmpeg unavailable" };
+  }
 }
 
 async function transcribeAudio(audioPath) {
   console.log(`  🎤 Transcribing audio...`);
 
-  // In production: Send to Groq Whisper API or similar
-  // For MVP: placeholder (requires audio handling)
-
-  return {
-    success: false,
-    transcript: null,
-    reason: "Audio API not configured in MVP",
-    confidence: 0,
-  };
+  try {
+    // Groq Whisper API transcription (requires GROQ_API_KEY)
+    // For MVP: Returns empty if audio not processable
+    return {
+      success: false,
+      transcript: null,
+      reason: "Whisper API not implemented",
+      confidence: 0,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      transcript: null,
+      reason: "Transcription failed",
+      confidence: 0,
+    };
+  }
 }
 
 async function sendAudioToGroq(caption, transcription, audioInsights) {
@@ -165,43 +182,51 @@ async function analyzeBlueserenaAudio() {
           `\n  🎯 Analyzing: ${account.url} (${new Date(account.date).toLocaleDateString()})`
         );
 
-        // Download video
-        const vidPath = path.join(TEMP_DIR, `${Date.now()}.mp4`);
-        const dlRes = await downloadVideo(account.url, vidPath);
+        let transcribeRes = { success: false, transcript: null };
+        let audioNote = "Audio extraction unavailable (ffmpeg/yt-dlp)";
 
-        if (!dlRes.success) {
-          console.log(`    ⚠️  Video download skipped: ${dlRes.reason}`);
-          continue;
+        // Try to download and extract audio (fallback to caption-only if fails)
+        try {
+          const vidPath = path.join(TEMP_DIR, `${Date.now()}.mp4`);
+          const dlRes = await downloadVideo(account.url, vidPath);
+
+          if (dlRes.success) {
+            const audioPath = path.join(TEMP_DIR, `${Date.now()}.mp3`);
+            const extractRes = await extractAudio(vidPath, audioPath);
+
+            if (extractRes.success) {
+              transcribeRes = await transcribeAudio(audioPath);
+              audioNote = transcribeRes.success
+                ? `Transcript: "${transcribeRes.transcript?.slice(0, 50)}..."`
+                : "Audio extracted but transcription failed";
+            } else {
+              audioNote = `Audio extraction failed: ${extractRes.reason}`;
+            }
+
+            // Cleanup temp files
+            try {
+              if (fs.existsSync(vidPath)) fs.unlinkSync(vidPath);
+              if (extractRes.success && fs.existsSync(audioPath)) fs.unlinkSync(audioPath);
+            } catch {}
+          } else {
+            audioNote = `Video download unavailable (${dlRes.reason})`;
+          }
+        } catch (err) {
+          audioNote = `Audio processing error: ${String(err).slice(0, 50)}`;
         }
 
-        // Extract audio
-        const audioPath = path.join(TEMP_DIR, `${Date.now()}.mp3`);
-        const extractRes = await extractAudio(vidPath, audioPath);
-
-        if (!extractRes.success) {
-          console.log(`    ⚠️  Audio extraction skipped: ${extractRes.reason}`);
-          continue;
-        }
-
-        // Transcribe
-        const transcribeRes = await transcribeAudio(audioPath);
-
-        if (!transcribeRes.success) {
-          console.log(`    ℹ️  Transcription skipped: ${transcribeRes.reason}`);
-        }
-
-        // Analyze combined audio + caption
+        // Analyze caption + audio (fallback to caption-only if audio unavailable)
+        console.log(`    ℹ️  ${audioNote}`);
         const analysis = await sendAudioToGroq(
           account.caption,
           transcribeRes.transcript,
-          `Audio detected: ${transcribeRes.success ? "Yes" : "No (silence or error)"}`
+          audioNote
         );
 
         if (analysis) {
-          console.log(`    ✅ Audio analysis complete`);
+          console.log(`    ✅ Analysis complete`);
           console.log(`       Sentiment: ${analysis.sentiment}`);
           console.log(`       Topics: ${analysis.topics?.join(", ")}`);
-          console.log(`       Audio: ${analysis.audioSentiment}`);
           console.log(`       Engagement: ${analysis.engagement}/10`);
 
           // Update account with audio data
@@ -222,12 +247,6 @@ async function analyzeBlueserenaAudio() {
 
         processedCount++;
 
-        // Cleanup temp files
-        try {
-          if (fs.existsSync(vidPath)) fs.unlinkSync(vidPath);
-          if (fs.existsSync(audioPath)) fs.unlinkSync(audioPath);
-        } catch {}
-
         // Rate limit
         if (processedCount % 3 === 0) {
           console.log(`  ⏳ Cooldown (3s)...`);
@@ -241,10 +260,10 @@ async function analyzeBlueserenaAudio() {
     // Summary
     console.log(`\n\n📈 Summary:`);
     console.log(`  Total posts: ${totalPosts}`);
-    console.log(`  Videos processed: ${processedCount}`);
+    console.log(`  Posts analyzed: ${processedCount}`);
     console.log(`  Successful: ${successCount}`);
 
-    if (processedCount > 0) {
+    if (successCount > 0) {
       console.log(`\n💾 Committing results to GitHub...`);
 
       const content = Buffer.from(JSON.stringify(store, null, 2)).toString(
@@ -255,20 +274,21 @@ async function analyzeBlueserenaAudio() {
         owner: "teomotta88-cloud",
         repo: "trendzn",
         path: STORE_PATH,
-        message: `chore: add audio analysis to Bluserena posts [trendzn-bot]
+        message: `chore: audio analysis update to Bluserena posts [trendzn-bot]
 
-Analyzed ${successCount}/${processedCount} TikTok/IG Reels from July-August 2025/2026
-- Extracted audio from video files (ffmpeg)
-- Transcribed speech via Groq Whisper API
-- Analyzed audio sentiment, engagement, topics
-- Updated audioAnalysis field with transcript, sentiment, engagement score`,
+Analyzed ${successCount}/${processedCount} posts from July-August 2025/2026
+- Attempted audio extraction (ffmpeg/yt-dlp)
+- Fallback to caption-only analysis if audio unavailable
+- Updated sentiment, engagement scores, audioAnalysis field`,
         content,
         sha: fileData.sha,
       });
 
       console.log(`✅ Committed successfully`);
+    } else if (processedCount > 0) {
+      console.log(`⚠️  ${processedCount} posts processed but analysis failed`);
     } else {
-      console.log(`⚠️  No videos to analyze`);
+      console.log(`ℹ️  No posts matching criteria (July-Aug 2025/2026, video type, not analyzed)`);
     }
 
     // Cleanup temp dir
