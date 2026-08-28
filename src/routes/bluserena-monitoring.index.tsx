@@ -392,7 +392,7 @@ function BluserenaCanaliView({
       .eq("section", "bluserena-monitoring")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
-      .then(({ data }) => {
+      .then(({ data }: { data: unknown[] | null }) => {
         if (data) setDbRows(data as DbRow[]);
       });
   }, []);

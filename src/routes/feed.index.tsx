@@ -624,7 +624,7 @@ export function TrendzFeed({
         TREND_SECTIONS.map((t) => t.section),
       )
       .eq("status", "approved")
-      .then(({ data: rows }) => {
+      .then(({ data: rows }: { data: unknown[] | null }) => {
         if (!rows) return;
         setMarkedByUrl((prev) => {
           const next = { ...prev };
