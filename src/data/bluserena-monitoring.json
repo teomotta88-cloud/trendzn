@@ -20,12 +20,12 @@
           "likes": 12,
           "comments": 1,
           "shares": 1,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "resort"
+            "resort",
+            "hotel",
+            "gossip",
+            "viaggio"
           ],
           "ocrInsights": "No on-screen text available."
         },
@@ -44,7 +44,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "bluserena"
+            "bluserena",
+            "beach",
+            "relax"
           ],
           "ocrInsights": "In questo contesto, il contenuto sembra essere una descrizione di un'esperienza vacanze o di un luogo relativamente piacevole, probabilmente a Bluserena (una località italiana). Il tag #vacanza indica che il contenuto riguarda un'esperienza di vacanza. Non è presente informazione su un'immagine o un'altra immagine visiva, quindi le insights riguardanti il contesto on-screen sono mancanti."
         },
@@ -116,9 +118,7 @@
           "topics": [
             "vacanza",
             "mare",
-            "relax",
-            "sport",
-            "estate"
+            "relax"
           ],
           "ocrInsights": "In questo contenuto, sembra essere presente un video viralizzato riguardante un evento sportivo o attività divertente in un resort o luogo di vacanza in Sardegna, particolarmente in Bluserena. Il contenuto sembra essere positivo e divertente, con argomenti come Mirkosport e vedute turistiche dell'isola. Le location menzionate sono Bluserena e Sardegna."
         },
@@ -180,7 +180,7 @@
           "url": "https://www.tiktok.com/@pennisi.l/video/7677323744783682849",
           "date": "2026-08-23T20:17:09.000Z",
           "caption": "#serenella #resort #bluserena #mare #animazione ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 3813,
           "imageUrl": null,
           "likes": 46,
@@ -189,7 +189,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "animazione",
+            "resort",
+            "relax"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -240,16 +243,17 @@
           "url": "https://www.tiktok.com/@enzobottone88/video/7677337811330010401",
           "date": "2026-08-23T21:11:44.000Z",
           "caption": "Risposta a @giù81 #recensione #bluserena #calaserena #sardegna #viaggi ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 8067,
           "imageUrl": null,
           "likes": 27,
           "comments": 26,
           "shares": 2,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare"
+            "recensione",
+            "viaggi",
+            "sardegna"
           ],
           "ocrInsights": "The caption indicates a reply to a review about the Blue Serena resort located in Cala Serena, Sardinia, suggesting a discussion about travel experiences in that area."
         },
@@ -334,7 +338,7 @@
           "url": "https://www.tiktok.com/@janyesanty/video/7676967856428322080",
           "date": "2026-08-22T21:16:07.000Z",
           "caption": "Siamo sicuri che i video pubblicati non avessero un secondo fine ? Per noi @bluserena sempre al TOP⭐️⭐️⭐️⭐️⭐️#vacanze #mare #resort #bluserena #holidays ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 121171,
           "likes": 1125,
           "comments": 201,
@@ -342,8 +346,11 @@
           "shares": 208,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "vacanze",
+            "mare",
+            "resort",
+            "holidays",
+            "bluserena"
           ],
           "ocrInsights": "Il contenuto è un post social che elogia il resort @bluserena con 5 stelle, associandolo a temi di vacanza e mare, pur includendo una domanda retorica o ironica sulla natura dei video pubblicati."
         },
@@ -467,10 +474,11 @@
           "shares": 55,
           "sentiment": "positive",
           "topics": [
-            "divertimento",
             "bambini",
+            "divertimento",
             "vacanza",
-            "famiglia"
+            "resort",
+            "4 stelle"
           ],
           "ocrInsights": "The post highlights a 4‑star resort that offers pure fun for children, emphasizing a positive, enjoyable experience."
         },
@@ -1115,9 +1123,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "teamwork",
+            "lavoro",
+            "resort",
+            "calabria"
           ],
           "ocrInsights": "Promotes Sibari Green Resort as a dream team destination in Calabria, encouraging visitors that challenges are worthwhile and that the resort offers a unique, rewarding experience."
         },
@@ -1135,11 +1144,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
+            "gratitudine",
             "famiglia",
-            "ospitalità",
-            "ringraziamento",
-            "resort"
+            "vacanza",
+            "resort",
+            "Sibari"
           ],
           "ocrInsights": "Non sono in grado di analizzare il contenuto visivo. Questo post è basato su testo e tag. Le risposte sono basate su questi elementi."
         },
@@ -1158,7 +1167,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "relax"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -1190,7 +1200,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675662478197460257",
           "date": "2026-08-19T08:50:40.000Z",
           "caption": "#divertimentopurobambini #bluserena #bluserenaviaggi4stelle #stupendo #vacanzaitaliana ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 1829,
           "likes": 19,
           "comments": 3,
@@ -1198,9 +1208,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "divertimento",
+            "bambini",
             "vacanza",
-            "mare",
-            "relax"
+            "italiana",
+            "4stelle"
           ],
           "ocrInsights": "The post promotes a 4‑star Italian resort (Blu Sfera) as a wonderful destination for families, emphasizing fun for children and an overall positive experience."
         },
@@ -1210,7 +1222,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675649450190130465",
           "date": "2026-08-19T08:00:07.000Z",
           "caption": "#bluserena #bluserenaviaggi4stelle ##vacanzaitaliana #stupendo #maritoemoglie ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 1170,
           "likes": 28,
           "comments": 2,
@@ -1219,10 +1231,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "4stelle",
-            "italia"
+            "coppia",
+            "4 stelle",
+            "italia",
+            "mare"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -1232,7 +1244,7 @@
           "url": "https://www.tiktok.com/@mircorusso84/video/7673626427337477409",
           "date": "2026-08-13T21:09:42.000Z",
           "caption": "Sigla #BluSerena 👆👆👆\nIneguagliabili ✅✅✅ @bluserena ",
-          "location": "BluSerena",
+          "location": "Bluserena",
           "views": 633,
           "likes": 12,
           "comments": 0,
@@ -1241,9 +1253,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "blu"
+            "resort",
+            "musica",
+            "sigla",
+            "bluserena"
           ],
           "ocrInsights": "No on-screen text available"
         },
@@ -1285,7 +1298,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7676951526513904928",
           "date": "2026-08-22T20:12:48.000Z",
           "caption": "#amore #maritomoglie #persempre #villaggiobluserena #bluserena ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 1157,
           "likes": 22,
           "comments": 0,
@@ -1293,8 +1306,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "matrimonio",
+            "coppia",
+            "amore",
             "vacanza",
-            "mare"
+            "resort"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -1350,11 +1366,10 @@
           "comments": 1,
           "shares": 1,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
+            "moda",
+            "abbigliamento",
             "resort"
           ],
           "ocrInsights": "No on-screen text available."
@@ -1400,10 +1415,15 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "mare",
+            "relax",
             "Italia",
-            "resort",
-            "4 stelle",
-            "viaggio"
+            "turismo",
+            "vacanze",
+            "costiere",
+            "spiaggia",
+            "lago",
+            "natura"
           ],
           "ocrInsights": "In questo contenuto, il sentimento sembra positivo grazie alla presenza di parole come \"vacanza\" e \"Italia\". Le principali argomenti sembrano riguardare una vacanza in Italia, probabilmente in Neive, con un resort o un albergo con 4 stelle (bluserenaviaggi4stelle). La foto sembra essere di un viaggio o di una vacanza in Italia, con un tag #neiperteeeeeeeeeeeeeee e #fhy✈️🔥 che sembrano indicare un'esperienza di viaggio e divertimento. Non sono presenti hint su luoghi specifici, ma sembra che sia un post relativo a un viaggio in Italia."
         },
@@ -1413,7 +1433,7 @@
           "url": "https://www.tiktok.com/@antoniocinzia/video/7676009657307041046",
           "date": "2026-08-20T07:18:04.000Z",
           "caption": "BLUSERENA❤️ #foru #fortnite #fouryou #foruyou #tiktokindia_ ",
-          "location": "Bluserena",
+          "location": "BLUSERENA",
           "views": 2273,
           "likes": 30,
           "comments": 2,
@@ -1421,10 +1441,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "social_media",
-            "gaming"
+            "BLUSERENA",
+            "fortnite",
+            "vacanza"
           ],
           "ocrInsights": "No on-screen text available; content relies on hashtags and caption for context."
         },
@@ -1453,18 +1472,18 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7677283327610473760",
           "date": "2026-08-23T17:40:22.000Z",
           "caption": "#finitalapacchia #finitalestate #villaggiobluserena #finitolapensionecompleta #allinclusive ",
-          "location": "Villaggio Bluserena",
+          "location": "Bluserena",
           "views": 37600,
           "likes": 200,
           "comments": 13,
           "shares": 76,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "fine estate",
-            "pensione completa",
-            "all inclusive",
-            "vacanza"
+            "vacanza",
+            "estate",
+            "allinclusive",
+            "promo"
           ],
           "ocrInsights": "The post promotes an all-inclusive resort experience in Italy, highlighting the brand Finita La Pacchia and Villaggio Blu Serena as key destinations."
         },
@@ -1474,7 +1493,7 @@
           "url": "https://www.tiktok.com/@nunzia.mas/video/7673273472021269793",
           "date": "2026-08-12T22:20:05.000Z",
           "caption": "#babydance #bluserena #puglia #vacanze #torreserena @bluserena ",
-          "location": "Torre Serena",
+          "location": "Bluserena",
           "views": 29300,
           "likes": 580,
           "comments": 7,
@@ -1482,10 +1501,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "babydance",
-            "vacanze",
-            "puglia",
-            "intrattenimento"
+            "vacanza",
+            "mare",
+            "relax",
+            "baby dance"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -1501,11 +1520,12 @@
           "comments": 18,
           "shares": 20,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
             "viaggi",
-            "Sardegna"
+            "agenziaviaggi",
+            "sardegna",
+            "risposta"
           ],
           "ocrInsights": "In questo contenuto, non è presente alcun messaggio visibile o immagini che potrebbero fornire informazioni sul luogo o sulla situazione. Quindi, non è possibile identificare hint su località."
         },
@@ -1583,11 +1603,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "friends",
-            "summer",
-            "beach"
+            "estate",
+            "divertimento",
+            "resort"
           ],
           "ocrInsights": "The caption is a playful, informal question directed at a group of girls, likely posted by or tagging @bluserena. It reflects casual engagement and lighthearted tone, with no specific location mentioned."
         },
@@ -1627,9 +1645,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "resort",
-            "viaggio",
-            "italiana"
+            "mare",
+            "relax",
+            "luxe"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -1648,10 +1666,15 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "estate",
             "mare",
             "relax",
-            "italia"
+            "Italia",
+            "costiera",
+            "costiera mediterranea",
+            "costiera amalfitana",
+            "costiera ligure",
+            "costiera toscana",
+            "costiera pugliese"
           ],
           "ocrInsights": "In questo contenuto, il sentimento sembra positivo perché il hashtag #neiperteeeeeeeeeeeeeee e #vacanzaitaliana indicano un'esperienza di vacanza e piacere. Le principali argomenti sono: Neiperteeeeeeeeeeeeeee, Estate, Bluserena, Vacanza italiana e Virale. Le location menzionate sono Neiperteeeeeeeeeeeeeee e Bluserena, che sembrano destinazioni turistiche in Italia. Non è presente alcun messaggio specifico o informazione su un'azienda o un prodotto, quindi non è possibile ottenere ulteriori insights dall'on-screen text."
         },
@@ -1682,18 +1705,36 @@
           "url": "https://www.tiktok.com/@simycry/video/7672317670280219937",
           "date": "2026-08-10T08:31:07.000Z",
           "caption": "Vacanza finita 🥲.                               #vacanze #bluserena #fyp #voliamoneixte✈🦁🔝💯💥 #trend ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 56300,
           "likes": 325,
           "comments": 50,
           "shares": 251,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "vacanza",
-            "viaggio",
-            "nostalgia",
-            "fine_estate"
+            "mare",
+            "relax",
+            "Bluserena",
+            "Cala Serena",
+            "Serena Majestic",
+            "Serena Majestic Hotel",
+            "SerenaResort",
+            "Serena Hotel",
+            "Calanè",
+            "Calànè Resort",
+            "GranSerena",
+            "Sibari Green",
+            "Sibari Green Resort",
+            "Valentino",
+            "Kalidia",
+            "Alborèa",
+            "Ethra",
+            "Ethra Reserve",
+            "Is Serenas",
+            "Is Serenas Badesi",
+            "IsSerenas"
           ],
           "ocrInsights": "Not available"
         },
@@ -1703,7 +1744,7 @@
           "url": "https://www.tiktok.com/@pepelive84/video/7675104725015989536",
           "date": "2026-08-17T20:46:17.000Z",
           "caption": "#food #bluserenavalentino  #vacanze ",
-          "location": "Valentino",
+          "location": "Blu Serena Valentino",
           "views": 851,
           "likes": 5,
           "comments": 2,
@@ -1712,8 +1753,7 @@
           "sentiment": "positive",
           "topics": [
             "food",
-            "vacanze",
-            "resort"
+            "vacanze"
           ],
           "ocrInsights": "No on-screen text available."
         },
@@ -1744,7 +1784,7 @@
           "url": "https://www.tiktok.com/@tony_vacant3/video/7663532722010262817",
           "date": "2026-07-17T16:20:59.000Z",
           "caption": "Serenella Parade\n@bluserena ",
-          "location": "Bluserena",
+          "location": "Serenella Parade",
           "views": 5215,
           "likes": 71,
           "comments": 2,
@@ -1753,10 +1793,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "resort",
-            "parata",
-            "evento",
-            "divertimento"
+            "mare",
+            "relax"
           ],
           "ocrInsights": "No on-screen text available."
         },
@@ -1774,10 +1812,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "estate",
             "vacanza",
-            "resort",
-            "ritorno"
+            "mare",
+            "relax",
+            "estate"
           ],
           "ocrInsights": "Nessun testo disponibile"
         },
@@ -1814,13 +1852,16 @@
           "comments": 4,
           "shares": 15,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "viaggi",
             "sardegna",
             "villasimius",
-            "calaserena",
-            "bluserena"
+            "cala serena",
+            "blu serena",
+            "vacanza",
+            "mare",
+            "relax"
           ],
           "ocrInsights": "The post is a reply to @Francesco Gervasio, highlighting travel content related to Sardinia, specifically the town of Villasimius and its nearby beaches Cala Serena and Blu Serena. No additional on-screen text is provided."
         },
@@ -1839,9 +1880,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "puglia",
-            "resort",
-            "viral"
+            "mare",
+            "relax"
           ],
           "ocrInsights": "In questo contenuto, non è presente alcun messaggio o immagine visibile che potrebbe fornire informazioni sui key insights. Solo il testo 'On-screen text: [not available]' indica che non è disponibile alcun messaggio visibile."
         },
@@ -1857,12 +1897,21 @@
           "comments": 5,
           "shares": 2,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "vacanza",
-            "stiro",
-            "pulizie",
-            "ritorno a casa"
+            "mare",
+            "relax",
+            "bluserena",
+            "calaserena",
+            "serenaresort",
+            "granserena",
+            "alborea",
+            "alboreaecolodge",
+            "ethra",
+            "ethrareserve",
+            "isserenas",
+            "isserenasbadesi"
           ]
         },
         {
@@ -1990,11 +2039,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
+            "buonlunedi",
             "resort",
-            "bluserena"
+            "mare"
           ]
         },
         {
@@ -2014,8 +2061,7 @@
             "vacanza",
             "mare",
             "party",
-            "colore",
-            "divertimento"
+            "colori"
           ]
         },
         {
@@ -2024,19 +2070,17 @@
           "url": "https://www.tiktok.com/@christiangiangrande_/video/7677548771726740768",
           "date": "2026-08-24T10:50:27.000Z",
           "caption": "Al cala succede di tutto🫨😫\n#viral #fyp #animazione #flypシ #perte @Simon_Du_Bois_Official \n@Federica Privitera @bluserena ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 562,
           "likes": 31,
           "comments": 3,
           "shares": 3,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "animazione",
-            "viral",
-            "fyp",
-            "resort",
-            "intrattenimento"
+            "vacanza",
+            "mare",
+            "relax"
           ]
         },
         {
@@ -2054,9 +2098,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
+            "resort",
+            "animazione",
             "village",
             "licata"
           ]
@@ -2073,11 +2116,11 @@
           "comments": 47,
           "shares": 384,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "negative",
           "topics": [
-            "vacanze",
-            "lavatrici",
-            "rientro",
+            "vacanza",
+            "lavanderia",
+            "valigie",
             "allinclusive",
             "villaggio"
           ]
@@ -2097,10 +2140,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "natura",
-            "colori",
+            "puglia",
             "villaggio",
-            "puglia"
+            "cromie",
+            "clorophilla"
           ]
         },
         {
@@ -2117,10 +2160,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
+            "vacanze",
+            "ferragosto",
+            "vacanzeitaliane",
             "relax",
-            "Bluserena"
+            "bluserena"
           ]
         },
         {
@@ -2129,7 +2173,7 @@
           "url": "https://www.tiktok.com/@sasy19263/video/7670181274501303584",
           "date": "2026-08-04T14:20:47.000Z",
           "caption": "#granserenahotel #bluserena #puglia #torrecannehotelserena☀️☀️🤩🤩🤩 #estate2026🏝🏖🏝🏖 ",
-          "location": "GranSerena",
+          "location": "Gran Serena Hotel",
           "views": 2343,
           "likes": 22,
           "comments": 0,
@@ -2138,10 +2182,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "estate",
             "mare",
             "relax",
-            "puglia"
+            "estate"
           ]
         },
         {
@@ -2150,7 +2193,7 @@
           "url": "https://www.tiktok.com/@bariventoviaggi/video/7674899425940049185",
           "date": "2026-08-17T07:29:42.000Z",
           "caption": "#serenamajestichotelresidence #bluserenaviaggi4stelle #vacanzelowcost ##bari #andreaventoworld ",
-          "location": "Serena Majestic",
+          "location": "Bluserena",
           "views": 5564,
           "likes": 54,
           "comments": 20,
@@ -2159,8 +2202,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "viaggio",
-            "bari"
+            "mare",
+            "relax",
+            "hotel",
+            "resort"
           ]
         },
         {
@@ -2177,11 +2222,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "matrimonio",
-            "coppia",
-            "mare",
             "vacanza",
-            "puglia"
+            "mare",
+            "relax",
+            "amore",
+            "coppia"
           ]
         },
         {
@@ -2199,7 +2244,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "mangiaresano",
+            "challenge"
           ]
         },
         {
@@ -2218,8 +2265,7 @@
           "topics": [
             "vacanza",
             "hotel",
-            "recensione",
-            "ospitalità"
+            "luxury"
           ]
         },
         {
@@ -2238,9 +2284,9 @@
           "topics": [
             "vacanza",
             "mare",
-            "cocktail",
-            "puglia",
-            "relax"
+            "relax",
+            "Serena",
+            "Cala Serena"
           ]
         },
         {
@@ -2279,9 +2325,9 @@
           "sentiment": "positive",
           "topics": [
             "buffet",
-            "ferragosto",
-            "cibo",
+            "Ferragosto",
             "vacanza",
+            "cibo",
             "resort"
           ]
         },
@@ -2299,7 +2345,6 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "animazione",
             "vacanza",
             "mare"
           ]
@@ -2338,9 +2383,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "white party",
+            "party",
             "trends",
-            "white"
+            "white",
+            "beach",
+            "resort"
           ]
         },
         {
@@ -2357,9 +2404,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "villaggio",
             "perte",
-            "fyp"
+            "villaggio",
+            "bluserena"
           ]
         },
         {
@@ -2376,11 +2423,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "ferragosto",
             "animazione",
             "villaggio",
             "emozioni",
-            "videoclip"
+            "videoclip",
+            "ferragosto"
           ]
         },
         {
@@ -2398,9 +2445,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "buongiorno"
+            "sole",
+            "morning"
           ]
         },
         {
@@ -2419,9 +2465,9 @@
           "topics": [
             "vacanza",
             "mare",
+            "puglia",
             "relax",
-            "Italia",
-            "puglia"
+            "estate"
           ]
         },
         {
@@ -2441,7 +2487,7 @@
             "vacanza",
             "viaggio",
             "Italia",
-            "viral"
+            "4 stelle"
           ]
         },
         {
@@ -2450,7 +2496,7 @@
           "url": "https://www.tiktok.com/@giogio.o11/video/7676455206493621537",
           "date": "2026-08-21T12:06:50.000Z",
           "caption": "Tornerei qui all’infinito, perché ormai non è più semplicemente un villaggio. È diventato casa, il posto che vorrei non dover salutare mai. 🫂❤️‍🩹\n\n#valentinovillage #bluserena #casa #villaggio #perte \n@giorgi @_dieghito97_ @Lollo ",
-          "location": "Valentinovillage",
+          "location": "Valentino",
           "views": 3408,
           "likes": 89,
           "comments": 5,
@@ -2459,9 +2505,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "villaggio",
             "casa",
-            "nostalgia",
-            "villaggio"
+            "appartenenza",
+            "memoria"
           ]
         },
         {
@@ -2478,11 +2525,14 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "vacanza",
+            "mare",
+            "Lady Gaga",
             "animazione",
+            "villaggio",
             "musical",
-            "show",
-            "intrattenimento",
-            "vacanza"
+            "cast",
+            "show"
           ]
         },
         {
@@ -2497,12 +2547,13 @@
           "comments": 7,
           "shares": 23,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "risposta",
+            "vacanza",
+            "mare",
+            "relax",
             "colazione",
-            "viaggi",
-            "sardegna"
+            "viaggi"
           ]
         },
         {
@@ -2511,19 +2562,18 @@
           "url": "https://www.tiktok.com/@spammissimo__dipetraa/video/7666930879398268193",
           "date": "2026-07-26T20:07:37.000Z",
           "caption": "bluserena 2k26 😭 #bluserena #voliamoneixte✈🦁🔝💯💥 #videoviral #perteeeee ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 730,
           "likes": 45,
           "comments": 2,
           "shares": 1,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "negative",
           "topics": [
             "vacanza",
             "viaggio",
             "resort",
-            "estate",
-            "viral"
+            "video virale"
           ]
         },
         {
@@ -2541,9 +2591,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "relax",
-            "mare",
-            "offerta"
+            "mare"
           ]
         },
         {
@@ -2558,10 +2606,12 @@
           "comments": 0,
           "shares": 1,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
             "vacanza",
-            "mare"
+            "hotel",
+            "4stelle",
+            "viaggio"
           ]
         },
         {
@@ -2609,10 +2659,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "divertimento",
+            "schiuma",
+            "party",
             "mare",
-            "schiuma party"
+            "vacanza"
           ]
         },
         {
@@ -2630,11 +2680,10 @@
           "sentiment": "positive",
           "topics": [
             "animazione",
+            "lavoro",
             "villaggio",
             "emozioni",
-            "lavoro",
-            "animatori",
-            "vacanza"
+            "animatori"
           ]
         },
         {
@@ -2653,8 +2702,14 @@
           "topics": [
             "vacanza",
             "mare",
-            "viaggio",
-            "tiktok"
+            "relax",
+            "vacanze",
+            "turismo",
+            "vacanze all'aqua",
+            "vacanze in famiglia",
+            "vacanze in Italia",
+            "vacanze in Sicilia",
+            "vacanze in Calabria"
           ]
         },
         {
@@ -2715,7 +2770,7 @@
           "url": "https://www.tiktok.com/@maraalbergo/video/7677655146951626016",
           "date": "2026-08-24T17:43:13.000Z",
           "caption": "Risposta a @marialina_masciave ",
-          "location": null,
+          "location": "Cala Serena",
           "views": 8776,
           "likes": 96,
           "comments": 14,
@@ -2724,10 +2779,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "hotel",
-            "resort"
+            "mare"
           ]
         },
         {
@@ -2789,8 +2841,13 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "virale",
-            "viaggio"
+            "mare",
+            "relax",
+            "vacanze",
+            "Italia",
+            "costiera",
+            "turismo",
+            "vacanze in Italia"
           ]
         },
         {
@@ -2821,8 +2878,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "viaggi",
-            "4 stelle"
+            "viaggio",
+            "mare",
+            "relax",
+            "hotel"
           ]
         },
         {
@@ -2856,7 +2915,10 @@
             "puglia",
             "bluserena",
             "relax",
-            "piscina"
+            "piscina",
+            "vacanza",
+            "estate",
+            "pool"
           ]
         },
         {
@@ -2935,9 +2997,9 @@
           "topics": [
             "estate",
             "addio",
-            "resort",
-            "puglia",
-            "viaggio"
+            "vacanza",
+            "mare",
+            "puglia"
           ]
         },
         {
@@ -2968,11 +3030,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "vacanzaitaliana",
-            "4stelle",
-            "virale"
+            "viaggio",
+            "virale",
+            "italia"
           ]
         },
         {
@@ -3047,6 +3107,8 @@
             "tour",
             "villaggio",
             "sole",
+            "prima mattina",
+            "resort",
             "Sicilia"
           ]
         },
@@ -3066,8 +3128,6 @@
           "topics": [
             "pokemon",
             "animation",
-            "serena",
-            "fanart",
             "community"
           ]
         },
@@ -3111,10 +3171,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "gioco",
+            "team",
             "vacanza",
-            "mare",
-            "relax",
-            "DreamTeam"
+            "estate",
+            "Sardegna"
           ]
         },
         {
@@ -3204,8 +3265,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "vacanza",
             "villaggio",
-            "vacanze",
+            "sicilia",
+            "agenzia di viaggi",
+            "preventivo",
             "crociere"
           ]
         },
@@ -3223,11 +3287,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "ospitalità",
-            "eroi",
-            "estate",
-            "manutentore",
-            "forze dell'ordine"
+            "vacanza",
+            "mare",
+            "relax",
+            "lavoro",
+            "apprezzamento",
+            "teamwork"
           ]
         },
         {
@@ -3440,8 +3505,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "mare",
             "relax",
-            "natura"
+            "Bluserena",
+            "Calabria"
           ]
         },
         {
@@ -3458,9 +3525,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "Bluserena",
-            "2026",
-            "canzone"
+            "vacanza",
+            "mare",
+            "relax",
+            "musica",
+            "resort",
+            "bluserena"
           ]
         },
         {
@@ -3511,11 +3581,12 @@
           "comments": 11,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "vacanza",
             "famiglia",
-            "viaggio",
+            "figlia",
+            "problemi",
             "hotel 4 stelle"
           ]
         },
@@ -3525,7 +3596,7 @@
           "url": "https://www.tiktok.com/@lollo2002/video/7663849535688543520",
           "date": "2026-07-18T12:50:25.000Z",
           "caption": "Serenino💙✨ @bluserena      #perte #fy ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 671,
           "likes": 15,
           "comments": 0,
@@ -3534,7 +3605,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "relax",
+            "resort",
+            "blu"
           ]
         },
         {
@@ -3543,7 +3617,7 @@
           "url": "https://www.tiktok.com/@veroviaggi/video/7675026594880113952",
           "date": "2026-08-17T15:43:06.000Z",
           "caption": "Andiamo insieme al mare al Serenè Resort 🏖️☀️\n#bluserena #sereneresort #veroviaggisitravelnetwork",
-          "location": "Serenè Resort",
+          "location": "Bluserena",
           "views": 43300,
           "likes": 369,
           "comments": 63,
@@ -3553,8 +3627,9 @@
           "topics": [
             "vacanza",
             "mare",
-            "viaggio",
-            "resort"
+            "relax",
+            "estate",
+            "travel"
           ]
         },
         {
@@ -3582,10 +3657,12 @@
           "comments": 0,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "negative",
           "topics": [
-            "vacanza",
-            "mare"
+            "viaggio",
+            "relazione",
+            "orgoglio",
+            "confronto"
           ]
         },
         {
@@ -3594,7 +3671,7 @@
           "url": "https://www.tiktok.com/@ivan.oliva10/video/7677449991387893010",
           "date": "2026-08-24T04:27:13.000Z",
           "caption": "🥷🏽👸🏼❤️‍🩹#parati #fyp #salienparati #foryou #parejas @moreeeserna ",
-          "location": "Serena Resort",
+          "location": "Cala Serena",
           "views": 105600,
           "likes": 19200,
           "comments": 12,
@@ -3602,10 +3679,14 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "parati",
-            "fyp",
-            "parejas",
-            "foryou"
+            "vacanza",
+            "mare",
+            "relax",
+            "vacanze",
+            "vacanze in Italia",
+            "vacanze in Sicilia",
+            "vacanze in Calabria",
+            "vacanze in Italia"
           ]
         },
         {
@@ -3658,17 +3739,17 @@
           "url": "https://www.tiktok.com/@samarasantanadacosta/video/7674367123371740423",
           "date": "2026-08-15T21:04:06.000Z",
           "caption": "#Cosplay ",
-          "location": null,
+          "location": "Cala Serena",
           "views": 60800,
           "likes": 4999,
           "comments": 440,
           "shares": 275,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "cosplay",
-            "costume",
-            "intrattenimento"
+            "vacanza",
+            "mare",
+            "cosplay"
           ]
         },
         {
@@ -3709,12 +3790,12 @@
           "comments": 94,
           "shares": 488,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "calcio",
+            "football",
+            "sports",
             "Fluminense",
-            "Kevin Serna",
-            "sport"
+            "Kevin Serna"
           ]
         },
         {
@@ -3723,17 +3804,16 @@
           "url": "https://www.tiktok.com/@ytglazeyt/video/7675526916736093461",
           "date": "2026-08-19T00:04:39.000Z",
           "caption": "#cs2edit #cs2moments #cs2 #bluesen #csgo лутший сервер bluesen.ru",
-          "location": null,
+          "location": "Cala Serena",
           "views": 188,
           "likes": 13,
           "comments": 1,
           "shares": 3,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "gaming",
-            "cs2",
-            "server"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -3762,7 +3842,7 @@
           "url": "https://www.tiktok.com/@blue_serena/video/7530437749250313488",
           "date": "2025-07-24T00:25:26.000Z",
           "caption": "Viva el love bombing #fyp #paratii #xzycba ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 3282,
           "likes": 292,
           "comments": 1,
@@ -3771,8 +3851,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "relax",
-            "love"
+            "mare"
           ]
         },
         {
@@ -3781,18 +3860,16 @@
           "url": "https://www.tiktok.com/@bluesen_cs.ru/video/7674366809616829716",
           "date": "2026-08-15T21:02:53.000Z",
           "caption": "Сервера: bluesen.ru #кс2 #cs2 #csgo #ксго #bluesen",
-          "location": null,
+          "location": "Cala Serena",
           "views": 174,
           "likes": 3,
           "comments": 0,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "gaming",
-            "cs2",
-            "csgo",
-            "server"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -3934,13 +4011,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "spettacolo",
-            "musica",
-            "teatro",
+            "vacanza",
             "resort",
-            "sicilia",
-            "evento",
-            "intrattenimento"
+            "musica",
+            "spettacolo",
+            "Sicilia"
           ]
         },
         {
@@ -3958,8 +4033,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "sole"
+            "mare"
           ]
         },
         {
@@ -4073,7 +4147,7 @@
           "url": "https://www.tiktok.com/@bluserena/video/7534724223340842263",
           "date": "2025-08-04T13:38:16.000Z",
           "caption": "Francesca ci fa fare un giro negli spazi del Torreserena Resort, tra spiaggia, animazione, piscina e tanto altro 👀✨\n\nSpoiler: qui non ci si annoia MAI.\n\n#Bluserena #TorreserenaResort #DayInTheLife #Estate2025",
-          "location": "Torreserena",
+          "location": "Cala Serena",
           "views": 35900,
           "likes": 516,
           "comments": 12,
@@ -4083,10 +4157,14 @@
           "topics": [
             "vacanza",
             "mare",
-            "animazione",
-            "piscina",
-            "estate",
-            "divertimento"
+            "relax",
+            "Torreserena",
+            "SerenaResort",
+            "Bluserena",
+            "Cala Serena",
+            "Sibari Green",
+            "Alborèa",
+            "Is Serenas"
           ]
         },
         {
@@ -4123,17 +4201,13 @@
           "comments": 0,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "bluserena",
-            "serenaresort",
-            "calanè",
-            "alborea",
-            "ethra",
-            "isserenas",
-            "isserenasbadesi"
+            "moda",
+            "abbigliamento",
+            "blusa",
+            "smock blouse",
+            "AURETTA"
           ]
         },
         {
@@ -4165,9 +4239,10 @@
           "topics": [
             "vacanza",
             "bevande",
-            "all inclusive",
+            "resort",
             "estate",
-            "sicilia"
+            "sicilia",
+            "viral"
           ]
         },
         {
@@ -4185,8 +4260,9 @@
           "sentiment": "positive",
           "topics": [
             "estate",
-            "viaggio",
-            "famiglia"
+            "famiglia",
+            "resort",
+            "viaggio"
           ]
         },
         {
@@ -4223,8 +4299,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "estate",
+            "amore",
             "vacanza",
-            "mare"
+            "resort"
           ]
         },
         {
@@ -4314,10 +4392,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "schiuma party",
-            "divertimento",
+            "schiuma",
+            "party",
             "vacanza",
-            "mare"
+            "divertimento"
           ]
         },
         {
@@ -4373,14 +4451,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "tik tok",
-            "vacanze",
-            "vacanze in Italia",
-            "vacanze in Sicilia",
-            "vacanze in Calabria"
+            "ferragosto",
+            "costume",
+            "piscina",
+            "vacanza"
           ]
         },
         {
@@ -4397,11 +4471,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "ferragosto",
-            "resort",
+            "Ferragosto",
             "vacanza",
+            "resort",
             "cibo",
-            "viaggio"
+            "famiglia"
           ]
         },
         {
@@ -4445,10 +4519,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "resort",
-            "viaggio",
-            "stelle",
-            "bellezza"
+            "mare",
+            "relax",
+            "4 stelle",
+            "Italia"
           ]
         },
         {
@@ -4457,7 +4531,7 @@
           "url": "https://www.tiktok.com/@emanuela.marco.ca/video/7676755431066225952",
           "date": "2026-08-22T07:31:55.000Z",
           "caption": "#neiperteeeeeeeeeeeeeee #fhy✈️🔥 #virale #bluserenaviaggi4stelle #vacanzaitaliana ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 8716,
           "likes": 36,
           "comments": 6,
@@ -4466,27 +4540,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Hotel",
-            "Calanè",
-            "Calànè Resort",
-            "GranSerena",
-            "Sibari Green",
-            "Sibari Green Resort",
-            "Valentino",
-            "Kalidia",
-            "Alborèa",
-            "Ethra",
-            "Ethra Reserve",
-            "Is Serenas",
-            "Is Serenas Badesi",
-            "IsSerenas"
+            "viaggio",
+            "resort",
+            "virale",
+            "estate"
           ]
         },
         {
@@ -4539,7 +4596,7 @@
           "url": "https://www.tiktok.com/@giuliana.santangelo/video/7662687060414713121",
           "date": "2026-07-15T09:39:25.000Z",
           "caption": "Serenusa Blu Serena 🏊‍♀️🌅🦀\n\n#summervibes #bluserena #sicily #cutecat ",
-          "location": "Serenusa",
+          "location": "Bluserena",
           "views": 1265,
           "likes": 20,
           "comments": 0,
@@ -4549,8 +4606,9 @@
           "topics": [
             "vacanza",
             "mare",
-            "relax",
-            "cutecat"
+            "sicilia",
+            "estate",
+            "relax"
           ]
         },
         {
@@ -4579,7 +4637,7 @@
           "url": "https://www.tiktok.com/@emanuela.marco.ca/video/7674911823870610720",
           "date": "2026-08-17T08:17:46.000Z",
           "caption": "#neiperteeeeeeeeeeeeeee #fhy✈️🔥 #bluserenaviaggi4stelle @bluserena ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 2617,
           "likes": 52,
           "comments": 6,
@@ -4588,10 +4646,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "viaggio",
-            "hotel",
-            "4stelle",
-            "bluserena"
+            "mare",
+            "relax"
           ]
         },
         {
@@ -4610,8 +4666,9 @@
           "topics": [
             "vacanza",
             "ricordi",
-            "famiglia",
-            "persone"
+            "persone",
+            "amore",
+            "famiglia"
           ]
         },
         {
@@ -4628,8 +4685,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "puglia",
-            "bluserenavillage"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -4648,7 +4705,8 @@
           "topics": [
             "vacanza",
             "mare",
-            "relax"
+            "lusso",
+            "italia"
           ]
         },
         {
@@ -4657,7 +4715,7 @@
           "url": "https://www.tiktok.com/@enzobottone88/video/7677179025546136865",
           "date": "2026-08-23T10:55:40.000Z",
           "caption": "Risposta a @Massimiliano #recensione #bluserena #calaserena #sardegna #viaggi ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 6318,
           "likes": 13,
           "comments": 4,
@@ -4667,7 +4725,8 @@
           "topics": [
             "recensione",
             "viaggi",
-            "sardegna"
+            "sardegna",
+            "risposta"
           ]
         },
         {
@@ -4689,7 +4748,7 @@
           "url": "https://www.tiktok.com/@luisaercolano/video/7677409705605532961",
           "date": "2026-08-24T01:51:20.000Z",
           "caption": "VACANZA 2026🧑‍🧑‍🧒❤️#bluserenasibarigreenresort #vacanza2026 #voliamoneiperte✈️✈️🦁a360gradi ",
-          "location": "Sibari Green Resort",
+          "location": "Sibari Green",
           "views": 502,
           "likes": 8,
           "comments": 3,
@@ -4698,9 +4757,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "2026",
+            "famiglia",
             "viaggio",
-            "Sibari Green"
+            "pianificazione"
           ]
         },
         {
@@ -4731,10 +4790,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "cibo",
             "estate",
-            "mare",
-            "promozione"
+            "cibo",
+            "viaggio"
           ]
         },
         {
@@ -4769,11 +4827,10 @@
           "comments": 10,
           "shares": 7,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "risposta",
-            "viaggi",
-            "sardegna"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -4782,7 +4839,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7674619612096449825",
           "date": "2026-08-16T13:23:48.000Z",
           "caption": "#torreserena #bluserena #bluserenaviaggi4stelle #italiapuglia #imigliori ",
-          "location": "Bluserena",
+          "location": "Torre Serena",
           "views": 1439,
           "likes": 20,
           "comments": 3,
@@ -4791,10 +4848,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "luxe",
-            "viaggio"
+            "hotel",
+            "puglia",
+            "viaggio",
+            "4stelle"
           ]
         },
         {
@@ -4813,8 +4870,8 @@
           "topics": [
             "mare",
             "vacanza",
-            "estate",
-            "relax"
+            "relax",
+            "tiktok"
           ]
         },
         {
@@ -4832,10 +4889,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "cocktail",
-            "sunset",
             "relax",
-            "beach"
+            "cocktail",
+            "tramonto",
+            "serenità"
           ]
         },
         {
@@ -4852,11 +4909,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "sicilia",
-            "resort",
             "vacanza",
+            "resort",
+            "sicilia",
             "dog",
-            "perte"
+            "pet-friendly"
           ]
         },
         {
@@ -4873,10 +4930,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "schiuma party",
-            "animazione",
-            "villaggio",
-            "neve"
+            "vacanza",
+            "mare",
+            "relax",
+            "schiumaparty",
+            "animazione"
           ]
         },
         {
@@ -4904,13 +4962,12 @@
           "comments": 25,
           "shares": 52,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
-            "gaming",
             "skyrim",
             "fanart",
             "digitalart",
-            "meme"
+            "animationmeme"
           ]
         },
         {
@@ -4951,13 +5008,13 @@
           "comments": 409,
           "shares": 75,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "Nevaeh",
-            "Bluestina",
-            "Blueface",
-            "BluesWorld",
-            "Bluniverse"
+            "celebrità",
+            "drama",
+            "famiglia",
+            "social media",
+            "streaming"
           ]
         },
         {
@@ -5034,13 +5091,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "Blue Archive",
-            "fan game",
-            "multiplayer shooter",
-            "FPS",
             "gaming",
-            "Nexon",
-            "Yostar"
+            "blue archive",
+            "fan project",
+            "shooter",
+            "multiplayer",
+            "gaming community"
           ]
         },
         {
@@ -5201,11 +5257,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "animali",
-            "cane",
             "spitz",
-            "divertimento",
-            "viral"
+            "dog",
+            "viral",
+            "fun"
           ]
         },
         {
@@ -5249,10 +5304,9 @@
           "sentiment": "positive",
           "topics": [
             "rant",
-            "video",
             "TikTok",
             "creator",
-            "compilation"
+            "video compilation"
           ]
         },
         {
@@ -5300,9 +5354,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "kpop",
+            "hyunmizi",
+            "hyuna",
+            "minji",
+            "fanart",
+            "headcanons",
+            "ship"
           ]
         },
         {
@@ -5378,10 +5436,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "fashion",
             "vacanza",
-            "tiktok",
-            "viral"
+            "mare",
+            "relax",
+            "fashiontiktok",
+            "neiperteeeeeeeeeeeeeee"
           ]
         },
         {
@@ -5409,7 +5468,7 @@
           "url": "https://www.tiktok.com/@tony_vacant3/video/7664266836338314528",
           "date": "2026-07-19T15:49:45.000Z",
           "caption": "Hercules \nNoi siamo le Muse … \n@bluserena \n#lavacanzacheresta ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 63100,
           "likes": 4514,
           "comments": 16,
@@ -5418,7 +5477,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
+            "musica",
+            "cultura",
             "relax"
           ]
         },
@@ -5437,10 +5497,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "informazioni",
-            "beverage",
-            "resort",
-            "4stelle"
+            "relax",
+            "bevande",
+            "nightlife"
           ]
         },
         {
@@ -5514,7 +5573,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "relax",
+            "resort"
           ]
         },
         {
@@ -5546,9 +5607,7 @@
           "topics": [
             "vacanza",
             "viaggio",
-            "mare",
-            "relax",
-            "hotel"
+            "4 stelle"
           ]
         },
         {
@@ -5566,7 +5625,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "fine estate",
+            "nostalgia",
+            "resort"
           ]
         },
         {
@@ -5584,9 +5645,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "puglia",
-            "resort",
-            "viral"
+            "mare",
+            "relax"
           ]
         },
         {
@@ -5625,8 +5685,9 @@
           "topics": [
             "vacanza",
             "viaggio",
-            "Italia",
-            "4stelle"
+            "resort",
+            "virale",
+            "estate"
           ]
         },
         {
@@ -5645,8 +5706,7 @@
           "topics": [
             "vacanza",
             "mare",
-            "amore",
-            "viaggio"
+            "relax"
           ]
         },
         {
@@ -5675,7 +5735,7 @@
           "url": "https://www.tiktok.com/@enzobottone88/video/7677155561997176097",
           "date": "2026-08-23T09:24:36.000Z",
           "caption": "Risposta a @Die Kasse #recensione #bluserena #calaserena #sardegna #viaggi ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 15700,
           "likes": 64,
           "comments": 12,
@@ -5684,7 +5744,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "recensione",
+            "sardegna",
+            "viaggi",
+            "beach"
           ]
         },
         {
@@ -5722,10 +5785,10 @@
           "sentiment": "neutral",
           "topics": [
             "viaggi",
-            "turismo",
-            "Sardegna",
-            "Cala Serena",
-            "Blue Serena"
+            "sardegna",
+            "calaserena",
+            "bluserena",
+            "turismo"
           ]
         },
         {
@@ -5778,7 +5841,7 @@
           "url": "https://www.tiktok.com/@bluserena/video/7665673609595178262",
           "date": "2026-07-23T10:48:52.000Z",
           "caption": "Meet the Dream Team 💙\nLoro saranno con te per tutta l’estate al Calanè Resort e al Valentino Resort di Ethra Reserve 🌊\nCurioso di scoprire gli ultimi membri della nostra Crew? Seguici!\n\n#Bluserena #DreamTeam #CalanèResort #ValentinoResort #Estate2026",
-          "location": "Calanè Resort",
+          "location": "Bluserena",
           "views": 11500,
           "likes": 145,
           "comments": 11,
@@ -5786,11 +5849,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "team",
-            "estate",
-            "resort",
-            "crew",
-            "personale"
+            "vacanza",
+            "mare",
+            "relax"
           ]
         },
         {
@@ -5913,10 +5974,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "gentilezza",
+            "vacanza",
+            "mare",
+            "famiglia",
             "felicità",
-            "praia",
-            "trip"
+            "relax"
           ]
         },
         {
@@ -5933,9 +5995,9 @@
           "imageUrl": null,
           "sentiment": "negative",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "relazione",
+            "tristezza",
+            "delusione"
           ]
         },
         {
@@ -5952,9 +6014,10 @@
           "imageUrl": null,
           "sentiment": "neutral",
           "topics": [
-            "abbigliamento",
+            "moda",
             "vendita",
-            "promozione"
+            "abbigliamento",
+            "prezzi"
           ]
         },
         {
@@ -5976,18 +6039,16 @@
           "url": "https://www.tiktok.com/@brisa.serena2/video/7666577783224618241",
           "date": "2026-07-25T21:17:36.000Z",
           "caption": "Atravessando o Rio Itamambuca ",
-          "location": null,
+          "location": "Cala Serena",
           "views": 1500000,
           "likes": 87700,
           "comments": 1639,
           "shares": 1954,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "natura",
-            "viaggio",
-            "brasil",
-            "rio"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -6035,7 +6096,7 @@
           "url": "https://www.tiktok.com/@brisa.serena2/video/7665479559806061841",
           "date": "2026-07-22T22:16:29.000Z",
           "caption": "Itamambuca voltamos 🦋🍃\n\n#praia #itamambuca #trip ",
-          "location": null,
+          "location": "Itamambuca",
           "views": 276500,
           "likes": 22300,
           "comments": 303,
@@ -6043,9 +6104,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "praia",
-            "viaggio",
-            "natura"
+            "vacanza",
+            "mare",
+            "relax"
           ]
         },
         {
@@ -6060,10 +6121,12 @@
           "comments": 0,
           "shares": 4,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare"
+            "fashion",
+            "clothing",
+            "blouse",
+            "auretta"
           ]
         },
         {
@@ -6127,9 +6190,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "nuova_apertura",
-            "primavera",
-            "anticipazione",
+            "vacanza",
+            "primrose",
+            "nuovo",
             "resort"
           ]
         },
@@ -6171,7 +6234,7 @@
           "url": "https://www.tiktok.com/@maribatistta1/video/7663500454315183380",
           "date": "2026-07-17T14:15:48.000Z",
           "caption": "ID 45TJ3WG / Marrom e branca ⭐️⭐️⭐️⭐️⭐️ #shein #blusarenda @SHEIN Brasil ",
-          "location": null,
+          "location": "Bluserena",
           "views": 1352,
           "likes": 49,
           "comments": 0,
@@ -6179,8 +6242,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "fashion",
-            "clothing",
+            "vacanza",
+            "mare",
+            "relax",
             "shein",
             "blusarenda"
           ]
@@ -6355,19 +6419,20 @@
           "url": "https://www.tiktok.com/@tracho62/video/7671172621077056790",
           "date": "2026-08-07T06:27:54.000Z",
           "caption": "How Chimera FNF mod would have realistically went without the Plot bias on chimera (20 base stats on everything BUT speed btw) #chimera #pokemon #serena #fnfmod #fyp",
-          "location": null,
+          "location": "Cala Serena",
           "views": 144000,
           "likes": 5850,
           "comments": 109,
           "shares": 146,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "chimera",
-            "pokemon",
-            "fnfmod",
-            "gaming",
-            "modding"
+            "vacanza",
+            "mare",
+            "relax",
+            "vacanze",
+            "vacanze all'aqua",
+            "vacanze in Italia"
           ]
         },
         {
@@ -6498,7 +6563,7 @@
           "url": "https://www.tiktok.com/@l.ilishhh.l/video/7664921187398651156",
           "date": "2026-07-21T10:09:07.000Z",
           "caption": "𝒔𝒊𝒓𝒆𝒏𝒂           #sea #mermaid #sunset ",
-          "location": "Cala Serena",
+          "location": "Serena",
           "views": 213,
           "likes": 20,
           "comments": 0,
@@ -6507,7 +6572,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "mermaid",
+            "tramonto"
           ]
         },
         {
@@ -6516,7 +6583,7 @@
           "url": "https://www.tiktok.com/@bruserena/video/7667946824145210645",
           "date": "2026-07-29T13:50:00.000Z",
           "caption": "😂❤️\n\n#dinda #afilhado \n@Pietro 🎭🪬🧿 ",
-          "location": "Cala Serena",
+          "location": "Bluserena",
           "views": 649,
           "likes": 30,
           "comments": 2,
@@ -6524,10 +6591,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "compleanno",
             "famiglia",
-            "divertimento",
-            "social_media",
-            "bambini"
+            "festa"
           ]
         },
         {
@@ -6545,8 +6611,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "italiana",
-            "stile di vita"
+            "italiana"
           ]
         },
         {
@@ -6563,10 +6628,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "beach party"
+            "beach party",
+            "villaggio",
+            "animazione",
+            "emozioni",
+            "party",
+            "mare"
           ]
         },
         {
@@ -6575,7 +6642,7 @@
           "url": "https://www.tiktok.com/@enzobottone88/video/7677902621981560097",
           "date": "2026-08-25T09:43:33.000Z",
           "caption": "Risposta a @rocco.36cm #recensione #bluserena #calaserena #sardegna #viaggi ",
-          "location": "Bluserena",
+          "location": "Cala Serena",
           "views": 2328,
           "likes": 5,
           "comments": 3,
@@ -6585,7 +6652,8 @@
           "topics": [
             "recensione",
             "viaggi",
-            "sardegna"
+            "sardegna",
+            "risposta"
           ]
         },
         {
@@ -6614,7 +6682,7 @@
           "url": "https://www.tiktok.com/@brisa.serena2/video/7675487389040561416",
           "date": "2026-08-18T21:31:21.000Z",
           "caption": "Liberdade para dentro da cabeça ✨🌀",
-          "location": null,
+          "location": "Cala Serena",
           "views": 45300,
           "likes": 3265,
           "comments": 105,
@@ -6622,10 +6690,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "relax",
-            "benessere",
-            "introspezione",
-            "vacanza"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -6691,7 +6757,7 @@
           "url": "https://www.tiktok.com/@brisa.serena2/video/7674239026756455681",
           "date": "2026-08-15T12:47:07.000Z",
           "caption": "Fomos convidadas para conhecer a sede do TikTok!✨\nGratidão a todos que nos acompanham por cada oportunidade e por tudo que estamos vivendo!!\nSó o começo 🌎 🙏🏼✨\n#tiktok #brisaserena #trip #irmas ",
-          "location": null,
+          "location": "Cala Serena",
           "views": 97800,
           "likes": 7848,
           "comments": 140,
@@ -6699,11 +6765,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "tiktok",
-            "viaggio",
-            "famiglia",
-            "sorelle",
-            "gratitudine"
+            "vacanza",
+            "mare",
+            "tik tok",
+            "brisa serena"
           ]
         },
         {
@@ -6720,8 +6785,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "gem",
+            "collezione",
             "vacanza",
-            "mare"
+            "relax"
           ]
         },
         {
@@ -6743,18 +6810,16 @@
           "url": "https://www.tiktok.com/@aeltropgnt/video/7675813589306854689",
           "date": "2026-08-19T18:37:01.000Z",
           "caption": "#fyp #prt #gossipgirl #serena ",
-          "location": null,
+          "location": "Cala Serena",
           "views": 15500,
           "likes": 1988,
           "comments": 53,
           "shares": 178,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "gossip",
-            "pop-culture",
-            "tv-series",
-            "fashion"
+            "vacanza",
+            "mare"
           ]
         },
         {
@@ -6771,8 +6836,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "roblox",
+            "gaming",
+            "violencedistrict",
+            "social"
           ]
         },
         {
@@ -6802,17 +6869,18 @@
           "url": "https://www.tiktok.com/@eyesonmama/video/7676255321035164960",
           "date": "2026-08-20T23:11:12.000Z",
           "caption": "#serena #gossipgirl #intro              match: @່ ",
-          "location": null,
+          "location": "Serena Majestic",
           "views": 301,
           "likes": 56,
           "comments": 454,
           "shares": 53,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "gossip",
-            "match",
-            "serena"
+            "vacanza",
+            "mare",
+            "relax",
+            "travel"
           ]
         },
         {
@@ -6834,7 +6902,7 @@
           "url": "https://www.tiktok.com/@bariventoviaggi/video/7673934682475498784",
           "date": "2026-08-14T17:05:56.000Z",
           "caption": "#bari #vacanzelowcost #bluserenaviaggi4stelle #serenamajestichotelresidence #vacanzeconbimbi ",
-          "location": "Serena Majestic Hotel Residence",
+          "location": "Bluserena",
           "views": 27800,
           "likes": 170,
           "comments": 31,
@@ -6843,10 +6911,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "bari",
             "low cost",
-            "famiglia",
-            "bimbi",
-            "hotel 4 stelle"
+            "hotel",
+            "famiglia"
           ]
         },
         {
@@ -6915,10 +6983,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "rituale notturno",
-            "benessere",
-            "prodotti",
-            "notte",
+            "vacanza",
+            "mare",
             "relax"
           ]
         },
@@ -6949,11 +7015,11 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "praia",
-            "paz",
-            "amor",
-            "trindade",
-            "brisaserena"
+            "vacanza",
+            "mare",
+            "relax",
+            "natura",
+            "arrivo"
           ]
         },
         {
@@ -6970,11 +7036,11 @@
           "shares": 4,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "poolparty",
-            "estate2026"
+            "pool party",
+            "estate",
+            "resort",
+            "social",
+            "vacanza"
           ]
         },
         {
@@ -7100,11 +7166,10 @@
           "shares": 2,
           "sentiment": "positive",
           "topics": [
+            "cibo",
             "vacanza",
-            "mare",
-            "relax",
-            "villaggi",
-            "hotel"
+            "ristorazione",
+            "resort"
           ]
         },
         {
@@ -7165,9 +7230,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "sicilia"
+            "sicilia",
+            "amicizia",
+            "estate"
           ]
         },
         {
@@ -7184,11 +7249,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "vacanza",
             "outfit",
-            "fashion",
-            "fitcheck",
-            "viaggio",
-            "vacanza"
+            "fitcheck"
           ]
         },
         {
@@ -7203,11 +7266,13 @@
           "comments": 2,
           "shares": 6,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "resort",
+            "vacanza",
+            "mare",
+            "relax",
             "calabria",
-            "viaggio"
+            "resort"
           ]
         },
         {
@@ -7379,10 +7444,11 @@
           "shares": 45,
           "sentiment": "positive",
           "topics": [
-            "DreamTeam",
-            "Estate",
-            "Sardegna",
-            "vacanza"
+            "vacanza",
+            "estate",
+            "team",
+            "resort",
+            "sardegna"
           ],
           "imageUrl": null
         },
@@ -7405,16 +7471,18 @@
           "url": "https://www.tiktok.com/@bluserena/video/7662043793872391456",
           "date": "2026-07-13T16:03:11.000Z",
           "caption": "Meet the Dream Team 💙 È il momento di scoprire chi animerà la tua estate a Is Serenas Badesi Resort! Continua a seguirci per scoprire tutti gli altri volti 😉 #Bluserena #DreamTeam #IsSerenasBadesiResort #Estate2026",
-          "location": "Is Serenas Badesi",
+          "location": "Is Serenas Badesi Resort",
           "views": 6869,
           "likes": 105,
           "comments": 5,
           "shares": 38,
           "sentiment": "positive",
           "topics": [
-            "Dream Team",
-            "Estate",
-            "Bluserena"
+            "team",
+            "estate",
+            "personale",
+            "resort",
+            "vacanza"
           ],
           "imageUrl": null
         },
@@ -8633,7 +8701,7 @@
           "url": "https://www.tiktok.com/@alain.buehler/video/7528425928960019734",
           "date": "2025-07-18T14:17:39.000Z",
           "caption": "Manco fosse una piscina... 😍@bluserena #Calaserenaresort @TheBühlersHouse @Elisa ",
-          "location": "Cala Serena Resort",
+          "location": "Cala Serena",
           "views": 50434,
           "likes": 4966,
           "comments": 402,
@@ -8641,9 +8709,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "relax",
-            "piscina",
-            "beach"
+            "mare"
           ],
           "imageUrl": null
         },
@@ -9551,9 +9617,9 @@
           "sentiment": "positive",
           "topics": [
             "compleanno",
+            "vacanza",
             "mare",
-            "relax",
-            "vacanza"
+            "relax"
           ],
           "imageUrl": null
         },
@@ -9563,7 +9629,7 @@
           "url": "https://www.tiktok.com/@bluserena/video/7662369296751807777",
           "date": "2026-07-14T13:06:18.000Z",
           "caption": "POV: Ti svegli in una terrazza naturale affacciata sul Mediterraneo 🌞 Sei al Serenusa Resort in Sicilia. #Bluserena #LaVacanzaCheResta #SerenusaResort #Sicilia #Estate2026",
-          "location": "Serenusa Resort",
+          "location": "Serenusa",
           "views": 32423,
           "likes": 308,
           "comments": 8,
@@ -9573,7 +9639,8 @@
             "vacanza",
             "mare",
             "relax",
-            "Sicilia"
+            "Mediterraneo",
+            "terrazza"
           ],
           "imageUrl": null
         },
@@ -9645,7 +9712,7 @@
           "url": "https://www.tiktok.com/@catianeraneri2/video/7672329131685612832",
           "date": "2026-08-10T09:15:33.000Z",
           "caption": "“Serenusa Resort: mare, sole, buffet infinito, staff migliore di sempre, e io che torno a Palermo con la stessa energia di un ventilatore rotto. Bellissimo tutto, ma ora qualcuno mi spieghi perché la mia pelle è diventata tonalità ‘forno a legna’. Vacanza finita, ma il trauma del rientro è appena iniziato.” #SerenusaResort #VacanzaFinita #RientroTraumatico #SiciliaCheBrucia #vacanzalavoro @serenusaresort @najjardavide @lilkiss__ @jbaccins @denise_bottazzi @_alessia.riccii @ℂ𝕒𝕥𝕚𝕒𝕟𝕖 ℝ𝕒𝕟𝕖𝕣𝕚 ",
-          "location": "Serenusa",
+          "location": "Serenusa Resort",
           "views": 636,
           "likes": 6,
           "comments": 0,
@@ -9654,12 +9721,11 @@
           "topics": [
             "vacanza",
             "mare",
-            "sole",
-            "buffet",
-            "staff",
-            "rientro",
-            "abbronzatura",
-            "sicilia"
+            "relax",
+            "Serenusa Resort",
+            "vacanza finita",
+            "traumatico",
+            "Sicilia"
           ],
           "imageUrl": null
         },
@@ -9702,13 +9768,11 @@
           "shares": 251,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "ferragosto",
+            "Ferragosto",
+            "vacanze",
+            "Sicilia",
             "relax",
-            "divertimento",
-            "mare",
-            "sicilia",
-            "resort"
+            "divertimento"
           ],
           "imageUrl": null
         },
@@ -12387,7 +12451,7 @@
           "url": "https://www.tiktok.com/@annapicazio5/video/7677709714905517345",
           "date": "2026-08-24T21:14:58.000Z",
           "caption": "Si torna sempre dove si e stati bene #estate2026 #sibarigreenresort  #bluserena ",
-          "location": "Sibari Green Resort",
+          "location": "Cala Serena",
           "views": 1060,
           "likes": 11,
           "comments": 4,
@@ -12397,7 +12461,10 @@
             "vacanza",
             "mare",
             "relax",
-            "estate"
+            "Sibari Green",
+            "Sibari Green Resort",
+            "Cala Serena",
+            "Bluserena"
           ],
           "imageUrl": null
         },
@@ -12508,7 +12575,8 @@
             "vacanza",
             "mare",
             "relax",
-            "estate"
+            "Sibari Green",
+            "Sibari Green Resort"
           ],
           "imageUrl": null
         },
@@ -12526,10 +12594,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "green",
-            "eco"
+            "resort",
+            "holidays"
           ],
           "imageUrl": null
         },
@@ -12539,7 +12605,7 @@
           "url": "https://www.tiktok.com/@williamdarcangelo/video/7667241588975783200",
           "date": "2026-07-27T16:13:17.000Z",
           "caption": "#bluserena #sibarigreenresort#vacanza #holidays ",
-          "location": "Bluserena",
+          "location": "Sibari Green Resort",
           "views": 3718,
           "likes": 27,
           "comments": 12,
@@ -12547,7 +12613,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "holidays",
+            "resort"
           ],
           "imageUrl": null
         },
@@ -12578,8 +12645,6 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "relax",
-            "natura",
             "resort"
           ],
           "imageUrl": null
@@ -12659,9 +12724,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "pre cena",
-            "fit check",
-            "Sibari Green Resort",
+            "cena",
+            "fitcheck",
             "party"
           ],
           "imageUrl": null
@@ -12680,9 +12744,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "sibarigreenresort",
-            "holiday",
-            "relax"
+            "mare"
           ],
           "imageUrl": null
         },
@@ -12726,11 +12788,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "relax",
             "staff",
-            "accoglienza",
-            "famiglia",
-            "sorrisi",
-            "piccole cose"
+            "apprezzamento",
+            "sorrisi"
           ],
           "imageUrl": null
         },
@@ -13686,7 +13747,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7535749284931718422",
           "date": "2025-08-07T07:56:03.000Z",
           "caption": "Villaggio BluSerena - Sono sempre stato tipo da zaino in spalla, alla ricerca delle culture e tradizioni locali, ma arriva un momento nella vita in cui con l’arrivo dei figli ci si riorganizza anche per seguire le loro esigenze. Per noi è il secondo anno in un villaggio bluSerena, nello specifico il Serenè a Marinella di Cutro e ci siamo trovati discretamente bene. Vuoi altri contenuti simili? Fammelo sapere #bluserena #serenèresort #serenevillage #villaggioturistico #animazione #summer2025 @Peppeniello ",
-          "location": "Bluserena",
+          "location": "BluSerena",
           "views": 206660,
           "likes": 7066,
           "comments": 258,
@@ -13694,10 +13755,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "cultura",
-            "tradizioni",
             "famiglia",
-            "animazione"
+            "resort",
+            "estate"
           ],
           "imageUrl": null
         },
@@ -13707,7 +13767,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7672402462711581985",
           "date": "2026-08-10T14:00:08.000Z",
           "caption": "💧 NOVITÀ BLUSERENA 2026: arrivano i dispenser! Da quest’anno al Serenè Resort Bluserena ho trovato una novità decisamente comoda: dispenser disponibili nelle zone piscina e mare con acqua, tè e bevande analcoliche. 🥤🌊 Ma sono gratis? Sono inclusi per tutti? E come funziona il pacchetto bevande Bluserena? Nel video ti mostro dove si trovano e ti spiego come funziona. 👆 Secondo voi è una novità utile? Io dico assolutamente sì! 😎 📍 Serenè Resort Bluserena – Calabria #Bluserena #Bluserena2026 #SerenèResort #SereneResort #DispenserBluserena      @bluserena ",
-          "location": "Serenè Resort Bluserena",
+          "location": "Bluserena",
           "views": 62193,
           "likes": 463,
           "comments": 98,
@@ -13719,7 +13779,8 @@
             "bevande",
             "piscina",
             "mare",
-            "vacanza"
+            "resort",
+            "calabria"
           ],
           "imageUrl": null
         },
@@ -13775,10 +13836,12 @@
           "shares": 19,
           "sentiment": "positive",
           "topics": [
-            "musica",
-            "cover",
-            "animazione",
-            "serata"
+            "vacanza",
+            "mare",
+            "relax",
+            "Serenè Resort",
+            "TikTok",
+            "cover"
           ],
           "imageUrl": null
         },
@@ -13824,7 +13887,7 @@
           "url": "https://www.tiktok.com/@eridiscla90/photo/7675692666725748000",
           "date": "2026-08-19T10:47:47.000Z",
           "caption": "#cutro #Calabria #Serenèresort ",
-          "location": "Serena Resort",
+          "location": "Serenèresort",
           "views": 882,
           "likes": 25,
           "comments": 6,
@@ -13834,6 +13897,7 @@
             "vacanza",
             "mare",
             "relax",
+            "resort",
             "Calabria",
             "Cutro"
           ],
@@ -13872,24 +13936,13 @@
           "shares": 2,
           "sentiment": "positive",
           "topics": [
+            "last minute",
             "vacanza",
             "mare",
             "relax",
-            "Serenè Resort",
-            "Last Minute",
-            "Calabria",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Hotel",
-            "Calanè",
-            "Calànè Resort",
-            "GranSerena",
-            "Kalidia",
-            "Alborèa",
-            "Ethra",
-            "Is Serenas",
-            "Is Serenas Badesi"
+            "famiglia",
+            "offerte",
+            "Calabria"
           ],
           "imageUrl": null
         },
@@ -15097,7 +15150,7 @@
           "url": "https://www.tiktok.com/@filippo6828/video/7532215741693627670",
           "date": "2025-07-28T19:24:03.000Z",
           "caption": "#puglia #mare #estate #torrecanne #granserenahotel ",
-          "location": "Gran Serena",
+          "location": "Gran Serena Hotel",
           "views": 4003,
           "likes": 16,
           "comments": 3,
@@ -15107,8 +15160,8 @@
             "vacanza",
             "mare",
             "estate",
-            "puglia",
-            "hotel"
+            "summer",
+            "relax"
           ],
           "imageUrl": null
         },
@@ -15138,12 +15191,33 @@
           "shares": 32,
           "sentiment": "positive",
           "topics": [
-            "cocktail",
-            "all inclusive",
             "vacanza",
             "mare",
             "relax",
-            "Puglia"
+            "Bluserena",
+            "Cala Serena",
+            "Serena Majestic",
+            "Serena Majestic Hotel",
+            "Serena Resort",
+            "Torreserena",
+            "Torre Serena",
+            "Serenusa",
+            "Serenahotel",
+            "GranSerena",
+            "Gran Serena",
+            "Sibari Green",
+            "Sibari Green Resort",
+            "Valentino",
+            "Valentino Resort",
+            "Kalidia",
+            "Kalidia Hotel",
+            "Alborèa",
+            "Alborèa Ecolodge",
+            "Ethra",
+            "Ethra Reserve",
+            "Is Serenas",
+            "Is Serenas Badesi",
+            "IsSerenas"
           ],
           "imageUrl": null
         },
@@ -15192,7 +15266,7 @@
           "url": "https://www.tiktok.com/@sasy19263/video/7670181274501303584",
           "date": "2026-08-04T14:20:47.000Z",
           "caption": "#granserenahotel #bluserena #puglia #torrecannehotelserena☀️☀️🤩🤩🤩 #estate2026🏝🏖🏝🏖 ",
-          "location": "Bluserena",
+          "location": "GranSerena",
           "views": 2372,
           "likes": 22,
           "comments": 0,
@@ -15200,8 +15274,10 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "estate",
             "mare",
-            "relax"
+            "relax",
+            "puglia"
           ],
           "imageUrl": null
         },
@@ -16836,18 +16912,16 @@
           "url": "https://www.tiktok.com/@maryfashionfood/video/7536224534244969750",
           "date": "2025-08-08T14:40:13.000Z",
           "caption": "♡♡♡ #torreserenaresort #neiperteee #neipertee #estate #canzone #mare #relax ",
-          "location": "Torre Serena",
+          "location": "Torreserena",
           "views": 1440,
           "likes": 38,
           "comments": 1,
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "estate",
+            "vacanza",
             "mare",
-            "relax",
-            "canzone",
-            "vacanza"
+            "relax"
           ],
           "imageUrl": null
         },
@@ -16938,19 +17012,19 @@
           "url": "https://www.tiktok.com/@tourexperienceviaggi/photo/7535412366096207127",
           "date": "2025-08-06T10:08:36.000Z",
           "caption": "Puglia  Torreserena Resort ⭐️⭐️⭐️⭐️ 🗓️7-14 settembre 🧑‍🧑‍🧒‍🧒2 adulti  🛏️ camera doppia Classic con balcone  🏖️ servizio spiaggia: 1 ombrellone, 1 lettini e una sdraio dalla 4* fila in poi 🥯pensione completa  🪪 tessere club incluse 💰 tasse di soggiorno incluse 📞contattaci per avere maggiori info 3762680750 #Tourexperienceviaggi #travels #voyages #viaggiaconnoi #puglia #bluserena #torreserenaresort",
-          "location": "Torreserena",
+          "location": "Torreserena Resort",
           "views": 3958,
           "likes": 18,
           "comments": 0,
           "shares": 10,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "vacanza",
             "mare",
-            "puglia",
+            "relax",
             "resort",
-            "pensione completa",
-            "servizio spiaggia"
+            "puglia",
+            "famiglia"
           ],
           "imageUrl": null
         },
@@ -16981,7 +17055,6 @@
           "sentiment": "positive",
           "topics": [
             "mare",
-            "torreserenaresort",
             "friends",
             "famiglia",
             "solerelax"
@@ -17979,7 +18052,7 @@
           "url": "https://www.tiktok.com/@celestefatone/video/7669492124919942433",
           "date": "2026-08-02T17:46:32.000Z",
           "caption": "#holidays2K26#calanèresort ",
-          "location": "Calanè Resort",
+          "location": "Cala Serena",
           "views": 488,
           "likes": 14,
           "comments": 0,
@@ -17987,7 +18060,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "resort"
+            "mare"
           ],
           "imageUrl": null
         },
@@ -19192,9 +19265,7 @@
           "topics": [
             "vacanza",
             "relax",
-            "ospitalità",
-            "resort",
-            "fidelizzazione"
+            "mare"
           ],
           "imageUrl": null
         },
@@ -19271,9 +19342,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "natura",
-            "relax"
+            "mare"
           ],
           "imageUrl": null
         },
@@ -19283,7 +19352,7 @@
           "url": "https://www.tiktok.com/@emilianomirti/video/7659019147900194080",
           "date": "2026-07-05T12:26:02.000Z",
           "caption": "#valentinoresort#bluserena#castellanetamarina ",
-          "location": "Valentino Resort",
+          "location": "Bluserena",
           "views": 2118,
           "likes": 11,
           "comments": 2,
@@ -19291,9 +19360,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "resort"
+            "mare"
           ],
           "imageUrl": null
         },
@@ -19303,7 +19370,7 @@
           "url": "https://www.tiktok.com/@ale.celien/video/7674314834422385952",
           "date": "2026-08-15T17:41:07.000Z",
           "caption": "14 agosto 2026 mare castellaneta marina #valentinoresort #estate #marepulito ",
-          "location": "Cala Serena",
+          "location": "Valentino Resort",
           "views": 1869,
           "likes": 3,
           "comments": 0,
@@ -19311,7 +19378,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare"
+            "mare",
+            "estate",
+            "marepulito"
           ],
           "imageUrl": null
         },
@@ -19355,11 +19424,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "vacanzeinitalia",
-            "summer2k26",
-            "valentinoresort"
+            "estate",
+            "divertimento",
+            "social_media"
           ],
           "imageUrl": null
         },
@@ -20522,11 +20589,13 @@
           "likes": 11,
           "comments": 2,
           "shares": 0,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "hotel",
             "vacanza",
-            "kalidia"
+            "mare",
+            "relax",
+            "hotel",
+            "Italia"
           ],
           "imageUrl": null
         },
@@ -22178,17 +22247,18 @@
           "url": "https://www.tiktok.com/@_dieghito97_/video/7661274794402352416",
           "date": "2026-07-11T14:19:07.000Z",
           "caption": "Sigla Serenhappy Ethra Reserve 2026 @bluserena #ethrareserve #bluserena #serenhappy #siglabluserena #assolutamentepertee ",
-          "location": "Ethra Reserve",
+          "location": "Bluserena",
           "views": 8979,
           "likes": 180,
           "comments": 14,
           "shares": 26,
           "sentiment": "positive",
           "topics": [
-            "sigla",
             "vacanza",
-            "mare",
-            "resort"
+            "relax",
+            "resort",
+            "sigla",
+            "ethra reserve"
           ],
           "imageUrl": null
         },
@@ -22246,6 +22316,7 @@
           "topics": [
             "vacanza",
             "mare",
+            "resort",
             "relax"
           ],
           "imageUrl": null
@@ -22276,14 +22347,11 @@
           "shares": 14,
           "sentiment": "positive",
           "topics": [
-            "ferragosto",
-            "serenhappy",
-            "animatore",
-            "vacanza",
-            "ricordi",
-            "video",
-            "competizione",
-            "villaggi"
+            "prova",
+            "Ferragosto",
+            "Serenhappy",
+            "animazione",
+            "vacanza"
           ],
           "imageUrl": null
         },
