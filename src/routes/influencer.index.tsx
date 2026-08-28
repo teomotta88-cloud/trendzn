@@ -93,7 +93,7 @@ export function InfluencerView({ tab, setTab }: { tab?: "feed" | "profili"; setT
       .eq("section", "influencer")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
-      .then(({ data }) => {
+      .then(({ data }: { data: unknown[] | null }) => {
         if (data) setDbRows(data as DbRow[]);
       });
   }, []);

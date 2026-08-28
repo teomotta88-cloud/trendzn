@@ -95,7 +95,7 @@ export function CanaliInspoView({ tab, setTab }: { tab?: "feed" | "canali"; setT
       .eq("section", "canali-inspo")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
-      .then(({ data }) => {
+      .then(({ data }: { data: unknown[] | null }) => {
         if (data) setDbRows(data as DbRow[]);
       });
   }, []);

@@ -36,7 +36,7 @@ const WINDOW_DAYS: Record<CollabWindow, number> = {
 };
 
 export async function listMonitoredProfiles(): Promise<MonitoredProfile[]> {
-  const { data, error } = await supabase
+  const { data, error } = await (supabase as any)
     .from("instagram_monitored_profiles")
     .select("*")
     .order("created_at", { ascending: false });
@@ -50,7 +50,7 @@ export async function listMonitoredProfiles(): Promise<MonitoredProfile[]> {
 export async function getMonitoredProfileByUsername(
   username: string,
 ): Promise<MonitoredProfile | null> {
-  const { data, error } = await supabase
+  const { data, error } = await (supabase as any)
     .from("instagram_monitored_profiles")
     .select("*")
     .eq("username", username)
@@ -73,7 +73,7 @@ export async function addBrandProfile(input: {
   const industry = input.industry.trim();
   if (!username || !industry) throw new Error("Username e industry sono obbligatori.");
 
-  const { error } = await supabase.from("instagram_monitored_profiles").insert({
+  const { error } = await (supabase as any).from("instagram_monitored_profiles").insert({
     username,
     kind: "brand",
     industry,
@@ -86,7 +86,7 @@ export async function addBrandProfile(input: {
 // nell'elenco) — un influencer può averne più di una, se ha collaborato con
 // brand di industry diverse.
 export async function listInfluencerIndustries(): Promise<string[]> {
-  const { data, error } = await supabase.from("instagram_influencer_industries").select("industry");
+  const { data, error } = await (supabase as any).from("instagram_influencer_industries").select("industry");
   if (error) throw error;
   return [...new Set((data ?? []).map((r) => r.industry))].sort();
 }
@@ -97,7 +97,7 @@ export async function listInfluencerIndustries(): Promise<string[]> {
 // influencer può comparire prima come collaboratore che come profilo
 // promosso).
 export async function listInfluencerIndustryMap(): Promise<Map<string, string[]>> {
-  const { data, error } = await supabase
+  const { data, error } = await (supabase as any)
     .from("instagram_influencer_industries")
     .select("influencer_username, industry");
   if (error) throw error;
@@ -124,7 +124,7 @@ export async function getCollabCounts(window: CollabWindow): Promise<Map<string,
   const since = new Date();
   since.setDate(since.getDate() - WINDOW_DAYS[window]);
 
-  const { data, error } = await supabase
+  const { data, error } = await (supabase as any)
     .from("instagram_post_collaborators")
     .select("username, post_id, instagram_posts!inner(published_at)")
     .gte("instagram_posts.published_at", since.toISOString());
@@ -161,7 +161,7 @@ export async function listPostsForUsername(
   username: string,
   { collabOnly = true }: { collabOnly?: boolean } = {},
 ): Promise<CollabPost[]> {
-  const { data: collabRows, error } = await supabase
+  const { data: collabRows, error } = await (supabase as any)
     .from("instagram_post_collaborators")
     .select("post_id")
     .eq("username", username);
@@ -170,14 +170,14 @@ export async function listPostsForUsername(
   const postIds = [...new Set((collabRows ?? []).map((r) => r.post_id))];
   if (postIds.length === 0) return [];
 
-  const { data: posts, error: postsError } = await supabase
+  const { data: posts, error: postsError } = await (supabase as any)
     .from("instagram_posts")
     .select("id, shortcode, url, owner_username, published_at")
     .in("id", postIds)
     .order("published_at", { ascending: false, nullsFirst: false });
   if (postsError) throw postsError;
 
-  const { data: allCollaborators, error: collabError } = await supabase
+  const { data: allCollaborators, error: collabError } = await (supabase as any)
     .from("instagram_post_collaborators")
     .select("post_id, username")
     .in("post_id", postIds);

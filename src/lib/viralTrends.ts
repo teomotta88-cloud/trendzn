@@ -172,7 +172,7 @@ export async function listViralTrendContent(
   // pulizia li cancelli. I contenuti senza didascalia (content null) restano
   // visibili: non abbiamo su cosa decidere e non vogliamo nascondere post
   // potenzialmente legittimi.
-  return (data ?? []).filter(
+  return ((data ?? []) as ViralTrendContent[]).filter(
     (item) => !item.content || looksItalian(item.content),
-  ) as ViralTrendContent[];
+  );
 }

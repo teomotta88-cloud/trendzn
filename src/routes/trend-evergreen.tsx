@@ -52,7 +52,7 @@ function Page() {
       .eq("section", "trend-evergreen")
       .eq("status", "approved")
       .order("created_at", { ascending: false })
-      .then(({ data }) => {
+      .then(({ data }: { data: unknown[] | null }) => {
         if (data) setDbRows(data as DbRow[]);
         setLoading(false);
       });

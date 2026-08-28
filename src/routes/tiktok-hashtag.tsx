@@ -50,7 +50,7 @@ function Page() {
       .order("posted_at", { ascending: false, nullsFirst: false })
       .order("created_at", { ascending: false })
       .limit(300)
-      .then(({ data }) => {
+      .then(({ data }: { data: unknown[] | null }) => {
         if (data) setDbRows(data as DbRow[]);
         setLoading(false);
       });
