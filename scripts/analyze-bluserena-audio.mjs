@@ -97,6 +97,16 @@ async function transcribeAudio(audioPath, groqApiKey) {
     }
 
     const audioBuffer = fs.readFileSync(audioPath);
+
+    if (!audioBuffer || audioBuffer.length === 0) {
+      return {
+        success: false,
+        transcript: null,
+        reason: "Audio file is empty",
+        confidence: 0,
+      };
+    }
+
     const formData = new FormData();
     formData.append("file", audioBuffer, { filename: "audio.mp3", contentType: "audio/mpeg" });
     formData.append("model", "whisper-large-v3");
