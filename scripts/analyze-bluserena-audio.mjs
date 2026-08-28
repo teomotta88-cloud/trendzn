@@ -40,14 +40,18 @@ async function downloadVideo(videoUrl, outputPath) {
 
   try {
     const { execSync } = await import("child_process");
-    execSync(`yt-dlp -f best -o "${outputPath}" "${videoUrl}"`, {
+    // Try with user-agent and longer timeout for TikTok
+    const cmd = `yt-dlp --no-warnings -f best -o "${outputPath}" --socket-timeout 30 "${videoUrl}" 2>&1`;
+    execSync(cmd, {
       stdio: "pipe",
-      timeout: 30000,
+      timeout: 120000, // 2 minutes timeout
+      maxBuffer: 10 * 1024 * 1024,
     });
     return { success: true };
   } catch (err) {
-    console.log(`    ⚠️  yt-dlp not available or download failed: ${String(err).slice(0, 50)}`);
-    return { success: false, reason: "yt-dlp unavailable" };
+    const errMsg = String(err).slice(0, 100);
+    console.log(`    ⚠️  Video download failed: ${errMsg}`);
+    return { success: false, reason: "yt-dlp failed or timeout" };
   }
 }
 
