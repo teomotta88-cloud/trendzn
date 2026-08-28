@@ -104,7 +104,8 @@ Analizza questo contenuto audio + caption e dammi:
 4. Audio insights: cosa dice il parlato, mood, tone
 5. Engagement score: 1-10
 
-Rispondi in JSON: {"sentiment": "...", "topics": [...], "locations": [...], "audioSentiment": "...", "engagement": 5}
+Rispondi SOLO con JSON valido, senza markdown:
+{"sentiment": "positive|negative|neutral", "topics": [...], "locations": [...], "audioSentiment": "positive|negative|neutral", "engagement": 5}
 `;
 
   const parse = (text) => {
