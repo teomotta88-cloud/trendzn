@@ -1,38 +1,53 @@
 // Monitoraggio delle PAGINE HASHTAG (Instagram, TikTok, X) aggiunte alla
 // pagina "Bluserena-monitoring" — complementare a sync-bluserena-monitoring.mjs,
-// che copre solo i PROFILI IG/TikTok. Stesso store (bluserena-monitoring.json,
-// chiave "canali"): un hashtag aggiunto tramite "Aggiungi"/import Excel vive
-// come un canale normale (id/name/urls/accounts), riconosciuto qui in base
-// alla FORMA dell'URL (nessun campo extra nello store) — stesso criterio già
-// usato lato UI in bluserena-monitoring.index.tsx/.$id.tsx:
+// che copre solo i PROFILI IG/TikTok. La LISTA degli hashtag da monitorare
+// resta configurata in bluserena-monitoring.json (chiave "canali", stesso
+// store dei profili, riconosciuti dalla forma dell'URL — vedi hashtagInfo
+// sotto), ma i POST scoperti ora vivono in Supabase
+// (bluserena_hashtag_posts, tabella dedicata) invece che nel JSON: un file
+// git non supporta retry persistente per-post, query/filtri, o
+// aggiornamenti senza commit — necessari per il workflow definitivo
+// (backfill, retry su login-wall, sentiment/topic via LLM in una fase
+// successiva).
+//
 //   Instagram: instagram.com/explore/tags/<tag>/
 //   TikTok:    tiktok.com/tag/<tag>  (o /tags/<tag>)
 //   X:         x.com/hashtag/<tag>   (o twitter.com)
 //
-// Per ogni post si cerca di recuperare: data di pubblicazione, utente che
-// l'ha pubblicato, caption, geotag (se presente). Copertura reale per
-// piattaforma (dettagli e affidabilità nei commenti delle rispettive
-// sezioni più sotto):
-//   - Instagram: tutti e quattro. Data/autore/caption confermati (stessa
-//     tecnica già in produzione per la discovery Trend Virali, vedi
-//     discover-instagram-hashtag-content.mjs — questo script riusa
-//     scripts/lib/instagram-public-metrics.mjs invece di duplicarne il
-//     parsing). Il geotag è stato aggiunto qui per la prima volta e NON è
-//     stato verificato su un post geotaggato reale.
-//   - TikTok: tutti e quattro, CONFERMATI su un video reale geotaggato con
-//     scripts/probe-tiktok-video-json.mjs (24/08/2026) — vedi i commenti
-//     nella sezione TikTok più sotto per i dettagli e il video usato. Autore
-//     e data hanno anche un fallback dall'URL/ID quando la pagina video non
-//     è raggiungibile (login-wall, confermato reale nello stesso probe).
-//   - X: data/autore/caption confermati (rettiwt-api, stesso account già in
-//     produzione per gli account X di ASPI-monitoring, vedi sync-x-posts.mjs,
-//     qui con tweet.search({ hashtags: [...] }) invece di
-//     { fromUsers: [...] }). Il geotag non è mai stato verificato come
-//     campo disponibile nel modello Tweet di rettiwt-api: resta sempre null.
+// Due passate, entrambe alimentano/consumano Supabase invece del JSON:
+//
+//   Passata A (scoperta): trova gli URL dei post recenti sulla pagina
+//   hashtag e li registra come candidati (detail_status 'pending', tranne X
+//   che ha già tutto — vedi sotto). Al PRIMO giro per un hashtag (nessun
+//   canale.backfilledAt in bluserena-monitoring.json) scrolla/cerca più a
+//   fondo per risalire fino a ~2 settimane indietro; ai giri successivi
+//   fa uno scan leggero (solo i post più recenti). "Fino a 2 settimane" è
+//   best-effort (più scroll/più risultati richiesti), non una garanzia:
+//   nessuna delle tre pagine hashtag espone una data prima di aprire il
+//   singolo post, quindi non si può sapere IN ANTICIPO quanto scrollare.
+//
+//   Passata B (dettaglio/retry): legge da
+//   list-bluserena-hashtag-pending.ts i post ancora da controllare —
+//   scoperti in QUESTO giro o falliti (login-wall ecc.) in un giro
+//   precedente, non fa differenza, la coda è la stessa. Per ciascuno riusa
+//   le tecniche già verificate in questa sessione: scripts/lib/
+//   instagram-public-metrics.mjs (Instagram, autore/data/caption/geotag
+//   dalla description) e la struttura JSON __UNIVERSAL_DATA_FOR_REHYDRATION__
+//   (TikTok, confermata con scripts/probe-tiktok-video-json.mjs su un video
+//   reale geotaggato). Un fallimento (es. login-wall, confermato reale per
+//   entrambe le piattaforme) marca il post 'failed': la PROSSIMA run lo
+//   rilegge automaticamente dalla stessa coda e riprova — è il fallback
+//   "riprova in una run successiva" richiesto esplicitamente, niente di più
+//   complesso di questo.
+//
+//   X fa eccezione: rettiwt-api restituisce autore/data/caption/views in
+//   un'unica chiamata di ricerca per hashtag, quindi Passata A e B
+//   coincidono (detail_status 'ok' subito, mai in coda per Passata B). Il
+//   geotag resta sempre null: nessun campo confermato nel modello Tweet di
+//   rettiwt-api.
 //
 // Nessuna delle tre tecniche richiede credit anysite. Tutte restano "best
-// effort" anche per i dati confermati (login-wall/blocchi possibili su
-// Instagram e TikTok, vedi i commenti nelle rispettive sezioni) — un
+// effort" (login-wall/blocchi possibili su Instagram e TikTok) — un
 // fallimento su un singolo hashtag o un singolo post non blocca gli altri.
 
 import { openInstagramMetricsSession } from "./lib/instagram-public-metrics.mjs";
@@ -42,18 +57,27 @@ import { Rettiwt } from "rettiwt-api";
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const MAX_ATTEMPTS = 5;
-const MAX_POSTS_PER_CHANNEL = 15;
-// Instagram: la stessa soglia empirica documentata in
-// discover-instagram-hashtag-content.mjs (~10 hashtag/sessione prima del
-// login-wall) — qui gli hashtag sono curati a mano da un utente, non decine
-// come nella discovery automatica, quindi nessuno sharding: se in futuro se
-// ne aggiungono molti, questo limite andrà rivisto insieme al cron.
-const MAX_POSTS_PER_INSTAGRAM_HASHTAG = parseInt(
-  process.env.MAX_POSTS_PER_INSTAGRAM_HASHTAG ?? "30",
-  10,
-);
-const TWEETS_PER_HASHTAG = parseInt(process.env.TWEETS_PER_HASHTAG ?? "10", 10);
+
+const SYNC_POSTS_ENDPOINT =
+  "https://trendzn.lovable.app/api/public/hooks/sync-bluserena-hashtag-posts";
+const LIST_PENDING_ENDPOINT =
+  "https://trendzn.lovable.app/api/public/hooks/list-bluserena-hashtag-pending";
+
 const DELAY_MS = parseInt(process.env.DELAY_BETWEEN_CALLS_MS ?? "1500", 10);
+const PENDING_LIMIT_PER_PLATFORM = parseInt(process.env.PENDING_LIMIT_PER_PLATFORM ?? "100", 10);
+
+// Backfill (primo giro di un hashtag) vs incrementale (giri successivi):
+// stessa soglia empirica di discover-instagram-hashtag-content.mjs per il
+// login-wall Instagram (~10 hashtag/sessione, ~500 richieste) applicata qui
+// al numero di post per singolo hashtag invece che al numero di hashtag —
+// valori scelti per restare ben sotto quella soglia anche al backfill.
+const INCREMENTAL_INSTAGRAM_MAX_POSTS = 30;
+const BACKFILL_INSTAGRAM_MAX_POSTS = 150;
+const INCREMENTAL_INSTAGRAM_SCROLL_ROUNDS = 15;
+const BACKFILL_INSTAGRAM_SCROLL_ROUNDS = 60;
+const BACKFILL_TIKTOK_SCROLL_STEPS = 30;
+const INCREMENTAL_TWEETS_PER_HASHTAG = 10;
+const BACKFILL_TWEETS_PER_HASHTAG = 100;
 
 const githubToken = process.env.GITHUB_TOKEN;
 if (!githubToken) {
@@ -102,39 +126,46 @@ async function readStore() {
   return { store, sha };
 }
 
-// Come sync-x-posts.mjs: più script scrivono sullo stesso file
-// (sync-bluserena-monitoring.mjs in parallelo), quindi rileggiamo e
-// riproviamo su conflitto invece di fallire silenziosamente.
-async function writeStore(store) {
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    const { sha } = await readStore();
-    const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
+// Scrive SOLO il flag backfilledAt sui canali passati (id -> timestamp): a
+// differenza dei post, ora su Supabase, questo resta nel JSON perché è
+// config del canale, non un dato scoperto. Stesso pattern retry-on-conflict
+// degli altri script di sync su questo file.
+async function markBackfilled(canaleIds) {
+  if (canaleIds.size === 0) return;
 
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const { store, sha } = await readStore();
+    const now = new Date().toISOString();
+    let changed = false;
+    for (const canale of store.canali) {
+      if (canaleIds.has(canale.id) && !canale.backfilledAt) {
+        canale.backfilledAt = now;
+        changed = true;
+      }
+    }
+    if (!changed) return;
+
+    const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
     const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
       method: "PUT",
       headers: { ...ghHeaders, "Content-Type": "application/json" },
       body: JSON.stringify({
-        message: "chore: sync hashtag Bluserena [trendzn-bot]",
+        message: "chore: segna backfill hashtag Bluserena completato [trendzn-bot]",
         content,
         sha,
       }),
     });
 
     if (res.ok) return;
-
     if ((res.status === 409 || res.status === 422) && attempt < MAX_ATTEMPTS) {
       console.log(
-        `Conflitto di scrittura (tentativo ${attempt}/${MAX_ATTEMPTS}), rileggo e riprovo...`,
+        `Conflitto su bluserena-monitoring.json (tentativo ${attempt}/${MAX_ATTEMPTS}), rileggo...`,
       );
       continue;
     }
-
-    throw new Error(
-      `Scrittura bluserena-monitoring.json fallita: ${res.status} ${await res.text()}`,
-    );
+    console.error(`Scrittura backfilledAt fallita: ${res.status} ${await res.text()}`);
+    return;
   }
-
-  throw new Error("Troppi conflitti di scrittura su bluserena-monitoring.json.");
 }
 
 // Stesso criterio usato lato UI (bluserena-monitoring.index.tsx/.$id.tsx):
@@ -168,174 +199,52 @@ function hashtagInfo(url) {
   return null;
 }
 
-// Tiene solo gli MAX_POSTS_PER_CHANNEL post più recenti di QUESTA piattaforma
-// nel canale, buttando i più vecchi — stesso approccio di trimToMax in
-// sync-x-posts.mjs, generalizzato: qui un canale hashtag ha post di UNA sola
-// piattaforma (quella dell'hashtag), ma il filtro per platform evita di
-// toccare eventuali altri account se il canale venisse riusato in futuro.
-function trimToMax(canale, platform, max) {
-  const posts = canale.accounts
-    .filter((a) => a.platform === platform)
-    .sort((a, b) => new Date(a.date || 0).getTime() - new Date(b.date || 0).getTime());
-
-  while (posts.length > max) {
-    const oldest = posts.shift();
-    canale.accounts = canale.accounts.filter((a) => a.url !== oldest.url);
-  }
-}
-
-// handle = utente che ha pubblicato il singolo post (non l'hashtag: un
-// hashtag raggruppa post di autori diversi) — fallback al tag SOLO se
-// l'autore non è stato recuperabile, per non lasciare mai handle vuoto.
-function addPosts(canale, platform, tag, posts) {
-  let added = 0;
-  for (const post of posts) {
-    if (!post.url) continue;
-    const exists = canale.accounts.some((a) => a.url === post.url);
-    if (exists) continue;
-    canale.accounts.push({
-      platform,
-      handle: post.author || tag,
-      url: post.url,
-      date: post.date ?? null,
-      caption: post.caption ?? null,
-      location: post.location ?? null,
-      views: post.views ?? null,
-    });
-    added++;
-  }
-  if (added > 0) trimToMax(canale, platform, MAX_POSTS_PER_CHANNEL);
-  return added;
-}
-
-// --- Main ---
-console.log("=== TRENDZN — Sync hashtag Bluserena-monitoring ===");
-
-const { store } = await readStore();
-const list = store.canali;
-
-const hashtagChannels = [];
-for (const canale of list) {
-  const info = hashtagInfo(canale.urls?.[0] ?? "");
-  if (info) hashtagChannels.push({ canale, ...info });
-}
-
-const byPlatform = {
-  instagram: hashtagChannels.filter((h) => h.platform === "instagram"),
-  tiktok: hashtagChannels.filter((h) => h.platform === "tiktok"),
-  x: hashtagChannels.filter((h) => h.platform === "x"),
-};
-
-console.log(
-  `Hashtag da monitorare: ${hashtagChannels.length} (Instagram: ${byPlatform.instagram.length}, TikTok: ${byPlatform.tiktok.length}, X: ${byPlatform.x.length})`,
-);
-
-if (hashtagChannels.length === 0) {
-  console.log("Nessun hashtag configurato, esco.");
-  process.exit(0);
-}
-
-let modified = false;
-
-// --- Instagram ---
-if (byPlatform.instagram.length > 0) {
-  console.log(`\n--- Instagram (${byPlatform.instagram.length} hashtag) ---`);
-  const session = await openInstagramMetricsSession();
+async function sendPosts(posts) {
+  if (posts.length === 0) return;
   try {
-    for (const { canale, tag } of byPlatform.instagram) {
-      console.log(`#${tag}`);
-      const page = await session.context.newPage();
-      let links = [];
-      try {
-        const url = `https://www.instagram.com/explore/tags/${encodeURIComponent(tag)}/`;
-        const response = await page
-          .goto(url, { waitUntil: "domcontentloaded", timeout: 30000 })
-          .catch(() => null);
-
-        if (response && !page.url().includes("/accounts/login")) {
-          await page.waitForTimeout(4000);
-          const collected = new Set();
-          let stagnantRounds = 0;
-          for (let round = 0; round < 15 && collected.size < MAX_POSTS_PER_INSTAGRAM_HASHTAG; round++) {
-            const found = await page.$$eval("a[href]", (nodes) =>
-              nodes
-                .map((n) => n.getAttribute("href"))
-                .filter((h) => h && (/^\/p\//.test(h) || /^\/reel\//.test(h))),
-            );
-            const before = collected.size;
-            for (const href of found) {
-              collected.add(new URL(href, "https://www.instagram.com").toString().split("?")[0]);
-            }
-            if (collected.size === before) {
-              stagnantRounds++;
-              if (stagnantRounds >= 3) break;
-            } else {
-              stagnantRounds = 0;
-            }
-            await page.mouse.wheel(0, 3000);
-            await page.waitForTimeout(1500);
-          }
-          links = [...collected].slice(0, MAX_POSTS_PER_INSTAGRAM_HASHTAG);
-        } else {
-          console.log("  FALLITO (login wall o nessuna risposta)");
-        }
-      } finally {
-        await page.close();
-      }
-
-      const posts = [];
-      for (const url of links) {
-        const { metrics } = await session.fetchMetricsDetailed(url);
-        if (metrics) {
-          posts.push({
-            url,
-            date: metrics.publishedAt,
-            caption: metrics.caption,
-            author: metrics.author,
-            location: metrics.location,
-          });
-        }
-        await sleep(DELAY_MS);
-      }
-
-      const added = addPosts(canale, "instagram", tag, posts);
-      if (added > 0) modified = true;
-      console.log(`  ${links.length} link trovati, ${added} nuovi post aggiunti.`);
-      await sleep(DELAY_MS);
+    const res = await fetch(SYNC_POSTS_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ posts }),
+    });
+    if (!res.ok) {
+      console.error(`  sync-bluserena-hashtag-posts fallito (${res.status}): ${await res.text()}`);
+      return;
     }
-  } finally {
-    await session.close();
+    const data = await res.json();
+    console.log(`  ${posts.length} record inviati (${data.upserted ?? "?"} upsert).`);
+  } catch (err) {
+    console.error(`  sync-bluserena-hashtag-posts errore: ${String(err)}`);
   }
 }
 
-// --- TikTok ---
-// scrapeTikTokHashtag() dà solo url + views (limite noto della pagina
-// hashtag, vedi scrape-tiktok-hashtag.mjs). Autore/data/caption/geotag si
-// leggono dalla pagina del singolo video, dal blob JSON che TikTok
-// incorpora server-side in ogni pagina (script
-// #__UNIVERSAL_DATA_FOR_REHYDRATION__, path
-// __DEFAULT_SCOPE__["webapp.video-detail"].itemInfo.itemStruct) — CONFERMATO
-// con scripts/probe-tiktok-video-json.mjs su un video reale geotaggato
-// (24/08/2026, https://www.tiktok.com/@iannacconefamilyofficia/video/7676876746549103905):
-//   itemStruct.author.uniqueId  -> stesso valore già ottenuto dall'URL
-//   itemStruct.createTime       -> timestamp Unix (secondi), preferito alla
-//                                   stima dall'ID video (che nel probe è
-//                                   risultata sfasata di ~4 secondi — normale
-//                                   per un ID stile snowflake, ma createTime
-//                                   dal JSON è la fonte esatta quando la
-//                                   pagina è raggiungibile)
-//   itemStruct.desc             -> caption (stringa vuota per il video di
-//                                   prova, che non ne aveva una — campo
-//                                   comunque confermato)
-//   itemStruct.poi.name / .address / .city -> geotag, es. "Villaggio Il
-//                                   Valentino Castellaneta Marina" /
-//                                   "Villaggio Valentino, Castellaneta,
-//                                   Italia" / "Taranto"
-// Login-wall confermato anch'esso nello stesso probe (un secondo video,
-// stessa run, ha dato pagina "Log in | TikTok" invece del video): come per
-// Instagram, resta un limite reale della tecnica anonima, non un bug — il
-// video va semplicemente perso per quel giro, rilevato esplicitamente sotto
-// invece di fallire silenziosamente su un JSON assente.
+async function fetchPending(platform) {
+  try {
+    const res = await fetch(
+      `${LIST_PENDING_ENDPOINT}?platform=${encodeURIComponent(platform)}&limit=${PENDING_LIMIT_PER_PLATFORM}`,
+    );
+    if (!res.ok) {
+      console.error(
+        `  list-bluserena-hashtag-pending fallito (${res.status}): ${await res.text()}`,
+      );
+      return [];
+    }
+    const data = await res.json();
+    return data.posts ?? [];
+  } catch (err) {
+    console.error(`  list-bluserena-hashtag-pending errore: ${String(err)}`);
+    return [];
+  }
+}
+
+// --- TikTok: autore/data/caption/geotag dal blob JSON della pagina video ---
+// CONFERMATO su un video reale geotaggato con
+// scripts/probe-tiktok-video-json.mjs (24/08/2026,
+// https://www.tiktok.com/@iannacconefamilyofficia/video/7676876746549103905):
+//   itemStruct.author.uniqueId, itemStruct.createTime (secondi Unix),
+//   itemStruct.desc (caption), itemStruct.poi.name/.city (geotag).
+// Login-wall confermato anch'esso reale nello stesso probe (pagina "Log in |
+// TikTok" al posto del video) — rilevato esplicitamente sotto.
 function tiktokAuthorFromUrl(url) {
   return url.match(/\/@([^/]+)\/video\//)?.[1] ?? null;
 }
@@ -397,109 +306,282 @@ async function tiktokVideoDetails(browser, url) {
     const caption = itemStruct.desc || null;
 
     const poi = itemStruct.poi;
-    const location = poi?.name
-      ? [poi.name, poi.city].filter(Boolean).join(" · ")
-      : null;
+    const location = poi?.name ? [poi.name, poi.city].filter(Boolean).join(" · ") : null;
 
     return { caption, date, author, location, reason: null };
   } catch (err) {
-    return { caption: null, date: null, author: null, location: null, reason: `error:${String(err)}` };
+    return {
+      caption: null,
+      date: null,
+      author: null,
+      location: null,
+      reason: `error:${String(err)}`,
+    };
   } finally {
     await page.close();
   }
 }
 
-if (byPlatform.tiktok.length > 0) {
-  console.log(`\n--- TikTok (${byPlatform.tiktok.length} hashtag) ---`);
-  const { chromium } = await import("playwright");
-  const browser = await chromium.launch({ headless: true });
+// --- Main ---
+console.log("=== TRENDZN — Sync hashtag Bluserena-monitoring ===");
+
+const { store } = await readStore();
+const list = store.canali;
+
+const hashtagChannels = [];
+for (const canale of list) {
+  const info = hashtagInfo(canale.urls?.[0] ?? "");
+  if (info) hashtagChannels.push({ canale, ...info });
+}
+
+const byPlatform = {
+  instagram: hashtagChannels.filter((h) => h.platform === "instagram"),
+  tiktok: hashtagChannels.filter((h) => h.platform === "tiktok"),
+  x: hashtagChannels.filter((h) => h.platform === "x"),
+};
+
+console.log(
+  `Hashtag da monitorare: ${hashtagChannels.length} (Instagram: ${byPlatform.instagram.length}, TikTok: ${byPlatform.tiktok.length}, X: ${byPlatform.x.length})`,
+);
+
+if (hashtagChannels.length === 0) {
+  console.log("Nessun hashtag configurato, esco.");
+  process.exit(0);
+}
+
+const backfilledIds = new Set();
+
+// ========== Passata A: scoperta ==========
+
+if (byPlatform.instagram.length > 0) {
+  console.log(`\n--- Instagram: scoperta (${byPlatform.instagram.length} hashtag) ---`);
+  const session = await openInstagramMetricsSession();
   try {
-    for (const { canale, tag } of byPlatform.tiktok) {
-      console.log(`#${tag}`);
-      let found = [];
+    for (const { canale, tag } of byPlatform.instagram) {
+      const isBackfill = !canale.backfilledAt;
+      const maxPosts = isBackfill ? BACKFILL_INSTAGRAM_MAX_POSTS : INCREMENTAL_INSTAGRAM_MAX_POSTS;
+      const maxRounds = isBackfill
+        ? BACKFILL_INSTAGRAM_SCROLL_ROUNDS
+        : INCREMENTAL_INSTAGRAM_SCROLL_ROUNDS;
+      console.log(`#${tag}${isBackfill ? " (backfill)" : ""}`);
+
+      const page = await session.context.newPage();
+      let links = [];
       try {
-        found = await scrapeTikTokHashtag(tag);
-      } catch (err) {
-        console.error(`  errore: ${String(err?.message || err)}`);
+        const url = `https://www.instagram.com/explore/tags/${encodeURIComponent(tag)}/`;
+        const response = await page
+          .goto(url, { waitUntil: "domcontentloaded", timeout: 30000 })
+          .catch(() => null);
+
+        if (response && !page.url().includes("/accounts/login")) {
+          await page.waitForTimeout(4000);
+          const collected = new Set();
+          let stagnantRounds = 0;
+          for (let round = 0; round < maxRounds && collected.size < maxPosts; round++) {
+            const found = await page.$$eval("a[href]", (nodes) =>
+              nodes
+                .map((n) => n.getAttribute("href"))
+                .filter((h) => h && (/^\/p\//.test(h) || /^\/reel\//.test(h))),
+            );
+            const before = collected.size;
+            for (const href of found) {
+              collected.add(new URL(href, "https://www.instagram.com").toString().split("?")[0]);
+            }
+            if (collected.size === before) {
+              stagnantRounds++;
+              if (stagnantRounds >= 3) break;
+            } else {
+              stagnantRounds = 0;
+            }
+            await page.mouse.wheel(0, 3000);
+            await page.waitForTimeout(1500);
+          }
+          links = [...collected].slice(0, maxPosts);
+        } else {
+          console.log("  FALLITO (login wall o nessuna risposta)");
+        }
+      } finally {
+        await page.close();
       }
 
-      const posts = [];
-      let loginWallCount = 0;
-      for (const { url, views } of found) {
-        const details = await tiktokVideoDetails(browser, url);
-        if (details.reason === "login-wall") loginWallCount++;
-        posts.push({
-          url,
-          author: details.author ?? tiktokAuthorFromUrl(url),
-          date: details.date ?? tiktokDateFromVideoId(url),
-          caption: details.caption,
-          location: details.location,
-          views: views ?? null,
-        });
-        await sleep(DELAY_MS);
+      if (links.length > 0) {
+        await sendPosts(
+          links.map((url) => ({ hashtagUrl: canale.urls[0], platform: "instagram", tag, url })),
+        );
       }
-
-      const added = addPosts(canale, "tiktok", tag, posts);
-      if (added > 0) modified = true;
-      console.log(
-        `  ${found.length} video trovati, ${added} nuovi post aggiunti` +
-          (loginWallCount > 0 ? ` (${loginWallCount} bloccati da login-wall)` : "") +
-          ".",
-      );
+      if (isBackfill) backfilledIds.add(canale.id);
+      await sleep(DELAY_MS);
     }
   } finally {
-    await browser.close();
+    await session.close();
   }
 }
 
-// --- X ---
+if (byPlatform.tiktok.length > 0) {
+  console.log(`\n--- TikTok: scoperta (${byPlatform.tiktok.length} hashtag) ---`);
+  for (const { canale, tag } of byPlatform.tiktok) {
+    const isBackfill = !canale.backfilledAt;
+    console.log(`#${tag}${isBackfill ? " (backfill)" : ""}`);
+    let found = [];
+    try {
+      found = isBackfill
+        ? await scrapeTikTokHashtag(tag, { scrollSteps: BACKFILL_TIKTOK_SCROLL_STEPS })
+        : await scrapeTikTokHashtag(tag);
+    } catch (err) {
+      console.error(`  errore: ${String(err?.message || err)}`);
+    }
+    if (found.length > 0) {
+      await sendPosts(
+        found.map(({ url, views }) => ({
+          hashtagUrl: canale.urls[0],
+          platform: "tiktok",
+          tag,
+          url,
+          views: views ?? null,
+        })),
+      );
+    }
+    if (isBackfill) backfilledIds.add(canale.id);
+  }
+}
+
 if (byPlatform.x.length > 0) {
-  console.log(`\n--- X (${byPlatform.x.length} hashtag) ---`);
+  console.log(`\n--- X: scoperta + dettaglio (${byPlatform.x.length} hashtag) ---`);
   const rettiwtApiKey = process.env.RETTIWT_API_KEY;
   if (!rettiwtApiKey) {
     console.error("  Manca RETTIWT_API_KEY nell'ambiente, salto gli hashtag X.");
   } else {
     const rettiwt = new Rettiwt({ apiKey: rettiwtApiKey });
     for (const { canale, tag } of byPlatform.x) {
-      console.log(`#${tag}`);
+      const isBackfill = !canale.backfilledAt;
+      const count = isBackfill ? BACKFILL_TWEETS_PER_HASHTAG : INCREMENTAL_TWEETS_PER_HASHTAG;
+      console.log(`#${tag}${isBackfill ? " (backfill)" : ""}`);
+
       let tweets = [];
       try {
         const result = await rettiwt.tweet.search(
           { hashtags: [tag], language: "it", top: false },
-          TWEETS_PER_HASHTAG,
+          count,
         );
         tweets = result?.list ?? [];
       } catch (err) {
         console.error(`  errore: ${String(err?.message || err)}`);
         continue;
       }
+
       // author: tweet.tweetBy.userName, campo verificato leggendo
       // node_modules/rettiwt-api/dist/models/data/Tweet.d.ts (vedi
-      // probe-x-hashtag-search-rettiwt.mjs). location resta sempre null:
-      // rettiwt-api non espone un campo di geolocalizzazione confermato sul
-      // modello Tweet — da verificare con un probe dedicato prima di
-      // provare a leggerlo, non un'omissione distratta.
+      // probe-x-hashtag-search-rettiwt.mjs). Niente Passata B per X: qui
+      // arriva già tutto quello che si può ottenere in un colpo solo.
       const posts = tweets
         .filter((t) => t?.url)
         .map((t) => ({
+          hashtagUrl: canale.urls[0],
+          platform: "x",
+          tag,
           url: t.url,
-          date: t.createdAt || null,
+          publishedAt: t.createdAt || null,
           caption: t.fullText || null,
           author: t.tweetBy?.userName || null,
           location: null,
           views: t.viewCount ?? null,
+          detailStatus: "ok",
         }));
-      const added = addPosts(canale, "x", tag, posts);
-      if (added > 0) modified = true;
-      console.log(`  ${tweets.length} tweet trovati, ${added} nuovi post aggiunti.`);
+      if (posts.length > 0) await sendPosts(posts);
+      if (isBackfill) backfilledIds.add(canale.id);
     }
   }
 }
 
-if (!modified) {
-  console.log("\nNessuna novità, bluserena-monitoring.json non modificato.");
-  process.exit(0);
+await markBackfilled(backfilledIds);
+
+// ========== Passata B: dettaglio/retry (Instagram + TikTok) ==========
+
+const igPending = byPlatform.instagram.length > 0 ? await fetchPending("instagram") : [];
+if (igPending.length > 0) {
+  console.log(`\n--- Instagram: dettaglio di ${igPending.length} post in coda ---`);
+  const session = await openInstagramMetricsSession();
+  const results = [];
+  try {
+    for (const p of igPending) {
+      const { metrics, reason } = await session.fetchMetricsDetailed(p.url);
+      if (metrics) {
+        results.push({
+          hashtagUrl: p.hashtag_url,
+          platform: "instagram",
+          tag: p.tag,
+          url: p.url,
+          author: metrics.author,
+          publishedAt: metrics.publishedAt,
+          caption: metrics.caption,
+          location: metrics.location,
+          detailStatus: "ok",
+        });
+      } else {
+        results.push({
+          hashtagUrl: p.hashtag_url,
+          platform: "instagram",
+          tag: p.tag,
+          url: p.url,
+          detailStatus: "failed",
+          detailFailReason: reason,
+        });
+      }
+      await sleep(DELAY_MS);
+    }
+  } finally {
+    await session.close();
+  }
+  const failed = results.filter((r) => r.detailStatus === "failed").length;
+  console.log(
+    `  ${results.length - failed}/${results.length} completati, ${failed} in coda per il prossimo giro.`,
+  );
+  await sendPosts(results);
 }
 
-await writeStore(store);
-console.log("\nbluserena-monitoring.json aggiornato su GitHub.");
+const ttPending = byPlatform.tiktok.length > 0 ? await fetchPending("tiktok") : [];
+if (ttPending.length > 0) {
+  console.log(`\n--- TikTok: dettaglio di ${ttPending.length} video in coda ---`);
+  const { chromium } = await import("playwright");
+  const browser = await chromium.launch({ headless: true });
+  const results = [];
+  try {
+    for (const p of ttPending) {
+      const details = await tiktokVideoDetails(browser, p.url);
+      if (details.reason) {
+        results.push({
+          hashtagUrl: p.hashtag_url,
+          platform: "tiktok",
+          tag: p.tag,
+          url: p.url,
+          author: details.author ?? tiktokAuthorFromUrl(p.url),
+          publishedAt: details.date ?? tiktokDateFromVideoId(p.url),
+          detailStatus: "failed",
+          detailFailReason: details.reason,
+        });
+      } else {
+        results.push({
+          hashtagUrl: p.hashtag_url,
+          platform: "tiktok",
+          tag: p.tag,
+          url: p.url,
+          author: details.author,
+          publishedAt: details.date,
+          caption: details.caption,
+          location: details.location,
+          detailStatus: "ok",
+        });
+      }
+      await sleep(DELAY_MS);
+    }
+  } finally {
+    await browser.close();
+  }
+  const failed = results.filter((r) => r.detailStatus === "failed").length;
+  console.log(
+    `  ${results.length - failed}/${results.length} completati, ${failed} in coda per il prossimo giro.`,
+  );
+  await sendPosts(results);
+}
+
+console.log("\n=== Fine ===");

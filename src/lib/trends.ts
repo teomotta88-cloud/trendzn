@@ -46,6 +46,12 @@ export type CanaleInspo = {
   urls: string[];
   descrizione: string | null;
   accounts: AccountRef[];
+  // Solo per i canali-hashtag di Bluserena-monitoring (sync-bluserena-hashtags.mjs):
+  // quando il backfill iniziale (fino a ~2 settimane indietro) è stato fatto
+  // almeno una volta, così le run successive fanno solo uno scan leggero
+  // invece di ripetere ogni volta lo scan profondo. undefined/null = mai
+  // fatto ancora. Assente per i canali-profilo.
+  backfilledAt?: string | null;
 };
 
 export const trendRealTime = data.trend_real_time as TrendItem[];

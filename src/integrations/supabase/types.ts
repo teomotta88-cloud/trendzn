@@ -14,6 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
+      bluserena_hashtag_posts: {
+        Row: {
+          author: string | null
+          caption: string | null
+          detail_attempt_count: number
+          detail_fail_reason: string | null
+          detail_last_attempt_at: string | null
+          detail_status: string
+          discovered_at: string
+          hashtag_url: string
+          id: string
+          location: string | null
+          platform: string
+          published_at: string | null
+          sentiment: string | null
+          sentiment_source: string | null
+          tag: string
+          topic: string | null
+          updated_at: string
+          url: string
+          views: number | null
+        }
+        Insert: {
+          author?: string | null
+          caption?: string | null
+          detail_attempt_count?: number
+          detail_fail_reason?: string | null
+          detail_last_attempt_at?: string | null
+          detail_status?: string
+          discovered_at?: string
+          hashtag_url: string
+          id?: string
+          location?: string | null
+          platform: string
+          published_at?: string | null
+          sentiment?: string | null
+          sentiment_source?: string | null
+          tag: string
+          topic?: string | null
+          updated_at?: string
+          url: string
+          views?: number | null
+        }
+        Update: {
+          author?: string | null
+          caption?: string | null
+          detail_attempt_count?: number
+          detail_fail_reason?: string | null
+          detail_last_attempt_at?: string | null
+          detail_status?: string
+          discovered_at?: string
+          hashtag_url?: string
+          id?: string
+          location?: string | null
+          platform?: string
+          published_at?: string | null
+          sentiment?: string | null
+          sentiment_source?: string | null
+          tag?: string
+          topic?: string | null
+          updated_at?: string
+          url?: string
+          views?: number | null
+        }
+        Relationships: []
+      }
       brand_keywords: {
         Row: {
           active: boolean

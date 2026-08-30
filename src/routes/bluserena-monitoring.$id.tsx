@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { detectPlatform, type CanaleInspo } from "@/lib/trends";
+import { detectPlatform, type AccountRef, type CanaleInspo } from "@/lib/trends";
 import { bluserenaCanali } from "@/lib/bluserenaMonitoring";
+import { supabase } from "@/integrations/supabase/client";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink, MapPin, Search } from "lucide-react";
 
@@ -56,18 +57,55 @@ const PAGE_SIZE = 9;
 function Page() {
   const { id } = Route.useParams();
   const canale: CanaleInspo | undefined = bluserenaCanali.find((c) => String(c.id) === String(id));
+  const isHashtag = isHashtagUrl(canale?.urls[0] ?? "");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [search, setSearch] = useState("");
 
+  // Per i canali-hashtag i post scoperti da scripts/sync-bluserena-hashtags.mjs
+  // vivono in Supabase (bluserena_hashtag_posts), non in canale.accounts —
+  // che per gli hashtag resta solo il seed del canale (nome/handle). I
+  // canali-profilo restano invariati, leggono da canale.accounts come sempre.
+  const [hashtagPosts, setHashtagPosts] = useState<AccountRef[]>([]);
+  const [loadingHashtagPosts, setLoadingHashtagPosts] = useState(isHashtag);
+
+  useEffect(() => {
+    if (!canale || !isHashtag) return;
+    let cancelled = false;
+    setLoadingHashtagPosts(true);
+    supabase
+      .from("bluserena_hashtag_posts")
+      .select("platform, url, author, published_at, caption, location")
+      .eq("hashtag_url", canale.urls[0])
+      .order("published_at", { ascending: false, nullsFirst: false })
+      .then(({ data }) => {
+        if (cancelled) return;
+        setHashtagPosts(
+          (data ?? []).map((row) => ({
+            platform: row.platform,
+            handle: row.author ?? "",
+            url: row.url,
+            date: row.published_at,
+            caption: row.caption,
+            location: row.location,
+          })),
+        );
+        setLoadingHashtagPosts(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [canale, isHashtag]);
+
   const allPosts = useMemo(() => {
     if (!canale) return [];
+    if (isHashtag) return hashtagPosts;
     const posts = canale.accounts.filter((a) => POST_URL_RE.test(a.url));
     return [...posts].sort((a, b) => {
       const da = a.date ? new Date(a.date).getTime() : 0;
       const db = b.date ? new Date(b.date).getTime() : 0;
       return db - da;
     });
-  }, [canale]);
+  }, [canale, isHashtag, hashtagPosts]);
 
   const filteredPosts = useMemo(() => {
     if (!search) return allPosts;
@@ -167,7 +205,11 @@ function Page() {
           )}
         </div>
 
-        {allPosts.length === 0 ? (
+        {isHashtag && loadingHashtagPosts ? (
+          <div className="rounded-2xl border border-dashed border-border p-10 text-center text-sm text-muted-foreground">
+            Caricamento…
+          </div>
+        ) : allPosts.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center">
             <p className="text-sm text-muted-foreground">
               Nessun post ancora per questo canale.

@@ -44,6 +44,7 @@ import { Route as ApiPublicHooksSyncTiktokHashtagRouteImport } from './routes/ap
 import { Route as ApiPublicHooksSyncInstagramCollabRouteImport } from './routes/api/public/hooks/sync-instagram-collab'
 import { Route as ApiPublicHooksSyncCrossSourceTrendsRouteImport } from './routes/api/public/hooks/sync-cross-source-trends'
 import { Route as ApiPublicHooksSyncBrandMentionsRouteImport } from './routes/api/public/hooks/sync-brand-mentions'
+import { Route as ApiPublicHooksSyncBluserenaHashtagPostsRouteImport } from './routes/api/public/hooks/sync-bluserena-hashtag-posts'
 import { Route as ApiPublicHooksSyncAudioTrendsRouteImport } from './routes/api/public/hooks/sync-audio-trends'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
 import { Route as ApiPublicHooksRecordTopicVolumeRouteImport } from './routes/api/public/hooks/record-topic-volume'
@@ -54,6 +55,7 @@ import { Route as ApiPublicHooksListMonitoredTopicsRouteImport } from './routes/
 import { Route as ApiPublicHooksListInstagramContentUrlsRouteImport } from './routes/api/public/hooks/list-instagram-content-urls'
 import { Route as ApiPublicHooksListCrossSourceTrendsRouteImport } from './routes/api/public/hooks/list-cross-source-trends'
 import { Route as ApiPublicHooksListCanaliInspoTopicsRouteImport } from './routes/api/public/hooks/list-canali-inspo-topics'
+import { Route as ApiPublicHooksListBluserenaHashtagPendingRouteImport } from './routes/api/public/hooks/list-bluserena-hashtag-pending'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksImportBluserenaBulkRouteImport } from './routes/api/public/hooks/import-bluserena-bulk'
 import { Route as ApiPublicHooksImportAspiBulkRouteImport } from './routes/api/public/hooks/import-aspi-bulk'
@@ -256,6 +258,12 @@ const ApiPublicHooksSyncBrandMentionsRoute =
     path: '/api/public/hooks/sync-brand-mentions',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksSyncBluserenaHashtagPostsRoute =
+  ApiPublicHooksSyncBluserenaHashtagPostsRouteImport.update({
+    id: '/api/public/hooks/sync-bluserena-hashtag-posts',
+    path: '/api/public/hooks/sync-bluserena-hashtag-posts',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksSyncAudioTrendsRoute =
   ApiPublicHooksSyncAudioTrendsRouteImport.update({
     id: '/api/public/hooks/sync-audio-trends',
@@ -313,6 +321,12 @@ const ApiPublicHooksListCanaliInspoTopicsRoute =
   ApiPublicHooksListCanaliInspoTopicsRouteImport.update({
     id: '/api/public/hooks/list-canali-inspo-topics',
     path: '/api/public/hooks/list-canali-inspo-topics',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksListBluserenaHashtagPendingRoute =
+  ApiPublicHooksListBluserenaHashtagPendingRouteImport.update({
+    id: '/api/public/hooks/list-bluserena-hashtag-pending',
+    path: '/api/public/hooks/list-bluserena-hashtag-pending',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksLinkPreviewRoute =
@@ -430,6 +444,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/import-bluserena-bulk': typeof ApiPublicHooksImportBluserenaBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/list-bluserena-hashtag-pending': typeof ApiPublicHooksListBluserenaHashtagPendingRoute
   '/api/public/hooks/list-canali-inspo-topics': typeof ApiPublicHooksListCanaliInspoTopicsRoute
   '/api/public/hooks/list-cross-source-trends': typeof ApiPublicHooksListCrossSourceTrendsRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
@@ -440,6 +455,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
+  '/api/public/hooks/sync-bluserena-hashtag-posts': typeof ApiPublicHooksSyncBluserenaHashtagPostsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-instagram-collab': typeof ApiPublicHooksSyncInstagramCollabRoute
@@ -490,6 +506,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/import-bluserena-bulk': typeof ApiPublicHooksImportBluserenaBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/list-bluserena-hashtag-pending': typeof ApiPublicHooksListBluserenaHashtagPendingRoute
   '/api/public/hooks/list-canali-inspo-topics': typeof ApiPublicHooksListCanaliInspoTopicsRoute
   '/api/public/hooks/list-cross-source-trends': typeof ApiPublicHooksListCrossSourceTrendsRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
@@ -500,6 +517,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
+  '/api/public/hooks/sync-bluserena-hashtag-posts': typeof ApiPublicHooksSyncBluserenaHashtagPostsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-instagram-collab': typeof ApiPublicHooksSyncInstagramCollabRoute
@@ -551,6 +569,7 @@ export interface FileRoutesById {
   '/api/public/hooks/import-aspi-bulk': typeof ApiPublicHooksImportAspiBulkRoute
   '/api/public/hooks/import-bluserena-bulk': typeof ApiPublicHooksImportBluserenaBulkRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/list-bluserena-hashtag-pending': typeof ApiPublicHooksListBluserenaHashtagPendingRoute
   '/api/public/hooks/list-canali-inspo-topics': typeof ApiPublicHooksListCanaliInspoTopicsRoute
   '/api/public/hooks/list-cross-source-trends': typeof ApiPublicHooksListCrossSourceTrendsRoute
   '/api/public/hooks/list-instagram-content-urls': typeof ApiPublicHooksListInstagramContentUrlsRoute
@@ -561,6 +580,7 @@ export interface FileRoutesById {
   '/api/public/hooks/record-topic-volume': typeof ApiPublicHooksRecordTopicVolumeRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/sync-audio-trends': typeof ApiPublicHooksSyncAudioTrendsRoute
+  '/api/public/hooks/sync-bluserena-hashtag-posts': typeof ApiPublicHooksSyncBluserenaHashtagPostsRoute
   '/api/public/hooks/sync-brand-mentions': typeof ApiPublicHooksSyncBrandMentionsRoute
   '/api/public/hooks/sync-cross-source-trends': typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   '/api/public/hooks/sync-instagram-collab': typeof ApiPublicHooksSyncInstagramCollabRoute
@@ -613,6 +633,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/import-bluserena-bulk'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/list-bluserena-hashtag-pending'
     | '/api/public/hooks/list-canali-inspo-topics'
     | '/api/public/hooks/list-cross-source-trends'
     | '/api/public/hooks/list-instagram-content-urls'
@@ -623,6 +644,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-audio-trends'
+    | '/api/public/hooks/sync-bluserena-hashtag-posts'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-instagram-collab'
@@ -673,6 +695,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/import-bluserena-bulk'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/list-bluserena-hashtag-pending'
     | '/api/public/hooks/list-canali-inspo-topics'
     | '/api/public/hooks/list-cross-source-trends'
     | '/api/public/hooks/list-instagram-content-urls'
@@ -683,6 +706,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-audio-trends'
+    | '/api/public/hooks/sync-bluserena-hashtag-posts'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-instagram-collab'
@@ -733,6 +757,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/import-aspi-bulk'
     | '/api/public/hooks/import-bluserena-bulk'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/list-bluserena-hashtag-pending'
     | '/api/public/hooks/list-canali-inspo-topics'
     | '/api/public/hooks/list-cross-source-trends'
     | '/api/public/hooks/list-instagram-content-urls'
@@ -743,6 +768,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/record-topic-volume'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/sync-audio-trends'
+    | '/api/public/hooks/sync-bluserena-hashtag-posts'
     | '/api/public/hooks/sync-brand-mentions'
     | '/api/public/hooks/sync-cross-source-trends'
     | '/api/public/hooks/sync-instagram-collab'
@@ -794,6 +820,7 @@ export interface RootRouteChildren {
   ApiPublicHooksImportAspiBulkRoute: typeof ApiPublicHooksImportAspiBulkRoute
   ApiPublicHooksImportBluserenaBulkRoute: typeof ApiPublicHooksImportBluserenaBulkRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
+  ApiPublicHooksListBluserenaHashtagPendingRoute: typeof ApiPublicHooksListBluserenaHashtagPendingRoute
   ApiPublicHooksListCanaliInspoTopicsRoute: typeof ApiPublicHooksListCanaliInspoTopicsRoute
   ApiPublicHooksListCrossSourceTrendsRoute: typeof ApiPublicHooksListCrossSourceTrendsRoute
   ApiPublicHooksListInstagramContentUrlsRoute: typeof ApiPublicHooksListInstagramContentUrlsRoute
@@ -804,6 +831,7 @@ export interface RootRouteChildren {
   ApiPublicHooksRecordTopicVolumeRoute: typeof ApiPublicHooksRecordTopicVolumeRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
   ApiPublicHooksSyncAudioTrendsRoute: typeof ApiPublicHooksSyncAudioTrendsRoute
+  ApiPublicHooksSyncBluserenaHashtagPostsRoute: typeof ApiPublicHooksSyncBluserenaHashtagPostsRoute
   ApiPublicHooksSyncBrandMentionsRoute: typeof ApiPublicHooksSyncBrandMentionsRoute
   ApiPublicHooksSyncCrossSourceTrendsRoute: typeof ApiPublicHooksSyncCrossSourceTrendsRoute
   ApiPublicHooksSyncInstagramCollabRoute: typeof ApiPublicHooksSyncInstagramCollabRoute
@@ -1066,6 +1094,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksSyncBrandMentionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/sync-bluserena-hashtag-posts': {
+      id: '/api/public/hooks/sync-bluserena-hashtag-posts'
+      path: '/api/public/hooks/sync-bluserena-hashtag-posts'
+      fullPath: '/api/public/hooks/sync-bluserena-hashtag-posts'
+      preLoaderRoute: typeof ApiPublicHooksSyncBluserenaHashtagPostsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/sync-audio-trends': {
       id: '/api/public/hooks/sync-audio-trends'
       path: '/api/public/hooks/sync-audio-trends'
@@ -1134,6 +1169,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/list-canali-inspo-topics'
       fullPath: '/api/public/hooks/list-canali-inspo-topics'
       preLoaderRoute: typeof ApiPublicHooksListCanaliInspoTopicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/list-bluserena-hashtag-pending': {
+      id: '/api/public/hooks/list-bluserena-hashtag-pending'
+      path: '/api/public/hooks/list-bluserena-hashtag-pending'
+      fullPath: '/api/public/hooks/list-bluserena-hashtag-pending'
+      preLoaderRoute: typeof ApiPublicHooksListBluserenaHashtagPendingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/link-preview': {
@@ -1267,6 +1309,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksImportAspiBulkRoute: ApiPublicHooksImportAspiBulkRoute,
   ApiPublicHooksImportBluserenaBulkRoute: ApiPublicHooksImportBluserenaBulkRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
+  ApiPublicHooksListBluserenaHashtagPendingRoute:
+    ApiPublicHooksListBluserenaHashtagPendingRoute,
   ApiPublicHooksListCanaliInspoTopicsRoute:
     ApiPublicHooksListCanaliInspoTopicsRoute,
   ApiPublicHooksListCrossSourceTrendsRoute:
@@ -1282,6 +1326,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksRecordTopicVolumeRoute: ApiPublicHooksRecordTopicVolumeRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
   ApiPublicHooksSyncAudioTrendsRoute: ApiPublicHooksSyncAudioTrendsRoute,
+  ApiPublicHooksSyncBluserenaHashtagPostsRoute:
+    ApiPublicHooksSyncBluserenaHashtagPostsRoute,
   ApiPublicHooksSyncBrandMentionsRoute: ApiPublicHooksSyncBrandMentionsRoute,
   ApiPublicHooksSyncCrossSourceTrendsRoute:
     ApiPublicHooksSyncCrossSourceTrendsRoute,

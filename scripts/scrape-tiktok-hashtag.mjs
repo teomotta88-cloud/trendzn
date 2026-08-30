@@ -66,7 +66,12 @@ async function extractLinksWithViews(page) {
   });
 }
 
-export async function scrapeHashtag(tag) {
+// scrollSteps opzionale (default SCROLL_STEPS = comportamento invariato per
+// sync-tiktok-hashtag.mjs, unico altro chiamante): usato da
+// sync-bluserena-hashtags.mjs per scrollare più a fondo al backfill iniziale
+// di un hashtag nuovo (fino a ~2 settimane indietro) rispetto ai giri
+// incrementali successivi.
+export async function scrapeHashtag(tag, { scrollSteps = SCROLL_STEPS } = {}) {
   const url = `https://www.tiktok.com/tag/${encodeURIComponent(tag)}`;
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({
@@ -78,7 +83,7 @@ export async function scrapeHashtag(tag) {
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
     await page.waitForTimeout(2000);
 
-    for (let i = 0; i < SCROLL_STEPS; i++) {
+    for (let i = 0; i < scrollSteps; i++) {
       await page.mouse.wheel(0, 2000);
       await page.waitForTimeout(SCROLL_DELAY_MS);
     }
