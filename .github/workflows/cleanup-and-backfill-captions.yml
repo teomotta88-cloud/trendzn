@@ -1,0 +1,44 @@
+name: Cleanup RSS-Bridge Errors + Backfill Captions with Playwright
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run on (default: main)"
+        required: false
+        default: "main"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup-and-backfill:
+    runs-on: ubuntu-latest
+    name: Remove error captions and extract via Playwright
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch || 'main' }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies and Playwright browsers
+        run: npm install --include=dev && npm install playwright && npx playwright install chromium
+
+      - name: Step 1 - Cleanup RSS-Bridge errors from captions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/cleanup-rssbridge-errors.mjs
+
+      - name: Step 2 - Backfill caption and bsconfirmed flag via Playwright
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/backfill-bluserena-caption-playwright.mjs
+
+      - name: Cleanup
+        if: always()
+        run: rm -rf /tmp/playwright-* 2>/dev/null || true
