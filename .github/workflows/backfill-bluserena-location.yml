@@ -1,7 +1,13 @@
 name: Backfill Bluserena Location
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run backfill on (default: main)"
+        required: false
+        default: "main"
+        type: string
 
 permissions:
   contents: write
@@ -14,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: ${{ inputs.branch || 'main' }}
 
       - uses: actions/setup-node@v4
         with:
