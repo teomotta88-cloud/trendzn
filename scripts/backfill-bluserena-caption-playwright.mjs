@@ -83,6 +83,9 @@ async function extractCaptionFromTikTok(url) {
     // Wait for caption to be visible
     await page.waitForSelector("div[data-testid='video-desc']", { timeout: 5000 }).catch(() => null);
 
+    // Extra delay to ensure DOM is fully loaded
+    await page.waitForTimeout(1000);
+
     const caption = await page.evaluate(() => {
       // Try multiple selectors for TikTok caption
       const desc = document.querySelector("div[data-testid='video-desc']")?.textContent;
@@ -93,6 +96,13 @@ async function extractCaptionFromTikTok(url) {
 
       const span = document.querySelector("span.video-desc-title")?.textContent;
       if (span) return span.trim();
+
+      // Fallback: look for any text in common caption containers
+      const spanEm = document.querySelector("span.tiktok-1g9kthx")?.textContent;
+      if (spanEm) return spanEm.trim();
+
+      const divDesc = document.querySelector("[class*='desc']")?.textContent;
+      if (divDesc && divDesc.length > 0) return divDesc.trim();
 
       return null;
     });
