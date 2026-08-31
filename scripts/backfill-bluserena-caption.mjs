@@ -100,16 +100,10 @@ async function fetchRSSBridge(url) {
 
 async function main() {
   try {
-    console.log("\u{1F4E5} Reading bluserena-monitoring.json from GitHub...");
-    const res = await fetch(
-      `https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`,
-      { headers: ghHeaders }
-    );
-
-    if (!res.ok) throw new Error(`Failed to read file: ${res.status}`);
-
-    const fileData = await res.json();
-    const data = JSON.parse(Buffer.from(fileData.content, "base64").toString("utf-8"));
+    console.log("\u{1F4E5} Reading bluserena-monitoring.json...");
+    const fs = await import("fs").then(m => m.promises);
+    const fileContent = await fs.readFile(STORE_PATH, "utf-8");
+    const data = JSON.parse(fileContent);
 
     let updated = 0;
     let skipped = 0;
@@ -189,7 +183,16 @@ async function main() {
     console.log(`  Errors: ${errors}`);
     console.log(`  Skipped: ${skipped}`);
 
-    console.log(`\n\u{1F4BE} Committing to GitHub...`);
+    console.log(`\n\u{1F4BE} Updating file and committing to GitHub...`);
+
+    await fs.writeFile(STORE_PATH, JSON.stringify(data, null, 2));
+
+    const res = await fetch(
+      `https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`,
+      { headers: ghHeaders }
+    );
+    const fileData = await res.json();
+
     const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
     await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
       method: "PUT",
