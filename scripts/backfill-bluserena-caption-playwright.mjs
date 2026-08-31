@@ -128,6 +128,35 @@ async function main() {
 
     const postsToUpdate = [];
 
+    // Diagnostic: count posts by status
+    let totalPosts = 0;
+    let noCaptionCount = 0;
+    let julyAugCount = 0;
+    let withTikTokUrl = 0;
+
+    for (const canale of data.canali) {
+      for (const account of canale.accounts || []) {
+        totalPosts++;
+        if (!account.caption || account.caption.trim() === "") {
+          noCaptionCount++;
+        }
+        if (isInJulyAugust(account.date)) {
+          julyAugCount++;
+          if ((!account.caption || account.caption.trim() === "") && account.url && /tiktok\.com/.test(account.url)) {
+            withTikTokUrl++;
+          }
+        }
+      }
+    }
+
+    console.log(`\u{1F50D} Diagnostics:`);
+    console.log(`   Total posts: ${totalPosts}`);
+    console.log(`   Posts without caption: ${noCaptionCount}`);
+    console.log(`   Posts in Jul-Aug 2025-2026: ${julyAugCount}`);
+    console.log(`   Posts in Jul-Aug + no caption + TikTok URL: ${withTikTokUrl}`);
+
+    console.log(`\u{1F50D} Filtering posts for July-August 2025-2026...`);
+
     for (const canale of data.canali) {
       for (const account of canale.accounts || []) {
         // Solo luglio-agosto 2025-2026
