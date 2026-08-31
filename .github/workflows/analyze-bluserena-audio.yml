@@ -31,7 +31,7 @@ jobs:
           sudo apt-get install -y ffmpeg yt-dlp > /dev/null 2>&1 || echo "ffmpeg/yt-dlp install skipped"
 
       - name: Install Node dependencies
-        run: npm install
+        run: npm install --include=dev
 
       - name: Run audio analysis
         env:
