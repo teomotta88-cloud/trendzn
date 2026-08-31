@@ -1,13 +1,7 @@
-import { Octokit } from "@octokit/rest";
-
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
-
-const octokit = new Octokit({
-  auth: GITHUB_TOKEN,
-});
 
 const ghHeaders = {
   Authorization: `token ${GITHUB_TOKEN}`,
@@ -36,8 +30,8 @@ function fullCaption(item) {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&apos;/g, "'")
-    .replace(/&rsquo;/g, "’")
-    .replace(/&lsquo;/g, "‘")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&lsquo;/g, "'")
     .replace(/&rdquo;/g, "”")
     .replace(/&ldquo;/g, "“")
     .replace(/&ndash;/g, "–")
@@ -72,7 +66,6 @@ function extractMetadata(rssItem) {
     shares: null,
   };
 
-  // Estrai metriche dal content_html (TikTok metadati)
   const content = rssItem.content_html || "";
   const viewMatch = content.match(/(\d+)\s*views?/i);
   if (viewMatch) result.views = parseInt(viewMatch[1]);
@@ -107,7 +100,7 @@ async function fetchRSSBridge(url) {
 
 async function main() {
   try {
-    console.log("📥 Reading bluserena-monitoring.json from GitHub...");
+    console.log("\u{1F4E5} Reading bluserena-monitoring.json from GitHub...");
     const res = await fetch(
       `https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`,
       { headers: ghHeaders }
@@ -122,17 +115,13 @@ async function main() {
     let skipped = 0;
     let errors = 0;
 
-    // Filtra post
     const postsToUpdate = [];
     for (const canale of data.canali) {
       for (const account of canale.accounts || []) {
-        // Solo TikTok (Instagram non supportato bene da RSS-Bridge per metriche)
         if (account.platform !== "tiktok") continue;
 
-        // Solo luglio-agosto 25-26
         if (!isInJulyAugust(account.date)) continue;
 
-        // Solo se ha campi nulli
         if (account.caption && account.views) {
           skipped++;
           continue;
@@ -153,7 +142,6 @@ async function main() {
           `[${i + 1}/${postsToUpdate.length}] ${account.handle} ${account.date ? account.date.split("T")[0] : "?"}`
         );
 
-        // Fetch da RSS-Bridge
         const rssItem = await fetchRSSBridge(account.url);
 
         if (rssItem) {
@@ -189,7 +177,6 @@ async function main() {
           console.log(`  ⚠ RSS-Bridge no data`);
         }
 
-        // Delay per evitare rate limiting
         await delay(1000);
       } catch (err) {
         console.log(`  ❌ ${err.message}`);
@@ -197,13 +184,12 @@ async function main() {
       }
     }
 
-    console.log("\n\u{1F4CA} Summary:");
+    console.log(`\n\u{1F4CA} Summary:`);
     console.log(`  Updated: ${updated}`);
     console.log(`  Errors: ${errors}`);
     console.log(`  Skipped: ${skipped}`);
 
-    // Commit
-    console.log("\n\u{1F4BE} Committing to GitHub...");
+    console.log(`\n\u{1F4BE} Committing to GitHub...`);
     const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
     await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
       method: "PUT",
