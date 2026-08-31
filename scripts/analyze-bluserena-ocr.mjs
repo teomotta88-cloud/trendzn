@@ -249,29 +249,29 @@ async function analyzeBlueserenaOCR() {
   console.log("==================================\n");
 
   try {
-    // Leggi store
+    // Leggi store - usa raw GitHub URL per evitare limiti API su file grandi
     console.log("1️⃣  Reading bluserena-monitoring.json...");
-    const { data: fileData } = await octokit.repos.getContent({
-      owner: "teomotta88-cloud",
-      repo: "trendzn",
-      path: STORE_PATH,
+
+    const rawUrl = `https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/${STORE_PATH}?t=${Date.now()}`;
+    const rawRes = await fetch(rawUrl, {
+      headers: { "User-Agent": "analyze-bluserena-ocr" },
     });
 
-    if (!fileData.content) {
-      console.error("❌ File content is empty from GitHub API");
+    if (!rawRes.ok) {
+      console.error(`❌ Failed to fetch from raw GitHub: ${rawRes.status}`);
       process.exit(1);
     }
 
     let raw;
     try {
-      raw = Buffer.from(fileData.content, "base64").toString("utf-8");
-    } catch (decodeErr) {
-      console.error("❌ Failed to decode base64 content:", decodeErr.message);
+      raw = await rawRes.text();
+    } catch (fetchErr) {
+      console.error("❌ Failed to read response:", fetchErr.message);
       process.exit(1);
     }
 
     if (!raw || raw.trim().length === 0) {
-      console.error("❌ Decoded content is empty");
+      console.error("❌ File content is empty");
       process.exit(1);
     }
 
