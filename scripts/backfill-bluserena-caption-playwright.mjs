@@ -107,6 +107,13 @@ async function extractCaptionFromTikTok(url) {
   }
 }
 
+function isInJulyAugust(dateStr) {
+  if (!dateStr) return false;
+  const date = new Date(dateStr);
+  const month = date.getMonth() + 1;
+  return month === 7 || month === 8;
+}
+
 async function main() {
   try {
     console.log("\u{1F4E5} Reading bluserena-monitoring.json...");
@@ -123,13 +130,19 @@ async function main() {
 
     for (const canale of data.canali) {
       for (const account of canale.accounts || []) {
+        // Solo luglio-agosto 2025-2026
+        if (!isInJulyAugust(account.date)) {
+          skipped++;
+          continue;
+        }
+
         // Solo se non ha caption
         if (account.caption && account.caption.trim() !== "") {
           skipped++;
           continue;
         }
 
-        // Solo se ha URL
+        // Solo se ha URL TikTok
         if (!account.url || !/tiktok\.com/.test(account.url)) {
           skipped++;
           continue;
