@@ -36,10 +36,10 @@ function fullCaption(item) {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&apos;/g, "'")
-    .replace(/&rsquo;/g, "'")
-    .replace(/&lsquo;/g, "'")
-    .replace(/&rdquo;/g, """)
-    .replace(/&ldquo;/g, """)
+    .replace(/&rsquo;/g, "’")
+    .replace(/&lsquo;/g, "‘")
+    .replace(/&rdquo;/g, "”")
+    .replace(/&ldquo;/g, "“")
     .replace(/&ndash;/g, "–")
     .replace(/&mdash;/g, "—")
     .replace(/&hellip;/g, "…")
@@ -100,7 +100,7 @@ async function fetchRSSBridge(url) {
     const data = await res.json();
     return data?.items?.[0] || null;
   } catch (err) {
-    console.log(`  ⚠️  RSS-Bridge error: ${err.message}`);
+    console.log(`  ⚠ RSS-Bridge error: ${err.message}`);
     return null;
   }
 }
@@ -142,8 +142,8 @@ async function main() {
       }
     }
 
-    console.log(`🔍 Found ${postsToUpdate.length} posts to backfill`);
-    console.log(`⏭️  Skipped ${skipped} posts (already have data)`);
+    console.log(`\u{1F50D} Found ${postsToUpdate.length} posts to backfill`);
+    console.log(`\u{23ED} Skipped ${skipped} posts (already have data)`);
 
     for (let i = 0; i < postsToUpdate.length; i++) {
       const account = postsToUpdate[i];
@@ -182,11 +182,11 @@ async function main() {
             updated++;
           } else {
             errors++;
-            console.log(`  ⚠️  No caption extracted`);
+            console.log(`  ⚠ No caption extracted`);
           }
         } else {
           errors++;
-          console.log(`  ⚠️  RSS-Bridge no data`);
+          console.log(`  ⚠ RSS-Bridge no data`);
         }
 
         // Delay per evitare rate limiting
@@ -197,13 +197,13 @@ async function main() {
       }
     }
 
-    console.log("\n📊 Summary:");
+    console.log("\n\u{1F4CA} Summary:");
     console.log(`  Updated: ${updated}`);
     console.log(`  Errors: ${errors}`);
     console.log(`  Skipped: ${skipped}`);
 
     // Commit
-    console.log("\n💾 Committing to GitHub...");
+    console.log("\n\u{1F4BE} Committing to GitHub...");
     const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
     await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
       method: "PUT",
