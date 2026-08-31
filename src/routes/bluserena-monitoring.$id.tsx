@@ -77,6 +77,7 @@ function Page() {
   const [search, setSearch] = useState("");
   const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("all");
   const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
+  const [verificationStatusOverride, setVerificationStatusOverride] = useState<Record<string, VerificationStatus>>({});
 
   const toggleVerificationStatus = async (postUrl: string, currentStatus: VerificationStatus) => {
     if (!canale) return;
@@ -96,13 +97,19 @@ function Page() {
       });
 
       if (res.ok) {
-        // Ricarica la pagina per mostrare il cambiamento
-        window.location.reload();
+        // Aggiorna lo stato locale immediatamente senza ricaricare
+        setVerificationStatusOverride((prev) => ({
+          ...prev,
+          [postUrl]: newStatus,
+        }));
       } else {
-        console.error("Errore aggiornamento verifica:", await res.text());
+        const errText = await res.text();
+        console.error("Errore aggiornamento verifica:", errText);
+        alert("Errore durante l'aggiornamento della verifica");
       }
     } catch (err) {
       console.error("Errore aggiornamento verifica:", err);
+      alert("Errore di connessione durante l'aggiornamento");
     } finally {
       setUpdatingUrl(null);
     }
@@ -132,13 +139,14 @@ function Page() {
     // Filtro verification
     if (verificationFilter !== "all") {
       posts = posts.filter((a) => {
-        const status = a.verificationStatus || verifyBluserenaPost(a.caption);
+        const overrideStatus = verificationStatusOverride[a.url];
+        const status = overrideStatus || a.verificationStatus || verifyBluserenaPost(a.caption);
         return status === verificationFilter;
       });
     }
 
     return posts;
-  }, [allPosts, search, verificationFilter]);
+  }, [allPosts, search, verificationFilter, verificationStatusOverride]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
@@ -301,7 +309,8 @@ function Page() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {visiblePosts.map((a, i) => {
                 const dateLabel = formatDate(a.date);
-                const status = a.verificationStatus || verifyBluserenaPost(a.caption);
+                const overrideStatus = verificationStatusOverride[a.url];
+                const status = overrideStatus || a.verificationStatus || verifyBluserenaPost(a.caption);
                 return (
                   <article
                     key={i}
