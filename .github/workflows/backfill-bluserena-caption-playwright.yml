@@ -1,4 +1,4 @@
-name: Backfill Bluserena Location
+name: Backfill Caption + bsconfirmed via Playwright
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ permissions:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    name: Backfill location from caption matching
+    name: Extract caption from TikTok + validate bsconfirmed
 
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +26,14 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Backfill location and engagement data
+      - name: Install Playwright browsers
+        run: npm install --include=dev && npx playwright install chromium
+
+      - name: Backfill caption and bsconfirmed flag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/backfill-bluserena-location.mjs
+        run: node scripts/backfill-bluserena-caption-playwright.mjs
+
+      - name: Cleanup
+        if: always()
+        run: rm -rf /tmp/playwright-* 2>/dev/null || true
