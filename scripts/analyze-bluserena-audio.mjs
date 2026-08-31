@@ -96,9 +96,8 @@ async function transcribeAudio(audioPath, groqApiKey) {
       };
     }
 
-    const audioBuffer = fs.readFileSync(audioPath);
-
-    if (!audioBuffer || audioBuffer.length === 0) {
+    const stats = fs.statSync(audioPath);
+    if (stats.size === 0) {
       return {
         success: false,
         transcript: null,
@@ -108,7 +107,7 @@ async function transcribeAudio(audioPath, groqApiKey) {
     }
 
     const formData = new FormData();
-    formData.append("file", audioBuffer, { filename: "audio.mp3", contentType: "audio/mpeg" });
+    formData.append("file", fs.createReadStream(audioPath), { filename: "audio.mp3", contentType: "audio/mpeg" });
     formData.append("model", "whisper-large-v3");
 
     const response = await fetch("https://api.groq.com/openai/v1/audio/transcriptions", {

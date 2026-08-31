@@ -43,14 +43,30 @@ async function downloadVideoAndExtractOCR(videoUrl) {
   const videoPath = path.join(tempDir, `${Date.now()}.mp4`);
 
   try {
-    const { execSync } = await import("child_process");
+    const { spawnSync } = await import("child_process");
     // Download video with yt-dlp (longer timeout for TikTok)
-    const cmd = `yt-dlp --no-warnings -f best -o "${videoPath}" --socket-timeout 30 "${videoUrl}" 2>&1`;
-    execSync(cmd, {
+    const result = spawnSync("yt-dlp", [
+      "--no-warnings",
+      "-f", "best",
+      "-o", videoPath,
+      "--socket-timeout", "30",
+      videoUrl
+    ], {
       stdio: "pipe",
       timeout: 120000, // 2 minutes timeout
       maxBuffer: 10 * 1024 * 1024,
     });
+
+    if (result.status !== 0 && result.status !== null) {
+      const errMsg = result.stderr?.toString().slice(0, 100) || "Unknown error";
+      console.log(`    ⚠️  Video download failed: ${errMsg}`);
+      return {
+        textOnScreen: null,
+        confidence: 0.0,
+        frames: [],
+        available: false,
+      };
+    }
 
     if (!fs.existsSync(videoPath)) {
       console.log(`    ⚠️  Video download produced no file`);
@@ -90,12 +106,18 @@ async function extractFrameAndOCR(videoPath, frameOutputPath) {
   console.log(`    [OCR] Extracting frame from video...`);
 
   try {
-    const { execSync } = await import("child_process");
+    const { spawnSync } = await import("child_process");
     // Extract frame at 5 seconds or middle of video
-    execSync(
-      `ffmpeg -i "${videoPath}" -vf "select=eq(n\\,round(5*fps/1))" -vframes 1 "${frameOutputPath}" -y 2>/dev/null || ffmpeg -i "${videoPath}" -vframes 1 "${frameOutputPath}" -y 2>/dev/null`,
-      { stdio: "pipe", timeout: 15000 }
-    );
+    const result = spawnSync("ffmpeg", [
+      "-i", videoPath,
+      "-vframes", "1",
+      frameOutputPath,
+      "-y"
+    ], {
+      stdio: "pipe",
+      timeout: 15000
+    });
+
     return fs.existsSync(frameOutputPath);
   } catch (err) {
     console.log(`    ⚠️  Frame extraction failed: ${String(err).slice(0, 50)}`);
