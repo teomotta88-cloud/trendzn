@@ -258,6 +258,13 @@ async function analyzeBlueserenaAudio() {
       process.exit(1);
     }
 
+    // Ottieni SHA del file per l'aggiornamento
+    const { data: fileData } = await octokit.repos.getContent({
+      owner: "teomotta88-cloud",
+      repo: "trendzn",
+      path: STORE_PATH,
+    });
+
     // Filtra post da analizzare
     let totalPosts = 0;
     let postsToAnalyze = 0;
