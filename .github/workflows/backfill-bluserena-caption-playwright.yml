@@ -26,8 +26,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install Playwright browsers
-        run: npm install --include=dev && npx playwright install chromium
+      - name: Install dependencies and Playwright browsers
+        run: npm install --include=dev && npm install playwright && npx playwright install chromium
 
       - name: Backfill caption and bsconfirmed flag
         env:
