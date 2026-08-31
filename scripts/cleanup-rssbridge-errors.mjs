@@ -40,8 +40,12 @@ async function main() {
       process.exit(0);
     }
 
-    // Commit
-    console.log(`\n\u{1F4BE} Updating file and committing to GitHub...`);
+    // Write cleaned data back to local file so next step in workflow reads the cleaned version
+    console.log(`\n\u{1F4BE} Updating local file...`);
+    await fs.writeFile(STORE_PATH, JSON.stringify(data, null, 2));
+
+    // Commit to GitHub
+    console.log(`\u{1F4BE} Committing to GitHub...`);
 
     const res = await fetch(
       `https://api.github.com/repos/teomotta88-cloud/trendzn/contents/${STORE_PATH}`,
