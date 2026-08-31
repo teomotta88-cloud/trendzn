@@ -1,15 +1,18 @@
-import https from "https";
-import fs from "fs";
 import { Octokit } from "@octokit/rest";
 
+const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const RAW_JSON_URL =
-  "https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/" + STORE_PATH;
+const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
 
 const octokit = new Octokit({
   auth: GITHUB_TOKEN,
 });
+
+const ghHeaders = {
+  Authorization: `token ${GITHUB_TOKEN}`,
+  Accept: "application/vnd.github.v3+json",
+};
 
 function isInJulyAugust(date) {
   if (!date) return false;
@@ -22,72 +25,98 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchRSSBridge(url) {
-  return new Promise((resolve, reject) => {
-    const rssUrl = `https://rss-bridge.org/?action=display&bridge=TikTok_Bridge&url=${encodeURIComponent(url)}&format=json`;
-
-    https.get(rssUrl, (res) => {
-      let data = "";
-      res.on("data", (chunk) => {
-        data += chunk;
-      });
-      res.on("end", () => {
-        try {
-          const parsed = JSON.parse(data);
-          resolve(parsed);
-        } catch (e) {
-          reject(e);
-        }
-      });
-    }).on("error", reject);
-  });
+function fullCaption(item) {
+  const html = item.content_html || "";
+  const text = html
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&lsquo;/g, "'")
+    .replace(/&rdquo;/g, """)
+    .replace(/&ldquo;/g, """)
+    .replace(/&ndash;/g, "–")
+    .replace(/&mdash;/g, "—")
+    .replace(/&hellip;/g, "…")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&[a-z]+;/gi, (entity) => {
+      const map = {
+        "&agrave;": "à", "&aacute;": "á", "&acirc;": "â", "&atilde;": "ã", "&auml;": "ä", "&aring;": "å",
+        "&egrave;": "è", "&eacute;": "é", "&ecirc;": "ê", "&euml;": "ë",
+        "&igrave;": "ì", "&iacute;": "í", "&icirc;": "î", "&iuml;": "ï",
+        "&ograve;": "ò", "&oacute;": "ó", "&ocirc;": "ô", "&otilde;": "õ", "&ouml;": "ö",
+        "&ugrave;": "ù", "&uacute;": "ú", "&ucirc;": "û", "&uuml;": "ü",
+        "&ntilde;": "ñ", "&ccedil;": "ç", "&szlig;": "ß",
+        "&Agrave;": "À", "&Aacute;": "Á", "&Egrave;": "È", "&Eacute;": "É",
+      };
+      return map[entity] || entity;
+    })
+    .trim();
+  return text || null;
 }
 
-function extractMetadata(rssData) {
-  if (!rssData || !rssData.items || rssData.items.length === 0) {
-    return null;
-  }
+function extractMetadata(rssItem) {
+  if (!rssItem) return null;
 
-  const item = rssData.items[0];
   const result = {
-    caption: item.title || null,
+    caption: fullCaption(rssItem) || rssItem.title || null,
     views: null,
     likes: null,
     comments: null,
     shares: null,
   };
 
-  // Estrai view count dalla description (RSS-Bridge lo mette qui)
-  if (item.content_html) {
-    const viewMatch = item.content_html.match(/(\d+)\s*views?/i);
-    if (viewMatch) result.views = parseInt(viewMatch[1]);
+  // Estrai metriche dal content_html (TikTok metadati)
+  const content = rssItem.content_html || "";
+  const viewMatch = content.match(/(\d+)\s*views?/i);
+  if (viewMatch) result.views = parseInt(viewMatch[1]);
 
-    const likeMatch = item.content_html.match(/(\d+)\s*likes?/i);
-    if (likeMatch) result.likes = parseInt(likeMatch[1]);
+  const likeMatch = content.match(/(\d+)\s*likes?/i);
+  if (likeMatch) result.likes = parseInt(likeMatch[1]);
 
-    const commentMatch = item.content_html.match(/(\d+)\s*comments?/i);
-    if (commentMatch) result.comments = parseInt(commentMatch[1]);
+  const commentMatch = content.match(/(\d+)\s*comments?/i);
+  if (commentMatch) result.comments = parseInt(commentMatch[1]);
 
-    const shareMatch = item.content_html.match(/(\d+)\s*shares?/i);
-    if (shareMatch) result.shares = parseInt(shareMatch[1]);
-  }
-
-  // Fallback: prova anche dalla description
-  if (item.description && typeof item.description === "string") {
-    if (!result.views) {
-      const viewMatch = item.description.match(/(\d+)\s*views?/i);
-      if (viewMatch) result.views = parseInt(viewMatch[1]);
-    }
-  }
+  const shareMatch = content.match(/(\d+)\s*shares?/i);
+  if (shareMatch) result.shares = parseInt(shareMatch[1]);
 
   return result;
 }
 
+async function fetchRSSBridge(url) {
+  try {
+    const platform = url.includes("tiktok.com") ? "TikTok" : "Instagram";
+    const rssUrl = `${RSS_BRIDGE_BASE}?action=display&bridge=${platform}&url=${encodeURIComponent(url)}&format=JSON`;
+
+    const res = await fetch(rssUrl, { signal: AbortSignal.timeout(20000) });
+    if (!res.ok) return null;
+
+    const data = await res.json();
+    return data?.items?.[0] || null;
+  } catch (err) {
+    console.log(`  ⚠️  RSS-Bridge error: ${err.message}`);
+    return null;
+  }
+}
+
 async function main() {
   try {
-    console.log("📥 Fetching JSON from GitHub...");
-    const jsonRes = await fetch(RAW_JSON_URL);
-    const data = await jsonRes.json();
+    console.log("📥 Reading bluserena-monitoring.json from GitHub...");
+    const res = await fetch(
+      `https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`,
+      { headers: ghHeaders }
+    );
+
+    if (!res.ok) throw new Error(`Failed to read file: ${res.status}`);
+
+    const fileData = await res.json();
+    const data = JSON.parse(Buffer.from(fileData.content, "base64").toString("utf-8"));
 
     let updated = 0;
     let skipped = 0;
@@ -97,25 +126,19 @@ async function main() {
     const postsToUpdate = [];
     for (const canale of data.canali) {
       for (const account of canale.accounts || []) {
-        // Solo TikTok
+        // Solo TikTok (Instagram non supportato bene da RSS-Bridge per metriche)
         if (account.platform !== "tiktok") continue;
 
         // Solo luglio-agosto 25-26
         if (!isInJulyAugust(account.date)) continue;
 
-        // Solo se ha campi null
-        if (
-          account.caption ||
-          account.views ||
-          account.likes ||
-          account.comments ||
-          account.shares
-        ) {
+        // Solo se ha campi nulli
+        if (account.caption && account.views) {
           skipped++;
           continue;
         }
 
-        postsToUpdate.push({ canale, account });
+        postsToUpdate.push(account);
       }
     }
 
@@ -123,68 +146,82 @@ async function main() {
     console.log(`⏭️  Skipped ${skipped} posts (already have data)`);
 
     for (let i = 0; i < postsToUpdate.length; i++) {
-      const { canale, account } = postsToUpdate[i];
+      const account = postsToUpdate[i];
 
       try {
-        console.log(`[${i + 1}/${postsToUpdate.length}] Processing ${account.url}`);
+        console.log(
+          `[${i + 1}/${postsToUpdate.length}] ${account.handle} ${account.date ? account.date.split("T")[0] : "?"}`
+        );
 
         // Fetch da RSS-Bridge
-        const rssData = await fetchRSSBridge(account.url);
-        const metadata = extractMetadata(rssData);
+        const rssItem = await fetchRSSBridge(account.url);
 
-        if (metadata) {
-          // Aggiorna il post
-          if (metadata.caption) account.caption = metadata.caption;
-          if (metadata.views) account.views = metadata.views;
-          if (metadata.likes) account.likes = metadata.likes;
-          if (metadata.comments) account.comments = metadata.comments;
-          if (metadata.shares) account.shares = metadata.shares;
-
-          updated++;
-          console.log(`  ✅ Updated: caption=${!!metadata.caption}, views=${metadata.views}`);
+        if (rssItem) {
+          const metadata = extractMetadata(rssItem);
+          if (metadata && metadata.caption) {
+            if (!account.caption) {
+              account.caption = metadata.caption;
+              console.log(`  ✅ caption (${metadata.caption.length} chars)`);
+            }
+            if (!account.views && metadata.views) {
+              account.views = metadata.views;
+              console.log(`  ✅ views (${metadata.views})`);
+            }
+            if (!account.likes && metadata.likes) {
+              account.likes = metadata.likes;
+              console.log(`  ✅ likes (${metadata.likes})`);
+            }
+            if (!account.comments && metadata.comments) {
+              account.comments = metadata.comments;
+              console.log(`  ✅ comments (${metadata.comments})`);
+            }
+            if (!account.shares && metadata.shares) {
+              account.shares = metadata.shares;
+              console.log(`  ✅ shares (${metadata.shares})`);
+            }
+            updated++;
+          } else {
+            errors++;
+            console.log(`  ⚠️  No caption extracted`);
+          }
         } else {
-          console.log(`  ⚠️  No data found from RSS-Bridge`);
           errors++;
+          console.log(`  ⚠️  RSS-Bridge no data`);
         }
 
         // Delay per evitare rate limiting
-        await delay(500);
-      } catch (err) {
-        console.log(`  ❌ Error: ${err.message}`);
-        errors++;
         await delay(1000);
+      } catch (err) {
+        console.log(`  ❌ ${err.message}`);
+        errors++;
       }
     }
 
     console.log("\n📊 Summary:");
     console.log(`  Updated: ${updated}`);
     console.log(`  Errors: ${errors}`);
-
-    // Fetch file SHA
-    console.log("\n💾 Committing to GitHub...");
-    const { data: fileData } = await octokit.repos.getContent({
-      owner: "teomotta88-cloud",
-      repo: "trendzn",
-      path: STORE_PATH,
-    });
+    console.log(`  Skipped: ${skipped}`);
 
     // Commit
-    await octokit.repos.createOrUpdateFileContents({
-      owner: "teomotta88-cloud",
-      repo: "trendzn",
-      path: STORE_PATH,
-      message: `chore: backfill caption and engagement data for Jul-Aug 2025-2026 posts
+    console.log("\n💾 Committing to GitHub...");
+    const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
+    await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
+      method: "PUT",
+      headers: { ...ghHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `chore: backfill caption and engagement data for Jul-Aug 2025-2026 posts
 
 - Updated ${updated} posts with caption, views, likes, comments, shares
 - Source: RSS-Bridge
-- Filtered: Only Jul-Aug 2025 and 2026 posts with null fields`,
-      content: Buffer.from(JSON.stringify(data, null, 2)).toString("base64"),
-      sha: fileData.sha,
+- Filtered: Only Jul-Aug 2025 and 2026 TikTok posts with null fields`,
+        content,
+        sha: fileData.sha,
+      }),
     });
 
     console.log("✅ Committed successfully!");
   } catch (err) {
-    console.error("❌ Error:", err.message);
+    console.error("❌ Fatal error:", err.message);
     process.exit(1);
   }
 }

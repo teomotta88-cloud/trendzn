@@ -1,0 +1,36 @@
+name: Backfill Bluserena Caption
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    services:
+      rss-bridge:
+        image: rssbridge/rss-bridge:latest
+        ports:
+          - 3000:80
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Wait for RSS-Bridge to be ready
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/ > /dev/null && exit 0
+            sleep 1
+          done
+          echo "RSS-Bridge did not respond in time" >&2
+          exit 1
+
+      - name: Backfill caption and engagement data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RSS_BRIDGE_BASE: http://localhost:3000/
+        run: node scripts/backfill-bluserena-caption.mjs
