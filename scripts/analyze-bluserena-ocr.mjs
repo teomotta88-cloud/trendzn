@@ -257,8 +257,32 @@ async function analyzeBlueserenaOCR() {
       path: STORE_PATH,
     });
 
-    const raw = Buffer.from(fileData.content, "base64").toString("utf-8");
-    const store = JSON.parse(raw);
+    if (!fileData.content) {
+      console.error("❌ File content is empty from GitHub API");
+      process.exit(1);
+    }
+
+    let raw;
+    try {
+      raw = Buffer.from(fileData.content, "base64").toString("utf-8");
+    } catch (decodeErr) {
+      console.error("❌ Failed to decode base64 content:", decodeErr.message);
+      process.exit(1);
+    }
+
+    if (!raw || raw.trim().length === 0) {
+      console.error("❌ Decoded content is empty");
+      process.exit(1);
+    }
+
+    let store;
+    try {
+      store = JSON.parse(raw);
+    } catch (parseErr) {
+      console.error("❌ Failed to parse JSON:", parseErr.message);
+      console.error("First 200 chars:", raw.substring(0, 200));
+      process.exit(1);
+    }
 
     // Filtra post da analizzare
     let totalPosts = 0;
