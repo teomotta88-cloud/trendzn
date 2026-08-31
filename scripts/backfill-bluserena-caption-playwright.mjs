@@ -87,22 +87,36 @@ async function extractCaptionFromTikTok(url) {
     await page.waitForTimeout(1000);
 
     const caption = await page.evaluate(() => {
-      // Try multiple selectors for TikTok caption
+      const MAX_CAPTION_LENGTH = 500; // TikTok captions are typically < 500 chars
+
+      // Try multiple selectors for TikTok caption - SPECIFIC only
       const desc = document.querySelector("div[data-testid='video-desc']")?.textContent;
-      if (desc) return desc.trim();
+      if (desc && desc.trim().length < MAX_CAPTION_LENGTH && desc.trim().length > 0) {
+        return desc.trim();
+      }
 
       const h1 = document.querySelector("h1[data-testid='video-desc-title']")?.textContent;
-      if (h1) return h1.trim();
+      if (h1 && h1.trim().length < MAX_CAPTION_LENGTH && h1.trim().length > 0) {
+        return h1.trim();
+      }
 
       const span = document.querySelector("span.video-desc-title")?.textContent;
-      if (span) return span.trim();
+      if (span && span.trim().length < MAX_CAPTION_LENGTH && span.trim().length > 0) {
+        return span.trim();
+      }
 
-      // Fallback: look for any text in common caption containers
-      const spanEm = document.querySelector("span.tiktok-1g9kthx")?.textContent;
-      if (spanEm) return spanEm.trim();
-
-      const divDesc = document.querySelector("[class*='desc']")?.textContent;
-      if (divDesc && divDesc.length > 0) return divDesc.trim();
+      // Look only in the first direct span under video description area (avoid page-wide search)
+      const videoArea = document.querySelector("[class*='video'][class*='description']") ||
+                       document.querySelector("[data-testid*='video']");
+      if (videoArea) {
+        const spans = videoArea.querySelectorAll("span");
+        for (let s of spans) {
+          const text = s.textContent?.trim();
+          if (text && text.length > 0 && text.length < MAX_CAPTION_LENGTH) {
+            return text;
+          }
+        }
+      }
 
       return null;
     });
