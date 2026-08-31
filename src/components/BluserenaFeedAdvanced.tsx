@@ -11,11 +11,14 @@ import {
   MapPin,
   Zap,
   Headphones,
+  BarChart3,
+  TrendingUp,
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
 
 type SentimentFilter = "all" | "positive" | "negative" | "neutral" | "unanalyzed";
 type VerificationFilter = "all" | "confirmed" | "unconfirmed";
+type DateFilter = "all" | "2025" | "2026" | "2025-2026";
 
 interface Post extends AccountRef {
   canaleName: string;
@@ -40,7 +43,9 @@ export function BluserenaFeedAdvanced({
   const [search, setSearch] = useState("");
   const [sentimentFilter, setSentimentFilter] = useState<SentimentFilter>("all");
   const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("all");
+  const [dateFilter, setDateFilter] = useState<DateFilter>("all");
   const [showFilters, setShowFilters] = useState(false);
+  const [showAIInsights, setShowAIInsights] = useState(false);
 
   // Carica JSON runtime
   useEffect(() => {
@@ -84,6 +89,13 @@ export function BluserenaFeedAdvanced({
     return () => clearInterval(interval);
   }, [jsonUrl]);
 
+  const isInJulyAugust = (date: string | null | undefined, year: number): boolean => {
+    if (!date) return false;
+    const d = new Date(date);
+    const month = d.getMonth() + 1;
+    return d.getFullYear() === year && (month === 7 || month === 8);
+  };
+
   const filteredPosts = useMemo(() => {
     let result = posts;
 
@@ -95,6 +107,17 @@ export function BluserenaFeedAdvanced({
           p.handle?.toLowerCase().includes(q) ||
           p.canaleName.toLowerCase().includes(q),
       );
+    }
+
+    if (dateFilter !== "all") {
+      result = result.filter((p) => {
+        if (dateFilter === "2025") return isInJulyAugust(p.date, 2025);
+        if (dateFilter === "2026") return isInJulyAugust(p.date, 2026);
+        if (dateFilter === "2025-2026") {
+          return isInJulyAugust(p.date, 2025) || isInJulyAugust(p.date, 2026);
+        }
+        return true;
+      });
     }
 
     if (sentimentFilter !== "all") {
@@ -112,7 +135,27 @@ export function BluserenaFeedAdvanced({
     }
 
     return result;
-  }, [posts, search, sentimentFilter, verificationFilter]);
+  }, [posts, search, sentimentFilter, verificationFilter, dateFilter]);
+
+  const stats = useMemo(() => {
+    const posts2025 = posts.filter((p) => isInJulyAugust(p.date, 2025));
+    const posts2026 = posts.filter((p) => isInJulyAugust(p.date, 2026));
+
+    return {
+      total2025: posts2025.length,
+      total2026: posts2026.length,
+      sentiment2025: posts2025.filter((p) => p.sentiment).length,
+      sentiment2026: posts2026.filter((p) => p.sentiment).length,
+      confirmed2025: posts2025.filter(
+        (p) => (p.verificationStatus || verifyBluserenaPost(p.caption)) === "confirmed"
+      ).length,
+      confirmed2026: posts2026.filter(
+        (p) => (p.verificationStatus || verifyBluserenaPost(p.caption)) === "confirmed"
+      ).length,
+      posts2025,
+      posts2026,
+    };
+  }, [posts]);
 
   if (loading) {
     return <div className="p-8 text-center text-muted-foreground">Caricamento feed...</div>;
@@ -132,6 +175,82 @@ export function BluserenaFeedAdvanced({
         >
           ← Canali
         </button>
+      </div>
+
+      {/* Statistiche */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Luglio-Agosto 2025 */}
+        <div className="rounded-xl border border-border bg-card p-4">
+          <div className="space-y-3">
+            <div className="text-sm font-medium text-muted-foreground">Luglio-Agosto 2025</div>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Post totali</span>
+                <span className="text-lg font-semibold">{stats.total2025}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Con sentiment</span>
+                <span className="text-lg font-semibold text-blue-600">{stats.sentiment2025}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Confirmed</span>
+                <span className="text-lg font-semibold text-green-600">
+                  {stats.confirmed2025}/{stats.total2025}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Luglio-Agosto 2026 */}
+        <div className="rounded-xl border border-border bg-card p-4">
+          <div className="space-y-3">
+            <div className="text-sm font-medium text-muted-foreground">Luglio-Agosto 2026</div>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Post totali</span>
+                <span className="text-lg font-semibold">{stats.total2026}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Con sentiment</span>
+                <span className="text-lg font-semibold text-blue-600">{stats.sentiment2026}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Confirmed</span>
+                <span className="text-lg font-semibold text-green-600">
+                  {stats.confirmed2026}/{stats.total2026}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Confronto */}
+        <div className="rounded-xl border border-border bg-card p-4">
+          <div className="space-y-3">
+            <div className="text-sm font-medium text-muted-foreground">Confronto YoY</div>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Var. totali</span>
+                <span className={`text-lg font-semibold ${stats.total2026 > stats.total2025 ? "text-green-600" : "text-red-600"}`}>
+                  {stats.total2026 - stats.total2025 > 0 ? "+" : ""}{stats.total2026 - stats.total2025}
+                </span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Var. sentiment</span>
+                <span className={`text-lg font-semibold ${stats.sentiment2026 > stats.sentiment2025 ? "text-green-600" : "text-red-600"}`}>
+                  {stats.sentiment2026 - stats.sentiment2025 > 0 ? "+" : ""}{stats.sentiment2026 - stats.sentiment2025}
+                </span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-muted-foreground">Var. confirmed</span>
+                <span className={`text-lg font-semibold ${stats.confirmed2026 > stats.confirmed2025 ? "text-green-600" : "text-red-600"}`}>
+                  {stats.confirmed2026 - stats.confirmed2025 > 0 ? "+" : ""}{stats.confirmed2026 - stats.confirmed2025}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="space-y-3 rounded-xl border border-border bg-card p-4">
@@ -158,6 +277,33 @@ export function BluserenaFeedAdvanced({
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
               />
+            </div>
+
+            <div>
+              <label className="text-xs font-medium text-muted-foreground mb-2 block">
+                Periodo
+              </label>
+              <div className="flex flex-wrap gap-2">
+                {(["all", "2025", "2026", "2025-2026"] as const).map((d) => (
+                  <button
+                    key={d}
+                    onClick={() => setDateFilter(d)}
+                    className={`px-3 py-1.5 text-xs rounded-full font-medium transition ${
+                      dateFilter === d
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
+                    }`}
+                  >
+                    {d === "all"
+                      ? "Tutti"
+                      : d === "2025"
+                        ? "Lug-Ago 2025"
+                        : d === "2026"
+                          ? "Lug-Ago 2026"
+                          : "Lug-Ago 25-26"}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div>
@@ -227,6 +373,23 @@ export function BluserenaFeedAdvanced({
         )}
       </div>
 
+      {/* AI Intelligence Section */}
+      <div className="rounded-xl border border-border bg-card p-4">
+        <button
+          onClick={() => setShowAIInsights(!showAIInsights)}
+          className="flex items-center gap-2 text-sm font-medium w-full"
+        >
+          <TrendingUp className="size-4" />
+          AI Intelligence {showAIInsights ? "▼" : "▶"}
+        </button>
+
+        {showAIInsights && (
+          <div className="border-t border-border pt-4 mt-4 space-y-4">
+            <AIInsights stats={stats} />
+          </div>
+        )}
+      </div>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filteredPosts.length === 0 ? (
           <div className="col-span-full text-center text-muted-foreground py-12">
@@ -237,6 +400,153 @@ export function BluserenaFeedAdvanced({
             <PostCard key={post.url} post={post} />
           ))
         )}
+      </div>
+    </div>
+  );
+}
+
+interface AIInsightsProps {
+  stats: {
+    posts2025: Post[];
+    posts2026: Post[];
+    total2025: number;
+    total2026: number;
+    sentiment2025: number;
+    sentiment2026: number;
+    confirmed2025: number;
+    confirmed2026: number;
+  };
+}
+
+function AIInsights({ stats }: AIInsightsProps) {
+  const getTopTopics = (posts: Post[]): { topic: string; count: number }[] => {
+    const topicCounts: Record<string, number> = {};
+    posts.forEach((p) => {
+      p.topics?.forEach((topic) => {
+        topicCounts[topic] = (topicCounts[topic] || 0) + 1;
+      });
+    });
+    return Object.entries(topicCounts)
+      .map(([topic, count]) => ({ topic, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+  };
+
+  const getSentimentBreakdown = (posts: Post[]) => {
+    const positive = posts.filter((p) => p.sentiment === "positive").length;
+    const negative = posts.filter((p) => p.sentiment === "negative").length;
+    const neutral = posts.filter((p) => p.sentiment === "neutral").length;
+    const analyzed = positive + negative + neutral;
+    return { positive, negative, neutral, analyzed };
+  };
+
+  const topTopics2026 = getTopTopics(stats.posts2026);
+  const sentiment2026 = getSentimentBreakdown(stats.posts2026);
+  const sentiment2025 = getSentimentBreakdown(stats.posts2025);
+  const avgViews2026 = stats.posts2026.length > 0
+    ? Math.round(stats.posts2026.reduce((sum, p) => sum + (p.views || 0), 0) / stats.posts2026.length)
+    : 0;
+  const avgViews2025 = stats.posts2025.length > 0
+    ? Math.round(stats.posts2025.reduce((sum, p) => sum + (p.views || 0), 0) / stats.posts2025.length)
+    : 0;
+
+  return (
+    <div className="space-y-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {/* Sentiment Breakdown 2026 */}
+        <div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">Sentiment Lug-Ago 2026</div>
+          <div className="space-y-1.5 text-xs">
+            <div className="flex justify-between items-center">
+              <span>😊 Positivi</span>
+              <span className="font-semibold text-green-600">
+                {sentiment2026.positive} ({Math.round((sentiment2026.positive / sentiment2026.analyzed) * 100) || 0}%)
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span>😐 Neutrali</span>
+              <span className="font-semibold text-slate-600">
+                {sentiment2026.neutral} ({Math.round((sentiment2026.neutral / sentiment2026.analyzed) * 100) || 0}%)
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span>😞 Negativi</span>
+              <span className="font-semibold text-red-600">
+                {sentiment2026.negative} ({Math.round((sentiment2026.negative / sentiment2026.analyzed) * 100) || 0}%)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Confronto Sentiment */}
+        <div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">Confronto Sentiment</div>
+          <div className="space-y-1.5 text-xs">
+            <div className="flex justify-between items-center">
+              <span>% Analyzed 2026</span>
+              <span className="font-semibold">
+                {Math.round((sentiment2026.analyzed / stats.total2026) * 100) || 0}%
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span>% Analyzed 2025</span>
+              <span className="font-semibold">
+                {Math.round((sentiment2025.analyzed / stats.total2025) * 100) || 0}%
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span>Positivi Delta</span>
+              <span className={`font-semibold ${
+                (sentiment2026.positive / sentiment2026.analyzed || 0) > (sentiment2025.positive / sentiment2025.analyzed || 0)
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}>
+                {Math.round(((sentiment2026.positive / sentiment2026.analyzed || 0) - (sentiment2025.positive / sentiment2025.analyzed || 0)) * 100)}pp
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Top Topics */}
+      {topTopics2026.length > 0 && (
+        <div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">Topic Top 5 (Lug-Ago 2026)</div>
+          <div className="space-y-1.5">
+            {topTopics2026.map((item, i) => (
+              <div key={i} className="flex justify-between items-center text-xs">
+                <span className="text-muted-foreground">#{i + 1}</span>
+                <span className="flex-1 mx-2">{item.topic}</span>
+                <span className="font-semibold text-primary">{item.count}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Engagement Metrics */}
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views 2026</div>
+          <div className="text-lg font-semibold">{avgViews2026.toLocaleString()}</div>
+        </div>
+        <div>
+          <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views 2025</div>
+          <div className="text-lg font-semibold">{avgViews2025.toLocaleString()}</div>
+        </div>
+      </div>
+
+      {/* Key Insights */}
+      <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-3 space-y-1">
+        <p>
+          <strong>Insight:</strong> Lug-Ago 2026 ha {stats.total2026 > stats.total2025 ? "+" : ""}{stats.total2026 - stats.total2025} post vs 2025
+          {stats.confirmed2026 > stats.confirmed2025 && (
+            <span>, con +{stats.confirmed2026 - stats.confirmed2025} post confermati.</span>
+          )}
+          {stats.sentiment2026 > stats.sentiment2025 && (
+            <span> L'analisi sentiment è cresciuta di +{stats.sentiment2026 - stats.sentiment2025} post.</span>
+          )}
+        </p>
       </div>
     </div>
   );
