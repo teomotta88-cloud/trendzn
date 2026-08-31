@@ -1,0 +1,39 @@
+name: Backfill Caption + bsconfirmed via Playwright
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to run backfill on (default: main)"
+        required: false
+        default: "main"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    name: Extract caption from TikTok + validate bsconfirmed
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch || 'main' }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright browsers
+        run: npm install --include=dev && npx playwright install chromium
+
+      - name: Backfill caption and bsconfirmed flag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/backfill-bluserena-caption-playwright.mjs
+
+      - name: Cleanup
+        if: always()
+        run: rm -rf /tmp/playwright-* 2>/dev/null || true
