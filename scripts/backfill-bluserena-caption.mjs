@@ -1,13 +1,7 @@
-import { Octokit } from "@octokit/rest";
-
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
-
-const octokit = new Octokit({
-  auth: GITHUB_TOKEN,
-});
 
 const ghHeaders = {
   Authorization: `token ${GITHUB_TOKEN}`,
