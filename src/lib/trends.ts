@@ -132,39 +132,41 @@ export function detectPlatform(
 // Resort Bluserena per verifica: nomi e hashtag
 export const BLUSERENA_RESORTS = [
   { name: "Bluserena", hashtag: "bluserena" },
-  { name: "Cala Serena", hashtag: "calaserena" },
-  { name: "Serena Majestic", hashtag: "serenamajestic" },
-  { name: "Serena Majestic Hotel", hashtag: "serenamajestic" },
-  { name: "Torreserena", hashtag: "torreserena" },
-  { name: "Torre Serena", hashtag: "torreserena" },
-  { name: "Serenusa", hashtag: "serenusa" },
-  { name: "Serena Hotel", hashtag: "serenahotel" },
-  { name: "Calanè", hashtag: "calane" },
-  { name: "GranSerena", hashtag: "granserena" },
-  { name: "Sibari Green", hashtag: "sibarigreen" },
-  { name: "Valentino", hashtag: "valentino" },
-  { name: "Kalidia", hashtag: "kalidia" },
-  { name: "Alborèa", hashtag: "alborea" },
-  { name: "Ethra", hashtag: "ethra" },
-  { name: "Is Serenas", hashtag: "isserenas" },
+  { name: "Is Serenas Badesi Resort", hashtag: "isserenasbadesiresort" },
+  { name: "Calaserena Resort", hashtag: "calaserenaresort" },
+  { name: "Serenusa Resort", hashtag: "serenusaresort" },
+  { name: "Serena Majestic Hotel Residence", hashtag: "serenamajestichotelresidence" },
+  { name: "Sibari Green Resort", hashtag: "sibarigreenresort" },
+  { name: "Serenè Resort", hashtag: "serenèresort" },
+  { name: "Granserena Hotel", hashtag: "granserenahotel" },
+  { name: "Torreserena Resort", hashtag: "torreserenaresort" },
+  { name: "Calanè Resort", hashtag: "calanèresort" },
+  { name: "Valentino Resort", hashtag: "valentinoresort" },
+  { name: "Kalidria Hotel & Thalasso SPA", hashtag: "kalidriahotel" },
+  { name: "Alborèa Ecolodge Resort", hashtag: "alborèaecolodgeresort" },
+  { name: "Ethra Reserve", hashtag: "ethrareserve" },
 ];
 
-// Verifica se il post è confermato (contiene bluserena o nome/hashtag resort)
+// Verifica se il post è confermato: la caption deve contenere "bluserena"
+// oppure la DENOMINAZIONE COMPLETA di un resort (o il suo hashtag), non
+// una sottostringa generica. Prima matchava anche solo "Valentino" o
+// "Ethra" o "Serena Hotel": bastava un hotel omonimo nel mondo (un
+// concerto al Serena Hotel di Kampala, un Cala Serena a Maiorca...) per
+// marcare confirmed un post che con Bluserena non c'entra nulla — stessa
+// correzione già applicata a scripts/bulk-verify-bluserena-posts.mjs,
+// unica fonte di verità duplicata qui perché il frontend deve poter
+// classificare anche i post che non hanno ancora un verificationStatus
+// salvato. Il confronto ignora maiuscole/minuscole: su TikTok gli hashtag
+// si scrivono quasi sempre tutti minuscoli (#sibarigreenresort).
 export function verifyBluserenaPost(caption: string | null | undefined): VerificationStatus {
   if (!caption) return "unconfirmed";
 
   const lower = caption.toLowerCase();
 
-  // Verifica "bluserena"
-  if (lower.includes("bluserena") || lower.includes("#bluserena")) return "confirmed";
+  if (lower.includes("bluserena")) return "confirmed";
 
-  // Verifica resort
   for (const resort of BLUSERENA_RESORTS) {
-    if (
-      lower.includes(resort.name.toLowerCase()) ||
-      lower.includes(`#${resort.hashtag}`) ||
-      lower.includes(resort.hashtag)
-    ) {
+    if (lower.includes(resort.name.toLowerCase()) || lower.includes(`#${resort.hashtag}`)) {
       return "confirmed";
     }
   }
