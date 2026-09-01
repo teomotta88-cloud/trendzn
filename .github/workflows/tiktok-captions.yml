@@ -3,10 +3,6 @@ name: TikTok captions via oEmbed
 on:
   workflow_dispatch:
     inputs:
-      urls:
-        description: "URL dei post TikTok, uno per riga"
-        required: true
-        type: string
       pausa:
         description: "Secondi di attesa tra una richiesta e l'altra (alza a 2-3 se vedi molti 429)"
         required: false
@@ -23,15 +19,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Gli input passano da env, non interpolati nel comando: cosi' un URL
-      # malevolo non puo' iniettare comandi nella shell.
       - name: Recupera caption via oEmbed
         env:
-          TIKTOK_URLS: ${{ inputs.urls }}
           TIKTOK_PAUSE: ${{ inputs.pausa }}
         run: python3 .github/scripts/tiktok_captions.py
 
+      # always(): con oltre mille post il run e' lungo, e se viene annullato
+      # o va in timeout quanto gia' recuperato viene comunque committato.
       - name: Commit
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
