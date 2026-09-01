@@ -45,7 +45,10 @@ const ghHeaders = {
   Accept: "application/vnd.github.v3+json",
 };
 
-const authHeader = `Basic ${Buffer.from(`${EMPLIFI_API_SECRET}:${EMPLIFI_API_TOKEN}`).toString("base64")}`;
+// Formato confermato da documentazione Emplifi: "token:secret" (non il
+// contrario) codificato in base64. L'inversione era la causa del 401
+// "Authorization is not valid" nel primo run reale.
+const authHeader = `Basic ${Buffer.from(`${EMPLIFI_API_TOKEN}:${EMPLIFI_API_SECRET}`).toString("base64")}`;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
