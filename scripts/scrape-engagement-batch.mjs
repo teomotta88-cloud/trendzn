@@ -1,10 +1,12 @@
 import fs from "fs/promises";
 
 const STORE_PATH = "src/data/bluserena-monitoring.json";
-const SCRAPECREATORS_API_KEY = process.env.SCRAPECREATORS_API_KEY;
+const EMPLIFI_API_SECRET = process.env.EMPLIFI_API_SECRET;
+const EMPLIFI_API_TOKEN = process.env.EMPLIFI_API_TOKEN;
+const EMPLIFI_API_BASE = "https://api.emplifi.io/v1";
 
-if (!SCRAPECREATORS_API_KEY) {
-  console.error("❌ Missing SCRAPECREATORS_API_KEY environment variable");
+if (!EMPLIFI_API_SECRET || !EMPLIFI_API_TOKEN) {
+  console.error("❌ Missing EMPLIFI_API_SECRET or EMPLIFI_API_TOKEN environment variables");
   process.exit(1);
 }
 
@@ -19,70 +21,41 @@ const ghHeaders = {
   Accept: "application/vnd.github.v3+json",
 };
 
+// Emplifi authentication: Basic Auth with API_SECRET:API_TOKEN
+const authHeader = `Basic ${Buffer.from(`${EMPLIFI_API_SECRET}:${EMPLIFI_API_TOKEN}`).toString("base64")}`;
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function extractTikTokVideoId(url) {
-  const match = url.match(/tiktok\.com\/@[^/]+\/(?:video|photo)\/(\d+)/);
-  return match?.[1] || null;
-}
-
-function normalizeTikTokUrl(url) {
+async function fetchPostData(url) {
   try {
-    const u = new URL(url);
-    return `${u.origin}${u.pathname.replace(/\/$/, "")}`;
-  } catch {
-    return url;
-  }
-}
+    const response = await fetch(`${EMPLIFI_API_BASE}/posts/data`, {
+      method: "POST",
+      headers: {
+        "Authorization": authHeader,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ url }),
+    });
 
-async function fetchPostData(url, retries = 3) {
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const videoId = extractTikTokVideoId(url);
-      if (!videoId) {
-        return { url, error: "Could not extract video ID from URL" };
-      }
-
-      const response = await fetch(
-        `https://api.scrapecreators.com/v1/tiktok/video?video_id=${videoId}`,
-        {
-          headers: { "x-api-key": SCRAPECREATORS_API_KEY },
-          signal: AbortSignal.timeout(15000),
-        }
-      );
-
+    if (!response.ok) {
       const text = await response.text();
-      if (!response.ok) {
-        if (attempt < retries) {
-          await sleep(Math.pow(2, attempt) * 1000);
-          continue;
-        }
-        throw new Error(`${response.status}: ${text.substring(0, 200)}`);
-      }
-
-      const data = JSON.parse(text);
-      if (!data || typeof data !== "object") {
-        return { url, error: "Invalid response format" };
-      }
-
-      const item = data.data || data;
-      return {
-        url,
-        views: item.statistics?.play_count ?? null,
-        likes: item.statistics?.digg_count ?? null,
-        comments: item.statistics?.comment_count ?? null,
-        shares: item.statistics?.share_count ?? null,
-        caption: item.desc ?? null,
-      };
-    } catch (err) {
-      if (attempt === retries) {
-        console.error(`  ⚠️  ${url}: ${err.message}`);
-        return { url, error: err.message };
-      }
-      await sleep(Math.pow(2, attempt) * 1000);
+      throw new Error(`${response.status}: ${text.substring(0, 200)}`);
     }
+
+    const data = await response.json();
+    return {
+      url,
+      views: data.metrics?.views || data.views || null,
+      likes: data.metrics?.likes || data.likes || null,
+      comments: data.metrics?.comments || data.comments || null,
+      shares: data.metrics?.shares || data.shares || null,
+      caption: data.caption || data.text || null,
+    };
+  } catch (err) {
+    console.error(`  ⚠️  ${url}: ${err.message}`);
+    return { url, error: err.message };
   }
 }
 

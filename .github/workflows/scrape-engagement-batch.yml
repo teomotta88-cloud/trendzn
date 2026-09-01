@@ -23,9 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install --include=dev
 
-      - name: Scrape engagement data via ScrapeCreators
+      - name: Scrape engagement data via Emplifi
         env:
-          SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
+          EMPLIFI_API_SECRET: ${{ secrets.EMPLIFI_API_SECRET }}
+          EMPLIFI_API_TOKEN: ${{ secrets.EMPLIFI_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/scrape-engagement-batch.mjs
 
