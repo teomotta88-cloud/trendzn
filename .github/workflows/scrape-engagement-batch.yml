@@ -1,0 +1,60 @@
+name: Scrape Engagement Data via ScraperCreator
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_endpoint:
+        description: "ScraperCreator API endpoint (default: https://api.scrapecreator.com/batch)"
+        required: false
+        default: "https://api.scrapecreator.com/batch"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    name: Scrape engagement data for Jul-Aug posts
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install --include=dev
+
+      - name: Scrape engagement data via ScraperCreator
+        env:
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
+          SCRAPER_API_ENDPOINT: ${{ inputs.api_endpoint }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/scrape-engagement-batch.mjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Show summary
+        run: |
+          echo "## Scrape Summary"
+          echo ""
+          echo "✅ Engagement data updated for Jul-Aug 2025-2026 posts"
+          echo ""
+          echo "**Changes:** $(git diff --stat | tail -1)"
+        if: steps.changes.outputs.has_changes == 'true'
+
+      - name: No changes
+        run: |
+          echo "ℹ️ No changes made - all engagement data already up to date"
+        if: steps.changes.outputs.has_changes == 'false'
