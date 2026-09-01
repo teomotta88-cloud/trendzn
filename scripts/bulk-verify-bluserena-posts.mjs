@@ -22,60 +22,56 @@ if (!token) {
 
 const octokit = new Octokit({ auth: token });
 
-// Lista resort da matchare nelle caption
-const RESORTS = [
-  "Bluserena",
-  "Cala Serena",
-  "Serena Majestic",
-  "Serena Majestic Hotel",
-  "SerenaResort",
-  "Serena Resort",
-  "Torreserena",
-  "Torre Serena",
-  "Serenusa",
-  "Serenahotel",
-  "Serena Hotel",
-  "Calanè",
-  "Calanè Resort",
-  "Calànè Resort",
-  "GranSerena",
-  "Gran Serena",
-  "Sibari Green",
+// Un post è confirmed solo se la caption nomina Bluserena o uno dei resort
+// con la DENOMINAZIONE COMPLETA, o con il suo hashtag.
+//
+// La lista precedente matchava sottostringhe generiche ("Valentino",
+// "Ethra", "Serena Hotel", "Calanè"): bastava un hotel omonimo in Uganda o
+// nelle Filippine per marcare confirmed un post che con Bluserena non
+// c'entra nulla. Qui i termini sono interi e non ambigui.
+//
+// Il confronto ignora maiuscole/minuscole: su TikTok gli hashtag si
+// scrivono quasi sempre tutti minuscoli (#sibarigreenresort), e con il
+// match esatto se ne perdevano parecchi — #KalidriaHotel, per dire, nel
+// dataset non compare mai con quelle maiuscole. Restano invece esclusi gli
+// scostamenti di grafia: "Blu Serena" staccato non è "bluserena".
+const TERMINI = [
+  "bluserena", // copre anche #bluserena, essendo sottostringa
+  "Is Serenas Badesi Resort",
+  "#IsSerenasBadesiResort",
+  "Calaserena Resort",
+  "#CalaserenaResort",
+  "Serenusa Resort",
+  "#SerenusaResort",
+  "Serena Majestic Hotel Residence",
+  "#SerenaMajesticHotelResidence",
   "Sibari Green Resort",
-  "Valentino",
+  "#SibariGreenResort",
+  "Serenè Resort",
+  "#SerenèResort",
+  "Granserena Hotel",
+  "#GranserenaHotel",
+  "Torreserena Resort",
+  "#TorreserenaResort",
+  "Calanè Resort",
+  "#CalanèResort",
   "Valentino Resort",
-  "Kalidia",
-  "Kalidia Hotel",
-  "Alborèa",
-  "Alborèa Ecolodge",
-  "Ethra",
+  "#ValentinoResort",
+  "Kalidria Hotel & Thalasso SPA",
+  "#KalidriaHotel",
+  "Alborèa Ecolodge Resort",
+  "#AlborèaEcolodgeResort",
   "Ethra Reserve",
-  "Is Serenas",
-  "Is Serenas Badesi",
-  "IsSerenas",
+  "#EthraReserve",
 ];
 
 function verifyPost(caption) {
   if (!caption) return "unconfirmed";
 
   const lower = caption.toLowerCase();
-
-  // Verifica "bluserena"
-  if (lower.includes("bluserena") || lower.includes("#bluserena")) {
-    return "confirmed";
-  }
-
-  // Verifica resort
-  for (const resort of RESORTS) {
-    if (
-      lower.includes(resort.toLowerCase()) ||
-      lower.includes(`#${resort.toLowerCase()}`)
-    ) {
-      return "confirmed";
-    }
-  }
-
-  return "unconfirmed";
+  return TERMINI.some((t) => lower.includes(t.toLowerCase()))
+    ? "confirmed"
+    : "unconfirmed";
 }
 
 async function bulkVerify() {
