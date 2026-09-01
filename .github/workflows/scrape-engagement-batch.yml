@@ -1,13 +1,7 @@
-name: Scrape Engagement Data via ScraperCreator
+name: Scrape Engagement Data via Emplifi
 
 on:
   workflow_dispatch:
-    inputs:
-      api_endpoint:
-        description: "ScraperCreator API endpoint (default: https://api.scrapecreator.com/batch)"
-        required: false
-        default: "https://api.scrapecreator.com/batch"
-        type: string
 
 permissions:
   contents: write
@@ -29,10 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install --include=dev
 
-      - name: Scrape engagement data via ScraperCreator
+      - name: Scrape engagement data via Emplifi
         env:
-          SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
-          SCRAPER_API_ENDPOINT: ${{ inputs.api_endpoint }}
+          EMPLIFI_API_SECRET: ${{ secrets.EMPLIFI_API_SECRET }}
+          EMPLIFI_API_TOKEN: ${{ secrets.EMPLIFI_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/scrape-engagement-batch.mjs
 
@@ -47,9 +41,9 @@ jobs:
 
       - name: Show summary
         run: |
-          echo "## Scrape Summary"
+          echo "## Engagement Data Scrape Summary"
           echo ""
-          echo "✅ Engagement data updated for Jul-Aug 2025-2026 posts"
+          echo "✅ Engagement data updated for Jul-Aug 2025 and Jul-Aug 2026 posts via Emplifi"
           echo ""
           echo "**Changes:** $(git diff --stat | tail -1)"
         if: steps.changes.outputs.has_changes == 'true'
