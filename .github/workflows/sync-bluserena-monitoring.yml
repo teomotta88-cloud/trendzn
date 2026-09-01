@@ -4,9 +4,13 @@ name: Sync Bluserena Monitoring
 # ora, al minuto 45 per non scrivere su GitHub in contemporanea agli altri sync
 # (canali-inspo al minuto 0, aspi-monitoring al minuto 30).
 
+# Cron sospeso dal 01/09/2026: le finestre di interesse (lug-ago 2025 e
+# lug-ago 2026) sono entrambe chiuse, quindi ogni post nuovo che questo
+# sync troverebbe cadrebbe fuori periodo e sporcherebbe lo store, che e'
+# stato ripulito apposta. Resta lanciabile a mano.
 on:
-  schedule:
-    - cron: "45 * * * *"
+  # schedule:
+  #   - cron: "45 * * * *"
   workflow_dispatch: {}
 
 jobs:

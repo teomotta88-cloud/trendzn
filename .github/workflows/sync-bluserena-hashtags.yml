@@ -13,9 +13,13 @@ name: Sync Bluserena Hashtags
 # troppe richieste ravvicinate (stessa soglia empirica documentata in
 # discover-instagram-hashtag-content.yml), meno run = meno rischio.
 
+# Cron sospeso dal 01/09/2026: le finestre di interesse (lug-ago 2025 e
+# lug-ago 2026) sono entrambe chiuse, quindi ogni post nuovo che questo
+# sync troverebbe cadrebbe fuori periodo e sporcherebbe lo store, che e'
+# stato ripulito apposta. Resta lanciabile a mano.
 on:
-  schedule:
-    - cron: "15 */3 * * *"
+  # schedule:
+  #   - cron: "15 */3 * * *"
   workflow_dispatch: {}
 
 jobs:
