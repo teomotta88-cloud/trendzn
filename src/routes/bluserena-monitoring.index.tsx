@@ -377,7 +377,10 @@ function BluserenaCanaliView({
   }, [confirmingId]);
 
   const fetchJson = useCallback(() => {
-    return fetch(BLUSERENA_JSON_URL)
+    // ?t= evita la cache di qualche minuto di raw.githubusercontent.com:
+    // senza, un aggiornamento del json (es. dopo un workflow) può non
+    // vedersi in pagina per un po' anche ricaricando.
+    return fetch(`${BLUSERENA_JSON_URL}?t=${Date.now()}`)
       .then((r) => r.json())
       .then((decoded) => {
         setJsonCanali(decoded.canali || []);
