@@ -44,22 +44,59 @@ async function main() {
       }
     };
 
-    console.log(`Request size: ${urls.length} URLs, fields: ${batchRequest.fields.join(", ")}`);
+    const payloadSize = JSON.stringify(batchRequest).length;
+    console.log(`Request size: ${urls.length} URLs (~${Math.round(payloadSize / 1024)}KB), fields: ${batchRequest.fields.join(", ")}`);
 
-    // Send batch request
-    const response = await fetch(SCRAPER_API_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${SCRAPER_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(batchRequest),
-    });
+    // Send batch request with timeout and retry logic
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60s timeout
 
-    if (!response.ok) {
-      const error = await response.text();
-      console.error(`❌ ScraperCreator API error: ${response.status}`);
-      console.error(error);
+    let response;
+    let lastError;
+
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        console.log(`📡 Attempt ${attempt}/3: Sending batch request...`);
+
+        response = await fetch(SCRAPER_API_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${SCRAPER_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(batchRequest),
+          signal: controller.signal,
+        });
+
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          const error = await response.text();
+          console.error(`❌ ScraperCreator API error: ${response.status}`);
+          console.error(`Response: ${error.substring(0, 500)}`);
+          process.exit(1);
+        }
+
+        break; // Success, exit retry loop
+      } catch (err) {
+        lastError = err;
+        console.error(`⚠️  Attempt ${attempt} failed: ${err.message}`);
+        if (attempt < 3) {
+          const delay = Math.pow(2, attempt) * 1000;
+          console.log(`⏳ Waiting ${delay}ms before retry...`);
+          await new Promise(r => setTimeout(r, delay));
+        }
+      }
+    }
+
+    clearTimeout(timeoutId);
+
+    if (!response) {
+      console.error(`\n❌ All 3 retry attempts failed`);
+      console.error(`Last error: ${lastError?.message || 'Unknown error'}`);
+      console.error(`Endpoint: ${SCRAPER_API_ENDPOINT}`);
+      console.error(`Payload size: ${Math.round(payloadSize / 1024)}KB`);
+      console.error(`URLs count: ${urls.length}`);
       process.exit(1);
     }
 
