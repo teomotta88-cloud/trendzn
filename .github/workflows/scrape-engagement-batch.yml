@@ -31,7 +31,7 @@ jobs:
 
       - name: Scrape engagement data via ScraperCreator
         env:
-          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
+          SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
           SCRAPER_API_ENDPOINT: ${{ inputs.api_endpoint }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/scrape-engagement-batch.mjs
