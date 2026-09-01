@@ -70,10 +70,17 @@ async function main() {
 
     for (const canale of data.canali) {
       for (const account of canale.accounts || []) {
+        if (!account.url) continue;
+
         const date = new Date(account.date);
+        const year = date.getFullYear();
         const month = date.getMonth() + 1;
 
-        if ((month === 7 || month === 8) && account.url) {
+        // Filter: only Jul-Aug 2025 and Jul-Aug 2026
+        const isJulAug = (month === 7 || month === 8);
+        const isTargetYear = (year === 2025 || year === 2026);
+
+        if (isJulAug && isTargetYear) {
           urls.push(account.url);
           urlToAccount.set(account.url, account);
         }
