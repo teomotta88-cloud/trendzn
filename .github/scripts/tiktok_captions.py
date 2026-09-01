@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Recupera caption, autore e thumbnail dei post TikTok via oEmbed pubblico.
 
-Legge gli URL (uno per riga) da TIKTOK_URLS, interroga l'endpoint oEmbed
-pubblico di TikTok e riporta i dati sui post gia' presenti in
-src/data/bluserena-monitoring.json, riempiendo solo i campi vuoti.
+Seleziona da src/data/bluserena-monitoring.json tutti i post TikTok con
+caption mancante nelle finestre Jul-Ago 2025 e Jul-Ago 2026, li interroga
+sull'endpoint oEmbed pubblico di TikTok e riempie i campi vuoti.
+
+Il lavoro e' ripetibile: un post con la caption gia' valorizzata non viene
+piu' selezionato, quindi un run interrotto riparte da dove si era fermato.
 
 Solo standard library: gira con il python3 gia' presente sul runner.
 """
@@ -24,6 +27,7 @@ UA = (
     "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 SHORT_HOSTS = ("vm.tiktok.com", "vt.tiktok.com")
+FINESTRE = ("2025-07", "2025-08", "2026-07", "2026-08")
 ATTEMPTS = 3
 
 
@@ -52,18 +56,16 @@ def fetch(url):
             time.sleep(2**attempt)
 
 
-def strip_url(url):
-    """Toglie query string, fragment, slash finale e www: serve per il match."""
-    parts = urllib.parse.urlsplit(url)
-    host = (parts.hostname or "").lower().removeprefix("www.")
-    return urllib.parse.urlunsplit(("https", host, parts.path.rstrip("/"), "", ""))
+def is_tiktok(url):
+    return (urllib.parse.urlsplit(url).hostname or "").lower().endswith("tiktok.com")
 
 
 def canonical(url):
-    """Risolve gli short link vm/vt e normalizza l'URL."""
+    """Risolve gli short link vm/vt e toglie query string e fragment."""
     if (urllib.parse.urlsplit(url).hostname or "").lower() in SHORT_HOSTS:
         url = fetch(url)[1]
-    return strip_url(url)
+    parts = urllib.parse.urlsplit(url)
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/"), "", ""))
 
 
 def oembed(url):
@@ -72,76 +74,78 @@ def oembed(url):
         "caption": data.get("title"),
         "handle": data.get("author_unique_id"),
         "imageUrl": data.get("thumbnail_url"),
-        "author_url": data.get("author_url"),
     }
 
 
+def seleziona(store):
+    """Post TikTok senza caption nelle finestre Jul-Ago 2025 e 2026."""
+    return [
+        a
+        for canale in store.get("canali", [])
+        for a in canale.get("accounts", [])
+        if a.get("url")
+        and is_tiktok(a["url"])
+        and not a.get("caption")
+        and (a.get("date") or "")[:7] in FINESTRE
+    ]
+
+
+def salva(store):
+    with open(STORE, "w", encoding="utf-8") as f:
+        json.dump(store, f, ensure_ascii=False, indent=2)
+
+
 def main():
-    urls = [u.strip() for u in os.environ.get("TIKTOK_URLS", "").splitlines() if u.strip()]
     pausa = float(os.environ.get("TIKTOK_PAUSE") or 1)
-    if not urls:
-        sys.exit("Nessun URL fornito.")
 
     with open(STORE, encoding="utf-8") as f:
         store = json.load(f)
 
-    posts = {
-        strip_url(a["url"]): a
-        for canale in store.get("canali", [])
-        for a in canale.get("accounts", [])
-        if a.get("url")
-    }
+    posts = seleziona(store)
+    print(f"{len(posts)} post TikTok senza caption in Jul-Ago 2025/2026, pausa {pausa}s")
+    if not posts:
+        return
 
-    righe = []
+    errori = []
     ok = aggiornati = 0
 
-    for i, raw in enumerate(urls):
-        if not (urllib.parse.urlsplit(raw).hostname or "").lower().endswith("tiktok.com"):
-            righe.append((raw, "❌", "non e' un URL tiktok.com"))
-            continue
-
+    for i, account in enumerate(posts, 1):
         try:
-            url = canonical(raw)
-            dati = oembed(url)
-        except Exception as err:  # noqa: BLE001 - un URL rotto non ferma il job
-            righe.append((raw, "❌", str(err)))
-            continue
-
-        ok += 1
-        account = posts.get(url)
-        if account is None:
-            righe.append((url, "⚠️", f"non presente nello store — caption: {dati['caption']!r}"))
+            dati = oembed(canonical(account["url"]))
+        except Exception as err:  # noqa: BLE001 - un post rotto non ferma il job
+            errori.append((account["url"], str(err)))
+            print(f"  ❌ {account['url']} — {err}")
         else:
-            riempiti = [
-                campo
-                for campo in ("caption", "handle", "imageUrl")
-                if dati[campo] and not account.get(campo)
-            ]
+            ok += 1
+            riempiti = [c for c in dati if dati[c] and not account.get(c)]
             for campo in riempiti:
                 account[campo] = dati[campo]
             if riempiti:
                 aggiornati += 1
-            righe.append((url, "✅", ", ".join(riempiti) if riempiti else "gia' completo"))
+                # Salvataggio incrementale: un timeout o un annullamento non
+                # butta via quanto gia' recuperato.
+                if aggiornati % 25 == 0:
+                    salva(store)
+            print(f"  ✅ {account['url']} — {', '.join(riempiti) or 'niente da riempire'}")
 
-        if i < len(urls) - 1:
+        if i % 50 == 0:
+            print(f"  ...{i}/{len(posts)} — recuperati {ok}, aggiornati {aggiornati}")
+        if i < len(posts):
             time.sleep(pausa)
 
-    if aggiornati:
-        with open(STORE, "w", encoding="utf-8") as f:
-            json.dump(store, f, ensure_ascii=False, indent=2)
-
-    print(f"\nRecuperati {ok}/{len(urls)} — post aggiornati nello store: {aggiornati}")
-    for url, esito, nota in righe:
-        print(f"  {esito} {url} — {nota}")
+    salva(store)
+    print(f"\nRecuperati {ok}/{len(posts)} — post aggiornati: {aggiornati}, falliti: {len(errori)}")
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
-            f.write(f"## TikTok oEmbed\n\nRecuperati {ok}/{len(urls)} — aggiornati {aggiornati}\n\n")
-            f.write("| URL | Esito | Note |\n| --- | --- | --- |\n")
-            for url, esito, nota in righe:
-                nota = nota.replace("|", "\\|")
-                f.write(f"| {url} | {esito} | {nota} |\n")
+            f.write("## TikTok oEmbed\n\n")
+            f.write(f"Selezionati {len(posts)} — recuperati {ok}, aggiornati {aggiornati}, ")
+            f.write(f"falliti {len(errori)}\n")
+            if errori:
+                f.write("\n| URL | Errore |\n| --- | --- |\n")
+                for url, err in errori:
+                    f.write(f"| {url} | {err.replace('|', chr(92) + '|')} |\n")
 
     if ok == 0:
         sys.exit("Tutti gli URL sono falliti.")
