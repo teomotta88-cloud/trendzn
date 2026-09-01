@@ -46,6 +46,7 @@ export function BluserenaFeedAdvanced({
   const [dateFilter, setDateFilter] = useState<DateFilter>("all");
   const [showFilters, setShowFilters] = useState(false);
   const [showAIInsights, setShowAIInsights] = useState(false);
+  const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
 
   // Carica JSON runtime. Il polling ogni 30s aggiorna i post in background:
   // setLoading(true) va chiamato SOLO al primo giro, altrimenti ogni refresh
@@ -100,6 +101,48 @@ export function BluserenaFeedAdvanced({
     return () => clearInterval(interval);
   }, [jsonUrl]);
 
+  // Aggiorna BSConfirmed/BSUnconfirmed di un post via API e riflette il
+  // cambio subito in locale, senza aspettare il prossimo polling. Match su
+  // url + canaleId (non solo url): lo stesso post può comparire in più
+  // canali hashtag contemporaneamente, e l'endpoint aggiorna solo la copia
+  // del canale passato in channelId.
+  const toggleVerificationStatus = async (post: Post) => {
+    const currentStatus = post.verificationStatus || verifyBluserenaPost(post.caption);
+    const newStatus: VerificationStatus = currentStatus === "confirmed" ? "unconfirmed" : "confirmed";
+    setUpdatingUrl(post.url);
+
+    try {
+      const res = await fetch("/api/public/hooks/update-bluserena-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          channelId: post.canaleId,
+          postUrl: post.url,
+          verificationStatus: newStatus,
+        }),
+      });
+
+      if (res.ok) {
+        setPosts((prev) =>
+          prev.map((p) =>
+            p.url === post.url && p.canaleId === post.canaleId
+              ? { ...p, verificationStatus: newStatus }
+              : p
+          )
+        );
+      } else {
+        const errText = await res.text();
+        console.error("Errore aggiornamento verifica:", errText);
+        alert("Errore durante l'aggiornamento della verifica");
+      }
+    } catch (err) {
+      console.error("Errore aggiornamento verifica:", err);
+      alert("Errore di connessione durante l'aggiornamento");
+    } finally {
+      setUpdatingUrl(null);
+    }
+  };
+
   const isInJulyAugust = (date: string | null | undefined, year: number): boolean => {
     if (!date) return false;
     const d = new Date(date);
@@ -151,20 +194,21 @@ export function BluserenaFeedAdvanced({
   const stats = useMemo(() => {
     const posts2025 = posts.filter((p) => isInJulyAugust(p.date, 2025));
     const posts2026 = posts.filter((p) => isInJulyAugust(p.date, 2026));
+    const isConfirmed = (p: Post) =>
+      (p.verificationStatus || verifyBluserenaPost(p.caption)) === "confirmed";
 
     return {
       total2025: posts2025.length,
       total2026: posts2026.length,
       sentiment2025: posts2025.filter((p) => p.sentiment).length,
       sentiment2026: posts2026.filter((p) => p.sentiment).length,
-      confirmed2025: posts2025.filter(
-        (p) => (p.verificationStatus || verifyBluserenaPost(p.caption)) === "confirmed"
-      ).length,
-      confirmed2026: posts2026.filter(
-        (p) => (p.verificationStatus || verifyBluserenaPost(p.caption)) === "confirmed"
-      ).length,
-      posts2025,
-      posts2026,
+      confirmed2025: posts2025.filter(isConfirmed).length,
+      confirmed2026: posts2026.filter(isConfirmed).length,
+      // Solo per AI Intelligence: l'analisi (topic, sentiment, views, il
+      // confronto tra i due periodi) deve girare solo sui post BSConfirmed,
+      // non su tutti quelli della finestra Jul-Ago.
+      confirmedPosts2025: posts2025.filter(isConfirmed),
+      confirmedPosts2026: posts2026.filter(isConfirmed),
     };
   }, [posts]);
 
@@ -396,7 +440,10 @@ export function BluserenaFeedAdvanced({
 
         {showAIInsights && (
           <div className="border-t border-border pt-4 mt-4 space-y-4">
-            <AIInsights stats={stats} />
+            <AIInsights
+              confirmedPosts2025={stats.confirmedPosts2025}
+              confirmedPosts2026={stats.confirmedPosts2026}
+            />
           </div>
         )}
       </div>
@@ -408,7 +455,12 @@ export function BluserenaFeedAdvanced({
           </div>
         ) : (
           filteredPosts.map((post) => (
-            <PostCard key={post.url} post={post} />
+            <PostCard
+              key={post.url}
+              post={post}
+              updating={updatingUrl === post.url}
+              onToggleVerification={() => toggleVerificationStatus(post)}
+            />
           ))
         )}
       </div>
@@ -417,19 +469,15 @@ export function BluserenaFeedAdvanced({
 }
 
 interface AIInsightsProps {
-  stats: {
-    posts2025: Post[];
-    posts2026: Post[];
-    total2025: number;
-    total2026: number;
-    sentiment2025: number;
-    sentiment2026: number;
-    confirmed2025: number;
-    confirmed2026: number;
-  };
+  // Solo post BSConfirmed: l'intera sezione confronta le due finestre
+  // Jul-Ago SOLO sui post che sono davvero di Bluserena, non su tutto
+  // quello che è stato monitorato (che include falsi positivi come
+  // concerti al Serena Hotel di Kampala o hashtag omonimi altrove).
+  confirmedPosts2025: Post[];
+  confirmedPosts2026: Post[];
 }
 
-function AIInsights({ stats }: AIInsightsProps) {
+function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps) {
   const getTopTopics = (posts: Post[]): { topic: string; count: number }[] => {
     const topicCounts: Record<string, number> = {};
     posts.forEach((p) => {
@@ -451,14 +499,20 @@ function AIInsights({ stats }: AIInsightsProps) {
     return { positive, negative, neutral, analyzed };
   };
 
-  const topTopics2026 = getTopTopics(stats.posts2026);
-  const sentiment2026 = getSentimentBreakdown(stats.posts2026);
-  const sentiment2025 = getSentimentBreakdown(stats.posts2025);
-  const avgViews2026 = stats.posts2026.length > 0
-    ? Math.round(stats.posts2026.reduce((sum, p) => sum + (p.views || 0), 0) / stats.posts2026.length)
+  // Totali locali, calcolati sui soli post confirmed: usarli come
+  // denominatore delle percentuali qui sotto tiene coerente il rapporto
+  // (altrimenti "% analizzati" userebbe al numeratore i confirmed e al
+  // denominatore tutti i post, compresi quelli scartati).
+  const total2025 = confirmedPosts2025.length;
+  const total2026 = confirmedPosts2026.length;
+  const topTopics2026 = getTopTopics(confirmedPosts2026);
+  const sentiment2026 = getSentimentBreakdown(confirmedPosts2026);
+  const sentiment2025 = getSentimentBreakdown(confirmedPosts2025);
+  const avgViews2026 = confirmedPosts2026.length > 0
+    ? Math.round(confirmedPosts2026.reduce((sum, p) => sum + (p.views || 0), 0) / confirmedPosts2026.length)
     : 0;
-  const avgViews2025 = stats.posts2025.length > 0
-    ? Math.round(stats.posts2025.reduce((sum, p) => sum + (p.views || 0), 0) / stats.posts2025.length)
+  const avgViews2025 = confirmedPosts2025.length > 0
+    ? Math.round(confirmedPosts2025.reduce((sum, p) => sum + (p.views || 0), 0) / confirmedPosts2025.length)
     : 0;
 
   return (
@@ -496,13 +550,13 @@ function AIInsights({ stats }: AIInsightsProps) {
             <div className="flex justify-between items-center">
               <span>% Analyzed 2026</span>
               <span className="font-semibold">
-                {Math.round((sentiment2026.analyzed / stats.total2026) * 100) || 0}%
+                {Math.round((sentiment2026.analyzed / total2026) * 100) || 0}%
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>% Analyzed 2025</span>
               <span className="font-semibold">
-                {Math.round((sentiment2025.analyzed / stats.total2025) * 100) || 0}%
+                {Math.round((sentiment2025.analyzed / total2025) * 100) || 0}%
               </span>
             </div>
             <div className="flex justify-between items-center">
@@ -550,12 +604,10 @@ function AIInsights({ stats }: AIInsightsProps) {
       {/* Key Insights */}
       <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-3 space-y-1">
         <p>
-          <strong>Insight:</strong> Lug-Ago 2026 ha {stats.total2026 > stats.total2025 ? "+" : ""}{stats.total2026 - stats.total2025} post vs 2025
-          {stats.confirmed2026 > stats.confirmed2025 && (
-            <span>, con +{stats.confirmed2026 - stats.confirmed2025} post confermati.</span>
-          )}
-          {stats.sentiment2026 > stats.sentiment2025 && (
-            <span> L'analisi sentiment è cresciuta di +{stats.sentiment2026 - stats.sentiment2025} post.</span>
+          <strong>Insight:</strong> Lug-Ago 2026 ha {total2026 > total2025 ? "+" : ""}{total2026 - total2025} post
+          BSConfirmed rispetto a Lug-Ago 2025 ({total2025}).
+          {sentiment2026.analyzed > sentiment2025.analyzed && (
+            <span> L'analisi sentiment è cresciuta di +{sentiment2026.analyzed - sentiment2025.analyzed} post.</span>
           )}
         </p>
       </div>
@@ -563,7 +615,15 @@ function AIInsights({ stats }: AIInsightsProps) {
   );
 }
 
-function PostCard({ post }: { post: Post }) {
+function PostCard({
+  post,
+  updating,
+  onToggleVerification,
+}: {
+  post: Post;
+  updating: boolean;
+  onToggleVerification: () => void;
+}) {
   const status = post.verificationStatus || verifyBluserenaPost(post.caption);
   const sentiment = post.sentiment;
 
@@ -611,15 +671,18 @@ function PostCard({ post }: { post: Post }) {
             ) : (
               <AlertCircle className="size-3 text-yellow-600" />
             )}
-            <span
-              className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+            <button
+              onClick={onToggleVerification}
+              disabled={updating}
+              className={`text-[10px] px-1.5 py-0.5 rounded-full transition hover:opacity-80 disabled:opacity-50 ${
                 status === "confirmed"
                   ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
                   : "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
               }`}
+              title="Click per cambiare lo stato di verifica"
             >
               BS {status === "confirmed" ? "Confermato" : "Non confermato"}
-            </span>
+            </button>
           </div>
 
           {post.topics && post.topics.length > 0 && (
