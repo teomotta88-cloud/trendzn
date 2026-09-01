@@ -5,14 +5,32 @@ on:
     # Ogni lunedì alle 02:00 UTC (4:00 CEST, orario notturno)
     - cron: "0 2 * * 1"
   workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "Numero massimo di post da elaborare in questa run"
+        required: false
+        default: "400"
+      reprocess_failed:
+        description: "Riprova i post il cui OCR era fallito (true/false)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
 
+concurrency:
+  # Lo script committa su bluserena-monitoring.json: due run in parallelo si
+  # rincorrerebbero a colpi di conflitto sullo stesso file.
+  group: bluserena-ocr
+  cancel-in-progress: false
+
 jobs:
   analyze-ocr:
     runs-on: ubuntu-latest
-    name: Extract on-screen text + analyze via Groq
+    name: Estrae il testo on-screen dai video
+    # Il limite GitHub è 360 minuti: lo script si ferma da solo prima
+    # (MAX_MINUTES) per fare in tempo a committare l'ultimo batch.
+    timeout-minutes: 350
 
     steps:
       - name: Checkout repo
@@ -23,24 +41,32 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+          cache: npm
+
+      # Senza questi due binari lo script esce subito con errore: prima non
+      # erano installati affatto e l'OCR falliva in silenzio a ogni post.
+      - name: Install ffmpeg + yt-dlp
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          # La versione apt di yt-dlp è troppo vecchia per TikTok: si usa il
+          # binario ufficiale.
+          sudo curl -fsSL --retry 3 \
+            https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
+            -o /usr/local/bin/yt-dlp
+          sudo chmod a+rx /usr/local/bin/yt-dlp
+          yt-dlp --version
+          ffmpeg -version | head -1
 
       - name: Install dependencies
-        run: npm install --include=dev
+        run: npm ci --include=dev
 
-      - name: Run OCR analysis
+      - name: Run OCR extraction
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MAX_POSTS: ${{ inputs.max_posts || '400' }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
+          MAX_MINUTES: "300"
+          BATCH_SIZE: "25"
         run: node scripts/analyze-bluserena-ocr.mjs
-
-      - name: Notify on failure
-        if: failure()
-        run: |
-          echo "❌ OCR analysis failed"
-          exit 1
-
-      - name: Notify on success
-        if: success()
-        run: echo "✅ OCR analysis completed"

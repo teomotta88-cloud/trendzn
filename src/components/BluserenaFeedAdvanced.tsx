@@ -648,14 +648,14 @@ function PostCard({ post }: { post: Post }) {
             </div>
           )}
 
-          {post.ocrData && (
+          {post.ocrData?.textOnScreen && (
             <div className="flex items-center gap-1.5">
               <Zap className="size-3 text-amber-600 dark:text-amber-500" />
               <span className="text-[9px] text-amber-700 dark:text-amber-400">OCR</span>
             </div>
           )}
 
-          {post.audioAnalysis && (
+          {post.audioAnalysis?.transcript && (
             <div className="flex items-center gap-1.5">
               <Headphones className="size-3 text-purple-600 dark:text-purple-500" />
               <span className="text-[9px] text-purple-700 dark:text-purple-400">Audio</span>
