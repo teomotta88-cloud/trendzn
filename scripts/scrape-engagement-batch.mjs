@@ -1,12 +1,62 @@
 import fs from "fs/promises";
 
 const STORE_PATH = "src/data/bluserena-monitoring.json";
-const SCRAPER_API_KEY = process.env.SCRAPECREATORS_API_KEY || process.env.SCRAPER_API_KEY;
-const SCRAPER_API_ENDPOINT = process.env.SCRAPER_API_ENDPOINT || "https://api.scrapecreator.com/batch";
+const EMPLIFI_API_SECRET = process.env.EMPLIFI_API_SECRET;
+const EMPLIFI_API_TOKEN = process.env.EMPLIFI_API_TOKEN;
+const EMPLIFI_API_BASE = "https://api.emplifi.io/v1";
 
-if (!SCRAPER_API_KEY) {
-  console.error("❌ SCRAPECREATORS_API_KEY (or SCRAPER_API_KEY) environment variable not set");
+if (!EMPLIFI_API_SECRET || !EMPLIFI_API_TOKEN) {
+  console.error("❌ Missing EMPLIFI_API_SECRET or EMPLIFI_API_TOKEN environment variables");
   process.exit(1);
+}
+
+const githubToken = process.env.GITHUB_TOKEN;
+if (!githubToken) {
+  console.error("❌ Manca GITHUB_TOKEN nell'ambiente.");
+  process.exit(1);
+}
+
+const ghHeaders = {
+  Authorization: `token ${githubToken}`,
+  Accept: "application/vnd.github.v3+json",
+};
+
+// Emplifi authentication: Basic Auth with API_SECRET:API_TOKEN
+const authHeader = `Basic ${Buffer.from(`${EMPLIFI_API_SECRET}:${EMPLIFI_API_TOKEN}`).toString("base64")}`;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchPostData(url) {
+  try {
+    const response = await fetch(`${EMPLIFI_API_BASE}/posts/data`, {
+      method: "POST",
+      headers: {
+        "Authorization": authHeader,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ url }),
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`${response.status}: ${text.substring(0, 200)}`);
+    }
+
+    const data = await response.json();
+    return {
+      url,
+      views: data.metrics?.views || data.views || null,
+      likes: data.metrics?.likes || data.likes || null,
+      comments: data.metrics?.comments || data.comments || null,
+      shares: data.metrics?.shares || data.shares || null,
+      caption: data.caption || data.text || null,
+    };
+  } catch (err) {
+    console.error(`  ⚠️  ${url}: ${err.message}`);
+    return { url, error: err.message };
+  }
 }
 
 async function main() {
@@ -15,15 +65,14 @@ async function main() {
     const fileContent = await fs.readFile(STORE_PATH, "utf-8");
     const data = JSON.parse(fileContent);
 
-    // Extract all URLs for Jul-Aug 2025-2026
     const urls = [];
-    const urlToAccount = new Map(); // Map URL to account for later update
+    const urlToAccount = new Map();
 
     for (const canale of data.canali) {
       for (const account of canale.accounts || []) {
         const date = new Date(account.date);
         const month = date.getMonth() + 1;
-        
+
         if ((month === 7 || month === 8) && account.url) {
           urls.push(account.url);
           urlToAccount.set(account.url, account);
@@ -32,104 +81,44 @@ async function main() {
     }
 
     console.log(`📊 Found ${urls.length} URLs for Jul-Aug 2025-2026`);
-    console.log(`\n🔄 Sending batch request to ScraperCreator...`);
-
-    // Prepare batch request
-    const batchRequest = {
-      urls: urls,
-      fields: ["caption", "views", "likes", "comments", "shares"],
-      options: {
-        timeout: 30000,
-        retries: 2
-      }
-    };
-
-    const payloadSize = JSON.stringify(batchRequest).length;
-    console.log(`Request size: ${urls.length} URLs (~${Math.round(payloadSize / 1024)}KB), fields: ${batchRequest.fields.join(", ")}`);
-
-    // Send batch request with timeout and retry logic
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60s timeout
-
-    let response;
-    let lastError;
-
-    for (let attempt = 1; attempt <= 3; attempt++) {
-      try {
-        console.log(`📡 Attempt ${attempt}/3: Sending batch request...`);
-
-        response = await fetch(SCRAPER_API_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${SCRAPER_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(batchRequest),
-          signal: controller.signal,
-        });
-
-        clearTimeout(timeoutId);
-
-        if (!response.ok) {
-          const error = await response.text();
-          console.error(`❌ ScraperCreator API error: ${response.status}`);
-          console.error(`Response: ${error.substring(0, 500)}`);
-          process.exit(1);
-        }
-
-        break; // Success, exit retry loop
-      } catch (err) {
-        lastError = err;
-        console.error(`⚠️  Attempt ${attempt} failed: ${err.message}`);
-        if (attempt < 3) {
-          const delay = Math.pow(2, attempt) * 1000;
-          console.log(`⏳ Waiting ${delay}ms before retry...`);
-          await new Promise(r => setTimeout(r, delay));
-        }
-      }
-    }
-
-    clearTimeout(timeoutId);
-
-    if (!response) {
-      console.error(`\n❌ All 3 retry attempts failed`);
-      console.error(`Last error: ${lastError?.message || 'Unknown error'}`);
-      console.error(`Endpoint: ${SCRAPER_API_ENDPOINT}`);
-      console.error(`Payload size: ${Math.round(payloadSize / 1024)}KB`);
-      console.error(`URLs count: ${urls.length}`);
-      process.exit(1);
-    }
-
-    const results = await response.json();
-    console.log(`✅ Batch request completed`);
-    console.log(`   Total results: ${results.data?.length || 0}`);
+    console.log(`\n🔄 Fetching engagement data from Emplifi...\n`);
 
     let updated = 0;
     let failed = 0;
+    const batchSize = 5;
 
-    // Update JSON with scraped data
-    for (const result of results.data || []) {
-      const account = urlToAccount.get(result.url);
-      if (!account) continue;
+    // Process URLs in parallel batches (5 at a time)
+    for (let i = 0; i < urls.length; i += batchSize) {
+      const batch = urls.slice(i, i + batchSize);
+      console.log(`⏳ Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(urls.length / batchSize)} (URLs ${i + 1}-${Math.min(i + batchSize, urls.length)})...`);
 
-      if (result.error) {
-        console.log(`⚠️  ${result.url}: ${result.error}`);
-        failed++;
-        continue;
+      const results = await Promise.all(batch.map(url => fetchPostData(url)));
+
+      for (const result of results) {
+        const account = urlToAccount.get(result.url);
+        if (!account) continue;
+
+        if (result.error) {
+          failed++;
+          continue;
+        }
+
+        if (result.caption && !account.caption) {
+          account.caption = result.caption;
+        }
+
+        if (result.views !== undefined && result.views !== null) account.views = result.views;
+        if (result.likes !== undefined && result.likes !== null) account.likes = result.likes;
+        if (result.comments !== undefined && result.comments !== null) account.comments = result.comments;
+        if (result.shares !== undefined && result.shares !== null) account.shares = result.shares;
+
+        updated++;
       }
 
-      // Update caption if not already present
-      if (result.caption && !account.caption) {
-        account.caption = result.caption;
+      // Rate limiting: wait between batches
+      if (i + batchSize < urls.length) {
+        await sleep(1000);
       }
-
-      // Update engagement metrics
-      if (result.views !== undefined) account.views = result.views;
-      if (result.likes !== undefined) account.likes = result.likes;
-      if (result.comments !== undefined) account.comments = result.comments;
-      if (result.shares !== undefined) account.shares = result.shares;
-
-      updated++;
     }
 
     console.log(`\n📊 Summary:`);
@@ -150,10 +139,7 @@ async function main() {
     const res = await fetch(
       `https://api.github.com/repos/teomotta88-cloud/trendzn/contents/${STORE_PATH}`,
       {
-        headers: {
-          Authorization: `token ${process.env.GITHUB_TOKEN}`,
-          Accept: "application/vnd.github.v3+json",
-        },
+        headers: ghHeaders,
       }
     );
     const fileData = await res.json();
@@ -164,15 +150,14 @@ async function main() {
       {
         method: "PUT",
         headers: {
-          Authorization: `token ${process.env.GITHUB_TOKEN}`,
-          Accept: "application/vnd.github.v3+json",
+          ...ghHeaders,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: `chore: update engagement data for Jul-Aug 2025-2026 posts via ScraperCreator
+          message: `chore: update engagement data for Jul-Aug 2025-2026 posts via Emplifi
 
 - Updated caption, views, likes, comments, shares for ${updated} posts
-- Single batch request to ScraperCreator API for efficiency
+- Parallel batch processing from Emplifi API
 - Jul-Aug 2025-2026 timeframe`,
           content,
           sha: fileData.sha,
