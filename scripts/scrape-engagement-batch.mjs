@@ -1,11 +1,11 @@
 import fs from "fs/promises";
 
 const STORE_PATH = "src/data/bluserena-monitoring.json";
-const SCRAPER_API_KEY = process.env.SCRAPER_API_KEY;
+const SCRAPER_API_KEY = process.env.SCRAPECREATORS_API_KEY || process.env.SCRAPER_API_KEY;
 const SCRAPER_API_ENDPOINT = process.env.SCRAPER_API_ENDPOINT || "https://api.scrapecreator.com/batch";
 
 if (!SCRAPER_API_KEY) {
-  console.error("❌ SCRAPER_API_KEY environment variable not set");
+  console.error("❌ SCRAPECREATORS_API_KEY (or SCRAPER_API_KEY) environment variable not set");
   process.exit(1);
 }
 
