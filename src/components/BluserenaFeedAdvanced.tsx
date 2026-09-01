@@ -132,8 +132,18 @@ export function BluserenaFeedAdvanced({
         );
       } else {
         const errText = await res.text();
-        console.error("Errore aggiornamento verifica:", errText);
-        alert("Errore durante l'aggiornamento della verifica");
+        console.error("Errore aggiornamento verifica:", res.status, errText);
+        // L'endpoint risponde sempre {ok:false, error:"..."}: mostriamo quel
+        // messaggio invece di un generico "errore", per capire subito se il
+        // problema è un token mancante, un conflitto di scrittura o altro,
+        // senza dover aprire la console.
+        let detail = errText;
+        try {
+          detail = JSON.parse(errText).error || errText;
+        } catch {
+          // risposta non JSON, teniamo il testo grezzo
+        }
+        alert(`Errore durante l'aggiornamento della verifica (${res.status}): ${detail}`);
       }
     } catch (err) {
       console.error("Errore aggiornamento verifica:", err);
