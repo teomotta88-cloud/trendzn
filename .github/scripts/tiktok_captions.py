@@ -20,6 +20,10 @@ import urllib.parse
 import urllib.request
 
 STORE = "src/data/bluserena-monitoring.json"
+# Fuori dal repo: e' uno scratch del run, non deve finire nel commit. Tiene
+# i dati scaricati cosi' che un push rifiutato non costi un altro giro di
+# chiamate a TikTok (vedi applica()).
+CACHE = os.environ.get("TIKTOK_CACHE") or "/tmp/tiktok_oembed.json"
 OEMBED = "https://www.tiktok.com/oembed?url="
 # Senza uno User-Agent da browser desktop TikTok risponde in modo inaffidabile.
 UA = (
@@ -60,12 +64,17 @@ def is_tiktok(url):
     return (urllib.parse.urlsplit(url).hostname or "").lower().endswith("tiktok.com")
 
 
-def canonical(url):
-    """Risolve gli short link vm/vt e toglie query string e fragment."""
-    if (urllib.parse.urlsplit(url).hostname or "").lower() in SHORT_HOSTS:
-        url = fetch(url)[1]
+def strip_url(url):
+    """Toglie query string, fragment e slash finale: e' la chiave della cache."""
     parts = urllib.parse.urlsplit(url)
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/"), "", ""))
+
+
+def canonical(url):
+    """Risolve gli short link vm/vt e normalizza l'URL."""
+    if (urllib.parse.urlsplit(url).hostname or "").lower() in SHORT_HOSTS:
+        url = fetch(url)[1]
+    return strip_url(url)
 
 
 def oembed(url):
@@ -95,6 +104,46 @@ def salva(store):
         json.dump(store, f, ensure_ascii=False, indent=2)
 
 
+def salva_cache(cache):
+    with open(CACHE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False)
+
+
+def riempi(account, dati):
+    """Scrive solo i campi vuoti; restituisce l'elenco di quelli riempiti."""
+    riempiti = [campo for campo in dati if dati[campo] and not account.get(campo)]
+    for campo in riempiti:
+        account[campo] = dati[campo]
+    return riempiti
+
+
+def applica():
+    """Riapplica allo store i dati gia' scaricati, senza toccare la rete.
+
+    Serve quando il push viene rifiutato perche' main e' andato avanti
+    durante il run: invece di rifare mezz'ora di chiamate, si riparte dal
+    file aggiornato e ci si riscrivono sopra i dati dalla cache.
+    """
+    if not os.path.exists(CACHE):
+        print("Nessuna cache da riapplicare.")
+        return
+
+    with open(CACHE, encoding="utf-8") as f:
+        cache = json.load(f)
+    with open(STORE, encoding="utf-8") as f:
+        store = json.load(f)
+
+    aggiornati = 0
+    for canale in store.get("canali", []):
+        for account in canale.get("accounts", []):
+            dati = cache.get(strip_url(account["url"])) if account.get("url") else None
+            if dati and riempi(account, dati):
+                aggiornati += 1
+
+    salva(store)
+    print(f"Riapplicati {aggiornati} post dalla cache ({len(cache)} scaricati)")
+
+
 def main():
     pausa = float(os.environ.get("TIKTOK_PAUSE") or 1)
 
@@ -107,25 +156,27 @@ def main():
         return
 
     errori = []
+    cache = {}
     ok = aggiornati = 0
 
     for i, account in enumerate(posts, 1):
         try:
-            dati = oembed(canonical(account["url"]))
+            url = canonical(account["url"])
+            dati = oembed(url)
         except Exception as err:  # noqa: BLE001 - un post rotto non ferma il job
             errori.append((account["url"], str(err)))
             print(f"  ❌ {account['url']} — {err}")
         else:
             ok += 1
-            riempiti = [c for c in dati if dati[c] and not account.get(c)]
-            for campo in riempiti:
-                account[campo] = dati[campo]
+            cache[url] = dati
+            riempiti = riempi(account, dati)
             if riempiti:
                 aggiornati += 1
-                # Salvataggio incrementale: un timeout o un annullamento non
-                # butta via quanto gia' recuperato.
-                if aggiornati % 25 == 0:
-                    salva(store)
+            # Salvataggio incrementale: un timeout o un annullamento non
+            # butta via quanto gia' recuperato.
+            if ok % 25 == 0:
+                salva(store)
+                salva_cache(cache)
             print(f"  ✅ {account['url']} — {', '.join(riempiti) or 'niente da riempire'}")
 
         if i % 50 == 0:
@@ -134,6 +185,7 @@ def main():
             time.sleep(pausa)
 
     salva(store)
+    salva_cache(cache)
     print(f"\nRecuperati {ok}/{len(posts)} — post aggiornati: {aggiornati}, falliti: {len(errori)}")
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
@@ -151,4 +203,4 @@ def main():
         sys.exit("Tutti gli URL sono falliti.")
 
 
-main()
+applica() if sys.argv[1:2] == ["apply"] else main()

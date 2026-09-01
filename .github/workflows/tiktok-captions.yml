@@ -26,11 +26,38 @@ jobs:
 
       # always(): con oltre mille post il run e' lungo, e se viene annullato
       # o va in timeout quanto gia' recuperato viene comunque committato.
+      #
+      # Il run dura ~25 minuti e nel frattempo altri workflow committano su
+      # main, quindi il push viene rifiutato (successo gia' visto una volta,
+      # con la perdita di tutte le chiamate fatte). Invece di rebasare - che
+      # andrebbe in conflitto proprio sul json conteso - a ogni tentativo si
+      # riparte dal main aggiornato e si riscrivono sopra i dati dalla cache,
+      # che vive fuori dal repo e sopravvive al reset.
       - name: Commit
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/bluserena-monitoring.json
-          git diff --staged --quiet || git commit -m "chore: backfill TikTok captions via oEmbed [trendzn-bot]"
-          git push
+
+          for tentativo in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard FETCH_HEAD
+            python3 .github/scripts/tiktok_captions.py apply
+
+            git add src/data/bluserena-monitoring.json
+            if git diff --staged --quiet; then
+              echo "Niente da committare."
+              exit 0
+            fi
+
+            git commit -m "chore: backfill TikTok captions via oEmbed [trendzn-bot]"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push rifiutato (tentativo $tentativo/5), main e' andato avanti: riparto da capo."
+            sleep $((tentativo * 5))
+          done
+
+          echo "::error::Push fallito dopo 5 tentativi."
+          exit 1
