@@ -46,12 +46,20 @@ function BluserenaFeedPage() {
   const [editingPostUrl, setEditingPostUrl] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
 
-  // Carica JSON runtime
+  // Carica JSON runtime. Il polling ogni 30s aggiorna i post in background:
+  // setLoading(true) va chiamato SOLO al primo giro, altrimenti ogni refresh
+  // automatico smonta l'intera pagina (filtri compresi) sostituendola con lo
+  // spinner di caricamento, perdendo scroll e dando l'impressione che sia
+  // stato il click su un filtro a causare un ricaricamento.
   useEffect(() => {
+    let isFirstLoad = true;
     const fetchData = async () => {
       try {
-        setLoading(true);
-        const res = await fetch(BLUSERENA_JSON_URL);
+        if (isFirstLoad) setLoading(true);
+        // ?t= evita la cache di qualche minuto di raw.githubusercontent.com:
+        // senza, un aggiornamento del json (es. dopo un workflow) può non
+        // vedersi in pagina per un po' anche ricaricando.
+        const res = await fetch(`${BLUSERENA_JSON_URL}?t=${Date.now()}`);
         if (!res.ok) throw new Error(`Errore ${res.status}`);
         const data = (await res.json()) as { canali: CanaleInspo[] };
 
@@ -80,7 +88,10 @@ function BluserenaFeedPage() {
       } catch (err) {
         setError(String(err));
       } finally {
-        setLoading(false);
+        if (isFirstLoad) {
+          setLoading(false);
+          isFirstLoad = false;
+        }
       }
     };
 
