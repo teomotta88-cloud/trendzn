@@ -81,7 +81,7 @@ async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) 
       if (!res.ok) {
         // Errore 4xx: non ha senso ritentare, il path/parametri sono sbagliati.
         if (res.status >= 400 && res.status < 500) {
-          throw new Error(`${method} ${path} -> ${res.status}: ${text.substring(0, 500)}`);
+          throw new Error(`${method} ${path} -> ${res.status}: ${text.substring(0, 2000)}`);
         }
         // 5xx: puo' essere transitorio, ritenta.
         if (attempt < retries) {
@@ -89,10 +89,19 @@ async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) 
           await sleep(Math.pow(2, attempt) * 1000);
           continue;
         }
-        throw new Error(`${method} ${path} -> ${res.status}: ${text.substring(0, 500)}`);
+        throw new Error(`${method} ${path} -> ${res.status}: ${text.substring(0, 2000)}`);
       }
 
-      return text ? JSON.parse(text) : null;
+      const parsed = text ? JSON.parse(text) : null;
+
+      // L'API Emplifi risponde 200 anche per errori logici (validazione
+      // input, ecc.), con {"success":false,...} nel body: senza questo
+      // controllo un errore del genere passa per una risposta vuota valida.
+      if (parsed && parsed.success === false) {
+        throw new Error(`${method} ${path} -> 200 ma success:false: ${text.substring(0, 2000)}`);
+      }
+
+      return parsed;
     } catch (err) {
       if (err.name === "AbortError" || err.message.includes("fetch failed")) {
         if (attempt < retries) {
@@ -130,55 +139,31 @@ async function resolveListeningQueryId(name) {
 }
 
 async function fetchListeningPosts(queryId, dateStart, dateEnd) {
-  const posts = [];
-  let offset = 0;
-  let pageNum = 1;
+  console.log(`   📄 Richiesta per ${dateStart}..${dateEnd}...`);
+  // Niente "fields" (i nomi che avevo ipotizzato erano tutti invalidi
+  // secondo la validazione Emplifi) e niente "offset" (rifiutato dallo
+  // schema): l'API restituisce i campi di default, li logghiamo per
+  // scoprire i nomi reali invece di indovinarli di nuovo. Paginazione
+  // rimandata a quando sappiamo come la espone questa risposta.
+  const data = await emplifiRequest("/listening/posts", {
+    method: "POST",
+    body: {
+      listening_queries: [queryId],
+      date_start: dateStart,
+      date_end: dateEnd,
+      limit: PAGE_LIMIT,
+    },
+  });
 
-  while (true) {
-    console.log(`   📄 Pagina ${pageNum} (offset ${offset}) per ${dateStart}..${dateEnd}...`);
-    const data = await emplifiRequest("/listening/posts", {
-      method: "POST",
-      body: {
-        queries: [queryId],
-        date_start: dateStart,
-        date_end: dateEnd,
-        fields: [
-          "url",
-          "post_link",
-          "permalink",
-          "content",
-          "text",
-          "caption",
-          "engagements",
-          "likes",
-          "comments",
-          "shares",
-          "views",
-          "reach",
-          "impressions",
-        ],
-        limit: PAGE_LIMIT,
-        offset,
-      },
-    });
+  console.log("   Risposta grezza (primi 1500 char):");
+  console.log("   " + JSON.stringify(data).substring(0, 1500));
 
-    if (pageNum === 1) {
-      console.log("   Esempio risposta grezza (primi 500 char):");
-      console.log("   " + JSON.stringify(data).substring(0, 500));
-    }
-
-    const items = data?.data ?? data?.posts ?? data?.mentions ?? (Array.isArray(data) ? data : []);
-    if (!Array.isArray(items) || items.length === 0) break;
-
-    posts.push(...items);
-
-    if (items.length < PAGE_LIMIT) break;
-    offset += PAGE_LIMIT;
-    pageNum++;
-    await sleep(500);
+  const items = data?.data ?? data?.posts ?? data?.mentions ?? (Array.isArray(data) ? data : []);
+  if (Array.isArray(items) && items.length > 0) {
+    console.log(`   Campi disponibili nel primo item: ${Object.keys(items[0]).join(", ")}`);
   }
 
-  return posts;
+  return Array.isArray(items) ? items : [];
 }
 
 function extractPostUrl(item) {
