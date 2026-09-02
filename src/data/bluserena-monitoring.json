@@ -8832,6 +8832,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:35:43.916Z"
+          },
+          "ocrData": {
+            "textOnScreen": "12 luglio al\n2 agosto",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:15.984Z"
           }
         },
         {
@@ -8862,6 +8871,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:35:46.449Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:18.085Z"
           }
         },
         {
@@ -8892,6 +8909,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:16.418Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:31.583Z"
           }
         },
         {
@@ -8922,6 +8947,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:18.473Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:35.998Z"
           }
         },
         {
@@ -8953,6 +8986,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:20.604Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:41.958Z"
           }
         },
         {
@@ -8986,6 +9027,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:22.606Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserena e 15\ngiorni di\nvillaggio\nGià pensi alla seconda\nvacanza che devi fare\nnell’altra parte del mondo\ndi arrivare a e\npreparare le nuove valigie\nGia pensi alla seconda\ndi arrivare a casa e\nle nuove valigie",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:53.387Z"
           }
         },
         {
@@ -9017,6 +9067,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:24.623Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quandoltorni\nDallejyacanze\nuando torni\nQuando,\nQuando torni\nDalle vacanze",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:01.465Z"
           }
         },
         {
@@ -9048,6 +9107,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:35.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Non sei triste, devi solo\nportare i tuoi figli alla\nSerenino dance\ndance\nLan i tuoi figli alla\ni Non sei triste,\ni tuoi figli alla i\nfigli",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:09.795Z"
           }
         },
         {
@@ -9077,6 +9145,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:36:37.892Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:19.580Z"
           }
         },
         {
@@ -9105,6 +9181,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:48:53.827Z"
+          },
+          "ocrData": {
+            "textOnScreen": "g Rispondi al commento di Die\nKasse\nCala Serena\nRispondi al commento di Die\nKasse J\ncommento diDie\nNEGATIVA\nCala Serena 7",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:36.768Z"
           }
         },
         {
@@ -9135,6 +9220,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:37:29.845Z"
+          },
+          "ocrData": {
+            "textOnScreen": "è iniziata con\n\"di dove sei?\" e finita con\n\"promettetemi che ci\nrivedremo\"\nrivegirem\n\"di dove sei?\" e finit\n\"promettetemi che\ndove 4\n\"prome\nPa rivedremo",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:43.049Z"
           }
         },
         {
@@ -9165,6 +9259,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:48:26.365Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pondi al comm\nmina F i\nSto anke io qui dal 11 agosto\nsi sta bene ma le camere\npiccolissime che nn ti puoi\nmuovere e nn sono pulite\nl'animazione ok infatti si\nsono lamentate tante\npersone per quello che si\nprendono mi aspettavo\nCALASERENA\n(Video girato il giorno)\nbasic. le\nRispondi al commento di\nRomina Ranieri 1987\nD Sto anke io qui dal 11 agosto\n(Video giorno)\nA La mia è una camera basic. Poi ci sono anche le suite.\nCALASERENAYS\ngiorno)\nanche le\nl'animazione ok infatti si v\nSto anke io qui dal 1 te\nl'animazione ok infatti\ne ne per quell\nLa le suite",
+            "confidence": 0.929,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:51.908Z"
           }
         },
         {
@@ -9195,6 +9298,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:37:53.536Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di gR\nhai ragione\nDISCORSO\nCAMBIAMO DISCORSO\nRispondi al commento di gR la\nragione",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:58.354Z"
           }
         },
         {
@@ -9226,6 +9338,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:08:27.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "orgia",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:20.857Z"
           }
         },
         {
@@ -9255,6 +9376,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:39:52.582Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bluserena\nconsiglialill\nLegroupeviaggi\nbluserena a\nmeglio\n4 Legroupeviaggi",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:31.690Z"
           }
         },
         {
@@ -9286,6 +9416,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:47:41.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Intrattenimento\nQ CALASERENA RESORT\nDe Martino\nAddetto Parco Nautico\nRobert Marcellin\nSerenUp",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:48.573Z"
           }
         },
         {
@@ -9316,6 +9455,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:41:40.658Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Faga uma pergunta be\nDa pra viajar sem ser rico?\nhell\nFaga uma pergunta\nE Da pra viajar sem ser rico?\nFaga uma pergunta NT\nNI Faga uma pergunta\npra viajar sem ser rico?\nè Da pra viajar sem ser rico?",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:47:06.903Z"
           }
         },
         {
@@ -9346,6 +9494,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: Your IP address is blocked from accessing this post",
             "version": 1,
             "updatedAt": "2026-09-02T09:41:41.915Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: Your IP address is blocked from accessing this post",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:47:08.599Z"
           }
         },
         {
@@ -9376,6 +9533,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:41:55.079Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:47:33.092Z"
           }
         },
         {
@@ -9405,6 +9570,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:41:59.134Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TE SIGO\nQUERIENDO?\nMe siento mal pq él si tiene “amigos”,\ntiene todo wey, yo lo veo y siento que\ntiene todo; es que no me\nyo no le servia ya para nada y me siento\nmal, siento que me tiraron como si no\nvaliera nada lo que vivimos 23:16\n<x Responder\nA Reenviar\nCopiar\nEditar\nInfo.\nW Eliminar\nENTRE\ntiene todo; es légico que no me\nEliminar\nENTRE TUS\nMANOS ME ESTOY",
+            "confidence": 0.915,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:47:44.831Z"
           }
         },
         {
@@ -9435,6 +9609,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:42:32.555Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ketanggungan N\ni i Ketanggungan\nT Ketanggungan",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:47:54.219Z"
           }
         },
         {
@@ -9465,6 +9648,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:43:33.917Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:48:08.460Z"
           }
         },
         {
@@ -9495,6 +9686,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:43:42.352Z"
+          },
+          "ocrData": {
+            "textOnScreen": "rata",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:48:20.552Z"
           }
         },
         {
@@ -9525,6 +9725,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:43:45.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:48:22.881Z"
           }
         },
         {
@@ -9556,6 +9764,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:44:34.047Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:48:30.967Z"
           }
         },
         {
@@ -14202,6 +14418,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:47:41.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Intrattenimento\nQ CALASERENA RESORT\nDe Martino\nAddetto Parco Nautico\nRobert Marcellin\nSerenUp",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:48.573Z"
           }
         },
         {
@@ -14224,6 +14449,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:48:26.365Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pondi al comm\nmina F i\nSto anke io qui dal 11 agosto\nsi sta bene ma le camere\npiccolissime che nn ti puoi\nmuovere e nn sono pulite\nl'animazione ok infatti si\nsono lamentate tante\npersone per quello che si\nprendono mi aspettavo\nCALASERENA\n(Video girato il giorno)\nbasic. le\nRispondi al commento di\nRomina Ranieri 1987\nD Sto anke io qui dal 11 agosto\n(Video giorno)\nA La mia è una camera basic. Poi ci sono anche le suite.\nCALASERENAYS\ngiorno)\nanche le\nl'animazione ok infatti si v\nSto anke io qui dal 1 te\nl'animazione ok infatti\ne ne per quell\nLa le suite",
+            "confidence": 0.929,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:51.908Z"
           }
         },
         {
@@ -14290,6 +14524,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:48:53.827Z"
+          },
+          "ocrData": {
+            "textOnScreen": "g Rispondi al commento di Die\nKasse\nCala Serena\nRispondi al commento di Die\nKasse J\ncommento diDie\nNEGATIVA\nCala Serena 7",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:45:36.768Z"
           }
         },
         {
@@ -15545,6 +15788,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:08:27.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "orgia",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:20.857Z"
           }
         },
         {
@@ -28778,6 +29030,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:08:27.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "orgia",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:20.857Z"
           }
         },
         {
@@ -30176,6 +30437,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:08:27.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "orgia",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:20.857Z"
           }
         },
         {
@@ -31661,6 +31931,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:08:27.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "orgia",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:46:20.857Z"
           }
         },
         {
