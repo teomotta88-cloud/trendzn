@@ -6912,6 +6912,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:18:47.814Z"
+          },
+          "ocrData": {
+            "textOnScreen": "what will genuinely happen\nif serena never stopped running",
+            "confidence": 0.951,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:17.710Z"
           }
         },
         {
@@ -6943,6 +6952,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:18:50.514Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:20.415Z"
           }
         },
         {
@@ -6966,6 +6983,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:20:14.537Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:26.387Z"
           }
         },
         {
@@ -6998,6 +7023,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:20:16.939Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BIBITE\nSOFT\nSOFTDRINKs",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:34.511Z"
           }
         },
         {
@@ -7029,6 +7063,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:20:27.522Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:57.468Z"
           }
         },
         {
@@ -7057,6 +7099,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:20:35.042Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:06.819Z"
           }
         },
         {
@@ -7086,6 +7136,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:20:47.660Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:13.680Z"
           }
         },
         {
@@ -7114,6 +7172,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:20:55.225Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:23.301Z"
           }
         },
         {
@@ -7143,6 +7209,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:50:08.575Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Joy\ncalaserena è stupendo ma\nquando ci sono stato\npurtroppo l'animazione è\nobbligata a non fare casinò\nperché i vicini fecero\ndenuncia in Procura E\nquindi tutto il bello dell\nanimazione Bluserena è\nIl calaserena è stupendo ma\nSERENA\npurtroppo è\nE Il calaserena è stupendo ma",
+            "confidence": 0.902,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:35.302Z"
           }
         },
         {
@@ -7173,6 +7248,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:21:43.489Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando\nQuando A\n“era altollivello\nBluserena\nera alto livello",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:42.636Z"
           }
         },
         {
@@ -7203,6 +7287,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:21:49.830Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:49.283Z"
           }
         },
         {
@@ -7237,6 +7329,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:22:13.457Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserenaserena majestic\nù Buon A g\nA Bluserena",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:37:13.390Z"
           }
         },
         {
@@ -7267,6 +7368,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:22:28.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Foes",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:37:43.775Z"
           }
         },
         {
@@ -7298,6 +7408,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:22:30.872Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:37:48.777Z"
           }
         },
         {
@@ -7329,6 +7447,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:06.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Adoro",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:37:56.949Z"
           }
         },
         {
@@ -7357,6 +7484,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:09.533Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Ester\nCanale\nlo quest'anno non ho scelto\nbluserena perché i cagnolini\nnon li fanno stare nel\nvillaggio, non possono\nscendere in spiaggia, non\npossono andare in giro con il\nguinzaglio, solo chiusi in i i\ncamera e nelle aree dedicate\n#7 bluserena perché i cagnolini\nguinzaglio, solo chiusi in",
+            "confidence": 0.914,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:38:06.672Z"
           }
         },
         {
@@ -7387,6 +7523,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:28.608Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:38:25.766Z"
           }
         },
         {
@@ -7417,6 +7561,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:30.869Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GamelOver,",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:38:33.242Z"
           }
         },
         {
@@ -7448,6 +7601,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:35.624Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:38:56.143Z"
           }
         },
         {
@@ -7479,6 +7640,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:41.140Z"
+          },
+          "ocrData": {
+            "textOnScreen": "200 FOTO IN\nLERIA gu\nA CASA CON\nJ LUI VESTI\nCONI\nRNI A GASA CON TUTTI VESTIT\nIN:VALIGIA 200 FOTONNIPIÙ IN\nDALLERIF\nSPORCHI IN VALIGIA 200 N\nMA CUORE\nTORNI A CASA CON TUTTI VESTITI\ni SPORCH VALIGIA 200 FOTO IN PIÙ",
+            "confidence": 0.829,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:07.355Z"
           }
         },
         {
@@ -7507,6 +7677,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:46.733Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:13.604Z"
           }
         },
         {
@@ -7537,6 +7715,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:59.274Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:19.121Z"
           }
         },
         {
@@ -7567,6 +7753,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:24:20.891Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 Son stato a\ncosa peggiore le\ncamere i\nresto passabile ma\nnulla di che\nNESSUNGIVE\nRispondi commento di\nMassimiliano\nè Son stato a\ncamere 28\nLO DICE QUESTO\nRispondi al commento di\nè Son stato a luglio,la\ncosa peggiore le 4\ncamere oscene,il\nNESSUNQIVE\nSon stato a\ncosa peggiore le ili\ncamere\n3 Son stato a la",
+            "confidence": 0.897,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:26.717Z"
           }
         },
         {
@@ -7590,6 +7785,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:24:23.104Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:32.778Z"
           }
         },
         {
@@ -7620,6 +7823,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:24:54.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:41.387Z"
           }
         },
         {
@@ -13938,6 +14149,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:50:08.575Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Joy\ncalaserena è stupendo ma\nquando ci sono stato\npurtroppo l'animazione è\nobbligata a non fare casinò\nperché i vicini fecero\ndenuncia in Procura E\nquindi tutto il bello dell\nanimazione Bluserena è\nIl calaserena è stupendo ma\nSERENA\npurtroppo è\nE Il calaserena è stupendo ma",
+            "confidence": 0.902,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:36:35.302Z"
           }
         },
         {
@@ -21611,6 +21831,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:24:54.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:41.387Z"
           }
         },
         {
@@ -26786,6 +27014,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:23:30.869Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GamelOver,",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:38:33.242Z"
           }
         },
         {
