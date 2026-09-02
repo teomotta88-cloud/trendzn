@@ -1869,7 +1869,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:12:13.796Z"
+            "updatedAt": "2026-09-02T14:15:56.096Z"
           }
         },
         {
@@ -6880,7 +6880,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:35:09.023Z"
+            "updatedAt": "2026-09-02T14:17:24.601Z"
           }
         },
         {
@@ -14698,6 +14698,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:33:14.779Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:14:58.161Z"
           }
         },
         {
@@ -14720,6 +14728,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:33:17.155Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:04.295Z"
           }
         },
         {
@@ -14742,6 +14758,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:34:40.446Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lilian Nabasa joined us last\nnight at St Stephens Kitara\nCOU during the end of\nAugust overnight",
+            "confidence": 0.875,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:12.128Z"
           }
         },
         {
@@ -14764,6 +14789,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:35:28.592Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:19.212Z"
           }
         },
         {
@@ -14786,6 +14819,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:04.192Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:23.801Z"
           }
         },
         {
@@ -14808,6 +14849,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:06.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:28.981Z"
           }
         },
         {
@@ -14831,6 +14880,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T11:00:24.157Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:40.046Z"
           }
         },
         {
@@ -14853,6 +14910,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:14.465Z"
+          },
+          "ocrData": {
+            "textOnScreen": "INGIN\nMENGATAKAN HAL INI\nTAKDIR KITA\nDENGANMU.",
+            "confidence": 0.848,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:44.579Z"
           }
         },
         {
@@ -14875,6 +14941,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:16.487Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:49.253Z"
           }
         },
         {
@@ -14905,7 +14979,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:12:13.796Z"
+            "updatedAt": "2026-09-02T14:15:56.096Z"
           }
         },
         {
@@ -14928,6 +15002,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:28.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:01.927Z"
           }
         },
         {
@@ -14950,6 +15032,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:30.781Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:10.656Z"
           }
         },
         {
@@ -14972,6 +15062,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:33.352Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:14.762Z"
           }
         },
         {
@@ -14994,6 +15092,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:38:23.053Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:19.984Z"
           }
         },
         {
@@ -15016,6 +15122,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:38:25.498Z"
+          },
+          "ocrData": {
+            "textOnScreen": "me na sa LPU kaselhindil\ni included sa'suspension\ncollege\nmena otw Kase hind i\nincluded sa sUspension\ncollege students.\nna nasa",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:29.430Z"
           }
         },
         {
@@ -15038,6 +15153,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:38:40.236Z"
+          },
+          "ocrData": {
+            "textOnScreen": "throwbackito when I\nthrowback to when\n4 kaylor\nserena dismissed\nto when I\nkaylor, A A",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:40.065Z"
           }
         },
         {
@@ -15060,6 +15184,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:38:44.386Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:45.841Z"
           }
         },
         {
@@ -15082,6 +15214,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:38:46.705Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:16:52.498Z"
           }
         },
         {
@@ -15104,6 +15244,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:38:49.414Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hold up. Wait a minute.\nAren't you, Jessica\nSerena, threatening to\ntake anyone and\neveryone to court for\nanything and\neverything?\nthat the same as\nyou trying to silence\npeople?\n\"don't\nyou can't\ntake it\"\nQ Find related content Search\nsuch a nobody\nyet so people\ncare what I have to say\nand then want to silence\nSarenasReceipts 10h ago\nyou could just ignore me #haters\n#staymad\n73 Poured @Lil Uzi Vert\nAdd comment...\nyet so many people\nand then want to silence J\nFor me giow skin 2v\nPoured @Lil Uzi Vert",
+            "confidence": 0.917,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:17:00.454Z"
           }
         },
         {
@@ -15126,6 +15275,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:35.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": "right\neuropean”\nfeatures\nskin\nFEATURE!\ntanned\nORIGINAL\nEUROPEAN FEATURES\nPALE SKIN i\nKOREAN FEATUR ES",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:17:08.489Z"
           }
         },
         {
@@ -15156,7 +15314,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:35:09.023Z"
+            "updatedAt": "2026-09-02T14:17:24.601Z"
           }
         },
         {
@@ -15179,6 +15337,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:40.968Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:17:32.696Z"
           }
         },
         {
@@ -15201,6 +15367,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:44.883Z"
+          },
+          "ocrData": {
+            "textOnScreen": "personalities",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:17:40.503Z"
           }
         },
         {
@@ -15223,6 +15398,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:47.197Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:17:46.613Z"
           }
         },
         {
@@ -15245,6 +15428,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:49.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OLDANDPRETTY\nAfter Serena Williams shared a video of her\ndancing while looking fresh and slimmer,\nmany said she seemed to have lightened\nher skin and lost weight but what for?\ngo being\nWoodz\n@Nibiru1000\nknow what's going on with Serena\n@OIdANndPretty\nHow,you go from being a thick; chocolate\nwoman to Michael\nknow going on with Serena\ngo, from beinga thick; chocolate\nwoman to Michael Jackson?\né OLDANDPRETTY\ngo, chocolate 4\nwoman to",
+            "confidence": 0.897,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:17:59.320Z"
           }
         },
         {
@@ -16543,6 +16735,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T11:00:24.157Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:15:40.046Z"
           }
         },
         {
@@ -17211,7 +17411,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:35:09.023Z"
+            "updatedAt": "2026-09-02T14:17:24.601Z"
           }
         },
         {
@@ -29106,7 +29306,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:35:09.023Z"
+            "updatedAt": "2026-09-02T14:17:24.601Z"
           }
         },
         {
@@ -29137,7 +29337,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:12:13.796Z"
+            "updatedAt": "2026-09-02T14:15:56.096Z"
           }
         },
         {
