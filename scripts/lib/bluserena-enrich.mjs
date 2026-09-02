@@ -67,8 +67,12 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
     if (!isInDateRange(account.date)) continue;
     eligible++;
 
+    // Solo i record scritti da QUESTO script contano come già elaborati: si
+    // riconoscono dallo `status`. I record legacy della vecchia analisi LLM
+    // non ce l'hanno e hanno transcript/testo nulli, quindi vanno rifatti —
+    // altrimenti resterebbero esclusi per sempre (erano 100 post).
     const existing = account[field];
-    if (existing) {
+    if (existing?.status) {
       if (!reprocessFailed || existing.status === "ok") {
         done++;
         continue;
@@ -86,12 +90,23 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
     return;
   }
 
+  // Un guasto sistematico (TikTok che blocca i download, una chiave scaduta)
+  // marcherebbe altrimenti centinaia di post come "tentati e falliti",
+  // escludendoli dalle run successive. Dopo N fallimenti di fila senza un
+  // solo esito buono si abortisce senza salvare nulla, e il workflow va rosso.
+  const failFast = intEnv("FAIL_FAST", 5);
+  // no_text/no_speech sono esiti legittimi: il video semplicemente non aveva
+  // testo o parlato, la pipeline ha funzionato.
+  const HEALTHY = new Set(["ok", "no_text", "no_speech"]);
+
   const deadline = Date.now() + maxMinutes * 60_000;
   const pending = new Map();
   const stats = {};
   let processed = 0;
   let committed = 0;
   let stoppedBy = null;
+  let healthy = 0;
+  let consecutiveFailures = 0;
 
   const flush = async () => {
     if (!pending.size) return;
@@ -133,6 +148,24 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
     record.updatedAt = new Date().toISOString();
     stats[record.status] = (stats[record.status] ?? 0) + 1;
     pending.set(account.url, record);
+
+    if (HEALTHY.has(record.status)) {
+      healthy++;
+      consecutiveFailures = 0;
+    } else {
+      consecutiveFailures++;
+      if (!healthy && consecutiveFailures >= failFast) {
+        // Niente flush: i post restano non marcati e la prossima run li rivede.
+        pending.clear();
+        console.error(
+          `\n❌ ${consecutiveFailures} fallimenti di fila e nessun esito buono: ` +
+            "sembra un guasto sistematico, non i singoli post.",
+        );
+        console.error(`   Ultimo errore: ${record.reason ?? record.status}`);
+        console.error("   Niente salvato: i post restano da elaborare.");
+        throw new Error("Interrotto per fallimenti consecutivi");
+      }
+    }
 
     if (pending.size >= batchSize) await flush();
   }
