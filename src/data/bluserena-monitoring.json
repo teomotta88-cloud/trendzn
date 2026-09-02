@@ -1374,14 +1374,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:52:54.675Z"
+            "updatedAt": "2026-09-02T15:24:58.639Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -3729,14 +3728,13 @@
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:26:40.582Z"
+            "updatedAt": "2026-09-02T15:25:02.368Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -4473,9 +4471,9 @@
             "durationSec": null,
             "model": "whisper-large-v3",
             "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: Your IP address is blocked from accessing this post",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
             "version": 1,
-            "updatedAt": "2026-09-02T09:08:27.175Z"
+            "updatedAt": "2026-09-02T15:25:04.075Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -5777,7 +5775,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T11:20:30.152Z"
+            "updatedAt": "2026-09-02T15:36:37.347Z"
           },
           "ocrData": {
             "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
@@ -9492,9 +9490,9 @@
             "durationSec": null,
             "model": "whisper-large-v3",
             "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: Your IP address is blocked from accessing this post",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
             "version": 1,
-            "updatedAt": "2026-09-02T09:41:41.915Z"
+            "updatedAt": "2026-09-02T15:25:13.898Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -10617,7 +10615,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7676255321035164960: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T09:49:52.518Z"
+            "updatedAt": "2026-09-02T15:25:15.447Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -10651,14 +10649,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Amici dell'Avento Viaggi, buonasera. Ora siamo qui a mostrarvi una delle piscine del Serena Majestic. Questa è la piscina diciamo più adatta alla zona bimbi quindi con i due acquascivoli, quello blu e quello verde. Qui ci sono i residence, qui c'è la Gulliver pizzeria, quindi anche se siete in residence quindi se non volete fare l'all inclusive c'è la possibilità, quindi avete la pizzeria, ristorante, panini, painoteco e tutto. Inoltre come vi faccio vedere qui c'è anche una bellissima area a bambini con gonfiabili, scivoli, altalene al di fuori del miniclip perché poi vi farò vedere domani che c'è anche il miniclip con tutta l'area attrezzata. come potete vedere inoltre qui c'è la zona palestra quindi per chi come me è palestrato sto scherzando per tutti gli amanti anche del fitness dice la zona palestra dopo vi faccio vedere la facilità per arrivare al mare ve lo zoom gli ombedoni laggiù sono il mare quindi siamo esattamente a 20 metri dal mare. Per informazioni contattateci in direct.",
+            "language": "Italian",
+            "durationSec": 82.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:02:27.644Z"
+            "updatedAt": "2026-09-02T15:43:30.647Z"
           },
           "ocrData": {
             "textOnScreen": "Mi jest d E",
@@ -10935,14 +10932,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/owE7BftRDD7qFEwEVYE6HaIWbBmQ6MGQveRvHA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=NccyfrbOrOiBxXN6NzA%2F%2FEu6lz8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Ciao Dai dai, dico, tale, ale, let's go Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:55:40.781Z"
+            "updatedAt": "2026-09-02T15:25:22.478Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -11279,14 +11275,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "... Grazie mille! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:32:33.489Z"
+            "updatedAt": "2026-09-02T15:25:25.696Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -11340,14 +11335,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUZHQWBqFg8QAaVccEkffFjAypsDWF8PQklBRC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=12w9XpemFy%2Bo6vTGuwf5mYg4%2Bsk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Si vorrei, vorrei tornare a quando ci basta Vivere, piangere, fare amore, poi stare in silenzio per ore Fino ad adormentarci sul divano, con il telecomando in mano Non so più come fare senza te, perché mi fai vivere, dimenticare Tu che mentre cucini ti metti a cantare E tu che amano se vuoi la fine Ma come te lo devo dire Stavitano la vita senza te Ma chissà perché Stavitano la vita senza te Magari un'ara",
+            "language": "Italian",
+            "durationSec": 75.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:00:57.776Z"
+            "updatedAt": "2026-09-02T15:25:28.958Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -12438,14 +12432,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oEuAVpOaBpAivzTcMEUK9VqIBaIpExYBQAIiZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EfXhabENRanONlT7CcgPcwyhng4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Grazie signore. Qui, vogliamo un applauso. Fabio? Giusto. Invece di qua, nome? Elena. Elena! Bene, nome? Francesco. Francesco! Cosa succederà adesso? Avete sentito, ascoltato il nome del gioco? La mummia due la vendemmia. Come vedete noi qui abbiamo delle persone abbastanza vive. ed è questo il bello perché queste persone abbastanza vive diventeranno delle mummie ovvero saranno le donne a rendere le mummie perché noi abbiamo i trucchi del mestiere che entrino i trucchi del mestiere ovvero l'occorrente per far sì che questa casa e voilà direttamente da camera mia 4 roti di cardigenica il cardistone è servito non c'è più niente ecco qua due sono per te, uno per te siamo al terrestre per portarlo in camera e uno è per te cosa succederà? da ora in poi adesso partiranno tre minuti di tempo e voi in tre minuti dovete mummificare tutto l'uomo con tutte e due mummificare con lui e questa è una morte, è gelosa una morte devi mummificare lui capito tu dalla faccia finoso ovviamente vincer la squadra che far la nomia migliore avete due rotoli c'è un segreto però andate piano perché questa cartigenica subito si rompe e ve lo dico che tante volte si spezza ed è un blasio quindi fate piano ok? siamo pronti? il candau lo facciamo tutti insieme tutti partendo da 5 4 3 2 1 e ma quelli prima non iniziavano i miei partono dalla testa invece qui non si sa vediamo le strategie come devi girare però vai mamma qua con me vai così vai vai vai non esagero non ti far prendere, se no si rompe piano, piano oh, che brutto mamma mia ma lo fai a casa che cavolo non che ti hanno dato anche fuori quasi quasi sei cos cos bravo ora che muoio mia nonna che mi faccio ancora di soldi faccio un giganteco uno deve fare il lavoro, allora io lo conosco e fa uno sconto poi si fanno usare gli soldi e si prendono ha detto... e voilà, lui ha la maglia che inganna, effetto mummia attenzione quando arriviamo nella zona dove già è morta da un bel po' la natura vai girati facciamo sentire un po' il tifo vai forza non mi molli a un lato abbiamo una mumbia a un lato abbiamo un water con la cartigiana che ha buttato da sopra sai quando vai al banco la butti così due tre la stessa cosa Non ce la fa più Ti gira la testa Vai tranquilla Sei assicurata Se dovesse succedere a te C'ho io dell'invia ad Andrea Che ce ne occupano Vai piano che ora se ne cade tutto Che quello è così All'inizio è un po' più Vai vai Rupert dimmi tu come stai Manca l'ultimo Vai vai Oh girati tu! Vieni, vieni signor! Ma non si preoccupare! Hai fatto rossa rossa la signora Non si preoccupare e voil Le gambe non le devi stringere non le devi dall vediamo un po se lei ti sta mettendo qualche amicia poi ti mette anche la patina e voil guardate l'altra che con l'incidenza stop la signora è esultata la stai attaccando e voilà occhio che la si tu rimani così piano piano adesso il gioco qual è da ora dovranno passare 18 minuti chi di loro rimarrà 18 minuti fa sto scherzando valutiamo, scusate le spalle allora a un lato ci abbiamo una mummia non finita ma mummificata di qua ci abbiamo che cosa ci abbiamo? sembra il gabinetto otturato da un autogrill sai quelli che quando lo scarto c'è un mappazzone sopra con i pantaloncini e questa diciamo che scende dalle gambe verso giù tu sei rimagrito dopo la mummificazione però signori dobbiamo essere onesti dobbiamo essere onesti si aggiudica il punto della mummificazione la squadra del futuro Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 340.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:14:32.808Z"
+            "updatedAt": "2026-09-02T15:25:34.775Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -14110,7 +14103,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:27:01.187Z"
+            "updatedAt": "2026-09-02T15:28:45.597Z"
           },
           "ocrData": {
             "textOnScreen": "Serena met her step goal the way\nshe strutted around this villa cursing\nKordell out for nearly 10 minutes\nMi I. don't think you up to date bruv",
@@ -14173,7 +14166,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7678850497431833877: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T10:27:06.824Z"
+            "updatedAt": "2026-09-02T15:28:47.276Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -14420,7 +14413,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T12:40:05.885Z"
+            "updatedAt": "2026-09-02T15:49:42.886Z"
           },
           "ocrData": {
             "textOnScreen": "...I HOPE YOU CAN LEAVE ALL THAT'S\nIN THE PAST AND LIVE AS\nO YOU WERE MEANT TO 4\nhoping that\nas her final\nfarewell.\nIO YOU WERE MEANT TO BE. i",
@@ -14452,7 +14445,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:31:02.426Z"
+            "updatedAt": "2026-09-02T15:31:16.383Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -14872,14 +14865,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQePQcFFC7o0PbJjDTDAQWI3jEVAyCcIieErfb~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ob%2Bbf1oxyrYImy01LTkUw9phTnw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Grazie. Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 66.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:00:24.157Z"
+            "updatedAt": "2026-09-02T15:33:27.663Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -15574,14 +15566,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEVCcFDMAGpfCxVXlqCeA4SvlAICQAo2D6ThEg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ceeere2TqN013uRLMy%2FBA%2FCKncs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Perché se sono quelle che ti preoccupano tanto, che finiscono diventando il momento, cosa fai per dirmi, per riavvisarmi, che questo è fuoco, che mi vedo bene, che tutti sanno che mi vedo bene. Non mi preoccupare e giocare. Io prenderei quella cosa fuori. Ma, grazie a Dio, ho un team incredibile che credo e che so che non mi faranno sbagliare. a me, quindi se mi dicono di chiudere quando sto diventando drammatico, io non chiudo, a meno che io siano no, non funziona. Ma 9 di 10, dopo un po' di avanti e avanti, io chiudo.",
+            "language": "Italian",
+            "durationSec": 45.3,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:40:39.269Z"
+            "updatedAt": "2026-09-02T15:32:22.636Z"
           },
           "ocrData": {
             "textOnScreen": "dramatic, shut the",
@@ -16739,7 +16730,7 @@
             "model": "whisper-large-v3",
             "status": "no_speech",
             "version": 1,
-            "updatedAt": "2026-09-02T10:55:49.317Z"
+            "updatedAt": "2026-09-02T15:32:24.866Z"
           },
           "ocrData": {
             "textOnScreen": "Calaserena Resort\nSardegna",
@@ -17067,14 +17058,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQePQcFFC7o0PbJjDTDAQWI3jEVAyCcIieErfb~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ob%2Bbf1oxyrYImy01LTkUw9phTnw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Grazie. Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 66.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:00:24.157Z"
+            "updatedAt": "2026-09-02T15:33:27.663Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -17250,14 +17240,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMkBbebADvWDGV37Kg1R8mfbEhFFd7EqgQMQMg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EHy212uhtUmkicdRYA67nVhmGZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.9,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7669339690344140054: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:23:17.026Z"
+            "updatedAt": "2026-09-02T15:36:39.495Z"
           },
           "ocrData": {
             "textOnScreen": "Exclysive",
@@ -18524,7 +18513,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T11:20:30.152Z"
+            "updatedAt": "2026-09-02T15:36:37.347Z"
           },
           "ocrData": {
             "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
@@ -18857,14 +18846,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMkBbebADvWDGV37Kg1R8mfbEhFFd7EqgQMQMg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EHy212uhtUmkicdRYA67nVhmGZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.9,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7669339690344140054: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:23:17.026Z"
+            "updatedAt": "2026-09-02T15:36:39.495Z"
           },
           "ocrData": {
             "textOnScreen": "Exclysive",
@@ -19570,7 +19558,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7670253794323664161: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T11:37:03.296Z"
+            "updatedAt": "2026-09-02T15:36:41.101Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -20144,14 +20132,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/owfGLLuAFIBiZ9gB5XBxkqIkSI6jX8Rkfi9ElW~tplv-tiktokx-dmt-logom:tos-no1a-i-0068-no/o4BEe8MjEU5II8lF4LyDfL5jI8AFAAfAAtSUIr.image?dr=9634&x-expires=1788433200&x-signature=5arjUxCpjqWaWIvlQjlq7OM%2Fe%2Fg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Una casa perfetta per questa vera. Se non hai ancora sentito di questo luogo di Hargita, assicurati che salvezzi questo video. Fuori da Canicula, in mezzo ai monti di Hajmaj, ho scoperto Oxygen Resort, un complex formato da 35 case sospendate, tutte con visite. Hai da alessi tra tre tipi di case, Aurora, Zen e Borealis. Abbiamo stato in Borealis, una casa su due livelli, e alla parte era il living con la canapea estensibile, TV, friggidero, masuza e terrazza, e al lato è il dormitorio. È una varietà molto buona, sia per le famiglie di bambini che per due bambini. Il piccolo pranzo è incluso in prezzo e lo puoi servire al ristorante o lo puoi ottenere in casa se preferi. Il ristorante funziona a carta e nel weekend il sistema impinge la tavola per servire più rapidamente il numero di turisti. Le porzioni sono generose e la mancazione è davvero merita. Se ti piace la adrenalina, qui trovi anche un par di avventura per i bambini e l'accesso costa solo 25 lei per un giorno. e per gli adulti la principale attrazione è la pista di Bob, lunga di 1,2 km, dove puoi arrivare a una velocità di fino a 45 km per ora. Se vuoi esplorare le intrezzature, il laccio rosso è a 20 minuti e le chiese di Bikazu sono a 25 minuti di risort. Io dico che è uno dei luoghi che merita la lista di questa settimana.",
+            "language": "Italian",
+            "durationSec": 75.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:43:28.148Z"
+            "updatedAt": "2026-09-02T15:39:21.257Z"
           },
           "ocrData": {
             "textOnScreen": "parc de aventura pentru",
@@ -21580,14 +21567,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUEAmDI6EeGgjNAGgUpzLKTLefIK8VQIqFQRNW~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=keRtKuYX6FTfi2QJ7OVDA8%2BZlrg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Ciò che mi manca di vivere in Suriname, senza mangiare, è andare un weekend fuori dalla città. E a causa del momento perfetto del anno in Suriname, non si può mangiare un weekend in Suriname. Iniziamo con il buon satè, il satè e il flan, e naturalmente la radio surinamese. Sono pronta? Sono pronta! Ci sono stati un paio di amici di noi a Issy Issy, quindi siamo andati per un po'. È davvero bellissimo lì. ma siamo andati a Marina Resort e ti sento pensare Jade, di tutte le poste dove puoi andare Marina Resort per prima cosa è un periodo di alto tempo per l'estate e tutto era già fatto e per seconda cosa, nei miei anni più giovani, sono andata molto spesso a Marina Resort e non è neanche così lontano dalla città quindi mi chiedo perché non è più così popolare eravamo con i quattro in totale e abbiamo preso una casa di tre stelle tutto si vede molto bene una cucina ben raffreddata, due tavolette, tre stelle qui vedo la lavastoviglie e ho abbastanza di maduca e questa è la bella stanza master davvero un bello stazio le stazioni erano prese da Erko e hai anche un safe per tutte le tue cose importanti hai anche una bella stanza di divertimento e un bello terrascio dove sei rinforzato dalla bella natura e ovviamente il cibo è anche con il cibo quindi da città è stato portato un spago chow mein nasi e chapsuoy da Kuantan Nord è stato la prima volta che questo chow mein e nasi erano mangiati da Kuantan Nord ma mi ha sicuramente soddisfatto scheltere, quindi dopo un'esplosione di tutto l'APK di Dino, siamo tutti in passato per scheltere un po' il resort. E' vero, quando sei piccolo questo il cinturi Ora siamo 4 bigilocas a scheltere e dovresti andare a staccare e non abbiamo fatto questo per tanto tempo ma stato molto divertente e anche con un piccolo ragazzino random e dopo siamo tutti stancati siamo andati all'estate perché devi fare le tue cose e sicuramente a un tapis c'è un salto o un barbecue o due ma noi siamo andati per un salto perché era buono all'avventura quindi ho fatto un salto buono, proprio alla maniera più antica di Suriname e abbiamo mangiato buono e poi avevamo voglia di fare un'avventura per il resort quindi abbiamo fatto questo è stato un bellissimo staro e ora sono davvero le mie foto favorite e questo è stato poi l'ultimo giorno questo è stato quel giorno del WK quindi non volevamo andare in città troppo tardi che abbiamo anche avuto una beca di guardia, quindi abbiamo mangiato le salte, abbiamo riportato tutto, abbiamo scoperto tutto e poi siamo andati a calare un po' più sul ponte. E ancora una volta, non capisco perché il Marina Resort non è più così popolare. Abbiamo piaciuto del mare e ci sono anche canoes e bici disponibili. O è un coriale? Non lo so. Abbiamo quindi anche fatto viaggi in più, così che puoi anche viaggiare in tutto il resto. E la vista del rio Suriname, guardando il bosco, è veramente una delle mie i miei preferiti views ever mi piace davvero la natura di Suriname anche magari è utile sapere che hanno anche una lavastoviglie e un spazio per i bambini e poi andiamo in direzione della città ma questo è stato il perfetto getaway non lontano dalla città e ristrazione quindi questo lo faremo sicuramente ancora un po' e iscriviti per più ciao",
+            "language": "Italian",
+            "durationSec": 201.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:00:59.876Z"
+            "updatedAt": "2026-09-02T15:40:26.731Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -21865,14 +21851,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEYffEWGIIEjRSXNIppAdMGgLjeEAGvi7QnfIy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=U5xo%2FO8p1ld4K7mkrHFcNfzLxu0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Amici dell'Avento Viaggi, buonasera. Ora siamo qui a mostrarvi una delle piscine del Serena Majestic. Questa è la piscina diciamo più adatta alla zona bimbi quindi con i due acquascivoli, quello blu e quello verde. Qui ci sono i residence, qui c'è la Gulliver pizzeria, quindi anche se siete in residence quindi se non volete fare l'all inclusive c'è la possibilità, quindi avete la pizzeria, ristorante, panini, painoteco e tutto. Inoltre come vi faccio vedere qui c'è anche una bellissima area a bambini con gonfiabili, scivoli, altalene al di fuori del miniclip perché poi vi farò vedere domani che c'è anche il miniclip con tutta l'area attrezzata. come potete vedere inoltre qui c'è la zona palestra quindi per chi come me è palestrato sto scherzando per tutti gli amanti anche del fitness dice la zona palestra dopo vi faccio vedere la facilità per arrivare al mare ve lo zoom gli ombedoni laggiù sono il mare quindi siamo esattamente a 20 metri dal mare. Per informazioni contattateci in direct.",
+            "language": "Italian",
+            "durationSec": 82.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:02:27.644Z"
+            "updatedAt": "2026-09-02T15:43:30.647Z"
           },
           "ocrData": {
             "textOnScreen": "Mi jest d E",
@@ -22335,7 +22320,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T12:10:17.793Z"
+            "updatedAt": "2026-09-02T15:46:36.479Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -24786,14 +24771,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUFGQAM1IIEV6voGqYaiBQBVGNioAUlFZ9DAL~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=D%2BNjawGOjb10kxBw71dwqq6OmBE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "non mi ha mai sentito Grazie mille.",
+            "language": "Italian",
+            "durationSec": 44.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:36:02.833Z"
+            "updatedAt": "2026-09-02T15:46:39.605Z"
           },
           "ocrData": {
             "textOnScreen": "ONE VISION\nKONDE MKUU WA MAJESHI\nALIVYO WASILI SERENA\nKWA AJILI TUKIO LA\nKWA AJILI TUKIO LA A LIST\nONE VISION UPDATES\nVISION UPDATES",
@@ -24917,7 +24901,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T12:40:05.885Z"
+            "updatedAt": "2026-09-02T15:49:42.886Z"
           },
           "ocrData": {
             "textOnScreen": "...I HOPE YOU CAN LEAVE ALL THAT'S\nIN THE PAST AND LIVE AS\nO YOU WERE MEANT TO 4\nhoping that\nas her final\nfarewell.\nIO YOU WERE MEANT TO BE. i",
@@ -25065,14 +25049,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUNkt0CtIEHIxvoBiKqEWD4BVIHfcnufgAdFNR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=IAcmibp6MXQCvpnuGn%2FBjDdft98%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Grazie a tutti. Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 69.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:46:39.758Z"
+            "updatedAt": "2026-09-02T15:51:46.004Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -25887,14 +25870,13 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:26:40.582Z"
+            "updatedAt": "2026-09-02T15:25:02.368Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -25967,14 +25949,13 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "... Grazie mille! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:32:33.489Z"
+            "updatedAt": "2026-09-02T15:25:25.696Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26435,14 +26416,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:52:54.675Z"
+            "updatedAt": "2026-09-02T15:24:58.639Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -27919,14 +27899,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUZHQWBqFg8QAaVccEkffFjAypsDWF8PQklBRC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=12w9XpemFy%2Bo6vTGuwf5mYg4%2Bsk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Si vorrei, vorrei tornare a quando ci basta Vivere, piangere, fare amore, poi stare in silenzio per ore Fino ad adormentarci sul divano, con il telecomando in mano Non so più come fare senza te, perché mi fai vivere, dimenticare Tu che mentre cucini ti metti a cantare E tu che amano se vuoi la fine Ma come te lo devo dire Stavitano la vita senza te Ma chissà perché Stavitano la vita senza te Magari un'ara",
+            "language": "Italian",
+            "durationSec": 75.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:00:57.776Z"
+            "updatedAt": "2026-09-02T15:25:28.958Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -33577,14 +33556,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:52:54.675Z"
+            "updatedAt": "2026-09-02T15:24:58.639Z"
           },
           "ocrData": {
             "textOnScreen": null,
