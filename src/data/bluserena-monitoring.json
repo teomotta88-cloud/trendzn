@@ -2573,7 +2573,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:16:27.236Z"
+            "updatedAt": "2026-09-02T14:35:14.012Z"
           }
         },
         {
@@ -11814,7 +11814,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:00:43.096Z"
+            "updatedAt": "2026-09-02T14:35:36.531Z"
           }
         },
         {
@@ -12268,7 +12268,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:03:05.666Z"
+            "updatedAt": "2026-09-02T14:35:06.535Z"
           }
         },
         {
@@ -14887,7 +14887,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:15:40.046Z"
+            "updatedAt": "2026-09-02T14:30:39.382Z"
           }
         },
         {
@@ -17013,6 +17013,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:59:27.523Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:30:14.847Z"
           }
         },
         {
@@ -17035,6 +17043,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:00:00.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Playground\ni RESO RT: Mount Sea Resort\nLavite\nSet in a lively public resort, the venue offered a fun\nperfect for a celebration with a vibrant backdrop\nBOOK YOUR EVENT NOW!\n‘e PLAYGROUND\nINFLATABLES\nMobile Playground\nRES RT: Mount Sea Resort,\nRosario, Cavite\nSet in a lively public resort, the venue of fered a fun atmospbe\nall around perfect for a celebration with a vibrant backdrop\nBOOK YOUR EVENT NOW! A\nENPERIENCE Rosario, Cavite\nSet in a lively public resort, the venue offered a fun atmospb\nA around perfect for a celebration with a vibrant backdrop\nfa Mount Sa esr,\nCavite\nSet in a lively public resort, the venue of fer ed a fun atmosph\nHAILIE;S INFLATABLES\n2 Set in a lively public resort, the venue un\nall around- perfect for a celebration with a vibrant bac",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:30:28.123Z"
           }
         },
         {
@@ -17065,7 +17082,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:15:40.046Z"
+            "updatedAt": "2026-09-02T14:30:39.382Z"
           }
         },
         {
@@ -17088,6 +17105,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:00:28.382Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:30:45.871Z"
           }
         },
         {
@@ -17110,6 +17135,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:01:35.348Z"
+          },
+          "ocrData": {
+            "textOnScreen": "afore you\nBefore yc in\nBoracay\nBefore book a hotel in\n‘Boracay... WATCH THIS\nFIRST! 992\nBefore you book a hotel in\nFIRST! 994\nFIRST!",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:30:57.281Z"
           }
         },
         {
@@ -17132,6 +17166,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:01:46.477Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“HA CASA",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:08.061Z"
           }
         },
         {
@@ -17154,6 +17197,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:01:55.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:12.236Z"
           }
         },
         {
@@ -17176,6 +17227,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:02:35.547Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:27.240Z"
           }
         },
         {
@@ -17199,6 +17258,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7669339690344140054: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-02T11:23:17.026Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Exclysive",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:36.773Z"
           }
         },
         {
@@ -17221,6 +17289,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:02:52.541Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DIBAWAH INI",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:46.702Z"
           }
         },
         {
@@ -17243,6 +17320,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:03:23.284Z"
+          },
+          "ocrData": {
+            "textOnScreen": "What\nthat they\nnights the,\nWeek",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:32:00.342Z"
           }
         },
         {
@@ -17265,6 +17351,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:03:27.904Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SANE",
+            "confidence": 0.73,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:32:43.074Z"
           }
         },
         {
@@ -17287,6 +17382,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:13.867Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:32:55.186Z"
           }
         },
         {
@@ -17309,6 +17413,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:21.282Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lola and auntie just got back\nfrom the, Us, so you surprised them\n3 sd this extraordinary kakanin for,\nwhile waiting for the\nlola and auntie just got\nthis extraordinary kakanin for merienda p\nwhile waiting for the sunset\nYour lola and auntie just got back i\nfrom the US, so you surprised them with\nthis extraordinary kakanin for merienda\ndi Your lola and auntie just got\nthis extraordinary kakanin for fl\ni waiting for the sunset s A\nour lola and auntie just got back\nthe US, so you surprised them with\n2 while waiting for the sunset",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:15.038Z"
           }
         },
         {
@@ -17331,6 +17444,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:28.460Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lagoon\ndsta EN",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:23.358Z"
           }
         },
         {
@@ -17353,6 +17475,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:30.692Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THATS\nended up\nin this,",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:43.012Z"
           }
         },
         {
@@ -17375,6 +17506,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:50.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:54.708Z"
           }
         },
         {
@@ -17397,6 +17536,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:54.239Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lo MEETINGS\nTHIS AND",
+            "confidence": 0.724,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:34:14.611Z"
           }
         },
         {
@@ -17419,6 +17567,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:05:03.134Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cala Seren\nCala Serena",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:34:53.104Z"
           }
         },
         {
@@ -17448,7 +17605,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:03:05.666Z"
+            "updatedAt": "2026-09-02T14:35:06.535Z"
           }
         },
         {
@@ -17479,7 +17636,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:16:27.236Z"
+            "updatedAt": "2026-09-02T14:35:14.012Z"
           }
         },
         {
@@ -17502,6 +17659,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:06:21.532Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:35:25.494Z"
           }
         },
         {
@@ -17531,7 +17696,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:00:43.096Z"
+            "updatedAt": "2026-09-02T14:35:36.531Z"
           }
         },
         {
@@ -17554,6 +17719,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:06:59.441Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:35:49.960Z"
           }
         },
         {
@@ -17576,6 +17749,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:07:29.250Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sei Biving\nyou'll get a romantic\nstudio suite with free\nWi-Fi\nhave kitchenette\ni 2 area and such great\nviews",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:36:00.851Z"
           }
         },
         {
@@ -18491,6 +18673,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7669339690344140054: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-02T11:23:17.026Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Exclysive",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:36.773Z"
           }
         },
         {
@@ -24341,7 +24532,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:16:27.236Z"
+            "updatedAt": "2026-09-02T14:35:14.012Z"
           }
         },
         {
@@ -25375,6 +25566,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:30.692Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THATS\nended up\nin this,",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:43.012Z"
           }
         },
         {
@@ -26165,6 +26365,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:01:55.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:12.236Z"
           }
         },
         {
@@ -26530,6 +26738,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:21.282Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lola and auntie just got back\nfrom the, Us, so you surprised them\n3 sd this extraordinary kakanin for,\nwhile waiting for the\nlola and auntie just got\nthis extraordinary kakanin for merienda p\nwhile waiting for the sunset\nYour lola and auntie just got back i\nfrom the US, so you surprised them with\nthis extraordinary kakanin for merienda\ndi Your lola and auntie just got\nthis extraordinary kakanin for fl\ni waiting for the sunset s A\nour lola and auntie just got back\nthe US, so you surprised them with\n2 while waiting for the sunset",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:15.038Z"
           }
         },
         {
@@ -26743,6 +26960,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:28.460Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lagoon\ndsta EN",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:23.358Z"
           }
         },
         {
@@ -30438,6 +30664,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:00:28.382Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:30:45.871Z"
           }
         },
         {
@@ -30603,6 +30837,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:01:55.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:31:12.236Z"
           }
         },
         {
@@ -30945,6 +31187,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:04:30.692Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THATS\nended up\nin this,",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:33:43.012Z"
           }
         },
         {
@@ -34515,7 +34766,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:00:43.096Z"
+            "updatedAt": "2026-09-02T14:35:36.531Z"
           }
         },
         {
