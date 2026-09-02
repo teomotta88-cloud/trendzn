@@ -212,13 +212,13 @@ async function main() {
     // La confidenza da sola non basta — nel campione del 02/09 le parole lette
     // meglio erano "|" a 97 e "i" a 95.
     for (const [conf, lettere] of [
-      [50, 3],
-      [60, 3],
+      [50, 4],
       [60, 4],
-      [70, 3],
+      [60, 5],
+      [70, 4],
     ]) {
       const testo = cleanText(
-        linesFromBlocks(blocchi, { minConfidence: conf, minLetters: lettere }),
+        linesFromBlocks(blocchi, { minConfidence: conf, minLineLetters: lettere }),
       );
       const righe = testo ? testo.split("\n") : [];
       const marca = conf === 60 && lettere === 3 ? " <= in produzione" : "";

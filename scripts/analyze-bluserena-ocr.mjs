@@ -32,13 +32,17 @@ import {
 // Si alza quando cambia il modo in cui si estrae il testo: i record scritti da
 // una versione precedente vengono rifatti da soli alla run dopo.
 //   1 = testo appiattito di Tesseract, senza filtri (produceva soprattutto rumore)
-//   2 = filtro per parola su confidenza + numero di lettere
-const VERSION = 2;
+//   2 = confidenza per parola + lunghezza minima per parola: toglieva il rumore
+//       ma smontava le frasi vere cancellando articoli e preposizioni
+//   3 = confidenza per parola, lunghezza minima valutata sulla RIGA
+const VERSION = 3;
 
 // Soglie scelte dalla calibrazione del 02/09 (workflow "OCR — calibrazione
 // soglia"), non a naso: vedi il commento in lib/ocr-text.mjs per i dati.
 const MIN_CONFIDENCE = Number.parseInt(process.env.OCR_MIN_CONFIDENCE ?? "60", 10);
-const MIN_LETTERS = Number.parseInt(process.env.OCR_MIN_LETTERS ?? "3", 10);
+// Una riga si tiene se contiene almeno una parola di questa lunghezza, e poi
+// si tiene INTERA: le righe di rumore non hanno nessuna parola lunga.
+const MIN_LINE_LETTERS = Number.parseInt(process.env.OCR_MIN_LINE_LETTERS ?? "4", 10);
 
 // Quanti fotogrammi campionare per video.
 const FRAMES_PER_VIDEO = Number.parseInt(process.env.OCR_FRAMES ?? "5", 10);
@@ -147,7 +151,7 @@ async function ocrPost(account) {
       lines.push(
         ...linesFromBlocks(data.blocks, {
           minConfidence: MIN_CONFIDENCE,
-          minLetters: MIN_LETTERS,
+          minLineLetters: MIN_LINE_LETTERS,
         }),
       );
 
