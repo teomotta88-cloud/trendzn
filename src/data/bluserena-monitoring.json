@@ -237,7 +237,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:03:18.418Z"
+            "updatedAt": "2026-09-02T16:48:31.844Z"
           }
         },
         {
@@ -471,7 +471,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:03:58.258Z"
+            "updatedAt": "2026-09-02T16:47:38.893Z"
           }
         },
         {
@@ -633,7 +633,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:05:31.912Z"
+            "updatedAt": "2026-09-02T16:47:04.458Z"
           }
         },
         {
@@ -713,7 +713,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:05:49.246Z"
+            "updatedAt": "2026-09-02T16:47:09.148Z"
           }
         },
         {
@@ -1869,7 +1869,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:15:56.096Z"
+            "updatedAt": "2026-09-02T16:47:32.389Z"
           }
         },
         {
@@ -2140,7 +2140,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:05:08.605Z"
+            "updatedAt": "2026-09-02T16:49:20.536Z"
           }
         },
         {
@@ -2295,7 +2295,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:29.553Z"
+            "updatedAt": "2026-09-02T16:45:16.109Z"
           }
         },
         {
@@ -2337,7 +2337,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:35.871Z"
+            "updatedAt": "2026-09-02T16:48:06.021Z"
           }
         },
         {
@@ -6879,7 +6879,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:37:20.053Z"
+            "updatedAt": "2026-09-02T16:47:25.488Z"
           }
         },
         {
@@ -7569,7 +7569,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:38:33.242Z"
+            "updatedAt": "2026-09-02T16:47:46.125Z"
           }
         },
         {
@@ -12599,7 +12599,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:05:08.605Z"
+            "updatedAt": "2026-09-02T16:49:20.536Z"
           }
         },
         {
@@ -14973,7 +14973,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:15:56.096Z"
+            "updatedAt": "2026-09-02T16:47:32.389Z"
           }
         },
         {
@@ -15308,7 +15308,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:37:20.053Z"
+            "updatedAt": "2026-09-02T16:47:25.488Z"
           }
         },
         {
@@ -17932,7 +17932,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:37:20.053Z"
+            "updatedAt": "2026-09-02T16:47:25.488Z"
           }
         },
         {
@@ -19475,7 +19475,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:48:15.514Z"
+            "updatedAt": "2026-09-02T16:48:48.844Z"
           }
         },
         {
@@ -20791,7 +20791,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:58:32.139Z"
+            "updatedAt": "2026-09-02T16:48:39.048Z"
           }
         },
         {
@@ -25742,7 +25742,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:29:03.280Z"
+            "updatedAt": "2026-09-02T16:44:56.250Z"
           }
         },
         {
@@ -34449,7 +34449,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oABV4SAElRQVZ9uEdBiiN5Vaw2I3PppA5BY5U~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=VIFJNSOi%2BxUeFlTv72%2FhP6ON4dc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Happening now at Serena hotel in the 4\n7 of grace nakimera press conference\nHappening now at Serena hotel in the power\nof grace nakimera press conference I\nof grace nakimera press conference",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:44:50.577Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34478,7 +34487,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:29:03.280Z"
+            "updatedAt": "2026-09-02T16:44:56.250Z"
           }
         }
       ]
@@ -34527,7 +34536,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:29.553Z"
+            "updatedAt": "2026-09-02T16:45:16.109Z"
           }
         },
         {
@@ -34548,7 +34557,15 @@
             "estate"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:45:21.896Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34570,7 +34587,15 @@
             "musica"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:46:04.850Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34592,7 +34617,15 @@
             "vacanza"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:46:13.503Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34613,7 +34646,15 @@
             "mare"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:46:19.770Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34650,7 +34691,16 @@
           "comments": 1,
           "shares": 2,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ooBvorBKjYBIEYZrkKastiDxVCGJbiIaAhNin~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DuJJNYyIyRCvtmOx7WpX55If9L4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Mary87 è",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:46:31.806Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34671,7 +34721,15 @@
             "relax"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:46:45.356Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34701,7 +34759,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:05:31.912Z"
+            "updatedAt": "2026-09-02T16:47:04.458Z"
           }
         },
         {
@@ -34732,7 +34790,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:05:49.246Z"
+            "updatedAt": "2026-09-02T16:47:09.148Z"
           }
         },
         {
@@ -34763,7 +34821,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:37:20.053Z"
+            "updatedAt": "2026-09-02T16:47:25.488Z"
           }
         },
         {
@@ -34794,7 +34852,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:15:56.096Z"
+            "updatedAt": "2026-09-02T16:47:32.389Z"
           }
         },
         {
@@ -34825,7 +34883,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:03:58.258Z"
+            "updatedAt": "2026-09-02T16:47:38.893Z"
           }
         },
         {
@@ -34856,7 +34914,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:38:33.242Z"
+            "updatedAt": "2026-09-02T16:47:46.125Z"
           }
         },
         {
@@ -34870,7 +34928,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogICYLElqiB5AAqm41wmIqwFTiIkfAiBIZCgEI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=pqo50mp8KtCiEsmuBKSHr4moQ6Q%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:47:59.553Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34900,7 +34966,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:35.871Z"
+            "updatedAt": "2026-09-02T16:48:06.021Z"
           }
         },
         {
@@ -34914,7 +34980,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocfHmKVl61HiIwixQVQiMC1BA9FKJIIPC8qAEA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=vM%2Br5aCZQe5tUvb6rYZTIqvJsmo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:48:22.559Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34944,7 +35018,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:03:18.418Z"
+            "updatedAt": "2026-09-02T16:48:31.844Z"
           }
         },
         {
@@ -34975,7 +35049,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:58:32.139Z"
+            "updatedAt": "2026-09-02T16:48:39.048Z"
           }
         },
         {
@@ -35006,7 +35080,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:48:15.514Z"
+            "updatedAt": "2026-09-02T16:48:48.844Z"
           }
         },
         {
@@ -35020,7 +35094,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4CEBSfQEGtEU6jCvPoDfB0RkKAFAA0gACIqI2~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XM6VK4HQhddmbEc5VO0jd84JyjQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "JPMorgan\nARAZ\nsPooL 3\nwhen he queen\nshare\nARAZ 53m\nspooL 3 o\nSPOOL o\n3 Emirate\nARAZ 4\nJPMorgan Emirate\nmm open E\nking\nARAZ am",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:49:00.219Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35033,7 +35116,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": null,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675157228390747412: Your IP address is blocked from accessing this post",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:49:01.990Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35063,7 +35155,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:05:08.605Z"
+            "updatedAt": "2026-09-02T16:49:20.536Z"
           }
         },
         {
@@ -35077,7 +35169,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o4gEHjAq3FeVABVEOq0YRaAzpEEQfEXDIODA48~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Jhz7UP3V9E8jpz2c5%2F1ObM1GG4U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "JPMorga\nBM usopen\nS. WILLIAMS ALCARAZ 5\nROUTLIFFE GLASSPOOL 3 0\nJPMorgan JPMorgan\nusopen\nS. WILLIAMS ALCARAZ 53m\nÈ JPMorgan\nS. WILLIAMS ALCARAZ 53 15\nthis\nusta i",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:49:31.367Z"
+          }
         },
         {
           "platform": "tiktok",
