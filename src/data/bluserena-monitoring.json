@@ -10042,7 +10042,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:49:48.364Z"
+            "updatedAt": "2026-09-02T14:11:49.799Z"
           }
         },
         {
@@ -13925,6 +13925,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:11:10.931Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THAM QUAN KHU",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:11:10.252Z"
           }
         },
         {
@@ -13947,6 +13956,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:23:41.629Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:11:16.537Z"
           }
         },
         {
@@ -13969,6 +13986,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:24:12.076Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Be to/protectithem anymore)",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:11:29.425Z"
           }
         },
         {
@@ -13991,6 +14017,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:24:26.730Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mantova",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:11:36.973Z"
           }
         },
         {
@@ -14013,6 +14048,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:24:31.373Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fuera de todo el la Diferencia de Altura.\nFuera de todo el Drama, omg la Diferencia de Altura.\nFuera de Drama,omg de Altura.\nFuera de todo el Drama,omg de Altura.",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:11:45.967Z"
           }
         },
         {
@@ -14043,7 +14087,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:49:48.364Z"
+            "updatedAt": "2026-09-02T14:11:49.799Z"
           }
         },
         {
@@ -14067,6 +14111,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T10:27:01.187Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena met her step goal the way\nshe strutted around this villa cursing\nKordell out for nearly 10 minutes\nMi I. don't think you up to date bruv",
+            "confidence": 0.92,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:12:03.363Z"
           }
         },
         {
@@ -14089,6 +14142,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:27:05.568Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ny's Call\\ca\nHis face went white.\nLike someone punched\nHe just held his face\nhead down mumbling",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:12:33.477Z"
           }
         },
         {
@@ -14112,6 +14174,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7678850497431833877: Your IP address is blocked from accessing this post",
             "version": 1,
             "updatedAt": "2026-09-02T10:27:06.824Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7678850497431833877: Your IP address is blocked from accessing this post",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:12:35.210Z"
           }
         },
         {
@@ -14134,6 +14205,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:27:10.493Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BASES\nVENUS SERENA\nNEW PODCAST SHOW",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:12:41.814Z"
           }
         },
         {
@@ -14156,6 +14236,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:27:57.960Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ello,",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:12:48.058Z"
           }
         },
         {
@@ -14178,6 +14267,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:28:01.550Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@histori as_genuinas A i\nte disculparas co t\nSerena ahora mismo,\nesto por el trato con\nBlackwood.\nni siquiera",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:02.144Z"
           }
         },
         {
@@ -14200,6 +14298,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:28:03.939Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena after marrying a\nWho secretly hates\note a book on\none nicejthing\nabout her andlalso\nassisibling\nSerena after marrying a guy\nWho secretly hates her,\na book on how he\nsees her (not one nice thing\nsaid about her and also N 1\nshare a whole ass sibling N\nwith him and not mention\nhe's inlove with her bsf\nhates her,\nseesjher (not one niceithing\nass sibling\nwith him and not mention f\nhe's iniove with\nWho secretlylhates'her,\nwrote/a book onhowhe\nsees one nicejthing\nsaid and aso 4\nshare ass sibling\nwith him andinot mention\nsaid about her and\nshare a whole ass sibling\n4 he's inlove with her",
+            "confidence": 0.891,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:11.093Z"
           }
         },
         {
@@ -14222,6 +14329,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:28:06.359Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:15.996Z"
           }
         },
         {
@@ -14244,6 +14359,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:28:08.508Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:21.261Z"
           }
         },
         {
@@ -14266,6 +14389,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:28:13.475Z"
+          },
+          "ocrData": {
+            "textOnScreen": "khéng!",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:26.139Z"
           }
         },
         {
@@ -14289,6 +14421,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:40:05.885Z"
+          },
+          "ocrData": {
+            "textOnScreen": "...I HOPE YOU CAN LEAVE ALL THAT'S\nIN THE PAST AND LIVE AS\nO YOU WERE MEANT TO 4\nhoping that\nas her final\nfarewell.\nIO YOU WERE MEANT TO BE. i",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:34.060Z"
           }
         },
         {
@@ -14312,6 +14453,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:02.426Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:44.259Z"
           }
         },
         {
@@ -14334,6 +14483,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:09.957Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Atkinson 2 3]\n#asmr E\n#babyboy #babyshower more\nHome @Matthew Hall",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:55.807Z"
           }
         },
         {
@@ -14356,6 +14514,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:12.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:59.062Z"
           }
         },
         {
@@ -14378,6 +14544,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:15.266Z"
+          },
+          "ocrData": {
+            "textOnScreen": "to serena\nH e\\ as aiting\ntofdivorce:\nN serena\ntold eiser that\nmind married the\ncrown prince\nrepeatinglwhat her\ngrandma did!\nblondelhusband",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:14:08.034Z"
           }
         },
         {
@@ -14400,6 +14575,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:17.062Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THEY ARE ALIVE AND GOT A HAPPY\nY ARE ALIVE AND GOT A HAPPY",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:14:14.251Z"
           }
         },
         {
@@ -14422,6 +14606,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:40.517Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Elle l'insulte Eiser en disant\nil est parti au moment du divorce, il pas\ndonné de nouvelles... c'est pas moi qui vate\ncontacter et te chercher a\nJusqu'à elle a peut ètre\neiser, elle est partie\nLady Serena?!\n«Tucherchequiavec i,\nEiser on dirait tu t'en sort bien».\nTétait où bon sang",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:14:24.560Z"
           }
         },
         {
@@ -14444,6 +14637,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:31:42.741Z"
+          },
+          "ocrData": {
+            "textOnScreen": "such a\nN such a [ke",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:14:34.195Z"
           }
         },
         {
@@ -14466,6 +14668,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:33:09.426Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:14:41.616Z"
           }
         },
         {
@@ -17046,6 +17256,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:11:10.931Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THAM QUAN KHU",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:11:10.252Z"
           }
         },
         {
@@ -22180,6 +22399,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:40:05.885Z"
+          },
+          "ocrData": {
+            "textOnScreen": "...I HOPE YOU CAN LEAVE ALL THAT'S\nIN THE PAST AND LIVE AS\nO YOU WERE MEANT TO 4\nhoping that\nas her final\nfarewell.\nIO YOU WERE MEANT TO BE. i",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:13:34.060Z"
           }
         },
         {
