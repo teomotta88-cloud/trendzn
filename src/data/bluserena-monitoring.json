@@ -1109,7 +1109,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:35.571Z"
+            "updatedAt": "2026-09-02T17:11:36.893Z"
           }
         },
         {
@@ -9346,7 +9346,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:36:27.136Z"
+            "updatedAt": "2026-09-02T17:11:59.517Z"
           }
         },
         {
@@ -17779,7 +17779,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:36:27.136Z"
+            "updatedAt": "2026-09-02T17:11:59.517Z"
           }
         },
         {
@@ -37164,7 +37164,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooqjmyE7YaCWdLojI5ZX7oAQDfAeFDAHaCqUfQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=GOpfsyEjXAvGZolY5ks86LOWUQg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "tinh yéu em danh cho\nVinWonders Ph...\n5 Serena Resort i\nWindnolove\nSerena Resort",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:09:19.959Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37177,7 +37186,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEIVIBAqIRtSAXB1WiKWfFijPI6CJiSwqoqEA5~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=kT2sGVTcbaXV5E%2FRqYlyS4L9JAI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Serena Resort\nch... chan.... chan té dil! cu\ni cu kawaiii~~, c... cau cau\nbiét té la ai\n~....kawaiii!! *chu mò cute\nb...ba... bakal!~*lanh lung\ne phong ma khoanh tay*\nch... chan.... chan té dil! ~icu\nch... chan.... chan té dill ~icu\nch... chan.... chan tg dil! cu\ni cu kawaiii~~, cau cau",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:09:31.128Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37190,7 +37208,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oMi1ZEZvYg1iVB0B2dCOABAJsacIoVpEE12iF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=k8LY9iDmwSJ1RgJEfZwghBJ1ltY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:09:42.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37203,7 +37229,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAwGEVfhI4rEgVLAqfJAdKyeTdTGFfRN3gG0Ax~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=kD%2F5dUv3Aw6BuiAnQ4dASOrJs7g%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:09:51.188Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37216,7 +37250,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8QvDU5IeC8flAjaFLgArLIDbyG5HwLlQeEXoo~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=C2gVrAdMi6RLUpMbWZtdA03HGN8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "JezzajBat alla 4\nBook your\npain:",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:10:11.007Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37229,7 +37272,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUeJBel8GDuVLenIbVITp5QTKC4gcYCA8kjHiA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ij67DgHN61drKP69BndDFIaDcPI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "24 thing 8, 2026 03:\n24 théng 8, 2026 03:55 2",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:10:17.206Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37242,7 +37294,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ok8EeEUDgmmBxgzFfOqRBTAmQ9hLGkQBPWAk5U~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2BjaQFVyWSUE6R%2FXQPfxStZXff9g%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ikatan Cintalini)\n33 hotel\n“3 lihat\n“kamu",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:10:36.024Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37255,7 +37316,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o8yA7cA1iRKBJq9nBAIxaJSiEApBnRcbvlIAE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=3%2F0yOg4QYHsdr3iKD138XnlAdmQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:10:45.924Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37268,7 +37337,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-4864-euttp/ooQDQMVJ4ko3GR2rGGQeOKLMeqNDHgeGIhgh5E~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=T8nZiwvdUKaWkQ07nz3ek7ht2CY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:10:53.980Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37281,7 +37358,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oMsQ2GS3QefIqHFCXU3M8IyjnhAXEABAmfxVQ7~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=JrirRhvhkL6gbpcTPiCBIKjLqXY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:11:06.690Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37294,7 +37379,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUEhY5ViaPrEnBTTUI5WsAI2S0lDIAIXBOiyp~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DSN3XcYV5OatvQTfHE1Lf7WMkQs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Serena Resort\nKhéng thé gui tin nhàn dén tai khoan\nTai nay da bi dinh chi va khéng thé Ì\nnhàn tin nhàn. Hay chon xda dé xda\ncuòc tro chuyén nay.\nthé gui tin nhàn dén tai khoan\nTai nay da bi dinh chi va khéng thé\nnhàn dudc tin nhàn. Hay chon xda dé xda\ntro chuyén nay.\nKhéng thé gli tin nhàn dén tai khoan\nTai khoan nay da bi dinh chi va khéng thé\nKhòng thé gli tin nhàn dén tai khoan\nTai nay da bi dinh chi và khòng thé\nnhan dudc tin Hay chon xda dé xda kd\nBa Cambie\nnhan dudc tin Hay chon xda dé xda\ncudc tro chuyén nay.",
+            "confidence": 0.892,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:11:16.369Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37307,7 +37401,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAf1usIBCRBLxdiiuwiGtEA1A1AbIwB9ujAKRA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ca5xxo77PIkJrYZX61T%2FsOIbe7I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:11:24.366Z"
+          }
         }
       ]
     },
@@ -37336,7 +37438,15 @@
             "holiday"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:11:29.056Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37366,7 +37476,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:35.571Z"
+            "updatedAt": "2026-09-02T17:11:36.893Z"
           }
         },
         {
@@ -37397,7 +37507,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:36:27.136Z"
+            "updatedAt": "2026-09-02T17:11:59.517Z"
           }
         },
         {
@@ -37411,7 +37521,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMEGGIAfQMqCbeR0QFO3OwLpMGYTAGefgRAjmP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=wo0ezwJvjBXIiNj5omf%2FGqLZr4M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Beach\ngpd Beach\naradiso Hotel and Beac",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:12:11.334Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37424,7 +37543,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oYAPo2caArA6Tg3cBzEqAR0CUI7li4sAANl3i~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=8YejhvXk3%2Fmmj7xdQc5fedtQnyw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "UNREA\n7 FIORENTINA\n8. SASSUOLO\nREAL\nFIORENTINA\nPRIME INSIGNE\n5. SAMPDORIA\n6. REAL MADRID\nPRIMEIINSIGNE\nWAS UNREAL\n2. SHAKHTAR\nTORINO\nREAL MADRID)\n75 FIORENTINA",
+            "confidence": 0.824,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:12:23.186Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37437,7 +37565,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8fBIVqQVKtDVBWLg1cBpfEqFEARLJatEgRFbQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=JtgCjCOfHl5H%2BRr6ihFjsGa6wvk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:12:38.470Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37450,7 +37586,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEoMXGdfLR3eB9IqQE3DQ8wfYXn9pQAeCNCGA8~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=OgsPRBHDc9c4bNKiQZGytPGge48%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:12:52.875Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37463,7 +37607,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIkQvyL0QEAHJAfBZnqE1D1BdQNBclhfgASFhR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Z0fvmpQdcMeNic9ME6CtULitNT0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:13:24.728Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37476,7 +37628,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owK0yEseUtD4mf5iCtLIAWGhIxAjtMrIIzeN4a~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ZmdjLDTD%2BlLaq%2FYTLGYUGLPHcvU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "RYCRIS BOUTIQUE RESORT\nRIZAL, BAROBO, SURIGAO DEL SUR",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:13:46.153Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37489,7 +37650,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0RIVjIAQDALeIffDEGWr9eoAjGrGJAQ5AHpg7~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=jQrol5MGy26WLGfHTcQeMulM34g%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "04 Agustus 2026\nkeindahan alam tropis|\nPulau Seribu Marine Resort\n04 Agustus\ncottagenya yang nyaman\ndan bersih menghadap\nkelaut,\npulaupantara E Pulau Seribu Marine Resort",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:14:03.205Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37502,7 +37672,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAYFqICdQej4cwCemfszDQ0LVU3T4DCWAgEAAD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=jbdKE58MjJV45SRqzss6i0hZxuk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:14:47.485Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37515,7 +37693,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIsDIWUQagvMVCreA942v8QcXIAjSgme3ex1CQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=c4KKkHk2Q4q7g6Oxz870UeQT4kE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Exclusivo para héspedes. d\nE nas piscinas privativas deg\ndestino",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:15:05.623Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37528,7 +37715,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4DCBfOfjVEsmoDaCYDQ7HFFgTWIAAjQttKfQI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Pi%2FItQf0Ydi5ImWkFZvt7RwDoL8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:15:13.575Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38837,7 +39032,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:36:27.136Z"
+            "updatedAt": "2026-09-02T17:11:59.517Z"
           }
         },
         {
@@ -40348,7 +40543,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:36:27.136Z"
+            "updatedAt": "2026-09-02T17:11:59.517Z"
           }
         },
         {
