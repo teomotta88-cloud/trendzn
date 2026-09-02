@@ -41,10 +41,13 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-post-me
           );
         }
 
+        // GitHub rifiuta con 403 le richieste senza User-Agent: il runtime
+        // serverless non ne aggiunge uno di default, quindi va esplicitato.
         const ghHeaders = {
           Authorization: `token ${token}`,
           Accept: "application/vnd.github+json",
           "Content-Type": "application/json",
+          "User-Agent": "trendzn-bot",
         };
 
         try {
