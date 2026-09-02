@@ -2380,10 +2380,13 @@
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 2,
-            "analyzedAt": "2026-09-02T07:10:49.223Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:05:35.261Z"
           }
         },
         {
@@ -2409,10 +2412,13 @@
           "ocrInsights": "In questo contenuto, il sentimento sembra positivo grazie alla presenza di parole come \"vacanza\" e \"Italia\". Le principali argomenti sembrano riguardare una vacanza in Italia, probabilmente in Neive, con un resort o un albergo con 4 stelle (bluserenaviaggi4stelle). La foto sembra essere di un viaggio o di una vacanza in Italia, con un tag #neiperteeeeeeeeeeeeeee e #fhy✈️🔥 che sembrano indicare un'esperienza di viaggio e divertimento. Non sono presenti hint su luoghi specifici, ma sembra che sia un post relativo a un viaggio in Italia.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:10:53.399Z"
+            "transcript": "allora gli omogenizzati non ci sono però ci sta allora sono tutti i tipi di pastino come vedi poi ci sono i biscotti per il latte la pasta un po più grande aspetta che ti mostro altro poi ecco qua ti ripeto ci sta la pasta cotta poi trovere sempre legumi il passato di pomodoro il passato di verdure ovviamente troverai anche la pasta già pronta però se vuoi ci andrò poi cucinare anche tu rimanendo tutto qui e poi vengono loro a pulire poi va beh puoi far partire un lato con la frutta fresca mettendo anche i biscotti dentro non lo so per 4 vera il legume di formaggio tutti i tipi di yogurt il latte e qui vedi può rimanere tutto così e vengono loro assistendo adatto la e chi vuole farsi proprio la vacanza però oltre a questi qua troverai anche qui o ora no quando c'è orario di pranzo e di cena invece di trovare il latte troverai le fettine di vitello oppure di petto di pollo che la puoi cuocere la puoi cuocere tu al momento fresco e la puoi omogenizzare nelle omogenizzature. Là ci sta le sterilizzature per il biberon e niente. Magari vi faccio un video quando ci sta qui tutto il fisco.",
+            "language": "Italian",
+            "durationSec": 107.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:05:42.676Z"
           }
         },
         {
@@ -2438,10 +2444,13 @@
           "ocrInsights": "No on-screen text available; content relies on hashtags and caption for context.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:11:00.441Z"
+            "transcript": "musica musica Arriverà Natale senza nuvole Non sono cioccioccioccolata, non sono cioccioccioccolata Cioè metto cococore, sono amata Se non ti do un abbraccio, vada là là là Che calorio che c'è, che sono stili belli, che non si può La città di San Francesco Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 114.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:05:46.025Z"
           }
         },
         {
@@ -2461,10 +2470,13 @@
           "ocrInsights": "Il testo a schermo non è disponibile, quindi non è possibile estrarre informazioni specifiche.",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 1,
-            "analyzedAt": "2026-09-02T07:11:11.005Z"
+            "transcript": "Buonasera! Con le mani lì, di più di più! E attenzione al mio 3-1 della Siva di Grineso! Uno, due, tre! E alla grande, alla grande! Siamo pronti per partire, caro Simone, lo iniziamo subito, lo spettacolo, Lo spettacolo, ma prima di tutto ciò dobbiamo dare qualche info per quanto riguarda sia questa sera che la giornata di domani. Esatto!",
+            "language": "Italian",
+            "durationSec": 35.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:05:48.865Z"
           }
         },
         {
@@ -2490,10 +2502,13 @@
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:11:14.013Z"
+            "transcript": "Come va? E come devi andare?",
+            "language": "Italian",
+            "durationSec": 7.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:05:53.947Z"
           }
         },
         {
@@ -2518,10 +2533,13 @@
           "ocrInsights": "In questo contenuto, il sentimento sembra positivo grazie alla presenza di hashtag come #babydance e #vacanze. Le principali argomenti sembrano riguardare il turismo e il relax, con focus su un resort o posto turistico come Torre Serena in Puglia. La foto sembra essere una vacanza o una foto di un luogo turistico. Non sono presenti hint su località specifiche, solo il nome del resort @bluserena.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:11:20.237Z"
+            "transcript": "Vai! Su! Su! Su! Su! Su! Su! Ehi! Viva Vita! Viva! Ehi! Buona! Ehi! Conventa! Su! Su! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 36.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:00.182Z"
           }
         },
         {
@@ -2546,10 +2564,13 @@
           "ocrInsights": "Il post è una risposta a @Stefania Franci e utilizza hashtag legati al viaggio e alla Sardegna. I tag #calaserena e #bluserena suggeriscono possibili nomi di resort o località turistiche in Sardegna. Il tono è positivo, tipico di contenuti promozionali o di condivisione di esperienze di viaggio.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:11:26.964Z"
+            "transcript": "siamo finalmente arrivati al cala serena già siamo super braccialati eccoci qua ci vediamo tra poco vi aggiorno su tutte le novità di questo villaggio io manco da due anni sono stato due anni fa e tre anni fa e sono tornato perché per me è impeccabile ve lo confermo tra poco",
+            "language": "Italian",
+            "durationSec": 23.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:02.578Z"
           }
         },
         {
@@ -2575,10 +2596,13 @@
           "ocrInsights": "The post conveys a positive, enthusiastic impression of a visit to the Bluserena resort in Pescara, emphasizing how beautiful the experience was.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:11:31.035Z"
+            "transcript": "Prova a seguirne la scia, tutta la vita blu, serena, dall'alba fino al luna piena, ti toglie il fiato per magia, lo sguardo da folli, ritrova la gioia con noi odiati.",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:08.444Z"
           }
         },
         {
@@ -2598,10 +2622,13 @@
           "ocrInsights": "Nessun testo on-screen disponibile per l'analisi.",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 1,
-            "analyzedAt": "2026-09-02T07:11:34.999Z"
+            "transcript": "Blu serena, dall'alba fino al luna piena, ti toglie il piatto che è magia, lo sguardo da follia, ti trova la gioia con noi ovvi, la vita blu serena, un brivido che ti scavena, la melodia che ti conquista, amore a prima vista, rientri in quel mondo che hai. Qui ritroviamo la felicità, un sogno che non finirà, un caldo abbraccio che sa di speciale, le lunghe giornate che non sentirai.",
+            "language": "Italian",
+            "durationSec": 44.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:14.295Z"
           }
         },
         {
@@ -2621,10 +2648,13 @@
           "ocrInsights": "No on-screen text provided for analysis.",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:11:41.352Z"
+            "transcript": "è trasmesso è trasmesso una foto messaggi",
+            "language": "Italian",
+            "durationSec": 16.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:19.863Z"
           }
         },
         {
@@ -2648,10 +2678,13 @@
           "ocrInsights": "The caption is a light‑hearted, informal question addressed to female friends, using a laughing emoji to convey a teasing, friendly vibe. No specific location or resort names are mentioned.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:11:44.831Z"
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:21.874Z"
           }
         },
         {
@@ -2674,10 +2707,13 @@
           "ocrInsights": "No on-screen text provided.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:11:52.621Z"
+            "transcript": "1, 2, 3 Piazza Play Vai Pronti E via Andiamo Insieme Ciao Pronti E gira Adesso Arriva l'internetto quindi Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:28.023Z"
           }
         },
         {
@@ -2702,10 +2738,13 @@
           "ocrInsights": "Il contenuto promuove o celebra un'esperienza di vacanza italiana a 4 stelle offerta da Bluserena, trasmettendo un sentimento positivo e sottolineando la meraviglia del viaggio.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:11:58.511Z"
+            "transcript": "No, a te che ti dici che no, dico meno su una gara un paro mio",
+            "language": "Italian",
+            "durationSec": 5.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:33.099Z"
           }
         },
         {
@@ -2731,10 +2770,13 @@
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:12:03.200Z"
+            "transcript": "... ... Grazie a tutti Mamma mia! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 131.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:37.277Z"
           }
         },
         {
@@ -2761,10 +2803,13 @@
           "ocrInsights": "The user is on vacation in Puglia, Italy, at Torre Serena, expressing a positive mood with beach and sunshine emojis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:12:07.830Z"
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:39.879Z"
           }
         },
         {
@@ -2791,10 +2836,13 @@
           "ocrInsights": "User likely shows themselves at the end of a holiday, possibly at a resort or venue called Bluserena, expressing mild sadness about returning home; emojis and popular hashtags are used to boost visibility on TikTok.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:12:14.456Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:44.970Z"
           }
         },
         {
@@ -2818,10 +2866,13 @@
           "ocrInsights": "The post uses upbeat hashtags related to food and vacation, suggesting a positive experience, likely at or about the restaurant/blu serena Valentino. No visual text is available, so insights are derived from the hashtags alone.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:12:19.331Z"
+            "transcript": "sentite a me non parlare di dieta come lo ha dos vizzerò mangiato o brona vizierà o fiorilata questi schifezzi a chi è voliderato quando mi sento e vado con il cuore che si ha rigetto a camma a fasana Noi spaghetti che pur pedile, cucinati in talacque mare, tre terzi di palermo a ril, tarato per in quantità. Ui, va a vinta, fa capace, dopo l'urna non ci sta, tanta cosa che è più bella, che è più bella lo pagnà. È bello pagnà, è bello pagnà, favorita che va a faccia consumà. Grazie a tutti l vestita come la nostra Ma avanza facci da lasciarla Pro ad abbonamad sul amè questo franzetto degne non faccia naso piere basta e fascio doi jacicci che friadiella na frittura e cala mariella e non ruota con baccala lui va vita, fa capace, il nostro mondo non c'è sta, tanta cosa che è più bella, che è più bella lo magnà. E' bello magnà, e' bello magnà, favorita quella faccia di un suor. E' favorita, favorita, è brutta la fame signor. E' bello magnà. E bello mangiare, farmi dire che la faccio un suono. Permettite, facciamoci un suono.",
+            "language": "Italian",
+            "durationSec": 151.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:49.345Z"
           }
         },
         {
@@ -2845,10 +2896,13 @@
           "ocrInsights": "L'autore sente la mancanza degli amici a distanza, esprime tristezza con cuori feriti, e menziona il resort Blue Serena, suggerendo un contesto di vacanza o luogo di ritrovo.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:12:22.345Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:51.284Z"
           }
         },
         {
@@ -2872,10 +2926,13 @@
           "ocrInsights": "Senza informazioni su contenuto specifico visualizzato, non è possibile fornire insights riguardo il contenuto. Si prega di fornire un'immagine o un link al contenuto per analizzare i dettagli.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 3,
-            "analyzedAt": "2026-09-02T07:12:28.935Z"
+            "transcript": "Siamo solo noi, dagli anni 90 e da 2000 in poi, siamo solo noi, siamo solo noi, che crediamo ancora nei supereroi.",
+            "language": "Italian",
+            "durationSec": 29,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:56.585Z"
           }
         },
         {
@@ -2902,10 +2959,13 @@
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:12:33.794Z"
+            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:02.962Z"
           }
         },
         {
@@ -2931,10 +2991,13 @@
           "ocrInsights": "The video likely showcases a party atmosphere at a venue named Villaggio, using popular hashtags to boost reach; the tone is upbeat and celebratory.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:12:38.183Z"
+            "transcript": "Tutti insieme! 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 41.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:10.039Z"
           }
         },
         {
@@ -2960,10 +3023,13 @@
           "ocrInsights": "No on-screen text available",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:12:45.919Z"
+            "transcript": "allora oggi il mare è un pochino mosso qui intanto stanno facendo penso yoga non so cosa stanno facendo però qualcosa di bello sicuramente come ti dicevo oggi il mare è un pochettino mosso però è sempre molto molto pulito è uno spettacolo eccolo qua se vuoi dopo ti metto anche un video di qualche giorno fa sempre del Cala Serena dove il mare era proprio un paradiso Grazie.",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:12.437Z"
           }
         },
         {
@@ -2987,10 +3053,13 @@
           "ocrInsights": "Not available",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:12:48.989Z"
+            "transcript": "E dopo un'altra notte, sorgerà un altro sole E se vuoi ti do un po' strage anche se non posso giurarti che arriviamo alle tre Anche tu lo sai quanto fa schifo il navigatore di Google Map",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:14.458Z"
           }
         },
         {
@@ -3016,10 +3085,13 @@
           "ocrInsights": "The post marks the end of a holiday period and the return to everyday chores such as ironing and cleaning, suggesting a shift from leisure to routine. The hashtags convey a mix of resignation and readiness to restart daily activities.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 4,
-            "analyzedAt": "2026-09-02T07:12:52.897Z"
+            "transcript": "Buongiorno ragazze, buongiorno da Napoli. Stamattina si stira. E niente ragazze, si ricomincia. Eccoci qua, la situazione è questa. Ragazze, siamo più cariche di prima. Aspettate le nostre notizie, ragazze, le collezioni nuove. Questa è la situazione tra stiro, bimbi. Mamma mia, quando inizia la scuola, ragazze? Siamo pronte, vi auguriamo un buon inizio settimana a tutte. e niente ragazze io vado continuo perché chi si firma è perduto mamma mia ragazze che caldo",
+            "language": "Italian",
+            "durationSec": 36.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:20.573Z"
           }
         },
         {
@@ -3039,10 +3111,13 @@
           "ocrInsights": "No content provided for analysis.",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 1,
-            "analyzedAt": "2026-09-02T07:13:05.162Z"
+            "transcript": "Sono sotto la pioggia, come la prima volta, a cantarti nel blu, dipinto nel blu, era la canzone nostra. Sono sotto la pioggia, come la prima volta.",
+            "language": "Italian",
+            "durationSec": 22,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:26.004Z"
           }
         },
         {
@@ -13537,7 +13612,16 @@
             "ritorno"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:02.962Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19206,7 +19290,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o8Ft5MIINfgnD0jqASVgGeHLkeofMURYNGAGAV~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=sti5WLuRjR4ladgz57Nuz%2FhwN6w%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:06:39.879Z"
+          }
         },
         {
           "platform": "tiktok",
