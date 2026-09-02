@@ -1280,7 +1280,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:45.822Z"
+            "updatedAt": "2026-09-02T12:02:32.186Z"
           }
         },
         {
@@ -1803,7 +1803,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:09.122Z"
+            "updatedAt": "2026-09-02T12:03:54.660Z"
           }
         },
         {
@@ -3508,7 +3508,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:08:25.924Z"
+            "updatedAt": "2026-09-02T12:01:51.136Z"
           }
         },
         {
@@ -3898,7 +3898,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:09:15.962Z"
+            "updatedAt": "2026-09-02T12:03:52.175Z"
           }
         },
         {
@@ -8352,13 +8352,14 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Amici dell'Avento Viaggi, buonasera. Ora siamo qui a mostrarvi una delle piscine del Serena Majestic. Questa è la piscina diciamo più adatta alla zona bimbi quindi con i due acquascivoli, quello blu e quello verde. Qui ci sono i residence, qui c'è la Gulliver pizzeria, quindi anche se siete in residence quindi se non volete fare l'all inclusive c'è la possibilità, quindi avete la pizzeria, ristorante, panini, painoteco e tutto. Inoltre come vi faccio vedere qui c'è anche una bellissima area a bambini con gonfiabili, scivoli, altalene al di fuori del miniclip perché poi vi farò vedere domani che c'è anche il miniclip con tutta l'area attrezzata. come potete vedere inoltre qui c'è la zona palestra quindi per chi come me è palestrato sto scherzando per tutti gli amanti anche del fitness dice la zona palestra dopo vi faccio vedere la facilità per arrivare al mare ve lo zoom gli ombedoni laggiù sono il mare quindi siamo esattamente a 20 metri dal mare. Per informazioni contattateci in direct.",
-            "language": "Italian",
-            "durationSec": 82.6,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:50:23.115Z"
+            "updatedAt": "2026-09-02T12:02:27.644Z"
           }
         },
         {
@@ -10019,7 +10020,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:16:37.193Z"
+            "updatedAt": "2026-09-02T12:04:53.591Z"
           }
         },
         {
@@ -16376,7 +16377,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ocSBj8YAq5wDkemaBiQRbafzEbDFPnEqgIkII0~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Q5t1MeZyu4FJQPFTeRWyNYzQ6AE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. We're going on vacation, so where you wanna go? It's a celebration, don't need no invitation Going on vacation, so where you wanna go? Love is our destination We're going on vacation Ready or not, here we go Vacation time, taking over",
+            "language": "Italian",
+            "durationSec": 54.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:01:14.332Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16389,7 +16399,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-p-0068/oEDHIJEDACfBz48AIoRaEbUQeAFctRAb4vCRGQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=uYD16Zoj2q1a9Af6qr0MhVTBjYU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:01:16.847Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16402,7 +16421,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o04GeCKQIqRRQvLAUHFAZeveMWRjCPIt2QDkYr~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=uOg%2B%2FqCQpajQAzx7cWZjpT9OO1I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo resort è a un'ora di San Paolo e sembra un vero e vero parco acquatico. Se stai cercando un luogo per viaggiare in famiglia senza preoccuparti di praticamente niente, salva questo video. Ci sono 17 piscine rinforzate e climatizzate, piscina di onde, rio lento, piscina di borda infinita e attività per tutte le età. E non parla da lì. Il resort ha una infrastruttura completa di lazer, con ricreazione per bambini e adulti, quadri sportivi, accademia, playground, salone di gioco e varie attività al giorno per tutta la famiglia. Nella diaria sono già incluse le quattro raffigurazioni complete, il caffè d'amore, il piatto, il caffè d'estate e il giantano, inoltre bebè non alcolico durante le raffigurazioni. È quel tipo di viaggio perfetto per rilassarsi, divertirsi e approfittare di momenti in famiglia senza dover uscire dal resort. Stiamo parlando del Valle Suizo Resort, che si trova a Itapeva, a circa un'ora da San Paolo. E ovviamente abbiamo ottenuto un coupon di sconto per voi. Lo mettiamo qui sulla tela. Legga la leggenda e saiba più. Ora salva questo video e manda a chi va a vivere questa esperienza con voi. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 61.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:01:22.862Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16415,7 +16443,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8kTjVC0JKXIIqy3DAQeKSOeZMrAALQGLeoCa1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=a%2BITjC%2Bl%2FNN1OfEugtnlj3OyXoo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Welcome to my paradise! Come take a look out through my eyes And you decide what people like me Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 47.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:01:36.475Z"
+          }
         }
       ]
     },
@@ -16446,7 +16483,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:08:25.924Z"
+            "updatedAt": "2026-09-02T12:01:51.136Z"
           }
         },
         {
@@ -16462,13 +16499,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEYffEWGIIEjRSXNIppAdMGgLjeEAGvi7QnfIy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=U5xo%2FO8p1ld4K7mkrHFcNfzLxu0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Amici dell'Avento Viaggi, buonasera. Ora siamo qui a mostrarvi una delle piscine del Serena Majestic. Questa è la piscina diciamo più adatta alla zona bimbi quindi con i due acquascivoli, quello blu e quello verde. Qui ci sono i residence, qui c'è la Gulliver pizzeria, quindi anche se siete in residence quindi se non volete fare l'all inclusive c'è la possibilità, quindi avete la pizzeria, ristorante, panini, painoteco e tutto. Inoltre come vi faccio vedere qui c'è anche una bellissima area a bambini con gonfiabili, scivoli, altalene al di fuori del miniclip perché poi vi farò vedere domani che c'è anche il miniclip con tutta l'area attrezzata. come potete vedere inoltre qui c'è la zona palestra quindi per chi come me è palestrato sto scherzando per tutti gli amanti anche del fitness dice la zona palestra dopo vi faccio vedere la facilità per arrivare al mare ve lo zoom gli ombedoni laggiù sono il mare quindi siamo esattamente a 20 metri dal mare. Per informazioni contattateci in direct.",
-            "language": "Italian",
-            "durationSec": 82.6,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:50:23.115Z"
+            "updatedAt": "2026-09-02T12:02:27.644Z"
           }
         },
         {
@@ -16490,7 +16528,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:45.822Z"
+            "updatedAt": "2026-09-02T12:02:32.186Z"
           }
         },
         {
@@ -16504,7 +16542,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osFHub0VAAVoGIeKEkp2ejsDMkBfQpJDIJwgQD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=WX1jwosJBCMCJoOwdJN5YZ4mUAE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Sei al Serena Majestic, tua figlia, papà ho voglia di McDonald's, nessun problema, delivero, McDonald's a 700 metri, 10 minuti e il McDonald's è qui. Questo è un altro consiglio che vi posso dare per chi alloggia a residence e quindi non ha la pensione completa, può godersi tranquillamente la spiaggia anche a ora di pranzi a quest'ora è di una tranquillità assoluta guardate sono quasi tutte vuote l'esraio e gli ombrelloni quindi uno si può mangiare un panino una pizza un piatto di pasta qui riva al mare al cinema majestic e che altro dire qui abbiamo la piscina e poi dopo ve la faccio vedere nel frattempo ci vediamo tra un posto andando a ritirare la consegna del mio delivery. Tutto qui ragazzi, venite qui, venite in agenzia, questo è uno dei resort degli hotel della catena Serena, della catena Blu Serena, ne abbiamo tantissimi, ne abbiamo due in Puglia, ne abbiamo in Calabria, per gli amanti della montagna abbiamo anche del Serena Majestic in Piemonte, quindi molto bello. Vi aspettiamo, venite da noi in via Nicola De Giro 75 Bari. Vi aspettiamo, un abbraccio a tutti.",
+            "language": "Italian",
+            "durationSec": 89.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:03:17.500Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16525,7 +16572,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:09:15.962Z"
+            "updatedAt": "2026-09-02T12:03:52.175Z"
           }
         },
         {
@@ -16547,7 +16594,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:09.122Z"
+            "updatedAt": "2026-09-02T12:03:54.660Z"
           }
         },
         {
@@ -16561,7 +16608,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oELfMD4p5A1lNKFBIRC6lG7GYP5eI3foRgeAEG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gdVt2dnLkDQIyZhm7tT%2B3Ieiv9U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 51.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:04:13.559Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16574,7 +16630,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oc1jqNIX5AOIAAiI6AiIFVPCqRClwAfK5JBBin~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2Fqenpck6bgRA3t4a0iK%2FrzZTwHg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Noi abbiamo sottra, ci chiediamo mattina, non noi è com'è, non ci chiediamo se non è buon, si, best different è un'occolaba. Buonanotte a tutti",
+            "language": "Italian",
+            "durationSec": 38,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:04:51.484Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16595,7 +16660,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:16:37.193Z"
+            "updatedAt": "2026-09-02T12:04:53.591Z"
           }
         },
         {
@@ -16609,7 +16674,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQJ2ELEeAL2jAQRuUMQLacFeInDzoZfJCQHWD4~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=IgeIrleCle5QAjft%2Bx%2FWfptCeQQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 29.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:05:30.093Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16622,7 +16696,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIAQgEyAVgMIqAEfGAogEwBCMhvDCCFPpSfBhi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=7%2Fm2BIoecHgJtD0x00zask3NtJc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. La città di San Paolo Grazie a tutti 21 agosto, tu alisa, tu alisa. E io dico a mio padre, come stai? E lui dice, non vedo un gol. E mio padre mi chiamava e mi diceva, ma io non so come stai.",
+            "language": "Italian",
+            "durationSec": 134.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:06:04.288Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16635,7 +16718,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o0cQunWnEDxgyVoFx6F8ABQERAm5IeDfEcBquu~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EWkAiHY7sPWElzK%2FzjcIzR2KgWk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Serena Williams è in notizia. Perché? Perché era a New York per supportare il suo amico Kim Kardashian con qualcosa che sta facendo con Nike e Serena Williams era in città per attendere a questo. e è in un hotel, non sappiamo in quale hotel sta, non ha pubblicato questo ma Serena Williams, che è una delle ricche americane viventi è stata trattata da qualcosa, e vi mostrerò cosa è stato Allora, come sentiamo il cotone come decorazione? Personalmente per me non sento bene ok I guess because it used to be picked by slaves and she a black american it 2025 serena williams is estimated by forbes to be worth 350 million dollars um she's married to a very very rich man too she hung up her racket in 2022 ending a career in which she earned 95 million in prize money more prize money than any female athlete in history she has endorsement deals to this day with more than a dozen brands she's active as an investor in her own venture capital firm she's got a licensing deal with a beauty line she's launched a multimedia company she owns part of the Miami Dolphins but she is an oppressed direct descendant of slaves I guess and that's how she sees herself to this day perché, penso, il trauma generazionale, come chiamano i bambini, non può camminare da un'estate di cotone in un hotel di luxurio per promuovere la linea di Kim Kardashian senza sentire il trauma che ha di videotapare e postare su Insta.",
+            "language": "Italian",
+            "durationSec": 134.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:11.947Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16648,7 +16740,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owyXvIFL1yA2FswIA0iiweBwCRAIDKqIIdvXqC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=fXzxVmKiPZXgDuFg6LQgCdyDO4Q%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nella vasaccia, ci ci temo e sogni ua uezi",
+            "language": "Italian",
+            "durationSec": 14.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:16.793Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16661,7 +16762,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAABA5oDEyqQfBD70UDdqQBeUgoREHFgWsrEQJ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=8YPbVoS%2BU9Bn8yAMIcm%2FiDwlqro%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:23.563Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16674,7 +16784,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8qvwvI2eFaIkAFGfGDIxATE8IRaAxfqwelDEi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=vbWWzLkoGAcmXhmMuzd95RwnWyc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie mille.",
+            "language": "Italian",
+            "durationSec": 12.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:30.091Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16687,7 +16806,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/og4eDqeGoQBijxVIuG1CeIyDQCxAZIYmLBVJQA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=aPG4I7CTcYGTKs5k3jBjhNHfduk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:39.942Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16700,7 +16828,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4dBjEPiIXVjMIYlpAIZiY21GBI7aal2ABuzi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=xLzZXiVqlqFlkAf%2FdOvGNLUbJbM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:17.793Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16713,7 +16851,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAgyiVUIfCRjcAjJaxgAILID8RGfsEVzvekpjo~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=FBORcsSD%2FXKWmupT1XhXyZ%2BllUw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Salve Salve",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:21.452Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16726,7 +16873,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQADdLGMDQEhSRqsAjFAcqVItCfjqABIEfglCi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dzJZRkN71S1hCN%2FI13%2BxVIAsPD8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, no, no, no, no, no. No, no, no, no, no. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 69.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:28.928Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16739,7 +16895,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooeT9n78jVuPQAIeMXfLUI8GC10qFQjWMh4AHD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BPGPmRZyuiwAB3MxzdXL0m7%2BYUU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica C'è un bambino che non sa fare niente, non sa fare niente, non sa fare niente, non sa fare niente, non sa fare niente. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:34.394Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16752,7 +16917,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owoE5xiUDIBsG9DApGIgf1iuqTI5RqbBcPPe1B~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bXUzjmg%2FdtOKGofnHO9lJlii0EA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "se vuoi fare qualcosa di nuovo, è il momento giusto ma questa volta non è un problema di asset o di pese è un problema di nome, Arshad se c'è pese, il nome si avviene",
+            "language": "Italian",
+            "durationSec": 18.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:36.948Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21329,7 +21503,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oc1jqNIX5AOIAAiI6AiIFVPCqRClwAfK5JBBin~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2Fqenpck6bgRA3t4a0iK%2FrzZTwHg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Noi abbiamo sottra, ci chiediamo mattina, non noi è com'è, non ci chiediamo se non è buon, si, best different è un'occolaba. Buonanotte a tutti",
+            "language": "Italian",
+            "durationSec": 38,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:04:51.484Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21342,7 +21525,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owyXvIFL1yA2FswIA0iiweBwCRAIDKqIIdvXqC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=fXzxVmKiPZXgDuFg6LQgCdyDO4Q%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nella vasaccia, ci ci temo e sogni ua uezi",
+            "language": "Italian",
+            "durationSec": 14.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:16.793Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21468,7 +21660,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/og4eDqeGoQBijxVIuG1CeIyDQCxAZIYmLBVJQA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=aPG4I7CTcYGTKs5k3jBjhNHfduk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:39.942Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21585,7 +21786,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAABA5oDEyqQfBD70UDdqQBeUgoREHFgWsrEQJ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=8YPbVoS%2BU9Bn8yAMIcm%2FiDwlqro%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:07:23.563Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21598,7 +21808,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAgyiVUIfCRjcAjJaxgAILID8RGfsEVzvekpjo~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=FBORcsSD%2FXKWmupT1XhXyZ%2BllUw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Salve Salve",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:21.452Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22157,7 +22376,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQADdLGMDQEhSRqsAjFAcqVItCfjqABIEfglCi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dzJZRkN71S1hCN%2FI13%2BxVIAsPD8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, no, no, no, no, no. No, no, no, no, no. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 69.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:28.928Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22695,7 +22923,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooeT9n78jVuPQAIeMXfLUI8GC10qFQjWMh4AHD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BPGPmRZyuiwAB3MxzdXL0m7%2BYUU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica C'è un bambino che non sa fare niente, non sa fare niente, non sa fare niente, non sa fare niente, non sa fare niente. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:10:34.394Z"
+          }
         },
         {
           "platform": "tiktok",
