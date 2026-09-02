@@ -986,7 +986,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:06.326Z"
+            "updatedAt": "2026-09-02T14:20:14.174Z"
           }
         },
         {
@@ -1546,7 +1546,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:10:46.984Z"
+            "updatedAt": "2026-09-02T14:22:29.614Z"
           }
         },
         {
@@ -1788,7 +1788,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:12:00.945Z"
+            "updatedAt": "2026-09-02T14:20:43.211Z"
           }
         },
         {
@@ -7212,13 +7212,13 @@
             "updatedAt": "2026-09-02T10:50:08.575Z"
           },
           "ocrData": {
-            "textOnScreen": "Rispondi al commento di Joy\ncalaserena è stupendo ma\nquando ci sono stato\npurtroppo l'animazione è\nobbligata a non fare casinò\nperché i vicini fecero\ndenuncia in Procura E\nquindi tutto il bello dell\nanimazione Bluserena è\nIl calaserena è stupendo ma\nSERENA\npurtroppo è\nE Il calaserena è stupendo ma",
-            "confidence": 0.902,
+            "textOnScreen": "Il calaserena è stupendo ma\nquando ci sono stato\npurtroppo l'animazione è\nobbligata a non fare casinò\nperché i vicini fecero\ndenuncia in Procura. E\nquindi tutto il bello dell\nanimazione Bluserena è\nCAI'A\\SERENA\nE è. calaserena è stupendo ma",
+            "confidence": 0.889,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:36:35.302Z"
+            "updatedAt": "2026-09-02T14:23:05.062Z"
           }
         },
         {
@@ -9190,7 +9190,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:45:36.768Z"
+            "updatedAt": "2026-09-02T14:22:05.161Z"
           }
         },
         {
@@ -9268,7 +9268,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:45:51.908Z"
+            "updatedAt": "2026-09-02T14:21:08.563Z"
           }
         },
         {
@@ -9425,7 +9425,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:48.573Z"
+            "updatedAt": "2026-09-02T14:20:59.837Z"
           }
         },
         {
@@ -11141,7 +11141,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:55:35.999Z"
+            "updatedAt": "2026-09-02T14:22:53.056Z"
           }
         },
         {
@@ -15459,6 +15459,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:55.717Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:12.003Z"
           }
         },
         {
@@ -15481,6 +15489,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:40:02.129Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:17.036Z"
           }
         },
         {
@@ -15503,6 +15519,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:40:05.644Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena VER Woodsen\nhairy?",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:25.306Z"
           }
         },
         {
@@ -15525,6 +15550,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:40:15.262Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SWEETNESS\n“CO CAPTAIN\ni BANTER QUEEN”",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:30.556Z"
           }
         },
         {
@@ -15548,6 +15582,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T10:40:39.269Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dramatic, shut the",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:39.363Z"
           }
         },
         {
@@ -15570,6 +15613,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:40:41.795Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:43.761Z"
           }
         },
         {
@@ -15592,6 +15643,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:41:53.567Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NISSAN SERENA 2.0AT\nTAHUN 2016 F,\nHARGA CASH RM 11,700\nTAHUN 2016\nSAN SERENA! 0;\nHARGA RM 11,700.",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:51.008Z"
           }
         },
         {
@@ -15614,6 +15674,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:42:03.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ELEPH",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:19:13.436Z"
           }
         },
         {
@@ -15636,6 +15705,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:43:09.151Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Wn the stre\nwork wk\nCrazy to me\nwhere\ntomeh oriesti\nthe street’\nwhere work\nSerena Williams livesy,\ndown the street fro\nwhere work which i\ncrazy to me honestly",
+            "confidence": 0.881,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:19:19.393Z"
           }
         },
         {
@@ -15658,6 +15736,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:44:14.785Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SYMOO FASHIONZ\nFOR BOTH LADIES\nFOR LADIES Mu",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:19:27.035Z"
           }
         },
         {
@@ -15680,6 +15767,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:44:28.904Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serena eiser\nsya nieiser\nserena sya ni\nni eiser",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:19:33.282Z"
           }
         },
         {
@@ -15702,6 +15798,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:44:31.938Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CAICKET\nJt LUGOGO OVAL\nOnly\nLUGOGO CRICKET OVAL",
+            "confidence": 0.729,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:19:45.678Z"
           }
         },
         {
@@ -15724,6 +15829,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:46:16.231Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:19:53.264Z"
           }
         }
       ]
@@ -15763,6 +15876,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:46:18.432Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Che poilillmare in Sardegna!\nin Sardegna\nChe poilillmareliniSardegna\nnon è poi cosi speciale...\nnon poi cosi speciale...",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:20:03.646Z"
           }
         },
         {
@@ -15802,7 +15924,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:06.326Z"
+            "updatedAt": "2026-09-02T14:20:14.174Z"
           }
         },
         {
@@ -15832,7 +15954,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:12:00.945Z"
+            "updatedAt": "2026-09-02T14:20:43.211Z"
           }
         },
         {
@@ -15863,7 +15985,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:48.573Z"
+            "updatedAt": "2026-09-02T14:20:59.837Z"
           }
         },
         {
@@ -15894,7 +16016,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:45:51.908Z"
+            "updatedAt": "2026-09-02T14:21:08.563Z"
           }
         },
         {
@@ -15917,6 +16039,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:48:30.235Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:21:39.358Z"
           }
         },
         {
@@ -15939,6 +16069,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:48:32.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:21:48.159Z"
           }
         },
         {
@@ -15969,7 +16107,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:45:36.768Z"
+            "updatedAt": "2026-09-02T14:22:05.161Z"
           }
         },
         {
@@ -16000,7 +16138,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:10:46.984Z"
+            "updatedAt": "2026-09-02T14:22:29.614Z"
           }
         },
         {
@@ -16031,7 +16169,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:55:35.999Z"
+            "updatedAt": "2026-09-02T14:22:53.056Z"
           }
         },
         {
@@ -16056,13 +16194,13 @@
             "updatedAt": "2026-09-02T10:50:08.575Z"
           },
           "ocrData": {
-            "textOnScreen": "Rispondi al commento di Joy\ncalaserena è stupendo ma\nquando ci sono stato\npurtroppo l'animazione è\nobbligata a non fare casinò\nperché i vicini fecero\ndenuncia in Procura E\nquindi tutto il bello dell\nanimazione Bluserena è\nIl calaserena è stupendo ma\nSERENA\npurtroppo è\nE Il calaserena è stupendo ma",
-            "confidence": 0.902,
+            "textOnScreen": "Il calaserena è stupendo ma\nquando ci sono stato\npurtroppo l'animazione è\nobbligata a non fare casinò\nperché i vicini fecero\ndenuncia in Procura. E\nquindi tutto il bello dell\nanimazione Bluserena è\nCAI'A\\SERENA\nE è. calaserena è stupendo ma",
+            "confidence": 0.889,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:36:35.302Z"
+            "updatedAt": "2026-09-02T14:23:05.062Z"
           }
         },
         {
@@ -16085,6 +16223,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:51:01.877Z"
+          },
+          "ocrData": {
+            "textOnScreen": "adel",
+            "confidence": 0.733,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:23:18.187Z"
           }
         },
         {
@@ -30472,6 +30619,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:39:55.717Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:18:12.003Z"
           }
         },
         {
