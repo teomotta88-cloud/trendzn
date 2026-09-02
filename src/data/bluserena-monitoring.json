@@ -40,11 +40,12 @@
             "updatedAt": "2026-09-02T09:00:40.635Z"
           },
           "ocrData": {
-            "textOnScreen": "iid :\nA g\n7 vale\num.\npi =\nbh *\ni i\nrh A\nSA |",
-            "confidence": 0.406,
+            "textOnScreen": null,
+            "confidence": null,
             "frameCount": 5,
-            "status": "ok",
-            "updatedAt": "2026-09-02T08:06:51.315Z"
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:02:34.585Z"
           }
         },
         {
@@ -77,11 +78,13 @@
             "updatedAt": "2026-09-02T09:00:43.054Z"
           },
           "ocrData": {
-            "textOnScreen": "4 Ne\n2 è i\nal pi -\n| Ve I\nCiao Bluserena\n{ N 3\net, Te\n> - sui\nCiao Bluserena q\nI i o ERP Su\nIF 3 her LXE ay Sh way 7\nMoats <a Rey E Ng LIA I =\nPes We Bk se Reve be Sd li\nAMEE Ì\nI; i v de\nans Ga i |\n|A O\nfo,\npsico sl\n\\ | Bo\niso\nA i\n| b a\nCia 3\ni” a\n| 411 4\n. yd\n] Lp\nPe] [=\nWa |\nérena\n= 0 wr\ni Ciao a ap\ni i - -",
-            "confidence": 0.498,
+            "textOnScreen": "Ciao Bluserena\nérena",
+            "confidence": 0.798,
             "frameCount": 5,
+            "minConfidence": 60,
             "status": "ok",
-            "updatedAt": "2026-09-02T08:07:00.816Z"
+            "version": 3,
+            "updatedAt": "2026-09-02T13:02:43.425Z"
           }
         },
         {
@@ -113,11 +116,12 @@
             "updatedAt": "2026-09-02T09:00:45.391Z"
           },
           "ocrData": {
-            "textOnScreen": "£5 4\napi\npa 2\nSSA i\n2 [Rana\n/ [ N pe,\npol\n£0, 7\n3 oe\nwe /\nee’\ni è\ndi\" he J\nip I",
-            "confidence": 0.43,
+            "textOnScreen": null,
+            "confidence": null,
             "frameCount": 5,
-            "status": "ok",
-            "updatedAt": "2026-09-02T08:07:08.380Z"
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:02:50.636Z"
           }
         },
         {
@@ -148,11 +152,13 @@
             "updatedAt": "2026-09-02T09:00:47.722Z"
           },
           "ocrData": {
-            "textOnScreen": "NE € [\n1] : EB . E Di\ni #5 Rion\ndbluserena\n@ Ww\ni 4 ora ati\n| , LI a\n| Hari ¥\n@ delgiudi\na suum ll el RPS\ni Sf AE se eit PAD\nRr SE SDA BEE\nEe — =_= ———\n—— ZA TIZI oe —arinet i mre —\n— = È © bluserena\npo i ——\ne lim— ii n\nre Ei — = n\npu sli ee\nV a\nEn - I.\nTikTok\n/4 @ delgiudicesandro\nSiete. a SEAT aS fray\nSe ee ints owe A AZZ\ni CT a RT\na _— a a\n== So bluserena —\n— — — (CV IJIVOCI lia\n— == il in —\n——— e — — ee\n> p= . — i\n@ delgiudicesandro\n| 2 ii\n#@blyseren; 7\npe 7\nA N JE\n> eas Bro\nEZ @ delgiudicesandro\n#1] » X\nE (7 YA\nys 7 7 ;\n4 AEA /\nLhe a 7\nLa 7 “of 7 A i\n# ys) 1A\ni 97 / La\n7 @bluse enag\ni) 7/ / . Ad\n74 Ww 5\nA À + Nap A\n47) 4 =\nNY ‘ i cd\nI A",
-            "confidence": 0.412,
+            "textOnScreen": "delgiudi\nÈ bluserena\nTikTok\n/4 delgiudicesandro\ndelgiudicesandro\n@bluse",
+            "confidence": 0.766,
             "frameCount": 5,
+            "minConfidence": 60,
             "status": "ok",
-            "updatedAt": "2026-09-02T08:07:20.299Z"
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:01.799Z"
           }
         },
         {
@@ -185,11 +191,12 @@
             "updatedAt": "2026-09-02T09:00:50.022Z"
           },
           "ocrData": {
-            "textOnScreen": "“i 2\nils A i\nWy UR ARI\nLo RAR Fo\nESS id ‘n\nWE AUG EI | |\nAI ù SR 3 il i\nLA AE |\n“NA AE\nÈ ANNA iN\ni oY è e a | od i + È i\n$5 ng £4 i\n- x = i pi . i\nES : e x\n| lp\n: A DD\nA 2\ni À",
-            "confidence": 0.448,
+            "textOnScreen": null,
+            "confidence": null,
             "frameCount": 5,
-            "status": "ok",
-            "updatedAt": "2026-09-02T08:07:28.283Z"
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:09.598Z"
           }
         },
         {
@@ -222,6 +229,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:00:52.255Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PIÙ QUESTA CANZONE\nCHE QUELLE DI\nQUANDO ORMAI CANTI PIÙ/QUESTA CANZONE\nQUANDO\nBLUSERENA\nHOTELS\nQUANDOJORMAI QUESTA\nCHE GEOLIER\nQUELLE DI",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:18.418Z"
           }
         },
         {
@@ -248,6 +264,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:00:55.324Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:23.955Z"
           }
         },
         {
@@ -283,6 +307,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:00:59.463Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:32.495Z"
           }
         },
         {
@@ -315,6 +347,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:01.637Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ne ssuno ti prepara\nDa questo a...\nti prepara\n2 @terryamato\nAnch\nUn rientro trau\nAnche",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:38.479Z"
           }
         },
         {
@@ -347,6 +388,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:04.925Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ERENING\nDANEE)",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:45.414Z"
           }
         },
         {
@@ -376,6 +426,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:09.743Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:51.752Z"
           }
         },
         {
@@ -405,6 +463,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:12.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@bluserena A\nPond na]\nQuandojfiniscellalmagia\ncome cgni Anno",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:58.258Z"
           }
         },
         {
@@ -432,6 +499,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:14.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:04:27.011Z"
           }
         },
         {
@@ -462,6 +537,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:16.511Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di giù81\ntutti i punti di mare\ndi Bluserena sono\nscadenti....\n24 AGOSTO\nFUORI TUTTO €/1C\ndifferencestore.it\nFUORI TUTTO 0\nFUORI TUTTO\nRispondi al commento di giu81",
+            "confidence": 0.843,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:04:49.958Z"
           }
         },
         {
@@ -491,6 +575,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:18.712Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i giorno a caso d'inverno\nnto ero felice adragosto nel mio\ngiorno acasod inverno. pe\nnto ero felice ad agosto nel mio\nposto del cuore\nroad\ngiorno a-caso d'inverno penserò a\ngiorno a caso d'inverno a\nnto ero felice ad agosto nel\nd'inverno a\nposto del guore",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:12.522Z"
           }
         },
         {
@@ -532,6 +625,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:21.084Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT IN RISERVA NATH",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:31.912Z"
           }
         },
         {
@@ -564,6 +666,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:24.771Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:44.542Z"
           }
         },
         {
@@ -595,6 +705,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:26.792Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLU SERENA DA\nSEMPREW i\nTorreserena Resort\n0 Torreserena Resort\nSEMPREW",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:49.246Z"
           }
         },
         {
@@ -627,6 +746,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:29.468Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE RESORT",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:57.158Z"
           }
         },
         {
@@ -656,6 +784,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:15:53.521Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:01.682Z"
           }
         },
         {
@@ -687,6 +823,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:34.533Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:06.888Z"
           }
         },
         {
@@ -719,6 +863,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:37.915Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:14.798Z"
           }
         },
         {
@@ -748,6 +900,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:40.226Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:49.046Z"
           }
         },
         {
@@ -778,6 +938,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:44.104Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Colazione",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:55.738Z"
           }
         },
         {
@@ -809,6 +978,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:47:22.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT\nwent\nCALASERENA RESORT\nwater i\ngood\nSoren A\na Beachiparty\ndrinks,",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:06.326Z"
           }
         },
         {
@@ -9845,6 +10023,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:15:53.521Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:01.682Z"
           }
         },
         {
@@ -12186,6 +12372,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:47:22.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT\nwent\nCALASERENA RESORT\nwater i\ngood\nSoren A\na Beachiparty\ndrinks,",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:06.326Z"
           }
         },
         {
@@ -20896,6 +21091,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:24.771Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:44.542Z"
           }
         },
         {
@@ -24602,6 +24805,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:21.084Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT IN RISERVA NATH",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:31.912Z"
           }
         },
         {
@@ -24624,6 +24836,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:26.792Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLU SERENA DA\nSEMPREW i\nTorreserena Resort\n0 Torreserena Resort\nSEMPREW",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:05:49.246Z"
           }
         },
         {
@@ -24690,6 +24911,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:12.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@bluserena A\nPond na]\nQuandojfiniscellalmagia\ncome cgni Anno",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:58.258Z"
           }
         },
         {
@@ -24782,6 +25012,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:00:52.255Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PIÙ QUESTA CANZONE\nCHE QUELLE DI\nQUANDO ORMAI CANTI PIÙ/QUESTA CANZONE\nQUANDO\nBLUSERENA\nHOTELS\nQUANDOJORMAI QUESTA\nCHE GEOLIER\nQUELLE DI",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:03:18.418Z"
           }
         },
         {
@@ -28975,6 +29214,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:34.533Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:06:06.888Z"
           }
         },
         {
