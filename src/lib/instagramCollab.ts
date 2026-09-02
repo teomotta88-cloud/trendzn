@@ -88,7 +88,7 @@ export async function addBrandProfile(input: {
 export async function listInfluencerIndustries(): Promise<string[]> {
   const { data, error } = await (supabase as any).from("instagram_influencer_industries").select("industry");
   if (error) throw error;
-  return [...new Set((data ?? []).map((r) => r.industry))].sort();
+  return [...new Set((data ?? []).map((r: any) => r.industry))].sort();
 }
 
 // Mappa username influencer -> industry associate, per filtrare l'elenco
@@ -167,7 +167,7 @@ export async function listPostsForUsername(
     .eq("username", username);
   if (error) throw error;
 
-  const postIds = [...new Set((collabRows ?? []).map((r) => r.post_id))];
+  const postIds = [...new Set((collabRows ?? []).map((r: any) => r.post_id))];
   if (postIds.length === 0) return [];
 
   const { data: posts, error: postsError } = await (supabase as any)
@@ -190,12 +190,12 @@ export async function listPostsForUsername(
     collaboratorsByPost.set(row.post_id, list);
   }
 
-  const withCollaborators = (posts ?? []).map((p) => ({
+  const withCollaborators = (posts ?? []).map((p: any) => ({
     ...p,
     collaborators: collaboratorsByPost.get(p.id) ?? [],
   }));
 
   return collabOnly
-    ? withCollaborators.filter((p) => p.collaborators.length >= 2)
+    ? withCollaborators.filter((p: any) => p.collaborators.length >= 2)
     : withCollaborators;
 }

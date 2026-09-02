@@ -117,7 +117,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
                   .select("shortcode")
                   .in("shortcode", shortcodes)
               : { data: [] as { shortcode: string }[] };
-          const existingShortcodes = new Set((existingRows ?? []).map((r) => r.shortcode));
+          const existingShortcodes = new Set((existingRows ?? []).map((r: any) => r.shortcode));
           const newPostsCount = posts.filter((p) => !existingShortcodes.has(p.shortcode)).length;
 
           let collabsFoundCount = 0;
