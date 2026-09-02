@@ -415,7 +415,7 @@ test("i record legacy senza status vengono rielaborati", async () => {
 // i post come tentati li escluderebbe dalle run successive.
 test("un guasto sistematico ferma la run senza marcare i post", async () => {
   const fake = fakeGitHub(storeFixture());
-  process.env.FAIL_FAST = "3";
+  process.env.FAIL_STREAK = "3";
 
   await assert.rejects(
     withFakeGitHub(fake, () =>
@@ -428,7 +428,7 @@ test("un guasto sistematico ferma la run senza marcare i post", async () => {
     ),
     /fallimenti consecutivi/,
   );
-  delete process.env.FAIL_FAST;
+  delete process.env.FAIL_STREAK;
 
   assert.equal(fake.state.puts, 0, "nessun commit");
   const marcati = fake.state.store.canali.flatMap((c) => c.accounts).filter((a) => a.ocrData);
@@ -437,7 +437,7 @@ test("un guasto sistematico ferma la run senza marcare i post", async () => {
 
 test("no_text è un esito legittimo e non fa scattare il circuit breaker", async () => {
   const fake = fakeGitHub(storeFixture());
-  process.env.FAIL_FAST = "2";
+  process.env.FAIL_STREAK = "2";
 
   await withFakeGitHub(fake, () =>
     runEnrichment({
@@ -447,7 +447,7 @@ test("no_text è un esito legittimo e non fa scattare il circuit breaker", async
       processPost: async () => ({ textOnScreen: null, status: "no_text" }),
     }),
   );
-  delete process.env.FAIL_FAST;
+  delete process.env.FAIL_STREAK;
 
   assert.equal(
     fake.state.store.canali.flatMap((c) => c.accounts).filter((a) => a.ocrData).length,
@@ -475,6 +475,163 @@ test("il motivo del fallimento di yt-dlp riporta il messaggio dell'estrattore", 
     process.env.PATH = previousPath;
     fs.rmSync(dir, { recursive: true, force: true });
   }
+});
+
+// Su ~1500 video il rate limit di Groq è una certezza: senza retry ogni 429
+// marcherebbe il post come fallito e andrebbe ripescato a mano.
+test("una richiesta a Groq riprova sul 429 e poi riesce", async () => {
+  let chiamate = 0;
+  const server = http.createServer((req, res) => {
+    chiamate++;
+    req.resume();
+    req.on("end", () => {
+      if (chiamate < 3) {
+        res.writeHead(429, { "Retry-After": "0", "Content-Type": "application/json" });
+        res.end('{"error":{"message":"rate limit"}}');
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ text: "ce l'ha fatta", language: "it", duration: 3 }));
+    });
+  });
+  await new Promise((r) => server.listen(0, r));
+  const url = `http://127.0.0.1:${server.address().port}/`;
+
+  const out = await transcribeAudioBuffer(Buffer.alloc(100), {
+    apiKey: "k",
+    model: "m",
+    url,
+    retryBaseMs: 1,
+  });
+  server.close();
+
+  assert.equal(chiamate, 3, "due 429 e poi il successo");
+  assert.equal(out.ok, true);
+  assert.equal(out.text, "ce l'ha fatta");
+});
+
+test("un 429 che non passa viene distinto dagli altri errori", async () => {
+  const server = http.createServer((req, res) => {
+    req.resume();
+    req.on("end", () => {
+      res.writeHead(429, { "Retry-After": "0" });
+      res.end('{"error":{"message":"quota esaurita"}}');
+    });
+  });
+  await new Promise((r) => server.listen(0, r));
+  const url = `http://127.0.0.1:${server.address().port}/`;
+
+  const out = await transcribeAudioBuffer(Buffer.alloc(10), {
+    apiKey: "k",
+    model: "m",
+    url,
+    attempts: 2,
+    retryBaseMs: 1,
+  });
+  server.close();
+
+  assert.equal(out.ok, false);
+  assert.equal(out.rateLimited, true, "il chiamante deve poterlo distinguere");
+  assert.match(out.reason, /429/);
+});
+
+test("Retry-After viene rispettato invece del backoff", async () => {
+  let chiamate = 0;
+  const server = http.createServer((req, res) => {
+    chiamate++;
+    req.resume();
+    req.on("end", () => {
+      if (chiamate === 1) {
+        res.writeHead(429, { "Retry-After": "0.3" });
+        res.end("{}");
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ text: "ok", language: "it" }));
+    });
+  });
+  await new Promise((r) => server.listen(0, r));
+  const url = `http://127.0.0.1:${server.address().port}/`;
+
+  const inizio = Date.now();
+  // baseMs enorme: se il backoff prevalesse su Retry-After, il test durerebbe minuti.
+  await transcribeAudioBuffer(Buffer.alloc(10), {
+    apiKey: "k",
+    model: "m",
+    url,
+    retryBaseMs: 600_000,
+  });
+  const durata = Date.now() - inizio;
+  server.close();
+
+  assert.ok(durata >= 250, `ha aspettato davvero: ${durata}ms`);
+  assert.ok(durata < 5000, `ha usato Retry-After, non il backoff: ${durata}ms`);
+});
+
+// Quando l'algoritmo migliora i record vecchi devono rifarsi da soli: senza
+// questo, la spazzatura salvata con status "ok" resterebbe bloccata, perché
+// REPROCESS_FAILED per definizione non tocca gli "ok".
+test("alzare la versione dell'estrattore rimette in coda i record vecchi", async () => {
+  const store = storeFixture();
+  store.canali[0].accounts[0].ocrData = { textOnScreen: "vecchio", status: "ok", version: 1 };
+  store.canali[0].accounts[1].ocrData = { textOnScreen: "nuovo", status: "ok", version: 2 };
+
+  const fake = fakeGitHub(store);
+  const visti = [];
+  await withFakeGitHub(fake, () =>
+    runEnrichment({
+      field: "ocrData",
+      version: 2,
+      title: "test",
+      commitMessage: (n) => `test ${n}`,
+      processPost: async (a) => {
+        visti.push(a.url);
+        return { textOnScreen: "rifatto", status: "ok" };
+      },
+    }),
+  );
+
+  assert.ok(visti.includes("https://www.tiktok.com/@a/video/1"), "versione 1 va rifatta");
+  assert.ok(!visti.includes("https://www.tiktok.com/@a/video/2"), "versione 2 è aggiornata");
+  assert.equal(
+    fake.state.store.canali[0].accounts[0].ocrData.version,
+    2,
+    "la versione viene timbrata",
+  );
+});
+
+// Il freno deve valere a ogni punto della run: su 1500 post la quota Groq si
+// esaurisce a metà, non in apertura.
+test("il freno scatta anche dopo dei successi, salvando il lavoro buono", async () => {
+  const fake = fakeGitHub(storeFixture());
+  process.env.FAIL_STREAK = "2";
+  process.env.BATCH_SIZE = "50";
+
+  await assert.rejects(
+    withFakeGitHub(fake, () =>
+      runEnrichment({
+        field: "audioAnalysis",
+        title: "test",
+        commitMessage: (n) => `test ${n}`,
+        processPost: async (a) =>
+          a.url.endsWith("/1")
+            ? { transcript: "buona", status: "ok" }
+            : { transcript: null, status: "rate_limited", reason: "Groq 429" },
+      }),
+    ),
+    /fallimenti consecutivi/,
+  );
+  delete process.env.FAIL_STREAK;
+  delete process.env.BATCH_SIZE;
+
+  const posts = fake.state.store.canali.flatMap((c) => c.accounts);
+  const salvato = posts.find((a) => a.url.endsWith("/1"));
+  assert.equal(salvato.audioAnalysis.transcript, "buona", "il post riuscito non si perde");
+  assert.equal(
+    posts.filter((a) => a.audioAnalysis?.status === "rate_limited").length,
+    0,
+    "i post della serie restano da rifare, non marcati",
+  );
 });
 
 test("runEnrichment committa a batch e rispetta il limite di post", async () => {

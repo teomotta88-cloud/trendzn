@@ -71,9 +71,14 @@ export type AccountRef = {
       | "download_failed"
       | "extract_failed"
       | "too_large"
+      | "rate_limited"
       | "transcribe_failed"
       | "error";
     reason?: string | null;
+    // Versione dell'estrattore che ha scritto il record: quando lo script
+    // migliora l'algoritmo alza la sua versione e i record vecchi vengono
+    // rifatti alla run successiva, senza interventi manuali.
+    version?: number;
     updatedAt?: string | null;
     // Campi legacy della vecchia analisi LLM, non più scritti da nessuno.
     sentiment?: string | null;
@@ -88,6 +93,7 @@ export type AccountRef = {
     frameCount?: number;
     status?: "ok" | "no_text" | "download_failed" | "frame_failed" | "error";
     reason?: string | null;
+    version?: number;
     updatedAt?: string | null;
   } | null;
   // Legacy: insight prodotti dalla vecchia analisi LLM su OCR + caption.

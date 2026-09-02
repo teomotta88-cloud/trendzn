@@ -9,7 +9,7 @@ on:
       max_posts:
         description: "Numero massimo di post da elaborare in questa run"
         required: false
-        default: "400"
+        default: "2000"
       reprocess_failed:
         description: "Riprova i post la cui trascrizione era fallita (true/false)"
         required: false
@@ -64,7 +64,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          MAX_POSTS: ${{ inputs.max_posts || '400' }}
+          MAX_POSTS: ${{ inputs.max_posts || '2000' }}
           REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
           MAX_MINUTES: "300"
           BATCH_SIZE: "25"

@@ -29,6 +29,11 @@ import {
   run,
 } from "./lib/bluserena-media.mjs";
 
+// Si alza quando cambia il modo in cui si estrae il testo: i record scritti da
+// una versione precedente vengono rifatti da soli alla run dopo. Da alzare
+// quando arriverà il filtro sulla confidenza per parola.
+const VERSION = 1;
+
 // Quanti fotogrammi campionare per video.
 const FRAMES_PER_VIDEO = Number.parseInt(process.env.OCR_FRAMES ?? "5", 10);
 const OCR_LANGS = process.env.OCR_LANGS ?? "ita+eng";
@@ -178,6 +183,7 @@ console.log("");
 try {
   await runEnrichment({
     field: "ocrData",
+    version: VERSION,
     title: "OCR testo on-screen",
     commitMessage: (n) => `chore: OCR testo on-screen su ${n} post Bluserena [trendzn-bot]`,
     processPost: ocrPost,
