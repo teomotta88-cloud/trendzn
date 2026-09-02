@@ -56,7 +56,7 @@ export const Route = createFileRoute("/api/public/hooks/sync-instagram-collab")(
           if (error) return Response.json({ ok: false, error: error.message }, { status: 500 });
 
           const now = Date.now();
-          const due = (profiles ?? []).filter((p) => {
+          const due = (profiles ?? []).filter((p: any) => {
             if (!p.last_checked_at) return true;
             const elapsedMinutes = (now - new Date(p.last_checked_at).getTime()) / 60000;
             return elapsedMinutes >= p.check_interval_minutes;
