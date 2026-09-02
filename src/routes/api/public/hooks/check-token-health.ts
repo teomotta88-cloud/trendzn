@@ -91,15 +91,50 @@ async function checkGithubToken(): Promise<TokenCheckResult> {
   const label = "GitHub (sync canali/rubriche)";
   const token = process.env.GITHUB_TOKEN;
   if (!token) return notConfigured(name, label);
+
+  const headers = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" };
+
   try {
-    const res = await fetch("https://api.github.com/rate_limit", {
-      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+    const rateRes = await fetch("https://api.github.com/rate_limit", {
+      headers,
       signal: AbortSignal.timeout(8000),
     });
-    if (!res.ok) return invalidResult(name, label, `GitHub ha risposto ${res.status}.`);
-    const expiresHeader = res.headers.get("github-authentication-token-expiration");
+    if (!rateRes.ok) {
+      return invalidResult(
+        name,
+        label,
+        `GitHub ha risposto ${rateRes.status} su /rate_limit (token non valido o scaduto).`,
+      );
+    }
+    const expiresHeader = rateRes.headers.get("github-authentication-token-expiration");
     const expiresAt = expiresHeader ? new Date(expiresHeader).toISOString() : null;
-    return okResult(name, label, "Token valido.", expiresAt);
+
+    // /rate_limit autentica con QUALSIASI token valido, anche senza lo
+    // scope "repo": da solo non basta a garantire che gli hook di
+    // scrittura (update-bluserena-verification.ts e affini) riescano
+    // davvero a leggere/scrivere il file che usano — verificato su un caso
+    // reale (403 solo qui, /rate_limit rispondeva comunque 200). Chiamiamo
+    // lo stesso identico endpoint/repo/file che quegli hook interrogano
+    // per primo: un token autenticato ma senza scope "repo", o non
+    // autorizzato via SSO per l'organizzazione, risponde 403 qui pur
+    // passando /rate_limit.
+    const repoRes = await fetch(
+      "https://api.github.com/repos/teomotta88-cloud/trendzn/contents/src/data/bluserena-monitoring.json",
+      { headers, signal: AbortSignal.timeout(8000) },
+    );
+    if (!repoRes.ok) {
+      return invalidResult(
+        name,
+        label,
+        `Il token autentica (GitHub risponde su /rate_limit) ma non può leggere ` +
+          `teomotta88-cloud/trendzn: risposta ${repoRes.status}. Probabile scope ` +
+          `"repo" mancante sul token, o SSO non autorizzato per l'organizzazione ` +
+          `teomotta88-cloud (GitHub → Settings → Developer settings → ` +
+          `Personal access tokens → il token → "Configure SSO").`,
+      );
+    }
+
+    return okResult(name, label, "Token valido, con accesso in lettura al repo.", expiresAt);
   } catch (err) {
     return errorResult(name, label, err);
   }
