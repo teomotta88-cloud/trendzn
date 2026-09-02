@@ -41,7 +41,7 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
 
         const ghHeaders = {
           Authorization: `token ${token}`,
-          Accept: "application/vnd.github.v3+json",
+          Accept: "application/vnd.github+json",
           "Content-Type": "application/json",
         };
 
