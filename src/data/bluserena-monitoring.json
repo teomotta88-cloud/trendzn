@@ -12173,7 +12173,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:06:29.306Z"
+            "updatedAt": "2026-09-02T17:47:36.310Z"
           }
         },
         {
@@ -37104,7 +37104,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:06:29.306Z"
+            "updatedAt": "2026-09-02T17:47:36.310Z"
           }
         },
         {
@@ -40223,7 +40223,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oErSSaiEGQqwECAdcgJ4BQkAAAoZIU0BiBXXP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ud%2BnuSLifpdUt6QIn2HFIdk9Ldc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "N ENTI\nENTING y VALENTINO N 4\nN ENTINO",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:44:07.456Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40236,7 +40245,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4gtfQ4MUCfnZgfXQZaPtAg0IDGp81QApjgWmF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=wYCzqd1NkKtWnMLxxRCF7qxUoWE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "MACKENZIE A",
+            "confidence": 0.736,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:44:21.389Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40249,7 +40267,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oEi5IqAP1pzINxCIerM1ADiccSzBKlAiA2yymA~tplv-tiktokx-dmt-logom:tos-useast8-i-0068-tx2/ocB6EVEDAafEEnbArqqmEerIpAFKXRAZQWC79A.image?dr=9634&x-expires=1788433200&x-signature=EP8k5cOFYDKXSRVSIpP3wwgOWvo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "MARLY/\ni IA VALENTINO\nVALI",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:44:33.231Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40262,7 +40289,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ocHoSPHEIiikR5IBltqq4kiVBpDAnisAKIa9R~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=avc7KNrGOWQGiJQPtK83sx2nKXM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "DEES,\nROME Al\nALTI\nMasculi",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:44:42.360Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40275,7 +40311,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogSN9fYQRSj9KgtgZCWVArcMAQ4ffDFK8aDINE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Z0ry4xcP%2Fx6UR7gxIMx07k7SBpw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:44:58.687Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40288,7 +40332,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIwQverfhzvI4mACLEqM8Dwjw9AXOSTAuemVAi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=96kA6ONLB2mqgVuC2oXPNnE5HTQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "VHEN TOOK A RANDOM ROLE P XIC BO\nAND NOW AN ENTIRE GENERATION LOVES TO\nI NALI\nA RANDOM ROLE AS A TOXIC BOSS\n7 AND NOW AN ENTIRE GENERATION LOVES TO\nWHEN I TOOK A RANDOM ROLE ASA TOXIC BOSS\nAND NOW AN ENTIRE GENERATION\nHATEMEg",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:45:10.316Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40301,7 +40354,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o4cACDr0qSELGofKBiFEAADLEiARsnaIIdfSVg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bhPk7zLUmLRANqbF7eF5AOOyqeg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "DIDN'T\nHONESTLY\nPERÙ",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:45:17.696Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40314,7 +40376,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oM7AmCEfXADgjQAwklTwFzvDf0oDrUQIeSQJjv~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ZlRQytKxGjq9bOjr6vzdB6ZJ1%2FE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:45:24.508Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40327,7 +40397,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/owegq8scAjhElrSqRg0BDDC5LEQWIBFUGzoafD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hAUBnl850jZlMsD8Hx%2Fp0a%2FN%2B%2BY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "VALENTINO",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:45:30.375Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40340,7 +40419,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osA4aPKEIioBg4yQV1bFxN7UBuWEJ8BbFzIpi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=1ud%2B7%2BOIMINdc9XVVGfYrqgORSg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:45:44.385Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40353,7 +40440,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ooJExIziEWfEkyaBXqRDfFyRF2AFBoigWIoqIx~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=y51X3Lj13VJ97NVpsffaeEsUZHE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "TLUAL\nESCAPE\n3 VALE 1 4",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:45:56.116Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40366,7 +40462,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/okAGAvCBBBB1iAnCOXi5ftEjKBJI8Gqw8oInmA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=IHjvzD8FKmJtbujpHBKwKvro8uc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "season",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:46:01.774Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40379,7 +40484,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMFRQe0IAztjAIanVMICeDWYI3DQ4Y8xC7FfMh~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=17hGjEdURqqiUjbVTHgC3WkMgHs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Date: 4\nFULL COST PER PERSON\nDate: September i\nOCHO RIOS: $52,300\nDate: September\nBERIPERSON\nRIU OCHO RIOS: $52,300\nAQUARELLE: $66,050\nPERSON\n4 DAYS|\nRIU/AQUARELLE:",
+            "confidence": 0.845,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:46:12.050Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40392,7 +40506,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0VQAIEIGUwQpA6e8fKeNdtErKUGRFL1IeLONr~tplv-tiktokx-dmt-logom:tos-useast5-i-0068-tx/o0AVAf8aDHDUFAOIP5E1OvIZfEkQwGdA9fjdrA.image?dr=9634&x-expires=1788433200&x-signature=%2FI50OAyaz2xpxmzzkSHTbMM7DEU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Relax on private Minitas Beach, which offers dining and\ndrinks, plus plenty of water sports\nFIRST/OF/ALL,\nWhy We Love This Deal\nThe 5-star Casa de Campo is tucked away in a private gated\ncommunity on one of the DR's best beaches. This “beyond\nultraluxe and magical” getaway is a favorite among Travelzoo\nmembers and A-list guests including Beyoncé and Jay-Z, Drake,\nJennifer Lopez and the Kardashians. Spanning 7,000 acres, it's a\ndestination in and of itself, featuring multiple restaurants,\nsparkling pools, a spa, three championship golf courses and\nmore.\nWith this offer, two guests can spend 3 nights (or longer)\nstarting at $599 (total, not per person) on dates through\nSeptember. This pa geal includes daily breakfast, $200\nin dining and \"mentary round of golf.\nYou can alsg prime winter dates\nor combi\nBEYONCE'AND JAY.\nAll-inclusive packages start from $1199 for 3 nights\nAdd additional individual nights by contacting the hotel\ndirectly; or, extend your stay by combining multiple 3-night\nvouchers\nPrices are per room, not per person\nAdditional member perks:\no Daily breakfast for two guests at Lago Restaurant ($64\ndaily value)\no $100 dining credit for use at Causa or Chilango Restaurant\n(one per stay)\no One round of golf on the Links or Dye Fore course ($270\nvalue; cart not included; one per stay; subject to\navailability)\n$100 spa credit (appl\nhydrothermal expej\n20% off horsebac\nSignature Casita Sept.\nPremier Junior pept. 24-\nNo rooms avail 1-2\n\"Casa de\nrejuveng\nreso\ncondi À\no $1 e toward massage or\nly; one per stay)\npaddleball and pickleball\nLe 1,21 22,31; Sept. 11-\nTENNIS,\nAbout the Destination\nCasa de Campo is approximately a 50-minute drive from Las\nAméricas International Airport (SDQ) and Punta Cana\nInternational Airport Please contact the hotel directly to\narrange transfers (fees apply).\nFlights are not included with this deal.\nHow to book: Click \"Continue\" to select and purchase\nvoucher(s) from Travelzoo. Once you've purchased your\nvoucher(s), follow the instruction",
+            "confidence": 0.93,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:46:26.533Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40405,7 +40528,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o0CE2l8GIwkEmfRCXMmDfDmRo0AFAAkQA7GqQX~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQUb0KQzMnPkODShu1MDqU0pjpc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:46:33.037Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40418,7 +40549,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oYqAyv0oIMBV41OvRpiADdIGtEGuiBaRsmUzB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=8jR9dQ5YV%2BA%2FxjQlSAolawFs2X8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Vendetta Jil\nfor women\nVendetta Donna\nEaude Parfum\nTuberose\nVendetta Donna (2026) Valentino\nDonna",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:46:45.897Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40431,7 +40571,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oAipBGEVAAAfAWYIAIL0fcIGhemdFJuIOJJDfQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=V9rK83kfXLiG8hcZwkOCq350hNs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ERICA'S SECOND\nEating like we\nsupposed to\nEating like we i\nsupposed to j",
+            "confidence": 0.824,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:46:53.251Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40444,7 +40593,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8EaSpyAiPUiLzBIA6VaAEBCLY9cAr29c6cAn~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EkrS138zqjIAcEwkAj1%2BJ%2BkILrU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:47:07.610Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40457,7 +40614,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oYRpEAzERV8ftSBehAA4dIAcEAZqI4DNjXJEFC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=8LPM%2BTYBO2eD2K%2B%2BEQw1XTtNQ1o%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "fun fact: some moths\nsqueak when they/feel\nstartled, initated, or\ndefensive\nit exists mainly to scare or\nLi trick predatorsiinto\nthinking more\nY dangerous than they\nactually are\nfeel\ntrick:\nstartled, irritated, or;\ndefensive a\n3 4 mainly] tosscare or\ninto\nthinking\nthan they\nsqueak feel\nirritated)\nif exists mainly to scare or\npredators into\n4 they\nthey; A\nsome\ndefensive] UN\nactually A 7",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:47:18.916Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40470,7 +40636,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o09fXBcBqBQz8n4iixvT4AIiEBSRfUugLRIBlq~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=3bzSIfOV4kvJzN8shr5%2BPbx2oOw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "iNew cosplay!",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:47:25.979Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40483,7 +40658,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o0PfR8kgqQmyELDsxBXFSCQEQQDCXrAaRQfPE8~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bQhdD2zH0fnMxq2BxVjzyDJRvZY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Silent disco?\nValentino resort\n1 V/alentinolresort\nresort",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:47:31.043Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40512,7 +40696,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:06:29.306Z"
+            "updatedAt": "2026-09-02T17:47:36.310Z"
           }
         },
         {
@@ -40526,7 +40710,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o8qBREPOMwZVSIYpzAIuiUlbLCbAawccBBSzi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BvF9bEIoKvZ7hUL2X9I5cA2A4Rc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:47:53.240Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40539,7 +40731,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/owaABAnBD1B1i1bEATw8GR9EEU0IAPiA5lCUA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=l1IVZxnc4MonVTgpDnz57oVmmMU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:47:58.243Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40552,7 +40752,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/owdAnE9Bvd1RcE1LAaNHZEQV5BJWiikNI3Bnu~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=naeLLlJAMDtxQzbmWmehc3w5iDA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T17:48:09.271Z"
+          }
         },
         {
           "platform": "tiktok",
