@@ -808,7 +808,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:47.107Z"
+            "updatedAt": "2026-09-02T10:47:22.355Z"
           }
         },
         {
@@ -1249,7 +1249,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:41.402Z"
+            "updatedAt": "2026-09-02T10:49:38.709Z"
           }
         },
         {
@@ -1440,7 +1440,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:03:11.972Z"
+            "updatedAt": "2026-09-02T10:47:24.735Z"
           }
         },
         {
@@ -5676,7 +5676,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:21:35.884Z"
+            "updatedAt": "2026-09-02T10:50:08.575Z"
           }
         },
         {
@@ -7211,7 +7211,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:37:27.671Z"
+            "updatedAt": "2026-09-02T10:48:53.827Z"
           }
         },
         {
@@ -7271,7 +7271,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:37:32.832Z"
+            "updatedAt": "2026-09-02T10:48:26.365Z"
           }
         },
         {
@@ -7392,7 +7392,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:40:54.523Z"
+            "updatedAt": "2026-09-02T10:47:41.559Z"
           }
         },
         {
@@ -8714,7 +8714,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:57:12.564Z"
+            "updatedAt": "2026-09-02T10:50:04.741Z"
           }
         },
         {
@@ -11839,7 +11839,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okggLkw0Ui9h0lJ1A6FCIEIUfgC26AAq0B1ISi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qLj%2FMOGA1Xfz5%2BoEYamys%2B%2Bcr%2Bw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:39:55.717Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11852,7 +11861,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oED96E6E4QflTFgEOVAfkYdokdqUBRAOpqQPAE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=5chNWstYkNkZ2I0E0fzWEmhampA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tutte le tue piccole menti e i tuoi mesi ti hanno dato il fiero, non è vero, ogni uno dei tuoi mesi che mi ha regalato, i tuoi...",
+            "language": "Italian",
+            "durationSec": 13.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:40:02.129Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11865,7 +11883,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o0iq7NREIFAfyIGbDoCghJaSkBipB9mBfRksB7~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=f7wTZuF8RC%2FyGmofC%2FW9ugIHODI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Complimentami, dicci che il mio pelo è bellissimo Ma il tuo pelo è disgustante Hai perso il tuo sapore?",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:40:05.644Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11878,7 +11905,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/okiRPF9lgBSEBt4DUbAqamJRUuqIMEBgY0i6W~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HXglGU5TvZdhJ%2BNXtkxDk2h3ACk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "POSTO POR THE PANS",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:40:15.262Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11891,7 +11927,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEVCcFDMAGpfCxVXlqCeA4SvlAICQAo2D6ThEg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ceeere2TqN013uRLMy%2FBA%2FCKncs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:40:39.269Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11904,7 +11950,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oAAD9NoNAcRIEg5EFHAC5EIDAgDSgAeCXDf42s~tplv-tiktokx-dmt-logom:tos-useast5-i-0068-tx/osU1IAIGiJ5xwxFLIAAc7AIeROgAeAeAxGQrEf.image?dr=9634&x-expires=1788433200&x-signature=Q36Vt%2F9hdhI3qr7UZ0liQAUW4oQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:40:41.795Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11917,7 +11972,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMlUnOAUeAE5rfqrBGGqBVFXvIGwLRNafuFItf~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ish%2FQY5MCWSFTXE6CZzDQVjMCek%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Macchia Affard dengan Vemfire ada. Apa yang Affard Vemfire ada? Kereta ni ada. Ok. So kalau nak beli Affard Vemfire tu, harga dia terlalu mahal lah. Dan untuk kereta ni juga, ada sekali untuk pinggan mangkok. Letak pinggan, letak air makan. Sebab apa? Kereta ni memang practical untuk family. Dan kereta ni dah ada sekali dengan TV. Kemudian aircon vents dekat sini ada. Dan setiap penjuru ada aircon vents. Nampak tak? ok, se voi sapete che l'interno non è spazio l'interno è molto spazio vedi? se vado all'interno vedi? con i miei piedi ancora c'è spazio e per il sito si può sondare ancora c'è un cup holder qui poi c'è un po' di spazio qui c'è un po' di spazio e c'è anche un aircon è spazio è spazio questo è il Nissan Serena 2016 quindi per questo modello puoi tirare in basso poi tuo abbo può ottenere un armrest o un'apartamento o poter ottenere un puoi ok puoi tirare cos poi puoi insamorare vedete vedete se scendo vedete 8 posti di seduta ok, questa macchina ha 2 power door, a destra e a sinistra e ciò che è ancora interessante per questa macchina e perché ho detto come Alphard e Van Fire perché questa macchina, due possono tutup ataupun buka daripada depan bak otomatik dia terbuka sendiri so untuk tutup balik tekan lama lama otomatik dah tertutup c'è on eh kereta ni dah ada sekali dengan android player ada boost up button dan apa lagi engine kereta ni 2.0 kereta condition masih dalam keadaan yang baik ok bak dotri masih dalam keadaan kemas jom kita pusing satu round dulu tengok condition kereta kereta ni berwarna putih da hadir dengan spoiler dan untuk bahagian boot space belakang tak besar sangat dan tak kecil sangat just nice sahaja, nampak tak? nice sahaja memang ada ruang juga untuk bahagian belakang kita tutup balik siapa cepat dia dapat, cepat-cepat tekan link di bio assalamualaikum dan bye bye",
+            "language": "Italian",
+            "durationSec": 149.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:41:53.567Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11930,7 +11994,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogZEBlOUBQAIoNngGWEOpfFeYgE6TBDEqI7RTF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DdZ13%2BXtHws%2BryH4l06eMGxdw5M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 23.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:42:03.538Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11943,7 +12016,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oIPCRHfEzA2OUM7kbICTjTA8h0IuFCIDDe9e5t~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ADrXy883PTmlUHpsVyujdrmMF0o%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, e come persona nera, sempre vivrai in una consapevolezza doppia, perché sempre vivrai in una realtà doppia. Perché chi è ricco a Palm Beach? Oltre a droghe e scammeri. Non conosco nemmeno i niggas, sento solo le niggas dai girlies. Sto guardando un video, vi visitate Florida, e andate attraverso tutte le città sulla mappa, e poi andate a Palm Beach e c'è solo dinero. è altro I I I I didn't even know that Marga Lago was in fucking Palm Beach till Trump ran for fucking presidency I just I I now work in Jupiter and just realize how like I already knew Jupiter was where white people was at and they were just rich but I'm realizing we're in two different tax brackets rich this is why tutto l'interno è così bello, il ponte di Palm Beach è così bello, così bello, così calmo, perché è qui dove i niggas hanno il money, la Palm Beach dove sono nato, West Palm Beach, Foodtown, Bear Lakes, Jaeger, Roosevelt, Emanuele? La chiesa di baptismo? L'Urban League? Show me the money! Hooks? Bro, the best hooks! I cross the street from some fucking apartments that my mama grew up in She didn't stay her whole life there they lived there one time she can still remember the fucking door which is down the street from a magnet school that's in an all black community show me the money",
+            "language": "Italian",
+            "durationSec": 119,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:43:09.151Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11956,7 +12038,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oseAQQoe1GAO8QW2pfLiGGqFsRnARFxVQqeurI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=lWeORl%2Ba8NW16K6SXL2d0zPOvyY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 47.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:44:14.785Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11969,7 +12060,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4mIgSdIRqIoBrqOCF67EjEX3D8Df4AeRBBAdc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=V%2FvGSppb2BPxaGg8XWEY%2FPqrvw4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 23.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:44:28.904Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11982,7 +12082,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/osqDvAfhclQJgdRcEMgSQDFEufxC5qqbD4BTB5~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=YXq7JWfrynjiH7u2fiCqKPtcPCg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 30.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:44:31.938Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11995,7 +12104,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/owxH31aYiTpeAijCsDqIwAiurjsQAkBzCInvIY~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=cbQ5%2B1AICHTdGYHsyMRvmzbaPhU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quando sono andata a Punta Cana, ho passato circa due mesi investigando i hotel, vedendo video, opinioni e cose così. Signori, tutti non hanno la stessa esperienza e io so che ci sono stati robi, che ci sono cose molto fette nei hotel, come in qualsiasi luogo. Ma bene, uno ovviamente va di vacanze, non vuole stare preoccupato se ti robano o cosa sia. la mia abitazione nel serenade aveva una caja forte super buona in effetti moderna nuova che la mia figlia in effetti gli ha messo un codice e poi non si ricordava e gli abbiamo dato un dedo per gusto e per aprire quello passiamo il Niagara ma bene io so che si fanno i suoi traquimani e che robano e che non so Io non ho visto una chiesa in quel hotel. In effetti il giorno in cui sono arrivata al Serenade Caribe Club c'era una ragazza chiedendo all'interno del check-in dove io stavo facendo... nel lobby dove stavo facendo il check c una ragazza chiedendo che la sua abitazione si filtrava e il signore non so se per che io non ascolti la chiesa ma così, così velocemente gli ho detto che abitazione è, che problema ha lo risolviamo, lo cambiamo e mi sono chiesto, wow, se è così realmente questo è buono e non ho visto più niente signori, io ho condiviso con molte persone che e in realtà mi sono staccata con un youtuber che faceva video con un youtuber spagnolo e con la sua famiglia che si dedica a fare video hall e ho parlato con loro un po' e la verità è che la loro opinione dell'hotel è spettacolare io ho visto i loro video su youtube e vi dico che non mi sono incontrata con nessuno che aveva una malopinione con tutte le persone che conoscivo nel hotel che avevano andato da qui negli Stati Uniti tutti erano molto felici con il hotel, nessuno aveva domande, di ciò che possiamo parlare e con le persone del hotel io la verit le mucamele signore in effetti mi ha dato anche pittura perch quella che mi arrivata era nuova e la ragazza aveva il dedo apposto e perch il primo giorno ho lasciato il bottone attivato per non farmi la casa, la ragazza non l'ha fatto e come alle quattro e mezza di notte che io salgo dalla piscina e sta facendo la casa del lato e mi dice vuoi che la faccia e gli ho detto perché io avevo ha messo il bottone perché io non volevo entrare nella mia abitazione quando non ero là, per questo paura e io gli dico ah ma puoi farlo io qui e mi dice se vuoi e gli dico sì certo e la ragazza si mette a fare la mia abitazione e si va il trasporto in cui loro si vanno e la supervisora è venuta e ha detto cose che io ho dovuto mettere e dirgli no ti hai sbagliato, non sta facendo l'abitazione perché ha preso tardi fino a ora, né perché è stata lenta, è in abitazione perché io ho usato il e mi ha detto che non me la facesse e allora non è entrata e da la casualità che ora io subo e lei è lì e mi dice che se io voglio che me la faccia e lei mi ha fatto perché io le ho detto che s e mi sta facendo un favore cio lei non l fatto per la trattata n perch si sta demorando e la signora mi ha fatto una cara tremenda male lo dir alla supervisora Le ho detto alla ragazza non ti lasciate malattare cos Se facevano i cubani, se ti decideni di trattare la signora, che cosa le passa a lei? Non ti lasciate malattare così. La signora mi ha dato una cara di pittura. Io ogni giorno le ho lasciato la propina alla ragazza. E, in effetti, l'ultimo giorno, lei mi ha portato questo caffè per che io mi portassi tutto. perché signore maltrattano i lavoratori e i supervisori come in tutti i hotel mi immagino come maltrattano i lavoratori perché poi ho anche visto una ragazza pulendo i passi quella stessa supervisore mettendo il dedo che non era ora di pulire il passaggio che aveva da pulire la chiesa insieme al passaggio davanti alla chiesa, in fin cose che ho visto ma non ho ascoltato niente di roba e ho visto molti video di persone che le è passato ma lì nel Caribe Club non ho visto niente di questo quindi lo sapete come sempre vi dico se avete domande lasciatemi sapere, io vi racconto la mia esperienza seguite me se non mi seguite, commentate, condividete mettete like per che vi arrivino più persone con la informazione un bacio e benedizioni",
+            "language": "Italian",
+            "durationSec": 277.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:46:16.231Z"
+          }
         }
       ]
     },
@@ -12025,7 +12143,16 @@
             "relax"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:46:18.432Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -12055,7 +12182,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:47.107Z"
+            "updatedAt": "2026-09-02T10:47:22.355Z"
           }
         },
         {
@@ -12077,7 +12204,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:03:11.972Z"
+            "updatedAt": "2026-09-02T10:47:24.735Z"
           }
         },
         {
@@ -12099,7 +12226,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:40:54.523Z"
+            "updatedAt": "2026-09-02T10:47:41.559Z"
           }
         },
         {
@@ -12121,7 +12248,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:37:32.832Z"
+            "updatedAt": "2026-09-02T10:48:26.365Z"
           }
         },
         {
@@ -12135,7 +12262,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYiGgAICEAAfIIBcA1AwAOWtKBiJ65LBnCjAs9~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/owCIoQyUAAjFD844jFfzcUDEeAu9SEIdPAvfA5.image?dr=9634&x-expires=1788433200&x-signature=b7cPxlPhXaFIw1DIzdDw9Q6Q%2Fs0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 22,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:48:30.235Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -12148,7 +12284,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYxRIziBDAfBQ0REi18vC41IOFiagIANsaAFRo~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=SH%2FXwuY5RWFr8lXSBH0%2ByzfLgsE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 5.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:48:32.394Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -12169,7 +12314,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:37:27.671Z"
+            "updatedAt": "2026-09-02T10:48:53.827Z"
           }
         },
         {
@@ -12191,7 +12336,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:41.402Z"
+            "updatedAt": "2026-09-02T10:49:38.709Z"
           }
         },
         {
@@ -12213,7 +12358,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:57:12.564Z"
+            "updatedAt": "2026-09-02T10:50:04.741Z"
           }
         },
         {
@@ -12235,7 +12380,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:21:35.884Z"
+            "updatedAt": "2026-09-02T10:50:08.575Z"
           }
         },
         {
@@ -12249,7 +12394,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o86qCP6AEPsFsCpARg9Ej0tARbPeDBAyEf9IgU~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/osZfGqA9PI7IRTRHGAgA5ssefnfA5LQGAnQJMp.image?dr=9634&x-expires=1788433200&x-signature=Fz4GIN0ZdcLtAC3CeGV68GkhdDI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao",
+            "language": "Italian",
+            "durationSec": 40.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:51:01.877Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22757,7 +22911,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okggLkw0Ui9h0lJ1A6FCIEIUfgC26AAq0B1ISi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qLj%2FMOGA1Xfz5%2BoEYamys%2B%2Bcr%2Bw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:39:55.717Z"
+          }
         },
         {
           "platform": "tiktok",
