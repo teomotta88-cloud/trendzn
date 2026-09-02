@@ -6930,7 +6930,16 @@
             "famiglia",
             "social media"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "albafine luna piena Marco, così il contest non lo vincerai mai Ma non è vero, mi sto impegnando Ah, scusate, il contest, sì perché dovete ascoltarmi bene adesso perché dal 12 luglio al 2 agosto inizia il Valla Blu Serena contest in palio ci sono 2500 euro di voucher da consumare per una vacanza dei nostri resort e poi come si fa? Impara la sigla blu serena insieme alla tua famiglia e ai tuoi amici E poi fai un bel video, caricalo sul tuo profilo Instagram pubblico e tagga Bluserena. Vai sulla pagina del contest e segui le istruzioni per partecipare.",
+            "language": "Italian",
+            "durationSec": 41.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:35:43.916Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -6951,7 +6960,16 @@
             "relax",
             "resort"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Stasera mi faccio l'interrogante e le pongo fin alla rispostora, usurpadora. Exijo contigo una entrevista, sospecho, plagio a mi signora, malimitadora. Ti metto in un'altra strada, dove puoi lavorare, io mi aspetto e se tu me ne so.",
+            "language": "Italian",
+            "durationSec": 23.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:35:46.449Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -6972,7 +6990,16 @@
             "aereo",
             "4 stelle"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Blu serena, dall'alba fino al luna piena, ti tocca il mio troppo e magia lo sguardo da follia, mi trova la gioia con noi ogni giorno. Blu serena, un brivido che ti scavela, la memoria che ti conquista, amore a prima vista, riempie quel luogo che hai. Qui ritroviamo la felicità Marco",
+            "language": "Italian",
+            "durationSec": 58,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:16.418Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -6993,7 +7020,16 @@
             "umorismo",
             "finevacanze"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 6.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:18.473Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7015,7 +7051,16 @@
             "resort",
             "puglia"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "E dice che tra i malvros spento l'iPhone, oh no, mi sembra che in casa ci sia un uragano, mi manca Milano, quando me ne vado...",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:20.604Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7039,7 +7084,16 @@
             "vacanze in Sicilia",
             "vacanze in Calabria"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:22.606Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7061,7 +7115,16 @@
             "virale",
             "estate"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 7.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:24.623Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7083,7 +7146,16 @@
             "famiglia",
             "estate"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Cirella la più bella, te indovini che farà, un bacino ti darà, salta salta salta Serenino, salta giù, salta salta salta Serenino, salta giù, salta salta salta Serenino, salta giù, salta salta salta, noi non ci perdiamo più. Ciao!",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:35.618Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7103,7 +7175,16 @@
             "schiuma",
             "vacanza"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 22.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:36:37.892Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7122,7 +7203,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "recensione negativa come sapete non è da me fare questo genere di video però quello che è giusto è giusto ieri sono andato in direzione e ho chiesto di montare dei maxi schermi per tutto il villaggio per avvertire che da domani ritorna il super fuori tutto a 10 euro al mio negozio di abbigliamento maschile difference store abiti completi giacca e pantaloni a soli 50 euro e la direzione mi ha detto che non è possibile quindi voglio fare questa recensione negativa per lamentarmi di questa cosa ovviamente sto scherzando ragazzi vi aspetto da domani allo store di napoli ore 9 e 30 difference store il panico",
+            "language": "Italian",
+            "durationSec": 41.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:37:27.671Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7143,7 +7233,16 @@
             "estate",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:37:29.845Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7164,7 +7263,16 @@
             "relax",
             "sardegna"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Appena arrivati, questa è la nostra stanza. Ciao Mia! Grazie.",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:37:32.832Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7185,7 +7293,16 @@
             "sardegna",
             "risposta"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "cambiamo discorso voltiamo pagina altrimenti voi dite che voglio solo vendere voglio sempre pensare a differenza lavorare tutto quanto quindi vi parlo di una cosa che non vi ho mai parlato finora differenza store solo oggi costumi 5 euro scarpe in vera pelle 20 euro abiti giacca più pantalone 50 euro oltre oltre mille articoli a soli 10 euro sandali in vera pelle a soli 20 euro oggi oggi pomeriggio ci trovate sia a caserta che a napoli e ovviamente sul nostro sito e con saluti dalla sardegna oggi mare agitato ma sempre un paradiso ciao",
+            "language": "Italian",
+            "durationSec": 49.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:37:53.536Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7207,7 +7324,16 @@
             "crew",
             "personale"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 129.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:38:50.750Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7227,7 +7353,16 @@
             "bluserena",
             "viaggi"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Sì, eccolo qua, trovo sulla porchetta. Grazie a tutti Buonasera. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 122.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:39:52.582Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7249,7 +7384,16 @@
             "team",
             "summer"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 91.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:40:54.523Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7270,7 +7414,16 @@
             "happiness",
             "brotherhood"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Brisa serena per il mondo, un'altra cappella di domande. Questa è una domanda che molte persone chiedono, puoi viaggiare senza essere ricco? Galera, puoi, il primo passo è coraggio e credere che sei capace. È questo, quando credi che sei capace, l'universo fa così con i tuoi cammini, apre tutti. E ragazzi, c'è infinita forma di viaggiare, spendendo meno, spedendo in hostel, potete fare volontariato, oggi in dia il home office possibilita tanto la vita nomad. Quando vai a mangiare in un posto, non devi stare in un ristorante, mangiare e spendere 100 Riali. Puoi prendere in un ristorante un Marmitex di 30 Riali. E sentare lì a mezzo della piazza e divertirsi. Quindi ti economizza molto. Se sai fare un artigianato, è comunicativo, disembolato, in qualsiasi modo, è una renda. Se non lo sai, puoi imparare. YouTube ti insegna a fare diverse cose. Per esempio, io e Serena viviamo dalla nostra renda di artigianati. Molte persone pensano che noi guadagno PIX, o che i nostri padri mandano. è la correria del giorno a giorno vedete questo artigianato? l'ho fatto ieri, ma mi sono appassionata e l'ho preso per me è questo ragazzi, siamo qui nella correria e quando vogliamo, riusciamo a farlo tutto nella nostra vita, tutto, tutto, tutto e ringraziamo sempre, ringraziamo la gratidão è la fonte principale quanto più ti ringraziamo, più motivi hai per ringraziare quindi sia grata la vita viva Brisa Serena per il mondo",
+            "language": "Italian",
+            "durationSec": 83.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:41:40.658Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7290,7 +7443,17 @@
             "meme",
             "fyp"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: Your IP address is blocked from accessing this post",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:41:41.915Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7311,7 +7474,16 @@
             "vacanza",
             "trip"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "3 mesi fa abbiamo trovato questo occhio qui sulla piazza e ho detto che lo andrei a dare a qualcuno che lo avrebbe piaciuto lo andrei a dare alla ragazza che è qui vediamo se lei va a piacere lo andrò ora hai usato l'occhio? uso abbiamo trovato questo occhio qui sulla piazza e ho detto che lo andrei a dare a qualcuno speciale sì, lo metterò qui ti piace? amore, è tuo è bellissima bellissima guarda che bella è molto bella è molto bella mi piace molto",
+            "language": "Italian",
+            "durationSec": 39.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:41:55.079Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7331,7 +7503,16 @@
             "tristezza",
             "delusione"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:41:59.134Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7352,7 +7533,16 @@
             "abbigliamento",
             "prezzi"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cosa vendi? Spill la vendita! Ok bebe, andiamo a spill Cosa ho preparato in questo posto? Il primo è un blu blu di 35.000 rupiah Sì, 35.000 rupiah E qui ho anche molti modelli cardigan con il raijute o sui cardigan Ho preparato un'acqua di frutta e anche un'acqua di printing e anche modelli importati ma questa è la versione locale non è meno bella, non è meno sottile la base e qui ho anche ready per la colorazione di l'abu per la batteria yellow e per la colorazione di l'impasto e per il modello, qui ho spilato a pezzi piccoli, che ho ready, il modello è così, bebe, bello bello e qui c'è la colorazione per l'avocado, per il verde e questa è la colorazione per marron è ancora molto complessa, bebe, perché molto bello, è venuto, non è? ieri con i prodotti, andiamo a un negozio, dobbiamo aprire da 8 di mattina fino a 9 di mattina, dove è il negozio? Quindi il nostro negozio è a Dukuh Badak, Ketangungan, bebe, se lo chiamate su Google Maps, il nome è Ratu Store, e io sono anche ready per l'adattamento di Parisa, il prezzo è solo 15.000, bebe, chi vuole andare al negozio aspetta, grazie",
+            "language": "Italian",
+            "durationSec": 84.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:42:32.555Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7373,7 +7563,16 @@
             "brasil",
             "rio"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Salve! Salve salve famiglia! Andiamo a passare il rio Itamambuca Andiamo a vendere artigianati! C'è stato tempo di passare qui, oh, Nel jugular, amore! Nel jugular? Nel jugular? E non già? E non già, già! Vieni con me, bambino! Abbiamo ancora un po' di sconto, non so nemmeno dove passiamo, quanto spendiamo, Valorizza il nostro artigianato di nuovo! Guarda il rilievo che c'è! ehi bella, oggi è più piena guarda qui guarda qui guarda qui sei in grado di problemi è bello sono fuori di problemi ma Dio sa non salire da casa in vain puoi fermarti",
+            "language": "Italian",
+            "durationSec": 57.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:43:33.917Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7394,7 +7593,16 @@
             "ritorno",
             "natura"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Guardate che problema buono, le fucilie stanno finendo, ho dovuto sentare qui per fare, i brici stanno finendo. Ho dovuto sentare qui per produrre più. Sei felice, eh? Sei felice, con il dinero nel bolso sei felice. Sono felice. Mia figlia, tu pensi che non ti vedo lì, no? Ai, ai, molto bene, ragazzi. Noi siamo felici, così, normale, no? ora quando arrebenta la venda sai da frente che la felicità è arrivata",
+            "language": "Italian",
+            "durationSec": 32.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:43:42.352Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7415,7 +7623,16 @@
             "blouse",
             "auretta"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "kakà, questo è il codice di Bless Blossom Bless Blossom è il codice di best seller numero 2 dopo il codice di Rosalie è veramente finito, due settimane non si può restockare oggi si può restockare, per favore, inizia prendi il codice di Bless Blossom continuiamo, c'è il codice di best seller numero 3 codice di Iris il codice di Iris ha un tema come Garden la dominante è in pinto per il codice di Iris",
+            "language": "Italian",
+            "durationSec": 29,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:43:45.804Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -7437,7 +7654,16 @@
             "famiglia",
             "viaggio"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "questo è solo per i ragazzi carinata! feste per tutto il mondo! un bacio al fuoco! ae compadre, compadre! benvenuto! e Ragnar oi Josué mio figlio Dio ti abbenzi guarda il tuo figlio che è nato qui amè amè amè",
+            "language": "Italian",
+            "durationSec": 37.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:44:34.047Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10345,7 +10571,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oU1dIEmvA9rrAIU7UAQCfpLvEJLfIseZFzAOGA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=s969YiruxhCK4oiWTXxgIJi2taA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 91.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:40:54.523Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10358,7 +10593,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQxPKLJIIQEIg2ECsSeRIA7AjAetVGMHGAeHF6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=E3w7LE3p6XHSAKr1adiALfdseIc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Appena arrivati, questa è la nostra stanza. Ciao Mia! Grazie.",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:37:32.832Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10397,7 +10641,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ow7qjXgcVgM9IKGeeDFXLYdQgYMNUfAJtg8nKy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=uG1R3%2FMU%2B2EGZm6yoQxKiPcH7V8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "recensione negativa come sapete non è da me fare questo genere di video però quello che è giusto è giusto ieri sono andato in direzione e ho chiesto di montare dei maxi schermi per tutto il villaggio per avvertire che da domani ritorna il super fuori tutto a 10 euro al mio negozio di abbigliamento maschile difference store abiti completi giacca e pantaloni a soli 50 euro e la direzione mi ha detto che non è possibile quindi voglio fare questa recensione negativa per lamentarmi di questa cosa ovviamente sto scherzando ragazzi vi aspetto da domani allo store di napoli ore 9 e 30 difference store il panico",
+            "language": "Italian",
+            "durationSec": 41.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:37:27.671Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11157,7 +11410,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oQJTfNIAQnALiIe4DwWOPheYAKGRWKAQfAoplD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BbbmCIn9T98VhKsrMppkkorBj10%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 129.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:38:50.750Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21216,7 +21478,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oQJTfNIAQnALiIe4DwWOPheYAKGRWKAQfAoplD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BbbmCIn9T98VhKsrMppkkorBj10%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 129.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:38:50.750Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22569,7 +22840,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oQJTfNIAQnALiIe4DwWOPheYAKGRWKAQfAoplD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BbbmCIn9T98VhKsrMppkkorBj10%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 129.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:38:50.750Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24010,7 +24290,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oQJTfNIAQnALiIe4DwWOPheYAKGRWKAQfAoplD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BbbmCIn9T98VhKsrMppkkorBj10%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 129.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:38:50.750Z"
+          }
         },
         {
           "platform": "tiktok",
