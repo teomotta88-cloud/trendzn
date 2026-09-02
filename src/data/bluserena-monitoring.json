@@ -7854,6 +7854,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:25:05.781Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bluserena",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:39:53.425Z"
           }
         },
         {
@@ -7884,6 +7893,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:25:46.913Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:40:01.767Z"
           }
         },
         {
@@ -7913,6 +7930,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:25:49.040Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lunga vita\nA quelle notti\nPassate nel\nVillaggio\nLunga vita h\nunga vita\nnotti\nVillaggio 4\nPass; nel 4",
+            "confidence": 0.874,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:40:08.895Z"
           }
         },
         {
@@ -7943,6 +7969,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:26:28.517Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di A\nSalvatore\n(SA È inutile dire che è tt x\nciò che dici ci sono È\nal calaserena\ncontrario di ciò a\nche dici\nCALA SERENA\nsembra di\nche non ti stai\nquesta\nRispondi al commento di\nÈ inutile dire che è tt\nciò che dici ci sono\nanch'io al calaserena\ne tt il contrario di ciò\nè tutto\nproporzionato,\nnegli altri\nv Rispondi al commento di\ncid che dici ci sono\ntu considera Una cosa\nperle.\nfile,\nÈ dire che è tt\ne tt il contrario di cid\nche dici a\nÈ inutile dire che è a\nnoi unialtro villaggio mil",
+            "confidence": 0.854,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:40:40.647Z"
           }
         },
         {
@@ -7974,6 +8009,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:26:35.148Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Torreserena Village\n@emanuela.ma\ni Torreserena Village\nTikTok\naimarco.ca\nÈ Torreserena Village\nè TikTok\n@emanuela.marco.ca",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:40:59.592Z"
           }
         },
         {
@@ -8002,6 +8046,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:26:55.746Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Casa\nHotel Bluserena\nHotel Bluserena Montesilvano\n2% Hotel Bluserena Montesilvano",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:41:08.036Z"
           }
         },
         {
@@ -8031,6 +8084,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:27:03.294Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@bluserena\nv Sunset cock",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:41:13.933Z"
           }
         },
         {
@@ -8062,6 +8124,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:27:06.398Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VINE",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:41:29.023Z"
           }
         },
         {
@@ -8093,6 +8164,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:27:36.117Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ragazzi, ma le emozioni vanno\nvissute,non N",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:41:42.170Z"
           }
         },
         {
@@ -8124,6 +8204,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:27:44.519Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:41:45.814Z"
           }
         },
         {
@@ -8157,6 +8245,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:29:03.005Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Chat asks Mama Bluestina what\nREALLY happened to Nevaeh\nhear what her mum has to say\nTV BLUNIVERSE\nKICK 13527/14000\nKICK.COM/BLUESCLUESI24\nL FOLLOW FOR MORE @bluecliped\nTV 1655) BLUNIVERSE Tv\nTV 1 Si BLUNIVERSE\nKICK 13528/14000\nL FOLLOW FOR MORE @bluecliped @blueciped\nTV 1 Si BLUNIVERSE Tv\nKICK 13529/14000",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:41:55.280Z"
           }
         },
         {
@@ -8188,6 +8285,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:29:05.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:01.759Z"
           }
         },
         {
@@ -8220,6 +8325,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:29:24.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rifle]\nOTAKU\nRABBIT-39 Sniper Rifle\nA speed:372cm/s",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:13.019Z"
           }
         },
         {
@@ -8251,6 +8365,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:29:26.847Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lady is CRAZY\nthis lady is CRAZY\n“this lady is CRAZY AN",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:20.353Z"
           }
         },
         {
@@ -8282,6 +8405,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:29:35.404Z"
+          },
+          "ocrData": {
+            "textOnScreen": "link in bio if hear the\nlink in bio if u u hear (seranaBlost\nlink in bio if u whatiuhear (serana Jlost the plot)\nlink in bio",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:34.398Z"
           }
         },
         {
@@ -8311,6 +8443,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:29:40.037Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:40.225Z"
           }
         },
         {
@@ -8342,6 +8482,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:30:12.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:43.734Z"
           }
         },
         {
@@ -8370,6 +8518,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:30:26.496Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Moment Chat Says That Nevaeh Mom\nBluestina Might Be Messing With Bowdean\nAnd Bluestina Says She Believes In Ab*rtions\nK i E K KICK.COM/BLUESCLUESI24\nKICK",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:42:55.156Z"
           }
         },
         {
@@ -8403,6 +8560,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:30:56.722Z"
+          },
+          "ocrData": {
+            "textOnScreen": "she doesn't have raga\nthey started\nbut even saw a comment\nsaying [ni black in alien stage\" which really:",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:43:00.654Z"
           }
         },
         {
@@ -8434,6 +8600,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:31:27.968Z"
+          },
+          "ocrData": {
+            "textOnScreen": "of this top one\nbit more sophisticated",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:43:15.109Z"
           }
         },
         {
@@ -8464,6 +8639,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:31:30.142Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:43:24.504Z"
           }
         },
         {
@@ -8493,6 +8676,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:31:36.348Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:43:32.412Z"
           }
         },
         {
@@ -8524,6 +8715,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:32:09.729Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:43:38.753Z"
           }
         },
         {
@@ -8555,6 +8754,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:34:30.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "golamen i.\nito agli ospiti d,\ndell'Acqua Park è consenti\nalle o\nveramente Vietato:\nnegli orari di Chiusura;\nrrere nell'area\ncibi e bevande all'interno della Spray area;\n“Cedere all'area con Ciabattine, zoccoli e di tipo\nUso di Pinne, Materassini e in\nuso di Shampoo o Saponi;\nSoffiarg; il Naso, in acqua,\ndite\nda in Caso Necessità.\nProv, dai respo,",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:43:50.521Z"
           }
         },
         {
@@ -8583,6 +8791,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:34:38.409Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:44:03.930Z"
           }
         },
         {
