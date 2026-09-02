@@ -5936,6 +5936,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:18:32.185Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mazara\nAMICA\navel Cente’",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:43.967Z"
           }
         },
         {
@@ -5967,6 +5976,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:23.135Z"
+          },
+          "ocrData": {
+            "textOnScreen": "perfor parte della x",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:55.100Z"
           }
         },
         {
@@ -5997,6 +6015,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:25.256Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:31:10.319Z"
           }
         },
         {
@@ -6028,6 +6054,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:36.807Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Pod: sei ad un spettacolo\nserale del tuo villaggio—\nsei ad un spettacolo\nserale del tuo\nPc: sei ad un spettacolo\ndel tuo villaggio\nTELS RESORTS\nad un spettacolo\nSERE\nRESO",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:31:19.979Z"
           }
         },
         {
@@ -6061,6 +6096,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:15:57.119Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rendi unica la tua vacanza\nTantissimi servizi per un soggiorno\nindimenticabile\nAnimazione Bambini e ragazzi\nLa migliore animazione italiana Un'avventura straordinaria\nRESORT",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:31:34.024Z"
           }
         },
         {
@@ -6091,6 +6135,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:48.906Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tochev\ny pensa\npensando di rm\ndallo",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:31:56.386Z"
           }
         },
         {
@@ -6119,6 +6172,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:51.069Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A SERENINO",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:32:19.578Z"
           }
         },
         {
@@ -6149,6 +6211,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:12:37.843Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DIAM\nANDIAMO\nSERENERESORT\nOLTRE/AD ESSERE",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:32:47.990Z"
           }
         },
         {
@@ -6179,6 +6250,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:12:40.107Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Li Nmmsimorra,como\ndoble\ncomo\nH Laws e",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:01.816Z"
           }
         },
         {
@@ -6208,6 +6288,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:13:53.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Estar enamorado\nelnuestro",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:15.070Z"
           }
         },
         {
@@ -6238,6 +6327,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:13:55.706Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:19.948Z"
           }
         },
         {
@@ -6267,6 +6364,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:06.993Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:25.257Z"
           }
         },
         {
@@ -6296,6 +6401,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:09.621Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:31.789Z"
           }
         },
         {
@@ -6324,6 +6437,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:14.579Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cepacp\ncepaep AAs\nCepacp AAA HanaHoa\ncepaep",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:37.771Z"
           }
         },
         {
@@ -6355,6 +6477,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:20.122Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:46.554Z"
           }
         },
         {
@@ -6383,6 +6513,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:22.599Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bombing\na mi'nifiez milpapa\nme llenaba\nantes d\nbombing pq\nalmi nifiez\na mi milpapé\nme justo\nantes nuevo\nNe encantalel love\nantes d no\nantes",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:33:54.807Z"
           }
         },
         {
@@ -6413,6 +6552,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:48.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Speed: 223",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:00.422Z"
           }
         },
         {
@@ -6445,6 +6593,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:14:54.640Z"
+          },
+          "ocrData": {
+            "textOnScreen": "[USA SERENA\nBLUSA SERENA",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:05.417Z"
           }
         },
         {
@@ -6478,6 +6635,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:38.246Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:11.303Z"
           }
         },
         {
@@ -6507,6 +6672,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:15:57.818Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1 serata userer\nserata @blusere\nerata @b",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:16.370Z"
           }
         },
         {
@@ -6535,6 +6709,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:16:27.185Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di nico\nbruno\nSono tornato settimana\nscorsa dal BLUSERENA in\nCalabria e ho avuto gli stessi\nproblemi che mostri tu.\nFormiche dappertutto e\npulizia camere zero",
+            "confidence": 0.829,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:31.951Z"
           }
         },
         {
@@ -6566,6 +6749,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:16:32.448Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SANS\nmi che passo)\nma io non mi ricordo di una vita senza\ni miei villaggi del\nvawy ING\nma io non miricordo di una\ndel cuore",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:40.977Z"
           }
         },
         {
@@ -6598,6 +6790,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:17:32.371Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:43.243Z"
           }
         },
         {
@@ -6630,6 +6830,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:18:07.449Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BRORILLA APOLOGIZES TO ICON SERENA\nWILLIAMS OVER VIRAL MENTION IN\nBEEF WITH CLARESSA SHIELDS 99\nTRULY\nORIGINAL POST\nWILLIAMS DVER VIRAL MENTION IN\nJAND",
+            "confidence": 0.881,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:52.743Z"
           }
         },
         {
@@ -6662,6 +6871,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:10:39.944Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cada",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:09.023Z"
           }
         },
         {
@@ -11140,6 +11358,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:15:57.119Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rendi unica la tua vacanza\nTantissimi servizi per un soggiorno\nindimenticabile\nAnimazione Bambini e ragazzi\nLa migliore animazione italiana Un'avventura straordinaria\nRESORT",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:31:34.024Z"
           }
         },
         {
@@ -13033,6 +13260,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:10:39.944Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cada",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:09.023Z"
           }
         },
         {
@@ -14983,6 +15219,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:10:39.944Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cada",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:09.023Z"
           }
         },
         {
@@ -15400,6 +15645,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:18:32.185Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mazara\nAMICA\navel Cente’",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:43.967Z"
           }
         },
         {
@@ -15536,6 +15790,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:38.246Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:34:11.303Z"
           }
         },
         {
@@ -26431,6 +26693,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:10:39.944Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cada",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:35:09.023Z"
           }
         },
         {
