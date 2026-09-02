@@ -27474,7 +27474,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:48:58.945Z"
+            "updatedAt": "2026-09-02T18:14:28.135Z"
           }
         },
         {
@@ -29848,6 +29848,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:58:01.961Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:57:17.933Z"
           }
         },
         {
@@ -29870,6 +29879,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:58:10.684Z"
+          },
+          "audioAnalysis": {
+            "transcript": "non hai bisogno di un'altra casa, prendi solo un'altra casa, hai bisogno di una casa che sia Ciao!",
+            "language": "Italian",
+            "durationSec": 40.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:59:05.897Z"
           }
         },
         {
@@ -29922,6 +29940,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:58:44.246Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica a",
+            "language": "Italian",
+            "durationSec": 37.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:00:41.634Z"
           }
         },
         {
@@ -29974,6 +30001,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:59:15.451Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Vuoi elevare il tuo viaggio a Giorgia per Halloween? Prova la suite Bellamere a Giorgia. Spazi privati incredibili, spazi freddi in spalle, spazi di acqua, spazi di fiamma e garagie personali che aspettano ogni paese. Stai a distanza dal lodging budget con palle finesse e spazi condivisi e abbiate la sua ospitalità privata. Atti velocemente per riservare la tua notte a questo hotel romantico di Giorgia.",
+            "language": "Italian",
+            "durationSec": 25,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:02:44.928Z"
           }
         },
         {
@@ -29996,6 +30032,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:59:52.432Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:03:41.790Z"
           }
         },
         {
@@ -30079,6 +30124,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:00:24.889Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:05:53.497Z"
           }
         },
         {
@@ -30100,6 +30155,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:00:32.413Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:08:57.637Z"
           }
         },
         {
@@ -30122,6 +30187,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:00:47.611Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Se ti aiuti a mantenere attivo e a lavorare su tutte le cibi delizie che ti sarai mangiando in Orlando, poi ti divertirai spendendo tempo al centro di fitness del resort. È aperto da 6 a.m. a 8 p.m. 7 giorni a settimana e è un'amica gimnaia. La cosa più negativa con le amenitie che troverai a Westgate Lakes è che, a parte il pool e la piattaforma, la maggior parte di loro richiede un piccolo fiume minimo. While this seems annoying, the one benefit of it is that you'll still get to save money by enjoying the amenities here at the resort, rather than going outside of the resort. But the good news is, kids will always have a blast when they stay here.",
+            "language": "Italian",
+            "durationSec": 41.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:09:00.420Z"
           }
         },
         {
@@ -30144,6 +30218,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:00:58.017Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:12:04.355Z"
           }
         },
         {
@@ -30166,6 +30250,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:01:12.884Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Serene beachfront resort with pristine pool and lounge chairs set against a backdrop of clear skies. The cityscape from above is cloaked in an air of mystery. Don't wait, book your tickets through the link in the bottom left corner.",
+            "language": "Italian",
+            "durationSec": 18.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:12:06.689Z"
           }
         },
         {
@@ -30188,6 +30281,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:01:22.104Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Questa immagine capisce un resort di piazza sereno dove la pianta sottile si streccia fuori nell'oceano vasto sotto un cielo blu chiaro. Non aspettare, book i vostri ticket attraverso il link in destra di destra.",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:12:09.101Z"
           }
         },
         {
@@ -30210,6 +30312,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:01:28.602Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Sorry I cannot hear you, I'm kinda busy I'm kinda busy",
+            "language": "Italian",
+            "durationSec": 7.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:12:11.379Z"
           }
         },
         {
@@ -30232,6 +30343,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:01:37.942Z"
+          },
+          "audioAnalysis": {
+            "transcript": "The location here is unbeatable, just a short walk to Disneyland and California Adventure, with a CVS right next door for late night snacks. After a long day at the parks, that outdoor heated pool and hot tub are exactly what we needed to unwind.",
+            "language": "Italian",
+            "durationSec": 16.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:12:13.770Z"
           }
         },
         {
@@ -30283,6 +30403,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:02:05.399Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:12:16.223Z"
           }
         },
         {
@@ -30336,6 +30465,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:02:27.025Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Non crederai a questo punto esclusivo. Il hotel Coco Key e il resort Waterpark sono irrealizzabili. Un resort di sereno ponte sbattuto in luce, con le sedie di lounge che invidiano la rilassazione, svolte da la bellezza della natura. Nel frame, un cafe a corioli cosi che invita con il display di raffreddamenti cool, setto contro una pietra di bricchi rustici, sotto il sottile brillo di luce ambientale. Don't wait! Book your dream getaway through the link in the bottom left corner.",
+            "language": "Italian",
+            "durationSec": 31.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:14:25.216Z"
           }
         },
         {
@@ -30365,7 +30503,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:48:58.945Z"
+            "updatedAt": "2026-09-02T18:14:28.135Z"
           }
         },
         {
@@ -30387,6 +30525,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:03:12.778Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:14:30.308Z"
           }
         },
         {
@@ -30408,6 +30555,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:03:32.819Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:14:56.842Z"
           }
         },
         {
@@ -30429,6 +30585,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:03:39.777Z"
+          },
+          "audioAnalysis": {
+            "transcript": "1, 2, walk. 1, 2, 3, spin. Backwards, go, go, go.",
+            "language": "Italian",
+            "durationSec": 7.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:15:20.171Z"
           }
         },
         {
@@ -30451,6 +30616,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:03:47.167Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:18:04.965Z"
           }
         },
         {
@@ -30503,6 +30678,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:04:09.814Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Io non ho le mani per le persone che mi hanno lasciato in un'altra città.",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:18:07.217Z"
           }
         },
         {
@@ -30525,6 +30709,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:04:20.770Z"
+          },
+          "audioAnalysis": {
+            "transcript": "In questo resort i bambini entrano gratis Un hotel tutto incluito in Punta Cana che inaugurò questo fine di settimana completamente nuovo O sea, questo ha molto da offrire, molta qualità con il suo parco acquatico per adulti, per bambini Abitazioni di lujo, piscine, piazza, coffee shop, veladeria E lo meglio di tutto è che ha una super tariffa di apertura con bambini gratis Oh my god! Wow! Vi consiglio di approfittare ora perché è una buona offerta per tutto ciò che questo hotel offre. Iscrivetevi al nostro Whatsapp e iscrivetevi al nostro canale YouTube che siamo come arroba Zulime Viajes e ricordate che siamo la vostra agenzia di viaggi favorita Zulime Viajes.",
+            "language": "Italian",
+            "durationSec": 44.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:19:19.494Z"
           }
         },
         {
@@ -30546,6 +30739,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:04:26.982Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:21:33.097Z"
           }
         },
         {
@@ -30568,6 +30771,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:04:35.409Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Tu bist der Wahnsinn Und das weiß ich ganz genau Ich erzähl dir keinen Schwachsinn Du bist für mich die tollste Frau Deine wunderschönen Augen",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:21:35.355Z"
           }
         },
         {
@@ -30589,6 +30801,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:04:55.184Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:21:37.599Z"
           }
         },
         {
