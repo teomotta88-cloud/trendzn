@@ -11593,6 +11593,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:03:06.816Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hanno fatto bene\ntroppo basso il\nprezzo\nRispondi al commento di\nAntonyCors\nprezzo ere\nRispondi al di\ntroppo basso il i\nAntonyCors E\nalcommento di",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:58:41.825Z"
           }
         },
         {
@@ -11615,6 +11624,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:03:54.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a YEARS",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:58:48.575Z"
           }
         },
         {
@@ -11637,6 +11655,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:56:15.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:10.574Z"
           }
         },
         {
@@ -11659,6 +11685,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:15.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LUSEREN\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:17.510Z"
           }
         },
         {
@@ -11681,6 +11716,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:05.650Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@pluserena=",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:29.847Z"
           }
         },
         {
@@ -11703,6 +11747,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:07.882Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(@bluserena",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:38.856Z"
           }
         },
         {
@@ -11725,6 +11778,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:10.295Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:32.053Z"
           }
         },
         {
@@ -11747,6 +11808,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:06:53.646Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:43.096Z"
           }
         },
         {
@@ -11769,6 +11838,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:17.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“AVETE GIRATO TUTTO Il\nMONDO\nMA PERCHÉ OGNI ANNO\nTORNATE IN CALABRIA\n2 Serené Resort\n“AVETE GIRATO TUTTO ll\nbluserena",
+            "confidence": 0.903,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:52.315Z"
           }
         },
         {
@@ -11791,6 +11869,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:19.864Z"
+          },
+          "ocrData": {
+            "textOnScreen": "vacanza 2026 blu serena\ntorre canne",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:59.115Z"
           }
         },
         {
@@ -11813,6 +11900,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:48.938Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:01:13.569Z"
           }
         },
         {
@@ -11835,6 +11930,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:50.972Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:01:22.462Z"
           }
         },
         {
@@ -11857,6 +11960,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:06:17.966Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:01:42.782Z"
           }
         },
         {
@@ -11879,6 +11990,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:06:36.298Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:01:48.053Z"
           }
         },
         {
@@ -11901,6 +12020,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:07:01.485Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:01:55.741Z"
           }
         },
         {
@@ -11923,6 +12050,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:07:23.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Seem.",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:01.775Z"
           }
         },
         {
@@ -11945,6 +12081,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:07:25.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:09.872Z"
           }
         },
         {
@@ -11967,6 +12111,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:06.144Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:19.201Z"
           }
         },
         {
@@ -11989,6 +12141,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:37.073Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:27.452Z"
           }
         },
         {
@@ -12011,6 +12171,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:43.809Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:32.811Z"
           }
         },
         {
@@ -12033,6 +12201,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:50.261Z"
+          },
+          "ocrData": {
+            "textOnScreen": "questa Vacanza\nquesta\nW J Pave il,",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:46.231Z"
           }
         },
         {
@@ -12055,6 +12232,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:09:20.038Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:52.053Z"
           }
         },
         {
@@ -12077,6 +12262,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:05:32.675Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:05.666Z"
           }
         },
         {
@@ -12099,6 +12292,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:10:25.873Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:11.662Z"
           }
         },
         {
@@ -12121,6 +12322,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:10:31.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "felice!\"\nallavoro\npomeriggio:\nsempre\n“Non puoi essere\ncosì felice!\"\ndirigo/a lavoro,\ndomenica\n\"Non puoilessere\nsempre così felice!\"\nmentre miidirigolallavoro\nsempre così",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:21.208Z"
           }
         },
         {
@@ -15408,6 +15618,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:15.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LUSEREN\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:17.510Z"
           }
         },
         {
@@ -15496,6 +15715,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:56:15.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:10.574Z"
           }
         },
         {
@@ -16092,6 +16319,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:05:32.675Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:05.666Z"
           }
         },
         {
@@ -16167,6 +16402,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:06:53.646Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:43.096Z"
           }
         },
         {
@@ -23004,6 +23247,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:06.144Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:19.201Z"
           }
         },
         {
@@ -24493,6 +24744,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:05:17.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“AVETE GIRATO TUTTO Il\nMONDO\nMA PERCHÉ OGNI ANNO\nTORNATE IN CALABRIA\n2 Serené Resort\n“AVETE GIRATO TUTTO ll\nbluserena",
+            "confidence": 0.903,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:52.315Z"
           }
         },
         {
@@ -24528,6 +24788,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:56:15.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:59:10.574Z"
           }
         },
         {
@@ -27207,6 +27475,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:37.073Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:27.452Z"
           }
         },
         {
@@ -29445,6 +29721,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:43.809Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:32.811Z"
           }
         },
         {
@@ -31715,6 +31999,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:08:43.809Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:02:32.811Z"
           }
         },
         {
@@ -33035,6 +33327,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:06:53.646Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:00:43.096Z"
           }
         },
         {
