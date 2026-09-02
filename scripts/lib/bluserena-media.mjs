@@ -36,12 +36,23 @@ export function run(bin, args, { timeoutMs = 60_000 } = {}) {
   return { ok: true, stdout: res.stdout?.toString() ?? "", stderr: res.stderr?.toString() ?? "" };
 }
 
+// ffmpeg e ffprobe NON accettano `--version`: usano l'opzione a trattino
+// singolo `-version` ed escono con errore (8 e 1 rispettivamente) su
+// un'opzione sconosciuta. Chiamarli con `--version` faceva fallire il
+// preflight su binari perfettamente installati — run #16 di entrambi i
+// workflow, con `ffmpeg -version` che due righe sopra stampava la versione.
+const VERSION_ARG = { ffmpeg: "-version", ffprobe: "-version" };
+
+export function versionArg(bin) {
+  return VERSION_ARG[bin] ?? "--version";
+}
+
 // Preflight: meglio fallire subito e rumorosamente che processare 100 post
 // producendo 100 "download failed".
 export function assertBinaries(bins) {
   const missing = [];
   for (const bin of bins) {
-    const res = run(bin, ["--version"], { timeoutMs: 20_000 });
+    const res = run(bin, [versionArg(bin)], { timeoutMs: 20_000 });
     if (res.ok) {
       console.log(`  ✓ ${bin}: ${res.stdout.trim().split("\n")[0].slice(0, 60)}`);
     } else {
