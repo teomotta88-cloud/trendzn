@@ -13,7 +13,7 @@ import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
-import { cleanText, frameTimestamps } from "./ocr-text.mjs";
+import { cleanText, frameTimestamps, linesFromBlocks, wordsFromBlocks } from "./ocr-text.mjs";
 import { downloadVideo, run, versionArg } from "./bluserena-media.mjs";
 import { commitField } from "./bluserena-store.mjs";
 import { runEnrichment } from "./bluserena-enrich.mjs";
@@ -632,6 +632,79 @@ test("il freno scatta anche dopo dei successi, salvando il lavoro buono", async 
     0,
     "i post della serie restano da rifare, non marcati",
   );
+});
+
+// Struttura blocks->paragraphs->lines->words come la restituisce Tesseract,
+// modellata sui dati veri della run #18: una riga di testo reale letta bene e
+// due righe di rumore lette malissimo, che oggi finiscono nello store insieme.
+const blocksFixture = () => [
+  {
+    paragraphs: [
+      {
+        lines: [
+          {
+            words: [
+              { text: "Ciao", confidence: 91.2, in_dictionary: true, language: "ita" },
+              { text: "Bluserena", confidence: 78.4, in_dictionary: false, language: "ita" },
+            ],
+          },
+          {
+            words: [
+              { text: "£5", confidence: 11.7, in_dictionary: false, language: "eng" },
+              { text: "4", confidence: 8.3, in_dictionary: false, language: "eng" },
+            ],
+          },
+          {
+            words: [
+              { text: "Wy", confidence: 21.0, in_dictionary: false, language: "eng" },
+              { text: "UR", confidence: 14.5, in_dictionary: false, language: "eng" },
+              { text: "ARI", confidence: 19.9, in_dictionary: false, language: "eng" },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+test("wordsFromBlocks recupera confidenza e dizionario per ogni parola", () => {
+  const parole = wordsFromBlocks(blocksFixture());
+  assert.equal(parole.length, 7);
+  assert.deepEqual(parole[0], {
+    text: "Ciao",
+    confidence: 91.2,
+    inDictionary: true,
+    language: "ita",
+  });
+});
+
+test("wordsFromBlocks regge blocks assenti o vuoti", () => {
+  assert.deepEqual(wordsFromBlocks(null), []);
+  assert.deepEqual(wordsFromBlocks([{ paragraphs: [{ lines: [{ words: [] }] }] }]), []);
+});
+
+// È il comportamento su cui si sceglie la soglia: sotto una certa confidenza
+// le righe di rumore spariscono del tutto, il testo vero resta.
+test("linesFromBlocks elimina le righe di rumore alzando la soglia", () => {
+  const blocks = blocksFixture();
+  assert.equal(linesFromBlocks(blocks, { minConfidence: 0 }).length, 3, "senza soglia passa tutto");
+  assert.deepEqual(linesFromBlocks(blocks, { minConfidence: 60 }), ["Ciao Bluserena"]);
+  assert.deepEqual(linesFromBlocks(blocks, { minConfidence: 95 }), [], "soglia assurda: niente");
+});
+
+test("linesFromBlocks tiene la riga anche se solo una parola supera la soglia", () => {
+  assert.deepEqual(linesFromBlocks(blocksFixture(), { minConfidence: 85 }), ["Ciao"]);
+});
+
+// in_dictionary da solo non basta: "Bluserena" è testo vero ma nessun
+// dizionario lo contiene. Va usato come segnale di supporto, non come filtro.
+test("il solo in_dictionary scarterebbe i nomi propri", () => {
+  assert.deepEqual(linesFromBlocks(blocksFixture(), { requireDictionary: true }), ["Ciao"]);
+});
+
+test("soglia e cleanText insieme producono il testo finale", () => {
+  const testo = cleanText(linesFromBlocks(blocksFixture(), { minConfidence: 60 }));
+  assert.equal(testo, "Ciao Bluserena");
 });
 
 test("runEnrichment committa a batch e rispetta il limite di post", async () => {
