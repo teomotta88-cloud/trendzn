@@ -2096,13 +2096,13 @@
             "updatedAt": "2026-09-02T12:26:51.964Z"
           },
           "ocrData": {
-            "textOnScreen": "Tecnico GRANSERENA\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi\nPiano Bar",
-            "confidence": 0.79,
+            "textOnScreen": "Lapi\nTecnico\nQ GRANSERENA\nHOTEL\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi",
+            "confidence": 0.776,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:47.151Z"
+            "updatedAt": "2026-09-02T16:35:48.291Z"
           }
         },
         {
@@ -12143,7 +12143,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:02:27.452Z"
+            "updatedAt": "2026-09-02T16:35:29.912Z"
           }
         },
         {
@@ -22423,7 +22423,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:09:43.065Z"
+            "updatedAt": "2026-09-02T16:37:04.300Z"
           }
         },
         {
@@ -23345,7 +23345,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:15:20.421Z"
+            "updatedAt": "2026-09-02T16:35:15.553Z"
           }
         },
         {
@@ -23773,7 +23773,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:18:25.735Z"
+            "updatedAt": "2026-09-02T16:36:04.898Z"
           }
         },
         {
@@ -23804,7 +23804,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:18:32.223Z"
+            "updatedAt": "2026-09-02T16:35:54.506Z"
           }
         },
         {
@@ -23866,7 +23866,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:18:48.488Z"
+            "updatedAt": "2026-09-02T16:37:12.415Z"
           }
         },
         {
@@ -23927,7 +23927,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:07.250Z"
+            "updatedAt": "2026-09-02T16:36:46.631Z"
           }
         },
         {
@@ -24013,13 +24013,13 @@
             "updatedAt": "2026-09-02T12:26:51.964Z"
           },
           "ocrData": {
-            "textOnScreen": "Tecnico GRANSERENA\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi\nPiano Bar",
-            "confidence": 0.79,
+            "textOnScreen": "Lapi\nTecnico\nQ GRANSERENA\nHOTEL\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi",
+            "confidence": 0.776,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:47.151Z"
+            "updatedAt": "2026-09-02T16:35:48.291Z"
           }
         },
         {
@@ -25220,7 +25220,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:26:01.093Z"
+            "updatedAt": "2026-09-02T16:35:08.020Z"
           }
         },
         {
@@ -33276,7 +33276,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:26:01.093Z"
+            "updatedAt": "2026-09-02T16:35:08.020Z"
           }
         },
         {
@@ -33307,7 +33307,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:15:20.421Z"
+            "updatedAt": "2026-09-02T16:35:15.553Z"
           }
         },
         {
@@ -33321,7 +33321,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8AnWUISCiCACgYaBqAA8QgpEziBBo4AAaAPE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XoTf%2FipHXDESuLJ6cPE4PpzSk40%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Serena Hotel\nHotel i",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:35:21.287Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33350,7 +33359,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:02:27.452Z"
+            "updatedAt": "2026-09-02T16:35:29.912Z"
           }
         },
         {
@@ -33375,13 +33384,13 @@
             "updatedAt": "2026-09-02T12:26:51.964Z"
           },
           "ocrData": {
-            "textOnScreen": "Tecnico GRANSERENA\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi\nPiano Bar",
-            "confidence": 0.79,
+            "textOnScreen": "Lapi\nTecnico\nQ GRANSERENA\nHOTEL\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi",
+            "confidence": 0.776,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:47.151Z"
+            "updatedAt": "2026-09-02T16:35:48.291Z"
           }
         },
         {
@@ -33412,7 +33421,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:18:32.223Z"
+            "updatedAt": "2026-09-02T16:35:54.506Z"
           }
         },
         {
@@ -33443,7 +33452,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:18:25.735Z"
+            "updatedAt": "2026-09-02T16:36:04.898Z"
           }
         },
         {
@@ -33457,7 +33466,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAI7S1mCNAWgWwIK8cIAGiiARyBv8SEF4fGrVu~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=OqWlllxA5N0OkgQa4uYmW8U9hB0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "G RACE a",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:36:20.554Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33470,7 +33488,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/osB8cWpeACyjeM6Ug8mD5fdDYlQIEVi4APCjgv~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=QRweZAGmbIwHOp2ypHiuou91HIs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "happening now a\nSerena hotel",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:36:34.866Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33500,7 +33527,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:07.250Z"
+            "updatedAt": "2026-09-02T16:36:46.631Z"
           }
         },
         {
@@ -33514,7 +33541,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osGC4IfD8IBPpLDRsYteJetJLFByGGAkQpIfAN~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ea6e1JgJefzADgBDFzHPOARkxLY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Entertalament\nHARMONIZE ALIVYO\nTINGA SERENA KWA\nKAJALA NA WENZIE\nminobongo\nminobongo Eatertalament",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:36:55.244Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33544,7 +33580,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:09:43.065Z"
+            "updatedAt": "2026-09-02T16:37:04.300Z"
           }
         },
         {
@@ -33575,7 +33611,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:18:48.488Z"
+            "updatedAt": "2026-09-02T16:37:12.415Z"
           }
         },
         {
@@ -33589,7 +33625,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQA7ACI1qisE8IKIXuufAi7NBBHo73I4ClWkpw~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=omPbBxsbG9nHXczPdTkCVxv%2BOM8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:37:25.579Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33602,7 +33646,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQEEJBfEVglVqZ8c7IB0RLA9PjIBFhEBDeSFXU~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gsUWorZKaXSY7vwSa%2Bh%2FMf0o9EY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:37:38.258Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33615,7 +33667,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEBmUqveB0Bi1ijCi74AAEuKiSIAXEMwISiiiT~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=2lRAQ7ln5OXlUo17VunZ%2BBM8FyE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:37:46.461Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33628,7 +33688,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYgubjCVEERihLVeKsUGXAQI4bDeAFiWxgfEIY~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=R%2FIbqJ3D9jodmjre0TfDjjwkLC0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "IRENE",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:37:56.682Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33641,7 +33710,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oAEioCamwCDA06LwDQI2goPmBAlviWBh51ZXI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BrndoY%2FCudoyJKGw%2Bv70VbGvqFk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:38:03.838Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33654,7 +33731,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0B0W6XAxDEikoURBRvVmIABpIavyJi4ZAW9Y~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MVwj5qAgS1AnFqGw%2BKwoMOwEqbY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "NABA 3\nSERENA",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:38:13.104Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33667,7 +33753,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8cghA5RlQBFEV1BEqygOmDrF3fOABODsQeO0H~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XPe85aE7mP4lFk9NdO%2FNe7GyRIs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "IRENEZ",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:38:23.459Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33680,7 +33775,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4LU4g1ErMRxDI7IJBFqAXSDgjc9oBIgfFlEve~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=aoZ6MaKa15DeTljMjqyEn%2FO3drA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:38:33.501Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33693,7 +33796,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocGFlLGsaJfeU6H8pqUeAgwOjjgRgf3RGKVQIA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=L%2F6yMdXwd1OCyTGP%2Fc%2FsxvP0bU8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Loom\nIRENEZ\nWOMAN\nOMAN Qi",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:38:46.905Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33706,7 +33818,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogBFQrB0U3iOIdNtiEGagoiEI3IPoaidA5BYs~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=l%2BgB32AiLjzxQtlZUZQSWz6Kxic%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "OUORE\nBROWSE EVEN MORE STUFF.\nNEW WEEKLY DATA BUNDLES.\n*All bundles valid for 7 days.",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:38:55.798Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33719,7 +33840,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEzUH3gIifBAlUgiDDBN6qNbxhYBREDkIg12fZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=4kW8Wh7I9Y1rw3VU6X0XVx%2Fd4hw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Serena Hotel",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:39:09.071Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -33732,7 +33862,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAImu1dCEAz6NwIw2GIAdiiAIZB26NFvifW1Ju~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rqB4PUe27FETWbOiygflYnV4w%2Bw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:39:23.112Z"
+          }
         },
         {
           "platform": "tiktok",
