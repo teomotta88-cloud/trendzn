@@ -115,7 +115,8 @@ async function transcribeAudio(audioPath, groqApiKey) {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${groqApiKey}`,
-        ...formData.getHeaders(), // Include multipart headers with boundary
+        ...formData.getHeaders(),
+        "Content-Length": formData.getLengthSync(),
       },
       body: formData,
     });
