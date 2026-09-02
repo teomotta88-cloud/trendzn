@@ -11503,13 +11503,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0rbN2EQQDgq1ajf81FSYF0QKeuA0EALDBGRE1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=omWyiYDIn6Q6qyNrv6vfSI3MuW8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Serena sta dicendo il suo ultimo saluto a Frederick. Anche la sua amica è in giro a un hotel che ha aiutato a risolvere le sue sentimenti riguardo Frederick e Iser. L'unica cosa che Serena può fare per Frederick ora che conoscono la verità del passato è sperare che trovi la pazza e lo mandi in casa. Gli dà la sua libertà. Non è nulla del loro peggio ciò che Lizzie ha fatto. While it's a painful memory, she doesn't want it to define their entire lives. So she really is letting Frederick go. We see people from the Republic coming to take him home. Serena's secretary running to him to return Lizzie's ballet shoes because Serena can't keep them anymore. She's hoping that suffices as her final farewell. It's so tragic, it really is. Lizzie's story, Frederick's story, what happened to Serena's family. e la realtà è che è un accidente orribile. Serena sta cercando di muovere la sua vita. Vediamo la sua incontro con gli ambasciatori, parlando dei suoi hotel Se non fosse per mio marito questo nuovo hotel non sarebbe fatto pi Ma cosa davvero sul fondo della sua mente Isa Ma sai cosa in un punto di grado di angst Dice che non ti ammi. Dice che è la persona che si trova che davvero perdono. Non ha detto nulla a me nemmeno dopo il divorzio. Davvero? Tu sei appena disaperto. Ma poi vede qualcuno che sembra Isa e stoppa praticamente curandolo per scoprire che no, no, non era Isa. Ma Ma mentre stanno cercando di ascolare Serena in un luogo per sorpresa, vede qualcuno che si pensa sia Iser e li chiesce. Ma sente una voce dietro la piazza dicendo Chi stai cercando? L'ultimo non-sì Serena? Iser, che grande entrata. Mi sembra di dire che cosa è questa entrata. Ma sappiamo che Man ha avuto un po' di tempo a combattere con il suo stuffo per trovare il suo modo di tornare a Serena. Spero che abbia sortito tutto con il suo fratello evillone. E ha il potere che ora ha bisogno di proteggere Serena so they can be together and they can be happy. I do wonder what he was up to during their separation, but it's clear it was painful for the both of them. Iser's just better at putting on a strong face than Serena is right now. She really, really terribly missed Iser.",
-            "language": "Italian",
-            "durationSec": 131.3,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:28:32.700Z"
+            "updatedAt": "2026-09-02T12:40:05.885Z"
           }
         },
         {
@@ -19084,7 +19085,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUFGQAM1IIEV6voGqYaiBQBVGNioAUlFZ9DAL~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=D%2BNjawGOjb10kxBw71dwqq6OmBE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:36:02.833Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19097,7 +19108,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEp4AE2BPwJgrr5rAaKC5E5UyAAhiio9IqBiB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=3Uwe2iZFHlYyQ3rnoPx2VVpJnM8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao! Grazie a tutti. Non è difficile, se vuoi. È solo un gioco di ricordamento. Cosa c'è da rilassare?",
+            "language": "Italian",
+            "durationSec": 66.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:36:11.878Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19110,7 +19130,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/owAWWavIPCIpiAziLBB3Kg48vAkAQCi4EYAjE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=m1n4JttwKiLv3mKu5JMnjnyqOJU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:36:14.064Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19123,7 +19152,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/osERS7IifN7FGCDaBgf8FcAUBTIwRaFdBlYqVE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=jp62Lyb9W%2BOceeQlhJVu90fAHEE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:37:59.538Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19138,13 +19176,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0rbN2EQQDgq1ajf81FSYF0QKeuA0EALDBGRE1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=omWyiYDIn6Q6qyNrv6vfSI3MuW8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Serena sta dicendo il suo ultimo saluto a Frederick. Anche la sua amica è in giro a un hotel che ha aiutato a risolvere le sue sentimenti riguardo Frederick e Iser. L'unica cosa che Serena può fare per Frederick ora che conoscono la verità del passato è sperare che trovi la pazza e lo mandi in casa. Gli dà la sua libertà. Non è nulla del loro peggio ciò che Lizzie ha fatto. While it's a painful memory, she doesn't want it to define their entire lives. So she really is letting Frederick go. We see people from the Republic coming to take him home. Serena's secretary running to him to return Lizzie's ballet shoes because Serena can't keep them anymore. She's hoping that suffices as her final farewell. It's so tragic, it really is. Lizzie's story, Frederick's story, what happened to Serena's family. e la realtà è che è un accidente orribile. Serena sta cercando di muovere la sua vita. Vediamo la sua incontro con gli ambasciatori, parlando dei suoi hotel Se non fosse per mio marito questo nuovo hotel non sarebbe fatto pi Ma cosa davvero sul fondo della sua mente Isa Ma sai cosa in un punto di grado di angst Dice che non ti ammi. Dice che è la persona che si trova che davvero perdono. Non ha detto nulla a me nemmeno dopo il divorzio. Davvero? Tu sei appena disaperto. Ma poi vede qualcuno che sembra Isa e stoppa praticamente curandolo per scoprire che no, no, non era Isa. Ma Ma mentre stanno cercando di ascolare Serena in un luogo per sorpresa, vede qualcuno che si pensa sia Iser e li chiesce. Ma sente una voce dietro la piazza dicendo Chi stai cercando? L'ultimo non-sì Serena? Iser, che grande entrata. Mi sembra di dire che cosa è questa entrata. Ma sappiamo che Man ha avuto un po' di tempo a combattere con il suo stuffo per trovare il suo modo di tornare a Serena. Spero che abbia sortito tutto con il suo fratello evillone. E ha il potere che ora ha bisogno di proteggere Serena so they can be together and they can be happy. I do wonder what he was up to during their separation, but it's clear it was painful for the both of them. Iser's just better at putting on a strong face than Serena is right now. She really, really terribly missed Iser.",
-            "language": "Italian",
-            "durationSec": 131.3,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:28:32.700Z"
+            "updatedAt": "2026-09-02T12:40:05.885Z"
           }
         },
         {
@@ -19158,7 +19197,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oYepeAVIjQIAckEebEIAcKGRAKOLIHDXEA6OuP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Lz%2FeaUrCo%2BpEy8%2BHuUnOzIxhSxA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:40:08.285Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19171,7 +19219,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oc1TiUsRiGshZgqC4EAB4bavqBI5PBUnCIwzm~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=cr7Lc5KCmJ68KZHQeQaFYHcTu2Y%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 17.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:40:10.381Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19184,7 +19241,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogLtwTtqTAvJG7BGIk0fZGfFwtPegfYaR84AQG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=mhzIFsVi%2FU0snFK0JNdxe78C3%2BQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ruhanga ya kukunda na kukunda, kani ya peza na p'a, ya pezo muccia da po'nja na omuceno, da ue' nio' e' si' uomuceno. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:41:38.508Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19197,7 +19263,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oABLiFGxLA255ZzRArPfAFxElOfEIIAeAUsbBI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ksKBQb97etfx0kzGS76bXuM0vzM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Rob, vieni qua! Sto cercando di fare il transfert daily Non preoccuparti, è bellissimo qui! Vieni! Rob, Rob, Rob! Guarda la città, papà! Rob, devi provare la città, è incredibile! L'hai visto? Oh mio Dio! Sto mangiando! Sto cercando di fare il transfert daily Ma non sei cattivo? Come posso aiutarvi, Rob? Guarda, questi ragazzi mi stanno spaventando, sto cercando di fare il mio show di giornali di trance, ho bisogno di farlo. Hai qualcosa con cui hai un po' di pazza e tranquillità? Non ti preoccupare, ho una soluzione per te. Benvenuti. Wow, è quello che sto parlando. Pazza e tranquillità alla fine. Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 73.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:44:03.037Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19210,7 +19285,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUNkt0CtIEHIxvoBiKqEWD4BVIHfcnufgAdFNR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=IAcmibp6MXQCvpnuGn%2FBjDdft98%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:46:39.758Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19223,7 +19308,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o4DBeZfmEVJoqFPEas0BAKVcEXQEiQZARqSdsV~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=FoEIIjdIbcbVokoXWVbszrCL87U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "A bigger suite does not guarantee better service, and one of those is much easier for hotels to show before you book. Every hotel website is full of room photos, ceiling height, marble bathrooms, private terraces. Those are tangible, easy to market and easy to compare side by side. Service is different. You can't photograph attentiveness. You don't know how quickly someone answers the phone or remembers your preferences until you are actually there. That's why I pay attention to staffing. Four Seasons' new yacht launched with a one-to-one guest-to-staff ratio, and it's one of the headline luxury features. Questo ti dice qualcosa di importante. L'industria in sé sa che il servizio eccezionale viene da avere abbastanza persone per actually deliver it. Un suite più grande è un investimento di un tempo. Un grande servizio è un costo ogni giorno. L'intervistare, allenare e ritirare staff eccezionali è una delle parti più difficili di running a luxury hotel. Questa è una delle ragioni per le quali non vado a hotel fino a quando sono stati aperti per sei mesi o neanche un anno. Ho attenuto molte aprile di hotel e il servizio è solitamente un messaggio. Bari nubili, staff confuso, servizio di turn down che non è mai avuto e tutto è molto veloce. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 84,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:48:15.453Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19236,7 +19330,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okIl71gA4TAX8QKqkvjf3K8lfsMLDC6g3PfVco~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Hsl6bXMt0mVfEmAnl5KAt9FDAKA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I was covered by his love, he said to me, my son, I am your dad, and again he said to me, I love you, I got a new song to sing, I said, come on baby Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:51:20.246Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19249,7 +19352,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMGEbk5cISmEcZkBPS2DfBfRGmAFBZpgDNaqI1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iCAVP4lQWeSCBLhBajjiv7NH2vY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 87.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:54:17.311Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19262,7 +19374,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osuXEU1lgB6RAEjYqdI2XJFuEoDUSJfkBvBeDi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=nw3wN33t0cp7iEFrI2zXt2AWRC4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 6.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:54:34.806Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19275,7 +19396,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:57:18.183Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19288,7 +19419,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQqCUjIGSBCQLAFRtBNQ2tDIeiEugOf6jSxDEQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qeLQYPWYMUMJa%2B6RDK0STSSOEsg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica La città di San Marco Grazie.",
+            "language": "Italian",
+            "durationSec": 61.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:57:40.159Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19301,7 +19441,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocQjX4VAVsz60jeUGDQDbKLOFoJCIAemIqIfK0~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Fc6clHUTj6KBFMCzeXBWsjElDeE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 42.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:00:45.451Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19314,7 +19463,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEIABVPvpABi6PmEaoSzpBTUqXiISc7Y7y6I9~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=VnO2hB4pLKFuHw3iT59eVjtjJzQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie mille.",
+            "language": "Italian",
+            "durationSec": 54.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:02:51.849Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19327,7 +19485,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4eU3nAKeAQnodeXFGjVnICWrID4LIUkIVkQy3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=s9P044ZQpZldVKlxj4tAHJBb2VY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:04:46.106Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19340,7 +19508,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMWj06EIIBgqkwlfHqFUU067FNhVwEA3DBKRCe~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XhSiLHEvyUDMsIcTh8JmVqMqeCs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:06:36.621Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19353,7 +19531,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIIUIlpp1Iu7CHAwsASizajiIDBDkvAcWwfymr~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=tlgGSBm3KgmiWVm%2F58sUzSRhdbk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Neonio quagara quozzi, quagara ngakonji jendi, quentula nendoza kwebio, biokoze oleri njaliami, kakomo kaliwo wakandukomo salami, wakarabana yeti wakakuata, si jokila we wakamangolaniakakubo, elate wakakuata, Nocuna cuna nendiga pola pola Songo genda mulo fula Yadechiso wachidabate wa imirida Yande wachia wasigalotambola Buentola nendo oza kweru Yokoze oredi njariange Buentola nendo oza kweru Nel seggio che la...",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:06:40.895Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19366,7 +19553,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oILtVdzVKA0tHwtCItBVEjYCkepeQKrjIeIAIG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hFRvbev%2FvjC28XZZy67Af6pyxTk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ma ti maio te asilica, ue aulina ti esuai Gasagia camugamba asilica, ma ti maio te asilica Ti esu katonda wange, wana wada uldi unsasile Jesu akoleve udo, mba wanonga nangenda wai Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:07:39.268Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19379,7 +19575,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYBE1cFlLQD4lkFA7cogfiEnqpQfRTQBUqsKXB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=CSp5G55ZjLltoqJwCOzxeC8Fo5E%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:09:48.289Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19392,7 +19598,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/os0IZQxZl6UAI2bnbpEOCF5IjDeDXAe4rQfjEj~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=r444N1bKm1f9DPu6lErM9edVRdc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:09:50.718Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19405,7 +19620,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o09iQqFZ6LUyD0wIBPDAQbiiRcqgdBqEeHEcfI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=OqxOtjMdoufWzVpE%2FBIFxn6%2FN30%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 26.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:12:56.913Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22995,7 +23219,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oABLiFGxLA255ZzRArPfAFxElOfEIIAeAUsbBI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ksKBQb97etfx0kzGS76bXuM0vzM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Rob, vieni qua! Sto cercando di fare il transfert daily Non preoccuparti, è bellissimo qui! Vieni! Rob, Rob, Rob! Guarda la città, papà! Rob, devi provare la città, è incredibile! L'hai visto? Oh mio Dio! Sto mangiando! Sto cercando di fare il transfert daily Ma non sei cattivo? Come posso aiutarvi, Rob? Guarda, questi ragazzi mi stanno spaventando, sto cercando di fare il mio show di giornali di trance, ho bisogno di farlo. Hai qualcosa con cui hai un po' di pazza e tranquillità? Non ti preoccupare, ho una soluzione per te. Benvenuti. Wow, è quello che sto parlando. Pazza e tranquillità alla fine. Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 73.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:44:03.037Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24181,7 +24414,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:57:18.183Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24617,7 +24860,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMGEbk5cISmEcZkBPS2DfBfRGmAFBZpgDNaqI1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iCAVP4lQWeSCBLhBajjiv7NH2vY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 87.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:54:17.311Z"
+          }
         },
         {
           "platform": "tiktok",
