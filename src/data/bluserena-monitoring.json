@@ -13147,13 +13147,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMkBbebADvWDGV37Kg1R8mfbEhFFd7EqgQMQMg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EHy212uhtUmkicdRYA67nVhmGZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Musica",
-            "language": "Italian",
-            "durationSec": 15.9,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7669339690344140054: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
-            "updatedAt": "2026-09-02T11:02:42.126Z"
+            "updatedAt": "2026-09-02T11:23:17.026Z"
           }
         },
         {
@@ -14171,7 +14172,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oIbDVIq3CZRoE1KEFDArvIQDYQfmbcJBmVfhM3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gkmTsguhcL2X3yhCbQkx83HIMJg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Cerchi 3 notti a Ferragosto in uno dei villaggi più belli in Sicilia? Ti portiamo al Serenusa Village di Licata. Dal 13 al 16 agosto, 3 notti in pensione completa, soft all inclusive, con animazione, miniclub, sport, piscine e spiaggia. Scrivici su WhatsApp o chiamaci per il tuo preventivo personalizzato. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:20:43.324Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14184,7 +14194,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEqWmG2EWBjErAFRtD0IamYB5dETQ3f9Y4vDEe~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=b7Ox0JRB1R4tGkswQKc6PWsgsjQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Pensi di non trovare disponibilità per due notti ad agosto in un villaggio in Sicilia? Vieni al Serenusa Village di Licata dal 4 al 31 agosto per minimo due notti con pensione completa, softball inclusive, animazione, miniclub, sport, piscina e spiaggia. Scrivici su WhatsApp o chiamaci per il tuo preventivo personalizzato.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:20:45.797Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14197,7 +14216,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oQBfbahfRqEB2VE5BADOKHFvolcjAA2EYz8YIE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=U8OqYobMK73ckrFMcFOalnSYvzI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La maggior parte dei persone non lo sa, ma uno dei più bellissimi hotel di risorto che si possono esperienziare in America del Nord può sentire sorprendentemente affidabile. Benvenuti a Rio Emerald Bay in Mazatlan, Mexico, un'esplosione di mare massiva dove la vista si vede molto più costosa di quello che potresti aspettare. Con più di 1000 abitazioni, molte palle, restauranti, bar e anche il suo parco di acqua, questo posto sembra più come una città di vacanza piccola di un hotel. Ma qui è dove le cose diventano interessanti. Invece della piccola mini bar che si trova in un'hotel, alcune case hanno dispensatori di drink che sono costruiti proprio nella piazza, dando allo spazio un tocco sorprendentemente unico. touch. Step outside, and the choices keep coming. You can relax by the pools, enjoy a meal near the water, or simply spend the afternoon taking in the Pacific Ocean. And just beyond the coastline, you can see the Venados Islands, where visitors may spot seabirds and marine wildlife in the surrounding waters. But staying inside the resort isn't the only option. Head into Mazatlan and troverete il famoso Malecone, fissato con cibo locale, strade colorate, mercati, architettura e incredibili visi pacifici. Quindi qui c'è la vera domanda. Spenderesti l'intera settimana a piacere questo bellissimo resort, o lasciare l'hotel e esplorare tutto ciò che Mazatlan ha da offrire?",
+            "language": "Italian",
+            "durationSec": 84.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:20:50.398Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14210,7 +14238,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMp86qScfAByB0DhESfaQoQgYFRDXjYVHSEIDy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=9OpAkGJckVxD7WAsF%2BuOllVodEo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:20:52.639Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14223,7 +14260,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ooleBF1EEICEQJghZBfWrAbARAmvqDm5DA4ZCZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Q8BcEjAWQp5PIwn%2F83HBpAC6670%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Qui siamo al Serena Resort, la nuova stagione di 4 stelle di turismo in Huatang due chilometri fuori, ma in un'edilica baia e andiamo a guardare un'altra stanza e a vedere la vista più importante un terrasso privato guardate questo Niente senza zicali, ovviamente. E poi... Un bel bed. Molto ben finito. E... Onestamente, spenderete tutto il vostro tempo solo su questo terreno, è fantastico. Storaggio, spazio... e il safe e così via e poi finalmente entro il lavabo con la sciogliera di passaggio ma immaginate di svegliarsi a quella vista andiamo a vederla una volta di più solo per dire ciao e l'avvantaggio di questo è che hai questa baia e tutta questa tranquillità, ma con un shuttle ogni ora in Fartown, quindi puoi combinare un giorno di relaxazione totale e poi avere la vita di Fartown in mattina. Una combinazione perfetta.",
+            "language": "Italian",
+            "durationSec": 91,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:22:10.363Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14236,7 +14282,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYyitDSIsFFYDtffIA0o74UnwpjX0AjbEIfCEV~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HjslIjjyKLlr947yFLeoTIwXnrU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'è un nuovo resort in Punta Cana che devi conoscere. È il Serenite Caribbean Club. È un nuovo hotel pensato per divertirsi in compagnie con amici o famiglie. Ha una varietà ampia di abitazioni e tutti hanno terrazza privata. E con una vista spettacolare, sia al mare, ai giardini o alle piscine del resort. Nelle sue installazioni troverai 8 restauranti tematici, 10 bar e 5 piscine. Inoltre, un rio lento e una zona di tobogane per adulti e bambini. E se vuoi un momento di rilassamento, ha anche un completo spa e wellness, con piscina climatizzata, jacuzzi, circuiti d'acqua, sauna finlandese, ducce, 7 cabine di trattamento, boutique e anche salone di bellezza. Quindi, sai, se stai planificando le tue prossime vacanze, questo hotel è un'opzione che vale la pena conoscere. Consulta le offerte per apertura e scopri tutto ciò che questo nuovo resort ha da offrire.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:23:11.601Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14249,7 +14304,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ow6CUPmMEoAIBtAIA52iAoBT3BJiEwpU17fgAB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=I5NL4QVuOwLlIJNxNbWC4S2tKnk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ma è questo il miglior resort di Sharm El Sheikh? Di resort 5 stelle all inclusive a Sharm ce ne sono tanti Ma forse questo potrebbe essere il migliore Ovviamente i drink sono inclusi tutto il giorno In tutti gli 8 bar all inclusive in giro per il resort E chiaramente anche il cibo nei 3 ristoranti a buffet In più ce ne sono anche altre alla carta Come la Steakhouse, la Piazzetta o la Cava ad esempio E le stanze, come vedete sono davvero spaziose Di piscine ce ne sono più di 10 disseminate per tutto il resort E con anche alcuni bar a bordo piscina E in più c'è anche il Lago Salato, un'enorme piscina con acqua di mare Per quanto riguarda lo sport ci sono tre campi da padel, uno da beach soccer dove organizzano anche tornei ufficiali, due da beach volley, due da ping pong e uno da pallanoto. Ovviamente non può mancare la palestra con vista mare e c'è anche la spa con piscina, idromassaggio e non solo. Nella parte centrale ci sono anche negozi, farmacie e supermerche e per la sera ci sono diversi lounge bar, l'arena con gli spettacoli dell'animazione italiana e russa, la discoteca Stargate e il casino, anch'esso già all'interno del resort. E un'altra cosa davvero comoda è che è presente nel resort anche il diving center Che organizza tutte le escursioni in barca Come quella a Ras Mohamed di cui vi parlerò nel prossimo video A proposito di mare la spiaggia è lunga quasi 2 km E ci sono 4 pontili per fare il bagno davanti alla barriera corallina E calcolando che la barriera corallina del Mar Rosso è una delle migliori del mondo E che si trova a soltanto 4 ore di volo dall'Italia Direi che un pensierino per venire qui è da fare Questo è il Domina Coral Bay di Sharm el Sheikh in Egitto",
+            "language": "Italian",
+            "durationSec": 77.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:23:16.012Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14264,13 +14328,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMkBbebADvWDGV37Kg1R8mfbEhFFd7EqgQMQMg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EHy212uhtUmkicdRYA67nVhmGZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Musica",
-            "language": "Italian",
-            "durationSec": 15.9,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7669339690344140054: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
-            "updatedAt": "2026-09-02T11:02:42.126Z"
+            "updatedAt": "2026-09-02T11:23:17.026Z"
           }
         },
         {
@@ -14284,7 +14349,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMgv4QBGyZBIE4UVrxdpliEwEBNlEiEaAkwwC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=7uOYxAUOYyk5riJt3ZIg9EifEAE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 50.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:23:24.483Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14297,7 +14371,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEIDU8Ak8q7eIENfkskDJsAAEBoT55AEpAfFj6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=t5SqkhsXa99vSbjT%2FBga44gFIbg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Saria questo qui il resort Alwin Cruz V01 del Brasile? Nella arrivata sei già impacchettato. È un resort molto, ma molto bello. Impeccabile, sai? Con una qualità assurda in ogni dettaglio. Cadella di massaggio a volontà. Questo è vero. Hai già visto questo in alcun resort? Lì c'è sì. E così, a livello di conoscenza, inizia a capire il livello di entrega. Un complesso di piscine che è sensazionale. La piscina gigante, lì al bar mollato, è aquecciata. la bifida con il giochetto acquatico è aqueciata e c'è più piscine coperte aqueciate ora guarda queste jacuzzi ragazzi, ho pensato che fosse top Guilhermão e la gastronomia mi piace mangiare, io anche il buffet non è solo bellissimo è anche molto gustoso per i fan di churrasco, come io la regione mi piace molto ha tutti i giorni e corti di molta qualit la reposizione molto efficiente e infatti su questo dovrebbero lanciare un corso e dare andare a alcuni l del nord est C una pizzeria tre bar di drink un caff colonial che sensazionale di cagare i buti del bolso traduzendo impacchante C'è un freezer di alto atteggiamento spalciato per il resort intero con cerveza, refrigerante, acqua, piccolè, sembra che ti stanno perseguendo lì nel bicicletto c'è il freezer lì dove ci sono gli animali c'è il freezer ma parlando di questo, l'attività è quello che non manca cavalgata, pesca, strada, barca, arvorismo, tirolesa, pedalina, stand up un contatto con gli animali, infine, è tutto molto top la ricreazione infantile è sensazionale il Simão, che oggi è mio fratello di resort, un parcerazzo che sta lì divertendo con la famiglia ha dato semplicemente nota 10 di 10 ma c'è un dettaglio questo resort non ha piazza e quindi voglio sapere da te puoi considerare il Fazenda Park il resort all inclusive 01 del Brasile anche senza piazza?",
+            "language": "Italian",
+            "durationSec": 121.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:24:43.825Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14310,7 +14393,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYzaSSwIigBALqRiRuANl1Q4xDRAICCgIzXlfF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MlYkuxMQM43%2BgdxRGEJcba4weeQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:24:47.939Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14323,7 +14415,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osPK0iM7RoDVrRmBIRaiEQAkIGzSJzzO9AvBK~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=F19Che4%2BObOu8NT%2BIfrm2bO2%2FUI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 39.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:24:51.013Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14336,7 +14437,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8IIdO1AnVnOW6gMBAEVoRiCqAABbwf9i7CA5v~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=yM4b9u%2B%2BOaT2RaS%2FCKeFrmcG0as%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sono stata in vacanza per tre giorni recentemente e mi avete chiesto come si trovava questo posto su Instagram Si trova a un'ora da L'Anne Si trova a Rauh, Bentong, Paha Il nome del posto è Senara Hills Questa è la sua stanza La cosa più importante è che la stanza è molto pulita Quando siamo in stanza, sempre sentiamo il rumore della riva Sentiteci sentite? è bello, no? quando vi arrivate a Sunara Hill Parking i staff ci prendono ora siamo arrivati al resort dopo aver arrivato ci danno i drink di benedizione è stato molto bello poi dobbiamo infilare un form dopo averlo infilato ci siamo andati a cercare dopo aver cercare ci sono i cibi ci sono 4 cibi cibi, l'inverno, la mattina e la cena i cibi sono in stile indonesiano e molto buono. Se vi restate, le attività di avventura sono in pack, come il hikin, il water trekking, il river walking, il fall jumping, il sunrise view, il bonfire, il ATV ride e tante altre attivit Non ci sono extra charge Dopo questo siamo pronti per il hikin Dopo il hikin possiamo andare al waterfall tv ride in a madre in aria e chi vi fissi un bel carico in the world e stracciaggiosi la caprona una hiking panteca re di aito ai king panini da nambo hanno water folk pomodoro 30 to 40 minute a chi non ha imparato che scegliere da roma hai letto a nevisio in connetti le eroe come un ene cavallo baioteri le innala guida camorino a bb nel pono ne da inizio in italia in italia ad anale na guida che vede in che non va per evitare il legno inglese staff a volo se fa parte con la gaga iphone o anche ieri in un coro pudo experience a rinunci in the moment se ne rompa rompa rompa e in gioco ne è ad ecco però non è fresca parte bonfire accadute che ride ai toller night views curio rompa rompa nella ricci ma relaxing a un indenne night in alla ora tutto potete cari li e il limone in six tic la nana sunrise più pacchetto che cambiato in the view o mai corrompa rompa rompa peaceful a rendeci una rompa Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 153.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:26:04.643Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14349,7 +14459,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/og6B7EPSciVJsIYogAIyiO8vHKpIaLE4ABz9i~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gWQAK4v8Z3S2%2F76nXXUcSRzAJJI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi sono voluta divertire la mia famiglia e sono venuta a Sanremo per restare con la famiglia. Posso dire che è uno dei miei posti preferiti per il rilassamento. Anche voglio dire che a Sanremo c'è una coda molto buona. Io mi stavo stendendo di coda. Come vedete, ho fatto un make-up molto speciale. Anche a me piace molto questa macchina, perché non devi fare niente qui. Il bassone è tutto per te. Oggi tutti danzavano, è stato molto bello. Poi si beveva i succhi, si rilassava. La parte più interessante è la sauna. qui puoi parlare di più di più quindi penso che questo posto sia uno dei posti più buoni per restare con la famiglia in tutto il mondo mi è piaciuto, grazie a Sanremo",
+            "language": "Italian",
+            "durationSec": 42.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:27:16.965Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14362,7 +14481,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/osuBTQU7EHVAG1gnD6IXCLCIjDxGfAq4HQeeD2~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=uTwGxkZt1OmCiAz9jLkE6AoM1%2FQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:27:21.556Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14375,7 +14503,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o4BB4jBIi577NuvZZIn7AAGCcwTEIpAPw1eCGi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=6FKKDp%2BQl%2FphrLxW%2BUOa1Ksk24A%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:27:23.842Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14388,7 +14525,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4MQQQeiAAsFGYfsGLe8IqGFPwE1QIRiGQlfNI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=M8yYFZ7uLgEq%2FyGcotDgNDKH19k%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi che ti sia piaciuto l'esperienza di un breakfast floating, una vista che è molto costosa, che se sei fortunato, è un marco di nuove, è molto worth it, perché ti piace la viaggia. Se vuoi che viaggia, asciugati a me e a tutti i miei amici, che hanno la mia esperienza, appello a che si scegliano i loro rame. Ciao, ragazzi! Per oggi, in un altro video, per aiutare la Davao City, di Nisa Marilov District, Mag overnight di I.M.I. cuyog akong family di Nisa Serenity Hills Mountain Resort. Pag abot ninyo di Nisa Marilog District, sulud lang mo di Nisa Dato Salomai. But anyway, for the exact location, puidi rin ninyo ma GPS makala agan. Unahan ragyod Nisa Bembofar. 10 to 15 minutes ni sha from the highway and makasulud ragyod any types of vehicles. Second time na lang mo di Nisa Serenity Hills makala agan. En karon, gi cuyog ragyod na ako ang akong family di R.I. En ke overnight stay man mi karon, ako tamong i room tour. Good for 15 Packs di siadiria, mga kalaagan, for 15,000. And as you can see, luagga a iuang sulod. So diri, pwede mo magkaraoke, nai luagga, nga living area, nai dining set, with fully equipped kitchen, nga mga kalaagan, makaloto. Ragion mo dini, mo nang food nalang iniuang dal on. So sakata dini, sa higdaanan, nai tulokar rooms, diri, mga kalaagan, nga pwede matulogan sa six katao. Nen duha kabokang CR, diri, asa sulod. So diri, anapunta, mga kalaagan, kai Good for 15 Packs mani, e a 7 bed di ria immagina se stai qui e ti guardi e non vedrai niente è un postcard e è molto comodissimo e non è un'accomodazione e ovviamente a parte la mountain hills view hai accesso a un infinity pool e 2 pax di room per 4 pesos So moni assoluto ma calagano double size bed puoi size pu essere un karaoke una cucina completamente equipaggiata con un set di dinamica e un CR E hanno un'acqua per 3.000 pesos, quindi, il secondo è un'acqua per 3.000 pesos, e un bed completo, ragazzi. Il bed è di un bed king size, e ha un'acqua per 8.000 pesos. Un bed completo, ragazzi, e un bed completo, ragazzi, e un bed completo, ragazzi, in un'altra acciaio. La viaggia è una veranda di macchina che potrà aiutare la viaggia. Ci sono due ruote di macchina per il master's bedroom e un'altra per la famiglia. Ci sono due ruote di macchina e un'altra per la cr. Ci sono due ruote di macchina per la serenità. Puoi anche fare team building. Puoi anche dare un day tour di macchina. Ci sono anche dei spot di foto. E puoi rilassarti di macchina. Il vento è molto buono in Marilov District. Se stai a casa, puoi usare il karaoke, puoi usare l'infinity pool, e se non hai mai bevuto, puoi orderare anche la cena. Il tempo è giusto, non hai mai bevuto, ma hai orderato la cena. E durante la notte, puoi usare la veranda, perché il vento è molto freddo. Il giorno dopo, ci sono le serenità, e il buon breakfast, che ci prepareranno la cena. E per completare la tua esperienza di Serenity Hills, puoi avviare il loro breakfast a blocco, è un buon shop per prendere foto con Instagram. E per completare la tua esperienza di Serenity Hills, puoi avviare il loro breakfast a blocco, è un buon shop per prendere foto con Instagram. E questo è il video di oggi, a presto!",
+            "language": "Italian",
+            "durationSec": 227.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:28:25.786Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14401,7 +14547,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ogvbiV2zEeWfAFCEAMqQRAI84MZGCmDxIQ0fjS~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=VVPQN21Dt2BUuFa%2BT6E4ms5ZcMQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, sono Charles di Orcawa e sono in San Juan, Puerto Rico e sto a Sanesta, quindi venite a visitare la mia stanza. Come potete vedere, non ho una vista, questo è un resort a fronte della piazza, ma sto affrontando la chiesa di caccia, la lobby, l'area di caccia, l'aeroporto è solo 5 minuti da qui. Quindi andiamo a guardare questa stanza. Quindi, facciamo la prima cosa, perché l'aereo non è in questo luogo e è molto freddo. Sono un po' sorpreso perché sembra molto moderno. Sono stata in Puerto Rico prima e infortunatamente era dopo il terremoto e abbiamo provato un hotel di valore. Quindi sembra molto comodo e molto business minded perché noto subito che ho molti caricatori USB. o usb, quindi lì vicino al mio sedere ho un bel piccolo notepad e abbiamo il telefono in casa, quindi questo è il royal sinesta san juan e qui c'è la tv vediamo cosa fa questo non si muove, un po' di area per mettere le cose se bisogna, si ha questa bella piccola tavola, hanno un ristorante in casa, ho informazioni sul mio cartone ma c'è un po' di informazioni qui, in effetti, usare i linfetti. Quindi lo stesso setup su questa parte usb due plug termostato e qui ci sono ancora usb un sacco di lombo un cannello di riciclata ho acqua in casa che tipo di caff hanno qui oh, è bello, come questi piccoli poti, dovrei provarlo in mattina perché ho un rapporto di 4,55 quindi sarò stupita, abbiamo anche un po' di tè, vediamo cosa ci hanno dato, decaffeinated haney incense never heard of english breakfast and decaf so what else do we got a little drawer probably have a little fridge right there this should be my closet perfect safe iron board there's my iron and some dirty clothes bag so moving on to the bathroom it's actually kind of grande più grande di molti altri hotel ma sto dicendo molto spazioso e moderno ci hanno dato questo pantalone a check-in che siamo un resort quindi penso che abbiamo come tavoli e cose così, quindi c'è la loro brand di lavori per la testa, ho tavoli e oh, vedo, oh, questo è interessante, guarda la tavola, mi piace un po' la lavora, non è troppo male, quindi questo è Beachfront, hanno un pool e io andrò a mangiare perché sto mangiando. Ho solo un'ultimo volo, ma abbiamo iniziato abbastanza presto questa mattina o avevo un giorno lungo ieri, ma questo è Travels with Orkoa, Hotels with Orkoa, questa è la mia serie Come Tour My Room e sono in San Juan, Puerto Rico, al Royal Celeste Resort. Spero che vi piaccia. Ciao!",
+            "language": "Italian",
+            "durationSec": 187.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:29:57.985Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14414,7 +14569,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocpEBrfDUQsxRQqEyQ2ESXWjeBYApE2mFFQAQg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Y%2F%2B5Os1xAcySVYC3TEJLbnorOK0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questa è la nuova propria safari a Serengeti e potrebbe essere la più bella posta che abbiamo mai vissuto. Dall'infiniti pool, alle classi di yoga e ai migliori money che si possono acquistare, si concentra sull'elastica e la salute nel mondo. Da la cena in un'acqua o la cena a uno dei loro due restauranti, El Iwana sempre porta esperienze di 5 star a tutte le loro proprietà. Ma non è tutto. C'è un lungo tunnel che ti porta a un foto hide, un'area cinema per la vino a notte, un'area di vino con vino da tutto il mondo, un supermercato per prendere qualcosa da casa e una barra che si vede ancora meglio a notte. Le sue suite con una cama comoda, un bellissimo bathtub e un balcone con vittime per giorni ti faranno voler stare in, ma la terra è aspettata per te. Ti prenderà giorni per apprezzare veramente cosa questa nuova propria ha da offrire.",
+            "language": "Italian",
+            "durationSec": 48.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:31:03.747Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14427,7 +14591,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oksaTY74COMnALAriiAPoIE74ozSA7BB5AEpA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=GyohwMRspZncxBPQ0wCXFX26Sbs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo resort è davvero una casa di casa? E è davvero 10.000 hectare? Vi racconto tutto in questo video. Il risort non è di 10.000 hectare, è solo un'avventura per il risort, perché è super grande e super grande. Se per il venerdì non sapete dove andare, vi invitiamo a visitare il risort di Selena. A partire da oggi, Selena ha costruito un'aeroporto per le sue figli e le sue figli. E non è possibile che non sia un'aeroporto per i bambini. Questo è super sicuro, perché la profondità non è più di quella del lato destro. e anche la sala di gym e spa per rilassarsi e qui c'è la barca per chi vuole andare al caffè, bere del latte, si può divertire e fare foto con i ghiaccioli in generale, Selena ha molte opere per chi vuole fare foto con i ghiaccioli dopo qualche passo, si arriva alla pianta, poi si rilassa e si gira la canone si dice che questa pianta è super bella, e il colore bianco e blu sono un'attività Quanto è bellissima questa piazza, questa piazza di Selena è bellissima. Adesso immaginate di portare un vestito lungo con un'automobile Canon e un po' di più. Oh mio Dio, è una forma di sottoposto. E questa è la mia nuova parte 3 del resort. C'è ancora molti dettagli che bisogna riempire. Allora, ora riempiamo la domanda. Il resort Selena non è la casa di Nha Nha? Sì, ma è la casa di Nha Nha. Nha Nha è solo un'altra casa, Nha Nha è una casa di Selena. per la mia ricerca e la mia review per sapere qual è la città più bella di Quang Binh poi vi invitiamo a viaggiare in casa a domenica ci saranno buffet e ho in grado di raccontarvi quante cose speciali di Quang Binh come i panini di bologna e i panini di bologna e non mettete le macchie di Betty grazie a tutti per aver guardato il video e vi ricordo di viaggiare al resort di Selena",
+            "language": "Italian",
+            "durationSec": 100.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:31:25.397Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14440,7 +14613,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEMuQkob3GA1PUNueHLqHjVFeIKACCOBgFeACI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=l92oKPN3jnuMSdJfbqtyfNz3pww%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:32:30.298Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14453,7 +14635,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMBk4BgEwadzIoAEVAiiiAMaJTI4v1kAvB4b3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dkKb1aM0uYygbeEMMVopnqFq2Zk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, è vero. a felì a felì",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:33:00.491Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14466,7 +14657,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUmG9iBIKB1BMMCq1wA1AWSvEfVWU2AicHIA2A~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BHRHoHP9wQg%2F46RHptv9nTluJFs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Serenay Caribe Club Family, se vuoi divertirti di questo bellissimo parco acuatico e di questo enorme rio lento, non dubbi di riservarti con noi in questo nuovo hotel. E ricorda che abbiamo le migliori tariffe del mercato, quindi solo scrivilo. Ciao",
+            "language": "Italian",
+            "durationSec": 43.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:33:03.698Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14479,7 +14679,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ooAImJVkA6jXEefIF9ACrEIDNALqGAHEU6fITg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RVkuI%2BJaGT0J%2FxIrpL6D6%2Brl%2B6o%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Melissa! I'm drunk and outside! I'm drunk and outside! Good vibe, good energy, we outside, we outside. Good vibe, good energy, we outside.",
+            "language": "Italian",
+            "durationSec": 18.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:33:06.317Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14492,7 +14701,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogX5YAkDqCvemF0FEAAL9AEMCFc0fd9gzVImBv~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=2iDUqj3JtNDEf%2FglZMSNKpG48n8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, oggi vi porto con me in un ristorante a Serenusa Resort davvero speciale. Guardate un po' dove si trova. Proprio sulla spiaggia. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:33:10.205Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19034,7 +19252,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMBk4BgEwadzIoAEVAiiiAMaJTI4v1kAvB4b3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dkKb1aM0uYygbeEMMVopnqFq2Zk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, è vero. a felì a felì",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:33:00.491Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19264,7 +19491,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYyitDSIsFFYDtffIA0o74UnwpjX0AjbEIfCEV~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HjslIjjyKLlr947yFLeoTIwXnrU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'è un nuovo resort in Punta Cana che devi conoscere. È il Serenite Caribbean Club. È un nuovo hotel pensato per divertirsi in compagnie con amici o famiglie. Ha una varietà ampia di abitazioni e tutti hanno terrazza privata. E con una vista spettacolare, sia al mare, ai giardini o alle piscine del resort. Nelle sue installazioni troverai 8 restauranti tematici, 10 bar e 5 piscine. Inoltre, un rio lento e una zona di tobogane per adulti e bambini. E se vuoi un momento di rilassamento, ha anche un completo spa e wellness, con piscina climatizzata, jacuzzi, circuiti d'acqua, sauna finlandese, ducce, 7 cabine di trattamento, boutique e anche salone di bellezza. Quindi, sai, se stai planificando le tue prossime vacanze, questo hotel è un'opzione che vale la pena conoscere. Consulta le offerte per apertura e scopri tutto ciò che questo nuovo resort ha da offrire.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:23:11.601Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -20016,7 +20252,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4MQQQeiAAsFGYfsGLe8IqGFPwE1QIRiGQlfNI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=M8yYFZ7uLgEq%2FyGcotDgNDKH19k%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi che ti sia piaciuto l'esperienza di un breakfast floating, una vista che è molto costosa, che se sei fortunato, è un marco di nuove, è molto worth it, perché ti piace la viaggia. Se vuoi che viaggia, asciugati a me e a tutti i miei amici, che hanno la mia esperienza, appello a che si scegliano i loro rame. Ciao, ragazzi! Per oggi, in un altro video, per aiutare la Davao City, di Nisa Marilov District, Mag overnight di I.M.I. cuyog akong family di Nisa Serenity Hills Mountain Resort. Pag abot ninyo di Nisa Marilog District, sulud lang mo di Nisa Dato Salomai. But anyway, for the exact location, puidi rin ninyo ma GPS makala agan. Unahan ragyod Nisa Bembofar. 10 to 15 minutes ni sha from the highway and makasulud ragyod any types of vehicles. Second time na lang mo di Nisa Serenity Hills makala agan. En karon, gi cuyog ragyod na ako ang akong family di R.I. En ke overnight stay man mi karon, ako tamong i room tour. Good for 15 Packs di siadiria, mga kalaagan, for 15,000. And as you can see, luagga a iuang sulod. So diri, pwede mo magkaraoke, nai luagga, nga living area, nai dining set, with fully equipped kitchen, nga mga kalaagan, makaloto. Ragion mo dini, mo nang food nalang iniuang dal on. So sakata dini, sa higdaanan, nai tulokar rooms, diri, mga kalaagan, nga pwede matulogan sa six katao. Nen duha kabokang CR, diri, asa sulod. So diri, anapunta, mga kalaagan, kai Good for 15 Packs mani, e a 7 bed di ria immagina se stai qui e ti guardi e non vedrai niente è un postcard e è molto comodissimo e non è un'accomodazione e ovviamente a parte la mountain hills view hai accesso a un infinity pool e 2 pax di room per 4 pesos So moni assoluto ma calagano double size bed puoi size pu essere un karaoke una cucina completamente equipaggiata con un set di dinamica e un CR E hanno un'acqua per 3.000 pesos, quindi, il secondo è un'acqua per 3.000 pesos, e un bed completo, ragazzi. Il bed è di un bed king size, e ha un'acqua per 8.000 pesos. Un bed completo, ragazzi, e un bed completo, ragazzi, e un bed completo, ragazzi, in un'altra acciaio. La viaggia è una veranda di macchina che potrà aiutare la viaggia. Ci sono due ruote di macchina per il master's bedroom e un'altra per la famiglia. Ci sono due ruote di macchina e un'altra per la cr. Ci sono due ruote di macchina per la serenità. Puoi anche fare team building. Puoi anche dare un day tour di macchina. Ci sono anche dei spot di foto. E puoi rilassarti di macchina. Il vento è molto buono in Marilov District. Se stai a casa, puoi usare il karaoke, puoi usare l'infinity pool, e se non hai mai bevuto, puoi orderare anche la cena. Il tempo è giusto, non hai mai bevuto, ma hai orderato la cena. E durante la notte, puoi usare la veranda, perché il vento è molto freddo. Il giorno dopo, ci sono le serenità, e il buon breakfast, che ci prepareranno la cena. E per completare la tua esperienza di Serenity Hills, puoi avviare il loro breakfast a blocco, è un buon shop per prendere foto con Instagram. E per completare la tua esperienza di Serenity Hills, puoi avviare il loro breakfast a blocco, è un buon shop per prendere foto con Instagram. E questo è il video di oggi, a presto!",
+            "language": "Italian",
+            "durationSec": 227.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:28:25.786Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23154,7 +23399,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMBk4BgEwadzIoAEVAiiiAMaJTI4v1kAvB4b3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dkKb1aM0uYygbeEMMVopnqFq2Zk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, è vero. a felì a felì",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:33:00.491Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23241,7 +23495,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYzaSSwIigBALqRiRuANl1Q4xDRAICCgIzXlfF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MlYkuxMQM43%2BgdxRGEJcba4weeQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:24:47.939Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24971,7 +25234,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4MQQQeiAAsFGYfsGLe8IqGFPwE1QIRiGQlfNI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=M8yYFZ7uLgEq%2FyGcotDgNDKH19k%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi che ti sia piaciuto l'esperienza di un breakfast floating, una vista che è molto costosa, che se sei fortunato, è un marco di nuove, è molto worth it, perché ti piace la viaggia. Se vuoi che viaggia, asciugati a me e a tutti i miei amici, che hanno la mia esperienza, appello a che si scegliano i loro rame. Ciao, ragazzi! Per oggi, in un altro video, per aiutare la Davao City, di Nisa Marilov District, Mag overnight di I.M.I. cuyog akong family di Nisa Serenity Hills Mountain Resort. Pag abot ninyo di Nisa Marilog District, sulud lang mo di Nisa Dato Salomai. But anyway, for the exact location, puidi rin ninyo ma GPS makala agan. Unahan ragyod Nisa Bembofar. 10 to 15 minutes ni sha from the highway and makasulud ragyod any types of vehicles. Second time na lang mo di Nisa Serenity Hills makala agan. En karon, gi cuyog ragyod na ako ang akong family di R.I. En ke overnight stay man mi karon, ako tamong i room tour. Good for 15 Packs di siadiria, mga kalaagan, for 15,000. And as you can see, luagga a iuang sulod. So diri, pwede mo magkaraoke, nai luagga, nga living area, nai dining set, with fully equipped kitchen, nga mga kalaagan, makaloto. Ragion mo dini, mo nang food nalang iniuang dal on. So sakata dini, sa higdaanan, nai tulokar rooms, diri, mga kalaagan, nga pwede matulogan sa six katao. Nen duha kabokang CR, diri, asa sulod. So diri, anapunta, mga kalaagan, kai Good for 15 Packs mani, e a 7 bed di ria immagina se stai qui e ti guardi e non vedrai niente è un postcard e è molto comodissimo e non è un'accomodazione e ovviamente a parte la mountain hills view hai accesso a un infinity pool e 2 pax di room per 4 pesos So moni assoluto ma calagano double size bed puoi size pu essere un karaoke una cucina completamente equipaggiata con un set di dinamica e un CR E hanno un'acqua per 3.000 pesos, quindi, il secondo è un'acqua per 3.000 pesos, e un bed completo, ragazzi. Il bed è di un bed king size, e ha un'acqua per 8.000 pesos. Un bed completo, ragazzi, e un bed completo, ragazzi, e un bed completo, ragazzi, in un'altra acciaio. La viaggia è una veranda di macchina che potrà aiutare la viaggia. Ci sono due ruote di macchina per il master's bedroom e un'altra per la famiglia. Ci sono due ruote di macchina e un'altra per la cr. Ci sono due ruote di macchina per la serenità. Puoi anche fare team building. Puoi anche dare un day tour di macchina. Ci sono anche dei spot di foto. E puoi rilassarti di macchina. Il vento è molto buono in Marilov District. Se stai a casa, puoi usare il karaoke, puoi usare l'infinity pool, e se non hai mai bevuto, puoi orderare anche la cena. Il tempo è giusto, non hai mai bevuto, ma hai orderato la cena. E durante la notte, puoi usare la veranda, perché il vento è molto freddo. Il giorno dopo, ci sono le serenità, e il buon breakfast, che ci prepareranno la cena. E per completare la tua esperienza di Serenity Hills, puoi avviare il loro breakfast a blocco, è un buon shop per prendere foto con Instagram. E per completare la tua esperienza di Serenity Hills, puoi avviare il loro breakfast a blocco, è un buon shop per prendere foto con Instagram. E questo è il video di oggi, a presto!",
+            "language": "Italian",
+            "durationSec": 227.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:28:25.786Z"
+          }
         },
         {
           "platform": "tiktok",
