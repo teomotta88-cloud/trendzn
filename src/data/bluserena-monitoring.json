@@ -834,10 +834,13 @@
           "ocrInsights": "No on-screen text provided. The hashtags emphasize family-friendly entertainment and a 4-star resort experience described as wonderful.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:04:58.206Z"
+            "transcript": "Eccoci qua ragazzi, il monello è lì. Marco!",
+            "language": "Italian",
+            "durationSec": 18.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:01:51.423Z"
           }
         },
         {
@@ -865,10 +868,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:05:05.206Z"
+            "transcript": "No, ci siamo, andiamo a sentire il freddo d'agosto! Siamo! La facciamo entrare, la teniamo? Un po' di specie della massifà. Facciamo entrare la coppa! Ma che cosa è la coppa? Ma che cosa è la coppa? Ma che cosa è la coppa? Ma non è questa la coppa vera? Ma questa potenza lume è fatta! ma non questa popa scella della città nera con la parità ma che cosa è ma è tua la sara con Filippo che se lo venga che se lo fa del tablagro ma non si impara ragazzi è qui è qui in piazza la popa è qua la diciamo in paese la propria città non è questa la popa in paese in poca lupa tutti in poca lupa tutti e vi facciamo un po' Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:01:54.627Z"
           }
         },
         {
@@ -894,10 +900,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:05:13.098Z"
+            "transcript": "e non a chi vorrei magia del momento che non finirà avanza quel ritmo che suona ad estate nessun orizzonte, da cielo e mare ritrova il respiro il momento più bello",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:01:57.754Z"
           }
         },
         {
@@ -921,10 +930,13 @@
           "ocrInsights": "No caption or on-screen text was provided, so there is no content to analyze. Consequently the sentiment is neutral, with no identifiable topics, locations, or key insights.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:05:22.654Z"
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:00.728Z"
           }
         },
         {
@@ -948,10 +960,13 @@
           "ocrInsights": "No caption or on-screen text was provided, so there is no content to analyze. Consequently the sentiment is neutral, there are no identifiable topics or location hints, and no key insights can be derived.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:05:38.443Z"
+            "transcript": "assolutamente sì allora si accede al mare tramite questa pineta privata non bisogna attraversare strada non bisogna attraversare nulla quindi il villaggio è direttamente collegato al al mare. Tra l'altro in questa pineta è possibile fare anche attività fisica e altre camminate al fresco. Allora qui c'è il beach point dove si possono chiedere tutte le informazioni e assistenza da questa parte c'è il bar mentre invece da questo lato il ristorante sul mare quindi si può anche cenare qui questo è la spiaggia spiaggia molto sabbiosa quindi un fastidiosa quando si esce dall'acqua però merita assolutamente. Tre tipologie di ombrelloni ho questi qui, questi che vanno dalla fila C alla fila H, mentre invece poi le prime tre file hanno a a disposizione degli ombrelloni che sono un po' più grandi ...",
+            "language": "Italian",
+            "durationSec": 106.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:04.756Z"
           }
         },
         {
@@ -976,10 +991,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:05:45.350Z"
+            "transcript": "a me me gusta vera con la sabrosura con che sta morena mueve la cintura a me me gusta vera con la sabrosura con che sta morena",
+            "language": "Italian",
+            "durationSec": 11.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:06.839Z"
           }
         },
         {
@@ -1005,10 +1023,13 @@
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:05:52.947Z"
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 107,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:11.369Z"
           }
         },
         {
@@ -1034,10 +1055,13 @@
           "ocrInsights": "No content available for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:05:56.589Z"
+            "transcript": "Vi porto a vedere la novità di questo estate. A tutte le ore del giorno e della notte, in piscina e al mare, gli spiaccoli, con acqua poca, pantasprite, tè. quest'anno nelle strutture blu serena sono disponibili questi dispenser dove potrete prendere tutte le bevande illimitatamente h24 e a prescindere dal tipo di pacchetto che avete acquistato se soft all inclusive o all inclusive queste bibite sono sempre disponibili in vari punti dei resort e tu lo sapevi?",
+            "language": "Italian",
+            "durationSec": 51.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:14.622Z"
           }
         },
         {
@@ -1063,10 +1087,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:06:02.996Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:16.819Z"
           }
         },
         {
@@ -1093,10 +1120,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:06:10.117Z"
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:23.724Z"
           }
         },
         {
@@ -1121,10 +1151,13 @@
           "ocrInsights": "No content available for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:06:13.902Z"
+            "transcript": "I drop ball",
+            "language": "Italian",
+            "durationSec": 12.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:25.991Z"
           }
         },
         {
@@ -1151,10 +1184,13 @@
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:06:20.205Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:31.421Z"
           }
         },
         {
@@ -1178,10 +1214,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:06:23.969Z"
+            "transcript": "Buonasera a tutti, ora stiamo andando a cenare, ora faccio vedere che bello. Aspettate. Qua ci sono tutti gli angoli, dove ci sono i secondi. Angolo dolci. Stasera ci sono i dolci alla frutta. due insalate faccio la frittura cosa c'è? i panzerotti faccio la frutta e anche qui la frutta qua ci sono i salumi e qui c'è la ricotta ragazzi è bellissimo si mangia benissimo qui ci sono le pizze eccola qua ma oggi a due black saint andy di che top oggi sono i primi a basta la città la griglia la ci sono gli agusti e poi sono tutte le sale ci sono i tavoli per mangiare",
+            "language": "Italian",
+            "durationSec": 95.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:38.317Z"
           }
         },
         {
@@ -1204,10 +1243,13 @@
           "ocrInsights": "Non c'è alcun contenuto da analizzare (caption nullo e testo on‑screen non disponibile). Di conseguenza il sentiment è neutro, non sono stati individuati argomenti né riferimenti a luoghi, e non ci sono insight da estrarre.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:06:30.807Z"
+            "transcript": "allora premetto che le vacanze sono una cosa soggettiva però tu considera che ci sono stato tre anni fa al Cala Sirena e sono tornato l'anno dopo quindi due anni fa poi l'anno scorso ho deciso di cambiare e questo cambiamento mi ha portato alla concezione che per me meglio del Cala Sirena per quelle che sono le mie esigenze non posso trovare tanto è vero che quest'anno ci vado di nuovo infatti rientrerò il giorno 20 però faccio solo una settimana perché col tempo ho capito che più di una settimana per come sono fatto io e la mia famiglia in un villaggio non ci troviamo preferiamo fare anche una vacanza come quella che sto facendo adesso un po' più libera dove appunto posso girare un pochettino le varie spiagge, i vari ristoranti e tutto quello che ho detto nei video precedenti quindi ci vediamo il 23 perché il 23 sono anche io lì e spero che ti piaccia Grazie.",
+            "language": "Italian",
+            "durationSec": 52.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:41.402Z"
           }
         },
         {
@@ -1232,10 +1274,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:06:40.583Z"
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 82.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:45.822Z"
           }
         },
         {
@@ -1261,10 +1306,13 @@
           "ocrInsights": "Non c'è alcun contenuto testuale da analizzare (Caption: null, On-screen text: [not available]). In assenza di informazioni, il sentiment è neutro, non emergono argomenti né riferimenti a località, e non ci sono insight specifici da estrarre.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:06:44.311Z"
+            "transcript": "Da una vita blu serena, un brivido che fischia appena, la melodia che ti conquista, amore a prima vista, rientra in quel guato che hai.",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:50.918Z"
           }
         },
         {
@@ -1290,10 +1338,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:06:47.762Z"
+            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ci vediamo a domani.",
+            "language": "Italian",
+            "durationSec": 60.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:58.463Z"
           }
         },
         {
@@ -1319,10 +1370,13 @@
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 7,
-            "analyzedAt": "2026-09-02T07:06:57.130Z"
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 53.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:00.683Z"
           }
         },
         {
@@ -1351,10 +1405,13 @@
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:07:00.429Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:06.018Z"
           }
         },
         {
@@ -1377,10 +1434,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:07:08.101Z"
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:11.972Z"
           }
         },
         {
@@ -1405,10 +1465,13 @@
           "ocrInsights": "No content available for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:07:14.574Z"
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:17.585Z"
           }
         },
         {
@@ -1434,10 +1497,13 @@
           "ocrInsights": "No content provided for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 8,
-            "analyzedAt": "2026-09-02T07:07:18.056Z"
+            "transcript": "Sfisca appena la melodia che ti conquista, amore a prima vista, riempie quel guato che hai. Quando senti che ti mancherà, blu serena, questo è l'effetto che fa, come un ricordo una fotografia. Nasconde la tua nostra vita.",
+            "language": "Italian",
+            "durationSec": 24.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:23.092Z"
           }
         },
         {
@@ -1462,10 +1528,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:07:21.938Z"
+            "transcript": "E la professionalità ha avuto un conto nel nostro tempo. Ma andiamo avanti, proseguiamo. E lo facciamo proprio con loro. Maglietto di Fizz. Pantalone di Fizz abbinato alla corrazza degli amici, degli eroi di Wonderland.",
+            "language": "Italian",
+            "durationSec": 23.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:28.630Z"
           }
         },
         {
@@ -1488,10 +1557,13 @@
           "ocrInsights": "Nessun contenuto disponibile per l'analisi (caption nullo e testo on-screen non fornito).",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "neutral",
-            "engagement": 6,
-            "analyzedAt": "2026-09-02T07:07:31.245Z"
+            "transcript": "allora gli ombrelloni delle prime due file come potete vedere sono molto molto grandi e sono pure abbastanza distanti tra un ombrellone e un altro ma anche quelli di dietro sono della stessa distanza solo che sono solo un po più piccolini vi faccio vedere un po la spiaggia tutta questa fino alla giu che ci sono poi le spiagge libere eccola poi se tra poco passa qualcuno che mi vende un metro e la misuro. Bene? Grazie, buona giornata.",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:34.608Z"
           }
         },
         {
@@ -1514,10 +1586,13 @@
           "ocrInsights": "No content provided for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "sentiment": "positive",
-            "engagement": 5,
-            "analyzedAt": "2026-09-02T07:07:35.348Z"
+            "transcript": "Blu serena, dall'alba fino a luna piena, ti toglie il fiato per magia, lo sguardo da follia, ti trova la gioia con noi oltre a una vita. Blu serena, un brivido che ti scappena, la melodia che ti conquista, amore a prima vista, riempie quel vuoto che hai. Qui ritroviamo la felicità, un sogno che non finirà, un caldo abbraccio che sa di speciale, le lunghe giornate che non sentirai. Blu Serena, qui non è che non vola via, prova a seguirne la scia Tutta la vita blu, serena, dall'alba fino al luna piena",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:38.999Z"
           }
         },
         {
@@ -7719,7 +7794,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYsvWEPgbI016CZRwx6kbAXiBl7PaB5EiVBET~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oc5YdTyaB0gvyw8jb1eNvuFjAfs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ci vediamo a domani.",
+            "language": "Italian",
+            "durationSec": 60.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:58.463Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -8525,7 +8609,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogCVDEgcEAoAlbCaICtAekFAPr8X2FfdtnAAmg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=TUeCawlAqJdE5cT%2FREgKpChNmMM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Sfisca appena la melodia che ti conquista, amore a prima vista, riempie quel guato che hai. Quando senti che ti mancherà, blu serena, questo è l'effetto che fa, come un ricordo una fotografia. Nasconde la tua nostra vita.",
+            "language": "Italian",
+            "durationSec": 24.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:23.092Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -8963,7 +9056,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okIAWUNE2FoAfArie6QADWQLtiMYE1Aji8e53I~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oh1D%2F8WwABT4ideeJC1QdZjG2GI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:11.972Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9041,7 +9143,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o8f9iECzQABitcUIDI8vwTAhlqSoW1F9BCIAiy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Nv%2Fbs7%2BnN%2FxwcmDUdfvNBZiFNqs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "allora premetto che le vacanze sono una cosa soggettiva però tu considera che ci sono stato tre anni fa al Cala Sirena e sono tornato l'anno dopo quindi due anni fa poi l'anno scorso ho deciso di cambiare e questo cambiamento mi ha portato alla concezione che per me meglio del Cala Sirena per quelle che sono le mie esigenze non posso trovare tanto è vero che quest'anno ci vado di nuovo infatti rientrerò il giorno 20 però faccio solo una settimana perché col tempo ho capito che più di una settimana per come sono fatto io e la mia famiglia in un villaggio non ci troviamo preferiamo fare anche una vacanza come quella che sto facendo adesso un po' più libera dove appunto posso girare un pochettino le varie spiagge, i vari ristoranti e tutto quello che ho detto nei video precedenti quindi ci vediamo il 23 perché il 23 sono anche io lì e spero che ti piaccia Grazie.",
+            "language": "Italian",
+            "durationSec": 52.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:41.402Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9236,7 +9347,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYCqPAAB1BBFtcctB3iioRBeCNAIkoAIE3v2Tt~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=lFsluHfythaj9Doy1%2F%2BXW%2BlcyHI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:00.728Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9980,7 +10100,16 @@
             "terrazza"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okAVaNfSMQCHesRDAMXAYqGfeK85pANIQSAPRW~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=AyceWA3uefNdedictd8bdN417tQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:31.421Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10104,7 +10233,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYCqPAAB1BBFtcctB3iioRBeCNAIkoAIE3v2Tt~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=lFsluHfythaj9Doy1%2F%2BXW%2BlcyHI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:00.728Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10494,7 +10632,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oAS4SiB8KBCO4IAJdaiEL9BAXAUwp4AnL1fHCB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=YSGZjXj8XfFahLsurJyhLfaqljQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 107,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:11.369Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10819,7 +10966,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYsvWEPgbI016CZRwx6kbAXiBl7PaB5EiVBET~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oc5YdTyaB0gvyw8jb1eNvuFjAfs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ci vediamo a domani.",
+            "language": "Italian",
+            "durationSec": 60.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:58.463Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11557,7 +11713,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o0CqYADtEFCEABecfCAgIlAFHzjpx2k7uJKVkP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=pV6CNqIl4oEOaTWKa5%2F%2FzAPGKT4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 82.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:45.822Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13535,7 +13700,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:23.724Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14346,7 +14520,16 @@
             "calabria"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ocAAIEB2PJOfymLh5mo3zvjiE94iIC1gBIoAWK~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hCkzXPfpl%2FQIUG1epWtXLMb0Jw4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Vi porto a vedere la novità di questo estate. A tutte le ore del giorno e della notte, in piscina e al mare, gli spiaccoli, con acqua poca, pantasprite, tè. quest'anno nelle strutture blu serena sono disponibili questi dispenser dove potrete prendere tutte le bevande illimitatamente h24 e a prescindere dal tipo di pacchetto che avete acquistato se soft all inclusive o all inclusive queste bibite sono sempre disponibili in vari punti dei resort e tu lo sapevi?",
+            "language": "Italian",
+            "durationSec": 51.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:14.622Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -18163,7 +18346,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogCVDEgcEAoAlbCaICtAekFAPr8X2FfdtnAAmg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=TUeCawlAqJdE5cT%2FREgKpChNmMM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Sfisca appena la melodia che ti conquista, amore a prima vista, riempie quel guato che hai. Quando senti che ti mancherà, blu serena, questo è l'effetto che fa, come un ricordo una fotografia. Nasconde la tua nostra vita.",
+            "language": "Italian",
+            "durationSec": 24.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:03:23.092Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -18493,7 +18685,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:02:23.724Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19510,7 +19711,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oABVDEgUE5qAN3CNIC1AhkFAfdArwFfcl3AwDc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=9vNnTEEDxITA5tW%2FwarCnqk6cNU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "e non a chi vorrei magia del momento che non finirà avanza quel ritmo che suona ad estate nessun orizzonte, da cielo e mare ritrova il respiro il momento più bello",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:01:57.754Z"
+          }
         },
         {
           "platform": "tiktok",
