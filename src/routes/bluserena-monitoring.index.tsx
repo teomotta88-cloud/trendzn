@@ -50,7 +50,7 @@ type BulkImportResult = {
 };
 
 function BluserenaMonitoringPage() {
-  const [tab, setTab] = useState<"feed" | "canali">("canali");
+  const [tab, setTab] = useState<string>("canali");
 
   return tab === "canali" ? (
     <BluserenaCanaliView tab={tab} setTab={setTab} />
