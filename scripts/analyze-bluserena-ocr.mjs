@@ -72,10 +72,27 @@ function extractFrame(videoPath, seconds, outPath) {
 
 // Un solo worker Tesseract per tutta la run: crearne uno per frame (come
 // faceva Tesseract.recognize) significa ricaricare i dati di lingua ogni volta.
-let workerPromise = null;
-function getWorker() {
-  if (!workerPromise) workerPromise = Tesseract.createWorker(OCR_LANGS.split("+"));
-  return workerPromise;
+//
+// Il worker si crea nel preflight, non alla prima chiamata, perché è lì che
+// tesseract.js scarica i dati di lingua: se il download fallisce vogliamo
+// saperlo prima di aver elaborato dei post, non a metà run con un batch in
+// sospeso. E serve la corsa contro "uncaughtException" qui sotto perché la
+// promise di createWorker NON rigetta su errore di rete — l'errore arriva
+// come eccezione non catturata che ucciderebbe il processo.
+let worker = null;
+
+async function initWorker() {
+  return new Promise((resolve, reject) => {
+    const onFatal = (err) => reject(err);
+    // Finestra brevissima e solo in avvio: qui non gira nient'altro.
+    process.once("uncaughtException", onFatal);
+    Tesseract.createWorker(OCR_LANGS.split("+"))
+      .then((w) => {
+        process.off("uncaughtException", onFatal);
+        resolve(w);
+      })
+      .catch(onFatal);
+  });
 }
 
 async function ocrPost(account) {
@@ -98,7 +115,6 @@ async function ocrPost(account) {
     const duration = probeDurationSec(videoPath);
     const timestamps = frameTimestamps(duration, FRAMES_PER_VIDEO);
 
-    const worker = await getWorker();
     const lines = [];
     const confidences = [];
     let framesRead = 0;
@@ -148,6 +164,15 @@ async function ocrPost(account) {
 
 console.log("🔤 Bluserena — estrazione testo on-screen (OCR)\n");
 assertBinaries(["yt-dlp", "ffmpeg", "ffprobe"]);
+
+try {
+  worker = await initWorker();
+  console.log(`  ✓ Tesseract pronto (${OCR_LANGS})`);
+} catch (err) {
+  console.error(`❌ Tesseract non inizializzabile: ${String(err?.message ?? err).slice(0, 200)}`);
+  console.error("   Di solito è il download dei dati di lingua da jsdelivr.");
+  process.exit(1);
+}
 console.log("");
 
 try {
@@ -158,9 +183,9 @@ try {
     processPost: ocrPost,
   });
 } finally {
-  if (workerPromise) {
+  if (worker) {
     try {
-      await (await workerPromise).terminate();
+      await worker.terminate();
     } catch {}
   }
   cleanup(TEMP_DIR);

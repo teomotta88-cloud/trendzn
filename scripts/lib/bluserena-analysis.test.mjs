@@ -7,11 +7,14 @@
 // 100 post.
 
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import http from "node:http";
+import os from "node:os";
+import path from "node:path";
 import test from "node:test";
 
 import { cleanText, frameTimestamps } from "./ocr-text.mjs";
-import { run } from "./bluserena-media.mjs";
+import { run, versionArg } from "./bluserena-media.mjs";
 import { commitField } from "./bluserena-store.mjs";
 import { runEnrichment } from "./bluserena-enrich.mjs";
 import { transcribeAudioBuffer } from "./groq-whisper.mjs";
@@ -56,6 +59,35 @@ test("run() segnala il binario mancante invece di mascherarlo", () => {
   const res = run("binario-che-non-esiste-42", ["--version"]);
   assert.equal(res.ok, false);
   assert.match(res.reason, /non installato/);
+});
+
+// ffmpeg e ffprobe escono con errore su `--version`: vogliono `-version`.
+// Il preflight li dava per mancanti su runner dove erano installati, e il test
+// con un binario inesistente non lo intercettava perché lì fallisce comunque.
+test("il preflight interroga ffmpeg con l'opzione che ffmpeg accetta", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "fake-bin-"));
+  const stub = path.join(dir, "ffmpeg");
+  fs.writeFileSync(
+    stub,
+    '#!/bin/sh\n[ "$1" = "-version" ] || exit 8\necho "ffmpeg version 6.1.1"\n',
+  );
+  fs.chmodSync(stub, 0o755);
+
+  const previousPath = process.env.PATH;
+  process.env.PATH = `${dir}:${previousPath}`;
+  try {
+    assert.equal(versionArg("ffmpeg"), "-version");
+    assert.equal(versionArg("ffprobe"), "-version");
+    assert.equal(versionArg("yt-dlp"), "--version");
+
+    assert.equal(run("ffmpeg", ["--version"]).ok, false, "conferma che --version fallisce");
+    const res = run("ffmpeg", [versionArg("ffmpeg")]);
+    assert.equal(res.ok, true, `il preflight deve passare: ${res.reason ?? ""}`);
+    assert.match(res.stdout, /ffmpeg version/);
+  } finally {
+    process.env.PATH = previousPath;
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test("run() distingue exit code diverso da zero", () => {
