@@ -683,6 +683,220 @@ export type Database = {
           },
         ]
       }
+      instagram_influencer_industries: {
+        Row: {
+          created_at: string
+          first_seen_post_id: string | null
+          id: string
+          industry: string
+          influencer_username: string
+        }
+        Insert: {
+          created_at?: string
+          first_seen_post_id?: string | null
+          id?: string
+          industry: string
+          influencer_username: string
+        }
+        Update: {
+          created_at?: string
+          first_seen_post_id?: string | null
+          id?: string
+          industry?: string
+          influencer_username?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "instagram_influencer_industries_first_seen_post_id_fkey"
+            columns: ["first_seen_post_id"]
+            isOneToOne: false
+            referencedRelation: "instagram_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      instagram_monitored_profiles: {
+        Row: {
+          active: boolean
+          check_interval_minutes: number
+          created_at: string
+          discovered_via_profile_id: string | null
+          display_name: string | null
+          first_checked_at: string | null
+          followers_count: number | null
+          id: string
+          industry: string | null
+          kind: string
+          last_checked_at: string | null
+          profile_pic_url: string | null
+          username: string
+        }
+        Insert: {
+          active?: boolean
+          check_interval_minutes?: number
+          created_at?: string
+          discovered_via_profile_id?: string | null
+          display_name?: string | null
+          first_checked_at?: string | null
+          followers_count?: number | null
+          id?: string
+          industry?: string | null
+          kind: string
+          last_checked_at?: string | null
+          profile_pic_url?: string | null
+          username: string
+        }
+        Update: {
+          active?: boolean
+          check_interval_minutes?: number
+          created_at?: string
+          discovered_via_profile_id?: string | null
+          display_name?: string | null
+          first_checked_at?: string | null
+          followers_count?: number | null
+          id?: string
+          industry?: string | null
+          kind?: string
+          last_checked_at?: string | null
+          profile_pic_url?: string | null
+          username?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "instagram_monitored_profiles_discovered_via_profile_id_fkey"
+            columns: ["discovered_via_profile_id"]
+            isOneToOne: false
+            referencedRelation: "instagram_monitored_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      instagram_monitoring_runs: {
+        Row: {
+          collabs_found: number
+          created_at: string
+          error_message: string | null
+          finished_at: string | null
+          id: string
+          new_posts: number
+          posts_found: number
+          profile_id: string | null
+          started_at: string
+          status: string
+        }
+        Insert: {
+          collabs_found?: number
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          new_posts?: number
+          posts_found?: number
+          profile_id?: string | null
+          started_at?: string
+          status?: string
+        }
+        Update: {
+          collabs_found?: number
+          created_at?: string
+          error_message?: string | null
+          finished_at?: string | null
+          id?: string
+          new_posts?: number
+          posts_found?: number
+          profile_id?: string | null
+          started_at?: string
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "instagram_monitoring_runs_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "instagram_monitored_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      instagram_post_collaborators: {
+        Row: {
+          created_at: string
+          id: string
+          post_id: string
+          username: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          post_id: string
+          username: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          post_id?: string
+          username?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "instagram_post_collaborators_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "instagram_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      instagram_posts: {
+        Row: {
+          caption: string | null
+          comments: number | null
+          created_at: string
+          discovered_via_profile_id: string | null
+          id: string
+          likes: number | null
+          owner_username: string
+          published_at: string | null
+          raw: Json | null
+          shortcode: string
+          url: string
+        }
+        Insert: {
+          caption?: string | null
+          comments?: number | null
+          created_at?: string
+          discovered_via_profile_id?: string | null
+          id?: string
+          likes?: number | null
+          owner_username: string
+          published_at?: string | null
+          raw?: Json | null
+          shortcode: string
+          url: string
+        }
+        Update: {
+          caption?: string | null
+          comments?: number | null
+          created_at?: string
+          discovered_via_profile_id?: string | null
+          id?: string
+          likes?: number | null
+          owner_username?: string
+          published_at?: string | null
+          raw?: Json | null
+          shortcode?: string
+          url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "instagram_posts_discovered_via_profile_id_fkey"
+            columns: ["discovered_via_profile_id"]
+            isOneToOne: false
+            referencedRelation: "instagram_monitored_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       monitored_topics: {
         Row: {
           category: string | null
@@ -1400,12 +1614,12 @@ export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1429,11 +1643,11 @@ export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1454,11 +1668,11 @@ export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1479,11 +1693,11 @@ export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
     | { schema: keyof DatabaseWithoutInternals },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -1496,11 +1710,11 @@ export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof DatabaseWithoutInternals },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never) = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
