@@ -5437,7 +5437,16 @@
             "fyp",
             "horror movies"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok?",
+            "language": "Italian",
+            "durationSec": 29.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:47.814Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5459,7 +5468,16 @@
             "smock blouse",
             "AURETTA"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:50.514Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5473,7 +5491,16 @@
           "comments": 0,
           "shares": 0,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oo6WgAfWmgQEyZROEjQdQEFEOVexqqDKD2D1Bc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=N5JMrs4vaKJrsR7UVWttryg58so%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Saremo io e te per sempre, legati per la vita che senza te non vale niente, non ha senso vivere. Con la mano sul petto io te lo prometto, davanti a Dio. Saremo io e te, ah così, sarà sempre sì. Grazie a tutti. Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 172,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:20:14.537Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5496,7 +5523,16 @@
             "sicilia",
             "divertimento"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ora svasciano le tue cose. Ora svasciano le tue cose, svasciano. Ora svasciano le tue cose, svasciano.",
+            "language": "Italian",
+            "durationSec": 8.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:20:16.939Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5518,7 +5554,16 @@
             "estate",
             "resort"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:20:27.522Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5537,7 +5582,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:20:35.042Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5557,7 +5611,16 @@
             "estate",
             "vacanza"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "E non abbiamo bisogno di parole per spiegare quello che è nascosto in fondo nel nostro cuore. Ti solleverò tutte le volte che cadrai e raccoglierò i tuoi fiori che per strada perderai.",
+            "language": "Italian",
+            "durationSec": 25.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:20:47.660Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5576,7 +5639,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Rinda sto mondo fatto sulle pagani, i te difende perché tu sei un sangue mio, ho sanno tutto quanto è quasi la vita mia, quando avevo le province a gestire.",
+            "language": "Italian",
+            "durationSec": 13.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:20:55.225Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5596,7 +5668,16 @@
             "mare",
             "relax"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Cala Serena, quando dico che la vacanza è una cosa soggettiva, è una cosa soggettiva per me il fatto che al Cala Serena non si può fare casino fino a notte fonda è quasi un vantaggio, perché fondamentalmente io inizio la giornata alle 8, 8 e mezza faccio colazione, vado al mare, la giornata in un villaggio è molto molto impegnativa ci sono tantissime cose da fare, arriva un certo orario che ovviamente preferisco proprio andare a dormire perché non è che al Cala Serena si va a dormire alle 9 di sera o alle 10 di sera, fino a mezzanotte si può fare musica, dopo mezzanotte si intrattiene un pochettino sulla piscina, perché? Perché il Cala Serena è immerso in una cala dove ci sono tantissime ville adiacenti al villaggio, non è uno di quei villaggi che si trova in un posto abbandonato, dove hanno costruito il villaggio e c'è solo il villaggio è un posto immerso in una cala importante e quindi le persone che abitano vicino non vogliono musica fino a notte fonda ma fondamentalmente per me non è un problema per questo dico la vacanza è una cosa soggettiva a chi piace fare notte fonda e si sveglia alle 10, alle 11, a mezzogiorno allora forse il cala Serena non è la vacanza adatta",
+            "language": "Italian",
+            "durationSec": 80.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:21:35.884Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5617,7 +5698,16 @@
             "estate",
             "mare"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Com'è il menù? Una squisitezza, una mannita. E mangiati, le fanno da voi. Grazie. E stasera la champagne per tutti! Dobbiamo festeggiare!",
+            "language": "Italian",
+            "durationSec": 16.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:21:43.489Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5638,7 +5728,16 @@
             "divertimento",
             "beach"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Se vuoi divertirti con incanto e con primor, solo devi vivere.",
+            "language": "Italian",
+            "durationSec": 12.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:21:49.830Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5663,7 +5762,16 @@
             "vacanze in Sicilia",
             "vacanze in Calabria"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "1, 2, 3, vola! E allora siamo pronti per iniziare con questo nostro Big Bang Party! E vogliamo chiedervi già subito una cosa. Abbiamo bisogno che vi... guarda, la prima volta che vi chiediamo, anziché di venire subito in acqua, di mettervi sul bordo.",
+            "language": "Italian",
+            "durationSec": 29.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:22:13.457Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5684,7 +5792,16 @@
             "vacanza",
             "famiglia"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:22:28.494Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5706,7 +5823,16 @@
             "stelle",
             "bellezza"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Io non so perché parlano male di me, nel quantiere coi miei già sognavamo Dubai.",
+            "language": "Italian",
+            "durationSec": 7.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:22:30.872Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5728,7 +5854,16 @@
             "resort",
             "vacanzaitaliana"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "ragazzi ma la cosa che adoro di più questo è una macchinetta dove troverete in tutti i punti centrali a becquia ristorante dove c'è l'acqua gassata, coca cola, cacchiera, tante e poi qui c'è la macchinetta per fare il cappuccino e il caffè ragazzi adoro questo",
+            "language": "Italian",
+            "durationSec": 28.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:06.998Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5747,7 +5882,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Applausi pizza",
+            "language": "Italian",
+            "durationSec": 35,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:09.533Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5768,7 +5912,16 @@
             "relax",
             "estate"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "What it takes to come alive It's the way I'm feeling, I just can't deny But I've gotta let it go We found love in a hopeless place We found love in a hopeless place We found love in a hopeless place Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:28.608Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5789,7 +5942,16 @@
             "relax",
             "estate"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Mentre brindiamo il cacqua, amici, cincina, facci l'infam Voglio una bionda, una morena, rosso, liscio, riccio, tanto per qua A te marbate che dai tono",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:30.869Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5811,7 +5973,16 @@
             "4stelle",
             "bluserena"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 16.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:35.624Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5833,7 +6004,16 @@
             "amore",
             "famiglia"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "è il segno di un'estate che vorrei poter se non per mai in bilico tra santi che",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:41.140Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5852,7 +6032,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:46.733Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5873,7 +6062,16 @@
             "viaggio",
             "italiana"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "ragazze, buon pranzo! a Bruxelles si mangia sempre ragazzi si mangia sempre come una crociera qua, lui gradisce tanto qua si mangia benissimo ragazzi le migliori vacanze in Italia sono a Bruxelles a Bruxelles",
+            "language": "Italian",
+            "durationSec": 25.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:59.274Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5894,7 +6092,16 @@
             "sardegna",
             "risposta"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "No Massimiliano, ma tra l'altro la cosa più importante che nessuno ti dice è che domani, lunedì 24 agosto, riapre Difference a Napoli quindi ci sarà l'apertura di Difference Store a Napoli abbigliamento maschile a soli 10 euro abiti, giacca più pantalone a soli 50 euro l'ultimo step del nostro super fuori tutto quindi ti consiglio per dimenticare questa brutta esperienza di passare in uno dei miei negozi e come sempre, come dico sempre, non fartelo raccontare.",
+            "language": "Italian",
+            "durationSec": 32.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:24:20.891Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5908,7 +6115,16 @@
           "comments": 1,
           "shares": 0,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4GWYVpDEXpIIeLjwBQC6OAMfmge0ZbaM8GQpG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XJLhsvzG1l4VWR0o1XOX0cfaB2g%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Lu, serena, dall'alba fino al luna piena, ti toglie il fiato per magia, lo sguardo da folli, ritrova la gioia con noi oltre a noi.",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:24:23.104Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5929,7 +6145,16 @@
             "viaggio",
             "pianificazione"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Niente e nessuno mai può allungare l'armadio Niente e nessuno ce lo può spartere perché Simo una storia scritta in un libro che sta eternità E che nessuno vuole mai può cancellare E ti accarezza mentre dorme già Non scordare questa dor, fino a che sbatte il tuo cuore Tu dici cose più, se la mia verità non giura me ne manderò di già Niente e nessuno mai va a lungo l'armadè Niente e nessuno è sottoposto",
+            "language": "Italian",
+            "durationSec": 60.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:24:54.494Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9995,7 +10220,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osiLPz6oLCqEBS03NuAtarYcZs2IWIBgCUixd~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ax%2F5xcfIqRMIG%2B3Lb%2Bf0miPxGuo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Cala Serena, quando dico che la vacanza è una cosa soggettiva, è una cosa soggettiva per me il fatto che al Cala Serena non si può fare casino fino a notte fonda è quasi un vantaggio, perché fondamentalmente io inizio la giornata alle 8, 8 e mezza faccio colazione, vado al mare, la giornata in un villaggio è molto molto impegnativa ci sono tantissime cose da fare, arriva un certo orario che ovviamente preferisco proprio andare a dormire perché non è che al Cala Serena si va a dormire alle 9 di sera o alle 10 di sera, fino a mezzanotte si può fare musica, dopo mezzanotte si intrattiene un pochettino sulla piscina, perché? Perché il Cala Serena è immerso in una cala dove ci sono tantissime ville adiacenti al villaggio, non è uno di quei villaggi che si trova in un posto abbandonato, dove hanno costruito il villaggio e c'è solo il villaggio è un posto immerso in una cala importante e quindi le persone che abitano vicino non vogliono musica fino a notte fonda ma fondamentalmente per me non è un problema per questo dico la vacanza è una cosa soggettiva a chi piace fare notte fonda e si sveglia alle 10, alle 11, a mezzogiorno allora forse il cala Serena non è la vacanza adatta",
+            "language": "Italian",
+            "durationSec": 80.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:21:35.884Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14886,7 +15120,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYRMIGALmQfbUjFgEGIFPZg0mMRNGeCDMzeV1X~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iQXw8W3rMkJ0Skg%2BmfuC9jvrOCM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Niente e nessuno mai può allungare l'armadio Niente e nessuno ce lo può spartere perché Simo una storia scritta in un libro che sta eternità E che nessuno vuole mai può cancellare E ti accarezza mentre dorme già Non scordare questa dor, fino a che sbatte il tuo cuore Tu dici cose più, se la mia verità non giura me ne manderò di già Niente e nessuno mai va a lungo l'armadè Niente e nessuno è sottoposto",
+            "language": "Italian",
+            "durationSec": 60.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:24:54.494Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19369,7 +19612,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oISAAQsMGmjBqAa8qeJKom1eBZ4MRGXfYU6NeY~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qSLHn%2FoUG8ZyBPc08RyaD39EDY0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Mentre brindiamo il cacqua, amici, cincina, facci l'infam Voglio una bionda, una morena, rosso, liscio, riccio, tanto per qua A te marbate che dai tono",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:23:30.869Z"
+          }
         },
         {
           "platform": "tiktok",
