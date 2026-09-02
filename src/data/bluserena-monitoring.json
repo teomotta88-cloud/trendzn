@@ -31784,6 +31784,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:12:22.041Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:53:20.605Z"
           }
         },
         {
@@ -31806,6 +31815,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:12:35.686Z"
+          },
+          "audioAnalysis": {
+            "transcript": "dove andiamo? ho appena capito che a Anjer c'è una villa private con una capacità di 23-27 persone non parliamo di facilità se stai qui la facilità di spazio di spazio è qui il luogo è anche di bivire pantai se stai a sentire il sole è possibile se stai a mangiare la pantai è molto buona soprattutto se stai a mangiare è molto buona ma il minus è che per il bivio di pantai l'area non è di pesce bianca ma per tutte le aree di villa qui è molto bella guarda l'area è una grande villa, è molto ampia, è comoda e la sopa è molto morbida, è una villa molto bella, il tappeto è anche grande, è completato, si mangia anche tre volte, se volete riempire questa villa, potete usare il booking in questo video, la città è molto bella, è per l'area della stanza, se la stanza è qui c'è quattro, è per l'area della stanza principale, è molto ampia, e l'area della stanza del bambino è molto bella, è molto Grazie a tutti!",
+            "language": "Italian",
+            "durationSec": 60.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:55:46.017Z"
           }
         },
         {
@@ -31828,6 +31846,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:12:53.629Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:58:25.000Z"
           }
         }
       ]
@@ -31868,6 +31896,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:13:07.670Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Magari corro il rischio di parlarti ancora, provi adesso che stai meglio sola, stavo aspettando la mia cura, dopo di te mai nessuna.",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:58:27.251Z"
           }
         },
         {
@@ -31967,6 +32004,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:13:59.368Z"
+          },
+          "audioAnalysis": {
+            "transcript": "GULBATU LALABATU SARUBATU NAZADA BAHR TUMAN BAHR TUMAN WASK CHAMAN ILHAM ASAR ME KONAM AAD JAHAD AAD JAHAD DEIRU KHERU SARPE NAZAR ME KONAM BULBULU GUL BULBULU GUL RAHMAHI KHAK BASAR ME KONAM Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:59:39.344Z"
           }
         },
         {
@@ -31988,6 +32034,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:14:07.238Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:02:43.183Z"
           }
         },
         {
@@ -32010,6 +32066,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:14:15.639Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:05:47.730Z"
           }
         },
         {
@@ -32062,6 +32128,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:14:42.516Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 28.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:06:50.222Z"
           }
         },
         {
@@ -32176,6 +32251,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:15:38.466Z"
+          },
+          "audioAnalysis": {
+            "transcript": "questo hotel resort è vicino a San Paolo la struttura è completa e se vuoi mangiare bene, mio amico, ci sono 4 riferimenti diari, notte tematica e anche le bevande non alcoliche sono inclusi al mattino e al giantano le piscine sono climatizzate, c'è piscina acchiusa e coperta anche rete per stare in preghiera, spazio kids per la bambina c'è ricreazione il giorno tutto, cioè cose da fare è ciò che non resta inoltre i banchetti al mattino, il mattino, il mattino e il giantano Il dettaglio è che ora in agosto succede la festa delle nazioni tutti i sabati con cibi di vari paesi. Tutto a volontà. Questo è il Gran Resort Serra Negra, che è una delle città che, nella nostra opinione, è una delle più carinissime dell'interiore. E c'è un coupon di sconto per ospedare lì. I dettagli li lascio qui nella descrizione.",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:06:53.577Z"
           }
         },
         {
@@ -32227,6 +32311,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:15:59.265Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Guarda, io vado a muovere il mio figlio. Oh, mio figlio! Ehi, tu, guarda, tu sei un po' di più. E' un po' di più. Guarda, tu sei un po' di più. Guarda, tu sei un po' di più. Guarda, tu sei un po' di più.",
+            "language": "Italian",
+            "durationSec": 17.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:06:56.414Z"
           }
         },
         {
@@ -32248,6 +32341,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:16:12.776Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:07:58.962Z"
           }
         },
         {
@@ -32270,6 +32372,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:16:20.153Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:09:39.012Z"
           }
         },
         {
@@ -32444,6 +32556,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:17:25.562Z"
+          },
+          "audioAnalysis": {
+            "transcript": "La la la la la la la la la",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:09:43.085Z"
           }
         },
         {
@@ -32465,6 +32586,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:17:51.944Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 13.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:09:45.312Z"
           }
         },
         {
@@ -32487,6 +32617,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:18:03.874Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti",
+            "language": "Italian",
+            "durationSec": 26.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:10:26.736Z"
           }
         },
         {
@@ -32602,6 +32741,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:18:57.078Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 19.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:10:29.149Z"
           }
         },
         {
@@ -32684,6 +32832,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:19:29.773Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie mille.",
+            "language": "Italian",
+            "durationSec": 10.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:10:31.323Z"
           }
         },
         {
@@ -32706,6 +32863,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:19:50.283Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 28.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:10:33.885Z"
           }
         },
         {
@@ -32789,6 +32955,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:20:30.811Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:10:36.064Z"
           }
         },
         {
@@ -32811,6 +32986,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:20:52.806Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il mio prezioso è tutto il bianco di te Il mio prezioso è tutto il bianco di te Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:13:38.957Z"
           }
         },
         {
@@ -32924,6 +33108,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:21:46.965Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Buongiorno a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 61.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:14:42.579Z"
           }
         },
         {
@@ -32977,6 +33170,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:22:07.164Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Oh, la marina magna, la marina magna, che se vuoi a casa, tu la fai a casa, la marina magna, oh, la marina magna, la marina magna,",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:15:36.355Z"
           }
         },
         {
@@ -32999,6 +33201,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:22:34.882Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:18:39.069Z"
           }
         },
         {
@@ -33021,6 +33233,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:22:50.153Z"
+          },
+          "audioAnalysis": {
+            "transcript": "You're my sweetest addiction, you're my strongest inspiration And I love you, it's true There's no mountain I could not climb, as long as you are mine And I thank you for being you I'll be your best friend I'll be your guy",
+            "language": "Italian",
+            "durationSec": 41.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:18:41.771Z"
           }
         },
         {
@@ -33073,6 +33294,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:23:16.971Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:21:46.890Z"
           }
         },
         {
