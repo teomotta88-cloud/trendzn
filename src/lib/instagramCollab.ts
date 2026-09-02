@@ -88,7 +88,7 @@ export async function addBrandProfile(input: {
 export async function listInfluencerIndustries(): Promise<string[]> {
   const { data, error } = await (supabase as any).from("instagram_influencer_industries").select("industry");
   if (error) throw error;
-  return [...new Set((data ?? []).map((r: any) => r.industry))].sort();
+  return [...new Set((data ?? []).map((r: any) => String(r.industry)))].sort();
 }
 
 // Mappa username influencer -> industry associate, per filtrare l'elenco
