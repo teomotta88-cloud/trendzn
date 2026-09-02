@@ -2016,6 +2016,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:43.597Z"
+          },
+          "ocrData": {
+            "textOnScreen": "solo crociere,ma un villaggio\nA turistico?\nn RTO! ECCONE U\nBlu Serena N\nBlu'Serena",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:13:23.800Z"
           }
         },
         {
@@ -2044,6 +2053,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:50.503Z"
+          },
+          "ocrData": {
+            "textOnScreen": "5A A LB JSER\nANDARE AL BLUSERENA\nBLI SERE\nAl :RENA",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:13:39.049Z"
           }
         },
         {
@@ -2076,6 +2094,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:26:51.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tecnico GRANSERENA\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi\nPiano Bar",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:13:57.037Z"
           }
         },
         {
@@ -2105,6 +2132,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:47.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": "arcn",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:14:15.272Z"
           }
         },
         {
@@ -2136,6 +2172,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:59.143Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JANN",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:14:43.145Z"
           }
         },
         {
@@ -2165,6 +2210,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:05.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:00.314Z"
           }
         },
         {
@@ -2196,6 +2249,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:03:54.660Z"
+          },
+          "ocrData": {
+            "textOnScreen": "saluto della\nfanpage Bluserena\nOddio sta",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:09.846Z"
           }
         },
         {
@@ -2225,6 +2287,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:12.418Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vilardi I\nEdo herr bri\nAddetto\nParco Nautico RESERENA\nRESORT",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:29.553Z"
           }
         },
         {
@@ -2258,6 +2329,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:15.446Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA a",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:35.871Z"
           }
         },
         {
@@ -2290,6 +2370,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:20.853Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: sei in Calabria e hai scelto\nun villaggio top per l'estate\n@bluserena",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:44.923Z"
           }
         },
         {
@@ -2321,6 +2410,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:26.392Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:52.360Z"
           }
         },
         {
@@ -2346,6 +2444,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:31.667Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:00.983Z"
           }
         },
         {
@@ -2380,6 +2486,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:32.450Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:09.795Z"
           }
         },
         {
@@ -2409,6 +2523,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:43.763Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort\nSerene Re\n1 pere\nNon conta quanto \\ontano sel\nandato, né il in cui sei\nstato. Il viaggio più bello è quello\nche la felicità negli occhi\ndei tuoi\nNon lontano sei\nstato. più bello è\nche lascia \\a felicità negli occhi\ndei tuoi figli.\n@bluserena",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:19.880Z"
           }
         },
         {
@@ -2442,6 +2565,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:05:42.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mi perla che\nDai, ce la puoi f|\nlo che mil perla",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:27.236Z"
           }
         },
         {
@@ -2473,6 +2605,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:49.928Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ho tenuto questa chicca Per\nil Grazie Vincenzo\nBluserena è una 4\ngaranzia su tutto.\nil finale™ Grazie Vincenzo\nBluserena è una 77\nPOCHETTINO DI TUTTO,\nRispondi ommento di\nBluserena è una\nQUANTI SONO\nFANTASTICI, NON SI\nVOGLIAMO SEMPRE NELLE\nspondial ommento di\nQUINDI RINGRAZIAMO",
+            "confidence": 0.88,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:34.559Z"
           }
         },
         {
@@ -2504,6 +2645,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:55.532Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:17:10.966Z"
           }
         },
         {
@@ -2535,6 +2684,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:00.757Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:17:15.772Z"
           }
         },
         {
@@ -2566,6 +2723,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:02.996Z"
+          },
+          "ocrData": {
+            "textOnScreen": "apace",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:17:45.381Z"
           }
         },
         {
@@ -2598,6 +2764,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:04.831Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:17:52.819Z"
           }
         },
         {
@@ -2628,6 +2802,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:09.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:17:59.619Z"
           }
         },
         {
@@ -2657,6 +2839,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:14.656Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nSalvatore Sarturell\nBisognerebbe togliere la\nQuarta Stella, non ne ha\npiù diritto. E da qualche\nanno ormai. Catena in\ndecadenza con prezzi\nfuori standard offerto. E\nsono stato cliente per 7\nanni fino all'anno scorso.\n5) Bisognerebbe togliere la\nentino\n3 Bisognerebbe togliere la",
+            "confidence": 0.945,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:05.663Z"
           }
         },
         {
@@ -2692,6 +2883,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:20.110Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:09.975Z"
           }
         },
         {
@@ -2718,6 +2917,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:25.567Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:16.795Z"
           }
         },
         {
@@ -2749,6 +2956,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:30.945Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:21.995Z"
           }
         },
         {
@@ -10182,6 +10397,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:47.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": "arcn",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:14:15.272Z"
           }
         },
         {
@@ -13873,6 +14097,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:05:42.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mi perla che\nDai, ce la puoi f|\nlo che mil perla",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:27.236Z"
           }
         },
         {
@@ -14585,6 +14818,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:32.450Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:09.795Z"
           }
         },
         {
@@ -17091,6 +17332,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:03:54.660Z"
+          },
+          "ocrData": {
+            "textOnScreen": "saluto della\nfanpage Bluserena\nOddio sta",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:09.846Z"
           }
         },
         {
@@ -18544,6 +18794,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:26:51.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tecnico GRANSERENA\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi\nPiano Bar",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:13:57.037Z"
           }
         },
         {
@@ -20300,6 +20559,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:05:42.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mi perla che\nDai, ce la puoi f|\nlo che mil perla",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:27.236Z"
           }
         },
         {
@@ -20322,6 +20590,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:49.928Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ho tenuto questa chicca Per\nil Grazie Vincenzo\nBluserena è una 4\ngaranzia su tutto.\nil finale™ Grazie Vincenzo\nBluserena è una 77\nPOCHETTINO DI TUTTO,\nRispondi ommento di\nBluserena è una\nQUANTI SONO\nFANTASTICI, NON SI\nVOGLIAMO SEMPRE NELLE\nspondial ommento di\nQUINDI RINGRAZIAMO",
+            "confidence": 0.88,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:16:34.559Z"
           }
         },
         {
@@ -24503,6 +24780,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:26:51.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tecnico GRANSERENA\nAudio/Luci\nAlessio Bulletti\nIstruttore Vela\nQ GRANSERENA HOTEL\nDavide Bianconi\nPiano Bar",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:13:57.037Z"
           }
         },
         {
@@ -25208,6 +25494,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:12.418Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vilardi I\nEdo herr bri\nAddetto\nParco Nautico RESERENA\nRESORT",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:29.553Z"
           }
         },
         {
@@ -25554,6 +25849,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:04:15.446Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA a",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:15:35.871Z"
           }
         },
         {
@@ -25690,6 +25994,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:47.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": "arcn",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:14:15.272Z"
           }
         },
         {
@@ -28543,6 +28856,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:50.503Z"
+          },
+          "ocrData": {
+            "textOnScreen": "5A A LB JSER\nANDARE AL BLUSERENA\nBLI SERE\nAl :RENA",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:13:39.049Z"
           }
         },
         {
