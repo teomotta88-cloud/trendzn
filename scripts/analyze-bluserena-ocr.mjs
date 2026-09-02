@@ -20,7 +20,7 @@ import path from "path";
 import Tesseract from "tesseract.js";
 
 import { runEnrichment } from "./lib/bluserena-enrich.mjs";
-import { cleanText, frameTimestamps } from "./lib/ocr-text.mjs";
+import { cleanText, frameTimestamps, linesFromBlocks } from "./lib/ocr-text.mjs";
 import {
   assertBinaries,
   cleanup,
@@ -30,9 +30,15 @@ import {
 } from "./lib/bluserena-media.mjs";
 
 // Si alza quando cambia il modo in cui si estrae il testo: i record scritti da
-// una versione precedente vengono rifatti da soli alla run dopo. Da alzare
-// quando arriverà il filtro sulla confidenza per parola.
-const VERSION = 1;
+// una versione precedente vengono rifatti da soli alla run dopo.
+//   1 = testo appiattito di Tesseract, senza filtri (produceva soprattutto rumore)
+//   2 = filtro per parola su confidenza + numero di lettere
+const VERSION = 2;
+
+// Soglie scelte dalla calibrazione del 02/09 (workflow "OCR — calibrazione
+// soglia"), non a naso: vedi il commento in lib/ocr-text.mjs per i dati.
+const MIN_CONFIDENCE = Number.parseInt(process.env.OCR_MIN_CONFIDENCE ?? "60", 10);
+const MIN_LETTERS = Number.parseInt(process.env.OCR_MIN_LETTERS ?? "3", 10);
 
 // Quanti fotogrammi campionare per video.
 const FRAMES_PER_VIDEO = Number.parseInt(process.env.OCR_FRAMES ?? "5", 10);
@@ -136,10 +142,23 @@ async function ocrPost(account) {
       const { data } = await worker.recognize(framePath);
       cleanup(framePath);
 
-      const text = data.text?.trim();
-      if (text) {
-        lines.push(...text.split("\n"));
-        if (typeof data.confidence === "number") confidences.push(data.confidence);
+      // Si legge l'albero per parola, non `data.text`: è lì che sta la
+      // confidenza che distingue il testo dal rumore.
+      lines.push(
+        ...linesFromBlocks(data.blocks, {
+          minConfidence: MIN_CONFIDENCE,
+          minLetters: MIN_LETTERS,
+        }),
+      );
+
+      for (const block of data.blocks ?? []) {
+        for (const para of block.paragraphs ?? []) {
+          for (const line of para.lines ?? []) {
+            for (const word of line.words ?? []) {
+              if ((word.confidence ?? 0) >= MIN_CONFIDENCE) confidences.push(word.confidence);
+            }
+          }
+        }
       }
     }
 
@@ -154,6 +173,8 @@ async function ocrPost(account) {
       return { textOnScreen: null, confidence: null, frameCount: framesRead, status: "no_text" };
     }
 
+    // Media delle sole parole tenute: la media per frame di prima mescolava
+    // rumore e testo, ed era per questo sempre intorno a 0,4-0,5.
     const confidence = confidences.length
       ? +(confidences.reduce((a, b) => a + b, 0) / confidences.length / 100).toFixed(3)
       : null;
@@ -161,7 +182,13 @@ async function ocrPost(account) {
     console.log(
       `    ✓ ${textOnScreen.split("\n").length} righe, confidenza ${confidence ?? "n/d"} (${framesRead} frame)`,
     );
-    return { textOnScreen, confidence, frameCount: framesRead, status: "ok" };
+    return {
+      textOnScreen,
+      confidence,
+      frameCount: framesRead,
+      minConfidence: MIN_CONFIDENCE,
+      status: "ok",
+    };
   } finally {
     cleanup(videoPath);
   }

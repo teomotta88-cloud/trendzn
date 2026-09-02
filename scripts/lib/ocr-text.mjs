@@ -60,10 +60,34 @@ export function wordsFromBlocks(blocks) {
   return out;
 }
 
-// Ricostruisce le righe tenendo solo le parole sopra soglia. Una riga che
-// resta senza parole sparisce: è esattamente il caso delle righe di puro
-// rumore, che oggi finiscono nello store.
-export function linesFromBlocks(blocks, { minConfidence = 0, requireDictionary = false } = {}) {
+// Quante LETTERE contiene un token (non caratteri: "£5" ne ha zero).
+export function letterCount(token) {
+  return (String(token).match(/\p{L}/gu) ?? []).length;
+}
+
+// Ricostruisce le righe tenendo solo le parole che superano ENTRAMBI i filtri.
+// Una riga che resta senza parole sparisce: è il caso delle righe di puro
+// rumore, che nella prima versione finivano nello store.
+//
+// Servono entrambi i criteri, e la calibrazione del 02/09 dice perché.
+//
+// La confidenza da sola non basta: le 15 parole lette meglio del campione
+// erano |(97) i(95) |(94) Ciao(93) @(93) /(93) 7(93) ... — Tesseract è
+// giustamente sicurissimo che un singolo tratto verticale sia una "|", quindi
+// alta confidenza NON vuol dire testo vero. E l'istogramma era piatto
+// (69/55/67/77/72/42/42/54/38/24), cioè nessuna soglia separa da sola i due
+// mondi.
+//
+// La forma da sola non basta: "bluserena" letto a confidenza 0 è rumore
+// visivo che assomiglia a una parola, e passerebbe qualsiasi filtro di forma.
+//
+// Insieme funzionano: sui 5 post del campione, conf>=60 + almeno 3 lettere
+// svuota i 3 post che davvero non hanno testo a video e conserva
+// "Ciao Bluserena" e "TikTok/@delgiudicesandro" negli altri due.
+export function linesFromBlocks(
+  blocks,
+  { minConfidence = 0, minLetters = 0, requireDictionary = false } = {},
+) {
   const lines = [];
   for (const block of blocks ?? []) {
     for (const para of block.paragraphs ?? []) {
@@ -72,7 +96,7 @@ export function linesFromBlocks(blocks, { minConfidence = 0, requireDictionary =
           .filter((w) => (w.confidence ?? 0) >= minConfidence)
           .filter((w) => !requireDictionary || w.in_dictionary)
           .map((w) => (w.text ?? "").trim())
-          .filter(Boolean);
+          .filter((t) => t && letterCount(t) >= minLetters);
         if (kept.length) lines.push(kept.join(" "));
       }
     }

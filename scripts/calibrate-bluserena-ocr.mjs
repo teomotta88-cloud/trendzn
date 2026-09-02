@@ -27,7 +27,13 @@ import {
   probeDurationSec,
   run,
 } from "./lib/bluserena-media.mjs";
-import { cleanText, frameTimestamps, linesFromBlocks, wordsFromBlocks } from "./lib/ocr-text.mjs";
+import {
+  cleanText,
+  frameTimestamps,
+  letterCount,
+  linesFromBlocks,
+  wordsFromBlocks,
+} from "./lib/ocr-text.mjs";
 
 const SAMPLE = Number.parseInt(process.env.SAMPLE ?? "5", 10);
 const FRAMES = Number.parseInt(process.env.OCR_FRAMES ?? "5", 10);
@@ -201,7 +207,32 @@ async function main() {
     console.log(
       `  solo in_dictionary -> ${JSON.stringify((soloDiz ? soloDiz.split("\n") : []).slice(0, 6))}`,
     );
+
+    // La regola che spedisce lo script vero: confidenza E numero di lettere.
+    // La confidenza da sola non basta — nel campione del 02/09 le parole lette
+    // meglio erano "|" a 97 e "i" a 95.
+    for (const [conf, lettere] of [
+      [50, 3],
+      [60, 3],
+      [60, 4],
+      [70, 3],
+    ]) {
+      const testo = cleanText(
+        linesFromBlocks(blocchi, { minConfidence: conf, minLetters: lettere }),
+      );
+      const righe = testo ? testo.split("\n") : [];
+      const marca = conf === 60 && lettere === 3 ? " <= in produzione" : "";
+      console.log(
+        `  conf>=${conf} + ${lettere} lettere -> ${JSON.stringify(righe.slice(0, 8))}${marca}`,
+      );
+    }
   }
+
+  const conLettere = globali.filter((w) => letterCount(w.text) >= 3);
+  console.log(
+    `\nParole con almeno 3 lettere: ${conLettere.length}/${globali.length}` +
+      ` — di queste, sopra 60 di confidenza: ${conLettere.filter((w) => w.confidence >= 60).length}`,
+  );
 
   const ordinate = [...globali].sort((a, b) => b.confidence - a.confidence);
   console.log("\nLe 15 parole lette meglio (dovrebbero essere il testo vero):");

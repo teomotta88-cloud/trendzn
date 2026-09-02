@@ -13,7 +13,13 @@ import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
-import { cleanText, frameTimestamps, linesFromBlocks, wordsFromBlocks } from "./ocr-text.mjs";
+import {
+  cleanText,
+  frameTimestamps,
+  letterCount,
+  linesFromBlocks,
+  wordsFromBlocks,
+} from "./ocr-text.mjs";
 import { downloadVideo, run, versionArg } from "./bluserena-media.mjs";
 import { commitField } from "./bluserena-store.mjs";
 import { runEnrichment } from "./bluserena-enrich.mjs";
@@ -705,6 +711,108 @@ test("il solo in_dictionary scarterebbe i nomi propri", () => {
 test("soglia e cleanText insieme producono il testo finale", () => {
   const testo = cleanText(linesFromBlocks(blocksFixture(), { minConfidence: 60 }));
   assert.equal(testo, "Ciao Bluserena");
+});
+
+// Il caso che ha smentito il piano iniziale. Nella calibrazione del 02/09 le
+// parole lette MEGLIO erano |(97) i(95) |(94) Ciao(93) @(93) /(93) 7(93):
+// Tesseract è giustamente sicurissimo che un tratto verticale sia una "|",
+// quindi la sola confidenza promuove il rumore invece di scartarlo.
+const blocksAltaConfidenzaMaRumore = () => [
+  {
+    paragraphs: [
+      {
+        lines: [
+          {
+            words: [
+              { text: "|", confidence: 97.0, in_dictionary: false },
+              { text: "i", confidence: 95.1, in_dictionary: true },
+              { text: "7", confidence: 93.0, in_dictionary: false },
+            ],
+          },
+          {
+            words: [
+              { text: "Ciao", confidence: 93.4, in_dictionary: true },
+              { text: "Bluserena", confidence: 84.2, in_dictionary: false },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+test("letterCount conta le lettere, non i caratteri", () => {
+  assert.equal(letterCount("£5"), 0);
+  assert.equal(letterCount("|"), 0);
+  assert.equal(letterCount("Ciao"), 4);
+  assert.equal(letterCount("@bluserena"), 9);
+  assert.equal(letterCount("érena"), 5);
+});
+
+test("la sola confidenza non basta: il rumore letto benissimo passerebbe", () => {
+  const soloConfidenza = linesFromBlocks(blocksAltaConfidenzaMaRumore(), { minConfidence: 60 });
+  assert.deepEqual(soloConfidenza, ["| i 7", "Ciao Bluserena"], "il rumore sopravvive");
+});
+
+test("confidenza e lettere insieme tengono il testo e scartano il rumore", () => {
+  const combinata = linesFromBlocks(blocksAltaConfidenzaMaRumore(), {
+    minConfidence: 60,
+    minLetters: 3,
+  });
+  assert.deepEqual(combinata, ["Ciao Bluserena"]);
+});
+
+// L'altra metà: "bluserena" nel campione è stato letto a confidenza 0, cioè
+// rumore visivo che assomiglia a una parola. La sola forma lo lascerebbe
+// passare.
+test("le sole lettere non bastano: il rumore che sembra una parola passerebbe", () => {
+  const blocks = [
+    {
+      paragraphs: [
+        { lines: [{ words: [{ text: "bluserena", confidence: 0, in_dictionary: false }] }] },
+      ],
+    },
+  ];
+  assert.deepEqual(
+    linesFromBlocks(blocks, { minLetters: 3 }),
+    ["bluserena"],
+    "la forma da sola passa",
+  );
+  assert.deepEqual(linesFromBlocks(blocks, { minConfidence: 60, minLetters: 3 }), []);
+});
+
+test("un post senza testo a video resta vuoto e diventa no_text", () => {
+  // Righe del post 1 della calibrazione, che a video non ha nessun testo.
+  const blocks = [
+    {
+      paragraphs: [
+        {
+          lines: [
+            {
+              words: [
+                { text: "iid", confidence: 42 },
+                { text: ":", confidence: 30 },
+              ],
+            },
+            {
+              words: [
+                { text: "A", confidence: 55 },
+                { text: "g", confidence: 48 },
+              ],
+            },
+            {
+              words: [
+                { text: "£5", confidence: 44 },
+                { text: "4", confidence: 51 },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  const testo = cleanText(linesFromBlocks(blocks, { minConfidence: 60, minLetters: 3 }));
+  assert.equal(testo, "", "niente testo: lo script scriverà status no_text");
 });
 
 test("runEnrichment committa a batch e rispetta il limite di post", async () => {
