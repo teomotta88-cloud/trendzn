@@ -22390,7 +22390,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:09:33.954Z"
+            "updatedAt": "2026-09-02T16:29:07.079Z"
           }
         },
         {
@@ -23250,7 +23250,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:14:52.211Z"
+            "updatedAt": "2026-09-02T16:24:37.605Z"
           }
         },
         {
@@ -23463,7 +23463,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:16:30.527Z"
+            "updatedAt": "2026-09-02T16:26:57.946Z"
           }
         },
         {
@@ -23956,7 +23956,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:18.541Z"
+            "updatedAt": "2026-09-02T16:27:09.546Z"
           }
         },
         {
@@ -31979,7 +31979,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:14:52.211Z"
+            "updatedAt": "2026-09-02T16:24:37.605Z"
           }
         },
         {
@@ -31993,7 +31993,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o8fEyLJIIgsgADGQvaemsfrAjdPvVGIOLFSWDn~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=PZ%2FQpI5AJnikC0pL%2F0wedDe0p80%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:24:45.662Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32006,7 +32014,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0FMDGfDSIoiR3oE2YYiVpvSKBEAeE9xFESyQg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Bk6CeocZg84T%2BR%2F8lrfSZBD3je8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Hotel\n.colombia\ngrand San\ngrand\nAndrés\nHotelg ar",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:24:55.077Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32019,7 +32036,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogRCoFBYAfGfBiUZgqGuAjUQGAEEIAK6DCKDEg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ZlmSzz91t%2FK2Hg44aqG273h6nMo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:25:07.789Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32032,7 +32057,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocY2iXa6BqABnM51nHXbEEiIBp2vpUXEAnZuA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=11Jvmr%2BUNZcQ%2B1xN2AZDztdfxww%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:25:17.339Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32045,7 +32078,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEtdA3gs1EyGOf2qASBtQ9QJf8Et8BDSTD5RSF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=KHiMUmXLONTm5lsp81eKxGMAwXU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Grand Sierra Resort,\n_Reno, NL\nIts many\npeople, we had to\nGrand Sierra\nReno, NV\npeople, we hail to come\nto our room to see.\nSierra Resott,\npeople, we had to come\nto owr room to see\nto our room to see 2\nthe fi eWOTR\nmany\nwad to come.\nour room to see\nthe fi e orks",
+            "confidence": 0.881,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:25:25.940Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32058,7 +32100,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIQGMijIgDA8SgofLVPArM3e4CX2PwHM7fqBo6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=wypxlj9z3tK3lMo0yPKojjhhr80%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Kulu kule serena hotel\nKampala 4th September\nOur grand finale\nKulu kule serena hotel i P\nKulu kule serena hotel t\nKampala 4th September 3\nKampala 4th September LEA\nKulu kule serena hotel 4 i\nKampala 4th September ahi\nOur grand finale è",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:25:36.527Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32071,7 +32122,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIHiDfuwEEWcIucdzDqgFBlJIORXALvzCBCoeq~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=lY9snmzxsABro3VAerfo37p4ExI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Mukisa properties at Serena\nhotel",
+            "confidence": 0.871,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:25:41.852Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32084,7 +32144,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oAzC8DBwUxLpTe4zDzFEAfD8I5AjnvFIIDfBIg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=wbIbPSN%2BAPS4xDu7SWHbZlBjob0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:25:50.335Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32097,7 +32165,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4RBIFBfNagf0qjgLq9UAgcYMXQEQyIHDEhwEg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=IP1tifsXOrIZqhKmK3wZisoxk6o%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:26:04.981Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32110,7 +32186,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogI3wNQA40ALMIrtkfjeMGeySPGUDCEQvKDVga~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/o8cojexRoEa1EWXBEqVgqoDtFcfAAChACI2NAg.image?dr=9634&x-expires=1788433200&x-signature=yZiHoNZRYQq9RfQ8lUyFsYby7ac%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:26:17.880Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32123,7 +32207,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEckqyIEQEHitFIBveqElDyBkQznQdTfgApFsR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=R1Tdr%2BclBC2Bc08Jf1iBZ73pcyk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Happening now at\nSerena Hotel J\nSerena Hotel\nHappening now at a i",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:26:31.276Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32152,7 +32245,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:16:30.527Z"
+            "updatedAt": "2026-09-02T16:26:57.946Z"
           }
         },
         {
@@ -32183,7 +32276,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:19:18.541Z"
+            "updatedAt": "2026-09-02T16:27:09.546Z"
           }
         },
         {
@@ -32197,7 +32290,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQIRLcqAvK7JqFhSDBIeLkFqWKDBhgfpE8E4O3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=tCHJDvt7G%2FPnAidRnicHlRZ71mk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "GATES OPEN AT 3PM Ì",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:27:19.391Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32210,7 +32312,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8QACAi51BBZIAwxVCmmi2HAf6uGm1ICKzIirR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=mqzodrgxjrEfR%2BCvDLIu6AFU7F8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "a IRENES\nNAMATOVU",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:27:31.114Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32223,7 +32334,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUItH1cCzA5JMwIy5hIA2iiANJBiOQFT7fP35u~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=1AdHbiDIGOCoj7jgW0CQCmId6NQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "WOMALY\nIRENEZ\nTOVU\nPASSA Ny",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:27:41.078Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32236,7 +32356,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okNCsSI6MixYAAqXw18fIdw0uiI9vAaBIRt74o~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dl8inVr5iix5978HoZB4BpxxUX0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ASTYSPHERE\nDESIGN\nNIFTYSPHERE|",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:28:14.329Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32249,7 +32378,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAeBdJDYFdxuhKHlbRnOABbE5ttQQcNfgqy1FE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=nVZ4HRyLS80%2BLFUyQZnU9lTtiwI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ARENE\nIRENE\nQ De ARNO, a",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:28:26.875Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32262,7 +32400,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8rsXRmIR1QDEAdVAfEQjGLLfeUtm7I4DG4CAL~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RLzNVXy%2B%2FJJa2mZhRjmeUiqfS8M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "namatovu on stage\nat Serena hotel\nIrene namatovu on stage\nSerena hotel\nIrene namatovu on",
+            "confidence": 0.824,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:28:38.222Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32275,7 +32422,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oU2IxSii1i6EzSuWCl253dwEBfAbiABDCAu1WI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=aeX3dYR5Rk9zc6hD0Qz%2BZaupwgs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Lillian\nNow at Serena Hotel\nJONA\nMEDIA\nNow at Serena Hotel A\nJONA Li\ny Lillian\nwh Lillian E",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:28:49.702Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32305,7 +32461,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:09:33.954Z"
+            "updatedAt": "2026-09-02T16:29:07.079Z"
           }
         },
         {
@@ -32319,7 +32475,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o03JGeAMuICTAOIVA4C6QUQEe7IeTCDoFGOjCL~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=h%2FnF4v0EjPwv2kCSxo4eSbRk%2FXQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "(yg he DAYS\nDayz To Go... STRONG WOMAN CONCERT\nKampala serena hotel\nLet's All Be There\nTRONG\n2 Dayz To Go... STRONG WOMAN CONCERT\n7 Let's All Be There\nSTRONG\nWOMAN,\n1) Let s All Be There\nAMATOVU\nTo Go... STRONG WOMAN CONCERT\nKampala serena\ni Let's All Be There\nDAYS\nVOMAN\nÈ 2 Dayz To Go... STRONG WOMAN CONCERT",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:29:19.396Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32332,7 +32497,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUEwQ4ffCE7QiWIj6MoU3EFfSAkD6aADAn7ygC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=s7i35SG8OqUdUFHmAKTJTuD0%2FHA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "VISION è\nONE VISION UPDATES\nUNA HISI NANDY ATAKUWA\nKAVALIA THAMANI YA BEI\nGANI USIKU WA LEO\nONE VISION\nvision DATES\nVISION UPDATES\nBONE VISION UPDATES",
+            "confidence": 0.884,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:29:28.115Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32345,7 +32519,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMIB1IE3SrQpCANmBUwAzdSAiRucFCqIawfiIO~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Mx7ZlAEQH9KCobjAidbXvOUzy64%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "CORONATION\nKine",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:29:40.059Z"
+          }
         },
         {
           "platform": "tiktok",
