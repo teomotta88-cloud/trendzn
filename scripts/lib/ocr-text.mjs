@@ -33,3 +33,49 @@ export function cleanText(rawLines, { maxChars = MAX_TEXT_CHARS } = {}) {
 
   return kept.join("\n").slice(0, maxChars);
 }
+
+// Tesseract restituisce, oltre al testo appiattito, l'albero
+// blocks -> paragraphs -> lines -> words con la confidenza di OGNI parola e
+// un flag `in_dictionary`. È il segnale che distingue "Ciao Bluserena" da
+// "£5 4", e la prima versione dell'estrattore lo buttava via usando solo
+// `data.text`: da lì il rumore nei record.
+export function wordsFromBlocks(blocks) {
+  const out = [];
+  for (const block of blocks ?? []) {
+    for (const para of block.paragraphs ?? []) {
+      for (const line of para.lines ?? []) {
+        for (const word of line.words ?? []) {
+          const text = (word.text ?? "").trim();
+          if (!text) continue;
+          out.push({
+            text,
+            confidence: word.confidence ?? 0,
+            inDictionary: Boolean(word.in_dictionary),
+            language: word.language ?? null,
+          });
+        }
+      }
+    }
+  }
+  return out;
+}
+
+// Ricostruisce le righe tenendo solo le parole sopra soglia. Una riga che
+// resta senza parole sparisce: è esattamente il caso delle righe di puro
+// rumore, che oggi finiscono nello store.
+export function linesFromBlocks(blocks, { minConfidence = 0, requireDictionary = false } = {}) {
+  const lines = [];
+  for (const block of blocks ?? []) {
+    for (const para of block.paragraphs ?? []) {
+      for (const line of para.lines ?? []) {
+        const kept = (line.words ?? [])
+          .filter((w) => (w.confidence ?? 0) >= minConfidence)
+          .filter((w) => !requireDictionary || w.in_dictionary)
+          .map((w) => (w.text ?? "").trim())
+          .filter(Boolean);
+        if (kept.length) lines.push(kept.join(" "));
+      }
+    }
+  }
+  return lines;
+}
