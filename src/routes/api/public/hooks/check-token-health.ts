@@ -92,7 +92,7 @@ async function checkGithubToken(): Promise<TokenCheckResult> {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return notConfigured(name, label);
 
-  const headers = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" };
+  const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github+json" };
 
   try {
     const rateRes = await fetch("https://api.github.com/rate_limit", {
