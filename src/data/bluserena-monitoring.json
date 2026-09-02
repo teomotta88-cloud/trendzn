@@ -3969,6 +3969,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:33.750Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:22:56.418Z"
           }
         },
         {
@@ -4001,6 +4009,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:37.955Z"
+          },
+          "ocrData": {
+            "textOnScreen": "nella sd\nmovimenti a cavatapp",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:05.872Z"
           }
         },
         {
@@ -4031,6 +4048,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:40.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ColazioneBluSerena™\nColazione",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:13.165Z"
           }
         },
         {
@@ -4061,6 +4087,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:42.809Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:23.371Z"
           }
         },
         {
@@ -4089,6 +4123,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:47.941Z"
+          },
+          "ocrData": {
+            "textOnScreen": "S=Buongiorno\nBuongiorno",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:31.556Z"
           }
         },
         {
@@ -4119,6 +4162,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:53.681Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:38.510Z"
           }
         },
         {
@@ -4150,6 +4201,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:59.302Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:45.829Z"
           }
         },
         {
@@ -4181,6 +4240,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:04.286Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:23:53.986Z"
           }
         },
         {
@@ -4211,6 +4278,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:06.731Z"
+          },
+          "ocrData": {
+            "textOnScreen": "momento in\nil braccialetto inclusive\nIl momento in cui togli\nil braccialetto dellall\nll momento in cui togli\nil braccialetto dell'all inclusive\nIl togli\nin cui togli",
+            "confidence": 0.853,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:02.054Z"
           }
         },
         {
@@ -4242,6 +4318,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:12.691Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ingressi\nvillaggio cromie\nbluserena e clorophilla\nun bivio davvero\nun bivio davvero difficile...",
+            "confidence": 0.901,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:08.991Z"
           }
         },
         {
@@ -4272,6 +4357,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:17.150Z"
+          },
+          "ocrData": {
+            "textOnScreen": "2 Lungomare di Montesilv...\nLungomare di Montesilv...",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:22.529Z"
           }
         },
         {
@@ -4301,6 +4395,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:22.682Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:34.999Z"
           }
         },
         {
@@ -4332,6 +4434,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:01:51.136Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serena majestic\n\\lare\nSerena\nPill,\nMare del\n2 Serena Majestic",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:54.175Z"
           }
         },
         {
@@ -4364,6 +4475,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: Your IP address is blocked from accessing this post",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:27.175Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: Your IP address is blocked from accessing this post",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:55.817Z"
           }
         },
         {
@@ -4394,6 +4514,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:32.370Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A pert\nCastellaneta\nPuglia\nComplimenti allo ch\nGiuseppe Q\n(@Dbluserena\nkalidria Hotel 1\no Castellaneta Marina\nComplimenti allo chef\nGiuseppe Quinzi.\n@bluserena",
+            "confidence": 0.855,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:01.226Z"
           }
         },
         {
@@ -4425,6 +4554,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:35.327Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:10.689Z"
           }
         },
         {
@@ -4455,6 +4592,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:40.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:19.938Z"
           }
         },
         {
@@ -4486,6 +4631,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:48.663Z"
+          },
+          "ocrData": {
+            "textOnScreen": "non ci caso\nInfatti non lo troviamo mai\nnormale\nPerchè lui non normale",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:30.198Z"
           }
         },
         {
@@ -4543,6 +4697,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:51.009Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:36.046Z"
           }
         },
         {
@@ -4572,6 +4734,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:53.052Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:41.720Z"
           }
         },
         {
@@ -4600,6 +4770,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:59.609Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:52.912Z"
           }
         },
         {
@@ -4631,6 +4809,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:51:06.699Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:58.258Z"
           }
         },
         {
@@ -4661,6 +4847,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:07.526Z"
+          },
+          "ocrData": {
+            "textOnScreen": "che fortuna avere un posto per cui piango così\ntanto ogni volta che devo tornare a casa\nche fortuna avere un posto per cui piango cosi\ni che fortuna avere un posto per cui piango così",
+            "confidence": 0.875,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:26:08.447Z"
           }
         },
         {
@@ -4692,6 +4887,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:13.930Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:26:20.829Z"
           }
         },
         {
@@ -4722,6 +4925,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:03:52.175Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserena Hotel Serena Majestic",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:26:30.489Z"
           }
         },
         {
@@ -13313,6 +13525,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:51:06.699Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:58.258Z"
           }
         },
         {
@@ -17428,6 +17648,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:01:51.136Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serena majestic\n\\lare\nSerena\nPill,\nMare del\n2 Serena Majestic",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:54.175Z"
           }
         },
         {
@@ -17526,6 +17755,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:03:52.175Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserena Hotel Serena Majestic",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:26:30.489Z"
           }
         },
         {
@@ -23323,6 +23561,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:22.682Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:24:34.999Z"
           }
         },
         {
@@ -29577,6 +29823,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:08:32.370Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A pert\nCastellaneta\nPuglia\nComplimenti allo ch\nGiuseppe Q\n(@Dbluserena\nkalidria Hotel 1\no Castellaneta Marina\nComplimenti allo chef\nGiuseppe Quinzi.\n@bluserena",
+            "confidence": 0.855,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:25:01.226Z"
           }
         },
         {
