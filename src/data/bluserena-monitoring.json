@@ -11343,7 +11343,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:28.958Z"
+            "updatedAt": "2026-09-02T17:18:40.042Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -27956,6 +27956,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:45:11.510Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:03:03.887Z"
           }
         },
         {
@@ -27978,6 +27987,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:45:24.256Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Mi sono tornata da questa viaggia in Florida e non posso aspettare di tornare. Benvenuti a Lido Key on the Gulf. Vuoi stare a Cirque St. Armand's Beachside Hotel. Si è aperto il mese passato. Scopri la loro shuttle gratis a Lido Beach Resort dove puoi divertirti del loro pool e la sua beach privata. La shuttle può anche portarti a St. Armand's Circle dove ci sono tutte le scuole e i restauranti come Green Ziba Cafe.",
+            "language": "Italian",
+            "durationSec": 24.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:04:51.769Z"
           }
         },
         {
@@ -28000,6 +28018,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:45:33.852Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 43.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:06:27.574Z"
           }
         },
         {
@@ -28021,6 +28048,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:45:40.768Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:08:00.401Z"
           }
         },
         {
@@ -28043,6 +28080,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:45:53.337Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Sai che il militare degli Stati Uniti ha un resort di 4 star su un'azienda Disney? E se sei attivo, un reservista o un veterano con una valida ID, puoi ottenere accesso a questo. L'hotel si chiama Shades of Green e questo è quanto le ruote di hotel iniziano ogni notte. Per E1 a E7 è solo $179. E per mostrarti come è freddo, questo è il resort di Polonia. È il resort più vicino a Shades of Green e come puoi vedere qui, i prezzi sono da $576 a notte fino a $831 a notte. Alcune cose che sono fredde di questo hotel sono le amenities Disney, come il sistema di transito per tornare e tornare dai parchi E è anche un golf course, quindi è un'azienda super bella E c'è un sacco di cose militari che sono involvute in questo resort Una, per esempio, è il fatto che hanno un intercambio locato all'interno di questo hotel, che è super cluccio Perché ovviamente sappiamo che non devi pagare le tasche all'interno E anche tu non devi pagare i prezzi di Disney World su questo intercambio Quindi fa le cose molto più facili in caso ti dimentichi qualcosa Inoltre, come gli altri resort, probabilmente devi pagare 35$ per un pennello Se vuoi vedere più video su finanziamenti militari o discount militari, faccia un'occhiata, perché io farò un nuovo discount militare o qualcosa di gratuito che i membri militari ottengono per il prossimo video.",
+            "language": "Italian",
+            "durationSec": 65.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:09:46.131Z"
           }
         },
         {
@@ -28065,6 +28111,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:45:59.939Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:10:18.477Z"
           }
         },
         {
@@ -28087,6 +28142,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:46:19.531Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:13:21.681Z"
           }
         },
         {
@@ -28109,6 +28174,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:46:32.091Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 24.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:13:24.010Z"
           }
         },
         {
@@ -28131,6 +28205,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:46:43.611Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Sai che il militare degli Stati Uniti ha un resort di 4 star su un'azienda Disney e se sei attivo, un reservista o un veterano con un ID valido puoi ottenere accesso a questo. L'hotel si chiama Shades of Green e questo è quanto la stanza di hotel per la notte. Per E1-E7 è solo $179. E per mostrarti come è freddo, questo è il resort di Polonia. È il resort più vicino al Shades of Green e come puoi vedere qui, i prezzi sono da $576 a notte fino a $831 a notte. Alcune cose che sono fredde di questo hotel sono le amenitizie Disney, come il sistema di transito per tornare e tornare dai parchi e è anche un golf course, quindi è un'azienda super bella e c'è un sacco di cose militari che sono involvute in questo resort Una, per esempio, è il fatto che hanno un interconto locato all'interno di questo hotel, che è super cluccio perché ovviamente sappiamo che non devi pagare le tasche all'interno e non devi pagare i prezzi di Disney World su questo interconto quindi fa le cose molto più facili in caso di che ti dimentichi qualcosa Come gli altri resort dove probabilmente devi pagare 35$ per un pennello se vuoi vedere più video su finanziamenti militari o discount militari, faccia un'occhiata, perché io farò un nuovo discount militare o qualcosa di gratuito che i membri militari ottengono per i prossimi 50 giorni.",
+            "language": "Italian",
+            "durationSec": 66.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:14:54.876Z"
           }
         }
       ]
@@ -28172,6 +28255,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:46:49.205Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:17:54.842Z"
           }
         },
         {
@@ -28244,7 +28337,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:28.958Z"
+            "updatedAt": "2026-09-02T17:18:40.042Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -28341,6 +28434,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:47:31.743Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 6.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:19:00.211Z"
           }
         },
         {
@@ -28385,6 +28487,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:47:39.810Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Agosto in Calabria al Serenay Resort. Dal 16 al 23 in software inclusive la quota include spiaggia, tessere club e anche la tazza di soggiorno è già inclusa. In camera tripla con bambino fino ad 11 anni a 3.375 euro. Scrivici e prenota con schema vacanze.",
+            "language": "Italian",
+            "durationSec": 22.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:20:08.941Z"
           }
         },
         {
@@ -28406,6 +28517,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:47:54.189Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:22:17.521Z"
           }
         },
         {
@@ -28458,6 +28579,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:48:11.308Z"
+          },
+          "audioAnalysis": {
+            "transcript": "è inutile chiamare non risponderà nessuno telefono è volato fuori giù dal quarto piano",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:22:20.137Z"
           }
         },
         {
@@ -28479,6 +28609,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:48:28.722Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:23:32.160Z"
           }
         },
         {
@@ -28501,6 +28640,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:48:49.905Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il Poconos finalmente ha un resort di lusso reale con un pool privato di plunge in casa. Ci siamo restati a Swiftwater e, sinceramente, questo posto era un reale. Il pool indoor e outdoor resta caldo tutto il verno, quindi puoi sfiorare da dentro all'esterno guardando le vittime. Il ristorante fuori fu anche un punto di rivoluzione, con un'amica città, cocktail di crema e anche un'esperienza di martini. Poi c'è tutto questo dettaglio di lusso, come i freddi di lino e questo grande chandelier nel lobby. Era la mia prima volta qui e sicuramente non sarà la mia ultima.",
+            "language": "Italian",
+            "durationSec": 28.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:24:20.059Z"
           }
         },
         {
@@ -28523,6 +28671,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:49:05.361Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Se stai cercando una vacanza rilassante a Houston, qui è una vacanza che vuoi salvare. Ho bookato una vacanza a la bella Hotel St. Augustine attraverso Resort Pass e è stato il modo perfetto per me e mia sessore di avviare. Abbiamo avuto sedi in lounge, una stazione di idratazione e potremmo anche orderre cibo e cocktail dal restaurant hotel fino alla palla. Era così facile sentire come se stessimo in vacanza senza lasciare la città. Book your next vacation at resortpass.com",
+            "language": "Italian",
+            "durationSec": 24.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:25:34.939Z"
           }
         },
         {
@@ -28575,6 +28732,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:49:48.233Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Famiglia, siamo arrivati! Serenade Caribe Club! Non perdete tutto il contenuto di questo spettacolare nuovo hotel recentemente inaugurato, ha solo dieci giorni, ha un parco d'acqua impressionante, una infrastruttura moderna, ma con un disegno che si diventerà loco perché tutto è veramente instagrammabile. accompagnami a divertirti di cinque ristoranti, parco d'acqua, rio lento, i migliori show che c'è in Punta Cana lo vedranno qui nel Serenade Caribe Club quindi andiamo, andiamo, accompagnami!",
+            "language": "Italian",
+            "durationSec": 44.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:27:47.290Z"
           }
         },
         {
@@ -28628,6 +28794,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:50:21.678Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:29:07.663Z"
           }
         },
         {
@@ -28650,6 +28826,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:50:38.187Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 18.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:29:10.073Z"
           }
         },
         {
@@ -28672,6 +28857,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:50:49.738Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:29:45.508Z"
           }
         },
         {
@@ -28694,6 +28888,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:51:02.253Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:30:48.035Z"
           }
         },
         {
@@ -28716,6 +28919,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:51:13.931Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:31:50.370Z"
           }
         },
         {
@@ -28738,6 +28950,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:51:24.499Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:34:17.403Z"
           }
         },
         {
