@@ -10777,6 +10777,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:50:47.614Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:53:22.510Z"
           }
         },
         {
@@ -10799,6 +10807,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:51:18.763Z"
+          },
+          "ocrData": {
+            "textOnScreen": "casion 3206864010\nUN’ESTATE DA SOGNO\nDal 31 Luglio\nBLUSERENA\nSOFT AL 22%\nPARTIAMO CON UN'ALTRA\nOCCASIONE PER\nDA SOGNO\nDal 31 Luglio al 2\nBLUSERENA CALA\nSOFT ALL INC 760\nBENISSIMO,\nDATE\nDESTINAZIONE\nSERVIZIO\nSOFT ALL INCL\nTRATTAMENTO\nVivi il lusso e il relax di\ne cena a buffet, e be A\nRIN SOFT ALL\nINCLUSIVE,\nDal 31 Lugl\nBLUSERENA ANE\nSOFT A\nTRATTAM a coppia\nlussq\nDal 31 Luglio} osto\nBLUSERENA NE\nSOFT AL\nTANTA\nPROFESSIONALITÀ:",
+            "confidence": 0.88,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:53:31.277Z"
           }
         },
         {
@@ -10821,6 +10838,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:51:35.940Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:53:47.031Z"
           }
         },
         {
@@ -10850,6 +10875,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:52:45.710Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:02.433Z"
           }
         },
         {
@@ -10879,6 +10912,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:55:09.102Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:08.242Z"
           }
         },
         {
@@ -10902,6 +10943,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T09:55:40.781Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:16.740Z"
           }
         },
         {
@@ -10924,6 +10973,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:56:09.806Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:25.977Z"
           }
         },
         {
@@ -10946,6 +11003,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:33.105Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE\nGIORNO AL\nANDIAMONN RECEPTION A\nLAMENTARCI\nQUINTO GIORNO AL\nANDIAMO IN RECEPTION A",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:32.972Z"
           }
         },
         {
@@ -10968,6 +11034,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:56:15.686Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:40.228Z"
           }
         },
         {
@@ -10998,6 +11072,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:57:07.107Z"
+          },
+          "ocrData": {
+            "textOnScreen": "chee]\ndiciamo\nunagaranzia\nE Una garanzia S\n\"Quando,",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:58.512Z"
           }
         },
         {
@@ -11020,6 +11103,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:57:09.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:55:10.545Z"
           }
         },
         {
@@ -11042,6 +11133,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:50:04.741Z"
+          },
+          "ocrData": {
+            "textOnScreen": "giulialamontagna\nE quale\nRispondi al comment\nwr E qual\nFERENCE\nRispondi al commento di\nE quale ù\nSTORE\n1 Rispondi al commento di\nRispondi al commento di N\nr E quale",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:55:35.999Z"
           }
         },
         {
@@ -11071,6 +11171,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:58:32.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:55:44.777Z"
           }
         },
         {
@@ -11101,6 +11209,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:59:40.759Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:04.440Z"
           }
         },
         {
@@ -11131,6 +11247,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:59:42.948Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Thome\nnostro",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:24.273Z"
           }
         },
         {
@@ -11162,6 +11287,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:32:33.489Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:30.586Z"
           }
         },
         {
@@ -11184,6 +11317,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:00:04.026Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:37.902Z"
           }
         },
         {
@@ -11207,6 +11348,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T10:00:57.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:46.146Z"
           }
         },
         {
@@ -11229,6 +11378,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:01:00.907Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i! migliore secondo\nme è il serene\nil migliore secondo ill\nRispondi al commento di\nFrancesca Galotto\nil migliore secondo\nDIFFERENCE!\nRispondi al commento di di\nFrancesca Galotto i\nil migliore secondo 7",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:57:00.184Z"
           }
         },
         {
@@ -11251,6 +11409,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:01:03.037Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:57:09.814Z"
           }
         },
         {
@@ -11273,6 +11439,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:01:37.019Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:57:19.274Z"
           }
         },
         {
@@ -11295,6 +11469,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:01:47.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": "che sfava male\nrlar\ntalme male",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:57:26.869Z"
           }
         },
         {
@@ -11317,6 +11500,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:01:56.222Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:57:42.384Z"
           }
         },
         {
@@ -11339,6 +11530,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:02:59.247Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Torreserena Re... bluserena\n2 Torreserena Re... bluserena\nrientreremg pi\nLibero e\nrientreremd\nLa pace\nQuando",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:58:03.932Z"
           }
         },
         {
@@ -11361,6 +11561,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:03:01.210Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@bluserena\nSHOE",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:58:16.653Z"
           }
         },
         {
@@ -14812,6 +15021,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:50:04.741Z"
+          },
+          "ocrData": {
+            "textOnScreen": "giulialamontagna\nE quale\nRispondi al comment\nwr E qual\nFERENCE\nRispondi al commento di\nE quale ù\nSTORE\n1 Rispondi al commento di\nRispondi al commento di N\nr E quale",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:55:35.999Z"
           }
         },
         {
@@ -16067,6 +16285,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:33.105Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE\nGIORNO AL\nANDIAMONN RECEPTION A\nLAMENTARCI\nQUINTO GIORNO AL\nANDIAMO IN RECEPTION A",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:32.972Z"
           }
         },
         {
@@ -22090,6 +22317,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:32:33.489Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:30.586Z"
           }
         },
         {
@@ -23398,6 +23633,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T10:00:57.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:56:46.146Z"
           }
         },
         {
@@ -23430,6 +23673,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:57:09.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:55:10.545Z"
           }
         },
         {
@@ -23540,6 +23791,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:33.105Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE\nGIORNO AL\nANDIAMONN RECEPTION A\nLAMENTARCI\nQUINTO GIORNO AL\nANDIAMO IN RECEPTION A",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:32.972Z"
           }
         },
         {
@@ -24805,6 +25065,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:51:35.940Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:53:47.031Z"
           }
         },
         {
@@ -25164,6 +25432,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:56:15.686Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:54:40.228Z"
           }
         },
         {
@@ -28392,6 +28668,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:02:59.247Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Torreserena Re... bluserena\n2 Torreserena Re... bluserena\nrientreremg pi\nLibero e\nrientreremd\nLa pace\nQuando",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:58:03.932Z"
           }
         },
         {
@@ -30601,6 +30886,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:50:47.614Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:53:22.510Z"
           }
         },
         {
