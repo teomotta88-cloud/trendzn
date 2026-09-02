@@ -1147,7 +1147,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:50.260Z"
+            "updatedAt": "2026-09-02T14:27:09.782Z"
           }
         },
         {
@@ -4817,7 +4817,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:25:58.258Z"
+            "updatedAt": "2026-09-02T14:23:27.277Z"
           }
         },
         {
@@ -11661,7 +11661,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:59:10.574Z"
+            "updatedAt": "2026-09-02T14:28:10.129Z"
           }
         },
         {
@@ -11692,7 +11692,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:59:17.510Z"
+            "updatedAt": "2026-09-02T14:27:25.514Z"
           }
         },
         {
@@ -16261,7 +16261,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:25:58.258Z"
+            "updatedAt": "2026-09-02T14:23:27.277Z"
           }
         },
         {
@@ -16284,6 +16284,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:51:57.557Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:23:50.943Z"
           }
         },
         {
@@ -16306,6 +16314,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:52:00.866Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:24:05.291Z"
           }
         },
         {
@@ -16328,6 +16344,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:52:50.578Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Chi.cack di\n‘Serena Kim là noi dé,\ngac Jai nhip $8hg voi va\nMot khién\ntré nén biét chinh la kién tric\nmang dam ban sic Tay Bac\ntrong\nCau ngan",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:24:58.183Z"
           }
         },
         {
@@ -16350,6 +16375,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:53:21.150Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YouTube A",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:25:10.582Z"
           }
         },
         {
@@ -16372,6 +16406,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:53:28.351Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:25:39.974Z"
           }
         },
         {
@@ -16394,6 +16436,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:53:32.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:25:51.472Z"
           }
         },
         {
@@ -16416,6 +16466,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:54:37.299Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ib ROME",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:26:11.661Z"
           }
         },
         {
@@ -16438,6 +16497,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:54:40.586Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:26:25.843Z"
           }
         },
         {
@@ -16460,6 +16527,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:54:42.725Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sirena Resort\nPaso CA\nResort\nPaso Robles, CA\nSirena Vineyard\nPaso Robles FE",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:26:38.604Z"
           }
         },
         {
@@ -16482,6 +16558,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:54:53.693Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SHAMPOOING GEL DE",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:26:55.275Z"
           }
         },
         {
@@ -16511,7 +16596,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:50.260Z"
+            "updatedAt": "2026-09-02T14:27:09.782Z"
           }
         },
         {
@@ -16534,6 +16619,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:05.857Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:27:18.676Z"
           }
         },
         {
@@ -16564,7 +16657,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:59:17.510Z"
+            "updatedAt": "2026-09-02T14:27:25.514Z"
           }
         },
         {
@@ -16587,6 +16680,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:45.164Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:27:30.314Z"
           }
         },
         {
@@ -16609,6 +16710,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:47.222Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:27:42.134Z"
           }
         },
         {
@@ -16631,6 +16740,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:49.317Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Calaserena Resort\nSardegna",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:27:47.851Z"
           }
         },
         {
@@ -16660,7 +16778,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:59:10.574Z"
+            "updatedAt": "2026-09-02T14:28:10.129Z"
           }
         },
         {
@@ -16683,6 +16801,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:56:32.524Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:28:32.181Z"
           }
         },
         {
@@ -16705,6 +16831,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:57:01.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:28:34.998Z"
           }
         },
         {
@@ -16727,6 +16861,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:57:36.380Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:28:42.167Z"
           }
         },
         {
@@ -16749,6 +16891,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:57:48.207Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ala Serena",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:29:02.249Z"
           }
         },
         {
@@ -16771,6 +16922,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:58:11.732Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:29:21.435Z"
           }
         },
         {
@@ -16793,6 +16952,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:58:38.313Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:29:39.250Z"
           }
         },
         {
@@ -16815,6 +16982,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:59:10.807Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Twinpalms MontAzure",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:29:47.057Z"
           }
         },
         {
@@ -18023,7 +18199,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:07:50.260Z"
+            "updatedAt": "2026-09-02T14:27:09.782Z"
           }
         },
         {
@@ -25156,6 +25332,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:55:05.857Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:27:18.676Z"
           }
         },
         {
@@ -25767,7 +25951,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:59:10.574Z"
+            "updatedAt": "2026-09-02T14:28:10.129Z"
           }
         },
         {
@@ -25816,6 +26000,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:54:42.725Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sirena Resort\nPaso CA\nResort\nPaso Robles, CA\nSirena Vineyard\nPaso Robles FE",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:26:38.604Z"
           }
         },
         {
@@ -25838,6 +26031,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:57:01.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:28:34.998Z"
           }
         },
         {
