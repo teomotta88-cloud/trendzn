@@ -30832,6 +30832,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:05:13.331Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grab casual bites and craft drinks at the open air beer garden right in the heart of Barnsley Resort Village.",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:21:43.385Z"
           }
         },
         {
@@ -30854,6 +30863,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:05:34.061Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Questo è il getaway di settimana che avete cercato. Il resort Omni Homestead è il getaway perfetto, locato nelle montagne di Hot Springs, Virginia. Ci sono attività infiniti qui, quindi non dovrete mai lasciare il resort. Prendete un dipendente in il giusto Jefferson Warm Springs per riscaldarsi e rinforzarsi. Aggiungete una gara di carriera forte o un giro di corso di corso. andate in un salto in gruppo guida attraverso la strada Cascade Gorge per vedere alcune belle valli di acqua. Slutate e rilassatevi all'indoor pool o al spa Serenity. Pianciatevi nella suite acqua-thermo o facciatevi un massaggio o facciale. Ci sono tantissimi ristoranti incredibili da scegliere al risorto e tutto il food I have was a 10 out of 10. I can't recommend this resort enough and I can't wait to go back there again.",
+            "language": "Italian",
+            "durationSec": 67.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:24:14.109Z"
           }
         },
         {
@@ -30875,6 +30893,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:05:46.568Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:26:56.009Z"
           }
         },
         {
@@ -30897,6 +30925,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:05:58.145Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:27:31.636Z"
           }
         },
         {
@@ -30918,6 +30955,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:06:05.933Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Pip pip, vi mostrerò la sala di risoio di Radisson Resort Franthead. Potete entrare qui. Quando entri, vedrete come è. Così. E questa è la sala di risoio. All'esterno, vedrete. Poi andate con me. Qui ci sono due luoghi. Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 42.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:28:34.656Z"
           }
         },
         {
@@ -30939,6 +30985,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:06:18.800Z"
+          },
+          "audioAnalysis": {
+            "transcript": "country roads take me home to the place i belong west virginia take me home country roads All my memories gather round her Miner's lady, stranger to blue water Dark and dusty, painted on the sky Misty taste of moonshine, teardrop in my eye Country roads, take me home to the place of love",
+            "language": "Italian",
+            "durationSec": 59.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:30:46.913Z"
           }
         },
         {
@@ -30961,6 +31016,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:06:25.422Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:31:49.429Z"
           }
         },
         {
@@ -30982,6 +31046,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:06:37.181Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 15.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:32:36.682Z"
           }
         },
         {
@@ -31004,6 +31077,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:06:50.113Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:33:48.378Z"
           }
         },
         {
@@ -31026,6 +31108,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:07:05.736Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Nei Tocca la taglia di locazione sotto e book through questo video prima che il prezzo cambi.",
+            "language": "Italian",
+            "durationSec": 34.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:35:33.252Z"
           }
         },
         {
@@ -31047,6 +31138,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:07:14.026Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:36:08.504Z"
           }
         },
         {
@@ -31099,6 +31199,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:08:07.150Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:36:53.190Z"
           }
         },
         {
@@ -31151,6 +31260,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:08:46.907Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 14.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:37:37.507Z"
           }
         },
         {
@@ -31172,6 +31290,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:08:54.618Z"
+          },
+          "audioAnalysis": {
+            "transcript": "musica Ciao!",
+            "language": "Italian",
+            "durationSec": 57.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:40:31.612Z"
           }
         },
         {
@@ -31193,6 +31320,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:09:04.049Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:42:58.773Z"
           }
         },
         {
@@ -31215,6 +31352,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:09:14.316Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:43:01.235Z"
           }
         },
         {
@@ -31237,6 +31383,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:09:24.952Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:43:03.511Z"
           }
         },
         {
@@ -31319,6 +31474,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:10:00.223Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Come with us as we stay at Boracay Tropics for 4 days and 3 nights. We stayed at their deluxe room. It has two queen size beds, a cable TV, fridge and a safe for valuables. The bathroom is nice and spacious. This hotel has a strong wifi coverage and our room has a nice view of the swimming pool. Boracay Tropics also caters breakfast buffet. We spent our slow mornings at Tropy Cafe eating warm, freshly prepared breakfast breads. Dopo l'appetito, ci rilassiamo sempre dal ponte o andiamo per 5 minuti a sfogare la beach bianca. Baracay Tropics è conveniente locato a Stazione 2. È così facile andare attorno all'isola mentre stiamo qui. Puoi bookare via il loro sito, ricorda che i prezzi variano a seconda della stagione. Puoi anche guardarli in la marcia di viaggio in Filippina, a settembre 46 a SMX Moa. Credo che ti ami Baracay Tropics.",
+            "language": "Italian",
+            "durationSec": 55.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:44:57.782Z"
           }
         },
         {
@@ -31341,6 +31505,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:10:16.560Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:46:12.188Z"
           }
         },
         {
@@ -31363,6 +31536,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:10:40.791Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:48:32.630Z"
           }
         },
         {
@@ -31416,6 +31599,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:10:58.719Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Benvenuti a 2913 Lakeside Village Boulevard. Ci sono quattro abitazioni, ogni con un'assoio. La cosa più bella è che è un'abitazione di lifestyle di lontananza e di rilassamento nel cuore di Lakeside Village con incredibili amenitizie. Puoi davvero divertirti di vacanza mentre sei a casa, ma anche con facilità puoi lasciare per vacanza ogni volta che vuoi con l'accesso facile a VFW",
+            "language": "Italian",
+            "durationSec": 38.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:48:35.370Z"
           }
         },
         {
@@ -31437,6 +31629,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:11:10.529Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:48:48.079Z"
           }
         },
         {
@@ -31459,6 +31660,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:11:24.891Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:51:09.863Z"
           }
         },
         {
@@ -31511,6 +31722,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:12:01.686Z"
+          },
+          "audioAnalysis": {
+            "transcript": "qui mi ricordo una canzone",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:51:12.532Z"
           }
         },
         {
@@ -31533,6 +31753,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:12:10.229Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 22.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T18:51:14.728Z"
           }
         },
         {
