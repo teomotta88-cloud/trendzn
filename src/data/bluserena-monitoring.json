@@ -3745,7 +3745,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:21:53.918Z"
+            "updatedAt": "2026-09-02T15:29:46.880Z"
           }
         },
         {
@@ -11294,7 +11294,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:56:30.586Z"
+            "updatedAt": "2026-09-02T15:30:02.604Z"
           }
         },
         {
@@ -25567,6 +25567,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:14:24.987Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nQuetta, Pakistan\nPakistan À Ja",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:14.954Z"
           }
         },
         {
@@ -25589,6 +25598,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:14:27.948Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serer Salaam Tanzania",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:21.132Z"
           }
         },
         {
@@ -25611,6 +25629,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:14:47.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YOUIRE/NOT GONNA WANNA",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:27.000Z"
           }
         },
         {
@@ -25633,6 +25660,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:17:18.233Z"
+          },
+          "ocrData": {
+            "textOnScreen": "28th NOV AT SERENA\nHOTEL A\nlook at these\nbeautiful\nlugavelians big\ni up all family guys.\nup all family guys.\ncommen\nJ look at these\nup all family #72\nReply to SHIDAH 202 sb",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:39.788Z"
           }
         },
         {
@@ -25655,6 +25691,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:19:05.700Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Katunyumirwemu, live at\nSerena hotel\ni WHERE IS\nhotel\nKING\nWHERE IS\nIKAMWOKYA",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:49.608Z"
           }
         },
         {
@@ -25677,6 +25722,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:19:35.352Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Irene Namatovu Strong Women Live\nIn Concert Serena hotel 21 August\nNamatovu Strong Women Live",
+            "confidence": 0.843,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:57.460Z"
           }
         },
         {
@@ -25699,6 +25753,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:20:34.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:03.280Z"
           }
         },
         {
@@ -25722,6 +25784,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:22:20.222Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 LLCC",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:13.173Z"
           }
         },
         {
@@ -25744,6 +25815,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:22:23.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:23.385Z"
           }
         },
         {
@@ -25766,6 +25845,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:24:30.783Z"
+          },
+          "ocrData": {
+            "textOnScreen": "woman concert at Serena\nKisa Kyamukama ne Muhammad nsereko in strong\nwoman concert at Serena 4\nla Kisa Kyamukama ne Muhammad nsereko in strong",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:38.343Z"
           }
         }
       ]
@@ -25815,7 +25903,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:21:53.918Z"
+            "updatedAt": "2026-09-02T15:29:46.880Z"
           }
         },
         {
@@ -25847,6 +25935,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:29:28.740Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi com to\nNoi siamo andati via il\nsabato prima che sei\narrivato tu, ci ho\nlasciato un pezzo di\ncuore, posto,\ncibo, animazione solo",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:56.462Z"
           }
         },
         {
@@ -25885,7 +25982,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:56:30.586Z"
+            "updatedAt": "2026-09-02T15:30:02.604Z"
           }
         },
         {
@@ -25917,6 +26014,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:32:36.668Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:30:17.841Z"
           }
         },
         {
@@ -25949,6 +26054,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:35:41.453Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:30:28.515Z"
           }
         },
         {
@@ -25977,6 +26090,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:35:45.164Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:30:35.699Z"
           }
         },
         {
@@ -26005,6 +26126,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:38:19.564Z"
+          },
+          "ocrData": {
+            "textOnScreen": "siete in vacanza\n‘click",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:30:56.881Z"
           }
         },
         {
@@ -26034,6 +26164,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:39:18.103Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:31:02.252Z"
           }
         },
         {
@@ -26066,6 +26204,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:42:01.112Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:31:12.086Z"
           }
         },
         {
@@ -26097,6 +26243,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:44:41.390Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:31:33.579Z"
           }
         },
         {
@@ -26126,6 +26280,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:44:43.936Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:31:42.005Z"
           }
         },
         {
@@ -26157,6 +26319,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:45:48.560Z"
+          },
+          "ocrData": {
+            "textOnScreen": "COMUNQUE QUESTI\n\"RAGAZZI SO\nMATTIA, MATTIA,\nVI SEGUIRANNO\nPER TUTTA",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:31:47.106Z"
           }
         },
         {
@@ -26179,6 +26350,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:47:51.764Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:31:52.975Z"
           }
         },
         {
@@ -26201,6 +26380,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:49:43.327Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A Conte\nTap the Link to\nI'd This for My Next\nTrip.\nthe Link;\nthe Check, Your",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:32:08.227Z"
           }
         },
         {
@@ -26223,6 +26411,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:49:46.374Z"
+          },
+          "ocrData": {
+            "textOnScreen": "link\nYour Tulum secret is\nYour: Tulum secret is out. 85\nthe link\nbook your;stay.",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:32:20.633Z"
           }
         },
         {
@@ -30956,6 +31153,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:14:27.948Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serer Salaam Tanzania",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:21.132Z"
           }
         },
         {
@@ -31982,6 +32188,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:22:23.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:23.385Z"
           }
         },
         {
@@ -32017,6 +32231,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:20:34.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:29:03.280Z"
           }
         }
       ]
