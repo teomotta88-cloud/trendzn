@@ -1586,7 +1586,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:10:58.576Z"
+            "updatedAt": "2026-09-02T15:06:36.597Z"
           }
         },
         {
@@ -2257,7 +2257,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:09.846Z"
+            "updatedAt": "2026-09-02T15:07:06.746Z"
           }
         },
         {
@@ -4443,7 +4443,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:24:54.175Z"
+            "updatedAt": "2026-09-02T15:06:05.738Z"
           }
         },
         {
@@ -4934,7 +4934,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:26:30.489Z"
+            "updatedAt": "2026-09-02T15:06:57.423Z"
           }
         },
         {
@@ -10661,13 +10661,13 @@
             "updatedAt": "2026-09-02T12:02:27.644Z"
           },
           "ocrData": {
-            "textOnScreen": "serena mi ik Mon ano",
-            "confidence": 0.788,
+            "textOnScreen": "Mi jest d E",
+            "confidence": 0.763,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:52:30.324Z"
+            "updatedAt": "2026-09-02T15:06:25.126Z"
           }
         },
         {
@@ -12922,7 +12922,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:06:31.060Z"
+            "updatedAt": "2026-09-02T15:07:41.399Z"
           }
         },
         {
@@ -21709,6 +21709,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:01:14.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This\nMUSE BY MARS",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:04:27.878Z"
           }
         },
         {
@@ -21731,6 +21740,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:01:16.847Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:05:01.147Z"
           }
         },
         {
@@ -21753,6 +21770,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:01:22.862Z"
+          },
+          "ocrData": {
+            "textOnScreen": "conta\nlazer com recreacao para criangasie adultos,\ndidria ja\ncafé da tarde}\nviagem para descansar, se\ndivertire em familia sem\nDeixamos aqui na a ne e mais!",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:05:23.536Z"
           }
         },
         {
@@ -21775,6 +21801,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:01:36.475Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:05:46.387Z"
           }
         }
       ]
@@ -21815,7 +21849,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:24:54.175Z"
+            "updatedAt": "2026-09-02T15:06:05.738Z"
           }
         },
         {
@@ -21841,13 +21875,13 @@
             "updatedAt": "2026-09-02T12:02:27.644Z"
           },
           "ocrData": {
-            "textOnScreen": "serena mi ik Mon ano",
-            "confidence": 0.788,
+            "textOnScreen": "Mi jest d E",
+            "confidence": 0.763,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:52:30.324Z"
+            "updatedAt": "2026-09-02T15:06:25.126Z"
           }
         },
         {
@@ -21878,7 +21912,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:10:58.576Z"
+            "updatedAt": "2026-09-02T15:06:36.597Z"
           }
         },
         {
@@ -21901,6 +21935,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:03:17.500Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Voglia improvvisa di mc\nserenamajestic di\nMontesilvano\nVoglia i\nentre sei al mare qui al\nntesilv\nVoglia di mc\nMentre mare qui al\nimprovvisa di mc\nsei al mare qui al\na majestic di\ntesilvano\nentre sei al mare qui\nserena",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:06:47.566Z"
           }
         },
         {
@@ -21931,7 +21974,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:26:30.489Z"
+            "updatedAt": "2026-09-02T15:06:57.423Z"
           }
         },
         {
@@ -21962,7 +22005,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:09.846Z"
+            "updatedAt": "2026-09-02T15:07:06.746Z"
           }
         },
         {
@@ -21985,6 +22028,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:04:13.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": "e chi lo spiegalil\ndivertimento",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:07:20.941Z"
           }
         },
         {
@@ -22007,6 +22059,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:04:51.484Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serenalhotel\nK TODAY e\nSERENA\nTODAY a\nè WOMAN,\nHOTEL e i i\nTODAY\ni K [TODAY",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:07:37.410Z"
           }
         },
         {
@@ -22037,7 +22098,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:06:31.060Z"
+            "updatedAt": "2026-09-02T15:07:41.399Z"
           }
         },
         {
@@ -22060,6 +22121,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:05:30.093Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:07:50.060Z"
           }
         },
         {
@@ -22082,6 +22151,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:06:04.288Z"
+          },
+          "ocrData": {
+            "textOnScreen": "#sanyukaUncut\nWatch Liveon\nWatch Live on PD",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:08.990Z"
           }
         },
         {
@@ -22104,6 +22182,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:11.947Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Williams who is one of the\nN richest\nso actually it feels like no polish\nOVer cotton\ncamed 95 million in prize\nbut she is an oppressed",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:18.296Z"
           }
         },
         {
@@ -22126,6 +22213,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:16.793Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena 4\nJ; I airtel\nAbagalana at Serena\nAbagalanajat\nat,Serenattoday\nSTRONG 9 J",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:34.850Z"
           }
         },
         {
@@ -22148,6 +22244,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:23.563Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:41.941Z"
           }
         },
         {
@@ -22170,6 +22274,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:30.091Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:49.451Z"
           }
         },
         {
@@ -22192,6 +22304,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:39.942Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nIslamabad, Pakistan",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:57.340Z"
           }
         },
         {
@@ -22215,6 +22336,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:17.793Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:05.207Z"
           }
         },
         {
@@ -22237,6 +22366,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:21.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ssemakula family/atiSerena\nSsemakula family/\nfamily/at Serena\nSsemakula",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:16.765Z"
           }
         },
         {
@@ -22259,6 +22397,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:28.928Z"
+          },
+          "ocrData": {
+            "textOnScreen": "For Entertainment, Ba\nIn control",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:33.954Z"
           }
         },
         {
@@ -22281,6 +22428,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:34.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA ENTRY TABLE TABLE\n2025 HOTEL yi\n1° SERENA ENTRY TABLE TABLE\n2025 HOTEL SM\nSERENA ENTRY TABLE TABLE 4 7\n2026 HOTEL f fal\nHOTEL 150k 3m 5M",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:43.065Z"
           }
         },
         {
@@ -22303,6 +22459,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:36.948Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:49.297Z"
           }
         },
         {
@@ -28359,6 +28523,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:04:51.484Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serenalhotel\nK TODAY e\nSERENA\nTODAY a\nè WOMAN,\nHOTEL e i i\nTODAY\ni K [TODAY",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:07:37.410Z"
           }
         },
         {
@@ -28381,6 +28554,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:16.793Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena 4\nJ; I airtel\nAbagalana at Serena\nAbagalanajat\nat,Serenattoday\nSTRONG 9 J",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:34.850Z"
           }
         },
         {
@@ -28551,6 +28733,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:39.942Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nIslamabad, Pakistan",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:57.340Z"
           }
         },
         {
@@ -28713,6 +28904,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:07:23.563Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:08:41.941Z"
           }
         },
         {
@@ -28735,6 +28934,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:21.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ssemakula family/atiSerena\nSsemakula family/\nfamily/at Serena\nSsemakula",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:16.765Z"
           }
         },
         {
@@ -29411,6 +29619,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:28.928Z"
+          },
+          "ocrData": {
+            "textOnScreen": "For Entertainment, Ba\nIn control",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:33.954Z"
           }
         },
         {
@@ -30084,6 +30301,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:34.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA ENTRY TABLE TABLE\n2025 HOTEL yi\n1° SERENA ENTRY TABLE TABLE\n2025 HOTEL SM\nSERENA ENTRY TABLE TABLE 4 7\n2026 HOTEL f fal\nHOTEL 150k 3m 5M",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:09:43.065Z"
           }
         },
         {
