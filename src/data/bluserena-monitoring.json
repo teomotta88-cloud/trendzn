@@ -936,7 +936,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:54:59.932Z"
+            "updatedAt": "2026-09-02T11:18:34.813Z"
           }
         },
         {
@@ -1190,7 +1190,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:31.421Z"
+            "updatedAt": "2026-09-02T11:13:43.632Z"
           }
         },
         {
@@ -1987,7 +1987,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:36.937Z"
+            "updatedAt": "2026-09-02T11:20:32.450Z"
           }
         },
         {
@@ -4556,13 +4556,14 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "buongiorno oggi vi porto con me a vedere il serenusa resort guardate qui questi sono i campetti ballavolo totalmente immerso nella natura verde molto molto curato questi sono i vialetti che portano alle stanze sono divise per settori questo è il 7 noi siamo all'8 il 6 sono tutte a piano terra primo piano e qualche altra al primo e secondo piano questi sono i cappetti di calcio qui c'è MS Padel guardate che verde rigoglioso sente solo il rumore degli uccellini neanche sono le 7 del mattino questo deserto è molto molto adatto perché bambini perché come vedete ci sono questi sentieri che portano un centro della struttura che ora vi faccio vedere dove c'è una piscina enorme per i bambini con gli scivoli, poi c'è una piscina semiolimpionica ed è vicinissimo al mare, c'è anche un ristorante centrale con la baby kitchen dove troverete tutto per trovare le pappine per i vostri bambini. Andiamo in piscina, qui trovate anche il piano bar dove poter prendere acqua e dispenser da quest novit anche inclusi coca cola sprite alla spina bar oltre mare e qui davanti troviamo la piscina con ombrelloni lettini le docce e suddivisa in due parti una un po' più profonda mentre l'altra è più bassa e ha questi due scivoli i vostri figli si divertiranno tantissimo questo simboletto della zampetta di un animale è perché questa struttura accetta gli animali sono delle dog room dove si paga un supplemento per il vostro cane e potete tranquillamente portarlo in vacanza con voi qui abbiamo il parco giochi e qui possiamo già vedere il mare questo è il sentiero che porta al mare e qua ci sono le piscine e adesso ci spostiamo in spiaggia potete prenotare tramite app Blu Sereno una volta prenotata la vostra vacanza qui tramite app una volta per ogni ristorante nel vostro soggiorno è incluso gratuitamente sia il ristorante Le Onde che Il Gusto Qua c il ristorante Il Gusto aperta a cena con i piatti tipici siciliani Questo il percorso che vi porta direttamente in spiaggia se avete bambini piccoli con il passeggino mentre adesso facciamo il percorso con le scale passando per il bar e per il ristorante le onde il ristorante le onde direttamente sul mare gli ombrelloni sono divisi per due settori le prime quattro file sono a pagamento mentre potete scegliere anche la formula ombrellone assegnato dalla quarta fila in poi per risparmiare qualcosina e poi quello non assegnato ogni giorno vi capiterà un ombrellone diverso Qui spiaggia trovate tutti i giorni animazione la mattina, mentre su in piscina il pomeriggio, contattatività di balli di gruppo, musica e poi varie attività anche durante il giorno sia per i bambini che per gli adulti. Saliamo su e adesso vi porto al ristorante. Questa è l'area Baby Kitchen. e qui il ristorante anche qui potete scegliere tranquillamente se pranzare o scegliere comunque una formula dei vostri pasti all della struttura che gratuita altrimenti all del ristorante che climatizzato che ha pagamento questo il ristorante Il Vento è ancora chiuso e da qui c'è un'altra area giochi per i bambini. Qui abbiamo le piscine e tanti giochi sulla sabbia. qui c'è la palestra e adesso risaliamo e vi porto alla piscina semi olimpionica anche qui ombrellone lettini docce Adesso arriviamo all'anfiteatro dove ogni sera ci saranno varie serate musical, serate di spettacolo, di canzoni, di intrattenimento, baby dance.",
-            "language": "Italian",
-            "durationSec": 618.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:03.222Z"
+            "updatedAt": "2026-09-02T11:20:30.152Z"
           }
         },
         {
@@ -4687,7 +4688,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:19.703Z"
+            "updatedAt": "2026-09-02T11:18:32.185Z"
           }
         },
         {
@@ -5229,7 +5230,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:15:22.640Z"
+            "updatedAt": "2026-09-02T11:20:38.246Z"
           }
         },
         {
@@ -5413,7 +5414,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:39:38.803Z"
+            "updatedAt": "2026-09-02T11:10:39.944Z"
           }
         },
         {
@@ -7332,7 +7333,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:38:50.750Z"
+            "updatedAt": "2026-09-02T11:08:27.029Z"
           }
         },
         {
@@ -8618,7 +8619,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:56:13.583Z"
+            "updatedAt": "2026-09-02T11:09:33.105Z"
           }
         },
         {
@@ -10744,7 +10745,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:23:31.984Z"
+            "updatedAt": "2026-09-02T11:11:10.931Z"
           }
         },
         {
@@ -11738,7 +11739,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:39:38.803Z"
+            "updatedAt": "2026-09-02T11:10:39.944Z"
           }
         },
         {
@@ -12667,7 +12668,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:54:59.932Z"
+            "updatedAt": "2026-09-02T11:18:34.813Z"
           }
         },
         {
@@ -13526,7 +13527,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:38:50.750Z"
+            "updatedAt": "2026-09-02T11:08:27.029Z"
           }
         },
         {
@@ -13540,7 +13541,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0EvIk1fe5DIHqIjb9xU3EFQfBtDrVAHA014jC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iDVUfKXa%2BUdVhXJXPYYgsoMpVnw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stop scrolling, because this might be the best beach house in Porto Pignasco. This is Villa dos Sirenas, located inside the stunning Bella Sirena Resort. Think you know luxury? Watch this. Not one bedroom, not two, not three, not even four, but five bedrooms. Bringing the whole family? Perfect! One bedroom has two sets of bunk beds, so there's room for everyone. But here's the part you'll never get over. Two bedrooms have private doors that open straight to the beach. immagina di svegliarsi, aprire la porta e la prima cosa che vedi è l'oceano caffè di mattina con una vista dell'oceano sottoposti dal tuo patio camminare la piazza è solo un passo dal tuo bed questo non è solo una vacanza è il tipo di posto che tutti parlano di molto dopo che si lasciano se stai planificando un getaway familiare, un viaggio di bambino, un weekend di ragazze o un escapamento di piazza, Villa Dos Sirenas ti chiede book il tuo stay oggi e usi il codice PARADISE per 10% di offra il tuo primo day Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 62.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:09:01.095Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13561,7 +13571,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:56:13.583Z"
+            "updatedAt": "2026-09-02T11:09:33.105Z"
           }
         },
         {
@@ -13575,7 +13585,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osADDPTUs8qIfB0ryiDJHIlEmllRESFQjmeEW1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=VecKgmG9njhdiqPv%2BT5ncZmIToQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Blu serena, dall'alba fino a luna piena, ti toglie il piatto per magia, lo sguardo da follia, ritrova la gioia con noi, io vi do una vita. Blu serena, un brivido che ti...",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:09:41.863Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13588,7 +13607,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o4gagNH9jB4rAFGUMLFMeRfL8NsIZItAkOQeCX~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=emLzjPib5JCFBEFGEhTS9NlMKbo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non sono in Great East, sono in California. E sai come puoi bookare questo hotel? Con TikTok? Clicca sul stick di green location e trova il meglio. Se sei appena iniziato e stai cercando un posto per la tua bambina, il Resort Serena Vineyard in Paso Robles è il posto. Sei benvenuto da un pool indoor che si rafforza attorno all'entrata. Molte persone si sono iniziati qui. Offrono pacchetti di proposta o romanzi. Questo posto è anche circondato da molte wineries e la loro winery è sotto il resort, so you can just walk down after your breakfast that's served in the morning and also breakfast is charged for free $23 for a person they have free wifi, free parking they have outdoor fire pits they're located in the mountains so the view is so unmatched and I guarantee you will have the most unforgettable moments for your special days get 50% cashback right now you book through TikTok and find the best discount offerings ciao",
+            "language": "Italian",
+            "durationSec": 53,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:10:08.014Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13609,7 +13637,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:39:38.803Z"
+            "updatedAt": "2026-09-02T11:10:39.944Z"
           }
         },
         {
@@ -13623,7 +13651,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0C3Mh8MggSCNgFiefGE1Z4fZKMALQKeW41fgA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ndXLDgPqrzsjXj5kyfGVhNV9cTw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo era il nostro piccolo weekend di partenza a Moalboal, Cebu. Avevo intenzione di fare un po' di voice over per questo vlog, ma non mi è piaciuto. Quindi, vi lascio qui. Aggiungatevi al vlog. Ciao per ora. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:11:04.179Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13644,7 +13681,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:23:31.984Z"
+            "updatedAt": "2026-09-02T11:11:10.931Z"
           }
         },
         {
@@ -13658,7 +13695,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oAt1BVpAiJBiKCrAcovESmyAIYKbBBA7CfMIWT~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=U2RSxnHasKxbjzSRmbSSzJpb%2F1g%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se cerchi una pioggia paradisiaca, savaggia e senza fuga nell'archipelago della Maddalena, qui è la pepita assoluta dove devi andare. Direzione l'isola di Caprera, proprio a posto della Maddalena. Per andare con la tua auto è super semplice, hai solo da attraversare un piccolo ponte che rilieva le due isole. Puoi stare sul parco principale della Cala Garibaldi, il stagione è totalmente gratuito, e da lì puoi contare circa 30 minuti di camminata su un cammino di randonnée abbastanza accessibile. E sul cammino ti sarai accompagnato anche di qualche chef e anche ho visto un book. Sono in libertà totale, in mezzo alla natura. Sei in un'immersione totale. E al fine del cammino, trovi la cala Serena. Una calanca proteggata dal sable fin e un'acqua turquese incredibile. L'ambito è così proteggato che ci sono anche piccoli pesci che nascono attorno a te senza aver paura. Aggiungo comunque un piccolo messaggio di prevenzione. Perché sulla piazza ho visto persone provare a attrappare i pesci con sacchi plastici. Ricordatevi che siamo nel loro ambiente naturale. Quindi li ammira con gli occhi, non li nourrisse e non li perturbasse. fare 30 minuti di cammino per avere questo livello di tranquillità e di bellezza è molto valido se no avete un'altra Kala qui a destra che è più facile di accesso con circa 10-15 minuti di cammino è la Kala Garibaldi e iscriviti al mio canale Chiara Voyage per scoprire tutte le mie altre pepite che scopro in Europa ogni mese",
+            "language": "Italian",
+            "durationSec": 72.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:11:48.353Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13671,7 +13717,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oUbvVig0sItRWmqVAeCSQfIiemIUDDGMTGMjIL~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=WhgZsHIHXQGrbPGXWVULHkWd1QU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Un'altra estate è finita, e come sempre settembre ci lascia quella strana sensazione di malinconia. I tramonti sono già più brevi, e le serate sempre più silenziose. E capisci che persino la stagione più attesa è passata in un soffio. La verità è che ogni estate ci insegna sempre la stessa cosa.",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:11:57.422Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13684,7 +13739,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIAiV0wfRqEeEcB1CGDgoZFAAOdkgAmIohDAQE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=V%2BhQPTVyZeVhP7uVTe4YJIXEmHk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se le mie amicizie si scompaniano, vi auguro di guardarle in atto. Quando sei morbida e stai soffrendo, ti lascio senza te. Se coi ben gamlantei E te hai noi Se ben danzalo Padma hu",
+            "language": "Italian",
+            "durationSec": 36,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:12:32.539Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13697,7 +13761,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4X6bnaI9zgE0OjUAIggjrmLfeGTMeI4DGsCAl~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zkxQzwFCOy1MLh62ePvNfpWSLWY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:12:37.547Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13710,7 +13783,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oIbQKyMNOG92eICtfILTANQIGALVHjVeRDFhof~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bInzsAM5zwoPhIKDron3LZZfc38%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi, è la tua ragazza Tanya e ho andato fuori dal Palm Springs oggi ragazzi e era 102 gradi, ma non mi ha fermato da avere un buon tempo, quindi ho andato fuori all'azacar restaurant, è locato nel resort di La Serena Villas e quando ti dico che questo posto è assolutamente bello, è il hotel di stile boutique più bello, amica, l'unico problema è che non offrono passaggi di resort, ok? quindi sono andata all'interno del restaurant e quando ti dico che l'arte sulla palla era assolutamente bella di Frida, mi piace un buon decor quindi ho comprato il mio Diet Coke e i miei tacos e frasi ho tolto tutto questo e guarda il decor ma aspetta un attimo, ho andato in alto perché hanno un bar a rufo era vicino quando sono arrivata ma ero in grado di andare in alto per prendere un video ma si aprono durante l'estate quando il clima è un po' più freddo e hanno le luci e le candele è un'esplosione intera quindi ho andato fuori e ho preso un po' di acqua con le salsicce arance e amico sono andata a casa perché ero stasera ok, ciao",
+            "language": "Italian",
+            "durationSec": 61.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:13:02.314Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13723,7 +13805,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooEIUQuMgAzeB5hBRFfqtqDCoAjbyEE3YA3FAd~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/oAAAOFECzjZMD38ARf9CtLEvgUEiBCAI0qpJEe.image?dr=9634&x-expires=1788433200&x-signature=LlO36qjh1uxW9xs0VKSIiTzqZrM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 28.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:13:34.834Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13736,7 +13827,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oc7LfABJaStCYiIa1kiySIyCwIlKAs7Itw7Siz~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BQiL4rAtPXdUhaTIenzyrDj%2BkqE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti per aver guardato il video.",
+            "language": "Italian",
+            "durationSec": 19.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:13:37.956Z"
+          }
         }
       ]
     },
@@ -13768,7 +13868,16 @@
             "viaggiare"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi è il mio compleanno e ho deciso di festeggiarlo qui in Totale Relax in un meraviglioso resort. E voi dove avete trascorso il vostro momento più bello del compleanno?",
+            "language": "Italian",
+            "durationSec": 19.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:13:41.147Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13799,7 +13908,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:31.421Z"
+            "updatedAt": "2026-09-02T11:13:43.632Z"
           }
         },
         {
@@ -13825,7 +13934,16 @@
             "sicilia"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "6, ancora, 7, va, e 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, si fermi un po' faccia che è il salito faccia un altro parco in piedi molto bene adesso guardate facciamo due da un lato e due dall'altro uno due faccio uno due uno due 1 2 3 4 5 6 7 8 9 10 la parte di dietro la parte la parte giusto ecco vai che ci mette la signora sta cacciando le vostre ok, il chat, bello, molto bello ok, quindi abbiamo fatto 8 di questi ok, invece di questi li facciamo 8 sempre, 2, 8 ok Una volta finito il ritmo, chiudiamo avanti e andiamo a capire i dentali. Avremo i dentali a destra. Prima vi faccio vedere il processo di dentale. Vedete, un attimo sull'altra mano. Braccio destro, senza dentale. Vogliamo andare a disegnare un osso. In che modo? il braccio fa, passo sopra la testa, scendo come se mi tagliassi la pancia, è questo, e ritorna da sopra, taglio la pancia, da sopra, taglio la pancia, da sopra, taglio la pancia, sopra taglio la pancia esattamente proviamo con il ventaglio a letto si dai Mi vedo sul tetto Sopra dentaglio Sopra dentaglio Giusto, sopra. Taglio. Quattro. E facciamo un atto anche di questo. Ok? Taglio, dentaglio, proviamo sinistra. Faccio un po' le giù di dietro, si che ponte. Solo braccio, dentaglio, prima. Sopra, taglio. Sopra, taglio. Cinque. vai, tanti, vai, sopra e taglio, sopra e taglio, sopra e taglio, sopra e taglio, l'uscio prima taglio, apri, provo con il taglio, vai, sopra e taglio pancia, sopra e pancia, tre, pancia 4 pancia, guarda bene e poi fai la stessa cosa con tutte e due insieme quindi il meccanismo è lo stesso le braccia fanno la stessa cosa di prima ok? sopra e taglio insieme proviamo vai e sopra e taglio sopra taglio 2 3 4 5 6 7 8 molto bene 1 2 3 4 ultimo, mettiamo i dentali avanti qui, ok? E semplicemente facciamo via il fine. Esatto. Con un po' di forza, con il nero, facciamo degli alternati e le braccia lavorano. Ok. Da qui apriamo la gamba destra. Le braccia continuano a fare questo e facciamo soltanto Affondo verso di destra e ritorno al centro. Due, non fermare le braccia. E torno. Tre. E torno. Quattro. E torno. Stessa cosa a sinistra. Quattro. E torno. Tre. E torno. Due. E torno. Ultimo. Uno. E torno. Ok? Quindi tutto insieme sarà 8 di questi 8, 7, 6, 5, 4",
+            "language": "Italian",
+            "durationSec": 290.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:16:08.644Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13850,7 +13968,16 @@
             "vacanzalavoro"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "So you can keep on taking it I never really knew that she could dance like this She make a man wanna speak Spanish Como se llama? Monica Picasso Shakira Shakira Oh baby when you talk like that You make a woman go mad So be wise And keep on Reading the signs of my body I'm on tonight And my hopes don't lie And I'm starting to feel you too Come on let's go Real slow Don't you see that your soul is full No Grazie. Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 167,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:17:30.983Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13919,7 +14046,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:19.703Z"
+            "updatedAt": "2026-09-02T11:18:32.185Z"
           }
         },
         {
@@ -13941,7 +14068,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:54:59.932Z"
+            "updatedAt": "2026-09-02T11:18:34.813Z"
           }
         },
         {
@@ -13957,13 +14084,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oUGEAc1ApL0zwRtBIqIGeAeIQBkeAKS3NYBfPG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=I7VgyUPx4QqAaIjyTDQLcsQvOlI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "buongiorno oggi vi porto con me a vedere il serenusa resort guardate qui questi sono i campetti ballavolo totalmente immerso nella natura verde molto molto curato questi sono i vialetti che portano alle stanze sono divise per settori questo è il 7 noi siamo all'8 il 6 sono tutte a piano terra primo piano e qualche altra al primo e secondo piano questi sono i cappetti di calcio qui c'è MS Padel guardate che verde rigoglioso sente solo il rumore degli uccellini neanche sono le 7 del mattino questo deserto è molto molto adatto perché bambini perché come vedete ci sono questi sentieri che portano un centro della struttura che ora vi faccio vedere dove c'è una piscina enorme per i bambini con gli scivoli, poi c'è una piscina semiolimpionica ed è vicinissimo al mare, c'è anche un ristorante centrale con la baby kitchen dove troverete tutto per trovare le pappine per i vostri bambini. Andiamo in piscina, qui trovate anche il piano bar dove poter prendere acqua e dispenser da quest novit anche inclusi coca cola sprite alla spina bar oltre mare e qui davanti troviamo la piscina con ombrelloni lettini le docce e suddivisa in due parti una un po' più profonda mentre l'altra è più bassa e ha questi due scivoli i vostri figli si divertiranno tantissimo questo simboletto della zampetta di un animale è perché questa struttura accetta gli animali sono delle dog room dove si paga un supplemento per il vostro cane e potete tranquillamente portarlo in vacanza con voi qui abbiamo il parco giochi e qui possiamo già vedere il mare questo è il sentiero che porta al mare e qua ci sono le piscine e adesso ci spostiamo in spiaggia potete prenotare tramite app Blu Sereno una volta prenotata la vostra vacanza qui tramite app una volta per ogni ristorante nel vostro soggiorno è incluso gratuitamente sia il ristorante Le Onde che Il Gusto Qua c il ristorante Il Gusto aperta a cena con i piatti tipici siciliani Questo il percorso che vi porta direttamente in spiaggia se avete bambini piccoli con il passeggino mentre adesso facciamo il percorso con le scale passando per il bar e per il ristorante le onde il ristorante le onde direttamente sul mare gli ombrelloni sono divisi per due settori le prime quattro file sono a pagamento mentre potete scegliere anche la formula ombrellone assegnato dalla quarta fila in poi per risparmiare qualcosina e poi quello non assegnato ogni giorno vi capiterà un ombrellone diverso Qui spiaggia trovate tutti i giorni animazione la mattina, mentre su in piscina il pomeriggio, contattatività di balli di gruppo, musica e poi varie attività anche durante il giorno sia per i bambini che per gli adulti. Saliamo su e adesso vi porto al ristorante. Questa è l'area Baby Kitchen. e qui il ristorante anche qui potete scegliere tranquillamente se pranzare o scegliere comunque una formula dei vostri pasti all della struttura che gratuita altrimenti all del ristorante che climatizzato che ha pagamento questo il ristorante Il Vento è ancora chiuso e da qui c'è un'altra area giochi per i bambini. Qui abbiamo le piscine e tanti giochi sulla sabbia. qui c'è la palestra e adesso risaliamo e vi porto alla piscina semi olimpionica anche qui ombrellone lettini docce Adesso arriviamo all'anfiteatro dove ogni sera ci saranno varie serate musical, serate di spettacolo, di canzoni, di intrattenimento, baby dance.",
-            "language": "Italian",
-            "durationSec": 618.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:03.222Z"
+            "updatedAt": "2026-09-02T11:20:30.152Z"
           }
         },
         {
@@ -13985,7 +14113,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:36.937Z"
+            "updatedAt": "2026-09-02T11:20:32.450Z"
           }
         },
         {
@@ -13999,7 +14127,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osQGU8B2XH7RIDMBes9GZa9AIDMMxf3IhgeLjJ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ahsTz1xXStdc5ft3dJHCmakdc10%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Una delle cose che ci ha colpito di più del Serenusa Resort è proprio la comodità. Si passa in pochi minuti dalla piscina al mare e per chi ha dei bambini fa davvero la differenza. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 51,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:20:35.398Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14020,7 +14157,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:15:22.640Z"
+            "updatedAt": "2026-09-02T11:20:38.246Z"
           }
         },
         {
@@ -18161,7 +18298,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osADDPTUs8qIfB0ryiDJHIlEmllRESFQjmeEW1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=VecKgmG9njhdiqPv%2BT5ncZmIToQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Blu serena, dall'alba fino a luna piena, ti toglie il piatto per magia, lo sguardo da follia, ritrova la gioia con noi, io vi do una vita. Blu serena, un brivido che ti...",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:09:41.863Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -18557,7 +18703,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:56:13.583Z"
+            "updatedAt": "2026-09-02T11:09:33.105Z"
           }
         },
         {
@@ -22358,7 +22504,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:39:38.803Z"
+            "updatedAt": "2026-09-02T11:10:39.944Z"
           }
         },
         {
@@ -22660,7 +22806,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0C3Mh8MggSCNgFiefGE1Z4fZKMALQKeW41fgA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ndXLDgPqrzsjXj5kyfGVhNV9cTw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo era il nostro piccolo weekend di partenza a Moalboal, Cebu. Avevo intenzione di fare un po' di voice over per questo vlog, ma non mi è piaciuto. Quindi, vi lascio qui. Aggiungatevi al vlog. Ciao per ora. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:11:04.179Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22686,7 +22841,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0EvIk1fe5DIHqIjb9xU3EFQfBtDrVAHA014jC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iDVUfKXa%2BUdVhXJXPYYgsoMpVnw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stop scrolling, because this might be the best beach house in Porto Pignasco. This is Villa dos Sirenas, located inside the stunning Bella Sirena Resort. Think you know luxury? Watch this. Not one bedroom, not two, not three, not even four, but five bedrooms. Bringing the whole family? Perfect! One bedroom has two sets of bunk beds, so there's room for everyone. But here's the part you'll never get over. Two bedrooms have private doors that open straight to the beach. immagina di svegliarsi, aprire la porta e la prima cosa che vedi è l'oceano caffè di mattina con una vista dell'oceano sottoposti dal tuo patio camminare la piazza è solo un passo dal tuo bed questo non è solo una vacanza è il tipo di posto che tutti parlano di molto dopo che si lasciano se stai planificando un getaway familiare, un viaggio di bambino, un weekend di ragazze o un escapamento di piazza, Villa Dos Sirenas ti chiede book il tuo stay oggi e usi il codice PARADISE per 10% di offra il tuo primo day Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 62.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:09:01.095Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23857,7 +24021,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:38:50.750Z"
+            "updatedAt": "2026-09-02T11:08:27.029Z"
           }
         },
         {
@@ -25228,7 +25392,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:38:50.750Z"
+            "updatedAt": "2026-09-02T11:08:27.029Z"
           }
         },
         {
@@ -26687,7 +26851,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:38:50.750Z"
+            "updatedAt": "2026-09-02T11:08:27.029Z"
           }
         },
         {
