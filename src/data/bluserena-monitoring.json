@@ -33325,6 +33325,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:23:29.344Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:21:51.757Z"
           }
         },
         {
@@ -33408,6 +33417,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:24:05.033Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:24:55.982Z"
           }
         },
         {
@@ -33430,6 +33449,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:24:19.888Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:24:58.722Z"
           }
         },
         {
@@ -33482,6 +33510,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:24:45.662Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Levic Sonia in the day what you wrote a Chibanga, what a surprise! What a surprise! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 53.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:25:01.421Z"
           }
         },
         {
@@ -33504,6 +33541,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:24:55.077Z"
+          },
+          "audioAnalysis": {
+            "transcript": "8 e 10 di notte, guarda, è finito, ho perso i platini, che è questo? non c'è niente, non c'è niente, non c'è niente, questo è tutto il buffet, e qui c'è l'amore e la fortuna e qui non c'è più niente e la bocca al cuore",
+            "language": "Italian",
+            "durationSec": 38.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:27:04.682Z"
           }
         },
         {
@@ -33525,6 +33571,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:25:07.789Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Cosa vuoi da me? Cosa vuoi da me? Guarda che è un salabate. Ma è un salabate. Guarda che è un salabate. Ma è un salabate. Ciao, ciao, ciao.",
+            "language": "Italian",
+            "durationSec": 48.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:28:08.708Z"
           }
         },
         {
@@ -33546,6 +33601,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:25:17.339Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:29:11.182Z"
           }
         },
         {
@@ -33568,6 +33632,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:25:25.940Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:29:13.459Z"
           }
         },
         {
@@ -33590,6 +33663,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:25:36.527Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Cure, cure, cure Cure, cure, cure Cure, cure, cure Cure, cure, cure Babava in oroara",
+            "language": "Italian",
+            "durationSec": 41.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:30:43.129Z"
           }
         },
         {
@@ -33612,6 +33694,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:25:41.852Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:31:36.400Z"
           }
         },
         {
@@ -33633,6 +33724,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:25:50.335Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:34:40.421Z"
           }
         },
         {
@@ -33654,6 +33755,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:26:04.981Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 10.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:34:42.948Z"
           }
         },
         {
@@ -33675,6 +33785,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:26:17.880Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 11.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:34:45.269Z"
           }
         },
         {
@@ -33697,6 +33816,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:26:31.276Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:34:47.824Z"
           }
         },
         {
@@ -33780,6 +33908,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:27:19.391Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Lillian Nawasa, live in Cosa, in Euroma, come la chattu, a Cuezi, qua a Mnana, in Cumevila, a Vina Mkaga, a Nuia, a Serena, a Hotelo, a Mlekampara, a Wadundu, a Kubashaba, a Kubeta, a Kabaterra, a Maju, a Kabajirangu, a Izova, a Eriani, a Nchakare, a Enjiri, a Kuzikoro, a Isha, a Tuzaka, a Fese, a Mokubasha, a Mwenda, a Lillian Nawasa, a Wadundu, a Tilekwesho, a Ngora, a Mwije, a Murebe, a Kurikodri, a Lillian Nawasa, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 44.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:37:00.311Z"
           }
         },
         {
@@ -33802,6 +33939,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:27:31.114Z"
+          },
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 18.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:37:05.920Z"
           }
         },
         {
@@ -33824,6 +33970,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:27:41.078Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:38:14.404Z"
           }
         },
         {
@@ -33846,6 +34001,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:28:14.329Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 33.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:39:59.000Z"
           }
         },
         {
@@ -33868,6 +34032,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:28:26.875Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:40:58.439Z"
           }
         },
         {
@@ -33890,6 +34063,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:28:38.222Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:43:31.483Z"
           }
         },
         {
@@ -33912,6 +34095,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:28:49.702Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:43:33.911Z"
           }
         },
         {
@@ -33965,6 +34157,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:29:19.396Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 53.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:45:57.833Z"
           }
         },
         {
@@ -33987,6 +34188,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:29:28.115Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:49:00.798Z"
           }
         },
         {
@@ -34009,6 +34220,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:29:40.059Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 74.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:49:40.974Z"
           }
         },
         {
@@ -34092,6 +34312,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:30:34.507Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. And there are melodies In each one of us Oh, it's glorious Glorious, glorious, glorious As you feel, you will see",
+            "language": "Italian",
+            "durationSec": 59.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:51:44.359Z"
           }
         },
         {
