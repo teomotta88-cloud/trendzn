@@ -27130,6 +27130,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:55:08.493Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:36:15.600Z"
           }
         },
         {
@@ -27152,6 +27162,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:37:54.531Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:36:17.977Z"
           }
         },
         {
@@ -27174,6 +27193,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:38:06.734Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 23,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:37:20.307Z"
           }
         },
         {
@@ -27195,6 +27223,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:38:12.756Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Arricciù! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:37:22.757Z"
           }
         },
         {
@@ -27216,6 +27253,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:38:29.444Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Una vacanza che ha fatto i nostri figli fuori scuola e in natura con attività che la nostra famiglia poteva piacere insieme, ma non mi ha richiesto di darmi i miei essenziali come air conditioning, sedi comodissimi, un lavabo privato e una cucina completa. L'abbiamo trovata in New Jersey a Sun Retreats Hospitality Creek, che ci ha hostato per un lungo weekend di settimana e non posso raccomandarlo abbastanza. Nessuno in un'area bellissima, rurale, fiorita, a mezzo di Philadelphia e Atlantic City, hanno un grande lago dove puoi portare i tuoi autobus o rentare i loro. I nostri figli spendono ore a partire dal corso di obstacolo di Wibbit Lake, hanno un pool di spazio di olympico e un large splash pad e un pool di attività per i bambini più giovani e le mie ragazze amano giocare lì. You can bring your RV or get a cabin like we did. We had the Garden State Cottage, which sleeps eight and was the perfect size, with the kids in lofts up above and us in a closed-off bedroom. We could cook in the kitchen, grill and eat outside, and of course roast and devour endless s'mores. They do have various activities going on as well. We checked out a foam party, gem mining, fireworks, the arcade, and karaoke night. Questo è un add-on, ma se chiedi ai miei figli la loro parte preferita di stare in un resort di Sun Outdoors, dicono che hanno il nostro stesso golf cartone da correre. Se sei pronto a bookare il tuo stay a Sun Retreats Hospitality Creek, prendi un passaggio di giorno o impari più sui propri proprietà di Sun Outdoors in tutto il paese. Clicca sul link nella mia bio.",
+            "language": "Italian",
+            "durationSec": 84.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:39:11.996Z"
           }
         },
         {
@@ -27237,6 +27283,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:38:36.465Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:41:32.965Z"
           }
         },
         {
@@ -27258,6 +27314,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:39:07.751Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Nei tempi di paura, senza andare troppo lontano, benvenuti al Green Valley Resort, svolto dalla natura pacifica di Chivapuri. Aggiunga l'aereo fresco, il buon cibo, i stai di Comzi e un tempo significativo con la famiglia e i amici. Venite a spostarvi, lasciate raffreddati. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 31.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:41:35.986Z"
           }
         },
         {
@@ -27279,6 +27344,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:39:13.875Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:44:00.330Z"
           }
         },
         {
@@ -27300,6 +27375,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:39:32.193Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:44:03.001Z"
           }
         },
         {
@@ -27321,6 +27405,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:40:03.107Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Non esistono persone che non vengono da casa e che pagano solo 69 monati per tutto il giorno, anche per la maniera di mangiare tre volte al giorno. Chi non ha un'esistenza come questa? Penso che è difficile trovare un posto di ristorante con così di buona costruzione e divertimento. Questo è il posto di ristorante che tutti conosciamo. Ho vissuto qui da molti anni, ma non ho mai venuto. Adesso c'è una campagna come questa, che pagano solo 69 monati per uno stagione. E' un posto di ristorante che puoi fare con i tuoi amici e amici. Grazie a tutti. Non ci siamo mai riusciti a capire che non ci fosse una cosa, ma che saremo ancora in grado di vivere.",
+            "language": "Italian",
+            "durationSec": 62.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:45:28.010Z"
           }
         },
         {
@@ -27343,6 +27436,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:40:11.133Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Adi Gassi Bari! Adi Gassi Bari! Adi Gassi Bari! Adi Gassi Bari!",
+            "language": "Italian",
+            "durationSec": 12.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:45:54.409Z"
           }
         },
         {
@@ -27364,6 +27466,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:03:02.040Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Tu non sai, non vedi niente, chi è più importante di te? Tu non sei caldo, non sei freddo, non hai mai paura di te? Come fai, non sai, chi ha il cuore deve farsi caldo Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 56.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:48:58.945Z"
           }
         },
         {
@@ -27385,6 +27496,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:41:11.445Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:52:01.942Z"
           }
         },
         {
@@ -27406,6 +27526,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:41:17.058Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Hello girl, what's your name? My name is Dolly Oh, god damn What's your number? Oh, my number? Yes 6-7 6-7? Yeah 6-7, 6-7 Yeah 6-7",
+            "language": "Italian",
+            "durationSec": 19.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:52:04.536Z"
           }
         },
         {
@@ -27428,6 +27557,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:41:26.577Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 14.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:52:06.804Z"
           }
         },
         {
@@ -27449,6 +27587,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:42:02.701Z"
+          },
+          "audioAnalysis": {
+            "transcript": "I didn't know what I was looking for Till I found her I found her",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:52:42.563Z"
           }
         },
         {
@@ -27500,6 +27647,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:42:24.060Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:53:54.183Z"
           }
         },
         {
@@ -27522,6 +27678,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:42:41.680Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:56:59.186Z"
           }
         },
         {
@@ -27544,6 +27710,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:42:54.394Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:57:02.663Z"
           }
         },
         {
@@ -27565,6 +27740,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:43:12.722Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Oggi faccio un'operazione. Faccio un'operazione di rinnovazione di un'aeroporto molto grande che si trova nel parco di Pasak Resort Sanaburi. Ci facciamo più sicuri, più sicuri e più bellissimi. A fine mese di settimana, i clienti che vengono a restare vedranno un nuovo tipo di aeroporto. Aspettate. Per i clienti che vengono a vedere un nuovo aeroporto, non dimenticate di shareare la bella foto.",
+            "language": "Italian",
+            "durationSec": 19.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:57:53.430Z"
           }
         },
         {
@@ -27587,6 +27771,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:43:29.607Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:58:20.507Z"
           }
         },
         {
@@ -27609,6 +27802,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:43:35.941Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ragazzi siamo appena usciti dal ristorante, si sente un profumo bellissimo, non so di che cosa si tratta Ve lo dico io, si tratta di Mind Petting Blah, non potrebbe essere diversamente no? Ragazzi non avete capito che abbiamo beccato qui al Silvary Green Vest? Oggi ragazzi, tutti aspettate ragazzi, vedo tutti quanti che è il numero uno del profumo Occhio",
+            "language": "Italian",
+            "durationSec": 24.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:59:35.346Z"
           }
         },
         {
@@ -27661,6 +27863,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:43:51.570Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Al Mondara Spa, i guest possono divertirsi con i massaggi, i trattamenti di bellezza e i servizi di salute, circondati da un'atmosfera tropica. È il posto perfetto per raffreddare il tuo corpo e la mia.",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:00:25.790Z"
           }
         },
         {
@@ -27682,6 +27893,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:44:29.990Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:02:01.487Z"
           }
         },
         {
@@ -27704,6 +27925,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:44:49.826Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T17:02:43.445Z"
           }
         },
         {
@@ -28841,6 +29071,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:55:08.493Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:36:15.600Z"
           }
         },
         {
@@ -29675,6 +29915,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:03:02.040Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Tu non sai, non vedi niente, chi è più importante di te? Tu non sei caldo, non sei freddo, non hai mai paura di te? Come fai, non sai, chi ha il cuore deve farsi caldo Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 56.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:48:58.945Z"
           }
         },
         {
