@@ -791,7 +791,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:06:01.682Z"
+            "updatedAt": "2026-09-02T14:05:19.344Z"
           }
         },
         {
@@ -1661,13 +1661,12 @@
             "updatedAt": "2026-09-02T11:43:45.021Z"
           },
           "ocrData": {
-            "textOnScreen": "NITE",
-            "confidence": 0.737,
+            "textOnScreen": null,
+            "confidence": null,
             "frameCount": 5,
-            "minConfidence": 60,
-            "status": "ok",
+            "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:11:13.645Z"
+            "updatedAt": "2026-09-02T14:07:23.907Z"
           }
         },
         {
@@ -2141,7 +2140,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:14:15.272Z"
+            "updatedAt": "2026-09-02T14:05:08.605Z"
           }
         },
         {
@@ -5867,7 +5866,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:30:27.166Z"
+            "updatedAt": "2026-09-02T14:04:50.360Z"
           }
         },
         {
@@ -6106,7 +6105,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:31:34.024Z"
+            "updatedAt": "2026-09-02T14:05:33.492Z"
           }
         },
         {
@@ -12353,6 +12352,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:11:49.200Z"
+          },
+          "ocrData": {
+            "textOnScreen": "prossimoanno\nFinisce un\nGrazie di-tutto\nmeravigliosiiliii\nvediamo prossimo anno,\nsiete stati\nanno",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:36.875Z"
           }
         },
         {
@@ -12375,6 +12383,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:11:51.331Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ll momento in cui togli il\nbracciale\ndell' All' Inclusive\nJ bracciale\ndell' Inclusive\nIl momento in cui togli il\n4 bracciale",
+            "confidence": 0.877,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:44.046Z"
           }
         },
         {
@@ -12397,6 +12414,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:11:55.555Z"
+          },
+          "ocrData": {
+            "textOnScreen": "un gi aso di inverno ci ve àin\nmente erav: mo felici ad agosto\ne un giorno a caso di inverno ci verràin\nmente quanto eravamo felici ad agosto",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:03:57.290Z"
           }
         },
         {
@@ -12420,6 +12446,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:32.808Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:04:03.017Z"
           }
         },
         {
@@ -12442,6 +12476,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:37.624Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mini)\nLind",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:04:23.833Z"
           }
         },
         {
@@ -12464,6 +12507,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:40.387Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resor",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:04:43.792Z"
           }
         }
       ]
@@ -12513,7 +12565,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:30:27.166Z"
+            "updatedAt": "2026-09-02T14:04:50.360Z"
           }
         },
         {
@@ -12552,7 +12604,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:14:15.272Z"
+            "updatedAt": "2026-09-02T14:05:08.605Z"
           }
         },
         {
@@ -12586,6 +12638,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:15:51.487Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:05:14.843Z"
           }
         },
         {
@@ -12615,7 +12675,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:06:01.682Z"
+            "updatedAt": "2026-09-02T14:05:19.344Z"
           }
         },
         {
@@ -12646,7 +12706,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:31:34.024Z"
+            "updatedAt": "2026-09-02T14:05:33.492Z"
           }
         },
         {
@@ -12669,6 +12729,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:16:00.797Z"
+          },
+          "ocrData": {
+            "textOnScreen": "best in\ntheir gamesi",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:05:40.104Z"
           }
         },
         {
@@ -12691,6 +12760,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:16:03.127Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:05:48.663Z"
           }
         },
         {
@@ -12713,6 +12790,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:16:06.051Z"
+          },
+          "ocrData": {
+            "textOnScreen": "shay\nfloomsha\ndisana N",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:05:57.330Z"
           }
         },
         {
@@ -12735,6 +12821,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:16:08.827Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fan Club N Watch LIVE\nTHIS IS WAT ALL THE BADDIES\nDOIN mm\nheavy on hi\nFan club for 30\nTHIS IS WAT ALL THE BRDDIES\nDOIN\nre what does that m A\n4 ormally take X\nFan Club Bill utes Watch e\nDOIN NOW\nONE AGREES a\nwo concealer\nFan Club",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:09.048Z"
           }
         },
         {
@@ -12757,6 +12852,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:16:30.987Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WHATSAPP 677378916\nYoung and sexyha",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:13.993Z"
           }
         },
         {
@@ -12779,6 +12883,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:16:34.004Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“is serena\nput love\nislander?” H\nme: undoubtedly yes\"\n“is serena page the personithat: È\nput love island on\nthe best islander?” È\n“is serena page thelperson that\nput love island on and\nbest islander?”\n\"is serena page\nput love island onjthe\n“is serena page the person that\nputliove island and",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:26.874Z"
           }
         },
         {
@@ -12801,6 +12914,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:04:53.591Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Atty O",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:31.060Z"
           }
         },
         {
@@ -12823,6 +12945,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:17:26.119Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Persuasion speaks\non leaving\nvjoining Nyx Network\nsweet_n_thicc95\nSHES HOSTING ON NYX\nNETWORK GO FOLLOW\nTHEM\nAdd a comme...)\nRersuasion speaks\nI Baddies\nNetwork\nforces D A\nWhat did of the LE)\nTESEKHI fight?\ntheskylarparis\ngirl nyx network out\nlea a ving\nwi p saying like\nbuilds real beef not\nin hotels creating\nstorylines\npromise gonna set u up\nPersuasion\nta leaving Baddies\nNyx Network:\nto back\nre asion e ome\nher. own show\nDon't speak on promise like\nthat she's a cool down to\nearth person\nBaddies\njoiningiNyx Network\nThis show is definitely going\nto show a different side of\nyou the leadership side\nAdda comme... v",
+            "confidence": 0.865,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:43.542Z"
           }
         },
         {
@@ -12845,6 +12976,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:17:30.511Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:57.897Z"
           }
         },
         {
@@ -12867,6 +13006,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:17:32.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:07:03.478Z"
           }
         },
         {
@@ -12889,6 +13036,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:17:36.083Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:07:12.700Z"
           }
         },
         {
@@ -12913,13 +13068,12 @@
             "updatedAt": "2026-09-02T11:43:45.021Z"
           },
           "ocrData": {
-            "textOnScreen": "NITE",
-            "confidence": 0.737,
+            "textOnScreen": null,
+            "confidence": null,
             "frameCount": 5,
-            "minConfidence": 60,
-            "status": "ok",
+            "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:11:13.645Z"
+            "updatedAt": "2026-09-02T14:07:23.907Z"
           }
         },
         {
@@ -12942,6 +13096,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:18:18.004Z"
+          },
+          "ocrData": {
+            "textOnScreen": "to Her Magic Touch i\ncomment\nHow JJ Mmanged to pull\nSerena will forever\nconfuse me to still i\nhave had her\nPurposely trying to\nMake him jealous is\ncrazy\nto Her Magic Touch\ncomment d\nconfuse me to still\nhave had her i\nMake him jealous js\nto Her Magic Touch 4\nS How Jy Manged to pull\nconfuse me g to still i\ntrying to\nRePIY to Her Magic Touch p\nRePIY to Her Magic Touch\nHow Jy manged to pull J\nSerena will forever i",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:07:34.067Z"
           }
         },
         {
@@ -12964,6 +13127,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:18:19.990Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“annoying”\n“worst character”\nwhat it is...\nthen i realized what it is...\nthenii realized\nwhat",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:07:41.983Z"
           }
         },
         {
@@ -18319,13 +18491,12 @@
             "updatedAt": "2026-09-02T11:43:45.021Z"
           },
           "ocrData": {
-            "textOnScreen": "NITE",
-            "confidence": 0.737,
+            "textOnScreen": null,
+            "confidence": null,
             "frameCount": 5,
-            "minConfidence": 60,
-            "status": "ok",
+            "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:11:13.645Z"
+            "updatedAt": "2026-09-02T14:07:23.907Z"
           }
         },
         {
@@ -19747,6 +19918,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:04:53.591Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Atty O",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:06:31.060Z"
           }
         },
         {
@@ -28763,7 +28943,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:14:15.272Z"
+            "updatedAt": "2026-09-02T14:05:08.605Z"
           }
         },
         {
