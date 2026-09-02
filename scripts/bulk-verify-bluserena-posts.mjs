@@ -22,8 +22,10 @@ if (!token) {
 
 const octokit = new Octokit({ auth: token });
 
-// Un post è confirmed solo se la caption nomina Bluserena o uno dei resort
-// con la DENOMINAZIONE COMPLETA, o con il suo hashtag.
+// Un post è confirmed se:
+// 1. La caption nomina Bluserena o uno dei resort con DENOMINAZIONE COMPLETA
+// 2. La trascrizione audio contiene "bluserena" O "blu" + "serena" (staccati)
+// 3. Il testo OCR nomina Bluserena o uno dei resort con DENOMINAZIONE COMPLETA
 //
 // La lista precedente matchava sottostringhe generiche ("Valentino",
 // "Ethra", "Serena Hotel", "Calanè"): bastava un hotel omonimo in Uganda o
@@ -34,7 +36,8 @@ const octokit = new Octokit({ auth: token });
 // scrivono quasi sempre tutti minuscoli (#sibarigreenresort), e con il
 // match esatto se ne perdevano parecchi — #KalidriaHotel, per dire, nel
 // dataset non compare mai con quelle maiuscole. Restano invece esclusi gli
-// scostamenti di grafia: "Blu Serena" staccato non è "bluserena".
+// scostamenti di grafia: "Blu Serena" staccato (caption/OCR) non è "bluserena",
+// MA in audio è accettato perché la trascrizione può separare le parole.
 const TERMINI = [
   "bluserena", // copre anche #bluserena, essendo sottostringa
   "Is Serenas Badesi Resort",
@@ -65,13 +68,48 @@ const TERMINI = [
   "#EthraReserve",
 ];
 
-function verifyPost(caption) {
-  if (!caption) return "unconfirmed";
+function matchesTermini(text, lower) {
+  if (!text) return false;
+  const lowerText = lower || text.toLowerCase();
+  return TERMINI.some((t) => lowerText.includes(t.toLowerCase()));
+}
 
-  const lower = caption.toLowerCase();
-  return TERMINI.some((t) => lower.includes(t.toLowerCase()))
-    ? "confirmed"
-    : "unconfirmed";
+function verifyCaption(caption) {
+  return matchesTermini(caption);
+}
+
+function verifyOCR(ocrData) {
+  // OCR usa le stesse regole della caption: termini esatti, non staccati
+  if (!ocrData?.text || ocrData.status !== "ok") return false;
+  return matchesTermini(ocrData.text);
+}
+
+function verifyAudio(audioAnalysis) {
+  // Audio ha regole più ampie rispetto caption/OCR:
+  // - "bluserena" insieme (come caption/OCR)
+  // - "blu" E "serena" come due termini indipendenti (anche in posizioni diverse)
+  if (!audioAnalysis?.transcript || audioAnalysis.status !== "ok") return false;
+
+  // Primo: prova i termini standard
+  if (matchesTermini(audioAnalysis.transcript)) return true;
+
+  // Secondo: per Bluserena specificamente, accetta anche se entrambi i termini
+  // "blu" e "serena" sono presenti nel transcript (anche staccati/lontani).
+  // Questo gestisce i casi dove la pronuncia li rende come due parole separate.
+  const hasBlu = /\bblu\b/i.test(audioAnalysis.transcript);
+  const hasSerena = /\bserena\b/i.test(audioAnalysis.transcript);
+  if (hasBlu && hasSerena) return true;
+
+  return false;
+}
+
+function verifyPost(account) {
+  // Verifica nell'ordine: caption, audio, OCR
+  if (verifyCaption(account.caption)) return "confirmed";
+  if (verifyAudio(account.audioAnalysis)) return "confirmed";
+  if (verifyOCR(account.ocrData)) return "confirmed";
+
+  return "unconfirmed";
 }
 
 async function bulkVerify() {
@@ -142,7 +180,7 @@ async function bulkVerify() {
         totalPosts++;
 
         // Determina status
-        const newStatus = verifyPost(account.caption);
+        const newStatus = verifyPost(account);
         const oldStatus = account.verificationStatus || null;
 
         if (newStatus === "confirmed") {
@@ -184,7 +222,8 @@ async function bulkVerify() {
         message: `chore: bulk verification of Bluserena posts [trendzn-bot]
 
 Automatically marked ${changedCount} posts as confirmed/unconfirmed
-based on caption content (bluserena mention or resort names)
+based on caption, audio transcript, and OCR text (bluserena mention or resort names).
+Audio accepts "blu + serena" staccati.
 
 Confirmed: ${confirmedCount}
 Unconfirmed: ${unconfirmedCount}`,
