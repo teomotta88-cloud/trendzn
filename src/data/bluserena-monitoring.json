@@ -2049,7 +2049,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:46.720Z"
+            "updatedAt": "2026-09-02T11:05:42.085Z"
           }
         },
         {
@@ -9209,7 +9209,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:05:14.789Z"
+            "updatedAt": "2026-09-02T11:06:53.646Z"
           }
         },
         {
@@ -9539,7 +9539,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:09:48.396Z"
+            "updatedAt": "2026-09-02T11:05:32.675Z"
           }
         },
         {
@@ -11423,13 +11423,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQePQcFFC7o0PbJjDTDAQWI3jEVAyCcIieErfb~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ob%2Bbf1oxyrYImy01LTkUw9phTnw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Grazie. Grazie a tutti. Grazie.",
-            "language": "Italian",
-            "durationSec": 66.2,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:37:10.962Z"
+            "updatedAt": "2026-09-02T11:00:24.157Z"
           }
         },
         {
@@ -12966,7 +12967,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogYIwFBRcDqtWUERRgjPAuIyQfBsCuBEgNQeEQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=KQH9kw2FpjAi6jdBqNvTEJxnvig%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Seabed Resort Pak Nam Pan benvenuti a tutti. Il posto di risposta è a 100.000 rai. È a distanza dal mare, solo attraverso la strada. Molti non credono, ma oggi vi mostrerò. Prima di tutto, andate attraverso la strada attraverso il posto di risposta. Se vi passate, trovate questa pagina. Prendete il posto di risposta 3. Se vi passate, vedrete la vista del mare. Andate un po' più in giro. E tutti riuscirete a trovare una strada molto bella. Il mare è chiaro, l'ambiente è caldo, è in grado di rispondere. E ora, restate con noi. Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 33.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:59:27.523Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -12979,7 +12989,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owuABnvKEiALRCdSRS9iRAFIEAavYACBPW3oy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=mQ%2Bvt6ieFAHkfp4eUG8pgHQeGcM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 88.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:00:00.820Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -12994,13 +13013,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQePQcFFC7o0PbJjDTDAQWI3jEVAyCcIieErfb~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ob%2Bbf1oxyrYImy01LTkUw9phTnw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Grazie. Grazie a tutti. Grazie.",
-            "language": "Italian",
-            "durationSec": 66.2,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:37:10.962Z"
+            "updatedAt": "2026-09-02T11:00:24.157Z"
           }
         },
         {
@@ -13014,7 +13034,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-4863-sg/o0uAlgyCdG0ByD3AEuUf0PPTXdAiRkiawI7Ijc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DsxLicZxNg07o7AYTEMan71DbeE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:00:28.382Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13027,7 +13056,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/octFGrfe2KfpLGA0gshMG4jGAIfRwHJoboiig3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rQw6jIkriZgcWKh5sA5CgnXZAvU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il Per esempio, se lo stessi, si avvicina e si avvicina. Entra, entra. Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 174.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:01:35.348Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13040,7 +13078,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0WxvJUDqBO9LAoFEQJ5MAQQEBVvfVeggRQQyc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MW3ybJ84GHWs2vt1%2FL18%2BRxccwY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Conte me lo ha, ehi!",
+            "language": "Italian",
+            "durationSec": 22.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:01:46.477Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13053,7 +13100,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEBfGen2GDUVL1iIRlIrayQyJC4QrUeAEZjJvA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Esl0Gy5p6EnGA76AROUQrZ1EIEk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:01:55.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13066,7 +13122,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0CJAE6xsLtfwICLQUIGEzeSQ02YAQ3eDoijoj~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2BY4bzBZr2%2FHCWbn69GT4N%2FDiTvc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'estate in un'area di montagna, vicino al mare, vicino alla natura e si può restare in pazienza. Oggi siamo in un'estate a Eden Beach, un'estate di mare, un'estate che è fondamentale per la forma di riso con la natura, con un'alba di luce verde, che fa l'ambiente caldo e tranquillo da quando siamo entrati. L'estate in cui siamo entrati oggi è in tono di tono di terra e di legame, che fa l'ambiente caldo, tranquillo e riuscito a riuscire a riuscire a riuscire a riuscire a riuscire a riuscire a riuscire. La zona è molto bella, ha un punto per restare in pazienza e per riuscire a riuscire a riuscire a riuscire. Il gusto è molto forte, come la pizza, e il gusto è molto forte. Grazie per aver guardato il video.",
+            "language": "Italian",
+            "durationSec": 79.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:02:35.547Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13079,7 +13144,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMkBbebADvWDGV37Kg1R8mfbEhFFd7EqgQMQMg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EHy212uhtUmkicdRYA67nVhmGZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:02:42.126Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13092,7 +13166,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oomEYfY1FgVRDRTIGfvEAnBcjBdFIgjjqa4jUp~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=QutgS8%2F4abTfrkmCXKohYjXrsE8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:02:52.541Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13105,7 +13188,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oIEaWllAivCiabBIA8AnBEBBVYDqAluVQZaAp~tplv-tiktokx-dmt-logom:tos-no1a-i-0068-no/o8WEIYBllA5BBVsiqlqaHpAbAZuBBai6vAEZq.image?dr=9634&x-expires=1788433200&x-signature=EmQF5B4qQNMWEJh1WhnZORssSrY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Dopo aver passato una settimana a stare al Princess Waterfensura, qui è la mia review onestamente del hotel. Il hotel stesso è assolutamente enorme, ma non è mai sentito overcrowded. I luoghi erano veramente spaziosi e avevano tutto ciò che avevamo bisogno per un stay comodissimo, includendo questo bellissimo balcone con una vista al cielo. Ci sono una selezione di area di ponte, quindi se vi viaggiate come famiglia o se vi viaggate per qualcosa di un po' più quieto in un spazio solo per adulti, c'è qualcosa per tutti. Una cosa che mi ha genuinamente sorpreso è la scelta di cibo disponibile. Ciò che mi piaceva davvero molto è che avevano giorni di tema durante la settimana e che le stazioni di cucina live significavano che il cibo non fosse mai ripetitivo. Ci sono anche diverse bar all'interno del resort, tutti con un'atmosfera completamente diversa. Quindi, se volete avere una bella bevanda in notte, o andare in un luogo più sostenibile, o solo per guardare i sport, c'è sicuramente qualcosa per tutti. Un altro punto fondamentale per me è che la piazza è a una distanza così corta e potete accessarla direttamente dal hotel. A meno che il hotel sia in una parte più tranquilla dell'islanda, sarei in grado di stare ancora? Assolutamente!",
+            "language": "Italian",
+            "durationSec": 56,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:03:23.284Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13118,7 +13210,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o0aj1GI2fVr35NIkI4vpPUAIGeAiLLM3eDUVnI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ByVyjdhBQ86kniPs5SpA%2BvAxoR4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:03:27.904Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13131,7 +13232,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYqk29euIm7ABijEIPZTFBAbFRFFqUf35grDXE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iNntfiwPP22xWWfUZnFHn4tEcC8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mai đây khi nắng lên, ta nắm tay bước trên đường dài Đưa nhau qua khó khăn, đời sẽ như đôi ta mơ ước Nhân san luôn đổi thay, tình chúng ta biết bao diệu kỳ Bay đi trong ánh dương, siêu sắt nhau đến nơi hằng mơ Yêu là sẽ bên nhau trọn đời, chẳng bao giờ Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:13.867Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13144,7 +13254,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/os1AKDURhB6EgAiI7AtIOMPAASCQw7fCGBABiy~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/ogap2vAEEOi3A7UBgAAAMKilBwAYmQcACIaP8.image?dr=9634&x-expires=1788433200&x-signature=LDtWa3r%2F1C9TUMQpe5GO18pQoqE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Musica",
+            "language": "Italian",
+            "durationSec": 23.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:21.282Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13157,7 +13276,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocWfk51UDI1OnToCAcFDUZRgSBfgqABIEWg7EU~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=YL9%2B4gwfN84CEt03WF5s8dlqAKE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:28.460Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13170,7 +13298,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ogUEbiAviDaADCoIzAR2Ul2ABnaBAV8ApE1NA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=SjC97JYNrOeI4ybLto5if01piNg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, sono io. Probabilmente stai chiedendo come sono arrivato in questa situazione.",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:30.692Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13183,7 +13320,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8lEmVV4IetEUBcBlzjDfBGRb1AFEY1gNSgqIM~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oGRQTH34%2BdDPm91ipPqExd%2FTP%2FQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'è una villaggia, che dopo un tempo di scontro, ha scelto un'area più tranquilla, in mezzo al lago di Somboi, dove si chiama la villaggia di Dongzhe, il terreno di rinforzamento del rio. Ma ha usato tutto il suo potere e la sua pazienza per riportare qui un colore di rosa, di pelle, di fiori, e questo terreno è un'area di rinforzamento del rio, un'area di rinforzamento del rio, Il vero e proprio inverno è pieno di esperienze con le notti di freddo sotto i milaneri nel camping di Dongzhe e l'albergo di l'albergo di l'albergo di l'albergo. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:50.749Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13196,7 +13342,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oMVPZ9DmGBrlTNuXiI0BE8a7BEEFXgaVSilAP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Dvqcc6wGmGiV2GpcXiWzHAgCX2w%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:54.239Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13209,7 +13364,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUiF86ICECAf1IyHC0gwQ8iLyAiVrSQB6D80Wx~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=n1G%2B7yNfLmSIOeDpNzfVnTdUlsM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 17.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:05:03.134Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13230,7 +13394,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:09:48.396Z"
+            "updatedAt": "2026-09-02T11:05:32.675Z"
           }
         },
         {
@@ -13252,7 +13416,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:46.720Z"
+            "updatedAt": "2026-09-02T11:05:42.085Z"
           }
         },
         {
@@ -13266,7 +13430,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocMzADfBOE4zIm1CaFYLCSKgUBJAVipAiAAJIw~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=h5rTtL1nkS7yiMzLoyspIwgjY7U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non pensate che ci sia un posto per la villa, il prezzo inizia da 1.100 baht e si trova a 3 km dal mare. Qui c'è il resort Wenda & Villa, in un resort spazio, pulito, con un stile minimo, molto comodo. Mi piace molto l'ambiente, è molto tranquillo e coso, da lì in. La zona in cui ci stiamo a posto è la zona Garden View, è rilassata da un po' di ponte, la sala è molto bella, La stanza è molto ampia, l'acqua è liscia e lenta, la zona di riposo è chiaramente asciutta, è piena di cose per la coppia, sia il sabù che il shampoo, e abbiamo due cappellini di acqua e un bar piccolo con le vestiti e la tv. Inoltre, c'è anche un'area per le persone che vogliono andare a spostarsi, c'è anche un'area per le persone che vogliono andare a spostarsi, per le persone che vogliono andare a spostarsi, per le persone che vogliono andare a spostarsi, per il resto di tempo. È un altro punto che aiuta a rilevarsi con questo tip. E qui c'è anche un'auto per le persone che vogliono andare a spostarsi, o vogliono trovare cose buone. molto buono, si può stare qui e viaggiare con calma, anche il posto di posto è molto corretto, non dovete preoccuparvi del posto di posto. Sono arrivati a Bangsan in questo momento, sono molto impressionata, quindi dovete guardare questo posto e tornare a riposarvi. Chi sta cercando un posto in Bangsan, l'ambiente è buono, è particolare e non costa tanto, vi consiglio Wanda Resort & Villa.",
+            "language": "Italian",
+            "durationSec": 74.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:06:21.532Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13287,7 +13460,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:05:14.789Z"
+            "updatedAt": "2026-09-02T11:06:53.646Z"
           }
         },
         {
@@ -13301,7 +13474,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocqAUZHMZCTI6AFRtB6QOrJAAgEKg7fEftVDE8~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=v1pOwS6gIQc6xs2Y9isBxvmLrTM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se ancora non conosci il enorme e divertito rio lento dell'hotel nuovo Serenay Caribe Club, allora restate, che questo video è per te e ti mostro perché devi riservare in questo hotel con noi. Amici, questo rio lento, senza dubbio, è uno dei più lunghi che ho visto. E guardate che bella questa cueva. Cioè, se sei rio lento, puoi trovare questa cueva con un bar. Guardate che bello, mi è piaciuto, mi è piaciuto. Signore non potete lasciare che vi racconti, dovete riservare con noi e divertirvi di questo enorme rivolento, ricordate che potete separare e pagare in comodità.",
+            "language": "Italian",
+            "durationSec": 42.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:06:59.441Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13314,7 +13496,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oQBRIDojg8Z0p8Cl3B0dutAUiMav7r451ilIE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gojQ%2BGYh8M9q85lBEimjPvY25Eg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non devi fare un volo a Grecia, hai Grecia in California e questo è il posto a andare quando vuoi fare foto integrabili. Serena Resort è a Grecia in California. Questo bellissimo posto è locato nel San Luis Obispo County. Con solo $326 a notte, otterrai una suite studio romantica con wifi gratuito, tv e vedi immaginabili. Non è da menzionare che questo hotel è un spa di massaggio in-room. spa e questo posto è circondato da wineries e spazi di viaggio che la staff sicuramente ti raccomanda. Hanno un'area cucinata e così grandi vedi per mangiare il piatto in mattina. Pagano 23 dollari per persona per il piatto e capisci questo se booki su TikTok cliccando sul sticker di green location su questo video, ti darai 50% di cashback sui tuoi primi bookings. Cosa pensi di questo hotel? Commenta qui sotto.",
+            "language": "Italian",
+            "durationSec": 54.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:07:29.250Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13934,7 +14125,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMkBbebADvWDGV37Kg1R8mfbEhFFd7EqgQMQMg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EHy212uhtUmkicdRYA67nVhmGZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:02:42.126Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17517,7 +17717,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:46.720Z"
+            "updatedAt": "2026-09-02T11:05:42.085Z"
           }
         },
         {
@@ -18458,7 +18658,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ogUEbiAviDaADCoIzAR2Ul2ABnaBAV8ApE1NA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=SjC97JYNrOeI4ybLto5if01piNg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, sono io. Probabilmente stai chiedendo come sono arrivato in questa situazione.",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:30.692Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19179,7 +19388,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEBfGen2GDUVL1iIRlIrayQyJC4QrUeAEZjJvA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Esl0Gy5p6EnGA76AROUQrZ1EIEk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:01:55.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19517,7 +19735,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/os1AKDURhB6EgAiI7AtIOMPAASCQw7fCGBABiy~tplv-tiktokx-dmt-logom:tos-alisg-i-0068/ogap2vAEEOi3A7UBgAAAMKilBwAYmQcACIaP8.image?dr=9634&x-expires=1788433200&x-signature=LDtWa3r%2F1C9TUMQpe5GO18pQoqE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Musica",
+            "language": "Italian",
+            "durationSec": 23.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:21.282Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19695,7 +19922,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocWfk51UDI1OnToCAcFDUZRgSBfgqABIEWg7EU~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=YL9%2B4gwfN84CEt03WF5s8dlqAKE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:28.460Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22780,7 +23016,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-4863-sg/o0uAlgyCdG0ByD3AEuUf0PPTXdAiRkiawI7Ijc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DsxLicZxNg07o7AYTEMan71DbeE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:00:28.382Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22919,7 +23164,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEBfGen2GDUVL1iIRlIrayQyJC4QrUeAEZjJvA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Esl0Gy5p6EnGA76AROUQrZ1EIEk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:01:55.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23236,7 +23490,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ogUEbiAviDaADCoIzAR2Ul2ABnaBAV8ApE1NA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=SjC97JYNrOeI4ybLto5if01piNg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, sono io. Probabilmente stai chiedendo come sono arrivato in questa situazione.",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T11:04:30.692Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26693,7 +26956,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:05:14.789Z"
+            "updatedAt": "2026-09-02T11:06:53.646Z"
           }
         },
         {
