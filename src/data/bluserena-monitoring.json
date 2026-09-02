@@ -3729,13 +3729,14 @@
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 60,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:07:02.962Z"
+            "updatedAt": "2026-09-02T13:26:40.582Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -10944,7 +10945,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:00:00.689Z"
+            "updatedAt": "2026-09-02T13:32:33.489Z"
           }
         },
         {
@@ -21535,7 +21536,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/osSBf8BPi6MIlLVc4RAoABSELwoIIcCfgqSMIi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=T2U%2FfFwmgnk%2BWZOVIoSqN4qutkQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:14:24.987Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21548,7 +21558,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooiBiAlREC5Wv6MIIC7pivyeqhRF1IAvGALIwC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rFMTfEbt%2BaK4RMh5tmJYiwExIKE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tutto cabra già giremba, ha già vana mona mi pendeza, na mpenda mpenda, ata we kucitiusi ngeweza, bila nha chenga bila nginga nginga, di machovia chiotazani kengeza, kusema kweri na mpenda mpenda, wapeke misi...",
+            "language": "Italian",
+            "durationSec": 18.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:14:27.948Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21561,7 +21580,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-85c255-tx2/oMfYPxxeHq9sIAE5dUQFWwODBj6UiQBIctVEBE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=wCSAyscC0jbwtoJ%2BBnxBUfOej8U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti in uno dei nostri stati di veranda. Se non sapete cosa significa veranda, significa balcone. Quindi, non solo potete divertirvi in un'amorevole, bellissima stanza, in un'abitazione comodissima, ma anche potete divertirvi nel sole mediterraneo dal vostro balcone. Quindi, se il Mediterraneo è sul vostro listaggio, sicuramente scrivete un'abitazione. Non dovrete perdere le belle vittime che potrete vedere da quattro paesi. Molto spazio per le abitazioni. Ancora, le abitazioni si separano se venite con un amico. Un'area di sedia bella. potete sottolineare tutto ciò che avete visto nel Mediterraneo, preparatevi per tutte le notte di tema, tv ovviamente, un bel bar, un sacco di stanza e stanza di stanza, perché 7 notti è un tempo molto lungo, e facciamo notti di tema, quindi dovete portare i vostri atteggiamenti di tema, bella sciogliera, togliete il vostro stufaio, molta spazio nella veranda, quindi se volete bookare un balcone, sicuramente attacchate la veranda.",
+            "language": "Italian",
+            "durationSec": 54,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:14:47.724Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21574,7 +21602,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/os9F3EB6IWRcJJbDufif0IG5qsEYxDV7dCEgAB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=fAmqHjd1fF06JfpXqzMqoW67hsw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 50.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:17:18.233Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21587,7 +21624,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8HeUVD3IFAEI0BiKBEcPoE0BpKAfRbIqbUKg3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=T9UWrTMSx8HVUl9LaSP4t7YGGSM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 28.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:19:05.700Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21600,7 +21646,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMVQgEwFRvkQqAmfZXwTaMFFbLRDEBFoU48BeF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=6vc5%2B8pEloZY6XVCj3CIIQKivZc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:19:35.352Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21613,7 +21668,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIoj9YibcAkh8hBAiVGmiYajiBpATINvyIEkU~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=tFJLkO61Af1qUFLDpDQm01cm%2BLk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:20:34.162Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21626,7 +21690,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUIhJDQAIeAL6I5nihjMttefXyG0LDpQXFYUp3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zjZ5ypZHnpu4MML8kbR0HwImDHE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:22:20.222Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21639,7 +21713,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQfFLICkIMj4F6QWJfiB5IQYU2ODHDBSeCEAAD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=kwJnpKlBYQDePbnVRONQ8DnG%2B4Y%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:22:23.396Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21652,7 +21735,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAF60LCqiA94BjPEEyPTSRPBUsJfIj5sElfgID~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DrPSfKNd7%2BumOK3%2Bb5J1B64%2BlN0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:24:30.783Z"
+          }
         }
       ]
     },
@@ -21685,13 +21777,14 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 60,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:07:02.962Z"
+            "updatedAt": "2026-09-02T13:26:40.582Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -21723,7 +21816,16 @@
             "videoviral"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Aspetta, fai. Dai. E questo è come il latte. Come il latte? Come la mozzarella di battipaglia? Bravo. Che spettacolo, grazie. Grazie. Prego signora. Questa è la testa del pomodoro. Dico. Bene, bene. Andiamo a proseguire dall'altra parte. Amore Dimmi Che spettacolo! Dai ragazzi! Eh? Pugliese! Pugliese? guarda qua i ragazzi che state smontando che state smontando che state smontando una barca una barca della serata calabriz ma vieni pure tu su tiktok facciamo una famosissima io sono una famosa io e le ragazzine anche voi non fa niente va bene così lo staff è meraviglioso guarda qua va lavora oltranza bravo ciao ragazzi",
+            "language": "Italian",
+            "durationSec": 98.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:29:28.740Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21753,7 +21855,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T10:00:00.689Z"
+            "updatedAt": "2026-09-02T13:32:33.489Z"
           }
         },
         {
@@ -21776,7 +21878,16 @@
             "social"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Di tutti li bellizzi su pra terra, chi incantano e chi fanno cantare, tu pi mi asi sempre la più bella, na rara per la degna di lo mari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amuri, o grazia che mi fici, o grazia che ti fici, o grazia che indifici lo signori, sti da lucenti di sta vita mia. Scinti fai presto che io spetto a te Stringimi forti, stammi vicino Fammi sentire",
+            "language": "Italian",
+            "durationSec": 38,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:32:36.668Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21798,7 +21909,17 @@
             "resort"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:35:41.453Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21817,7 +21938,16 @@
             "mare"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "La Città di San Paolo I nani ne vengono, ho un mio cuore, sono un cuore di un cuore Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 70.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:35:45.164Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21836,7 +21966,16 @@
             "mare"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "WAKE THEM UP! BACK IN THE TRENCH FOOTA PUT THE ARM ON LET'S WORK DOWN IN THE TRENCH AND WE PUTTING THE WORK ENEMY LURKING BUT WE NEVER HURT SWEATING THE HEAD GET THE TRUMP ON THE BELL BRINGING THE HEAT THAT THE DEVIL GON' MELT YEAH WE HOLDING THE LINE Ciao",
+            "language": "Italian",
+            "durationSec": 30.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:38:19.564Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21856,7 +21995,16 @@
             "holidays"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 57.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:39:18.103Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21879,7 +22027,16 @@
             "allegria"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Una piena ti toglie il fiato per magia, lo sguardo da follia Ti trova la gioia con noi, ogni giorno Una vita blu, serena, un brivido che ti scappena La melodia che ti conquista, amore a prima vista Riempie quel guanto che hai Qui ritroviamo la felicità Un sogno che non finirà Un caldo abbraccio che sa di speciale Le lunghe giornate che non sentirai Blu Serena, un aquilone che non vola via Prova a seguirne la scia Tutta la vita blu, serena Dall'alba fino al luna, piena",
+            "language": "Italian",
+            "durationSec": 54.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:42:01.112Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21900,7 +22057,17 @@
             "resort"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:44:41.390Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21920,7 +22087,16 @@
             "resort"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ma robe che te prega dove tristezze, lo sai qual è l'età più bella? Te lo dico io qual è, è quella che uno ha giorno per giorno, e la fanno schiacciare.",
+            "language": "Italian",
+            "durationSec": 15.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:44:43.936Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21942,7 +22118,16 @@
             "apprezzare le piccole cose"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ragazzi è terminata la serata, come si chiama? Dio dello smuerto Dio dello smuerto No, no, Dio dello smuerto Dio dello smuerto Ragazzi, comunque questi ragazzi sono proprio fiocchi, vero? Stanchi, stanchi, stanchi Stanchi, siete fortissimi, siete fortissimi Ballate, cantate, siete, intrattenete sempre, siete fortissimi Ragazzi, per quelli che verranno alla vacanza prossimamente Tu sei? Mattia Mattia Aurora Gianluca Fabiana Fabiana? Sì Ragazzi sono meravigliosi Saranno i volti che vi seguiranno per tutta la vacanza Ragazzi ci aspettiamo Ciao Ci vediamo domani A domani",
+            "language": "Italian",
+            "durationSec": 44.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:45:48.560Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21955,7 +22140,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/owWeWLgHANaj9GfLIwtHNV4eZ9IIlUGkABCKEo~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=AgSKp1dZeulMOHDt4FnZyicxlOM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Iscriviti al canale!",
+            "language": "Italian",
+            "durationSec": 29.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:47:51.764Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21968,7 +22162,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/okCECn6BiiABtRBAIISBqRK8gpGj3y1MUiUfA6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=W8oSFgDyDKTCc3uOQY9C2JQ2DJ0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I thought I knew what Tulum hotels looked like, and then I found this. Hotel Shibari is tucked into the jungle with a crystal clear cenote, luxury accommodations, personalized service, and an adults-only atmosphere that feels incredibly private. The first few minutes here are enough to make you forget about every other hotel you were comparing. If you're planning Tulum, don't just save this video. Tap the link and check availability before you book somewhere else.",
+            "language": "Italian",
+            "durationSec": 25.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:49:43.327Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21981,7 +22184,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/owAEDE6qSEjK0RRQu6MfBFGjeDJytBQj3kAU3g~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=wMI8c3QJATTnm4HjkvTtyoYlv9U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non voglio share questo perché sembra uno dei segreti più ben presi di Tulum. La prima volta che entri in Hotel Shibari, sei svolto da giungoli, acqua cristallina, luci di luce e questa atmosfera incredibilmente tranquilla. È solo per gli adulti, intima e completamente diversa dal tipico hotel di Tulum. Questo è il tipo di posto che scopri una volta e poi continui a pensare di tornare. Se vuoi sperimentarlo per te stesso, clicca il link e controlla i tuoi dati.",
+            "language": "Italian",
+            "durationSec": 27.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:49:46.374Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26159,7 +26371,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooiBiAlREC5Wv6MIIC7pivyeqhRF1IAvGALIwC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rFMTfEbt%2BaK4RMh5tmJYiwExIKE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tutto cabra già giremba, ha già vana mona mi pendeza, na mpenda mpenda, ata we kucitiusi ngeweza, bila nha chenga bila nginga nginga, di machovia chiotazani kengeza, kusema kweri na mpenda mpenda, wapeke misi...",
+            "language": "Italian",
+            "durationSec": 18.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:14:27.948Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27087,7 +27308,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQfFLICkIMj4F6QWJfiB5IQYU2ODHDBSeCEAAD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=kwJnpKlBYQDePbnVRONQ8DnG%2B4Y%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:22:23.396Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27113,7 +27343,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIoj9YibcAkh8hBAiVGmiYajiBpATINvyIEkU~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=tFJLkO61Af1qUFLDpDQm01cm%2BLk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:20:34.162Z"
+          }
         }
       ]
     },
