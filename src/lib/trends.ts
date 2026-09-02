@@ -55,21 +55,43 @@ export type AccountRef = {
   sentiment?: Sentiment | null;
   // Topic/hashtag estratti dalla caption tramite LLM. Array vuoto se non trovati.
   topics?: string[] | null;
-  // Audio analysis metadata per TikTok/Instagram Reels (Phase 3)
   audioUrl?: string | null;
+  // Trascrizione dell'audio del video, scritta SOLO da
+  // scripts/analyze-bluserena-audio.mjs (Groq Whisper). Il record c'è anche
+  // quando la trascrizione non è riuscita: `status` dice perché, così la run
+  // successiva sa che il post è già stato tentato e non lo rifà.
   audioAnalysis?: {
     transcript?: string | null;
+    language?: string | null;
+    durationSec?: number | null;
+    model?: string | null;
+    status?:
+      | "ok"
+      | "no_speech"
+      | "download_failed"
+      | "extract_failed"
+      | "too_large"
+      | "transcribe_failed"
+      | "error";
+    reason?: string | null;
+    updatedAt?: string | null;
+    // Campi legacy della vecchia analisi LLM, non più scritti da nessuno.
     sentiment?: string | null;
     engagement?: number | null;
     analyzedAt?: string | null;
   } | null;
-  // OCR analysis: testo estratto dai frame video durante Phase 2
+  // Testo sovraimpresso letto dai frame del video, scritto SOLO da
+  // scripts/analyze-bluserena-ocr.mjs (Tesseract). Stessa logica di `status`.
   ocrData?: {
     textOnScreen?: string | null;
-    confidence?: number;
-    frames?: string[];
+    confidence?: number | null;
+    frameCount?: number;
+    status?: "ok" | "no_text" | "download_failed" | "frame_failed" | "error";
+    reason?: string | null;
+    updatedAt?: string | null;
   } | null;
-  // Insights estratti da OCR + caption combinati
+  // Legacy: insight prodotti dalla vecchia analisi LLM su OCR + caption.
+  // Nessuno script lo scrive più, resta per i post già analizzati.
   ocrInsights?: string | null;
   // Verifica Bluserena: il post contiene "bluserena" o un nome/hashtag resort?
   // "confirmed" se sì, "unconfirmed" se no. Modificabile manualmente via UI.

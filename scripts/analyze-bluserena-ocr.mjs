@@ -1,413 +1,167 @@
 #!/usr/bin/env node
 
+// Estrae il TESTO ON-SCREEN dai video Bluserena (TikTok / IG Reels) e lo
+// scrive nello store, nel campo `ocrData`. Fa solo questo: nessuna chiamata a
+// LLM, nessun sentiment, nessun topic, nessuna location — quei campi sono di
+// altri script e questo non li tocca mai.
+//
+// Pipeline per post: yt-dlp -> ffprobe (durata) -> ffmpeg (N frame campionati
+// lungo il video) -> Tesseract (ita+eng) -> testo ripulito e deduplicato.
+//
+// Nota sul vecchio comportamento: il workflow non installava né yt-dlp né
+// ffmpeg, e lo script mascherava l'ENOENT come "video non disponibile",
+// ricadendo su un'analisi LLM della sola caption. Risultato: 0 post con OCR su
+// 1478, ma workflow verde. Ora i binari sono un prerequisito verificato
+// all'avvio (assertBinaries) e l'unico output è il testo davvero letto a video.
+
 import fs from "fs";
+import os from "os";
 import path from "path";
-import { fileURLToPath } from "url";
-import { spawnSync } from "child_process";
-import { Octokit } from "@octokit/rest";
-import { chatCompletionWithFallback } from "./lib/openrouter.mjs";
 import Tesseract from "tesseract.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { runEnrichment } from "./lib/bluserena-enrich.mjs";
+import { cleanText, frameTimestamps } from "./lib/ocr-text.mjs";
+import {
+  assertBinaries,
+  cleanup,
+  downloadVideo,
+  probeDurationSec,
+  run,
+} from "./lib/bluserena-media.mjs";
 
-const REPO = "teomotta88-cloud/trendzn";
-const STORE_PATH = "src/data/bluserena-monitoring.json";
+// Quanti fotogrammi campionare per video.
+const FRAMES_PER_VIDEO = Number.parseInt(process.env.OCR_FRAMES ?? "5", 10);
+const OCR_LANGS = process.env.OCR_LANGS ?? "ita+eng";
 
-// API keys
-const apiKey = process.env.OPENROUTER_API_KEY;
-const groqApiKey = process.env.GROQ_API_KEY;
+// Contatore invece di Date.now(): due post elaborati nello stesso
+// millisecondo (succede quando il download fallisce subito) condividerebbero
+// lo stesso nome di file temporaneo.
+let seq = 0;
 
-// Intervallo date per analisi (luglio-agosto 2025 e 2026)
-const DATE_RANGES = [
-  { start: new Date("2025-07-01"), end: new Date("2025-08-31") },
-  { start: new Date("2026-07-01"), end: new Date("2026-08-31") },
-];
+const TEMP_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "bluserena-ocr-"));
 
-function isInDateRange(dateStr) {
-  if (!dateStr) return false;
-  try {
-    const date = new Date(dateStr);
-    return DATE_RANGES.some((range) => date >= range.start && date <= range.end);
-  } catch {
-    return false;
-  }
+// Tesseract su un video verticale a piena risoluzione è lento e rumoroso:
+// si scala a 720px di larghezza e si alza il contrasto, che è la condizione in
+// cui i sottotitoli/caption sovraimpressi si leggono meglio.
+const FRAME_FILTER = "scale=720:-2,eq=contrast=1.3";
+
+function extractFrame(videoPath, seconds, outPath) {
+  // `-ss` prima di `-i` = seek veloce; `-update 1` perché l'output è un
+  // singolo PNG e non una sequenza numerata.
+  return run(
+    "ffmpeg",
+    [
+      "-v",
+      "error",
+      "-ss",
+      String(seconds),
+      "-i",
+      videoPath,
+      "-frames:v",
+      "1",
+      "-update",
+      "1",
+      "-vf",
+      FRAME_FILTER,
+      "-y",
+      outPath,
+    ],
+    { timeoutMs: 30_000 },
+  );
 }
 
-async function downloadVideoAndExtractOCR(videoUrl) {
-  console.log(`  📥 Downloading video for OCR...`);
+// Un solo worker Tesseract per tutta la run: crearne uno per frame (come
+// faceva Tesseract.recognize) significa ricaricare i dati di lingua ogni volta.
+let workerPromise = null;
+function getWorker() {
+  if (!workerPromise) workerPromise = Tesseract.createWorker(OCR_LANGS.split("+"));
+  return workerPromise;
+}
 
-  const tempDir = path.join(__dirname, "..", ".tmp", "ocr");
-  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
-
-  const videoPath = path.join(tempDir, `${Date.now()}.mp4`);
+async function ocrPost(account) {
+  const stem = path.join(TEMP_DIR, `post-${seq++}`);
+  const videoPath = `${stem}.mp4`;
 
   try {
-    const { spawnSync } = await import("child_process");
-    // Download video with yt-dlp (longer timeout for TikTok)
-    const result = spawnSync("yt-dlp", [
-      "--no-warnings",
-      "-f", "best",
-      "-o", videoPath,
-      "--socket-timeout", "30",
-      videoUrl
-    ], {
-      stdio: "pipe",
-      timeout: 120000, // 2 minutes timeout
-      maxBuffer: 10 * 1024 * 1024,
-    });
-
-    if (result.status !== 0 && result.status !== null) {
-      const errMsg = result.stderr?.toString().slice(0, 100) || "Unknown error";
-      console.log(`    ⚠️  Video download failed: ${errMsg}`);
+    const dl = downloadVideo(account.url, videoPath);
+    if (!dl.ok) {
+      console.log(`    ⚠️  download fallito: ${dl.reason}`);
       return {
         textOnScreen: null,
-        confidence: 0.0,
-        frames: [],
-        available: false,
+        confidence: null,
+        frameCount: 0,
+        status: "download_failed",
+        reason: dl.reason,
       };
     }
 
-    if (!fs.existsSync(videoPath)) {
-      console.log(`    ⚠️  Video download produced no file`);
-      return {
-        textOnScreen: null,
-        confidence: 0.0,
-        frames: [],
-        available: false,
-      };
-    }
+    const duration = probeDurationSec(videoPath);
+    const timestamps = frameTimestamps(duration, FRAMES_PER_VIDEO);
 
-    // Extract OCR from downloaded video
-    const ocrResult = await extractOCRText(videoPath);
+    const worker = await getWorker();
+    const lines = [];
+    const confidences = [];
+    let framesRead = 0;
 
-    // Cleanup video
-    try {
-      fs.unlinkSync(videoPath);
-    } catch {}
-
-    return ocrResult;
-  } catch (err) {
-    console.log(`    ⚠️  Video download failed: ${String(err).slice(0, 100)}`);
-    // Cleanup
-    try {
-      if (fs.existsSync(videoPath)) fs.unlinkSync(videoPath);
-    } catch {}
-    return {
-      textOnScreen: null,
-      confidence: 0.0,
-      frames: [],
-      available: false,
-    };
-  }
-}
-
-async function extractFrameAndOCR(videoPath, frameOutputPath) {
-  console.log(`    [OCR] Extracting frame from video...`);
-
-  try {
-    const { spawnSync } = await import("child_process");
-    // Extract frame at 5 seconds or middle of video
-    const result = spawnSync("ffmpeg", [
-      "-i", videoPath,
-      "-vframes", "1",
-      frameOutputPath,
-      "-y"
-    ], {
-      stdio: "pipe",
-      timeout: 15000
-    });
-
-    return fs.existsSync(frameOutputPath);
-  } catch (err) {
-    console.log(`    ⚠️  Frame extraction failed: ${String(err).slice(0, 50)}`);
-    return false;
-  }
-}
-
-async function extractOCRText(videoPath) {
-  console.log(`  [OCR] Attempting text extraction from video...`);
-
-  try {
-    const frameDir = path.join(path.dirname(videoPath), "frames");
-    if (!fs.existsSync(frameDir)) fs.mkdirSync(frameDir, { recursive: true });
-
-    const frameOutputPath = path.join(frameDir, `frame_${Date.now()}.png`);
-    const frameExtracted = await extractFrameAndOCR(videoPath, frameOutputPath);
-
-    if (!frameExtracted) {
-      console.log(`    ⚠️  Could not extract frame from video`);
-      return {
-        textOnScreen: null,
-        confidence: 0.0,
-        frames: [],
-        available: false,
-      };
-    }
-
-    console.log(`    [OCR] Running Tesseract on extracted frame...`);
-    const result = await Tesseract.recognize(frameOutputPath, "eng", {
-      logger: (m) => {
-        if (m.status === "recognizing text") {
-          process.stdout.write(`\r    [OCR] Progress: ${Math.round(m.progress * 100)}%`);
-        }
-      },
-    });
-
-    if (process.stdout.isTTY) console.log(""); // newline after progress
-
-    const text = result.data.text?.trim() || "";
-    const confidence = result.data.confidence || 0;
-
-    // Cleanup
-    try {
-      fs.unlinkSync(frameOutputPath);
-    } catch {}
-
-    if (!text || text.length < 3) {
-      return {
-        textOnScreen: null,
-        confidence: 0.0,
-        frames: [],
-        available: false,
-      };
-    }
-
-    return {
-      textOnScreen: text,
-      confidence: confidence / 100, // normalize to 0-1
-      frames: [frameOutputPath],
-      available: true,
-    };
-  } catch (err) {
-    console.log(`\n    ⚠️  OCR extraction failed: ${String(err).slice(0, 80)}`);
-    return {
-      textOnScreen: null,
-      confidence: 0.0,
-      frames: [],
-      available: false,
-    };
-  }
-}
-
-async function sendOCRToGroq(caption, ocrData, apiKey, groqApiKey) {
-  let ocrContext = ocrData?.textOnScreen ? `On-screen text: ${ocrData.textOnScreen}` : "On-screen text: [not available]";
-
-  const combined = `
-Caption: ${caption}
-${ocrContext}
-
-Analizza questo contenuto e dammi:
-1. Sentiment: positive|negative|neutral
-2. Topics: estrai argomenti principali (lista)
-3. Location hints: nomi di resort/posti
-4. Key insights
-
-Rispondi SOLO con JSON valido, senza markdown:
-{"sentiment": "positive|negative|neutral", "topics": [...], "locations": [...], "onScreenInsights": "..."}
-`;
-
-  const parse = (text) => {
-    try {
-      const json = JSON.parse(text.trim());
-      if (!json.sentiment) return null;
-      return json;
-    } catch {
-      return null;
-    }
-  };
-
-  try {
-    const response = await chatCompletionWithFallback([
-      {
-        role: "user",
-        content: combined,
-      },
-    ], {
-      apiKey,
-      groqApiKey,
-      parse,
-    });
-
-    return response;
-  } catch (err) {
-    console.error(`    [ERROR] Groq analysis failed:`, err.message);
-    return null;
-  }
-}
-
-async function analyzeBlueserenaOCR() {
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    console.error("❌ GITHUB_TOKEN not set");
-    process.exit(1);
-  }
-
-  const octokit = new Octokit({ auth: token });
-
-  console.log("📊 Bluserena OCR Analysis - Phase 2");
-  console.log("==================================\n");
-
-  try {
-    // Leggi store - usa raw GitHub URL per evitare limiti API su file grandi
-    console.log("1️⃣  Reading bluserena-monitoring.json...");
-
-    const rawUrl = `https://raw.githubusercontent.com/teomotta88-cloud/trendzn/main/${STORE_PATH}?t=${Date.now()}`;
-    const rawRes = await fetch(rawUrl, {
-      headers: { "User-Agent": "analyze-bluserena-ocr" },
-    });
-
-    if (!rawRes.ok) {
-      console.error(`❌ Failed to fetch from raw GitHub: ${rawRes.status}`);
-      process.exit(1);
-    }
-
-    let raw;
-    try {
-      raw = await rawRes.text();
-    } catch (fetchErr) {
-      console.error("❌ Failed to read response:", fetchErr.message);
-      process.exit(1);
-    }
-
-    if (!raw || raw.trim().length === 0) {
-      console.error("❌ File content is empty");
-      process.exit(1);
-    }
-
-    let store;
-    try {
-      store = JSON.parse(raw);
-    } catch (parseErr) {
-      console.error("❌ Failed to parse JSON:", parseErr.message);
-      console.error("First 200 chars:", raw.substring(0, 200));
-      process.exit(1);
-    }
-
-    // Ottieni SHA del file per l'aggiornamento
-    const { data: fileData } = await octokit.repos.getContent({
-      owner: "teomotta88-cloud",
-      repo: "trendzn",
-      path: STORE_PATH,
-    });
-
-    // Filtra post da analizzare
-    let totalPosts = 0;
-    let postsToAnalyze = 0;
-    let processedCount = 0;
-    let successCount = 0;
-
-    for (const canale of store.canali || []) {
-      console.log(`\n📺 Canale: ${canale.name}`);
-
-      for (const account of canale.accounts || []) {
-        totalPosts++;
-
-        // Solo video TikTok/IG Reels
-        if (!/\/(video|reel|reels)\//i.test(account.url)) continue;
-
-        // Solo intervalli specificati
-        if (!isInDateRange(account.date)) continue;
-
-        // Skip se OCR già eseguito
-        if (account.ocrData) {
-          console.log(`  ✅ ${account.url} - already analyzed`);
-          continue;
-        }
-
-        postsToAnalyze++;
-
-        if (postsToAnalyze > 100) {
-          console.log(`  ⚠️  Limiting to 100 posts per run (cost control)`);
-          break;
-        }
-
-        console.log(
-          `\n  🔍 Analyzing: ${account.url} (${new Date(account.date).toLocaleDateString()})`
-        );
-
-        // Download video and extract OCR (with fallback)
-        const ocrData = await downloadVideoAndExtractOCR(account.url);
-
-        if (!ocrData.available) {
-          console.log(`    ℹ️  OCR unavailable (ffmpeg/tesseract.js), using caption-only analysis`);
-        }
-
-        // Store OCR data if extracted
-        if (ocrData.textOnScreen) {
-          account.ocrData = ocrData;
-        }
-
-        // Send combined caption + OCR to Groq (or caption-only if OCR unavailable)
-        const analysis = await sendOCRToGroq(account.caption, ocrData, apiKey, groqApiKey);
-
-        if (analysis) {
-          console.log(`    ✅ Analysis complete`);
-          console.log(`       Sentiment: ${analysis.sentiment}`);
-          console.log(`       Topics: ${analysis.topics?.join(", ")}`);
-          console.log(`       Locations: ${analysis.locations?.join(", ")}`);
-
-          // Merge with existing data (preserve if exists)
-          account.sentiment = analysis.sentiment || account.sentiment;
-          account.topics = analysis.topics || account.topics;
-          account.location = analysis.locations?.[0] || account.location;
-
-          if (analysis.onScreenInsights) {
-            account.ocrInsights = analysis.onScreenInsights;
-          }
-
-          successCount++;
-        }
-
-        processedCount++;
-
-        // Rate limit
-        if (processedCount % 5 === 0) {
-          console.log(`  ⏳ Cooldown (2s)...`);
-          await new Promise((resolve) => setTimeout(resolve, 2000));
-        }
+    for (const [i, seconds] of timestamps.entries()) {
+      const framePath = `${stem}-f${i}.png`;
+      const extracted = extractFrame(videoPath, seconds, framePath);
+      if (!extracted.ok || !fs.existsSync(framePath)) {
+        cleanup(framePath);
+        continue;
       }
 
-      if (postsToAnalyze > 100) break;
+      framesRead++;
+      const { data } = await worker.recognize(framePath);
+      cleanup(framePath);
+
+      const text = data.text?.trim();
+      if (text) {
+        lines.push(...text.split("\n"));
+        if (typeof data.confidence === "number") confidences.push(data.confidence);
+      }
     }
 
-    // Summary
-    console.log(`\n\n📈 Summary:`);
-    console.log(`  Total posts: ${totalPosts}`);
-    console.log(`  Posts analyzed: ${processedCount}`);
-    console.log(`  Successful: ${successCount}`);
-
-    if (successCount > 0) {
-      console.log(`\n💾 Committing results to GitHub...`);
-
-      const content = Buffer.from(JSON.stringify(store, null, 2)).toString(
-        "base64"
-      );
-
-      await octokit.repos.createOrUpdateFileContents({
-        owner: "teomotta88-cloud",
-        repo: "trendzn",
-        path: STORE_PATH,
-        message: `chore: OCR + text analysis update to Bluserena posts [trendzn-bot]
-
-Analyzed ${successCount}/${processedCount} posts from July-August 2025/2026
-- Attempted OCR extraction (ffmpeg/tesseract.js)
-- Fallback to caption-only analysis if OCR unavailable
-- Updated sentiment, topics, location, ocrInsights fields`,
-        content,
-        sha: fileData.sha,
-      });
-
-      console.log(`✅ Committed successfully`);
-    } else if (processedCount > 0) {
-      console.log(`⚠️  ${processedCount} posts processed but analysis failed`);
-    } else {
-      console.log(`ℹ️  No posts matching criteria (July-Aug 2025/2026, video type, not analyzed)`);
+    if (!framesRead) {
+      console.log(`    ⚠️  nessun frame estraibile`);
+      return { textOnScreen: null, confidence: null, frameCount: 0, status: "frame_failed" };
     }
-  } catch (err) {
-    console.error(`❌ Error:`, err.message);
-    process.exit(1);
+
+    const textOnScreen = cleanText(lines);
+    if (!textOnScreen) {
+      console.log(`    · nessun testo a video (${framesRead} frame)`);
+      return { textOnScreen: null, confidence: null, frameCount: framesRead, status: "no_text" };
+    }
+
+    const confidence = confidences.length
+      ? +(confidences.reduce((a, b) => a + b, 0) / confidences.length / 100).toFixed(3)
+      : null;
+
+    console.log(
+      `    ✓ ${textOnScreen.split("\n").length} righe, confidenza ${confidence ?? "n/d"} (${framesRead} frame)`,
+    );
+    return { textOnScreen, confidence, frameCount: framesRead, status: "ok" };
+  } finally {
+    cleanup(videoPath);
   }
 }
 
-await analyzeBlueserenaOCR();
+console.log("🔤 Bluserena — estrazione testo on-screen (OCR)\n");
+assertBinaries(["yt-dlp", "ffmpeg", "ffprobe"]);
+console.log("");
+
+try {
+  await runEnrichment({
+    field: "ocrData",
+    title: "OCR testo on-screen",
+    commitMessage: (n) => `chore: OCR testo on-screen su ${n} post Bluserena [trendzn-bot]`,
+    processPost: ocrPost,
+  });
+} finally {
+  if (workerPromise) {
+    try {
+      await (await workerPromise).terminate();
+    } catch {}
+  }
+  cleanup(TEMP_DIR);
+}

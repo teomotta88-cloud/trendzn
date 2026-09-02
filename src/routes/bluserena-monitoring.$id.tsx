@@ -404,7 +404,7 @@ function Page() {
                         {a.caption}
                       </p>
                     )}
-                    {(a.sentiment || (a.topics && a.topics.length > 0) || a.ocrData || a.ocrInsights || a.audioAnalysis) && (
+                    {(a.sentiment || (a.topics && a.topics.length > 0) || a.ocrData?.textOnScreen || a.ocrInsights || a.audioAnalysis?.transcript) && (
                       <div className="space-y-2 px-1 pt-2 border-t border-border/50">
                         {a.sentiment && (
                           <div className="flex items-center gap-1.5">
@@ -446,12 +446,12 @@ function Page() {
                             </div>
                           </div>
                         )}
-                        {(a.ocrData || a.ocrInsights) && (
+                        {(a.ocrData?.textOnScreen || a.ocrInsights) && (
                           <div className="flex flex-col gap-1.5">
                             <div className="flex items-center gap-1.5">
                               <Zap className="size-3 text-amber-600 dark:text-amber-500" />
                               <span className="text-[10px] font-medium text-amber-700 dark:text-amber-400">
-                                OCR Analysis
+                                Testo on-screen
                               </span>
                             </div>
                             {a.ocrData?.textOnScreen && (
@@ -466,12 +466,12 @@ function Page() {
                             )}
                           </div>
                         )}
-                        {a.audioAnalysis && (
+                        {a.audioAnalysis?.transcript && (
                           <div className="flex flex-col gap-1.5">
                             <div className="flex items-center gap-1.5">
                               <Headphones className="size-3 text-purple-600 dark:text-purple-500" />
                               <span className="text-[10px] font-medium text-purple-700 dark:text-purple-400">
-                                Audio Analysis
+                                Trascrizione audio
                               </span>
                             </div>
                             {a.audioAnalysis.engagement != null && (
