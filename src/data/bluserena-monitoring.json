@@ -1267,7 +1267,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:08:48.898Z"
+            "updatedAt": "2026-09-02T14:47:53.480Z"
           }
         },
         {
@@ -19423,7 +19423,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:08:48.898Z"
+            "updatedAt": "2026-09-02T14:47:53.480Z"
           }
         },
         {
@@ -19446,6 +19446,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:35:00.002Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TaHne NPUATHO\na BeuepoM\nnporynarbcs",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:48:05.705Z"
           }
         },
         {
@@ -19468,6 +19477,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:35:27.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ZUCAR\nCucumber\nORGANIC AGAVE\ncan be made as a\nMOCKTAIL\nÈ LALO TEQUILA\nSTRAWBERRIES\nsvaup\nESH LIME",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:48:15.514Z"
           }
         },
         {
@@ -19490,6 +19508,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:35:55.892Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Saint Hotel,\nAnd -onis' Boutique Hote!",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:48:25.551Z"
           }
         },
         {
@@ -19512,6 +19539,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:01.893Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3% MELHOR\n17 PISCINAS",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:48:49.880Z"
           }
         },
         {
@@ -19535,6 +19571,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7670253794323664161: Your IP address is blocked from accessing this post",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:03.296Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7670253794323664161: Your IP address is blocked from accessing this post",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:48:51.631Z"
           }
         },
         {
@@ -19557,6 +19602,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:05.671Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:49:08.354Z"
           }
         },
         {
@@ -19579,6 +19632,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:53.880Z"
+          },
+          "ocrData": {
+            "textOnScreen": "than\nGreece\nPOV: this hotel in Greece\nwas so much better than\nthe photos online\nPON: this hotel\nWES better {en\nhe photos\ntinis in\nphotos",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:49:26.829Z"
           }
         },
         {
@@ -19601,6 +19663,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:56.444Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RENA\nT PASO",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:49:34.328Z"
           }
         },
         {
@@ -19623,6 +19694,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:58.373Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:49:43.457Z"
           }
         },
         {
@@ -19645,6 +19724,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:38:01.348Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:49:54.513Z"
           }
         },
         {
@@ -19667,6 +19754,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:38:03.955Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OCOOUCTO\nBecb DeHb\nUltra All",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:50:08.038Z"
           }
         },
         {
@@ -19689,6 +19785,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:39:05.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:50:18.249Z"
           }
         },
         {
@@ -19711,6 +19815,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:39:08.592Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:50:43.233Z"
           }
         },
         {
@@ -19733,6 +19845,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:39:21.131Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:50:57.876Z"
           }
         },
         {
@@ -19755,6 +19875,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:39:23.260Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:51:06.979Z"
           }
         },
         {
@@ -19777,6 +19905,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:40:14.165Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:51:20.615Z"
           }
         },
         {
@@ -19799,6 +19935,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:40:16.420Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Paso/Robles,\n@SIRENARESORT",
+            "confidence": 0.71,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:51:27.270Z"
           }
         },
         {
@@ -19821,6 +19966,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:40:18.513Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:51:42.824Z"
           }
         },
         {
@@ -19843,6 +19996,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:40:20.713Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A RESOR PUNTA i",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:52:02.048Z"
           }
         },
         {
@@ -19865,6 +20027,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:40:51.813Z"
+          },
+          "ocrData": {
+            "textOnScreen": "con iones modernas\ny espaciosas,\nMEXICAN\nBtamente\nentresi",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:52:14.491Z"
           }
         },
         {
@@ -19887,6 +20058,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:41:19.294Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BIENVENIDO\nA BORDO",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:52:21.150Z"
           }
         },
         {
@@ -19909,6 +20089,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:41:57.365Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Salgar\n-Pasadias\nResorts\nill h ts Salgar",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:52:39.084Z"
           }
         },
         {
@@ -19931,6 +20120,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:42:52.588Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YOU SEE ALL THE TREES?\n(COSTA)",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:52:58.279Z"
           }
         },
         {
@@ -19954,6 +20152,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T11:43:28.148Z"
+          },
+          "ocrData": {
+            "textOnScreen": "parc de aventura pentru",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:53:16.416Z"
           }
         },
         {
@@ -30477,6 +30684,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:35:27.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ZUCAR\nCucumber\nORGANIC AGAVE\ncan be made as a\nMOCKTAIL\nÈ LALO TEQUILA\nSTRAWBERRIES\nsvaup\nESH LIME",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:48:15.514Z"
           }
         },
         {
@@ -32362,6 +32578,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:37:05.671Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:49:08.354Z"
           }
         },
         {
