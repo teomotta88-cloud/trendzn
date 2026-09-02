@@ -85,18 +85,17 @@ function verifyOCR(ocrData) {
 }
 
 function verifyAudio(audioAnalysis) {
-  // Audio ha regole più ampie:
+  // Audio ha regole più ampie rispetto caption/OCR:
   // - "bluserena" insieme (come caption/OCR)
-  // - "blu" + "serena" staccati (unica differenza rispetto caption/OCR)
+  // - "blu" E "serena" come due termini indipendenti (anche in posizioni diverse)
   if (!audioAnalysis?.transcript || audioAnalysis.status !== "ok") return false;
-
-  const lower = audioAnalysis.transcript.toLowerCase();
 
   // Primo: prova i termini standard
   if (matchesTermini(audioAnalysis.transcript)) return true;
 
-  // Secondo: per Bluserena specificamente, accetta anche "blu" + "serena" staccati
-  // (perché la trascrizione audio può separarli nelle parole pronunciate)
+  // Secondo: per Bluserena specificamente, accetta anche se entrambi i termini
+  // "blu" e "serena" sono presenti nel transcript (anche staccati/lontani).
+  // Questo gestisce i casi dove la pronuncia li rende come due parole separate.
   const hasBlu = /\bblu\b/i.test(audioAnalysis.transcript);
   const hasSerena = /\bserena\b/i.test(audioAnalysis.transcript);
   if (hasBlu && hasSerena) return true;
