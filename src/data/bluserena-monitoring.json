@@ -4679,7 +4679,16 @@
             "tour",
             "vacanze"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti al Serenusa Resort. Oggi vi portiamo a scoprire questa meravigliosa struttura e vi faremo vedere cosa ci ha colpito fin dal primo momento. Seguidemi! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 52.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:19.703Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4701,7 +4710,16 @@
             "manutenzione",
             "ringraziamento"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Vabbè, mi interessa, grazie. Scusa, ti volevo dare un regalo da parte più serena. No, no. Un piccolo regalo di... niente. Grazie mille. Cioè, quando mi stavi facendo prima la foto... Infatti ti ho detto, mi hai beccato, però secondo me è bellissima questa pietra qua, così. Niente, non mi devi niente, sicuramente. Grazie mille. Ti vedo gentilissimo. E io ho detto, mi stai facendo la foto e mi stai facendo una brutta foto. Eh, eh, eh. Vedi, infatti stai ridendo da solo. Eh. Ma lo vedo. La perdita era allegretta già la prima volta, ma adesso ne so proprio la genitura.",
+            "language": "Italian",
+            "durationSec": 77.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:23.135Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4722,7 +4740,16 @@
             "Calabria",
             "neipertee"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "3, 2, 1...",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:25.256Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4744,7 +4771,16 @@
             "2026",
             "TikTok"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Amore a prima vista, rientri a quel mondo che hai incanto.",
+            "language": "Italian",
+            "durationSec": 40.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:36.807Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4768,7 +4804,16 @@
             "attività",
             "Sardegna"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "La vacanza perfetta non esiste, o forse sì, appena arrivati ci siamo sentiti subito coccolati in una struttura moderna e pulitissima. Qui trovi davvero tutto, negozi, farmacia, medico H24, baby kitchen e noleggio passeggini, l'ideale per partire leggeri. L'animazione è incredibile, con attività per grandi e piccoli, acquapark, giochi, sport, miniclub e balli di gruppo. Tantissime esperienze si possono prenotare direttamente dall'applicazione Mentre i bambini si divertono, i genitori possono finalmente rilassarsi Feste a tema, ogni sera spettacoli curati nei minimi dettagli E poi il cibo, preparato al momento, pesce freschissimo e dolci fatti in casa Ci troviamo al nord della Sardegna, al Serena Badesi Village, affacciato su un mare mozzafiato Questa è la vera vacanza che tu e la tua famiglia meritate Quindi prepara le valigie, al resto ci penso io",
+            "language": "Italian",
+            "durationSec": 55.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:46.345Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4789,7 +4834,16 @@
             "viaggio",
             "hotel 4 stelle"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:48.906Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4808,7 +4862,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:51.069Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4829,7 +4892,16 @@
             "resort",
             "travel"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "tutta la zona della piazzetta, quindi è tutto molto raccolto. Abbiamo lì la piscina, il bar e adesso andiamo insieme in spiaggia. Appena prendiamo la strada che ci porta poi in spiaggia, troviamo quest'area giochi interamente dedicata ai bambini, con scivoli, altalene. Qui invece troviamo un'altra piscina. Qui un campo di bocce. E andiamo adesso diretti in spiaggia. Oltre ad essere veramente breve il tragitto, e anche piacevoli perché tutti questi alberi formano comunque una zona d'ombra quindi è piacevole anche camminarci arrivati in spiaggia troviamo qui il beach point per le varie informazioni delle attività che fanno in spiaggia e qui troviamo il bar della spiaggia e qui invece c questo piccolo spazio per il ristorante che si pu prenotare a pranzo o a cena tramite app una volta a settimana Questa è tutta la spiaggia, davvero molto bella, grande, con quest'area con divanetti. Qui troviamo i vari gazebi, un po' più esclusivi. la spiaggia è veramente molto molto grande e adesso andiamo a vedere il mare che è spettacolare Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 150.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:12:37.843Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4850,7 +4922,16 @@
             "mare",
             "resort"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 5.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:12:40.107Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4870,7 +4951,16 @@
             "vacanza",
             "romantic"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come Romeo e Julieta Lo nostro è salvo eterno Stare innamorato E darci per completo Un amore come il nostro Non deve morire mai Grazie.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:13:53.349Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4891,7 +4981,16 @@
             "cute",
             "foryoupage"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:13:55.706Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4911,7 +5010,16 @@
             "mare",
             "cosplay"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho capito che vuoi parlare di amore Puoi contare con me, mi dai un saluto Che io salgo correndo per incontrarlo E vi mostrerò il buon lato della vita Per tutto nel mondo c'è una salita Ho già vivuto abbastanza e posso insegnarvi Il mio inderezzo è su internet, clicca su amado.com andiamo a risolvere il vostro futuro, sono un uomo maturo, sono un uomo buono che vuole un'amica, un'amica, un'amata amante e un'amorata per vivere con me una vita intera Stando al mio lato non va a faltar nada",
+            "language": "Italian",
+            "durationSec": 60.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:06.993Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4931,7 +5039,16 @@
             "KevinSerna",
             "TikTokEsportes"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie.",
+            "language": "Italian",
+            "durationSec": 6.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:09.621Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4950,7 +5067,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La luce è bellissima! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:14.579Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4972,7 +5098,16 @@
             "hospitality",
             "trend"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Salam alaykum Adekom salat jelid Zindan, che c'è? 20? 15? 10? Adekom yaqad? Baza' aswad? Adekom abiyad? Zind az kum w jelad akbar? Zeno giusto, sora?",
+            "language": "Italian",
+            "durationSec": 38.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:20.122Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -4991,7 +5126,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 9.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:22.599Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5012,7 +5156,16 @@
             "CS:GO",
             "CS2"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:48.570Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5035,7 +5188,16 @@
             "limaperu",
             "chorillos"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se cercate una borsa che definisce la tua silhouette all'istante e mantenga un acabato super strutturato e elegante, questa blusa è tutto ciò che necessita. Un disegno impeccabile con una caída perfetta per rialzare la tua figura senza perdere comodità.",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:14:54.640Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5059,7 +5221,16 @@
             "evento",
             "intrattenimento"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Il tempo delle casche trae, la terra sarà dura come la realtà, ma non questi bandali e battagli che giocano qua. Questo è il giorno che vedrò, oggi è il giorno che vedrò.",
+            "language": "Italian",
+            "durationSec": 44.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:15:22.640Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5079,7 +5250,16 @@
             "mare",
             "sole"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Pizzasheik, allora top Zara, jeans Zara, borsa Zara, accessori legato e capelli battaglio. Pizzasheik, Montesilvano, allora borsa, sei parto, completo Zara, capelli, scatte che mi vengono.",
+            "language": "Italian",
+            "durationSec": 29.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:15:57.818Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5098,7 +5278,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La cosa che mi ha delusa di più è stato proprio il ruolo che il direttore principale della struttura ha avuto in tutta questa vicenda, in quanto piuttosto che comunque sia coccolarci o che ne so, anche cercare di rendere la nostra vacanza migliore o comunque avere anche un po' di rispetto nei nostri confronti, ha fatto praticamente tutto il contrario. Io non voglio dilungarmi qui perché lo farò nelle sedi opportune, però vi posso garantire che non è stato molto gentile con noi, mettiamola così. e quindi nulla, questa è stata la nostra esperienza al Serenè in Calabria e sicuramente non ci ritorneremo mai più. Tra l'altro qui abbiamo parlato anche con tantissime famiglie che hanno riscontrato i nostri stessi problemi e che sono andati a parlarne anche con il direttore e il vice direttore e anche a loro è stato risposto siete i primi che ci ponete questa lamentela, quindi non possiamo prendervi sul serio, non possiamo prendervi più di tanto in considerazione perché siete i primi. Quindi praticamente la stessa cosa viene detta a tutti quanti, ma qui c'è proprio un malcontento generale e questa struttura sicuramente fa perdere molto a quello che è il brand o il marchio blu serena. Almeno questo è il mio pensiero e anche quello di tante altre famiglie con cui abbiamo parlato in questi giorni.",
+            "language": "Italian",
+            "durationSec": 110.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:16:27.185Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5120,7 +5309,16 @@
             "villaggio",
             "futuro"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 13.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:16:32.448Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5143,7 +5341,16 @@
             "karet",
             "pinggang"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Non ti preoccupare, fai il tuo lavoro. Non ti preoccupare, facci un lavoro. Se volessi, amico, non avrei avuto un altro amore. Non avrei avuto un altro amore. Non ti farò mai perdere Buonanotte! Buonanotte! Già non mi dà più il mondo, Ho volato da lui!",
+            "language": "Italian",
+            "durationSec": 115.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:17:32.371Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5166,7 +5373,16 @@
             "viral",
             "trending"
           ],
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hey bro, I ain't ever publicly apologized to anybody, but I do want to publicly apologize to Serena Williams. Like, there was a line for me to bring you up in your icon and I really, really truly am sorry about that. But on another note, Clarissa, my friend said you got your motherfucking teeth done in the suite with your gay man face. Why the fuck your bottom teeth like you're sucked in? Calm on your ass, oh god. Clarissa, what the fuck is you talking about? Bitch, go get your one with, uh, bring me my first, okay? Oh god, I can pass the one on her. Bitch, you bring your ass to Memphis, you're not going to make it out. ok? you don't know about Memphis you think a motherfucker is supposed to be scared of your big ugliest Serena Williams looking ass I don't know who the fuck you think you is and who you coming for ho pinched you because she got money oh your bro I promise you you ugliest fuck fool on my soul so when you say I'm bad as a motherfucker I got a good ass I got a good panetta you need to be a doc like ho find you something safe to do and finish giving all your money to motherfucking Pelt alright cause don't nobody know who you put for which which you know what I'm saying hey it's your talent boxing don't know how to shut the fuck up ugly as fuck and giving all your money to Pell",
+            "language": "Italian",
+            "durationSec": 57.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:07.449Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -5189,7 +5405,16 @@
             "estate",
             "divertimento"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, sono Francesca e oggi vi porto in giro con me. Saluto Daphne e guardo il meraviglioso mare della Puglia. Vado a salutare i ragazzi della base nautica che stanno per uscire. Mi godo la passeggiata in penombra e mi dirigo verso il ristorante dove oggi ho deciso di mangiare gli gnocchi con pistacchi e gambero e la torta foresta nera. Passeggio nella bellissima pineta del Torre Serena mentre passa Carmelo e vado a riposarmi nella tranquilla area relax prima di tornare al lavoro. Vado in Activity Point dove allestando dai terri mari agli ospiti le informazioni per tutte le escursioni Passo per un saluto in piscina dove Thomas ha iniziato la sua attività di aqua fitness Dopo passo in palestra da Gigi dove si sta allenando sulla parete attrezzata La sera proviamo la nostra bellissima sigla dove ci divertiamo sempre tanto Ci trucchiamo e prepariamo per lo spettacolo seale E infine in seconda serata ci divertiamo al nostro bellissimo porti in piscina",
+            "language": "Italian",
+            "durationSec": 50.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:41.337Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -8212,7 +8437,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oAYR8XESWDHI47mfESmik9QQDfAOFDLbjBpqcQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Dlksjy68Lyzm7blVbOJDCNLsIqE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "La vacanza perfetta non esiste, o forse sì, appena arrivati ci siamo sentiti subito coccolati in una struttura moderna e pulitissima. Qui trovi davvero tutto, negozi, farmacia, medico H24, baby kitchen e noleggio passeggini, l'ideale per partire leggeri. L'animazione è incredibile, con attività per grandi e piccoli, acquapark, giochi, sport, miniclub e balli di gruppo. Tantissime esperienze si possono prenotare direttamente dall'applicazione Mentre i bambini si divertono, i genitori possono finalmente rilassarsi Feste a tema, ogni sera spettacoli curati nei minimi dettagli E poi il cibo, preparato al momento, pesce freschissimo e dolci fatti in casa Ci troviamo al nord della Sardegna, al Serena Badesi Village, affacciato su un mare mozzafiato Questa è la vera vacanza che tu e la tua famiglia meritate Quindi prepara le valigie, al resto ci penso io",
+            "language": "Italian",
+            "durationSec": 55.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:46.345Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9335,7 +9569,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogtEZEzDASAFfeOFfARrLAA1E0Q06IIdWv9CiI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HmV0tJyqLP83UaIUte2vRFhRhOE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, sono Francesca e oggi vi porto in giro con me. Saluto Daphne e guardo il meraviglioso mare della Puglia. Vado a salutare i ragazzi della base nautica che stanno per uscire. Mi godo la passeggiata in penombra e mi dirigo verso il ristorante dove oggi ho deciso di mangiare gli gnocchi con pistacchi e gambero e la torta foresta nera. Passeggio nella bellissima pineta del Torre Serena mentre passa Carmelo e vado a riposarmi nella tranquilla area relax prima di tornare al lavoro. Vado in Activity Point dove allestando dai terri mari agli ospiti le informazioni per tutte le escursioni Passo per un saluto in piscina dove Thomas ha iniziato la sua attività di aqua fitness Dopo passo in palestra da Gigi dove si sta allenando sulla parete attrezzata La sera proviamo la nostra bellissima sigla dove ci divertiamo sempre tanto Ci trucchiamo e prepariamo per lo spettacolo seale E infine in seconda serata ci divertiamo al nostro bellissimo porti in piscina",
+            "language": "Italian",
+            "durationSec": 50.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:41.337Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10520,7 +10763,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogtEZEzDASAFfeOFfARrLAA1E0Q06IIdWv9CiI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HmV0tJyqLP83UaIUte2vRFhRhOE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, sono Francesca e oggi vi porto in giro con me. Saluto Daphne e guardo il meraviglioso mare della Puglia. Vado a salutare i ragazzi della base nautica che stanno per uscire. Mi godo la passeggiata in penombra e mi dirigo verso il ristorante dove oggi ho deciso di mangiare gli gnocchi con pistacchi e gambero e la torta foresta nera. Passeggio nella bellissima pineta del Torre Serena mentre passa Carmelo e vado a riposarmi nella tranquilla area relax prima di tornare al lavoro. Vado in Activity Point dove allestando dai terri mari agli ospiti le informazioni per tutte le escursioni Passo per un saluto in piscina dove Thomas ha iniziato la sua attività di aqua fitness Dopo passo in palestra da Gigi dove si sta allenando sulla parete attrezzata La sera proviamo la nostra bellissima sigla dove ci divertiamo sempre tanto Ci trucchiamo e prepariamo per lo spettacolo seale E infine in seconda serata ci divertiamo al nostro bellissimo porti in piscina",
+            "language": "Italian",
+            "durationSec": 50.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:41.337Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10812,7 +11064,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMiIwEOEoTAKCn1XAiRMBiiAyB9hfkAcKABUBS~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=NyeP1QSkCa%2BKlRJySvKc76SoILI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti al Serenusa Resort. Oggi vi portiamo a scoprire questa meravigliosa struttura e vi faremo vedere cosa ci ha colpito fin dal primo momento. Seguidemi! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 52.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:11:19.703Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -10904,7 +11165,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o0CBA0zBRpoiCSiIEUIAx2ASMdwfV2xOACREGB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=H%2BtQYpQ8xVjteo2cF05tAwwo5Zk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Il tempo delle casche trae, la terra sarà dura come la realtà, ma non questi bandali e battagli che giocano qua. Questo è il giorno che vedrò, oggi è il giorno che vedrò.",
+            "language": "Italian",
+            "durationSec": 44.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:15:22.640Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -19033,7 +19303,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogtEZEzDASAFfeOFfARrLAA1E0Q06IIdWv9CiI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HmV0tJyqLP83UaIUte2vRFhRhOE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, sono Francesca e oggi vi porto in giro con me. Saluto Daphne e guardo il meraviglioso mare della Puglia. Vado a salutare i ragazzi della base nautica che stanno per uscire. Mi godo la passeggiata in penombra e mi dirigo verso il ristorante dove oggi ho deciso di mangiare gli gnocchi con pistacchi e gambero e la torta foresta nera. Passeggio nella bellissima pineta del Torre Serena mentre passa Carmelo e vado a riposarmi nella tranquilla area relax prima di tornare al lavoro. Vado in Activity Point dove allestando dai terri mari agli ospiti le informazioni per tutte le escursioni Passo per un saluto in piscina dove Thomas ha iniziato la sua attività di aqua fitness Dopo passo in palestra da Gigi dove si sta allenando sulla parete attrezzata La sera proviamo la nostra bellissima sigla dove ci divertiamo sempre tanto Ci trucchiamo e prepariamo per lo spettacolo seale E infine in seconda serata ci divertiamo al nostro bellissimo porti in piscina",
+            "language": "Italian",
+            "durationSec": 50.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:18:41.337Z"
+          }
         },
         {
           "platform": "tiktok",
