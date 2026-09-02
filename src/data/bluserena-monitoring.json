@@ -1147,7 +1147,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:27:09.782Z"
+            "updatedAt": "2026-09-02T14:40:22.408Z"
           }
         },
         {
@@ -1469,7 +1469,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:10:17.938Z"
+            "updatedAt": "2026-09-02T14:39:39.950Z"
           }
         },
         {
@@ -2493,7 +2493,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:16:09.795Z"
+            "updatedAt": "2026-09-02T14:40:41.492Z"
           }
         },
         {
@@ -5786,7 +5786,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:30:17.361Z"
+            "updatedAt": "2026-09-02T14:40:32.720Z"
           }
         },
         {
@@ -5945,7 +5945,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:30:43.967Z"
+            "updatedAt": "2026-09-02T14:40:07.948Z"
           }
         },
         {
@@ -6643,7 +6643,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:34:11.303Z"
+            "updatedAt": "2026-09-02T14:41:01.811Z"
           }
         },
         {
@@ -6880,7 +6880,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:17:24.601Z"
+            "updatedAt": "2026-09-02T14:37:20.053Z"
           }
         },
         {
@@ -9347,7 +9347,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:20.857Z"
+            "updatedAt": "2026-09-02T14:36:27.136Z"
           }
         },
         {
@@ -11011,7 +11011,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:54:32.972Z"
+            "updatedAt": "2026-09-02T14:36:42.258Z"
           }
         },
         {
@@ -13933,7 +13933,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:11:10.252Z"
+            "updatedAt": "2026-09-02T14:37:43.727Z"
           }
         },
         {
@@ -15314,7 +15314,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:17:24.601Z"
+            "updatedAt": "2026-09-02T14:37:20.053Z"
           }
         },
         {
@@ -16596,7 +16596,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:27:09.782Z"
+            "updatedAt": "2026-09-02T14:40:22.408Z"
           }
         },
         {
@@ -17788,7 +17788,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:20.857Z"
+            "updatedAt": "2026-09-02T14:36:27.136Z"
           }
         },
         {
@@ -17811,6 +17811,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:01.095Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:36:35.141Z"
           }
         },
         {
@@ -17841,7 +17849,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:54:32.972Z"
+            "updatedAt": "2026-09-02T14:36:42.258Z"
           }
         },
         {
@@ -17864,6 +17872,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:41.863Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:36:48.881Z"
           }
         },
         {
@@ -17886,6 +17902,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:10:08.014Z"
+          },
+          "ocrData": {
+            "textOnScreen": "[ooking\nZA winery is under\nthey have",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:37:03.619Z"
           }
         },
         {
@@ -17916,7 +17941,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:17:24.601Z"
+            "updatedAt": "2026-09-02T14:37:20.053Z"
           }
         },
         {
@@ -17939,6 +17964,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:11:04.179Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:37:25.798Z"
           }
         },
         {
@@ -17969,7 +18002,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:11:10.252Z"
+            "updatedAt": "2026-09-02T14:37:43.727Z"
           }
         },
         {
@@ -17992,6 +18025,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:11:48.353Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Q Cala Serena\nplastiques",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:38:02.074Z"
           }
         },
         {
@@ -18014,6 +18056,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:11:57.422Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Galaxy S25 FE N",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:38:12.743Z"
           }
         },
         {
@@ -18036,6 +18087,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:12:32.539Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:38:19.291Z"
           }
         },
         {
@@ -18058,6 +18117,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:12:37.547Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A CASA VEGA",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:38:28.277Z"
           }
         },
         {
@@ -18080,6 +18148,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:13:02.314Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:38:39.520Z"
           }
         },
         {
@@ -18102,6 +18179,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:13:34.834Z"
+          },
+          "ocrData": {
+            "textOnScreen": "O eted\ngreeting\nin this paradise with loved X\nZa 5 eating\n@balidiary Ì\nin this parudise with loved ones meeting,\nNeet mornir\nin i meeting",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:38:50.223Z"
           }
         },
         {
@@ -18124,6 +18210,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:13:37.956Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TE i POOL\nPOOL\nPRIVATE\nWITH PRIVATE POOL",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:39:17.412Z"
           }
         }
       ]
@@ -18165,6 +18260,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:13:41.147Z"
+          },
+          "ocrData": {
+            "textOnScreen": "E HODECISO\nE VOI DOVE AVETE\nTRASCORSO IL VOSTRO\nMOMENTO Plu BELLO\nCOMPLEANNO?\nrenot:\n/ia Castelvetrano 92/C",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:39:24.054Z"
           }
         },
         {
@@ -18204,7 +18308,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:10:17.938Z"
+            "updatedAt": "2026-09-02T14:39:39.950Z"
           }
         },
         {
@@ -18239,6 +18343,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:16:08.644Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:39:51.748Z"
           }
         },
         {
@@ -18273,6 +18385,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:17:30.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:39:59.282Z"
           }
         },
         {
@@ -18351,7 +18471,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:30:43.967Z"
+            "updatedAt": "2026-09-02T14:40:07.948Z"
           }
         },
         {
@@ -18381,7 +18501,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:27:09.782Z"
+            "updatedAt": "2026-09-02T14:40:22.408Z"
           }
         },
         {
@@ -18413,7 +18533,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:30:17.361Z"
+            "updatedAt": "2026-09-02T14:40:32.720Z"
           }
         },
         {
@@ -18443,7 +18563,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:16:09.795Z"
+            "updatedAt": "2026-09-02T14:40:41.492Z"
           }
         },
         {
@@ -18466,6 +18586,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:35.398Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mall\npiscina al mare..\nin pochi minuti!\nf\\ ACCESSO SPIAGGIA\nRISTORANTE IL GUSTO\nwelll\nRISTORANTE LE ONDE\nBAR MAREA\nREACH POINT I",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:40:55.433Z"
           }
         },
         {
@@ -18495,7 +18624,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:34:11.303Z"
+            "updatedAt": "2026-09-02T14:41:01.811Z"
           }
         },
         {
@@ -25019,6 +25148,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:41.863Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:36:48.881Z"
           }
         },
         {
@@ -25448,7 +25585,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:54:32.972Z"
+            "updatedAt": "2026-09-02T14:36:42.258Z"
           }
         },
         {
@@ -29880,7 +30017,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:17:24.601Z"
+            "updatedAt": "2026-09-02T14:37:20.053Z"
           }
         },
         {
@@ -30263,6 +30400,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:11:04.179Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:37:25.798Z"
           }
         },
         {
@@ -30298,6 +30443,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:09:01.095Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T14:36:35.141Z"
           }
         },
         {
@@ -31572,7 +31725,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:20.857Z"
+            "updatedAt": "2026-09-02T14:36:27.136Z"
           }
         },
         {
@@ -32987,7 +33140,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:20.857Z"
+            "updatedAt": "2026-09-02T14:36:27.136Z"
           }
         },
         {
@@ -34489,7 +34642,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:46:20.857Z"
+            "updatedAt": "2026-09-02T14:36:27.136Z"
           }
         },
         {
