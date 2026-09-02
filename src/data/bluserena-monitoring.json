@@ -3139,13 +3139,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "18 agosto al nostro Color Party non c'è nessuno Où sono passati se, où sono passati se chi mi dice di fare la che Empilè, empilè, empilè, empilè, empilè, empilè, empilè Michael Jackson ha empilè, empilè, empilè, empilè El Madre l'ha detto che empilè, empilè, empilè Michael Jackson ha empilè, empilè, empilè, empilè Obbligato di venire per tutti allume, allume, allume, allume, allume, allume, allume, allume, allume, allume, allume, allume, allume Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 58,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1",
-            "updatedAt": "2026-09-02T07:54:06.694Z"
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:33.750Z"
           }
         },
         {
@@ -3171,13 +3171,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "musica ma quanto cazzo sono fletish SPAN musica Grazie a tutti. In parazione, in parazione, in parazione dai",
+            "language": "Italian",
+            "durationSec": 105.7,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1",
-            "updatedAt": "2026-09-02T07:54:07.918Z"
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:37.955Z"
           }
         },
         {
@@ -3201,13 +3201,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Buongiorno ragazze, stamattina colazione e nutella ragazze uova cereali, latte, zimeno, latte scremato yogurt qua c'è tutto salato formaggio crocetto pane pizza la parte più buona le torte crostate",
+            "language": "Italian",
+            "durationSec": 57.2,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1",
-            "updatedAt": "2026-09-02T07:54:09.122Z"
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:40.569Z"
           }
         },
         {
@@ -3231,13 +3231,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Una tentazione Yeah, yeah, yeah Tu e io a la fiesta Tu e io Toda la notte Tu e io a la fiesta",
+            "language": "Italian",
+            "durationSec": 15,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1",
-            "updatedAt": "2026-09-02T07:54:10.328Z"
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:42.809Z"
           }
         },
         {
@@ -3259,13 +3259,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.3,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1",
-            "updatedAt": "2026-09-02T07:54:11.528Z"
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:47.941Z"
           }
         },
         {
@@ -3287,7 +3287,16 @@
             "beach",
             "vacanza"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "8, 7, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0! Grazie.",
+            "language": "Italian",
+            "durationSec": 32.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:53.681Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3309,7 +3318,16 @@
             "resort",
             "intrattenimento"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:07:59.302Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3331,7 +3349,16 @@
             "village",
             "licata"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "... La gara è male, la gara è pericolosa. ... Sì, è vero. Ciao C un po di calma ma non cos Grazie a tutti. ... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 201,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:04.286Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3352,7 +3379,16 @@
             "ritorno",
             "all inclusive"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:06.731Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3374,7 +3410,16 @@
             "natura",
             "puglia"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:12.691Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3395,7 +3440,16 @@
             "relax",
             "bluserena"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno amici dell'Avento Viaggi Bari, stamattina anzi, buon appetito, buon feragosto a tutti. Siamo un po' relax, tutti sono andati su a mangiare, ma come vi dicevo ieri, avendo la Formula Residence abbiamo la possibilità di prendere qualcosa da mangiare sul lettino. Mia figlia mangia le patatine, io aspetto già Luca che ci porta qualcosa. questo è la spiaggia lì c'è sempre il blocco siete vicinissimi e dietro le sepi scusate che vedete c'è un'altra piscina che vi faccio vedere più tardi e adesso lo zoom non sa mare non c'è nessuno perché chiaramente tutti stanno a magna però non è male oggi si sta bene ti auguriamo Buon Ferragosto, la mia polpetta mangia. Ciao, ci sentiamo dopo.",
+            "language": "Italian",
+            "durationSec": 61.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:17.150Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3415,7 +3469,16 @@
             "mare",
             "relax"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:22.682Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3437,7 +3500,16 @@
             "hotel",
             "resort"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Nei video che ho caricato qualche giorno fa ho avuto diverse domande per sapere come fosse l'acqua. Adesso vi faccio vedere un po' com'è l'acqua qui del medio adriatico. Ricordiamoci che ci troviamo in Abruzzo, Montesilvano, provincia di Pescara. Una cosa fondamentale per i bambini piccoli, l'acqua è sempre bassa. faccio una panoramica del mare questo è tutto il video del villaggio questo qua è il mare oggi tra l'altro il mare è calmissimo il mare è veramente uno spettacolo oggi qualche sassolino all'ingresso vi aspettiamo via de jose 75 bari buongiorno a tutti e buon lunedì a tutti",
+            "language": "Italian",
+            "durationSec": 70.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:25.924Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3459,7 +3531,17 @@
             "amore",
             "coppia"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: Your IP address is blocked from accessing this post",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:27.175Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3480,7 +3562,16 @@
             "cibo sano",
             "vacanza"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "So Digididididi digididi digidi dii hey Perereta mamma mamma Perereta mamma mamma Mm Ciao Dad, you're old and sad.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:32.370Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3502,7 +3593,16 @@
             "hotel",
             "resort"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Blu serena, dall'alba fino al luna piena, ti toglie il fiato per magia, lo sguardo da follia, ritrova la gioia con noi oltre a una vita. Blu serena, un brivido che fischia appena, la melodia che ti conquista, amore a prima vista, riempie quel vuoto che hai. Qui ritroviamo la felicità, un sogno che non finirà, un caldo abbraccio che è satisfecciale, le lunghe giornate che non sentirai. Blu serena un'aquilone che non vola via, prova a seguirne la scia, tutta la vita blu serena, dall'alba fino al luna piena.",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:35.327Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3523,7 +3623,16 @@
             "relax",
             "bevande"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "ieri è la storia domani è un mistero ma oggi è un regalo per questo è chiamato il presente",
+            "language": "Italian",
+            "durationSec": 20.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:40.983Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3545,7 +3654,16 @@
             "animatori",
             "lavoro"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "come come come come La città è una città Io vi dirò, oh lele, voi mi risponderete, ma che bella giornata, voi furai! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 77.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:48.663Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3593,7 +3711,16 @@
             "Is Serenas Badesi",
             "IsSerenas"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a Notarquigno, che profumo c'è, da Castellaneta fino a casa mia, si apre la vetrina.",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:51.009Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3613,7 +3740,16 @@
             "resort",
             "vacanza"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:53.052Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3632,7 +3768,16 @@
             "affetto",
             "supporto"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Se mi vedi un po' triste è perché ho che foto mamma, da sai mamma mia, a casa mia Dove ancora si muore per niente a vent'anni, si figlia na capi, sta guerra da farmi E mo riportami dove, ho veramente sogni, ho caffè in de canzone Vien de mare che sbatte per dinde e faneste, ma scende po' salva Ma vanno a fottere l'anima, ecco un po' che sto buono Dovrei dopo fare la morte ad una staccatura per correre mille volte ancora E tirerò mille volte ancora E caglierò mille volte ancora A casa mia mille volte ancora Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 66,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:59.609Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3654,7 +3799,16 @@
             "white party",
             "trends"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:09:01.859Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3675,7 +3829,16 @@
             "resort",
             "bluserena"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:09:07.526Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3697,7 +3860,16 @@
             "villaggio",
             "emozioni"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:09:13.930Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -3718,7 +3890,16 @@
             "mare",
             "relax",
             "buongiorno"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:09:15.962Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9363,7 +9544,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQfmXl4mWBDFfL4EBIDSzyAmSJyQXqDxDERaE1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=A0SlhFWcLuTL0JYCdEUm%2F0w68jo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:09:01.859Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11864,7 +12054,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okfLCvLADIBEY7Q5xqD4mqIGgIdO8uRErFTE6f~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gWW49TghETQcWd7Q1hYezPfChks%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Nei video che ho caricato qualche giorno fa ho avuto diverse domande per sapere come fosse l'acqua. Adesso vi faccio vedere un po' com'è l'acqua qui del medio adriatico. Ricordiamoci che ci troviamo in Abruzzo, Montesilvano, provincia di Pescara. Una cosa fondamentale per i bambini piccoli, l'acqua è sempre bassa. faccio una panoramica del mare questo è tutto il video del villaggio questo qua è il mare oggi tra l'altro il mare è calmissimo il mare è veramente uno spettacolo oggi qualche sassolino all'ingresso vi aspettiamo via de jose 75 bari buongiorno a tutti e buon lunedì a tutti",
+            "language": "Italian",
+            "durationSec": 70.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:25.924Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -11925,7 +12124,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oM1Pt4rnIrMFAFVCIVX5pBAnBIirFzvlcokBei~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=4speE1u6hAyHHe15lkenMUmdE00%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:09:15.962Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16374,7 +16582,16 @@
             "puglia"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:22.682Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21927,7 +22144,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o00AB7IaZOEgoEiJXAT8uPayCAi9uB8mnvZ1s~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=R20MS0P6h%2F%2Bo1NWGtLY3i5IXW1w%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "So Digididididi digididi digidi dii hey Perereta mamma mamma Perereta mamma mamma Mm Ciao Dad, you're old and sad.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T09:08:32.370Z"
+          }
         },
         {
           "platform": "tiktok",
