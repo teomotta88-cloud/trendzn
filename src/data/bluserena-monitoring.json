@@ -23257,6 +23257,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:19:00.414Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Frolence\nQueen Frolence\nE IN CONCERT ki 4",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:52.211Z"
           }
         },
         {
@@ -23279,6 +23288,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:19:03.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a Deny\nSerena Hotel Faisalabad\nHotel Faisalabad",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:03.305Z"
           }
         },
         {
@@ -23301,6 +23319,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:19:05.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": "irene Namatovu his daughter",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:12.799Z"
           }
         },
         {
@@ -23323,6 +23350,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:07.722Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:20.421Z"
           }
         },
         {
@@ -23345,6 +23381,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:31.523Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:27.230Z"
           }
         },
         {
@@ -23367,6 +23411,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:34.693Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:54.580Z"
           }
         },
         {
@@ -23389,6 +23441,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:37.542Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:16:03.844Z"
           }
         },
         {
@@ -23411,6 +23471,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:42.128Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:16:30.527Z"
           }
         },
         {
@@ -23433,6 +23501,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:44.627Z"
+          },
+          "ocrData": {
+            "textOnScreen": "safari lodge\nhe most beautiful\nin Masai Mara",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:16:46.562Z"
           }
         },
         {
@@ -23455,6 +23532,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:47.034Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘my taste in h Is\nila very strong work\n“my taste in hotels requires\na very strong work ethic\"\nstrong work ethi\nmy taste\navery g",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:16:59.658Z"
           }
         },
         {
@@ -23477,6 +23563,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:12.886Z"
+          },
+          "ocrData": {
+            "textOnScreen": "the room doesn't matter in Santorini\"\ndoesn't matter in\nin Santorini\"",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:09.970Z"
           }
         },
         {
@@ -23499,6 +23594,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:15.757Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:17.086Z"
           }
         },
         {
@@ -23521,6 +23624,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:18.356Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:22.750Z"
           }
         },
         {
@@ -23543,6 +23654,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:36.304Z"
+          },
+          "ocrData": {
+            "textOnScreen": "erenade but\nhidden vocals’",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:27.677Z"
           }
         },
         {
@@ -23565,6 +23685,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:43.687Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HAPPENING NOW MZEEI MAGALA AT\nSTRONG WOMAN IRENE NAMATOVU\nSERENA HOTEL\nè HAPPENING NOW MZEEI MAGALA AT\nHAPPENING NOW MZEEI MAGALA\nHAPPENING NOW MZEEI AT",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:41.810Z"
           }
         },
         {
@@ -23587,6 +23716,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:22:23.095Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HEARD ABOU\nBISCUITS\nCOURSE\nOF COURSE TEA",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:05.455Z"
           }
         },
         {
@@ -23609,6 +23747,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:22:46.053Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Emirates 3\nOVERTHE LAST\nCOUPLE\nTHERE'S BEEN NO\nEmirates fi\nNOT EVEN'A BID\nI WANT TO LEAVE\"",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:15.059Z"
           }
         },
         {
@@ -23631,6 +23778,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:23:25.583Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bebe Cool arrivial at Serena i\n4 Hotel\nBebe Cool arrivial at Serena\nHotel\nBebe Cool arrivial at Serena f\nBAVMMBA\nSOTH AUG 2026",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:25.735Z"
           }
         },
         {
@@ -23653,6 +23809,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:23:38.408Z"
+          },
+          "ocrData": {
+            "textOnScreen": "QUEEN IRENE UWOYA\nAWASILI HAPA SERENA\nKWENYE A LIST\nONE VISION a UPDATES",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:32.223Z"
           }
         },
         {
@@ -23675,6 +23840,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:24:00.606Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HON MIN JUSTINE NAMEERE\nARRIVES AT IRENE NAMATOVU\nCONCERT SERENA HOTEL\nARRIVES AT IRENE\ni SEAN",
+            "confidence": 0.847,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:40.467Z"
           }
         },
         {
@@ -23697,6 +23871,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:24:31.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SO IF HE DOES SIGN\nTHERE'S NOBODY\nWHO'S GONNA BE\nMILLION\nHE IS CERTAINLY,",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:48.488Z"
           }
         },
         {
@@ -23719,6 +23902,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:24:34.101Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:55.874Z"
           }
         },
         {
@@ -23741,6 +23932,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:25:41.923Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happening Now Irene Namatovu Strong Woman\nlive in concert at Serena Hotel 2026 press\n1 conference\nconference 4\nconference a\nlive in concert at Serena Hotel 2026 press i\nconference\nHappening Now Irene Namatovu Strong Woman N\nconference 1",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:19:07.250Z"
           }
         },
         {
@@ -23763,6 +23963,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:26:22.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JONA\nLive at Serena Hotel\nLillian",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:19:18.541Z"
           }
         },
         {
@@ -23785,6 +23994,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:26:26.467Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:19:25.948Z"
           }
         },
         {
@@ -28728,6 +28945,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:15.757Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:17.086Z"
           }
         },
         {
@@ -29435,6 +29660,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:24:00.606Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HON MIN JUSTINE NAMEERE\nARRIVES AT IRENE NAMATOVU\nCONCERT SERENA HOTEL\nARRIVES AT IRENE\ni SEAN",
+            "confidence": 0.847,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:40.467Z"
           }
         },
         {
@@ -29496,6 +29730,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:21:43.687Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HAPPENING NOW MZEEI MAGALA AT\nSTRONG WOMAN IRENE NAMATOVU\nSERENA HOTEL\nè HAPPENING NOW MZEEI MAGALA AT\nHAPPENING NOW MZEEI MAGALA\nHAPPENING NOW MZEEI AT",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:17:41.810Z"
           }
         },
         {
@@ -29632,6 +29875,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:19:00.414Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Frolence\nQueen Frolence\nE IN CONCERT ki 4",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:52.211Z"
           }
         },
         {
@@ -29797,6 +30049,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:42.128Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:16:30.527Z"
           }
         },
         {
@@ -29819,6 +30079,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:26:22.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JONA\nLive at Serena Hotel\nLillian",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:19:18.541Z"
           }
         },
         {
@@ -30032,6 +30301,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:19:05.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": "irene Namatovu his daughter",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:12.799Z"
           }
         },
         {
@@ -30421,6 +30699,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:20:07.722Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:15:20.421Z"
           }
         },
         {
@@ -30517,6 +30804,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:23:38.408Z"
+          },
+          "ocrData": {
+            "textOnScreen": "QUEEN IRENE UWOYA\nAWASILI HAPA SERENA\nKWENYE A LIST\nONE VISION a UPDATES",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:32.223Z"
           }
         },
         {
@@ -30539,6 +30835,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:23:25.583Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bebe Cool arrivial at Serena i\n4 Hotel\nBebe Cool arrivial at Serena\nHotel\nBebe Cool arrivial at Serena f\nBAVMMBA\nSOTH AUG 2026",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:25.735Z"
           }
         },
         {
@@ -30587,6 +30892,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:25:41.923Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happening Now Irene Namatovu Strong Woman\nlive in concert at Serena Hotel 2026 press\n1 conference\nconference 4\nconference a\nlive in concert at Serena Hotel 2026 press i\nconference\nHappening Now Irene Namatovu Strong Woman N\nconference 1",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:19:07.250Z"
           }
         },
         {
@@ -30653,6 +30967,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:24:31.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SO IF HE DOES SIGN\nTHERE'S NOBODY\nWHO'S GONNA BE\nMILLION\nHE IS CERTAINLY,",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:18:48.488Z"
           }
         },
         {
