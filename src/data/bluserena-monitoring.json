@@ -4964,6 +4964,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:20.667Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:26:59.148Z"
           }
         },
         {
@@ -4995,6 +5003,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:26.872Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:27:21.270Z"
           }
         },
         {
@@ -5025,6 +5041,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:32.001Z"
+          },
+          "ocrData": {
+            "textOnScreen": "y {effettivamente si,\nin cui tornerei\nall’infinito...\neffettivamente\nun posto in cuistornerei",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:27:34.071Z"
           }
         },
         {
@@ -5056,6 +5081,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:37.121Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:27:41.965Z"
           }
         },
         {
@@ -5087,6 +5120,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:43.423Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cifaivederela L\ncolazione?\nCALA SERENA\ni COLAZIONE\nCALA\n8 Ci fai vedere la\nSERENA",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:27:50.181Z"
           }
         },
         {
@@ -5118,6 +5160,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:45.362Z"
+          },
+          "ocrData": {
+            "textOnScreen": "\"ci vediamo l’anno\nprossimo”",
+            "confidence": 0.824,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:27:55.078Z"
           }
         },
         {
@@ -5146,6 +5197,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:52.131Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:10.123Z"
           }
         },
         {
@@ -5177,6 +5236,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:54.797Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:16.127Z"
           }
         },
         {
@@ -5205,6 +5272,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:09:59.451Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nCaterina Albaran3rde\nio con 8.500 euro me ne\nandrei a Zanzibar con i\nmiei figli e gli porterei a\nvedere un mare da\nsogno nn li andrei\nsicuramente a portare a\nbluserena",
+            "confidence": 0.87,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:23.537Z"
           }
         },
         {
@@ -5228,6 +5304,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:02.102Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Dream Team",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:30.032Z"
           }
         },
         {
@@ -5259,6 +5344,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:04.767Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:39.549Z"
           }
         },
         {
@@ -5291,6 +5384,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:11.816Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MEZZANOTTE",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:47.952Z"
           }
         },
         {
@@ -5325,6 +5427,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:13.830Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:28:55.050Z"
           }
         },
         {
@@ -5353,6 +5463,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:20.256Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nmarialina_masciave\n[foto] Diciamo la verità... la\nè signora in questione che ha\npubblicato questo video con 4\nl'intento di denunciare\n1 l'accaduto sa benissimo che\nil per aver avuto ospiti nella\nsua camera tutte quelle\nformiche sa benissimo che à",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:29:06.813Z"
           }
         },
         {
@@ -5384,6 +5503,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:27.710Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tell\nreterl®",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:29:15.749Z"
           }
         },
         {
@@ -5414,6 +5542,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:30.966Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserena",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:29:24.669Z"
           }
         },
         {
@@ -5444,6 +5581,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:37.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:29:29.883Z"
           }
         },
         {
@@ -5476,6 +5621,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:40.686Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:29:41.934Z"
           }
         },
         {
@@ -5507,6 +5660,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:43.906Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fitcheck\nitcheck",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:29:52.049Z"
           }
         },
         {
@@ -5535,6 +5697,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:47.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:00.568Z"
           }
         },
         {
@@ -5566,6 +5736,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:10:53.179Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:07.506Z"
           }
         },
         {
@@ -5599,6 +5777,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:30.152Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:17.361Z"
           }
         },
         {
@@ -5631,6 +5818,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:06.980Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:20.846Z"
           }
         },
         {
@@ -5662,6 +5857,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:44.116Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Matteo\nDamiano\nPeppe",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:27.166Z"
           }
         },
         {
@@ -5692,6 +5896,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:11:13.626Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:32.275Z"
           }
         },
         {
@@ -10795,6 +11007,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:14:44.116Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Matteo\nDamiano\nPeppe",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:27.166Z"
           }
         },
         {
@@ -15232,6 +15453,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T11:20:30.152Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:30:17.361Z"
           }
         },
         {
