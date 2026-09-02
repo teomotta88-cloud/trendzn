@@ -35,6 +35,14 @@
             "sentiment": "neutral",
             "engagement": 5,
             "analyzedAt": "2026-09-02T07:02:01.392Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:52.300Z"
           }
         },
         {
@@ -62,6 +70,14 @@
             "sentiment": "neutral",
             "engagement": 6,
             "analyzedAt": "2026-09-02T07:02:04.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:53.501Z"
           }
         },
         {
@@ -88,6 +104,14 @@
             "sentiment": "positive",
             "engagement": 5,
             "analyzedAt": "2026-09-02T07:02:10.254Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:54.721Z"
           }
         },
         {
@@ -113,6 +137,14 @@
             "sentiment": "neutral",
             "engagement": 6,
             "analyzedAt": "2026-09-02T07:02:17.568Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:55.964Z"
           }
         },
         {
@@ -140,6 +172,14 @@
             "sentiment": "neutral",
             "engagement": 4,
             "analyzedAt": "2026-09-02T07:02:29.703Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:57.189Z"
           }
         },
         {
