@@ -750,14 +750,16 @@ test("letterCount conta le lettere, non i caratteri", () => {
 });
 
 test("la sola confidenza non basta: il rumore letto benissimo passerebbe", () => {
+  // "|" cade perché è sola punteggiatura, ma "i" e "7" restano: sono letti a
+  // 95 e 93, cioè meglio di "Bluserena".
   const soloConfidenza = linesFromBlocks(blocksAltaConfidenzaMaRumore(), { minConfidence: 60 });
-  assert.deepEqual(soloConfidenza, ["| i 7", "Ciao Bluserena"], "il rumore sopravvive");
+  assert.deepEqual(soloConfidenza, ["i 7", "Ciao Bluserena"], "il rumore sopravvive");
 });
 
-test("confidenza e lettere insieme tengono il testo e scartano il rumore", () => {
+test("confidenza e lunghezza insieme tengono il testo e scartano il rumore", () => {
   const combinata = linesFromBlocks(blocksAltaConfidenzaMaRumore(), {
     minConfidence: 60,
-    minLetters: 3,
+    minLineLetters: 4,
   });
   assert.deepEqual(combinata, ["Ciao Bluserena"]);
 });
@@ -811,8 +813,72 @@ test("un post senza testo a video resta vuoto e diventa no_text", () => {
       ],
     },
   ];
-  const testo = cleanText(linesFromBlocks(blocks, { minConfidence: 60, minLetters: 3 }));
+  const testo = cleanText(linesFromBlocks(blocks, { minConfidence: 60, minLineLetters: 4 }));
   assert.equal(testo, "", "niente testo: lo script scriverà status no_text");
+});
+
+// La regressione trovata dalla calibrazione su 15 post: applicare la lunghezza
+// minima PAROLA PER PAROLA cancella articoli e preposizioni, e sulle frasi
+// vere fa più danni del rumore che dovrebbe togliere. Riga reale dal campione.
+const blocksFraseVera = () => [
+  {
+    paragraphs: [
+      {
+        lines: [
+          {
+            words: [
+              { text: "Rispondi", confidence: 88 },
+              { text: "al", confidence: 82 },
+              { text: "commento", confidence: 90 },
+              { text: "di", confidence: 85 },
+              { text: "giù81", confidence: 71 },
+            ],
+          },
+          // Riga di puro rumore dallo stesso campione: nessuna parola lunga.
+          {
+            words: [
+              { text: "ù", confidence: 74 },
+              { text: "3", confidence: 68 },
+              { text: "i", confidence: 91 },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+test("una frase vera resta intera, articoli e preposizioni compresi", () => {
+  const righe = linesFromBlocks(blocksFraseVera(), { minConfidence: 60, minLineLetters: 4 });
+  assert.deepEqual(righe, ["Rispondi al commento di giù81"]);
+});
+
+test("la riga di rumore accanto alla frase sparisce lo stesso", () => {
+  const righe = linesFromBlocks(blocksFraseVera(), { minConfidence: 60, minLineLetters: 4 });
+  assert.equal(righe.length, 1, "solo la frase, non il sacchetto di token corti");
+});
+
+test("i token di sola punteggiatura non entrano nel testo", () => {
+  const blocks = [
+    {
+      paragraphs: [
+        {
+          lines: [
+            {
+              words: [
+                { text: "=", confidence: 95 },
+                { text: "È", confidence: 88 },
+                { text: "bluserena", confidence: 76 },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  assert.deepEqual(linesFromBlocks(blocks, { minConfidence: 60, minLineLetters: 4 }), [
+    "È bluserena",
+  ]);
 });
 
 test("runEnrichment committa a batch e rispetta il limite di post", async () => {

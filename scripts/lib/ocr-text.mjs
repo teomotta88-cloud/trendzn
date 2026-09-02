@@ -65,28 +65,33 @@ export function letterCount(token) {
   return (String(token).match(/\p{L}/gu) ?? []).length;
 }
 
-// Ricostruisce le righe tenendo solo le parole che superano ENTRAMBI i filtri.
-// Una riga che resta senza parole sparisce: è il caso delle righe di puro
-// rumore, che nella prima versione finivano nello store.
+// Un token senza nemmeno una lettera o una cifra: "|", "=", "—", "[", "«".
+// Toglierlo non può mai cancellare una parola vera.
+function isPuntEggiatura(token) {
+  return !/[\p{L}\p{N}]/u.test(token);
+}
+
+// Ricostruisce le righe da Tesseract applicando due criteri di natura diversa.
 //
-// Servono entrambi i criteri, e la calibrazione del 02/09 dice perché.
+// Sulla PAROLA: la confidenza. Serve, ma non basta — nella calibrazione le
+// parole lette meglio erano |(97) i(95) |(94) Ciao(93) @(93) /(93) 7(93):
+// Tesseract è giustamente sicurissimo che un tratto verticale sia una "|",
+// quindi alta confidenza non vuol dire testo vero.
 //
-// La confidenza da sola non basta: le 15 parole lette meglio del campione
-// erano |(97) i(95) |(94) Ciao(93) @(93) /(93) 7(93) ... — Tesseract è
-// giustamente sicurissimo che un singolo tratto verticale sia una "|", quindi
-// alta confidenza NON vuol dire testo vero. E l'istogramma era piatto
-// (69/55/67/77/72/42/42/54/38/24), cioè nessuna soglia separa da sola i due
-// mondi.
+// Sulla RIGA, non sulla parola: la presenza di almeno una parola lunga. Questo
+// è il punto in cui la prima versione del filtro sbagliava. Applicare la
+// lunghezza minima parola per parola cancella gli articoli e le preposizioni,
+// e sulle frasi vere fa più danni del rumore che dovrebbe togliere:
 //
-// La forma da sola non basta: "bluserena" letto a confidenza 0 è rumore
-// visivo che assomiglia a una parola, e passerebbe qualsiasi filtro di forma.
+//   "Rispondi al commento di giù81"  ->  "Rispondi commento giù81"
+//   "Nessuno ti prepara a questo"    ->  "ssuno prepara"
 //
-// Insieme funzionano: sui 5 post del campione, conf>=60 + almeno 3 lettere
-// svuota i 3 post che davvero non hanno testo a video e conserva
-// "Ciao Bluserena" e "TikTok/@delgiudicesandro" negli altri due.
+// Una riga di rumore invece è un sacchetto di token da 1-2 caratteri
+// ("ù 3 i", "i è | od + i", "| lp"): non contiene NESSUNA parola lunga. Basta
+// quindi decidere se tenere la riga intera, e poi tenerla per intero.
 export function linesFromBlocks(
   blocks,
-  { minConfidence = 0, minLetters = 0, requireDictionary = false } = {},
+  { minConfidence = 0, minLineLetters = 0, requireDictionary = false } = {},
 ) {
   const lines = [];
   for (const block of blocks ?? []) {
@@ -96,8 +101,10 @@ export function linesFromBlocks(
           .filter((w) => (w.confidence ?? 0) >= minConfidence)
           .filter((w) => !requireDictionary || w.in_dictionary)
           .map((w) => (w.text ?? "").trim())
-          .filter((t) => t && letterCount(t) >= minLetters);
-        if (kept.length) lines.push(kept.join(" "));
+          .filter((t) => t && !isPuntEggiatura(t));
+
+        // La riga passa solo se contiene qualcosa che somiglia a una parola.
+        if (kept.some((t) => letterCount(t) >= minLineLetters)) lines.push(kept.join(" "));
       }
     }
   }
