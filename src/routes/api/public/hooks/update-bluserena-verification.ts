@@ -55,8 +55,10 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
             );
 
             if (!metaRes.ok) {
+              const errorText = await metaRes.text();
+              console.error(`[update-bluserena-verification] GitHub API error ${metaRes.status}:`, errorText);
               return Response.json(
-                { ok: false, error: `Lettura metadata fallita: ${metaRes.status}` },
+                { ok: false, error: `Lettura metadata fallita: ${metaRes.status}`, details: errorText },
                 { status: 500 },
               );
             }

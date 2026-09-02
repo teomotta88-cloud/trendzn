@@ -57,8 +57,10 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-post-me
             );
 
             if (!metaRes.ok) {
+              const errorText = await metaRes.text();
+              console.error(`[update-bluserena-post-metadata] GitHub API error ${metaRes.status}:`, errorText);
               return Response.json(
-                { ok: false, error: `Lettura metadata fallita: ${metaRes.status}` },
+                { ok: false, error: `Lettura metadata fallita: ${metaRes.status}`, details: errorText },
                 { status: 500 },
               );
             }
