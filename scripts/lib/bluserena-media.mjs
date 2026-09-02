@@ -15,6 +15,16 @@ import { spawnSync } from "child_process";
 
 // Eseguibile esterno con esito esplicito: `ok` è vero solo se il processo è
 // partito davvero ed è uscito con 0.
+// L'ultima riga utile di stderr, che per yt-dlp è quella dell'estrattore.
+function withDetail(reason, stderr) {
+  const line = (stderr ?? "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .at(-1);
+  return line ? `${reason}: ${line.slice(0, 200)}` : reason;
+}
+
 export function run(bin, args, { timeoutMs = 60_000 } = {}) {
   const res = spawnSync(bin, args, {
     stdio: "pipe",
@@ -66,12 +76,25 @@ export function assertBinaries(bins) {
   }
 }
 
+// TikTok riconosce lo User-Agent di default e serve una pagina di login al
+// posto del video: è lo stesso blocco già diagnosticato e risolto per lo
+// scraping delle caption (vedi REAL_CHROME_UA in sync-bluserena-hashtags.mjs,
+// dove con lo UA di default la caption risultava null su 15 post su 15).
+const REAL_CHROME_UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
+
 export function downloadVideo(url, outPath, { timeoutMs = 120_000 } = {}) {
   const res = run(
     "yt-dlp",
     [
       "--no-warnings",
       "--no-playlist",
+      "--user-agent",
+      REAL_CHROME_UA,
+      "--retries",
+      "3",
+      "--extractor-retries",
+      "2",
       "-f",
       "best[ext=mp4]/best",
       "--socket-timeout",
@@ -83,7 +106,9 @@ export function downloadVideo(url, outPath, { timeoutMs = 120_000 } = {}) {
     { timeoutMs },
   );
 
-  if (!res.ok) return { ok: false, reason: res.reason };
+  // "yt-dlp exit 1" da solo non dice niente: senza il messaggio
+  // dell'estrattore non si distingue un post rimosso da un blocco di TikTok.
+  if (!res.ok) return { ok: false, reason: withDetail(res.reason, res.stderr) };
   // yt-dlp può uscire 0 anche senza produrre il file (es. post rimosso).
   if (!fs.existsSync(outPath) || fs.statSync(outPath).size === 0) {
     return { ok: false, reason: "yt-dlp non ha prodotto un file" };

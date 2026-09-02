@@ -14,7 +14,7 @@ import path from "node:path";
 import test from "node:test";
 
 import { cleanText, frameTimestamps } from "./ocr-text.mjs";
-import { run, versionArg } from "./bluserena-media.mjs";
+import { downloadVideo, run, versionArg } from "./bluserena-media.mjs";
 import { commitField } from "./bluserena-store.mjs";
 import { runEnrichment } from "./bluserena-enrich.mjs";
 import { transcribeAudioBuffer } from "./groq-whisper.mjs";
@@ -375,6 +375,106 @@ test("un post fallito viene comunque marcato e non si ripresenta", async () => {
   );
   delete process.env.REPROCESS_FAILED;
   assert.equal(riprovati, 4);
+});
+
+// I record della vecchia analisi LLM non hanno `status` e hanno transcript
+// nullo: contarli come già elaborati li escludeva per sempre (erano 100 post).
+test("i record legacy senza status vengono rielaborati", async () => {
+  const store = storeFixture();
+  store.canali[0].accounts[0].audioAnalysis = {
+    transcript: null,
+    sentiment: "neutral",
+    engagement: 5,
+    analyzedAt: "2026-09-02T07:02:01.392Z",
+  };
+  // Un record del formato nuovo, invece, va saltato.
+  store.canali[0].accounts[1].audioAnalysis = { transcript: "già fatto", status: "ok" };
+
+  const fake = fakeGitHub(store);
+  const visti = [];
+  await withFakeGitHub(fake, () =>
+    runEnrichment({
+      field: "audioAnalysis",
+      title: "test",
+      commitMessage: (n) => `test ${n}`,
+      processPost: async (a) => {
+        visti.push(a.url);
+        return { transcript: "nuovo", status: "ok" };
+      },
+    }),
+  );
+
+  assert.ok(visti.includes("https://www.tiktok.com/@a/video/1"), "il legacy va rifatto");
+  assert.ok(
+    !visti.includes("https://www.tiktok.com/@a/video/2"),
+    "quello con status ok va saltato",
+  );
+});
+
+// Se il download è rotto per tutti (TikTok che blocca, chiave scaduta), marcare
+// i post come tentati li escluderebbe dalle run successive.
+test("un guasto sistematico ferma la run senza marcare i post", async () => {
+  const fake = fakeGitHub(storeFixture());
+  process.env.FAIL_FAST = "3";
+
+  await assert.rejects(
+    withFakeGitHub(fake, () =>
+      runEnrichment({
+        field: "ocrData",
+        title: "test",
+        commitMessage: (n) => `test ${n}`,
+        processPost: async () => ({ textOnScreen: null, status: "download_failed", reason: "403" }),
+      }),
+    ),
+    /fallimenti consecutivi/,
+  );
+  delete process.env.FAIL_FAST;
+
+  assert.equal(fake.state.puts, 0, "nessun commit");
+  const marcati = fake.state.store.canali.flatMap((c) => c.accounts).filter((a) => a.ocrData);
+  assert.equal(marcati.length, 0, "nessun post marcato: la prossima run li rivede");
+});
+
+test("no_text è un esito legittimo e non fa scattare il circuit breaker", async () => {
+  const fake = fakeGitHub(storeFixture());
+  process.env.FAIL_FAST = "2";
+
+  await withFakeGitHub(fake, () =>
+    runEnrichment({
+      field: "ocrData",
+      title: "test",
+      commitMessage: (n) => `test ${n}`,
+      processPost: async () => ({ textOnScreen: null, status: "no_text" }),
+    }),
+  );
+  delete process.env.FAIL_FAST;
+
+  assert.equal(
+    fake.state.store.canali.flatMap((c) => c.accounts).filter((a) => a.ocrData).length,
+    4,
+  );
+});
+
+test("il motivo del fallimento di yt-dlp riporta il messaggio dell'estrattore", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "fake-bin-"));
+  const stub = path.join(dir, "yt-dlp");
+  fs.writeFileSync(
+    stub,
+    '#!/bin/sh\necho "ERROR: [TikTok] 123: Unable to extract video data" >&2\nexit 1\n',
+  );
+  fs.chmodSync(stub, 0o755);
+
+  const previousPath = process.env.PATH;
+  process.env.PATH = `${dir}:${previousPath}`;
+  try {
+    const res = downloadVideo("https://www.tiktok.com/@x/video/123", path.join(dir, "out.mp4"));
+    assert.equal(res.ok, false);
+    // "yt-dlp exit 1" da solo non basta a capire cosa è successo.
+    assert.match(res.reason, /Unable to extract video data/);
+  } finally {
+    process.env.PATH = previousPath;
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test("runEnrichment committa a batch e rispetta il limite di post", async () => {
