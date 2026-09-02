@@ -2994,6 +2994,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:35.261Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:33.759Z"
           }
         },
         {
@@ -3026,6 +3034,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:42.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nimmagiulycarlo\nScusa ci sono pure\nomogenizzati?\ni Rispondi al commento di\nScusa ci sono pure pi\nScusa ci sono pure i",
+            "confidence": 0.854,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:42.698Z"
           }
         },
         {
@@ -3058,6 +3075,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:46.025Z"
+          },
+          "ocrData": {
+            "textOnScreen": "allCalanè\nSeratelNapoletane\nSerate Napoletane",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:49.752Z"
           }
         },
         {
@@ -3084,6 +3110,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:48.865Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena”",
+            "confidence": 0.677,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:18:54.941Z"
           }
         },
         {
@@ -3116,6 +3151,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:05:53.947Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando finisce la”\nQuando finiscella)\npensione completa\nfiniscela\npensioneicompleta 32,",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:19:04.272Z"
           }
         },
         {
@@ -3147,6 +3191,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:00.182Z"
+          },
+          "ocrData": {
+            "textOnScreen": "quando pensi\ntuoi figli alla bab eeli\nf ritrovi in un festino\nquando pensi di i\nfigli alla baby, anceeli\nAritroviin'un festino\nfiglialla baby dance e\nritrovi in un festino\nWini j\nquando pensi dilpdftare i\ntuoifigli alla baby danceeli\nquando pensj diportat i\ntuoi figli eli\nIritrovi",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:19:20.092Z"
           }
         },
         {
@@ -3178,6 +3231,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:02.578Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nStefania Franci\nCalaserena sempre\nCALA SERENA\nCalaserenasempre 2\nStefania Franci by\nA Stefania Franci\nFi) Calaserena sempre\nCALA\nSERENA",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:19:45.398Z"
           }
         },
         {
@@ -3210,6 +3272,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:08.444Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Blu Serena estate 2026",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:19:52.939Z"
           }
         },
         {
@@ -3236,6 +3307,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:14.295Z"
+          },
+          "ocrData": {
+            "textOnScreen": "piscina\na Valentino\nnzione e pulizia\ni izia\nzero\ndiscina\nDISC\na piscina\nValentino\nitenzione e pulizia",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:20:02.148Z"
           }
         },
         {
@@ -3262,6 +3342,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:19.863Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:20:10.072Z"
           }
         },
         {
@@ -3292,6 +3380,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:21.874Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:20:15.956Z"
           }
         },
         {
@@ -3321,6 +3417,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:28.023Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:20:22.958Z"
           }
         },
         {
@@ -3352,6 +3456,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:33.099Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:20:28.353Z"
           }
         },
         {
@@ -3384,6 +3496,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:37.277Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serenella",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:20:41.427Z"
           }
         },
         {
@@ -3417,6 +3538,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:39.879Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:10.948Z"
           }
         },
         {
@@ -3450,6 +3579,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:44.970Z"
+          },
+          "ocrData": {
+            "textOnScreen": "braccialetto\ninclusive e torni alla vita\ndell'all inclusive alla vita\nJ normale. 2.\nti tolgono il braccialetto\ndell'all inclusive e torni alla vita\nu a vita\nQuando ti tolgono il braccialetto\ndelliall inclusive e torni alla vita",
+            "confidence": 0.855,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:18.091Z"
           }
         },
         {
@@ -3480,6 +3618,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:49.345Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:27.643Z"
           }
         },
         {
@@ -3510,6 +3656,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:51.284Z"
+          },
+          "ocrData": {
+            "textOnScreen": "è inizi. e sei\"\ned è finita con \"p ttimi che ci rivedremo\"\ncon \"di dove sei\"\nè finita con \"promettimi che ci rivedremo\"\nè iniziata con \"di dove sei\"\ned è finita con \"promettimi che ci rivedremo\"",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:33.801Z"
           }
         },
         {
@@ -3540,6 +3695,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:56.585Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:45.451Z"
           }
         },
         {
@@ -3573,6 +3736,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:02.962Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi a annastabile Q",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:53.918Z"
           }
         },
         {
@@ -3605,6 +3777,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:10.039Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ballon party",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:58.699Z"
           }
         },
         {
@@ -3637,6 +3818,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:12.437Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nFrancesco Gervasio\no ciao posso vedere un\nvideo del mare per\npiacere?",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:22:09.767Z"
           }
         },
         {
@@ -3667,6 +3857,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:14.458Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:22:16.456Z"
           }
         },
         {
@@ -3699,6 +3897,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:20.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Buongiorno da",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:22:28.498Z"
           }
         },
         {
@@ -3725,6 +3932,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:26.004Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Blu Serena Valentino",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:22:36.655Z"
           }
         },
         {
@@ -20058,6 +20274,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:07:02.962Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi a annastabile Q",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:53.918Z"
           }
         },
         {
@@ -26590,6 +26815,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:06:39.879Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:21:10.948Z"
           }
         },
         {
