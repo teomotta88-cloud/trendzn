@@ -25205,13 +25205,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Musica Cacati curumba, gavonumba, gannaia gale, misina, nesuca, singa, kare, nazua, vacate, yamba, kobe, vitamina, kusabira, bafa, omomu, kaze, yafumba, kone, bufa, kobe, yazala, moli, singo, maba. Dababoke, rette, mikose, mitima, nefuna, simpate, kalamu, lenjibaka, mumpendu, runewe, muta, ansasula, sifayo, mungu, yarishimbalira, Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 73.4,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:52:52.719Z"
+            "updatedAt": "2026-09-02T20:18:45.157Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -34343,6 +34344,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:30:44.489Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il nostro mondo è la posa dei visionari La posa dei visionari La posa dei visionari La posa dei visionari Il 3 agosto 2025 Passeremo un super momento D'accordo",
+            "language": "Italian",
+            "durationSec": 13.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:52:23.673Z"
           }
         },
         {
@@ -34427,6 +34437,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:31:18.605Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:55:26.318Z"
           }
         },
         {
@@ -34449,6 +34469,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:31:43.576Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Siamo arrivati a San Eusebio Il suo amore per te è il tuo amore per me. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 84.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:57:02.940Z"
           }
         },
         {
@@ -34470,6 +34499,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:31:51.620Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:59:18.639Z"
           }
         },
         {
@@ -34523,6 +34562,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:55:42.793Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Would you live in this alien hotel for 30 days for $500,000? It's not a haunted house, it's not a prison, it's a luxury floating pod in the middle of the Red Sea. Welcome to the Shabara Resort in Saudi Arabia. No roads, no internet. You can only get here by private yacht. And once you arrive, it's just you, the sea and the sound of waves. The challenge? Survive 30 days, completely alone. The reward? Stay 15 days, get $100,000, make it to 30 days and walk away with $500,000 each pod looks like a giant metal bubble floating on water inside, total luxury gourmet meals, spa tubs skin care products, fancy drinks basically a 5 star spaceship on the ocean but here's the catch no phone, no wifi, no pets no distractions, no escape just you and your thoughts sounds like a dream at first but by day 10, you might start talking to furniture Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 65,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:59:55.489Z"
           }
         },
         {
@@ -34576,6 +34624,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:32:28.721Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, benvenuti al Grand Resort & Spa. L'area del pool è bellissima. E qui c'è un'occhiata a mia stanza. La vista dal balcone è incredibile. È così bella, più a venire!",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:00:43.210Z"
           }
         },
         {
@@ -34598,6 +34655,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:32:36.785Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:03:45.974Z"
           }
         },
         {
@@ -34651,6 +34718,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:32:53.822Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:03:48.398Z"
           }
         },
         {
@@ -34673,6 +34749,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:33:01.448Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Gran Serenis Cartagena, Colombia Quick Room Tour Clean Room Nice Size Nice Size Shower Plenty of Closet Space Bed Soft Fresh Sheets Safe and a refrigerator and coffee maker. It's giving nice balcony views. Large pool and they have a spa. Restaurant on site advertised as all inclusive, but make sure when you book. è come 20-30 minuti dall'aeroporto questo resort è un getaway è bello, ci darà 7 di 10 non ho potuto vedere se c'era un'entertainment Definitely a family chill resort. Food with mid my opinion.",
+            "language": "Italian",
+            "durationSec": 97.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:06:37.246Z"
           }
         },
         {
@@ -34695,6 +34780,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:33:25.916Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:08:50.737Z"
           }
         },
         {
@@ -34717,6 +34812,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:33:33.981Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:08:52.917Z"
           }
         },
         {
@@ -34738,6 +34842,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:33:54.299Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 21.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:08:55.190Z"
           }
         },
         {
@@ -34760,6 +34873,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:34:08.380Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 32.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:10:54.687Z"
           }
         },
         {
@@ -34782,6 +34904,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:34:15.673Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Isingiro, isingiro, isingire si ange, isingiro, ninesi mokulomu, isingiro, ensia vatenano voci.",
+            "language": "Italian",
+            "durationSec": 17.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:11:06.127Z"
           }
         },
         {
@@ -34803,6 +34934,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:34:39.669Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:13:08.573Z"
           }
         },
         {
@@ -34825,6 +34965,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:34:46.587Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:14:11.010Z"
           }
         },
         {
@@ -34847,6 +34996,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:34:57.601Z"
+          },
+          "audioAnalysis": {
+            "transcript": "musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 41.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:16:41.051Z"
           }
         },
         {
@@ -34862,13 +35020,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Musica Cacati curumba, gavonumba, gannaia gale, misina, nesuca, singa, kare, nazua, vacate, yamba, kobe, vitamina, kusabira, bafa, omomu, kaze, yafumba, kone, bufa, kobe, yazala, moli, singo, maba. Dababoke, rette, mikose, mitima, nefuna, simpate, kalamu, lenjibaka, mumpendu, runewe, muta, ansasula, sifayo, mungu, yarishimbalira, Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 73.4,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:52:52.719Z"
+            "updatedAt": "2026-09-02T20:18:45.157Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -34931,6 +35090,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:35:21.287Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:18:47.725Z"
           }
         },
         {
@@ -35076,6 +35244,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:36:20.554Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 56.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:19:41.644Z"
           }
         },
         {
@@ -35098,6 +35275,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:36:34.866Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:20:32.032Z"
           }
         },
         {
@@ -35151,6 +35337,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:36:55.244Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:23:16.706Z"
           }
         },
         {
@@ -35234,6 +35430,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:37:25.579Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 57.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:23:25.492Z"
           }
         },
         {
@@ -35255,6 +35460,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:37:38.258Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 19.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:24:24.987Z"
           }
         },
         {
@@ -35276,6 +35490,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:37:46.461Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T20:26:03.563Z"
           }
         },
         {
@@ -37399,6 +37623,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:55:42.793Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Would you live in this alien hotel for 30 days for $500,000? It's not a haunted house, it's not a prison, it's a luxury floating pod in the middle of the Red Sea. Welcome to the Shabara Resort in Saudi Arabia. No roads, no internet. You can only get here by private yacht. And once you arrive, it's just you, the sea and the sound of waves. The challenge? Survive 30 days, completely alone. The reward? Stay 15 days, get $100,000, make it to 30 days and walk away with $500,000 each pod looks like a giant metal bubble floating on water inside, total luxury gourmet meals, spa tubs skin care products, fancy drinks basically a 5 star spaceship on the ocean but here's the catch no phone, no wifi, no pets no distractions, no escape just you and your thoughts sounds like a dream at first but by day 10, you might start talking to furniture Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 65,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T19:59:55.489Z"
           }
         },
         {
