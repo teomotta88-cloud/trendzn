@@ -655,7 +655,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:31.602Z"
+            "updatedAt": "2026-09-02T10:15:53.521Z"
           }
         },
         {
@@ -1338,13 +1338,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ci vediamo a domani.",
+            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai molto di nero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Se tu me vedi, si simba Se te vedi, si samba Se tu me vedi, si simba Se ti amarei, si simba Se ti amarei, si simba Se te vedi, si simba Se tu me vieni a tamba, io ti amarei Mami tu mi tieni",
             "language": "Italian",
             "durationSec": 60.2,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:58.463Z"
+            "updatedAt": "2026-09-02T10:18:15.678Z"
           }
         },
         {
@@ -1712,7 +1712,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:03:56.965Z"
+            "updatedAt": "2026-09-02T10:14:47.394Z"
           }
         },
         {
@@ -4619,13 +4619,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Ciao Enzo! Alice? Ciao Enzo! Caterina? Ciao Enzo! Scusa? Ciao Enzo! Marta? Ciao Enzo! Sita? Ah, si, le fallo, le ripelo! Ciao Enzo! Ehi, Enrico! Ciao Enzo! Margherita? Non hai Margherita? Marta, mi sei? Non mi viene! Ciao Enzo Tutti uguali sono Ciao Enzo Martina no Chi manca? Margherita no Sì Ciao Enzo Questa è Monica Ciao Enzo Ma chi è? Non mi dice chi c'era Aiutatemi Ciao Enzo Questo è Fausto Ciao Enzo Sì Sì Matteo Ciao Enzo Silde No? Silde non c'è mai Ciao Enzo Silde Lo state imitando Ciao Enzo Ciao Enzo Ciao Enzo Enzo ma è Matteo Ciao Enzo Ma l'ha diventata Ma l'ha diventata Ah l'ha diventata Ah si Elisa Porca miseria Ciao Enzo E Peppe Emanuele E c'è un altro però Ciao Enzo Ciao Enzo Ah Damiano Difficilissimo",
+            "transcript": "Ciao Enzo Alice Ciao Enzo Caterina Ciao Enzo Scusa? Ciao Enzo Marta Ciao Enzo Zitta Ciao Enzo Enrico Ciao Enzo Margherita Non è Margherita Marta Miserio Ciao Enzo Ciao Enzo! Tutti uguali sono? Ciao Enzo! Martina no? Chi manca? Margherita no? Sì! Ciao Enzo! Questa è Monica! Ciao Enzo! Ma chi è? Non mi sa chi c'era! Aiutatemi! Ciao Enzo! Questo è Fausto! Ciao Enzo! Sì! Sì, è arrivato! Matteo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo Sid No? Sid non c'è mai Ciao Enzo Sid Lo state imitando Ciao Enzo Ciao Enzo Enzo ma sono Teo Ciao Enzo Ma l'ho divinata Ah l'ho divinata Ah si Elisa Che miseria Ciao Enzo E Peppe Emanuele E c'è un altro però Ciao Enzo Ciao Enzo Ah Damiano Difficilissimo",
             "language": "Italian",
             "durationSec": 108,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:10.882Z"
+            "updatedAt": "2026-09-02T10:14:44.116Z"
           }
         },
         {
@@ -4812,7 +4812,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:46.345Z"
+            "updatedAt": "2026-09-02T10:15:57.119Z"
           }
         },
         {
@@ -9597,7 +9597,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQSHGIeGMQfvjIVIDo2cKKOTUDIA2IkKLGfHQg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=1c%2BtyX03tWMHsPwURZx8ii6n4nE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "... ... ... ... ... ... Grazie a tutti. Grazie a tutti Grazie a tutti. questo era per voi un saluto dei primi ma si è una magia sti per l'omia 26",
+            "language": "Italian",
+            "durationSec": 149.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:11:49.200Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9610,7 +9619,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oksU5sQIEGDAlmdFEFBAGqT7lLRDREB3Em9bff~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=uVSwjlE4kT4ftHMhC8geFNh6P8U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:11:51.331Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9623,7 +9641,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okqCEV4EADEvpQAAzWECfFterDmrbIalRVlJrA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=VghNPV8TAXaHdOFhP70eXMGOfMA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "There was a time I met a girl of a different kind. We ruled the world, I thought I'd never lose.",
+            "language": "Italian",
+            "durationSec": 11.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:11:55.555Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9636,7 +9663,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oEuAVpOaBpAivzTcMEUK9VqIBaIpExYBQAIiZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EfXhabENRanONlT7CcgPcwyhng4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:14:32.808Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9649,7 +9686,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUqUzigHUp6ZRB8BIGaiEJY3IG1ddI2udAvBN~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BQkS8qTgldf7fyrgvQtRBuNGAtA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "La sospensione fa ridere, dico la verità! Fate vedere nelle borse che c'ha tutti, non la faccio un po' di sospetto, guardate! Non ci avete un po'... Non ridere amore, che fa... che è lui tuo papà? Guarda che sei tu! Voi fate ridere! Sì, va bene! Controllo secondo il branquista, senza farlo scendere, controllalo! Secondo me c'è un... Guarda, guarda di cosa! Guarda, forse... Senta! Si sieda Ciao, buongiorno Ciao, buongiorno dal Valentino Resort La sta arrestando Voto 10 per l'animazione, un video Sì, non lo so, la sta arrestando la signora Sì Quindi se possiamo evitare È il gasto, è il gasto Mi sta registrando mentre la resta Non si può registrare le forze dell'ordine Voto 10 Voto 10 per voi Allora ciao Vabbè prego ragazzi Scusate Scusate",
+            "language": "Italian",
+            "durationSec": 70.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:14:37.624Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9662,7 +9708,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4BfRwDzl0WfYvOqqNxrmOnEDazFIEqxDQQAPQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=U6hT63Tr5ritf8lfFclla%2BgKg3c%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Tu sei bella, bella, sei bella In un cavo vicino a me Non è bella come te Su un mondo pure si gira Ti non mi raccomando cosa che ne esiste Ma che vuoi che tu vada Pure si non va ma non va niente provando Quanto è bella all'inizio senza fine durante Però stai nervoso E tutto che vuoi si dà ciò bella Ma non per l'altro tu vuoi dimostrare solo a te stessa Tu non dai mai corde, non ti piacere a comprensione Tu vuoi lasciare la dura che non ti leva Però fai un show, che ti insieme, insieme troppo Tuttengo prodotto a San Zieti e a Mumanigon",
+            "language": "Italian",
+            "durationSec": 31.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:14:40.387Z"
+          }
         }
       ]
     },
@@ -9696,13 +9751,13 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Ciao Enzo! Alice? Ciao Enzo! Caterina? Ciao Enzo! Scusa? Ciao Enzo! Marta? Ciao Enzo! Sita? Ah, si, le fallo, le ripelo! Ciao Enzo! Ehi, Enrico! Ciao Enzo! Margherita? Non hai Margherita? Marta, mi sei? Non mi viene! Ciao Enzo Tutti uguali sono Ciao Enzo Martina no Chi manca? Margherita no Sì Ciao Enzo Questa è Monica Ciao Enzo Ma chi è? Non mi dice chi c'era Aiutatemi Ciao Enzo Questo è Fausto Ciao Enzo Sì Sì Matteo Ciao Enzo Silde No? Silde non c'è mai Ciao Enzo Silde Lo state imitando Ciao Enzo Ciao Enzo Ciao Enzo Enzo ma è Matteo Ciao Enzo Ma l'ha diventata Ma l'ha diventata Ah l'ha diventata Ah si Elisa Porca miseria Ciao Enzo E Peppe Emanuele E c'è un altro però Ciao Enzo Ciao Enzo Ah Damiano Difficilissimo",
+            "transcript": "Ciao Enzo Alice Ciao Enzo Caterina Ciao Enzo Scusa? Ciao Enzo Marta Ciao Enzo Zitta Ciao Enzo Enrico Ciao Enzo Margherita Non è Margherita Marta Miserio Ciao Enzo Ciao Enzo! Tutti uguali sono? Ciao Enzo! Martina no? Chi manca? Margherita no? Sì! Ciao Enzo! Questa è Monica! Ciao Enzo! Ma chi è? Non mi sa chi c'era! Aiutatemi! Ciao Enzo! Questo è Fausto! Ciao Enzo! Sì! Sì, è arrivato! Matteo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo! Ciao Enzo Sid No? Sid non c'è mai Ciao Enzo Sid Lo state imitando Ciao Enzo Ciao Enzo Enzo ma sono Teo Ciao Enzo Ma l'ho divinata Ah l'ho divinata Ah si Elisa Che miseria Ciao Enzo E Peppe Emanuele E c'è un altro però Ciao Enzo Ciao Enzo Ah Damiano Difficilissimo",
             "language": "Italian",
             "durationSec": 108,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:10.882Z"
+            "updatedAt": "2026-09-02T10:14:44.116Z"
           }
         },
         {
@@ -9732,7 +9787,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:03:56.965Z"
+            "updatedAt": "2026-09-02T10:14:47.394Z"
           }
         },
         {
@@ -9757,7 +9812,16 @@
             "2025"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 46.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:15:51.487Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9778,7 +9842,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:31.602Z"
+            "updatedAt": "2026-09-02T10:15:53.521Z"
           }
         },
         {
@@ -9800,7 +9864,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:11:46.345Z"
+            "updatedAt": "2026-09-02T10:15:57.119Z"
           }
         },
         {
@@ -9814,7 +9878,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owvajARMzUDcKiIo5YifBBgdKQzDe3IqRWByEq~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2Fp9keC2InNwbkkGEt9RmPYjT3X0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti!",
+            "language": "Italian",
+            "durationSec": 7.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:00.797Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9827,7 +9900,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o0goTGFifWYeGte2a85YZAORUjQ4AvKaMgQfgP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qRzjHp7wuxys5XoYn5KwIkFuiG0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:03.127Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9840,7 +9922,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocA8k1FfRqEBBpBXC3DdsoFdAjdXgAfEwX2AIE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=UiNOVrRL%2FvesA8RR6yzzcCx4PgE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In this statement, aku yang paling bad di In this statement, aku cewek yang paling cantik Pake baju pasar, aku masih sabi Bua cewek yang bisa, jangan tak menyerah Kamu bisa juga, jadi kayak gua",
+            "language": "Italian",
+            "durationSec": 20.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:06.051Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9853,7 +9944,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o0zIWDQWQFsIqE9CZ0DGeIej1RALKYAAwCeUQm~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=xnAOXsgBzA6zpY3DxQTMLn8CPiI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 27.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:08.827Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9866,7 +9966,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocu2SCCfq2BUUnXNB8FEgkDKEjARDrsIIMfoQd~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=yo8SX7Bjk%2F%2BSLtohDRKeTkg0s64%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:30.987Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9879,7 +9988,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ooZPpPAHeAItWbSEBGjVP4DegILILIzxEwfQJb~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qhslRy2FPThGCCMWMvJNk3LakLg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "They gon' hate me regardless, that's why I do what I do, see me in person I'm flawless, I might just never",
+            "language": "Italian",
+            "durationSec": 6.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:34.004Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9892,7 +10010,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oo0CIOABVigcABOAa19PIOwAyiERfAvBI2mR9S~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HUlOGViUusZyydX%2FJP02xAUCe4M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:37.193Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9905,7 +10032,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ocAJEEAFoQf5KRGAurEgJ9Q5xwnBDfrBV2EqMD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=GybKdGkr7oUzXa2g7PjSBTtdTUo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "non c'è struttura, non c'è conseguenza, non c'è responsabilità per le nostre azioni sui bambini non c'è conseguenza, possiamo letteralmente tirare un cazzo in la lega con un reale gun e guarda cosa, Zeus va a tirare e probabilmente ti farà fuori da un gelo come la vostra storia è che voi fight, la vostra storia non è in realtà reale, non è reale non è vero hai passato sulle mie forze nere stai nero e voglio andare a un punto dove sono valutato voglio andare a un punto dove mi guardano come un asset e voglio crescere e penso che Promise farà questo per me e sono contenta non posso aspettare di imparare da qualcuno che ha preso che ha preso limoni e ha fatto limone periodo Prima di tutto non ho l'energia, non credo in questo, come ho detto, non sono lì per combattere i miei membri del cast, non è lo stesso, e come ho detto, ho dovuto tornare a vedere se ho la possibilità di essere in una posizione del cast, e non lo sono. I don't belong in the cast position I just don't me watching it in real life fold out what y'all see is not what I experience y'all think that this is y'all think it's funny y'all think it's funny because y'all only see bits and pieces of it what I witness on the back end is something I just don't want to deal with I don't care how much money you give me I don't want to experience that no more our money ain't good money",
+            "language": "Italian",
+            "durationSec": 117.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:17:26.119Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9918,7 +10054,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocFzLLCqV0DlF8fdCXWQAyMTIHAjSerQQf8Eoc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=vdtJgMMFfLbWSyEWHUDkw1loqUc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:17:30.511Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9931,7 +10076,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oUBIRNDgsq4fLfGqzT9cVAsECmjFQEo3EQAA2G~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=S7aj6tEeelJdIvPBo8Aswj0VEIs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 9.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:17:32.628Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9944,7 +10098,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/owteAWDDUIRLF2EfRqfCj8FKA94O89IuAEIWOI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=0p9o5bCtZ8jxBIA2%2BxEZpz8WwBQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:17:36.083Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9959,13 +10122,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYsvWEPgbI016CZRwx6kbAXiBl7PaB5EiVBET~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oc5YdTyaB0gvyw8jb1eNvuFjAfs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ci vediamo a domani.",
+            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai molto di nero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Se tu me vedi, si simba Se te vedi, si samba Se tu me vedi, si simba Se ti amarei, si simba Se ti amarei, si simba Se te vedi, si simba Se tu me vieni a tamba, io ti amarei Mami tu mi tieni",
             "language": "Italian",
             "durationSec": 60.2,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:58.463Z"
+            "updatedAt": "2026-09-02T10:18:15.678Z"
           }
         },
         {
@@ -9979,7 +10142,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/owUHsSWGlQWfR46QIi4AilGJLfeFAFmfuQVsoP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=M%2FQKaIDkDW4p3gOHgy9RDv%2BEY%2BE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 13.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:18:18.004Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -9992,7 +10164,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ooAlQIPNUHZW9WNNAGCWSfSmLDWQkQej3IIMYe~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=7Wa%2FSF58SvxKshONQNxvewlGgYs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Poi ho realizzato cosa è. C'è un uomo.",
+            "language": "Italian",
+            "durationSec": 9.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:18:19.990Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -13311,13 +13492,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYsvWEPgbI016CZRwx6kbAXiBl7PaB5EiVBET~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oc5YdTyaB0gvyw8jb1eNvuFjAfs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ci vediamo a domani.",
+            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai molto di nero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Se tu me vedi, si simba Se te vedi, si samba Se tu me vedi, si simba Se ti amarei, si simba Se ti amarei, si simba Se te vedi, si simba Se tu me vieni a tamba, io ti amarei Mami tu mi tieni",
             "language": "Italian",
             "durationSec": 60.2,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:58.463Z"
+            "updatedAt": "2026-09-02T10:18:15.678Z"
           }
         },
         {
@@ -14179,7 +14360,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oo0CIOABVigcABOAa19PIOwAyiERfAvBI2mR9S~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HUlOGViUusZyydX%2FJP02xAUCe4M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T10:16:37.193Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21094,7 +21284,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:03:56.965Z"
+            "updatedAt": "2026-09-02T10:14:47.394Z"
           }
         },
         {
