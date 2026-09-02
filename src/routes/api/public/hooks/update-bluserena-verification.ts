@@ -69,21 +69,28 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
             const meta = await metaRes.json();
             const sha = meta.sha;
 
-            // Leggi contenuto attuale
-            const branch = "main";
-            const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${STORE_PATH}?t=${Date.now()}`;
-            const rawRes = await fetch(rawUrl, {
-              headers: { "User-Agent": "update-bluserena-verification" },
-            });
+            // Il file supera 1 MB: l'endpoint contents non restituisce il
+            // contenuto, si scarica il blob identificato dallo sha appena letto
+            // (coerente per costruzione, a differenza della CDN raw).
+            const blobRes = await fetch(
+              `https://api.github.com/repos/${REPO}/git/blobs/${sha}`,
+              {
+                headers: {
+                  Authorization: `token ${token}`,
+                  Accept: "application/vnd.github.raw",
+                  "User-Agent": "trendzn-bot",
+                },
+              },
+            );
 
-            if (!rawRes.ok) {
+            if (!blobRes.ok) {
               return Response.json(
-                { ok: false, error: `Lettura raw fallita: ${rawRes.status}` },
+                { ok: false, error: `Lettura blob fallita: ${blobRes.status}` },
                 { status: 500 },
               );
             }
 
-            const raw = await rawRes.text();
+            const raw = await blobRes.text();
             const store = raw.trim() ? JSON.parse(raw) : { canali: [] };
 
             // Trova e aggiorna il post
