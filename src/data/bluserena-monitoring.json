@@ -1374,13 +1374,14 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 94.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:24:58.639Z"
+            "updatedAt": "2026-09-02T16:09:52.133Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -3734,7 +3735,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:02.368Z"
+            "updatedAt": "2026-09-02T15:59:49.165Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -11275,13 +11276,14 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "... Grazie mille! Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 67,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:25.696Z"
+            "updatedAt": "2026-09-02T16:02:06.620Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -25203,14 +25205,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Cacati curumba, gavonumba, gannaia gale, misina, nesuca, singa, kare, nazua, vacate, yamba, kobe, vitamina, kusabira, bafa, omomu, kaze, yafumba, kone, bufa, kobe, yazala, moli, singo, maba. Dababoke, rette, mikose, mitima, nefuna, simpate, kalamu, lenjibaka, mumpendu, runewe, muta, ansasula, sifayo, mungu, yarishimbalira, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:57:18.183Z"
+            "updatedAt": "2026-09-02T15:52:52.719Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -25327,14 +25328,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4eU3nAKeAQnodeXFGjVnICWrID4LIUkIVkQy3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=s9P044ZQpZldVKlxj4tAHJBb2VY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Maria, mano qua, il Signore è ciò che hai in me, e la tua vita, la tua vita, la tua vita, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:04:46.106Z"
+            "updatedAt": "2026-09-02T15:54:55.674Z"
           },
           "ocrData": {
             "textOnScreen": "Happening now Lillian Nabaasa Live\nConcert Serena Hotel Kampala\nConcert Serena Hotel Kampala 3",
@@ -25366,7 +25366,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T13:06:36.621Z"
+            "updatedAt": "2026-09-02T15:57:10.957Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -25451,14 +25451,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYBE1cFlLQD4lkFA7cogfiEnqpQfRTQBUqsKXB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=CSp5G55ZjLltoqJwCOzxeC8Fo5E%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:09:48.289Z"
+            "updatedAt": "2026-09-02T15:57:49.545Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -25766,7 +25765,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T13:22:20.222Z"
+            "updatedAt": "2026-09-02T15:59:10.170Z"
           },
           "ocrData": {
             "textOnScreen": "3 LLCC",
@@ -25876,7 +25875,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:02.368Z"
+            "updatedAt": "2026-09-02T15:59:49.165Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -25949,13 +25948,14 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "... Grazie mille! Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 67,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:25.696Z"
+            "updatedAt": "2026-09-02T16:02:06.620Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26027,14 +26027,13 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "You can be the best, you can be the King Kong banging on your chest You can beat the world, you can beat the war You can talk the guy go banging on his door You can throw your hands up, you can beat the clock You can move a mountain, you can break rocks You can be a master, don't wait for luck Dedicate yourself and you can find yourself Standing in the hall of fame And the world's gonna know your name Ciao Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 91.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:35:41.453Z"
+            "updatedAt": "2026-09-02T16:03:46.045Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26216,14 +26215,13 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "noi stiamo andando a cena ragazzi guardate che belle come si chiama qui ti cerco fammi vedere allora calzedoni e pantalone borsa bella calzedoni tu che fitti c'è che di quando sei bello tutto e te Geni e tu e invece papà",
+            "language": "Italian",
+            "durationSec": 47,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:44:41.390Z"
+            "updatedAt": "2026-09-02T16:06:49.037Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26416,13 +26414,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 94.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:24:58.639Z"
+            "updatedAt": "2026-09-02T16:09:52.133Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26476,14 +26475,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osKIbjUrQVjHIlWILBA2OggGAAeqw1iC4veRek~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2B4iJWQiirTtQHt9wQK2vMN2%2Bvi0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 130.4,
             "model": "whisper-large-v3",
-            "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T13:52:59.744Z"
+            "updatedAt": "2026-09-02T16:12:38.322Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26514,7 +26512,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T13:55:58.848Z"
+            "updatedAt": "2026-09-02T16:15:00.032Z"
           },
           "ocrData": {
             "textOnScreen": "daga\nNEMACOLIN",
@@ -26608,7 +26606,7 @@
             "status": "transcribe_failed",
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T14:01:58.697Z"
+            "updatedAt": "2026-09-02T16:18:05.666Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26639,6 +26637,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:33:56.881Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 66.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:19:08.502Z"
           }
         },
         {
@@ -26661,6 +26668,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:34:22.643Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:19:11.044Z"
           }
         },
         {
@@ -26682,6 +26698,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:34:29.093Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Legendary lovers, legendary, legendary lovers",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:19:13.364Z"
           }
         },
         {
@@ -26704,6 +26729,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:34:47.550Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Hotel Shibari Stulum, Mexico. Si trova nella zona hotelera di Stulum. Questo hotel è esclusivo per adulti. Questo hotel ha un senote proprio che è la gioia del complejo. chiedono permesso agli aluxi per poter usare il cenote sono affascinata con questo hotel, senza dubbio, torneremo",
+            "language": "Italian",
+            "durationSec": 49.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:20:16.411Z"
           }
         },
         {
@@ -26725,6 +26759,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:35:01.086Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:22:30.946Z"
           }
         },
         {
@@ -26747,6 +26791,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:35:10.536Z"
+          },
+          "audioAnalysis": {
+            "transcript": "take the trip get the boo take the time grab the car get the ticket plane ride train ride however you need to get there get there Sabira Suites there's three locations I think one in Northbrook, Illinois one on the south side of Chicago penso che sia Frankfurt e poi c'è un altro in Indiana. Questo è di Northbrook 10 di 10. Dice quasi come un vero e proprio, quindi sei secolato, sai, non hai vicini diretti, hai il tuo suo privato pool in suite, è solo a 4 metri profondi, quindi se non sei un sguardo, non preoccuparti, abbiamo portato i nostri piccoli floaties, ok, questo abbiamo avuto un vittorio, puoi Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 69.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:23:10.527Z"
           }
         },
         {
@@ -26768,6 +26821,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:35:16.793Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:26:13.942Z"
           }
         },
         {
@@ -26882,6 +26945,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:36:18.981Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Io volevo andare a terapia, ma il mio GPS mi ha mandato qui. Buonanotte, buonanotte, buonanotte, buonanotte",
+            "language": "Italian",
+            "durationSec": 38.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:27:17.177Z"
           }
         },
         {
@@ -26933,6 +27005,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T15:36:35.140Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Now turn me up",
+            "language": "Italian",
+            "durationSec": 37,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:27:58.753Z"
           }
         },
         {
@@ -26955,6 +27036,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:37:08.044Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ho appena scoperto che c'è un destino di rilievo di Hidden Gem nel paese di Subang, un paese che offre calma con un ambiente freddo e si unisce direttamente con l'alma. Conosci, Safia Hotel e Resort Theater, che si trova a piedi di Subang, questo resort è un paese di rilievo di udara fresca, di piazza verde asri e di ambiente calmo che si sentono direttamente dal mattino. È molto adatto per il rilievo o per la rilievo con la famiglia. Le opzioni di camere sono diverse a base dei necessari. Una delle favorite è la cabina di relax con capacità di 4-6 persone che è completato con AC, wifi, smart tv con Netflix, sofa, camere di bambino moderne, fino a colam rendam aereo private che è molto adatto per il piacere di un'aereo freddo. La facilità è anche completata, inizialmente dal ristorante, colam rendam outdoor, playground, mini zoo, area billiard, fino all'area lunga che è adatta per il gathering con la famiglia o l'ambito. La locazione è strategica, solo qualche minuto di viaggio da un'area di viaggio di bambino aereo freddo. Andiamo, riserviamoci su Instagram, o cliccate sull'occasione di lato sinistro sotto la video, e non dimenticate di iscrivervi al nostro canale per le altre ricomentazioni di staycation.",
+            "language": "Italian",
+            "durationSec": 57.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:30:03.019Z"
           }
         },
         {
@@ -26977,6 +27067,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:37:18.109Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:33:05.535Z"
           }
         },
         {
@@ -26999,6 +27099,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:37:28.200Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Mi hanno fatto questo commento nel video precedente. Non hanno lavori nei quarti. Devi condividere i lavori. E la verità è che tu puoi avere la tua cabana con il tuo proprio lavori privato completo dentro. Qui non condividi il lavori con nessuno. Hai la tua propria ducha, inodoro e privacità totale durante tutta la tua stanza. Inoltre, la comodità della tua cabana. Ti regalano passi gratis per tutti al parco acquatico e al zoo, quindi non ti lasci confondere. Tocca il bottone verde di ubicazione sopra il mio nome. Per fare la tua riservazione, i prezzi sono da 95 dollari la notte. ricorda che puoi essere elegibile per un 50% nella tua prima riservazione con TikTok",
+            "language": "Italian",
+            "durationSec": 32.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T16:33:08.642Z"
           }
         },
         {
@@ -32993,14 +33102,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Cacati curumba, gavonumba, gannaia gale, misina, nesuca, singa, kare, nazua, vacate, yamba, kobe, vitamina, kusabira, bafa, omomu, kaze, yafumba, kone, bufa, kobe, yazala, moli, singo, maba. Dababoke, rette, mikose, mitima, nefuna, simpate, kalamu, lenjibaka, mumpendu, runewe, muta, ansasula, sifayo, mungu, yarishimbalira, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T12:57:18.183Z"
+            "updatedAt": "2026-09-02T15:52:52.719Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -34658,13 +34766,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 94.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T15:24:58.639Z"
+            "updatedAt": "2026-09-02T16:09:52.133Z"
           },
           "ocrData": {
             "textOnScreen": null,
