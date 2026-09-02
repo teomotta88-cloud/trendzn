@@ -1019,6 +1019,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:51.423Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:19.390Z"
           }
         },
         {
@@ -1053,6 +1061,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:54.627Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:27.757Z"
           }
         },
         {
@@ -1085,6 +1101,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:57.754Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:35.571Z"
           }
         },
         {
@@ -1115,6 +1140,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:18:34.813Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:50.260Z"
           }
         },
         {
@@ -1145,6 +1178,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:04.756Z"
+          },
+          "ocrData": {
+            "textOnScreen": "al commento di A\nè possibile vedere la\nspiaggia? È\nRispondi al commento di\nvallyt82\nspiaggia?\n&W è possibile vedere la",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:08:13.680Z"
           }
         },
         {
@@ -1176,6 +1218,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:06.839Z"
+          },
+          "ocrData": {
+            "textOnScreen": "glia StO\nChe ti sveg 7\nlas glia\nQuando sei in\nhe ti svegli alle\nimpostate\nMa sei talmente abituata a è,\nsvegliarti presto\nMa sei talmente abituata\nhe glia",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:08:30.376Z"
           }
         },
         {
@@ -1208,6 +1259,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:34:06.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": "amantha\nniappucci\nRes Sa bile\nDel Negro\nstruttore Q SERENUSA\nNITTI\nENUSA",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:08:48.898Z"
           }
         },
         {
@@ -1240,6 +1300,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:14.622Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:08:57.548Z"
           }
         },
         {
@@ -1272,6 +1340,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:16.819Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:09:16.003Z"
           }
         },
         {
@@ -1305,6 +1381,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:23.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:09:33.717Z"
           }
         },
         {
@@ -1336,6 +1420,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:25.991Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:02.248Z"
           }
         },
         {
@@ -1369,6 +1461,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:13:43.632Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:17.938Z"
           }
         },
         {
@@ -1399,6 +1499,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:38.317Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserena",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:23.303Z"
           }
         },
         {
@@ -1428,6 +1537,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:49:38.709Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Mario\nde masi\nCosa mi dici del blu\nSerena\nCalaserena ???devo y\nandare il 23\nCALA\nCalaserena ???devo Bai\nCALA SERENA\nde masi 4\nCalaserena ???devo i\nCALA SERENAW\nCalaserena ???devo\nCosa mi dici del blu af\nCalaserena ???devo 5\nandare il 23 we i ar.",
+            "confidence": 0.843,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:46.984Z"
           }
         },
         {
@@ -1459,6 +1577,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:02:32.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Borrelli\nERENA\nNicola",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:58.576Z"
           }
         },
         {
@@ -1491,6 +1618,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:50.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:11:02.591Z"
           }
         },
         {
@@ -1523,6 +1658,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:43:45.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NITE",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:11:13.645Z"
           }
         },
         {
@@ -1555,6 +1699,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:00.683Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SI SONO\nDobbiamo sapere\nda dove veniamo",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:11:20.741Z"
           }
         },
         {
@@ -1590,6 +1743,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:06.018Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Come glielo spieghi a chi\nè mai andato in un\nCome glielo\nvillaggio\nnon è mai andato in un",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:11:32.039Z"
           }
         },
         {
@@ -1619,6 +1781,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:47:24.735Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:00.945Z"
           }
         },
         {
@@ -1650,6 +1820,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:17.585Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DON'T STO",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:06.999Z"
           }
         },
         {
@@ -1682,6 +1861,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:18.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA\nB ERENA",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:13.796Z"
           }
         },
         {
@@ -1713,6 +1901,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:28.630Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A LOVE\n5.) 4 LOVE",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:17.841Z"
           }
         },
         {
@@ -1742,6 +1939,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:34.608Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nCiao,potrei sapere quanto\nlunga la spiaggia del\nCalaSerena (a noi piace fare\nlunghe passeggiate sulla\nspiaggia) e se è vero come\ndicono alcune recensioni /4\nche i lettini sono\nappiccicati?Grazie mille\nCALA\nLibera74\nCiao, potrei sapere quanto è\ni dicono alcune recensioni\nri spiaggia) e se è vero come\ndicono alcune recensioni\nCiao,potrei sapere è\nCALA SERENA",
+            "confidence": 0.886,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:37.229Z"
           }
         },
         {
@@ -1771,6 +1977,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:03:38.999Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:47.113Z"
           }
         },
         {
@@ -10317,6 +10531,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:43:45.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NITE",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:11:13.645Z"
           }
         },
         {
@@ -11685,6 +11908,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:18.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA\nB ERENA",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:13.796Z"
           }
         },
         {
@@ -12403,6 +12635,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:47:24.735Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:00.945Z"
           }
         },
         {
@@ -12535,6 +12775,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:49:38.709Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Mario\nde masi\nCosa mi dici del blu\nSerena\nCalaserena ???devo y\nandare il 23\nCALA\nCalaserena ???devo Bai\nCALA SERENA\nde masi 4\nCalaserena ???devo i\nCALA SERENAW\nCalaserena ???devo\nCosa mi dici del blu af\nCalaserena ???devo 5\nandare il 23 we i ar.",
+            "confidence": 0.843,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:46.984Z"
           }
         },
         {
@@ -12865,6 +13114,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:18:34.813Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:50.260Z"
           }
         },
         {
@@ -14106,6 +14363,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:13:43.632Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:17.938Z"
           }
         },
         {
@@ -14266,6 +14531,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:18:34.813Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:50.260Z"
           }
         },
         {
@@ -14928,6 +15201,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:34:06.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": "amantha\nniappucci\nRes Sa bile\nDel Negro\nstruttore Q SERENUSA\nNITTI\nENUSA",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:08:48.898Z"
           }
         },
         {
@@ -15480,6 +15762,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T11:43:45.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NITE",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:11:13.645Z"
           }
         },
         {
@@ -16724,6 +17015,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:02:32.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Borrelli\nERENA\nNicola",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:10:58.576Z"
           }
         },
         {
@@ -19577,6 +19877,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:23.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:09:33.717Z"
           }
         },
         {
@@ -20451,6 +20759,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:14.622Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:08:57.548Z"
           }
         },
         {
@@ -24889,6 +25205,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T10:37:18.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA\nB ERENA",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:12:13.796Z"
           }
         },
         {
@@ -25309,6 +25634,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:02:23.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:09:33.717Z"
           }
         },
         {
@@ -26416,6 +26749,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T09:01:57.754Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T13:07:35.571Z"
           }
         },
         {
