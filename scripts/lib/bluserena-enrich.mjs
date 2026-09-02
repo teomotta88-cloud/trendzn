@@ -44,7 +44,7 @@ function intEnv(name, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
-export async function runEnrichment({ field, title, commitMessage, processPost }) {
+export async function runEnrichment({ field, version = 0, title, commitMessage, processPost }) {
   const maxPosts = intEnv("MAX_POSTS", 400);
   const maxMinutes = intEnv("MAX_MINUTES", 300);
   const batchSize = intEnv("BATCH_SIZE", 25);
@@ -60,6 +60,7 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
 
   let eligible = 0;
   let done = 0;
+  let obsoleti = 0;
   const queue = [];
 
   for (const { account } of eachAccount(store)) {
@@ -67,22 +68,31 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
     if (!isInDateRange(account.date)) continue;
     eligible++;
 
-    // Solo i record scritti da QUESTO script contano come già elaborati: si
-    // riconoscono dallo `status`. I record legacy della vecchia analisi LLM
-    // non ce l'hanno e hanno transcript/testo nulli, quindi vanno rifatti —
-    // altrimenti resterebbero esclusi per sempre (erano 100 post).
+    // Un record conta come già elaborato solo se lo ha scritto QUESTO script
+    // (si riconosce dallo `status`) E con l'algoritmo corrente (`version`).
+    // I due casi che questo esclude sono entrambi reali: i record legacy della
+    // vecchia analisi LLM, senza status e con testo nullo, e i record prodotti
+    // da una versione precedente dell'estrattore, che vanno rifatti quando
+    // l'algoritmo migliora — senza doversi ricordare quale flag passare.
     const existing = account[field];
-    if (existing?.status) {
-      if (!reprocessFailed || existing.status === "ok") {
-        done++;
-        continue;
-      }
+    const corrente = Boolean(existing?.status) && (existing.version ?? 0) >= version;
+
+    if (!corrente) {
+      if (existing?.status) obsoleti++;
+      queue.push(account);
+      continue;
+    }
+    if (!reprocessFailed || existing.status === "ok") {
+      done++;
+      continue;
     }
     queue.push(account);
   }
 
   console.log(`Post video nell'intervallo: ${eligible}`);
-  console.log(`Già elaborati: ${done}`);
+  console.log(
+    `Già elaborati: ${done}` + (obsoleti ? ` (${obsoleti} da rifare: versione precedente)` : ""),
+  );
   console.log(`Da elaborare: ${queue.length} (in coda ora: ${Math.min(queue.length, maxPosts)})\n`);
 
   if (!queue.length) {
@@ -90,11 +100,13 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
     return;
   }
 
-  // Un guasto sistematico (TikTok che blocca i download, una chiave scaduta)
-  // marcherebbe altrimenti centinaia di post come "tentati e falliti",
-  // escludendoli dalle run successive. Dopo N fallimenti di fila senza un
-  // solo esito buono si abortisce senza salvare nulla, e il workflow va rosso.
-  const failFast = intEnv("FAIL_FAST", 5);
+  // Un guasto sistematico (TikTok che blocca i download, una quota Groq
+  // esaurita) marcherebbe altrimenti centinaia di post come "tentati e
+  // falliti", escludendoli dalle run successive. Dopo N fallimenti CONSECUTIVI
+  // si abortisce: i post della serie non vengono salvati, quelli buoni già
+  // elaborati sì. Il controllo vale a ogni punto della run, non solo in
+  // apertura: su 1500 post la quota si esaurisce a metà, non all'inizio.
+  const failStreak = intEnv("FAIL_STREAK", 10);
   // no_text/no_speech sono esiti legittimi: il video semplicemente non aveva
   // testo o parlato, la pipeline ha funzionato.
   const HEALTHY = new Set(["ok", "no_text", "no_speech"]);
@@ -106,7 +118,9 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
   let committed = 0;
   let stoppedBy = null;
   let healthy = 0;
-  let consecutiveFailures = 0;
+  // URL dei fallimenti consecutivi in coda: se il freno scatta vanno tolti da
+  // `pending` prima di salvare, così restano da rifare.
+  let streak = [];
 
   const flush = async () => {
     if (!pending.size) return;
@@ -145,24 +159,26 @@ export async function runEnrichment({ field, title, commitMessage, processPost }
       record = { status: "error", error: String(err?.message ?? err).slice(0, 200) };
     }
 
+    record.version = version;
     record.updatedAt = new Date().toISOString();
     stats[record.status] = (stats[record.status] ?? 0) + 1;
     pending.set(account.url, record);
 
     if (HEALTHY.has(record.status)) {
       healthy++;
-      consecutiveFailures = 0;
+      streak = [];
     } else {
-      consecutiveFailures++;
-      if (!healthy && consecutiveFailures >= failFast) {
-        // Niente flush: i post restano non marcati e la prossima run li rivede.
-        pending.clear();
+      streak.push(account.url);
+      if (streak.length >= failStreak) {
+        for (const url of streak) pending.delete(url);
         console.error(
-          `\n❌ ${consecutiveFailures} fallimenti di fila e nessun esito buono: ` +
-            "sembra un guasto sistematico, non i singoli post.",
+          `\n❌ ${streak.length} fallimenti consecutivi: sembra un guasto ` +
+            "sistematico, non i singoli post.",
         );
         console.error(`   Ultimo errore: ${record.reason ?? record.status}`);
-        console.error("   Niente salvato: i post restano da elaborare.");
+        console.error(`   Questi ${streak.length} post restano da elaborare.`);
+        // I post andati bene prima della serie sono lavoro valido: si salvano.
+        await flush();
         throw new Error("Interrotto per fallimenti consecutivi");
       }
     }

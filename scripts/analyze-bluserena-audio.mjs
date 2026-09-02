@@ -25,6 +25,10 @@ import { runEnrichment } from "./lib/bluserena-enrich.mjs";
 import { transcribeAudioBuffer } from "./lib/groq-whisper.mjs";
 import { assertBinaries, cleanup, downloadVideo, run } from "./lib/bluserena-media.mjs";
 
+// Si alza quando cambia il modo in cui si produce la trascrizione: i record
+// scritti da una versione precedente vengono rifatti da soli alla run dopo.
+const VERSION = 1;
+
 const MODEL = process.env.WHISPER_MODEL ?? "whisper-large-v3";
 // Contenuti italiani: forzare la lingua riduce le allucinazioni di Whisper sui
 // clip corti o con sola musica. WHISPER_LANGUAGE="" per lasciarlo autodetect.
@@ -168,6 +172,7 @@ console.log("");
 try {
   await runEnrichment({
     field: "audioAnalysis",
+    version: VERSION,
     title: "Trascrizione audio",
     commitMessage: (n) => `chore: trascrizione audio su ${n} post Bluserena [trendzn-bot]`,
     processPost: transcribePost,
