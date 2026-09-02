@@ -2802,7 +2802,16 @@
             "vacanza",
             "mare"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:06.694Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -2825,7 +2834,16 @@
             "capo",
             "divertimento"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:07.918Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -2846,7 +2864,16 @@
             "cibo",
             "hotel 4 stelle"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:09.122Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -2867,7 +2894,16 @@
             "divertimento",
             "social"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:10.328Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -2886,7 +2922,16 @@
             "buon lunedì",
             "Monday"
           ],
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1",
+            "updatedAt": "2026-09-02T07:54:11.528Z"
+          }
         },
         {
           "platform": "tiktok",
