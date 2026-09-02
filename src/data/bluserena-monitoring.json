@@ -22489,6 +22489,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:45.030Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:05.568Z"
           }
         },
         {
@@ -22511,6 +22519,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:47.392Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:13.176Z"
           }
         },
         {
@@ -22533,6 +22549,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:54.409Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(WOMAN,\nSTRONG",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:25.119Z"
           }
         },
         {
@@ -22555,6 +22580,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:11:30.443Z"
+          },
+          "ocrData": {
+            "textOnScreen": "30.8.2026 Lillian Nabaasa\nlive in",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:32.154Z"
           }
         },
         {
@@ -22577,6 +22611,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:11:32.882Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MEMBERS ONLY PRIVILEGES\n@SERENA HOTELS\nMEMBERS\n@SERENA",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:39.885Z"
           }
         },
         {
@@ -22599,6 +22642,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:35.677Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Irene cries after her E\nhusband joins her on stage\ni Irene cries after her\nIrene cries after her\nBAYIMBA\nFESTIVAL SOTH È\nOF THE ARTS E\nhusband joins her on stage i",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:50.226Z"
           }
         },
         {
@@ -22621,6 +22673,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:38.962Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kampala Serena",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:58.077Z"
           }
         },
         {
@@ -22643,6 +22704,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:43.424Z"
+          },
+          "ocrData": {
+            "textOnScreen": "p \\NAMATOVU",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:11:09.343Z"
           }
         },
         {
@@ -22665,6 +22735,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:47.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HON MIN JUSTINE NAMEERE [i\nARRIVES AT IRENE NAMATOVU\nCONCERT SERENA HOTEL\nHON MIN JUSTINE NAMEERE\nARRIVES AT IRENE NAMATOUU\nARRIVES AT IRENE\nCONCERT SERENA HOTEL gg",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:11:17.552Z"
           }
         },
         {
@@ -22687,6 +22766,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:52.070Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hon Namere at Irene\nNamatoyu\nconcert\n3 airtel\nNamatovu concert",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:11:25.693Z"
           }
         },
         {
@@ -22709,6 +22797,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:55.149Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HON MIN JUSTINE NAMEERE\nARRIVES AT IRENE NAMATOVU\nCONCERT SERENA HOTEL\n7 HON MIN JUSTINE NAMEERE\nARRIVES AT IRENE",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:11:37.068Z"
           }
         },
         {
@@ -22731,6 +22828,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:57.522Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:02.274Z"
           }
         },
         {
@@ -22753,6 +22858,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:00.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:15.380Z"
           }
         },
         {
@@ -22775,6 +22888,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:06.357Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MIN JUSTINE NAMEERE\nARRIVES AT IRENE NAMATOVU\nCONCERT SERENA HOTEL\nHON MIN JUSTINE NAMEERE\nARRIVES AT IRENE\nP CONCERT SERENA HOTEL\nARRIVES AT IRENE NAMATOVU 4\n4 HON MIN JUSTINE NAMEERE\nN ARRIVES AT IRENE NAMATOVU",
+            "confidence": 0.823,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:29.415Z"
           }
         },
         {
@@ -22797,6 +22919,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:16.551Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happy;\nHappy family,",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:39.198Z"
           }
         },
         {
@@ -22819,6 +22950,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:33.378Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lwasa\nconcert i\nLwasa kwanjura At Irene A\nconcert Organic\nLwasa At Irene\nConcert y\nSCARS 4 i\nLwasalkwanjura At Irene Namatovu\ny ‘concert",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:51.490Z"
           }
         },
         {
@@ -22841,6 +22981,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:38.034Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CENTURY\nENTURY HOTEL\n15616528 Duly 21}\nG MAUR\nKAMPALA",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:00.662Z"
           }
         },
         {
@@ -22863,6 +23012,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:46.048Z"
+          },
+          "ocrData": {
+            "textOnScreen": "emay\\amaku\nRema ni\nRema\nRema Namakula",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:09.135Z"
           }
         },
         {
@@ -22885,6 +23043,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:50.959Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:30.055Z"
           }
         },
         {
@@ -22907,6 +23073,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:15:02.940Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:38.859Z"
           }
         },
         {
@@ -22929,6 +23103,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:15:07.062Z"
+          },
+          "ocrData": {
+            "textOnScreen": "adidas’\nC ididgs\ncdidas",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:48.772Z"
           }
         },
         {
@@ -22951,6 +23134,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:15:14.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BEST\nINTERNATIONAL i\nCOMES,",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:57.729Z"
           }
         },
         {
@@ -22973,6 +23165,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:16:50.917Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:15.153Z"
           }
         },
         {
@@ -22995,6 +23195,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:17:41.978Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MIN JUSTINE NAMEERE\nAT IRENE NAMATOVU CONCERT AT i\nSERENA HOTEL\nHON MIN JUSTINE NAMEERE\nAT IRENE NAMATOVU CONCERT AT\na SERENA HOTEL\nSEAN\nSERENRHOTEL\nHON MIN JUSTINE",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:25.367Z"
           }
         },
         {
@@ -23017,6 +23226,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:18:09.205Z"
+          },
+          "ocrData": {
+            "textOnScreen": "al food ast\nserena hotel food taste test",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:35.312Z"
           }
         },
         {
@@ -28466,6 +28684,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:43.424Z"
+          },
+          "ocrData": {
+            "textOnScreen": "p \\NAMATOVU",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:11:09.343Z"
           }
         },
         {
@@ -28689,6 +28916,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:18:09.205Z"
+          },
+          "ocrData": {
+            "textOnScreen": "al food ast\nserena hotel food taste test",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:35.312Z"
           }
         },
         {
@@ -28711,6 +28947,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:00.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:15.380Z"
           }
         },
         {
@@ -28764,6 +29008,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:10:47.392Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:13.176Z"
           }
         },
         {
@@ -28825,6 +29077,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:33.378Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lwasa\nconcert i\nLwasa kwanjura At Irene A\nconcert Organic\nLwasa At Irene\nConcert y\nSCARS 4 i\nLwasalkwanjura At Irene Namatovu\ny ‘concert",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:51.490Z"
           }
         },
         {
@@ -28869,6 +29130,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:16.551Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happy;\nHappy family,",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:39.198Z"
           }
         },
         {
@@ -28991,6 +29261,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:15:02.940Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:38.859Z"
           }
         },
         {
@@ -29061,6 +29339,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:57.522Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:12:02.274Z"
           }
         },
         {
@@ -29083,6 +29369,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:11:30.443Z"
+          },
+          "ocrData": {
+            "textOnScreen": "30.8.2026 Lillian Nabaasa\nlive in",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:10:32.154Z"
           }
         },
         {
@@ -29249,6 +29544,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:12:55.149Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HON MIN JUSTINE NAMEERE\nARRIVES AT IRENE NAMATOVU\nCONCERT SERENA HOTEL\n7 HON MIN JUSTINE NAMEERE\nARRIVES AT IRENE",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:11:37.068Z"
           }
         },
         {
@@ -29271,6 +29575,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:17:41.978Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MIN JUSTINE NAMEERE\nAT IRENE NAMATOVU CONCERT AT i\nSERENA HOTEL\nHON MIN JUSTINE NAMEERE\nAT IRENE NAMATOVU CONCERT AT\na SERENA HOTEL\nSEAN\nSERENRHOTEL\nHON MIN JUSTINE",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:14:25.367Z"
           }
         },
         {
@@ -29689,6 +30002,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:13:50.959Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:13:30.055Z"
           }
         },
         {
