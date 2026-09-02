@@ -1374,13 +1374,14 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 94.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:23.724Z"
+            "updatedAt": "2026-09-02T13:52:54.675Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -22677,13 +22678,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 94.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:23.724Z"
+            "updatedAt": "2026-09-02T13:52:54.675Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -22705,7 +22707,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/owCAPU5zIEEMWPYMiAaiBFBlnBiTRAoQcAAAC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=f39mYdFnJz932w3MDCT79CpLZ5k%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao!",
+            "language": "Italian",
+            "durationSec": 57.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:52:58.221Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22718,7 +22729,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osKIbjUrQVjHIlWILBA2OggGAAeqw1iC4veRek~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2B4iJWQiirTtQHt9wQK2vMN2%2Bvi0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:52:59.744Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22731,7 +22752,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o8qBYLWtiKCDIaiA0OtA5rwfSjyIAmCROIivMT~tplv-tiktokx-dmt-logom:tos-useast8-i-0068-tx2/oQtEqiOvi65AZCIISARPWlLABZaBA76NdErnA.image?dr=9634&x-expires=1788433200&x-signature=%2FMqgQv2vy04s0147Pg8ToMBUFnI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:55:58.848Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22744,7 +22775,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEBCkBiOaEBZW4AAcqAwfqiQ13I2IjQAKAi6TB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=FhHCEegZiv%2FuELxGdaOcD7fZPvc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 47.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:56:41.258Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22757,7 +22797,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooIRIUqAQZViLznJDBIdsSFtQMJBegfuEAExGl~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zOUb4Jr4IaM9oXIHoHem7td7HmM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi siamo a Blue Green Resort a 1,5 ore di distanza da Diyarbakır. Questo è Blue Green Resort Hotel a 1,5 ore di distanza da Diyarbakır, a Elazığ. Qui potete abitare nei bungalow a partecipa, in appartamenti o in caravan. Noi abbiamo preferito il bungalow e vi vogliamo portare velocemente nel nostro luogo. In questo luogo potete abitare 4 persone. Inoltre, c'è anche un'espedita e un plage di questo edificio. È un piacere stare a piedi e guardare il sole. Io amavo la parte più scura, ma i miei figli hanno avuto un'esplosione in un'acqua. Qui c'è un ristorante dove potete stare quando volete vedere la vista del lago. Il ristorante è anche per il ristorante. Dopo avervi mostrato il ristorante, vi faccio un ristorante. Se non volete fare il ristorante, potete preferire il ristorante come noi. Per i tre anni, preferiamo questo ristorante. Aggiungo i dettagli del ristorante.",
+            "language": "Italian",
+            "durationSec": 55.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T13:59:05.194Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22770,7 +22819,17 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okhPyIIIB9x0AAHHwifTAZHKJiVjA1CCYzgI64~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=E%2B4zQvXVoPzZfSiQdJCDuz3vk%2BE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-02T14:01:58.697Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28618,13 +28677,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
-            "language": "Italian",
-            "durationSec": 94.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:23.724Z"
+            "updatedAt": "2026-09-02T13:52:54.675Z"
           },
           "ocrData": {
             "textOnScreen": null,
