@@ -17489,7 +17489,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8ERzXIIfanqUBD0BgfVFIAUFRIrK6AkBIiqhE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bBSaDtNBcGsjMVgBcX6%2F3sFFhWc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica a tutti",
+            "language": "Italian",
+            "durationSec": 35,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:19:00.414Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17502,7 +17511,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMA8aopQAxARBIbGvYPBamlVEiY2OiCIuXC19~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=5NJkhkeDCwcMFONz%2FKXJJ31f8lo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:19:03.901Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17515,7 +17533,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQAEdwnMAiImuCLIuaBrYXPdSE6oFijrBicI8~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ixd2GhD3TkQ9QPiVFBNALveXZm4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:19:05.918Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17528,7 +17555,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0Azv7DwIiAIpdMAEm1CQBEASI1tur2fwAvimI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=luIBBeURmM5ZW1JlULNEDm2zsa8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:07.722Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17541,7 +17577,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogGIG4OnQCtEXQI0zejqImIDWUgeVAtIDRAfLV~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MfhQSToWBeHH4hKKaYZrLUEjbMo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 47.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:31.523Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17554,7 +17599,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUwii8SfMDIVWqJI7hQaLegrEC4gwkVAtejnUA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=eiRMTLSieKho66C%2FpLJeqAEEylE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:34.693Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17567,7 +17621,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocvBmDcDqBgxNm3FEYEIFAIfEBbIfizgCRIHaZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hFyVuFxXGPK6OUwIvMwG%2BtZljYo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mani ci muti a singo urungi, a vasica de tu n'etela, cano che casca un'intera e camma sbaglio cammino un'amore. E via mafisi a singo cubi mani, a vasica de tu munila, ne un'quant'anno...",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:37.542Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17580,7 +17643,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooSfLFDiAUeRQDhLI1sBnqkFSLEEiqIUgGBIIP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hy0nh8hDMY2TFIispr75vNOBgoM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 14.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:42.128Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17593,7 +17665,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oExI5LsgQe7RUE6FM61GeQWGfFALOIKAf3qpQ2~tplv-tiktokx-dmt-logom:tos-useast8-i-0068-tx2/oEBI4gDgFA3IeL6tAjNYAEfIlhJEIqAfAUiXLE.image?dr=9634&x-expires=1788433200&x-signature=rIzr9xmbxYEzvY7eMBrEZEPy4iU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:44.627Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17606,7 +17687,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oYByqqZLIAUOhIidzfIcCPxiRivHTAyrH5AEi1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dTig%2F5WevJqgsjl21W%2FxAKkfetw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:47.034Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17619,7 +17709,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o4KvkBTiuBun76ymiI4A37asBEEAdgVBpiAAu~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XF%2FnXwGQs%2BxMj8uMenh1hM6pxSo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Chiudere il ruolo non importa quando sei in vacanza, ma quando ti dico che mi aspetto i ruoli quando viaggio, perché è qui dove c'è la vera divertimento, ok? Guarda questa vista, guarda questa vista, un piccolo tubo caldo, un'area di luce, anche un'area di luce. area also have upstairs this is literally the pathway to heaven when i tell you this hotel",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:12.886Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17632,7 +17731,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogeEoQvQGONwVCsgAIeDArGAELofBVDIOUoj9I~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=t0pOsM2l1ISZrH2CAcYjj6OfzHI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Eh, mamma e angu, che muova! Non ho guangiavache che inghia sas! Che muica ica ica ica! Non ho sopra un malalo inghia!",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:15.757Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17645,7 +17753,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oc1eFhehYgoloieYAZsPweGPqF4wqXGggVA2RI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=l34iGEaZFLZ%2BEmLqb8bb19z55T8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:18.356Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17658,7 +17775,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o8maDfv2EEhmIkyq2BqQFBbrIQR8A5eyFDuUN6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=mkS5JVaqUdBlB0iqHi%2BUX1FypLw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica I don't know it No then We're floating, we're floating We're floating, we're floating We're floating, yeah we're floating baby We're floating, can you hold me?",
+            "language": "Italian",
+            "durationSec": 51.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:36.304Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17671,7 +17797,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQ59IusoxBA1nOHhrEi6AI1DGCuwCAwRIUfJIi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=teqEeC6AVcK0QgCG9J%2FiHDBVc0E%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:43.687Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17684,7 +17819,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oU6eUASBqCX2hsoiiAAFLAEFEDVEfhVgWRI2Cy~tplv-tiktokx-dmt-logom:tos-useast5-i-0068-tx/oc62AE9EFlEahA2qA9AIRXDFSfCiFUESDDeCgm.image?dr=9634&x-expires=1788433200&x-signature=glznvEbzqztJQTL1F9ZzyV8GTLc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "è questo il miglior buffet di te in islamabad? andiamo a scoprire pakistan ha alcune delle migliori cibi del mondo quindi quando ho sentito di high tea all'islamabad serena hotel ho dovuto vedere come era questo non è il tuo cup di tè average e un paio di biscotti c'era un'esattamente insana spiaggia di cibi pakistani desserti, sandwichi, pastries e ovviamente tè e onestamente la parte più difficile era capire cosa mettere sul mio piatto prima dopo spendere tanto tempo viaggiando attorno a pakistan amo posti come questo perché puoi vivere molti diversi sapori pakistani in una città Quindi, se vi visitate Islamabad e volete qualcosa che si senta un po' più upscale mentre affrontate la cultura pakistana, questa arena è definitivamente valida di cercare.",
+            "language": "Italian",
+            "durationSec": 35.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:22:23.095Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17697,7 +17841,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oEQwlA3yvkA2XEQqDcFfFCgzQfPA8UIvVADvCN~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=FKzc8DPw3UowgQFcL7hYTC4bJrU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "75 milioni di pound è stato accordato come fida, con nessun aggiunto, come ciò che sarà pagato per Bruno Gimmares. Questo accordo sta andando a fare, a dispiace di tutto il sbaglio che abbiamo sentito negli ultimi due giorni. Vi ho detto che questo è solo, you know, Newcastle appena appena appena, che stanno fendendo storie che, you know, non preoccupatevi, you know, Bruno sta pensando di stare, non ci sono ancora le bide, tutto questo sbaglio, dietro le scene c'è stata molta negoziazione. David Ornstein ieri ha rompito le notizie dove ha detto che c'è stato un accordo totale raggiunto e anche oggi stiamo vedendo alcuni giornalisti di Newcastle che un paio di giorni fa stavano dicendo che questo non può succedere, non ci sono ancora le bide, ora stanno dicendo che le bide sono andate in. As a matter of fact, it's not even a bid. 75 million pound has been agreed as the fee, with no add-ons, as what is going to be paid for Bruno Guimaraes. Bruno Guimaraes went to the new manager of Newcastle as well and told him, I want to leave, I want to join Arsenal and he will become an Arsenal player. Bruno Guimaraes, great signing for Arsenal. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 87.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:22:46.053Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17710,7 +17863,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okxDPAvi2wNc1ftqnIASI1AqObIvi9CFB79ySu~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RZ0p%2FJBWUqvWrzwa45YKE9ZmXwU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e non si può combattere per la stanza Buon anno.",
+            "language": "Italian",
+            "durationSec": 38.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:23:25.583Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17723,7 +17885,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owfpFfjIQP7XuJeAfA8BPplkGtLQMGN8R8DAaw~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=SNdBPMb%2FwAkplh1%2B3NsQaO31r04%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "è un po' difficile Grazie mille.",
+            "language": "Italian",
+            "durationSec": 44.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:23:38.408Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17736,7 +17907,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8yoLAeXoEgHYrjeI1A3gbLIsooDfVItGVDVCR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Q48rF6nCdflvJwnJ3UoxXLyaT%2Fc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, sì, è un piacere. Anche a me, a mia mamma, mi piace, mi piace molto, mi piace molto. Sì, sì. Buon anno, buon anno. Buon anno a tutti, buon anno a tutti. Sì, ok. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 49,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:24:00.606Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17749,7 +17929,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUAdAfhpDLDUFArEEpETURIw6FIQqIYAwgreeA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=6blOXienZTSarUi%2B%2BwC1JrvolIY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quindi sembra che questo capitolo sia arrivato, non c'è più Vinicius Junior Daily, ma è vero che sarà un signore per Real Madrid. Quindi, se lo signora, quali sono le alternative per Arsenal? Chi farà per rinforzare questo voce? Non c'è nessuno che sia di standard elite, ma ci sono state suggestioni che Arsenal potrebbe provare a hijack il movimento di Liverpool per Bradley Barcola. Barcola, ovviamente, di PSG, gioca anche sul lato destro, un giocatore spettacolare, ma un enorme fiume è stato posto sul suo cuore, ci sono stati rapporti di 130, anche di 140 milioni per Barcola. Per me, Vinicius Junior, sì, ma per Barcola, così buono come è, non è valuto quel tipo di money, ma è quello che sta parlando per lui. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 62.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:24:31.206Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17762,7 +17951,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooDUbc8RQBxihQEmifRfEDsBp41UngcNC1AIFq~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Nj7HnvlrinUjfr8RKF9rhp9a0SU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:24:34.101Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17775,7 +17973,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMi6aUh1JADMAndHizCo9IIAuFNfI23VC63wIB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rkbA3yis0pZ2UE7qrc%2FafnvfAuI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Amavili Kutaka, grazie. Oh, your baby boy. Muevi Nassofi Morini, Amavili Kutaka. Mua Nassofi Morini, amavili Kutaka. Banango, mamio no? Mamio. Ancune. E la anga buemunda ba'a buena chanli kabiona babi ogede. Ancune kuva'a. Okunji giri zokola. Kuva'a, ianiace yangamba. eeeh, gula wa kaunti, ne ingo maniemi a kajagangu kugula wa kaunti. Neda. Eh? Gli dè keji. Ha! Wa kadi shuleta wa data, andi sementa kaka na te wajia giogera. Ora ok sango muntunga, muntuo, mami one inga ya galo kula kula ne. Abba chara abba singa abba miteba, teba tu agala kula kula na. Balo za tukenda abba singa, tu vai teko. Ne eeeh, mami utaia. Ueba le butanko to gara. e per il talento che ha avuto in questo momento, e per la sua attenzione, e per la sua attenzione, non è stato un problema, ma stato un problema Grazie Grazie a tutti Grazie a tutti. Nel Mugamba, eh, nel Mugamba, ah ah, non so se è un po' di lavoro, ma nel Mugamba non è un po' di lavoro. Nel Mugamba, oh, già ci si, bobo, e ha calato quella città, e ha calato, ma è un maneggia, huevale, voli so innovative, huevale, gno.",
+            "language": "Italian",
+            "durationSec": 146.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:25:41.923Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17788,7 +17995,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0GTKqcVETKwAFN6GLUQ1gBAIFfkBkDnEQ9fRg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DkQFVCXcLF2iDQxTv08ZDcMIsi0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:26:22.162Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -17801,7 +18017,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oE5yYBniavIEABzbAg2oFAI4Z3lAEAmXBtiuB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MRTdL86vhGK8knUmWcAZYLLsuDs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:26:26.467Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21724,7 +21949,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ogeEoQvQGONwVCsgAIeDArGAELofBVDIOUoj9I~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=t0pOsM2l1ISZrH2CAcYjj6OfzHI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Eh, mamma e angu, che muova! Non ho guangiavache che inghia sas! Che muica ica ica ica! Non ho sopra un malalo inghia!",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:15.757Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22266,7 +22500,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8yoLAeXoEgHYrjeI1A3gbLIsooDfVItGVDVCR~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Q48rF6nCdflvJwnJ3UoxXLyaT%2Fc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, sì, è un piacere. Anche a me, a mia mamma, mi piace, mi piace molto, mi piace molto. Sì, sì. Buon anno, buon anno. Buon anno a tutti, buon anno a tutti. Sì, ok. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 49,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:24:00.606Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22318,7 +22561,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQ59IusoxBA1nOHhrEi6AI1DGCuwCAwRIUfJIi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=teqEeC6AVcK0QgCG9J%2FiHDBVc0E%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:21:43.687Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22427,7 +22679,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8ERzXIIfanqUBD0BgfVFIAUFRIrK6AkBIiqhE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bBSaDtNBcGsjMVgBcX6%2F3sFFhWc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica a tutti",
+            "language": "Italian",
+            "durationSec": 35,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:19:00.414Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22583,7 +22844,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooSfLFDiAUeRQDhLI1sBnqkFSLEEiqIUgGBIIP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hy0nh8hDMY2TFIispr75vNOBgoM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 14.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:42.128Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22596,7 +22866,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0GTKqcVETKwAFN6GLUQ1gBAIFfkBkDnEQ9fRg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=DkQFVCXcLF2iDQxTv08ZDcMIsi0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:26:22.162Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22783,7 +23062,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQAEdwnMAiImuCLIuaBrYXPdSE6oFijrBicI8~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ixd2GhD3TkQ9QPiVFBNALveXZm4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:19:05.918Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23108,7 +23396,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o0Azv7DwIiAIpdMAEm1CQBEASI1tur2fwAvimI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=luIBBeURmM5ZW1JlULNEDm2zsa8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:20:07.722Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23178,7 +23475,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owfpFfjIQP7XuJeAfA8BPplkGtLQMGN8R8DAaw~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=SNdBPMb%2FwAkplh1%2B3NsQaO31r04%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "è un po' difficile Grazie mille.",
+            "language": "Italian",
+            "durationSec": 44.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:23:38.408Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23191,7 +23497,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okxDPAvi2wNc1ftqnIASI1AqObIvi9CFB79ySu~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RZ0p%2FJBWUqvWrzwa45YKE9ZmXwU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e non si può combattere per la stanza Buon anno.",
+            "language": "Italian",
+            "durationSec": 38.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:23:25.583Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23230,7 +23545,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMi6aUh1JADMAndHizCo9IIAuFNfI23VC63wIB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rkbA3yis0pZ2UE7qrc%2FafnvfAuI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Amavili Kutaka, grazie. Oh, your baby boy. Muevi Nassofi Morini, Amavili Kutaka. Mua Nassofi Morini, amavili Kutaka. Banango, mamio no? Mamio. Ancune. E la anga buemunda ba'a buena chanli kabiona babi ogede. Ancune kuva'a. Okunji giri zokola. Kuva'a, ianiace yangamba. eeeh, gula wa kaunti, ne ingo maniemi a kajagangu kugula wa kaunti. Neda. Eh? Gli dè keji. Ha! Wa kadi shuleta wa data, andi sementa kaka na te wajia giogera. Ora ok sango muntunga, muntuo, mami one inga ya galo kula kula ne. Abba chara abba singa abba miteba, teba tu agala kula kula na. Balo za tukenda abba singa, tu vai teko. Ne eeeh, mami utaia. Ueba le butanko to gara. e per il talento che ha avuto in questo momento, e per la sua attenzione, e per la sua attenzione, non è stato un problema, ma stato un problema Grazie Grazie a tutti Grazie a tutti. Nel Mugamba, eh, nel Mugamba, ah ah, non so se è un po' di lavoro, ma nel Mugamba non è un po' di lavoro. Nel Mugamba, oh, già ci si, bobo, e ha calato quella città, e ha calato, ma è un maneggia, huevale, voli so innovative, huevale, gno.",
+            "language": "Italian",
+            "durationSec": 146.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:25:41.923Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -23278,7 +23602,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUAdAfhpDLDUFArEEpETURIw6FIQqIYAwgreeA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=6blOXienZTSarUi%2B%2BwC1JrvolIY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quindi sembra che questo capitolo sia arrivato, non c'è più Vinicius Junior Daily, ma è vero che sarà un signore per Real Madrid. Quindi, se lo signora, quali sono le alternative per Arsenal? Chi farà per rinforzare questo voce? Non c'è nessuno che sia di standard elite, ma ci sono state suggestioni che Arsenal potrebbe provare a hijack il movimento di Liverpool per Bradley Barcola. Barcola, ovviamente, di PSG, gioca anche sul lato destro, un giocatore spettacolare, ma un enorme fiume è stato posto sul suo cuore, ci sono stati rapporti di 130, anche di 140 milioni per Barcola. Per me, Vinicius Junior, sì, ma per Barcola, così buono come è, non è valuto quel tipo di money, ma è quello che sta parlando per lui. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 62.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-02T12:24:31.206Z"
+          }
         },
         {
           "platform": "tiktok",
