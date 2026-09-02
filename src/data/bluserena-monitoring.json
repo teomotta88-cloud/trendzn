@@ -4401,7 +4401,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:24:34.999Z"
+            "updatedAt": "2026-09-02T16:13:31.150Z"
           }
         },
         {
@@ -11037,7 +11037,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:54:40.228Z"
+            "updatedAt": "2026-09-02T16:13:18.533Z"
           }
         },
         {
@@ -20543,7 +20543,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:56:42.008Z"
+            "updatedAt": "2026-09-02T16:15:46.244Z"
           }
         },
         {
@@ -22052,7 +22052,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:07:37.410Z"
+            "updatedAt": "2026-09-02T16:15:06.205Z"
           }
         },
         {
@@ -22206,7 +22206,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:08:34.850Z"
+            "updatedAt": "2026-09-02T16:15:22.741Z"
           }
         },
         {
@@ -22297,7 +22297,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:08:57.340Z"
+            "updatedAt": "2026-09-02T16:16:57.828Z"
           }
         },
         {
@@ -22511,7 +22511,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:10:13.176Z"
+            "updatedAt": "2026-09-02T16:17:05.140Z"
           }
         },
         {
@@ -22697,7 +22697,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:11:09.343Z"
+            "updatedAt": "2026-09-02T16:14:26.787Z"
           }
         },
         {
@@ -22850,7 +22850,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:12:15.380Z"
+            "updatedAt": "2026-09-02T16:16:49.913Z"
           }
         },
         {
@@ -22943,7 +22943,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:12:51.490Z"
+            "updatedAt": "2026-09-02T16:18:16.566Z"
           }
         },
         {
@@ -23213,13 +23213,13 @@
             "updatedAt": "2026-09-02T12:18:09.205Z"
           },
           "ocrData": {
-            "textOnScreen": "al food ast\nserena hotel food taste test",
-            "confidence": 0.832,
+            "textOnScreen": "food taste test\nserena hotel food taste test",
+            "confidence": 0.811,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:14:35.312Z"
+            "updatedAt": "2026-09-02T16:16:37.303Z"
           }
         },
         {
@@ -23586,7 +23586,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:17:17.086Z"
+            "updatedAt": "2026-09-02T16:14:49.675Z"
           }
         },
         {
@@ -24109,7 +24109,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:20:34.970Z"
+            "updatedAt": "2026-09-02T16:16:28.277Z"
           }
         },
         {
@@ -25033,7 +25033,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:25:21.806Z"
+            "updatedAt": "2026-09-02T16:18:25.240Z"
           }
         },
         {
@@ -30656,7 +30656,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:54:40.228Z"
+            "updatedAt": "2026-09-02T16:13:18.533Z"
           }
         },
         {
@@ -30695,7 +30695,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T13:24:34.999Z"
+            "updatedAt": "2026-09-02T16:13:31.150Z"
           }
         },
         {
@@ -30709,7 +30709,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIIfLfIAozAF6Exklaj8owfdD6DYDCCIJQYUnh~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Bw0RfjJqapoF43ydUev1ADUAkoY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:13:59.368Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30722,7 +30730,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8RBIFBsCGpfi1iMDqBhAecISCIEIg0oDKuhEg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ej%2FApv39aor%2FMBUE%2BpLbpCc7b9I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:14:07.238Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30735,7 +30751,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okIgIMJelVBEmrIjtL9UeALqR2GGoBgGAje07D~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=0n1zCkMXneu88qH99ElbC83ykRw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "GRAND HOTEL, I DUBBI DELL'OPPOSIZIONE\nGRAND HOTEL, DUBBI DELL'OPPOSIZIONE\n88 dgtv\nNEWS,",
+            "confidence": 0.852,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:14:15.639Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30765,7 +30790,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:11:09.343Z"
+            "updatedAt": "2026-09-02T16:14:26.787Z"
           }
         },
         {
@@ -30779,7 +30804,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAvEcEyDgqVBI49FffqRBFAqQlIgjiQHLjh6uU~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=FZ7TMsJS4at7BSArNWZqZ9jaayE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:14:42.516Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30808,7 +30841,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:17:17.086Z"
+            "updatedAt": "2026-09-02T16:14:49.675Z"
           }
         },
         {
@@ -30839,7 +30872,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:07:37.410Z"
+            "updatedAt": "2026-09-02T16:15:06.205Z"
           }
         },
         {
@@ -30870,7 +30903,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:08:34.850Z"
+            "updatedAt": "2026-09-02T16:15:22.741Z"
           }
         },
         {
@@ -30884,7 +30917,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oYImamBciG0XxIpBDYEvAYaziAY5j6NMNYiuI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=GSTzJ4ATM6vbFkENKZ2OR0mwuk0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "opiniao",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:15:38.466Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30913,7 +30955,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T14:56:42.008Z"
+            "updatedAt": "2026-09-02T16:15:46.244Z"
           }
         },
         {
@@ -30927,7 +30969,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o4MR5bExfShk3ukuE6LiMxgEDfASFFBdZBOqjI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=0nkF4sjlK1hKSxyyl2mff6xmox4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:15:59.265Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30940,7 +30990,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEByIgLLjNo5IMzuDCGAQ77MjTUA0CjIksIeef~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Vx%2FziQa0Z3ddjv%2BKjKquy8WMF48%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:16:12.776Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30953,7 +31011,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8ffrV2ciBBFnTAQEQ2It6AXpdSgOqq1DERSEM~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=h67cg2m6FI%2BkBeWyDF6UoHbYbFA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ENDER",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:16:20.153Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30982,7 +31049,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:20:34.970Z"
+            "updatedAt": "2026-09-02T16:16:28.277Z"
           }
         },
         {
@@ -31007,13 +31074,13 @@
             "updatedAt": "2026-09-02T12:18:09.205Z"
           },
           "ocrData": {
-            "textOnScreen": "al food ast\nserena hotel food taste test",
-            "confidence": 0.832,
+            "textOnScreen": "food taste test\nserena hotel food taste test",
+            "confidence": 0.811,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:14:35.312Z"
+            "updatedAt": "2026-09-02T16:16:37.303Z"
           }
         },
         {
@@ -31043,7 +31110,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:12:15.380Z"
+            "updatedAt": "2026-09-02T16:16:49.913Z"
           }
         },
         {
@@ -31074,7 +31141,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:08:57.340Z"
+            "updatedAt": "2026-09-02T16:16:57.828Z"
           }
         },
         {
@@ -31104,7 +31171,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T15:10:13.176Z"
+            "updatedAt": "2026-09-02T16:17:05.140Z"
           }
         },
         {
@@ -31118,7 +31185,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oEJE1E8DgoeBdcsFfWqRBHAmQXOJ4TQFirkhDc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MW6ggLZ0tZthEbcw4GC6c5odPnI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "hotel\nhotel I'd",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:17:25.562Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31131,7 +31207,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAIB1RE4lQgGCAH9t98AhCVAiOupIjmISwfiI3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=jyoUwDxb%2BknUZeyS61HOIzC4r1s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:17:51.944Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31144,7 +31228,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oUQQ1UDIeCS05AjEDzQAKLIDQJGtftDHieIzW4~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=qBgq9eE6s1m1HIY6hMuesEIDVvQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "x Honourable Minister Kyeyune\nHaruna Kasolo and The wife at\nSerena hotel\nHonourable Minister Kyeyune\nB= Serena hotel",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T16:18:03.874Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31174,7 +31267,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:12:51.490Z"
+            "updatedAt": "2026-09-02T16:18:16.566Z"
           }
         },
         {
@@ -31205,7 +31298,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:25:21.806Z"
+            "updatedAt": "2026-09-02T16:18:25.240Z"
           }
         },
         {
