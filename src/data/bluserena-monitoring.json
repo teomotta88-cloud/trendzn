@@ -14429,7 +14429,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:13:34.060Z"
+            "updatedAt": "2026-09-02T15:24:49.796Z"
           }
         },
         {
@@ -24794,6 +24794,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:36:02.833Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ONE VISION\nKONDE MKUU WA MAJESHI\nALIVYO WASILI SERENA\nKWA AJILI TUKIO LA\nKWA AJILI TUKIO LA A LIST\nONE VISION UPDATES\nVISION UPDATES",
+            "confidence": 0.852,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:24:20.978Z"
           }
         },
         {
@@ -24816,6 +24825,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:36:11.878Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:24:26.962Z"
           }
         },
         {
@@ -24838,6 +24855,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:36:14.064Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SETA\nSETAI\nH SETAI",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:24:33.290Z"
           }
         },
         {
@@ -24860,6 +24886,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:37:59.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": "21 August rene in concert 4\n21 August Irene Namatovu live in concert\nSerena hotel\nQ A Serena hotel\n21 August ene live in concert 4\n21 August live in concert",
+            "confidence": 0.824,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:24:41.724Z"
           }
         },
         {
@@ -24891,7 +24926,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:13:34.060Z"
+            "updatedAt": "2026-09-02T15:24:49.796Z"
           }
         },
         {
@@ -24914,6 +24949,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:40:08.285Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BODY\nRosemary p",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:24:59.455Z"
           }
         },
         {
@@ -24936,6 +24980,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:40:10.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": "coulel\nyou locked",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:05.573Z"
           }
         },
         {
@@ -24958,6 +25011,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:41:38.508Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:12.856Z"
           }
         },
         {
@@ -24980,6 +25041,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:44:03.037Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Emirates\nFLY BETTER\nDANY",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:21.806Z"
           }
         },
         {
@@ -25003,6 +25073,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:46:39.758Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:24.449Z"
           }
         },
         {
@@ -25025,6 +25103,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:48:15.453Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AMAN\nè TIME\nFAST MEETS WE\nATIME\nIVE TIME TE\nService is different.\none of the headline",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:31.589Z"
           }
         },
         {
@@ -25047,6 +25134,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:51:20.246Z"
+          },
+          "ocrData": {
+            "textOnScreen": "=RENA",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:39.446Z"
           }
         },
         {
@@ -25069,6 +25165,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:54:17.311Z"
+          },
+          "ocrData": {
+            "textOnScreen": "28th November tuli ku\nserena Hotel in 10years of\nMaryBata\n28th November tuli\n28th November tuli ku 3\nMaryBata 0.\n3. 28th November tuli ku\nN Serena Hotel in 10years of f\nIl Serena Hotel in 10years of\nMaryBata 4",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:47.034Z"
           }
         },
         {
@@ -25091,6 +25196,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:54:34.806Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Senior Presidential Advisor Peace Rugambwa attends\nGospel Singer Lillian Nabaasa’s concert at Serena Hotel\nSenior Presidential Advisor Peace Rugambwa attends J",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:54.570Z"
           }
         },
         {
@@ -25114,6 +25228,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:57:18.183Z"
+          },
+          "ocrData": {
+            "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:26:01.093Z"
           }
         },
         {
@@ -25136,6 +25259,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:57:40.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:26:10.604Z"
           }
         },
         {
@@ -25158,6 +25289,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:00:45.451Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happening now Lillian Nabaasa Live\nConcert Serena Hotel Kampala\nConcert Serena Hotel Kampala g\nHappening now Lillian Nabaasa Live 7\nBANX",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:26:33.803Z"
           }
         },
         {
@@ -25180,6 +25320,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:02:51.849Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happening now Lillian Nabaasa Live\nConcert Serena Hotel Kampala\nMAJJE i",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:26:43.300Z"
           }
         },
         {
@@ -25203,6 +25352,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:04:46.106Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happening now Lillian Nabaasa Live\nConcert Serena Hotel Kampala\nConcert Serena Hotel Kampala 3",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:27:00.350Z"
           }
         },
         {
@@ -25226,6 +25384,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:06:36.621Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:27:05.702Z"
           }
         },
         {
@@ -25248,6 +25414,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:06:40.895Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:27:15.419Z"
           }
         },
         {
@@ -25270,6 +25444,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:07:39.268Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Senior Presidential Advisor Peace Rugambwa\nenjoying Pastor Wilson Bugembe 8 Lilian\nNabaasa’s performance at SERENA HOTEL.\nperformance at SERENA HOTEL.\nenjoying Pastor Wilson Bugembe Lilian",
+            "confidence": 0.894,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:27:23.371Z"
           }
         },
         {
@@ -25293,6 +25476,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T13:09:48.289Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:27:32.756Z"
           }
         },
         {
@@ -25315,6 +25506,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:09:50.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": "N Rehearsals ongoing see you 21\nAugust Serena hotel Irene\nNamatovu\nATE. RECORD\n\\TE. RECORD E\n4 Rehearsals ongoing see you 21 È p\np Namatovu\nRehearsals ongoing see you 21",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:27:43.678Z"
           }
         },
         {
@@ -25337,6 +25537,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T13:12:56.913Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:28:05.596Z"
           }
         },
         {
@@ -29551,6 +29759,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:44:03.037Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Emirates\nFLY BETTER\nDANY",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:21.806Z"
           }
         },
         {
@@ -30949,6 +31166,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-02T12:57:18.183Z"
+          },
+          "ocrData": {
+            "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:26:01.093Z"
           }
         },
         {
@@ -31465,6 +31691,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T12:54:17.311Z"
+          },
+          "ocrData": {
+            "textOnScreen": "28th November tuli ku\nserena Hotel in 10years of\nMaryBata\n28th November tuli\n28th November tuli ku 3\nMaryBata 0.\n3. 28th November tuli ku\nN Serena Hotel in 10years of f\nIl Serena Hotel in 10years of\nMaryBata 4",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-02T15:25:47.034Z"
           }
         },
         {
