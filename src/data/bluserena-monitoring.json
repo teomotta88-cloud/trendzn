@@ -43983,6 +43983,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:46:26.533Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:19:09.483Z"
           }
         },
         {
@@ -44004,6 +44014,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:19:35.163Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 28.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:19:11.959Z"
           }
         },
         {
@@ -44026,6 +44045,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:46:45.897Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 9.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:19:14.085Z"
           }
         },
         {
@@ -44048,6 +44076,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:46:53.251Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Erika's second course of the second course the lamb chops so it's whatever we out here we said we was getting two so we gonna eat like we said we was getting two",
+            "language": "Italian",
+            "durationSec": 14.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:19:16.848Z"
           }
         },
         {
@@ -44069,6 +44106,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:19:48.603Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:19:19.122Z"
           }
         },
         {
@@ -44091,6 +44137,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:47:18.916Z"
+          },
+          "audioAnalysis": {
+            "transcript": "F***ing kill this whole f***ing family! Fox! Fox! What can I do for such a... And Valentino? Thanks, babe. Sure. Hey, screen time means nothing in the long run. Do I collect for you or have they paid? Always a pleasure. Crushed any major cities? You are...",
+            "language": "Italian",
+            "durationSec": 29.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:22:12.900Z"
           }
         },
         {
@@ -44113,6 +44168,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:47:25.979Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:22:15.354Z"
           }
         },
         {
@@ -44135,6 +44199,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:47:31.043Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Best friends forever!",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:22:17.512Z"
           }
         },
         {
@@ -44186,6 +44259,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:09.282Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 28.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:25:20.475Z"
           }
         },
         {
@@ -44207,6 +44289,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:13.766Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:25:23.181Z"
           }
         },
         {
@@ -44228,6 +44319,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:24.172Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 11.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:25:25.257Z"
           }
         },
         {
@@ -44249,6 +44349,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:32.900Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:28:00.757Z"
           }
         },
         {
@@ -44270,6 +44380,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:37.199Z"
+          },
+          "audioAnalysis": {
+            "transcript": "KSL Resort Hotel",
+            "language": "Italian",
+            "durationSec": 28.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:28:15.217Z"
           }
         }
       ]
@@ -44310,6 +44429,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:42.002Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Voglio una vita che non è mai tardi, di quelle che non dormi mai. Voglio una vita, vedrai che vita vedrai.",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:28:17.700Z"
           }
         },
         {
@@ -44332,6 +44460,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:48:40.704Z"
+          },
+          "audioAnalysis": {
+            "transcript": "La mia parte preferita quando sono in vacanza è la colazione. Omelette e pure pancake. Omelette e pancake. Ci siamo nello stand. Aspettate lì dentro. Sì, pasta con dolci. Pastici cornetti, pancake, guapo. Zona fitness, uova, verdure. Angolo tipico dello stop. C'è affettati e pane. Frutta. Ma ora la mia parte preferita. Zona beverage. Ciao. Il prosacco. Si sboccia il colazione. Ciliegio e prosacco, la mia colazione preferita. Ciao a tutti.",
+            "language": "Italian",
+            "durationSec": 44.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:30:42.318Z"
           }
         },
         {
@@ -44353,6 +44490,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:48.223Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Al Caligrea hai sempre la possibilità di incontrare una scuola rossa. Io non ci credo. Cosa è? Alba Chiara. No. Sempre che non ci credo non lo troverò mai. Ciao.",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:30:44.628Z"
           }
         },
         {
@@ -44375,6 +44521,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:48:55.111Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il mio denaro è servito a questo? Mi dispiace papà, non volevo mentirti Tu non sei quella che credevo, baby Non so più chi sei In ogni caso non voglio che tu veda più quella gente Lascia almeno che... No, baby, ti ho detto che non devi avere niente a che fare con loro La tua madre non dirà niente Io me ne torno a lei E tu togliti quella roba dalla faccia che sei ridicola Andiamo a uccidere Ciao, all'uomo",
+            "language": "Italian",
+            "durationSec": 25.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:31:53.557Z"
           }
         },
         {
@@ -44427,6 +44582,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:20:53.633Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 13.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:32:34.873Z"
           }
         },
         {
@@ -44449,6 +44613,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:49:16.152Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Che fanciano che si è, toglieremo a si se è, che fanciano che si è, si è, si è, e non è così male.",
+            "language": "Italian",
+            "durationSec": 11.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:33:10.419Z"
           }
         },
         {
@@ -44471,6 +44644,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:49:31.125Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Pag. 3 Rido a kamatacundat karu, c'è il sì.",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:35:14.096Z"
           }
         },
         {
@@ -44492,6 +44674,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:21:06.207Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Come inside the most beautiful hotel in the world. Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:37:50.943Z"
           }
         },
         {
@@ -44514,6 +44705,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:50:07.543Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:40:26.818Z"
           }
         },
         {
@@ -44535,6 +44736,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:21:16.694Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:40:29.148Z"
           }
         },
         {
@@ -44556,6 +44766,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:21:23.108Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 27.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:40:46.433Z"
           }
         },
         {
@@ -44577,6 +44796,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:21:34.020Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:42:49.287Z"
           }
         },
         {
