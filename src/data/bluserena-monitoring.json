@@ -44828,6 +44828,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:51:00.008Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Calahari Resort, Indoor Water Park, 900 Room Hotel, Convention Center, Thornburg, Virginia, Spotsylvania County. Come vi sentite tutti? Ho parlato con i locali. Ho sentito da persone che sono in questa area, in Fredericksburg, che non vogliono. Parlano dei datacenteri, parlano di King's Dominion, parlano di Great Wolf Lodge che è proprio in strada. Parlano del acqua. Ci sono tanti topic che hanno, parlano del traffico. I locali non vogliono questo, ma è arrivato. Novembre 2026. Lasciamci sapere come ti senti. Non sono per questo. Non sono contro. È quello che è. È qui. Sono open minded. Vediamo cosa succede. Lasciamci sapere nei commenti. Avete un buon giorno. Come sempre, grazie per aver guardato.",
+            "language": "Italian",
+            "durationSec": 49.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:42:55.340Z"
           }
         },
         {
@@ -44849,6 +44858,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:21:42.165Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Numbers 24, vivete la vostra vita, ragazzi. Guardate, vi ritrovo. E' vero che la città è in grado di risolvere questo problema. Ma non potete farlo. Guardate, vi ritrovo. Questo è Numbers 24.",
+            "language": "Italian",
+            "durationSec": 16.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:42:59.625Z"
           }
         },
         {
@@ -44871,6 +44889,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:51:19.611Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:45:05.101Z"
           }
         },
         {
@@ -44892,6 +44920,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:22:05.984Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il pacchetto privato è in Cerela 1199 Includono i cali, le mani, anche i ticket d'entrata E il più importante è che è un viaggio privato, non un viaggio in gruppo Quindi se avete voglia di andare a Cerela, scrivete in commento CERELA E vi manderemo l'itinerario E ricordate che sono slot limitati Solo per 10 persone",
+            "language": "Italian",
+            "durationSec": 19.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:45:07.580Z"
           }
         },
         {
@@ -44914,6 +44951,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:51:57.184Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:48:12.005Z"
           }
         },
         {
@@ -44935,6 +44982,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:22:12.862Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Mi sono mi è busy! Mi è busy! Quando lo si mi è busy!",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:48:15.317Z"
           }
         },
         {
@@ -44957,6 +45013,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:52:11.698Z"
+          },
+          "audioAnalysis": {
+            "transcript": "ho tutto il giorno sto facendo l'ultimo tempo non ho bisogno di essere lì ma ho tutto il giorno a Radisson su Boulevard devo stare qui in questo parco e aspettare il generale manager perché la recezione del crackhead è al fronte oh non sarà qui oggi ora non sarà qui oggi perché voglio sapere dove i junkies hanno trovato il mio bagno mi stai giocando con voi? ho restato qui tutto il tempo tutto il tempo e poi ho trovato un nuovo crackhead and they feel as though they can go in my room and take my shit steal my asthma pump and my money and then y'all call me 8 hours later and tell me oh y'all found my bag but don't nobody know where it came from corporate already reached out to y'all general manager fuck you and corporate I'ma keep harassing you cause this is not how you treat your value fucking customers do a background check y'all gotta stop hiring these crackheads I know people that want a fucking job god damn",
+            "language": "Italian",
+            "durationSec": 57.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:49:18.532Z"
           }
         },
         {
@@ -44979,6 +45044,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:52:51.469Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Io sono ancora qua",
+            "language": "Italian",
+            "durationSec": 5.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:49:20.653Z"
           }
         },
         {
@@ -45001,6 +45075,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:53:04.923Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:51:47.530Z"
           }
         },
         {
@@ -45022,6 +45106,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:22:46.364Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:51:49.815Z"
           }
         },
         {
@@ -45044,6 +45137,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:53:54.303Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:54:53.336Z"
           }
         },
         {
@@ -45066,6 +45169,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:54:08.563Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Sambang pondok di Jombang, tapi harus nginep. Terus bingung mau nginep di mana? Sini ku rekomendasiin hotel syariah yang deket kemana aja kalo kamu mau ke Jombang. Ini dia hotelnya, hotel Trion Syariah. Nggak usah lama-lama langsung aja ku spill kamarnya. Untuk yang tipe ini aku dapat di harga 219.000 lebih murah karena aku belinya pakai voucher di TikTok. Lumayan luas kok tempatnya, bersih juga dan staffnya ramah-ramah. È sufficiente per la riposizione con la famiglia, e anche per la mattina con i figli che stanno in Pondok. Oh, sì, la camera è anche pulita, e l'amenitis è anche completata. Ok, così è tutto. Non dimenticate di acquistare con i voucher di TikTok. Ci vediamo!",
+            "language": "Italian",
+            "durationSec": 39.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:54:59.536Z"
           }
         },
         {
@@ -45088,6 +45200,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:54:15.038Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:55:01.601Z"
           }
         },
         {
@@ -45110,6 +45231,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:54:44.458Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:58:04.421Z"
           }
         },
         {
@@ -45163,6 +45294,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:55:10.842Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 18.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:58:08.805Z"
           }
         },
         {
@@ -45185,6 +45325,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:55:21.561Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:58:10.962Z"
           }
         },
         {
@@ -45207,6 +45356,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:55:28.770Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Dicci mi perché ando in stanza per prendere dei brufoli Sto facendo la mia piatta uno dei cuochi mi chiede uno dei cuochi mi chiede sei un residente qui? ho vissuto qui per tre settimane Spero non fossi un residente qui ma sono un residente qui ok si parla spagnolo e si chiama con l'altra ragazza l'altra ragazza si è pronta a arrivare e mi ha detto qualcosa ma io vedo io vedo io vedo quindi io mi siedo e mangio il mio piccolo cilindro è circa tre bugli tre bugli sul cilindro io non potevo aspettare io mi sono messo a guardare e ho visto qualcosa muovere e io mi sono detto che forse solo una fly poi ho detto, aspetta, aspetta, aspetta, aspetta è da 3, 4, 5, ok è da 3 bug su una cosa che non si muove e poi sono andato a passare da quella platea Grazie.",
+            "language": "Italian",
+            "durationSec": 92.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:00:15.284Z"
           }
         },
         {
@@ -45228,6 +45386,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:22:59.065Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:00:17.401Z"
           }
         },
         {
@@ -45249,6 +45416,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:07.054Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:00:19.854Z"
           }
         },
         {
@@ -45271,6 +45447,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:55:57.686Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:00:22.150Z"
           }
         },
         {
@@ -45293,6 +45478,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:56:09.916Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:00:30.498Z"
           }
         },
         {
@@ -45314,6 +45508,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:11.829Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, sempre vedo questo hotel nei miei feed e mi sono chiesto perché c'è tanta gente che booka qui quindi andiamo a provarlo Benvenuti all'Alcury Sky Garden Hotel il mio hotel è il più costoso perché siamo sempre uguali abbiamo pagato solo per 368 per due notti e abbiamo avuto il buon albume per due è un'altra stanza classica è molto spazioso e anche pulito in verità What I like most is their bathroom. Tengano, ang laki. Yan, then they have the rain shower. Das sa kabila yung toilet. For its price, yung room, yung service and the location, this hotel is definitely worth trying.",
+            "language": "Italian",
+            "durationSec": 46.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:03:33.798Z"
           }
         },
         {
@@ -45336,6 +45539,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:56:23.125Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:06:15.489Z"
           }
         },
         {
@@ -45358,6 +45571,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:56:37.691Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 46.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:06:18.196Z"
           }
         },
         {
@@ -45379,6 +45601,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:17.923Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Paginapan muradi kalianda, harga promo TikTok 100 ribuan. Berlokasi di veteran atas dekat kalun alun dan pantai. Dapatkan diskon 5-10% dengan pesan langsung di TikTok. Info di telebilanjut klik tek lokasi yang berwarna hijau di bawah tanda panah. Terima kasih. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:06:57.009Z"
           }
         },
         {
