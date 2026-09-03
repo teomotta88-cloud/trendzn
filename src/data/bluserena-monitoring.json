@@ -45631,6 +45631,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:41.160Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Guardate queste vedi da l'alto del nuovo hotel di Kali a Hollywood Park, proprio vicino al Stadio Sophie, la casa di Ram. Puoi vedere l'Intuit Stadium e LAX da qui. This is definitely going to be the place to stay at during football season.",
+            "language": "Italian",
+            "durationSec": 42.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:09:03.659Z"
           }
         },
         {
@@ -45653,6 +45662,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:57:28.850Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:10:55.332Z"
           }
         },
         {
@@ -45675,6 +45693,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:57:44.740Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:11:18.648Z"
           }
         },
         {
@@ -45697,6 +45724,16 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7679855773756738847: Your IP address is blocked from accessing this post",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:42.944Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7679855773756738847: Your IP address is blocked from accessing this post",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:11:20.313Z"
           }
         },
         {
@@ -45719,6 +45756,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:58:00.720Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:12:22.762Z"
           }
         },
         {
@@ -45741,6 +45787,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:58:06.759Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:15:27.064Z"
           }
         },
         {
@@ -45763,6 +45819,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:58:13.983Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il calcio è molto bello e è molto utile per il mio lavoro. Perchè non sono così abituato a fare i corsi? Io ho avuto un'opzione per farlo e sono stato in grado di farlo. Credo che la mia scuola possa farlo e farlo con la mia capacità. La mia famiglia e io siamo in grado di farlo. Inoltre, mio padre era molto sordido e aveva piacere in quello che faceva. Con questo il mio figlio è stato in grado di farlo. Ho avuto un'opzione per farlo e la mia famiglia è stata in grado di farlo. Invece, non ho avuto la capacità di farlo. Il primo è il Pernanke, il secondo è il Guadigli, il terzo è il Guadigli, il terzo è il Guadigli, il terzo è il Guadigli. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:15:48.669Z"
           }
         },
         {
@@ -45785,6 +45850,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:58:21.883Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:16:39.078Z"
           }
         },
         {
@@ -45807,6 +45881,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:58:28.886Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao e benvenuti al hotel Bel Air. Per la prima volta, offriamo bassi risultati su tutte le sue suite, rendendo la luce più affidabile. Book your stay today and enjoy these incredible weekend specials while they last. We can't wait to welcome you to our hotel and to make sure that your stay is comfortable, relaxing and truly unforgettable.",
+            "language": "Italian",
+            "durationSec": 51.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:19:15.188Z"
           }
         },
         {
@@ -45829,6 +45912,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:58:55.066Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 57.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:22:06.385Z"
           }
         },
         {
@@ -45851,6 +45943,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:59:12.532Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:23:11.931Z"
           }
         },
         {
@@ -45872,6 +45973,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:50.896Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 31.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:24:47.640Z"
           }
         },
         {
@@ -45893,6 +46003,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:23:58.684Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:25:37.939Z"
           }
         },
         {
@@ -45915,6 +46034,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:59:44.843Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:26:43.500Z"
           }
         },
         {
@@ -45936,6 +46064,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:07.387Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Happy Birthday, Max! Ciao",
+            "language": "Italian",
+            "durationSec": 38.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:28:40.119Z"
           }
         },
         {
@@ -45958,6 +46095,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T18:00:12.629Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:30:27.703Z"
           }
         },
         {
@@ -45979,6 +46126,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:13.612Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:32:36.488Z"
           }
         },
         {
@@ -46000,6 +46157,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:26.961Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Oh baby when you talk like that, you make a woman go mad, so be wise and keep your mouth shut.",
+            "language": "Italian",
+            "durationSec": 6.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:32:38.612Z"
           }
         },
         {
@@ -46022,6 +46188,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T18:00:42.993Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ken! Let me see your manager! Ken! Ken! Ken! Let me see your manager!",
+            "language": "Italian",
+            "durationSec": 12.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:32:41.022Z"
           }
         }
       ]
@@ -46063,6 +46238,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T18:00:48.792Z"
+          },
+          "audioAnalysis": {
+            "transcript": "ora sta giusti no gianni non ha capito sto spaccando la macchina ora l'hai accesa quindi devi mettere la chalda in giro saluta ehi comunque stavolta per prendere il tiktok scusa fai un tour fai vedere il posto prendo quello qua qua qua presto gli occhiali poi faccio le stronzate questa invece è la zona per fare e non facciamo video ci sono i minuti no è bello facciamo vedere perché abbiamo due uno con la doccia il televisore è piccolo ormai già ne avete tutti ai 500.000 pollici e poi c'è un bagno con la vasca idromassaggio che questo è il bagno di Gianni se già è impossessato è il bagno più grande che in quello più piccolo non ci entra ciao a tutti vi do questo video con carico",
+            "language": "Italian",
+            "durationSec": 71.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:33:14.400Z"
           }
         }
       ]
@@ -46103,6 +46287,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:35.715Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Woo! Woo! I'm blue, money, fresh, yeah!",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:34:01.752Z"
           }
         },
         {
@@ -46174,6 +46367,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T18:01:09.103Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:34:28.098Z"
           }
         },
         {
@@ -46207,6 +46409,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:47.477Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T12:37:32.007Z"
           }
         },
         {
