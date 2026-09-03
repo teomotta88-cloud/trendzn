@@ -39807,6 +39807,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:10:17.206Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 39,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:35:45.372Z"
           }
         },
         {
@@ -39829,6 +39838,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:10:36.024Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Quindi chi è qui e piace vedere Icata Cinta? Forse sapete che Icata Cinta è uno dei sinetroni più popolari in Indonesia e ora sono in uno dei hotel che è stato il posto di filmato per 3 anni immaginate, per 3 anni stanno filmando qui Sì, è un posto molto bello Se siete interessati, vedrete come si fa a spiegare il filmato",
+            "language": "Italian",
+            "durationSec": 27.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:35:47.743Z"
           }
         },
         {
@@ -39850,6 +39868,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:10:45.924Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Tutti pensano che Cozumel sia tutto piazze e resorti. Tutti sono sbagliati. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:35:50.136Z"
           }
         },
         {
@@ -39871,6 +39898,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:10:53.980Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:35:53.377Z"
           }
         },
         {
@@ -39892,6 +39928,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:11:06.690Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao, saluto e presento per chi non mi conosce, mi chiamo Maibel e sto imprendendo con la mia nuova franquicia di Dream Vacations, dove ci occupiamo di planificare le vacanze. Questo è sempre stato una passione, sono andato a più di 10 cruceri e ho viaggiato a molti luoghi e ho sempre aiutato i miei familiari e amici con i loro plani vacanziali Spero di aiutarli a molti di voi, se avete qualche domanda, qualche viaggio in un momento futuro per favore non dubbiate di contattarmi e io vi aiuterò, grazie",
+            "language": "Italian",
+            "durationSec": 41.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:36:38.133Z"
           }
         },
         {
@@ -39914,6 +39959,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:11:16.369Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:36:40.180Z"
           }
         },
         {
@@ -39935,6 +39989,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:11:24.366Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Siamo in blocco cinematico e canzone",
+            "language": "Italian",
+            "durationSec": 22.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:36:42.320Z"
           }
         }
       ]
@@ -39972,6 +40035,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:11:29.056Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Fall in love Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:38:44.882Z"
           }
         },
         {
@@ -40056,6 +40128,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:12:11.334Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 17.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:39:23.082Z"
           }
         },
         {
@@ -40078,6 +40159,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:12:23.186Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:42:13.875Z"
           }
         },
         {
@@ -40099,6 +40190,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:12:38.470Z"
+          },
+          "audioAnalysis": {
+            "transcript": "la donna vieni a conoscere il tawà con noi il primo resort in aree di João Pessoa è un'altra cosa, è chic, vedi ragazzi? qui è l'entrata, la donna del resort vediamo, è una cosa bellissima entriamo nel resort e siamo andati direttamente alla recezione per fare il nostro check-in e da questa recezione sei già ricevuto con questa vista meravigliosa dopo fare il nostro check-in siamo andati a conoscere il resort e ho saputo che il hotel ha 9 piscine e c'è un elevatore che dà accesso alla piazza Molto bene e inoltre è molto comodo come ho detto ha una vista magnifica e in questo momento il nostro amico Vitor che ci ha accettato molto bene ha fatto un tour con noi e questa parte che sto mostrando è tipo una gigante di giochette guarda il tamanho di questo qui c'è l'academia e un altro aspetto che non ricordo qui c'è la sinuca e il boliche e qui è tutto molto vicino, devi stare al lato della giochette ragazza quando guardi a destra ti ripari con un campo di golf un campo di society e una quadra di futsal. E ancora c'è una messina per giocare un futebol. E è tutto, ragazzi. Ancora è rimasto il parco equatico, ma è ancora per essere inaugurato. Sono già ansiosa, no? La prossima volta trago le bambine e è tutto. Spero che vi sia piaciuto e un sapore.",
+            "language": "Italian",
+            "durationSec": 100.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:44:27.464Z"
           }
         },
         {
@@ -40120,6 +40220,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:12:52.875Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:47:29.727Z"
           }
         },
         {
@@ -40141,6 +40251,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:13:24.728Z"
+          },
+          "audioAnalysis": {
+            "transcript": "musica Ciao",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:47:32.720Z"
           }
         },
         {
@@ -40163,6 +40282,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:13:46.153Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 27.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:49:47.404Z"
           }
         },
         {
@@ -40185,6 +40313,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:14:03.205Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:52:05.595Z"
           }
         },
         {
@@ -40206,6 +40344,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:14:47.485Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:55:31.237Z"
           }
         },
         {
@@ -40228,6 +40376,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:15:05.623Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Nell'arte della natura Hotel Bonito, le acque fredde sono parte dell'esperienza. Ora anche nel nuovo parco acquatico. Diversione per tutta la famiglia. Esclusivo per ospiti. Acque fredde nelle piscine. Nelle idromassaggine. e nelle piscine privative degli appartamenti. Arte della natura, il destino ideale per vivere bello l'anno intero.",
+            "language": "Italian",
+            "durationSec": 45.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:56:04.073Z"
           }
         },
         {
@@ -40249,6 +40406,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:15:13.575Z"
+          },
+          "audioAnalysis": {
+            "transcript": "... Niente. Niente? Ma c'è tanta gente! Niente. Niente. Mi sento! Mi vuoi riparare? Ahahah! Ahahah! Ahahah! Ma cosa stai facendo? Stai facendo un'altra cosa! Ahahah! Stai facendo un'altra cosa! Ahahah! Mi senti così? Non mi porti cos ragazzo Non cos amico Amico Amico perch Amico fai un amico per me Buon anno. Buon uomo!",
+            "language": "Italian",
+            "durationSec": 125.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:57:16.884Z"
           }
         },
         {
@@ -40271,6 +40437,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:15:43.570Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:00:19.530Z"
           }
         },
         {
@@ -40293,6 +40469,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:16:00.683Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:03:23.338Z"
           }
         },
         {
@@ -40315,6 +40501,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:16:15.350Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:05:57.612Z"
           }
         },
         {
@@ -40336,6 +40532,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:16:29.508Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao!",
+            "language": "Italian",
+            "durationSec": 35,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:05:59.990Z"
           }
         },
         {
@@ -40358,6 +40563,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:16:43.978Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:06:59.675Z"
           }
         },
         {
@@ -40379,6 +40593,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T17:17:15.044Z"
+          },
+          "audioAnalysis": {
+            "transcript": "This is not your typical hot spring resort. When we booked Balay Ligaya, akala namin sa hot spring pool lang kami tatamba eh. Pero honestly, mas na in love pa kami sa villa mismo. The moment you stepped inside, mapapansin mo na agad yung warm, tropical inspired interiors, ang cozy, ang homey, and sobrang relaxing ng vibe. We went here as a family, and what surprised us the most is that this place can accommodate up to 30 packs, without feeling crowded. Andiamo a partire. La prima stanza è sul pavimento, quindi è perfetta per i grandadossi, i pwds o le famiglie con i bambini. Ha due stanza, una tv smart e un'altra stanza con un'astrofilo. All'esterno c'è la cucina completamente equipata, quindi se volete cuocere, è completamente completa. C'è anche un'area di grill, perfetta per i barbecues familiari. All'interno della villa c'è molto da fare. C'è un'area di dormitore cosciente, spazioso, karaoke, arcade e un altro lavabo, quindi, anche se c'è molti persone, è ancora comodissimo. All'altezza c'è il più grande lavabo con ponte di bancho. Anche se c'è molti persone che possono dormire, non è ancora crowd. Ha anche il suo lavabo e una bella vista. Ma ovviamente, il punto di notizia di questo luogo è il pool di fiori naturale. Il pool di hot spring. Si trova con il suo own jacuzzi, e mentre si rilassano durante il giorno, diventa ancora più magico a notte. Immagina di soffrire in acqua calda mentre abbiate l'ambiente paurito. Si trova in un'ambiente diverso. E se ti piace fare foto, troverai tanti corpi di Instagram corposi all'interno della villa. Se stai cercando un resort di hot spring privato, perfetto per vacanze familiari, riunioni o getaway di barcata, Palai Ligaya in Los Baños Laguna è definitivamente valido di guardare. Scegli questo per il tuo prossimo getaway. Ti ringrazierò più tardi.",
+            "language": "Italian",
+            "durationSec": 116.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:08:04.713Z"
           }
         },
         {
@@ -40401,6 +40624,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:17:22.964Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:10:07.250Z"
           }
         },
         {
