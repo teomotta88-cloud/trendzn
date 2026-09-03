@@ -1380,7 +1380,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:36:21.787Z"
+            "updatedAt": "2026-09-03T08:09:01.093Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26408,7 +26408,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:36:21.787Z"
+            "updatedAt": "2026-09-03T08:09:01.093Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -36798,6 +36798,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:46:31.806Z"
+          },
+          "audioAnalysis": {
+            "transcript": "E ogni volta che la vita tua si intreccia con la mia, finirà che finiremo in una scelata di folle e gelosia. E no, no, no, no, che forse è meglio di no, quante cose non mi hai detto, c'è una musica nel vento.",
+            "language": "Italian",
+            "durationSec": 20.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:01:32.761Z"
           }
         },
         {
@@ -36827,6 +36836,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:46:45.356Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:01:35.278Z"
           }
         },
         {
@@ -37034,6 +37052,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:47:59.553Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao nena, come stai? Oggi mi accompagnerai a un anniversario super importante anche vi farò un video di come è la terrazza serena ho molti giorni che voglio venire ma non ho presentato l'opportunità e oggi la conosciamo insieme, come si vede adornata e tutto per tutti i tuoi eventi, graduazioni, anniversari quello che ti immagini puoi fare qui e andiamo là la terrazza è serena e ha un jacuzzi una piscina che ha area per bambini e adulti ha i suoi banchi per bambini e bambine la vera desta e ramosissima Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 118,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:02:19.123Z"
           }
         },
         {
@@ -37086,6 +37113,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:48:22.559Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao nena, come stai? Oggi mi accompagnerai a un anniversario super importante anche vi farò un video su come è la terrazza serena ho molti giorni che voglio venire ma non ho presentato l'opportunità e oggi la conosciamo insieme, come si vede adornata e tutto per tutti i tuoi eventi, graduazioni, anniversari quello che ti immagini puoi fare qui e andiamo là musica Bene ragazzi, siamo arrivati alla terrazza serena e questa terrazza ha un jacuzzi, una piscina che ha un'area per bambini e adulti, ha i suoi banchi per uomini e donne, la verità è bellissima. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 118,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:03:17.711Z"
           }
         },
         {
@@ -37201,6 +37237,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:49:00.219Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:03:45.795Z"
           }
         },
         {
@@ -37223,6 +37268,16 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675157228390747412: Your IP address is blocked from accessing this post",
             "version": 3,
             "updatedAt": "2026-09-02T16:49:01.990Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675157228390747412: Your IP address is blocked from accessing this post",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:03:47.404Z"
           }
         },
         {
@@ -37276,6 +37331,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:49:31.367Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": "Italian",
+            "durationSec": 14.2,
+            "model": "whisper-large-v3",
+            "status": "no_speech",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:03:49.606Z"
           }
         },
         {
@@ -37298,6 +37362,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:49:48.094Z"
+          },
+          "audioAnalysis": {
+            "transcript": "3,2,1... Sì, lo so. Mata Dora, Mata Dora Mata Dora, Mata Dora Mata Dora, Mata Dora Non so che faccio, non lo so come farlo Mata Dora, Mata Dora",
+            "language": "Italian",
+            "durationSec": 59.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:04:18.182Z"
           }
         },
         {
@@ -37319,6 +37392,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:49:57.149Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Parliamo del cantante mexicano al quale dicevano che Michael Jackson si è ispirato nella sua maniera di ballare. Artista originario di Tepito, che è passato da Las Carpas a filmare più di 100 film. Comico che debutò a Pedrito Fernandez e che a pesar di interpretare papeles de borracho nunca fue aficionado al alcol Adalberto Martínez Chávez mejor conocido como Resortes nació en la Ciudad de México il 25 di enero di 1916 De Cuna, umilde a los 7 años, ya bailaba Adalberto pasó de merodear salones de baile y de vender paletas de hielo a debutar en la carpa a los 15 años de edad su inigualable simpatía simpatia e stile unico per ballare, lo ingressarono al cinema realizzando la sua prima filmata nel 1946 Suo apodo se lo puso suo fratello e questo a causa sua maniera di camminare e lo agil che era bailando Resortes si cas tre volte e sempre si caratterizzò per essere un uomo semplice e vicino alla gente. I suoi passi di ballo mescolati tra Charleston, tap dance e rumba Hanno fatto che la stessa gente inventasse che Michael Jackson lo toglie a ispirazione Ma è stato totalmente falso Anche lui stesso lo ha desmentito Adalberto Nunca dejò de trabajar No obstante Sus últimos años los pasó Entre hospitales y cuidados Pues debido a su gusto Por el cigarrillo Este le desencadenó un efisema pulmonar No compadre Ay compadre Resortes falleció El 4 de abril del 2003 A los 87 años de edad Siendo così uno dei comici più importanti del cinema mexicano. Poi mi ho messo i nomi, Resorte, Resortin de la Resortera, per servirle qui, dove vogliono, come vogliono e all'ora che vogliono. E tu, lo ricordi?",
+            "language": "Italian",
+            "durationSec": 179.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:05:45.189Z"
           }
         },
         {
@@ -37341,6 +37423,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:50:06.340Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Is Ireland beautiful? Let me show you Ciao",
+            "language": "Italian",
+            "durationSec": 41,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:06:04.737Z"
           }
         },
         {
@@ -37363,6 +37454,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:50:16.114Z"
+          },
+          "audioAnalysis": {
+            "transcript": "I should get some sleep.",
+            "language": "Italian",
+            "durationSec": 8.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:06:08.881Z"
           }
         },
         {
@@ -37385,6 +37485,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:50:28.003Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 41.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:06:40.343Z"
           }
         },
         {
@@ -37436,6 +37545,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:50:42.405Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ci sono alcune decisioni che a volte sono in un'opportunità, ma io mi sono spostato a fare così. Ci sono persone che chiedono di fare un progetto, e dicono che il progetto è così, non è così, ma quando arrivano al progetto, per un motivo, per un sentimento, che hanno preso il pese, o hanno preso un'azienda, che a volte vengono e non sanno perché. Ci sono persone che diranno che è perché i carri sono chiusi, ma no, penso che per chi ha il pieno, come i vostri amici qui, non è mai chiuso, a parte che vogliamo comprare o no. E il Sedena Riverside è anche uno dei carri che stiamo utilizzando sul mercato, con un progetto di Rio Bac. I carri iniziano a andare in Sedena, poi vanno a Rio Bac e bevono un caffè. E non penso che i clienti compriano questo progetto, fino a quando i clienti dicono che è solo un'aeroporto. e che rende il cliente molto felice Quando il cliente è sottoposto al risultato, si sa che ha già amato questo progetto e ho ancora un altro consiglio Se ti piace davvero, scegli e se hai la sensazione che lo vuoi, scegli e alla fine il cliente sceglie DMROTI VALBACCULIERON Ciao",
+            "language": "Italian",
+            "durationSec": 102.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:07:21.444Z"
           }
         },
         {
@@ -37487,6 +37605,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:51:00.609Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao ciao, buongiorno amici della nostra terrazza Serena. Oggi è notte, è nublato, ma comunque riceviamo persone speciali. Grazie a tutti per il vostro supporto, per chi ci ha portato qui nella terrazza. La terrazza Serena può ricevere anche delle bambine, oggi di una casa a casa. E qui vi abbiamo lasciato questo dettaglio, per ogni bambina, un bello vaso per le sue bambine. Grazie a tutti i nostri supporti e a tutti i nostri amici che hanno rentato la nostra terrazza, qui possiamo fare questo tipo di dettagli con la nostra terrazza serena. Qui abbiamo preparato il nostro jacuzzi con una temperatura di 36°C e la nostra alberta di 34°C per che queste bambine sfruttino questo giorno nublato e bello. Ricordate che siamo di Irapuato, Guanajuato, Buleva, Aranda. Qui abbiamo anche questa, guardate che belle sono. quando vengano a visitare la nostra terrazza, qui potranno divertirsi del nostro bellissimo jardin. Che tal? Saludos!",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:07:51.373Z"
           }
         },
         {
@@ -37509,6 +37636,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:51:27.504Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 9.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:07:55.455Z"
           }
         },
         {
@@ -37531,6 +37667,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:51:41.181Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Baby show me you can come down, come down Dance with me and take the lead now, lead now Got you so high that you can come down, come down Don't you ask, you know you're allowed, allowed When it's you I can't say no Baby give me Oh oh oh oh oh oh oh oh oh oh oh oh I camminai po-po-po-po-po-po-po-po Sì, dico a niente",
+            "language": "Italian",
+            "durationSec": 36,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:08:17.070Z"
           }
         },
         {
@@ -37552,7 +37697,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:36:21.787Z"
+            "updatedAt": "2026-09-03T08:09:01.093Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -37583,6 +37728,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:52:20.351Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:09:09.246Z"
           }
         },
         {
@@ -37635,6 +37789,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:52:50.548Z"
+          },
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti. Game over",
+            "language": "Italian",
+            "durationSec": 63.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:09:41.142Z"
           }
         },
         {
@@ -37657,6 +37820,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:53:04.043Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Buongiorno clienti, buone tardi, come stanno? Oggi abbiamo un evento, una riunione familiare per 20 persone Da questo lato abbiamo le messe e le sedie accomodate Questa è la nostra sala di jardin, bella per divertirsi e l'alberca Ricordate clienti che qui abbiamo pacchetti per 10, 20, 30, 40, 50 persone e questa terrazza è un luogo unicamente per eventi, non ha abitazioni, non ha stanze per stare qui a dormire, non ha, perché molti clienti pensano che è anche per un Airbnb, ma non è un luogo solo per riunioni familiari, baby shower, un compleanno o semplicemente avere qui una riunione familiare come queste persone che oggi avranno la loro riunione familiare qui c'è il nostro jacuzzi una temperatura di 35 gradi e per chi non ci ubica ricordate che siamo di Irapuato Guanajuato ci ubichiamo in Boulevard Arandas Fraccionamento Jalisco vi do mille scuse se non ho potuto rispondere ai messaggi o non li ho risposto però qui andiamo se siete interessati mandami un whatsapp che è più facile per me per poter rispondere per favore anche per messinger ma se vi è piaciuto sapere il costo della terrazza per separare una data mandami un whatsapp per darvi più priorità e così è saluti e che tengano un bello fine di settimana Ciao",
+            "language": "Italian",
+            "durationSec": 113,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:10:37.670Z"
           }
         },
         {
@@ -37678,6 +37850,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:53:29.752Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Cheh hacer un fin de semana en las terrenas? Lo primero es el alojamiento, un lugar perfecto con 4 villas con ocupación de hasta 10 personas a tan solo unos minutos de playa bonita. Te hablo de Villasmana, un espacio super tranquilo y acogedor que también cuenta con piscina. Dopo la notte, non c'è niente di meglio che una parata in Karai Coffee. Qui potrai divertirti di un buon caffè o un ricco matcha, accompagnato di uno dei famosi Cinnamoroll. Alla ora del piatto, la parata obbligatoria è in Campo Kitchen. La proposta gastronomica e la sua posizione davanti al mare, fanno che ogni cibo si divertisse ancora più. E da i suoi tratti, fino ai suoi piatti, tutto era bellissimo. Quando scende la sera, Playa Bonita regala uno dei ambienti più accoglienti delle terreni. Un luogo perfetto per rilassarti e condividere con i tuoi amici e divertirti dei migliori attardeggi. E per chiudere il giorno, una buona cena in Al Laito. Qui le hamburghezze sono le protagoniste, ma hanno un menù con opzioni per tutti i gusti. Ma questo non finisce lì. La notte si vive in Moschito Rockstar. Buona musica, cocktail e un ambiente ideale per finire un fine di settimana inolvidabile. E raccontami con chi ti scapperai a Las Terrenas. Lascialo nei commenti e non ti dimentichi di condividere. Grazie.",
+            "language": "Italian",
+            "durationSec": 74,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:11:25.595Z"
           }
         },
         {
@@ -37699,6 +37880,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:53:40.990Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ho una domanda. Se qualcuno dice che non bisogna ritirare la testa di ponte e che è molto facile, è possibile ritirarla. Oggi P'Nui ci farà provare. Questo hotel è molto buono. L'acqua è molto buona, con tutto il sistema. La stanza, la tv, la stanza e l'aereo. L'acqua è di ponte, con la zona bianca e la zona nera. È molto facile. L'altro punto che mi piace è l'area di gioco all'estero. Nella fiamma, si può stare a riposare, bevare un caffè o parlare. L'ambiente è molto tranquillo, è molto adatto per la riposazione. Per chi ha un auto, è molto comodo. c'è un posto per la macchina per andare in mare o in qualsiasi posto in Huo Hin non è difficile ma dobbiamo dire che qui non è un hotel con una piazza e un'aeroporto se qualcuno vuole aprire la porta e trovare il mare qui non è possibile Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 98.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:12:03.480Z"
           }
         },
         {
@@ -37721,6 +37911,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:53:54.194Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:12:15.982Z"
           }
         },
         {
@@ -37742,6 +37941,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:54:20.685Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:12:56.132Z"
           }
         },
         {
@@ -37764,6 +37972,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:54:28.865Z"
+          },
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T08:13:08.400Z"
           }
         },
         {
