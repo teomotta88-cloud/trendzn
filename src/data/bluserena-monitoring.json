@@ -43148,6 +43148,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:40:21.829Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:50:34.757Z"
           }
         },
         {
@@ -43169,6 +43179,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:18:12.434Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:51:37.292Z"
           }
         },
         {
@@ -43191,6 +43210,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:41:00.737Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Welcome to Ghetto Ventures Happy birthday to you Happy birthday to you Hey guys, we are in Valentino Ano sebatanga I suon the road Let's wait for a while Let's go guys e l'avventura say hi hi this is Tarsie hello it's me sayo miante",
+            "language": "Italian",
+            "durationSec": 85.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:52:40.753Z"
           }
         },
         {
@@ -43243,6 +43271,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:18:30.570Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:52:42.956Z"
           }
         },
         {
@@ -43264,6 +43301,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:18:43.313Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:52:45.059Z"
           }
         },
         {
@@ -43286,6 +43332,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:42:17.605Z"
+          },
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:55:29.953Z"
           }
         },
         {
@@ -43308,6 +43363,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:42:43.324Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:58:38.647Z"
           }
         },
         {
@@ -43330,6 +43395,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:42:49.672Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:01:43.301Z"
           }
         },
         {
@@ -43352,6 +43427,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:43:02.005Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 37.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:01:45.795Z"
           }
         },
         {
@@ -43373,6 +43457,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:18:50.035Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:01:47.885Z"
           }
         },
         {
@@ -43426,6 +43519,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:43:38.222Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 23.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:01:50.093Z"
           }
         },
         {
@@ -43447,6 +43549,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:18:58.036Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Siete pronti per la notte di date? Oggi andremo a ascoltare jazz a una speakeasy e ho pensato che, da sempre che portiamo gli outfit a compagni, potrebbe essere bello fare una combinazione di scente di lui e di lei. Vorrei portare la nuova Vendetta Uomo da Valentino. E io vorrei portare la Vendetta Donna. Sono così fofosa di un florale bianco ricco e questa è come un scente di tubero cremoso, sento il sapore di tuberose, inizialmente. Si sente un po' di melco perché ha il sandalo in base, ma si sente anche un po' di spazzatura, un po' effervescente all'inizio, perché ha un arancione rosso. Ricorda le note del tuo? No. Chiudi gli occhi, sentilo con me. Abbiamo il zenzero. Oh, questo va bene con l'arancia del tuo. Esattamente. Che fa spessissimo? Oh, buona notte. Questo sarebbe il liquido di cinamano. Questo è un po' dolce, eh? È un po' dolce, ma ha il patchouli in base, quindi è un po' How do you think they smell together though? I guess you're gonna find out on the dance floor Date night ready",
+            "language": "Italian",
+            "durationSec": 54.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:04:53.872Z"
           }
         },
         {
@@ -43469,6 +43580,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:44:07.456Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:07:58.538Z"
           }
         },
         {
@@ -43491,6 +43612,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:44:21.389Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Necessito conoscere il dueño di questo luogo urgentemente, perché ho due cose da dirgli. Prima dargli un abbraccio, per creare una meraviglia simile, e poi reclamarglielo perché ora spiegami come si suppone che mi voglia andare da qui.",
+            "language": "Italian",
+            "durationSec": 23.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:08:01.589Z"
           }
         },
         {
@@ -43513,6 +43643,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:44:33.231Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:11:04.293Z"
           }
         },
         {
@@ -43535,6 +43675,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:44:42.360Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ranking every Valentino on a tier list. Starting off with Womo EDP Intense. This one's like a woody masculine date night cologne, but they're definitely better Valentino. EDP. Born in Roma, EDP. And this one's kind of like the baseline of Valentino. It's good, but they're definitely to be better. EDP. Yellow Dream. And this is like the cologne version of Axe. It smells like gingerbread-y, but also pretty masculine. EDP. Green Shavagazza. And this one smells professional. Like it's fresh, clean, but it just doesn't last very long. EDP. And then we have Coral Fantasy. Versatile, fruity, and masculine at the same time. Ciao",
+            "language": "Italian",
+            "durationSec": 47.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:12:07.608Z"
           }
         },
         {
@@ -43556,6 +43705,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:19:10.574Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 20.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:12:09.728Z"
           }
         },
         {
@@ -43578,6 +43736,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:45:10.316Z"
+          },
+          "audioAnalysis": {
+            "transcript": "I didn't have a pen and paper I got to the mic, I'm like Oh, press record Ah, ah, ah Drive a road Let the fuck this shit please",
+            "language": "Italian",
+            "durationSec": 8.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:12:11.937Z"
           }
         },
         {
@@ -43600,6 +43767,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:45:17.696Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Queste sono le nuove fragranze Valentino. Questa è Vendenta Omo e questa è Vendenta Donna. Ora, una cosa che direi, venendo direttamente da fuori, questa fragranza è più femminile e questa fragranza è più maschile. Ora, per Donna, direi che questa è una fragranza molto floral gourmand. Non l'ho testata, tutto ciò che ho fatto è metterela su un testo, ma mia sessore e mia mamma l'hanno usata e la stavano progettando tutto il giorno. Questa è una fragranza super buona e questa è davvero una masterpiece di fragranza femminile. Ovviamente, se sei un uomo, puoi usare questa anche, ma questo è più femminile e, sinceramente, sentisce super bene nell'aereo, in un frangrante in generale. Quindi se sei femminile e stai cercando frangranti di Valentino, direi che questo è quello per cui devi andare. Ora, per Umo, questo è quello che mi porterò molto. Ha la nota superiore del ginger di Perù. E sulla raffreddazione, ho un liquido di cinamano o un cordone che si trova super ben sullo schiena. Tutte queste frangranti sono grandi scelte. Puoi smetterle a tua località, Sephora, Macy's, chiunque porti questo prodotto. potrete usare questo e potrete vedere se ho ballato. Ma per la mia audience femminile, questa fragranza è un dormitorio. Dovete usare questo. Come ho detto, si progetta tutto il giorno ed è solo quel frangrante di gommone di pelle che sarà super buono per la primavera. E con la primavera venendo per i nostri uomini, questa fragranza sarà ottima. È solo una buona fragranza di cinamano e ginger dove il riscaldamento è incredibile. Se avessi da scegliere tra queste due fragranze di Valentino, per quale volete usare? La mia scelta, se sei un uomo, andrei con Umo e se sei una donna, andrei con donna ma questi due sono grandi fragranze prendi il tuo naso su questi super buoni",
+            "language": "Italian",
+            "durationSec": 87.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:12:16.194Z"
           }
         },
         {
@@ -43621,6 +43797,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:19:16.735Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:12:18.364Z"
           }
         },
         {
@@ -43643,6 +43828,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:45:30.375Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 7.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:12:35.590Z"
           }
         },
         {
@@ -43664,6 +43858,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:19:29.275Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:15:38.976Z"
           }
         },
         {
@@ -43686,6 +43890,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:45:56.116Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:15:41.288Z"
           }
         },
         {
@@ -43708,6 +43921,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:46:01.774Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 8.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:15:43.644Z"
           }
         },
         {
@@ -43730,6 +43952,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:46:12.050Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Rio Jamaica is having a sale and this one is good. Four days and three nights in September for just $52,300 at Rio Ocho Rios and $66,050 per person at Rio Aquarelle. Yes, it's all inclusive. Yes, it's a party resort and you only need to pay $8,000 to reserve and the rest at a later date. WhatsApp us now at 876-823-1363 and let's get you booked. Grazie.",
+            "language": "Italian",
+            "durationSec": 31,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T11:16:46.316Z"
           }
         },
         {
