@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { describeGithubFailure } from "@/lib/githubApiError";
 
 const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
@@ -59,9 +60,16 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
 
             if (!metaRes.ok) {
               const errorText = await metaRes.text();
-              console.error(`[update-bluserena-verification] GitHub API error ${metaRes.status}:`, errorText);
+              console.error(
+                `[update-bluserena-verification] GitHub API error ${metaRes.status}:`,
+                errorText,
+              );
               return Response.json(
-                { ok: false, error: `Lettura metadata fallita: ${metaRes.status}`, details: errorText },
+                {
+                  ok: false,
+                  error: `Lettura metadata fallita: ${describeGithubFailure(metaRes, errorText)}`,
+                  details: errorText,
+                },
                 { status: 500 },
               );
             }
@@ -72,20 +80,26 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
             // Il file supera 1 MB: l'endpoint contents non restituisce il
             // contenuto, si scarica il blob identificato dallo sha appena letto
             // (coerente per costruzione, a differenza della CDN raw).
-            const blobRes = await fetch(
-              `https://api.github.com/repos/${REPO}/git/blobs/${sha}`,
-              {
-                headers: {
-                  Authorization: `token ${token}`,
-                  Accept: "application/vnd.github.raw",
-                  "User-Agent": "trendzn-bot",
-                },
+            const blobRes = await fetch(`https://api.github.com/repos/${REPO}/git/blobs/${sha}`, {
+              headers: {
+                Authorization: `token ${token}`,
+                Accept: "application/vnd.github.raw",
+                "User-Agent": "trendzn-bot",
               },
-            );
+            });
 
             if (!blobRes.ok) {
+              const blobError = await blobRes.text();
+              console.error(
+                `[update-bluserena-verification] GitHub blob error ${blobRes.status}:`,
+                blobError,
+              );
               return Response.json(
-                { ok: false, error: `Lettura blob fallita: ${blobRes.status}` },
+                {
+                  ok: false,
+                  error: `Lettura blob fallita: ${describeGithubFailure(blobRes, blobError)}`,
+                  details: blobError,
+                },
                 { status: 500 },
               );
             }
@@ -137,8 +151,17 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
               continue;
             }
 
+            const writeError = await writeRes.text();
+            console.error(
+              `[update-bluserena-verification] GitHub write error ${writeRes.status}:`,
+              writeError,
+            );
             return Response.json(
-              { ok: false, error: `Scrittura fallita: ${writeRes.status}` },
+              {
+                ok: false,
+                error: `Scrittura fallita: ${describeGithubFailure(writeRes, writeError)}`,
+                details: writeError,
+              },
               { status: 500 },
             );
           }
@@ -148,10 +171,7 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-verific
             { status: 500 },
           );
         } catch (err) {
-          return Response.json(
-            { ok: false, error: String(err).slice(0, 200) },
-            { status: 500 },
-          );
+          return Response.json({ ok: false, error: String(err).slice(0, 200) }, { status: 500 });
         }
       },
     },
