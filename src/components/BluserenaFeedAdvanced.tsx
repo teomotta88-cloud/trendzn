@@ -160,17 +160,36 @@ export function BluserenaFeedAdvanced({
     return d.getFullYear() === year && (month === 7 || month === 8);
   };
 
+  // Testo su cui cerca il campo di ricerca: oltre a caption/handle/canale,
+  // anche la trascrizione audio (scripts/analyze-bluserena-audio.mjs) e il
+  // testo sovraimpresso letto dai frame (scripts/analyze-bluserena-ocr.mjs).
+  // Nei reel il messaggio sta quasi sempre lì e non nella caption, quindi
+  // senza questi cercare una frase detta o scritta a video non trovava nulla.
+  //
+  // L'indice si costruisce una volta per ogni ricarica dei post (il polling
+  // ogni 30s), non ad ogni tasto premuto: le trascrizioni sono lunghe e
+  // rifare le concatenazioni ad ogni keystroke si sentirebbe sulla
+  // digitazione.
+  const searchIndex = useMemo(() => {
+    const index = new Map<Post, string>();
+    for (const p of posts) {
+      index.set(
+        p,
+        [p.caption, p.handle, p.canaleName, p.audioAnalysis?.transcript, p.ocrData?.textOnScreen]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase(),
+      );
+    }
+    return index;
+  }, [posts]);
+
   const filteredPosts = useMemo(() => {
     let result = posts;
 
     if (search) {
       const q = search.toLowerCase();
-      result = result.filter(
-        (p) =>
-          p.caption?.toLowerCase().includes(q) ||
-          p.handle?.toLowerCase().includes(q) ||
-          p.canaleName.toLowerCase().includes(q),
-      );
+      result = result.filter((p) => (searchIndex.get(p) ?? "").includes(q));
     }
 
     if (dateFilter !== "all") {
@@ -199,7 +218,7 @@ export function BluserenaFeedAdvanced({
     }
 
     return result;
-  }, [posts, search, sentimentFilter, verificationFilter, dateFilter]);
+  }, [posts, searchIndex, search, sentimentFilter, verificationFilter, dateFilter]);
 
   const stats = useMemo(() => {
     const posts2025 = posts.filter((p) => isInJulyAugust(p.date, 2025));
@@ -337,7 +356,7 @@ export function BluserenaFeedAdvanced({
             <div>
               <input
                 type="text"
-                placeholder="Cerca nelle caption, handle, nome canale..."
+                placeholder="Cerca in caption, trascrizioni audio, testo on-screen, handle, canale..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
@@ -468,6 +487,7 @@ export function BluserenaFeedAdvanced({
             <PostCard
               key={post.url}
               post={post}
+              search={search}
               updating={updatingUrl === post.url}
               onToggleVerification={() => toggleVerificationStatus(post)}
             />
@@ -625,17 +645,50 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
   );
 }
 
+// Ritaglio di testo attorno alla prima occorrenza cercata: le trascrizioni
+// arrivano anche a diverse migliaia di caratteri, mostrarle intere nella card
+// non direbbe comunque dov'è il match.
+function excerptAround(text: string, query: string, radius = 45): string {
+  const at = text.toLowerCase().indexOf(query);
+  if (at < 0) return text.slice(0, radius * 2);
+  const start = Math.max(0, at - radius);
+  const end = Math.min(text.length, at + query.length + radius);
+  return `${start > 0 ? "…" : ""}${text.slice(start, end).trim()}${end < text.length ? "…" : ""}`;
+}
+
 function PostCard({
   post,
+  search,
   updating,
   onToggleVerification,
 }: {
   post: Post;
+  search: string;
   updating: boolean;
   onToggleVerification: () => void;
 }) {
   const status = post.verificationStatus || verifyBluserenaPost(post.caption);
   const sentiment = post.sentiment;
+
+  // Quando un post è in lista per una parola che sta solo nell'audio o nel
+  // testo a video, la card non mostrerebbe da nessuna parte il perché e il
+  // risultato sembrerebbe sbagliato: qui si vede il punto esatto del match.
+  // Nessuno snippet se la parola è già nella caption, che è visibile sopra.
+  const hiddenMatch = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return null;
+    if (post.caption?.toLowerCase().includes(q)) return null;
+
+    const transcript = post.audioAnalysis?.transcript;
+    if (transcript?.toLowerCase().includes(q)) {
+      return { source: "audio" as const, text: excerptAround(transcript, q) };
+    }
+    const onScreen = post.ocrData?.textOnScreen;
+    if (onScreen?.toLowerCase().includes(q)) {
+      return { source: "ocr" as const, text: excerptAround(onScreen, q) };
+    }
+    return null;
+  }, [search, post.caption, post.audioAnalysis?.transcript, post.ocrData?.textOnScreen]);
 
   return (
     <div className="rounded-xl border border-border bg-card overflow-hidden">
@@ -660,6 +713,23 @@ function PostCard({
         </div>
 
         {post.caption && <p className="text-[11px] line-clamp-2 text-muted-foreground">{post.caption}</p>}
+
+        {hiddenMatch && (
+          <p
+            className={`flex items-start gap-1.5 text-[10px] italic line-clamp-2 ${
+              hiddenMatch.source === "audio"
+                ? "text-purple-700 dark:text-purple-400"
+                : "text-amber-700 dark:text-amber-400"
+            }`}
+          >
+            {hiddenMatch.source === "audio" ? (
+              <Headphones className="size-3 shrink-0 mt-0.5" />
+            ) : (
+              <Zap className="size-3 shrink-0 mt-0.5" />
+            )}
+            <span>{hiddenMatch.text}</span>
+          </p>
+        )}
 
         <div className="space-y-1.5 border-t border-border pt-2">
           <div className="flex items-center gap-1.5">
