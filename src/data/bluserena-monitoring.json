@@ -1374,14 +1374,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:09:52.133Z"
+            "updatedAt": "2026-09-03T07:36:21.787Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -4474,7 +4473,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:04.075Z"
+            "updatedAt": "2026-09-03T07:34:42.240Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -5769,14 +5768,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "buongiorno oggi vi porto con me a vedere il serenusa resort guardate qui questi sono i campetti ballavolo totalmente immerso nella natura verde molto molto curato questi sono i vialetti che portano alle stanze sono divise per settori questo è il 7 noi siamo all'8 il 6 sono tutte a piano terra primo piano e qualche altra al primo e secondo piano questi sono i cappetti di calcio qui c'è MS Padel guardate che verde rigoglioso sente solo il rumore degli uccellini neanche sono le 7 del mattino questo deserto è molto molto adatto perché bambini perché come vedete ci sono questi sentieri che portano un centro della struttura che ora vi faccio vedere dove c'è una piscina enorme per i bambini con gli scivoli, poi c'è una piscina semiolimpionica ed è vicinissimo al mare, c'è anche un ristorante centrale con la baby kitchen dove troverete tutto per trovare le pappine per i vostri bambini. Andiamo in piscina, qui trovate anche il piano bar dove poter prendere acqua e dispenser da quest novit anche inclusi coca cola sprite alla spina bar oltre mare e qui davanti troviamo la piscina con ombrelloni lettini le docce e suddivisa in due parti una un po' più profonda mentre l'altra è più bassa e ha questi due scivoli i vostri figli si divertiranno tantissimo questo simboletto della zampetta di un animale è perché questa struttura accetta gli animali sono delle dog room dove si paga un supplemento per il vostro cane e potete tranquillamente portarlo in vacanza con voi qui abbiamo il parco giochi e qui possiamo già vedere il mare questo è il sentiero che porta al mare e qua ci sono le piscine e adesso ci spostiamo in spiaggia potete prenotare tramite app Blu Sereno una volta prenotata la vostra vacanza qui tramite app una volta per ogni ristorante nel vostro soggiorno è incluso gratuitamente sia il ristorante Le Onde che Il Gusto Qua c il ristorante Il Gusto aperta a cena con i piatti tipici siciliani Questo il percorso che vi porta direttamente in spiaggia se avete bambini piccoli con il passeggino mentre adesso facciamo il percorso con le scale passando per il bar e per il ristorante le onde il ristorante le onde direttamente sul mare gli ombrelloni sono divisi per due settori le prime quattro file sono a pagamento mentre potete scegliere anche la formula ombrellone assegnato dalla quarta fila in poi per risparmiare qualcosina e poi quello non assegnato ogni giorno vi capiterà un ombrellone diverso Qui spiaggia trovate tutti i giorni animazione la mattina, mentre su in piscina il pomeriggio, contattatività di balli di gruppo, musica e poi varie attività anche durante il giorno sia per i bambini che per gli adulti. Saliamo su e adesso vi porto al ristorante. Questa è l'area Baby Kitchen. e qui il ristorante anche qui potete scegliere tranquillamente se pranzare o scegliere comunque una formula dei vostri pasti all della struttura che gratuita altrimenti all del ristorante che climatizzato che ha pagamento questo il ristorante Il Vento è ancora chiuso e da qui c'è un'altra area giochi per i bambini. Qui abbiamo le piscine e tanti giochi sulla sabbia. qui c'è la palestra e adesso risaliamo e vi porto alla piscina semi olimpionica anche qui ombrellone lettini docce Adesso arriviamo all'anfiteatro dove ogni sera ci saranno varie serate musical, serate di spettacolo, di canzoni, di intrattenimento, baby dance.",
+            "language": "Italian",
+            "durationSec": 618.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:36:37.347Z"
+            "updatedAt": "2026-09-03T07:35:43.915Z"
           },
           "ocrData": {
             "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
@@ -9491,9 +9489,9 @@
             "durationSec": null,
             "model": "whisper-large-v3",
             "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:13.898Z"
+            "updatedAt": "2026-09-03T07:34:54.650Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -10616,7 +10614,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7676255321035164960: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T15:25:15.447Z"
+            "updatedAt": "2026-09-03T07:34:56.290Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -11276,14 +11274,13 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "... Grazie mille! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:02:06.620Z"
+            "updatedAt": "2026-09-03T07:36:18.730Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -14098,14 +14095,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMEi8AaiKIHo4kIR8jIoguPmBArTidBp46UvI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=6OpOtKejQkaVTGLyrQhghbrhFUs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Leo, non posso. Miguel, cazzo di te. Stai mentendo, sei un mentireo. Ma non so cosa cazzo di te stai guardando. Sto mentendo. Cazzo, lei è andata a lui. Aspetta. Sei un mentireo, sei un cazzo di te. Non so perché sei qui, mollando, sad, agendo come... Siete a punto di ascoltarmi, avete fatto mi f***. Aspetta, sta chiamando. Sta chiamando. Siete lì, hippie, yeah, non abbiamo mai visto lui così con te, ma lui con te, ma quando parli con me è un'altra storia. Sei piena di c***o, Cordell. Sei piena di c***o, sei disrespecchioso come c***o. Stai mettendo su un c***o. Bravo. I ragazzi mi dicono che Cordell piace molto lei, che è un po' l'amore. Sì, è vero. Ma poi penso che quando lei dice che Cordell piace molto lei, tutti dicono la stessa cosa. È cazzata. È cazzata. Ho parlato con lei. Ok, voglio sapere, perché mi hai chiamato? Parliamo. Onestamente non posso fare questa cosa. No, no, vieni. Questi uomini stanno parlando. Serena, torna. Tutti sono disinteressati. Cazzo! Mi dico che sei ferita, ma stai tagliando i tuoi amici. Non mi interessa. Oh mio Dio, sono andata a svegliare. Cazzo di un uomo! Sei frustrata. Sei frustrata. Come via, come via, come via. Sì, sì, sì. Posso parlarti? No Posso parlare qui, vieni Ma voglio sentire ciò che hai detto Voglio capire da dove sei arrivata No Non siete miei amici Miguel, non ti penso che sia stato un bel giorno Io non penso che sia stato un bel giorno Ho chiesto a Cordell Come si sentono i ragazzi Quando mi parlano E lui mi diceva che tutti erano molto felici Che non avevano mai visto un smile così e così via, è quello che avete detto in casa che è ok, ma penso che dove è pazzesca è che lei è stata anche fatta la stessa cosa da voi due questi non sono un pezzo di cazzo sei un pezzo di cazzo sei un pezzo di cazzo parliamo di come sono un pezzo di cazzo facciamo il nostro 101 questo è perché volevo parlare con te in prima parte perché sei cazzata come sono cazzata? parli con me no, no, no parli con me No, ho bisogno di sentire tu prima. Aspetta. Aspetta. Aspetta, lo capisco. Sei obbligato a sentire come ti senti, ma dicci come ti senti. Ho dato un po' di cosa su come mi sento. No, ho bisogno di sentire un a un esattamente come ti senti perché tu stai arrivando a me, lo capisco. Ho capito perché sei frustrato. Questo è perché volevo parlarti in prima parte. Non sto cercando di chiamarti. Non mi interessa. Non mi interessa. Aspetta, ok. Quindi parli con me. Dicci come ti senti. Che cosa sta succedendo? Sei sbagliato. Sei sbagliato. Ciao I told you what the fuck Serena stop Don't fucking touch me Because I still don't want to fucking talk to your ass Because it is what it is You wasn't feeling bad in the slightest When your ass was over No there was no type of consideration for me Or you wouldn't have done half the shit you did Half the shit First off I told her I felt like I disrespect you And kept doing it So how bad did you really feel Cause you kept doing it e poi l'hai portata per rubare quella cazzo nel mio face nessuno stava cercando di rubare la cazzo nel face di nessuno ok, bello, bello non intenzionalmente ma tu l'hai fatto e l'hai portata quindi stai su quella cazzo volevo testare la nostra connessione e l'hai testata bello, l'hai fatto l'hai fatto e l'hai fatto disrespecchialmente e per questo volevo venire e parlarti per cosa? dici scusa? se ti senti cazzo non avresti continuato a farlo bello senti che avete più di quello che abbiamo dimenticare quella cazzo Non senti che abbiamo più? No. Ho detto a lei, aspetta, ho letteralmente detto a lei, le mie sensazioni per Serena sono forti, è andato a prendere molto, ma sei andata in alto. Non è andato molto. È andato... Non è andato a prendere s*****o. Solo perché, aspetta... Non è andato a prendere s*****o. Lo capisco, ho s*****o. Tutti hanno s*****o, sono umano. E lo so. Lo capisco. E lo so. E per questo non mi dispiace di come ti senti. Non importa cosa faccio, ho il tuo aspetto in mezzo a me. Io ti considero ogni passo, anche quando sono andato a quella data, io ti considero. E non hai bisogno di dire rispetto a me. No, non mi fai male, sono umano. Non ti fai male, non ti fai male. Non ti fai male per me. Ti voglio sentire. Mi fai male che ho fatto questo a te. Tu non hai zero controllo di te stesso. Ti è prezioso non nemmeno 24 ore per fuggire. Fuggire come un presso. Stando a... Io sto a... Sì, stavo a... Adesso sono mai amministrato di ciò che ho fatto. Ma io avrei potuto... non avrei potuto... Non sei mai stato malata per tutto. Non sei mai stata malata per tutto. No non l fatto Come mi stai parlando No non l fatto Puoi chiedere a quei ragazzi l Puoi chiedere a lui Puoi chiedere a Rob No you didn What the fuck is you talking about You can go ask them boys over there You can go ask her The same boys over here telling me oh You can go ask Rob You can go ask Rob You can go ask Kendall. You can go ask fucking... They ain't never seen you act the way you act with her. And I told them it's the same shit. So be it. Listen. So be it. I'm fucking done. Serena. Dog, you ain't even really let me talk. Serena Serena, andiamo sei così disrespeccosa non sto cercando di essere disrespeccosa no, ma tu l'hai non ti preoccupai no, non ti preoccupai non ti preoccupai ho potuto essere molto più rispeccoso mi sono fottuto per quattro giorni mi sono fottuto non mi fottuto è quello che vuoi non lo capisci non devi non devi chiamarmi io sarò bene fuck I hate this I hate this I hate this Serena stop come on no I'm done I'm not about to do this back and forth with you there is no compromise just because you did it you did it obviously I'm gonna be hurt but it's fine I didn't that you're hurt I'm trying to I'm trying to fix this I promise you I was never trying to put you in this position I thought of it differently yes I got caught up in a moment I fucked up Hai fatto la tua scelta. Questa è la tua scelta. Questa non è la mia scelta. Questa è la tua scelta. Sono felice di sapere che in tre giorni hai sbagliato tutto ciò che abbiamo costruito per tre giorni. Volevo esplorare. E lo hai fatto. Non mi ha preso una settimana per esplorare con un ragazzo e sapere che sei sempre tu. Non l'hai fatto. Marina, andiamo, non possiamo finire così. Ti sei finito quando sei entrati qui. Bro, è un cazzo di cazzo. Ti sei finito quando sei entrati qui. Go get your girl Serena come on Go get your girl Cordell",
+            "language": "Italian",
+            "durationSec": 497.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:28:45.597Z"
+            "updatedAt": "2026-09-03T07:35:11.452Z"
           },
           "ocrData": {
             "textOnScreen": "Serena met her step goal the way\nshe strutted around this villa cursing\nKordell out for nearly 10 minutes\nMi I. don't think you up to date bruv",
@@ -14168,7 +14164,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7678850497431833877: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T15:28:47.276Z"
+            "updatedAt": "2026-09-03T07:35:13.027Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -14408,14 +14404,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0rbN2EQQDgq1ajf81FSYF0QKeuA0EALDBGRE1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=omWyiYDIn6Q6qyNrv6vfSI3MuW8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Serena sta dicendo il suo ultimo saluto a Frederick. Anche la sua amica è in giro a un hotel che ha aiutato a risolvere le sue sentimenti riguardo Frederick e Iser. L'unica cosa che Serena può fare per Frederick ora che conoscono la verità del passato è sperare che trovi la pazza e lo mandi in casa. Gli dà la sua libertà. Non è nulla del loro peggio ciò che Lizzie ha fatto. While it's a painful memory, she doesn't want it to define their entire lives. So she really is letting Frederick go. We see people from the Republic coming to take him home. Serena's secretary running to him to return Lizzie's ballet shoes because Serena can't keep them anymore. She's hoping that suffices as her final farewell. It's so tragic, it really is. Lizzie's story, Frederick's story, what happened to Serena's family. e la realtà è che è un accidente orribile. Serena sta cercando di muovere la sua vita. Vediamo la sua incontro con gli ambasciatori, parlando dei suoi hotel Se non fosse per mio marito questo nuovo hotel non sarebbe fatto pi Ma cosa davvero sul fondo della sua mente Isa Ma sai cosa in un punto di grado di angst Dice che non ti ammi. Dice che è la persona che si trova che davvero perdono. Non ha detto nulla a me nemmeno dopo il divorzio. Davvero? Tu sei appena disaperto. Ma poi vede qualcuno che sembra Isa e stoppa praticamente curandolo per scoprire che no, no, non era Isa. Ma Ma mentre stanno cercando di ascolare Serena in un luogo per sorpresa, vede qualcuno che si pensa sia Iser e li chiesce. Ma sente una voce dietro la piazza dicendo Chi stai cercando? L'ultimo non-sì Serena? Iser, che grande entrata. Mi sembra di dire che cosa è questa entrata. Ma sappiamo che Man ha avuto un po' di tempo a combattere con il suo stuffo per trovare il suo modo di tornare a Serena. Spero che abbia sortito tutto con il suo fratello evillone. E ha il potere che ora ha bisogno di proteggere Serena so they can be together and they can be happy. I do wonder what he was up to during their separation, but it's clear it was painful for the both of them. Iser's just better at putting on a strong face than Serena is right now. She really, really terribly missed Iser.",
+            "language": "Italian",
+            "durationSec": 131.3,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:49:42.886Z"
+            "updatedAt": "2026-09-03T07:35:59.814Z"
           },
           "ocrData": {
             "textOnScreen": "...I HOPE YOU CAN LEAVE ALL THAT'S\nIN THE PAST AND LIVE AS\nO YOU WERE MEANT TO 4\nhoping that\nas her final\nfarewell.\nIO YOU WERE MEANT TO BE. i",
@@ -14440,14 +14435,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/osf6QSDAEDBETEAEkcDrVqQgkIY0XMRkCFUEe7~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=4TksSa6iJzPmRBTSSK%2B5ZuawywU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Andiamo a fare la tavola di piedi di Hannah Montana, ma questa volta provo le palle di plastica. Le taglio in strisci. Le dipongo in un pezzo di acqua e poi le stacco sulle mie pantaloni di pietra così. Dobbiamo fare questo per tutto il mio piede. Ho bisogno di un nuovo tessuto. Taglio le strisci del mio marito mentre stacca queste sui miei piedi. È come portare un'ipatch sui tuoi piedi. Cosa? Oh, un'ipatch sotto, non un'ipatch pirata. Un piede in basso, uno in basso. Mi interessa se scopro per un momento? Mi metto solo il mio red bull. No, no, no! Per favore! È qui. Guarda. Guarda il mio torso che sta muovendo. Sembra che stia venendo sottoposto in mezzo. Le gambe sono pronte. Posso fare un spin? Guarda. Come lo faccio a mangiare il mio sandwich mentre questo si asciuga? Brava! Lo taglierò senza che tu taglieri le tante l'ultima volta. Forse se non possiamo toglierlo possiamo chiamare la stazione di fiume. Sono amici con loro tutti. C'è tipo 8 strati qui. Non taglieri le tante. Sono bene? Oh. Ti ho detto di non taglierle le tante! Oh. Oh. All right, here are my legs. Now we'll do a little bit of reconstruction. You destroyed these bands. No, I'm not shaking your hand. I didn't film it because it was a mess, but I plastered my legs closed again. Now we just need to wait for her to dry. To get the table to stand upright, I'm going to put this piece of wood up the leg and then I'm going to screw this to the bottom. This is girls in construction. Got it. Okay. My hands look like this so that his can look like this. I just lost them. Sì, sicuramente. Ora che è sulla tavola, stiamo smuovendo la parte. Devo lasciarla asciugare ancora. Buongiorno, lo dipingiamo così. Penso che posso stenzilare alcune forme strane. Stiamo dipingendo. Lo ho scettato come una situazione di colori per numeri. Iniziamo con il blu. Finisco con il blu, mio marito lavorerà sul rosso. Vengo avanti, mescolo un po' di rosso. Per la mia ultima colorazione, faccio un rosso caldo. rosso guarda quanto è bello questo si svolge sull'alto della tavola e possiamo dipingere la tavola blu bene dopo 40 e più giorni di chiedere qui è la tavola Hannah Montana sembra cos buona ho praticamente tolto la loro set penso che sia perfetta e incredibile devo solo farlo registrare da Hannah Montana ogni anno mio marito ha 11 amici che vengono in citt per un grande weekend di golf e sempre stanno a casa mia ma non questo anno sono andata in hotel la cosa divertente che i ragazzi non lo sanno una sorpresa sono molto grata perché il Red Rock ha detto che avrebbero portato tutti i ragazzi è così bello, è dove ho avuto il mio lizard andiamo a vedere la casa è la casa della stessa wow è stupenda qui guarda quel enorme tavolo circolare ho un buon aereo? quindi la rete di eventi è che decoreremo la stanza e quando stanno finendo di golfare ci incontreremo a casa mia dove pensano stanno e gli dirò che non c'è nessun ragazzo qui e li porterei in questo hotel. Ho questo signo enorme che mi metterò a stendere in una finestra. Mio fratello mi ha aiutato a stendere questa posterina e poi ha dovuto lasciare, quindi ora sono solo qui! Sono solo in questo grande e bello luogo, è così divertente! Ora facciamo un balloon arch, ho anche trovato questo giallo-red bull in la friggere. Yum. No! È come quattro sottili di riso. Scusate ragazzi. Ok. Ok. Andiamo a lavorare sui balloon. Amo questo. Poi pensavo che fosse bello stendere un po' di tinsel dal bar. è così divertente! ho ancora un po' di cose prima di tutto questo, c'è un sacco di ragazzi che stanno in una stanza e in caso di tre round di golf al giorno non siano sufficienti, possono praticare il puttino qui tutti in uno! un'altra lavastoviglie spaziale oh, sono pronta oh mio dio, guarda quanto è grande questa sciogliera è la stessa stanza più bella del hotel in cui sono mai stata ok, sono finita di decorare e penso che abbia questa stanza per me stessa per 7 ore forse dovrei farmi un massaggio la madonna del massaggio è qui dormo così, quindi probabilmente concentrandoci sull'altra parte Ciao le floppe sono così volanti la ultima cosa è mettere fuori questi donati custom face pronti per i ragazzi? buona notizia ho trovato il bluetooth ok andiamo a prendere i ragazzi potete aver notato per la manca di 11 sedi non stai qui ma c'è un carro fuori andiamo tutti a bordo i ragazzi sono qui abbracciate ok ragazzi wow All aboard Enjoy My husband's throwing a golf weekend and I thought it would be funny if I printed all of his friends' faces on donuts. Good morning! The most beautiful donuts in the world! Morning! Buongiorno! Ho fatto le mie foto. Mio marito ha foto stupide di tutti i suoi amici. Lo lascio pulire e partiamo. Wow, il mullet è perfetto! Bello. Penso sia Halloween. Hot dog. Bello. La metà della crew. Ha fatto una bella foto. Bello. Aspetta, snap break, perché non ho mai provato a crepire. non so come non l'ho mai sentita non so come non l'ho mai sentita non lo so mi piace il crunch giusto? lo farò mangiare come lo faranno mangiare che è in alto e basso approvato? sì approvato selfie check non lo so tutti ma ci sono dei grandi piccoli qui l'ultimo è così buono ho visto in mia camera che il primo ragazzo è arrivato spero che non inizi a cercare un'acqua ok ho tutti i miei donuts voglio andare a prenderli all'hotel dove stanno andiamo a prendere i donuts custom ok, pronti per i ragazzi? questo è così carino ti piacciono i donati? Thomas, prendi quelli per te mio marito li ha trovati in un'altra casa e li ha portati a casa perché pensava che li avrei voluti un regalo sottile ma sottile la macchina è stata toccata perché aveva un scherzo ma è ancora abbastanza stabile oh mio Dio ok forse non asciugata come ho pensato guarda una macchina di rock un sito a vostro rischio ho postato una foto su Instagram e le persone hanno detto che sembrava un avocado quindi facciamo un sito avocado Non sono stata in la mia casa da quando sono stata stessa per il hibachi Non ho pi un tarp ma ho questo tento che penso che funzioni. Ah! È perfetto! È la migliore tenta di spray mai. È un po' fredda oggi. Vieni, ragazza. Prendi la tua stessa. Inizierò con la textura di palle perché volevo che sembriva un reale avocado. Non so come usare questo. Scaldare l'albero. Rimuovere il clip rosso. Non puoi imparare a leggere la textura? Don un nero sbagliato diva in basso e lo metto in pesante e alto spray 20 metri in avanti è lontano oh 20 centimetri è come se fosse un forno di pressione proviamo lì di nuovo penso che sembra ottimo ora lo dipenderò espresso ottimo coverage fino a ora penso che sia esattamente quello che volevo aspettare che si asciughi e poi faremo verde all'interno ho tagliato le corna del sedere ora possiamo fare l'interno verde ho un verde lento e un dark green so we can do the whole thing in dark green and then put light green in the middle so it has that nice like avocado ombre make it realistic i want you to be able to take a bite out of the chair and be like that's a fruit shivakadoo we'll start with dark green i'm just gonna eat some seaweed and wait for that to dry maybe i could set up my new hummingbird feeder my last one broke they stopped coming around when i stopped feeding them fair enough sugar this is my new hummingbird feeder it's really cute but it's kind of small non è bello? buonissimo aah mi è spazzato la faccia! togli questo questa piccola coperta di forno è probabilmente la mia cosa preferita della cucina mettiamo questo su e prendiamo questo fuori spero che i miei uomini non abbiano dimenticato di me, li amo un altro strato di questo ora lo faccio più leggero nel mezzo spero che non si vada uguale sta semplicemente semplicemente sottile oh no! E' un bugio! Oh, scusa, rest in peace. È un po' troppo? Andiamo in con il più scuro. Tocchiamo la tappa. Cool. Quello verde è troppo sbagliato, lo provo. Wow, è come un neon. La vernice è finita sul mio sedere di avocado. La pelle è texturata, con un colore colorato di ombre all'interno. E non sarebbe un avocado senza un pit. Che ne pensi? Questo sembra un po' massimo, ma è ok. I'm gonna put it over here with all my other painted furniture. It's kind of getting a little weird in here.",
+            "language": "Italian",
+            "durationSec": 550.8,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:31:16.383Z"
+            "updatedAt": "2026-09-03T07:35:35.050Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -16732,7 +16726,7 @@
             "model": "whisper-large-v3",
             "status": "no_speech",
             "version": 1,
-            "updatedAt": "2026-09-02T15:32:24.866Z"
+            "updatedAt": "2026-09-03T07:35:37.202Z"
           },
           "ocrData": {
             "textOnScreen": "Calaserena Resort\nSardegna",
@@ -18508,14 +18502,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oUGEAc1ApL0zwRtBIqIGeAeIQBkeAKS3NYBfPG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=I7VgyUPx4QqAaIjyTDQLcsQvOlI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "buongiorno oggi vi porto con me a vedere il serenusa resort guardate qui questi sono i campetti ballavolo totalmente immerso nella natura verde molto molto curato questi sono i vialetti che portano alle stanze sono divise per settori questo è il 7 noi siamo all'8 il 6 sono tutte a piano terra primo piano e qualche altra al primo e secondo piano questi sono i cappetti di calcio qui c'è MS Padel guardate che verde rigoglioso sente solo il rumore degli uccellini neanche sono le 7 del mattino questo deserto è molto molto adatto perché bambini perché come vedete ci sono questi sentieri che portano un centro della struttura che ora vi faccio vedere dove c'è una piscina enorme per i bambini con gli scivoli, poi c'è una piscina semiolimpionica ed è vicinissimo al mare, c'è anche un ristorante centrale con la baby kitchen dove troverete tutto per trovare le pappine per i vostri bambini. Andiamo in piscina, qui trovate anche il piano bar dove poter prendere acqua e dispenser da quest novit anche inclusi coca cola sprite alla spina bar oltre mare e qui davanti troviamo la piscina con ombrelloni lettini le docce e suddivisa in due parti una un po' più profonda mentre l'altra è più bassa e ha questi due scivoli i vostri figli si divertiranno tantissimo questo simboletto della zampetta di un animale è perché questa struttura accetta gli animali sono delle dog room dove si paga un supplemento per il vostro cane e potete tranquillamente portarlo in vacanza con voi qui abbiamo il parco giochi e qui possiamo già vedere il mare questo è il sentiero che porta al mare e qua ci sono le piscine e adesso ci spostiamo in spiaggia potete prenotare tramite app Blu Sereno una volta prenotata la vostra vacanza qui tramite app una volta per ogni ristorante nel vostro soggiorno è incluso gratuitamente sia il ristorante Le Onde che Il Gusto Qua c il ristorante Il Gusto aperta a cena con i piatti tipici siciliani Questo il percorso che vi porta direttamente in spiaggia se avete bambini piccoli con il passeggino mentre adesso facciamo il percorso con le scale passando per il bar e per il ristorante le onde il ristorante le onde direttamente sul mare gli ombrelloni sono divisi per due settori le prime quattro file sono a pagamento mentre potete scegliere anche la formula ombrellone assegnato dalla quarta fila in poi per risparmiare qualcosina e poi quello non assegnato ogni giorno vi capiterà un ombrellone diverso Qui spiaggia trovate tutti i giorni animazione la mattina, mentre su in piscina il pomeriggio, contattatività di balli di gruppo, musica e poi varie attività anche durante il giorno sia per i bambini che per gli adulti. Saliamo su e adesso vi porto al ristorante. Questa è l'area Baby Kitchen. e qui il ristorante anche qui potete scegliere tranquillamente se pranzare o scegliere comunque una formula dei vostri pasti all della struttura che gratuita altrimenti all del ristorante che climatizzato che ha pagamento questo il ristorante Il Vento è ancora chiuso e da qui c'è un'altra area giochi per i bambini. Qui abbiamo le piscine e tanti giochi sulla sabbia. qui c'è la palestra e adesso risaliamo e vi porto alla piscina semi olimpionica anche qui ombrellone lettini docce Adesso arriviamo all'anfiteatro dove ogni sera ci saranno varie serate musical, serate di spettacolo, di canzoni, di intrattenimento, baby dance.",
+            "language": "Italian",
+            "durationSec": 618.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:36:37.347Z"
+            "updatedAt": "2026-09-03T07:35:43.915Z"
           },
           "ocrData": {
             "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
@@ -19560,7 +19553,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7670253794323664161: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-02T15:36:41.101Z"
+            "updatedAt": "2026-09-03T07:35:45.396Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -22315,14 +22308,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o4dBjEPiIXVjMIYlpAIZiY21GBI7aal2ABuzi~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=xLzZXiVqlqFlkAf%2FdOvGNLUbJbM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Buongiorno! Il nostro corso gratuito è www.mesmerism.info ok Grazie a tutti. Grazie a tutti Oh c un Ci sono molte ricominazioni dagli amici. E noi vediamo il lavoro di tutti. Qualche ministro, quando ha il dottorato, ha il dottorato di riso di ricominciare. E siamo sempre riusciti a dare un'impressione. Che c'è un dottorato di riso di ricominciare. E c'è qualcuno che lo fa bene. Anche se non è così. Quindi, noi siamo riusciti a dare un'impressione. E poi abbiamo fatto i risultati. Ciao Grazie a tutti. Grazie a tutti Il nostro lavoro stato un di risoluzione di problemi e di risoluzione di problemi È un messaggio di ringrazio. teoria all'azione, all'azione concreta. Grazie a tutti. Grazie, signor Giornalista, per la questione che mi avete chiesto. Devo dire che è stato un grande lavoro. L'accompagnamento è la sua risorsa. E un lavoro di un programma i controlli di gestione e altri L'obiettivo era rafforzare la loro capacità in materia di pilotaggio della performance e di gestione. Abbiamo approvato 8 moduli, partendo dai fondamenti del controllo di gestione nell'amministrazione, Grazie a tutti. Grazie a tutti. e sono ora utili. Abbiamo elaborato specialmente per questo ministero un canale di utili di pilotaggio della performance. Quindi, come direi, il ministero pilota in questo momento a avere 27 utili per il controllo dell'efficacia. Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 550.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:46:36.479Z"
+            "updatedAt": "2026-09-03T07:35:56.073Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -24896,14 +24888,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0rbN2EQQDgq1ajf81FSYF0QKeuA0EALDBGRE1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=omWyiYDIn6Q6qyNrv6vfSI3MuW8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Serena sta dicendo il suo ultimo saluto a Frederick. Anche la sua amica è in giro a un hotel che ha aiutato a risolvere le sue sentimenti riguardo Frederick e Iser. L'unica cosa che Serena può fare per Frederick ora che conoscono la verità del passato è sperare che trovi la pazza e lo mandi in casa. Gli dà la sua libertà. Non è nulla del loro peggio ciò che Lizzie ha fatto. While it's a painful memory, she doesn't want it to define their entire lives. So she really is letting Frederick go. We see people from the Republic coming to take him home. Serena's secretary running to him to return Lizzie's ballet shoes because Serena can't keep them anymore. She's hoping that suffices as her final farewell. It's so tragic, it really is. Lizzie's story, Frederick's story, what happened to Serena's family. e la realtà è che è un accidente orribile. Serena sta cercando di muovere la sua vita. Vediamo la sua incontro con gli ambasciatori, parlando dei suoi hotel Se non fosse per mio marito questo nuovo hotel non sarebbe fatto pi Ma cosa davvero sul fondo della sua mente Isa Ma sai cosa in un punto di grado di angst Dice che non ti ammi. Dice che è la persona che si trova che davvero perdono. Non ha detto nulla a me nemmeno dopo il divorzio. Davvero? Tu sei appena disaperto. Ma poi vede qualcuno che sembra Isa e stoppa praticamente curandolo per scoprire che no, no, non era Isa. Ma Ma mentre stanno cercando di ascolare Serena in un luogo per sorpresa, vede qualcuno che si pensa sia Iser e li chiesce. Ma sente una voce dietro la piazza dicendo Chi stai cercando? L'ultimo non-sì Serena? Iser, che grande entrata. Mi sembra di dire che cosa è questa entrata. Ma sappiamo che Man ha avuto un po' di tempo a combattere con il suo stuffo per trovare il suo modo di tornare a Serena. Spero che abbia sortito tutto con il suo fratello evillone. E ha il potere che ora ha bisogno di proteggere Serena so they can be together and they can be happy. I do wonder what he was up to during their separation, but it's clear it was painful for the both of them. Iser's just better at putting on a strong face than Serena is right now. She really, really terribly missed Iser.",
+            "language": "Italian",
+            "durationSec": 131.3,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:49:42.886Z"
+            "updatedAt": "2026-09-03T07:35:59.814Z"
           },
           "ocrData": {
             "textOnScreen": "...I HOPE YOU CAN LEAVE ALL THAT'S\nIN THE PAST AND LIVE AS\nO YOU WERE MEANT TO 4\nhoping that\nas her final\nfarewell.\nIO YOU WERE MEANT TO BE. i",
@@ -25205,14 +25196,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Cacati curumba, gavonumba, gannaia gale, misina, nesuca, singa, kare, nazua, vacate, yamba, kobe, vitamina, kusabira, bafa, omomu, kaze, yafumba, kone, bufa, kobe, yazala, moli, singo, maba. Dababoke, rette, mikose, mitima, nefuna, simpate, kalamu, lenjibaka, mumpendu, runewe, muta, ansasula, sifayo, mungu, yarishimbalira, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T20:18:45.157Z"
+            "updatedAt": "2026-09-03T07:36:05.329Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -25360,14 +25350,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oMWj06EIIBgqkwlfHqFUU067FNhVwEA3DBKRCe~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XhSiLHEvyUDMsIcTh8JmVqMqeCs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Lilian, il tuo account è il mio, il tuo numero è Asha22. Il mio numero è Asha22. Lilian è il nostro singolo di Gospi, come si dice in arabo. ma ha buona though the world is sound where we are everyone, the media is loud the difference of the sound is of the alien now what we are going to do is to show the sound of the hope the sound of the hope the sound of the hope they give hope through their gospel singing e è il menonga il menonga è il menonga per il massもの davanti e mi safta mi safta roguiro un ringua che si rompe e mi muce e mi cura con il capo per il menonga e il menongo si cura e si cala con il capo per il regiro quando c'è ok e c'è la mamma e la mamma e la mamma e la ragazza di Dr. e la ragazza Il nostro corpo pieno di cose che sono molto importanti per la nostra vita ingegge j quindi l di naio su un gola g cani ma naso alla avassata g poco mucamma comici a liria qui alzino a da cura concert serena non bus interventi con la serena mai fatto mi ha solo no bring it to the sun when it had a sram man in corinna e robin con con cani singolo chicagate Grazie. di suahiri e via sono le piona qui siamo i suahiri una bambini le regia che si parla della sala ma che si parla nairoba che si parla di gari a solo farà sa che sta comunque amparano amparare a un caetano coree con camione di pisar supporti galleggiani mia venkise Grazie mille.",
+            "language": "Italian",
+            "durationSec": 191.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:57:10.957Z"
+            "updatedAt": "2026-09-03T07:36:11.408Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -25759,14 +25748,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUIhJDQAIeAL6I5nihjMttefXyG0LDpQXFYUp3~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zjZ5ypZHnpu4MML8kbR0HwImDHE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 60.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:59:10.170Z"
+            "updatedAt": "2026-09-03T07:36:16.086Z"
           },
           "ocrData": {
             "textOnScreen": "3 LLCC",
@@ -25949,14 +25937,13 @@
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "... Grazie mille! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:02:06.620Z"
+            "updatedAt": "2026-09-03T07:36:18.730Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26415,14 +26402,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:09:52.133Z"
+            "updatedAt": "2026-09-03T07:36:21.787Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26506,14 +26492,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o8qBYLWtiKCDIaiA0OtA5rwfSjyIAmCROIivMT~tplv-tiktokx-dmt-logom:tos-useast8-i-0068-tx2/oQtEqiOvi65AZCIISARPWlLABZaBA76NdErnA.image?dr=9634&x-expires=1788433200&x-signature=%2FMqgQv2vy04s0147Pg8ToMBUFnI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Questo resort in Pennsylvania ha rovinato ogni hotel per me in avanti. Questo posto è assolutamente massimo, è come 2.000 acre di un'amore di un bilionario. Prima di tutto, le tue stupefacce sono incredibili, parlo di tassi fissate, sedi fissati, dischi e dischetti, macchine di espresso, cucchiai distribuiti ogni giorno. ho avuto un butler che potevo chiamare 24 7 il resort ha 15 bar e ristoranti su proprietà che include un parlor di crema e un lounge di cigarro c'è un'attività quasi letteralmente illimitata e cercherò di listare tutti probabilmente sarò in grado di uscire di respiro ma dovete ascoltare questo perché è incredibile c'è due corsi di golf un casino di corso a bordo mini golf di bici di 5 spalle di sfumatura un zoo un aeroplano hangar with its own runway a classic car collection pickleball bowling basketball tennis volleyball a ski hill paintball a rock climbing wall a ropes course an off-road jeep tour archery and rifle shooting shopping with several men's and women's stores a spa a healing center a gym an arcade there's an art collection throughout property with over a thousand pieces there's a carnival carousel c'è la cucina e le classi di arte, la lista si va inizialmente in avanti, hanno scuole per portarti in ogni parte del paese, il servizio di clienti è fantastico, sono onestamente sconfitto che tutto questo esista in un posto, si chiama Nemecolon Resort, non è un ad perciò, ma probabilmente deve essere perché non voglio lasciare questo posto.",
+            "language": "Italian",
+            "durationSec": 90.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:15:00.032Z"
+            "updatedAt": "2026-09-03T07:36:25.588Z"
           },
           "ocrData": {
             "textOnScreen": "daga\nNEMACOLIN",
@@ -26600,14 +26585,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okhPyIIIB9x0AAHHwifTAZHKJiVjA1CCYzgI64~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=E%2B4zQvXVoPzZfSiQdJCDuz3vk%2BE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Quindi stiamo a Bermuda Green Nature in Seragami ed è un nuovo hotel, è solo aperto da tre mesi fa, ma c'è ancora molta lavoro non si può mai notare, non ti causa nessun problema come puoi vedere qui quindi c'è qualcosa di nuovo qui, c'è qualche lavoro che sta andando su ma è assolutamente bellissimo, è così pulito ovviamente tutto è brand nuovo, la staff è incredibile, ma ha tutto in qui, ma l'anno prossimo penso che sia ancora più grande e migliore. Quindi, è come l'area di lobby dove entri nel cammino, e dietro a lui hai l'arco di terra, spazio e poi qui sotto la terra e dentro quella strada è il vostro il vostro ristorante di buffet che si occupa di fare il vostro piatto e il vostro il vostro piatto di buffet. Abbiamo anche i alacrotti che si possono usare anche, ma inoltre è dove si mangiano il piatto di mattina e la cena d'estate. Questa una delle prime palle Ci sono molte palle C una piccola barra nel centro I negozi sono al fondo, dietro. Quindi hai supermercati, giullerie, beauty center, e poi dietro c'è tutto quello di cake e ice cream che è lì Tasting State è quello che si chiama poi ovviamente la stanza di dietro qui e qui hai il buffet sotto quella stanza è molto grande e si fa un po' di lavoro ma hai due posti dove puoi fare il cibo hai quello dove ti aiuti e poi hai quello che vi mostrerò in un momento che è il servizio di tavolo. Un po' di più. Quindi quello con la fensa di forno che è il servizio di tavolo per la cena. Poi lì dietro c'è un piccolo spazio per i bambini e poi dietro c'è il servizio di tavolo e tutto. I villi sono l e poi dietro a tutto questo avete altre palle e poi tutti i vostri restaurant e cose sono lì dietro poi, questo è l'indiano restaurant lì, in realtà dietro a quello dietro a quello e questo lì avete il vostro gym potete vedere che si sposta lì avete il vostro gym e sotto next to that avete l'Irish Bar e penso che sia tutto oh, il club dei bambini che è davvero buono ma sì ho un sacco di spazio è per alcune case perché è l'ora di partire, è l'agosto e cosa direi è alcune case dovete arrivare prima quindi sono andata a 7.15 e sono state già prendute con le tavole e e e poi questa mattina sono andata a 6.15 e e poi mi sono gi preso quindi ho toccato le tavole e tutto un po sbagliato ma l problema che ho trovato che mi hanno dato dei sottobedi in mattina e mi hanno dovuto sottobediare presto e presto. E poi, se mi piacciono, mi sono dovuta sottobediare per un paio di ore. Probabilmente non dovrei dire questo, perché dovrei sottobediare se mi hanno dato dei sottobedi, ma non c'è modo, le persone sono stati sottobediate a... è dovuto essere 5 di mattina e stare in casa perché non era un solo sole era ancora bianco ma sì, assolutamente bello quindi l'anno prossimo ho prezziato e è diventato 50% più di quello che ho pagato quest'anno per una famiglia di 4 in agosto quindi penso che quando diventa più grande e meglio oh, la piazza è anche lì anche qui, si vede un piccolo cammino e là sotto c'è una donna che si siede a fare panchette e panchette e è davvero bello, ha delle piccole cuscelle che si siedono sul pavimento, è bellissimo, è tutto coperto e questo ti porta alla beach e poi c'è un bar su beach e un po' di toilette in una scioglia ma assolutamente bello vi raccomando vi raccomando",
+            "language": "Italian",
+            "durationSec": 334,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:18:05.666Z"
+            "updatedAt": "2026-09-03T07:36:34.402Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -26762,14 +26746,13 @@
             "updatedAt": "2026-09-02T15:35:01.086Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 55,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:22:30.946Z"
+            "updatedAt": "2026-09-03T07:36:36.991Z"
           }
         },
         {
@@ -26824,14 +26807,13 @@
             "updatedAt": "2026-09-02T15:35:16.793Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Come on everybody! Ciao 3 o'clock, 4 o'clock, rock 5, 6, 7 o'clock, 8 o'clock, rock 9, 10, 11 o'clock, 12 o'clock, rock We're gonna rock around the clock tonight Put your bad lights on, join me, hon We'll have some fun when the clock strikes We're gonna rock around the clock tonight We're gonna rock, rock, rock, rock all day long We're gonna rock, gonna rock around the clock tonight Rock, rock, rock, rock everybody Outro",
+            "language": "Italian",
+            "durationSec": 111,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:26:13.942Z"
+            "updatedAt": "2026-09-03T07:36:42.944Z"
           }
         },
         {
@@ -27070,14 +27052,13 @@
             "updatedAt": "2026-09-02T15:37:18.109Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "1, 2, 3 Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54.8,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:33:05.535Z"
+            "updatedAt": "2026-09-03T07:36:47.524Z"
           }
         },
         {
@@ -27133,14 +27114,13 @@
             "updatedAt": "2026-09-02T15:55:08.493Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "3, 2, 1 qui in mezzo step out left side and put it there yeah we got it all good step up very good step up full full all ready all good ok Ah, scusa! Poi andiamo qui No, no, no, aspetta fino al gym Ti lascio sapere quando iniziare il buggy Salve! Buona fitnesse! Fitnesse! Soprattutto per la sinistra E inizia il buggy velocemente Ok, bene, andiamo a vedere. Ora andiamo al pool. Ora andiamo a Pisa, a Vilnius. A Cintana A Savainam qui attraverso qui sotto Ecco sono pronta Andiamo un po pi lentamente la scuola potrebbe essere in giro per i 10 anni a bordeaux giudice coro voli All good, we are on the on, nice. Nice, all good. Outside, faster a little bit. Under the umbrella. Wow, good, good, good. Ok, fuori qui, andiamo qui, bene, poi a destra, sì, abbiamo capito, tutto bene, freddo, freddo, e... Lebloy, capo, abbiamo capito, capo, capo, è tutto. Sì, Leo, sì, Leo.",
+            "language": "Italian",
+            "durationSec": 142.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T17:48:16.762Z"
+            "updatedAt": "2026-09-03T07:36:51.739Z"
           }
         },
         {
@@ -27286,14 +27266,13 @@
             "updatedAt": "2026-09-02T15:38:36.465Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Baby make your move, step across the line, touch me one more time, come on tell me Baby make your move, step in front of the line, touch me one more time, come on tell me Baby make your move, step in front of the line, touch me one more time, come on tell me Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 115.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:41:32.965Z"
+            "updatedAt": "2026-09-03T07:36:55.131Z"
           }
         },
         {
@@ -27347,14 +27326,13 @@
             "updatedAt": "2026-09-02T15:39:13.875Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 66,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:44:00.330Z"
+            "updatedAt": "2026-09-03T07:36:58.024Z"
           }
         },
         {
@@ -27681,14 +27659,13 @@
             "updatedAt": "2026-09-02T15:42:41.680Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Siamo in un hotel in Kanchanaburi, è assolutamente bello, guardateci. Ora siamo in stagione, ma è assolutamente incredibile. La situazione, l'hotel, il cibo, per favore. È tutto che posso dire sul cibo. Cibo incredibile. E' proprio al lago. i porti di spazio sono bellissimi la staff è amica i cocktail sono belli Mida Hotel, Can Chanaburi guarda perché non vuoi stare qui? amiamo la Tailandia",
+            "language": "Italian",
+            "durationSec": 69.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:56:59.186Z"
+            "updatedAt": "2026-09-03T07:37:01.159Z"
           }
         },
         {
@@ -29415,14 +29392,13 @@
             "updatedAt": "2026-09-02T15:55:08.493Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "3, 2, 1 qui in mezzo step out left side and put it there yeah we got it all good step up very good step up full full all ready all good ok Ah, scusa! Poi andiamo qui No, no, no, aspetta fino al gym Ti lascio sapere quando iniziare il buggy Salve! Buona fitnesse! Fitnesse! Soprattutto per la sinistra E inizia il buggy velocemente Ok, bene, andiamo a vedere. Ora andiamo al pool. Ora andiamo a Pisa, a Vilnius. A Cintana A Savainam qui attraverso qui sotto Ecco sono pronta Andiamo un po pi lentamente la scuola potrebbe essere in giro per i 10 anni a bordeaux giudice coro voli All good, we are on the on, nice. Nice, all good. Outside, faster a little bit. Under the umbrella. Wow, good, good, good. Ok, fuori qui, andiamo qui, bene, poi a destra, sì, abbiamo capito, tutto bene, freddo, freddo, e... Lebloy, capo, abbiamo capito, capo, capo, è tutto. Sì, Leo, sì, Leo.",
+            "language": "Italian",
+            "durationSec": 142.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T17:48:16.762Z"
+            "updatedAt": "2026-09-03T07:36:51.739Z"
           }
         },
         {
@@ -35020,14 +34996,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQsg4e8UfiQf7IjhlJVADXikP7MEJADAxgQKC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=RQQrWwbC8Fo0zGb3ei1YA8VrIe8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Cacati curumba, gavonumba, gannaia gale, misina, nesuca, singa, kare, nazua, vacate, yamba, kobe, vitamina, kusabira, bafa, omomu, kaze, yafumba, kone, bufa, kobe, yazala, moli, singo, maba. Dababoke, rette, mikose, mitima, nefuna, simpate, kalamu, lenjibaka, mumpendu, runewe, muta, ansasula, sifayo, mungu, yarishimbalira, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T20:18:45.157Z"
+            "updatedAt": "2026-09-03T07:36:05.329Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -37273,14 +37248,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/okErpjQfkCSZAZDvFAfcFXAIArIjXA5eLlvULE~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EjjEREStXjC9iVhQ8OHIUJWOYQo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 94.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T16:09:52.133Z"
+            "updatedAt": "2026-09-03T07:36:21.787Z"
           },
           "ocrData": {
             "textOnScreen": null,
