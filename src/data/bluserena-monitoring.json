@@ -45656,7 +45656,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/o0teMLt4AeojfGt8g4lHDLnbF2IIqUhkAFCRQv~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=xO%2Fd0WFzp46gUv7ebw1gHtZcmHY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "FROM\nUNDERGROUND,\nSHER\nTALL ANDY",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:31:18.805Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45669,7 +45678,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYLgxGDvIFAFQLBk4BEmoAEBDmwZfRqTqVieQx~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zGtjPFvTwTwCoZwThM9HM6qWTs0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:31:23.124Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45682,7 +45699,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oASBBAxAiB8AI9igoaDAM3evsfzRC1Ed3EDEZS~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=f2f5CYs9Xltd5mcHrOzQVKjXAtc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "2 Trump says he's\nFed Chair Powell was appointed.\nTrump picked him in 2017.\nwas surprised he was appointed.\n28 Trump says he's 'surprised' 1\nBiden put him in and extended him.\nmy pleasure and my honor\nof Jerome Powell to be the next\nBiden reappointed Powell\nto a second four-year term\nchairman of the Federal Reserve.",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:31:32.669Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45695,7 +45721,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-85c255-tx/okCCBYB1pifBVArIHGcvAixLxBTWvmE1sXT8Ww~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=iCRyUd4%2FcPDF5kSYDXc7NL%2FtCiw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "RESERVES\nMSTR WHO HAS\nIN CASH\nTHEY HAVE",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:31:39.759Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45708,7 +45743,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oUejqrQachOgStqFIwwvLeAQM8A1WIAfSCZUSQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=LgaapcbVoWTf97nos2Hsy1Crzek%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "or A floor that cannot break.\nA celling that cannot rise.\nAn audited, certificated,\nLBMA-grade gold reserve.\nPre-minted and immutable. Nothing left to mint, ever.\n100,000,000 software agents,\nrecruited and ready.\nOn a roadmap toward the billions by 2030. In the near future they go to work, across\n150 skill sets.\nPaid over x402 in stablecoins each payment converted automatically into xVTSN.\nTheir working currency. They eam it, and they spend it back into the ecosystem.\nv Afloor that holds.\nv A celling that is sealed.\nv A buyer that never stops.\nNot a fixed-price gold token.",
+            "confidence": 0.916,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:31:45.317Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45721,7 +45765,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQPZwJBGqI1Wi5thGqvAIXX6o78F4fCcAiAmDI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Wn37%2BTQUvvaiPVyML7cq92zRbVg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ARMAF",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:32:12.257Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45734,7 +45787,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oM1Kq4dAXA0IvAiIyi8IKkgAMLCmAof9zE4BiF~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=rYpd8v0XOBVJLHYfQbdf941HJTk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "A floor,\nBacked by an audited, certificated, BMA-grade\ngold reserve, held in trust.\nThe floor is physical\nA workforce.\nAgents recruited and ready.\n150 skill sets. Still climbing.\nLater this year,\nthey go to work.\nPaid over x402 in stablecoins.\nConverted automatically into xVTSN.\nWhat the first three produce together.\nA growing\nworkforce,\nbidding for a supply\nthat cannot grow\nwith it,\nor A floor.",
+            "confidence": 0.926,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:32:16.992Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45747,7 +45809,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ocZLlCXk12BC8VnTA0iiwYBeCSAIOc0II3PtpZ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=2B6IxponkFrB4EMsuRfcQIFEmWo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "dela",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:32:26.812Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45760,7 +45831,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ooAAC1LSiH1IvAGg02BV0Ie5qSuIiziwwD3CTH~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bn%2FkR9VCEm7DrF5HQVuGZoX59Zs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:32:34.125Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45773,7 +45852,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMt1GCjSAAA7AKrrwEiwSkSBgfSnPcMiCBBCRI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=LCfZJuz6ngK9qpknqzq8riwWIYI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "MACHT, A f\nHOLEN\ni DRIN",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:33:00.968Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45786,7 +45874,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/okS6yFBRVDqGk6ElGAfAA8qSIftiYHEEY9QghB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=h6H6NWtPVX1lEm18rdaDL4%2B6%2FGc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:33:18.020Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45799,7 +45895,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ooMaeAPERIrAdSaf4CEAAuDqAVFFEDWMCgHXxj~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2F1Jmnf9%2FuWSFd%2Fqs6EUMEDmA7rA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "like, share\n4 TERRXTRA\nALL RIGHTS\nCOPYRIGHT. Reserved\nThank You.For- Tuning In.\nSong production\navailablelin",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:33:23.299Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45812,7 +45917,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oY4p8OaiMYqVaBcc6zAVCaY7IAiDQIEPABvij~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=PSCTMkxYemTktNl4fbopO7w7RA0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Dead Inside",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:33:30.182Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45825,7 +45939,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o8BKAZpSFiCA8CbAE1iBy4fhIAvsAPJdiKTFZI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ulaTxx2mRKHE%2BSPIm%2B7AwiakQ6s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "CHAMPION\nBARROW\nCOUNTY\njunior",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:33:46.506Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45838,7 +45961,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/okblNpAmvB9pE5E03Tiac3GCiRpaBP6VIvsIA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XIEhmOV99yR%2BnZhPciOq4XQrSdY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "TIA Collection Cor...\n181 followers\nRainbow Bubble Tips Bayb Blue Tips Holy\nNem 8\"+ Grail Torch\n$72 bids $42 46 vids\nAUCTION AUCTION\nHell Fire Torch Indo Banana Torch\n$146 40 bids $197 48 bids\nAuctions 203 Lightning Sales 1\nSort: Ending Soon\nJF Raja Rampage Multicolor Candy\nChalice Cane\n$8 8 bids $12 6\nTIA Blue Wheel TIA Bubble Chalice\nRainbow Acan $10 11 bids\n$54 35 bids Buy now $159\nTIA Fire Cracker TIA Fluo Yellow\nAsian Acan Goniopora\n$13 bids $47 26\nTIA CyberPunk TIA Immortal Blasto\nMillepora $33 34 bids\n$52 26 bids Buy now $299\nPoto Bubble Gum TIA Pink Carnival\nBliss Acropora Rainbow Acan\n$5 $15 bids\nPer page 20\n2h 5m No Reserve\nTIA Golden Kiwi Ultra Bowerbanki\nAcropora $5 .5 bids\n$10 8 bias Buy now $299\n2h 6m No Reserve 2h No Reserve\nTIA Grape Juice Bubble Gum Digitata\nAcropora Acropora\n$21 14 bids $30 23 bids\nSlide to bid $22 Slide to bid $31",
+            "confidence": 0.892,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:33:57.279Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45851,7 +45983,15 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oEgjwqVA2ei8yvknMIgGdJXUAeOCeA8SQbIv8Q~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=deMQIK2MW7Tk5B7wVQVO2OuicWs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:02.962Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45864,7 +46004,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oAAvwc6ngiIpRsVm6aBI4UPmkEymDTTZBikI0~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=EqZ1ctHyxESipsSFwVsf8BxoOQw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "oil tax revenue 4\nNorway's government\noil fund\nIt's kind country\nhas this massive trust and\nAnd that\neroding s",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:10.368Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45877,7 +46026,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/ogqAN48AJViBgq3xBPZIvXfFCDiiqoi0AI7IcD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=mRcj8unVDDrVLqP6k2ujcwm3tKg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "q it's a criminal\nscanda l\nText your “Full Name”\nto (321) 312-0130 if you're open to\nlearn more about finance for FREE!\nwhich if any ordinary\ncentral banks repress the\namount of interest rates are\nq we talk loosely about\ndeposit guaran!\nq it's theft from the",
+            "confidence": 0.896,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:18.403Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45890,7 +46048,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okB1RnDjlaIf5dc1Uk7fmkVEAMnFEEqXDIQAug~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=bdM6iOIgMd1J6joubjcjuaDEaB0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "ORLOV COPYRIGHT RESERVED®\nEASY) 5)\n3 COPRRIGHT RESERVED 3\nCOPYRIGHT RESERVED\nRIGH A C\nEASYWQRLDY RVED\nRESERVED",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:28.665Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45903,7 +46070,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oYHqCoFAECcFrEeAXQcIlAAARn13DDAoEfKQwm~tplv-tiktokx-dmt-logom:tos-useast2a-i-0068-euttp/ogEAQmBfHcRIw4ERBelqRAFn6AnDAEQDAVlGoC.image?dr=9634&x-expires=1788433200&x-signature=AQH1vZ74m47zX9oV24xKFrqKmUA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Camm Kil\nSANSICOMPENSATION FINANCIERE?\nDONNER",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:35.343Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45916,7 +46092,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oIuEhiqdE8VTEEACFPAMhIQDpAEVlczBAefSco~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=dHey5I5fdL%2BtFaWEE0Y8FfuznpI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "SING\nABORS",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:44.047Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45929,7 +46114,16 @@
           "likes": null,
           "comments": null,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/o4JQczGyLAFfVpWqAWfsAJBJ5KGQgUAeAqq1eI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=MUg%2BE0sDNYzpgu3P%2FGTPjpTXG3I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "NATHANIEL MAYBERG\nREPORTS CORRESPONDENT\n4 PONTUS A\nNILI 88 Kumzar\nDILIGENT WARRIOR\ne ARABIAN\nSUHAILA <7 XING QIANG 1 Y\nZAKHER\nSima\nO RATGA\nLANPAN 22 TOPAZBELAYA Lima\nEH ANPAN 6",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-03T09:34:53.927Z"
+          }
         }
       ]
     }
