@@ -41462,6 +41462,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:26:22.408Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 28.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:46:30.811Z"
           }
         },
         {
@@ -41484,6 +41493,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:26:55.754Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Se vivi a Fuerteventura e non conosci questo sito, guarda questo plan per il prossimo domenico. Per solo 14€ puoi passare il giorno in Beach Club Lagoon. E aspetta, perché il prezzo include cocktail di benvenuta, toalla e amaca. È esclusivo per i residenti canari durante tutto il mese di agosto e puoi stare lì da 10-7 di notte. Inoltre, c'è musica in diretto e tutto l'ambiente di un autentico giorno di vacanza. 14€ per passare il domenico così. Se sei residente di Fuerteventura, guarda questo video perché hai scoperto un autentico plan. Grazie.",
+            "language": "Italian",
+            "durationSec": 30.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:48:33.979Z"
           }
         },
         {
@@ -41505,6 +41523,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:11:17.681Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Life is what happens to you while you're busy making other plans Beautiful, beautiful, beautiful, beautiful boy",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:48:36.108Z"
           }
         },
         {
@@ -41526,6 +41553,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:11:35.872Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Non c'è nessuno che sa come è così bello a vicino a Zapa. Dopo 30 minuti di viaggio da Budabare a Zapa, si arriva al Resort Rong Hills. Non devi viaggiare per ore per scappare dal caldo. Solo 30 minuti. E un po' di clima, aereo fresco e belle vittime. Famiglia, amici o partner. Chiunque venga, è il posto perfetto per un weekend getaway. Se stai cercando un posto per rilassarti, buonanotte e un po' di pausa dalla vita cittadina, il Resort Rong Hills è sicuramente un posto per viaggiare.",
+            "language": "Italian",
+            "durationSec": 29.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:50:40.157Z"
           }
         },
         {
@@ -41547,6 +41583,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:11:46.621Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Woooo! Ganda! Woooo!",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:50:47.106Z"
           }
         },
         {
@@ -41569,6 +41614,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:27:53.913Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:53:51.126Z"
           }
         },
         {
@@ -41590,6 +41645,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:12:02.908Z"
+          },
+          "audioAnalysis": {
+            "transcript": "I wanna hold the hand inside you",
+            "language": "Italian",
+            "durationSec": 10.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:53:53.532Z"
           }
         },
         {
@@ -41612,6 +41676,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:28:21.223Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Can I take you to a moment Where the fields are painted gold And the trees are filled with memories Of the feelings never told When the evening pulls the sun down And the day is almost through Oh, the whole world is sleeping But my world is here Can I be close to you?",
+            "language": "Italian",
+            "durationSec": 47.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:53:56.170Z"
           }
         },
         {
@@ -41633,6 +41706,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:12:19.604Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, questa volta le 5 ragazze e io andremo a Ammanoi per divertirci. Quando siamo arrivati, tutti gli amici ci hanno invitato. Il luogo e la situazione sono davvero molto divertenti. Ora le 5 ragazze e io andremo a vedere le sue abitazioni. Adesso vi mostrerò la nostra abitazione, che ha un'abitazione di bianco e di bianco. È molto libero. poi sono arrivata a casa di Hari Won qui sento la pazienza del lavoro e questo posto è molto bello c'è qualcuno che si preoccupa di me non ho bisogno di chiamare il telefono di Tổng Đại ho solo bisogno di chiamare il telefono di quella persona che si preoccupa di chi oggi ho un cliente di Ri vi invitiamo a mangiare Hari è una persona che piace molto mettere questo bicchiere da Sài Gòn e poi prendere un piccolo giro e poi mangiare Non so se è troppo caldo, ma è molto bello, è molto bello, è molto bello e bello. Oh i nostri fratelli e fratelli tutti hanno fatto tanti film Anche qui c il sistema di mangiare non si sai mangiare le mani o non sai mangiare qualcosa lo puoi chiamare e lo guarderanno e lo mangiaremo e lo guarderanno e lo serviranno con la propria intenzione io mi piace guardare la bambina quindi quando sono le 5.30 mi sono dimenticata di guardare questo è bellissimo, è la mattina e poi mi sono disordinata poi andiamo a questo posto a fotografare, a girare, oh ma è bellissima, è bella lo sapete? 3 giorni, 2 notti, ci siamo restati così e abbiamo vestito 10 vestiti ogni giorno, un giorno e 4-5 volte così la ragazza è molto felice, è andata in un'attività ragazza, ragazza, non posso andare a girare e l'impressione di questo resort è che quando Harry entra in casa Harry non trova nessun bambino Quando andiamo fuori, la gente si arrangia immediatamente, quando entri in casa, la casa è sempre pulita, non ci vediamo mai, non ci vediamo mai in un resort. In general, è un'attività straordinaria. La storia di Nam Chiem è ora iniziata. Non aspettate!",
+            "language": "Italian",
+            "durationSec": 141.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:56:10.273Z"
           }
         },
         {
@@ -41655,6 +41737,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:29:01.281Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Buon Chiocare a seo",
+            "language": "Italian",
+            "durationSec": 8.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:56:30.635Z"
           }
         },
         {
@@ -41677,6 +41768,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:29:17.039Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:59:33.934Z"
           }
         },
         {
@@ -41699,6 +41800,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:29:29.896Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:01:52.117Z"
           }
         },
         {
@@ -41721,6 +41832,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:29:37.830Z"
+          },
+          "audioAnalysis": {
+            "transcript": "E se per il vostro prossimo viaggio Dua La Yaw le sembrava più un viaggio premium piuttosto che un semplice viaggio? A Travelines abbiamo fatto il scelto dell'eccellenza con i bus IRISA ECS, riconosciuti per il loro confort, il loro design moderno e soprattutto la loro fiabilità. I sedi ergonomici, un interiore spazioso, una climatizzazione performante, una conduzione pensata per il vostro benessere. Ogni dettaglio è costruito per assurare un viaggio agrilevole. viaggiare in modo diverso, viaggiare nel confort, la sicurezza e soprattutto l'eleganza. Traverlines, una nuova maniera di viaggiare tra Doha e Yaoundé.",
+            "language": "Italian",
+            "durationSec": 54.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:01:55.044Z"
           }
         },
         {
@@ -41743,6 +41863,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:29:45.918Z"
+          },
+          "audioAnalysis": {
+            "transcript": "In schierda, in rencia, cambia la stagione Voi siete passati come il treno alla stazione Tutti quanti accostano il nostro tormentone Perché la merenda è il meglio della colazione Scusa mamma, io sto formando Anna Questa cica mi guarda mentre flexo sulla playa La situa, è hot, è calda, un basso alla schierda Ischierda e dereccia E allora questa era Aura",
+            "language": "Italian",
+            "durationSec": 49,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:02:33.951Z"
           }
         },
         {
@@ -41764,6 +41893,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:12:37.257Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao ciao",
+            "language": "Italian",
+            "durationSec": 14.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:02:36.033Z"
           }
         },
         {
@@ -41786,6 +41924,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:30:20.479Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:05:26.956Z"
           }
         },
         {
@@ -41808,6 +41956,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:30:41.004Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:07:39.063Z"
           }
         },
         {
@@ -41830,6 +41988,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-03T09:12:52.177Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 91.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:07:42.011Z"
           }
         },
         {
@@ -41852,6 +42019,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-03T09:13:17.939Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:10:48.800Z"
           }
         },
         {
@@ -41873,6 +42050,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:13:36.243Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:13:01.908Z"
           }
         },
         {
@@ -41894,6 +42081,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:13:46.357Z"
+          },
+          "audioAnalysis": {
+            "transcript": "venite con me alla Laura Beach Club in Accra, Ghana. Baby, dopo il mercato, siamo famosi, quindi siamo andati in un altro posto di Accra e siamo finiti all'Allora Beach Club. Diciamo qualcosa, ho sentito come se fossimo in un'esercito all'inclusivo in Mexico. Guardate l'estetica, è un millennio, è un classico, è un super fancy. Siamo stati con l'elite dell'elite della società ghanese. società. Siamo andati, stavamo preparando per prendere alcune foto e ottenere un menu perché eravamo molto cibi, ma ovviamente ho preso questa opportunità per creare un po' di contenuto per invitare le persone ai nostri viaggi e esperienze perché l'estetica era assolutamente bella. Siamo andati al pool, ma sul lato di un altro lato del pool c'era la piazza e c'erano i corpi proprio al lato della piazza, quindi volevo assicurare che ho preso un po' di tempo per esplorare Spero che abbiamo pi tempo per entrare nel pool C un DJ e la vibrazione era vibrazione Mi sentivo davvero come se fossimo in un altro paese cos fabbricante questo posto ci ha davvero dato un contrasto diverso dal villaggio e dal mercato che stavamo apprendendo la nostra lezione di drumming e mi sono andata, ho speso un po' di tempo veramente cercando di creare un contenuto, ho anche rompito un tripod mentre ero lì e di nuovo mi ha Mi ha dato un sentimento di zen e felicità. E poi, dopo aver creato più contenuto, stavo aspettando il mio cibo. Il cibo in Ghana prende un po' di tempo per arrivare, quindi avevo abbastanza tempo per andare con i bambini e creare un contenuto per il mio mercato target. Ma una volta che ho finito di creare il mio contenuto, era il momento di mangiare. Ho preso un po' di ginger ale, un po' di frutta e un burger. Lo faccio semplice e, ovviamente, ci serve un extra ketchup perché il mondo si avvia con più ketchup ma in generale l'esperienza era veramente fabbrica, l'estetica era flotta le vibe erano on 10 e era una grande esperienza quindi se sei in Ghana, sei in Accra vai al Resort Laura Beach e fai un viaggio di giorno",
+            "language": "Italian",
+            "durationSec": 125.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:13:20.981Z"
           }
         },
         {
@@ -41916,6 +42112,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:31:49.254Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:16:24.145Z"
           }
         },
         {
@@ -41938,6 +42144,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:32:07.865Z"
+          },
+          "audioAnalysis": {
+            "transcript": "È meraviglioso essere a Marseille, a bordi di mare, e allo stesso tempo in un hotel. È incredibile. Ho l'impressione di essere su un'illa, mentre sono nella seconda più grande città di Francia. Qui ti senti in vacanze, con questa piscina offrendo una vista sulle calanque. Per arrivare, ho attraversato questo tunnel magico. Dopo avermi sbattuto, sono passato per questo luogo insolito dell'hotel. Ho l'impressione di essere in una calanque della Côte Blu. Poi è l'ora del diner. Sono andato sulla terrazza della mia chiesa e ho ammirato il sole sulle isole del Friul. è piacente mangiare davanti alla mer il domenica domenica ho testato la sala di sport con lui sul chateau d'If dopo l'efforto, il riconforto, lo spa quindi qui siamo a Marseille vedi le calandre, è magnifico guarda un bel piccolo jacuzzi e qui hai tutta la parte spa con una bella piscina lì l'Ehamam commenta Hotel Marseille se hai guardato fino a qui un bel hotel del sud, ideale per profittare di questo vero grazie a Hotel No per questa collaborazione Le buone adresse del sud della Francia sono su Fier du Sud.",
+            "language": "Italian",
+            "durationSec": 64.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:17:28.023Z"
           }
         },
         {
@@ -41960,6 +42175,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:32:23.965Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:17:54.541Z"
           }
         },
         {
@@ -41982,6 +42206,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:32:42.153Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Dove stanno le donne che non hanno mario? Dove Carolina? Dove Carolina? Dove Carolina?",
+            "language": "Italian",
+            "durationSec": 8.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:18:20.796Z"
           }
         },
         {
