@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { describeGithubFailure } from "@/lib/githubApiError";
 
 // Verifica periodica di validità dei secret/token usati dall'app (lato
 // Cloudflare, letti da process.env — vedi anche scripts/check-ci-secrets-health.mjs
@@ -92,7 +93,15 @@ async function checkGithubToken(): Promise<TokenCheckResult> {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return notConfigured(name, label);
 
-  const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github+json" };
+  // Stessi identici header degli hook di scrittura (User-Agent incluso: il
+  // runtime serverless non ne manda uno di default e GitHub rifiuta con 403
+  // le richieste che ne sono prive): se qui divergessero, il check non
+  // starebbe più verificando le stesse condizioni che quegli hook incontrano.
+  const headers = {
+    Authorization: `token ${token}`,
+    Accept: "application/vnd.github+json",
+    "User-Agent": "trendzn-bot",
+  };
 
   try {
     const rateRes = await fetch("https://api.github.com/rate_limit", {
@@ -109,6 +118,20 @@ async function checkGithubToken(): Promise<TokenCheckResult> {
     const expiresHeader = rateRes.headers.get("github-authentication-token-expiration");
     const expiresAt = expiresHeader ? new Date(expiresHeader).toISOString() : null;
 
+    // /rate_limit è esente dal rate limit: risponde 200 anche quando la
+    // quota è a zero e ogni altra chiamata riceve 403. Leggiamo qui quante
+    // chiamate restano, così il probe qui sotto può dire se un 403 è una
+    // quota esaurita (transitoria, si ripristina da sola) o un problema di
+    // permessi (che richiede di rigenerare/autorizzare il token).
+    let coreRemaining: number | null = null;
+    try {
+      const rate = await rateRes.json();
+      const core = rate?.resources?.core ?? rate?.rate;
+      if (typeof core?.remaining === "number") coreRemaining = core.remaining;
+    } catch {
+      // body non leggibile: proseguiamo senza il dato sulla quota
+    }
+
     // /rate_limit autentica con QUALSIASI token valido, anche senza lo
     // scope "repo": da solo non basta a garantire che gli hook di
     // scrittura (update-bluserena-verification.ts e affini) riescano
@@ -123,18 +146,41 @@ async function checkGithubToken(): Promise<TokenCheckResult> {
       { headers, signal: AbortSignal.timeout(8000) },
     );
     if (!repoRes.ok) {
+      const detail = describeGithubFailure(repoRes, await repoRes.text());
+
+      // Quota esaurita: non è un problema di token, si ripristina da sé
+      // all'ora di reset. Distinguerlo evita di mandare a rigenerare un
+      // token che è perfettamente valido.
+      if (repoRes.status === 403 && coreRemaining === 0) {
+        return invalidResult(
+          name,
+          label,
+          `Rate limit GitHub esaurito per questo token: ${detail}. Fino al reset ` +
+            `ogni scrittura dal sito (verifica post, metadata, eliminazione canali) ` +
+            `risponde 403. Il token è valido: se succede spesso, il consumo arriva ` +
+            `dai workflow di sync che condividono lo stesso GITHUB_TOKEN.`,
+        );
+      }
+
       return invalidResult(
         name,
         label,
         `Il token autentica (GitHub risponde su /rate_limit) ma non può leggere ` +
-          `teomotta88-cloud/trendzn: risposta ${repoRes.status}. Probabile scope ` +
-          `"repo" mancante sul token, o SSO non autorizzato per l'organizzazione ` +
+          `teomotta88-cloud/trendzn: ${detail}. Probabile scope ` +
+          `"repo" mancante sul token, permesso "Contents" non concesso se è un ` +
+          `token fine-grained, o SSO non autorizzato per l'organizzazione ` +
           `teomotta88-cloud (GitHub → Settings → Developer settings → ` +
           `Personal access tokens → il token → "Configure SSO").`,
       );
     }
 
-    return okResult(name, label, "Token valido, con accesso in lettura al repo.", expiresAt);
+    const quota = coreRemaining === null ? "" : ` Chiamate API residue: ${coreRemaining}.`;
+    return okResult(
+      name,
+      label,
+      `Token valido, con accesso in lettura al repo.${quota}`,
+      expiresAt,
+    );
   } catch (err) {
     return errorResult(name, label, err);
   }
