@@ -10780,7 +10780,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:54:41.164Z"
+            "updatedAt": "2026-09-03T09:15:19.156Z"
           }
         },
         {
@@ -21546,7 +21546,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:23:24.429Z"
+            "updatedAt": "2026-09-03T09:14:23.491Z"
           }
         },
         {
@@ -41204,7 +41204,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:25:43.008Z"
+            "updatedAt": "2026-09-03T09:11:04.201Z"
           }
         },
         {
@@ -41269,7 +41269,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:27:10.475Z"
+            "updatedAt": "2026-09-03T09:11:17.681Z"
           }
         },
         {
@@ -41290,7 +41290,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:27:29.554Z"
+            "updatedAt": "2026-09-03T09:11:35.872Z"
           }
         },
         {
@@ -41311,7 +41311,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:27:43.467Z"
+            "updatedAt": "2026-09-03T09:11:46.621Z"
           }
         },
         {
@@ -41354,7 +41354,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:28:11.842Z"
+            "updatedAt": "2026-09-03T09:12:02.908Z"
           }
         },
         {
@@ -41397,7 +41397,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:28:41.795Z"
+            "updatedAt": "2026-09-03T09:12:19.604Z"
           }
         },
         {
@@ -41528,7 +41528,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:30:06.046Z"
+            "updatedAt": "2026-09-03T09:12:37.257Z"
           }
         },
         {
@@ -41588,12 +41588,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIrwg2fB0I4dIU1CIaDChJvbLAAAyiMOiGndIw~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=ivHdxgh%2BfaZyym8n%2FnKiUig8iVA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "ocrData": {
-            "textOnScreen": null,
-            "confidence": null,
+            "textOnScreen": "x 3 A Tums.",
+            "confidence": 0.766,
             "frameCount": 5,
-            "status": "no_text",
+            "minConfidence": 60,
+            "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T17:30:57.862Z"
+            "updatedAt": "2026-09-03T09:12:52.177Z"
           }
         },
         {
@@ -41609,12 +41610,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/ocVYqECBvAmAqB1iAaKAyE8lMAKZiioqIbBct~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=K5oGWJvTs8icrQkE7P6uLHfDs4M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "ocrData": {
-            "textOnScreen": null,
-            "confidence": null,
+            "textOnScreen": "A member of",
+            "confidence": 0.787,
             "frameCount": 5,
-            "status": "no_text",
+            "minConfidence": 60,
+            "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T17:31:06.358Z"
+            "updatedAt": "2026-09-03T09:13:17.939Z"
           }
         },
         {
@@ -41635,7 +41637,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:31:26.065Z"
+            "updatedAt": "2026-09-03T09:13:36.243Z"
           }
         },
         {
@@ -41656,7 +41658,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:31:36.221Z"
+            "updatedAt": "2026-09-03T09:13:46.357Z"
           }
         },
         {
@@ -41765,7 +41767,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:33:11.025Z"
+            "updatedAt": "2026-09-03T09:14:07.192Z"
           }
         },
         {
@@ -41936,7 +41938,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:23:24.429Z"
+            "updatedAt": "2026-09-03T09:14:23.491Z"
           }
         },
         {
@@ -41979,7 +41981,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:35:17.175Z"
+            "updatedAt": "2026-09-03T09:14:35.628Z"
           }
         },
         {
@@ -42022,7 +42024,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:35:57.063Z"
+            "updatedAt": "2026-09-03T09:15:06.249Z"
           }
         },
         {
@@ -42052,7 +42054,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:54:41.164Z"
+            "updatedAt": "2026-09-03T09:15:19.156Z"
           }
         },
         {
@@ -42095,7 +42097,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:36:29.867Z"
+            "updatedAt": "2026-09-03T09:15:25.692Z"
           }
         },
         {
@@ -42116,7 +42118,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:36:38.670Z"
+            "updatedAt": "2026-09-03T09:15:33.778Z"
           }
         },
         {
@@ -42137,7 +42139,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:36:47.028Z"
+            "updatedAt": "2026-09-03T09:15:41.337Z"
           }
         },
         {
@@ -42202,7 +42204,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:37:58.602Z"
+            "updatedAt": "2026-09-03T09:16:02.727Z"
           }
         },
         {
@@ -42223,7 +42225,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:38:47.862Z"
+            "updatedAt": "2026-09-03T09:16:50.878Z"
           }
         }
       ]
@@ -42261,7 +42263,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:39:06.405Z"
+            "updatedAt": "2026-09-03T09:17:08.585Z"
           }
         },
         {
@@ -42290,7 +42292,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T18:01:27.170Z"
+            "updatedAt": "2026-09-03T09:17:17.559Z"
           }
         },
         {
@@ -42318,7 +42320,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:39:34.616Z"
+            "updatedAt": "2026-09-03T09:17:34.259Z"
           }
         },
         {
@@ -42345,7 +42347,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T17:39:41.080Z"
+            "updatedAt": "2026-09-03T09:17:40.508Z"
           }
         },
         {
@@ -44835,7 +44837,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-02T18:01:27.170Z"
+            "updatedAt": "2026-09-03T09:17:17.559Z"
           }
         },
         {
