@@ -40655,6 +40655,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:18:07.078Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:13:03.396Z"
           }
         },
         {
@@ -40676,6 +40686,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:09:09.814Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Catahakbang salupay para akong inaalong At nalulunot sa batikos ngungtong Sa kung ano lamang ang kaya ko Bigang bigang sa mga problemang di ma solusyonan agad Parang wala nang bukas Puoi evitare? Stai cercando la tua vita, ma non hai la capacità di sentire il che sto facendo. Dove è che ti porto? Dove mi porto? Dove mi porto? Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 74.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:14:06.756Z"
           }
         },
         {
@@ -40697,6 +40716,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:09:28.912Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:17:11.327Z"
           }
         },
         {
@@ -40719,6 +40748,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:19:08.434Z"
+          },
+          "audioAnalysis": {
+            "transcript": "I be feeling like",
+            "language": "Italian",
+            "durationSec": 28.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:17:13.665Z"
           }
         },
         {
@@ -40741,6 +40779,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:19:23.499Z"
+          },
+          "audioAnalysis": {
+            "transcript": "musica Ciao",
+            "language": "Italian",
+            "durationSec": 34.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:17:15.996Z"
           }
         },
         {
@@ -40763,6 +40810,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:19:45.077Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:18:00.760Z"
           }
         },
         {
@@ -40784,6 +40840,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:09:48.877Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:21:04.767Z"
           }
         },
         {
@@ -40806,6 +40872,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:20:36.718Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 18.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:21:07.235Z"
           }
         },
         {
@@ -40827,6 +40902,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:09:53.162Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:21:09.236Z"
           }
         },
         {
@@ -40849,6 +40933,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:21:13.258Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:23:44.659Z"
           }
         },
         {
@@ -40870,6 +40964,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:10:10.624Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 22.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:23:46.917Z"
           }
         },
         {
@@ -40922,6 +41025,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:22:09.746Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Questo non è il tipo di viaggio che puoi fare ogni weekend e è proprio questo che fa questo posto speciale di Macaronis Resort Mentawai che si trova nel paese Siniai, Sumatra Barat Per arrivare qui, andiamo in ferie da Padang a Sikakap poi andiamo in speedboot e arriviamo al resort La sua camorra è di tipo suite che è ampia e ha un suono che è molto bello La sua facilità è che c'è AC, wifi, mezza di lavoro e tv che possono mostrare live fit, camera ombak in modo real time Di fuori c'è la ferranda plus gazebo santai con un'antara di vista del lago e una colonna di resa Non solo per i server, qui possiamo anche giocare a kayak, paddleboard, snorkeling, e anche fare tour di vicino a casa per free. Per chi vuole sentire la festività di troppi di Paket Complete, questo riservo è davvero obbligatorio.",
+            "language": "Italian",
+            "durationSec": 41.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:23:49.769Z"
           }
         },
         {
@@ -40944,6 +41056,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:22:20.888Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Tesoro buongiorno e buon ferragosto, tesoro qua si sta benissimo, si mangia benissimo, tutto italiano, chef italiano, è seguito da Tenier Vacanze che è un tour operator italiano, l'animazione è italianatissima, tutto italiano, si sta veramente bene, questa è la seconda volta che lo scelgo perché siamo stati veramente bene i bambini, lo amano, si sono divertiti, l'ho scelto anche soprattutto per questo perché le vacanze sono dei bambini quindi se loro stanno bene sto bene pure io adesso loro stanno a fare il gioco animazione il gioco avventivo io sto bella schiattata sul lettino bella rilassata quindi se vuoi venire a Sharma te lo consiglio concorde a un salam con la tenere vacanza si sta veramente molto molto bene",
+            "language": "Italian",
+            "durationSec": 52.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:25:40.922Z"
           }
         },
         {
@@ -40966,6 +41087,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:22:31.312Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:28:44.203Z"
           }
         },
         {
@@ -40988,6 +41119,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:22:46.160Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Sì, ce ne sei parli così di me. Grazie.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:29:47.182Z"
           }
         },
         {
@@ -41010,6 +41150,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:23:00.971Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:29:49.370Z"
           }
         },
         {
@@ -41032,6 +41181,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:23:42.217Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:32:52.630Z"
           }
         },
         {
@@ -41054,6 +41213,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:24:03.175Z"
+          },
+          "audioAnalysis": {
+            "transcript": "In mezzo a un lago di Menorca c'è un resort 5 stelle. Sì, sì, come lo senti. Si chiama Lago Resort Menorca e è nel porto sportivo di Calambos. E ciò che lo fa ancora più unico è la grande varietà gastronomica dentro il resort. Vieni che ve lo insegno. Questa è la parte delle suites del lago, dove troviamo abitazioni grandi con disegno e un mobiliario molto moderno e mediterraneo, con il bando integrato e la tua propria terrazza, o queste altre abitazioni che contano con piscina privata. La gioia è la superiore con viste alla marina, con solarium e jacuzzi privato. In sue zone comuni ha piscina con amache dentro l'acqua e un cocktail bar smerzato, anche con la zona di camere balinesi. E in quanto a gastronomia, a parte del buffet dell'hotel, c'è Caipa, un peruano con sol rep sol con questo ambiente così bello e speciale. E se ti piace qualcosa di più esclusivo, hanno il Hanan Skate Table, una mesa privata con viste per 6 persone. e poi c'è Godai, che è un ristorante di cucina fusion japonese con estrella Michelin e che avete menù degustazione. Ora entriamo nella parte di case del lago, dove ci sono molti tipi di casette e vi mostrerò la gioia del resort. È questo tipo di appartamento suite con due dormitori e due banchi e un salone comune che è ideale per famiglie o amiche di amici. Che mi dici di queste viste? Appetiziano o no? In quanto ai ristoranti c'è il proprio hotel con un buffet e la sua terrazza e un Thailandese, Thai Garden tutto all'aereo libero In quanto alle zone comuni ha una piscina con un cocktail bar insommeggito incredibile e la zona di camas balinesas e hamacas con viste al lago e i suoi barchetti Ah, e mi dimenticavo del spa che ha piscina con torri due jacuzzi, sauna e bagno turco Spero che vi sia piaciuto come a me conoscere il hotel. E come sapete, questo hotel e molti altri più appiccicabili lo troverete in Appetize. Perché se appetece, appetece.",
+            "language": "Italian",
+            "durationSec": 113.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:34:48.453Z"
           }
         },
         {
@@ -41076,6 +41244,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:24:14.128Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:37:25.849Z"
           }
         },
         {
@@ -41097,6 +41275,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:10:31.781Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie.",
+            "language": "Italian",
+            "durationSec": 30.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:38:04.665Z"
           }
         },
         {
@@ -41119,6 +41306,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:24:37.607Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:41:02.135Z"
           }
         },
         {
@@ -41141,6 +41338,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:24:48.133Z"
+          },
+          "audioAnalysis": {
+            "transcript": "sto congelando oggi proveremo la vera esperienza della sauna finlandese sul lago ghiacciato entriamo prima di tuffarsi ci sarà una sorta di spogliatoio e dietro quella porta troverete la sauna purtroppo queste temperature io non riuscivo a reggerle quindi ho provato a stare con la maglietta termica ma non ci sono riuscito io più di questo non ce la faccio Credibilmente la mia amica è riuscita ad immaginarsi Questa esperienza si può provare a Rovaniemi Alla Pucca Resort E credetemi che al tramonto osserverete uno spettacolo assurdo Prima ovviamente della sera Dove osserverete l'aurora boreale Ma di questo ve ne parlerò nel prossimo video Seguimi perché vi farò scoprire tantissime esperienze",
+            "language": "Italian",
+            "durationSec": 46.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:41:05.119Z"
           }
         },
         {
@@ -41163,6 +41369,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:25:11.551Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:44:14.509Z"
           }
         },
         {
@@ -41184,6 +41400,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:10:35.753Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:44:16.770Z"
           }
         },
         {
@@ -41205,6 +41430,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:11:04.201Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T09:46:25.941Z"
           }
         },
         {
