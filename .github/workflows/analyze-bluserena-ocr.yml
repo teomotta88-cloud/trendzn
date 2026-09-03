@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   # Lo script committa su bluserena-monitoring.json: due run in parallelo si
@@ -70,3 +71,44 @@ jobs:
           MAX_MINUTES: "300"
           BATCH_SIZE: "25"
         run: node scripts/analyze-bluserena-ocr.mjs
+
+      - name: Check if more posts need processing and auto-reschedule
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Conta i post non elaborati o con status != 'ok' in ocrData
+          REMAINING=$(node -e "
+            const fs = require('fs');
+            const data = JSON.parse(fs.readFileSync('src/data/bluserena-monitoring.json'));
+            let count = 0;
+            const dateRanges = [
+              { start: new Date('2025-07-01'), end: new Date('2025-08-31') },
+              { start: new Date('2026-07-01'), end: new Date('2026-08-31') }
+            ];
+            const isInRange = (dateStr) => {
+              if (!dateStr) return false;
+              const d = new Date(dateStr);
+              return isNaN(d.getTime()) ? false : dateRanges.some(r => d >= r.start && d <= r.end);
+            };
+            for (const c of data.canali) {
+              for (const a of c.accounts) {
+                if (!a.url || !/\/(video|reel|reels)\/i.test(a.url)) continue;
+                if (!isInRange(a.date)) continue;
+                const existing = a.ocrData;
+                if (!existing?.status || existing.status !== 'ok') count++;
+              }
+            }
+            console.log(count);
+          ")
+
+          echo "Posts da elaborare: $REMAINING"
+
+          if [ "$REMAINING" -gt 0 ]; then
+            echo "🔄 Relaunching workflow - still $REMAINING posts to process"
+            gh workflow run analyze-bluserena-ocr.yml \
+              -f max_posts=2000 \
+              -f reprocess_failed=false
+          else
+            echo "✅ All posts processed!"
+          fi
