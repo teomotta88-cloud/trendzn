@@ -25202,7 +25202,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:36:05.329Z"
+            "updatedAt": "2026-09-03T07:51:57.667Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -33157,14 +33157,13 @@
             "updatedAt": "2026-09-02T16:22:34.882Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Mipango ya mungu ni ajabu, mipango ya mungu wa ipangapo, akuna mwanada muye yote, aweza eku ipangu wa mipango ya mungu. Mipango ya mungu ni ajabu, mipango ya mungu wa ipangapo, Non c'è nessun uomo che non può fare il lavoro di Dio. Tutti hanno le loro benedizioni, tutti hanno i loro rischi. I nostri lavori sono per il nostro vita, per andare in un'ambiente con il lavoro di Dio.",
+            "language": "Italian",
+            "durationSec": 55.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:18:39.069Z"
+            "updatedAt": "2026-09-03T07:42:51.723Z"
           }
         },
         {
@@ -33250,14 +33249,13 @@
             "updatedAt": "2026-09-02T16:23:16.971Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Quindi volevo venire qui e raccontare la mia esperienza di stare al resort di Sirenes a Pentecona. Dopo aver bookato il nostro viaggio, ho fatto qualcosa che non faccio mai e ho ascoltato le rivoluzioni e erano orribili. Onestamente non volevo andare, ho pensato di cancellare o cambiare il mio viaggio, ma sono così felice che non l'ho fatto. Quando siamo arrivati, ci abbiamo dato un alimento di benedizione, la cerchia era facile, hanno curato i nostri bagagli. All we had to do was take a short walk to our room, which was gorgeous. I couldn't believe the size of this place. It was so pretty. Really, really a positive experience. Then we got to a room. Oh my days. How amazing. At the check-in desk, we were told that the room that I had initially booked wasn't very good. So the man gave us a free upgrade right by the beach. I couldn't believe how lucky I was. S sono stato in casa tutta la settimana se non c altre cose da fare all L anche ha un bar gratuito di bambini gratis che veniva toccata ogni giorno Mi piacevano le viti sul balcone che bello Il pool era vicino, offriva attività di divertimento diversi ogni giorno per i bambini e per gli adulti. Abbiamo molto piaciuto la festa di telefono, tutti erano in buon spirito, ci ha fatto molto bene e molto felice. Ritorno alla dimensione del hotel, è enorme, è molto bello, la squadra lo mantiene costantemente, è così pulito, che è molto buono, che è ciò che vuoi per i viaggi. Ci sono tantissimi fiori, è bello vedere la frutta. Ci sono 27 posti da mangiare e bere a Gran Sirenis. Ci siamo frequentemente mangiati al buffet principale, che era per tutti. C'erano cose diverse da scegliere, come il freddo, la coda dei bambini la coda degli adulti S c qualcosa di diverso non si poteva svolgere Mio figlio molto difficile ma ha qualcosa di diverso ogni giorno ogni giorno per scegliere quanto fosse buono food honestly there was something different you couldn fault it my son is very difficult but he had something every day to choose from which was good cakes were always different um lots to choose from again really delicious but for me my favorite was the fruit so much selection different to the uk uh just proper fruit big fruit tasty we dined at the italian one night che era bellissimo e per mio figlio siamo andati all'americano diner che era fantastico per lui fuori dalla recezione puoi fare una breve viaggia sopra questa ponte e c'è un ponte con pesci diversi e ci sono ghiacci che mi hanno mantenuto divertito puoi prendere un buggy all'acqua e attraverso il viaggio vedrai il club dei bambini la caffè che è è anche inserito nel prezzo. C'è un negozio di eventi di bambini. S c molto da fare in questo resort molto da fare e vedere Per me non potevo credere che solo trovassi tre giorni prima della nostra vacanza che include un parco di acqua che non avevo capito quindi questo ha mantenuto mio figlio felice. Molte slide, ci sono alcuni porti, cibi, cibo, sono davvero felice lì. Non potevo credere alla dimensione di questo posto, forse andremo di nuovo, e mi prenderei sicuramente mio figlio, e è molto difficile piacere. Tornando al nostro luogo, eravamo vicino alla piazza, e c'erano attività di giorno per... beh, per i giorni di vita, scusate, per gli adulti e i bambini. Mio figlio mi ha molto piaciuto il circus e gli acrobati. Per la notte, se downloadi l'app con il codice QR che ti danno a controllare, puoi controllare le attività, i giorni di vita, eccetera. abbiamo davvero piaciuto l'attività di notte sul ponte, sì, era divertente, abbiamo davvero piaciuto.",
+            "language": "Italian",
+            "durationSec": 247.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:21:46.890Z"
+            "updatedAt": "2026-09-03T07:42:56.401Z"
           }
         },
         {
@@ -33373,14 +33371,13 @@
             "updatedAt": "2026-09-02T16:24:05.033Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti Grazie a tutti Sì, siamo già. Grazie a tutti Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie mille.",
+            "language": "Italian",
+            "durationSec": 247.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:24:55.982Z"
+            "updatedAt": "2026-09-03T07:44:47.464Z"
           }
         },
         {
@@ -33680,14 +33677,13 @@
             "updatedAt": "2026-09-02T16:25:50.335Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Sì. Ciao",
+            "language": "Italian",
+            "durationSec": 62.3,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:34:40.421Z"
+            "updatedAt": "2026-09-03T07:46:50.525Z"
           }
         },
         {
@@ -34019,14 +34015,13 @@
             "updatedAt": "2026-09-02T16:28:38.222Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Buonanotte!",
+            "language": "Italian",
+            "durationSec": 32.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:43:31.483Z"
+            "updatedAt": "2026-09-03T07:47:52.940Z"
           }
         },
         {
@@ -34144,14 +34139,13 @@
             "updatedAt": "2026-09-02T16:29:28.115Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "... David oh, Islandia oh, vabbè, vabbè, vabbè vabbè, tu fai niente di altro, mamma tu puoi andare a vedere Mopi Mopi eh? No, no, no. Grazie.",
+            "language": "Italian",
+            "durationSec": 92.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:49:00.798Z"
+            "updatedAt": "2026-09-03T07:47:56.294Z"
           }
         },
         {
@@ -34392,14 +34386,13 @@
             "updatedAt": "2026-09-02T16:31:18.605Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:55:26.318Z"
+            "updatedAt": "2026-09-03T07:47:58.791Z"
           }
         },
         {
@@ -34454,14 +34447,13 @@
             "updatedAt": "2026-09-02T16:31:51.620Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Mi sento come se andassi in un post-picture, e poi ti dici che sei stato qui. E' un post-picture, e io sono arrivato qui. In effetti, non ho mai visto un post-picture così bello. Questo è il cuore di Dubai. Il più alto edificio, si chiama Bouch Khalifa. se guardi qui, vedi l'acqua che danza in Kenya anche noi possiamo essere così se vogliamo, possiamo essere così ma se vogliamo è bello, mi hai dato sai questo è un Kenia questo è un Kenia e posso dirvi qualcosa che fa immagina, perché a Dubai non c'è cibo di Kenya ha iniziato a portare cibo di Kenya qui di ogni unghia, tutte le unghie sono qui Ndengu nini zi ukonazo apa",
+            "language": "Italian",
+            "durationSec": 58.7,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T19:59:18.639Z"
+            "updatedAt": "2026-09-03T07:48:01.902Z"
           }
         },
         {
@@ -34610,14 +34602,13 @@
             "updatedAt": "2026-09-02T16:32:36.785Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Ma non è così, è un senso centrale. E' una cosa che non si può fare. Se non si fa, si può fare un po' di amore, un po' di amore. Non si può fare. Non si può fare. E' una cosa che non si può fare. Non si può fare. Se non ci siamo riusciti a fare un'esercito, non ci sarebbe mai avuto la possibilità di fare un'esercito. Grazie.",
+            "language": "Italian",
+            "durationSec": 67.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T20:03:45.974Z"
+            "updatedAt": "2026-09-03T07:49:04.861Z"
           }
         },
         {
@@ -34735,14 +34726,13 @@
             "updatedAt": "2026-09-02T16:33:25.916Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "dopo la preda, si dice che la persona che si trova in quella casa deve si abbandonare non dobbiamo fare niente, dobbiamo continuare a lavorare e la loro vita e se si risponde a questo? non si risponda a questo Adesso non ci vediamo più. Mamma vuole che tu facciano il tuo lavoro che tu facciano la tua scuola E be ma bagnini se c una di mamma baffa ma se c di bagniamo bagniamo mamma che ancora l voluto e non mi ha saputo e beve mamma buona buona buona buona buona buona buona buona buona buona buona buona ma il corpo è il più importante e questo è il tuo lavoro? si, per questo il mio lavoro è quello di lavorare e questo è il tuo lavoro? si, prima di andare in casa dove andiamo a lavorare? in casa ci si trova un'altra cosa che non si trova in casa non vero Ehi ieri e ieri in Pessagno Ehi ieri e ieri in Pessagno Ehi Non è vero, non è vero. Mola l'uva nangi. Adora malaga kubabu kubiruji? Eh, attenti segni mubira mubavi. What day? O kubabu kubiruji no ingira? Yes, please. No, bambi, ingira, ingira ci segni. What day? Pisa? E cadico engadio mzeci wagudja mubra imari. Si so la ringhiza muka zua inga mwachi mba muli ingese A ti cadu kubiro inechi ringa ci tambo Neda si iniziato a lavorare L fatto in un Neda si iniziato a lavorare anche per il gioco in etica citt un di gisela novanto varala oriom casi bambola va a giocare in gira citt ambo le d sopra nio buenzi o o o mutuari alico buenzi ad avanti ammua vari in giza guardare via come a manava cardinale canzoni cingave gatta patizia di barabie con una passando e emozioni di cunha misa ora le coca panga e gatta una lava un coco pussycat zecati post cat in ari gira vieco ari nari in fuga nina web it an in packing anente camminavo indicator minamba come chissà buon fungo guamani o mai ti avanti fa fatta varia cucata nasi e gatto no parking and parking o da rio fadoo da rio un angelo fadoo nomi gama ninda nemmeno ninda mune parking a moda boi indicator e so canada vedersi nei capo alzato ala ebriaco la novità pazzo ziruau noi migliora di capo di ram c'è una cioncina cattura a bollizzo fangato la mia famiglia si manca di bobbinino bose si manca di carabica simoni ad evitare di si vedeva Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 335.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T20:08:50.737Z"
+            "updatedAt": "2026-09-03T07:50:33.526Z"
           }
         },
         {
@@ -34979,7 +34969,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:36:05.329Z"
+            "updatedAt": "2026-09-03T07:51:57.667Z"
           },
           "ocrData": {
             "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
@@ -35291,14 +35281,13 @@
             "updatedAt": "2026-09-02T16:36:55.244Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "no ma sanno poi prima con la sua in inglese poi una congiugola una tonica c'è un capo Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 57.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T20:23:16.706Z"
+            "updatedAt": "2026-09-03T07:53:27.349Z"
           }
         },
         {
@@ -35444,14 +35433,13 @@
             "updatedAt": "2026-09-02T16:37:46.461Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 42,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T20:26:03.563Z"
+            "updatedAt": "2026-09-03T07:53:30.004Z"
           }
         },
         {
@@ -35474,6 +35462,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:37:56.682Z"
+          },
+          "audioAnalysis": {
+            "transcript": "La niente vola mua' ingira, ovula mutufuna La niente vola mua' ingira, ovula mutufuna La niente vola mua' ingira, ovula mutufuna La niente vola mua' ingira, ovula mutufuna La niente vagesi ua' ingira Amagezi Tufuna Nannini Amagezi Waingira Amagezi Tufuna Nannini Amagezi Waingira Amagezi Tufuna Amagezi Tufuna",
+            "language": "Italian",
+            "durationSec": 51.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:53:33.485Z"
           }
         },
         {
@@ -35495,6 +35492,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:38:03.838Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Signore e signori, benvenuti a Islamabad, la seconda più bella capitale del mondo. Come ci stiamo sottoponendo nei fiori, siate pronti a veder la bellezza e la bellezza di Faisal Mosque. Dall'arco di Margala, alla serena parte di Lakeview Park, Islamabad si mescola con il splendore naturale e con la moderna arte.",
+            "language": "Italian",
+            "durationSec": 20.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:53:35.789Z"
           }
         },
         {
@@ -35517,6 +35523,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:38:13.104Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:53:59.240Z"
           }
         },
         {
@@ -35539,6 +35554,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:38:23.459Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:01.414Z"
           }
         },
         {
@@ -35560,6 +35584,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:38:33.501Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:04.012Z"
           }
         },
         {
@@ -35582,6 +35615,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:38:46.905Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Io! Io! Io! Io! Io! Io!",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:06.156Z"
           }
         },
         {
@@ -35604,6 +35646,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:38:55.798Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 23.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:08.767Z"
           }
         },
         {
@@ -35626,6 +35677,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:39:09.071Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:11.022Z"
           }
         },
         {
@@ -35647,6 +35707,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-02T16:39:23.112Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:15.788Z"
           }
         },
         {
@@ -35669,6 +35738,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:39:34.143Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ah ah ah ah ah ah ah ah ah ah ah ai Mis ahorros Mis ahorros di dinero Tanto che me costò orarlo Ah ah ah ah ah ah ah ah",
+            "language": "Italian",
+            "durationSec": 14.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:19.550Z"
           }
         },
         {
@@ -35691,6 +35769,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:39:45.110Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:21.564Z"
           }
         },
         {
@@ -35713,6 +35800,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:06:23.924Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 13,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:23.651Z"
           }
         },
         {
@@ -38389,6 +38485,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:06:23.924Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 13,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T07:54:23.651Z"
           }
         },
         {
