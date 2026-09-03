@@ -42236,6 +42236,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:14:07.192Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:21:26.672Z"
           }
         },
         {
@@ -42258,6 +42268,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:33:22.456Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:21:28.965Z"
           }
         },
         {
@@ -42280,6 +42299,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:33:40.087Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Niente ci racconta di Nanai, un resort di alto padrone, lusso, qui in Brasile. Questo è il Muro Alto Resort, ha tre altre opzioni, ma parlando di Muro Alto, iniziamo dalla meravigliosa e accogliente ristretto, che ti offre champagne e drink, senti una presenza diversa. Il quarto, ampio, saporito, prodotti L'Occitane, è veramente diverso dall'esperienza, con sempre tenta superare l'aspettativa area di la verità non può non è quella non vuca e solo agglomerato in tante senti questa esperienza gastronomica con sushi in un prodotto di altissima qualità ed è realmente penso una esperienza o apprendimento è spettacolare so che non agradece si realmente il servizio è differente di tutto che a gente già viva con essa esperienza e commenta se vuoi ricevere un'opportunità nel tuo direct su questo risorto incredibile.",
+            "language": "Italian",
+            "durationSec": 59.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:22:34.088Z"
           }
         },
         {
@@ -42302,6 +42330,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:33:52.553Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 44.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:24:41.233Z"
           }
         },
         {
@@ -42355,6 +42392,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:34:21.713Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 28.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:25:43.763Z"
           }
         },
         {
@@ -42377,6 +42423,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:34:39.197Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:28:14.013Z"
           }
         },
         {
@@ -42429,6 +42485,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:35:04.470Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:28:16.268Z"
           }
         },
         {
@@ -42450,6 +42515,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:14:35.628Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 41.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:29:13.126Z"
           }
         },
         {
@@ -42472,6 +42546,16 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:35:25.451Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:32:12.905Z"
           }
         },
         {
@@ -42493,6 +42577,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:15:06.249Z"
+          },
+          "audioAnalysis": {
+            "transcript": "One night I was taking a walk along the river When I saw him together with a young girl And the look that he gave her made her shiver Cause he always used to look at me that way",
+            "language": "Italian",
+            "durationSec": 17.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:32:15.343Z"
           }
         },
         {
@@ -42545,6 +42638,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:36:18.863Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Quindi ieri sono arrivata in questo store, Canela Vintage, e era così bello. Qui stavo guardando la rocca del 10$. 10$ ragazzi per le vestiti vintage. Devi prenderti tempo per guardarla perché sono di tutti i tipi. Mi piacciono davvero i pezzi unici qui, le macchie, i blazer, il denim che si è uscito. hanno anche Gucci e altre giuliettine vintage in questo tavolo di glass che devi aprire. Le stupefacce vengono in tutti i stili diversi, da bootle a Nike, sono semplicemente cool. L'azienda che la gestiva mi diceva che era ispirata dalla sua marmottiera e così è cominciata la stanza. iniziavano, quindi sempre hanno diversi finiti, a volte si donano pezzi unici e bellissimi alla storia, quindi definito che questo lo mettete in lista per guardare, soprattutto se amate la moda e se volete essere la ragazza di una sorta in ogni uno dei vostri eventi o semplicemente per disegnare molto in moda a livello quotidiano",
+            "language": "Italian",
+            "durationSec": 72,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:33:15.893Z"
           }
         },
         {
@@ -42566,6 +42668,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:15:25.692Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:34:15.147Z"
           }
         },
         {
@@ -42587,6 +42698,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:15:33.778Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Questi pantaloni di canae sono perfetti per uso diario. Hanno una cintura elastica con cordone, polsicchi e tela molto suave. Tela suave. Dissima le cadere e allarga le piedi. Ci sono vari colori disponibili per il tuo look diario.",
+            "language": "Italian",
+            "durationSec": 13.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:34:56.589Z"
           }
         },
         {
@@ -42608,6 +42728,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:15:41.337Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:37:02.311Z"
           }
         },
         {
@@ -42630,6 +42760,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:37:10.698Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Questo posto che sembra un'Europa, si può arrivare a Katmandu in un'ora. Questo è il Salty Western Resort Nagarkot. Questo posto, che è naturalmente circondato, deve essere nella vostra bucket list. Si può arrivare qui per la scenic view di Macha, Rani Jula e Buddha Peace Park. Dopo arrivare, i nostri warm welcome sono arrivati. La stanza, la piazza di sceglie e la jacuzzi sono stati memorabili. E il più grande sguardo è la vista del sole e della notte del valle. Era davvero così bello che questa camera non può giustificarlo. E' l'ora di salti-hetis, da 5.30 alle 6.30, dove i club salti-hetis servono snack complimentari. E noi abbiamo anche mangiato i nostri snack. La città è molto buona, anche la buona cena. La buona cena è molto buona, anche la buona cena. Se avete cercato un'altra città, sicuramente guardate questo posto. Vi ringrazio. Ci vediamo alla prossima.",
+            "language": "Italian",
+            "durationSec": 54.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:38:05.849Z"
           }
         },
         {
@@ -42652,6 +42791,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:37:30.340Z"
+          },
+          "audioAnalysis": {
+            "transcript": "I didn't know what I was looking for Until I found her",
+            "language": "Italian",
+            "durationSec": 9.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:38:08.034Z"
           }
         },
         {
@@ -42673,6 +42821,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:16:02.727Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:40:52.899Z"
           }
         },
         {
@@ -42694,6 +42852,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:16:50.878Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 31.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:41:10.803Z"
           }
         }
       ]
@@ -42732,6 +42899,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:17:08.585Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:42:13.346Z"
           }
         },
         {
@@ -42761,6 +42937,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:56.354Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:42:15.351Z"
           }
         },
         {
@@ -42789,6 +42974,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:17:34.259Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:42:44.783Z"
           }
         },
         {
@@ -42816,6 +43010,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:17:40.508Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:43:47.533Z"
           }
         },
         {
@@ -42844,6 +43047,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:17:54.176Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:44:13.727Z"
           }
         },
         {
@@ -42874,6 +43086,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:39:58.879Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Eh, come va? Cerco di a volte sdrammatizzare, ma dentro di me... Cerco di divertirmi, ma... però... così...",
+            "language": "Italian",
+            "durationSec": 11.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:44:49.104Z"
           }
         },
         {
@@ -42895,6 +43116,16 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:17:59.746Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:47:27.850Z"
           }
         },
         {
@@ -45306,6 +45537,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-03T09:24:56.354Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-03T10:42:15.351Z"
           }
         },
         {
