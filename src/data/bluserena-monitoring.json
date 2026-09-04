@@ -45,7 +45,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:34:26.809Z"
+            "updatedAt": "2026-09-04T07:45:59.479Z"
           }
         },
         {
@@ -121,7 +121,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:34:34.035Z"
+            "updatedAt": "2026-09-04T07:46:07.055Z"
           }
         },
         {
@@ -196,7 +196,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:34:41.854Z"
+            "updatedAt": "2026-09-04T07:46:15.217Z"
           }
         },
         {
@@ -271,7 +271,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:34:47.599Z"
+            "updatedAt": "2026-09-04T07:46:21.158Z"
           }
         },
         {
@@ -314,7 +314,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:34:55.856Z"
+            "updatedAt": "2026-09-04T07:46:29.506Z"
           }
         },
         {
@@ -433,7 +433,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:35:02.128Z"
+            "updatedAt": "2026-09-04T07:46:35.880Z"
           }
         },
         {
@@ -506,7 +506,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:35:30.867Z"
+            "updatedAt": "2026-09-04T07:47:06.295Z"
           }
         },
         {
@@ -673,7 +673,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:42:52.304Z"
+            "updatedAt": "2026-09-04T07:47:18.965Z"
           }
         },
         {
@@ -791,7 +791,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:01:08.392Z"
+            "updatedAt": "2026-09-04T07:47:24.432Z"
           }
         },
         {
@@ -830,7 +830,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T09:24:40.637Z"
+            "updatedAt": "2026-09-04T07:47:29.684Z"
           }
         },
         {
@@ -870,7 +870,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:36:03.071Z"
+            "updatedAt": "2026-09-04T07:47:39.109Z"
           }
         },
         {
@@ -907,7 +907,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:36:37.057Z"
+            "updatedAt": "2026-09-04T07:48:15.385Z"
           }
         },
         {
@@ -1026,7 +1026,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:36:46.443Z"
+            "updatedAt": "2026-09-04T07:48:25.411Z"
           }
         },
         {
@@ -1063,12 +1063,13 @@
             "updatedAt": "2026-09-02T09:01:54.627Z"
           },
           "ocrData": {
-            "textOnScreen": null,
-            "confidence": null,
+            "textOnScreen": "RAGOS i",
+            "confidence": 0.78,
             "frameCount": 5,
-            "status": "no_text",
+            "minConfidence": 60,
+            "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-03T07:36:54.585Z"
+            "updatedAt": "2026-09-04T07:48:33.863Z"
           }
         },
         {
@@ -1147,7 +1148,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:13:54.845Z"
+            "updatedAt": "2026-09-04T07:48:48.882Z"
           }
         },
         {
@@ -1307,7 +1308,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:40:02.766Z"
+            "updatedAt": "2026-09-04T07:48:57.774Z"
           }
         },
         {
@@ -1347,7 +1348,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:37:36.221Z"
+            "updatedAt": "2026-09-04T07:49:17.214Z"
           }
         },
         {
@@ -1388,7 +1389,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:59:36.579Z"
+            "updatedAt": "2026-09-04T07:49:36.431Z"
           }
         },
         {
@@ -1427,7 +1428,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:38:22.222Z"
+            "updatedAt": "2026-09-04T07:50:06.597Z"
           }
         },
         {
@@ -1468,7 +1469,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:13:22.353Z"
+            "updatedAt": "2026-09-04T07:50:23.201Z"
           }
         },
         {
@@ -1625,7 +1626,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:38:41.825Z"
+            "updatedAt": "2026-09-04T07:50:27.694Z"
           }
         },
         {
@@ -1660,12 +1661,13 @@
             "updatedAt": "2026-09-02T11:43:45.021Z"
           },
           "ocrData": {
-            "textOnScreen": null,
-            "confidence": null,
+            "textOnScreen": "NITE",
+            "confidence": 0.737,
             "frameCount": 5,
-            "status": "no_text",
+            "minConfidence": 60,
+            "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-03T08:19:06.601Z"
+            "updatedAt": "2026-09-04T07:50:39.294Z"
           }
         },
         {
@@ -1787,7 +1789,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:05:58.883Z"
+            "updatedAt": "2026-09-04T07:51:10.060Z"
           }
         },
         {
@@ -1983,7 +1985,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:39:32.485Z"
+            "updatedAt": "2026-09-04T07:51:19.915Z"
           }
         },
         {
@@ -2216,7 +2218,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T07:39:49.870Z"
+            "updatedAt": "2026-09-04T07:51:37.709Z"
           }
         },
         {
@@ -12667,7 +12669,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:01:08.392Z"
+            "updatedAt": "2026-09-04T07:47:24.432Z"
           }
         },
         {
@@ -13060,12 +13062,13 @@
             "updatedAt": "2026-09-02T11:43:45.021Z"
           },
           "ocrData": {
-            "textOnScreen": null,
-            "confidence": null,
+            "textOnScreen": "NITE",
+            "confidence": 0.737,
             "frameCount": 5,
-            "status": "no_text",
+            "minConfidence": 60,
+            "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-03T08:19:06.601Z"
+            "updatedAt": "2026-09-04T07:50:39.294Z"
           }
         },
         {
@@ -15941,7 +15944,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:05:58.883Z"
+            "updatedAt": "2026-09-04T07:51:10.060Z"
           }
         },
         {
@@ -16583,7 +16586,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:13:54.845Z"
+            "updatedAt": "2026-09-04T07:48:48.882Z"
           }
         },
         {
@@ -18293,7 +18296,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:13:22.353Z"
+            "updatedAt": "2026-09-04T07:50:23.201Z"
           }
         },
         {
@@ -18486,7 +18489,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:13:54.845Z"
+            "updatedAt": "2026-09-04T07:48:48.882Z"
           }
         },
         {
@@ -20167,12 +20170,13 @@
             "updatedAt": "2026-09-02T11:43:45.021Z"
           },
           "ocrData": {
-            "textOnScreen": null,
-            "confidence": null,
+            "textOnScreen": "NITE",
+            "confidence": 0.737,
             "frameCount": 5,
-            "status": "no_text",
+            "minConfidence": 60,
+            "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-03T08:19:06.601Z"
+            "updatedAt": "2026-09-04T07:50:39.294Z"
           }
         },
         {
@@ -26416,7 +26420,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:59:36.579Z"
+            "updatedAt": "2026-09-04T07:49:36.431Z"
           }
         },
         {
@@ -28279,7 +28283,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:40:02.766Z"
+            "updatedAt": "2026-09-04T07:48:57.774Z"
           }
         },
         {
@@ -29543,7 +29547,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:42:52.304Z"
+            "updatedAt": "2026-09-04T07:47:18.965Z"
           }
         },
         {
@@ -37704,7 +37708,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:59:36.579Z"
+            "updatedAt": "2026-09-04T07:49:36.431Z"
           }
         },
         {
@@ -46295,7 +46299,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T09:24:40.637Z"
+            "updatedAt": "2026-09-04T07:47:29.684Z"
           }
         },
         {
