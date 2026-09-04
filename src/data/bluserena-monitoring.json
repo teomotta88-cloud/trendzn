@@ -4473,7 +4473,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
             "version": 1,
-            "updatedAt": "2026-09-03T07:34:42.240Z"
+            "updatedAt": "2026-09-04T07:46:18.493Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -9489,9 +9489,9 @@
             "durationSec": null,
             "model": "whisper-large-v3",
             "status": "download_failed",
-            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: Your IP address is blocked from accessing this post",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668293475615427848: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
             "version": 1,
-            "updatedAt": "2026-09-03T07:34:54.650Z"
+            "updatedAt": "2026-09-04T07:46:20.324Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -10614,7 +10614,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7676255321035164960: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-03T07:34:56.290Z"
+            "updatedAt": "2026-09-04T07:46:22.003Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -14164,7 +14164,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7678850497431833877: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-03T07:35:13.027Z"
+            "updatedAt": "2026-09-04T07:46:23.686Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -16726,7 +16726,7 @@
             "model": "whisper-large-v3",
             "status": "no_speech",
             "version": 1,
-            "updatedAt": "2026-09-03T07:35:37.202Z"
+            "updatedAt": "2026-09-04T07:46:26.297Z"
           },
           "ocrData": {
             "textOnScreen": "Calaserena Resort\nSardegna",
@@ -19553,7 +19553,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7670253794323664161: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-03T07:35:45.396Z"
+            "updatedAt": "2026-09-04T07:46:27.988Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -32328,14 +32328,13 @@
             "updatedAt": "2026-09-02T16:16:20.153Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Attenganze, neweboke da ebichibicha, oiokwefina Motavazze, siriasignua, lingarinda konecha Kasabomotonsa, tuanilile, munguatutuse kumeta Me bebika La citt di Bambini Grazie a tutti. La chiesa di Dio Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 248.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:42:45.363Z"
+            "updatedAt": "2026-09-04T07:46:33.663Z"
           }
         },
         {
@@ -36117,7 +36116,7 @@
             "model": "whisper-large-v3",
             "status": "no_speech",
             "version": 1,
-            "updatedAt": "2026-09-03T07:57:36.314Z"
+            "updatedAt": "2026-09-04T07:46:36.633Z"
           }
         },
         {
@@ -37277,7 +37276,7 @@
             "status": "download_failed",
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675157228390747412: Your IP address is blocked from accessing this post",
             "version": 1,
-            "updatedAt": "2026-09-03T08:03:47.404Z"
+            "updatedAt": "2026-09-04T07:46:38.314Z"
           }
         },
         {
@@ -37339,7 +37338,7 @@
             "model": "whisper-large-v3",
             "status": "no_speech",
             "version": 1,
-            "updatedAt": "2026-09-03T08:03:49.606Z"
+            "updatedAt": "2026-09-04T07:46:40.661Z"
           }
         },
         {
@@ -38889,14 +38888,13 @@
             "updatedAt": "2026-09-03T09:03:53.617Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "musica Oh, oh, oh, oh, oh, oh Promise that you'll hold me close, don't let me go Take my heart, don't break it Love me to my bones All this time I've wasted You were right there all along You and I started guessing Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 70.8,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:24:13.883Z"
+            "updatedAt": "2026-09-04T07:46:44.069Z"
           }
         },
         {
@@ -39134,14 +39132,13 @@
             "updatedAt": "2026-09-03T09:05:02.089Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti. La versione pi felice di me No shadow strong Grazie a tutti Grazie a tutti. I'm a firework waiting to fly A rainbow painted across the sky I've got joy that won't fade away I'm living my song in a bright way With every heartbeat I'm breaking free This is the happiest version of me Oh oh oh oh oh oh The world can see I finally free Oh wake up with the sunlight on my face Little dreams are dancing into the flames Every step's a chance to shine anew Ciao Grazie a tutti Ciao Ciao! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 352.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:29:14.507Z"
+            "updatedAt": "2026-09-04T07:46:50.113Z"
           }
         },
         {
@@ -40161,14 +40158,13 @@
             "updatedAt": "2026-09-02T17:12:23.186Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Insigne, che ha un po' di spazio, Gazala prova a prenderlo, Insigne si accentra, Insigneeeeeee! Loretta l'Insigne! Prova la Fiorentina, Insigne aspetta Goulam, va sul destro, prova a calciare, Insigne! Lorenzo Insigne! Una! ...di Kai Hong quando Real ha in possesso Pala. Uno, due, Insigne cerca il pallonetto! Loretta! Loretta incredibile! Che ha volato! Ancora Insigne, che vede Gaviadini, Insigne il destro! Lorenzo Insigne che può attaccare l'area di rigore, passa Insigne, vuole calciare! Insigne! Fabio Ruiz, è stato toccato, Lorenzo Insigne! L'ha chiesto un eroe! L'area di rigore, salta come uno osalo speciale, tre paletti, un giocatore! Ecco! Viva Lorenzo Insigne! Porenzini rientra su Tilemans che lo perde C'è la possibilità del destro Lorenzo",
+            "language": "Italian",
+            "durationSec": 56.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:42:13.875Z"
+            "updatedAt": "2026-09-04T07:46:54.161Z"
           }
         },
         {
@@ -40222,14 +40218,13 @@
             "updatedAt": "2026-09-03T09:07:29.443Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 27.3,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:47:29.727Z"
+            "updatedAt": "2026-09-04T07:46:56.664Z"
           }
         },
         {
@@ -40315,14 +40310,13 @@
             "updatedAt": "2026-09-02T17:14:03.205Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "L'aereo blu è un ombak che risponde e ha un'amore che non è mai finita. L'Indonesia, un paese di milioni di persone, ha tutto per rinforzare i suoi occhi, i suoi cuori e le sue cuore. Siamo pronti perché vi facciamo viaggiare sulle sorghe, le sorghe che vi sono bisogno di visitare. Unico, spettacolare e non abituale. Salve a tutti i amici di Visata, sono Sugianto, Grazie a tutti Facilit sia lengkap mulai kotik yang nyaman dan lengkap dan menghadap ke laut Restaurant dengan pilihan menu yang beragam Kolam renang area pantai yang bersih hingga facilitas olahraga air Untuk menambah pengalaman liburan para tamu. Selama berada di pulau pantara, wisatawan dapat menikmati berbagai aktività yang menarik. Seperti snorkeling, untuk melihat keindahan bawah laut. Gerenan di laut yang jernih. Lihat sunset di sore hari. Per il viaggio in spazio in spazio di pantai o per il momento di abbandonare in diversi spot foto che sono bellissimi. Poi vediamo il kotik che è un luogo per i viaggiatori. Il kotik di Pantara è pulito, comodo e è completato con diverse facilitazioni di supporto, così che i viaggiatori possono restare tranquilli e mangiare la situazione alambra. Per i viaggiatori che vogliono rilassarsi, è disponibile un colam renang pulito e comodo. Per i amici che cercano un'attività di viaggio, un'attività di viaggio, un'attività di viaggio, l'Ulava Pantara può essere una scelta che dovrebbe essere risolta. Così la nostra informazione dal l'Ulava Pantara. Ci vediamo alla prossima attività di viaggio.",
+            "language": "Italian",
+            "durationSec": 137.8,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:52:05.595Z"
+            "updatedAt": "2026-09-04T07:47:01.427Z"
           }
         },
         {
@@ -40346,14 +40340,13 @@
             "updatedAt": "2026-09-03T09:08:26.821Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Sono uno dei resort più buoni che abbiamo provato, vicino alla natura, con molte cabine disponibili, molte attività che puoi fare, c'è un cafe e un resto in house, puoi fare seminari e eventi, e più di tutto, puoi fare team building qui. Puoi divertirsi con la famiglia, la barca o con il tuo team, in qualsiasi momento, anche se è freddo. I miei amici e i miei figli sono qui nel resort di Cabin Resort di Puricos, Locate nella sito Camilla Calantipe a Palit Pampanga È a poco da Bulacana, solo due ore da Metro Manila Non vi arricchirete perché sono searchable su Google Maps Non è solo una stagione che possiamo fare qui Perché nel loro resort è molto grande Sono anche compagni per la loro team building Possono accomodare grandi gruppi e offrire anche pacchetti esclusivi Dipende dal tuo date preferito Il team ha un buon stay e ha opzioni per il free hassle Ha anche un pacchetto con la cassa Qualcosa che si possa fare qui, come le gare di energia, le attività di waterpool, i fan games, le olimpiadi e tanti altri. Sicuramente il tuo team si divertirà qui, non solo nell'ambiente del resort, ma anche nell'esperienza. Per chi ha plan di stare a vacanza ci sono tanti abiti disponibili qui Instagram Warty Ampoule il resort anche pet Ci sono tante attivit che si possono fare si possono rentare ATV Sumakai ng bangka mag fishing Mag basketball o volleyball mag billiards Puede ring mag videoke, puede ring mag request Ng bonfire, di rin maboboring ang mga kids Dito dahil merong playground para sa kanila Dito nga sa loob ng resort, hai ng in-house cafe E resto sila, ang istoria bar and cafe No problem, kahit wala kayong dalang food Puede kayong mag dining sa kanila Lata naman tayo sa mga cabin sila, kung mahilig kayong mag camping At gusto nyo ng ganitong vibe, meron sila ditong campervan e se siete una famiglia o gruppo, avete qui la casa di Athena, con una casa di up to 35 persone. Ci sono anche delle cabine di 15 persone, con una cabine di Luciana e una cabine di famiglia, e questa cabina di Bargada, con una casa di 10 persone. La stanza di living room, la cucina e la cucina, è completamente air-conditioned, ha anche le platine e le utensili, ha l'elettricità, ha la tv e il refrigeratore, ha una buona stanza di comfort room, ha la tavola e le toilette, ha anche una taberna, ha anche un jacuzzi, nella seconda piazza, ci sono due bed, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 146.2,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:55:31.237Z"
+            "updatedAt": "2026-09-04T07:47:12.516Z"
           }
         },
         {
@@ -40439,14 +40432,13 @@
             "updatedAt": "2026-09-02T17:15:43.570Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 31.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:00:19.530Z"
+            "updatedAt": "2026-09-04T07:47:15.124Z"
           }
         },
         {
@@ -40471,14 +40463,13 @@
             "updatedAt": "2026-09-02T17:16:00.683Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Welcome to La Cercita! Come with us on our overnight family stay at La Cercita Beach Resort in Mansalay Oriental, Mindoro. After a scenic drive, finally, we're here! Pagdating sa entrance, dumaan muna kami sa security para i confirmang booking bago kami makapasok sa loob ng resort. Hello po, may booking po? Ah yes. Ano paka la lina ma? Ah, Aranda, last name. E' giù na nani! After nami i confirm su security guard, pinapasok na kabi sa loob. Pagpasok sa lobby, we were welcomed with a refreshing four-season juice, perfect talaga after the long drive. Habang iniinom ko yung welcome drink, let's take a quick look around the lobby. Ang ganda ng lobby, halos lahat ng furnitures e gawa sa beautifully carved wood, kaya ang rustic, elegant and very filipino nandating. Dopo aver guardato, andiamo in alto. Questa la stanza dei miei genitori Ho preso due sedi di grande dimensione quinta dimensione per loro e molto spaziosa Ciao mamma E anche questa la loro stanza di bath La stanza di bath separata e la stanza di shower separata Ora è il nostro turno. Unlockiamo la stanza e benvenuti nella nostra stanza per la notte. Abbiamo bookato la stanza di premier con due stanza di bed di quinta dimensione, come la stanza dei miei parenti. room one thing i really like is the same layout separate your shower and your toilet which is super convenient now for my favorite part the balcony let's open the blinds and unlock the balcony door and yes anganda non view overlooking the pool with such a peaceful atmosphere è bello restare in bianco e rilassarsi. Un'altra cosa che amo è il resort di fronte di piazza, solo un po' di distanza dal resort e sei già alla piazza. In generale, questo è stato un getaway per la famiglia rilassata. Se stai cercando un esame di pazienza in Oriental Mindoro, il resort di La Cercita è definitivamente valido di cercare. Ci vediamo nel prossimo vlog, ciao!",
+            "language": "Italian",
+            "durationSec": 133.6,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:03:23.338Z"
+            "updatedAt": "2026-09-04T07:47:19.451Z"
           }
         },
         {
@@ -40503,14 +40494,13 @@
             "updatedAt": "2026-09-02T17:16:15.350Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "For as low as 5,999 pesos, good for 20 bucks na, ay mas solo mo na, yung ganito kagandam place sa Laguna, na estetic, relaxing at affordable, na perfect for family at magbabarkada, na perfect den for any occasions, na halos katabi lang ng Kastilio sa Bukal at Naruto Village, na matatagpuan sa Barangay Bukal, Kalamba, Laguna, che è a 1 ora e più da Metro Manila, ti riuscirai. Quindi abbiamo viaggiato 1 ora da Bacoor per arrivare a Calamba Laguna. Poi, ti riuscirai a Calamba Laguna. Quindi, benvenuti al CRJ Cabin Resort di Barangay Bucal, Calamba Laguna. Bene, è un private resort con due cabin, quindi il posto è solo. Quando entri qui, ti riuscirai. Grazie a tutti. Grazie a tutti Grazie a tutti o magari giocare a board games o a video con un limite di video con il matching disco light spa Poi hanno anche qui la cucina che è completata con la cucina e le utensili di cucina. E hanno anche le utensili di cucina. Poi, hanno anche qui il ref, il forno di microfono, il dispensatore di acqua, il cucinatore di riso e la cucina. Poi, hanno anche un'area di dine che potete mangiare e un'area di vivend che potete anche mangiare. Perfetto questo posto per la famiglia o per ogni band o per ogni occasione. Poi, questi sono i loro liste di prezzi e hanno promosso la tour di giorno da agosto fino a novembre. Quindi il 8000 che hanno dato è 5999 pesos e anche loro accettano un gruppo o gruppi piccoli. E puoi anche pagare o fare eventi in area. Quindi una domanda, come puoi arrivare qui? Scriviti su Wisa o Google il CRJ Cabin Resort e ti porteremo qui. O se ti commuoti, vi portate solo con il bus. a Viajeng Calamba e a Cip che va a Los Baños e a Bungaba a Barangay Bucal a Riles e poi a Cricycle e a Lakeview a CRJ Cabin Resort per i bookings e inquiries messaggate a CRJ Cabin Resort e per più viaggi seguiteci per più e God bless",
+            "language": "Italian",
+            "durationSec": 225.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:05:57.612Z"
+            "updatedAt": "2026-09-04T07:47:26.142Z"
           }
         },
         {
@@ -40657,14 +40647,13 @@
             "updatedAt": "2026-09-02T17:18:07.078Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Musica Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 54.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:13:03.396Z"
+            "updatedAt": "2026-09-04T07:47:29.628Z"
           }
         },
         {
@@ -40718,14 +40707,13 @@
             "updatedAt": "2026-09-03T09:09:28.912Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Grazie a tutti. Grazie a tutti. Ciao Grazie a tutti. Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 164.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:17:11.327Z"
+            "updatedAt": "2026-09-04T07:47:33.927Z"
           }
         },
         {
@@ -40842,14 +40830,13 @@
             "updatedAt": "2026-09-03T09:09:48.877Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Nel 2020, ci sono 100 islande. Grazie a tutti. E' un po' come se ci stessero i nostri abitanti. Grazie a tutti E questo è quello che mi riporto qui per ridurre il stress. Oh, no? Non si ridurre il stress della troma dei tuoi compagni? E poi si riparano le macchine qui in Islanda di Quezon. Ma voglio che la donna si fotografi in un'inglese perché ha il suo panty colorato. Però il più importante è il nostro lunch qui su Children's Island E non ti dispiace la loro package di bilao Tutto è buono, soprattutto la salsa del seafood, a parte Shanghai Quindi vi raccomando di cuocere con le donne che vengono E per me è la più bella isla di tutte, se vuoi una vita, è la Temptation Island Ma nel mezzo della fiamma, il fiume si è scolpito Ma è quello che mi aspetto, per avere un'esperienza di comparazione con l'estate E' un'altra cosa bella, il fiume di fiume in acqua Mentre ti fai uscire, ti stai stacchiando nella vita E ci siamo tornati di nuovo per non fare pulmonia in baga E' un po' di tempo che non ci sono più. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 229.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:21:04.767Z"
+            "updatedAt": "2026-09-04T07:47:39.606Z"
           }
         },
         {
@@ -40935,14 +40922,13 @@
             "updatedAt": "2026-09-02T17:21:13.258Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Per la maggior parte dei personaggi, la distanza può essere la ragione per la qualità di essere in grado di esplorare la marea di bulelec. Tuttavia, questo è un luogo bellissimo, e questo è la sisa di Tosiana. Quando siamo arrivati, la sensazione di lontananza è iniziata a rilassarsi. Siamo in un paese di seremonie di benessere e di massaggio libero, un pacchetto completo per rilassarsi e rilassarsi in un momento. La sua casa è rilassata e estetica, ma la parte più bella è la sua casa. C'è un'altra casa, una casa privata che si avviene direttamente dal lago. E provate a vedere l'infiniti pool. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 46.4,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:23:44.659Z"
+            "updatedAt": "2026-09-04T07:47:43.305Z"
           }
         },
         {
@@ -41089,14 +41075,13 @@
             "updatedAt": "2026-09-02T17:22:31.312Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "Cosa di bello, qui la cosmetica, i gel per la ducha, il condizioniere, il shampoo, è davvero incredibile, chi lo sa, l'atelier di Repubblica è molto caro, è davvero fantastico. Poi guardate, almeno per il primo tempo, abbiamo anche un'impastatura, e qui c'è anche una penna per impastare, pasta di denti, Marvis, non è piccola, ma è standard, ha le capote per la stufa, le macinatine, le pennellate di denti, ogni giorno, anche le nuove, le pennellate di denti ogni giorno, in generali è tutto bello qui e la penna ci hanno notato ogni giorno",
+            "language": "Italian",
+            "durationSec": 78.9,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:28:44.203Z"
+            "updatedAt": "2026-09-04T07:47:47.234Z"
           }
         },
         {
@@ -41183,14 +41168,13 @@
             "updatedAt": "2026-09-02T17:23:42.217Z"
           },
           "audioAnalysis": {
-            "transcript": null,
-            "language": null,
-            "durationSec": null,
+            "transcript": "I stranieri sono pronti a spendere un milione di doni per tre notti di riposo qui, ma a volte i vietnami non hanno mai sentito il nome Amanoi. Cosa fa che gli siano pronti a lasciare molto di pieno per riposo qui? I Vinhhi si sono sentiti dire che erano bellissimi, ma pochi sanno che nel cuore di quei Vinh, c'è un'area in cui si trova l'unico luogo di riserva di unesco. C'è un luogo di riposo che da lontano si vede solo la parte di fuoco di un'anima. Tutto il pavimento è scritto da un'architetto di base del mondo, Ging Misen Gati, Grazie a tutti. Il luogo dove i clienti si sfruttano la cucina tradizionale, la piazza di 140 metri quadrati, non vedono nessun progetto di persone, solo il Vinhie, che è l'albero e il sole. E' la sensazione di specialità che la notte di Condé Nast Traveler ha vinto la lista dei buoni hotel del mondo dal 2014. L'anno scorso, Amanoi ha anche avuto Michelin Guide, un'azienda famosa per la cucina, che ha donato la chiesa Michelin, la più alta di tutti i hotel del mondo. ma in realtà, l'Ambito di Vietnami è un'Ambito che fa il mondo in un'amore, un'amore che a volte è il nostro vero e proprio.",
+            "language": "Italian",
+            "durationSec": 87.5,
             "model": "whisper-large-v3",
-            "status": "transcribe_failed",
-            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T09:32:52.630Z"
+            "updatedAt": "2026-09-04T07:47:56.284Z"
           }
         },
         {
