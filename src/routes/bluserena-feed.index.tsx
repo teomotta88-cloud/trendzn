@@ -255,7 +255,9 @@ function BluserenaFeedPage() {
         ) : (
           filteredPosts.map((post) => (
             <PostCard
-              key={post.url}
+              // Vedi BluserenaFeedAdvanced: la sola url non è univoca, lo
+              // stesso post sta in più canali hashtag.
+              key={`${post.canaleId}|${post.url}`}
               post={post}
               isEditing={editingPostUrl === post.url}
               onEditToggle={() =>

@@ -485,7 +485,14 @@ export function BluserenaFeedAdvanced({
         ) : (
           filteredPosts.map((post) => (
             <PostCard
-              key={post.url}
+              // Chiave url + canaleId, non solo url: lo stesso post compare in
+              // più canali hashtag (148 url su 1310 sono in due canali), quindi
+              // con la sola url React riceveva chiavi duplicate e, al cambio di
+              // filtro, riusava il nodo sbagliato — una card già filtrata via
+              // restava a schermo, ed è così che tra i confermati comparivano
+              // dei "BS Non confermato". È la stessa identità (url + canale)
+              // che usa già il toggle di verifica.
+              key={`${post.canaleId}|${post.url}`}
               post={post}
               search={search}
               updating={updatingUrl === post.url}
