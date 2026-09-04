@@ -1,0 +1,43 @@
+name: Dedupe Bluserena Posts
+
+# Rimuove da bluserena-monitoring.json le righe che descrivono lo stesso post
+# più volte — lo store ne tiene una per canale, quindi un post sotto più
+# hashtag esiste in più copie e ogni copia conta nelle statistiche della
+# pagina. Vedi scripts/dedupe-bluserena-posts.mjs.
+#
+# Da rilanciare dopo le sync degli hashtag: quelle ripopolano i canali uno per
+# uno e un post su due hashtag torna in due copie. Parti sempre con
+# dry_run=true e leggi il report prima di scrivere davvero.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo report, nessuna scrittura"
+        type: boolean
+        default: true
+      same_url_only:
+        description: "Unisci solo le righe con lo stesso url (passata conservativa)"
+        type: boolean
+        default: false
+
+jobs:
+  dedupe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Deduplica post
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          SAME_URL_ONLY: ${{ inputs.same_url_only }}
+        run: node scripts/dedupe-bluserena-posts.mjs
