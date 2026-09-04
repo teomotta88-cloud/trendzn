@@ -79,9 +79,13 @@ function verifyCaption(caption) {
 }
 
 function verifyOCR(ocrData) {
-  // OCR usa le stesse regole della caption: termini esatti, non staccati
-  if (!ocrData?.text || ocrData.status !== "ok") return false;
-  return matchesTermini(ocrData.text);
+  // OCR usa le stesse regole della caption: termini esatti, non staccati.
+  // Il campo è `textOnScreen`, quello che scrive analyze-bluserena-ocr.mjs:
+  // finché qui si leggeva `ocrData.text` (che non esiste in nessun record)
+  // il ramo OCR era di fatto spento e restituiva sempre false, quindi il
+  // testo sovraimpresso non ha mai contribuito a nessuna verifica.
+  if (!ocrData?.textOnScreen || ocrData.status !== "ok") return false;
+  return matchesTermini(ocrData.textOnScreen);
 }
 
 function verifyAudio(audioAnalysis) {
