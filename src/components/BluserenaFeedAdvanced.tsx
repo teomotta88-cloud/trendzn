@@ -16,6 +16,42 @@ import {
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
 
+// Identità di un post ai fini della lista: stesso autore, stesso giorno e
+// stessa caption = stesso contenuto, anche quando arriva da canali hashtag
+// diversi o con url diverse (i ripubblicati e i re-scrape cambiano id ma non
+// contenuto). Serve perché lo store tiene una riga per canale: 211 righe su
+// 1478 sono ripetizioni e nel feed si vedevano come card moltiplicate.
+//
+// Con la caption vuota "stessa caption" non distingue nulla — 62 righe ce
+// l'hanno — e fonderebbe video diversi dello stesso autore nello stesso
+// giorno: in quel caso l'identità torna a essere l'url senza query string
+// (che è già come cleanup-duplicate-tiktok-posts.mjs normalizza gli url).
+function contentKey(post: Post): string {
+  const handle = (post.handle || "").trim().toLowerCase();
+  const day = (post.date || "").slice(0, 10);
+  const caption = (post.caption || "").replace(/\s+/g, " ").trim().toLowerCase();
+  if (caption) return `c|${handle}|${day}|${caption}`;
+
+  let url = post.url;
+  try {
+    const parsed = new URL(post.url);
+    url = `${parsed.origin}${parsed.pathname.replace(/\/$/, "")}`;
+  } catch {
+    // url non parsabile: resta com'è, peggio che vada non deduplica
+  }
+  return `u|${handle}|${day}|${url}`;
+}
+
+function dedupeByContent(list: Post[]): Post[] {
+  const seen = new Set<string>();
+  return list.filter((post) => {
+    const key = contentKey(post);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 type SentimentFilter = "all" | "positive" | "negative" | "neutral" | "unanalyzed";
 type VerificationFilter = "all" | "confirmed" | "unconfirmed";
 type DateFilter = "all" | "2025" | "2026" | "2025-2026";
@@ -102,37 +138,61 @@ export function BluserenaFeedAdvanced({
   }, [jsonUrl]);
 
   // Aggiorna BSConfirmed/BSUnconfirmed di un post via API e riflette il
-  // cambio subito in locale, senza aspettare il prossimo polling. Match su
-  // url + canaleId (non solo url): lo stesso post può comparire in più
-  // canali hashtag contemporaneamente, e l'endpoint aggiorna solo la copia
-  // del canale passato in channelId.
+  // cambio subito in locale, senza aspettare il prossimo polling.
+  //
+  // L'endpoint aggiorna UNA riga sola (quella del canale passato in
+  // channelId), ma la card ne rappresenta anche altre: da quando il feed
+  // deduplica per contenuto, le copie dello stesso post negli altri canali
+  // non hanno più una card propria da cui sistemarle. Le aggiorniamo tutte
+  // qui, una alla volta — sono quasi sempre due e ogni chiamata riscrive lo
+  // stesso file, quindi in parallelo si pesterebbero i piedi a vicenda.
   const toggleVerificationStatus = async (post: Post) => {
     const currentStatus = post.verificationStatus || verifyBluserenaPost(post.caption);
     const newStatus: VerificationStatus = currentStatus === "confirmed" ? "unconfirmed" : "confirmed";
     setUpdatingUrl(post.url);
 
-    try {
-      const res = await fetch("/api/public/hooks/update-bluserena-verification", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          channelId: post.canaleId,
-          postUrl: post.url,
-          verificationStatus: newStatus,
-        }),
-      });
+    const key = contentKey(post);
+    const copies = posts.filter((p) => contentKey(p) === key);
 
-      if (res.ok) {
+    try {
+      const updated: Post[] = [];
+      let failure: { status: number; text: string } | null = null;
+
+      for (const copy of copies) {
+        const res = await fetch("/api/public/hooks/update-bluserena-verification", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            channelId: copy.canaleId,
+            postUrl: copy.url,
+            verificationStatus: newStatus,
+          }),
+        });
+
+        if (res.ok) {
+          updated.push(copy);
+        } else {
+          failure = { status: res.status, text: await res.text() };
+          break;
+        }
+      }
+
+      // Le copie andate a buon fine si riflettono comunque in locale, anche
+      // se una successiva è fallita: nasconderle darebbe l'idea che non sia
+      // cambiato niente mentre su GitHub il cambio c'è.
+      if (updated.length > 0) {
         setPosts((prev) =>
           prev.map((p) =>
-            p.url === post.url && p.canaleId === post.canaleId
+            updated.some((u) => u.url === p.url && u.canaleId === p.canaleId)
               ? { ...p, verificationStatus: newStatus }
-              : p
-          )
+              : p,
+          ),
         );
-      } else {
-        const errText = await res.text();
-        console.error("Errore aggiornamento verifica:", res.status, errText);
+      }
+
+      if (failure) {
+        const { status: resStatus, text: errText } = failure;
+        console.error("Errore aggiornamento verifica:", resStatus, errText);
         // L'endpoint risponde sempre {ok:false, error:"..."}: mostriamo quel
         // messaggio invece di un generico "errore", per capire subito se il
         // problema è un token mancante, un conflitto di scrittura o altro,
@@ -143,7 +203,7 @@ export function BluserenaFeedAdvanced({
         } catch {
           // risposta non JSON, teniamo il testo grezzo
         }
-        alert(`Errore durante l'aggiornamento della verifica (${res.status}): ${detail}`);
+        alert(`Errore durante l'aggiornamento della verifica (${resStatus}): ${detail}`);
       }
     } catch (err) {
       console.error("Errore aggiornamento verifica:", err);
@@ -217,8 +277,15 @@ export function BluserenaFeedAdvanced({
       });
     }
 
-    return result;
+    // Deduplica per ultima, sul risultato già filtrato: tutte le copie di uno
+    // stesso post condividono caption, data e stato, quindi passano o cadono
+    // insieme nei filtri e quale copia sopravvive non cambia cosa si vede.
+    return dedupeByContent(result);
   }, [posts, searchIndex, search, sentimentFilter, verificationFilter, dateFilter]);
+
+  // Denominatore del contatore: anche il totale va contato per contenuto,
+  // altrimenti si leggerebbe "1267 / 1478" con 211 post irraggiungibili.
+  const uniqueTotal = useMemo(() => new Set(posts.map(contentKey)).size, [posts]);
 
   const stats = useMemo(() => {
     const posts2025 = posts.filter((p) => isInJulyAugust(p.date, 2025));
@@ -347,7 +414,7 @@ export function BluserenaFeedAdvanced({
             Filtri {showFilters ? "▼" : "▶"}
           </button>
           <span className="text-xs text-muted-foreground">
-            {filteredPosts.length} / {posts.length} post
+            {filteredPosts.length} / {uniqueTotal} post
           </span>
         </div>
 
