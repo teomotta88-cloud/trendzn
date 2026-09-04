@@ -4,16 +4,22 @@
 // Perché serve: lo store tiene una riga per canale, quindi un post che
 // compare sotto più hashtag esiste in più copie. Le statistiche della pagina
 // (totali, confirmed, sentiment, medie view) contano le righe, quindi ogni
-// copia gonfia i numeri: sui dati del 04/09 sono 203 righe su 1478, il 14%.
+// copia gonfia i numeri: sui dati del 04/09 sono 168 righe su 1478.
 //
-// Si distingue da cleanup-duplicate-tiktok-posts.mjs, che deduplica solo per
-// url normalizzata DENTRO un canale: qui l'identità è il contenuto (autore +
-// giorno + caption), che intercetta anche le ripubblicazioni e i re-scrape
-// con id diverso, e il confronto attraversa i canali.
+// Criterio unico: stessa url, a meno della query string — i share_url di
+// TikTok portano parametri di tracciamento generati a caso a ogni scrape,
+// stesso video. Due righe con url diversa restano due post, anche quando
+// autore, giorno e caption coincidono: un autore che copre un evento dal vivo
+// pubblica davvero più clip con la stessa caption, e fonderle perderebbe
+// contenuti veri.
+//
+// Si distingue da cleanup-duplicate-tiktok-posts.mjs, che applica lo stesso
+// criterio ma solo DENTRO un canale: qui il confronto attraversa i canali, ed
+// è lì che stanno praticamente tutte le copie.
 //
 // Uso:
-//   node scripts/dedupe-bluserena-posts.mjs            scrive su GitHub
-//   DRY_RUN=true node scripts/dedupe-bluserena-posts.mjs   solo report
+//   node scripts/dedupe-bluserena-posts.mjs                 scrive su GitHub
+//   DRY_RUN=true node scripts/dedupe-bluserena-posts.mjs    solo report
 //
 // Richiede GITHUB_TOKEN nell'ambiente.
 
@@ -21,13 +27,6 @@ const REPO = "teomotta88-cloud/trendzn";
 const STORE_PATH = "src/data/bluserena-monitoring.json";
 const MAX_ATTEMPTS = 5;
 const DRY_RUN = process.env.DRY_RUN === "true";
-// Passata conservativa: fonde solo le righe che puntano allo STESSO url, cioè
-// quelle di cui non c'è dubbio che siano lo stesso post (167 righe su 203 nei
-// dati del 04/09). Le altre 36 hanno autore, giorno e caption identici ma id
-// video diverso — quasi sempre lo stesso contenuto ripubblicato, ma un autore
-// che copre un evento dal vivo può davvero postare più clip con la stessa
-// caption, e questa modalità le lascia stare.
-const SAME_URL_ONLY = process.env.SAME_URL_ONLY === "true";
 
 const githubToken = process.env.GITHUB_TOKEN;
 if (!githubToken) {
@@ -52,21 +51,10 @@ function normalizeUrl(url) {
 
 const normalizeText = (text) => (text || "").replace(/\s+/g, " ").trim().toLowerCase();
 
-// Identità di un post: stesso autore, stesso giorno, stessa caption.
-//
-// Con la caption vuota quella regola non distingue nulla e fonderebbe video
-// diversi dello stesso autore nello stesso giorno (@seanstylezxclusive ne ha
-// 7 il 21/08, tutti senza caption): lì l'identità torna a essere l'url senza
-// query string, come in cleanup-duplicate-tiktok-posts.mjs.
-function contentKey(account) {
-  if (SAME_URL_ONLY) return `u|${normalizeUrl(account.url)}`;
-
-  const handle = normalizeText(account.handle);
-  const day = (account.date || "").slice(0, 10);
-  const caption = normalizeText(account.caption);
-  if (caption) return `c|${handle}|${day}|${caption}`;
-  return `u|${handle}|${day}|${normalizeUrl(account.url)}`;
-}
+// Identità di un post: la sua url senza query string. Stesso criterio del
+// feed (contentKey in BluserenaFeedAdvanced.tsx): se i due divergessero, la
+// pagina mostrerebbe un numero di post diverso da quello che c'è nei dati.
+const contentKey = (account) => normalizeUrl(account.url);
 
 // Solo i post veri: i profili (url senza /p/, /reel/, /video/...) non sono
 // duplicati fra loro anche quando condividono handle e data assente.
@@ -162,9 +150,9 @@ async function writeStore(store, removed) {
       body: JSON.stringify({
         message: `chore: rimuovi ${removed} post duplicati Bluserena [trendzn-bot]
 
-Righe che descrivevano lo stesso post (stesso autore, giorno e caption)
-in canali hashtag diversi o nello stesso canale. I campi delle copie
-sono stati fusi nella riga superstite, non scartati.`,
+Righe che puntavano allo stesso post (stessa url a meno della query
+string) da canali hashtag diversi. I campi delle copie sono stati fusi
+nella riga superstite, non scartati.`,
         content,
         sha,
       }),
@@ -185,17 +173,13 @@ sono stati fusi nella riga superstite, non scartati.`,
 // --- Main ---
 console.log("=== Deduplica post Bluserena-monitoring ===\n");
 if (DRY_RUN) console.log("DRY_RUN: nessuna scrittura, solo report.");
-console.log(
-  SAME_URL_ONLY
-    ? "Modalità SAME_URL_ONLY: unisce solo le righe con lo stesso url.\n"
-    : "Regola: stesso autore + stesso giorno + stessa caption (url quando la caption è vuota).\n",
-);
+console.log("Criterio: stessa url a meno della query string.\n");
 
 const { store } = await readStore();
 
-// Un solo passaggio su tutti i canali: le copie stanno soprattutto FRA canali
-// diversi (143 gruppi su 149 nei dati del 04/09), quindi deduplicare canale
-// per canale ne intercetterebbe una minima parte.
+// Un solo passaggio su tutti i canali: le copie stanno quasi tutte FRA canali
+// diversi, quindi deduplicare canale per canale — come fa già
+// cleanup-duplicate-tiktok-posts.mjs — ne intercetterebbe una minima parte.
 const groups = new Map();
 let totalPosts = 0;
 
@@ -221,9 +205,10 @@ if (removedRows === 0) {
   process.exit(0);
 }
 
-// Riepilogo dei casi più vistosi, per poter controllare a occhio che la
-// regola non stia fondendo post diversi.
-console.log("I 10 gruppi più numerosi:");
+// Riepilogo dei casi più vistosi: con l'url come criterio non c'è ambiguità
+// da controllare, ma vedere in quali canali stava ogni post aiuta a capire
+// cosa sparisce da quali viste.
+console.log("I 10 post presenti in più copie:");
 for (const [, group] of [...duplicated].sort((a, b) => b[1].length - a[1].length).slice(0, 10)) {
   const first = group[0].account;
   const canali = group.map((g) => g.canale.id).join(", ");
