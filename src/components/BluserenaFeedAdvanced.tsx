@@ -16,30 +16,23 @@ import {
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
 
-// Identità di un post ai fini della lista: stesso autore, stesso giorno e
-// stessa caption = stesso contenuto, anche quando arriva da canali hashtag
-// diversi o con url diverse (i ripubblicati e i re-scrape cambiano id ma non
-// contenuto). Serve perché lo store tiene una riga per canale: 211 righe su
-// 1478 sono ripetizioni e nel feed si vedevano come card moltiplicate.
+// Identità di un post ai fini della lista: la sua url, senza query string
+// (i share_url di TikTok portano parametri di tracciamento generati a caso a
+// ogni scrape, stesso video). Serve perché lo store tiene una riga per
+// canale: un post indicizzato sotto più hashtag esiste in più copie e nel
+// feed si vedeva ripetuto — 168 righe su 1478 nei dati del 04/09.
 //
-// Con la caption vuota "stessa caption" non distingue nulla — 62 righe ce
-// l'hanno — e fonderebbe video diversi dello stesso autore nello stesso
-// giorno: in quel caso l'identità torna a essere l'url senza query string
-// (che è già come cleanup-duplicate-tiktok-posts.mjs normalizza gli url).
+// È lo stesso identico criterio di scripts/dedupe-bluserena-posts.mjs, che
+// ripulisce lo store: se qui la regola fosse più larga, il feed nasconderebbe
+// post che nei dati (e quindi nelle statistiche) restano.
 function contentKey(post: Post): string {
-  const handle = (post.handle || "").trim().toLowerCase();
-  const day = (post.date || "").slice(0, 10);
-  const caption = (post.caption || "").replace(/\s+/g, " ").trim().toLowerCase();
-  if (caption) return `c|${handle}|${day}|${caption}`;
-
-  let url = post.url;
   try {
     const parsed = new URL(post.url);
-    url = `${parsed.origin}${parsed.pathname.replace(/\/$/, "")}`;
+    return `${parsed.origin}${parsed.pathname.replace(/\/$/, "")}`;
   } catch {
-    // url non parsabile: resta com'è, peggio che vada non deduplica
+    // url non parsabile: resta com'è, al massimo non deduplica
+    return post.url;
   }
-  return `u|${handle}|${day}|${url}`;
 }
 
 function dedupeByContent(list: Post[]): Post[] {
@@ -277,9 +270,9 @@ export function BluserenaFeedAdvanced({
       });
     }
 
-    // Deduplica per ultima, sul risultato già filtrato: tutte le copie di uno
-    // stesso post condividono caption, data e stato, quindi passano o cadono
-    // insieme nei filtri e quale copia sopravvive non cambia cosa si vede.
+    // Deduplica per ultima, sul risultato già filtrato: le copie di uno stesso
+    // post condividono caption, data e stato, quindi passano o cadono insieme
+    // nei filtri e quale copia sopravvive non cambia cosa si vede.
     return dedupeByContent(result);
   }, [posts, searchIndex, search, sentimentFilter, verificationFilter, dateFilter]);
 
