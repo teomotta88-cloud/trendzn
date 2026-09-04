@@ -1788,7 +1788,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T07:51:10.060Z"
+            "updatedAt": "2026-09-04T08:18:47.954Z"
           }
         },
         {
@@ -4816,7 +4816,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T07:56:43.323Z"
+            "updatedAt": "2026-09-04T08:19:37.476Z"
           }
         },
         {
@@ -14725,7 +14725,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:03:38.495Z"
+            "updatedAt": "2026-09-04T08:16:25.818Z"
           }
         },
         {
@@ -14786,7 +14786,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:03:45.015Z"
+            "updatedAt": "2026-09-04T08:16:32.082Z"
           }
         },
         {
@@ -14816,7 +14816,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:03:49.034Z"
+            "updatedAt": "2026-09-04T08:16:35.993Z"
           }
         },
         {
@@ -14846,7 +14846,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:03:53.925Z"
+            "updatedAt": "2026-09-04T08:16:41.170Z"
           }
         },
         {
@@ -14876,7 +14876,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:11:07.921Z"
+            "updatedAt": "2026-09-04T08:16:54.607Z"
           }
         },
         {
@@ -14937,7 +14937,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:09.234Z"
+            "updatedAt": "2026-09-04T08:16:59.202Z"
           }
         },
         {
@@ -14998,7 +14998,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:15.247Z"
+            "updatedAt": "2026-09-04T08:17:05.397Z"
           }
         },
         {
@@ -15028,7 +15028,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:26.124Z"
+            "updatedAt": "2026-09-04T08:17:14.736Z"
           }
         },
         {
@@ -15058,7 +15058,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:30.324Z"
+            "updatedAt": "2026-09-04T08:17:18.937Z"
           }
         },
         {
@@ -15088,7 +15088,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:35.301Z"
+            "updatedAt": "2026-09-04T08:17:24.131Z"
           }
         },
         {
@@ -15180,7 +15180,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:42.261Z"
+            "updatedAt": "2026-09-04T08:17:30.353Z"
           }
         },
         {
@@ -15210,7 +15210,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:48.683Z"
+            "updatedAt": "2026-09-04T08:17:36.802Z"
           }
         },
         {
@@ -15333,7 +15333,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:04:56.757Z"
+            "updatedAt": "2026-09-04T08:17:45.171Z"
           }
         },
         {
@@ -15394,7 +15394,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:05:02.867Z"
+            "updatedAt": "2026-09-04T08:17:51.546Z"
           }
         },
         {
@@ -15452,10 +15452,11 @@
           "ocrData": {
             "textOnScreen": null,
             "confidence": null,
-            "frameCount": 5,
-            "status": "no_text",
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7679781616859761941: Your IP address is blocked from accessing this post",
             "version": 3,
-            "updatedAt": "2026-09-03T09:04:48.744Z"
+            "updatedAt": "2026-09-04T08:17:53.105Z"
           }
         },
         {
@@ -15485,7 +15486,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:05:16.864Z"
+            "updatedAt": "2026-09-04T08:17:57.921Z"
           }
         },
         {
@@ -15608,7 +15609,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:05:21.124Z"
+            "updatedAt": "2026-09-04T08:18:02.211Z"
           }
         },
         {
@@ -15824,7 +15825,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:05:30.147Z"
+            "updatedAt": "2026-09-04T08:18:17.383Z"
           }
         }
       ]
@@ -15942,7 +15943,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T07:51:10.060Z"
+            "updatedAt": "2026-09-04T08:18:47.954Z"
           }
         },
         {
@@ -16034,7 +16035,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:06:29.653Z"
+            "updatedAt": "2026-09-04T08:19:22.969Z"
           }
         },
         {
@@ -16064,7 +16065,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:06:38.154Z"
+            "updatedAt": "2026-09-04T08:19:31.892Z"
           }
         },
         {
@@ -16249,7 +16250,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T07:56:43.323Z"
+            "updatedAt": "2026-09-04T08:19:37.476Z"
           }
         },
         {
@@ -16279,7 +16280,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:07:09.985Z"
+            "updatedAt": "2026-09-04T08:19:57.932Z"
           }
         },
         {
@@ -16309,7 +16310,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:07:24.620Z"
+            "updatedAt": "2026-09-04T08:20:13.443Z"
           }
         },
         {
@@ -16401,7 +16402,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:07:53.687Z"
+            "updatedAt": "2026-09-04T08:20:44.971Z"
           }
         },
         {
@@ -17069,7 +17070,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-03T08:11:07.921Z"
+            "updatedAt": "2026-09-04T08:16:54.607Z"
           }
         },
         {
@@ -39106,10 +39107,11 @@
           "ocrData": {
             "textOnScreen": null,
             "confidence": null,
-            "frameCount": 5,
-            "status": "no_text",
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7679781616859761941: Your IP address is blocked from accessing this post",
             "version": 3,
-            "updatedAt": "2026-09-03T09:04:48.744Z"
+            "updatedAt": "2026-09-04T08:17:53.105Z"
           }
         },
         {
