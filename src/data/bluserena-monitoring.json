@@ -62453,6 +62453,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:30.098Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hotel",
+            "confidence": 0.731,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:34:39.959Z"
           }
         },
         {
@@ -62476,6 +62485,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:32.495Z"
+          },
+          "ocrData": {
+            "textOnScreen": "monday",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:34:46.039Z"
           }
         },
         {
@@ -62499,6 +62517,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:34.816Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VENUE\nTHE SCENTS OF\nENDETT",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:34:55.250Z"
           }
         },
         {
@@ -62522,6 +62549,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:37.427Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:34:59.461Z"
           }
         },
         {
@@ -62545,6 +62580,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:42.076Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:07.650Z"
           }
         },
         {
@@ -62568,6 +62611,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:45.121Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino's chateau",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:22.741Z"
           }
         },
         {
@@ -62591,6 +62643,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:48.012Z"
+          },
+          "ocrData": {
+            "textOnScreen": "same",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:30.510Z"
           }
         },
         {
@@ -62614,6 +62675,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:50.204Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“i hate cuase\nof his. buti\ne the o vees!”\n“i hate decuase\nof his è oh buti\nlove the two vees!”\n\"i hat becuase\nof oh buti\nlove r two vees!”\n“i ha becuase\nlove the o vees!”\n\"i hate va",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:36.902Z"
           }
         },
         {
@@ -62637,6 +62707,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:52.699Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Translating has\nwith.\n“Ugh, that idiot thinks he can\nput that fat princess in front\nidiot thinksjhe can\nfront",
+            "confidence": 0.869,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:42.987Z"
           }
         },
         {
@@ -62660,6 +62739,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:38:55.106Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lentino Swiss Hotel Apartments\nProspective guest:\nI'll book the room later\nalentino Swiss Hotel Apartments\nValentino Swiss Hotel Apartments",
+            "confidence": 0.919,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:48.478Z"
           }
         },
         {
@@ -62683,6 +62771,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:07.506Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:53.395Z"
           }
         },
         {
@@ -62706,6 +62802,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:10.609Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SO WHAT\nTHAT YOU DONT NEED TO\nWITH ME\nSAYS THAT IM STRANGE",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:35:57.183Z"
           }
         },
         {
@@ -62729,6 +62834,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:18.493Z"
+          },
+          "ocrData": {
+            "textOnScreen": "character Ki",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:36:02.956Z"
           }
         },
         {
@@ -62752,6 +62866,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:20.873Z"
+          },
+          "ocrData": {
+            "textOnScreen": "When thelsuniremindsjyou\nreminds you",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:36:17.451Z"
           }
         },
         {
@@ -62775,6 +62898,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:23.485Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Val's en\ntwo extra a ms ii nas.\nRite old his",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:36:24.665Z"
           }
         },
         {
@@ -62798,6 +62930,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:26.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Amii",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:36:32.297Z"
           }
         },
         {
@@ -62821,6 +62962,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:31.717Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:36:44.562Z"
           }
         },
         {
@@ -62844,6 +62993,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:33.968Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:36:57.202Z"
           }
         },
         {
@@ -62867,6 +63024,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:36.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": "not buying\nthisiValentinolcoat?\nA buying’ ha\ncoat?\n“Itis actually not that",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:37:10.936Z"
           }
         },
         {
@@ -62890,6 +63056,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:39:43.543Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino 19 Secret\nRetreat!!\nBank Holiday Monday 2\nNights ONLY £349!!",
+            "confidence": 0.91,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:37:17.602Z"
           }
         }
       ]
@@ -65192,6 +65367,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:40:45.546Z"
+          },
+          "ocrData": {
+            "textOnScreen": "located\nofilos\nrooms,\ne Tithe J\nImulti.course/meals",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:37:30.448Z"
           }
         },
         {
@@ -65215,6 +65399,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:40:49.391Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:37:46.164Z"
           }
         },
         {
@@ -65238,6 +65430,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:41:19.949Z"
+          },
+          "ocrData": {
+            "textOnScreen": "2n Pools, eigenem\ngesamte Hotel\nUNSERE ANGEBOTE\n7 Nàchte 8 9 10\n442 505 Pers. 569 632\n11 Nàchte 12 Nàchte 14 Nàchte 21 Nàchte\n695 758 pers.” 884 1326\n23 494 Zuriick am Fr. 28 Aug\n24 494 Zuriick am Sa. 29 Aug\n25 494 pers\" Zuriick am So. 30 Aug.\n26 494 Zuriick am Mo. 31 Aug\nAUG. statt\n27 494 Zuriick am Di. 1 Sep.\nAUG. statt w\nPerson\nAUG. statt +366-€\n31 494 Zuriick am Sa. 5 Sep\nstatt\n7 Nàchte 8 Néchte 9 10\n442 pers. 505 pers.” 569 pers. 632 Pers.\"\n695 758 884 pers.” 1326\nOKT. statt\n4 DI. Zuriick am So. 18 Okt\nOKT. statt +366-€\n16 316 Pers.\"\nOKT. statt +366-€ J\nOKT. statt i\n18 Verfugbar in 4 Nachte und 3 Nachte\n19 3 Nachte\nFilter v\n29 Ergebnisse\nClassic Zimmer EA\nBett: 1 groBes Doppelbett\nZimmer m2] Klimaanlage\n[Schrank] Holz- oder Balkon]\nBadezimmer (im Zimmer)\nKostenfreies\nO Preiswert Friihstiick O Flex\nPreis fur: Preis\n(2 Frihstiick im Preis inbegriffen\nNicht kostenlos stornierbar\nPreis fur 5 Nachte: J \\Preis\nCt i insc\nDeluxe Zimmer mit Parkblick",
+            "confidence": 0.88,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:37:56.947Z"
           }
         },
         {
@@ -65261,6 +65462,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:41:22.009Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Wisconsin dells\ndown\nmyjbirthday,\ngotta hold\nsomeone's",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:38:09.458Z"
           }
         },
         {
@@ -65284,6 +65494,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:41:28.095Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MR.SANDIP,CHHETR\nActor,",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:38:17.761Z"
           }
         },
         {
