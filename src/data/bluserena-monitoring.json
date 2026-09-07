@@ -20375,6 +20375,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:06:52.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:22.170Z"
           }
         },
         {
@@ -20398,6 +20406,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:39.317Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando sei in un villaggio\nall inclusive\ne non devi pensare\na cucinare\nall inclusiv\ne dev pensare",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:30.689Z"
           }
         },
         {
@@ -20421,6 +20438,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:17.903Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:36.797Z"
           }
         },
         {
@@ -20444,6 +20469,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:01.417Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Effetto fine vacanze\nENAMAJESTIC 2)\nLANE\nfine\nEffetto fine\nSERENAMAJESTIC\nine Vacan",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:43.476Z"
           }
         }
       ]
@@ -24303,6 +24337,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:03.773Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Gotta make sure look\nmake sure\nmake sure look",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:55.210Z"
           }
         },
         {
@@ -24326,6 +24369,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:06.545Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TU BAI A ASTA\nOYE/MAMBA MI",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:03.089Z"
           }
         },
         {
@@ -24349,6 +24401,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:09.620Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TONE 15",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:09.287Z"
           }
         },
         {
@@ -24372,6 +24433,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:12.028Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Where the baddies at",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:15.600Z"
           }
         },
         {
@@ -24395,6 +24465,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:14.173Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Williams under\nthat divestor spell!",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:21.975Z"
           }
         },
         {
@@ -24418,6 +24497,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:17.325Z"
+          },
+          "ocrData": {
+            "textOnScreen": "June 8th, 2026",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:28.288Z"
           }
         },
         {
@@ -24441,6 +24529,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:20.752Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:33.829Z"
           }
         },
         {
@@ -24464,6 +24560,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:25.112Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Jacoby\nand they\nwere; like,",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:39.917Z"
           }
         },
         {
@@ -24487,6 +24592,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:27.840Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:56:46.884Z"
           }
         },
         {
@@ -24510,6 +24623,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:30.257Z"
+          },
+          "ocrData": {
+            "textOnScreen": "need new friends\nstay here\nneed new\nI need new\nhere\nè Forrest\nSouthern Miss x\n4 Southern Miss x\nUniversity",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:04.091Z"
           }
         },
         {
@@ -24533,6 +24655,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:32.600Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serenaneel i",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:11.293Z"
           }
         },
         {
@@ -24556,6 +24687,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:35.060Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:19.538Z"
           }
         },
         {
@@ -24579,6 +24718,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:37.546Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:24.400Z"
           }
         },
         {
@@ -24602,6 +24749,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:42.062Z"
+          },
+          "ocrData": {
+            "textOnScreen": "doesn’t like Kelly the\nNave you gu\nlove island?\nAron doesn’t like Kelly the\nproducer\nlove isla\npretty\nAron Kelly the\nClipbaddie",
+            "confidence": 0.847,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:32.538Z"
           }
         },
         {
@@ -24625,6 +24781,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:44.258Z"
+          },
+          "ocrData": {
+            "textOnScreen": "University\nTHE FIRST LAW SERENA PAGE\nPASS AS PRESIDENT 99\nFree giveaways,\nPassT\nUnivers\nof Hous he\nUniversit\nTHE FIRST LAW SERENA PAGE i\nRSVP at Pass\nWOULD PASS AS PRESIDENT 99\nFree giveaways, 4\nSERI\nUnive\n4 summer reading\nof Hour\nFree give:\nFALE\nUniversity 2\nFree\na RSVPatPass\nThe kids aren't reading,\nUnive EN\nsunday\nHou THE FIRST LAW SERENA PAGE i\nSunday, i\nFree 4\nUniv\np fi guys! BE",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:44.115Z"
           }
         },
         {
@@ -24648,6 +24813,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:47.034Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:57:52.255Z"
           }
         },
         {
@@ -24671,6 +24844,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:49.587Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:58:00.588Z"
           }
         },
         {
@@ -24694,6 +24875,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:52.885Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fer it gets\nleaving\nNo ize leaving the\nfunction\n4 ever it gets boring\nK 4 like serena\nke seren\nNor ving the\nwhegigv ets boring\nike serena",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:58:06.791Z"
           }
         },
         {
@@ -24717,6 +24907,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:55.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": "usopen\nJPMO\nE rgan open PMorgan\nCHASE\nEmirates",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:58:17.834Z"
           }
         },
         {
@@ -24740,6 +24939,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:07:58.613Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:58:24.260Z"
           }
         },
         {
@@ -24763,6 +24970,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:08:01.118Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:58:30.370Z"
           }
         },
         {
@@ -40540,6 +40755,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:39.317Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando sei in un villaggio\nall inclusive\ne non devi pensare\na cucinare\nall inclusiv\ne dev pensare",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:30.689Z"
           }
         },
         {
@@ -40747,6 +40971,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:17.903Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T22:55:36.797Z"
           }
         },
         {
