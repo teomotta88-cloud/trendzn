@@ -15057,13 +15057,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "festa",
-            "colore",
-            "desiderio",
-            "celebrazione",
-            "resort",
-            "divertimento"
-          ]
+            "animazione",
+            "eventi",
+            "intrattenimento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "eventi",
+              "intrattenimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:21.915Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15097,11 +15112,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "serate",
-            "cucinare",
-            "divertimento",
-            "party"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:22.586Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15134,12 +15167,26 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "relax",
-            "musica",
-            "pesca"
-          ]
+            "vacanze"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:23.279Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15173,10 +15220,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "bambini",
-            "family"
-          ]
+            "vacanze",
+            "alloggi",
+            "ambiente"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanze",
+              "alloggi",
+              "ambiente"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:24.127Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15184,7 +15250,7 @@
           "url": "https://www.tiktok.com/@littleangelv/video/7676988058935266593",
           "date": "2026-08-22T22:34:31.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": null,
           "likes": null,
           "comments": null,
@@ -15207,7 +15273,27 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:58:16.653Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:24.954Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "musica"
+          ]
         },
         {
           "platform": "tiktok",
@@ -15241,10 +15327,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "prezzi"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:25.482Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15278,11 +15383,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "intrattenimento",
-            "spettacolo"
-          ]
+            "animazione",
+            "spettacolo",
+            "intrattenimento serale"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spettacolo",
+              "intrattenimento serale"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:27.453Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15315,14 +15438,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "famiglia",
-            "piscina",
-            "cibo",
-            "kids club"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:28.102Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15356,30 +15493,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Hotel",
-            "Calanè",
-            "Calànè Resort",
-            "GranSerena",
-            "Gran Serena",
-            "Sibari Green",
-            "Sibari Green Resort",
-            "Valentino",
-            "Kalidia",
-            "Alborèa",
-            "Ethra",
-            "Ethra Reserve",
-            "Is Serenas",
-            "Is Serenas Badesi",
-            "IsSerenas"
-          ]
+            "animazione",
+            "staff",
+            "intrattenimento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "staff",
+              "intrattenimento"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:30.236Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15411,12 +15547,22 @@
             "version": 3,
             "updatedAt": "2026-09-02T13:59:29.847Z"
           },
-          "sentiment": "neutral",
-          "topics": [
-            "vacanza",
-            "mare",
-            "resort"
-          ]
+          "sentiment": null,
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.4,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:32.041Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15450,11 +15596,27 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "piscina",
-            "relax",
-            "documentario"
-          ]
+            "divertimento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "piscina",
+              "divertimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:34.437Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15488,11 +15650,27 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "sardegna",
-            "summer2026"
-          ]
+            "spiaggia",
+            "resort"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:34.894Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15525,13 +15703,32 @@
           },
           "sentiment": "positive",
           "topics": [
+            "sport",
+            "attività all'aria aperta",
             "tennis",
             "padel",
-            "attività all'aria aperta",
-            "energia",
-            "Puglia",
-            "vacanza"
-          ]
+            "benessere"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "sport",
+              "attività all'aria aperta",
+              "tennis",
+              "padel",
+              "benessere"
+            ],
+            "location": "Alborèa Ecolodge Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:42.176Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15565,12 +15762,31 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
             "famiglia",
-            "calabria",
+            "mare",
+            "vacanze",
             "resort"
-          ]
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "mare",
+              "vacanze",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:43.654Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15634,11 +15850,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "divertimento",
-            "resort",
-            "sicilia"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:44.188Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15669,12 +15902,26 @@
             "version": 3,
             "updatedAt": "2026-09-04T08:11:52.728Z"
           },
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
-          ]
+            "musica"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:44.845Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15707,12 +15954,26 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "calabria",
-            "summer"
-          ]
+            "promozione della struttura",
+            "interazione con il pubblico"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "promozione della struttura",
+              "interazione con il pubblico"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:47.011Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15745,10 +16006,28 @@
           },
           "sentiment": "positive",
           "topics": [
+            "gratitudine",
             "vacanza",
-            "mare",
-            "ringraziamento"
-          ]
+            "resort"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "gratitudine",
+              "vacanza",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:48.069Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15781,11 +16060,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Calabria"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:48.486Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15819,12 +16115,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "discoteca",
-            "party",
-            "social media"
-          ]
+            "animazione",
+            "serata",
+            "discoteca"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "serata",
+              "discoteca"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:52.710Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15857,12 +16170,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "fashion",
-            "outfit"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:53.453Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15895,11 +16224,30 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "famiglia",
-            "Calabria",
-            "ospitalità"
-          ]
+            "soddisfazione generale",
+            "ospitalità",
+            "ritorno",
+            "vacanza in famiglia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "soddisfazione generale",
+              "ospitalità",
+              "ritorno",
+              "vacanza in famiglia"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:56.141Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15930,11 +16278,21 @@
             "version": 3,
             "updatedAt": "2026-09-04T09:11:03.637Z"
           },
-          "sentiment": "positive",
-          "topics": [
-            "vacanza",
-            "mare"
-          ]
+          "sentiment": "neutral",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:59.379Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -15967,11 +16325,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "estate",
             "animazione",
-            "team"
-          ]
+            "vacanze",
+            "Italia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "Italia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:05:59.966Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16005,12 +16380,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "nonni",
-            "all inclusive"
-          ]
+            "all inclusive",
+            "famiglia",
+            "vacanza"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "all inclusive",
+              "famiglia",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:02.201Z"
+          }
         },
         {
           "platform": "tiktok",
