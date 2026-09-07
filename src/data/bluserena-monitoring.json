@@ -20366,7 +20366,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Alziamo le mani",
+            "language": "Italian",
+            "durationSec": 21,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:06:52.159Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -20380,7 +20389,16 @@
           "likes": 286,
           "comments": 37,
           "shares": 87,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:06:54.434Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -20394,7 +20412,16 @@
           "likes": 38,
           "comments": 8,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "per l'ultima cena ce la facciamo faccio vedere subito aspettate alla trattoria questa sera mangiamo i serviti a tavola andiamo a vedere com'è faccio un bel video siamo pronti buon appetito per il la per trattoria ci andiamo con la ragazza che spettacolo che fiore d'uomo che ti è viva fiori fiori di averia dove sta casa pesetta a raffaio fiori mi raccomando garofalo dove ogni fiori racconta una storia Ragazzi, qua stiamo trovando solamente chicche, perle, quindi dobbiamo andare per forza a casetta. Beh, vi tocca che devo fare un bel mazzo di fiori a mia moglie. Eh certo, certo, che oggi, oggi purtroppo poche persone fanno questo mazzo. Eh non è vero, fate i bravi e regalate i fiori, è sempre un bel gesto ragazzi, quindi mi raccomando fate i bravi. le cucettine con capocollo e stracciatella e le bruschettine voilà grazie ora mi prepara qualcosa e prendi la pasta, va bene? E mo me ne taglia la perna da ora, bicicletta bro, piccolina di mia figlia, che me la putt, vai frata",
+            "language": "Italian",
+            "durationSec": 114,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:06:59.016Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -20408,7 +20435,16 @@
           "likes": 100,
           "comments": 12,
           "shares": 32,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": "Italian",
+            "durationSec": 29.7,
+            "model": "whisper-large-v3",
+            "status": "no_speech",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:01.417Z"
+          }
         }
       ]
     },
@@ -24258,7 +24294,16 @@
           "likes": 5744,
           "comments": 86,
           "shares": 212,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:03.773Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24272,7 +24317,16 @@
           "likes": 5296,
           "comments": 96,
           "shares": 158,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oye mami a mi me gusta tu estallo, te pones de esa mini y te ves very nice, tu bailas hasta abajo y que bien me distraes, con todo ese booty tu me alocas vosais. Oye mami a mi me gusta tu estallo, te vacilas bien rico con el...",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:06.545Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24286,7 +24340,16 @@
           "likes": 113,
           "comments": 14,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "se sei sotto l'età di 24 e pensi che vuoi un tatuaggio ma non sei sicuro e vuoi essere felice quindi vai a prenderlo non lo fai non lo fai perché poi ti vedrai come me e questo cazzo mi sapeva molto male questo cazzo mi sapeva molto male oh mio dio sono così ho fatto la removera laser per 2 anni e ho ancora tanto da fare e è sempre peggio fai il tuo fronte il mio viso è reddito perchè sto cercando di non oh, sottopacca",
+            "language": "Italian",
+            "durationSec": 48.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:09.620Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24300,7 +24363,16 @@
           "likes": 113,
           "comments": 86,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": "Italian",
+            "durationSec": 25.7,
+            "model": "whisper-large-v3",
+            "status": "no_speech",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:12.028Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24314,7 +24386,16 @@
           "likes": 281,
           "comments": 330,
           "shares": 199,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Superstitions Writing on the wall Baby Superstitions",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:14.173Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24328,7 +24409,16 @@
           "likes": 140300,
           "comments": 393,
           "shares": 908,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ma ti dico cosa, quei driver di delivery sono fortunati come il cielo. Dove c'è? Devo sapere. Man, se potesse, se potesse, se potesse me lo avviare, se potesse me lo avviare per un giorno e io potessi venire a deliverare il suo pacchetto e ottenere l'esperienza di Serena Neal, sarebbe fantastico. Se potesse me lo avviare per un giorno, se potesse me lo avviare per un giorno, se potesse me lo avviare per un giorno. Oh, che bello! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:17.325Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24342,7 +24432,16 @@
           "likes": 39900,
           "comments": 459,
           "shares": 1593,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:20.752Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24356,7 +24455,16 @@
           "likes": 790,
           "comments": 3,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'era qualcosa che hai imparato tra di noi dopo il show? E ci sono alcune malattie che vuoi chiarire? La malattia che voglio chiarire è che le persone si sono sforzate in alto e in basso. Nessuno mi ha voluto in that villa besides Cordell. Andiamo a... Andiamo a clock it! Sì, andiamo a clock it. La tua ragazza era voluta da altri. Molti uomini in casa. Kane stesso mi stava facendo il piatto, chiedendo a Janae come poteva andare con me, Jacoby mi ha messo in un chat prima e gli ho detto che avevo interesse in Cordell. Sì, c'erano molte volte che... Dico Nigel, voi avete visto il giorno con Nigel. Sì, loro erano come, oh, l'unica ragione per cui è con lui è perché nessuno altro è in un'altra, non giochi con me. è importante, è molto importante, però e sento che sia così annullante che non lo abbiano mostrato sul show perché penso che le persone pensassero che, beh, vabbè, cosa succede e come sarebbe se qualcuno sia attivamente, sai, che venga dopo di voi, quindi è interessante che sia qualcosa che non hanno messo in perché sì, guarda un momento, sai, aspetta un momento, sai, alcuni dei ragazzi sono andati live dicendo no, come tre di noi abbiamo provato a parlare con lei e ogni volta che era come un'ice cold, era come lo so, sono bene su di me, come o come ho continuato a portare Cordell nella conversazione e erano come, non posso, come era, sì, sei così un vergo, amico, quando siamo bloccati, siamo in un giro di giro, come non può nessuno passare, lo amo, lo amo tanto,",
+            "language": "Italian",
+            "durationSec": 100.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:25.112Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24370,7 +24478,16 @@
           "likes": 4616,
           "comments": 248,
           "shares": 242,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Go crazy Go crazy Go crazy Go crazy",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:27.840Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24384,7 +24501,16 @@
           "likes": 3722,
           "comments": 174,
           "shares": 121,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 6.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:30.257Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24398,7 +24524,16 @@
           "likes": 454,
           "comments": 4,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 11.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:32.600Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24412,7 +24547,16 @@
           "likes": 2509,
           "comments": 42,
           "shares": 65,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:35.060Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24426,7 +24570,16 @@
           "likes": 146,
           "comments": 17,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi sento come se sempre sapevo che ero una badi perché, sai, mia mamma è una badi e quando tua mamma è una badi, tu sarai una badi",
+            "language": "Italian",
+            "durationSec": 6.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:37.546Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24440,7 +24593,16 @@
           "likes": 30500,
           "comments": 88,
           "shares": 681,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho capito di più e di più ogni giorno perché hai detto no. Se sono veramente onesta, lo spero. Penso che il team dinamico, il duo dinamico, sia la stagione 6 con i produttori di Love Island. I produttori di Love Island non sono i produttori di Love Beyond the Veil. Abbiamo solo Kelly. Abbiamo solo Kelly. E quindi... No. Abbiamo amato Kelly! No, no, no. No, mi piace Kelly. No! No, no, non ascoltare lui. Non ascoltare lui. Lei è ok. Ascolta, Aaron. I'll make Kalisha drunk right now No No We've been drinking a little bit Don't listen to him Kelly if you're watching this right now No Bye Bye All right well Maybe I'll call Rob in private Because Fuck me bro Fuck me I'm about to get in trouble",
+            "language": "Italian",
+            "durationSec": 55.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:42.062Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24454,7 +24616,16 @@
           "likes": 50200,
           "comments": 145,
           "shares": 636,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se fossi presidente, la prima legge che approverò è la legge mandatoria. Le bambine non leggono, ragazzi.",
+            "language": "Italian",
+            "durationSec": 10.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:44.258Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24468,7 +24639,16 @@
           "likes": 184000,
           "comments": 398,
           "shares": 8349,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Scusate, l'amico, non dimenticate di non provare a vi avvicinare, ma se Queen S farà questo a D, ci sono alcune risposte? Bocciate o boccate. Spottati a Grand Central, baggi in mano, Serena Van Der Wittgen.",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:47.034Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24482,7 +24662,16 @@
           "likes": 88,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "You guys, how are you feeling? I feel good. Oh my gosh, positive energy, I love that.",
+            "language": "Italian",
+            "durationSec": 5.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:49.587Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24496,7 +24685,16 @@
           "likes": 119300,
           "comments": 156,
           "shares": 5905,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:52.885Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24510,7 +24708,16 @@
           "likes": 5261,
           "comments": 22,
           "shares": 431,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:55.217Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24524,7 +24731,16 @@
           "likes": 72,
           "comments": 6,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, no, no. Ciao",
+            "language": "Italian",
+            "durationSec": 32.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:07:58.613Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -24538,7 +24754,16 @@
           "likes": 11300,
           "comments": 43,
           "shares": 442,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:08:01.118Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39766,7 +39991,16 @@
           "likes": 286,
           "comments": 37,
           "shares": 87,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:06:54.434Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39892,7 +40126,16 @@
           "likes": 38,
           "comments": 8,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "per l'ultima cena ce la facciamo faccio vedere subito aspettate alla trattoria questa sera mangiamo i serviti a tavola andiamo a vedere com'è faccio un bel video siamo pronti buon appetito per il la per trattoria ci andiamo con la ragazza che spettacolo che fiore d'uomo che ti è viva fiori fiori di averia dove sta casa pesetta a raffaio fiori mi raccomando garofalo dove ogni fiori racconta una storia Ragazzi, qua stiamo trovando solamente chicche, perle, quindi dobbiamo andare per forza a casetta. Beh, vi tocca che devo fare un bel mazzo di fiori a mia moglie. Eh certo, certo, che oggi, oggi purtroppo poche persone fanno questo mazzo. Eh non è vero, fate i bravi e regalate i fiori, è sempre un bel gesto ragazzi, quindi mi raccomando fate i bravi. le cucettine con capocollo e stracciatella e le bruschettine voilà grazie ora mi prepara qualcosa e prendi la pasta, va bene? E mo me ne taglia la perna da ora, bicicletta bro, piccolina di mia figlia, che me la putt, vai frata",
+            "language": "Italian",
+            "durationSec": 114,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:06:59.016Z"
+          }
         },
         {
           "platform": "tiktok",
