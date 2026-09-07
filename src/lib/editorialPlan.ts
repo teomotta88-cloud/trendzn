@@ -23,8 +23,27 @@ export interface EditorialPlan {
   id: string;
   year: number;
   month: number; // 1-12
+  brand: string | null;
   created_at: string;
 }
+
+export interface IhcBrand {
+  slug: string;
+  label: string;
+}
+
+// Sotto-brand IHC per cui la pagina "Piani Editoriali IHC" espone un
+// calendario indipendente (editorial_plans.brand = slug).
+export const IHC_BRANDS: IhcBrand[] = [
+  { slug: "bagni-di-pisa", label: "Bagni di Pisa" },
+  { slug: "fonteverde", label: "Fonteverde" },
+  { slug: "grotta-giusti", label: "Grotta Giusti" },
+  { slug: "baia-di-chia", label: "Baia di Chia" },
+  { slug: "conrad", label: "Conrad" },
+  { slug: "chia-laguna-nature-resort", label: "Chia Laguna Nature Resort" },
+  { slug: "ihc-corporate", label: "IHC Corporate" },
+  { slug: "duo-milan", label: "Duo Milan" },
+];
 
 export interface EditorialPost {
   id: string;
@@ -89,18 +108,19 @@ export const MONTH_NAMES = [
 // passiamo dal cast per evitare di dover rigenerare types.ts ad ogni modifica.
 const db = supabase as any;
 
-export async function getOrCreatePlan(year: number, month: number): Promise<EditorialPlan> {
-  const { data: existing } = await db
-    .from("editorial_plans")
-    .select("*")
-    .eq("year", year)
-    .eq("month", month)
-    .maybeSingle();
+export async function getOrCreatePlan(
+  year: number,
+  month: number,
+  brand: string | null = null,
+): Promise<EditorialPlan> {
+  let query = db.from("editorial_plans").select("*").eq("year", year).eq("month", month);
+  query = brand ? query.eq("brand", brand) : query.is("brand", null);
+  const { data: existing } = await query.maybeSingle();
   if (existing) return existing;
 
   const { data: created, error } = await db
     .from("editorial_plans")
-    .insert({ year, month })
+    .insert({ year, month, brand })
     .select("*")
     .single();
   if (error) throw error;

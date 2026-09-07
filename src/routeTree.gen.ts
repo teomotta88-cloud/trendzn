@@ -19,6 +19,8 @@ import { Route as InfluencerFeedRouteImport } from './routes/influencer-feed'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ReputazioneBrandIndexRouteImport } from './routes/reputazione-brand.index'
 import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editoriale.index'
+import { Route as PianiEditorialiIhcIndexRouteImport } from './routes/piani-editoriali-ihc.index'
+import { Route as PianiEditorialiIhcBrandRouteImport } from './routes/piani-editoriali-ihc.$brand'
 import { Route as InfluencerIndexRouteImport } from './routes/influencer.index'
 import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CollabInstagramIndexRouteImport } from './routes/collab-instagram.index'
@@ -125,6 +127,11 @@ const PianoEditorialeIndexRoute = PianoEditorialeIndexRouteImport.update({
   path: '/piano-editoriale/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PianiEditorialiIhcIndexRoute = PianiEditorialiIhcIndexRouteImport.update({
+  id: '/piani-editoriali-ihc/',
+  path: '/piani-editoriali-ihc/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InfluencerIndexRoute = InfluencerIndexRouteImport.update({
   id: '/influencer/',
   path: '/influencer/',
@@ -199,6 +206,11 @@ const BluserenaFeedBackupRoute = BluserenaFeedBackupRouteImport.update({
 const AspiMonitoringIdRoute = AspiMonitoringIdRouteImport.update({
   id: '/aspi-monitoring/$id',
   path: '/aspi-monitoring/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PianiEditorialiIhcBrandRoute = PianiEditorialiIhcBrandRouteImport.update({
+  id: '/piani-editoriali-ihc/$brand',
+  path: '/piani-editoriali-ihc/$brand',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicHooksUpdateBluserenaVerificationRoute =
@@ -451,6 +463,7 @@ export interface FileRoutesByFullPath {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
+  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
@@ -466,6 +479,7 @@ export interface FileRoutesByFullPath {
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
+  '/piani-editoriali-ihc/': typeof PianiEditorialiIhcIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -518,6 +532,7 @@ export interface FileRoutesByTo {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
+  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
@@ -533,6 +548,7 @@ export interface FileRoutesByTo {
   '/feed': typeof FeedIndexRoute
   '/influencer': typeof InfluencerIndexRoute
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
+  '/piani-editoriali-ihc': typeof PianiEditorialiIhcIndexRoute
   '/reputazione-brand': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -586,6 +602,7 @@ export interface FileRoutesById {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
+  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
@@ -601,6 +618,7 @@ export interface FileRoutesById {
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
+  '/piani-editoriali-ihc/': typeof PianiEditorialiIhcIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -655,6 +673,7 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
+    | '/piani-editoriali-ihc/$brand'
     | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
@@ -670,6 +689,7 @@ export interface FileRouteTypes {
     | '/feed/'
     | '/influencer/'
     | '/piano-editoriale/'
+    | '/piani-editoriali-ihc/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/analyze-bluserena-backfill-stats'
@@ -722,6 +742,7 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
+    | '/piani-editoriali-ihc/$brand'
     | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
@@ -737,6 +758,7 @@ export interface FileRouteTypes {
     | '/feed'
     | '/influencer'
     | '/piano-editoriale'
+    | '/piani-editoriali-ihc'
     | '/reputazione-brand'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/analyze-bluserena-backfill-stats'
@@ -789,6 +811,7 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
+    | '/piani-editoriali-ihc/$brand'
     | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
@@ -804,6 +827,7 @@ export interface FileRouteTypes {
     | '/feed/'
     | '/influencer/'
     | '/piano-editoriale/'
+    | '/piani-editoriali-ihc/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/analyze-bluserena-backfill-stats'
@@ -857,6 +881,7 @@ export interface RootRouteChildren {
   TrendRealTimeRoute: typeof TrendRealTimeRoute
   TrendViraliRoute: typeof TrendViraliRoute
   AspiMonitoringIdRoute: typeof AspiMonitoringIdRoute
+  PianiEditorialiIhcBrandRoute: typeof PianiEditorialiIhcBrandRoute
   BluserenaFeedBackupRoute: typeof BluserenaFeedBackupRoute
   BluserenaMonitoringIdRoute: typeof BluserenaMonitoringIdRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
@@ -872,6 +897,7 @@ export interface RootRouteChildren {
   FeedIndexRoute: typeof FeedIndexRoute
   InfluencerIndexRoute: typeof InfluencerIndexRoute
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
+  PianiEditorialiIhcIndexRoute: typeof PianiEditorialiIhcIndexRoute
   ReputazioneBrandIndexRoute: typeof ReputazioneBrandIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
   ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute: typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -987,6 +1013,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PianoEditorialeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/piani-editoriali-ihc/': {
+      id: '/piani-editoriali-ihc/'
+      path: '/piani-editoriali-ihc'
+      fullPath: '/piani-editoriali-ihc/'
+      preLoaderRoute: typeof PianiEditorialiIhcIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/influencer/': {
       id: '/influencer/'
       path: '/influencer'
@@ -1090,6 +1123,13 @@ declare module '@tanstack/react-router' {
       path: '/aspi-monitoring/$id'
       fullPath: '/aspi-monitoring/$id'
       preLoaderRoute: typeof AspiMonitoringIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/piani-editoriali-ihc/$brand': {
+      id: '/piani-editoriali-ihc/$brand'
+      path: '/piani-editoriali-ihc/$brand'
+      fullPath: '/piani-editoriali-ihc/$brand'
+      preLoaderRoute: typeof PianiEditorialiIhcBrandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/update-bluserena-verification': {
@@ -1385,6 +1425,7 @@ const rootRouteChildren: RootRouteChildren = {
   TrendRealTimeRoute: TrendRealTimeRoute,
   TrendViraliRoute: TrendViraliRoute,
   AspiMonitoringIdRoute: AspiMonitoringIdRoute,
+  PianiEditorialiIhcBrandRoute: PianiEditorialiIhcBrandRoute,
   BluserenaFeedBackupRoute: BluserenaFeedBackupRoute,
   BluserenaMonitoringIdRoute: BluserenaMonitoringIdRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
@@ -1400,6 +1441,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeedIndexRoute: FeedIndexRoute,
   InfluencerIndexRoute: InfluencerIndexRoute,
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
+  PianiEditorialiIhcIndexRoute: PianiEditorialiIhcIndexRoute,
   ReputazioneBrandIndexRoute: ReputazioneBrandIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute:
