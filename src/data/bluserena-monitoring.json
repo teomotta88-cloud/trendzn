@@ -5756,9 +5756,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5778,6 +5778,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:24:08.991Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:00.208Z"
           }
         },
         {
@@ -5794,12 +5813,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "ferragosto",
-            "relax",
-            "mare",
+            "spiaggia",
+            "piscina",
             "cibo",
-            "piscina"
+            "relax"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5819,6 +5836,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:24:22.529Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "piscina",
+              "cibo",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:03.111Z"
           }
         },
         {
@@ -5835,11 +5872,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "estate",
-            "mare",
-            "relax",
-            "puglia"
+            "musica",
+            "intratenimento"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5858,6 +5893,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T09:04:28.642Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "musica",
+              "intratenimento"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:05.709Z"
           }
         },
         {
@@ -5874,11 +5927,11 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okfLCvLADIBEY7Q5xqD4mqIGgIdO8uRErFTE6f~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gWW49TghETQcWd7Q1hYezPfChks%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "low cost",
-            "famiglia",
-            "Abruzzo"
+            "spiaggia",
+            "acqua bassa",
+            "famiglia con bambini",
+            "posizione geografica"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5898,6 +5951,27 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:06:05.738Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "spiaggia",
+              "acqua bassa",
+              "famiglia con bambini",
+              "posizione geografica"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:08.504Z"
           }
         },
         {
@@ -5914,11 +5988,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "coppia",
-            "maritoemoglie",
-            "vacanza",
             "mare",
-            "puglia"
+            "vacanze"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5939,6 +6010,22 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677897023256939808: You do not have permission to view this post. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://git",
             "version": 3,
             "updatedAt": "2026-09-04T07:55:52.319Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:09.110Z"
           }
         },
         {
@@ -5955,12 +6042,9 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o00AB7IaZOEgoEiJXAT8uPayCAi9uB8mnvZ1s~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=R20MS0P6h%2F%2Bo1NWGtLY3i5IXW1w%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "mare",
-            "vacanza",
-            "challenge",
-            "mangiaresano",
+            "cibo",
             "chef",
-            "complimenti"
+            "cucina"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5980,6 +6064,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T17:49:00.546Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "chef",
+              "cucina"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:12.023Z"
           }
         },
         {
@@ -5996,11 +6099,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "magia",
-            "amore"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6019,6 +6120,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:56:04.756Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:12.894Z"
           }
         },
         {
@@ -6035,12 +6154,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Serena",
-            "Calànè",
-            "Cala Serena"
+            "presente",
+            "intrattenimento"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6059,6 +6174,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:56:14.082Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "presente",
+              "intrattenimento"
+            ],
+            "location": "Calanè Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:15.968Z"
           }
         },
         {
@@ -6076,11 +6208,8 @@
           "sentiment": "positive",
           "topics": [
             "animazione",
-            "villaggio",
-            "emozioni",
-            "animatori",
-            "lavoro",
-            "vacanza"
+            "divertimento",
+            "villaggio"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6100,6 +6229,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:25:30.198Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "divertimento",
+              "villaggio"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:18.886Z"
           }
         },
         {
@@ -6116,10 +6264,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "buffet",
-            "ferragosto",
+            "vacanza",
             "cibo",
-            "celebrazione"
+            "lungomare"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6138,6 +6285,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:56:20.115Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "cibo",
+              "lungomare"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:19.539Z"
           }
         },
         {
@@ -6154,11 +6319,7 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "animazione",
-            "vacanza",
-            "resort",
-            "team",
-            "estate"
+            "animazione"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6177,6 +6338,22 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:56:25.906Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:20.731Z"
           }
         },
         {
@@ -6191,13 +6368,7 @@
           "comments": 0,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "positive",
-          "topics": [
-            "casa",
-            "caffè",
-            "canzone",
-            "mare"
-          ],
+          "sentiment": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
             "transcript": "Se mi vedi un po' triste è perché ho che foto mamma, da sai mamma mia, a casa mia Dove ancora si muore per niente a vent'anni, si figlia na capi, sta guerra da farmi E mo riportami dove, ho veramente sogni, ho caffè in de canzone Vien de mare che sbatte per dinde e faneste, ma scende po' salva Ma vanno a fottere l'anima, ecco un po' che sto buono Dovrei dopo fare la morte ad una staccatura per correre mille volte ancora E tirerò mille volte ancora E caglierò mille volte ancora A casa mia mille volte ancora Grazie a tutti.",
@@ -6215,6 +6386,20 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:56:37.660Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.3,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:24.042Z"
           }
         },
         {
@@ -6231,10 +6416,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQfmXl4mWBDFfL4EBIDSzyAmSJyQXqDxDERaE1~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=A0SlhFWcLuTL0JYCdEUm%2F0w68jo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "white party",
-            "trends",
-            "vacanza",
-            "mare"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6253,6 +6437,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:19:37.476Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:24.762Z"
           }
         },
         {
@@ -6269,10 +6471,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "villaggio",
             "emozione",
-            "vacanza",
-            "bluserena"
+            "partenza",
+            "casa"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6292,6 +6493,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:26:08.447Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "emozione",
+              "partenza",
+              "casa"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:35.773Z"
           }
         },
         {
@@ -6308,11 +6528,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "ferragosto",
-            "video clip",
             "animazione",
-            "villaggio",
-            "emozioni"
+            "vacanza",
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6331,6 +6549,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:56:55.870Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanza",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:36.839Z"
           }
         },
         {
@@ -6348,8 +6584,9 @@
           "verificationStatus": "confirmed",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "audioAnalysis": {
             "transcript": "Musica",
@@ -6368,6 +6605,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:06:57.423Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:37.900Z"
           }
         },
         {
@@ -6384,13 +6640,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
+            "tempo meteorologico",
             "relax",
-            "sole",
-            "Puglia",
-            "Bluserena",
-            "holidays"
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6409,6 +6661,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:57:22.324Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "tempo meteorologico",
+              "relax",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.82,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:40.008Z"
           }
         },
         {
@@ -6425,14 +6695,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
+            "animazione",
             "famiglia",
             "bambini",
-            "divertimento",
-            "mare",
-            "storie",
-            "tiktok"
+            "intrattenimento"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6451,6 +6717,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:57:45.570Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "famiglia",
+              "bambini",
+              "intrattenimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:44.172Z"
           }
         },
         {
@@ -6468,10 +6753,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "villaggio",
-            "casa",
-            "appartenenza",
-            "memoria"
+            "ambiente",
+            "sosta"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6491,6 +6774,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:27:34.071Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "ambiente",
+              "sosta"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:45.017Z"
           }
         },
         {
@@ -6507,9 +6809,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "Lady Gaga"
+            "animazione",
+            "spettacolo",
+            "musica"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6528,6 +6830,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:57:53.836Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spettacolo",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:47.556Z"
           }
         },
         {
@@ -6544,11 +6864,7 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "colazione",
-            "viaggi",
-            "Sardegna",
-            "vacanza",
-            "cibo"
+            "colazione"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6568,6 +6884,23 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:27:50.181Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "colazione"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:56.367Z"
           }
         },
         {
@@ -6582,13 +6915,11 @@
           "comments": 2,
           "shares": 1,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "viaggio",
-            "tiktok",
-            "video virale"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6608,6 +6939,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:27:55.078Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:59:57.345Z"
           }
         },
         {
@@ -6624,11 +6974,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "famiglia",
             "cibo",
             "animazione",
-            "resort"
+            "fedeltà",
+            "vacanza in famiglia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6647,6 +6996,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:09.651Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "animazione",
+              "fedeltà",
+              "vacanza in famiglia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:00.518Z"
           }
         },
         {
@@ -6663,8 +7031,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -6683,6 +7052,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:15.555Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:01.296Z"
           }
         },
         {
@@ -6697,15 +7084,7 @@
           "comments": 35,
           "shares": 13,
           "imageUrl": null,
-          "sentiment": "negative",
-          "topics": [
-            "vacanza",
-            "mare",
-            "Italia vs estero",
-            "famiglia",
-            "resort",
-            "viaggio"
-          ],
+          "sentiment": null,
           "verificationStatus": "confirmed",
           "audioAnalysis": {
             "transcript": "Allora Caterina rispondo a te per rispondere un po' a tutti. Il problema prima di tutto ragazzi, noi sempre, quasi sempre tendiamo comunque a sottovalutare l'Italia. L'Italia ha dei posti bellissimi, è un mare stupendo. quindi Caterina ti invito ad andare a guardare il video di prima dove siamo stati noi oggi a Punta della Suina in Puglia ti invito anche a guardare il mio profilo Instagram perché lì ho postato delle foto che non ho nemmeno mostrato qua su TikTok e quindi ti invito a vedere io dove porto i miei figli al mare anche in Italia il problema di fare l'estero soprattutto questi posti come stai dicendo su Zanzibar eccetera non è una questione di soldi perché noi lavoriamo tutto l'anno e per quanto riguarda le vacanze lavoriamo proprio per questo ragazze, per fare 15 giorni all'anno come si deve, quindi andare a Giantsi Bado come stai dicendo tu sicuramente non era una questione di prezzo, è di paragone con l'Italia e con il Bucerina qui dove siamo noi. Chi mi conosce di segue sa che io purtroppo ho un terribile di volare tantissime ore oppure di andare in questi posti come stai dicendo tu soprattutto con i bambini È una cosa che mi spaventa un po'. È una cosa che devo un attimo superare, che prima o poi supererò, perché queste sono mete e viaggi che noi vogliamo fare. Infatti mio marito quest'anno io gli ho fatto quasi disdire, proprio per un pelo, anche perché l'agenzia che ci segue, il nostro amico, ci conosce. la crociera caraibica proprio perché io proprio perché io mi metto un poco ansia andare in questi posti così lontani questo è quanto quindi per questo quest'anno abbiamo scelto questa metà qua ti ho detto, ti ho invitato comunque a guardare anche un attimo il mare anche perché noi non siamo venuti qua e stiamo soltanto nel villaggio ma una volta che siamo qua in Puglia abbiamo comunque deciso di uscire due o tre volte, ma anche qualcosa in più, e di andare a vedere qualche posto di questo. Infatti siamo stati sia a Punta Prosciutto per il momento e oggi a Punta della Fina. Una di Punta del Cabanino. Eh, che si è ruminato. E niente, quindi questo è quanto. Mi capisco.",
@@ -6724,6 +7103,21 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:28:23.537Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": null,
+            "confidence": 0.4,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:04.034Z"
           }
         },
         {
