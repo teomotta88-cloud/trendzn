@@ -39,4 +39,9 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Ispeziona i profili
+        env:
+          # Se presente, la sonda ripete la prova con questo cookie di
+          # sessione: serve a distinguere "TikTok rifiuta le richieste non
+          # autenticate" da "la lista sta altrove".
+          TIKTOK_MS_TOKEN: ${{ secrets.TIKTOK_MS_TOKEN }}
         run: node scripts/probe-tiktok-profile-videos.mjs "${{ inputs.handles }}"
