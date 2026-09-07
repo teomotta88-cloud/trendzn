@@ -16,6 +16,8 @@ import {
   TrendingUp,
   Calendar,
   X,
+  Loader2,
+  Wand2,
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
 // recharts "raw", non il wrapper ChartContainer di shadcn: è lo stesso stile
@@ -112,11 +114,7 @@ interface BluserenaFeedAdvancedProps {
   setTab: (tab: string) => void;
 }
 
-export function BluserenaFeedAdvanced({
-  jsonUrl,
-  tab,
-  setTab,
-}: BluserenaFeedAdvancedProps) {
+export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdvancedProps) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -137,6 +135,16 @@ export function BluserenaFeedAdvanced({
   const [showFilters, setShowFilters] = useState(false);
   const [showAIInsights, setShowAIInsights] = useState(false);
   const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
+  // Esito dell'ultimo avvio della pipeline di analisi. Resta a schermo finché
+  // non si ripreme: il lavoro vero gira su GitHub Actions e dura minuti,
+  // quindi l'unica cosa che il feed può dire con onestà è "è partita", con il
+  // link a dove guardare com'è finita.
+  const [analisiStato, setAnalisiStato] = useState<
+    | { fase: "invio" }
+    | { fase: "avviata"; url: string }
+    | { fase: "errore"; messaggio: string }
+    | null
+  >(null);
   const [updatingResortUrl, setUpdatingResortUrl] = useState<string | null>(null);
   const [updatingSentimentUrl, setUpdatingSentimentUrl] = useState<string | null>(null);
 
@@ -193,6 +201,37 @@ export function BluserenaFeedAdvanced({
     return () => clearInterval(interval);
   }, [jsonUrl]);
 
+  // Lancia la pipeline di analisi sui post confermati che non l'hanno ancora
+  // avuta: KPI + caption, trascrizione audio, testo on-screen, sentiment e
+  // topic, in quest'ordine (il sentiment legge gli altri tre, quindi va per
+  // ultimo).
+  //
+  // "Solo la prima volta" non è deciso qui: ogni script scrive sul post un
+  // record versionato e salta chi ce l'ha già. Premere due volte di fila non
+  // rifà quindi il lavoro, e non serve tenere una lista di cosa è già stato
+  // analizzato — la verità sta nello store, non in questo componente.
+  const avviaAnalisi = async () => {
+    setAnalisiStato({ fase: "invio" });
+    try {
+      const res = await fetch("/api/public/hooks/trigger-analyze-new-bsconfirmed", {
+        method: "POST",
+      });
+      const body = await res.json().catch(() => null);
+
+      if (!res.ok || !body?.ok) {
+        setAnalisiStato({
+          fase: "errore",
+          messaggio: body?.error ?? `errore ${res.status}`,
+        });
+        return;
+      }
+
+      setAnalisiStato({ fase: "avviata", url: body.runsUrl });
+    } catch (err) {
+      setAnalisiStato({ fase: "errore", messaggio: String(err).slice(0, 200) });
+    }
+  };
+
   // Aggiorna BSConfirmed/BSUnconfirmed di un post via API e riflette il
   // cambio subito in locale, senza aspettare il prossimo polling.
   //
@@ -204,7 +243,8 @@ export function BluserenaFeedAdvanced({
   // stesso file, quindi in parallelo si pesterebbero i piedi a vicenda.
   const toggleVerificationStatus = async (post: Post) => {
     const currentStatus = post.verificationStatus || verifyBluserenaPost(post.caption);
-    const newStatus: VerificationStatus = currentStatus === "confirmed" ? "unconfirmed" : "confirmed";
+    const newStatus: VerificationStatus =
+      currentStatus === "confirmed" ? "unconfirmed" : "confirmed";
     setUpdatingUrl(post.url);
 
     const key = contentKey(post);
@@ -607,20 +647,29 @@ export function BluserenaFeedAdvanced({
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <span className="text-xs text-muted-foreground">Var. totali</span>
-                <span className={`text-lg font-semibold ${stats.total2026 > stats.total2025 ? "text-green-600" : "text-red-600"}`}>
-                  {stats.total2026 - stats.total2025 > 0 ? "+" : ""}{stats.total2026 - stats.total2025}
+                <span
+                  className={`text-lg font-semibold ${stats.total2026 > stats.total2025 ? "text-green-600" : "text-red-600"}`}
+                >
+                  {stats.total2026 - stats.total2025 > 0 ? "+" : ""}
+                  {stats.total2026 - stats.total2025}
                 </span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-muted-foreground">Var. sentiment</span>
-                <span className={`text-lg font-semibold ${stats.sentiment2026 > stats.sentiment2025 ? "text-green-600" : "text-red-600"}`}>
-                  {stats.sentiment2026 - stats.sentiment2025 > 0 ? "+" : ""}{stats.sentiment2026 - stats.sentiment2025}
+                <span
+                  className={`text-lg font-semibold ${stats.sentiment2026 > stats.sentiment2025 ? "text-green-600" : "text-red-600"}`}
+                >
+                  {stats.sentiment2026 - stats.sentiment2025 > 0 ? "+" : ""}
+                  {stats.sentiment2026 - stats.sentiment2025}
                 </span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-muted-foreground">Var. confirmed</span>
-                <span className={`text-lg font-semibold ${stats.confirmed2026 > stats.confirmed2025 ? "text-green-600" : "text-red-600"}`}>
-                  {stats.confirmed2026 - stats.confirmed2025 > 0 ? "+" : ""}{stats.confirmed2026 - stats.confirmed2025}
+                <span
+                  className={`text-lg font-semibold ${stats.confirmed2026 > stats.confirmed2025 ? "text-green-600" : "text-red-600"}`}
+                >
+                  {stats.confirmed2026 - stats.confirmed2025 > 0 ? "+" : ""}
+                  {stats.confirmed2026 - stats.confirmed2025}
                 </span>
               </div>
             </div>
@@ -809,6 +858,49 @@ export function BluserenaFeedAdvanced({
                 ))}
               </div>
             </div>
+
+            <div className="sm:col-span-2 lg:col-span-3">
+              <label className="text-xs font-medium text-muted-foreground mb-2 block">
+                Analisi dei post confermati
+              </label>
+              <div className="flex flex-wrap items-center gap-3">
+                <button
+                  onClick={avviaAnalisi}
+                  disabled={analisiStato?.fase === "invio"}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 text-xs rounded-full font-medium bg-primary text-primary-foreground transition hover:bg-primary/90 disabled:opacity-60"
+                >
+                  {analisiStato?.fase === "invio" ? (
+                    <Loader2 className="size-3 animate-spin" />
+                  ) : (
+                    <Wand2 className="size-3" />
+                  )}
+                  Analizza nuovi confermati
+                </button>
+
+                {analisiStato?.fase === "avviata" && (
+                  <span className="text-xs text-muted-foreground">
+                    Analisi avviata su GitHub Actions — dura qualche minuto.{" "}
+                    <a
+                      href={analisiStato.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline underline-offset-2"
+                    >
+                      Vedi l'avanzamento
+                    </a>
+                  </span>
+                )}
+                {analisiStato?.fase === "errore" && (
+                  <span className="text-xs text-red-600 dark:text-red-400">
+                    Avvio fallito: {analisiStato.messaggio}
+                  </span>
+                )}
+              </div>
+              <p className="text-xs text-muted-foreground mt-2">
+                Recupera KPI e caption, trascrive audio e testo on-screen, poi analizza sentiment e
+                topic. Ogni post viene analizzato una volta sola: quelli già fatti vengono saltati.
+              </p>
+            </div>
           </div>
         )}
       </div>
@@ -935,36 +1027,49 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
   const topTopics2026 = getTopTopics(confirmedPosts2026);
   const sentiment2026 = getSentimentBreakdown(confirmedPosts2026);
   const sentiment2025 = getSentimentBreakdown(confirmedPosts2025);
-  const avgViews2026 = confirmedPosts2026.length > 0
-    ? Math.round(confirmedPosts2026.reduce((sum, p) => sum + (p.views || 0), 0) / confirmedPosts2026.length)
-    : 0;
-  const avgViews2025 = confirmedPosts2025.length > 0
-    ? Math.round(confirmedPosts2025.reduce((sum, p) => sum + (p.views || 0), 0) / confirmedPosts2025.length)
-    : 0;
+  const avgViews2026 =
+    confirmedPosts2026.length > 0
+      ? Math.round(
+          confirmedPosts2026.reduce((sum, p) => sum + (p.views || 0), 0) /
+            confirmedPosts2026.length,
+        )
+      : 0;
+  const avgViews2025 =
+    confirmedPosts2025.length > 0
+      ? Math.round(
+          confirmedPosts2025.reduce((sum, p) => sum + (p.views || 0), 0) /
+            confirmedPosts2025.length,
+        )
+      : 0;
 
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {/* Sentiment Breakdown 2026 */}
         <div>
-          <div className="text-xs font-medium text-muted-foreground mb-2">Sentiment Lug-Ago 2026</div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">
+            Sentiment Lug-Ago 2026
+          </div>
           <div className="space-y-1.5 text-xs">
             <div className="flex justify-between items-center">
               <span>😊 Positivi</span>
               <span className="font-semibold text-green-600">
-                {sentiment2026.positive} ({Math.round((sentiment2026.positive / sentiment2026.analyzed) * 100) || 0}%)
+                {sentiment2026.positive} (
+                {Math.round((sentiment2026.positive / sentiment2026.analyzed) * 100) || 0}%)
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>😐 Neutrali</span>
               <span className="font-semibold text-slate-600">
-                {sentiment2026.neutral} ({Math.round((sentiment2026.neutral / sentiment2026.analyzed) * 100) || 0}%)
+                {sentiment2026.neutral} (
+                {Math.round((sentiment2026.neutral / sentiment2026.analyzed) * 100) || 0}%)
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>😞 Negativi</span>
               <span className="font-semibold text-red-600">
-                {sentiment2026.negative} ({Math.round((sentiment2026.negative / sentiment2026.analyzed) * 100) || 0}%)
+                {sentiment2026.negative} (
+                {Math.round((sentiment2026.negative / sentiment2026.analyzed) * 100) || 0}%)
               </span>
             </div>
           </div>
@@ -988,12 +1093,20 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
             </div>
             <div className="flex justify-between items-center">
               <span>Positivi Delta</span>
-              <span className={`font-semibold ${
-                (sentiment2026.positive / sentiment2026.analyzed || 0) > (sentiment2025.positive / sentiment2025.analyzed || 0)
-                  ? "text-green-600"
-                  : "text-red-600"
-              }`}>
-                {Math.round(((sentiment2026.positive / sentiment2026.analyzed || 0) - (sentiment2025.positive / sentiment2025.analyzed || 0)) * 100)}pp
+              <span
+                className={`font-semibold ${
+                  (sentiment2026.positive / sentiment2026.analyzed || 0) >
+                  (sentiment2025.positive / sentiment2025.analyzed || 0)
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {Math.round(
+                  ((sentiment2026.positive / sentiment2026.analyzed || 0) -
+                    (sentiment2025.positive / sentiment2025.analyzed || 0)) *
+                    100,
+                )}
+                pp
               </span>
             </div>
           </div>
@@ -1008,7 +1121,9 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
       {/* Top Topics */}
       {topTopics2026.length > 0 && (
         <div>
-          <div className="text-xs font-medium text-muted-foreground mb-2">Topic Top 5 (Lug-Ago 2026)</div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">
+            Topic Top 5 (Lug-Ago 2026)
+          </div>
           <div className="space-y-1.5">
             {topTopics2026.map((item, i) => (
               <div key={i} className="flex justify-between items-center text-xs">
@@ -1059,10 +1174,15 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
       {/* Key Insights */}
       <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-3 space-y-1">
         <p>
-          <strong>Insight:</strong> Lug-Ago 2026 ha {total2026 > total2025 ? "+" : ""}{total2026 - total2025} post
-          BSConfirmed rispetto a Lug-Ago 2025 ({total2025}).
+          <strong>Insight:</strong> Lug-Ago 2026 ha {total2026 > total2025 ? "+" : ""}
+          {total2026 - total2025} post BSConfirmed rispetto a Lug-Ago 2025 ({total2025}).
           {sentiment2026.analyzed > sentiment2025.analyzed && (
-            <span> L'analisi sentiment è cresciuta di +{sentiment2026.analyzed - sentiment2025.analyzed} post.</span>
+            <span>
+              {" "}
+              L'analisi sentiment è cresciuta di +{sentiment2026.analyzed -
+                sentiment2025.analyzed}{" "}
+              post.
+            </span>
           )}
         </p>
       </div>
@@ -1626,7 +1746,12 @@ function PostCard({
             <PlatformIcon platform={post.platform} className="size-3" />
             {post.platform}
           </span>
-          <a href={post.url} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+          <a
+            href={post.url}
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:underline"
+          >
             Apri ↗
           </a>
         </div>
@@ -1641,7 +1766,9 @@ function PostCard({
           {post.date && <div>{new Date(post.date).toLocaleDateString("it-IT")}</div>}
         </div>
 
-        {post.caption && <p className="text-[11px] line-clamp-2 text-muted-foreground">{post.caption}</p>}
+        {post.caption && (
+          <p className="text-[11px] line-clamp-2 text-muted-foreground">{post.caption}</p>
+        )}
 
         {hiddenMatch && (
           <p
@@ -1721,7 +1848,9 @@ function PostCard({
                   </span>
                 ))}
                 {post.topics.length > 3 && (
-                  <span className="text-[9px] text-muted-foreground">+{post.topics.length - 3}</span>
+                  <span className="text-[9px] text-muted-foreground">
+                    +{post.topics.length - 3}
+                  </span>
                 )}
               </div>
             </div>

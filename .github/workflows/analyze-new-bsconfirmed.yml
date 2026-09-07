@@ -1,0 +1,135 @@
+name: Analizza nuovi BSConfirmed
+
+# Pipeline completa per i post appena segnati BSConfirmed a mano dal feed,
+# lanciata dal pulsante "Analizza nuovi confermati" (vedi
+# src/routes/api/public/hooks/trigger-analyze-new-bsconfirmed.ts).
+#
+# Perché serve: marcare un post come confirmed non fa partire nulla da solo, e
+# gli script che lavorano SOLO sui confirmed (KPI e sentiment) lo prenderebbero
+# alla loro prossima run schedulata. Questo workflow accorcia l'attesa.
+#
+# "Solo la prima volta" è garantito dagli script, non da qui: ognuno scrive un
+# record versionato sul post (engagementData, audioAnalysis, ocrData,
+# sentimentData) e salta chi ce l'ha già. Quindi una run in cui non c'è niente
+# di nuovo attraversa i quattro passi senza scaricare nulla, e premere il
+# pulsante due volte di fila non rifà il lavoro.
+#
+# L'ORDINE È SIGNIFICATIVO: il sentiment legge caption, trascrizione audio e
+# testo on-screen, quindi va per ultimo. Se girasse prima, deciderebbe su un
+# post di cui non ha ancora letto il parlato — che per un reel è spesso l'unica
+# fonte di senso.
+#
+# La caption non ha un passo suo: la riempie il primo, leggendola dalla stessa
+# pagina TikTok già scaricata per i contatori (itemStruct.desc). Costa zero
+# richieste in più ed evita backfill-bluserena-caption.mjs, che riscrive
+# l'intero store con una PUT sola e senza retry sui conflitti — pericoloso in
+# una sequenza dove altri tre passi scrivono lo stesso file.
+#
+# I passi dopo il primo girano con `if: always()`: un guasto su una fonte (una
+# quota LLM esaurita, un video sparito) non deve impedire alle altre di
+# lavorare. Il job resta comunque rosso, così il fallimento non passa
+# inosservato.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "Numero massimo di post per ciascuna analisi"
+        required: false
+        default: "400"
+      reprocess_failed:
+        description: "Riprova anche i post il cui esito precedente non era ok"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  # I quattro passi scrivono tutti su bluserena-monitoring.json: due run in
+  # parallelo si rincorrerebbero a colpi di conflitto. Con i workflow
+  # schedulati la sovrapposizione resta possibile — lì la protezione è il
+  # retry-su-409 di commitField, che rilegge e riapplica invece di sovrascrivere.
+  group: bluserena-analisi-nuovi
+  cancel-in-progress: false
+
+jobs:
+  analizza:
+    runs-on: ubuntu-latest
+    name: KPI, caption, audio, testo on-screen e sentiment
+    # Il limite GitHub è 360 minuti: ogni script si ferma da solo prima
+    # (MAX_MINUTES) per fare in tempo a committare l'ultimo batch.
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Install ffmpeg + yt-dlp
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          # La versione apt di yt-dlp è troppo vecchia per TikTok: si usa il
+          # binario ufficiale.
+          sudo curl -fsSL --retry 3 \
+            https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
+            -o /usr/local/bin/yt-dlp
+          sudo chmod a+rx /usr/local/bin/yt-dlp
+          yt-dlp --version
+          ffmpeg -version | head -1
+
+      - name: 1/4 — KPI engagement e caption dalla pagina video
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_POSTS: ${{ inputs.max_posts || '400' }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
+          MAX_MINUTES: "60"
+          BATCH_SIZE: "25"
+        run: node scripts/scrape-tiktok-engagement.mjs
+
+      - name: 2/4 — Trascrizione audio
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MAX_POSTS: ${{ inputs.max_posts || '400' }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
+          MAX_MINUTES: "80"
+          BATCH_SIZE: "25"
+        run: node scripts/analyze-bluserena-audio.mjs
+
+      - name: 3/4 — Testo on-screen (OCR)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_POSTS: ${{ inputs.max_posts || '400' }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
+          MAX_MINUTES: "80"
+          BATCH_SIZE: "25"
+        run: node scripts/analyze-bluserena-ocr.mjs
+
+      - name: 4/4 — Sentiment e topic
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MAX_POSTS: ${{ inputs.max_posts || '400' }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
+          MIN_CONFIDENCE: "0.6"
+          MAX_MINUTES: "50"
+        run: node scripts/analyze-bluserena-sentiment-topic.mjs

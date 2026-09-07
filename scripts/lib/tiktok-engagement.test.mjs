@@ -166,3 +166,48 @@ test("un contatore null non azzera il campo piatto già presente", () => {
   assert.equal(account.views, 500, "un null della pagina non deve cancellare un dato buono");
   assert.equal(account.likes, 2);
 });
+
+// ------------------------------------------------------------------ caption
+
+test("la caption viene letta dalla stessa pagina dei contatori", () => {
+  const record = readVideoDetail(
+    payload({ desc: "  Estate al Bluserena ☀️ #bluserena  ", stats: { playCount: 10 } }),
+  );
+  assert.equal(record.caption, "Estate al Bluserena ☀️ #bluserena");
+});
+
+test("una desc assente o vuota dà caption null, non stringa vuota", () => {
+  assert.equal(readVideoDetail(payload({ stats: { playCount: 10 } })).caption, null);
+  assert.equal(readVideoDetail(payload({ desc: "   ", stats: { playCount: 10 } })).caption, null);
+});
+
+test("la caption riempie il buco e finisce in applied", () => {
+  const account = { url: "u", caption: null };
+  const record = {
+    status: "ok",
+    caption: "testo",
+    views: 1,
+    likes: null,
+    comments: null,
+    shares: null,
+  };
+  applyEngagement(account, record);
+  assert.equal(account.caption, "testo");
+  assert.ok(record.applied.includes("caption"));
+});
+
+test("una caption esistente non viene mai sovrascritta, nemmeno con overwrite", () => {
+  // Alcune caption sono state sistemate a mano dal feed: i numeri si
+  // rinfrescano, il testo no.
+  const account = { url: "u", caption: "scritta a mano" };
+  const record = { status: "ok", caption: "dalla pagina", views: 1 };
+  applyEngagement(account, record, { overwrite: true });
+  assert.equal(account.caption, "scritta a mano");
+  assert.ok(!record.applied.includes("caption"));
+});
+
+test("una caption fatta di soli spazi conta come mancante", () => {
+  const account = { url: "u", caption: "   " };
+  applyEngagement(account, { status: "ok", caption: "dalla pagina" });
+  assert.equal(account.caption, "dalla pagina");
+});
