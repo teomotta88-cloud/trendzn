@@ -981,6 +981,10 @@ interface AIInsightsProps {
 }
 
 function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: AIInsightsProps) {
+  // Elenco topic esteso: chiuso di default perché la coda è lunga (la maggior
+  // parte dei topic compare una volta sola) e in cima stanno comunque quelli
+  // che contano.
+  const [tuttiITopic, setTuttiITopic] = useState(false);
   const confirmedPosts2025 = useMemo(
     () => posts.filter((p) => isInJulyAugustStandalone(p.date, 2025)),
     [posts],
@@ -989,6 +993,11 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
     () => posts.filter((p) => isInJulyAugustStandalone(p.date, 2026)),
     [posts],
   );
+  // Classifica COMPLETA dei topic: il taglio ai primi 5 si fa al rendering,
+  // così l'elenco esteso non deve ricontare nulla e il totale mostrato sul
+  // pulsante è quello vero. A parità di occorrenze ordina per nome, altrimenti
+  // la coda lunga (la maggior parte dei topic compare una volta sola)
+  // cambierebbe ordine a ogni render senza motivo.
   const getTopTopics = (posts: Post[]): { topic: string; count: number }[] => {
     const topicCounts: Record<string, number> = {};
     posts.forEach((p) => {
@@ -998,8 +1007,7 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
     });
     return Object.entries(topicCounts)
       .map(([topic, count]) => ({ topic, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 5);
+      .sort((a, b) => b.count - a.count || a.topic.localeCompare(b.topic));
   };
 
   const getSentimentBreakdown = (posts: Post[]) => {
@@ -1154,18 +1162,35 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
           autore selezionato in tabella). */}
       <SentimentTimeline posts={posts} />
 
-      {/* Top Topics */}
+      {/* Topic: i primi 5 di default, l'elenco completo a richiesta. Sui dati
+          attuali i topic distinti sono oltre 250, quindi da espansi vanno in
+          un contenitore che scorre da solo: srotolarli tutti nel pannello
+          spingerebbe fuori schermo tutto quello che viene dopo. */}
       {topTopics.length > 0 && (
         <div>
-          <div className="text-xs font-medium text-muted-foreground mb-2">
-            Topic Top 5 ({periodo})
+          <div className="flex items-center justify-between mb-2 gap-2">
+            <div className="text-xs font-medium text-muted-foreground">
+              {tuttiITopic ? `Tutti i ${topTopics.length} topic` : "Topic Top 5"} ({periodo})
+            </div>
+            {topTopics.length > 5 && (
+              <button
+                onClick={() => setTuttiITopic((v) => !v)}
+                className="text-xs text-primary hover:underline underline-offset-2 shrink-0"
+              >
+                {tuttiITopic ? "Mostra solo i primi 5" : `Mostra tutti (${topTopics.length})`}
+              </button>
+            )}
           </div>
-          <div className="space-y-1.5">
-            {topTopics.map((item, i) => (
-              <div key={i} className="flex justify-between items-center text-xs">
-                <span className="text-muted-foreground">#{i + 1}</span>
-                <span className="flex-1 mx-2">{item.topic}</span>
-                <span className="font-semibold text-primary">{item.count}</span>
+          <div
+            className={tuttiITopic ? "space-y-1.5 max-h-72 overflow-y-auto pr-1" : "space-y-1.5"}
+          >
+            {(tuttiITopic ? topTopics : topTopics.slice(0, 5)).map((item, i) => (
+              <div key={item.topic} className="flex justify-between items-center text-xs">
+                <span className="text-muted-foreground shrink-0">#{i + 1}</span>
+                <span className="flex-1 mx-2 truncate" title={item.topic}>
+                  {item.topic}
+                </span>
+                <span className="font-semibold text-primary shrink-0">{item.count}</span>
               </div>
             ))}
           </div>
