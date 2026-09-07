@@ -1281,7 +1281,72 @@ function KpiTotali({ posts }: { posts: Post[] }) {
 
 // ------------------------------------------------------------- AI: per resort
 
+// Criteri di ordinamento condivisi da "Per resort" e "Per utente": le due
+// tabelle rispondono alle stesse domande ("chi pubblica di più", "chi raccoglie
+// più negativi") e avere due controlli diversi le renderebbe difficili da
+// confrontare.
+type OrdineSezione = "volume" | "views" | "positive" | "neutral" | "negative";
+
+const ETICHETTE_ORDINE: Record<OrdineSezione, string> = {
+  volume: "contenuti",
+  views: "visualizzazioni",
+  positive: "post positivi",
+  neutral: "post neutrali",
+  negative: "post negativi",
+};
+
+// Ordina per NUMERO di post con quel sentiment, non per percentuale: la
+// domanda dietro "ordina per negativi" è quasi sempre "dove sta il grosso del
+// malcontento", e una quota alta su tre post non è quello. La composizione in
+// percentuale resta comunque leggibile nella barra sentiment di ogni riga.
+//
+// A parità di valore vince il volume: due resort con un solo post negativo a
+// testa restano in ordine di grandezza invece che nell'ordine casuale in cui
+// sono stati incontrati.
+function ordinaPerCriterio<T extends { posts: Post[]; views: number }>(
+  righe: T[],
+  ordine: OrdineSezione,
+): T[] {
+  const valore = (r: T) => {
+    if (ordine === "volume") return r.posts.length;
+    if (ordine === "views") return r.views;
+    return r.posts.filter((p) => p.sentiment === ordine).length;
+  };
+  return [...righe].sort((a, b) => valore(b) - valore(a) || b.posts.length - a.posts.length);
+}
+
+// Tendina di ordinamento, identica nelle due tabelle.
+function SelettoreOrdine({
+  valore,
+  onChange,
+  id,
+}: {
+  valore: OrdineSezione;
+  onChange: (ordine: OrdineSezione) => void;
+  id: string;
+}) {
+  return (
+    <label className="flex items-center gap-1" htmlFor={id}>
+      <span className="text-muted-foreground">Ordina per</span>
+      <select
+        id={id}
+        value={valore}
+        onChange={(e) => onChange(e.target.value as OrdineSezione)}
+        className="rounded border border-border bg-background px-1 py-0.5 outline-none focus:border-primary"
+      >
+        {(Object.keys(ETICHETTE_ORDINE) as OrdineSezione[]).map((k) => (
+          <option key={k} value={k}>
+            {ETICHETTE_ORDINE[k]}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
 function ResortBreakdown({ posts }: { posts: Post[] }) {
+  const [ordine, setOrdine] = useState<OrdineSezione>("volume");
+
   const righe = useMemo(() => {
     const gruppi = new Map<string, Post[]>();
     for (const p of posts) {
@@ -1290,23 +1355,30 @@ function ResortBreakdown({ posts }: { posts: Post[] }) {
       if (lista) lista.push(p);
       else gruppi.set(resort, [p]);
     }
-    return [...gruppi.entries()]
-      .map(([resort, lista]) => ({
-        resort,
-        posts: lista,
-        views: somma(lista, "views"),
-        likes: somma(lista, "likes"),
-        comments: somma(lista, "comments"),
-        shares: somma(lista, "shares"),
-      }))
-      .sort((a, b) => b.posts.length - a.posts.length);
-  }, [posts]);
+    const base = [...gruppi.entries()].map(([resort, lista]) => ({
+      resort,
+      posts: lista,
+      views: somma(lista, "views"),
+      likes: somma(lista, "likes"),
+      comments: somma(lista, "comments"),
+      shares: somma(lista, "shares"),
+    }));
+    return ordinaPerCriterio(base, ordine);
+  }, [posts, ordine]);
 
+  // La barra del volume resta proporzionale al massimo di POST, anche quando
+  // l'ordinamento è un altro: è la scala della colonna "Volume", non del
+  // criterio scelto, e cambiarla farebbe sembrare che i numeri cambino.
   const maxVolume = Math.max(1, ...righe.map((r) => r.posts.length));
 
   return (
     <div className="space-y-2">
-      <div className="text-xs font-medium text-muted-foreground">Per resort</div>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="text-xs font-medium text-muted-foreground">Per resort</div>
+        <div className="text-[10px]">
+          <SelettoreOrdine id="ordine-resort" valore={ordine} onChange={setOrdine} />
+        </div>
+      </div>
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[560px] text-xs">
@@ -1364,8 +1436,6 @@ function ResortBreakdown({ posts }: { posts: Post[] }) {
 
 // ------------------------------------------------------------- AI: per utente
 
-type OrdineUtenti = "volume" | "views";
-
 function UtentiBreakdown({
   posts,
   activeAuthor,
@@ -1375,7 +1445,7 @@ function UtentiBreakdown({
   activeAuthor: string;
   onSelectAuthor: (autore: string) => void;
 }) {
-  const [ordine, setOrdine] = useState<OrdineUtenti>("volume");
+  const [ordine, setOrdine] = useState<OrdineSezione>("volume");
   const [limite, setLimite] = useState(10);
   const [soloProlifici, setSoloProlifici] = useState(false);
 
@@ -1387,9 +1457,12 @@ function UtentiBreakdown({
       if (lista) lista.push(p);
       else gruppi.set(autore, [p]);
     }
-    return [...gruppi.entries()]
-      .map(([autore, lista]) => ({ autore, posts: lista, views: somma(lista, "views") }))
-      .sort((a, b) => (ordine === "volume" ? b.posts.length - a.posts.length : b.views - a.views));
+    const base = [...gruppi.entries()].map(([autore, lista]) => ({
+      autore,
+      posts: lista,
+      views: somma(lista, "views"),
+    }));
+    return ordinaPerCriterio(base, ordine);
   }, [posts, ordine]);
 
   // "Utenti con più contenuti" è una soglia, non un ordinamento: chi ha
@@ -1405,17 +1478,7 @@ function UtentiBreakdown({
           Per utente — {righe.length} autori
         </div>
         <div className="flex flex-wrap items-center gap-2 text-[10px]">
-          <label className="flex items-center gap-1">
-            <span className="text-muted-foreground">Ordina per</span>
-            <select
-              value={ordine}
-              onChange={(e) => setOrdine(e.target.value as OrdineUtenti)}
-              className="rounded border border-border bg-background px-1 py-0.5 outline-none focus:border-primary"
-            >
-              <option value="volume">contenuti</option>
-              <option value="views">visualizzazioni</option>
-            </select>
-          </label>
+          <SelettoreOrdine id="ordine-utenti" valore={ordine} onChange={setOrdine} />
           <label className="flex items-center gap-1 text-muted-foreground">
             <input
               type="checkbox"
