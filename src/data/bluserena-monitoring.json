@@ -60708,7 +60708,16 @@
           "likes": 2191,
           "comments": 52,
           "shares": 356,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Wow, I'm so happy! I'm with my friends and family! I'm finally home! Haha, stupid fucking shit! I'm going to get you! No, please, please, don't hit me, please! Oh my god, I'm going to skip! No, fucking stupid shit!",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:30.098Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60722,7 +60731,16 @@
           "likes": 64,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:32.495Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60736,7 +60754,16 @@
           "likes": 32,
           "comments": 4,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:34.816Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60750,7 +60777,16 @@
           "likes": 68,
           "comments": 4,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:37.427Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60764,7 +60800,16 @@
           "likes": 28,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 38.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:42.076Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60778,7 +60823,16 @@
           "likes": 1385,
           "comments": 7,
           "shares": 54,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "It was just a special day having this brunch and looking out at the garden. Valentino took us around showing us this gorgeous ground. E' stato un giorno così memorabile.",
+            "language": "Italian",
+            "durationSec": 34.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:45.121Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60792,7 +60846,16 @@
           "likes": 367,
           "comments": 35,
           "shares": 28,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Da 1957, Valentino's ha servito un gusto di casa per i nebrascani. Inizia come sempre, con carità, qualità e caratteristica dietro ogni pizza. E mentre i tempi cambiano, il gusto di casa che le persone conoscono e amano rimane lo stesso. Ci ritrovi a celebrare i terzi di giugno, comprare una pizza di 16 ozzi di jumbo, e ricevere una pizza di jumbo gratis gratis su nostra crosta originale. Siamo qui per la prossima generazione di tradizioni. a",
+            "language": "Italian",
+            "durationSec": 35.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:48.012Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60806,7 +60869,16 @@
           "likes": 7963,
           "comments": 463,
           "shares": 205,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Just relax, if you wanna know me, here's two facts I hate catchy choruses And I'm a hypocrite Hungry, hungry hypocrite",
+            "language": "Italian",
+            "durationSec": 10.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:50.204Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60820,7 +60892,16 @@
           "likes": 8619,
           "comments": 55,
           "shares": 345,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "It's getting old fast, Fox. Ai, che stupido demonio con ese stupido... Ai, ese imbecil piensa que puede poner esa princesa gordisima enfrente de mi, pero...",
+            "language": "Italian",
+            "durationSec": 13.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:52.699Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60834,7 +60915,16 @@
           "likes": 26,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Anoda Storio, Storio, Storio",
+            "language": "Italian",
+            "durationSec": 5.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:55.106Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60848,7 +60938,16 @@
           "likes": 18100,
           "comments": 113,
           "shares": 307,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Andiamo a guardare alcune fatti di Valentino da Hasbin Hotel. La prima, Valentino's demon form is a giant pink moth. Standing nearly 3 meters tall with enormous moth wings, he can create a sense of pressure just by standing there. Those huge wings are not only used for flying, they can also create powerful winds and red smoke, which can easily put out fires. During battles, they can also effectively disrupt an enemy's vision. The second one, Valentino has extremely poor eyesight. Angel Dust once mocked Valentino for taking half an hour to count a stack of only three bills. E perché il suo viso è così male, è accettato di diventare immune alla capacità di ipnosi di Vox. La terza. Valentino è nato in Florida durante il XX secolo quando era vivo. Ha una heritagia spagnola. Quindi Valentino può parlare spagnolo e inglese fluentemente. Quando diventa emozionale, anche switcha di volta e di volta tra un accento americano e un accento spagnolo. Vox realmente dislike questo perché non può capire. Sai, non posso capire quando parli quel linguaggio di isla, vado. Qualcuno altro ha qualcosa da dire? Sono da fucking Florida! La quarta. Valentino ha una personalità estremamente violenta. Ha un robot di clown custom fatto che lo serve a livello di vita. A volte ha anche bisogno di servire gli altri due V. Ma Val non lo rispetta neanche. Anche se ha tirato cigarette a lei, Valentino ha anche avuto un petto. Ma poi lo ha trovato troppo annullante e lo ha ucciso. Quando parla del suo star employee Angel Dust, mostra un livello quasi obsessivo di possessività e abuso. Relaendo sul suo solo contratto che ha avuto con Angel, lo tratta come nulla più che un tool per fare money e soddisfare i suoi desideri. Solo perché Angel è andato in hotel, era sufficiente per far Val completamente furioso. Angel quit? No! He didn't fucking quit! It's worse! He moved!",
+            "language": "Italian",
+            "durationSec": 91.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:07.506Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60862,7 +60961,16 @@
           "likes": 102,
           "comments": 13,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "That's fine! Ciao",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:10.609Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60876,7 +60984,16 @@
           "likes": 55,
           "comments": 10,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I'm in love with Paul. I'm in love with John. You know what? I'm in love with Ringo. What? Um, I said... I don't know what I said.",
+            "language": "Italian",
+            "durationSec": 8.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:18.493Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60890,7 +61007,16 @@
           "likes": 81,
           "comments": 8,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:20.873Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60904,7 +61030,16 @@
           "likes": 12300,
           "comments": 175,
           "shares": 566,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 9.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:23.485Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60918,7 +61053,16 @@
           "likes": 144700,
           "comments": 82,
           "shares": 9106,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:26.655Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60932,7 +61076,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:31.717Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60946,7 +61099,16 @@
           "likes": 249,
           "comments": 3,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:33.968Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60960,7 +61122,16 @@
           "likes": 50,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cerco di essere normale e rimanere calmo, ma questo è esattamente il scenario che ho voluto.",
+            "language": "Italian",
+            "durationSec": 7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:36.085Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60974,7 +61145,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:39:43.543Z"
+          }
         }
       ]
     },
@@ -63267,7 +63447,16 @@
           "likes": 443,
           "comments": 1,
           "shares": 165,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo hotel deve essere sulla tua lista di bucchetti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:40:45.546Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63281,7 +63470,16 @@
           "likes": 10200,
           "comments": 463,
           "shares": 246,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok, ciao a tutti. Ho messaggiato a molti, ho PMato a molti, ho chiamato a molti per Whatsapp, ho messaggiato a molti per Whatsapp, ho messaggiato a molti per Insta e FB, scusate, non ho potuto rispondere personalmente, stavamo viaggiando e alla fine sono qui, a Nord Face. Ok, prego per i nostri familiari maledetti che sono morti. prego e me ci ha più o meno satisfica via here one year plus e per me a mangi c and thanks to everyone we were messaging me and fine via save al I will come back on 31st and we will take different water. Ok? Thank you, thank you people.",
+            "language": "Italian",
+            "durationSec": 59,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:40:49.391Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63295,7 +63493,16 @@
           "likes": 6865,
           "comments": 166,
           "shares": 4749,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non dimenticate la Grecia, non dimenticate la Turchia. Quest'anno andiamo a Croazia. Guardate questo nuovo hotel a quattro piste a Borto di Carvana. Siete direttamente al mar con molti pool, un suo accesso al ponte e una vista che non si dimentica così rapidamente. Non importa se dal pool, dai restauranti o anche dal studio di fitness, sentite un bellissimo vista al mar. L'intero hotel è anche molto moderno e offre un bellissimo campo di risposta. 6 giorni in agosto si ottengono qui per solo 494 euro per persona, inclusivamente il pranzo. E se potete viaggiare fuori dalla sessone, è ancora più caro. Poi ottengete 6 giorni per solo 316 euro per persona, inclusivamente il pranzo. E per poter valutare quanto è davvero bello. Sui portali di registrazione di buching, pagate per lo stesso termine in agosto e esattamente lo stesso stile con pranzo di più di 800 euro per persona. Grazie a tutti!",
+            "language": "Italian",
+            "durationSec": 61.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:41:19.949Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63309,7 +63516,16 @@
           "likes": 96,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 5.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:41:22.009Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63323,7 +63539,16 @@
           "likes": 423,
           "comments": 16,
           "shares": 26,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, come va il vostro lavoro? Fantastico, una buona ospitalità, tutti i miei membri sono assolutamente insieme. sono i suoi amici canals of the ambro e mi sa subito ospitali di ospedale andrew and man mister maresma tra i suoi hotel e mia mia canna non so ieri cretini",
+            "language": "Italian",
+            "durationSec": 37.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:41:28.095Z"
+          }
         },
         {
           "platform": "tiktok",
