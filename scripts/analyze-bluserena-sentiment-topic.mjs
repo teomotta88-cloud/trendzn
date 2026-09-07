@@ -217,7 +217,12 @@ await runEnrichment({
   commitMessage: (n) => `chore: sentiment su ${n} post Bluserena BSConfirmed [trendzn-bot]`,
   // Solo i post confermati: gli altri sono omonimie da hashtag e non entrano
   // nelle statistiche della pagina, che sono calcolate sui BSConfirmed.
-  select: (account) => account.verificationStatus === "confirmed",
+  //
+  // E mai quelli decisi a mano dal feed: sovrascriverli alla run notturna
+  // renderebbe la correzione manuale inutile. Per rimetterli in circolo basta
+  // riportarli a "non analizzato" dalla pagina, che cancella il record.
+  select: (account) =>
+    account.verificationStatus === "confirmed" && account.sentimentData?.status !== "manual",
   processPost: analyzePost,
   apply: applyRecord,
 });

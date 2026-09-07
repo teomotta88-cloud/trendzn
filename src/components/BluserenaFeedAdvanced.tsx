@@ -109,6 +109,7 @@ export function BluserenaFeedAdvanced({
   const [showAIInsights, setShowAIInsights] = useState(false);
   const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
   const [updatingResortUrl, setUpdatingResortUrl] = useState<string | null>(null);
+  const [updatingSentimentUrl, setUpdatingSentimentUrl] = useState<string | null>(null);
 
   // Carica JSON runtime. Il polling ogni 30s aggiorna i post in background:
   // setLoading(true) va chiamato SOLO al primo giro, altrimenti ogni refresh
@@ -295,6 +296,62 @@ export function BluserenaFeedAdvanced({
       alert("Errore di connessione durante l'assegnazione del resort");
     } finally {
       setUpdatingResortUrl(null);
+    }
+  };
+
+  // Corregge a mano il sentiment di un post. L'endpoint marca il record come
+  // deciso a mano, e l'analisi notturna salta i post così marcati: senza,
+  // ogni correzione sarebbe cancellata entro il giorno dopo. Riportare a
+  // "non analizzato" cancella la marcatura e rimette il post in coda.
+  const updatePostSentiment = async (post: Post, sentiment: Sentiment | null) => {
+    setUpdatingSentimentUrl(post.url);
+    const key = contentKey(post);
+    const copies = posts.filter((p) => contentKey(p) === key);
+
+    try {
+      const updated: Post[] = [];
+      let failure: { status: number; text: string } | null = null;
+
+      for (const copy of copies) {
+        const res = await fetch("/api/public/hooks/update-bluserena-post-metadata", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ channelId: copy.canaleId, postUrl: copy.url, sentiment }),
+        });
+
+        if (res.ok) {
+          updated.push(copy);
+        } else {
+          failure = { status: res.status, text: await res.text() };
+          break;
+        }
+      }
+
+      if (updated.length > 0) {
+        setPosts((prev) =>
+          prev.map((p) =>
+            updated.some((u) => u.url === p.url && u.canaleId === p.canaleId)
+              ? { ...p, sentiment }
+              : p,
+          ),
+        );
+      }
+
+      if (failure) {
+        console.error("Errore aggiornamento sentiment:", failure.status, failure.text);
+        let detail = failure.text;
+        try {
+          detail = JSON.parse(failure.text).error || failure.text;
+        } catch {
+          // risposta non JSON, teniamo il testo grezzo
+        }
+        alert(`Errore durante l'aggiornamento del sentiment (${failure.status}): ${detail}`);
+      }
+    } catch (err) {
+      console.error("Errore aggiornamento sentiment:", err);
+      alert("Errore di connessione durante l'aggiornamento del sentiment");
+    } finally {
+      setUpdatingSentimentUrl(null);
     }
   };
 
@@ -748,8 +805,10 @@ export function BluserenaFeedAdvanced({
               search={search}
               updating={updatingUrl === post.url}
               updatingResort={updatingResortUrl === post.url}
+              updatingSentiment={updatingSentimentUrl === post.url}
               onToggleVerification={() => toggleVerificationStatus(post)}
               onChangeResort={(resort) => updatePostResort(post, resort)}
+              onChangeSentiment={(sentiment) => updatePostSentiment(post, sentiment)}
             />
           ))
         )}
@@ -1239,15 +1298,19 @@ function PostCard({
   search,
   updating,
   updatingResort,
+  updatingSentiment,
   onToggleVerification,
   onChangeResort,
+  onChangeSentiment,
 }: {
   post: Post;
   search: string;
   updating: boolean;
   updatingResort: boolean;
+  updatingSentiment: boolean;
   onToggleVerification: () => void;
   onChangeResort: (resort: string) => void;
+  onChangeSentiment: (sentiment: Sentiment | null) => void;
 }) {
   const status = post.verificationStatus || verifyBluserenaPost(post.caption);
   const sentiment = post.sentiment;
@@ -1315,17 +1378,31 @@ function PostCard({
         )}
 
         <div className="space-y-1.5 border-t border-border pt-2">
+          {/* Sentiment modificabile a mano: la scelta viene marcata come
+              manuale e l'analisi notturna non la sovrascrive più. "Non
+              analizzato" toglie la marcatura e rimette il post in coda. */}
           <div className="flex items-center gap-1.5">
             <Smile className="size-3 text-muted-foreground" />
-            <span className="text-[10px] text-muted-foreground">
-              {sentiment
-                ? sentiment === "positive"
-                  ? "😊 Positivo"
-                  : sentiment === "negative"
-                    ? "😞 Negativo"
-                    : "😐 Neutrale"
-                : "❓ Non analizzato"}
-            </span>
+            <select
+              value={sentiment ?? ""}
+              disabled={updatingSentiment}
+              onChange={(e) => onChangeSentiment((e.target.value || null) as Sentiment | null)}
+              aria-label="Sentiment del post"
+              title={
+                post.sentimentData?.status === "manual"
+                  ? "Impostato a mano: l'analisi automatica non lo tocca"
+                  : "Sentiment dall'analisi automatica"
+              }
+              className="w-full rounded border border-border bg-background px-1 py-0.5 text-[10px] text-muted-foreground outline-none focus:border-primary disabled:opacity-50"
+            >
+              <option value="">❓ Non analizzato</option>
+              <option value="positive">😊 Positivo</option>
+              <option value="negative">😞 Negativo</option>
+              <option value="neutral">😐 Neutrale</option>
+            </select>
+            {post.sentimentData?.status === "manual" && (
+              <span className="shrink-0 text-[9px] text-muted-foreground">manuale</span>
+            )}
           </div>
 
           <div className="flex items-center gap-1.5">

@@ -115,7 +115,29 @@ export const Route = createFileRoute("/api/public/hooks/update-bluserena-post-me
               if (canale.id !== channelId) continue;
               const account = (canale.accounts || []).find((a: any) => a.url === postUrl);
               if (account) {
-                if (sentiment !== undefined) account.sentiment = sentiment;
+                if (sentiment !== undefined) {
+                  account.sentiment = sentiment;
+                  // Questo endpoint è la SOLA via da cui passa una modifica
+                  // fatta a mano: gli script scrivono direttamente sullo
+                  // store. Marcare il record come "manual" serve a
+                  // analyze-bluserena-sentiment-topic.mjs, che salta i post
+                  // così marcati invece di riscriverli alla run notturna.
+                  //
+                  // Rimettere "non analizzato" (sentiment null) cancella il
+                  // record: è il modo per dire "lascia decidere di nuovo alla
+                  // pipeline", altrimenti la scelta manuale resterebbe
+                  // definitiva senza modo di tornare indietro.
+                  if (sentiment === null) {
+                    delete account.sentimentData;
+                  } else {
+                    account.sentimentData = {
+                      status: "manual",
+                      sentiment,
+                      sources: ["manuale"],
+                      updatedAt: new Date().toISOString(),
+                    };
+                  }
+                }
                 if (topics !== undefined) account.topics = topics;
                 if (location !== undefined) account.location = location;
                 found = true;
