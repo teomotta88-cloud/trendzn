@@ -1,0 +1,42 @@
+name: Probe TikTok Profile Videos (diagnostico)
+
+# Sonda usa-e-getta: verifica se la pagina profilo di un autore TikTok espone
+# la lista dei suoi video a Playwright. Vedi
+# scripts/probe-tiktok-profile-videos.mjs per il perché.
+#
+# In breve: le liste hashtag di TikTok sono parziali e hanno saltato un post
+# con #bluserena per 13 giorni di campionamento ogni 3 ore. Enumerare i
+# profili dei 993 autori già noti sarebbe deterministico e gratuito, ma solo
+# se il profilo espone davvero i video: questa sonda lo accerta prima di
+# costruirci sopra.
+#
+# Solo workflow_dispatch: non è pensato per girare su schedule.
+
+on:
+  workflow_dispatch:
+    inputs:
+      handles:
+        description: "Handle da ispezionare, separati da virgola (vuoto = il caso reale)"
+        required: false
+        default: ""
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Ispeziona i profili
+        run: node scripts/probe-tiktok-profile-videos.mjs "${{ inputs.handles }}"
