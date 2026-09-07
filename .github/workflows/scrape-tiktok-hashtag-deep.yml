@@ -1,0 +1,79 @@
+name: Scraping profondo hashtag TikTok
+
+# Scorre le pagine hashtag TikTok fino in fondo, salva i post mai visti dentro
+# la finestra lug-ago 25-26, e ripete il giro 15 minuti dopo il TERMINE del
+# precedente finché continua a trovarne — campioni distanziati pescano post
+# diversi, perché la lista di TikTok non è deterministica. Ci si ferma alla
+# prima passata senza post nuovi. Vedi scripts/scrape-tiktok-hashtag-deep.mjs.
+#
+# Fa anche da controllo di salute: se nessuna pagina hashtag restituisce video
+# lo script esce con errore, invece di lasciar passare "nessun post nuovo" —
+# che è l'esito normale quando invece funziona.
+#
+# Gli hashtag sono i 14 canali configurati nello store, non una lista a parte.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_passate:
+        description: "Tetto di passate (ci si ferma prima, alla prima senza post nuovi)"
+        required: false
+        default: "18"
+      intervallo_min:
+        description: "Minuti tra il termine di una passata e l'inizio della successiva"
+        required: false
+        default: "15"
+      dry_run:
+        description: "Fa il lavoro ma non scrive"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bluserena-scoperta
+  cancel-in-progress: false
+
+jobs:
+  scraping:
+    runs-on: ubuntu-latest
+    name: Scorre le 14 pagine hashtag
+    timeout-minutes: 350
+    outputs:
+      aggiunti: ${{ steps.scraping.outputs.aggiunti }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Scorri le pagine hashtag
+        id: scraping
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_PASSATE: ${{ inputs.max_passate || '18' }}
+          INTERVALLO_MIN: ${{ inputs.intervallo_min || '15' }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          set -o pipefail
+          node scripts/scrape-tiktok-hashtag-deep.mjs 2>&1 | tee scraping.log
+          N=$(grep -oP 'Post aggiunti allo store: \K\d+' scraping.log | tail -1 || echo 0)
+          echo "aggiunti=${N:-0}" >> "$GITHUB_OUTPUT"
+          echo "Post aggiunti: ${N:-0}"
+
+  analizza:
+    needs: scraping
+    if: needs.scraping.outputs.aggiunti != '0' && needs.scraping.outputs.aggiunti != ''
+    uses: ./.github/workflows/analizza-post-bluserena.yml
+    secrets: inherit

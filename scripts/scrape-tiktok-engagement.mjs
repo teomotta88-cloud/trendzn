@@ -36,7 +36,8 @@
 import { chromium } from "playwright";
 
 import { runEnrichment } from "./lib/bluserena-enrich.mjs";
-import { applyEngagement, readVideoDetail } from "./lib/tiktok-engagement.mjs";
+import { applyEngagement } from "./lib/tiktok-engagement.mjs";
+import { fetchVideoDetail } from "./lib/tiktok-page.mjs";
 
 // 3, non 1: engagementData è lo stesso campo che usava lo script Emplifi, che
 // è arrivato a version 2. Il driver considera "già fatto" un record con status
@@ -44,13 +45,6 @@ import { applyEngagement, readVideoDetail } from "./lib/tiktok-engagement.mjs";
 // Emplifi — inclusi i 120 "not_found" sbagliati della sua ultima run — senza
 // mai riprovarli da questa fonte.
 const VERSION = 3;
-
-// Senza uno User-Agent "da browser vero" TikTok serve la pagina di login al
-// posto del video: verificato in sync-bluserena-hashtags.mjs, dove la caption
-// risultava null su 15/15 post con lo UA headless di default. Stesso UA già
-// usato con successo per la pagina hashtag in scrape-tiktok-hashtag.mjs.
-const REAL_CHROME_UA =
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
 
 const DELAY_MS = Number.parseInt(process.env.DELAY_MS ?? "", 10) || 1200;
 const OVERWRITE_EXISTING = process.env.OVERWRITE_EXISTING === "true";
@@ -73,43 +67,6 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function scrapePost(browser, url) {
-  const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
-  try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-    await page.waitForTimeout(2000);
-
-    const raw = await page
-      .$eval("#__UNIVERSAL_DATA_FOR_REHYDRATION__", (el) => el.textContent)
-      .catch(() => null);
-
-    if (!raw) {
-      // Nessuno script di idratazione: quasi sempre è il login-wall. Titolo e
-      // URL finale lo dicono, e servono a distinguerlo da un guasto vero.
-      const title = await page.title().catch(() => null);
-      const finalUrl = page.url();
-      const isLogin = /log ?in|accedi/i.test(title ?? "") || /\/login/.test(finalUrl);
-      return {
-        status: isLogin ? "login_wall" : "no_data",
-        reason: `titolo: ${String(title).slice(0, 80)}`,
-      };
-    }
-
-    let data;
-    try {
-      data = JSON.parse(raw);
-    } catch {
-      return { status: "no_data", reason: "JSON di idratazione non parsabile" };
-    }
-
-    return readVideoDetail(data);
-  } catch (err) {
-    return { status: "error", reason: String(err?.message ?? err).slice(0, 200) };
-  } finally {
-    await page.close().catch(() => {});
-  }
-}
-
 const browser = await chromium.launch({ headless: true });
 
 try {
@@ -121,7 +78,7 @@ try {
     select: isConfirmedTikTok,
     apply: (account, record) => applyEngagement(account, record, { overwrite: OVERWRITE_EXISTING }),
     processPost: async (account) => {
-      const record = await scrapePost(browser, account.url);
+      const record = await fetchVideoDetail(browser, account.url);
       if (record.status === "ok") {
         console.log(
           `  views=${record.views ?? "-"} likes=${record.likes ?? "-"} ` +

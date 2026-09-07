@@ -1,37 +1,37 @@
-// Sonda diagnostica: la pagina PROFILO di un autore TikTok espone la lista
-// dei suoi video a Playwright?
+// Sonda diagnostica: come si ottiene la lista dei video di un autore TikTok?
 //
-// Perché serve. Il post @maraalbergo/video/7675653655655140640 (19/08/2026)
-// ha #bluserena in caption ma non è mai entrato nello store, pur essendo
-// l'autore già noto con altri 3 post. È sfuggito allo scraping hashtag DIY
-// mentre girava ogni 3 ore, per 13 giorni: le liste hashtag di TikTok sono
-// parziali e non deterministiche (vedi il commento in testa a
-// backfill-tiktok-hashtag.mjs), quindi campionarle più spesso non chiude il
-// buco.
+// PRIMO RUN (07/09/2026), leggendo solo il DOM: fallito, ma non per un
+// login-wall — la pagina caricava correttamente ("Mara Albergo (@maraalbergo)
+// | TikTok"), lo script di idratazione c'era, e __DEFAULT_SCOPE__ conteneva
+// webapp.user-detail (i dati dell'utente) senza nessuna chiave con la lista
+// dei post. Zero link video nel DOM. Conclusione: la griglia NON è nell'HTML,
+// TikTok la carica con una chiamata separata dopo l'idratazione.
 //
-// L'alternativa è deterministica: un profilo elenca TUTTI i video di quel
-// autore. Su 993 autori già noti nello store, enumerarli chiuderebbe il buco
-// per tutti i post di autori che conosciamo — gratis, con la stessa tecnica
-// Playwright già validata in scrape-tiktok-engagement.mjs.
+// Questo secondo giro prova le tre strade rimaste, e dice quale funziona:
 //
-// Ma la fattibilità NON è data per scontata: la pagina video espone i dati
-// in __UNIVERSAL_DATA_FOR_REHYDRATION__, il profilo potrebbe caricare la
-// griglia via API separata e restituire un login-wall. Questa sonda lo
-// verifica sul campo prima di costruirci sopra — stessa disciplina dei
-// probe-tiktok-*.mjs già nel repo.
+//   A. Attendere davvero la griglia (waitForSelector con timeout lungo)
+//      invece di scorrere subito: se è solo lentezza, basta questo.
+//   B. Intercettare la risposta XHR /api/post/item_list/ che la pagina fa da
+//      sé. È la strada più promettente: la firma della richiesta (msToken,
+//      X-Bogus) la calcola TikTok nel suo JS, noi leggiamo solo la risposta
+//      e non dobbiamo riprodurre nulla.
+//   C. Guardare cosa c'è comunque nel DOM dopo gli scroll, come prima, per
+//      confronto.
+//
+// Se nessuna funziona, l'enumerazione dei profili non è praticabile e resta
+// solo lo scraping degli hashtag (che invece è già validato).
 //
 // Uso: node scripts/probe-tiktok-profile-videos.mjs [@handle,...]
-// Default: gli autori del caso reale, con l'ID atteso da ritrovare.
 
 import { chromium } from "playwright";
 
 const REAL_CHROME_UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
 
-// Il primo è il caso che ha motivato tutto: se la sonda funziona, tra i suoi
-// video deve comparire ATTESO, che nello store non c'è.
+// Il caso che ha motivato tutto: se una delle strade funziona, tra i video di
+// @maraalbergo deve comparire questo ID, che nello store non c'è.
 const ATTESO = "7675653655655140640";
-const DEFAULT_HANDLE = ["maraalbergo", "manuenatyboutique", "vaniagossip81"];
+const DEFAULT_HANDLE = ["maraalbergo"];
 
 const handles = (process.argv[2] || "")
   .split(",")
@@ -43,51 +43,72 @@ const browser = await chromium.launch({ headless: true });
 
 try {
   for (const handle of daProvare) {
-    const url = `https://www.tiktok.com/@${handle}`;
     console.log(`\n========== @${handle}`);
     const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
-    try {
-      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-      // La griglia si popola dopo l'idratazione; qualche scroll per vedere
-      // se arrivano altri video oltre al primo blocco.
-      await page.waitForTimeout(3000);
-      for (let i = 0; i < 3; i++) {
-        await page.evaluate(() => window.scrollBy(0, document.body.scrollHeight));
-        await page.waitForTimeout(1500);
-      }
 
-      const esito = await page.evaluate(() => {
-        const link = [...document.querySelectorAll('a[href*="/video/"]')]
-          .map((a) => a.getAttribute("href"))
-          .filter(Boolean);
-        const raw = document.querySelector("#__UNIVERSAL_DATA_FOR_REHYDRATION__")?.textContent;
-        let scope = [];
-        try {
-          scope = Object.keys(JSON.parse(raw ?? "{}")?.__DEFAULT_SCOPE__ ?? {});
-        } catch {
-          /* JSON assente o illeggibile: lo dice già `idratazione` qui sotto */
+    // B. Tutto ciò che assomiglia alla lista dei post dell'utente, raccolto
+    // mentre la pagina fa le sue chiamate.
+    const daXhr = new Set();
+    const chiamate = [];
+    page.on("response", async (res) => {
+      const u = res.url();
+      if (!/\/api\/(post\/item_list|user\/detail)/.test(u)) return;
+      chiamate.push(`${res.status()} ${u.slice(0, 110)}`);
+      try {
+        const body = await res.json();
+        for (const item of body?.itemList ?? []) {
+          if (item?.id) daXhr.add(String(item.id));
         }
-        return {
-          titolo: document.title,
-          idratazione: Boolean(raw),
-          scope,
-          link: [...new Set(link)],
-        };
+      } catch {
+        /* risposta non JSON o già consumata: la registra comunque `chiamate` */
+      }
+    });
+
+    try {
+      await page.goto(`https://www.tiktok.com/@${handle}`, {
+        waitUntil: "domcontentloaded",
+        timeout: 30000,
       });
 
-      const id = esito.link.map((l) => l.match(/\/video\/(\d+)/)?.[1]).filter(Boolean);
-      console.log(`  titolo pagina : ${esito.titolo}`);
-      console.log(`  script idratazione presente: ${esito.idratazione}`);
-      console.log(`  chiavi __DEFAULT_SCOPE__   : ${esito.scope.join(", ") || "(nessuna)"}`);
-      console.log(`  video elencati nel DOM     : ${id.length}`);
-      if (id.length > 0) console.log(`  primi id: ${id.slice(0, 8).join(", ")}`);
+      // A. Aspetta la griglia invece di scorrere subito.
+      const grigliaComparsa = await page
+        .waitForSelector('a[href*="/video/"]', { timeout: 25000 })
+        .then(() => true)
+        .catch(() => false);
+      console.log(`  A) griglia comparsa entro 25s : ${grigliaComparsa ? "SÌ" : "NO"}`);
+
+      for (let i = 0; i < 4; i++) {
+        await page.mouse.wheel(0, 3000);
+        await page.waitForTimeout(2000);
+      }
+
+      // C. Cosa c'è nel DOM adesso.
+      const daDom = await page
+        .$$eval('a[href*="/video/"]', (link) =>
+          link.map((a) => a.getAttribute("href")?.match(/\/video\/(\d+)/)?.[1]).filter(Boolean),
+        )
+        .catch(() => []);
+
+      const titolo = await page.title().catch(() => null);
+      console.log(`  titolo pagina                 : ${titolo}`);
+      console.log(`  B) chiamate lista intercettate: ${chiamate.length}`);
+      for (const c of chiamate.slice(0, 4)) console.log(`     ${c}`);
+      console.log(`  B) id video dalle XHR         : ${daXhr.size}`);
+      console.log(`  C) id video dal DOM           : ${new Set(daDom).size}`);
+
+      const tutti = new Set([...daXhr, ...daDom]);
+      console.log(`  --> id totali raccolti        : ${tutti.size}`);
+      if (tutti.size > 0) console.log(`      primi: ${[...tutti].slice(0, 8).join(", ")}`);
       if (handle === "maraalbergo") {
         console.log(
-          `  >>> ${ATTESO} (il post mancante) presente: ${id.includes(ATTESO) ? "SÌ" : "NO"}`,
+          `  >>> ${ATTESO} (il post mancante) presente: ${tutti.has(ATTESO) ? "SÌ" : "NO"}`,
         );
       }
-      if (id.length === 0) {
-        console.log("  ⚠️  Nessun video nel DOM: probabile login-wall o griglia caricata via API.");
+      if (tutti.size === 0) {
+        console.log(
+          "  ⚠️  Nessuna strada ha prodotto video: l'enumerazione dei profili non è praticabile " +
+            "così, resta lo scraping degli hashtag.",
+        );
       }
     } catch (err) {
       console.error(`  ERRORE: ${String(err?.message ?? err).slice(0, 200)}`);

@@ -138,3 +138,73 @@ export async function commitField({ field, updates, message, apply }) {
 
   throw new Error(`Troppi conflitti di scrittura su ${STORE_PATH}.`);
 }
+
+// Aggiunge post MAI VISTI ai canali indicati. commitField sa solo aggiornare
+// post già presenti (cerca per URL e scrive un campo): la scoperta di post
+// nuovi — enumerazione dei profili autore, scraping profondo degli hashtag —
+// ha bisogno di inserirli, e passa di qui.
+//
+// Stesso pattern retry-su-409 di commitField, per la stessa ragione: sullo
+// store scrivono una decina di workflow e una PUT su una copia stantia
+// riporterebbe indietro il file cancellando il lavoro altrui. Lo store fresco
+// si rilegge dentro il ciclo, subito prima di scrivere.
+//
+// `byChannel` è una Map nomeCanale -> array di post. Un post già presente nel
+// canale viene saltato: il confronto è sull'URL normalizzato, perché lo stesso
+// video arriva con query string diverse (?_r=1&_t=... dagli share link) e un
+// confronto letterale creerebbe duplicati.
+export async function commitNewPosts({ byChannel, message, normalizeUrl }) {
+  const totale = [...byChannel.values()].reduce((n, posts) => n + posts.length, 0);
+  if (!totale) return { aggiunti: 0, saltati: 0 };
+
+  const norm = normalizeUrl ?? ((u) => u);
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const { store, sha } = await readStore();
+
+    let aggiunti = 0;
+    let saltati = 0;
+
+    for (const [nomeCanale, posts] of byChannel) {
+      const canale = (store.canali || []).find(
+        (c) => (c.name || "").toLowerCase() === nomeCanale.toLowerCase(),
+      );
+      if (!canale) {
+        console.error(`  ⚠️  Canale "${nomeCanale}" non trovato: ${posts.length} post saltati.`);
+        saltati += posts.length;
+        continue;
+      }
+      canale.accounts = canale.accounts || [];
+      const presenti = new Set(canale.accounts.map((a) => norm(a.url || "")));
+      for (const post of posts) {
+        if (presenti.has(norm(post.url))) {
+          saltati++;
+          continue;
+        }
+        canale.accounts.push(post);
+        presenti.add(norm(post.url));
+        aggiunti++;
+      }
+    }
+
+    if (!aggiunti) return { aggiunti: 0, saltati };
+
+    const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
+    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
+      method: "PUT",
+      headers: { ...ghHeaders(), "Content-Type": "application/json" },
+      body: JSON.stringify({ message, content, sha, branch: targetBranch() }),
+    });
+
+    if (res.ok) return { aggiunti, saltati };
+
+    if ((res.status === 409 || res.status === 422) && attempt < MAX_ATTEMPTS) {
+      console.log(`  ↻ Conflitto di scrittura (${attempt}/${MAX_ATTEMPTS}), rileggo e riprovo...`);
+      continue;
+    }
+
+    throw new Error(`Scrittura ${STORE_PATH} fallita: ${res.status} ${await res.text()}`);
+  }
+
+  throw new Error(`Troppi conflitti di scrittura su ${STORE_PATH}.`);
+}
