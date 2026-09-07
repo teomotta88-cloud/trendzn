@@ -1,7 +1,40 @@
 name: Scrape Engagement Data via Emplifi
 
+# Recupera views/like/commenti/condivisioni per i post Bluserena BSConfirmed
+# della finestra Jul-Ago 2025/2026 via Emplifi Listening. Vedi
+# scripts/scrape-engagement-batch.mjs.
+#
+# Ogni post tentato riceve un record versionato (engagementData): un post già
+# tentato non viene rifatto, quindi ogni run costa solo per i post nuovi o
+# appena passati a BSConfirmed dall'ultima volta. Lo schedule settimanale
+# gira il lunedì all'1 UTC, un'ora dopo "Bulk Verify Bluserena Posts"
+# (00:00 UTC), che è il momento in cui i post cambiano status in blocco.
+#
+# Lo script scrive direttamente su GitHub via API (stesso pattern degli
+# altri script Bluserena): niente step "git diff" dopo, il checkout locale
+# di questo job non viene mai toccato.
+
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (logga cosa scriverebbe, non commit)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      reprocess_not_found:
+        description: "Riprova anche i post non trovati su Emplifi nell'ultima run"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+  schedule:
+    - cron: "0 1 * * 1"
 
 permissions:
   contents: write
@@ -9,46 +42,20 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    name: Scrape engagement data for Jul-Aug posts
+    name: Scrape engagement data for BSConfirmed Jul-Ago posts
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install dependencies
-        run: npm install --include=dev
-
-      - name: Scrape engagement data via Emplifi
+      - name: Recupera KPI engagement via Emplifi
         env:
           EMPLIFI_API_SECRET: ${{ secrets.EMPLIFI_API_SECRET }}
           EMPLIFI_API_TOKEN: ${{ secrets.EMPLIFI_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          REPROCESS_NOT_FOUND: ${{ github.event.inputs.reprocess_not_found || 'false' }}
         run: node scripts/scrape-engagement-batch.mjs
-
-      - name: Check for changes
-        id: changes
-        run: |
-          if git diff --quiet; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Show summary
-        run: |
-          echo "## Engagement Data Scrape Summary"
-          echo ""
-          echo "✅ Engagement data updated for Jul-Aug 2025 and Jul-Aug 2026 posts via Emplifi"
-          echo ""
-          echo "**Changes:** $(git diff --stat | tail -1)"
-        if: steps.changes.outputs.has_changes == 'true'
-
-      - name: No changes
-        run: |
-          echo "ℹ️ No changes made - all engagement data already up to date"
-        if: steps.changes.outputs.has_changes == 'false'
