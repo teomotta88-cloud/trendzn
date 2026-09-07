@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { PlatformIcon, SocialEmbed } from "@/components/SocialEmbed";
 import { verifyBluserenaPost, type VerificationStatus, type Sentiment } from "@/lib/trends";
+import { GENERIC_RESORT, RESORT_NAMES, resolveResort } from "@/lib/bluserenaResorts";
 import {
   Search,
   Filter,
@@ -48,6 +49,33 @@ function dedupeByContent(list: Post[]): Post[] {
 type SentimentFilter = "all" | "positive" | "negative" | "neutral" | "unanalyzed";
 type VerificationFilter = "all" | "confirmed" | "unconfirmed";
 type DateFilter = "all" | "2025" | "2026" | "2025-2026";
+// "2025-07", "2026-08"... più "all": i mesi disponibili si ricavano dai dati,
+// non da una lista fissa, così restano allineati alla finestra monitorata.
+type MonthFilter = string;
+type ResortFilter = string;
+
+const MESI_IT = [
+  "Gennaio",
+  "Febbraio",
+  "Marzo",
+  "Aprile",
+  "Maggio",
+  "Giugno",
+  "Luglio",
+  "Agosto",
+  "Settembre",
+  "Ottobre",
+  "Novembre",
+  "Dicembre",
+];
+
+const monthKey = (date: string | null | undefined) => (date || "").slice(0, 7);
+
+const monthLabel = (key: string) => {
+  const [year, month] = key.split("-");
+  const nome = MESI_IT[Number(month) - 1];
+  return nome ? `${nome} ${year}` : key;
+};
 
 interface Post extends AccountRef {
   canaleName: string;
@@ -71,11 +99,16 @@ export function BluserenaFeedAdvanced({
 
   const [search, setSearch] = useState("");
   const [sentimentFilter, setSentimentFilter] = useState<SentimentFilter>("all");
-  const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("all");
+  // Il lavoro su questa pagina si fa sui post confermati: gli altri sono
+  // omonimie da hashtag. Il filtro resta comunque a portata di click.
+  const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("confirmed");
+  const [monthFilter, setMonthFilter] = useState<MonthFilter>("all");
+  const [resortFilter, setResortFilter] = useState<ResortFilter>("all");
   const [dateFilter, setDateFilter] = useState<DateFilter>("all");
   const [showFilters, setShowFilters] = useState(false);
   const [showAIInsights, setShowAIInsights] = useState(false);
   const [updatingUrl, setUpdatingUrl] = useState<string | null>(null);
+  const [updatingResortUrl, setUpdatingResortUrl] = useState<string | null>(null);
 
   // Carica JSON runtime. Il polling ogni 30s aggiorna i post in background:
   // setLoading(true) va chiamato SOLO al primo giro, altrimenti ogni refresh
@@ -206,6 +239,65 @@ export function BluserenaFeedAdvanced({
     }
   };
 
+  // Assegna a mano il resort di un post: scrive `location`, che è la fonte
+  // più affidabile per resolveResort e quindi vince su canale e testo. Stessa
+  // logica del toggle di verifica, copie comprese: l'endpoint aggiorna una
+  // riga per volta e le copie non hanno una card propria da cui sistemarle.
+  const updatePostResort = async (post: Post, resort: string) => {
+    setUpdatingResortUrl(post.url);
+    const key = contentKey(post);
+    const copies = posts.filter((p) => contentKey(p) === key);
+    // Stringa vuota = "non specificato": azzera il campo e l'attribuzione
+    // torna a essere dedotta dal canale o dal testo.
+    const location = resort || null;
+
+    try {
+      const updated: Post[] = [];
+      let failure: { status: number; text: string } | null = null;
+
+      for (const copy of copies) {
+        const res = await fetch("/api/public/hooks/update-bluserena-post-metadata", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ channelId: copy.canaleId, postUrl: copy.url, location }),
+        });
+
+        if (res.ok) {
+          updated.push(copy);
+        } else {
+          failure = { status: res.status, text: await res.text() };
+          break;
+        }
+      }
+
+      if (updated.length > 0) {
+        setPosts((prev) =>
+          prev.map((p) =>
+            updated.some((u) => u.url === p.url && u.canaleId === p.canaleId)
+              ? { ...p, location }
+              : p,
+          ),
+        );
+      }
+
+      if (failure) {
+        console.error("Errore aggiornamento resort:", failure.status, failure.text);
+        let detail = failure.text;
+        try {
+          detail = JSON.parse(failure.text).error || failure.text;
+        } catch {
+          // risposta non JSON, teniamo il testo grezzo
+        }
+        alert(`Errore durante l'assegnazione del resort (${failure.status}): ${detail}`);
+      }
+    } catch (err) {
+      console.error("Errore aggiornamento resort:", err);
+      alert("Errore di connessione durante l'assegnazione del resort");
+    } finally {
+      setUpdatingResortUrl(null);
+    }
+  };
+
   const isInJulyAugust = (date: string | null | undefined, year: number): boolean => {
     if (!date) return false;
     const d = new Date(date);
@@ -237,52 +329,105 @@ export function BluserenaFeedAdvanced({
     return index;
   }, [posts]);
 
-  const filteredPosts = useMemo(() => {
-    let result = posts;
+  // Un filtro solo, usato sia per la griglia sia per i conteggi delle
+  // tendine. `salta` serve a quelli: il numero accanto a "Agosto 2026" deve
+  // dire quanti post resterebbero SCEGLIENDO quel mese, quindi si applicano
+  // tutti gli altri filtri tranne quello della tendina che si sta popolando.
+  // Senza, con il filtro su "confermati" si leggeva "Agosto 2026 (860)" e poi
+  // se ne vedevano 230.
+  const applicaFiltri = useCallback(
+    (lista: Post[], salta?: "month" | "resort") => {
+      let result = lista;
 
-    if (search) {
-      const q = search.toLowerCase();
-      result = result.filter((p) => (searchIndex.get(p) ?? "").includes(q));
+      if (search) {
+        const q = search.toLowerCase();
+        result = result.filter((p) => (searchIndex.get(p) ?? "").includes(q));
+      }
+
+      if (dateFilter !== "all") {
+        result = result.filter((p) => {
+          if (dateFilter === "2025") return isInJulyAugust(p.date, 2025);
+          if (dateFilter === "2026") return isInJulyAugust(p.date, 2026);
+          if (dateFilter === "2025-2026") {
+            return isInJulyAugust(p.date, 2025) || isInJulyAugust(p.date, 2026);
+          }
+          return true;
+        });
+      }
+
+      if (sentimentFilter !== "all") {
+        result = result.filter((p) => {
+          if (sentimentFilter === "unanalyzed") return !p.sentiment;
+          return p.sentiment === sentimentFilter;
+        });
+      }
+
+      if (verificationFilter !== "all") {
+        result = result.filter((p) => {
+          const status = p.verificationStatus || verifyBluserenaPost(p.caption);
+          return status === verificationFilter;
+        });
+      }
+
+      if (salta !== "month" && monthFilter !== "all") {
+        result = result.filter((p) => monthKey(p.date) === monthFilter);
+      }
+
+      if (salta !== "resort" && resortFilter !== "all") {
+        result = result.filter((p) => resolveResort(p) === resortFilter);
+      }
+
+      // Deduplica per ultima, sul risultato già filtrato: le copie di uno stesso
+      // post condividono caption, data e stato, quindi passano o cadono insieme
+      // nei filtri e quale copia sopravvive non cambia cosa si vede.
+      return dedupeByContent(result);
+    },
+    [
+      searchIndex,
+      search,
+      sentimentFilter,
+      verificationFilter,
+      dateFilter,
+      monthFilter,
+      resortFilter,
+    ],
+  );
+
+  const filteredPosts = useMemo(() => applicaFiltri(posts), [posts, applicaFiltri]);
+
+  // Mesi effettivamente presenti nei dati, dal più recente: una tendina con
+  // dodici mesi di cui dieci vuoti sarebbe solo rumore.
+  const availableMonths = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const p of applicaFiltri(posts, "month")) {
+      const key = monthKey(p.date);
+      if (key) counts.set(key, (counts.get(key) ?? 0) + 1);
     }
+    return [...counts.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+  }, [posts, applicaFiltri]);
 
-    if (dateFilter !== "all") {
-      result = result.filter((p) => {
-        if (dateFilter === "2025") return isInJulyAugust(p.date, 2025);
-        if (dateFilter === "2026") return isInJulyAugust(p.date, 2026);
-        if (dateFilter === "2025-2026") {
-          return isInJulyAugust(p.date, 2025) || isInJulyAugust(p.date, 2026);
-        }
-        return true;
-      });
+  // Tutti i resort della lista canonica, anche quelli a zero post: vedere che
+  // una struttura non ha contenuti nel periodo è a sua volta un'informazione.
+  const resortCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const p of applicaFiltri(posts, "resort")) {
+      const resort = resolveResort(p);
+      counts.set(resort, (counts.get(resort) ?? 0) + 1);
     }
-
-    if (sentimentFilter !== "all") {
-      result = result.filter((p) => {
-        if (sentimentFilter === "unanalyzed") return !p.sentiment;
-        return p.sentiment === sentimentFilter;
-      });
-    }
-
-    if (verificationFilter !== "all") {
-      result = result.filter((p) => {
-        const status = p.verificationStatus || verifyBluserenaPost(p.caption);
-        return status === verificationFilter;
-      });
-    }
-
-    // Deduplica per ultima, sul risultato già filtrato: le copie di uno stesso
-    // post condividono caption, data e stato, quindi passano o cadono insieme
-    // nei filtri e quale copia sopravvive non cambia cosa si vede.
-    return dedupeByContent(result);
-  }, [posts, searchIndex, search, sentimentFilter, verificationFilter, dateFilter]);
+    return counts;
+  }, [posts, applicaFiltri]);
 
   // Denominatore del contatore: anche il totale va contato per contenuto,
   // altrimenti si leggerebbe "1267 / 1478" con 211 post irraggiungibili.
   const uniqueTotal = useMemo(() => new Set(posts.map(contentKey)).size, [posts]);
 
   const stats = useMemo(() => {
-    const posts2025 = posts.filter((p) => isInJulyAugust(p.date, 2025));
-    const posts2026 = posts.filter((p) => isInJulyAugust(p.date, 2026));
+    // Deduplicati anche qui: se una sync ripopola i canali prima della
+    // pulizia dello store, le copie conterebbero due volte in ogni numero
+    // di questa sezione — volumi, medie view, classifiche per resort.
+    const unici = dedupeByContent(posts);
+    const posts2025 = unici.filter((p) => isInJulyAugust(p.date, 2025));
+    const posts2026 = unici.filter((p) => isInJulyAugust(p.date, 2026));
     const isConfirmed = (p: Post) =>
       (p.verificationStatus || verifyBluserenaPost(p.caption)) === "confirmed";
 
@@ -450,6 +595,52 @@ export function BluserenaFeedAdvanced({
               </div>
             </div>
 
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="filtro-mese"
+                  className="text-xs font-medium text-muted-foreground mb-2 block"
+                >
+                  Mese di pubblicazione
+                </label>
+                <select
+                  id="filtro-mese"
+                  value={monthFilter}
+                  onChange={(e) => setMonthFilter(e.target.value)}
+                  className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+                >
+                  <option value="all">Tutti i mesi</option>
+                  {availableMonths.map(([key, count]) => (
+                    <option key={key} value={key}>
+                      {monthLabel(key)} ({count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="filtro-resort"
+                  className="text-xs font-medium text-muted-foreground mb-2 block"
+                >
+                  Resort
+                </label>
+                <select
+                  id="filtro-resort"
+                  value={resortFilter}
+                  onChange={(e) => setResortFilter(e.target.value)}
+                  className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+                >
+                  <option value="all">Tutti i resort</option>
+                  {[...RESORT_NAMES, GENERIC_RESORT].map((resort) => (
+                    <option key={resort} value={resort}>
+                      {resort} ({resortCounts.get(resort) ?? 0})
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
             <div>
               <label className="text-xs font-medium text-muted-foreground mb-2 block">
                 Sentiment
@@ -556,7 +747,9 @@ export function BluserenaFeedAdvanced({
               post={post}
               search={search}
               updating={updatingUrl === post.url}
+              updatingResort={updatingResortUrl === post.url}
               onToggleVerification={() => toggleVerificationStatus(post)}
+              onChangeResort={(resort) => updatePostResort(post, resort)}
             />
           ))
         )}
@@ -602,6 +795,13 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
   // denominatore tutti i post, compresi quelli scartati).
   const total2025 = confirmedPosts2025.length;
   const total2026 = confirmedPosts2026.length;
+  // Le sezioni per resort, per utente e i KPI guardano tutto il periodo
+  // monitorato insieme: separare 2025 e 2026 lì dentro spezzerebbe classifiche
+  // già corte (metà dei resort sta sotto i dieci post).
+  const confermati = useMemo(
+    () => [...confirmedPosts2025, ...confirmedPosts2026],
+    [confirmedPosts2025, confirmedPosts2026],
+  );
   const topTopics2026 = getTopTopics(confirmedPosts2026);
   const sentiment2026 = getSentimentBreakdown(confirmedPosts2026);
   const sentiment2025 = getSentimentBreakdown(confirmedPosts2025);
@@ -698,6 +898,12 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
         </div>
       </div>
 
+      <KpiTotali posts={confermati} />
+
+      <ResortBreakdown posts={confermati} />
+
+      <UtentiBreakdown posts={confermati} />
+
       {/* Key Insights */}
       <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-3 space-y-1">
         <p>
@@ -712,6 +918,311 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
   );
 }
 
+// --------------------------------------------------------------- AI: helper
+
+const nf = new Intl.NumberFormat("it-IT");
+
+const somma = (posts: Post[], campo: "views" | "likes" | "comments" | "shares") =>
+  posts.reduce((tot, p) => tot + (p[campo] ?? 0), 0);
+
+// I post con metriche sono meno di quelli totali: TikTok le espone solo per i
+// video passati dal backfill Apify, gli altri hanno i campi a null. Contarli
+// serve a dire su quanti post poggia un totale, invece di far credere che sia
+// calcolato su tutti.
+const conMetriche = (posts: Post[]) => posts.filter((p) => p.views != null).length;
+
+const contaSentiment = (posts: Post[]) => ({
+  positive: posts.filter((p) => p.sentiment === "positive").length,
+  neutral: posts.filter((p) => p.sentiment === "neutral").length,
+  negative: posts.filter((p) => p.sentiment === "negative").length,
+});
+
+// Barra del sentiment: tre segmenti proporzionali con 2px di stacco fra loro,
+// accompagnati SEMPRE dai numeri — il colore da solo non è un'informazione
+// accessibile, e con pochi post i segmenti diventano invisibili.
+function SentimentBar({ posts }: { posts: Post[] }) {
+  const { positive, neutral, negative } = contaSentiment(posts);
+  const analizzati = positive + neutral + negative;
+
+  if (analizzati === 0) {
+    return <span className="text-[10px] text-muted-foreground">non analizzati</span>;
+  }
+
+  const pct = (n: number) => `${(n / analizzati) * 100}%`;
+
+  return (
+    <div className="space-y-1">
+      <div
+        className="flex h-1.5 w-full gap-[2px] overflow-hidden rounded-full bg-muted"
+        title={`${positive} positivi, ${neutral} neutrali, ${negative} negativi`}
+      >
+        {positive > 0 && (
+          <div
+            className="rounded-full bg-green-600 dark:bg-green-500"
+            style={{ width: pct(positive) }}
+          />
+        )}
+        {neutral > 0 && (
+          <div
+            className="rounded-full bg-slate-400 dark:bg-slate-500"
+            style={{ width: pct(neutral) }}
+          />
+        )}
+        {negative > 0 && (
+          <div
+            className="rounded-full bg-red-600 dark:bg-red-500"
+            style={{ width: pct(negative) }}
+          />
+        )}
+      </div>
+      <div className="flex gap-2 text-[9px] text-muted-foreground">
+        <span className="text-green-700 dark:text-green-400">{positive} pos</span>
+        <span>{neutral} neu</span>
+        <span className="text-red-700 dark:text-red-400">{negative} neg</span>
+      </div>
+    </div>
+  );
+}
+
+// ------------------------------------------------------------ AI: KPI totali
+
+function KpiTotali({ posts }: { posts: Post[] }) {
+  const conDati = conMetriche(posts);
+  const views = somma(posts, "views");
+  const likes = somma(posts, "likes");
+  const comments = somma(posts, "comments");
+  const shares = somma(posts, "shares");
+  // Engagement rate nel senso corrente del termine: interazioni sulle
+  // visualizzazioni. Senza views non è calcolabile e non va inventato.
+  const engagementRate = views > 0 ? ((likes + comments + shares) / views) * 100 : null;
+
+  const tiles = [
+    { label: "Visualizzazioni", value: views },
+    { label: "Like", value: likes },
+    { label: "Commenti", value: comments },
+    { label: "Condivisioni", value: shares },
+  ];
+
+  return (
+    <div className="space-y-2">
+      <div className="text-xs font-medium text-muted-foreground">
+        KPI complessivi — {posts.length} post BSConfirmed
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {tiles.map((t) => (
+          <div key={t.label} className="rounded-lg border border-border p-3">
+            <div className="text-[10px] uppercase tracking-wide text-muted-foreground">
+              {t.label}
+            </div>
+            <div className="text-xl font-semibold">{nf.format(t.value)}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-[10px] text-muted-foreground space-y-0.5">
+        <p>
+          Totali calcolati sui {conDati} post che hanno metriche ({posts.length - conDati} non le
+          espongono: il backfill delle metriche non li ha ancora coperti).
+          {engagementRate !== null && (
+            <span> Engagement rate: {engagementRate.toFixed(2)}% delle visualizzazioni.</span>
+          )}
+        </p>
+        <p>
+          La <strong>reach</strong> non compare: TikTok non la espone pubblicamente, la danno solo
+          gli analytics del proprietario dell&apos;account. Le visualizzazioni sono l&apos;unico
+          dato di diffusione disponibile per contenuti di terzi.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ------------------------------------------------------------- AI: per resort
+
+function ResortBreakdown({ posts }: { posts: Post[] }) {
+  const righe = useMemo(() => {
+    const gruppi = new Map<string, Post[]>();
+    for (const p of posts) {
+      const resort = resolveResort(p);
+      const lista = gruppi.get(resort);
+      if (lista) lista.push(p);
+      else gruppi.set(resort, [p]);
+    }
+    return [...gruppi.entries()]
+      .map(([resort, lista]) => ({
+        resort,
+        posts: lista,
+        views: somma(lista, "views"),
+        likes: somma(lista, "likes"),
+        comments: somma(lista, "comments"),
+        shares: somma(lista, "shares"),
+      }))
+      .sort((a, b) => b.posts.length - a.posts.length);
+  }, [posts]);
+
+  const maxVolume = Math.max(1, ...righe.map((r) => r.posts.length));
+
+  return (
+    <div className="space-y-2">
+      <div className="text-xs font-medium text-muted-foreground">Per resort</div>
+
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[560px] text-xs">
+          <thead>
+            <tr className="text-[10px] uppercase tracking-wide text-muted-foreground">
+              <th className="py-1 text-left font-medium">Resort</th>
+              <th className="py-1 text-left font-medium">Volume</th>
+              <th className="py-1 text-left font-medium">Sentiment</th>
+              <th className="py-1 text-right font-medium">Visual.</th>
+              <th className="py-1 text-right font-medium">Like</th>
+              <th className="py-1 text-right font-medium">Comm.</th>
+              <th className="py-1 text-right font-medium">Cond.</th>
+            </tr>
+          </thead>
+          <tbody>
+            {righe.map((r) => (
+              <tr key={r.resort} className="border-t border-border/60">
+                <td className="py-2 pr-3">
+                  <span className={r.resort === GENERIC_RESORT ? "text-muted-foreground" : ""}>
+                    {r.resort}
+                  </span>
+                </td>
+                <td className="py-2 pr-3">
+                  <div className="flex items-center gap-2">
+                    <div className="h-1.5 w-20 overflow-hidden rounded-full bg-muted">
+                      <div
+                        className="h-full rounded-full bg-primary"
+                        style={{ width: `${(r.posts.length / maxVolume) * 100}%` }}
+                      />
+                    </div>
+                    <span className="tabular-nums">{r.posts.length}</span>
+                  </div>
+                </td>
+                <td className="w-32 py-2 pr-3">
+                  <SentimentBar posts={r.posts} />
+                </td>
+                <td className="py-2 text-right tabular-nums">{nf.format(r.views)}</td>
+                <td className="py-2 text-right tabular-nums">{nf.format(r.likes)}</td>
+                <td className="py-2 text-right tabular-nums">{nf.format(r.comments)}</td>
+                <td className="py-2 text-right tabular-nums">{nf.format(r.shares)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p className="text-[10px] text-muted-foreground">
+        Il resort viene dal geotag o dalla scelta manuale, altrimenti dal canale hashtag di
+        provenienza, altrimenti dal testo del post. Quello che non nomina nessuna struttura resta in
+        &laquo;{GENERIC_RESORT}&raquo;: è contenuto di brand, non un errore.
+      </p>
+    </div>
+  );
+}
+
+// ------------------------------------------------------------- AI: per utente
+
+type OrdineUtenti = "volume" | "views";
+
+function UtentiBreakdown({ posts }: { posts: Post[] }) {
+  const [ordine, setOrdine] = useState<OrdineUtenti>("volume");
+  const [limite, setLimite] = useState(10);
+  const [soloProlifici, setSoloProlifici] = useState(false);
+
+  const righe = useMemo(() => {
+    const gruppi = new Map<string, Post[]>();
+    for (const p of posts) {
+      const autore = p.handle || "(senza autore)";
+      const lista = gruppi.get(autore);
+      if (lista) lista.push(p);
+      else gruppi.set(autore, [p]);
+    }
+    return [...gruppi.entries()]
+      .map(([autore, lista]) => ({ autore, posts: lista, views: somma(lista, "views") }))
+      .sort((a, b) => (ordine === "volume" ? b.posts.length - a.posts.length : b.views - a.views));
+  }, [posts, ordine]);
+
+  // "Utenti con più contenuti" è una soglia, non un ordinamento: chi ha
+  // pubblicato una volta sola è la coda lunga (la maggioranza degli autori) e
+  // di solito non è quello che si sta cercando.
+  const filtrate = soloProlifici ? righe.filter((r) => r.posts.length > 1) : righe;
+  const visibili = filtrate.slice(0, limite);
+
+  return (
+    <div className="space-y-2">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="text-xs font-medium text-muted-foreground">
+          Per utente — {righe.length} autori
+        </div>
+        <div className="flex flex-wrap items-center gap-2 text-[10px]">
+          <label className="flex items-center gap-1">
+            <span className="text-muted-foreground">Ordina per</span>
+            <select
+              value={ordine}
+              onChange={(e) => setOrdine(e.target.value as OrdineUtenti)}
+              className="rounded border border-border bg-background px-1 py-0.5 outline-none focus:border-primary"
+            >
+              <option value="volume">contenuti</option>
+              <option value="views">visualizzazioni</option>
+            </select>
+          </label>
+          <label className="flex items-center gap-1 text-muted-foreground">
+            <input
+              type="checkbox"
+              checked={soloProlifici}
+              onChange={(e) => setSoloProlifici(e.target.checked)}
+            />
+            solo con più di un contenuto
+          </label>
+          <label className="flex items-center gap-1">
+            <span className="text-muted-foreground">Mostra</span>
+            <select
+              value={limite}
+              onChange={(e) => setLimite(Number(e.target.value))}
+              className="rounded border border-border bg-background px-1 py-0.5 outline-none focus:border-primary"
+            >
+              <option value={10}>10</option>
+              <option value={25}>25</option>
+              <option value={9999}>tutti</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[460px] text-xs">
+          <thead>
+            <tr className="text-[10px] uppercase tracking-wide text-muted-foreground">
+              <th className="py-1 text-left font-medium">Autore</th>
+              <th className="py-1 text-left font-medium">Contenuti</th>
+              <th className="py-1 text-left font-medium">Sentiment</th>
+              <th className="py-1 text-right font-medium">Visual.</th>
+            </tr>
+          </thead>
+          <tbody>
+            {visibili.map((r) => (
+              <tr key={r.autore} className="border-t border-border/60">
+                <td className="py-2 pr-3">@{r.autore}</td>
+                <td className="py-2 pr-3 tabular-nums">{r.posts.length}</td>
+                <td className="w-32 py-2 pr-3">
+                  <SentimentBar posts={r.posts} />
+                </td>
+                <td className="py-2 text-right tabular-nums">{nf.format(r.views)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {filtrate.length > visibili.length && (
+        <p className="text-[10px] text-muted-foreground">
+          Mostrati {visibili.length} autori su {filtrate.length}.
+        </p>
+      )}
+    </div>
+  );
+}
 // Ritaglio di testo attorno alla prima occorrenza cercata: le trascrizioni
 // arrivano anche a diverse migliaia di caratteri, mostrarle intere nella card
 // non direbbe comunque dov'è il match.
@@ -727,15 +1238,20 @@ function PostCard({
   post,
   search,
   updating,
+  updatingResort,
   onToggleVerification,
+  onChangeResort,
 }: {
   post: Post;
   search: string;
   updating: boolean;
+  updatingResort: boolean;
   onToggleVerification: () => void;
+  onChangeResort: (resort: string) => void;
 }) {
   const status = post.verificationStatus || verifyBluserenaPost(post.caption);
   const sentiment = post.sentiment;
+  const resort = resolveResort(post);
 
   // Quando un post è in lista per una parola che sta solo nell'audio o nel
   // testo a video, la card non mostrerebbe da nessuna parte il perché e il
@@ -851,12 +1367,27 @@ function PostCard({
             </div>
           )}
 
-          {post.location && (
-            <div className="flex items-center gap-1.5">
-              <MapPin className="size-3 text-muted-foreground" />
-              <span className="text-[10px] text-muted-foreground">{post.location}</span>
-            </div>
-          )}
+          {/* Resort: la tendina mostra l'attribuzione corrente da qualunque
+              fonte arrivi (geotag, canale, testo) e permette di correggerla a
+              mano. Il valore selezionato è quello risolto, così si vede subito
+              in quale gruppo il post finisce nelle statistiche. */}
+          <div className="flex items-start gap-1.5">
+            <MapPin className="size-3 text-muted-foreground mt-1" />
+            <select
+              value={resort === GENERIC_RESORT ? "" : resort}
+              disabled={updatingResort}
+              onChange={(e) => onChangeResort(e.target.value)}
+              aria-label="Resort del post"
+              className="w-full rounded border border-border bg-background px-1 py-0.5 text-[10px] text-muted-foreground outline-none focus:border-primary disabled:opacity-50"
+            >
+              <option value="">{GENERIC_RESORT}</option>
+              {RESORT_NAMES.map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
 
           {post.ocrData?.textOnScreen && (
             <div className="flex items-center gap-1.5">
