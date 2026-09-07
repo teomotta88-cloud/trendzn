@@ -1024,9 +1024,32 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
     () => [...confirmedPosts2025, ...confirmedPosts2026],
     [confirmedPosts2025, confirmedPosts2026],
   );
-  const topTopics2026 = getTopTopics(confirmedPosts2026);
   const sentiment2026 = getSentimentBreakdown(confirmedPosts2026);
   const sentiment2025 = getSentimentBreakdown(confirmedPosts2025);
+
+  // Questo pannello nasce per il confronto anno su anno, ma il filtro di
+  // periodo può restringere i post a una sola annata: allora il secchio
+  // dell'altro anno è vuoto e ogni delta diventa un paragone con lo zero.
+  // È il motivo per cui, filtrando su Lug-Ago 2025, si leggeva "0 (0%)" sotto
+  // un titolo fisso "Lug-Ago 2026" e un delta di -88pp: i numeri erano quelli
+  // di un anno che non era a schermo.
+  //
+  // Gli anni si deducono dai post invece di farsi passare il filtro attivo:
+  // anche un filtro per resort o per autore può lasciare una sola annata, e
+  // in quel caso il confronto è altrettanto privo di senso.
+  const ha2025 = confirmedPosts2025.length > 0;
+  const ha2026 = confirmedPosts2026.length > 0;
+  const confrontoPossibile = ha2025 && ha2026;
+  const periodo = confrontoPossibile ? "Lug-Ago 25-26" : ha2026 ? "Lug-Ago 2026" : "Lug-Ago 2025";
+
+  // Le card principali seguono ciò che è davvero a schermo, non un anno
+  // cablato: `confermati` è l'insieme filtrato dentro le due finestre.
+  const sentimentMostrato = getSentimentBreakdown(confermati);
+  const topTopics = getTopTopics(confermati);
+  const avgViewsMostrato =
+    confermati.length > 0
+      ? Math.round(confermati.reduce((sum, p) => sum + (p.views || 0), 0) / confermati.length)
+      : 0;
   const avgViews2026 =
     confirmedPosts2026.length > 0
       ? Math.round(
@@ -1045,71 +1068,84 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        {/* Sentiment Breakdown 2026 */}
+        {/* Sentiment dei post a schermo */}
         <div>
-          <div className="text-xs font-medium text-muted-foreground mb-2">
-            Sentiment Lug-Ago 2026
-          </div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">Sentiment {periodo}</div>
           <div className="space-y-1.5 text-xs">
             <div className="flex justify-between items-center">
               <span>😊 Positivi</span>
               <span className="font-semibold text-green-600">
-                {sentiment2026.positive} (
-                {Math.round((sentiment2026.positive / sentiment2026.analyzed) * 100) || 0}%)
+                {sentimentMostrato.positive} (
+                {Math.round((sentimentMostrato.positive / sentimentMostrato.analyzed) * 100) || 0}%)
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>😐 Neutrali</span>
               <span className="font-semibold text-slate-600">
-                {sentiment2026.neutral} (
-                {Math.round((sentiment2026.neutral / sentiment2026.analyzed) * 100) || 0}%)
+                {sentimentMostrato.neutral} (
+                {Math.round((sentimentMostrato.neutral / sentimentMostrato.analyzed) * 100) || 0}%)
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>😞 Negativi</span>
               <span className="font-semibold text-red-600">
-                {sentiment2026.negative} (
-                {Math.round((sentiment2026.negative / sentiment2026.analyzed) * 100) || 0}%)
+                {sentimentMostrato.negative} (
+                {Math.round((sentimentMostrato.negative / sentimentMostrato.analyzed) * 100) || 0}%)
+              </span>
+            </div>
+            <div className="flex justify-between items-center text-muted-foreground">
+              <span>Analizzati</span>
+              <span className="font-semibold">
+                {sentimentMostrato.analyzed}/{confermati.length} (
+                {Math.round((sentimentMostrato.analyzed / confermati.length) * 100) || 0}%)
               </span>
             </div>
           </div>
         </div>
 
-        {/* Confronto Sentiment */}
+        {/* Confronto anno su anno: ha senso solo con entrambe le annate a
+            schermo, altrimenti confronterebbe un anno con un insieme vuoto. */}
         <div>
           <div className="text-xs font-medium text-muted-foreground mb-2">Confronto Sentiment</div>
-          <div className="space-y-1.5 text-xs">
-            <div className="flex justify-between items-center">
-              <span>% Analyzed 2026</span>
-              <span className="font-semibold">
-                {Math.round((sentiment2026.analyzed / total2026) * 100) || 0}%
-              </span>
+          {confrontoPossibile ? (
+            <div className="space-y-1.5 text-xs">
+              <div className="flex justify-between items-center">
+                <span>% Analyzed 2026</span>
+                <span className="font-semibold">
+                  {Math.round((sentiment2026.analyzed / total2026) * 100) || 0}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>% Analyzed 2025</span>
+                <span className="font-semibold">
+                  {Math.round((sentiment2025.analyzed / total2025) * 100) || 0}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>Positivi Delta</span>
+                <span
+                  className={`font-semibold ${
+                    (sentiment2026.positive / sentiment2026.analyzed || 0) >
+                    (sentiment2025.positive / sentiment2025.analyzed || 0)
+                      ? "text-green-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {Math.round(
+                    ((sentiment2026.positive / sentiment2026.analyzed || 0) -
+                      (sentiment2025.positive / sentiment2025.analyzed || 0)) *
+                      100,
+                  )}
+                  pp
+                </span>
+              </div>
             </div>
-            <div className="flex justify-between items-center">
-              <span>% Analyzed 2025</span>
-              <span className="font-semibold">
-                {Math.round((sentiment2025.analyzed / total2025) * 100) || 0}%
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Positivi Delta</span>
-              <span
-                className={`font-semibold ${
-                  (sentiment2026.positive / sentiment2026.analyzed || 0) >
-                  (sentiment2025.positive / sentiment2025.analyzed || 0)
-                    ? "text-green-600"
-                    : "text-red-600"
-                }`}
-              >
-                {Math.round(
-                  ((sentiment2026.positive / sentiment2026.analyzed || 0) -
-                    (sentiment2025.positive / sentiment2025.analyzed || 0)) *
-                    100,
-                )}
-                pp
-              </span>
-            </div>
-          </div>
+          ) : (
+            <p className="text-xs text-muted-foreground">
+              A schermo c'è solo {periodo}: il confronto anno su anno compare selezionando il
+              periodo Lug-Ago 25-26.
+            </p>
+          )}
         </div>
       </div>
 
@@ -1119,13 +1155,13 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
       <SentimentTimeline posts={posts} />
 
       {/* Top Topics */}
-      {topTopics2026.length > 0 && (
+      {topTopics.length > 0 && (
         <div>
           <div className="text-xs font-medium text-muted-foreground mb-2">
-            Topic Top 5 (Lug-Ago 2026)
+            Topic Top 5 ({periodo})
           </div>
           <div className="space-y-1.5">
-            {topTopics2026.map((item, i) => (
+            {topTopics.map((item, i) => (
               <div key={i} className="flex justify-between items-center text-xs">
                 <span className="text-muted-foreground">#{i + 1}</span>
                 <span className="flex-1 mx-2">{item.topic}</span>
@@ -1136,17 +1172,25 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
         </div>
       )}
 
-      {/* Engagement Metrics */}
-      <div className="grid grid-cols-2 gap-3">
-        <div>
-          <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views 2026</div>
-          <div className="text-lg font-semibold">{avgViews2026.toLocaleString()}</div>
+      {/* Engagement Metrics: due colonne solo quando ci sono due anni da
+          confrontare, altrimenti una delle due mostrerebbe zero. */}
+      {confrontoPossibile ? (
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views 2026</div>
+            <div className="text-lg font-semibold">{avgViews2026.toLocaleString()}</div>
+          </div>
+          <div>
+            <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views 2025</div>
+            <div className="text-lg font-semibold">{avgViews2025.toLocaleString()}</div>
+          </div>
         </div>
+      ) : (
         <div>
-          <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views 2025</div>
-          <div className="text-lg font-semibold">{avgViews2025.toLocaleString()}</div>
+          <div className="text-xs font-medium text-muted-foreground mb-1">Avg Views {periodo}</div>
+          <div className="text-lg font-semibold">{avgViewsMostrato.toLocaleString()}</div>
         </div>
-      </div>
+      )}
 
       {/* Prima di ogni numero, su cosa sono calcolati: con un filtro attivo
           il pannello mostra un sottoinsieme, e chi legge deve saperlo. */}
@@ -1171,20 +1215,27 @@ function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: 
         onSelectAuthor={onSelectAuthor}
       />
 
-      {/* Key Insights */}
+      {/* Key Insights: la frase confronta le due annate, quindi si scrive solo
+          quando ci sono entrambe. Con una sola a schermo si dice cosa c'è. */}
       <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-3 space-y-1">
-        <p>
-          <strong>Insight:</strong> Lug-Ago 2026 ha {total2026 > total2025 ? "+" : ""}
-          {total2026 - total2025} post BSConfirmed rispetto a Lug-Ago 2025 ({total2025}).
-          {sentiment2026.analyzed > sentiment2025.analyzed && (
-            <span>
-              {" "}
-              L'analisi sentiment è cresciuta di +{sentiment2026.analyzed -
-                sentiment2025.analyzed}{" "}
-              post.
-            </span>
-          )}
-        </p>
+        {confrontoPossibile ? (
+          <p>
+            <strong>Insight:</strong> Lug-Ago 2026 ha {total2026 > total2025 ? "+" : ""}
+            {total2026 - total2025} post BSConfirmed rispetto a Lug-Ago 2025 ({total2025}).
+            {sentiment2026.analyzed > sentiment2025.analyzed && (
+              <span>
+                {" "}
+                L'analisi sentiment è cresciuta di +
+                {sentiment2026.analyzed - sentiment2025.analyzed} post.
+              </span>
+            )}
+          </p>
+        ) : (
+          <p>
+            <strong>Insight:</strong> {periodo} ha {confermati.length} post, di cui{" "}
+            {sentimentMostrato.analyzed} con sentiment analizzato.
+          </p>
+        )}
       </div>
     </div>
   );
