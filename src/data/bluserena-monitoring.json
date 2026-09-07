@@ -68852,6 +68852,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:52:33.254Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SUBSCRIBE\ni YOU'RE LOOKING\nTO ISOLATE\nWE ALWAYS\nEWARDED IT",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:42:18.168Z"
           }
         },
         {
@@ -68875,6 +68884,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:52:35.997Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:42:31.628Z"
           }
         },
         {
@@ -68898,6 +68915,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:52:40.771Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A MEW UNDERTALE LORE\nBASED ROLEFLAY\nGAME 15 EMTERIMG\nJOIN THE DISCORD BELLOW To\nDELT\nTHIS GAME\nTN BE MASSIVE,\nTHE DISCORD LIME BELLOW TO\nFLEAZE\nLIKE\nTo, BE MASSIVE.\ni i ENJOY THE\nJOIN THE DISCORD LINK BELLOW TO JOIN\nYOU LIKE\nDELTARUNE THIS GAME IS\nJOIN THE DISCORD LINK BELLOW Ta JOIN",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:42:43.986Z"
           }
         },
         {
@@ -68921,6 +68947,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:55:09.360Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Reserve 4",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:42:53.783Z"
           }
         }
       ]
