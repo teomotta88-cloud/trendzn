@@ -3,6 +3,7 @@ import { Plus } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   IHC_BRANDS,
+  POST_FORMATS,
   MONTH_NAMES,
   getOrCreatePlan,
   listPosts,
@@ -186,6 +187,7 @@ function PianiEditorialiIhcPage() {
             <NewPostCard
               planId={plan.id}
               defaultDate={defaultDate}
+              formatOptions={POST_FORMATS}
               onCreated={() => {
                 setCreating(false);
                 load(year, month);
@@ -208,6 +210,7 @@ function PianiEditorialiIhcPage() {
               >
                 <PostCard
                   post={p}
+                  formatOptions={POST_FORMATS}
                   onDeleted={() => load(year, month)}
                   onUpdated={() => load(year, month)}
                   onApprovalChange={() => loadApprovals(posts)}

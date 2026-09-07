@@ -25,12 +25,16 @@ export function NewPostCard({
   planId,
   defaultDate,
   editPost,
+  formatOptions,
   onCreated,
   onCancel,
 }: {
   planId?: string;
   defaultDate?: string;
   editPost?: EditorialPost;
+  // Se presente, il campo Formato diventa un select obbligatorio con queste
+  // opzioni invece del testo libero (usato dalle pagine Piani Editoriali IHC).
+  formatOptions?: readonly string[];
   onCreated: () => void;
   onCancel: () => void;
 }) {
@@ -121,13 +125,31 @@ export function NewPostCard({
               placeholder="es. Edutainment"
             />
           </Field>
-          <Field label="Formato">
-            <input
-              value={formato}
-              onChange={(e) => setFormato(e.target.value)}
-              className={inputCls}
-              placeholder="es. Carousel"
-            />
+          <Field label={formatOptions ? "Tipologia *" : "Formato"}>
+            {formatOptions ? (
+              <select
+                required
+                value={formato}
+                onChange={(e) => setFormato(e.target.value)}
+                className={inputCls}
+              >
+                <option value="" disabled>
+                  Seleziona…
+                </option>
+                {formatOptions.map((f) => (
+                  <option key={f} value={f}>
+                    {f}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                value={formato}
+                onChange={(e) => setFormato(e.target.value)}
+                className={inputCls}
+                placeholder="es. Carousel"
+              />
+            )}
           </Field>
         </div>
         <button

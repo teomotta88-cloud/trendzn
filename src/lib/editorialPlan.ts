@@ -32,6 +32,10 @@ export interface IhcBrand {
   label: string;
 }
 
+// Tipologie di post selezionabili nel form "Nuovo post" delle pagine
+// Piani Editoriali IHC (il Piano Editoriale originale resta a testo libero).
+export const POST_FORMATS = ["Foto", "Carousel", "Story"] as const;
+
 // Sotto-brand IHC per cui la pagina "Piani Editoriali IHC" espone un
 // calendario indipendente (editorial_plans.brand = slug).
 export const IHC_BRANDS: IhcBrand[] = [
