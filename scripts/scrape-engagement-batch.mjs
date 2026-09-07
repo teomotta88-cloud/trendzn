@@ -108,10 +108,23 @@ function normalizeUrl(url) {
   }
 }
 
-async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) {
+async function emplifiRequest(path, { method = "GET", body, query } = {}, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(`${EMPLIFI_API_BASE}${path}`, {
+      let url = `${EMPLIFI_API_BASE}${path}`;
+      if (query) {
+        const params = new URLSearchParams();
+        Object.entries(query).forEach(([key, value]) => {
+          if (Array.isArray(value)) {
+            value.forEach((v) => params.append(key, v));
+          } else {
+            params.set(key, value);
+          }
+        });
+        url += "?" + params.toString();
+      }
+
+      const res = await fetch(url, {
         method,
         headers: {
           Authorization: authHeader,
@@ -126,7 +139,7 @@ async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) 
       if (!res.ok) {
         // 4xx: non ha senso ritentare, il path/parametri sono sbagliati.
         if (res.status >= 400 && res.status < 500) {
-          throw new Error(`${method} ${path} -> ${res.status}: ${text.slice(0, 2000)}`);
+          throw new Error(`${method} ${url} -> ${res.status}: ${text.slice(0, 2000)}`);
         }
         // 5xx: può essere transitorio, ritenta.
         if (attempt < retries) {
@@ -134,7 +147,7 @@ async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) 
           await sleep(2 ** attempt * 1000);
           continue;
         }
-        throw new Error(`${method} ${path} -> ${res.status}: ${text.slice(0, 2000)}`);
+        throw new Error(`${method} ${url} -> ${res.status}: ${text.slice(0, 2000)}`);
       }
 
       const parsed = text ? JSON.parse(text) : null;
@@ -143,7 +156,7 @@ async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) 
       // input, ecc.), con {"success":false,...} nel body: senza questo
       // controllo un errore del genere passerebbe per una risposta valida.
       if (parsed && parsed.success === false) {
-        throw new Error(`${method} ${path} -> 200 ma success:false: ${text.slice(0, 2000)}`);
+        throw new Error(`${method} ${url} -> 200 ma success:false: ${text.slice(0, 2000)}`);
       }
 
       return parsed;
@@ -187,10 +200,13 @@ async function resolveListeningQueryId(name) {
 
 async function fetchListeningPosts(queryId, dateStart, dateEnd) {
   console.log(`   📄 Richiesta per ${dateStart}..${dateEnd}...`);
-  const data = await emplifiRequest("/listening/posts", {
-    method: "POST",
-    body: {
-      listening_queries: [queryId],
+  const allItems = [];
+  let after = "";
+
+  while (true) {
+    const query = {
+      after,
+      listening_queries: queryId,
       date_start: dateStart,
       date_end: dateEnd,
       fields: [
@@ -210,18 +226,34 @@ async function fetchListeningPosts(queryId, dateStart, dateEnd) {
         "sentiment",
       ],
       limit: PAGE_LIMIT,
-    },
-  });
+    };
 
-  const items = data?.data ?? data?.posts ?? data?.mentions ?? (Array.isArray(data) ? data : []);
-  console.log(`   ${Array.isArray(items) ? items.length : 0} post ricevuti.`);
-  if (Array.isArray(items) && items.length > 0) {
-    console.log(`   Campi disponibili nel primo item: ${Object.keys(items[0]).join(", ")}`);
-  } else {
-    console.log("   Risposta grezza (primi 1000 char): " + JSON.stringify(data).slice(0, 1000));
+    const data = await emplifiRequest("/listening/posts", {
+      method: "POST",
+      query,
+    });
+
+    const items = data?.data ?? data?.posts ?? data?.mentions ?? (Array.isArray(data) ? data : []);
+    if (Array.isArray(items) && items.length > 0) {
+      allItems.push(...items);
+      console.log(`   ${items.length} post ricevuti (totale: ${allItems.length}).`);
+      console.log(`   Campi disponibili nel primo item: ${Object.keys(items[0]).join(", ")}`);
+
+      // Verifica se c'è un cursore per la prossima pagina
+      const nextAfter = data?.after ?? data?.paging?.after ?? data?.pagination?.after;
+      if (!nextAfter) {
+        console.log(`   Paginazione terminata.`);
+        break;
+      }
+      after = nextAfter;
+    } else {
+      console.log(`   Nessun item ricevuto.`);
+      console.log("   Risposta grezza (primi 1000 char): " + JSON.stringify(data).slice(0, 1000));
+      break;
+    }
   }
 
-  return Array.isArray(items) ? items : [];
+  return allItems;
 }
 
 function extractPostUrl(item) {
