@@ -20,12 +20,10 @@
           "likes": 12,
           "comments": 1,
           "shares": 1,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "amore",
-            "emozione",
-            "candy",
-            "vacanza"
+            "relazione"
           ],
           "ocrInsights": "No on-screen text provided. Caption includes a user mention (@Giuseppe Forte) and hashtags (#serenamajestic #bluserena) indicating a promotional or marketing context for the Serena Majestic and Blu Serena resorts.",
           "verificationStatus": "confirmed",
@@ -45,6 +43,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:45:59.479Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "amore",
+              "relazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:47.430Z"
           }
         },
         {
@@ -61,7 +76,7 @@
           "shares": 14,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
+            "spiaggia",
             "acqua",
             "relax"
           ],
@@ -84,6 +99,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:02:43.425Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "acqua",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:48.124Z"
           }
         },
         {
@@ -98,11 +132,10 @@
           "likes": 14,
           "comments": 7,
           "shares": 4,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "resort",
-            "vacanza",
-            "famiglia"
+            "animazione",
+            "spiaggia"
           ],
           "ocrInsights": "Caption includes a mention of @Giuseppe Forte and hashtags #serenamajestic and #bluserena, indicating a promotional post for the luxury resorts Serena Majestic and Blu Serena. No on-screen text is available.",
           "verificationStatus": "confirmed",
@@ -122,6 +155,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:46:07.055Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:48.586Z"
           }
         },
         {
@@ -135,12 +185,8 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEeQMQkEgAeuGuq8jFfjxVDDdNGGuEIgKTzBCN~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BkasG7j0vCydidSieM9RdR2RWv4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "relax",
-            "estate",
-            "torrecanne",
-            "fasano"
+            "vacanze"
           ],
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
@@ -161,6 +207,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:03:01.799Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:56.786Z"
           }
         },
         {
@@ -177,11 +241,9 @@
           "shares": 1,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
+            "spiaggia",
             "relax",
-            "serenità",
-            "musica"
+            "serenità"
           ],
           "ocrInsights": "The caption references @Giuseppe Forte and the hashtag #bluserena, indicating a promotional or endorsement post for the Blue Serena resort.",
           "verificationStatus": "confirmed",
@@ -201,6 +263,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:46:15.217Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "relax",
+              "serenità"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:57.473Z"
           }
         },
         {
@@ -217,25 +297,10 @@
           "shares": 70,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "Serena Resort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Alborèa",
-            "Alborèa Ecolodge",
-            "Ethra",
-            "Ethra Reserve",
-            "Is Serenas",
-            "Is Serenas Badesi",
-            "IsSerenas"
+            "estate",
+            "spiaggia",
+            "musica",
+            "animazione"
           ],
           "ocrInsights": "Nessun testo on‑screen disponibile. I tag indicano un contenuto legato a sport (probabilmente Mirko Sport), video virali, possibili offerte immobiliari o promozioni di un resort/area chiamata Bluserena situata in Sardegna, con tono promozionale e positivo.",
           "verificationStatus": "confirmed",
@@ -256,6 +321,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:48:31.844Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "spiaggia",
+              "musica",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:58.467Z"
           }
         },
         {
@@ -267,11 +352,11 @@
           "location": "Cala Serena",
           "views": null,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4jYeGtkAT4gBGuVYCMLIMOHgDNebNB4fgGRIc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=kuAJIgY4I2CgN35ESswmcdmZwj8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "ocrInsights": "Nessun contenuto disponibile (caption nullo e testo on-screen non disponibile); impossibile determinare sentiment, argomenti, luoghi o approfondimenti.",
           "verificationStatus": "confirmed",
@@ -291,6 +376,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:46:21.158Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:59.114Z"
           }
         },
         {
@@ -307,11 +410,9 @@
           "shares": 15,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "resort",
             "animazione",
-            "villaggio"
+            "spiaggia",
+            "cibo"
           ],
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
@@ -331,6 +432,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:46:29.506Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:54:59.820Z"
           }
         },
         {
@@ -348,9 +467,9 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
+            "bluserena",
             "scherzare",
-            "rientro",
-            "rientroacasa"
+            "rientro"
           ],
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
@@ -371,6 +490,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:03:38.479Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "bluserena",
+              "scherzare",
+              "rientro"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:00.330Z"
           }
         },
         {
@@ -388,11 +527,7 @@
           "sentiment": "positive",
           "topics": [
             "animazione",
-            "musica",
-            "balli",
-            "divertimento",
-            "famiglia",
-            "resort"
+            "spiaggia"
           ],
           "ocrInsights": "Il contenuto trasmette un tono positivo e promozionale, evidenziando un'esperienza di vacanza al mare in un resort chiamato Serenella o Bluserena. Gli hashtag suggeriscono focus su relax, attività di animazione e ambientazione balneare, puntando a un pubblico interessato a soggiorni estivi e intrattenimento.",
           "verificationStatus": "confirmed",
@@ -413,6 +548,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:03:45.414Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:00.960Z"
           }
         },
         {
@@ -426,11 +579,9 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQImsBKiA0LI6BF15aziimhREA7fFdmLPoBVCx~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=jKI9HMCIyCRa5j2P%2FpLC9gsJRqA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
             "animazione",
-            "villaggio",
-            "licata"
+            "vacanze",
+            "resort"
           ],
           "ocrInsights": "Nessun contenuto disponibile per l'analisi.",
           "verificationStatus": "confirmed",
@@ -450,6 +601,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:46:35.880Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:01.393Z"
           }
         },
         {
@@ -464,9 +633,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "famiglia",
-            "estate",
-            "magia"
+            "lungomare",
+            "sosta"
           ],
           "ocrInsights": "Nessun contenuto disponibile per l'analisi.",
           "verificationStatus": "confirmed",
@@ -487,6 +655,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:47:38.893Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "lungomare",
+              "sosta"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:02.110Z"
           }
         },
         {
@@ -501,10 +688,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "bluserena",
-            "sole",
-            "vento",
-            "libertà"
+            "spiaggia",
+            "sosta"
           ],
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
@@ -524,6 +709,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:47:06.295Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "sosta"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:06.272Z"
           }
         },
         {
@@ -538,13 +741,11 @@
           "likes": 27,
           "comments": 26,
           "shares": 2,
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
-            "recensione",
+            "spiaggia",
             "mare",
-            "viaggi",
-            "sardegna",
-            "vacanza"
+            "recensione"
           ],
           "ocrInsights": "No on-screen text available.",
           "verificationStatus": "confirmed",
@@ -565,6 +766,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:04:49.958Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "spiaggia",
+              "mare",
+              "recensione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:06.597Z"
           }
         },
         {
@@ -578,9 +798,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oIaOvAVSsE0oVBZZxsicyimCIEs3BwLg6HxmY~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=7j5Nw9inb7BrEiyztpD48o7Kf%2Bc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "relax",
-            "nostalgia"
+            "ricordo",
+            "estate",
+            "felicità"
           ],
           "ocrInsights": "Nessun contenuto disponibile per l'analisi.",
           "verificationStatus": "confirmed",
@@ -601,6 +821,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:05:12.522Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "ricordo",
+              "estate",
+              "felicità"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:07.020Z"
           }
         },
         {
@@ -616,15 +855,9 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4eaBf5SEiImIyLzMLqQiBirItRyACywVD2Jia~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=3OiLstbq3mKfYfkefQQ0dJcXIB4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "family",
-            "resort",
-            "cucina",
-            "pet friendly",
-            "natura",
-            "sport",
-            "spettacoli"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
@@ -645,6 +878,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:47:04.458Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:07.829Z"
           }
         },
         {
@@ -660,10 +912,10 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ooGJ1UeDTXxEIyFj22QNG9AMvegfcz3nM6pQxD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=xtC36OrQnvTOtzdmxlpYASwT84c%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Serenè Resort"
+            "camere",
+            "bagno",
+            "giardino",
+            "servizi"
           ],
           "ocrInsights": "No caption or on-screen text provided; therefore sentiment is neutral, and no topics or location hints can be extracted.",
           "verificationStatus": "confirmed",
@@ -683,6 +935,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:57:54.295Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "camere",
+              "bagno",
+              "giardino",
+              "servizi"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:08.344Z"
           }
         },
         {
@@ -698,9 +969,9 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osJZ2acIPGKoiACisBB85g0iCAZrBCuQEWzCI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zW5KH%2BZw65ZeF9upKBYzEwAPlnQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "branding",
+            "qualità",
+            "posizione"
           ],
           "ocrInsights": "Non è stato fornito alcun testo né didascalia; pertanto non è possibile estrarre argomenti, luoghi o insight specifici. L'assenza di contenuto suggerisce un sentimento neutro.",
           "verificationStatus": "confirmed",
@@ -721,6 +992,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:47:09.148Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "branding",
+              "qualità",
+              "posizione"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:09.068Z"
           }
         },
         {
@@ -737,10 +1027,9 @@
           "shares": 208,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "resort",
-            "bluserena"
+            "cibo",
+            "ristorante",
+            "verifica contenuti social"
           ],
           "ocrInsights": "Information about the on-screen text is not available.",
           "verificationStatus": "confirmed",
@@ -761,6 +1050,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:05:57.158Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "ristorante",
+              "verifica contenuti social"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.78,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:11.124Z"
           }
         },
         {
@@ -776,11 +1084,8 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o4AAuIAo161AINGxKmiCBiOBKC9BkwPSvEfBOK~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=72y9J0%2BSwLNys%2BWoivhMrqMkngM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "team",
-            "Sardegna",
-            "musica"
+            "animazione",
+            "spiaggia"
           ],
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
@@ -800,6 +1105,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:13:48.550Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:11.557Z"
           }
         },
         {
@@ -815,11 +1137,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUCAQlvYXbpqwIYoAAEAiE3k0AxgaGhGBBr3i~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=YzT8maPwgPA4RBMZTrB%2F0YFgSxs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "show",
-            "passione",
-            "dietro le quinte",
-            "team",
-            "follia"
+            "animazione",
+            "spettacoli",
+            "divertimento"
           ],
           "ocrInsights": "No specific insights available.",
           "verificationStatus": "confirmed",
@@ -839,6 +1159,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:47:39.109Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spettacoli",
+              "divertimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:13.830Z"
           }
         },
         {
@@ -854,11 +1192,8 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oceVe96pKAJdEjpZgILyHnMGFeSou1ZIGIDsdQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=OnxyQ02gOwfJnbkZQY2tk3tEqaY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
             "spiaggia",
-            "relax",
-            "famiglia"
+            "emozioni"
           ],
           "ocrInsights": "Insufficient visual or textual information to determine sentiment, topics, or locations.",
           "verificationStatus": "confirmed",
@@ -878,6 +1213,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:48:15.385Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "emozioni"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:15.774Z"
           }
         },
         {
@@ -893,11 +1245,8 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oceosqwceAGCDbG9RRBKfIQAWLGKVFfwtYIINs~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=I7q1J%2FEsFwUyNCRPsP2hVALtYm4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "colazione",
-            "buffet",
-            "estate",
-            "cibo"
+            "cibo",
+            "buffet"
           ],
           "ocrInsights": "No caption or on-screen text provided; therefore no sentiment cues, topics, or location hints can be extracted. Sentiment is neutral by default.",
           "verificationStatus": "confirmed",
@@ -918,6 +1267,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:06:55.738Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "buffet"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:21.076Z"
           }
         },
         {
@@ -934,10 +1301,8 @@
           "shares": 55,
           "sentiment": "positive",
           "topics": [
-            "divertimento",
-            "bambini",
-            "vacanza",
-            "famiglia"
+            "animazione",
+            "spiaggia"
           ],
           "ocrInsights": "No on-screen text provided. The hashtags emphasize family-friendly entertainment and a 4-star resort experience described as wonderful.",
           "verificationStatus": "confirmed",
@@ -957,6 +1322,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:48:25.411Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:22.090Z"
           }
         },
         {
@@ -972,15 +1354,11 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o8v5LXa1FgBwlYpAUnBCNO1ALiAAnB4iIEiAq~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zWmby%2BwOKr7f6iduZsxcVcd0m%2Bs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
+            "animazione",
+            "eventi",
             "Ferragosto",
-            "contest",
-            "coppa",
-            "vacanza",
-            "hotel",
-            "resort",
-            "travel",
-            "Italia",
-            "estate"
+            "giochi",
+            "coppa"
           ],
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
@@ -1001,6 +1379,27 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-04T07:48:33.863Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "eventi",
+              "Ferragosto",
+              "giochi",
+              "coppa"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:55:25.453Z"
           }
         },
         {
