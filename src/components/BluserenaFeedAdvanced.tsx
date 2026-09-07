@@ -14,18 +14,24 @@ import {
   Headphones,
   BarChart3,
   TrendingUp,
+  Calendar,
   X,
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
+// recharts "raw", non il wrapper ChartContainer di shadcn: è lo stesso stile
+// del grafico "Timeline Sentiment" di /ai-intelligence (Line/CartesianGrid/
+// Tooltip/Legend nativi), che questo pannello riproduce a pixel il più
+// fedelmente possibile — vedi SentimentTimeline più sotto.
 import {
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
-} from "@/components/ui/chart";
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 // Identità di un post ai fini della lista: la sua url, senza query string
 // (i share_url di TikTok portano parametri di tracciamento generati a caso a
@@ -1141,107 +1147,81 @@ function SentimentBar({ posts }: { posts: Post[] }) {
 
 // --------------------------------------------------- AI: timeline sentiment
 
-// Stessi colori di SentimentBar (verde/slate/rosso): i <Bar> di recharts
-// vogliono un colore vero, non una classe Tailwind, quindi qui sono valori
-// letterali invece delle classi bg-green-600 ecc.
-//
-// Niente variante "dark:" separata come in SentimentTrendChart: l'app non ha
-// una modalità chiara, :root è già lo schema scuro e nessuno aggiunge mai la
-// classe .dark al documento — i toni dark: di SentimentBar sono già inerti
-// per lo stesso motivo. Un solo colore, quello che si vede davvero.
-const sentimentTimelineConfig = {
-  positive: { label: "Positivo", color: "#16a34a" },
-  neutral: { label: "Neutrale", color: "#94a3b8" },
-  negative: { label: "Negativo", color: "#dc2626" },
-  // Non è un quarto sentiment, è l'assenza di uno. Su uno sfondo scuro un
-  // grigio chiaro sarebbe il segmento più appariscente del grafico — il
-  // contrario di "recede" — quindi qui si usa il colore del bordo delle
-  // card: si confonde con lo sfondo invece di saltare all'occhio, e resta
-  // comunque identificabile da legenda e tooltip.
-  nonAnalizzato: { label: "Non analizzato", color: "var(--border)" },
-} satisfies ChartConfig;
+// Stessi colori, stessa aggregazione per giorno e stesso LineChart "raw" del
+// grafico "Timeline Sentiment" già esistente su /ai-intelligence
+// (src/routes/ai-intelligence.index.tsx, SENTIMENT_COLORS + timelineMap):
+// qui è lo stesso identico grafico, applicato ai post che passano i filtri
+// di QUESTO pannello invece che a quelli di quella pagina.
+const SENTIMENT_TIMELINE_COLORS = {
+  positive: "#10b981",
+  neutral: "#6b7280",
+  negative: "#ef4444",
+};
 
 function SentimentTimeline({ posts }: { posts: Post[] }) {
   const dati = useMemo(() => {
-    const gruppi = new Map<string, Post[]>();
+    // Un punto per giorno, non per mese: è la stessa granularità
+    // dell'originale, e a differenza del filtro mesi qui non riempie i
+    // giorni senza post — un giorno senza dati è un buco nella linea, non
+    // uno zero.
+    //
+    // Solo i post CON sentiment, come nell'originale: la timeline non
+    // rappresenta i non analizzati, a differenza delle card più sopra.
+    const timelineMap = new Map<string, { positive: number; negative: number; neutral: number }>();
     for (const p of posts) {
-      const key = monthKey(p.date);
-      if (!key) continue;
-      const lista = gruppi.get(key);
-      if (lista) lista.push(p);
-      else gruppi.set(key, [p]);
+      if (!p.date || !p.sentiment) continue;
+      const date = p.date.slice(0, 10);
+      const entry = timelineMap.get(date) || { positive: 0, negative: 0, neutral: 0 };
+      entry[p.sentiment]++;
+      timelineMap.set(date, entry);
     }
-    // In ordine cronologico: è una timeline, si legge da sinistra a destra
-    // nel tempo — a differenza della tendina mesi nel pannello Filtri, che
-    // ordina dal più recente perché lì si sta scegliendo, non leggendo un
-    // andamento.
-    return [...gruppi.entries()]
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([mese, lista]) => {
-        const { positive, neutral, negative } = contaSentiment(lista);
-        return {
-          etichetta: monthLabel(mese),
-          positive,
-          neutral,
-          negative,
-          nonAnalizzato: lista.length - positive - neutral - negative,
-        };
-      });
+    return [...timelineMap.entries()]
+      .map(([date, stats]) => ({ date, ...stats }))
+      .sort((a, b) => a.date.localeCompare(b.date));
   }, [posts]);
 
   if (dati.length === 0) return null;
 
   return (
     <div className="space-y-2">
-      <div className="text-xs font-medium text-muted-foreground">Andamento sentiment nel tempo</div>
-      <ChartContainer config={sentimentTimelineConfig} className="h-56 w-full">
-        <BarChart data={dati} barCategoryGap="20%">
-          <CartesianGrid vertical={false} strokeDasharray="3 3" />
-          <XAxis dataKey="etichetta" tickLine={false} axisLine={false} fontSize={10} />
-          <YAxis tickLine={false} axisLine={false} width={28} fontSize={10} allowDecimals={false} />
-          <ChartTooltip content={<ChartTooltipContent />} />
-          <ChartLegend content={<ChartLegendContent />} />
-          <Bar
+      <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
+        <Calendar className="size-3.5" />
+        Timeline Sentiment
+      </div>
+      <ResponsiveContainer width="100%" height={300}>
+        <LineChart data={dati}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+          <XAxis dataKey="date" tick={{ fontSize: 12 }} />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
             dataKey="positive"
-            stackId="sentiment"
-            fill="var(--color-positive)"
-            stroke="var(--card)"
-            strokeWidth={2}
+            stroke={SENTIMENT_TIMELINE_COLORS.positive}
+            name="Positivi"
+            dot={false}
           />
-          <Bar
+          <Line
+            type="monotone"
             dataKey="neutral"
-            stackId="sentiment"
-            fill="var(--color-neutral)"
-            stroke="var(--card)"
-            strokeWidth={2}
+            stroke={SENTIMENT_TIMELINE_COLORS.neutral}
+            name="Neutrali"
+            dot={false}
           />
-          <Bar
+          <Line
+            type="monotone"
             dataKey="negative"
-            stackId="sentiment"
-            fill="var(--color-negative)"
-            stroke="var(--card)"
-            strokeWidth={2}
+            stroke={SENTIMENT_TIMELINE_COLORS.negative}
+            name="Negativi"
+            dot={false}
           />
-          {/* Ultimo della pila: è l'unico segmento con l'angolo arrotondato,
-              il "data-end" esposto in cima. Gli altri restano squadrati,
-              ancorati alla baseline come alla riga sotto. */}
-          <Bar
-            dataKey="nonAnalizzato"
-            stackId="sentiment"
-            fill="var(--color-nonAnalizzato)"
-            stroke="var(--card)"
-            strokeWidth={2}
-            radius={[4, 4, 0, 0]}
-          />
-        </BarChart>
-      </ChartContainer>
-      <p className="text-[10px] text-muted-foreground">
-        Un mese per barra, in ordine cronologico. Il segmento scuro in cima (a malapena visibile)
-        sono i post non ancora analizzati — passa il mouse su una barra per i numeri esatti.
-      </p>
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 }
+
 // ------------------------------------------------------------ AI: KPI totali
 
 function KpiTotali({ posts }: { posts: Post[] }) {
