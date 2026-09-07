@@ -307,6 +307,65 @@ test("commitField non sovrascrive le modifiche altrui arrivate nel frattempo", a
 
 // ------------------------------------------------ driver: copertura e ripresa
 
+test("select sostituisce il filtro video: il sentiment prende anche le foto", async () => {
+  // La finestra temporale resta imposta dal driver, il resto lo decide lo
+  // script: qui "solo i BSConfirmed", foto comprese.
+  const store = storeFixture();
+  store.canali[0].accounts[0].verificationStatus = "confirmed";
+  store.canali[0].accounts[2].verificationStatus = "confirmed"; // photo/3, non è un video
+  store.canali[1].accounts[0].verificationStatus = "unconfirmed";
+
+  const fake = fakeGitHub(store);
+  const visti = [];
+
+  await withFakeGitHub(fake, () =>
+    runEnrichment({
+      field: "sentimentData",
+      title: "test",
+      commitMessage: (n) => `test ${n}`,
+      select: (account) => account.verificationStatus === "confirmed",
+      processPost: async (account) => {
+        visti.push(account.url);
+        return { status: "ok" };
+      },
+    }),
+  );
+
+  assert.deepEqual(visti, [
+    "https://www.tiktok.com/@a/video/1",
+    "https://www.tiktok.com/@a/photo/3",
+  ]);
+});
+
+test("apply aggiorna i campi piatti letti dalla UI, non solo il record", async () => {
+  const store = storeFixture();
+  for (const canale of store.canali) {
+    for (const account of canale.accounts) account.verificationStatus = "confirmed";
+  }
+  const fake = fakeGitHub(store);
+
+  await withFakeGitHub(fake, () =>
+    runEnrichment({
+      field: "sentimentData",
+      title: "test",
+      commitMessage: (n) => `test ${n}`,
+      select: () => true,
+      processPost: async () => ({ status: "ok", sentiment: "negative", topics: ["coda"] }),
+      apply: (account, record) => {
+        account.sentimentData = record;
+        account.sentiment = record.sentiment;
+        if (record.topics?.length) account.topics = record.topics;
+      },
+    }),
+  );
+
+  const primo = fake.state.store.canali[0].accounts[0];
+  assert.equal(primo.sentiment, "negative", "il campo piatto va sovrascritto");
+  assert.deepEqual(primo.topics, ["coda"]);
+  assert.equal(primo.sentimentData.status, "ok");
+  assert.ok(primo.sentimentData.updatedAt, "il driver timbra comunque il record");
+});
+
 test("runEnrichment copre tutti i canali, non solo il primo", async () => {
   const fake = fakeGitHub(storeFixture());
   const visti = [];

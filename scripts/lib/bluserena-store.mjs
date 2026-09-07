@@ -94,8 +94,14 @@ export function* eachAccount(store) {
 // Applica `updates` (Map url -> valore) sul campo `field` dello store fresco e
 // committa. Lo stesso URL può comparire in più canali: si aggiornano tutte le
 // occorrenze. Ritorna il numero di post effettivamente scritti.
-export async function commitField({ field, updates, message }) {
+// `apply` serve a chi non scrive un campo solo: l'analisi del sentiment
+// deposita il proprio record in sentimentData ma deve aggiornare anche i campi
+// piatti che legge la UI (sentiment, topics, location). Chi non lo passa
+// ottiene il comportamento di sempre, un campo e basta.
+export async function commitField({ field, updates, message, apply }) {
   if (!updates.size) return 0;
+
+  const write = apply ?? ((account, record) => (account[field] = record));
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     const { store, sha } = await readStore();
@@ -103,7 +109,7 @@ export async function commitField({ field, updates, message }) {
     let applied = 0;
     for (const { account } of eachAccount(store)) {
       if (updates.has(account.url)) {
-        account[field] = updates.get(account.url);
+        write(account, updates.get(account.url));
         applied++;
       }
     }

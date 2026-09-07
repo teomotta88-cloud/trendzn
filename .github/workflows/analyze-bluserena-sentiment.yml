@@ -1,18 +1,22 @@
 name: Analyze Bluserena Sentiment & Topic
 
-# Analizza i post Bluserena-monitoring tramite Groq + OpenRouter per:
-# - Sentiment (positive/negative/neutral)
-# - Topic extraction (hashtag/argomenti)
-# - Location matching (resort names)
-# - Audio analysis (TikTok, future)
+# Rianalizza sentiment, topic e location dei post Bluserena-monitoring usando
+# TUTTO il testo del post — caption, trascrizione audio e testo on-screen —
+# invece della sola caption. Vedi scripts/analyze-bluserena-sentiment-topic.mjs.
 #
-# Executato manualmente o su schedule (giornaliero).
+# Perimetro: post BSConfirmed nella finestra luglio-agosto 2025 e 2026.
+# Presuppone che OCR e trascrizione audio abbiano già girato: senza quei campi
+# l'analisi ricade sulla sola caption.
+#
+# I post già analizzati con la versione corrente del prompt vengono saltati,
+# quindi la run giornaliera prende solo i post nuovi; quando il prompt cambia,
+# lo script alza la propria versione e li rifà tutti da solo.
 
 on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Dry run (non scrivere su GitHub)"
+        description: "Dry run (analizza ma non scrive su GitHub)"
         required: false
         default: "false"
         type: choice
@@ -20,9 +24,21 @@ on:
           - "false"
           - "true"
       min_confidence:
-        description: "Confidence threshold (0-1)"
+        description: "Soglia di confidenza sotto la quale il sentiment non viene applicato (0-1)"
         required: false
         default: "0.6"
+      max_posts:
+        description: "Quanti post al massimo in questa run"
+        required: false
+        default: "400"
+      reprocess_failed:
+        description: "Riprova anche i post con esito diverso da ok"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
   schedule:
     - cron: "0 3 * * *"  # Giornaliero alle 3 AM UTC
 
@@ -48,4 +64,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
           MIN_CONFIDENCE: ${{ github.event.inputs.min_confidence || '0.6' }}
+          MAX_POSTS: ${{ github.event.inputs.max_posts || '400' }}
+          REPROCESS_FAILED: ${{ github.event.inputs.reprocess_failed || 'false' }}
+          # Sotto il timeout del job, così la run si ferma da sola salvando il
+          # lavoro fatto invece di essere uccisa a metà commit.
+          MAX_MINUTES: "50"
         run: node scripts/analyze-bluserena-sentiment-topic.mjs
