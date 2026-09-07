@@ -46519,6 +46519,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:02.616Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ow ure in an all inclusive\nwhen u hear this\nure in an all inclusive\nureinanalli\nen u hear",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:19:41.534Z"
           }
         },
         {
@@ -46542,6 +46551,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:06.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": "boat\nGoogle\ndoing\ncomparing",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:02.997Z"
           }
         },
         {
@@ -46565,6 +46583,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:09.134Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:09.558Z"
           }
         }
       ]
@@ -50693,6 +50719,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:12.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": "_SERENA HOTEL\nMATHIAS\nWALUKAGGA",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:15.683Z"
           }
         },
         {
@@ -50716,6 +50751,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:15.456Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Hotel",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:21.312Z"
           }
         },
         {
@@ -50739,6 +50783,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:19.750Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fin Nabaasa\nB hotel\nLidl\nNABAASA\nSERENA HOTEL KAMPALA\nTABLES:\nE VATION 47489",
+            "confidence": 0.856,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:26.769Z"
           }
         },
         {
@@ -50762,6 +50815,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:26.123Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WALUKAGGA I 2\nSIR. MATHIAS\nSERENA HOTEL HNO 1\nFIRST\nMATHIAS\nSERENA HOTEL da\nWALUKAGGA\nSERENA HOTEL )D IRS",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:35.085Z"
           }
         },
         {
@@ -50785,6 +50847,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:28.717Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FAISALABAD SERENA\"\nHOTEL\nsalabad, Paki\nlabad, Pakis\nFAISALABAD\nHOTE\nEFAISALABAD",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:20:54.290Z"
           }
         },
         {
@@ -50808,6 +50879,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:31.401Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ALABAD SERENA\nHOTEL\nPakistan\nFAISACABAD\nFaisalabad, Pakistan",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:21:03.946Z"
           }
         },
         {
@@ -50831,6 +50911,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:35.969Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The arrival of Hon.Aminah\n@SERENAHOTELUGANDA\na today\narrival of Hon.Aminah\n‘today",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:21:28.214Z"
           }
         },
         {
@@ -50854,6 +50943,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:40.679Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1kg Wis in rwavu@",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:21:33.536Z"
           }
         },
         {
@@ -50877,6 +50975,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:48.590Z"
+          },
+          "ocrData": {
+            "textOnScreen": "INNI",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:21:51.806Z"
           }
         },
         {
@@ -50900,6 +51007,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:51.502Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i È like t\nAMABAD\n4 abad, Pakistan",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:21:59.467Z"
           }
         },
         {
@@ -50923,6 +51039,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:17:55.118Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 Varo",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:22:09.717Z"
           }
         },
         {
@@ -50946,6 +51071,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:00.039Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hon. Annet Mugisha\nkampala serena Hotel",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:22:16.122Z"
           }
         },
         {
@@ -50969,6 +51103,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:03.571Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Live at Serena Hotel\n44 Live at Serena Hotel",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:22:31.381Z"
           }
         },
         {
@@ -50992,6 +51135,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:05.993Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OTEL\ngbad\nAISALABAD SERENA HOTEL",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:22:56.535Z"
           }
         },
         {
@@ -51015,6 +51167,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:09.736Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Best Moment\nThe Best Moment è\nsemi",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:23:09.205Z"
           }
         },
         {
@@ -51038,6 +51199,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:13.269Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:23:15.940Z"
           }
         },
         {
@@ -51061,6 +51230,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:16.419Z"
+          },
+          "ocrData": {
+            "textOnScreen": "J CLEVELAND AND PITTSBURGH.",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:23:25.943Z"
           }
         },
         {
@@ -51084,6 +51262,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:25.785Z"
+          },
+          "ocrData": {
+            "textOnScreen": "STRATE\nCORONATION",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:23:35.578Z"
           }
         },
         {
@@ -51107,6 +51294,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:30.880Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Clever j at king Micheal's\nshow\nDANC\nClever j at king\nshow N§",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:23:42.770Z"
           }
         }
       ]
@@ -54945,6 +55141,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:37.376Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A è 7 serena\nDATXANH SERVICES\nTHUC NHÀN BOOKING\nRIVERSIDE\nHome Resogt\ntricy",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:23:55.666Z"
           }
         },
         {
@@ -54968,6 +55173,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:47.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fay Ally\nLIVE\nSTAY WHER ENT LIVI\nSTAY WHERE ENTERTAINME",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:24:06.400Z"
           }
         },
         {
@@ -54991,6 +55205,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:18:49.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:24:12.158Z"
           }
         },
         {
