@@ -20360,7 +20360,7 @@
           "url": "https://www.tiktok.com/@elenamatranga7/video/7680129991341870358",
           "date": "2026-08-31T09:46:49.000Z",
           "caption": "#bluserena #estateitaliana #vacanze #relaxingvideos #dreamteam",
-          "location": null,
+          "location": "Bluserena",
           "views": 107,
           "imageUrl": null,
           "likes": 5,
@@ -20383,7 +20383,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T22:55:22.170Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "estate",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:02.020Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "estate",
+            "vacanze"
+          ]
         },
         {
           "platform": "tiktok",
@@ -20391,7 +20415,7 @@
           "url": "https://www.tiktok.com/@cinziastellina93/video/7666375552281922849",
           "date": "2026-07-25T08:12:34.000Z",
           "caption": "Quando sei in un villaggio all inclusive e non devi pensare a cucinare 😍😍😍 Da lunedì si ricomincia 😩😩😩 #villaggio #calabria #bluserena #sibari #allinclusive",
-          "location": null,
+          "location": "Bluserena",
           "views": 43400,
           "imageUrl": null,
           "likes": 286,
@@ -20415,7 +20439,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:10:30.859Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:09.854Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -20423,7 +20472,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666596786244554017",
           "date": "2026-07-25T22:31:04.000Z",
           "caption": "Dove Ogni Fiore Racconta una storia Cit: @Garofalo Fiori🌹 Questa sera vi portiamo in #trattoria #sibarigrennresort #bluserena #calabria🌶️ #virale",
-          "location": null,
+          "location": "Bluserena",
           "views": 3844,
           "imageUrl": null,
           "likes": 38,
@@ -20446,7 +20495,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T23:12:05.467Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "fiori",
+              "trattoria",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:11.219Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "fiori",
+            "trattoria",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -32798,7 +32873,7 @@
           "url": "https://www.tiktok.com/@cocktailandcompass/video/7663621539866168607",
           "date": "2026-07-17T22:05:35.000Z",
           "caption": "POV: You're craving Santorini... but you're still in Paso Robles Wine Country Tucked into the rolling hills of California wine country, Sirena Vineyard Resort feels like a little slice of Greece without ever leaving California. Whitewashed walls. Sun-drenched views. A glass of wine in hand. And that slow, Mediterranean energy that makes you forget what day it is. This is your reminder that sometimes the getaway you need isn't across the ocean. It's just a scenic drive away. #pasoroblescalifornia #pasorobleshiddengems #californiahiddengems #pasorobleswineries #californiadaytrip @VisitCalifornia @Sirena Resort",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 1845,
           "imageUrl": null,
           "likes": 44,
@@ -32822,7 +32897,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:04:05.138Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vino",
+              "resort",
+              "vacanza",
+              "Grecialike",
+              "paesaggi"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:06.418Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vino",
+            "resort",
+            "vacanza",
+            "Grecialike",
+            "paesaggi"
+          ]
         },
         {
           "platform": "tiktok",
@@ -40946,7 +41050,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7664520495496236321",
           "date": "2026-07-20T08:14:00.000Z",
           "caption": "Pronti Per la prima cena in #sibarigreenresort Una Bella scoperta L'Accoglienza è stata Super Gradita😂😂😂 #Viportiamoinvacanza Con noi #Family #Vacanza2k26 #Calabria grazie sempre a @Puerto Svago - Pagani",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 50300,
           "imageUrl": null,
           "likes": 199,
@@ -40970,7 +41074,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:07:58.289Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "gluten-free",
+              "ospitalità",
+              "famiglia",
+              "vacanza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:07.766Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "gluten-free",
+            "ospitalità",
+            "famiglia",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -40978,7 +41111,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7664590069709196577",
           "date": "2026-07-20T12:43:59.000Z",
           "caption": "Una Bellissima Novita di questa Permanenza Ma.... #vacanzaBluserena #sibarigreenresort #Sibari #viralissimi #paratiiiiiii",
-          "location": null,
+          "location": "Bluserena",
           "views": 2029,
           "imageUrl": null,
           "likes": 17,
@@ -41002,7 +41135,38 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:08:16.263Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "bambini",
+              "attività per bambini",
+              "spiaggia",
+              "vacanza",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.94,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:09.421Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "bambini",
+            "attività per bambini",
+            "spiaggia",
+            "vacanza",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -41263,7 +41427,7 @@
           "url": "https://www.tiktok.com/@cinziastellina93/video/7666375552281922849",
           "date": "2026-07-25T08:12:34.000Z",
           "caption": "Quando sei in un villaggio all inclusive e non devi pensare a cucinare 😍😍😍 Da lunedì si ricomincia 😩😩😩 #villaggio #calabria #bluserena #sibari #allinclusive",
-          "location": null,
+          "location": "Bluserena",
           "views": 43400,
           "imageUrl": null,
           "likes": 286,
@@ -41287,7 +41451,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:10:30.859Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:09.854Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -41548,7 +41737,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666596786244554017",
           "date": "2026-07-25T22:31:04.000Z",
           "caption": "Dove Ogni Fiore Racconta una storia Cit: @Garofalo Fiori🌹 Questa sera vi portiamo in #trattoria #sibarigrennresort #bluserena #calabria🌶️ #virale",
-          "location": null,
+          "location": "Bluserena",
           "views": 3844,
           "imageUrl": null,
           "likes": 38,
@@ -41571,7 +41760,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T23:12:05.467Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "fiori",
+              "trattoria",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:11.219Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "fiori",
+            "trattoria",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -46219,7 +46434,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7662749676822646049",
           "date": "2026-07-15T13:42:19.000Z",
           "caption": "Risposta a @Alessio Grandi vorrei capire… questo è il mare che si presenta ogni giorno a Marinella di Cutro, presso il Serenè Resort di Bluserena. Ad oggi mai trovato il mare sporco, acqua sempre limpida e pulita @bluserena #sereneresort #mare #calabria",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 4007,
           "imageUrl": null,
           "likes": 26,
@@ -46243,7 +46458,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:17:57.251Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "pulizia",
+              "spiaggia"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:12.148Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "pulizia",
+            "spiaggia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -55221,7 +55461,7 @@
           "url": "https://www.tiktok.com/@agarliviaggi/video/7657585228805983521",
           "date": "2026-07-01T15:41:37.000Z",
           "caption": null,
-          "location": null,
+          "location": "Is Serenas Badesi Resort",
           "views": 9123,
           "imageUrl": null,
           "likes": 68,
@@ -55245,7 +55485,37 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-07T23:24:30.471Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "animazione",
+              "camere",
+              "accessibilità",
+              "cibo",
+              "famiglie"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:13.607Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "spiaggia",
+            "animazione",
+            "camere",
+            "accessibilità",
+            "cibo",
+            "famiglie"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62343,7 +62613,7 @@
           "url": "https://www.tiktok.com/@tarcy_buging/video/7664235322372361490",
           "date": "2026-07-19T13:47:23.000Z",
           "caption": "Happiness starts from within good vibes only #fyp #tiktokviral #happiness #gocart #valentinoresortandspa @Valentino Resort and Spa",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 251,
           "imageUrl": null,
           "likes": 12,
@@ -62366,7 +62636,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T23:34:15.346Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "happiness",
+              "musica",
+              "gratitudine"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:19.237Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "happiness",
+            "musica",
+            "gratitudine"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62565,7 +62859,7 @@
           "url": "https://www.tiktok.com/@kayyy_cj/video/7544169079821700359",
           "date": "2025-08-30T00:29:02.000Z",
           "caption": "weekend vibes ✨ @Valentino Resort and Spa  #creatorsearchinsights  #badminton #papawisgaming #couple #fyp",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 1936,
           "imageUrl": null,
           "likes": 28,
@@ -62588,7 +62882,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T23:35:07.650Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "badminton",
+              "gaming",
+              "coppia"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:20.352Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "badminton",
+            "gaming",
+            "coppia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62947,7 +63265,7 @@
           "url": "https://www.tiktok.com/@valentinoresortandspa/video/7539504259142864135",
           "date": "2025-08-17T10:47:09.000Z",
           "caption": "Celebrate Life’s Moments at Valentino Resort and Spa  Planning a wedding, debut, birthday, or company event? Our elegant event hall, paired with delicious catering services, sets the perfect scene for unforgettable memories. ✨️   📍Located in San Jose, Batangas 📩Message us for packages and bookings #EventsAtValentino #batangasvenuestyling  #CelebrateWithUs",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 1912,
           "imageUrl": null,
           "likes": 7,
@@ -62970,7 +63288,37 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T23:36:44.562Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "matrimonio",
+              "debut",
+              "compleanno",
+              "evento aziendale",
+              "catering",
+              "location"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:21.550Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "matrimonio",
+            "debut",
+            "compleanno",
+            "evento aziendale",
+            "catering",
+            "location"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62978,7 +63326,7 @@
           "url": "https://www.tiktok.com/@randomne5s/video/7524153534804167991",
           "date": "2025-07-07T01:58:30.000Z",
           "caption": "#valentino resort 2026 #runway #avantgarde #highfashion #resortwear #valentinorunway #targetaudience",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 2760,
           "imageUrl": null,
           "likes": 249,
@@ -63001,7 +63349,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-07T23:36:57.202Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "fashion",
+              "runway",
+              "resortwear",
+              "highfashion",
+              "target audience"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T23:43:22.274Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "fashion",
+            "runway",
+            "resortwear",
+            "highfashion",
+            "target audience"
+          ]
         },
         {
           "platform": "tiktok",
