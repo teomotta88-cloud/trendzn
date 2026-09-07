@@ -14,8 +14,18 @@ import {
   Headphones,
   BarChart3,
   TrendingUp,
+  X,
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
+import {
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+  type ChartConfig,
+} from "@/components/ui/chart";
 
 // Identità di un post ai fini della lista: la sua url, senza query string
 // (i share_url di TikTok portano parametri di tracciamento generati a caso a
@@ -34,6 +44,14 @@ function contentKey(post: Post): string {
     // url non parsabile: resta com'è, al massimo non deduplica
     return post.url;
   }
+}
+
+// Etichetta dell'autore, condivisa fra il filtro (applicaFiltri) e il
+// raggruppamento in UtentiBreakdown: devono restare identiche, o cliccare
+// "(senza autore)" nella tabella non filtrerebbe gli stessi post che vi
+// appaiono raggruppati.
+function authorLabel(post: Pick<Post, "handle">): string {
+  return post.handle || "(senza autore)";
 }
 
 function dedupeByContent(list: Post[]): Post[] {
@@ -104,6 +122,11 @@ export function BluserenaFeedAdvanced({
   const [verificationFilter, setVerificationFilter] = useState<VerificationFilter>("confirmed");
   const [monthFilter, setMonthFilter] = useState<MonthFilter>("all");
   const [resortFilter, setResortFilter] = useState<ResortFilter>("all");
+  // Impostato cliccando un autore nella tabella "Per utente" di AI
+  // Intelligence, non da un controllo nel pannello Filtri: gli autori sono
+  // 168, una tendina sarebbe inutile quando si può cliccare direttamente il
+  // nome che interessa. Stringa vuota = nessun filtro.
+  const [authorFilter, setAuthorFilter] = useState("");
   const [dateFilter, setDateFilter] = useState<DateFilter>("all");
   const [showFilters, setShowFilters] = useState(false);
   const [showAIInsights, setShowAIInsights] = useState(false);
@@ -434,6 +457,10 @@ export function BluserenaFeedAdvanced({
         result = result.filter((p) => resolveResort(p) === resortFilter);
       }
 
+      if (authorFilter) {
+        result = result.filter((p) => authorLabel(p) === authorFilter);
+      }
+
       // Deduplica per ultima, sul risultato già filtrato: le copie di uno stesso
       // post condividono caption, data e stato, quindi passano o cadono insieme
       // nei filtri e quale copia sopravvive non cambia cosa si vede.
@@ -447,6 +474,7 @@ export function BluserenaFeedAdvanced({
       dateFilter,
       monthFilter,
       resortFilter,
+      authorFilter,
     ],
   );
 
@@ -495,11 +523,6 @@ export function BluserenaFeedAdvanced({
       sentiment2026: posts2026.filter((p) => p.sentiment).length,
       confirmed2025: posts2025.filter(isConfirmed).length,
       confirmed2026: posts2026.filter(isConfirmed).length,
-      // Solo per AI Intelligence: l'analisi (topic, sentiment, views, il
-      // confronto tra i due periodi) deve girare solo sui post BSConfirmed,
-      // non su tutti quelli della finestra Jul-Ago.
-      confirmedPosts2025: posts2025.filter(isConfirmed),
-      confirmedPosts2026: posts2026.filter(isConfirmed),
     };
   }, [posts]);
 
@@ -612,6 +635,25 @@ export function BluserenaFeedAdvanced({
             {filteredPosts.length} / {uniqueTotal} post
           </span>
         </div>
+
+        {/* Filtro autore: non ha un controllo nel pannello Filtri (si imposta
+            cliccando un nome in AI Intelligence), quindi senza questa chip
+            resterebbe attivo senza modo di vedere che c'è o di toglierlo. */}
+        {authorFilter && (
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-1 text-xs text-primary">
+              Autore: @{authorFilter}
+              <button
+                type="button"
+                onClick={() => setAuthorFilter("")}
+                aria-label={`Rimuovi il filtro sull'autore @${authorFilter}`}
+                className="rounded-full p-0.5 hover:bg-primary/20"
+              >
+                <X className="size-3" />
+              </button>
+            </span>
+          </div>
+        )}
 
         {showFilters && (
           <div className="space-y-4 border-t border-border pt-4">
@@ -778,8 +820,12 @@ export function BluserenaFeedAdvanced({
         {showAIInsights && (
           <div className="border-t border-border pt-4 mt-4 space-y-4">
             <AIInsights
-              confirmedPosts2025={stats.confirmedPosts2025}
-              confirmedPosts2026={stats.confirmedPosts2026}
+              posts={filteredPosts}
+              totaleNonFiltrato={uniqueTotal}
+              activeAuthor={authorFilter}
+              onSelectAuthor={(autore) =>
+                setAuthorFilter((prev) => (prev === autore ? "" : autore))
+              }
             />
           </div>
         )}
@@ -818,15 +864,33 @@ export function BluserenaFeedAdvanced({
 }
 
 interface AIInsightsProps {
-  // Solo post BSConfirmed: l'intera sezione confronta le due finestre
-  // Jul-Ago SOLO sui post che sono davvero di Bluserena, non su tutto
-  // quello che è stato monitorato (che include falsi positivi come
-  // concerti al Serena Hotel di Kampala o hashtag omonimi altrove).
-  confirmedPosts2025: Post[];
-  confirmedPosts2026: Post[];
+  // Gli stessi post che si vedono nella griglia, filtri compresi: guardare
+  // una tabella per resort che ignora il resort selezionato, o KPI che
+  // contano post di agosto mentre a schermo c'è luglio, è il modo più veloce
+  // per prendere una decisione sui numeri sbagliati.
+  //
+  // Il perimetro "solo BSConfirmed" non è più cablato qui: lo impone il
+  // filtro di verifica, che parte da "confermati" proprio per questo. Chi
+  // sceglie di guardare i non confermati vede le statistiche di quelli.
+  posts: Post[];
+  // Quanti post ci sono in tutto, per dire quanto stretto è il filtro attivo.
+  totaleNonFiltrato: number;
+  // Autore attualmente filtrato (stringa vuota = nessuno) e callback per
+  // impostarlo: arrivano dal componente padre, che tiene lo stato e mostra
+  // la chip rimovibile. Ripassati giù fino a UtentiBreakdown, dove si clicca.
+  activeAuthor: string;
+  onSelectAuthor: (autore: string) => void;
 }
 
-function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps) {
+function AIInsights({ posts, totaleNonFiltrato, activeAuthor, onSelectAuthor }: AIInsightsProps) {
+  const confirmedPosts2025 = useMemo(
+    () => posts.filter((p) => isInJulyAugustStandalone(p.date, 2025)),
+    [posts],
+  );
+  const confirmedPosts2026 = useMemo(
+    () => posts.filter((p) => isInJulyAugustStandalone(p.date, 2026)),
+    [posts],
+  );
   const getTopTopics = (posts: Post[]): { topic: string; count: number }[] => {
     const topicCounts: Record<string, number> = {};
     posts.forEach((p) => {
@@ -855,8 +919,9 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
   const total2025 = confirmedPosts2025.length;
   const total2026 = confirmedPosts2026.length;
   // Le sezioni per resort, per utente e i KPI guardano tutto il periodo
-  // monitorato insieme: separare 2025 e 2026 lì dentro spezzerebbe classifiche
-  // già corte (metà dei resort sta sotto i dieci post).
+  // insieme: separare 2025 e 2026 lì dentro spezzerebbe classifiche già corte
+  // (metà dei resort sta sotto i dieci post). È l'insieme filtrato, non tutti
+  // i post: fuori dalla finestra luglio-agosto non c'è comunque nulla.
   const confermati = useMemo(
     () => [...confirmedPosts2025, ...confirmedPosts2026],
     [confirmedPosts2025, confirmedPosts2026],
@@ -929,6 +994,11 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
         </div>
       </div>
 
+      {/* Timeline sentiment: stessa logica delle card sopra ma spalmata nel
+          tempo, sui post che passano i filtri attivi (compreso l'eventuale
+          autore selezionato in tabella). */}
+      <SentimentTimeline posts={posts} />
+
       {/* Top Topics */}
       {topTopics2026.length > 0 && (
         <div>
@@ -957,11 +1027,28 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
         </div>
       </div>
 
+      {/* Prima di ogni numero, su cosa sono calcolati: con un filtro attivo
+          il pannello mostra un sottoinsieme, e chi legge deve saperlo. */}
+      <p className="text-[11px] text-muted-foreground">
+        {posts.length === totaleNonFiltrato ? (
+          <>Calcolato su tutti i {totaleNonFiltrato} post monitorati.</>
+        ) : (
+          <>
+            Calcolato sui <strong>{posts.length}</strong> post che passano i filtri attivi, su{" "}
+            {totaleNonFiltrato} monitorati.
+          </>
+        )}
+      </p>
+
       <KpiTotali posts={confermati} />
 
       <ResortBreakdown posts={confermati} />
 
-      <UtentiBreakdown posts={confermati} />
+      <UtentiBreakdown
+        posts={confermati}
+        activeAuthor={activeAuthor}
+        onSelectAuthor={onSelectAuthor}
+      />
 
       {/* Key Insights */}
       <div className="text-xs text-muted-foreground bg-muted/50 rounded-lg p-3 space-y-1">
@@ -978,6 +1065,15 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
 }
 
 // --------------------------------------------------------------- AI: helper
+
+// Stessa regola della finestra monitorata usata nel feed, qui in forma
+// riusabile: AIInsights è un componente a sé e non vede l'helper interno.
+function isInJulyAugustStandalone(date: string | null | undefined, year: number): boolean {
+  if (!date) return false;
+  const d = new Date(date);
+  const month = d.getMonth() + 1;
+  return d.getFullYear() === year && (month === 7 || month === 8);
+}
 
 const nf = new Intl.NumberFormat("it-IT");
 
@@ -1043,6 +1139,109 @@ function SentimentBar({ posts }: { posts: Post[] }) {
   );
 }
 
+// --------------------------------------------------- AI: timeline sentiment
+
+// Stessi colori di SentimentBar (verde/slate/rosso): i <Bar> di recharts
+// vogliono un colore vero, non una classe Tailwind, quindi qui sono valori
+// letterali invece delle classi bg-green-600 ecc.
+//
+// Niente variante "dark:" separata come in SentimentTrendChart: l'app non ha
+// una modalità chiara, :root è già lo schema scuro e nessuno aggiunge mai la
+// classe .dark al documento — i toni dark: di SentimentBar sono già inerti
+// per lo stesso motivo. Un solo colore, quello che si vede davvero.
+const sentimentTimelineConfig = {
+  positive: { label: "Positivo", color: "#16a34a" },
+  neutral: { label: "Neutrale", color: "#94a3b8" },
+  negative: { label: "Negativo", color: "#dc2626" },
+  // Non è un quarto sentiment, è l'assenza di uno. Su uno sfondo scuro un
+  // grigio chiaro sarebbe il segmento più appariscente del grafico — il
+  // contrario di "recede" — quindi qui si usa il colore del bordo delle
+  // card: si confonde con lo sfondo invece di saltare all'occhio, e resta
+  // comunque identificabile da legenda e tooltip.
+  nonAnalizzato: { label: "Non analizzato", color: "var(--border)" },
+} satisfies ChartConfig;
+
+function SentimentTimeline({ posts }: { posts: Post[] }) {
+  const dati = useMemo(() => {
+    const gruppi = new Map<string, Post[]>();
+    for (const p of posts) {
+      const key = monthKey(p.date);
+      if (!key) continue;
+      const lista = gruppi.get(key);
+      if (lista) lista.push(p);
+      else gruppi.set(key, [p]);
+    }
+    // In ordine cronologico: è una timeline, si legge da sinistra a destra
+    // nel tempo — a differenza della tendina mesi nel pannello Filtri, che
+    // ordina dal più recente perché lì si sta scegliendo, non leggendo un
+    // andamento.
+    return [...gruppi.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([mese, lista]) => {
+        const { positive, neutral, negative } = contaSentiment(lista);
+        return {
+          etichetta: monthLabel(mese),
+          positive,
+          neutral,
+          negative,
+          nonAnalizzato: lista.length - positive - neutral - negative,
+        };
+      });
+  }, [posts]);
+
+  if (dati.length === 0) return null;
+
+  return (
+    <div className="space-y-2">
+      <div className="text-xs font-medium text-muted-foreground">Andamento sentiment nel tempo</div>
+      <ChartContainer config={sentimentTimelineConfig} className="h-56 w-full">
+        <BarChart data={dati} barCategoryGap="20%">
+          <CartesianGrid vertical={false} strokeDasharray="3 3" />
+          <XAxis dataKey="etichetta" tickLine={false} axisLine={false} fontSize={10} />
+          <YAxis tickLine={false} axisLine={false} width={28} fontSize={10} allowDecimals={false} />
+          <ChartTooltip content={<ChartTooltipContent />} />
+          <ChartLegend content={<ChartLegendContent />} />
+          <Bar
+            dataKey="positive"
+            stackId="sentiment"
+            fill="var(--color-positive)"
+            stroke="var(--card)"
+            strokeWidth={2}
+          />
+          <Bar
+            dataKey="neutral"
+            stackId="sentiment"
+            fill="var(--color-neutral)"
+            stroke="var(--card)"
+            strokeWidth={2}
+          />
+          <Bar
+            dataKey="negative"
+            stackId="sentiment"
+            fill="var(--color-negative)"
+            stroke="var(--card)"
+            strokeWidth={2}
+          />
+          {/* Ultimo della pila: è l'unico segmento con l'angolo arrotondato,
+              il "data-end" esposto in cima. Gli altri restano squadrati,
+              ancorati alla baseline come alla riga sotto. */}
+          <Bar
+            dataKey="nonAnalizzato"
+            stackId="sentiment"
+            fill="var(--color-nonAnalizzato)"
+            stroke="var(--card)"
+            strokeWidth={2}
+            radius={[4, 4, 0, 0]}
+          />
+        </BarChart>
+      </ChartContainer>
+      <p className="text-[10px] text-muted-foreground">
+        Un mese per barra, in ordine cronologico. Il segmento scuro in cima (a malapena visibile)
+        sono i post non ancora analizzati — passa il mouse su una barra per i numeri esatti.
+      </p>
+    </div>
+  );
+}
 // ------------------------------------------------------------ AI: KPI totali
 
 function KpiTotali({ posts }: { posts: Post[] }) {
@@ -1065,7 +1264,10 @@ function KpiTotali({ posts }: { posts: Post[] }) {
   return (
     <div className="space-y-2">
       <div className="text-xs font-medium text-muted-foreground">
-        KPI complessivi — {posts.length} post BSConfirmed
+        {/* Non più "post BSConfirmed": il perimetro lo decidono i filtri, e
+            dirlo qui a prescindere sarebbe falso appena si guardano i non
+            confermati. Quale sia l'insieme lo spiega la riga in cima. */}
+        KPI complessivi — {posts.length} post
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -1184,7 +1386,15 @@ function ResortBreakdown({ posts }: { posts: Post[] }) {
 
 type OrdineUtenti = "volume" | "views";
 
-function UtentiBreakdown({ posts }: { posts: Post[] }) {
+function UtentiBreakdown({
+  posts,
+  activeAuthor,
+  onSelectAuthor,
+}: {
+  posts: Post[];
+  activeAuthor: string;
+  onSelectAuthor: (autore: string) => void;
+}) {
   const [ordine, setOrdine] = useState<OrdineUtenti>("volume");
   const [limite, setLimite] = useState(10);
   const [soloProlifici, setSoloProlifici] = useState(false);
@@ -1192,7 +1402,7 @@ function UtentiBreakdown({ posts }: { posts: Post[] }) {
   const righe = useMemo(() => {
     const gruppi = new Map<string, Post[]>();
     for (const p of posts) {
-      const autore = p.handle || "(senza autore)";
+      const autore = authorLabel(p);
       const lista = gruppi.get(autore);
       if (lista) lista.push(p);
       else gruppi.set(autore, [p]);
@@ -1260,16 +1470,40 @@ function UtentiBreakdown({ posts }: { posts: Post[] }) {
             </tr>
           </thead>
           <tbody>
-            {visibili.map((r) => (
-              <tr key={r.autore} className="border-t border-border/60">
-                <td className="py-2 pr-3">@{r.autore}</td>
-                <td className="py-2 pr-3 tabular-nums">{r.posts.length}</td>
-                <td className="w-32 py-2 pr-3">
-                  <SentimentBar posts={r.posts} />
-                </td>
-                <td className="py-2 text-right tabular-nums">{nf.format(r.views)}</td>
-              </tr>
-            ))}
+            {visibili.map((r) => {
+              const attivo = r.autore === activeAuthor;
+              return (
+                <tr
+                  key={r.autore}
+                  className={`border-t border-border/60 ${attivo ? "bg-primary/5" : ""}`}
+                >
+                  <td className="py-2 pr-3">
+                    {/* Filtra il feed e questo stesso pannello su questo
+                        autore; ricliccare lo stesso nome toglie il filtro,
+                        così la tabella resta reversibile senza dover cercare
+                        la chip in cima alla pagina. */}
+                    <button
+                      type="button"
+                      onClick={() => onSelectAuthor(r.autore)}
+                      aria-pressed={attivo}
+                      title={
+                        attivo
+                          ? "Clicca per togliere il filtro"
+                          : `Mostra solo i post di @${r.autore}`
+                      }
+                      className={`hover:underline ${attivo ? "font-semibold text-primary" : ""}`}
+                    >
+                      @{r.autore}
+                    </button>
+                  </td>
+                  <td className="py-2 pr-3 tabular-nums">{r.posts.length}</td>
+                  <td className="w-32 py-2 pr-3">
+                    <SentimentBar posts={r.posts} />
+                  </td>
+                  <td className="py-2 text-right tabular-nums">{nf.format(r.views)}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
