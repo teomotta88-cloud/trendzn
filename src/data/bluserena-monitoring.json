@@ -66676,7 +66676,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Per noi, bianchi, indigeni e popoli mori, la terra è sempre stata sagra per noi. Dobbiamo reclamare la nostra terra. Dobbiamo reclamare la terra che è sempre stata nostra. Ora, anche se potremmo averlo acquistato, stiamo ancora reclamando perché lo stuartiamo, una volta acquistato. Questo non deve essere una fantasia, non deve essere qualcosa che stai cercando di isolare, non deve essere qualcosa che sia fuori dalla norma. Per noi, bianchi, indigeni e popoli mori, l'inverno è sempre stato sagrato per noi. è sempre stato sagro per noi e abbiamo sempre stuartato e abbiamo sempre avuto autorità che era razionale e vogliamo reclamare la nostra literatura economica la nostra preparazione legale il nostro empoderamento collettivo e la nostra allineamento spirituale con la responsabilità del paese e delle possessioni che abbiamo",
+            "language": "Italian",
+            "durationSec": 78.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:52:33.254Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66690,7 +66699,16 @@
           "likes": 65,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:52:35.997Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66704,7 +66722,16 @@
           "likes": 6777,
           "comments": 716,
           "shares": 1852,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 26,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:52:40.771Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66718,7 +66745,16 @@
           "likes": 3542,
           "comments": 15,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ma che cazzo di profumo c'è? Perfume? Ma dove c'è il profumo? Qui, è di Gucci Flora, è brandato Ma questo mi piace, mi piace ancora Mi piace ancora? Ora mi sento come una ragazza del misto È una ragazza del misto Mi piace anche questo, mi piace davvero molto Ma che cazzo di altro? Mi piace davvero molto Ma questo è un profumo di un'altra generazione Ma questo è un profumo di un'altra generazione Mi piace anche questo, mi piace davvero molto Mi piace davvero molto Ora cambia la forma Questo è il profumo di Latafa Questo è il profumo di Candy Da dove viene così molto profumo? L'ho preso da The Reserve Perfume di brand Unico, 35 ml Guarda Di Candy, ha altri profumi Questo è Latafa E altri profumi che non ci sono Se volete profumi, DM Da The Reserve Ok?",
+            "language": "Italian",
+            "durationSec": 55.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:55:09.360Z"
+          }
         }
       ]
     }
