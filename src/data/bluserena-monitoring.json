@@ -50375,12 +50375,27 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "fashion",
-            "Valentino",
-            "luxury"
-          ]
+            "luxury",
+            "fashion"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "luxury",
+              "fashion"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:24.274Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -50491,16 +50506,33 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "resort",
-            "spa",
             "piscina",
-            "minivlog",
+            "natura",
             "cibo",
-            "ospitalità",
-            "promozione",
-            "Batangas"
-          ]
+            "benessere"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "resort",
+              "piscina",
+              "natura",
+              "cibo",
+              "benessere"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:30.102Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -51499,7 +51531,7 @@
           "url": "https://www.tiktok.com/@sofiapezone/video/7665060892614151456",
           "date": "2026-07-21T19:11:01.000Z",
           "caption": null,
-          "location": null,
+          "location": "Valentino Resort",
           "views": null,
           "likes": null,
           "comments": null,
@@ -51522,7 +51554,29 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T11:22:17.512Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:30.619Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -51555,10 +51609,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "estate",
-            "famiglia"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:34.960Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -51737,8 +51809,9 @@
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "vita",
+            "energia",
+            "divertimento"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -51758,6 +51831,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T11:28:17.700Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vita",
+              "energia",
+              "divertimento"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:36.864Z"
           }
         },
         {
@@ -51793,12 +51884,30 @@
           "sentiment": "positive",
           "topics": [
             "colazione",
-            "vacanza",
-            "lusso",
-            "hotel 5 stelle",
             "cibo",
-            "thalasso spa"
-          ]
+            "bevande",
+            "luxury hotel"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "colazione",
+              "cibo",
+              "bevande",
+              "luxury hotel"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:41.859Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -51831,13 +51940,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "vascorossi",
-            "kalidria",
-            "castellaneta"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:42.545Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -51872,13 +51996,28 @@
           "sentiment": "negative",
           "topics": [
             "cinema all'aperto",
-            "lusso",
-            "resort",
-            "aspettative deluse",
-            "PESCAMAN",
-            "ironia",
-            "vacanza italiana"
-          ]
+            "rapporto qualità-prezzo",
+            "intrattenimento serale"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "cinema all'aperto",
+              "rapporto qualità-prezzo",
+              "intrattenimento serale"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:44.486Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -53887,11 +54026,10 @@
           "shares": 9,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
             "suite",
-            "tour"
+            "tour camera",
+            "vasca idromassaggio",
+            "vacanza"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -53912,6 +54050,26 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T12:33:14.400Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "suite",
+              "tour camera",
+              "vasca idromassaggio",
+              "vacanza"
+            ],
+            "location": "Alborèa Ecolodge Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:52.270Z"
           }
         }
       ]
@@ -53937,9 +54095,8 @@
           "shares": 7,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "animazione",
+            "spiaggia"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -53959,6 +54116,23 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T12:34:01.752Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:52.827Z"
           }
         },
         {
@@ -53975,11 +54149,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "estate",
-            "relax",
-            "musica",
-            "sigla"
+            "spiaggia",
+            "relax"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okrUf8CUfAUXLjhMggLQpoMGteAN2bKIGIDSkg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=fr403rQrZv3oc5gUKJxmApQnQNQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -54000,7 +54171,25 @@
             "version": 3,
             "updatedAt": "2026-09-04T09:40:54.192Z"
           },
-          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis."
+          "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:53.666Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54013,12 +54202,10 @@
           "likes": 62,
           "comments": 1,
           "shares": 0,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "resort",
-            "mare",
-            "relax"
+            "branding",
+            "ambientazione"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -54039,6 +54226,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T12:34:28.098Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "branding",
+              "ambientazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:54.344Z"
           }
         },
         {
@@ -54054,16 +54259,11 @@
           "shares": 14,
           "sentiment": "positive",
           "topics": [
-            "ferragosto",
             "animazione",
-            "competizione villaggi",
-            "storia",
-            "amicizia",
-            "ringraziamenti",
-            "carriera animatore",
-            "villaggio turistico",
-            "videoclip musicale",
-            "serenhappy"
+            "eventi",
+            "team building",
+            "ferragosto",
+            "competizione tra villaggi"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -54083,6 +54283,26 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-04T07:59:15.823Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "eventi",
+              "team building",
+              "ferragosto",
+              "competizione tra villaggi"
+            ],
+            "location": "Ethra Reserve",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:56.789Z"
           }
         },
         {
