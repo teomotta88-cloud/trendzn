@@ -1,0 +1,85 @@
+name: KPI Engagement TikTok (pagina video)
+
+# Recupera views/like/commenti/condivisioni dei post TikTok Bluserena
+# leggendoli dal JSON incorporato nella pagina del singolo video. Vedi
+# scripts/scrape-tiktok-engagement.mjs.
+#
+# Sostituisce "Scrape Engagement Data via Emplifi": nessun credito da pagare,
+# tutte e quattro le metriche invece delle sole commenti/condivisioni, e la
+# fonte è la stessa piattaforma dei post da arricchire.
+#
+# Costa solo minuti Actions (~1000 video a qualche secondo l'uno), quindi lo
+# script si ferma da solo su MAX_MINUTES e riprende alla run dopo da dove si
+# era interrotto: ogni post tentato riceve un record versionato, e la coda si
+# smaltisce in più run senza rifare ogni volta gli stessi post.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "Numero massimo di post da elaborare in questa run"
+        required: false
+        default: "2000"
+      reprocess_failed:
+        description: "Riprova i post falliti (login_wall, error, no_data)"
+        required: false
+        default: "false"
+      overwrite_existing:
+        description: "Sovrascrivi anche i KPI già presenti da Apify/ScrapeCreators"
+        required: false
+        default: "false"
+      dry_run:
+        description: "Fa il lavoro ma non scrive nulla"
+        required: false
+        default: "false"
+  schedule:
+    # Lunedì alle 03:00 UTC, tre ore dopo "Bulk Verify Bluserena Posts"
+    # (00:00 UTC) che è quando i post cambiano status in blocco, e su un
+    # orario libero rispetto a OCR (lunedì) e audio (mercoledì).
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  # Lo script committa su bluserena-monitoring.json: due run in parallelo si
+  # rincorrerebbero a colpi di conflitto sullo stesso file.
+  group: bluserena-engagement
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    name: Legge i KPI dalla pagina di ogni video TikTok
+    # Il limite GitHub è 360 minuti: lo script si ferma da solo prima
+    # (MAX_MINUTES) per fare in tempo a committare l'ultimo batch.
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Recupera KPI dalla pagina video
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_POSTS: ${{ inputs.max_posts || '2000' }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
+          OVERWRITE_EXISTING: ${{ inputs.overwrite_existing || 'false' }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          MAX_MINUTES: "300"
+          BATCH_SIZE: "25"
+        run: node scripts/scrape-tiktok-engagement.mjs
