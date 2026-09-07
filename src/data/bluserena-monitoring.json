@@ -57935,7 +57935,16 @@
           "likes": 21,
           "comments": 5,
           "shares": 22,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 11.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:30:25.284Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57949,7 +57958,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh, ho aspettato questo. Oh, ragazzi, ho aspettato questo!",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:30:27.492Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57963,7 +57981,17 @@
           "likes": 15100,
           "comments": 50,
           "shares": 807,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:31:21.849Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57977,7 +58005,16 @@
           "likes": 114,
           "comments": 7,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Amé me le khaira, amé me le mo to yaani, oh oh oh oh oh, ma fu, oh oh oh oh, che sei mai Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:31:25.993Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57991,7 +58028,16 @@
           "likes": 3027,
           "comments": 172,
           "shares": 1167,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Io lavoro in hotel e sto assistendo da dentro a un cambiamento massimo che arriva sul mercato del turismo e che vedremo prendere un enorme emplo nelle prossime anni. Questo fenomeno si chiama Coolcation, in grosso è un nuovo neologismo inglese per parlare delle vacanze a freddo, la tendenza che fa che un enorme numero di persone stiano lasciando le loro abitudini sulle coste fredde della Mediterranea, per scegliere delle destine dove sono a freddo, in un microclima più vantaggiovole. e di quello che ho visto nel mio lavoro come consultante junior in hotelera è che in questo momento abbiamo molti progetti che si lanciano sulla costa nord atlantica per esempio in Bretagna, la Bretagna è una regione che conosce attualmente un esor molto importante quest'anno abbiamo registrato 20% di più visite in fine ottobre che nelle anni precedenti e è uno dei record storici per la Bretagna a livello della sua frequentazione turistica al di là di questo vediamo la stessa cosa in Inghilterra con un aumento crescente per la Cornwall La Cornwall per chi non conosce è un po' il pendente della Bretagna in Inghilterra e più globalmente, avendo lavorato anche nel medio della croisiere, vedo che i vettori che propongono stile in Lofoten, Scandinavia, sono in grado di avere di più e di più attrazione. In breve, il mercato del freddo sta diventando un big deal.",
+            "language": "Italian",
+            "durationSec": 71.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:31:29.621Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58005,7 +58051,16 @@
           "likes": 1233,
           "comments": 4,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 71.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:32:04.461Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58019,7 +58074,16 @@
           "likes": 27,
           "comments": 13,
           "shares": 58,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come with me to Savera Boutique Resort located at Bon Bon, Karkar City, Seville. This is truly a not so hidden paradise in Karkar. It's located only 15 minutes away from Gustavo Grand Mall Karkar. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 51.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:32:39.233Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58033,7 +58097,16 @@
           "likes": 76,
           "comments": 117,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:32:42.072Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58047,7 +58120,16 @@
           "likes": 120,
           "comments": 20,
           "shares": 88,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:32:44.869Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58061,7 +58143,16 @@
           "likes": 2806,
           "comments": 130,
           "shares": 251,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 12.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:32:47.395Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58075,7 +58166,16 @@
           "likes": 822,
           "comments": 49,
           "shares": 37,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:32:54.068Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58089,7 +58189,16 @@
           "likes": 30,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:33:04.009Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58103,7 +58212,16 @@
           "likes": 44,
           "comments": 11,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 14.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:33:12.063Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58117,7 +58235,16 @@
           "likes": 87,
           "comments": 11,
           "shares": 24,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 37.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:33:31.206Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58131,7 +58258,16 @@
           "likes": 866,
           "comments": 5,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:33:33.906Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58145,7 +58281,16 @@
           "likes": 330,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh, Arthur. Ti amico e ti amerò sempre, ma non posso vivere.",
+            "language": "Italian",
+            "durationSec": 7.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:33:37.736Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58159,7 +58304,16 @@
           "likes": 14300,
           "comments": 329,
           "shares": 5162,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "430.000 fran per due persone, pagate in 4 frange per scoprire il Ghana dal 24 al 27 dicembre. Questo arrivo comprende l'albergo, la visita, il posto e un guida per accompagnarvi tutto il giorno. 4 giorni in un ambiente festivo, caldo e pieno di ricerche. Il migliore di tutto è che avete la possibilità di iniziare a pagare da ora. E vi offriamo 4 mesi per soldare. Vi riservate progressivamente il vostro viaggio fino a decennio. Allora, per non sbagliare, la Noël si passa al Ghana. Un bacio!",
+            "language": "Italian",
+            "durationSec": 28.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:34:11.991Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58173,7 +58327,16 @@
           "likes": 7,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:34:14.567Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58187,7 +58350,16 @@
           "likes": 7655,
           "comments": 173,
           "shares": 326,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao In noi, in noi, il tuo amore si è iniziato.",
+            "language": "Italian",
+            "durationSec": 35.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:34:21.634Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58201,7 +58373,16 @@
           "likes": 30,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ariel, ascoltami, questo mondo sta molto male, la vita sotto il mare è molto meglio che il mondo là in alto. Tu credi che in altri lago la salga più verde del sole e sogni di andare in alto che era una equivocazione. Non è che il tuo proprio mondo non ha comparazione, che può avere là fuori che causa tal'emozione. Bajo el mar, bajo el mar, vives contenta siendo sirena, eres feliz, se es que trabajas sin parar, si bajo el sol para bailar, mientras nosotros siempre flotamos bajo el mar. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:34:51.602Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58215,7 +58396,16 @@
           "likes": 5609,
           "comments": 228,
           "shares": 212,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I left my consciousness in the sixth diamond Shunned off my soul and his vision Let's go get it",
+            "language": "Italian",
+            "durationSec": 9.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:34:55.887Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58229,7 +58419,16 @@
           "likes": 1083,
           "comments": 14,
           "shares": 1267,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:35:20.586Z"
+          }
         }
       ]
     },
@@ -60439,7 +60638,16 @@
           "likes": 12,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 92,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:35:57.491Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60453,7 +60661,17 @@
           "likes": 9,
           "comments": 6,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:22.040Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60467,7 +60685,16 @@
           "likes": 24,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 6.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:38:24.426Z"
+          }
         },
         {
           "platform": "tiktok",
