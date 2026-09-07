@@ -41751,6 +41751,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:41.407Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:13:42.188Z"
           }
         },
         {
@@ -41774,6 +41782,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:46.453Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:13:52.032Z"
           }
         },
         {
@@ -41797,6 +41813,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:52.670Z"
+          },
+          "ocrData": {
+            "textOnScreen": "uauyan\nFreie",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:14:02.012Z"
           }
         },
         {
@@ -41820,6 +41845,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:57.309Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: Pronasli smo hotel na Siciliji\nPOV: Pronasli smo savrsen hotel na Siciliji\nView\nPENA",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:14:30.405Z"
           }
         },
         {
@@ -41843,6 +41877,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:14:00.196Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:14:40.334Z"
           }
         },
         {
@@ -41866,6 +41908,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:14:03.121Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sibari green villa ge 20\nagosto 26 j",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:14:49.932Z"
           }
         },
         {
@@ -41889,6 +41940,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:14:05.876Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sol y Luna”",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:15:02.711Z"
           }
         },
         {
@@ -41912,6 +41972,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:14:10.299Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SKA, KOMENTON\nKOMENTON\nAl QE KA LEK; REZERVON\nAl QE KOMENTON",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:15:17.911Z"
           }
         },
         {
@@ -41935,6 +42004,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:14:22.711Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:15:25.209Z"
           }
         },
         {
@@ -41958,6 +42035,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:15:59.034Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Advance Booking",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:15:54.066Z"
           }
         },
         {
@@ -41981,6 +42067,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:04.680Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:16:10.735Z"
           }
         },
         {
@@ -42004,6 +42098,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:07.086Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Saibari 7",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:16:16.878Z"
           }
         }
       ]
@@ -46006,6 +46109,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:09.773Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:16:26.547Z"
           }
         },
         {
@@ -46029,6 +46140,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:14.221Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:16:41.612Z"
           }
         },
         {
@@ -46052,6 +46171,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:17.730Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Maya Presidential Villa with Butler\nService",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:17:04.577Z"
           }
         },
         {
@@ -46075,6 +46203,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:22.728Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:17:14.222Z"
           }
         },
         {
@@ -46098,6 +46234,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:25.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": "siokmailmareiolo\nintendo in un altro\nmodo\nAlessio\nAlessio Grand\nmodo E\nRispondi al commento di\nGrandi\nsi ok ma il mare io lo È",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:17:57.251Z"
           }
         },
         {
@@ -46121,6 +46266,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:29.082Z"
+          },
+          "ocrData": {
+            "textOnScreen": "when ut Li\nalso groom J\ntouch the 4;\n7a submerged but\nroom\nsofmy the water\nfull 5g but\nmust have-enodgh\nmy airpods the water\nod erge\nough'breathing ro\nsomy ai don't\nami the that ike\nÈ i full body submerged but:\ndon't to",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:18:11.504Z"
           }
         },
         {
@@ -46144,6 +46298,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:32.225Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:18:17.984Z"
           }
         },
         {
@@ -46167,6 +46329,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:35.256Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:18:35.835Z"
           }
         },
         {
@@ -46190,6 +46360,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:41.172Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IS UNIVERSAL'S\nINCLUDED\nTHROUGH",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:18:48.537Z"
           }
         },
         {
@@ -46213,6 +46392,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:43.806Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort and Spa\nf A Lenox,",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:19:02.668Z"
           }
         },
         {
@@ -46236,6 +46424,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:51.152Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:19:07.852Z"
           }
         },
         {
@@ -46259,6 +46455,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:54.239Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VIPB\nADRIAN DE CASTRO JERROLD HERERRA\nRUBY DE CASTRO JOCELYN HERERRA\nMARK ANTHONY PULMA MAYA QUILING\nKEEZIA ARRA EBALLA IRENE BALLESTEROS i\nMRS. REGINA EBALLA JEFFREY BALLESTEROS\nMR, CESAR MARASIGAN PRECY LAS\nDRA, ANITA MARASIGAN RENATO LAS\nMRS. MARIA ODESSA PEREZ BABY VALENCIA\nMR. ROMLEY MENDIOLA MR BERNARDO VALENCIA\nMR. ROMLEY MENDIOLA MRS. DORY ESPINA\nGERARD MRS. DORY ESPINA\nDRA. SONIA BATILO MR, ANGEL QUILING\nMRS. AURELIA MIRAMBIL VILLARAZO\nGRACE SANCHEZ EDWIN BARRIENTOS\nMRS. CHERRY\nMR, ALLEN SANCHEZ A\nPASTRANA MRS n”\nMRS. ANASELLE PASTRANA\nLILIBETH A RAZON RIVERA\nENGR. PUENTE\nDE CASTRO ROSALIE BALLESTERCS\nABLE 4\nTABLE 3\nTABLE 2\nRAZON\nJADE BALLESTERCS\nRHAIN\nBALLESTEROS CAMEN\nKLAUDE CLARE RAZ PEMA\nBALLESTEROS\nleamDaph\nTABLES\nTABLE 7\nTABLE 6\nALPUERTO\n0 TABLE\nTABLET!\nTABLE 10",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:19:23.164Z"
           }
         },
         {
@@ -46282,6 +46487,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:16:56.612Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Wingate by Wyndham Miami Airport\nFlying Out Early? This\nHotel Is Worth a Look!\nThis Miami\nLook!\nMiami",
+            "confidence": 0.905,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:19:30.227Z"
           }
         },
         {
