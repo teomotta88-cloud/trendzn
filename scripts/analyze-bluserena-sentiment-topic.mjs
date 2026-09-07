@@ -1,391 +1,223 @@
-// Analisi AI di sentiment, topic e location per i post Bluserena-monitoring.
-// Usa Groq + OpenRouter per NLP su caption e metadati post.
+// Analisi AI di sentiment, topic e location per i post Bluserena-monitoring,
+// su TUTTO il testo che il post porta con sé: caption, parlato (trascrizione
+// audio) e testo sovraimpresso (OCR).
 //
-// Per ogni post in bluserena-monitoring.json:
-// 1. Estrae sentiment (positive/negative/neutral) dalla caption
-// 2. Estrae topic (hashtag/argomenti) dalla caption
-// 3. Tenta di rilevare location da geotag o match con elenco resort
-// 4. Per TikTok: estrae audio (se disponibile) e lo analizza
+// Perché i tre insieme: nei reel il messaggio sta quasi sempre nel parlato o
+// nella grafica a video, non nella caption — sui 338 post BSConfirmed della
+// finestra, 332 hanno una trascrizione e 173 hanno testo on-screen, e 8 non
+// hanno caption del tutto. Analizzare la sola caption significava dare un
+// sentiment a metà del contenuto.
 //
-// Salva i risultati aggiornando bluserena-monitoring.json su GitHub.
-// Usa chatCompletionWithFallback da lib/openrouter.mjs per retry automatico.
+// Perimetro: i post BSConfirmed nella finestra luglio-agosto 2025 e 2026 (la
+// finestra è quella di tutta la pagina, la impone il driver condiviso). I post
+// non confermati sono rumore da hashtag omonimi — hotel Serena in Uganda e in
+// Pakistan — e analizzarli costerebbe chiamate LLM per sporcare le medie.
 //
-// Env variables:
-//   OPENROUTER_API_KEY: required for OpenRouter
-//   GROQ_API_KEY: optional (for Groq free tier, tried first)
-//   GITHUB_TOKEN: required for GitHub API
-//   MIN_CONFIDENCE: (optional, default 0.6) - filtro per topic/sentiment con bassa confidenza
-//   BATCH_SIZE: (optional, default 5) - quanti post analizzare in parallelo per limitare rate-limit
-//   DRY_RUN: (optional) - se true, non scrive su GitHub
+// Il record finisce in `sentimentData` (con status, confidence, fonti usate e
+// versione), e i campi piatti `sentiment`, `topics` e `location` che legge la
+// UI vengono aggiornati di conseguenza. La versione permette al driver di
+// riprendere una run interrotta e di rifare tutto da solo quando il prompt
+// cambia, senza flag da ricordare.
+//
+// NOTA: la vecchia versione di questo script scriveva in `audioAnalysis` il
+// risultato di un'analisi LLM dei METADATI audio (nome del suono TikTok),
+// serializzato come stringa. Da quando analyze-bluserena-audio.mjs mette lì la
+// trascrizione Whisper, quella scrittura distruggeva le trascrizioni: è stata
+// rimossa, questo script non tocca più audioAnalysis né ocrData.
+//
+// Env:
+//   OPENROUTER_API_KEY / GROQ_API_KEY: almeno una delle due
+//   GITHUB_TOKEN: obbligatoria
+//   MIN_CONFIDENCE: soglia sotto la quale il sentiment non viene applicato (0.6)
+//   MAX_POSTS / MAX_MINUTES / BATCH_SIZE / REPROCESS_FAILED: vedi lib/bluserena-enrich.mjs
 
 import { chatCompletionWithFallback } from "./lib/openrouter.mjs";
+import { runEnrichment } from "./lib/bluserena-enrich.mjs";
 
-const REPO = "teomotta88-cloud/trendzn";
-const STORE_PATH = "src/data/bluserena-monitoring.json";
-const WINDOW_A = { start: "2025-07-01", end: "2025-08-31" };
-const WINDOW_B = { start: "2026-07-01", end: "2026-08-31" };
+// Alzare quando il prompt o le regole cambiano: il driver rifà da solo i
+// record scritti con una versione precedente.
+const VERSION = 1;
 
-// Lista resort da matchare nelle caption (da estrarre da store attuale)
-const RESORTS = [
-  "Bluserena",
-  "Cala Serena",
-  "Serena Majestic",
-  "Serena Majestic Hotel",
-  "SerenaResort",
-  "Serena Resort",
-  "Torreserena",
-  "Torre Serena",
-  "Serenusa",
-  "Serenahotel",
-  "Serena Hotel",
-  "Calanè",
-  "Calanè Resort",
-  "Calànè Resort",
-  "GranSerena",
-  "Gran Serena",
-  "Sibari Green",
-  "Sibari Green Resort",
-  "Valentino",
-  "Valentino Resort",
-  "Kalidia",
-  "Kalidia Hotel",
-  "Alborèa",
-  "Alborèa Ecolodge",
-  "Ethra",
-  "Ethra Reserve",
-  "Is Serenas",
-  "Is Serenas Badesi",
-  "IsSerenas",
-];
-
-const MIN_CONFIDENCE = parseFloat(process.env.MIN_CONFIDENCE ?? "0.6");
-const BATCH_SIZE = parseInt(process.env.BATCH_SIZE ?? "5", 10);
-const DRY_RUN = process.env.DRY_RUN === "true";
+const MIN_CONFIDENCE = Number.parseFloat(process.env.MIN_CONFIDENCE ?? "0.6");
 
 const apiKey = process.env.OPENROUTER_API_KEY;
 const groqApiKey = process.env.GROQ_API_KEY;
-const githubToken = process.env.GITHUB_TOKEN;
 
 if (!apiKey && !groqApiKey) {
   console.error("Serve almeno una chiave API: OPENROUTER_API_KEY o GROQ_API_KEY");
   process.exit(1);
 }
-
-if (!githubToken) {
+if (!process.env.GITHUB_TOKEN) {
   console.error("Manca GITHUB_TOKEN nell'ambiente.");
   process.exit(1);
 }
 
-const ghHeaders = {
-  Authorization: `token ${githubToken}`,
-  Accept: "application/vnd.github.v3+json",
+// Nomi da riconoscere come location. Sono gli stessi resort della verifica
+// BSConfirmed, in forma estesa: qui servono a dire DOVE, non SE.
+const RESORTS = [
+  "Bluserena",
+  "Is Serenas Badesi Resort",
+  "Calaserena Resort",
+  "Serenusa Resort",
+  "Serena Majestic Hotel Residence",
+  "Sibari Green Resort",
+  "Serenè Resort",
+  "Granserena Hotel",
+  "Torreserena Resort",
+  "Calanè Resort",
+  "Valentino Resort",
+  "Kalidria Hotel & Thalasso SPA",
+  "Alborèa Ecolodge Resort",
+  "Ethra Reserve",
+];
+
+// Trascrizioni e OCR possono essere lunghi: un reel di un minuto fa qualche
+// migliaio di caratteri e il prompt non ci guadagna nulla oltre un certo
+// punto, mentre il costo per chiamata sì.
+const MAX_CHARS = 1500;
+
+const clip = (text) => {
+  const clean = (text || "").replace(/\s+/g, " ").trim();
+  return clean.length > MAX_CHARS ? `${clean.slice(0, MAX_CHARS)}…` : clean;
 };
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+function buildPrompt(sections) {
+  const blocco = sections.map(({ label, text }) => `${label}:\n"${text}"`).join("\n\n");
 
-function inWindow(date) {
-  if (!date) return false;
-  const d = date.slice(0, 10);
-  return (d >= WINDOW_A.start && d <= WINDOW_A.end) || (d >= WINDOW_B.start && d <= WINDOW_B.end);
-}
+  return `
+Analizza questo post social di un resort italiano. Il contenuto arriva da più
+fonti: valutale INSIEME, nessuna prevale sulle altre.
 
-async function readStore() {
-  const metaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
-    headers: ghHeaders,
-  });
+${blocco}
 
-  if (!metaRes.ok) {
-    throw new Error(`Lettura metadata fallita: ${metaRes.status} ${await metaRes.text()}`);
-  }
-
-  const meta = await metaRes.json();
-  const sha = meta.sha;
-
-  const branch = process.env.GITHUB_REF_NAME || "main";
-  const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${STORE_PATH}?t=${Date.now()}`;
-
-  const rawRes = await fetch(rawUrl, {
-    headers: {
-      "User-Agent": "analyze-bluserena-sentiment",
-      Accept: "application/json,text/plain,*/*",
-    },
-  });
-
-  if (!rawRes.ok) {
-    throw new Error(`Lettura raw fallita: ${rawRes.status} ${await rawRes.text()}`);
-  }
-
-  const raw = await rawRes.text();
-  const store = raw.trim() ? JSON.parse(raw) : { canali: [] };
-  if (!Array.isArray(store.canali)) store.canali = [];
-
-  // Crea mappa di post precedenti per merge intelligente (preserva sentiment/topics/location)
-  const previousStore = {};
-  for (const canale of store.canali) {
-    for (const account of canale.accounts || []) {
-      previousStore[account.url] = account;
-    }
-  }
-
-  return { store, sha, previousStore };
-}
-
-async function writeStore(store, sha) {
-  if (DRY_RUN) {
-    console.log("(DRY_RUN) Non scrivo su GitHub.");
-    return;
-  }
-
-  const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
-
-  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
-    method: "PUT",
-    headers: { ...ghHeaders, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message: "chore: analyze bluserena posts sentiment/topic [trendzn-bot]",
-      content,
-      sha,
-    }),
-  });
-
-  if (!res.ok) {
-    throw new Error(`Scrittura fallita: ${res.status} ${await res.text()}`);
-  }
-}
-
-// Analizza metadati audio (TikTok sound name, IG audio, ecc.)
-async function analyzeAudio(post) {
-  const hasAudioUrl = !!post.audioUrl;
-  const hasAudioName = !!post.audioName;
-
-  if (!hasAudioUrl && !hasAudioName) {
-    return null;
-  }
-
-  const audioContext = [];
-  if (post.audioName) audioContext.push(`Audio name: ${post.audioName}`);
-  if (post.audioUrl) audioContext.push(`Audio URL: ${post.audioUrl}`);
-
-  const prompt = `
-Analizza questo audio metadata da post social resort:
-${audioContext.join("\n")}
-Caption del post: "${post.caption || ""}"
+Tieni presente che la trascrizione audio e il testo on-screen sono generati
+automaticamente e possono contenere errori di riconoscimento: se una parola
+sembra storpiata, interpretala dal contesto invece di trattarla come rumore.
 
 Rispondi in JSON con:
-1. audioSentiment: "positive" | "negative" | "neutral" (sentimento suggerito dall'audio)
-2. audioGenre: stringa breve (es: "relaxing", "upbeat", "wedding", "travel")
-3. audioRelevance: "high" | "medium" | "low" (quanto l'audio è rilevante al tema resort/vacanza)
-4. confidence: numero 0-1
+1. sentiment: "positive" | "negative" | "neutral" — il sentimento di chi ha
+   pubblicato il post verso la vacanza/struttura, considerando tutte le fonti
+2. topics: array di argomenti principali (es: ["animazione", "spiaggia", "cibo"])
+3. locations: array di strutture citate, scelte SOLO fra: ${RESORTS.join(", ")}
+4. confidence: numero fra 0 e 1
 
-Rispondi SOLO con JSON valido, senza markdown.
-Esempio: {"audioSentiment": "positive", "audioGenre": "upbeat", "audioRelevance": "high", "confidence": 0.7}
+Rispondi SOLO con JSON valido, senza markdown e senza altro testo.
+Esempio: {"sentiment": "positive", "topics": ["animazione", "mare"], "locations": ["Torreserena Resort"], "confidence": 0.9}
   `.trim();
+}
 
-  const messages = [
-    {
-      role: "user",
-      content: prompt,
-    },
-  ];
-
-  const parse = (text) => {
-    try {
-      const json = JSON.parse(text.trim());
-      if (!json.audioSentiment) return null;
-      return json;
-    } catch {
-      return null;
-    }
-  };
-
+const parse = (text) => {
   try {
-    const result = await chatCompletionWithFallback(messages, {
+    const json = JSON.parse(text.trim());
+    if (!json.sentiment || !Array.isArray(json.topics)) return null;
+    if (!["positive", "negative", "neutral"].includes(json.sentiment)) return null;
+    return json;
+  } catch {
+    return null;
+  }
+};
+
+async function analyzePost(account) {
+  // Le fonti effettivamente disponibili per QUESTO post: finiscono nel record
+  // così si sa su cosa è stato deciso il sentiment, senza riaprire il post.
+  const sections = [];
+  const sources = [];
+
+  const caption = clip(account.caption);
+  if (caption) {
+    sections.push({ label: "Caption del post", text: caption });
+    sources.push("caption");
+  }
+
+  const transcript =
+    account.audioAnalysis?.status === "ok" ? clip(account.audioAnalysis.transcript) : "";
+  if (transcript) {
+    sections.push({ label: "Parlato nel video (trascrizione automatica)", text: transcript });
+    sources.push("audio");
+  }
+
+  const onScreen = account.ocrData?.status === "ok" ? clip(account.ocrData.textOnScreen) : "";
+  if (onScreen) {
+    sections.push({ label: "Testo sovraimpresso nel video (OCR)", text: onScreen });
+    sources.push("ocr");
+  }
+
+  if (!sections.length) {
+    return {
+      status: "no_text",
+      sentiment: null,
+      topics: [],
+      location: null,
+      confidence: 0,
+      sources,
+    };
+  }
+
+  let result;
+  try {
+    result = await chatCompletionWithFallback([{ role: "user", content: buildPrompt(sections) }], {
       apiKey,
       groqApiKey,
       parse,
     });
-
-    return {
-      sentiment: result.audioSentiment,
-      genre: result.audioGenre || "unknown",
-      relevance: result.audioRelevance || "unknown",
-      confidence: result.confidence || 0,
-    };
   } catch (err) {
-    console.error(`Errore audio analysis post ${post.url}: ${err.message}`);
-    return null;
-  }
-}
-
-// Analizza un singolo post per sentiment, topic, location
-async function analyzePost(post) {
-  if (!post.caption && !post.url) {
-    return { sentiment: null, topics: [], locations: [], audioAnalysis: null };
-  }
-
-  const caption = post.caption || "";
-
-  // Includi OCR text se disponibile
-  let ocrContext = "";
-  if (post.ocrData?.textOnScreen) {
-    ocrContext = `\nTesto on-screen (OCR): "${post.ocrData.textOnScreen}"`;
-  }
-
-  // Includi audio transcript se disponibile
-  let audioContext = "";
-  if (post.audioAnalysis?.transcript) {
-    audioContext = `\nTranscript audio: "${post.audioAnalysis.transcript}"`;
-  }
-
-  const prompt = `
-Analizza questo post social da resort italiano utilizzando TUTTI i dati disponibili:
-Caption: "${caption}"${ocrContext}${audioContext}
-URL: ${post.url}
-
-Rispondi in JSON con:
-1. sentiment: "positive" | "negative" | "neutral" (sentimento generale considerando caption, OCR e audio)
-2. topics: array di argomenti/hashtag principali (es: ["vacanza", "mare", "relax"])
-3. locations: array di nomi di resort/posti menzionati (cerca ${RESORTS.join(", ")})
-4. confidence: numero 0-1 della fiducia nell'analisi
-
-Rispondi SOLO con JSON valido, senza markdown, senza altro testo.
-Esempio: {"sentiment": "positive", "topics": ["vacanza", "mare"], "locations": ["Cala Serena"], "confidence": 0.9}
-  `.trim();
-
-  const messages = [
-    {
-      role: "user",
-      content: prompt,
-    },
-  ];
-
-  const parse = (text) => {
-    try {
-      const json = JSON.parse(text.trim());
-      if (!json.sentiment || !Array.isArray(json.topics)) return null;
-      return json;
-    } catch {
-      return null;
-    }
-  };
-
-  try {
-    const result = await chatCompletionWithFallback(messages, {
-      apiKey,
-      groqApiKey,
-      parse,
-    });
-
-    // Analizza audio se disponibile (per TikTok/IG Reels)
-    let audioAnalysis = null;
-    if ((post.audioUrl || post.audioName) && post.platform === "tiktok") {
-      audioAnalysis = await analyzeAudio(post);
-    }
-
     return {
-      sentiment: result.sentiment,
-      topics: result.topics || [],
-      locations: result.locations || [],
-      confidence: result.confidence || 0,
-      audioAnalysis,
+      status: "error",
+      reason: String(err?.message ?? err).slice(0, 200),
+      sentiment: null,
+      topics: [],
+      location: null,
+      confidence: 0,
+      sources,
     };
-  } catch (err) {
-    console.error(`Errore analisi post ${post.url}: ${err.message}`);
-    return { sentiment: null, topics: [], locations: [], audioAnalysis: null };
-  }
-}
-
-// Applica risultati analisi al post, preservando dati precedenti se non sovrascrivibili
-function applyAnalysis(post, analysis, previousPost) {
-  // Se non abbiamo analisi valida, preserva i dati precedenti
-  if (!analysis || analysis.confidence < MIN_CONFIDENCE) {
-    if (previousPost) {
-      post.sentiment = previousPost.sentiment;
-      post.topics = previousPost.topics;
-      post.location = previousPost.location;
-      post.audioAnalysis = previousPost.audioAnalysis;
-    }
-    return;
   }
 
-  // Applica nuova analisi
-  post.sentiment = analysis.sentiment;
-  post.topics = analysis.topics.length > 0 ? analysis.topics : undefined;
+  const confidence = Number(result.confidence) || 0;
+  const locations = Array.isArray(result.locations) ? result.locations : [];
 
-  // Per location: usa quella nuova se trovata, altrimenti preserva la vecchia
-  if (analysis.locations && analysis.locations.length > 0) {
-    post.location = analysis.locations[0];
-  } else if (previousPost?.location) {
-    post.location = previousPost.location;
-  }
-
-  if (analysis.audioAnalysis) {
-    post.audioAnalysis = JSON.stringify(analysis.audioAnalysis);
-  }
-}
-
-// Main
-console.log(
-  `Analisi Bluserena sentiment/topic per post in finestre: ${WINDOW_A.start}..${WINDOW_A.end}, ${WINDOW_B.start}..${WINDOW_B.end}`,
-);
-console.log(`Min confidence threshold: ${MIN_CONFIDENCE}`);
-console.log(`Batch size: ${BATCH_SIZE}`);
-if (DRY_RUN) console.log("(DRY_RUN mode attivo - nessuna modifica su GitHub)");
-
-const { store, sha, previousStore } = await readStore();
-
-let totalAnalyzed = 0;
-let totalUpdated = 0;
-
-for (const canale of store.canali) {
-  console.log(`\nCanale: ${canale.name} (${canale.accounts?.length ?? 0} post)`);
-
-  // Analizza TUTTI i post nella finestra temporale (rigenera sentiment/topics usando OCR + audio)
-  const accountsToAnalyze = (canale.accounts || []).filter(
-    (a) => inWindow(a.date) && a.caption,
+  console.log(
+    `    ${result.sentiment} (conf ${confidence.toFixed(2)}) da ${sources.join("+")}` +
+      `${confidence < MIN_CONFIDENCE ? " — sotto soglia, non applicato" : ""}`,
   );
 
-  if (accountsToAnalyze.length === 0) {
-    console.log("  → Nessun post da analizzare (fuori finestra o già analizzati)");
-    continue;
-  }
-
-  for (let i = 0; i < accountsToAnalyze.length; i += BATCH_SIZE) {
-    const batch = accountsToAnalyze.slice(i, i + BATCH_SIZE);
-    console.log(`  → Batch ${Math.floor(i / BATCH_SIZE) + 1}: analizzando ${batch.length} post...`);
-
-    const results = await Promise.all(batch.map((post) => analyzePost(post)));
-
-    let batchUpdated = 0;
-    for (let j = 0; j < batch.length; j++) {
-      const analysis = results[j];
-      const previousPost = previousStore[batch[j].url];
-      applyAnalysis(batch[j], analysis, previousPost);
-      if (analysis.confidence >= MIN_CONFIDENCE) {
-        batchUpdated++;
-      }
-    }
-
-    console.log(`     → ${batchUpdated}/${batch.length} post aggiornati`);
-    totalAnalyzed += batch.length;
-    totalUpdated += batchUpdated;
-
-    if (i + BATCH_SIZE < accountsToAnalyze.length) {
-      await sleep(2000); // delay tra batch per rate-limit
-    }
-  }
+  // Sotto soglia il record resta "ok" (la pipeline ha funzionato, il modello
+  // era solo incerto) ma il sentiment non viene applicato: meglio un post
+  // "non analizzato" che una media inquinata da tirate a indovinare.
+  return {
+    status: "ok",
+    sentiment: confidence >= MIN_CONFIDENCE ? result.sentiment : null,
+    topics: confidence >= MIN_CONFIDENCE ? result.topics.filter(Boolean).slice(0, 8) : [],
+    location: locations[0] ?? null,
+    confidence,
+    minConfidence: MIN_CONFIDENCE,
+    sources,
+  };
 }
 
-console.log(`\n=== Riepilogo ===`);
-console.log(`Post analizzati: ${totalAnalyzed}`);
-console.log(`Post aggiornati: ${totalUpdated}`);
-
-if (totalUpdated > 0) {
-  console.log("Scritto su GitHub...");
-  await writeStore(store, sha);
-  console.log("✓ Completato!");
-} else {
-  console.log("Nessun aggiornamento.");
+// Il record vive in sentimentData, ma la UI legge i campi piatti: vanno
+// aggiornati insieme, o la pagina continuerebbe a mostrare l'analisi vecchia.
+//
+// sentiment e topics vengono SEMPRE dallo stesso record, anche quando è vuoto:
+// tenersi i valori della run precedente significherebbe mostrare un giudizio
+// dato sulla sola caption accanto a uno dato su caption + audio + OCR, senza
+// modo di distinguerli. Se un post perde il sentiment, sentimentData dice
+// perché (confidence sotto soglia, nessun testo, errore).
+function applyRecord(account, record) {
+  account.sentimentData = record;
+  account.sentiment = record.sentiment;
+  account.topics = record.topics?.length ? record.topics : undefined;
+  // Il geotag vero, quando c'è, vale più di un nome dedotto dal testo.
+  if (!account.location && record.location) account.location = record.location;
 }
+
+await runEnrichment({
+  field: "sentimentData",
+  version: VERSION,
+  title: "Sentiment, topic e location su caption + audio + testo on-screen",
+  commitMessage: (n) => `chore: sentiment su ${n} post Bluserena BSConfirmed [trendzn-bot]`,
+  // Solo i post confermati: gli altri sono omonimie da hashtag e non entrano
+  // nelle statistiche della pagina, che sono calcolate sui BSConfirmed.
+  select: (account) => account.verificationStatus === "confirmed",
+  processPost: analyzePost,
+  apply: applyRecord,
+});

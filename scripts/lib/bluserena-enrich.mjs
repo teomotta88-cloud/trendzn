@@ -29,8 +29,11 @@ const DATE_RANGES = [
   { start: new Date("2026-07-01T00:00:00Z"), end: new Date("2026-08-31T23:59:59Z") },
 ];
 
-// Solo contenuti video: TikTok /video/, Instagram /reel/ o /reels/.
+// Solo contenuti video: TikTok /video/, Instagram /reel/ o /reels/. È il
+// default perché OCR e trascrizione audio hanno senso solo lì; chi analizza
+// testo (il sentiment) passa il proprio `select` e prende anche le foto.
 const VIDEO_URL = /\/(video|reel|reels)\//i;
+const isVideo = (account) => VIDEO_URL.test(account.url);
 
 function isInDateRange(dateStr) {
   if (!dateStr) return false;
@@ -44,16 +47,30 @@ function intEnv(name, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
-export async function runEnrichment({ field, version = 0, title, commitMessage, processPost }) {
+export async function runEnrichment({
+  field,
+  version = 0,
+  title,
+  commitMessage,
+  processPost,
+  // Quali post sono eleggibili, oltre alla finestra temporale (che vale
+  // sempre: è il confronto luglio-agosto anno su anno di tutta la pagina).
+  select = isVideo,
+  // Come depositare il record sull'account allo scrittura: vedi commitField.
+  apply,
+}) {
   const maxPosts = intEnv("MAX_POSTS", 400);
   const maxMinutes = intEnv("MAX_MINUTES", 300);
   const batchSize = intEnv("BATCH_SIZE", 25);
   const reprocessFailed = process.env.REPROCESS_FAILED === "true";
+  // Il lavoro vero (download, OCR, chiamate LLM) viene fatto lo stesso: DRY_RUN
+  // salta solo la scrittura, serve a vedere cosa uscirebbe prima di committarlo.
+  const dryRun = process.env.DRY_RUN === "true";
 
   console.log(`${title}\n${"=".repeat(title.length)}\n`);
   console.log(
     `Budget: max ${maxPosts} post, max ${maxMinutes} min, commit ogni ${batchSize}` +
-      `${reprocessFailed ? ", riprovo i falliti" : ""}\n`,
+      `${reprocessFailed ? ", riprovo i falliti" : ""}${dryRun ? " — DRY_RUN, non scrivo" : ""}\n`,
   );
 
   const { store } = await readStore();
@@ -64,7 +81,7 @@ export async function runEnrichment({ field, version = 0, title, commitMessage, 
   const queue = [];
 
   for (const { account } of eachAccount(store)) {
-    if (!account.url || !VIDEO_URL.test(account.url)) continue;
+    if (!account.url || !select(account)) continue;
     if (!isInDateRange(account.date)) continue;
     eligible++;
 
@@ -89,7 +106,7 @@ export async function runEnrichment({ field, version = 0, title, commitMessage, 
     queue.push(account);
   }
 
-  console.log(`Post video nell'intervallo: ${eligible}`);
+  console.log(`Post eleggibili nell'intervallo: ${eligible}`);
   console.log(
     `Già elaborati: ${done}` + (obsoleti ? ` (${obsoleti} da rifare: versione precedente)` : ""),
   );
@@ -124,12 +141,19 @@ export async function runEnrichment({ field, version = 0, title, commitMessage, 
 
   const flush = async () => {
     if (!pending.size) return;
+    if (dryRun) {
+      console.log(`  (DRY_RUN) ${pending.size} post pronti, non li scrivo.\n`);
+      committed += pending.size;
+      pending.clear();
+      return;
+    }
     // commitField ritorna le OCCORRENZE scritte: lo stesso URL può comparire in
     // più canali e in quel caso il record finisce su tutte le copie.
     const occorrenze = await commitField({
       field,
       updates: pending,
       message: commitMessage(pending.size),
+      apply,
     });
     committed += pending.size;
     const extra = occorrenze > pending.size ? ` (${occorrenze} occorrenze)` : "";

@@ -96,6 +96,26 @@ export type AccountRef = {
     version?: number;
     updatedAt?: string | null;
   } | null;
+  // Esito dell'analisi di sentiment/topic/location, scritto SOLO da
+  // scripts/analyze-bluserena-sentiment-topic.mjs sui post BSConfirmed della
+  // finestra luglio-agosto. `sources` dice su quali testi è stata decisa
+  // (caption, audio, ocr): il sentiment di un reel nasce spesso dal parlato,
+  // non dalla caption. Il campo piatto `sentiment` qui sopra resta quello che
+  // legge la UI; sotto la soglia di confidenza il record c'è con status "ok"
+  // ma sentiment null, così la run successiva sa che il post è già stato
+  // valutato e non lo rifà.
+  sentimentData?: {
+    status?: "ok" | "no_text" | "error";
+    sentiment?: Sentiment | null;
+    topics?: string[];
+    location?: string | null;
+    confidence?: number;
+    minConfidence?: number;
+    sources?: Array<"caption" | "audio" | "ocr">;
+    reason?: string | null;
+    version?: number;
+    updatedAt?: string | null;
+  } | null;
   // Legacy: insight prodotti dalla vecchia analisi LLM su OCR + caption.
   // Nessuno script lo scrive più, resta per i post già analizzati.
   ocrInsights?: string | null;
