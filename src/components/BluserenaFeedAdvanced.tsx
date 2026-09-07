@@ -1315,6 +1315,7 @@ function PostCard({
   const status = post.verificationStatus || verifyBluserenaPost(post.caption);
   const sentiment = post.sentiment;
   const resort = resolveResort(post);
+  const [showTranscript, setShowTranscript] = useState(false);
 
   // Quando un post è in lista per una parola che sta solo nell'audio o nel
   // testo a video, la card non mostrerebbe da nessuna parte il perché e il
@@ -1354,7 +1355,12 @@ function PostCard({
         </div>
 
         <div className="text-[11px] text-muted-foreground">
-          <div>@{post.canaleName}</div>
+          {/* L'autore del post, non il canale hashtag da cui è stato pescato:
+              quello raccontava il resort una seconda volta (la card ha già la
+              location) e nascondeva l'unica informazione che qui manca, cioè
+              chi ha pubblicato. Il canale resta nel tooltip, serve solo a
+              capire da quale hashtag è arrivato. */}
+          <div title={`Trovato nel canale ${post.canaleName}`}>@{post.handle || "sconosciuto"}</div>
           {post.date && <div>{new Date(post.date).toLocaleDateString("it-IT")}</div>}
         </div>
 
@@ -1474,9 +1480,41 @@ function PostCard({
           )}
 
           {post.audioAnalysis?.transcript && (
-            <div className="flex items-center gap-1.5">
-              <Headphones className="size-3 text-purple-600 dark:text-purple-500" />
-              <span className="text-[9px] text-purple-700 dark:text-purple-400">Audio</span>
+            <div className="space-y-1">
+              {/* La trascrizione arriva a qualche migliaio di caratteri: sta
+                  chiusa per non allungare la card, e si apre qui invece che
+                  in un popup perché va letta accanto al video. */}
+              <button
+                type="button"
+                onClick={() => setShowTranscript((v) => !v)}
+                aria-expanded={showTranscript}
+                className="flex items-center gap-1.5 text-purple-700 hover:opacity-80 dark:text-purple-400"
+              >
+                <Headphones className="size-3 text-purple-600 dark:text-purple-500" />
+                <span className="text-[9px]">
+                  Audio — {showTranscript ? "nascondi" : "leggi"} trascrizione
+                </span>
+              </button>
+
+              {showTranscript && (
+                <div className="rounded border border-border bg-muted/40 p-2">
+                  <p className="max-h-40 overflow-y-auto whitespace-pre-wrap text-[10px] leading-relaxed text-muted-foreground">
+                    {post.audioAnalysis.transcript}
+                  </p>
+                  {(post.audioAnalysis.language || post.audioAnalysis.durationSec) && (
+                    <p className="mt-1 text-[9px] text-muted-foreground/70">
+                      {[
+                        post.audioAnalysis.language,
+                        post.audioAnalysis.durationSec
+                          ? `${Math.round(post.audioAnalysis.durationSec)}s`
+                          : null,
+                      ]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           )}
         </div>
