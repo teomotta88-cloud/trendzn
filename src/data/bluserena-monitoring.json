@@ -55236,6 +55236,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:19:15.575Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CON COOKING",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:24:30.471Z"
           }
         },
         {
@@ -55259,6 +55268,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:19:33.910Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TENGO DOS ALTERNATIVAS UNA\nOPCION\nEN ESTA TORRE DE\nVALOR DE 540 000\nAMOBLADODOS\nPONIENTE Y\nALGUNA DE LAS DOS é\nALTERNATIVAS EN",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:24:42.711Z"
           }
         },
         {
@@ -55282,6 +55300,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:19:41.448Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VILLA WITH PRIVATE POOL IN AJMAN T\nAL ZORAH RESORT IS ONE OF THE MOST LUXURIOUS RESORTS\nINSIDE THE RESORT ITSELF, THERE ARE RESTAURANTS, A\nSPA SECTION. AND MORE",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:24:58.822Z"
           }
         },
         {
@@ -55305,6 +55332,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:19:49.564Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JA the resort",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:25:10.916Z"
           }
         },
         {
@@ -55328,6 +55364,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:20:20.343Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:25:18.252Z"
           }
         },
         {
@@ -55351,6 +55395,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:20:22.859Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:25:26.672Z"
           }
         },
         {
@@ -55374,6 +55426,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:20:44.178Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Burnt Store Rd\nPunta Gorda FL\nSh by taylor morrison\nESPLANADE",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:25:34.540Z"
           }
         }
       ]
@@ -58832,6 +58893,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:20:50.294Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:25:42.300Z"
           }
         },
         {
@@ -58855,6 +58924,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:20:52.821Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:25:52.741Z"
           }
         },
         {
@@ -58878,6 +58955,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:23:08.720Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:26:08.536Z"
           }
         },
         {
@@ -58901,6 +58986,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:23:42.467Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a SAE AH TOURIST\nfrom the aifport\nwhich had a stunning vie\nlive caesar Salad",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:26:22.139Z"
           }
         },
         {
@@ -58924,6 +59018,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:23:44.986Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fited\ne need",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:26:33.391Z"
           }
         },
         {
@@ -58947,6 +59050,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:23:58.950Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ZATON\nHOLIDAY RESORT",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:26:52.396Z"
           }
         },
         {
@@ -58970,6 +59082,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:24:21.262Z"
+          },
+          "ocrData": {
+            "textOnScreen": "25 Fall Phys 207 Electricity Magnetism\nFors\nThen you're going\nsettings\nLanguage and region\nWorld clock United States Print\nView options ‘00pm i\nKeyboard shortcuts Display secondary time zone\ncalendar (GMT-05:00) Time Chicago\nfor my Ask to update my primary time zone to current location\nCALENDAR VIEW OF SCHEDULE A\nwith\nTrey Bartee\nSettings for other calendars\nfile; import and",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:27:01.061Z"
           }
         },
         {
@@ -58993,6 +59114,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:24:26.854Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lila e ar fo\nè Lila\nustomized",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:27:12.738Z"
           }
         },
         {
@@ -59016,6 +59146,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:24:43.943Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:27:25.338Z"
           }
         },
         {
@@ -59039,6 +59177,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:26:26.035Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:27:30.934Z"
           }
         },
         {
@@ -59062,6 +59208,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:27:19.195Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tabela kennte Sisonke resort\nn guest house F\nn guest house approved\nn guest house approved fi",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:27:40.675Z"
           }
         },
         {
@@ -59085,6 +59240,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:27:26.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BACT\nsuasana alamnya langsung\nidatnya rutinitas",
+            "confidence": 0.736,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:28:11.357Z"
           }
         },
         {
@@ -59108,6 +59272,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:27:31.674Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:28:37.451Z"
           }
         },
         {
@@ -59131,6 +59303,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:27:52.375Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Skyligh i\nPowel\nLet’s take on the day.\na ylight.\ntake on the day.",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:28:44.694Z"
           }
         },
         {
@@ -59154,6 +59335,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:28:39.075Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Calendar August2026\nAugust 2026. ù\nSPAN201\nO) Timo zone\nAugust2026 CDE:\nOther oT",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:28:58.911Z"
           }
         },
         {
@@ -59177,6 +59367,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:29:22.630Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:29:04.609Z"
           }
         },
         {
@@ -59200,6 +59398,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:29:25.031Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:29:14.513Z"
           }
         },
         {
@@ -59223,6 +59429,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:30:19.914Z"
+          },
+          "ocrData": {
+            "textOnScreen": "STARTS JULY 01,2026 ONWARDS...\nOpen\nNILA e\nAT MARAMI PA\nLocloc Ba\nAU BATANGAS\nYUNG DAAN",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:29:33.301Z"
           }
         },
         {
