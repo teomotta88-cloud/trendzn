@@ -12574,31 +12574,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oU1dIEmvA9rrAIU7UAQCfpLvEJLfIseZFzAOGA~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=s969YiruxhCK4oiWTXxgIJi2taA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Calaserena Resort",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Hotel",
-            "Calanè",
-            "Calanè Resort",
-            "GranSerena",
-            "Gran Serena",
-            "Sibari Green",
-            "Sibari Green Resort",
-            "Valentino",
-            "Valentino Resort",
-            "Kalidia",
-            "Kalidia Hotel",
-            "Alborèa",
-            "Alborèa Ecolodge",
-            "Ethra",
-            "Ethra Reserve",
-            "Is Serenas",
-            "Is Serenas Badesi",
-            "IsSerenas"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -12618,6 +12596,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:20:59.837Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:03:39.768Z"
           }
         },
         {
@@ -13111,11 +13108,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "tigretta",
-            "bacio"
+            "animazione",
+            "viralità"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -13135,6 +13129,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:49:31.478Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "viralità"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.72,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:03:44.025Z"
           }
         },
         {
@@ -13143,7 +13155,7 @@
           "url": "https://www.tiktok.com/@francescodimarc4/video/7677939653558816033",
           "date": "2026-08-25T12:07:15.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": 410,
           "likes": 22,
           "comments": 6,
@@ -13167,7 +13179,31 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:49:41.013Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:03:44.799Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -13384,13 +13420,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "italiano",
-            "relax",
-            "serenità",
-            "amore",
-            "mare",
-            "resort"
+            "villaggi",
+            "emozioni",
+            "atmosfera"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -13410,6 +13442,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:50:34.767Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "villaggi",
+              "emozioni",
+              "atmosfera"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.65,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:03:47.769Z"
           }
         },
         {
@@ -13426,10 +13477,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "beach party"
+            "animazione",
+            "spiaggia",
+            "musica",
+            "party"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -13448,6 +13499,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:06:05.475Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "musica",
+              "party"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:03:52.552Z"
           }
         },
         {
@@ -13462,14 +13532,11 @@
           "comments": 3,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "recensione",
-            "vacanza",
-            "mare",
-            "shopping",
-            "sconti",
-            "abbigliamento"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -13489,6 +13556,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:50:55.088Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:03:53.567Z"
           }
         },
         {
@@ -13505,12 +13591,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "cibo",
-            "nutella",
-            "buffet",
-            "risposta",
-            "estate"
+            "prezzi",
+            "buffet"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -13530,6 +13613,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:51:05.247Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "prezzi",
+              "buffet"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.82,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:00.511Z"
           }
         },
         {
@@ -13857,13 +13959,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEYffEWGIIEjRSXNIppAdMGgLjeEAGvi7QnfIy~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=U5xo%2FO8p1ld4K7mkrHFcNfzLxu0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "bambini",
-            "piscina",
-            "mare",
-            "residence",
-            "fitness",
-            "lowcost"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -13883,6 +13981,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:06:25.126Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:01.392Z"
           }
         },
         {
@@ -13979,12 +14096,9 @@
           "shares": 4,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "pool",
-            "estate",
-            "relax",
-            "party",
-            "mare"
+            "animazione",
+            "intrattenimento serale",
+            "estate"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14003,6 +14117,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T09:31:11.598Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "intrattenimento serale",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.82,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:03.474Z"
           }
         },
         {
@@ -14037,26 +14169,33 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Alborèa",
-            "Alborèa Ecolodge",
-            "Ethra",
-            "Ethra Reserve",
-            "Is Serenas",
-            "Is Serenas Badesi",
-            "IsSerenas"
-          ]
+            "offerta estiva",
+            "trattamento soft all inclusive",
+            "professionalità",
+            "cena a buffet",
+            "rapporto qualità prezzo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "offerta estiva",
+              "trattamento soft all inclusive",
+              "professionalità",
+              "cena a buffet",
+              "rapporto qualità prezzo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:12.279Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14089,12 +14228,26 @@
           },
           "sentiment": "positive",
           "topics": [
-            "party",
-            "foam party",
-            "summer",
-            "vacanza",
-            "acqua"
-          ]
+            "animazione",
+            "spiaggia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:13.028Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14110,11 +14263,11 @@
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
             "musica",
-            "estate"
+            "emozioni",
+            "estate",
+            "vacanze",
+            "mare"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14133,6 +14286,26 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:07:39.162Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "emozioni",
+              "estate",
+              "vacanze",
+              "mare"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:14.954Z"
           }
         },
         {
@@ -14149,11 +14322,9 @@
           "shares": 0,
           "sentiment": "neutral",
           "topics": [
-            "anni 90",
-            "cultura pop",
-            "famiglia",
-            "vita da adulto",
-            "humor"
+            "animazione",
+            "intrattenimento serale",
+            "commedia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14172,6 +14343,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:07:44.775Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "animazione",
+              "intrattenimento serale",
+              "commedia"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.82,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:17.145Z"
           }
         },
         {
@@ -14205,45 +14394,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Resort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Serena Hotel",
-            "Cala Serena",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Resort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Serena Hotel",
-            "Cala Serena",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Resort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Serena Hotel"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:18.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14276,11 +14448,26 @@
           },
           "sentiment": "positive",
           "topics": [
-            "pool party",
-            "vacanza",
-            "musica",
-            "resort"
-          ]
+            "animazione",
+            "piscina"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "piscina"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:31.616Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14314,13 +14501,29 @@
           },
           "sentiment": "negative",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "formiche",
-            "video",
-            "TikTok"
-          ]
+            "animazione",
+            "cibo",
+            "servizi"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "animazione",
+              "cibo",
+              "servizi"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:32.191Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14336,10 +14539,9 @@
           "shares": 2,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "cibo",
-            "relax",
-            "resort"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14359,6 +14561,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:54:58.512Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:32.885Z"
           }
         },
         {
@@ -14391,15 +14612,29 @@
             "version": 3,
             "updatedAt": "2026-09-02T14:22:53.056Z"
           },
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "recensione",
-            "shopping",
-            "sconti",
-            "abbigliamento",
-            "consiglio",
-            "viaggio"
-          ]
+            "shop",
+            "abbigliamento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "shop",
+              "abbigliamento"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:34.986Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14415,13 +14650,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "amore",
-            "musica",
+            "vacanze",
             "felicità",
-            "serenità"
+            "gioia",
+            "musica",
+            "ricordi",
+            "emozioni"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14440,6 +14674,27 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:08:34.085Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanze",
+              "felicità",
+              "gioia",
+              "musica",
+              "ricordi",
+              "emozioni"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:37.053Z"
           }
         },
         {
@@ -14457,9 +14712,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "sicilia",
-            "bluserena",
-            "vacanzeinitalia"
+            "Italia",
+            "bluserena"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14478,6 +14732,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:08:56.724Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "Italia",
+              "bluserena"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:37.873Z"
           }
         },
         {
@@ -14494,11 +14766,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "outfit",
             "fashion",
-            "travel"
+            "outfit"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14518,6 +14787,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:56:24.273Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "fashion",
+              "outfit"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:39.867Z"
           }
         },
         {
@@ -14534,11 +14821,7 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Sibari Green",
-            "Sibari Green Resort"
+            "ringraziamento"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -14557,6 +14840,22 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:45:59.757Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "ringraziamento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:42.001Z"
           }
         },
         {
@@ -14590,13 +14889,34 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanze",
+            "animazione",
             "musica",
-            "Disney",
-            "famiglia",
-            "ricordi",
-            "villaggio turistico"
-          ]
+            "canto",
+            "intrattenimento",
+            "emozioni",
+            "estate"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "canto",
+              "intrattenimento",
+              "emozioni",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:44.192Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14628,17 +14948,31 @@
             "version": 3,
             "updatedAt": "2026-09-02T13:57:00.184Z"
           },
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "recensione",
-            "bluserena",
-            "calaserena",
-            "sardegna",
-            "viaggi",
-            "shopping",
-            "sconti",
-            "moda"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:45.147Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -14669,13 +15003,28 @@
             "version": 3,
             "updatedAt": "2026-09-04T08:09:30.447Z"
           },
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "resort"
-          ]
+            "musica",
+            "animazione"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "animazione"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:04:47.397Z"
+          }
         },
         {
           "platform": "tiktok",
