@@ -59,6 +59,16 @@ const OVERWRITE_EXISTING = process.env.OVERWRITE_EXISTING === "true";
 // stesso itemStruct dei video, quindi gli stessi contatori.
 const TIKTOK_POST = /tiktok\.com\/@[^/]+\/(?:video|photo)\/\d+/i;
 
+// Solo i BSConfirmed, come faceva lo script Emplifi: gli altri sono omonimie
+// raccolte dagli hashtag (hotel Serena in Uganda, Pakistan...) e non entrano
+// nelle statistiche della pagina. Senza questo filtro la coda passa da 338 a
+// 1310 post — lo store contiene solo post TikTok della finestra lug-ago,
+// quindi è `verificationStatus` a fare tutta la selezione, non la data.
+// Un post che diventa confirmed più avanti (bulk-verify gira ogni settimana)
+// non ha ancora un record e viene preso alla run successiva, da solo.
+const isConfirmedTikTok = (account) =>
+  account.verificationStatus === "confirmed" && TIKTOK_POST.test(account.url ?? "");
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -108,7 +118,7 @@ try {
     version: VERSION,
     title: "KPI engagement TikTok dalla pagina del video",
     commitMessage: (n) => `chore: KPI engagement da pagina TikTok su ${n} post [trendzn-bot]`,
-    select: (account) => TIKTOK_POST.test(account.url ?? ""),
+    select: isConfirmedTikTok,
     apply: (account, record) => applyEngagement(account, record, { overwrite: OVERWRITE_EXISTING }),
     processPost: async (account) => {
       const record = await scrapePost(browser, account.url);
