@@ -97,16 +97,51 @@ export async function scrollAndCollectVideoUrls(
 // Tutti i video pubblici di un autore. È la parte deterministica della
 // scoperta: un profilo elenca i suoi video, non un campione, a differenza
 // delle pagine hashtag.
+//
+// Si raccoglie da DUE strade insieme, perché la griglia NON sta nell'HTML: il
+// primo run della sonda (07/09/2026) ha trovato la pagina caricata
+// correttamente, con webapp.user-detail nello scope di idratazione ma nessuna
+// lista di post e zero link nel DOM. TikTok la carica dopo, con una chiamata
+// separata.
+//
+//   1. le risposte XHR /api/post/item_list/ che la pagina fa da sé — la firma
+//      (msToken, X-Bogus) la calcola il JS di TikTok, noi leggiamo soltanto
+//      la risposta e non dobbiamo riprodurre niente;
+//   2. i link nel DOM dopo gli scroll, per quando la griglia si materializza.
+//
+// L'unione delle due copre entrambi i casi senza dover indovinare quale sia
+// quello buono.
 export async function fetchAuthorVideos(browser, handle, opzioni = {}) {
   const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
+  const daXhr = new Set();
+
+  page.on("response", async (res) => {
+    if (!/\/api\/post\/item_list/.test(res.url())) return;
+    try {
+      const body = await res.json();
+      for (const item of body?.itemList ?? []) {
+        const id = item?.id;
+        const autore = item?.author?.uniqueId ?? handle;
+        if (id) daXhr.add(`https://www.tiktok.com/@${autore}/video/${id}`);
+      }
+    } catch {
+      /* risposta non JSON o già consumata: resta la strada del DOM */
+    }
+  });
+
   try {
     await page.goto(`https://www.tiktok.com/@${handle}`, {
       waitUntil: "domcontentloaded",
       timeout: 30000,
     });
-    await page.waitForTimeout(2500);
 
-    const url = await scrollAndCollectVideoUrls(page, opzioni);
+    // Aspetta che la griglia compaia invece di scorrere subito nel vuoto; se
+    // non arriva si prosegue lo stesso, perché le XHR possono aver già
+    // consegnato la lista.
+    await page.waitForSelector('a[href*="/video/"]', { timeout: 15000 }).catch(() => null);
+
+    const daDom = await scrollAndCollectVideoUrls(page, opzioni);
+    const url = [...new Set([...daXhr, ...daDom])];
 
     if (url.length === 0) {
       const titolo = await page.title().catch(() => null);
@@ -117,7 +152,7 @@ export async function fetchAuthorVideos(browser, handle, opzioni = {}) {
       };
     }
 
-    return { status: "ok", url };
+    return { status: "ok", url, daXhr: daXhr.size, daDom: daDom.length };
   } catch (err) {
     return { status: "error", reason: String(err?.message ?? err).slice(0, 200), url: [] };
   } finally {

@@ -1,9 +1,10 @@
 name: Scraping profondo hashtag TikTok
 
 # Scorre le pagine hashtag TikTok fino in fondo, salva i post mai visti dentro
-# la finestra lug-ago 25-26, e ripete l'intero giro dopo un intervallo — due
-# campioni distanziati pescano post diversi, perché la lista di TikTok non è
-# deterministica. Vedi scripts/scrape-tiktok-hashtag-deep.mjs.
+# la finestra lug-ago 25-26, e ripete il giro 15 minuti dopo il TERMINE del
+# precedente finché continua a trovarne — campioni distanziati pescano post
+# diversi, perché la lista di TikTok non è deterministica. Ci si ferma alla
+# prima passata senza post nuovi. Vedi scripts/scrape-tiktok-hashtag-deep.mjs.
 #
 # Fa anche da controllo di salute: se nessuna pagina hashtag restituisce video
 # lo script esce con errore, invece di lasciar passare "nessun post nuovo" —
@@ -14,12 +15,12 @@ name: Scraping profondo hashtag TikTok
 on:
   workflow_dispatch:
     inputs:
-      passate:
-        description: "Quante passate complete"
+      max_passate:
+        description: "Tetto di passate (ci si ferma prima, alla prima senza post nuovi)"
         required: false
-        default: "2"
+        default: "18"
       intervallo_min:
-        description: "Minuti di attesa tra una passata e l'altra"
+        description: "Minuti tra il termine di una passata e l'inizio della successiva"
         required: false
         default: "15"
       dry_run:
@@ -61,7 +62,7 @@ jobs:
         id: scraping
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PASSATE: ${{ inputs.passate || '2' }}
+          MAX_PASSATE: ${{ inputs.max_passate || '18' }}
           INTERVALLO_MIN: ${{ inputs.intervallo_min || '15' }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
         run: |

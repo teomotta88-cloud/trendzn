@@ -1,14 +1,16 @@
 // Scraping profondo delle pagine hashtag TikTok: scorre finché la pagina
 // carica, tiene solo i post MAI VISTI e dentro la finestra lug-ago 25-26, e
-// ripete l'intero giro dopo un intervallo.
+// ripete l'intero giro 15 minuti dopo il TERMINE del precedente, finché
+// continua a trovarne.
 //
-// Perché due passate. La lista che TikTok mostra su una pagina hashtag è un
+// Perché più passate. La lista che TikTok mostra su una pagina hashtag è un
 // campione, e cambia tra una visita e l'altra: è esattamente il motivo per cui
 // @maraalbergo/video/7675653655655140640 non è mai entrato pur avendo
-// #bluserena. Due giri distanziati pescano due campioni diversi, e il secondo
-// trova cose che il primo non aveva. Il numero di post nuovi che il secondo
-// giro aggiunge è anche la misura di quanto la lista sia incompleta: se è
-// zero, il primo giro aveva già saturato.
+// #bluserena. Giri distanziati pescano campioni diversi, quindi si continua
+// finché una passata trova ancora post nuovi e ci si ferma alla prima che non
+// ne trova — quello è il segnale che la lista si è esaurita, e non un numero
+// deciso a priori. Quanti post emergono dopo la prima passata è anche la
+// misura di quanto la lista fosse incompleta.
 //
 // Il workflow serve anche da controllo di salute dello scraping: se una
 // pagina hashtag smette di restituire link (markup cambiato, login-wall), qui
@@ -20,8 +22,11 @@
 //
 // Env:
 //   GITHUB_TOKEN: obbligatoria
-//   PASSATE: quante passate complete (default 2)
-//   INTERVALLO_MIN: minuti di attesa tra una passata e l'altra (default 15)
+//   MAX_PASSATE: tetto di passate (default 18); di norma ci si ferma prima,
+//     alla prima passata senza post nuovi
+//   INTERVALLO_MIN: minuti tra il TERMINE di una passata e l'inizio della
+//     successiva (default 15)
+//   MAX_MINUTES: budget complessivo della run (default 320)
 //   MAX_SCROLL: tetto di scroll per pagina (default 40)
 //   DELAY_MS: pausa tra un hashtag e l'altro (default 2000)
 //   DRY_RUN: fa il lavoro ma non scrive
@@ -45,8 +50,18 @@ function intEnv(name, fallback) {
   return Number.isFinite(n) && n >= 0 ? n : fallback;
 }
 
-const PASSATE = intEnv("PASSATE", 2) || 2;
+// Le passate non sono un numero fisso: si continua finché una passata trova
+// post nuovi, aspettando INTERVALLO_MIN dal TERMINE della precedente. Ci si
+// ferma alla prima passata che non trova nulla — è il segnale che la lista ha
+// smesso di restituire campioni diversi.
+//
+// MAX_PASSATE è solo una cintura di sicurezza contro il limite di 6 ore per
+// job di GitHub: 18 passate × (giro + 15 min) sta comodamente sotto. Se il
+// tetto viene raggiunto significa che si stavano ancora trovando post, e il
+// log lo dice esplicitamente perché si possa rilanciare.
+const MAX_PASSATE = intEnv("MAX_PASSATE", 18) || 18;
 const INTERVALLO_MIN = intEnv("INTERVALLO_MIN", 15);
+const MAX_MINUTES = intEnv("MAX_MINUTES", 320) || 320;
 const MAX_SCROLL = intEnv("MAX_SCROLL", 40) || 40;
 const DELAY_MS = intEnv("DELAY_MS", 2000);
 const DRY_RUN = process.env.DRY_RUN === "true";
@@ -87,15 +102,19 @@ console.log(
   `Hashtag monitorati : ${nomiCanali.length} -> ${nomiCanali.map((n) => "#" + n).join(", ")}`,
 );
 console.log(`Post già nello store: ${noti.size}`);
-console.log(`Passate: ${PASSATE}, intervallo ${INTERVALLO_MIN} min, max ${MAX_SCROLL} scroll\n`);
+console.log(
+  `Passate: finché ne trovo (max ${MAX_PASSATE}), intervallo ${INTERVALLO_MIN} min ` +
+    `dal termine della precedente, max ${MAX_SCROLL} scroll\n`,
+);
 
+const scadenza = Date.now() + MAX_MINUTES * 60_000;
 const browser = await chromium.launch({ headless: true });
 const riepilogo = [];
 let totaleAggiunti = 0;
 
 try {
-  for (let passata = 1; passata <= PASSATE; passata++) {
-    console.log(`\n===== PASSATA ${passata}/${PASSATE} =====\n`);
+  for (let passata = 1; passata <= MAX_PASSATE; passata++) {
+    console.log(`\n===== PASSATA ${passata} (max ${MAX_PASSATE}) =====\n`);
     const pending = new Map();
     let vistiPassata = 0;
     let nuoviPassata = 0;
@@ -171,10 +190,36 @@ try {
 
     riepilogo.push({ passata, visti: vistiPassata, nuovi: nuoviPassata, perTag });
 
-    if (passata < PASSATE) {
-      console.log(`\n⏳ Attendo ${INTERVALLO_MIN} minuti prima della passata successiva...`);
-      await sleep(INTERVALLO_MIN * 60_000);
+    // Ci si ferma alla prima passata che non trova niente: è il segnale che la
+    // lista ha smesso di restituire campioni diversi. Finché invece emergono
+    // post nuovi si continua, perché vuol dire che non era ancora esaurita.
+    if (nuoviPassata === 0) {
+      console.log(`\n🛑 Passata ${passata} senza post nuovi: mi fermo.`);
+      break;
     }
+
+    if (passata === MAX_PASSATE) {
+      console.log(
+        `\n⚠️  Raggiunto il tetto di ${MAX_PASSATE} passate mentre si trovavano ancora post ` +
+          "nuovi: rilanciare il workflow per continuare.",
+      );
+      break;
+    }
+
+    // L'attesa parte da QUI, cioè dal termine della passata, non dal suo
+    // inizio: è ciò che rende l'intervallo davvero di 15 minuti tra un giro e
+    // il successivo, indipendentemente da quanto è durato il giro.
+    const restanti = (scadenza - Date.now()) / 60_000;
+    if (restanti < INTERVALLO_MIN + 5) {
+      console.log(
+        `\n⏱️  Restano ${Math.max(0, Math.round(restanti))} min di budget, non bastano per ` +
+          "un'altra passata: mi fermo qui. Rilanciare il workflow per continuare.",
+      );
+      break;
+    }
+
+    console.log(`\n⏳ Attendo ${INTERVALLO_MIN} minuti dal termine di questa passata...`);
+    await sleep(INTERVALLO_MIN * 60_000);
   }
 } finally {
   await browser.close();
