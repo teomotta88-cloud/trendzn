@@ -32686,6 +32686,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:04.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:03:15.514Z"
           }
         },
         {
@@ -32709,6 +32717,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:08.395Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CUCT",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:03:27.101Z"
           }
         },
         {
@@ -32732,6 +32749,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:15.516Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IN PARTS\nOF THE FOOD:\nTHE POOL BAR)",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:03:37.543Z"
           }
         },
         {
@@ -32755,6 +32781,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:18.958Z"
+          },
+          "ocrData": {
+            "textOnScreen": "renade P\nLana Beach\n4 esort",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:03:48.315Z"
           }
         },
         {
@@ -32778,6 +32813,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:22.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TASTING Ro",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:04:05.138Z"
           }
         },
         {
@@ -32801,6 +32845,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:24.980Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:04:11.748Z"
           }
         },
         {
@@ -32824,6 +32876,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:28.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": "[ARIBC",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:04:29.563Z"
           }
         },
         {
@@ -32847,6 +32908,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:35.467Z"
+          },
+          "ocrData": {
+            "textOnScreen": "EXTRA\nQ Search here\nRestaurants jem Hotels Shopping Coffee\nSandy Beach\nChimelong Hotel\nChimelong Paradise\nDiandude\nGoogle Maps 29m è\nLocal vibe\nExplore You Contribute\n7. Hot pot buffet for2 3",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:04:41.797Z"
           }
         },
         {
@@ -32870,6 +32940,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:38.439Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:04:52.930Z"
           }
         },
         {
@@ -32893,6 +32971,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:43.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:05:03.083Z"
           }
         },
         {
@@ -32916,6 +33002,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:46.955Z"
+          },
+          "ocrData": {
+            "textOnScreen": "5 peaceful beaches clear waters\nfreshly\nand a warm welcome",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:05:21.824Z"
           }
         }
       ]
@@ -37519,6 +37614,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:49.857Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nMATHIAS\nMATHIAS i\nHLUNA\ni YEARS\ni SERENA HOTEL",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:05:30.764Z"
           }
         },
         {
@@ -37542,6 +37646,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:10:53.728Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bea@i Hotel\nKenya\nBeach\nMombasa\nPha Beach Hotel",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:05:41.539Z"
           }
         },
         {
@@ -37565,6 +37678,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:00.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PUNTA CANA\nSAFE 7\nCANA\nFOOD] TRUCK] DESDE",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:05:52.301Z"
           }
         },
         {
@@ -37588,6 +37710,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:04.239Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel lobby\nenvironments",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:05:58.294Z"
           }
         },
         {
@@ -37611,6 +37742,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:11.751Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 d gear\nesta\ndigoldel de J,\nJ carreteandoconcamird",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:06:20.995Z"
           }
         },
         {
@@ -37634,6 +37774,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:16.443Z"
+          },
+          "ocrData": {
+            "textOnScreen": "there was a lotto\nwa mazing.",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:06:28.911Z"
           }
         },
         {
@@ -37657,6 +37806,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:21.785Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pe quick",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:06:37.958Z"
           }
         },
         {
@@ -37680,6 +37838,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:26.626Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Welcome on 4th\nThis Friday Serena hotel\nKampala for our grand finale\nWelcome on 4th i\nThis Friday Serena hotel Fa\nThis Friday Serena hotel i\nKampala for our grand",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:06:50.265Z"
           }
         },
         {
@@ -37703,6 +37870,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:29.845Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SEAN\nHAPPENING NOW REMA NAMAKULA\nAT STRONG WOMAN IRENE\nNAMATOVU SERENA HOTEL\nHy HAPPENING NOW REMA NAMAKULA\n\\T HAPPENING NOW REMA NAMAKULA\n4) NAMATOVU SERENA HOTEL\nHAPPENING NOW REMA NAMAKULR\nP_NAMATOVU SERENA HOTEL",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:02.202Z"
           }
         },
         {
@@ -37726,6 +37902,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:34.042Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:12.562Z"
           }
         },
         {
@@ -37749,6 +37933,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:39.943Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i SEAN\nHAPPENING NOW CATHERINE\nKUSASIRA AT STRONG WOMAN\n2 IRENE NAMATOVU SERENA HOTEL\nIRENE NAMATOVU SERENA HOTEL\n3 IRAN",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:18.976Z"
           }
         },
         {
@@ -37772,6 +37965,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:43.052Z"
+          },
+          "ocrData": {
+            "textOnScreen": "plus réservat\nrésidence\nplus\nInternet,\npour 3h;",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:33.022Z"
           }
         },
         {
@@ -37795,6 +37997,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:45.339Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:43.056Z"
           }
         },
         {
@@ -37818,6 +38028,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:47.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pov: working any\nposition at a hotel",
+            "confidence": 0.922,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:48.067Z"
           }
         }
       ]
