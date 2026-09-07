@@ -20,7 +20,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ReputazioneBrandIndexRouteImport } from './routes/reputazione-brand.index'
 import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editoriale.index'
 import { Route as PianiEditorialiIhcIndexRouteImport } from './routes/piani-editoriali-ihc.index'
-import { Route as PianiEditorialiIhcBrandRouteImport } from './routes/piani-editoriali-ihc.$brand'
 import { Route as InfluencerIndexRouteImport } from './routes/influencer.index'
 import { Route as FeedIndexRouteImport } from './routes/feed.index'
 import { Route as CollabInstagramIndexRouteImport } from './routes/collab-instagram.index'
@@ -29,6 +28,7 @@ import { Route as BluserenaMonitoringIndexRouteImport } from './routes/bluserena
 import { Route as BluserenaFeedIndexRouteImport } from './routes/bluserena-feed.index'
 import { Route as AspiMonitoringIndexRouteImport } from './routes/aspi-monitoring.index'
 import { Route as AiIntelligenceIndexRouteImport } from './routes/ai-intelligence.index'
+import { Route as PianiEditorialiIhcBrandRouteImport } from './routes/piani-editoriali-ihc.$brand'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as EditorGraficoRubricaIdRouteImport } from './routes/editor-grafico.$rubricaId'
 import { Route as CollabInstagramUsernameRouteImport } from './routes/collab-instagram.$username'
@@ -43,6 +43,7 @@ import { Route as ApiPublicHooksTriggerSyncBluserenaMonitoringRouteImport } from
 import { Route as ApiPublicHooksTriggerSyncBluserenaHashtagsRouteImport } from './routes/api/public/hooks/trigger-sync-bluserena-hashtags'
 import { Route as ApiPublicHooksTriggerSyncAspiMonitoringRouteImport } from './routes/api/public/hooks/trigger-sync-aspi-monitoring'
 import { Route as ApiPublicHooksTriggerDiscoveryPipelineRouteImport } from './routes/api/public/hooks/trigger-discovery-pipeline'
+import { Route as ApiPublicHooksTriggerAnalyzeNewBsconfirmedRouteImport } from './routes/api/public/hooks/trigger-analyze-new-bsconfirmed'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
 import { Route as ApiPublicHooksTiktokOembedRouteImport } from './routes/api/public/hooks/tiktok-oembed'
 import { Route as ApiPublicHooksTiktokHashtagPostsRouteImport } from './routes/api/public/hooks/tiktok-hashtag-posts'
@@ -173,6 +174,11 @@ const AiIntelligenceIndexRoute = AiIntelligenceIndexRouteImport.update({
   path: '/ai-intelligence/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PianiEditorialiIhcBrandRoute = PianiEditorialiIhcBrandRouteImport.update({
+  id: '/piani-editoriali-ihc/$brand',
+  path: '/piani-editoriali-ihc/$brand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InfluencerIdRoute = InfluencerIdRouteImport.update({
   id: '/influencer/$id',
   path: '/influencer/$id',
@@ -206,11 +212,6 @@ const BluserenaFeedBackupRoute = BluserenaFeedBackupRouteImport.update({
 const AspiMonitoringIdRoute = AspiMonitoringIdRouteImport.update({
   id: '/aspi-monitoring/$id',
   path: '/aspi-monitoring/$id',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PianiEditorialiIhcBrandRoute = PianiEditorialiIhcBrandRouteImport.update({
-  id: '/piani-editoriali-ihc/$brand',
-  path: '/piani-editoriali-ihc/$brand',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicHooksUpdateBluserenaVerificationRoute =
@@ -253,6 +254,12 @@ const ApiPublicHooksTriggerDiscoveryPipelineRoute =
   ApiPublicHooksTriggerDiscoveryPipelineRouteImport.update({
     id: '/api/public/hooks/trigger-discovery-pipeline',
     path: '/api/public/hooks/trigger-discovery-pipeline',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute =
+  ApiPublicHooksTriggerAnalyzeNewBsconfirmedRouteImport.update({
+    id: '/api/public/hooks/trigger-analyze-new-bsconfirmed',
+    path: '/api/public/hooks/trigger-analyze-new-bsconfirmed',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksTopTiktokHashtagsRoute =
@@ -463,13 +470,13 @@ export interface FileRoutesByFullPath {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
-  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/ai-intelligence/': typeof AiIntelligenceIndexRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/bluserena-feed/': typeof BluserenaFeedIndexRoute
@@ -478,8 +485,8 @@ export interface FileRoutesByFullPath {
   '/collab-instagram/': typeof CollabInstagramIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
-  '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/piani-editoriali-ihc/': typeof PianiEditorialiIhcIndexRoute
+  '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -514,6 +521,7 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-analyze-new-bsconfirmed': typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-bluserena-hashtags': typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
@@ -532,13 +540,13 @@ export interface FileRoutesByTo {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
-  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/ai-intelligence': typeof AiIntelligenceIndexRoute
   '/aspi-monitoring': typeof AspiMonitoringIndexRoute
   '/bluserena-feed': typeof BluserenaFeedIndexRoute
@@ -547,8 +555,8 @@ export interface FileRoutesByTo {
   '/collab-instagram': typeof CollabInstagramIndexRoute
   '/feed': typeof FeedIndexRoute
   '/influencer': typeof InfluencerIndexRoute
-  '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/piani-editoriali-ihc': typeof PianiEditorialiIhcIndexRoute
+  '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/reputazione-brand': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -583,6 +591,7 @@ export interface FileRoutesByTo {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-analyze-new-bsconfirmed': typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-bluserena-hashtags': typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
@@ -602,13 +611,13 @@ export interface FileRoutesById {
   '/trend-real-time': typeof TrendRealTimeRoute
   '/trend-virali': typeof TrendViraliRoute
   '/aspi-monitoring/$id': typeof AspiMonitoringIdRoute
-  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/bluserena-feed/backup': typeof BluserenaFeedBackupRoute
   '/bluserena-monitoring/$id': typeof BluserenaMonitoringIdRoute
   '/canali-inspo/$id': typeof CanaliInspoIdRoute
   '/collab-instagram/$username': typeof CollabInstagramUsernameRoute
   '/editor-grafico/$rubricaId': typeof EditorGraficoRubricaIdRoute
   '/influencer/$id': typeof InfluencerIdRoute
+  '/piani-editoriali-ihc/$brand': typeof PianiEditorialiIhcBrandRoute
   '/ai-intelligence/': typeof AiIntelligenceIndexRoute
   '/aspi-monitoring/': typeof AspiMonitoringIndexRoute
   '/bluserena-feed/': typeof BluserenaFeedIndexRoute
@@ -617,8 +626,8 @@ export interface FileRoutesById {
   '/collab-instagram/': typeof CollabInstagramIndexRoute
   '/feed/': typeof FeedIndexRoute
   '/influencer/': typeof InfluencerIndexRoute
-  '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/piani-editoriali-ihc/': typeof PianiEditorialiIhcIndexRoute
+  '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/reputazione-brand/': typeof ReputazioneBrandIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
   '/api/public/hooks/analyze-bluserena-backfill-stats': typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -653,6 +662,7 @@ export interface FileRoutesById {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/trigger-analyze-new-bsconfirmed': typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   '/api/public/hooks/trigger-sync-bluserena-hashtags': typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
@@ -673,13 +683,13 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
-    | '/piani-editoriali-ihc/$brand'
     | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
     | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
+    | '/piani-editoriali-ihc/$brand'
     | '/ai-intelligence/'
     | '/aspi-monitoring/'
     | '/bluserena-feed/'
@@ -688,8 +698,8 @@ export interface FileRouteTypes {
     | '/collab-instagram/'
     | '/feed/'
     | '/influencer/'
-    | '/piano-editoriale/'
     | '/piani-editoriali-ihc/'
+    | '/piano-editoriale/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/analyze-bluserena-backfill-stats'
@@ -724,6 +734,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-analyze-new-bsconfirmed'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-bluserena-hashtags'
@@ -742,13 +753,13 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
-    | '/piani-editoriali-ihc/$brand'
     | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
     | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
+    | '/piani-editoriali-ihc/$brand'
     | '/ai-intelligence'
     | '/aspi-monitoring'
     | '/bluserena-feed'
@@ -757,8 +768,8 @@ export interface FileRouteTypes {
     | '/collab-instagram'
     | '/feed'
     | '/influencer'
-    | '/piano-editoriale'
     | '/piani-editoriali-ihc'
+    | '/piano-editoriale'
     | '/reputazione-brand'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/analyze-bluserena-backfill-stats'
@@ -793,6 +804,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-analyze-new-bsconfirmed'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-bluserena-hashtags'
@@ -811,13 +823,13 @@ export interface FileRouteTypes {
     | '/trend-real-time'
     | '/trend-virali'
     | '/aspi-monitoring/$id'
-    | '/piani-editoriali-ihc/$brand'
     | '/bluserena-feed/backup'
     | '/bluserena-monitoring/$id'
     | '/canali-inspo/$id'
     | '/collab-instagram/$username'
     | '/editor-grafico/$rubricaId'
     | '/influencer/$id'
+    | '/piani-editoriali-ihc/$brand'
     | '/ai-intelligence/'
     | '/aspi-monitoring/'
     | '/bluserena-feed/'
@@ -826,8 +838,8 @@ export interface FileRouteTypes {
     | '/collab-instagram/'
     | '/feed/'
     | '/influencer/'
-    | '/piano-editoriale/'
     | '/piani-editoriali-ihc/'
+    | '/piano-editoriale/'
     | '/reputazione-brand/'
     | '/api/public/hooks/add-client-channel'
     | '/api/public/hooks/analyze-bluserena-backfill-stats'
@@ -862,6 +874,7 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/trigger-analyze-new-bsconfirmed'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
     | '/api/public/hooks/trigger-sync-bluserena-hashtags'
@@ -881,13 +894,13 @@ export interface RootRouteChildren {
   TrendRealTimeRoute: typeof TrendRealTimeRoute
   TrendViraliRoute: typeof TrendViraliRoute
   AspiMonitoringIdRoute: typeof AspiMonitoringIdRoute
-  PianiEditorialiIhcBrandRoute: typeof PianiEditorialiIhcBrandRoute
   BluserenaFeedBackupRoute: typeof BluserenaFeedBackupRoute
   BluserenaMonitoringIdRoute: typeof BluserenaMonitoringIdRoute
   CanaliInspoIdRoute: typeof CanaliInspoIdRoute
   CollabInstagramUsernameRoute: typeof CollabInstagramUsernameRoute
   EditorGraficoRubricaIdRoute: typeof EditorGraficoRubricaIdRoute
   InfluencerIdRoute: typeof InfluencerIdRoute
+  PianiEditorialiIhcBrandRoute: typeof PianiEditorialiIhcBrandRoute
   AiIntelligenceIndexRoute: typeof AiIntelligenceIndexRoute
   AspiMonitoringIndexRoute: typeof AspiMonitoringIndexRoute
   BluserenaFeedIndexRoute: typeof BluserenaFeedIndexRoute
@@ -896,8 +909,8 @@ export interface RootRouteChildren {
   CollabInstagramIndexRoute: typeof CollabInstagramIndexRoute
   FeedIndexRoute: typeof FeedIndexRoute
   InfluencerIndexRoute: typeof InfluencerIndexRoute
-  PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   PianiEditorialiIhcIndexRoute: typeof PianiEditorialiIhcIndexRoute
+  PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ReputazioneBrandIndexRoute: typeof ReputazioneBrandIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
   ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute: typeof ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute
@@ -932,6 +945,7 @@ export interface RootRouteChildren {
   ApiPublicHooksTiktokHashtagPostsRoute: typeof ApiPublicHooksTiktokHashtagPostsRoute
   ApiPublicHooksTiktokOembedRoute: typeof ApiPublicHooksTiktokOembedRoute
   ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
+  ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute: typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   ApiPublicHooksTriggerDiscoveryPipelineRoute: typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   ApiPublicHooksTriggerSyncAspiMonitoringRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
   ApiPublicHooksTriggerSyncBluserenaHashtagsRoute: typeof ApiPublicHooksTriggerSyncBluserenaHashtagsRoute
@@ -1076,6 +1090,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AiIntelligenceIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/piani-editoriali-ihc/$brand': {
+      id: '/piani-editoriali-ihc/$brand'
+      path: '/piani-editoriali-ihc/$brand'
+      fullPath: '/piani-editoriali-ihc/$brand'
+      preLoaderRoute: typeof PianiEditorialiIhcBrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/influencer/$id': {
       id: '/influencer/$id'
       path: '/influencer/$id'
@@ -1125,13 +1146,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AspiMonitoringIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/piani-editoriali-ihc/$brand': {
-      id: '/piani-editoriali-ihc/$brand'
-      path: '/piani-editoriali-ihc/$brand'
-      fullPath: '/piani-editoriali-ihc/$brand'
-      preLoaderRoute: typeof PianiEditorialiIhcBrandRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/public/hooks/update-bluserena-verification': {
       id: '/api/public/hooks/update-bluserena-verification'
       path: '/api/public/hooks/update-bluserena-verification'
@@ -1179,6 +1193,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/trigger-discovery-pipeline'
       fullPath: '/api/public/hooks/trigger-discovery-pipeline'
       preLoaderRoute: typeof ApiPublicHooksTriggerDiscoveryPipelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/trigger-analyze-new-bsconfirmed': {
+      id: '/api/public/hooks/trigger-analyze-new-bsconfirmed'
+      path: '/api/public/hooks/trigger-analyze-new-bsconfirmed'
+      fullPath: '/api/public/hooks/trigger-analyze-new-bsconfirmed'
+      preLoaderRoute: typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/top-tiktok-hashtags': {
@@ -1425,13 +1446,13 @@ const rootRouteChildren: RootRouteChildren = {
   TrendRealTimeRoute: TrendRealTimeRoute,
   TrendViraliRoute: TrendViraliRoute,
   AspiMonitoringIdRoute: AspiMonitoringIdRoute,
-  PianiEditorialiIhcBrandRoute: PianiEditorialiIhcBrandRoute,
   BluserenaFeedBackupRoute: BluserenaFeedBackupRoute,
   BluserenaMonitoringIdRoute: BluserenaMonitoringIdRoute,
   CanaliInspoIdRoute: CanaliInspoIdRoute,
   CollabInstagramUsernameRoute: CollabInstagramUsernameRoute,
   EditorGraficoRubricaIdRoute: EditorGraficoRubricaIdRoute,
   InfluencerIdRoute: InfluencerIdRoute,
+  PianiEditorialiIhcBrandRoute: PianiEditorialiIhcBrandRoute,
   AiIntelligenceIndexRoute: AiIntelligenceIndexRoute,
   AspiMonitoringIndexRoute: AspiMonitoringIndexRoute,
   BluserenaFeedIndexRoute: BluserenaFeedIndexRoute,
@@ -1440,8 +1461,8 @@ const rootRouteChildren: RootRouteChildren = {
   CollabInstagramIndexRoute: CollabInstagramIndexRoute,
   FeedIndexRoute: FeedIndexRoute,
   InfluencerIndexRoute: InfluencerIndexRoute,
-  PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   PianiEditorialiIhcIndexRoute: PianiEditorialiIhcIndexRoute,
+  PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ReputazioneBrandIndexRoute: ReputazioneBrandIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
   ApiPublicHooksAnalyzeBluserenaBackfillStatsRoute:
@@ -1487,6 +1508,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksTiktokHashtagPostsRoute: ApiPublicHooksTiktokHashtagPostsRoute,
   ApiPublicHooksTiktokOembedRoute: ApiPublicHooksTiktokOembedRoute,
   ApiPublicHooksTopTiktokHashtagsRoute: ApiPublicHooksTopTiktokHashtagsRoute,
+  ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute:
+    ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute,
   ApiPublicHooksTriggerDiscoveryPipelineRoute:
     ApiPublicHooksTriggerDiscoveryPipelineRoute,
   ApiPublicHooksTriggerSyncAspiMonitoringRoute:

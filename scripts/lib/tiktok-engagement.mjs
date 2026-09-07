@@ -65,7 +65,13 @@ export function readVideoDetail(data) {
     return { status: "no_stats", reason: "itemStruct senza contatori" };
   }
 
-  return { status: "ok", source: "tiktok-page", ...stats };
+  // La caption è nella stessa pagina già scaricata per i contatori
+  // (itemStruct.desc): prenderla qui non costa una richiesta in più ed evita
+  // di passare da backfill-bluserena-caption.mjs, che riscrive l'intero store
+  // con una PUT sola e senza retry sui conflitti.
+  const caption = typeof itemStruct.desc === "string" ? itemStruct.desc.trim() : "";
+
+  return { status: "ok", source: "tiktok-page", caption: caption || null, ...stats };
 }
 
 // I campi piatti views/likes/comments/shares sono quelli che legge la UI. Si
@@ -88,6 +94,15 @@ export function applyEngagement(account, record, { overwrite = false } = {}) {
     account[metric] = value;
     applied.push(metric);
   }
+
+  // La caption si riempie SOLO se manca, anche con overwrite=true: i numeri
+  // invecchiano e ha senso rinfrescarli, un testo no — e alcune caption sono
+  // state sistemate a mano dal feed, sovrascriverle sarebbe una perdita.
+  if (record.caption && !(account.caption ?? "").trim()) {
+    account.caption = record.caption;
+    applied.push("caption");
+  }
+
   record.applied = applied;
   return record;
 }
