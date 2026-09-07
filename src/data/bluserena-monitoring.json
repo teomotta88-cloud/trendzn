@@ -20414,7 +20414,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-07T22:55:30.689Z"
+            "updatedAt": "2026-09-07T23:10:30.859Z"
           }
         },
         {
@@ -20445,7 +20445,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-07T22:55:36.797Z"
+            "updatedAt": "2026-09-07T23:12:05.467Z"
           }
         },
         {
@@ -40961,6 +40961,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:54.014Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GLUTINE",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:07:58.289Z"
           }
         },
         {
@@ -40984,6 +40993,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:11:59.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sibari Green Resort\nUNA BELLA\nINIZIATIVA\n2 Sibari Green Resort\nMISERIA RAGAZZI\nÈ IMMENSO",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:08:16.263Z"
           }
         },
         {
@@ -41007,6 +41025,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:05.496Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:08:44.346Z"
           }
         },
         {
@@ -41030,6 +41056,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:11.679Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bebidas\nestao inclusas\nao maximo\n...bora dar um Lup\nna sua viagem! -q",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:09:02.164Z"
           }
         },
         {
@@ -41053,6 +41088,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:14.417Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:09:08.480Z"
           }
         },
         {
@@ -41076,6 +41119,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:17.340Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@STEPBY!\n@STEPBYSTEPDANCECO",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:09:15.272Z"
           }
         },
         {
@@ -41099,6 +41151,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:19.864Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:09:38.819Z"
           }
         },
         {
@@ -41122,6 +41182,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:27.770Z"
+          },
+          "ocrData": {
+            "textOnScreen": "And when the jet\nSTAFF\nbeginning\nandiwe grewjl,300%in bookings\nAlmost like;",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:09:50.509Z"
           }
         },
         {
@@ -41145,6 +41214,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:31.945Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RIVER'RESORTH,\nSABIFI RIVER",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:10:09.462Z"
           }
         },
         {
@@ -41168,6 +41246,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:37.046Z"
+          },
+          "ocrData": {
+            "textOnScreen": "UNITED\nSTATES\n7 WERE\n~1 HOUR\nTHE GREENBRIER\nRESORT\nTIME HAD\nAT HIGH ALERT AT NORMAL READINESS\nMINUTES HOURS J\nFROM SOVIET UNION (ICBM)\nAT ELEVATED READINESS ALREADY LAUNCHED\nMINUTES MINUTES\nCONGRESS TO THE GREENBRIER\nBY AIR BY ROAD BY TRAIN\nHOURS HOURS HOURS J\nA MISSILE WARNING: MINUTES\nEVACUATION TO BUNKER: HOURS",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:10:22.261Z"
           }
         },
         {
@@ -41199,7 +41286,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-07T22:55:30.689Z"
+            "updatedAt": "2026-09-07T23:10:30.859Z"
           }
         },
         {
@@ -41223,6 +41310,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:42.607Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nature Sarigerme\n§arigerme\ncri pushimet",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:10:40.197Z"
           }
         },
         {
@@ -41246,6 +41342,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:46.114Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:10:48.452Z"
           }
         },
         {
@@ -41269,6 +41373,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:50.818Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:10:53.475Z"
           }
         },
         {
@@ -41292,6 +41404,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:53.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 Green",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:11:00.952Z"
           }
         },
         {
@@ -41315,6 +41436,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:12:58.028Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HALE KOA HOTEL\nWAIKIKI HAWAII\n72 OCEANFRONT ACRES\nSHADES OF GREEN\nDRAGON HILL LODGE\nSEOUL e SOUTH KOREA\nCONNECTED\nVETERANS\nPURPLE HEART\nRECIPIENTS\n9 FORMER\nPOWs\nCERTAIN\nA CAREGIVERS\nELIGIBILITY\nRULES APPLY\nHAWAII\nDISNEY WORLD\nGERMANY\nSEOUL\nRATES ELIGIBILITY VARY",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:11:10.759Z"
           }
         },
         {
@@ -41338,6 +41468,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:04.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A Full Package:\n“3=course lunch and access fo the",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:11:32.143Z"
           }
         },
         {
@@ -41361,6 +41500,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:08.929Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Military family that wants\n3 to go to Disney?!\nof Green\nWalt Disney World\nSo many things to do on\nZA property!\nproperty!\nFollow for all things\nDisney!",
+            "confidence": 0.86,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:11:42.247Z"
           }
         },
         {
@@ -41384,6 +41532,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:14.016Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:11:58.709Z"
           }
         },
         {
@@ -41414,7 +41570,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-07T22:55:36.797Z"
+            "updatedAt": "2026-09-07T23:12:05.467Z"
           }
         },
         {
@@ -41438,6 +41594,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:20.177Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:12:18.913Z"
           }
         },
         {
@@ -41461,6 +41625,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:26.624Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:12:25.430Z"
           }
         },
         {
@@ -41484,6 +41656,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:29.380Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YOUR HOTAL ROOM COMES\nPRIVATE POOLN!\nYoUR\nYOUR HOTAL ROOM COMES WITH A\nBOOK YOUR pre\nROMANTIC\nGETAWAY,\n‘PRIVATE POOLN! i",
+            "confidence": 0.872,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:12:34.195Z"
           }
         },
         {
@@ -41507,6 +41688,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:32.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Penginapan diggiater\nFasilitas koldm air\nKlik 4\nKlik tag lokasi\nNuntuk booking biar hemat karnalada i\n350k untuk\nllyangibaru pesan hotel viaitiktok",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:13:10.997Z"
           }
         },
         {
@@ -41530,6 +41720,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:13:36.769Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:13:32.859Z"
           }
         },
         {
