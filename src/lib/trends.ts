@@ -34,8 +34,9 @@ export type AccountRef = {
   url: string;
   date?: string | null;
   caption?: string | null;
-  // Solo per post TikTok: numero di view estratto da RSS-Bridge. Instagram
-  // non espone metriche di engagement via RSS-Bridge, resta sempre null.
+  // Solo per post TikTok: numero di view da RSS-Bridge o, dove mancava, dalla
+  // pagina del video (scrape-tiktok-engagement.mjs, playCount). Instagram non
+  // espone metriche di engagement via RSS-Bridge, resta sempre null.
   views?: number | null;
   // Geotag del post (nome del luogo), quando la piattaforma/tecnica di
   // raccolta lo espone — solo Instagram per ora (sync-bluserena-hashtags.mjs),
@@ -44,11 +45,14 @@ export type AccountRef = {
   location?: string | null;
   // likes/comments: per Instagram da pagina hashtag (sync-bluserena-hashtags.mjs,
   // estratti dalla description del post) o per TikTok da backfill Apify
-  // (backfill-tiktok-hashtag-apify.mjs, diggCount/commentCount) — null dove
-  // la tecnica di raccolta non li espone (es. X).
+  // (backfill-tiktok-hashtag-apify.mjs, diggCount/commentCount) e, sui post
+  // che ne restavano senza, dalla pagina del video
+  // (scrape-tiktok-engagement.mjs) — null dove la tecnica di raccolta non li
+  // espone (es. X).
   likes?: number | null;
   comments?: number | null;
-  // Solo TikTok via backfill Apify (shareCount) — nessun'altra tecnica lo espone.
+  // TikTok: da backfill Apify (shareCount) o dalla pagina del video
+  // (scrape-tiktok-engagement.mjs) — nessun'altra tecnica lo espone.
   shares?: number | null;
   // Analisi AI: sentiment del post (positive/negative/neutral) calcolato da
   // LLM (Groq/OpenRouter) sulla caption. Null se non analizzato.
@@ -117,26 +121,37 @@ export type AccountRef = {
     version?: number;
     updatedAt?: string | null;
   } | null;
-  // Esito del recupero KPI, scritto SOLO da scripts/scrape-engagement-batch.mjs
-  // sui post BSConfirmed della finestra luglio-agosto (via Emplifi
-  // Listening). "not_found" = Emplifi non ha indicizzato quel post,
-  // "no_metrics" = trovato ma senza numeri, "shadowed" = trovato CON numeri
-  // ma un'altra fonte (backfill-tiktok-hashtag.mjs, Apify/ScrapeCreators) li
-  // aveva già scritti prima: quei numeri restano quelli buoni, i campi piatti
-  // NON vengono toccati da Emplifi. Solo "ok" significa che i valori qui
-  // sotto (e in comments/shares sul post) sono di Emplifi — cosa che succede
-  // solo quando erano gli unici KPI disponibili per quel post. In ogni caso
-  // il record c'è comunque, così la run successiva sa che il post è già stato
-  // tentato e non lo richiama. Nota: Emplifi Listening fornisce solo
-  // comments/shares (non views/likes, che rimangono null).
+  // Esito del recupero KPI, scritto SOLO da scripts/scrape-tiktok-engagement.mjs,
+  // che legge i contatori dal JSON incorporato nella pagina del singolo video
+  // TikTok. Come per audioAnalysis/ocrData, il record c'è anche quando il
+  // recupero non è riuscito: `status` dice perché, così la run successiva sa
+  // che il post è già stato tentato e non lo rifà.
+  //   ok         = contatori letti (quelli qui sotto)
+  //   not_found  = video rimosso, privato o non disponibile
+  //   no_stats   = pagina letta ma senza contatori
+  //   no_data    = JSON di idratazione assente o illeggibile
+  //   login_wall = TikTok ha servito la schermata di login al posto del video
+  //   error      = errore di rete o timeout sul singolo post
+  // `applied` elenca quali campi piatti sono stati scritti davvero: di default
+  // si riempiono solo i buchi, perché su molti post i numeri arrivano già da
+  // backfill-tiktok-hashtag.mjs (Apify/ScrapeCreators) e non vanno
+  // sovrascritti senza che sia stato chiesto. Un post può quindi avere status
+  // "ok" e `applied` vuoto.
+  //
+  // Storico: fino a settembre 2026 questo campo veniva scritto da
+  // scrape-engagement-batch.mjs via Emplifi Listening, con status
+  // "no_metrics"/"shadowed" e i campi interactions/potential_impressions. I
+  // record rimasti da quella fonte hanno version <= 2 e vengono rifatti da
+  // questa.
   engagementData?: {
-    status?: "ok" | "not_found" | "no_metrics" | "shadowed";
-    source?: "emplifi";
-    caption?: string | null;
+    status?: "ok" | "not_found" | "no_stats" | "no_data" | "login_wall" | "error";
+    source?: "tiktok-page";
+    views?: number | null;
+    likes?: number | null;
     comments?: number | null;
     shares?: number | null;
-    interactions?: number | null;
-    potential_impressions?: number | null;
+    applied?: Array<"views" | "likes" | "comments" | "shares">;
+    reason?: string | null;
     version?: number;
     updatedAt?: string | null;
   } | null;
