@@ -8,9 +8,13 @@ name: KPI Engagement TikTok (pagina video)
 # tutte e quattro le metriche invece delle sole commenti/condivisioni, e la
 # fonte è la stessa piattaforma dei post da arricchire.
 #
-# Costa solo minuti Actions (~1000 video a qualche secondo l'uno), quindi lo
-# script si ferma da solo su MAX_MINUTES e riprende alla run dopo da dove si
-# era interrotto: ogni post tentato riceve un record versionato, e la coda si
+# Perimetro: i soli post BSConfirmed (338 sui dati del 07/09), non tutti i
+# 1310 dello store — gli altri sono omonimie da hashtag che non entrano nelle
+# statistiche della pagina.
+#
+# Costa solo minuti Actions (qualche secondo a video), quindi lo script si
+# ferma da solo su MAX_MINUTES e riprende alla run dopo da dove si era
+# interrotto: ogni post tentato riceve un record versionato, e la coda si
 # smaltisce in più run senza rifare ogni volta gli stessi post.
 
 on:
