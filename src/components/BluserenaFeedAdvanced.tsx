@@ -1092,6 +1092,18 @@ const somma = (posts: Post[], campo: "views" | "likes" | "comments" | "shares") 
 // calcolato su tutti.
 const conMetriche = (posts: Post[]) => posts.filter((p) => p.views != null).length;
 
+// I KPI su un post vengono da UNA fonte alla volta, mai due: Emplifi non
+// scrive mai sopra un valore già presente (scrape-engagement-batch.mjs,
+// hasExistingMetrics), quindi engagementData.status === "ok" vuol dire
+// esattamente "questi numeri sono di Emplifi, ed erano gli unici disponibili
+// per questo post" — "shadowed" è il caso in cui Emplifi ha trovato qualcosa
+// ma un'altra fonte era già arrivata prima, e i campi piatti restano suoi.
+// Qualunque post con metriche ma senza quello status "ok" viene dalla
+// pipeline con la precedenza: backfill-tiktok-hashtag.mjs (Apify in prima
+// battuta, ScrapeCreators come riserva quando Apify esaurisce il credito).
+const conMetricheDaEmplifi = (posts: Post[]) =>
+  posts.filter((p) => p.views != null && p.engagementData?.status === "ok").length;
+
 const contaSentiment = (posts: Post[]) => ({
   positive: posts.filter((p) => p.sentiment === "positive").length,
   neutral: posts.filter((p) => p.sentiment === "neutral").length,
@@ -1226,6 +1238,8 @@ function SentimentTimeline({ posts }: { posts: Post[] }) {
 
 function KpiTotali({ posts }: { posts: Post[] }) {
   const conDati = conMetriche(posts);
+  const daEmplifi = conMetricheDaEmplifi(posts);
+  const daBackfill = conDati - daEmplifi;
   const views = somma(posts, "views");
   const likes = somma(posts, "likes");
   const comments = somma(posts, "comments");
@@ -1264,11 +1278,24 @@ function KpiTotali({ posts }: { posts: Post[] }) {
       <div className="text-[10px] text-muted-foreground space-y-0.5">
         <p>
           Totali calcolati sui {conDati} post che hanno metriche ({posts.length - conDati} non le
-          espongono: il backfill delle metriche non li ha ancora coperti).
+          espongono ancora).
           {engagementRate !== null && (
             <span> Engagement rate: {engagementRate.toFixed(2)}% delle visualizzazioni.</span>
           )}
         </p>
+        {conDati > 0 && (
+          <p>
+            {daBackfill} da Apify/ScrapeCreators (fonte primaria, dal singolo video)
+            {daEmplifi > 0 && (
+              <>
+                {" "}
+                + {daEmplifi} da Emplifi Listening (solo i post che non avevano altra fonte —
+                Emplifi non sovrascrive mai un KPI già presente)
+              </>
+            )}
+            .
+          </p>
+        )}
         <p>
           La <strong>reach</strong> non compare: TikTok non la espone pubblicamente, la danno solo
           gli analytics del proprietario dell&apos;account. Le visualizzazioni sono l&apos;unico

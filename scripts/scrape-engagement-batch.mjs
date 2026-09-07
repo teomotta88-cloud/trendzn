@@ -9,6 +9,14 @@
 // statistiche della pagina — pagare crediti Emplifi per le loro metriche
 // sarebbe soldi buttati. Sui dati del 07/09, sono 338 post su 1310.
 //
+// Precedenza sulle fonti KPI già esistenti: 218 di quei 338 hanno già
+// views/like/commenti/condivisioni da backfill-tiktok-hashtag.mjs
+// (Apify + ScrapeCreators) — dati dal singolo video, non da un aggregatore
+// di terze parti. Emplifi non li tocca mai: entra in gioco SOLO sui post che
+// non hanno ancora nessun KPI da nessuna parte, cioè quando i suoi sarebbero
+// gli UNICI numeri disponibili per quel post. Vedi hasExistingMetrics() e il
+// commento su applyEngagement() più sotto per il dettaglio.
+//
 // Idempotenza: ogni post tentato riceve un record in engagementData con
 // status e version, sullo stesso schema di sentimentData/ocrData/
 // audioAnalysis. Un post già tentato (qualunque esito) non viene rifatto
@@ -214,13 +222,46 @@ function extractMetrics(item) {
   };
 }
 
+// Emplifi è l'ultima arrivata delle fonti KPI: backfill-tiktok-hashtag.mjs
+// (Apify + ScrapeCreators) gira da prima e ha già popolato 218 dei 338
+// BSConfirmed nella finestra. Quei numeri sono la fonte "primaria" — vengono
+// da chi guarda il singolo video, non da un aggregatore di terze parti — e
+// Emplifi non deve mai scavalcarli: entra in gioco SOLO quando un post non
+// ha ancora nessun KPI da nessuna parte.
+//
+// `hasExistingMetrics` va controllato su un dato FRESCO (l'account che
+// commitField ri-legge appena prima di scrivere), non su quello raccolto in
+// fase di selezione: se backfill-tiktok-hashtag.mjs ha scritto i suoi numeri
+// nel frattempo — anche a metà della stessa run, sono due workflow diversi
+// che possono girare in parallelo — questo controllo li vede e si ferma,
+// invece di sovrascriverli con un dato peggiore arrivato prima nella corsa.
+function hasExistingMetrics(account) {
+  return (
+    account.views != null ||
+    account.likes != null ||
+    account.comments != null ||
+    account.shares != null
+  );
+}
+
 // Il record vive in engagementData, ma la UI legge i campi piatti
-// views/likes/comments/shares: vanno aggiornati insieme. La caption, se
-// Emplifi la restituisce e il post non ne ha già una propria, viene
-// riportata a costo zero (stesso dato dello stesso payload) ma MAI in
-// sovrascrittura: una caption già presente (magari corretta a mano, o letta
-// dalla pagina TikTok) vale più di quella che arriva da un aggregatore.
+// views/likes/comments/shares: quando Emplifi li applica davvero (status
+// "ok"), vanno aggiornati insieme. Quando trova dati ma un'altra fonte è
+// arrivata prima, il record resta per tracciabilità (si è cercato, si è
+// trovato qualcosa) ma con status "shadowed": i campi piatti non si
+// toccano, è quel record — non questo — a spiegare perché i numeri visti
+// nella UI non sono i suoi.
+//
+// La caption, quando Emplifi la restituisce e il post non ne ha già una
+// propria, viene riportata a costo zero (stesso payload) ma MAI in
+// sovrascrittura: una caption già presente (corretta a mano, o letta dalla
+// pagina TikTok) vale più di quella che arriva da un aggregatore.
 function applyEngagement(account, record) {
+  if (record.status === "ok" && hasExistingMetrics(account)) {
+    account.engagementData = { ...record, status: "shadowed" };
+    return;
+  }
+
   account.engagementData = record;
   if (record.status !== "ok") return;
   if (record.views != null) account.views = record.views;
@@ -238,12 +279,26 @@ async function main() {
 
   const candidates = [];
   let totaleConfermatiInFinestra = 0;
+  let giaConAltraFonte = 0;
   let giaFatti = 0;
 
   for (const { account } of eachAccount(store)) {
     if (account.verificationStatus !== "confirmed") continue;
     if (!inWindow(account.date)) continue;
     totaleConfermatiInFinestra++;
+
+    // Il caso comune: 218 dei 338 BSConfirmed hanno già i KPI da
+    // backfill-tiktok-hashtag.mjs (Apify/ScrapeCreators). Per questi Emplifi
+    // non ha nulla da fare — non sono "gli unici KPI presenti" — quindi non
+    // li si interroga nemmeno: risparmia il giro e tiene il log pulito. Non è
+    // solo un'ottimizzazione: è la stessa regola di precedenza applicata qui
+    // invece che dentro applyEngagement, dove serve comunque restare (vedi
+    // commento lì) per il caso raro in cui un'altra fonte scriva i suoi
+    // numeri PROPRIO durante questa run.
+    if (hasExistingMetrics(account)) {
+      giaConAltraFonte++;
+      continue;
+    }
 
     const existing = account.engagementData;
     const corrente = Boolean(existing?.status) && (existing.version ?? 0) >= VERSION;
@@ -257,11 +312,12 @@ async function main() {
   }
 
   console.log(`BSConfirmed nella finestra Jul-Ago 2025/2026: ${totaleConfermatiInFinestra}`);
-  console.log(`Già tentati (skip): ${giaFatti}`);
+  console.log(`Con KPI già da un'altra fonte (skip, Emplifi non li tocca): ${giaConAltraFonte}`);
+  console.log(`Già tentati su Emplifi in una run precedente (skip): ${giaFatti}`);
   console.log(`Da recuperare in questa run: ${candidates.length}\n`);
 
   if (candidates.length === 0) {
-    console.log("Niente da fare: nessun post nuovo o ri-confermato da recuperare.");
+    console.log("Niente da fare: nessun post nuovo o ri-confermato senza KPI da recuperare.");
     return;
   }
 

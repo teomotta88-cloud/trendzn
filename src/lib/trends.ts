@@ -120,12 +120,16 @@ export type AccountRef = {
   // Esito del recupero KPI, scritto SOLO da scripts/scrape-engagement-batch.mjs
   // sui post BSConfirmed della finestra luglio-agosto (via Emplifi
   // Listening). "not_found" = Emplifi non ha indicizzato quel post,
-  // "no_metrics" = trovato ma senza numeri; in entrambi i casi il record
-  // c'è comunque, così la run successiva sa che è già stato tentato e non
-  // lo richiama. I campi piatti views/likes/comments/shares qui sopra
-  // restano quelli che legge la UI.
+  // "no_metrics" = trovato ma senza numeri, "shadowed" = trovato CON numeri
+  // ma un'altra fonte (backfill-tiktok-hashtag.mjs, Apify/ScrapeCreators) li
+  // aveva già scritti prima: quei numeri restano quelli buoni, i campi piatti
+  // NON vengono toccati da Emplifi. Solo "ok" significa che i valori qui
+  // sotto (e in views/likes/comments/shares sul post) sono di Emplifi — cosa
+  // che succede solo quando erano gli unici KPI disponibili per quel post. In
+  // ogni caso il record c'è comunque, così la run successiva sa che il post
+  // è già stato tentato e non lo richiama.
   engagementData?: {
-    status?: "ok" | "not_found" | "no_metrics";
+    status?: "ok" | "not_found" | "no_metrics" | "shadowed";
     source?: "emplifi";
     views?: number | null;
     likes?: number | null;
