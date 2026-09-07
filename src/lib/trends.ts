@@ -117,6 +117,23 @@ export type AccountRef = {
     version?: number;
     updatedAt?: string | null;
   } | null;
+  // Esito del recupero KPI, scritto SOLO da scripts/scrape-engagement-batch.mjs
+  // sui post BSConfirmed della finestra luglio-agosto (via Emplifi
+  // Listening). "not_found" = Emplifi non ha indicizzato quel post,
+  // "no_metrics" = trovato ma senza numeri; in entrambi i casi il record
+  // c'è comunque, così la run successiva sa che è già stato tentato e non
+  // lo richiama. I campi piatti views/likes/comments/shares qui sopra
+  // restano quelli che legge la UI.
+  engagementData?: {
+    status?: "ok" | "not_found" | "no_metrics";
+    source?: "emplifi";
+    views?: number | null;
+    likes?: number | null;
+    comments?: number | null;
+    shares?: number | null;
+    version?: number;
+    updatedAt?: string | null;
+  } | null;
   // Legacy: insight prodotti dalla vecchia analisi LLM su OCR + caption.
   // Nessuno script lo scrive più, resta per i post già analizzati.
   ocrInsights?: string | null;
