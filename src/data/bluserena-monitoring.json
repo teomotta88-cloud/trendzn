@@ -35041,13 +35041,9 @@
           "shares": 2,
           "sentiment": "positive",
           "topics": [
-            "last minute",
-            "vacanza in famiglia",
-            "mare",
-            "relax",
-            "offerta agosto",
-            "villaggio all-inclusive",
-            "Calabria"
+            "vacanza",
+            "spiaggia",
+            "servizi"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -35068,6 +35064,25 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T17:20:08.941Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "servizi"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:17.915Z"
           }
         },
         {
@@ -38616,14 +38631,7 @@
           "likes": 16,
           "comments": 3,
           "shares": 4,
-          "sentiment": "neutral",
-          "topics": [
-            "puglia",
-            "mare",
-            "estate",
-            "torrecanne",
-            "hotel"
-          ],
+          "sentiment": null,
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "ocrData": {
@@ -38642,6 +38650,20 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-02T18:58:27.251Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": "Granserena Hotel",
+            "confidence": 0.4,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:23.429Z"
           }
         },
         {
@@ -38657,11 +38679,9 @@
           "shares": 32,
           "sentiment": "positive",
           "topics": [
-            "cocktail",
-            "all inclusive",
-            "vacanze",
-            "Puglia",
-            "resort"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osmAiBAiUEA0BIAojyCJdzIek3sXBPlBT1z1FP~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=XpF4ppHoBvH5d4vvyHyKogoPkGU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -38681,6 +38701,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T09:04:15.781Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:24.315Z"
           }
         },
         {
@@ -42678,29 +42716,8 @@
           "shares": 58,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Hotel",
-            "Calanè",
-            "Calànè Resort",
-            "GranSerena",
-            "Gran Serena",
-            "Sibari Green",
-            "Sibari Green Resort",
-            "Valentino",
-            "Kalidia",
-            "Alborèa",
-            "Ethra",
-            "Ethra Reserve",
-            "Is Serenas",
-            "Is Serenas Badesi",
-            "IsSerenas"
+            "animazione",
+            "team"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oc8YRqA5WBXiE74BDAIA87ffhJPQpiEBABmCkO~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=PNEi1amgYYcIb4Ozhdzfz2LL8hE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -42722,7 +42739,25 @@
             "version": 3,
             "updatedAt": "2026-09-02T16:45:16.109Z"
           },
-          "ocrInsights": "No content available for analysis."
+          "ocrInsights": "No content available for analysis.",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "team"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:26.288Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -42737,12 +42772,8 @@
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "estate",
             "mare",
-            "relax",
-            "canzone",
-            "musica"
+            "relax"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -42762,6 +42793,23 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T08:01:20.650Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "relax"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:27.016Z"
           }
         },
         {
@@ -42777,11 +42825,9 @@
           "shares": 1,
           "sentiment": "positive",
           "topics": [
-            "buongiorno",
             "relax",
-            "estate",
             "mare",
-            "musica"
+            "estate"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -42801,6 +42847,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T08:01:22.742Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "mare",
+              "estate"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:28.941Z"
           }
         },
         {
@@ -42818,9 +42882,7 @@
           "topics": [
             "relax",
             "mare",
-            "estate",
-            "vacanza",
-            "resort"
+            "estate"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -42840,6 +42902,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T08:01:25.037Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "mare",
+              "estate"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:36.647Z"
           }
         },
         {
@@ -42855,10 +42935,9 @@
           "shares": 3,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "estate",
-            "resort",
-            "mare"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -42878,6 +42957,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T08:01:27.295Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:37.329Z"
           }
         },
         {
@@ -42893,16 +42990,33 @@
           "shares": 10,
           "sentiment": "positive",
           "topics": [
-            "puglia",
-            "vacanza",
-            "mare",
-            "resort",
-            "pensione completa",
+            "offerta vacanza",
             "spiaggia",
-            "viaggio"
+            "pensione completa",
+            "camera",
+            "servizi inclusi"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "offerta vacanza",
+              "spiaggia",
+              "pensione completa",
+              "camera",
+              "servizi inclusi"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:42.618Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -42949,9 +43063,8 @@
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "relax"
+            "vacanze"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -42971,6 +43084,23 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T08:01:35.278Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:43.154Z"
           }
         },
         {
@@ -44087,13 +44217,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "villaggio",
-            "ferie",
-            "famiglia",
-            "crescita",
-            "emozione",
-            "estate"
-          ]
+            "emozioni",
+            "ricordi",
+            "famiglia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "emozioni",
+              "ricordi",
+              "famiglia"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.82,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:45.350Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44785,7 +44931,7 @@
           "url": "https://www.tiktok.com/@lellotiktok06/video/7676987211547479328",
           "date": "2026-08-22T22:31:13.000Z",
           "caption": "#accadeoggi @adrianavilardi88 😉🤫",
-          "location": null,
+          "location": "Bluserena",
           "views": null,
           "likes": null,
           "comments": null,
@@ -44809,11 +44955,31 @@
             "version": 1,
             "updatedAt": "2026-09-03T08:23:36.313Z"
           },
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "dignità",
-            "riflessione"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:45.858Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44884,10 +45050,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
-          ]
+            "vacanze",
+            "musica",
+            "ringraziamento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanze",
+              "musica",
+              "ringraziamento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:48.122Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45507,10 +45691,35 @@
           },
           "sentiment": "negative",
           "topics": [
+            "cibo",
             "vegan",
-            "resort",
-            "problemi"
-          ]
+            "ristorante",
+            "colazione",
+            "pranzo",
+            "cena"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "cibo",
+              "vegan",
+              "ristorante",
+              "colazione",
+              "pranzo",
+              "cena"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:50.198Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -46183,8 +46392,7 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "resort",
-            "amore"
+            "esperienza romantica"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -46204,6 +46412,23 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T08:38:44.882Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "esperienza romantica"
+            ],
+            "location": "Calanè Resort",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:52.250Z"
           }
         },
         {
@@ -49590,12 +49815,9 @@
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "ritorno al resort",
-            "clienti fedeli",
-            "relax",
-            "mare",
-            "ringraziamento"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -49615,6 +49837,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T10:42:13.346Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:53.027Z"
           }
         },
         {
@@ -49630,10 +49870,7 @@
           "shares": 6,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "cibo",
-            "esperienza"
+            "cibo"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ow5NIRA1BoQIKNI84iE5fFRAPVIBJi529zkuBC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gHjL9629IxAH3zfINTwtxokvrgk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -49653,6 +49890,22 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T10:42:15.351Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:08:55.266Z"
           }
         },
         {
@@ -49666,11 +49919,7 @@
           "likes": 4,
           "comments": 1,
           "shares": 3,
-          "sentiment": "positive",
-          "topics": [
-            "vacanza",
-            "mare"
-          ],
+          "sentiment": null,
           "imageUrl": null,
           "verificationStatus": "confirmed",
           "ocrData": {
@@ -49689,6 +49938,20 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T10:42:44.783Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.5,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:03.612Z"
           }
         },
         {
@@ -49704,8 +49967,9 @@
           "shares": 1,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -49725,6 +49989,24 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T10:43:47.533Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:04.527Z"
           }
         },
         {
@@ -49740,8 +50022,8 @@
           "shares": 1,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "mare",
+            "estate"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -49761,6 +50043,23 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T10:44:13.727Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "estate"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:10.720Z"
           }
         },
         {
@@ -49774,13 +50073,11 @@
           "likes": 26,
           "comments": 1,
           "shares": 1,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
-            "lavoro",
-            "caldo",
-            "estate",
-            "stress",
-            "vacanze"
+            "animazione",
+            "vacanze",
+            "Italia"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -49801,6 +50098,25 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-03T10:44:49.104Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "Italia"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:11.686Z"
           }
         },
         {
@@ -49834,13 +50150,30 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
             "relax",
-            "Valentino Resort and Spa",
-            "Batangas",
-            "Nen Adventure"
-          ]
+            "wellness",
+            "vacanza",
+            "spa"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "wellness",
+              "vacanza",
+              "spa"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:13.966Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49874,15 +50207,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "staycation",
-            "resort",
-            "family outing",
-            "couple getaway",
-            "go-kart",
-            "piscine",
-            "cibo",
-            "relax"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:14.451Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49915,13 +50262,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Valentino Resort",
-            "Batangas",
-            "San Jose"
-          ]
+            "eventi",
+            "catering",
+            "location"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "eventi",
+              "catering",
+              "location"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:16.706Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49955,12 +50317,31 @@
           },
           "sentiment": "positive",
           "topics": [
-            "avventura",
-            "go-kart",
-            "compleanno",
-            "vlog",
-            "resort"
-          ]
+            "animazione",
+            "attività",
+            "divertimento",
+            "compleanno"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "attività",
+              "divertimento",
+              "compleanno"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:09:20.557Z"
+          }
         },
         {
           "platform": "tiktok",
