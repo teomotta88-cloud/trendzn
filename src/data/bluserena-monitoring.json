@@ -63562,7 +63562,16 @@
           "likes": 4658,
           "comments": 38,
           "shares": 1373,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vi racconto perché Cirello è una buona scelta per la vacanza. Perché è un'altra parte del pianeta, puoi andare in bicicletta in ogni posto. Per 250 TL di denaro, puoi portare la bicicletta e andare fino a Olimpos Antico. Cirello e Olimpos hanno un'antica piazza che si rivolge tra le montagne. Prendere un po' di tempo tra le antiche ponte e trovarsi in un'altra parte del pianeta è la parte più attiva di Olimpos. Se vuoi andare in bici, il lago di Nikkei, che è uno dei più importanti luoghi di Turchia, è proprio Cirello. Puoi seguire le patiche e arrivare a un luogo bello e tranquillo senza città. puoi arrivare a Koi. Se vuoi continuare per la costa, è un'ottava molto bella dove puoi scoprire il stop board e il canone. Il giorno è incredibilmente bello. Nel giorno d'estate puoi uscire dal ponte e frullare i marshmallow in un'acqua naturalmente non fissata da centinaia di anni. In particolare i bambini piacciono molto questa attività. Se non ti piacciono tutti questi, puoi uscire dal canone a 20 minuti da un'altra parte del terreno e vedere la Sula Islanda, la città di Turchia, che è la più famosa. Mi consiglio di scegliere il posto dove abitare. Perché un po' questo tempo tranquillo. Planificare il giorno a base dei giorni e delle ore d'estate e restare a riposare a mezzogiorno in un pavimento o in un pavimento è quello che fa bene la balanza in un viaggio. E' questo che fa bene la cirella. Il mare, la natura e la storia possono vivere in un viaggio. E puoi farlo fuori da un'esplosione.",
+            "language": "Italian",
+            "durationSec": 67,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:42:00.899Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63576,7 +63585,17 @@
           "likes": 780,
           "comments": 31,
           "shares": 59,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:45:39.658Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63590,7 +63609,16 @@
           "likes": 450,
           "comments": 28,
           "shares": 23,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:45:42.299Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63604,7 +63632,16 @@
           "likes": 108,
           "comments": 3,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti nella nostra tour di stanza ragazzi e quando entri in giro a mia destra abbiamo un closet di andamento e a mia destra un bello e lusso lavabo con tutti gli accenti di oro che adoro assolutamente quando entri in giro abbiamo un bed di plushi di grande dimensione e poi la staff del hotel ci ha lasciato un cake di anniversario che era molto bello di loro in In questa stanza abbiamo due terrassi, il primo è all'esterno della nostra area di lavori, puoi vedere la piazza da qui, puoi vedere i restauranti, che è bello, e poi su queste lunghe strade, puoi arrivare al nostro secondo terrassi e le vittime qui sono anche assolutamente stupide, quindi la viaggia su queste strade è totalmente valida, c'è un sito, alcune lampade, c'è un sottobed e poi c'è un pool di plunge e poi di nuovo puoi vederlo, risort you can see the beach from here and you can see all things so happy we were able to do this happy anniversary honey",
+            "language": "Italian",
+            "durationSec": 65.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:45:45.506Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63618,7 +63655,16 @@
           "likes": 33,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 72.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:47:50.099Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63632,7 +63678,16 @@
           "likes": 363,
           "comments": 7,
           "shares": 22,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:47:52.790Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63646,7 +63701,16 @@
           "likes": 2552,
           "comments": 17,
           "shares": 452,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 9.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:47:56.963Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63660,7 +63724,16 @@
           "likes": 92,
           "comments": 7,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 34.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:01.834Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63674,7 +63747,16 @@
           "likes": 43,
           "comments": 1,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "prima di questo posto di Austin c'era una barra, poi un banco, poi un barbershop, poi un spa, poi una stazione di radio dove il futuro presidente ha avuto una broadcast e sono così seriosa su questo troverete il Victorian all'interno del hotel Driscoll, che era originalmente costruito nel 1886 e oggi il Victorian è una barra di due strati, è come un salone contro un club sociale ha questo buon sentimento a lui, ma non è troppo stifoso noterete che la barra è bellissima, è mahogany e quando andate in alto c'è un'area di mezzanine con una tavola di piazza e molte altre sedi While it is fun to sit downstairs and take in the vibe, it's also neat to sit upstairs and see everything from an aerial view. I just love the old western vibe in here. While I'm in the mood for some storytelling, I'm going to tell you about this hotel. As mentioned, it was built in 1886 by a cattle baron, Jesse Driscoll. Unfortunately, after a couple of years, he lost the hotel and died shortly after. But the crazy part is, guests still report cigar smoke and flickering lights near his portrait. There's a number of other stories as well, including one about a four-year-old girl named Samantha. And people talk about the room 525. La Driscoll continua a essere considerata il hotel più incontrobato in Austin. Make sure to check out the Victorian next time you're there. Bye!",
+            "language": "Italian",
+            "durationSec": 62,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:05.364Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63688,7 +63770,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:07.880Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63702,7 +63793,16 @@
           "likes": 1873,
           "comments": 42,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "All right, so this is my first task force experience. So I'm staying at the Salamander. It's a gorgeous hotel. I like this. You can see my room, hopefully it's nice. Room tour! Walk in. Welcome Victoria. A little view of the Potomac. And the monument. Sto assistendo i giovani, Marriott ha comprato il salamander, quindi sarà una collezione autografata di Marriott. Sono sicuramente in grado di usare questo. Sto togliendo tutti i miei vestiti e le mie cose. E ora mi devo preparare. Questo sarà il mio lavoro di oggi. Sì. Sto facendo la squadra a 12. Non so cosa faccio ma sono pronta ok stiamo facendo la stagione questa è la mia viaggia di business questo è un escalatore gigante ma sto andando ok, ho finito il mio lavoro e ora andrò a camminare e andrò a guardare il monumento ok bello andiamo per il monumento ieri dicevano salamander si oh scusa quindi hanno cambiato ok quindi questa è la notte passata e questo va al hotel salamander I'm gonna go watch it all happen.",
+            "language": "Italian",
+            "durationSec": 125.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:12.196Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63716,7 +63816,16 @@
           "likes": 825,
           "comments": 40,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok, quindi Freddy ha deciso di sorprendermi con un incontro a un hotel romantico, quindi andiamo, siamo in West Virginia. Qualcosa per te, amico. Questo è tutto? Penso che siamo qui, sì. Dicono che è stata un'esperienza davvero incredibile o qualcosa del genere. E ho solo sentito cose buone. Oh, dovrei portare qui? Oh, ok. Sì, vorrei portare qui. Sì, forse. Cool. oh mio Dio Ok, so che stanno renovando, ma sarà tutto bene. Non lasciare i bambini o i bambini non attenduti. Oh, Dio. Sono scordata. Va bene. non è proprio non sembra come si diceva ma è ok Freddy non so non voglio stare qui è grossissimo All right, I know, I'm already, I'm calling Expedia right now, they didn't say it was going to be like, I mean, they don't look like any of the pictures, at all, but, let me call Expedia, I'll figure it out.",
+            "language": "Italian",
+            "durationSec": 110.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:16.776Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63730,7 +63839,16 @@
           "likes": 71,
           "comments": 2,
           "shares": 19,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ma ben back packer che ho come ciò mai con e non ho hotel romeo stai con come pubblica mia niente l'ing loo per peggio e am la zona ma ex e tutti quando vedo un sui da con l'angelo ma qua ma ma come con il tuo con on ma per con un non sabai con l'am suoni a una metà due più che non è un ruolo e se ti è proprio per tronfagia di qua ti detti con un amico di tante ma va già sai Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:20.387Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -63744,7 +63862,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 10.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:22.687Z"
+          }
         }
       ]
     },
@@ -66296,7 +66423,16 @@
           "likes": 25,
           "comments": 1,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:25.493Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66310,7 +66446,16 @@
           "likes": 180200,
           "comments": 962,
           "shares": 119300,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:27.574Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66324,7 +66469,16 @@
           "likes": 62000,
           "comments": 379,
           "shares": 18500,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "con un faccio così, un corpo così, baby, devi servire servire, servire baby girl, mettiti a lavorare",
+            "language": "Italian",
+            "durationSec": 7.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:30.080Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66338,7 +66492,16 @@
           "likes": 70100,
           "comments": 350,
           "shares": 28700,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:32.609Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66352,7 +66515,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e se stiamo guardando l'Ethereum nel tempo di tre giorni continuiamo a semplicemente tenere in alto questa area massima di supporto qui, ancora seduto tra 1.5k e 1.6k e stiamo continuando a suonare questo segno di oversold in l'Ethereum RSI di tre giorni e ora stiamo ancora molto vicini all'oversold in l'Ethereum RSI di tre giorni, che significa che abbiamo ancora molto più tempo per andare, molto più spazio per vedere più di un reset nei prossimi giorni o settimane come un scenario molto probabilistico. ricordatevi, non necessariamente un segnale di basso, non necessariamente aspettando un movimento massimo di alto momento verso l'alto o qualcosa del genere, ma almeno un po' di rilievo, qualcosa come questo o potenzialmente solo un po' di più di prezzo iniziale in i prossimi giorni o settimane è ultimamente la mia predicazione per Ethereum.",
+            "language": "Italian",
+            "durationSec": 45.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:35.693Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66366,7 +66538,16 @@
           "likes": 861,
           "comments": 24,
           "shares": 119,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I nuovi magneti espandibili di Severo sono molto simili e un po' unici. Sono il vostro tipico spandibolo, ma qui dietro hanno un ring metallico che si ferma le spalle fino a quando l'impatto li sposta e li apre. Questo competirà con i hypodermics, il G5 Megameat, il Bomar Beast. Cosa ne pensate? Ha il costo di un spandibolo spandibolo?",
+            "language": "Italian",
+            "durationSec": 28.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:38.540Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66380,7 +66561,16 @@
           "likes": 11900,
           "comments": 136,
           "shares": 4775,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:40.861Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66394,7 +66584,16 @@
           "likes": 142000,
           "comments": 1059,
           "shares": 93100,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 6.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:42.965Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66408,7 +66607,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 58.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:48:46.159Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66422,7 +66630,16 @@
           "likes": 204,
           "comments": 5,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno, è il giorno 3 del viaggio di Ushguli, e questo è dove sono andato la notte. Sono andato in quell'area oggi, la fine del giorno. Ho passato la mattina rilassando sul deck, prima di coprirmi con un'orange verde-vietnamese. Poi l'autore ci ha sorpreso con un viaggio complementare alla parte di fuori. Siamo arrivati a partire, ora abbiamo 4-5 ore di viaggio e siamo arrivati a Ushguli. La strada ci ha portato in un altro piccolo villaggio medievale. Questo è stato fatto con il suo sistema di sicurezza. Fortunatamente, lui era tutto barco e non c'era nessuno. E prima di tutto, siamo stati sull'acqua e inizialmente sulle ponte. Non molto dopo, sono andato a vedere alcuni bambini locali che vendono ponte. Non avevano dovuto lavorare molto per convincermi di comprare un paio. Dopo un altro salto, siamo arrivati con un gruppo di ossi che avevamo incontrato il giorno prima. avevano anche avuto un buon giorno di camminare, quindi abbiamo stoppato per la cena insieme prima di continuare verso la nostra finala destinazione. La strada passava da piccoli mercati di cibo e di cibo, a cattivi di cavali e, in qualche modo, anche più butterfly. Non si può dimenticare di questo ragazzo. Poi, proprio come questo, Ushguli è apparito. La più alta settimana medievalmente abitata permanente in Europa. Torri di pietra passi lunghi e montagne in ogni direzione ma non ero finito ancora C un ultimo salto a chiedere e era la castella di Queen Tamar. Ho finito il salto di Mestia di Ushkuli. Questo è come sembra di avere il top. Wow, man. Mi sento bene. Mi sento bene di aver fatto questo. Dopo tre giorni incredibili, ho finalmente completato uno dei più bellissimi salto che ho mai fatto. Una celebrazione era definitivamente in ordine, quindi ho preso un birra con gli Aussie e questo giovane gatto. Finalmente è stato il momento di dire ciao a Che e di passare per Ushguli una volta. La villa in sé sentiva come se stessi tornando in passato. Le sue iconiche torri di pietra che una volta proteggevano le famiglie, stavano le stesse, e stavano come simboli di status. C'era anche un piccolo cinema mostrando l'unico film mai fatto in lingua di spagnolo. Quello mattino ho condiviso il cena con il mio amico francese dal trek e ho soccorso un ultimo giorno nei Caucasi. Quando sono stato lì, mi è finalmente arrivato. Non era solo l'ultimo di questa treccia di Mistia di Ushkuli, era l'esperienza finale di un'esperienza di bucket list di un viaggio attorno al mondo. 30 paesi, numerose voli, bus, posti, monti e amicizie. E in qualche modo, tutto è arrivato qui.",
+            "language": "Italian",
+            "durationSec": 159.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:50:44.813Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66436,7 +66653,16 @@
           "likes": 808,
           "comments": 0,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buon Natale. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 58.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-07T22:50:48.618Z"
+          }
         },
         {
           "platform": "tiktok",
