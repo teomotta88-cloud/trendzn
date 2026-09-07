@@ -4281,10 +4281,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "relax",
-            "estate"
+            "vacanze"
           ],
           "ocrInsights": "The post conveys a positive, enthusiastic impression of a visit to the Bluserena resort in Pescara, emphasizing how beautiful the experience was.",
           "verificationStatus": "confirmed",
@@ -4305,6 +4303,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:19:52.939Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:57:55.298Z"
           }
         },
         {
@@ -4313,14 +4329,20 @@
           "url": "https://www.tiktok.com/@iannacconefamilyofficia/video/7676876746549103905",
           "date": "2026-08-22T15:22:38.000Z",
           "caption": null,
-          "location": null,
+          "location": "Valentino Resort",
           "views": 762200,
           "likes": 6793,
           "comments": 0,
           "shares": 2992,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQ4JkToRPAINUeutEBI1NsASviBziC1axN4Iu2~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=w4R1y9pQvJqeoqCfBKAKWwljhOY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "sentiment": "neutral",
-          "topics": [],
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "intrattenimento",
+            "emozioni",
+            "felicità"
+          ],
           "ocrInsights": "Nessun testo on-screen disponibile per l'analisi.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -4340,6 +4362,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:20:02.148Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "intrattenimento",
+              "emozioni",
+              "felicità"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.72,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:01.774Z"
           }
         },
         {
@@ -4388,11 +4430,10 @@
           "comments": 5,
           "shares": 24,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "social",
-            "interazione",
-            "domanda"
+            "animazione",
+            "spiaggia"
           ],
           "ocrInsights": "The caption is a light‑hearted, informal question addressed to female friends, using a laughing emoji to convey a teasing, friendly vibe. No specific location or resort names are mentioned.",
           "verificationStatus": "confirmed",
@@ -4412,6 +4453,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:53:35.163Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:02.320Z"
           }
         },
         {
@@ -4428,9 +4486,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "ocrInsights": "No on-screen text provided.",
           "verificationStatus": "confirmed",
@@ -4450,6 +4508,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:53:42.278Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:03.410Z"
           }
         },
         {
@@ -4466,10 +4542,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "viaggio",
-            "italia"
+            "villaggio",
+            "promozione"
           ],
           "ocrInsights": "Il contenuto promuove o celebra un'esperienza di vacanza italiana a 4 stelle offerta da Bluserena, trasmettendo un sentimento positivo e sottolineando la meraviglia del viaggio.",
           "verificationStatus": "confirmed",
@@ -4489,6 +4563,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:53:47.825Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "villaggio",
+              "promozione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:06.971Z"
           }
         },
         {
@@ -4506,8 +4597,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax"
+            "Italia",
+            "resort"
           ],
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
@@ -4528,6 +4619,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:20:41.427Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "Italia",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:07.686Z"
           }
         },
         {
@@ -4545,9 +4655,8 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "puglia",
             "mare",
-            "relax"
+            "spiaggia"
           ],
           "ocrInsights": "The user is on vacation in Puglia, Italy, at Torre Serena, expressing a positive mood with beach and sunshine emojis.",
           "verificationStatus": "confirmed",
@@ -4567,6 +4676,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T09:18:24.162Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "mare",
+              "spiaggia"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:09.735Z"
           }
         },
         {
@@ -4583,11 +4710,8 @@
           "imageUrl": null,
           "sentiment": "negative",
           "topics": [
-            "vacanza",
-            "all-inclusive",
-            "bluserena",
-            "life",
-            "trend"
+            "braccialetto all inclusive",
+            "fine vacanza"
           ],
           "ocrInsights": "User likely shows themselves at the end of a holiday, possibly at a resort or venue called Bluserena, expressing mild sadness about returning home; emojis and popular hashtags are used to boost visibility on TikTok.",
           "verificationStatus": "confirmed",
@@ -4608,6 +4732,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:21:18.091Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "braccialetto all inclusive",
+              "fine vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:12.519Z"
           }
         },
         {
@@ -4624,11 +4766,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "food",
-            "vacanza",
-            "mare",
-            "relax",
-            "resort"
+            "cibo",
+            "animazione",
+            "ristorante",
+            "vita da resort"
           ],
           "ocrInsights": "The post uses upbeat hashtags related to food and vacation, suggesting a positive experience, likely at or about the restaurant/blu serena Valentino. No visual text is available, so insights are derived from the hashtags alone.",
           "verificationStatus": "confirmed",
@@ -4648,6 +4789,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:54:28.474Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "animazione",
+              "ristorante",
+              "vita da resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:14.543Z"
           }
         },
         {
@@ -4662,12 +4822,11 @@
           "comments": 24,
           "shares": 7,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
-            "amici a distanza",
-            "nostalgia",
-            "separazione",
-            "promessa di incontro"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "ocrInsights": "L'autore sente la mancanza degli amici a distanza, esprime tristezza con cuori feriti, e menziona il resort Blue Serena, suggerendo un contesto di vacanza o luogo di ritrovo.",
           "verificationStatus": "confirmed",
@@ -4688,6 +4847,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:21:33.801Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:15.359Z"
           }
         },
         {
@@ -4704,8 +4882,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "animazione",
+            "intrattenimento"
           ],
           "ocrInsights": "Senza informazioni su contenuto specifico visualizzato, non è possibile fornire insights riguardo il contenuto. Si prega di fornire un'immagine o un link al contenuto per analizzare i dettagli.",
           "verificationStatus": "confirmed",
@@ -4725,6 +4903,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:54:40.683Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "intrattenimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.65,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:18.427Z"
           }
         },
         {
@@ -4741,11 +4936,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "estate",
-            "relax",
-            "natura",
-            "amore"
+            "esperienza personale",
+            "ritorno alla struttura",
+            "ringraziamento"
           ],
           "ocrInsights": "Nessun testo disponibile",
           "verificationStatus": "confirmed",
@@ -4766,6 +4959,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T15:29:46.880Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "esperienza personale",
+              "ritorno alla struttura",
+              "ringraziamento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:28.573Z"
           }
         },
         {
@@ -4782,11 +4994,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "party",
-            "villaggio",
-            "ballo",
-            "divertimento",
-            "evento"
+            "animazione",
+            "vacanze",
+            "spiaggia"
           ],
           "ocrInsights": "The video likely showcases a party atmosphere at a venue named Villaggio, using popular hashtags to boost reach; the tone is upbeat and celebratory.",
           "verificationStatus": "confirmed",
@@ -4807,6 +5017,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:21:58.699Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:29.175Z"
           }
         },
         {
@@ -4824,11 +5053,7 @@
           "sentiment": "positive",
           "topics": [
             "mare",
-            "viaggio",
-            "Sardegna",
-            "Villa Simius",
-            "yoga",
-            "risposta a commento"
+            "vacanze"
           ],
           "ocrInsights": "No on-screen text available",
           "verificationStatus": "confirmed",
@@ -4849,6 +5074,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:22:09.767Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:30.027Z"
           }
         },
         {
@@ -4863,12 +5106,11 @@
           "comments": 40,
           "shares": 43,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
-            "viaggio",
-            "guida",
-            "navigatore",
-            "puglia"
+            "tramonto",
+            "intrattenimento serale",
+            "musica"
           ],
           "ocrInsights": "Not available",
           "verificationStatus": "confirmed",
@@ -4888,6 +5130,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:54:47.375Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "tramonto",
+              "intrattenimento serale",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:33.589Z"
           }
         },
         {
@@ -4902,11 +5162,12 @@
           "comments": 5,
           "shares": 2,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax"
+            "fine vacanza",
+            "ritorno alla quotidianità",
+            "stiro",
+            "preparazione nuove collezioni"
           ],
           "ocrInsights": "The post marks the end of a holiday period and the return to everyday chores such as ironing and cleaning, suggesting a shift from leisure to routine. The hashtags convey a mix of resignation and readiness to restart daily activities.",
           "verificationStatus": "confirmed",
@@ -4927,6 +5188,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:22:28.498Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "fine vacanza",
+              "ritorno alla quotidianità",
+              "stiro",
+              "preparazione nuove collezioni"
+            ],
+            "location": null,
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:40.212Z"
           }
         },
         {
@@ -4978,11 +5259,9 @@
           "imageUrl": null,
           "sentiment": "neutral",
           "topics": [
-            "color party",
-            "holiday",
-            "resort",
-            "August 18",
-            "bluserena"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5001,6 +5280,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:55:04.320Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:41.092Z"
           }
         },
         {
@@ -5017,13 +5314,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
             "animazione",
-            "villaggio",
-            "lavoro",
-            "capo"
+            "vacanze",
+            "resort"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5043,6 +5336,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:23:05.872Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:41.619Z"
           }
         },
         {
@@ -5059,11 +5371,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "colazione",
             "cibo",
-            "vacanza",
-            "hotel",
-            "4stelle"
+            "colazione"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5083,6 +5392,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:23:13.165Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "colazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:44.317Z"
           }
         },
         {
@@ -5099,11 +5426,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanze",
-            "village",
-            "bluserena",
-            "divertimento",
-            "fiesta"
+            "animazione",
+            "intrattenimento",
+            "vita notturna",
+            "musica"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5122,6 +5448,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:55:14.803Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "intrattenimento",
+              "vita notturna",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:46.446Z"
           }
         },
         {
@@ -5138,9 +5483,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "buongiorno",
-            "buon lunedi",
-            "musica"
+            "animazione",
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5160,6 +5504,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:23:31.556Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:46.961Z"
           }
         },
         {
@@ -5176,9 +5538,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "party",
-            "countdown",
-            "celebrazione"
+            "animazione",
+            "intrattenimento"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5197,6 +5558,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:55:21.802Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "intrattenimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.65,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:50.699Z"
           }
         },
         {
@@ -5211,13 +5589,10 @@
           "comments": 3,
           "shares": 3,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "cala",
-            "animazione"
+            "animazione",
+            "intrattenimento serale"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5236,6 +5611,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:55:30.038Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "intrattenimento serale"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:52.902Z"
           }
         },
         {
@@ -5252,8 +5644,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare"
+            "animazione",
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5272,6 +5664,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:55:37.749Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:53.950Z"
           }
         },
         {
@@ -5288,11 +5697,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanze",
             "all inclusive",
             "rientro",
-            "lavatrici",
-            "villaggio"
+            "valigie",
+            "lavatrici"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -5312,6 +5720,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:24:02.054Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "all inclusive",
+              "rientro",
+              "valigie",
+              "lavatrici"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T08:58:56.277Z"
           }
         },
         {
