@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { PlatformIcon, SocialEmbed } from "@/components/SocialEmbed";
+import { useCallback, useDeferredValue, useEffect, useMemo, useState } from "react";
+import { LazyEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { verifyBluserenaPost, type VerificationStatus, type Sentiment } from "@/lib/trends";
 import { GENERIC_RESORT, RESORT_NAMES, resolveResort } from "@/lib/bluserenaResorts";
 import {
@@ -80,6 +80,12 @@ type DateFilter = "all" | "2025" | "2026" | "2025-2026";
 type MonthFilter = string;
 type ResortFilter = string;
 
+// Quante card mostrare per volta. La griglia è a 3 colonne su schermo largo,
+// quindi 24 sono 8 righe piene: abbastanza da scorrere un po' prima di dover
+// cliccare, e poche abbastanza da rendere immediato il cambio di filtro.
+// Alzarlo o abbassarlo è una riga sola.
+const PAGINA = 24;
+
 const MESI_IT = [
   "Gennaio",
   "Febbraio",
@@ -120,6 +126,10 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
   const [error, setError] = useState<string | null>(null);
 
   const [search, setSearch] = useState("");
+  // La casella resta reattiva mentre il filtro vero gira in ritardo: senza,
+  // ogni tasto premuto rifiltra 1310 post e ricostruisce la griglia, e il
+  // campo di testo sembra incollato.
+  const searchDiffuso = useDeferredValue(search);
   const [sentimentFilter, setSentimentFilter] = useState<SentimentFilter>("all");
   // Il lavoro su questa pagina si fa sui post confermati: gli altri sono
   // omonimie da hashtag. Il filtro resta comunque a portata di click.
@@ -465,8 +475,8 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
     (lista: Post[], salta?: "month" | "resort") => {
       let result = lista;
 
-      if (search) {
-        const q = search.toLowerCase();
+      if (searchDiffuso) {
+        const q = searchDiffuso.toLowerCase();
         result = result.filter((p) => (searchIndex.get(p) ?? "").includes(q));
       }
 
@@ -514,7 +524,7 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
     },
     [
       searchIndex,
-      search,
+      searchDiffuso,
       sentimentFilter,
       verificationFilter,
       dateFilter,
@@ -525,6 +535,23 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
   );
 
   const filteredPosts = useMemo(() => applicaFiltri(posts), [posts, applicaFiltri]);
+
+  // Quante card montare. La griglia intera sarebbe fino a 1310 card, e ognuna
+  // porta con sé un embed del post: anche con LazyEmbed, che monta l'iframe
+  // solo quando la card entra in viewport, restano 1310 sottoalberi di DOM da
+  // costruire a ogni cambio di filtro. Mostrarne una pagina alla volta è ciò
+  // che rende immediato il click su un filtro.
+  //
+  // NOTA: si pagina SOLO il rendering della griglia. AI Intelligence continua
+  // a ricevere `filteredPosts` per intero, altrimenti le sue statistiche
+  // cambierebbero premendo "Mostra altri", che sarebbe assurdo.
+  const [visibili, setVisibili] = useState(PAGINA);
+
+  // Cambiare filtro riparte dalla prima pagina: restare a "500 mostrati" dopo
+  // aver ristretto a 12 post non avrebbe senso, e vanificherebbe il taglio.
+  useEffect(() => {
+    setVisibili(PAGINA);
+  }, [filteredPosts]);
 
   // Mesi effettivamente presenti nei dati, dal più recente: una tendina con
   // dodici mesi di cui dieci vuoti sarebbe solo rumore.
@@ -935,7 +962,7 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
             Nessun post trovato
           </div>
         ) : (
-          filteredPosts.map((post) => (
+          filteredPosts.slice(0, visibili).map((post) => (
             <PostCard
               // Chiave url + canaleId, non solo url: lo stesso post compare in
               // più canali hashtag (148 url su 1310 sono in due canali), quindi
@@ -946,7 +973,7 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
               // che usa già il toggle di verifica.
               key={`${post.canaleId}|${post.url}`}
               post={post}
-              search={search}
+              search={searchDiffuso}
               updating={updatingUrl === post.url}
               updatingResort={updatingResortUrl === post.url}
               updatingSentiment={updatingSentimentUrl === post.url}
@@ -957,6 +984,20 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
           ))
         )}
       </div>
+
+      {visibili < filteredPosts.length && (
+        <div className="flex flex-col items-center gap-2 py-4">
+          <span className="text-xs text-muted-foreground">
+            {visibili} di {filteredPosts.length} post mostrati
+          </span>
+          <button
+            onClick={() => setVisibili((n) => n + PAGINA)}
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
+          >
+            Mostra altri {Math.min(PAGINA, filteredPosts.length - visibili)}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -1813,7 +1854,7 @@ function PostCard({
   return (
     <div className="rounded-xl border border-border bg-card overflow-hidden">
       <div className="aspect-square bg-muted overflow-hidden">
-        <SocialEmbed url={post.url} />
+        <LazyEmbed url={post.url} />
       </div>
 
       <div className="p-3 space-y-2">
