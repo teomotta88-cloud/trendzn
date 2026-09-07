@@ -161,6 +161,7 @@ const NAV_ITEMS = [
   // { to: "/tiktok-hashtag", label: "TikTok Trending" },
   { to: "/trend-virali", label: "Trend Virali" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
+  { to: "/piani-editoriali-ihc", label: "Piani Editoriali IHC" },
   { to: "/aspi-monitoring", label: "ASPI-monitoring" },
   { to: "/bluserena-monitoring", label: "Bluserena-monitoring" },
   // { to: "/reputazione-brand", label: "Reputazione Brand" },
