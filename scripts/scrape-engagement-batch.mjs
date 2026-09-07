@@ -193,6 +193,22 @@ async function fetchListeningPosts(queryId, dateStart, dateEnd) {
       listening_queries: [queryId],
       date_start: dateStart,
       date_end: dateEnd,
+      fields: [
+        "id",
+        "url",
+        "message",
+        "author",
+        "created_time",
+        "platform",
+        "media_type",
+        "content_type",
+        "comments",
+        "shares",
+        "interactions",
+        "potential_impressions",
+        "post_labels",
+        "sentiment",
+      ],
       limit: PAGE_LIMIT,
     },
   });
@@ -213,12 +229,19 @@ function extractPostUrl(item) {
 }
 
 function extractMetrics(item) {
+  // Emplifi Listening non fornisce views/likes direttamente: solo commenti,
+  // condivisioni e interazioni totali. Questi sono usati come fallback quando
+  // nessun'altra fonte (Apify/ScrapeCreators) ha i dati più precisi. La
+  // caption viene riportata per eventuali usi futuri, ma non sovrascrive mai
+  // quella già presente nel post.
   return {
-    caption: item.content || item.text || item.caption || item.desc || null,
-    views: item.views ?? item.video_views ?? item.impressions ?? null,
-    likes: item.likes ?? item.reactions ?? null,
-    comments: item.comments ?? item.comments_count ?? null,
-    shares: item.shares ?? item.shares_count ?? null,
+    caption: item.message || item.content || item.text || item.caption || null,
+    views: null, // Listening non espone views direttamente
+    likes: null, // Listening non espone likes direttamente
+    comments: item.comments ?? null,
+    shares: item.shares ?? null,
+    interactions: item.interactions ?? null,
+    potential_impressions: item.potential_impressions ?? null,
   };
 }
 
@@ -256,6 +279,11 @@ function hasExistingMetrics(account) {
 // propria, viene riportata a costo zero (stesso payload) ma MAI in
 // sovrascrittura: una caption già presente (corretta a mano, o letta dalla
 // pagina TikTok) vale più di quella che arriva da un aggregatore.
+//
+// Nota: Emplifi Listening fornisce solo comments/shares (e interactions/
+// potential_impressions per riferimento). Views e likes non sono disponibili
+// da Listening e rimangono null; solo altre fonti (Apify/ScrapeCreators)
+// le forniscono.
 function applyEngagement(account, record) {
   if (record.status === "ok" && hasExistingMetrics(account)) {
     account.engagementData = { ...record, status: "shadowed" };
@@ -264,8 +292,7 @@ function applyEngagement(account, record) {
 
   account.engagementData = record;
   if (record.status !== "ok") return;
-  if (record.views != null) account.views = record.views;
-  if (record.likes != null) account.likes = record.likes;
+  // Emplifi Listening fornisce solo comments e shares, non views/likes
   if (record.comments != null) account.comments = record.comments;
   if (record.shares != null) account.shares = record.shares;
   if (record.caption && !account.caption) account.caption = record.caption;
@@ -350,9 +377,13 @@ async function main() {
       record = { status: "not_found", version: VERSION, updatedAt: now };
     } else {
       const metrics = extractMetrics(item);
-      const hasAnyMetric = [metrics.views, metrics.likes, metrics.comments, metrics.shares].some(
-        (v) => v != null,
-      );
+      // Controlla se almeno uno dei campi disponibili è presente
+      const hasAnyMetric = [
+        metrics.comments,
+        metrics.shares,
+        metrics.interactions,
+        metrics.potential_impressions,
+      ].some((v) => v != null);
       record = hasAnyMetric
         ? { status: "ok", source: "emplifi", ...metrics, version: VERSION, updatedAt: now }
         : { status: "no_metrics", version: VERSION, updatedAt: now };
