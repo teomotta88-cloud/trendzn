@@ -57,7 +57,13 @@ import { readStore, commitField, eachAccount } from "./lib/bluserena-store.mjs";
 
 // Alzare quando cambia l'estrazione dei campi o l'endpoint: il prossimo run
 // rifà tutti i BSConfirmed della finestra, non solo i nuovi.
-const VERSION = 1;
+//
+// 2: la v1 leggeva i post dal livello sbagliato della risposta (data.data
+// invece di data.data.posts), quindi ha visto zero post in risposte piene e
+// ha scritto 120 record "not_found" che non lo erano. Senza questo scatto
+// resterebbero lì per sempre: con status valorizzato e version >= VERSION
+// verrebbero saltati come "già tentati" a ogni run successiva.
+const VERSION = 2;
 
 const EMPLIFI_API_BASE = "https://api.emplifi.io/3";
 const LISTENING_QUERY_NAME = process.env.EMPLIFI_LISTENING_QUERY_NAME || "Bluserena";
@@ -242,13 +248,21 @@ async function fetchListeningPosts(queryId, dateStart, dateEnd) {
 
     const data = await emplifiRequest("/listening/posts", { method: "POST", body });
 
-    const items = data?.data ?? data?.posts ?? data?.mentions ?? (Array.isArray(data) ? data : []);
+    // La risposta è {success, data:{posts:[...]}}: i post stanno annidati in
+    // data.data.posts, NON in data.data. La versione precedente si fermava al
+    // primo livello e trovava lì un oggetto invece di un array, quindi leggeva
+    // zero post da risposte piene e marcava not_found tutti i candidati.
+    const payload = data?.data ?? data;
+    const items =
+      payload?.posts ??
+      payload?.mentions ??
+      (Array.isArray(payload) ? payload : Array.isArray(data) ? data : []);
 
     if (page === 1) {
-      // Le chiavi di primo livello dicono dove sta davvero il cursore: se i
-      // fallback qui sotto non lo pescano, il log basta a correggerlo senza
-      // dover indovinare di nuovo alla cieca.
+      // Se il cursore o i post finissero sotto nomi diversi da questi, il log
+      // basta a correggerli senza dover indovinare di nuovo alla cieca.
       console.log(`   Chiavi della risposta: ${Object.keys(data ?? {}).join(", ")}`);
+      console.log(`   Chiavi di data: ${Object.keys(payload ?? {}).join(", ")}`);
       if (Array.isArray(items) && items.length > 0) {
         console.log(`   Campi del primo item: ${Object.keys(items[0]).join(", ")}`);
       }
@@ -264,12 +278,16 @@ async function fetchListeningPosts(queryId, dateStart, dateEnd) {
     allItems.push(...items);
     console.log(`   pagina ${page}: ${items.length} post (totale ${allItems.length}).`);
 
+    // Cercato prima dentro data.data, dove sta anche l'array dei post, poi al
+    // primo livello: la risposta annida tutto sotto `data`.
     const nextAfter =
+      payload?.after ??
+      payload?.next ??
+      payload?.paging?.after ??
+      payload?.paging?.next ??
       data?.after ??
       data?.next ??
       data?.paging?.after ??
-      data?.paging?.next ??
-      data?.pagination?.after ??
       null;
 
     // Un cursore identico al precedente vorrebbe dire richiedere in eterno la
@@ -416,6 +434,25 @@ async function main() {
     allItems.push(...(await fetchListeningPosts(queryId, w.start, w.end)));
   }
   console.log(`\n📊 ${allItems.length} post scaricati da Emplifi Listening in totale.\n`);
+
+  // I post da arricchire sono quasi tutti TikTok, mentre la Listening query
+  // indicizza anche Instagram/Facebook: se qui TikTok non compare, i
+  // not_found non sono un bug di questo script ma un limite di copertura
+  // della query lato dashboard Emplifi — distinzione che senza questo
+  // conteggio si paga rileggendo i log a mano.
+  const perPiattaforma = {};
+  for (const item of allItems) {
+    const p = item.platform || "?";
+    perPiattaforma[p] = (perPiattaforma[p] || 0) + 1;
+  }
+  if (allItems.length > 0) {
+    const dettaglio = Object.entries(perPiattaforma)
+      .sort((a, b) => b[1] - a[1])
+      .map(([p, n]) => `${p}: ${n}`)
+      .join(", ");
+    console.log(`   Per piattaforma -> ${dettaglio}`);
+    console.log(`   Candidati da arricchire: ${candidates.length} (quasi tutti TikTok)\n`);
+  }
 
   const itemByUrl = new Map();
   for (const item of allItems) {
