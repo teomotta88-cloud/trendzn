@@ -16410,7 +16410,7 @@
           "url": "https://www.tiktok.com/@elenamatranga7/video/7679891807639014678",
           "date": "2026-08-30T18:22:32.000Z",
           "caption": "#bluserena  sigla bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": null,
           "likes": null,
           "comments": null,
@@ -16435,12 +16435,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "bluserena",
-            "vacanza",
-            "relax",
-            "musica",
-            "serenità"
-          ]
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:06.358Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16474,10 +16490,25 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "sardegna"
-          ]
+            "ringraziamento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "ringraziamento"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.72,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:08.300Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16510,11 +16541,26 @@
           },
           "sentiment": "positive",
           "topics": [
-            "amore",
-            "nostalgia",
-            "musica",
-            "relazione"
-          ]
+            "vacanza",
+            "brand"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "brand"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:10.273Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16548,11 +16594,27 @@
           },
           "sentiment": "positive",
           "topics": [
-            "lavoro",
-            "felicità",
-            "viral",
-            "fyp"
-          ]
+            "animazione",
+            "spiaggia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:11.025Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16586,11 +16648,31 @@
           },
           "sentiment": "positive",
           "topics": [
-            "serenamajestic",
-            "bluserena",
-            "gratitudine",
-            "fine anno"
-          ]
+            "saluti",
+            "ringraziamento",
+            "animazione",
+            "fine stagione"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "saluti",
+              "ringraziamento",
+              "animazione",
+              "fine stagione"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:13.278Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16622,13 +16704,29 @@
             "version": 3,
             "updatedAt": "2026-09-02T14:03:44.046Z"
           },
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "all inclusive",
-            "bracciale",
-            "fine vacanza",
-            "lavatrice"
-          ]
+            "servizi"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "all inclusive",
+              "servizi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:15.217Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16662,13 +16760,31 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "relax",
-            "amor",
+            "emozioni",
+            "ricordi",
             "estate",
-            "inverno",
             "felicità"
-          ]
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "emozioni",
+              "ricordi",
+              "estate",
+              "felicità"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:17.372Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16701,13 +16817,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "gioco",
-            "mummia",
-            "divertimento",
-            "estate",
-            "team building",
-            "animazione"
-          ]
+            "animazione",
+            "giochi",
+            "vacanze estive"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "giochi",
+              "vacanze estive"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:19.618Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16741,12 +16872,27 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
             "animazione",
-            "divertimento",
-            "posto di blocco"
-          ]
+            "spiaggia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:20.263Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16778,14 +16924,22 @@
             "version": 3,
             "updatedAt": "2026-09-02T14:04:43.792Z"
           },
-          "sentiment": "positive",
-          "topics": [
-            "vacanza",
-            "mare",
-            "Sardegna",
-            "estate",
-            "relax"
-          ]
+          "sentiment": null,
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.2,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:27.990Z"
+          }
         }
       ]
     },
@@ -16810,12 +16964,9 @@
           "shares": 38,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Serena",
-            "Is Serenas",
-            "Badesi"
+            "animazione",
+            "vacanze",
+            "resort"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ogVBiCi9OE1A4BfYEAA5ifGKm7WgqIAgGDBRQ6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=irpP%2BO%2FmBONMRQOE0bUzrH8rYDg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -16837,7 +16988,26 @@
             "version": 3,
             "updatedAt": "2026-09-02T16:49:20.536Z"
           },
-          "ocrInsights": "No on-screen text available."
+          "ocrInsights": "No on-screen text available.",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "resort"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:28.443Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -16850,12 +17020,9 @@
           "likes": 75,
           "comments": 5,
           "shares": 0,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
-            "vacanza",
-            "mare",
-            "resort",
-            "Sardegna"
+            "benvenuto"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -16875,6 +17042,22 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:13:44.106Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "benvenuto"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:35.825Z"
           }
         },
         {
@@ -17787,13 +17970,28 @@
           "sentiment": "positive",
           "topics": [
             "vacanza",
-            "mare",
-            "relax",
-            "famiglia",
-            "sconto",
-            "estate",
-            "Sardegna"
-          ]
+            "spiaggia",
+            "servizi"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "servizi"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:36.470Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -20563,10 +20761,8 @@
           "shares": 266,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "Sardegna",
-            "resort",
+            "piscina",
             "spiaggia"
           ],
           "imageUrl": null,
@@ -20588,6 +20784,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:20:03.646Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "piscina",
+              "spiaggia"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:36.875Z"
           }
         },
         {
@@ -20603,14 +20818,12 @@
           "shares": 194,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "resort",
-            "Sardegna",
-            "all inclusive",
             "spiaggia",
+            "cibo",
+            "animazione",
+            "piscina",
             "relax",
-            "divertimento",
-            "spettacolo"
+            "bambini"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/owBA6j24IEE0svniN0aiBYBpnIiygAlWcA5Am~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=d3Pj6GLks16aquvyQk7TMWlXDng%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -20632,7 +20845,29 @@
             "version": 3,
             "updatedAt": "2026-09-02T14:20:14.174Z"
           },
-          "ocrInsights": "No content available for analysis."
+          "ocrInsights": "No content available for analysis.",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "cibo",
+              "animazione",
+              "piscina",
+              "relax",
+              "bambini"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:40.445Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21242,11 +21477,26 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "teatro",
-            "magia",
-            "Sardegna"
-          ]
+            "animazione",
+            "spiaggia"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:41.209Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22318,11 +22568,29 @@
           "sentiment": "positive",
           "topics": [
             "estate",
-            "vacanza",
-            "resort",
+            "animazione",
             "musica",
-            "relax"
-          ]
+            "intrattenimento"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "animazione",
+              "musica",
+              "intrattenimento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:43.577Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22711,17 +22979,10 @@
           "shares": 1,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
+            "compleanno",
             "relax",
-            "Serenusa",
-            "Serenahotel",
-            "Calànè Resort",
-            "GranSerena",
-            "Alborèa",
-            "Ethra",
-            "Is Serenas",
-            "Is Serenas Badesi"
+            "mare",
+            "celebrazione"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -22742,6 +23003,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:39:24.054Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "compleanno",
+              "relax",
+              "mare",
+              "celebrazione"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:46.239Z"
           }
         },
         {
@@ -22757,11 +23038,8 @@
           "shares": 59,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "mare",
-            "relax",
-            "Sicilia",
-            "Serenusa Resort"
+            "vacanza"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okAVaNfSMQCHesRDAMXAYqGfeK85pANIQSAPRW~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=AyceWA3uefNdedictd8bdN417tQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -22782,7 +23060,24 @@
             "version": 3,
             "updatedAt": "2026-09-04T08:26:31.626Z"
           },
-          "ocrInsights": "No on-screen text available."
+          "ocrInsights": "No on-screen text available.",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanza"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:46.976Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22797,17 +23092,11 @@
           "shares": 0,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "ritorno",
-            "sole",
-            "mare",
-            "buffet",
+            "animazione",
             "staff",
-            "Sicilia",
-            "Palermo",
-            "abbronzatura",
-            "rientro traumatico",
-            "estate"
+            "cibo",
+            "mare",
+            "sole"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -22827,6 +23116,26 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:26:42.460Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "staff",
+              "cibo",
+              "mare",
+              "sole"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:49.229Z"
           }
         },
         {
@@ -22840,18 +23149,13 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
-            "vacanza",
+            "animazione",
             "mare",
-            "sole",
-            "buffet",
+            "cibo",
             "staff",
-            "rientro",
-            "trauma",
-            "Sicilia",
-            "pelle",
-            "forno a legna"
+            "ristorante"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -22871,6 +23175,26 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:26:49.817Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "mare",
+              "cibo",
+              "staff",
+              "ristorante"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:51.561Z"
           }
         },
         {
@@ -22886,16 +23210,29 @@
           "shares": 251,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "ferragosto",
-            "relax",
-            "divertimento",
-            "mare",
-            "sicilia",
-            "resort"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:52.161Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22910,16 +23247,35 @@
           "shares": 8,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "relax",
-            "gruppi",
-            "estate",
-            "offerta",
-            "soft inclusive",
-            "servizio spiaggia"
+            "offerte gruppi",
+            "spiaggia",
+            "settimana di relax",
+            "villaggio",
+            "last minute",
+            "estate 2026"
           ],
           "imageUrl": null,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "offerte gruppi",
+              "spiaggia",
+              "settimana di relax",
+              "villaggio",
+              "last minute",
+              "estate 2026"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:55.506Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22953,19 +23309,33 @@
           },
           "sentiment": "positive",
           "topics": [
-            "villaggio",
-            "mare",
             "piscina",
-            "famiglia",
-            "bambini",
-            "relax",
-            "resort",
+            "mare",
             "spiaggia",
-            "ristorante",
-            "bar",
-            "agenzia viaggi",
-            "vacanze"
-          ]
+            "famiglia con bambini",
+            "comodità"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "piscina",
+              "mare",
+              "spiaggia",
+              "famiglia con bambini",
+              "comodità"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:06:57.862Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22999,16 +23369,39 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "Ferragosto",
-            "mare",
-            "relax",
-            "famiglia",
+            "pensione completa",
             "animazione",
-            "cucina",
-            "offerta",
-            "Sicilia"
-          ]
+            "miniclub",
+            "sport",
+            "piscina",
+            "spiaggia",
+            "ristorazione"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "Ferragosto",
+              "pensione completa",
+              "animazione",
+              "miniclub",
+              "sport",
+              "piscina",
+              "spiaggia",
+              "ristorazione"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:07:00.655Z"
+          }
         },
         {
           "platform": "tiktok",
