@@ -7126,7 +7126,7 @@
           "url": "https://www.tiktok.com/@silvia.teragnoli83/video/7669311757755632928",
           "date": "2026-08-02T06:06:43.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": 894,
           "likes": 12,
           "comments": 5,
@@ -7150,7 +7150,29 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:28:30.032Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:08.115Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "vacanze"
+          ]
         },
         {
           "platform": "tiktok",
@@ -7166,10 +7188,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "schiuma",
-            "party",
-            "vacanza",
-            "mare"
+            "animazione",
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7188,6 +7208,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:25.213Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:08.958Z"
           }
         },
         {
@@ -7202,15 +7239,12 @@
           "comments": 69,
           "shares": 75,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "positive",
           "topics": [
             "animazione",
             "lavoro",
-            "vacanza",
-            "villaggio",
-            "attività",
-            "rehearsals",
-            "midnight"
+            "vita da animatore",
+            "villaggio"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7230,6 +7264,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:28:47.952Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "lavoro",
+              "vita da animatore",
+              "villaggio"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:11.689Z"
           }
         },
         {
@@ -7246,12 +7300,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "vacanze",
-            "turismo",
-            "vacanze in Italia"
+            "animazione",
+            "drink",
+            "vita da resort",
+            "esperienza vacanza"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7270,6 +7322,25 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:32.546Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "drink",
+              "vita da resort",
+              "esperienza vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.72,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:15.185Z"
           }
         },
         {
@@ -7367,12 +7438,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "famiglia",
-            "bambini",
-            "servizi",
-            "cucina",
-            "villaggio"
+            "biberoneria",
+            "servizi per bambini",
+            "cibo per bambini",
+            "ristorante"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7392,6 +7461,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:29:24.669Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "biberoneria",
+              "servizi per bambini",
+              "cibo per bambini",
+              "ristorante"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:18.102Z"
           }
         },
         {
@@ -7408,12 +7497,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Giù",
-            "Gordetta",
-            "DJ"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7432,6 +7518,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:37.943Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:18.588Z"
           }
         },
         {
@@ -7448,12 +7552,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "estate",
-            "puglia",
             "relax",
             "piscina",
-            "bluserena"
+            "estate"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7472,6 +7573,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:50.513Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "piscina",
+              "estate"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:22.203Z"
           }
         },
         {
@@ -7488,13 +7607,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "outfit",
-            "serata",
-            "mare",
-            "immersione",
-            "mermaid",
-            "fashion"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7514,6 +7629,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:29:52.049Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:22.865Z"
           }
         },
         {
@@ -7530,11 +7664,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "estate",
-            "vacanza",
+            "animazione",
             "musica",
-            "puglia",
-            "addio"
+            "chiusura stagione"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7553,6 +7685,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:58:59.534Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "chiusura stagione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:23.501Z"
           }
         },
         {
@@ -7569,11 +7719,13 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "famiglia",
             "cibo",
-            "servizi",
-            "relax"
+            "piscina",
+            "spiaggia",
+            "servizio",
+            "bambini",
+            "check-in/check-out",
+            "bar"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7592,6 +7744,28 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:59:06.370Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "piscina",
+              "spiaggia",
+              "servizio",
+              "bambini",
+              "check-in/check-out",
+              "bar"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.72,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:26.119Z"
           }
         },
         {
@@ -7608,15 +7782,14 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oUGEAc1ApL0zwRtBIqIGeAeIQBkeAKS3NYBfPG~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=I7VgyUPx4QqAaIjyTDQLcsQvOlI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "famiglia",
+            "tour della struttura",
             "piscina",
-            "Sicilia",
-            "villaggio turistico",
-            "mattina",
-            "natura"
+            "spiaggia",
+            "camere",
+            "sport",
+            "pet friendly",
+            "ristorante",
+            "bambini"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7636,6 +7809,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:40:32.720Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "tour della struttura",
+              "piscina",
+              "spiaggia",
+              "camere",
+              "sport",
+              "pet friendly",
+              "ristorante",
+              "bambini"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:28.665Z"
           }
         },
         {
@@ -7692,14 +7889,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "team",
-            "challenge",
-            "Sardegna",
-            "estate",
-            "resort"
+            "animazione",
+            "staff",
+            "team"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7719,6 +7911,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:04:50.360Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "staff",
+              "team"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:31.263Z"
           }
         },
         {
@@ -7735,10 +7946,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "bluserena",
-            "thegreatestshowman"
+            "animazione",
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7757,6 +7966,23 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:59:14.949Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:32.057Z"
           }
         },
         {
@@ -7773,12 +7999,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oMiIwEOEoTAKCn1XAiRMBiiAyB9hfkAcKABUBS~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=NyeP1QSkCa%2BKlRJySvKc76SoILI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "villaggio",
-            "sicilia",
-            "resort",
-            "agenzia di viaggi",
-            "mazaradelvallo"
+            "tour della struttura",
+            "presentazione"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7798,6 +8021,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:40:07.948Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "villaggio",
+              "tour della struttura",
+              "presentazione"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:34.390Z"
           }
         },
         {
@@ -7814,12 +8056,10 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
+            "ringraziamenti personale",
+            "manutenzione",
             "ospitalità",
-            "personale",
-            "dietro le quinte",
-            "estate",
-            "gratitude",
-            "eroi"
+            "lavoro dietro le quinte"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7839,6 +8079,26 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:30:55.100Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "ringraziamenti personale",
+              "manutenzione",
+              "ospitalità",
+              "lavoro dietro le quinte"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.82,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:36.757Z"
           }
         },
         {
@@ -7857,8 +8117,7 @@
           "topics": [
             "vacanza",
             "relax",
-            "calabria",
-            "neipertee"
+            "spiaggia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7877,6 +8136,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T07:59:30.790Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "relax",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:37.303Z"
           }
         },
         {
@@ -7893,32 +8170,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Resort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Serena Hotel",
-            "Cala Serena",
-            "Bluserena",
-            "Cala Serena",
-            "Serena Majestic",
-            "Serena Majestic Hotel",
-            "SerenaResort",
-            "Serena Resort",
-            "Torreserena",
-            "Torre Serena",
-            "Serenusa",
-            "Serenahotel",
-            "Serena Hotel"
+            "animazione",
+            "spettacoli serali"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7938,6 +8191,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:31:19.979Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spettacoli serali"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:42.141Z"
           }
         },
         {
@@ -7954,15 +8225,9 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oAYR8XESWDHI47mfESmik9QQDfAOFDLbjBpqcQ~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Dlksjy68Lyzm7blVbOJDCNLsIqE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "famiglia",
-            "mare",
             "animazione",
-            "attività",
-            "cibo",
-            "relax",
-            "bambini",
-            "Sardegna"
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -7982,6 +8247,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T14:05:33.492Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:45.004Z"
           }
         },
         {
@@ -7998,10 +8282,8 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "famiglia",
-            "viaggio",
-            "resort"
+            "ringraziamento",
+            "vacanza in famiglia"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8021,6 +8303,24 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:31:56.386Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "ringraziamento",
+              "vacanza in famiglia"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.78,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:56.646Z"
           }
         },
         {
@@ -8037,10 +8337,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "ringraziamento"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8060,6 +8359,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:32:19.578Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:57.687Z"
           }
         },
         {
@@ -8076,13 +8394,12 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
-            "piscina",
             "spiaggia",
-            "bambini",
-            "ristorante"
+            "piscina",
+            "struttura",
+            "area bambini",
+            "mare",
+            "ombra e vegetazione"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8102,6 +8419,28 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:32:47.990Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "piscina",
+              "struttura",
+              "area bambini",
+              "mare",
+              "ombra e vegetazione"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:00:59.872Z"
           }
         },
         {
@@ -8504,12 +8843,9 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o0CBA0zBRpoiCSiIEUIAx2ASMdwfV2xOACREGB~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=H%2BtQYpQ8xVjteo2cF05tAwwo5Zk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "resort",
-            "sicilia",
-            "spettacolo",
-            "attore",
-            "live",
-            "cattedrali"
+            "animazione",
+            "spiaggia",
+            "cibo"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8528,6 +8864,24 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-04T08:27:19.366Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:01:00.578Z"
           }
         },
         {
@@ -8582,12 +8936,11 @@
           "imageUrl": null,
           "sentiment": "negative",
           "topics": [
-            "vacanza",
-            "pulizia",
+            "pulizia camere",
             "formiche",
-            "cliente",
-            "direttore",
-            "brand"
+            "gestione direttore",
+            "customer service",
+            "reception"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8607,6 +8960,27 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:34:31.951Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "pulizia camere",
+              "formiche",
+              "gestione direttore",
+              "customer service",
+              "reception"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:01:02.503Z"
           }
         },
         {
@@ -8623,11 +8997,9 @@
           "imageUrl": null,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
             "villaggio",
-            "animatore",
-            "estate",
-            "bluserena"
+            "animazione",
+            "estate"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8647,6 +9019,25 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T13:34:40.977Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "villaggio",
+              "animazione",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:01:04.851Z"
           }
         },
         {
@@ -8743,14 +9134,14 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/ogtEZEzDASAFfeOFfARrLAA1E0Q06IIdWv9CiI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=HmV0tJyqLP83UaIUte2vRFhRhOE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "mare",
-            "relax",
+            "spiaggia",
             "animazione",
-            "gastronomia",
-            "attività",
             "piscina",
-            "estate"
+            "cibo",
+            "escursioni",
+            "palestra",
+            "spettacoli",
+            "pineta"
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
@@ -8770,6 +9161,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-02T16:47:25.488Z"
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "animazione",
+              "piscina",
+              "cibo",
+              "escursioni",
+              "palestra",
+              "spettacoli",
+              "pineta"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-07T09:01:14.760Z"
           }
         },
         {
