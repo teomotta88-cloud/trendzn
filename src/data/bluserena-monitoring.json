@@ -60,6 +60,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:54:47.430Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 942,
+            "likes": 24,
+            "comments": 4,
+            "shares": 9,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:01:53.161Z",
+            "applied": []
           }
         },
         {
@@ -118,6 +129,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:54:48.124Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 10700,
+            "likes": 56,
+            "comments": 2,
+            "shares": 15,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:01:57.210Z",
+            "applied": []
           }
         },
         {
@@ -172,6 +194,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:54:48.586Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 903,
+            "likes": 19,
+            "comments": 7,
+            "shares": 5,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:01.144Z",
+            "applied": []
           }
         },
         {
@@ -181,7 +214,7 @@
           "date": "2026-08-25T12:54:56.000Z",
           "caption": "@bluserena #bluserena #2026 #torrecanne #fasano #granserena ",
           "location": "Bluserena",
-          "views": null,
+          "views": 719,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oEeQMQkEgAeuGuq8jFfjxVDDdNGGuEIgKTzBCN~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=BkasG7j0vCydidSieM9RdR2RWv4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -227,10 +260,24 @@
             "updatedAt": "2026-09-07T08:54:56.786Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 719,
+            "likes": 8,
+            "comments": 0,
+            "shares": 1,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:05.090Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "likes": 8,
+          "comments": 0,
+          "shares": 1
         },
         {
           "platform": "tiktok",
@@ -286,6 +333,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:54:57.473Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 1390,
+            "likes": 53,
+            "comments": 9,
+            "shares": 5,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:09.163Z",
+            "applied": []
           }
         },
         {
@@ -346,6 +404,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:54:58.467Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 22500,
+            "likes": 381,
+            "comments": 6,
+            "shares": 80,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:13.448Z",
+            "applied": []
           }
         },
         {
@@ -355,7 +424,7 @@
           "date": "2026-08-25T22:05:37.000Z",
           "caption": "#serenamajestic #bluserena ",
           "location": "Cala Serena",
-          "views": null,
+          "views": 874,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4jYeGtkAT4gBGuVYCMLIMOHgDNebNB4fgGRIc~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=kuAJIgY4I2CgN35ESswmcdmZwj8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "neutral",
           "topics": [
@@ -401,10 +470,24 @@
             "updatedAt": "2026-09-07T08:54:59.114Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 874,
+            "likes": 14,
+            "comments": 2,
+            "shares": 0,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:17.823Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "likes": 14,
+          "comments": 2,
+          "shares": 0
         },
         {
           "platform": "tiktok",
@@ -460,6 +543,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:54:59.820Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 6492,
+            "likes": 107,
+            "comments": 1,
+            "shares": 20,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:21.886Z",
+            "applied": []
           }
         },
         {
@@ -520,6 +614,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:55:00.330Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 11900,
+            "likes": 58,
+            "comments": 5,
+            "shares": 16,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:25.798Z",
+            "applied": []
           }
         },
         {
@@ -576,6 +681,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:55:00.960Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 4712,
+            "likes": 59,
+            "comments": 2,
+            "shares": 10,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:29.714Z",
+            "applied": []
           }
         },
         {
@@ -585,7 +701,7 @@
           "date": "2026-08-23T20:13:09.000Z",
           "caption": "#bluserena #resort #licata #villaggio #animazione ",
           "location": "bluserena",
-          "views": null,
+          "views": 441,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQImsBKiA0LI6BF15aziimhREA7fFdmLPoBVCx~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=jKI9HMCIyCRa5j2P%2FpLC9gsJRqA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -631,10 +747,24 @@
             "updatedAt": "2026-09-07T08:55:01.393Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 441,
+            "likes": 7,
+            "comments": 0,
+            "shares": 0,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:33.820Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "likes": 7,
+          "comments": 0,
+          "shares": 0
         },
         {
           "platform": "tiktok",
@@ -643,7 +773,7 @@
           "date": "2026-08-23T13:24:42.000Z",
           "caption": "#bluserena #villaggiobluserena #torreserena #vacanzaitaliana #amorefamiglia ",
           "location": "Bluserena",
-          "views": null,
+          "views": 1490,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ow8VniqE4KRBEQ6Q6BFqA6sDQcmuPDfTfuiEA0~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=%2FgzMGcbNB4MsGk0OzRYJTW5nV98%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -691,10 +821,24 @@
             "updatedAt": "2026-09-07T08:55:02.110Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 1490,
+            "likes": 20,
+            "comments": 3,
+            "shares": 0,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:37.677Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "likes": 20,
+          "comments": 3,
+          "shares": 0
         },
         {
           "platform": "tiktok",
@@ -703,7 +847,7 @@
           "date": "2026-08-24T09:14:48.000Z",
           "caption": "#vacanza ##bluserena #",
           "location": "Bluserena",
-          "views": null,
+          "views": 799,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oIujDfeAEERmI4Ck8DqQFBaME6RAAUgOyD5b8U~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=fEE%2FSD%2F2NMLP2I3CLOITybs%2FcuI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -749,10 +893,24 @@
             "updatedAt": "2026-09-07T08:55:06.272Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 799,
+            "likes": 14,
+            "comments": 0,
+            "shares": 0,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:42.042Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "likes": 14,
+          "comments": 0,
+          "shares": 0
         },
         {
           "platform": "tiktok",
@@ -810,6 +968,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:55:06.597Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 8621,
+            "likes": 27,
+            "comments": 26,
+            "shares": 4,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:46.061Z",
+            "applied": []
           }
         },
         {
@@ -819,7 +988,7 @@
           "date": "2026-08-26T09:32:56.000Z",
           "caption": "bluserena❤️",
           "location": "Bluserena",
-          "views": null,
+          "views": 1205,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oIaOvAVSsE0oVBZZxsicyimCIEs3BwLg6HxmY~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=7j5Nw9inb7BrEiyztpD48o7Kf%2Bc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -867,10 +1036,24 @@
             "updatedAt": "2026-09-07T08:55:07.020Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 1205,
+            "likes": 136,
+            "comments": 28,
+            "shares": 36,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:49.939Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "likes": 136,
+          "comments": 28,
+          "shares": 36
         },
         {
           "platform": "tiktok",
@@ -879,9 +1062,9 @@
           "date": "2026-07-30T11:01:51.000Z",
           "caption": "Recap dei giorni con @bluserena a Torre Serena. 💙 Cose che vanno raccontate: 🌊 Costa ampia e sabbiosa, con quasi 7 chilometri di arenile. 🍃 Immerso nella riserva naturale di Stornara 🏊 Le piscine, lo sport e le attività durante tutta la giornata 🎭 Gli spettacoli serali di alto livello e un’animazione sempre attenta 🎨 Il Serenino, con laboratori e programmi divisi per fasce d’età 🍝 La buona cucina e due ristoranti  🐾 É Pet Friendly Un resort completo, ma anche un ottimo punto di partenza per scoprire questa zona della: durante il soggiorno abbiamo visitato Taranto e Matera, entrambe facilmente raggiungibili. Consigliamo anche Laterza. Nel Reel trovate il nostro racconto, con nuovi ricordi da portare a casa. ☀️ . . . #Puglia #bluserena #family #resort Invito",
           "location": "Bluserena",
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "views": 28900,
+          "likes": 245,
+          "comments": 14,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/o4eaBf5SEiImIyLzMLqQiBirItRyACywVD2Jia~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=3OiLstbq3mKfYfkefQQ0dJcXIB4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -929,10 +1112,22 @@
             "updatedAt": "2026-09-07T08:55:07.829Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 28900,
+            "likes": 245,
+            "comments": 14,
+            "shares": 190,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:54.127Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "shares": 190
         },
         {
           "platform": "tiktok",
@@ -941,9 +1136,9 @@
           "date": "2026-07-12T20:37:43.000Z",
           "caption": "Ma come sono le camere del Serenè Resort? Venite a scoprirle con me. @bluserena #bluserena #sereneresort #villaggio #calabria ",
           "location": "Serenè Resort",
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "views": 47600,
+          "likes": 410,
+          "comments": 44,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ooGJ1UeDTXxEIyFj22QNG9AMvegfcz3nM6pQxD~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=xtC36OrQnvTOtzdmxlpYASwT84c%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -991,10 +1186,22 @@
             "updatedAt": "2026-09-07T08:55:08.344Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 47600,
+            "likes": 410,
+            "comments": 44,
+            "shares": 189,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:02:58.373Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "shares": 189
         },
         {
           "platform": "tiktok",
@@ -1003,9 +1210,9 @@
           "date": "2026-08-16T13:23:07.000Z",
           "caption": "#torreserena #bluserena #bluserenaviaggi4stelle #imiglioriinItalia #puglia ",
           "location": "Bluserena",
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "views": 11000,
+          "likes": 83,
+          "comments": 14,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/osJZ2acIPGKoiACisBB85g0iCAZrBCuQEWzCI~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=zW5KH%2BZw65ZeF9upKBYzEwAPlnQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -1053,10 +1260,22 @@
             "updatedAt": "2026-09-07T08:55:09.068Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 11000,
+            "likes": 83,
+            "comments": 14,
+            "shares": 37,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:03:02.285Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "shares": 37
         },
         {
           "platform": "tiktok",
@@ -1114,6 +1333,17 @@
             ],
             "version": 1,
             "updatedAt": "2026-09-07T08:55:11.124Z"
+          },
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 133100,
+            "likes": 1213,
+            "comments": 208,
+            "shares": 228,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:03:06.381Z",
+            "applied": []
           }
         },
         {
@@ -1123,9 +1353,9 @@
           "date": "2026-08-07T11:56:33.000Z",
           "caption": "Noi ogni giorno così 😎 #Bluserena #DreamTeam #Serenella #IsSerenasBadesiResort #Sardegna",
           "location": "IsSerenas Badesi",
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "views": 12700,
+          "likes": 203,
+          "comments": 6,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/o4AAuIAo161AINGxKmiCBiOBKC9BkwPSvEfBOK~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=72y9J0%2BSwLNys%2BWoivhMrqMkngM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "sentiment": "positive",
           "topics": [
@@ -1169,10 +1399,22 @@
             "updatedAt": "2026-09-07T08:55:11.557Z"
           },
           "engagementData": {
-            "status": "not_found",
-            "version": 2,
-            "updatedAt": "2026-09-07T14:41:31.778Z"
-          }
+            "status": "ok",
+            "source": "tiktok-page",
+            "views": 12700,
+            "likes": 203,
+            "comments": 6,
+            "shares": 38,
+            "version": 3,
+            "updatedAt": "2026-09-07T15:03:10.253Z",
+            "applied": [
+              "views",
+              "likes",
+              "comments",
+              "shares"
+            ]
+          },
+          "shares": 38
         },
         {
           "platform": "tiktok",
