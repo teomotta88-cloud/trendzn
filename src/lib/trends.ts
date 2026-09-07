@@ -105,13 +105,14 @@ export type AccountRef = {
   // ma sentiment null, così la run successiva sa che il post è già stato
   // valutato e non lo rifà.
   sentimentData?: {
-    status?: "ok" | "no_text" | "error";
+    // "manual" = deciso a mano dal feed: lo script di analisi lo salta.
+    status?: "ok" | "no_text" | "error" | "manual";
     sentiment?: Sentiment | null;
     topics?: string[];
     location?: string | null;
     confidence?: number;
     minConfidence?: number;
-    sources?: Array<"caption" | "audio" | "ocr">;
+    sources?: Array<"caption" | "audio" | "ocr" | "manuale">;
     reason?: string | null;
     version?: number;
     updatedAt?: string | null;
