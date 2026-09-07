@@ -495,11 +495,6 @@ export function BluserenaFeedAdvanced({
       sentiment2026: posts2026.filter((p) => p.sentiment).length,
       confirmed2025: posts2025.filter(isConfirmed).length,
       confirmed2026: posts2026.filter(isConfirmed).length,
-      // Solo per AI Intelligence: l'analisi (topic, sentiment, views, il
-      // confronto tra i due periodi) deve girare solo sui post BSConfirmed,
-      // non su tutti quelli della finestra Jul-Ago.
-      confirmedPosts2025: posts2025.filter(isConfirmed),
-      confirmedPosts2026: posts2026.filter(isConfirmed),
     };
   }, [posts]);
 
@@ -777,10 +772,7 @@ export function BluserenaFeedAdvanced({
 
         {showAIInsights && (
           <div className="border-t border-border pt-4 mt-4 space-y-4">
-            <AIInsights
-              confirmedPosts2025={stats.confirmedPosts2025}
-              confirmedPosts2026={stats.confirmedPosts2026}
-            />
+            <AIInsights posts={filteredPosts} totaleNonFiltrato={uniqueTotal} />
           </div>
         )}
       </div>
@@ -818,15 +810,28 @@ export function BluserenaFeedAdvanced({
 }
 
 interface AIInsightsProps {
-  // Solo post BSConfirmed: l'intera sezione confronta le due finestre
-  // Jul-Ago SOLO sui post che sono davvero di Bluserena, non su tutto
-  // quello che è stato monitorato (che include falsi positivi come
-  // concerti al Serena Hotel di Kampala o hashtag omonimi altrove).
-  confirmedPosts2025: Post[];
-  confirmedPosts2026: Post[];
+  // Gli stessi post che si vedono nella griglia, filtri compresi: guardare
+  // una tabella per resort che ignora il resort selezionato, o KPI che
+  // contano post di agosto mentre a schermo c'è luglio, è il modo più veloce
+  // per prendere una decisione sui numeri sbagliati.
+  //
+  // Il perimetro "solo BSConfirmed" non è più cablato qui: lo impone il
+  // filtro di verifica, che parte da "confermati" proprio per questo. Chi
+  // sceglie di guardare i non confermati vede le statistiche di quelli.
+  posts: Post[];
+  // Quanti post ci sono in tutto, per dire quanto stretto è il filtro attivo.
+  totaleNonFiltrato: number;
 }
 
-function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps) {
+function AIInsights({ posts, totaleNonFiltrato }: AIInsightsProps) {
+  const confirmedPosts2025 = useMemo(
+    () => posts.filter((p) => isInJulyAugustStandalone(p.date, 2025)),
+    [posts],
+  );
+  const confirmedPosts2026 = useMemo(
+    () => posts.filter((p) => isInJulyAugustStandalone(p.date, 2026)),
+    [posts],
+  );
   const getTopTopics = (posts: Post[]): { topic: string; count: number }[] => {
     const topicCounts: Record<string, number> = {};
     posts.forEach((p) => {
@@ -855,8 +860,9 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
   const total2025 = confirmedPosts2025.length;
   const total2026 = confirmedPosts2026.length;
   // Le sezioni per resort, per utente e i KPI guardano tutto il periodo
-  // monitorato insieme: separare 2025 e 2026 lì dentro spezzerebbe classifiche
-  // già corte (metà dei resort sta sotto i dieci post).
+  // insieme: separare 2025 e 2026 lì dentro spezzerebbe classifiche già corte
+  // (metà dei resort sta sotto i dieci post). È l'insieme filtrato, non tutti
+  // i post: fuori dalla finestra luglio-agosto non c'è comunque nulla.
   const confermati = useMemo(
     () => [...confirmedPosts2025, ...confirmedPosts2026],
     [confirmedPosts2025, confirmedPosts2026],
@@ -957,6 +963,19 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
         </div>
       </div>
 
+      {/* Prima di ogni numero, su cosa sono calcolati: con un filtro attivo
+          il pannello mostra un sottoinsieme, e chi legge deve saperlo. */}
+      <p className="text-[11px] text-muted-foreground">
+        {posts.length === totaleNonFiltrato ? (
+          <>Calcolato su tutti i {totaleNonFiltrato} post monitorati.</>
+        ) : (
+          <>
+            Calcolato sui <strong>{posts.length}</strong> post che passano i filtri attivi, su{" "}
+            {totaleNonFiltrato} monitorati.
+          </>
+        )}
+      </p>
+
       <KpiTotali posts={confermati} />
 
       <ResortBreakdown posts={confermati} />
@@ -978,6 +997,15 @@ function AIInsights({ confirmedPosts2025, confirmedPosts2026 }: AIInsightsProps)
 }
 
 // --------------------------------------------------------------- AI: helper
+
+// Stessa regola della finestra monitorata usata nel feed, qui in forma
+// riusabile: AIInsights è un componente a sé e non vede l'helper interno.
+function isInJulyAugustStandalone(date: string | null | undefined, year: number): boolean {
+  if (!date) return false;
+  const d = new Date(date);
+  const month = d.getMonth() + 1;
+  return d.getFullYear() === year && (month === 7 || month === 8);
+}
 
 const nf = new Intl.NumberFormat("it-IT");
 
@@ -1065,7 +1093,10 @@ function KpiTotali({ posts }: { posts: Post[] }) {
   return (
     <div className="space-y-2">
       <div className="text-xs font-medium text-muted-foreground">
-        KPI complessivi — {posts.length} post BSConfirmed
+        {/* Non più "post BSConfirmed": il perimetro lo decidono i filtri, e
+            dirlo qui a prescindere sarebbe falso appena si guardano i non
+            confermati. Quale sia l'insieme lo spiega la riga in cima. */}
+        KPI complessivi — {posts.length} post
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
