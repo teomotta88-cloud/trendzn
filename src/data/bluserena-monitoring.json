@@ -65526,6 +65526,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:42:00.899Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AE asin 3\ndogumt Bai",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:38:49.475Z"
           }
         },
         {
@@ -65550,6 +65559,14 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-07T22:45:39.658Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:38:54.156Z"
           }
         },
         {
@@ -65573,6 +65590,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:45:42.299Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:00.743Z"
           }
         },
         {
@@ -65596,6 +65621,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:45:45.506Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:07.014Z"
           }
         },
         {
@@ -65619,6 +65652,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:47:50.099Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:18.475Z"
           }
         },
         {
@@ -65642,6 +65683,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:47:52.790Z"
+          },
+          "ocrData": {
+            "textOnScreen": "found the best hotel in Santorini\nhaveitoo=\ndon'thavetoo=",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:29.742Z"
           }
         },
         {
@@ -65665,6 +65715,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:47:56.963Z"
+          },
+          "ocrData": {
+            "textOnScreen": "At ZARLA COURT HOTEL\nPERFECTPOOL,\nCOURRHOTEL",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:38.421Z"
           }
         },
         {
@@ -65688,6 +65747,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:01.834Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hagadera,\nKenya\nGADERA\nIN FIELD &HOTE\nHagadera, Kenya a\nHAGADERA 7SIDE\nMAIN FIELD &HOTEL\nHagadera, Kenya",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:45.689Z"
           }
         },
         {
@@ -65711,6 +65779,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:05.364Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:52.158Z"
           }
         },
         {
@@ -65734,6 +65810,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:07.880Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BOUTIQUE\nANDRONIS BOUTIQUE",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:39:58.300Z"
           }
         },
         {
@@ -65757,6 +65842,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:12.196Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:02.718Z"
           }
         },
         {
@@ -65780,6 +65873,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:16.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": "got scammed\nonjExpedia for a jacuzzi\nfonour\non a jacuzzi hotel\nai uf got{scammed",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:11.750Z"
           }
         },
         {
@@ -65803,6 +65905,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:20.387Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 ecutive",
+            "confidence": 0.709,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:21.035Z"
           }
         },
         {
@@ -65826,6 +65937,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:22.687Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:25.909Z"
           }
         }
       ]
@@ -68387,6 +68506,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:25.493Z"
+          },
+          "ocrData": {
+            "textOnScreen": "join?\ndiscord\nLink'in\nfor discordy\njoin’ a",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:30.998Z"
           }
         },
         {
@@ -68410,6 +68538,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:27.574Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:36.920Z"
           }
         },
         {
@@ -68433,6 +68569,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:30.080Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:42.638Z"
           }
         },
         {
@@ -68456,6 +68600,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:32.609Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:53.221Z"
           }
         },
         {
@@ -68479,6 +68631,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:35.693Z"
+          },
+          "ocrData": {
+            "textOnScreen": "still sitting in\nAnd right",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:40:57.246Z"
           }
         },
         {
@@ -68502,6 +68663,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:38.540Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MAGN_\nICE COLT\nICE COLT OUTDOORS",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:41:02.862Z"
           }
         },
         {
@@ -68525,6 +68695,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:40.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:41:09.261Z"
           }
         },
         {
@@ -68548,6 +68726,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:42.965Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:41:15.777Z"
           }
         },
         {
@@ -68571,6 +68757,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:48:46.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Costa Rica\nSun Resi\nNE STASY\nFRUITS\nORGANI",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:41:27.832Z"
           }
         },
         {
@@ -68594,6 +68789,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:50:44.813Z"
+          },
+          "ocrData": {
+            "textOnScreen": "the trail took A\nfor lunch\nshowing\nmade in",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:41:51.461Z"
           }
         },
         {
@@ -68617,6 +68821,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-07T22:50:48.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-07T23:42:05.991Z"
           }
         },
         {
