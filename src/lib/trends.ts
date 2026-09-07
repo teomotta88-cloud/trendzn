@@ -124,17 +124,19 @@ export type AccountRef = {
   // ma un'altra fonte (backfill-tiktok-hashtag.mjs, Apify/ScrapeCreators) li
   // aveva già scritti prima: quei numeri restano quelli buoni, i campi piatti
   // NON vengono toccati da Emplifi. Solo "ok" significa che i valori qui
-  // sotto (e in views/likes/comments/shares sul post) sono di Emplifi — cosa
-  // che succede solo quando erano gli unici KPI disponibili per quel post. In
-  // ogni caso il record c'è comunque, così la run successiva sa che il post
-  // è già stato tentato e non lo richiama.
+  // sotto (e in comments/shares sul post) sono di Emplifi — cosa che succede
+  // solo quando erano gli unici KPI disponibili per quel post. In ogni caso
+  // il record c'è comunque, così la run successiva sa che il post è già stato
+  // tentato e non lo richiama. Nota: Emplifi Listening fornisce solo
+  // comments/shares (non views/likes, che rimangono null).
   engagementData?: {
     status?: "ok" | "not_found" | "no_metrics" | "shadowed";
     source?: "emplifi";
-    views?: number | null;
-    likes?: number | null;
+    caption?: string | null;
     comments?: number | null;
     shares?: number | null;
+    interactions?: number | null;
+    potential_impressions?: number | null;
     version?: number;
     updatedAt?: string | null;
   } | null;
