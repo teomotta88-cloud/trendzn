@@ -1,0 +1,113 @@
+name: Analizza post Bluserena (riusabile)
+
+# Coda di analisi condivisa: la richiamano i workflow che AGGIUNGONO post allo
+# store (scoperta dai profili autore, scraping profondo degli hashtag) e il
+# pulsante "Analizza nuovi confermati" del feed.
+#
+# L'ORDINE È SIGNIFICATIVO:
+#   1. audio e testo on-screen — producono i testi su cui si decide dopo;
+#   2. bulk verification — stabilisce BSConfirmed/BSUnconfirmed sulla caption;
+#   3. sentiment e topic — girano SOLO sui confermati, quindi dopo il passo 2.
+# Invertire 2 e 3 vorrebbe dire decidere il sentiment su post che non sono
+# ancora stati riconosciuti come Bluserena, cioè non farlo affatto per quelli
+# appena scoperti.
+#
+# "Solo la prima volta" è garantito dagli script, non da qui: ognuno scrive
+# sul post un record versionato (audioAnalysis, ocrData, sentimentData) e
+# salta chi ce l'ha già. Una chiamata in cui non c'è nulla di nuovo attraversa
+# i quattro passi senza scaricare niente.
+#
+# I passi dopo il primo girano con `if: always()`: una quota LLM esaurita o un
+# video sparito non devono impedire alle altre analisi di lavorare. Il job
+# resta comunque rosso, così il fallimento non passa inosservato.
+
+on:
+  workflow_call:
+    inputs:
+      max_posts:
+        description: "Numero massimo di post per ciascuna analisi"
+        required: false
+        type: string
+        default: "400"
+      reprocess_failed:
+        description: "Riprova anche i post il cui esito precedente non era ok"
+        required: false
+        type: string
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  analizza:
+    runs-on: ubuntu-latest
+    name: Audio, testo on-screen, verifica e sentiment
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install ffmpeg + yt-dlp
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          # La versione apt di yt-dlp è troppo vecchia per TikTok: si usa il
+          # binario ufficiale.
+          sudo curl -fsSL --retry 3 \
+            https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
+            -o /usr/local/bin/yt-dlp
+          sudo chmod a+rx /usr/local/bin/yt-dlp
+          yt-dlp --version
+          ffmpeg -version | head -1
+
+      - name: 1/4 — Trascrizione audio
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MAX_POSTS: ${{ inputs.max_posts }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed }}
+          MAX_MINUTES: "80"
+          BATCH_SIZE: "25"
+        run: node scripts/analyze-bluserena-audio.mjs
+
+      - name: 2/4 — Testo on-screen (OCR)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_POSTS: ${{ inputs.max_posts }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed }}
+          MAX_MINUTES: "80"
+          BATCH_SIZE: "25"
+        run: node scripts/analyze-bluserena-ocr.mjs
+
+      - name: 3/4 — Bulk verification (BSConfirmed)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm install @octokit/rest --no-save
+          node scripts/bulk-verify-bluserena-posts.mjs
+
+      - name: 4/4 — Sentiment e topic (solo sui confermati)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MAX_POSTS: ${{ inputs.max_posts }}
+          REPROCESS_FAILED: ${{ inputs.reprocess_failed }}
+          MIN_CONFIDENCE: "0.6"
+          MAX_MINUTES: "50"
+        run: node scripts/analyze-bluserena-sentiment-topic.mjs

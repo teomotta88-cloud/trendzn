@@ -1,0 +1,83 @@
+name: Scopri post dai profili autore
+
+# Enumera i profili dei ~990 autori TikTok già noti per trovare i post
+# Bluserena che le liste hashtag hanno perso, poi manda i post trovati nella
+# coda di analisi. Vedi scripts/discover-tiktok-by-author.mjs.
+#
+# Un profilo elenca TUTTI i video del suo autore, non un campione: è la parte
+# deterministica della scoperta. Resta scoperto solo il caso degli autori mai
+# visti, che nessuna enumerazione può raggiungere.
+#
+# Solo workflow_dispatch: è un recupero storico su finestre ormai chiuse, non
+# un monitoraggio continuo.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_authors:
+        description: "Quanti autori al massimo (vuoto = tutti)"
+        required: false
+        default: ""
+      start_index:
+        description: "Da quale autore ripartire, per spezzare su più run"
+        required: false
+        default: "0"
+      dry_run:
+        description: "Fa il lavoro ma non scrive"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bluserena-scoperta
+  cancel-in-progress: false
+
+jobs:
+  scopri:
+    runs-on: ubuntu-latest
+    name: Enumera i profili autore
+    timeout-minutes: 350
+    outputs:
+      aggiunti: ${{ steps.scoperta.outputs.aggiunti }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Enumera i profili
+        id: scoperta
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_AUTHORS: ${{ inputs.max_authors }}
+          START_INDEX: ${{ inputs.start_index || '0' }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          MAX_MINUTES: "280"
+          BATCH_SIZE: "20"
+        run: |
+          set -o pipefail
+          node scripts/discover-tiktok-by-author.mjs 2>&1 | tee scoperta.log
+          N=$(grep -oP 'Post aggiunti allo store: \K\d+' scoperta.log | tail -1 || echo 0)
+          echo "aggiunti=${N:-0}" >> "$GITHUB_OUTPUT"
+          echo "Post aggiunti: ${N:-0}"
+
+  # I post appena scoperti nascono senza analisi e senza verifica: la coda
+  # condivisa li porta a termine. Si salta quando non è stato aggiunto nulla,
+  # per non far girare a vuoto ffmpeg e i modelli.
+  analizza:
+    needs: scopri
+    if: needs.scopri.outputs.aggiunti != '0' && needs.scopri.outputs.aggiunti != ''
+    uses: ./.github/workflows/analizza-post-bluserena.yml
+    secrets: inherit
