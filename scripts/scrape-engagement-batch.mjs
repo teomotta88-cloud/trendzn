@@ -36,14 +36,14 @@
 //      candidato.
 //   3. Match per URL normalizzato con i post BSConfirmed non ancora tentati.
 //
-// ATTENZIONE: il path e i nomi dei campi di risposta NON sono confermati da
-// documentazione pubblica (l'host api.emplifi.io non è raggiungibile da
-// questo ambiente di sviluppo per verificarli), sono dedotti dal pattern
-// generale delle altre API Emplifi. Se il primo run fallisce o i campi non
-// matchano, il log stampa status + body grezzo + le chiavi del primo item
-// per poter correggere senza dover indovinare di nuovo alla cieca — usare
-// DRY_RUN=true per il primo tentativo, così un path/campo sbagliato non
-// scrive nulla di sbagliato nello store.
+// Il formato della RICHIESTA è confermato dagli errori di validazione
+// dell'API (vedi il commento su fetchListeningPosts): parametri nel body,
+// due schemi alternativi prima pagina/paginazione, limit <= 100. I nomi dei
+// campi in RISPOSTA restano invece dedotti: il log stampa le chiavi di primo
+// livello e quelle del primo item, così se il cursore o le metriche stanno
+// altrove si corregge leggendo il log invece di indovinare. Usare
+// DRY_RUN=true al primo tentativo, così un campo sbagliato non scrive nulla
+// di sbagliato nello store.
 //
 // Env:
 //   EMPLIFI_API_TOKEN / EMPLIFI_API_SECRET: obbligatorie
@@ -61,7 +61,10 @@ const VERSION = 1;
 
 const EMPLIFI_API_BASE = "https://api.emplifi.io/3";
 const LISTENING_QUERY_NAME = process.env.EMPLIFI_LISTENING_QUERY_NAME || "Bluserena";
-const PAGE_LIMIT = 200;
+// 100 è il massimo accettato dall'API: con 200 la richiesta veniva rifiutata
+// in blocco con "limit must be <= 100" — vedi il commento su
+// fetchListeningPosts per come si legge quell'errore.
+const PAGE_LIMIT = 100;
 const DRY_RUN = process.env.DRY_RUN === "true";
 const REPROCESS_NOT_FOUND = process.env.REPROCESS_NOT_FOUND === "true";
 
@@ -108,21 +111,13 @@ function normalizeUrl(url) {
   }
 }
 
-async function emplifiRequest(path, { method = "GET", body, query } = {}, retries = 3) {
+// I parametri vanno SEMPRE nel body JSON, mai in query string: l'API non
+// legge la query string, la vede come proprietà spuria dell'evento e
+// risponde "must NOT have additional properties 'queryStringParameters'".
+async function emplifiRequest(path, { method = "GET", body } = {}, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      let url = `${EMPLIFI_API_BASE}${path}`;
-      if (query) {
-        const params = new URLSearchParams();
-        Object.entries(query).forEach(([key, value]) => {
-          if (Array.isArray(value)) {
-            value.forEach((v) => params.append(key, v));
-          } else {
-            params.set(key, value);
-          }
-        });
-        url += "?" + params.toString();
-      }
+      const url = `${EMPLIFI_API_BASE}${path}`;
 
       const res = await fetch(url, {
         method,
@@ -198,61 +193,92 @@ async function resolveListeningQueryId(name) {
   return match.id;
 }
 
+// Il body di /listening/posts deve rispettare uno di DUE schemi alternativi
+// (il "oneOf" degli errori di validazione), e l'API quando fallisce elenca
+// insieme le lamentele di entrambi i rami — per questo il messaggio sembra
+// contraddittorio ("deve avere 'after'" + "non deve avere 'listening_queries'"
+// nella stessa risposta). Vanno letti separati:
+//
+//   ramo 1 (prima pagina): listening_queries + date_start + date_end + fields
+//     obbligatori, limit facoltativo ma <= 100, NIENTE after.
+//   ramo 2 (pagine successive): SOLO after, nient'altro — ripetere i filtri
+//     qui fa fallire la validazione.
+//
+// L'unico vero errore della prima versione di questo script era quindi
+// limit: 200 (fuori range nel ramo 1); spostare i parametri in query string
+// non c'entrava nulla — l'API la query string non la legge proprio.
 async function fetchListeningPosts(queryId, dateStart, dateEnd) {
   console.log(`   📄 Richiesta per ${dateStart}..${dateEnd}...`);
   const allItems = [];
-  let after = "";
+  let after = null;
+  let page = 0;
 
   while (true) {
-    const query = {
-      after,
-      listening_queries: queryId,
-      date_start: dateStart,
-      date_end: dateEnd,
-      fields: [
-        "id",
-        "url",
-        "message",
-        "author",
-        "created_time",
-        "platform",
-        "media_type",
-        "content_type",
-        "comments",
-        "shares",
-        "interactions",
-        "potential_impressions",
-        "post_labels",
-        "sentiment",
-      ],
-      limit: PAGE_LIMIT,
-    };
+    page++;
+    const body = after
+      ? { after }
+      : {
+          listening_queries: [queryId],
+          date_start: dateStart,
+          date_end: dateEnd,
+          fields: [
+            "id",
+            "url",
+            "message",
+            "author",
+            "created_time",
+            "platform",
+            "media_type",
+            "content_type",
+            "comments",
+            "shares",
+            "interactions",
+            "potential_impressions",
+            "post_labels",
+            "sentiment",
+          ],
+          limit: PAGE_LIMIT,
+        };
 
-    const data = await emplifiRequest("/listening/posts", {
-      method: "POST",
-      query,
-    });
+    const data = await emplifiRequest("/listening/posts", { method: "POST", body });
 
     const items = data?.data ?? data?.posts ?? data?.mentions ?? (Array.isArray(data) ? data : []);
-    if (Array.isArray(items) && items.length > 0) {
-      allItems.push(...items);
-      console.log(`   ${items.length} post ricevuti (totale: ${allItems.length}).`);
-      console.log(`   Campi disponibili nel primo item: ${Object.keys(items[0]).join(", ")}`);
 
-      // Verifica se c'è un cursore per la prossima pagina
-      const nextAfter = data?.after ?? data?.paging?.after ?? data?.pagination?.after;
-      if (!nextAfter) {
-        console.log(`   Paginazione terminata.`);
-        break;
+    if (page === 1) {
+      // Le chiavi di primo livello dicono dove sta davvero il cursore: se i
+      // fallback qui sotto non lo pescano, il log basta a correggerlo senza
+      // dover indovinare di nuovo alla cieca.
+      console.log(`   Chiavi della risposta: ${Object.keys(data ?? {}).join(", ")}`);
+      if (Array.isArray(items) && items.length > 0) {
+        console.log(`   Campi del primo item: ${Object.keys(items[0]).join(", ")}`);
       }
-      after = nextAfter;
-    } else {
-      console.log(`   Nessun item ricevuto.`);
-      console.log("   Risposta grezza (primi 1000 char): " + JSON.stringify(data).slice(0, 1000));
+    }
+
+    if (!Array.isArray(items) || items.length === 0) {
+      if (page === 1) {
+        console.log("   Risposta grezza (primi 1000 char): " + JSON.stringify(data).slice(0, 1000));
+      }
       break;
     }
+
+    allItems.push(...items);
+    console.log(`   pagina ${page}: ${items.length} post (totale ${allItems.length}).`);
+
+    const nextAfter =
+      data?.after ??
+      data?.next ??
+      data?.paging?.after ??
+      data?.paging?.next ??
+      data?.pagination?.after ??
+      null;
+
+    // Un cursore identico al precedente vorrebbe dire richiedere in eterno la
+    // stessa pagina: meglio fermarsi che bruciare crediti in un loop.
+    if (!nextAfter || nextAfter === after) break;
+    after = nextAfter;
   }
 
+  console.log(`   ${allItems.length} post ricevuti in totale.`);
   return allItems;
 }
 
