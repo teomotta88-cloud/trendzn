@@ -35,6 +35,7 @@ export function PostCard({
   onApprovalChange,
   onPublishedChange,
   onProgrammatoChange,
+  formatOptions,
 }: {
   post: EditorialPost;
   onDeleted: () => void;
@@ -42,6 +43,9 @@ export function PostCard({
   onApprovalChange?: () => void;
   onPublishedChange?: () => void;
   onProgrammatoChange?: (programmato: boolean) => void;
+  // Vedi NewPostCard: se presente, l'edit del post usa il select
+  // Foto/Carousel/Story invece del campo Formato a testo libero.
+  formatOptions?: readonly string[];
 }) {
   const [approvals, setApprovals] = useState<Record<ReviewComponent, boolean>>({
     copy: false,
@@ -137,6 +141,7 @@ export function PostCard({
     return (
       <NewPostCard
         editPost={post}
+        formatOptions={formatOptions}
         onCreated={() => {
           setEditing(false);
           onUpdated?.();
