@@ -170,6 +170,8 @@ function hashtagInfo(url) {
 // continuare a insistere sulla stessa fonte comunque.
 
 // --- Apify ---
+// Ignora il cursore: non è paginato allo stesso modo di ScrapeCreators, va
+// già in profondità con RESULTS_PER_CALL in una sola chiamata.
 async function callApify(tag) {
   const url = `https://api.apify.com/v2/acts/${APIFY_ACTOR}/run-sync-get-dataset-items?timeout=280`;
   const res = await fetch(url, {
@@ -209,8 +211,25 @@ function mapApifyItem(item) {
 // supporta liste/comma-separated (restituisce un match spurio senza errore,
 // quindi va usato un solo hashtag alla volta senza eccezioni — per questo
 // il modo "tutti gli hashtag" qui sotto itera le chiamate, non le raggruppa).
-async function callScrapeCreators(tag) {
-  const url = `https://api.scrapecreators.com/v1/tiktok/search/hashtag?hashtag=${encodeURIComponent(tag)}`;
+//
+// L'endpoint supporta un parametro `cursor` per andare oltre la prima
+// pagina (documentazione: "Cursor to get more videos - get 'cursor' from
+// previous response"). Senza passarlo — il caso di questo script fino
+// all'8/09/2026 — ogni chiamata richiede di nuovo la STESSA prima pagina:
+// da qui i run reali con sempre ~19-20 video restituiti e quasi nessun post
+// nuovo dopo la prima chiamata, pur consumando un credito a chiamata come
+// le altre. Il nome esatto del campo nella risposta con cui proseguire non
+// è verificabile da qui (rete di sviluppo bloccata su scrapecreators.com),
+// quindi si prova la lista di candidati più plausibile e si logga l'intera
+// risposta alla prima chiamata di ogni hashtag per confermarlo su un run
+// reale.
+async function callScrapeCreators(tag, cursor, { logRawOnce = false } = {}) {
+  const url = new URL("https://api.scrapecreators.com/v1/tiktok/search/hashtag");
+  url.searchParams.set("hashtag", tag);
+  // cursor != null invece di un semplice truthy check: un cursore "0" è
+  // falsy ma potrebbe essere un valore di pagina legittimo.
+  if (cursor != null && cursor !== "") url.searchParams.set("cursor", cursor);
+
   const res = await fetch(url, { headers: { "x-api-key": scrapeCreatorsKey } });
   const text = await res.text();
   if (!res.ok) {
@@ -221,7 +240,19 @@ async function callScrapeCreators(tag) {
   if (data.credits_remaining != null) {
     console.log(`  (ScrapeCreators: ${data.credits_remaining} crediti residui)`);
   }
-  return { items: list.map(mapScrapeCreatorsItem), costUsd: 0 }; // 1 credito/chiamata, non per risultato
+  if (logRawOnce) {
+    console.log(`  (diagnostica cursore — chiavi risposta: ${Object.keys(data).join(", ")})`);
+  }
+
+  const nextCursor =
+    data.cursor ?? data.next_cursor ?? data.nextCursor ?? data.max_cursor ?? data.maxCursor ?? null;
+  const hasMore = data.has_more ?? data.hasMore ?? nextCursor != null;
+
+  return {
+    items: list.map(mapScrapeCreatorsItem),
+    costUsd: 0, // 1 credito/chiamata, non per risultato
+    cursor: hasMore ? nextCursor : null,
+  };
 }
 
 function mapScrapeCreatorsItem(item) {
@@ -288,6 +319,11 @@ async function backfillHashtag(tag, canaleName) {
   let totalNewInWindows = 0;
   let totalCostUsd = 0;
   let stopReason = "saturazione";
+  // Il cursore vale solo per la fonte che l'ha prodotto: cambiando fonte
+  // (fallback su errore) si riparte da capo, non ha senso passare un
+  // cursore di ScrapeCreators ad Apify o viceversa.
+  let cursor = null;
+  let scRawLoggedFor = null;
 
   while (call < MAX_CALLS) {
     if (sourceIdx === -1 || sourceIdx >= SOURCES.length) {
@@ -300,7 +336,8 @@ async function backfillHashtag(tag, canaleName) {
 
     let result;
     try {
-      result = await source.call(tag);
+      result = await source.call(tag, cursor, { logRawOnce: scRawLoggedFor !== tag });
+      if (source.name === "ScrapeCreators") scRawLoggedFor = tag;
     } catch (err) {
       console.error(`  Errore su ${source.name}: ${err.message}`);
       const nextIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
@@ -311,11 +348,17 @@ async function backfillHashtag(tag, canaleName) {
       }
       console.log(`  Passo alla fonte successiva: ${SOURCES[nextIdx].name}.`);
       sourceIdx = nextIdx;
+      cursor = null;
       continue;
     }
 
+    cursor = result.cursor ?? null;
     totalCostUsd += result.costUsd;
-    console.log(`  ${result.items.length} video restituiti.`);
+    console.log(
+      `  ${result.items.length} video restituiti` +
+        (source.name === "ScrapeCreators" ? ` (prossimo cursore: ${cursor ?? "nessuno"})` : "") +
+        ".",
+    );
 
     // Classificazione su una lettura fresca dello store, fatta ORA — non
     // sulla lista di target letta a inizio run: tra una chiamata e l'altra
