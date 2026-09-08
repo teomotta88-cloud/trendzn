@@ -20800,6 +20800,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:01.062Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:05:06.271Z"
           }
         },
         {
@@ -20901,6 +20909,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:48.201Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:05:15.155Z"
           }
         },
         {
@@ -21310,6 +21326,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:10.558Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vilardi I\nEdo herr bri\nAddetto\nParco Nautico RESERENA\nRESORT",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:05:35.617Z"
           }
         },
         {
@@ -21489,6 +21514,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:13.079Z"
+          },
+          "ocrData": {
+            "textOnScreen": "È solo na la vacanza\nE solo una la vacanza\nital\nE solo una la vz",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:05:43.686Z"
           }
         },
         {
@@ -21557,6 +21591,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:24.365Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:05:48.236Z"
           }
         },
         {
@@ -21613,6 +21655,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:27.796Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:06:10.118Z"
           }
         },
         {
@@ -21661,6 +21711,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:32.694Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SIREN",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:06:16.824Z"
           }
         },
         {
@@ -21696,6 +21755,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:37.458Z"
+          },
+          "ocrData": {
+            "textOnScreen": "or finjo estar triste por mi\nme hizo lovebombing\nmec triste por mi j\nrante anas alv\nfinjo estar triste por mi\ne porel wey q\nhizo lovebombing\ntriste por mi\ndos anos orel wey q\nloveb ombing\nHurante anas alv\nme hizo ng\ndurante alv",
+            "confidence": 0.874,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:06:25.394Z"
           }
         },
         {
@@ -21744,6 +21812,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:55:54.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NURSE RE\nNugsing [Diagnosis\nA Nursin I\nhat Nurses\ndhs disca lt\nHyper\nal mobil\now Ta diseass\nthey haus Lr\nhaus a\nThey\nlade do 1 i\nemia\ntidy\n+3 pard PI\nProblem\nNURSERENA",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:06:36.825Z"
           }
         },
         {
@@ -21766,6 +21843,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:02.578Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Giolll A i\nwill sn\nwill\nFer MA Golllows\nwhen pinch rp\nmy peed” land\npata od\nNormal de\nFogo}\nCar [Fer Goll\nAssassme.\nanything\nnurs) i\npate\nnormal paia\nars ond ford\nCracked, will\nLange un-|\nolor\nated nals\n5 helps\ndown\nproper |i\nPlain E\nPlannmg\ned |dowm\ndi of daily don\nCwash,\nSkin\nhealing. Pr",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:06:56.252Z"
           }
         },
         {
@@ -21788,6 +21874,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:05.317Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:06:58.331Z"
           }
         },
         {
@@ -21810,6 +21904,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:10.753Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:07.130Z"
           }
         },
         {
@@ -21832,6 +21934,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:13.379Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:09.119Z"
           }
         },
         {
@@ -21880,6 +21990,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:18.408Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:11.813Z"
           }
         },
         {
@@ -21902,6 +22020,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:22.451Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CapCut",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:19.941Z"
           }
         },
         {
@@ -21937,6 +22064,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:28.758Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 Serena i\nAniq pe\nC28 E Power A\nCall Now\n0184015710 Aniq",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:26.575Z"
           }
         },
         {
@@ -22259,6 +22395,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:30:58.667Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:40.984Z"
           }
         },
         {
@@ -22345,6 +22489,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:34.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:57.192Z"
           }
         },
         {
@@ -22380,6 +22532,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:37.428Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:08:07.653Z"
           }
         },
         {
@@ -22425,6 +22585,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:40.968Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:08:12.891Z"
           }
         },
         {
@@ -22468,6 +22636,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:43.188Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bluserena",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:08:25.000Z"
           }
         },
         {
@@ -22503,6 +22680,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:45.873Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:08:36.877Z"
           }
         },
         {
@@ -22548,6 +22733,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:48.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:08:53.418Z"
           }
         },
         {
@@ -22570,6 +22763,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:51.702Z"
+          },
+          "ocrData": {
+            "textOnScreen": "saluti da Blu serena torre\ncanne\nanne",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:09:06.702Z"
           }
         },
         {
@@ -22606,6 +22808,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:56:54.847Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ricco perché faccio il lavoro più\nbello del mondo: y\nRicco perehé faccio il lavoro più",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:09:18.377Z"
           }
         },
         {
@@ -33627,6 +33838,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:48.201Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:05:15.155Z"
           }
         },
         {
@@ -40069,6 +40288,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:30:58.667Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:07:40.984Z"
           }
         },
         {
@@ -43487,7 +43714,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:26:31.626Z"
+            "updatedAt": "2026-09-08T13:08:53.418Z"
           },
           "ocrInsights": "No on-screen text available.",
           "sentimentData": {
@@ -59439,7 +59666,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:54:47.858Z"
+            "updatedAt": "2026-09-08T13:05:15.155Z"
           },
           "ocrInsights": "No content available for analysis.",
           "sentimentData": {
@@ -64449,7 +64676,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T09:04:15.781Z"
+            "updatedAt": "2026-09-08T13:05:06.271Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -70127,7 +70354,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:45:16.109Z"
+            "updatedAt": "2026-09-08T13:05:35.617Z"
           },
           "ocrInsights": "No content available for analysis.",
           "sentimentData": {
@@ -81917,7 +82144,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T09:36:15.528Z"
+            "updatedAt": "2026-09-08T13:07:57.192Z"
           },
           "audioAnalysis": {
             "transcript": "Musica",
@@ -86728,7 +86955,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T09:40:54.192Z"
+            "updatedAt": "2026-09-08T13:08:12.891Z"
           },
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "sentimentData": {
