@@ -18,6 +18,7 @@ import { PostCard } from "@/components/PianoEditoriale/PostCard";
 import { NewPostCard } from "@/components/PianoEditoriale/NewPostCard";
 import { InstagramFeedPreview } from "@/components/PianoEditoriale/InstagramFeedPreview";
 import { PostNumberRail } from "@/components/PianoEditoriale/PostNumberRail";
+import { StoryExportPanel } from "@/components/PianoEditoriale/StoryExportPanel";
 
 export const Route = createFileRoute("/piani-editoriali-ihc/$brand")({
   head: () => ({
@@ -183,6 +184,7 @@ function PianiEditorialiIhcPage() {
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
         <div ref={postsColumnRef} className="space-y-4">
+          <StoryExportPanel posts={posts} sheetName={`${brand.label} Stories`} />
           {plan && creating && (
             <NewPostCard
               planId={plan.id}

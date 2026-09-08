@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import {
   type EditorialPost,
   createPost,
@@ -41,6 +41,11 @@ export function NewPostCard({
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Vedi Formato: presenza di formatOptions == pagine Piani Editoriali IHC,
+  // dove il copy visual può avere più campi (bottone "+"), uno per colonna
+  // nell'export Story per Canva Bulk Create.
+  const isIhc = !!formatOptions;
+
   const [date, setDate] = useState(editPost?.post_date ?? defaultDate ?? "");
   const [rubrica, setRubrica] = useState(editPost?.rubrica ?? "");
   const [topic, setTopic] = useState(editPost?.topic ?? "");
@@ -50,6 +55,9 @@ export function NewPostCard({
     editPost?.channel_copies ?? {},
   );
   const [copyVisual, setCopyVisual] = useState(editPost?.copy_visual ?? "");
+  const [copyVisualList, setCopyVisualList] = useState<string[]>(
+    editPost?.copy_visual_list?.length ? editPost.copy_visual_list : [editPost?.copy_visual ?? ""],
+  );
   const [disclaimer, setDisclaimer] = useState(editPost?.disclaimer ?? "");
   const [obiettivo, setObiettivo] = useState(editPost?.obiettivo_media ?? "");
   const [budget, setBudget] = useState(editPost?.budget_media ? String(editPost.budget_media) : "");
@@ -66,6 +74,7 @@ export function NewPostCard({
         const value = channelCopies[code]?.trim();
         if (value) filteredCopies[code] = value;
       }
+      const trimmedCopyVisualList = copyVisualList.map((t) => t.trim()).filter(Boolean);
       const fields = {
         post_date: date,
         rubrica: rubrica.trim() || null,
@@ -73,7 +82,8 @@ export function NewPostCard({
         canali,
         formato: formato.trim() || null,
         channel_copies: filteredCopies,
-        copy_visual: copyVisual.trim() || null,
+        copy_visual: isIhc ? (trimmedCopyVisualList[0] ?? null) : copyVisual.trim() || null,
+        copy_visual_list: isIhc && trimmedCopyVisualList.length > 0 ? trimmedCopyVisualList : null,
         disclaimer: disclaimer.trim() || null,
         obiettivo_media: obiettivo.trim() || null,
         budget_media: budget ? Number(budget) : null,
@@ -253,12 +263,51 @@ export function NewPostCard({
           <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
             Copy Visual
           </span>
-          <textarea
-            value={copyVisual}
-            onChange={(e) => setCopyVisual(e.target.value)}
-            className={`${inputCls} scrollbar-thin max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
-            placeholder="Testo presente nelle card / nel visual…"
-          />
+          {isIhc ? (
+            <>
+              {copyVisualList.map((text, i) => (
+                <div key={i} className="flex items-start gap-1.5">
+                  <textarea
+                    value={text}
+                    onChange={(e) =>
+                      setCopyVisualList((prev) =>
+                        prev.map((t, idx) => (idx === i ? e.target.value : t)),
+                      )
+                    }
+                    className={`${inputCls} scrollbar-thin max-h-40 min-h-16 overflow-y-auto text-[11px] leading-snug`}
+                    placeholder={`Copy visual ${i + 1}…`}
+                  />
+                  {copyVisualList.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setCopyVisualList((prev) => prev.filter((_, idx) => idx !== i))
+                      }
+                      className="mt-1 shrink-0 rounded-lg border border-border p-1 text-muted-foreground hover:border-destructive hover:text-destructive"
+                      title="Rimuovi questo copy visual"
+                    >
+                      <X className="size-3" />
+                    </button>
+                  )}
+                </div>
+              ))}
+              <button
+                type="button"
+                onClick={() => setCopyVisualList((prev) => [...prev, ""])}
+                className="inline-flex items-center gap-1 text-[11px] font-medium text-primary hover:underline"
+              >
+                <Plus className="size-3" />
+                Aggiungi copy visual
+              </button>
+            </>
+          ) : (
+            <textarea
+              value={copyVisual}
+              onChange={(e) => setCopyVisual(e.target.value)}
+              className={`${inputCls} scrollbar-thin max-h-80 min-h-20 overflow-y-auto text-[11px] leading-snug`}
+              placeholder="Testo presente nelle card / nel visual…"
+            />
+          )}
         </div>
 
         <div className="space-y-2 rounded-xl border border-border bg-background/40 p-3">
