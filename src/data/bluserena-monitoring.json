@@ -20790,7 +20790,16 @@
             "animazione",
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:01.062Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -20882,7 +20891,16 @@
             "piscina",
             "mare",
             "novità"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Vi porto a vedere la novità di questo estate. A tutte le ore del giorno e della notte, in piscina e al mare, gli spiaccoli, con acqua poca, pantasprite, tè. quest'anno nelle strutture blu serena sono disponibili questi dispenser dove potrete prendere tutte le bevande illimitatamente h24 e a prescindere dal tipo di pacchetto che avete acquistato se soft all inclusive o all inclusive queste bibite sono sempre disponibili in vari punti dei resort e tu lo sapevi?",
+            "language": "Italian",
+            "durationSec": 51.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:04.126Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21282,7 +21300,16 @@
             "animazione",
             "team",
             "estate"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 93.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:10.558Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21452,7 +21479,16 @@
             "version": 1,
             "updatedAt": "2026-09-08T09:59:18.886Z"
           },
-          "sentiment": null
+          "sentiment": null,
+          "audioAnalysis": {
+            "transcript": "Buonasera amici e amici, buonasera, ben arrivati per i domani quindi siamo pronti per partire con questa fantastica serata in seguito dell'emozione, del divertimento ma prima di tutto ciò devo darvi qualche info per quanto riguarda la serata che sta a sera e la giornata di domani. Vediamo di poter che questa sera appena termini",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:13.079Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21511,7 +21547,16 @@
             "emozioni",
             "tramonto",
             "divertimento"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica Musica I can't fix without the skies Oh baby, baby, run, run, run into you You want to see me cry I'm hiding inside My heart can't take it But you love me 3, 2, 1, via! Ciao Ciao Grazie a tutti Non c'è nessuno, non c'è nessuno. Grazie a tutti. Dance the night away, if you like to see your mom and dad Dance the night away, make somebody dream for you Tonight we're gonna get on the floor Tonight we gonna hit on the floor I know you gotta put your hands on the floor And keep on rockin' rockin' up on the floor If you're a criminal can let on the floor Steal it quick on the floor On the floor Don't stop keep it moving put your drinks up It's getting ill, it's getting sick on the floor We never quit, we never rest on the floor In my ego we come and die on the floor We're still Morocco, London to me Oiva, sè! E la ballona fu un gol e che sbagliamo è che cosa? La la la la la la la la la la la la la la la la, tonight we gonna get on the floor. Musica Grazie a tutti. S s s Sì, sì, sì. ...e poi con un po' di calore... Salta su e giù e non si ferma mai, con noi non ti metterai mai nei guai. Salta, salta, coniglietto, sul prato fai un bel ballo. Musica Non si può pensare, non si può pensare di farlo, non si può pensare, non si può pensare di farlo. Se vuoi, se vuoi",
+            "language": "Italian",
+            "durationSec": 644.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:24.365Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21558,7 +21603,16 @@
           "topics": [
             "famiglia",
             "vacanza"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:27.796Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21597,7 +21651,16 @@
           "likes": 3591,
           "comments": 19,
           "shares": 125,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come ti ricordi di dire che sei in moda se ancora non conosci la nuova blusa sirena in colori interi? Con dettagli super unici che chiamano l'attenzione di qualsiasi persona. Uniche taglie S e M.",
+            "language": "Italian",
+            "durationSec": 13.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:32.694Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21623,7 +21686,16 @@
           "likes": 146,
           "comments": 0,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:37.458Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21662,7 +21734,16 @@
           "likes": 4729,
           "comments": 68,
           "shares": 592,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "So like I said in our previous video right from now on we'll be taking this thing one step at a time and please don't forget that we are still on the nursing care plan and we are done with the first component of the nursing care plan which is assessment so today we'll be moving to the second component of the nursing care plan which is nursing diagnosis so please make sure to watch the first video on assessment so that you get a better understanding of this one. So as a student nurse, before you get to nursing diagnosis, you must have done your assessment, you must have assessed your patient right, you must have gathered all the necessary information needed to bring out a good clinical judgment, which is the nursing diagnosis. di diagnosi di medicina, ho realizzato che questa è la maggior parte delle domande che mi sono venute quando ho postato il video ultimo. Sì, ho realizzato che molti studenti hanno problemi con la formulazione di una buona diagnosi di medicina dopo l'assessore. Quindi, andiamo a parlare del nostro tema per oggi, che è la diagnosi di medicina. Prima di andare in questo, dobbiamo, prima di tutto, capire qual è la differenza. Dobbiamo, prima di tutto, capire la differenza tra la diagnosi di medicina e la diagnosi medica. Dobbiamo capire la differenza tra la diagnosi di medicina e la diagnosi medica. Perché se non capisci la differenza tra queste due, ti fai sempre confondere. Una diagnosi medica è l'identificazione di una malattia, un'illusione o una condizione medica da un dottore o da altri proprietari di salute autorizzati. Ci dice cosa è la malattia o la condizione che il paziente ha. That's a medical diagnosis. And to further simplify this definition, a medical diagnosis is the name of the disease or condition. Yes, that's a medical diagnosis. A medical diagnosis is the name of the disease or condition affecting the patient. For example, we have medical conditions like malaria, pneumonia, diabetes, malattia, stroke, hypertension, appendicitis, ETC. These are all medical diagnoses because they are disease conditions. Yes, these are all medical diagnoses because they are disease conditions So let's now move to our topic which is nursing diagnosis So what is a nursing diagnosis? A nursing diagnosis is a clinical judgment about a patient's actual or potential responses to a health condition or life process That nurses can manage through nursing intervention That is a nursing diagnosis Per semplificare questa definizione, una diagnosi di medicina è la risposta del paziente a una condizione di salute che i medici identificano e gestiscono attraverso la medicina. Quindi, fammi spiegare questo per che le persone capiscono. Quella definizione che ci dice è che una diagnosi medica è una condizione di malattia, per esempio, e una diagnosi di medicina è la risposta a questa condizione di malattia. Per esempio, un paziente è davanti a voi e il dottore ha diagnosato quel paziente con malaria. Voi, il medicatore, volete formulare la diagnosi di medicina. Iniziate a chiedere a voi stessi come il mio paziente sta rispondendo a questa malaria Questa la diagnosi di medicina La risposta the patient is having to a health condition is your nursing diagnosis it doesn't name the disease instead it describes how the disease is affecting the patient that is nursing diagnosis examples of nursing diagnosis you have things like acute pain we have hypothermia we have impaired physical mobility We have deficient fluid volume, we have activity intolerance, we have anxiety, we have ineffective airway clearance, ETC. These are all nursing diagnoses, these are all responses, not diseases. Acute pain as a nursing diagnosis can come from a medical condition like maybe arthritis, fracture and so on and so forth. You have hypothermia, it can come from a medical diagnosis like maybe an infection, like malaria. malaria è una infezione parassitica causata dalla bici di una bambina anofilese quindi questa ipotemia può essere un risultato di un'infezione come l'infezione di malaria può causare al paziente una temperatura di corpo alto che è l'ipotemia la mobilità fisica imparata può essere un risultato di un paziente che ha un paziente con un stroke un paziente con un stroke sì la mobilità fisica imparata come una diagnosi di medicamento può provenire da una diagnosi medicare come un stroke Deficient fluid volume can come from a medical diagnosis like maybe diarrhea. Activity intolerance can come from a medical diagnosis like maybe arthritis. Anxiety can come from different medical conditions. For example, a patient is diagnosed of a medical condition, the patient becomes anxious, worried, anxiety. Ineffective airway clearance can come from a medical condition like maybe pneumonia. So all of these responses are Nursing diagnosis Why the disease conditions are medical Diagnosis Yes So the easiest way for you to Remember them, right? Imagine the patient comes into the hospital with pneumonia And the doctor asks For example, the patient came in The patient has gone to the lab for Lab test And the patient has collected his or her result So the patient now takes the result For the doctor from the lab and take it to the doctor for interpretation and the doctor now interprets the result and diagnoses the patient of pneumonia and the patient now came to you now you are trying to bring out your nursing diagnosis from this medical diagnosis which is pneumonia you are now asking yourself how is this disease affecting the patient a patient with pneumonia will have things like difficulty breathing coughing up mucus having fever and the patient will get tired easily and so on and so forth So these are all the responses to the medical diagnosis that the patient has That is your nursing diagnosis And you now come up with things like ineffective airway clearance Because the patient is having difficulty breathing, coughing up mucus If the patient is coughing up mucus It means that the patient is having ineffective airway clearance The airway is blocked, is choked up with mucus And hypothermia Because the patient is having a fever High body temperature activity intolerance because the patient is getting tired easily so this is how you bring out your nursing diagnosis so medical diagnosis identify the disease or condition why nursing diagnosis identify the patient response to the disease or condition yes so we move now to the next we move now to the next which is phase two of this video phase two is formulating a nursing diagnosis this is where the rethink is so now formulating a nursing diagnosis for formulation and nursing diagnosis right we have two kind of problems we have the actual problem and we have the potential problem so these are the two problems you can formulate your nursing diagnosis on and for the actual problem it has three parts often abbreviated as pes which stands for problem etiologia and science and symptoms another name for this science and symptoms is defining characteristics so the actual problem it has theory parts which is problem like which are problems etiology defining characteristics often abbreviated as pes and we also have the potential problem which has two parts problem and etiology because for the potential problem there is no evidence by it has just super the problems and the etiology so the problem can be actual problem or potential problem etiology is the cause of the problem what is causing this problem and the defining characteristics which are the signs and symptoms you get all of this from your assessment that is why proper patient assessment is very necessary before you can formulate a proper nursing diagnosis yes so for problem like what is the patient response the problem is what is the patient response like i already explained earlier how is the patient responding to a particular health condition and for the theology which is a cause why does the patient have this problem for the defining characteristics which is a science and symptoms how do you know the patient has this problem these are the questions you ask yourself yes so let me just go straight to an example like example nursing diagnosis for a patient with malaria how you can formulate your nursing diagnosis you start by assessment you start by assessing the patient so you see a assessment findings you must assess first so that you will be able to bring out a good clinical giusti ma mi costa di don assedio non lo deve what the patient is going to the patient's problem the action e potescia problem sia assenze perciò istante assessing the patient let me see for example this question ride the medical diagnosis is malaria sui udenes nei lati brinca di un essi in diagnosis from this medical diagnosis which is malaria the patient is in front of you you do your assessment you get your assessment finding for example the patient body temperature is 39 point 5 degrees celsius the patient is having choose the il paziente sta sudando, il paziente ha la pelle calda, ETC, la tua diagnosi di medicamento il tuo problema sar la patemia perch la temperatura di questa paziente di 39 quindi il tuo problema ora la ipotemia questo il tuo problema in realt la teologia che il causo di questa ipotemia è relativa al processo infeccioso perché questo paziente ha malaria e la malaria è un'infezione, una infezione parassitica causata dal bando di un'infezione femminile anofilese muschietto quindi la malaria è una infezione parassitica quindi questa è la teologia il costo di questa ipertemia che è la temperatura del corpo come puoi vedere la temperatura del corpo del paziente è 39,5°C il tuo problema ora è l'ipertemia e il costo che è la teologia è relato al processo infeccioso perché la malaria è una malattia infecciosa o una condizione infecciosa poi andiamo ora alle caratteristiche definite che sono i segni e i sintomi le evidenze come che puoi vedere per giustificare che questo paziente is actually having hypothermia so you put as evidence by temperature of 39.5 degrees Celsius warm skin, chills and sweating these are all the findings that you got you can justify that you use a thermometer to measure the patient's body temperature and it gave you 39.5 degrees Celsius meaning that the patient is having hypothermia e puoi anche identificare le tue scure puoi vedere che il paziente ha scure puoi vederlo, puoi mescolarlo il paziente è svegliato, puoi vederlo il paziente ha la pelle calda questi sono i segni e i sintomi che definiscono le caratteristiche quindi è così come formuliamo la nostra diagnosi quindi per mettere tutto insieme la ipotemia, questa diagnosi di medicina diventa ipotemia relativa al processo infeccioso process as evidenced by temperature of 39.5 degrees celsius warm skin chills and sweating that's the nursing diagnosis i have a lot of nursing diagnosis here to share with you but this video will be too long so i have to cut it short like if you see this one this one is example nursing diagnosis for a patient with pneumonia this is assessment finding right you are you have accepted your patient and your patient is having productive cough thick sputum difficulty breathing oxygen saturation of 88 percent crackles on auscultation these are your finding so what is your problem here what is your nursing diagnosis your problem here is ineffective airway clearance because you can really see that the patient is having productive cough mean that the airway is congested so the patient is having ineffective airway clearance the patient cannot clear their airway a theology the cause of this ineffective airway clearance is related to excessive mucus in the airway the airway is congested and the defining characteristics which is a science and symptom as evidenced by productive cough those are the things that you can actually see the signs and symptoms things that you can see that's the objective data and what the patient tells you which are the subjective so as evidenced by productive cough tick sputum crackles and difficult tick clearing secretions so you can see that all of those things are here This is how you formulate your nursing diagnosis Please guys Like this video, share with your classmates This is how You encourage me to do more and more",
+            "language": "Italian",
+            "durationSec": 801.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:54.139Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21675,7 +21756,16 @@
           "likes": 25000,
           "comments": 194,
           "shares": 4036,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "so guys this is a nursing care plan with an imaginary name the name you see is not the name of a real patient so it is an imaginary name yes i know a lot of students have problem when it comes to developing a nursing care plan or formulating a good nursing diagnosis for a patient so let's discuss on this um before you start creating your nursing care plan before you start anything you to put a heading for your nursing care plan for example as you can see this is the heading a nursing care plan for mr golov with type 2 diabetes malattias so that's the heading then for a nursing care plan for a good nursing care plan right it has six headings we have assessment we have nursing diagnosis we have planning we have implementation we have scientific rationale and we have evaluation so those are the six headings of a nursing care plan so for assessment what are you doing here we are getting information from the patient right under assessment we have two types of data we have subjective data and objective data for the objective data this is what the patient is telling you for example the patient tells you i'm feeling pain that is subjective se qualcosa che il paziente ti dice è classificato sotto dati subiettivi quindi dati obiettivi queste sono cose che puoi misurare per esempio la vita scienze è obiettivo sì come prendere pressione di sangue temperatura um ossigeno saturazione e cose cos sono tutti obiettivi ma qualsiasi cosa il paziente ti dice che una data subiettiva e sempre messo in quote s quindi per la diagnosi di medicina ora questo un giudizio clinico dopo aver raccolto i dati dall'assessore ora formulate una buona diagnosi di medicina per la condizione del paziente, torneremo back to that and therefore planning for planning now you're planning on what you are supposed to do to this patient what are you planning to do how are you planning to solve the patient's problem therefore implementation you are now carrying out your plan what you plan to do right you are now carrying out that plan so that is implementation for il vostro razionale scientifico è la ragione per cui state facendo qualcosa per quel paziente avete planificato cosa dovete fare, implementato, ora state facendo quello che avete planificato e poi il vostro razionale scientifico vi dà una ragione per cui state facendo questo ad esempio, come potete vedere, avete fatto una scuola di riscaldamento di pelle di giorno speciali the patient's feet now you are giving the reason why you are performing daily skin inspection so that's a scientific rationale and this is very very important because anything you're doing to a patient you must have a reason why you're doing that thing to that patient and then for evaluation now you are now it's like reassessment you are reassessing what you have done to see if your plan you have actually achieved your goals that is evaluation yes so coming back to this now",
+            "language": "Italian",
+            "durationSec": 207.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:02.578Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21688,7 +21778,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:05.317Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21701,7 +21800,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazza, vieni qua! Guarda questo blazer che ho trovato qui nel link del carino laranja. È super versatile. Puoi usarlo con l'opzione di look sociale o casual. È quella pezza coringa, sai? Una pezza e tu fai diversi look. Ti è piaciuto? Quindi garantisci già il tuo cliccando qui nel carino.",
+            "language": "Italian",
+            "durationSec": 21.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:10.753Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21714,7 +21822,16 @@
           "likes": 8,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sto facendo questo piccolo gioco di me e lui ha detto Ciao",
+            "language": "Italian",
+            "durationSec": 55.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:13.379Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21753,7 +21870,16 @@
           "likes": 160,
           "comments": 0,
           "shares": 35,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "se volete, questo è il codice Iris ragazzi, questo è il codice Iris ragazzi, quello che sto usando è il codice Rosalie questo è il codice Iris se lo usate, il tema è come un garden come un garden, c'è un bambino, c'è una fiuma, c'è un legame il tema è un garden per il codice Iris il dominante è il color pink ragazzi, voglio quello che è viral, il codice che ha il color butter yellow ada sayang, ini kodenya kaluna, kaluna itu dia warna dasarnya kayak butter yellow terus dia bunganya bener-bener yang kayak cantik banget kalem banget, ini warnanya ya, kodenya kaluna best seller juga sayang, dia kemarin habis dan belum bisa ristok hari ini ristok sayang kalunanya, ya, akasayang ini kodenya kode si blooming rose, akasayang untuk caranya tanya ke miminnya aja non so se è un calzone, ma è un rosso di blocchiato, ha un colore molto simile a quella di una ragazza coreana che ha un colore caldo, prende il codice di un rosso di blocchiato, non c'è niente da distruggere, è tutto bello tutto bello, il codice, i bruscoli sono a domenica",
+            "language": "Italian",
+            "durationSec": 80.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:18.408Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21766,7 +21892,16 @@
           "likes": 212,
           "comments": 54,
           "shares": 22,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:22.451Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -21792,7 +21927,16 @@
           "likes": 38,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:28.758Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22105,7 +22249,16 @@
             "caldo",
             "spensieratezza",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Blu Serena le stelle che disegnano una scenografia pronta a mostrarti la via tutta la vita Blu Serena dall'alba fino al luna piena ti toglie il fiato per magia lo sguardo da follia",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:31.576Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22182,7 +22335,16 @@
             "famiglia",
             "estate",
             "resort"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 28.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:34.998Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22208,7 +22370,16 @@
           "likes": 12,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cos'è Renella, sempre più speciale, ti guarda col sorriso e poi ti fa ballare, con i suoi puntini porta l'allegria, brilla come il sole, esplode la magia. Batti i piedi sul selciato, canta forte a me.",
+            "language": "Italian",
+            "durationSec": 19.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:37.428Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22244,7 +22415,16 @@
             "animazione",
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "bisogno di versare il piano. Avanza quel ritmo che suona d'estate, nessun orizzonte da cielo e mare. Ritrova il respiro, il momento più bello, vivi ogni giorno con noi, Blu Serena. Le stelle che disegnano una scenografia, pronta a mostrarti la via, tutta la vita. Blu Serena. Dall'alba fino a luna piena Ti toglie il fiato per magia Lo sguardo da folli Ti trova la gioia con noi Oltre a una vita più serena Un brivido che fischia appena",
+            "language": "Italian",
+            "durationSec": 49.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:40.968Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22278,7 +22458,16 @@
           "topics": [
             "relax",
             "vacanze"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:43.188Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22304,7 +22493,16 @@
           "likes": 423,
           "comments": 67,
           "shares": 142,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Blu Serena, le stelle che disegnano una scenografia, pronta a mostrarti la via, tutta la vita. Blu Serena, dall'alba fino al luce.",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:45.873Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22340,7 +22538,16 @@
             "terrazza naturale",
             "vista sul Mediterraneo",
             "vacanza estiva"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:48.186Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22353,7 +22560,16 @@
           "likes": 15,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non possiamo piacere a tutti, ci sono i belli e ci sono i brutti, suona Tigra che suonate, io non sono cioccolata, alle critiche rispondo, giro giro giro tondo, non guarda a me guarda la mano, Corre sempre in volontà Parli a me, anche se balli Pensami, basta che balli Perché se volevo viaggiare tutti Nasceva tale panno Che vorrei si faglia a botte Un maggiore a un, scuimi c'è a tutti Non sono cioccioccioccolata",
+            "language": "Italian",
+            "durationSec": 50.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:51.702Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -22380,7 +22596,16 @@
             "version": 1,
             "updatedAt": "2026-09-08T09:59:28.779Z"
           },
-          "sentiment": "positive"
+          "sentiment": "positive",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:54.847Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32636,7 +32861,16 @@
             "piscina",
             "mare",
             "novità"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Vi porto a vedere la novità di questo estate. A tutte le ore del giorno e della notte, in piscina e al mare, gli spiaccoli, con acqua poca, pantasprite, tè. quest'anno nelle strutture blu serena sono disponibili questi dispenser dove potrete prendere tutte le bevande illimitatamente h24 e a prescindere dal tipo di pacchetto che avete acquistato se soft all inclusive o all inclusive queste bibite sono sempre disponibili in vari punti dei resort e tu lo sapevi?",
+            "language": "Italian",
+            "durationSec": 51.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:55:04.126Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38239,7 +38473,16 @@
             "caldo",
             "spensieratezza",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Blu Serena le stelle che disegnano una scenografia pronta a mostrarti la via tutta la vita Blu Serena dall'alba fino al luna piena ti toglie il fiato per magia lo sguardo da follia",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T11:56:31.576Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41523,7 +41766,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:13:43.632Z"
+            "updatedAt": "2026-09-08T11:56:48.186Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -57232,7 +57475,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:02:14.622Z"
+            "updatedAt": "2026-09-08T11:55:04.126Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -62196,7 +62439,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:56:15.686Z"
+            "updatedAt": "2026-09-08T11:55:01.062Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -67810,7 +68053,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:12.418Z"
+            "updatedAt": "2026-09-08T11:55:10.558Z"
           },
           "ocrData": {
             "textOnScreen": "Vilardi I\nEdo herr bri\nAddetto\nParco Nautico RESERENA\nRESORT",
@@ -79501,7 +79744,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T11:25:20.475Z"
+            "updatedAt": "2026-09-08T11:56:34.998Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -84241,7 +84484,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:34.533Z"
+            "updatedAt": "2026-09-08T11:56:40.968Z"
           },
           "ocrData": {
             "textOnScreen": null,
