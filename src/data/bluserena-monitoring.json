@@ -9550,7 +9550,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:40:32.720Z"
+            "updatedAt": "2026-09-08T13:39:34.524Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -9786,7 +9786,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:40:07.948Z"
+            "updatedAt": "2026-09-08T13:41:47.991Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -25515,7 +25515,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:14:45.488Z"
+            "updatedAt": "2026-09-08T13:42:00.237Z"
           }
         },
         {
@@ -39462,6 +39462,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:17:31.415Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ow ure in an all inclusive\nwhen u hear this\nure in an all inclusive\nureinanalli\nen u hear",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:38:00.284Z"
           }
         },
         {
@@ -39549,6 +39558,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:18:01.194Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Kim Bi la noi\nkhién Sere\nnén biét chinh la kién tric\nmang dam ban sic Tay Bac\ntrong\nboichung)\nban de dang iua cnon\nngan sacnh cua",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:38:55.629Z"
           }
         },
         {
@@ -39636,6 +39654,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:18:48.248Z"
+          },
+          "ocrData": {
+            "textOnScreen": "thisisn\ne first we did\nalive finance theater\nand even d a shopping,\narea\n7 each the cruise",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:39:06.192Z"
           }
         },
         {
@@ -39801,6 +39828,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:19:15.379Z"
+          },
+          "ocrData": {
+            "textOnScreen": "your best\nthat you know me\nU but should know th of\nand the thoughest part\nlat you're out on your own",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:39:14.493Z"
           }
         },
         {
@@ -39823,6 +39859,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:19:20.389Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:39:24.935Z"
           }
         },
         {
@@ -40055,6 +40099,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-08T12:20:51.341Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:39:34.524Z"
           }
         },
         {
@@ -40090,6 +40143,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:20:55.289Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 have\nbest plai\nbook thi h",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:39:46.067Z"
           }
         },
         {
@@ -40151,6 +40213,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:21:24.229Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:39:57.799Z"
           }
         },
         {
@@ -40186,6 +40256,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:21:26.702Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Puerto\nVilla Dos",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:40:04.887Z"
           }
         },
         {
@@ -40351,6 +40430,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:21:33.369Z"
+          },
+          "ocrData": {
+            "textOnScreen": "COMMUNITIES",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:40:24.926Z"
           }
         },
         {
@@ -40373,6 +40461,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:22:35.528Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pe quick",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:40:34.287Z"
           }
         },
         {
@@ -40499,6 +40596,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:23:42.310Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:40:42.879Z"
           }
         },
         {
@@ -40534,6 +40639,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:24:50.647Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:40:53.692Z"
           }
         },
         {
@@ -40556,6 +40669,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:25:04.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BRAY!\nX UNTUK JUGA\nYANG HOBI\"PARLENTE BRAY!\nSALAH SORRY BRAY-NYA\nMOBIL BUAT KLEN\n0858-0545-6810 (BEWOK)\nYANG HOBI\nMOBIL PARLINTE GINI",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:41:00.334Z"
           }
         },
         {
@@ -40708,6 +40830,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:11.864Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ELEVEN",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:41:13.450Z"
           }
         },
         {
@@ -40834,6 +40965,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:15.070Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RATA\nPREFERATELE A\nMELE 4\nCHIARN\nLANGA\nHOTELUL\nCOMENTARII",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:41:21.454Z"
           }
         },
         {
@@ -40921,6 +41061,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:17.557Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:41:39.163Z"
           }
         },
         {
@@ -40966,6 +41114,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:44.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mazara\nAMICA\navel Cente’",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:41:47.991Z"
           }
         },
         {
@@ -40988,6 +41145,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:49.540Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:41:53.660Z"
           }
         },
         {
@@ -41053,7 +41218,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:14:45.488Z"
+            "updatedAt": "2026-09-08T13:42:00.237Z"
           }
         },
         {
@@ -41076,6 +41241,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:28:15.473Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OSMO",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:42:13.505Z"
           }
         },
         {
@@ -41202,6 +41376,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:28:21.057Z"
+          },
+          "ocrData": {
+            "textOnScreen": "then you're in the right place",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:42:40.932Z"
           }
         },
         {
@@ -41237,6 +41420,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:29:03.361Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT\nTODAY\n@SERENA BEACH RESORT\nTODAY A\n@SBRENA BEACH RESORT\nTODAY AT",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:42:50.234Z"
           }
         },
         {
@@ -41311,6 +41503,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:30:04.015Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:42:52.329Z"
           }
         },
         {
@@ -41333,6 +41533,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:30:12.472Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:42:56.486Z"
           }
         },
         {
@@ -42287,13 +42495,13 @@
             "updatedAt": "2026-09-08T12:18:01.194Z"
           },
           "ocrData": {
-            "textOnScreen": "Chi.cack di\n‘Serena Kim là noi dé,\ngac Jai nhip $8hg voi va\nMot khién\ntré nén biét chinh la kién tric\nmang dam ban sic Tay Bac\ntrong\nCau ngan",
-            "confidence": 0.785,
+            "textOnScreen": "Serena Kim Bi la noi\nkhién Sere\nnén biét chinh la kién tric\nmang dam ban sic Tay Bac\ntrong\nboichung)\nban de dang iua cnon\nngan sacnh cua",
+            "confidence": 0.778,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:24:58.183Z"
+            "updatedAt": "2026-09-08T13:38:55.629Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -43536,7 +43744,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:24:47.640Z"
+            "updatedAt": "2026-09-08T13:39:57.799Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -43779,7 +43987,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:14:45.488Z"
+            "updatedAt": "2026-09-08T13:42:00.237Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -48154,7 +48362,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:48:39.048Z"
+            "updatedAt": "2026-09-08T13:40:04.887Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -55100,7 +55308,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-07T23:06:37.958Z"
+            "updatedAt": "2026-09-08T13:40:34.287Z"
           }
         },
         {
@@ -65282,7 +65490,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-07T23:19:41.534Z"
+            "updatedAt": "2026-09-08T13:38:00.284Z"
           }
         },
         {
