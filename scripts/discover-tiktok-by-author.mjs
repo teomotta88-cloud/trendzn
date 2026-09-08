@@ -129,7 +129,16 @@ try {
     esiti[esito.status] = (esiti[esito.status] ?? 0) + 1;
 
     if (esito.status !== "ok") {
-      console.log(`[${i + 1}/${coda.length}] @${autore.handle} — ${esito.status}`);
+      // esito.reason (titolo, URL finale, estratto testo pagina — vedi
+      // fetchAuthorVideos in lib/tiktok-page.mjs) va stampato qui, per ogni
+      // profilo: prima finiva solo nel messaggio "Ultimo motivo" del freno
+      // a FAIL_STREAK falliti di fila, quindi con meno profili in coda di
+      // quel tetto (es. un MAX_AUTHORS piccolo per un test rapido) non si
+      // vedeva mai, anche se la diagnostica veniva calcolata regolarmente.
+      console.log(
+        `[${i + 1}/${coda.length}] @${autore.handle} — ${esito.status}` +
+          (esito.reason ? ` (${esito.reason})` : ""),
+      );
       streak++;
       if (streak >= FAIL_STREAK) {
         console.error(
