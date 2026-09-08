@@ -43561,7 +43561,16 @@
           "likes": 140,
           "comments": 19,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e ne capo come male che mi tocca nel mondo da zampo la terra da sara",
+            "language": "Italian",
+            "durationSec": 11.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:24.698Z"
+          }
         }
       ]
     },
@@ -57577,7 +57586,16 @@
           "likes": 128,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:29.214Z"
+          }
         }
       ]
     },
@@ -74030,7 +74048,16 @@
           "likes": 1224,
           "comments": 5,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:34.912Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -74044,7 +74071,16 @@
           "likes": 31900,
           "comments": 58,
           "shares": 359,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:37.000Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -74058,7 +74094,16 @@
           "likes": 112,
           "comments": 6,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 124.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:40.787Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -74072,7 +74117,16 @@
           "likes": 23,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Saluti a tutti, comunque anche noi siamo in base a Rania Il Kilo la sera del 1esimo.",
+            "language": "Italian",
+            "durationSec": 20.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:47.348Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -74086,7 +74140,16 @@
           "likes": 35,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:52.463Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -74100,7 +74163,16 @@
           "likes": 1216,
           "comments": 89,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:55.346Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -74114,7 +74186,16 @@
           "likes": 443,
           "comments": 3,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:44:57.906Z"
+          }
         }
       ]
     },
@@ -90906,7 +90987,16 @@
           "likes": 4759,
           "comments": 108,
           "shares": 98,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T14:45:01.271Z"
+          }
         }
       ]
     },
