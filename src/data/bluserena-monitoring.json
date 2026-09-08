@@ -6168,7 +6168,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:29:46.880Z"
+            "updatedAt": "2026-09-08T13:49:20.827Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -7276,7 +7276,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T09:04:28.642Z"
+            "updatedAt": "2026-09-08T13:53:36.484Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -17542,7 +17542,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:45:59.757Z"
+            "updatedAt": "2026-09-08T13:49:12.427Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -56064,6 +56064,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:39:11.984Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Happening Now Nina Roz speech on Irene lil\nNamatovu Strong Woman live in concert I\nat Serena Hotel 2026 press conference\nHappening Now Nina Roz speech on Irene\nNamatovu Strong Woman live in concert\ni at Serena Hotel 2026 press conference\nA Namatovu Strong Woman live in concert\nat Serena Hotel 2026 press conference r",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:48:32.096Z"
           }
         },
         {
@@ -56087,6 +56096,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:39:38.544Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WORLD CUP 2026 EINK",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:48:41.767Z"
           }
         },
         {
@@ -56110,6 +56128,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:39:42.790Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ffe Munnyo N A\nTwo Legendary Rev Jolly And Julius Muhoozi\nomubariya at Lilian Nabasab Live in concert\npress conference at serena hotel kampala\n4 omubariya at Lilian Nabasab Live in concert\nNABAASA\ni Ffe Munnyo A BLST\nomubariya at Lilian Nabasab Live in concert ill",
+            "confidence": 0.868,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:48:53.251Z"
           }
         },
         {
@@ -56133,6 +56160,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:40:16.891Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Irene Namatovu rehearsals for her\nconcert at Serena Hotel\n7 concert at Serena Hotel i",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:49:06.342Z"
           }
         }
       ]
@@ -60761,6 +60797,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:40:19.990Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:49:12.427Z"
           }
         },
         {
@@ -60806,6 +60850,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:41:17.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi a annastabile Q",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:49:20.827Z"
           }
         },
         {
@@ -60955,6 +61008,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:41:31.340Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Andrea\nma nei tavoli si sta\ncon altre famiglie\noppure sono singoli\na camera?\nQUESTO 200\noppure sono singoli pr\nCOMUNQUE NOI\nSIAMO IN 5\nQUALCUNO, MA\nMma nei tavoli si sta\nDIRE PERO",
+            "confidence": 0.872,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:49:29.220Z"
           }
         },
         {
@@ -60998,6 +61060,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:41:33.711Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando til VUOI",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:49:38.533Z"
           }
         },
         {
@@ -61019,6 +61090,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:41:36.298Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“Balla con il cuore, ridi con\nl'anima, vivi senza paura. E\nti porterà la vita, i\nricordati che per il tuo p, pà sarai\nrgogli\novunque ti porterà la vi a,\nper il tuo papa 2\nsempreil suo\novunque ti porterà la vita,\nricordati che per il tuo papà sarai\nsempre il suo più grande\nPara\norgoglio -f\nricordati ch il tuo papà sarai\n7 i sempre il iv grande",
+            "confidence": 0.89,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:49:48.299Z"
           }
         },
         {
@@ -61042,6 +61122,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:42:11.954Z"
+          },
+          "ocrData": {
+            "textOnScreen": "press\nnaik\nga Booking; lebih hemat\nAgoda Ho aminan...\ncashback dengan\nbelanja minimum\nv Upgrade penawaran\nPesan sokarano untuk kamar\ndengan harga In}\nLembang\namar terbatas. Pesan sekarang!\nNimo Resort Ciater\nLembang 285m dari propert\nLanjutkan sampai pembayaran\nDapatkan cashback TikTok Rp120.000 dengan\nbelanja minimum sebesar\nKami mengamankan harga Anda.\ntamu utamanya?\ndepan\nkhusus\nBeri tahu kami mana yang lebih Anda\nketersediaan\ncok banget buat healing\ndengan\nprivate pool air hangat",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:50:24.240Z"
           }
         },
         {
@@ -61065,6 +61154,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-08T12:42:15.659Z"
+          },
+          "ocrData": {
+            "textOnScreen": "harness\nCan also b i\nCan also be\na decorative harness",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:50:30.733Z"
           }
         },
         {
@@ -61088,6 +61186,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:42:18.478Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT\n24-31 GUSHT 2000€ TOTALI\nSherbimi buggy falas\nGREENICOAST RESORT\nTOTALI\nPersona\n‘94-31 GUSHT\n6 Persona\nfalas\nAkomodim 5-6 Persona\n2 poste parkimi falas",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:50:43.259Z"
           }
         },
         {
@@ -61111,6 +61218,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:42:43.780Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sibari!\n7 Luglio 2026 yu",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:51:22.965Z"
           }
         },
         {
@@ -61134,6 +61250,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:43:05.666Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:51:29.073Z"
           }
         },
         {
@@ -61157,6 +61281,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:43:40.597Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The White Balcon\nBinangongn, Rizal\nWhite\nRizal 15\nThe White\nRizal\nBalcon”",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:51:35.142Z"
           }
         },
         {
@@ -61180,6 +61313,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:43:44.277Z"
+          },
+          "ocrData": {
+            "textOnScreen": "you foundahiddenbeauty\nto gatekeepliti@\ni beauty\nwant\n30 minutes dutside Chiang Mai\nwant tg it®",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:51:51.245Z"
           }
         },
         {
@@ -61203,6 +61345,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:43:48.815Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:51:59.157Z"
           }
         },
         {
@@ -61226,6 +61376,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:45:41.889Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Green",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:52:04.844Z"
           }
         },
         {
@@ -61249,6 +61408,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:45:50.109Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pero a veces el que esta al 5%\nerestu x\n'y a escasos metros del Mar Menor,\ndonde podras disfrutar de piscina\n3 n 2 MENOR.\nLDERO.DEL MAR MENTE\nhr Manos? un plato da are\n“Caldero Murciano”? It j8 a fish dish that\noriginato. and is its\naroma.\nSorve with (garlic\ndel restaurante del hotel",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:52:17.161Z"
           }
         }
       ]
@@ -66177,6 +66345,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:46:26.109Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Blue Haven Resort Quy Nhon Bài Rang, Quy Nhon\nBlue Haven Resort",
+            "confidence": 0.867,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:52:24.420Z"
           }
         },
         {
@@ -66201,6 +66378,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-08T12:46:47.770Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PARA",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:52:34.096Z"
           }
         },
         {
@@ -66224,6 +66410,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:46:51.551Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:52:52.037Z"
           }
         },
         {
@@ -66247,6 +66441,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:47:25.360Z"
+          },
+          "ocrData": {
+            "textOnScreen": "para quienes\ncomo",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:53:02.667Z"
           }
         },
         {
@@ -66270,6 +66473,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:47:34.829Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:53:23.708Z"
           }
         }
       ]
@@ -71801,6 +72012,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:47:39.103Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:53:36.484Z"
           }
         },
         {
