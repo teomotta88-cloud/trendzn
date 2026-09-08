@@ -67,7 +67,6 @@ jobs:
         id: scraping
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TIKTOK_SESSION_SEED: ${{ secrets.TIKTOK_SESSION_SEED }}
           MAX_PASSATE: ${{ inputs.max_passate || '18' }}
           INTERVALLO_MIN: ${{ inputs.intervallo_min || '15' }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
