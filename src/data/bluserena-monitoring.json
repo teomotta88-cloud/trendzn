@@ -9534,13 +9534,14 @@
           ],
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "buongiorno oggi vi porto con me a vedere il serenusa resort guardate qui questi sono i campetti ballavolo totalmente immerso nella natura verde molto molto curato questi sono i vialetti che portano alle stanze sono divise per settori questo è il 7 noi siamo all'8 il 6 sono tutte a piano terra primo piano e qualche altra al primo e secondo piano questi sono i cappetti di calcio qui c'è MS Padel guardate che verde rigoglioso sente solo il rumore degli uccellini neanche sono le 7 del mattino questo deserto è molto molto adatto perché bambini perché come vedete ci sono questi sentieri che portano un centro della struttura che ora vi faccio vedere dove c'è una piscina enorme per i bambini con gli scivoli, poi c'è una piscina semiolimpionica ed è vicinissimo al mare, c'è anche un ristorante centrale con la baby kitchen dove troverete tutto per trovare le pappine per i vostri bambini. Andiamo in piscina, qui trovate anche il piano bar dove poter prendere acqua e dispenser da quest novit anche inclusi coca cola sprite alla spina bar oltre mare e qui davanti troviamo la piscina con ombrelloni lettini le docce e suddivisa in due parti una un po' più profonda mentre l'altra è più bassa e ha questi due scivoli i vostri figli si divertiranno tantissimo questo simboletto della zampetta di un animale è perché questa struttura accetta gli animali sono delle dog room dove si paga un supplemento per il vostro cane e potete tranquillamente portarlo in vacanza con voi qui abbiamo il parco giochi e qui possiamo già vedere il mare questo è il sentiero che porta al mare e qua ci sono le piscine e adesso ci spostiamo in spiaggia potete prenotare tramite app Blu Sereno una volta prenotata la vostra vacanza qui tramite app una volta per ogni ristorante nel vostro soggiorno è incluso gratuitamente sia il ristorante Le Onde che Il Gusto Qua c il ristorante Il Gusto aperta a cena con i piatti tipici siciliani Questo il percorso che vi porta direttamente in spiaggia se avete bambini piccoli con il passeggino mentre adesso facciamo il percorso con le scale passando per il bar e per il ristorante le onde il ristorante le onde direttamente sul mare gli ombrelloni sono divisi per due settori le prime quattro file sono a pagamento mentre potete scegliere anche la formula ombrellone assegnato dalla quarta fila in poi per risparmiare qualcosina e poi quello non assegnato ogni giorno vi capiterà un ombrellone diverso Qui spiaggia trovate tutti i giorni animazione la mattina, mentre su in piscina il pomeriggio, contattatività di balli di gruppo, musica e poi varie attività anche durante il giorno sia per i bambini che per gli adulti. Saliamo su e adesso vi porto al ristorante. Questa è l'area Baby Kitchen. e qui il ristorante anche qui potete scegliere tranquillamente se pranzare o scegliere comunque una formula dei vostri pasti all della struttura che gratuita altrimenti all del ristorante che climatizzato che ha pagamento questo il ristorante Il Vento è ancora chiuso e da qui c'è un'altra area giochi per i bambini. Qui abbiamo le piscine e tanti giochi sulla sabbia. qui c'è la palestra e adesso risaliamo e vi porto alla piscina semi olimpionica anche qui ombrellone lettini docce Adesso arriviamo all'anfiteatro dove ogni sera ci saranno varie serate musical, serate di spettacolo, di canzoni, di intrattenimento, baby dance.",
-            "language": "Italian",
-            "durationSec": 618.7,
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
             "model": "whisper-large-v3",
-            "status": "ok",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
-            "updatedAt": "2026-09-03T07:35:43.915Z"
+            "updatedAt": "2026-09-08T12:20:51.341Z"
           },
           "ocrData": {
             "textOnScreen": "MENTRI\nDIRETTAMENTE\nSUJIN\nPISCINA)",
@@ -9776,7 +9777,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:18:32.185Z"
+            "updatedAt": "2026-09-08T12:26:44.237Z"
           },
           "ocrData": {
             "textOnScreen": "Mazara\nAMICA\navel Cente’",
@@ -24957,7 +24958,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:59:30.704Z"
+            "updatedAt": "2026-09-08T12:26:52.064Z"
           }
         },
         {
@@ -37962,7 +37963,16 @@
           "likes": 474,
           "comments": 1,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 9.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:17:31.415Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38040,7 +38050,16 @@
           "likes": 112,
           "comments": 111,
           "shares": 96,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hai la verità che solo 1.180.000 rmb per persona puoi mangiare 5 stelle di aceto in un luogo caldo e freddo? Se no, Serenale Kimbo ti farà cambiare di idea. A Hanoi, l'A.D. Kimbo è il luogo per rinforzare la tua vita e per rinforzare la tua vita in un luogo tranquillo e tranquillo. È così che per me è stato un piacere e un piacere per tutti, l'aceto in un luogo caldo e freddo. L'aceto in un luogo caldo e freddo non solo aiuta il corpo a rinforzare e che portano a una sensazione di rilevamento. Potete riprendere l'energia dopo i giorni di stupore. Nel luogo del Wonsen, potrete rilassarvi in un ambiente bianco e blu di un luogo di resti. Da un luogo di resti, vi trovate anche un luogo di resti, dove tutti i luoghi sono costruiti per portare la sensazione di serenità e di essere vicini alla natura. Un altro punto di rilevamento di Serena è l'articolo di mani e di colori di nord. In particolare, con 1.180.000 doni per persona, potete scegliere un luogo di resti, e poi ci vediamo Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 97.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:18:01.194Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38118,7 +38137,16 @@
           "likes": 134,
           "comments": 14,
           "shares": 68,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è il giorno 1 della mia cruise in Alaska, la Serenade dei Seas della Corriente. Abbiamo portato circa le 2.30 di notte e il corso è stato lasciato a Vancouver a 4 di notte. Questa è la mia prima cruise in tutta l'Italia e, a partire da Vancouver, sentivo che fosse la maniera più facile di finire la mia cruise senza dover volare. Il corso ha 12 portiere, quindi la prima cosa che abbiamo fatto è esplorare. Abbiamo controllato il nostro bagaglio di portiere e quando siamo arrivati al portiere i nostri bagagli stavano già in giro all'interno della stanza. Il nostro cappello di stanza era lasciato all'interno della porta Spentavamo la maggior parte del giorno a scoprire tutte le amenizie, la piazza, l'arcadio, il mini golf, la piazza di piazza, la sala di sguardo, la sala di spazio, la sala di capello, il cinema, il cinema di performance, e anche avevamo un'area di acquistazione. Abbiamo anche ottenuto un braceletto gratuito del giorno, che hanno messo a disposizione ogni giorno. La selezione del buffet era in realtà abbastanza decente, e vi posteremo un video completo di tutto ciò che mangio ogni giorno sulla viaggia, inoltre c'è una tour in stanza, quindi fate attenzione a quello. Per finire la notte, abbiamo visto un po' di danze e delle performance di canzone, e di percorso prendere dei snack di notte prima di andare a dormire",
+            "language": "Italian",
+            "durationSec": 57.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:18:48.248Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38274,7 +38302,16 @@
           "likes": 16000,
           "comments": 52,
           "shares": 659,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Buon Natale!",
+            "language": "Italian",
+            "durationSec": 40,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:19:15.379Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38287,7 +38324,16 @@
           "likes": 5582,
           "comments": 176,
           "shares": 2140,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Otro son se bonita che ve en San Juan Disfrutando de todas esas cosas que extrañan los que se van Disfrutando de noches de esas que ya no se dan Que ya no se dan Pero queriendo volver a la ultima vez",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:19:20.389Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38509,7 +38555,17 @@
             "vacanza",
             "mare",
             "giardini"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:20:51.341Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38535,7 +38591,16 @@
           "likes": 26500,
           "comments": 138,
           "shares": 4042,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In Paso Ropas puoi andare in un winery e stare in un hotel che sembra la Grecia. Il Resort Serena è sempre stato il posto che mi ha portato a portare. Non ho bisogno di andare a volare in un altro posto solo per sentire come se non fossi in California. Questo è un posto per trovare la solitudine. E anche il meglio posto per entrare in un'amministrazione o una boda, perché offrono servizi di boda. Preparano il piatto per 23 dollari a persona e hanno massaggi e spa in stanza. Questo è il posto per andare a mangiare vino. Hanno un pool indoor che si rafforza sopra la porta così bellissimamente. Devi avere le vibra di Miconos e ogni stanza ha i pittori di fiume. Ti dà un'immagine di un'immagine e momenti inescapabili. La cosa curiosa è che se clicchi su TikTok con il sticker di Green Location sotto, ti darai un 50% di cashback sui tuoi primi bookings. Quindi, sei pronto per la mia esperienza in California? Bocca sotto!",
+            "language": "Italian",
+            "durationSec": 52.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:20:55.289Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38587,7 +38652,16 @@
           "likes": 564,
           "comments": 25,
           "shares": 138,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'è una villaggia, che dopo un tempo di scontro, ha scelto un'area più tranquilla, in mezzo al lago di Somboi, dove si chiama la villaggia di Dongzhe, il terreno di rinforzamento del rio. Ma ha usato tutto il suo potere e la sua pazienza per riportare qui un colore di rosa, di pelle, di fiori, e questo terreno è un'area di rinforzamento del rio, un'area di rinforzamento del rio, Il giardino è pieno di esperienze con le notti di fuoco sotto i milaneri al camping di Dongzhe e la calma del cuore di persone con il fuoco di calma dei nostri amici. Il cuore della terra e di chi è qui è ancora in grado di proteggere. Perché il cuore di Dongzhe è un cuore di la città, per chi si è distrutto e chi ha chiamato, è un cuore di la città. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:21:24.229Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38613,7 +38687,16 @@
           "likes": 205,
           "comments": 7,
           "shares": 92,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:21:26.702Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38769,7 +38852,16 @@
           "likes": 2447,
           "comments": 68,
           "shares": 184,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sai una delle zone più preziosi di BGC, la Serendra? Sì, è preziosa, ma c'è un motivo per questo. La Serendra è una delle prime comunità di scala in Bonifacio, sviluppata da Ayala Land nel 2007. È composta da due Serendra e una Serendra, che offrono la vivenza in modo low density, come un resort, quindi è molto tranquilla e tranquilla, anche se è nel centro della città. C'è accesso diretto a Bonifacio High Street, distanza per i malls, i parchi, and fine dining, kaya sobrang convenient sa lifestyle. Bukod doon, ang laki ng units compared to newer condos. Malalaki ang cuts, high ceilings, at premium materials, kaya ideal for families or expats. Security, 24x7 amenities, complete. Kaya kahit mahal, you're paying for peace, privacy, and prestige. So next time tanungin ka kung bakit mahal ang serendra ang sagot, it's not just a condo, it's a legacy community. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:21:33.369Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38782,7 +38874,16 @@
           "likes": 2700000,
           "comments": 12600,
           "shares": 27600,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Avete mai visto questo video? Avete visto quella ragazza, Serena, qui? She be doing all that cool stuff for her delivery drivers. I need to go deliver to her house. She had a 7-Eleven outside of her house. She could fly me out for a day and I could just come deliver her package and get the Serena Neal experience. That would be awesome. So, we're flying him out. Oh, and I forgot to tell you, I got a limo to go get Byron. Oh my gosh. This is so fun. I haven't been in a limo since I was like six. Siamo arrivati all'aeroporto, mio marito va a trovare i bambini, io vado a stare con il limone e la mia poster. Byron! Vi daremo un po' di bambini, ciao! Come stai? Ok, ti seguirai, sei pronto? Andiamo! No way! Come stai? Sono bravo! Siamo arrivati! Andiamo a casa! Siamo a casa e ti ho portato un pacchetto per rilasciare. Special delivery for Mrs. Neal. oooh so just like a seminar I'm gonna take my quick photo first so Amazon's cool with it I'll slurp what do you think? this slurpy is really good thank you I measured with my heart dude I don't this is this is awesome Tom's for if your stomach hurts this is great the packages are actually for you my own 7-eleven shirt I'll be right back that's nice I like that Sei pronto per la prossima sorpresa Sono pronto Andiamo a seguire in questa direzione Ok Benvenuti a Hibashi S S Puoi fare una posizione rapidamente come Byron dietro di te Stiamo facendo un po' di un po' di egg toss. Juice! Juice! Juice! Ok. Sì! Eccoci! Sì, lo siamo. Ciao! Come va? Come va? E' stato fantastico! Un breve tour della streppa. Ho cercato il loro hotel. Sono andata in tutto il luogo perché mi hanno detto che avevano una sorpresa. Mi piace le sorprese. Siete pronti? Allora, andate. Oh mio Dio! Guardate tutto questo stupendo! Mi avete portato in Vegas. Ho dovuto portare un po' di Detroit a voi. Sì! Lo sapete molto bene. E poi? buon anno per tutti questo è dove ti lascio area 15 abbiate fun con gli alieni a Omega Mart grazie per essere venuti è stato molto divertente sono così felice che sono venuti a Vegas",
+            "language": "Italian",
+            "durationSec": 179.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:22:35.528Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38899,7 +39000,16 @@
           "likes": 637,
           "comments": 16,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao amici, abbiamo un evento spettacolare domani e per il mio conveniente ho deciso di cercare il bello Hotel Lake Victoria Serena Questo è il loro miglior suit perché mi piace le cose belle quindi venite e vediamo Ha due ruote, la stanza, la stanza di lavoro Lo userò per fare qualche preparazione di fine minuto e oh mio Dio, hanno vino per me Oh, questo ruolo viene con vino, bello Devo bevere a questo momento del giorno? assolutamente questa stanza ha un balcone e il balcone ha la perfetta vista della letta vittoria questo è il posto perfetto per bere vino da cheers andiamo a guardare il sedere oh questo bello speciale sedere mi piace che sia vintage è vecchio e amo molti vecchi cose c'è un'altra macchina d'office e oh mio Dio ci sono due cappelline mi piace che quindi questa è una sua e la sua ... Nice, like Victoria Serena is such a breath of fresh air. Anyway, I'm uber excited about the event tomorrow. My guests, please keep time and see you. Bye!",
+            "language": "Italian",
+            "durationSec": 94.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:23:42.310Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38925,7 +39035,16 @@
           "likes": 38,
           "comments": 3,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, sono Queen Vita, la prima runner-up del mistero di Westdale e vi invito a tutti per la notte di rinvio che si sta facendo in Sinit, August e Serena Hotel. Vieni, vieni tutti, non dimenticare nessuno di casa. Vieni e vieni a vedere le belle cose che saranno competendo per questo mistero di Raine. E... vi saluto.",
+            "language": "Italian",
+            "durationSec": 25.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:24:50.647Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38938,7 +39057,16 @@
           "likes": 28,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Rai, per i ragazzi che vanno a Bavaria, che vogliono andare a Bavaria, abbiamo una soluzione, Rai. Cosa è? Questa è la Rai. Nisar Serena, nel 2013, ha un'AWS, ha due comando, la trasmissione è automatica, Rai. Iniziamo, stiliamo l'estereo, soprattutto per la parte di fuori. Per la parte di fuori, è molto pulita, è molto pulita, Rai. La lampada è anche pulita. Per il pagamento, è del 11-2006, per il pagamento, è del 11-2007, per il pagamento, è del 11-2007, e la città e la città l'epoca ma se original da solo da solo di una maschera l'ho mobilia banalaccia bray danzuale giocare per il boccaccio potrà paghe head unit android ukulele 9 inci brai un po casinassi la digital un premio sia passia responsivo di lei nejudo engine giunga braia apalagio domenica rio da digital break e gana secure al di nissan ride e giochi a musica brai asli gabriele maschi kai per il dottorino il dottor dottor binti e brai brei poterlo creare maschi musica la faccia rosa e tasca di bambini di war in barbato che toccola giocare namanya sliding da brai e mangi mani a casa in bianco biobi beccola spalmente beri bava ambele geni e drive un totò totò ma se vuoi entrai ma se per il cilindro ha 3 blower per l'interno, l'interno e l'interno le luci sono attive ha anche una tv di adesione ok brai ora vediamo il coperchio può essere usato per il cilindro o per il blower è bello brai ora vediamo il lato posteriore per il lato posteriore la luce è grande è come un pazzero per il cilindro non è un po' lusso, il nickel è un po' lusso, l'emblem è un po' lusso, la baca è un po' lusso, ok? Ok, se volete cercare un'auto di questo tipo, che è classica, che è surreale, non vi dico che il valore è in questo senso, non vi dico che il valore è in questo senso, se volete comprare un'auto sport, avete 4 bonus, il primo bonus è l'acqua, il secondo bonus è il servizio, il terzo bonus è l'alunno, l'interior, l'interior e l'automobile, il terzo bonus è il terzo bonus, è garanzia 1 minghie doi 1 minghie garanzia ok brai bye bye",
+            "language": "Italian",
+            "durationSec": 172.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:25:04.861Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39081,7 +39209,16 @@
           "likes": 19200,
           "comments": 145,
           "shares": 473,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quindi, ricordate quella ragazza che ha fatto il 7-Eleven gratuito in fronte alla casa dei piloti? La sua nome è Serena Neal e ha portato un pop-up 7-Eleven gratuito qui a Vegas. Ci siamo fermati in prima perché non piace le linee lunghe e è molto caldo qui. Serena è stata così carina, è anche venuta e ha fatto un po' di foto con i clienti che stavano aspettando. Stiamo appena a mettere le tappe, stiamo quasi a metterle. I snorkeli stanno ancora freddando, ma c'è acqua e acqua e pop-up. Ciao! Grazie mille, è stato un piacere vederti. Volete un bottone di acqua? Prendete un bottone di acqua. C'è un 7-Eleven qui vicino, il numero uno rito 7-Eleven nel mondo, quindi se potessi considerare una rivoluzione. Grazie mille. Oh, grazie. Quindi ci hanno avuto la notizia che i slushies non erano ancora freddi, ma hanno letteralmente e abbiamo appena aperto le porte e siamo la seconda persona in linea, quindi penso che questo sia da aspettare. Hanno avuto dei red bulls liberi e questo piccolo stand 7-Eleven dove puoi fare un'estate di stai o un po' di cipolle. Se puoi, lasciare un review. Ho capito. Grazie. Andate a lasciare 7-Eleven un buon review. Serena era molto preoccupata e mi sentivo male chiedendo per una foto, ma era benissima per darmi una. Quando stavo andando ho notato che la linea stava diventando estremamente lunga e non credo che abbiano aspettato un grande turno, ma penso che sia davvero incredibile quando i creatori e le compagnie si uniscono per fare qualcosa di davvero bellissimo per la comunità. è stata una coincidenza un po' strana perché ieri stavo planificando di arrivare qui e ho stoppato a un altro 7-Eleven per ottenere gas e quando l'ho fatto, avevano un grand opening e ho scortato questa bella shirt di Las Vegas 7-Eleven e altre cose cute quindi sì, supportate 7-Eleven e Serena e mi seguite grazie, ciao",
+            "language": "Italian",
+            "durationSec": 118.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:26:11.864Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39198,7 +39335,16 @@
           "likes": 492,
           "comments": 58,
           "shares": 285,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se arrivi a Saturno, sul litorale romano, non rata i gogosi, questi assolutamente deliziosi. I miei preferiti sono quelli con frutti di padella, ma ho amici che adorano anche quelli con cioccolato, vaniglia o caisse. Li trovi in una locazione con tradizioni, proprio vicino al hotel Sirena. Tu li hai provati mai? Se sì, lasciami un commento. Qual è il tuo aroma preferito?",
+            "language": "Italian",
+            "durationSec": 28,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:26:15.070Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39276,7 +39422,16 @@
           "likes": 6362,
           "comments": 174,
           "shares": 3520,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:26:17.557Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39312,7 +39467,16 @@
             "animazione",
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Benvenuti al Serenusa Resort. Oggi vi portiamo a scoprire questa meravigliosa struttura e vi faremo vedere cosa ci ha colpito fin dal primo momento. Seguidemi! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 52.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:26:44.237Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39325,7 +39489,16 @@
           "likes": 76,
           "comments": 14,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:26:49.540Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39382,7 +39555,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:59:30.704Z"
+            "updatedAt": "2026-09-08T12:26:52.064Z"
           }
         },
         {
@@ -39396,7 +39569,16 @@
           "likes": 59,
           "comments": 16,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno amici, qui siamo in shuttle bus in direzione al ponte. Dopo 4 minuti di autovigilio siamo arrivati e stiamo camminando. C'è solo un modo, per noi è un esperimento, nessuno di noi è mai stato in un'aeroporto, o al ponte. Per noi è stato un giorno molto, molto bello. Per i bambini è stato un'esperienza, per i bambini è stato un highlight, Qui mi sto passando per il lato. Qui c'è anche un ristorante e i miei collaboratori sono davvero molto amici, sono tutti molto amici, sono pronti per aiutare e hanno sempre un ghiaccio sul loro viso. Non vedono stress o nervosi. E questo è davvero il buon albergo. C'è anche una scatola qui fuori, per poter uscire direttamente dopo aver vissuto un po'. poi abbiamo cercato due o tre strati e abbiamo trovato due strati liberi siamo andati a loro, il più grande naturalmente e gli abbiamo messo il cinturone in una strada per riservarlo e poi sono andati direttamente si vede come sono felici, come hanno spazio stante nota tenden das wasser und ich wir sind keine freunde ich bleibe da wo ich bin ja und nach dem mittagessen habe ich mir noch von anderen super nett non siamo amici mi piacerebbe rimanere dove sono Dopo il cibo ho avuto il piacere di avere un donna che mi ha fatto fare qualcosa di dolce e ha fatto tutto con amore e mi ha piaciuto molto. Dopo il cibo e il bando, siamo andati a spazzare un po' perché è stato anche il nostro ultimo giorno, anche il nostro ultimo giorno e devo dire che qui si può fare un buon shopping forse in Germania non troverai una tasca di 10 euro ma qui in Turchia si quindi andate rapidamente in Turchia qui potete comprare un set di tricoti per 3 euro wow Penso che acquistare all'abitazione sia molto molto bello, solo come la strada si alluce e anche i persone che sono in avanti, la città diventa vivace. a giorno sono tutti a dormire ma a notte la città vive e è molto bello per tutti che vi invitano a Dijikai vi piace è molto bello quindi abbiate il viaggio a presto Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 190.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:28:15.473Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39513,7 +39695,16 @@
           "likes": 329,
           "comments": 2,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se questa è la tua vibrazione, o questa, o questa, allora sei nel posto giusto.",
+            "language": "Italian",
+            "durationSec": 8.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:28:21.057Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39539,7 +39730,16 @@
           "likes": 204,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 23.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:29:03.361Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39604,7 +39804,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:30:04.015Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39617,7 +39826,16 @@
           "likes": 20,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'Agricoltura Grazie a tutti. La Citt di San Giorgio Ciao Grazie a tutti La sua vita è a me, la ha in mano mentre si affronta. Nel mio cuore sento che ogni secondo è libero. Come puoi vivere se sei in un luogo di perdita? Sei il luogo di perdita del mio cuore, sei il mio mondo. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 170.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:30:12.472Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40455,13 +40673,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oQ0PlB79LBWkEJ7kiIYA38auBEEAnAuhCiAAS~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=u6FyOHDvYeCviZ2iyAPnJj4NxQ8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Se ti credi che solo 1.180.000$ per persona puoi vedere i 5 stessi luoghi di caldo e freddo tra il freddo e il freddo e se non lo è, Serenau Kimbo ti farà cambiare di pensiero e per te, per più di un'ora di viaggio, Serenau Kimbo è un luogo per riprenderti di vita veloce e per ottenere un'amore di rinforzamento, di rinforzamento e di tranquillità e per questo motivo, la cosa che tutti i clienti di Hohesu preferiscono è il luogo di caldo e freddo Il luogo di caldo e freddo è un luogo di caldo e freddo non solo aiuta il corpo a rilassarsi ma anche a portare la sensazione di essere in grado di sfruttare il corpo e di riprodurre l'energia dopo i giorni di stupore. Nel Wonsen, potrai rilassarti nel luogo di una stanza di resti. Dall'interno dei luoghi di Nature View fino al fondo della piazza, ogni spazio è disegnato per portare la sensazione di essere in grado di rilassarsi e di essere vicino alla natura. Un altro punto di rilassamento di Serena è quello di la costruzione di un'architettura di colori di nord. In particolare, solo da 1.180.000 rilassanti per una persona, puoi scegliere di restare in una stanza di resti, anche per una sera. Il tempo di trattamento è di 1 minuto per il trattamento di un'altezza. Inoltre, la combo è anche un'altezza per il trattamento di un'altezza. A 2h, si usa la bicicletta ogni giorno, il caffè e il latte. Inoltre, si può usare anche il bambino, la chiesa, la chiesa per i bambini e la chiesa per i bambini. Il trattamento contiene anche la servizio e la scala. Se vuoi un trattamento più veloce, ci sono anche le mani, che possono essere 2 o 3 mani. Per farlo, è facile scegliere a base dei vostri bisogni. Un'epoca di 5 stelle, l'albero naturale, non si è rinforzato, ha molti servizi, solo 1.180.000 dollari per una persona. Se avete un posto per rinforzare la vostra vita senza andare troppo lontano, il Cerno di Marriott è sicuramente una scelta molto utile per la vostra esperienza.",
+            "transcript": "Hai la verità che solo 1.180.000 rmb per persona puoi mangiare 5 stelle di aceto in un luogo caldo e freddo? Se no, Serenale Kimbo ti farà cambiare di idea. A Hanoi, l'A.D. Kimbo è il luogo per rinforzare la tua vita e per rinforzare la tua vita in un luogo tranquillo e tranquillo. È così che per me è stato un piacere e un piacere per tutti, l'aceto in un luogo caldo e freddo. L'aceto in un luogo caldo e freddo non solo aiuta il corpo a rinforzare e che portano a una sensazione di rilevamento. Potete riprendere l'energia dopo i giorni di stupore. Nel luogo del Wonsen, potrete rilassarvi in un ambiente bianco e blu di un luogo di resti. Da un luogo di resti, vi trovate anche un luogo di resti, dove tutti i luoghi sono costruiti per portare la sensazione di serenità e di essere vicini alla natura. Un altro punto di rilevamento di Serena è l'articolo di mani e di colori di nord. In particolare, con 1.180.000 doni per persona, potete scegliere un luogo di resti, e poi ci vediamo Grazie a tutti.",
             "language": "Italian",
             "durationSec": 97.1,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:52:50.578Z"
+            "updatedAt": "2026-09-08T12:18:01.194Z"
           },
           "ocrData": {
             "textOnScreen": "Chi.cack di\n‘Serena Kim là noi dé,\ngac Jai nhip $8hg voi va\nMot khién\ntré nén biét chinh la kién tric\nmang dam ban sic Tay Bac\ntrong\nCau ngan",
@@ -41699,13 +41917,13 @@
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8lEmVV4IetEUBcBlzjDfBGRb1AFEY1gNSgqIM~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=oGRQTH34%2BdDPm91ipPqExd%2FTP%2FQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "C'è una villaggia, che dopo un tempo di scontro, ha scelto un'area più tranquilla, in mezzo al lago di Somboi, dove si chiama la villaggia di Dongzhe, il terreno di rinforzamento del rio. Ma ha usato tutto il suo potere e la sua pazienza per riportare qui un colore di rosa, di pelle, di fiori, e questo terreno è un'area di rinforzamento del rio, un'area di rinforzamento del rio, Il vero e proprio inverno è pieno di esperienze con le notti di freddo sotto i milaneri nel camping di Dongzhe e l'albergo di l'albergo di l'albergo di l'albergo. Grazie a tutti.",
+            "transcript": "C'è una villaggia, che dopo un tempo di scontro, ha scelto un'area più tranquilla, in mezzo al lago di Somboi, dove si chiama la villaggia di Dongzhe, il terreno di rinforzamento del rio. Ma ha usato tutto il suo potere e la sua pazienza per riportare qui un colore di rosa, di pelle, di fiori, e questo terreno è un'area di rinforzamento del rio, un'area di rinforzamento del rio, Il giardino è pieno di esperienze con le notti di fuoco sotto i milaneri al camping di Dongzhe e la calma del cuore di persone con il fuoco di calma dei nostri amici. Il cuore della terra e di chi è qui è ancora in grado di proteggere. Perché il cuore di Dongzhe è un cuore di la città, per chi si è distrutto e chi ha chiamato, è un cuore di la città. Grazie a tutti.",
             "language": "Italian",
             "durationSec": 55.8,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:04:50.749Z"
+            "updatedAt": "2026-09-08T12:21:24.229Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -41948,7 +42166,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:59:30.704Z"
+            "updatedAt": "2026-09-08T12:26:52.064Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -46277,7 +46495,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:50:33.737Z"
+            "updatedAt": "2026-09-08T12:21:26.702Z"
           },
           "ocrData": {
             "textOnScreen": "Puerto\nVilla Dos",
@@ -53199,13 +53417,13 @@
           "shares": 27500,
           "verificationStatus": "unconfirmed",
           "audioAnalysis": {
-            "transcript": "Avete mai visto questo video? Avete visto quella ragazza, Serena, qui? She be doing all that cool stuff for her delivery drivers. I need to go deliver to her house. She had a 7-Eleven outside of her house. She could fly me out for a day and I could just come deliver her package and get the Serena Neal experience. That would be awesome. So, we're flying him out. Oh, and I forgot to tell you, I got a limo to go get Byron. Oh my gosh. This is so fun. I haven't been in a limo since I was like six. Siamo arrivati all'aeroporto, mio marito va a trovare i bambini, io vado a stare con il limone e la mia poster. Byron! Vi daremo un po' di bambini, ciao! Come stai? Ok, ti seguirai, sei pronto? Andiamo! No way! Come stai? Sono bravo! Siamo arrivati! Andiamo a casa! Siamo a casa e ti ho portato un pacchetto per rilasciare. Special delivery for Mrs. Neal. Oh, quindi, proprio come la 7-Eleven. Devo prendere la foto prima, per amazone, con il mio smurf. Cosa ne pensi? Questo smurf è davvero buono. Grazie, l'ho misurato con il mio cuore. Dio, non lo so, questo è... Questa è fantastica. Le tue bocce, per se il tuo stomaco si stupefaccia, questo è ottimo. I pacchetti sono per te. La mia stessa t-shirt 7-Eleven. Sarei giusto con questa. E' bello. Mi piace. Sei pronto per la prossima sorpresa Sono pronto Andiamo a seguire in questa maniera Benvenuti a Hibashi S S Puoi fare una posizione rapidamente come Byron dietro di te Stiamo facendo un po' di un po' di egg toss. Juice! Juice! Juice! Ok. Sì! Eccoci! Sì, lo siamo. Ciao! Come va? Come va? E' stato fantastico! Un breve tour della streppa. Ho cercato il loro hotel. Sono andata in tutto il luogo perché mi hanno detto che avevano una sorpresa. Mi piace le sorprese. Siete pronti? Allora, andate. Oh mio Dio! Guardate tutto questo stupendo! Mi avete portato in Vegas. Ho dovuto portare un po' di Detroit a voi. Sì! Lo sapete molto bene. E poi? buon anno per tutti questo è dove ti lascio area 15 abbiate fun con gli alieni a Omega Mart grazie per essere venuti è stato molto divertente sono così felice che sono venuti a Vegas",
+            "transcript": "Avete mai visto questo video? Avete visto quella ragazza, Serena, qui? She be doing all that cool stuff for her delivery drivers. I need to go deliver to her house. She had a 7-Eleven outside of her house. She could fly me out for a day and I could just come deliver her package and get the Serena Neal experience. That would be awesome. So, we're flying him out. Oh, and I forgot to tell you, I got a limo to go get Byron. Oh my gosh. This is so fun. I haven't been in a limo since I was like six. Siamo arrivati all'aeroporto, mio marito va a trovare i bambini, io vado a stare con il limone e la mia poster. Byron! Vi daremo un po' di bambini, ciao! Come stai? Ok, ti seguirai, sei pronto? Andiamo! No way! Come stai? Sono bravo! Siamo arrivati! Andiamo a casa! Siamo a casa e ti ho portato un pacchetto per rilasciare. Special delivery for Mrs. Neal. oooh so just like a seminar I'm gonna take my quick photo first so Amazon's cool with it I'll slurp what do you think? this slurpy is really good thank you I measured with my heart dude I don't this is this is awesome Tom's for if your stomach hurts this is great the packages are actually for you my own 7-eleven shirt I'll be right back that's nice I like that Sei pronto per la prossima sorpresa Sono pronto Andiamo a seguire in questa direzione Ok Benvenuti a Hibashi S S Puoi fare una posizione rapidamente come Byron dietro di te Stiamo facendo un po' di un po' di egg toss. Juice! Juice! Juice! Ok. Sì! Eccoci! Sì, lo siamo. Ciao! Come va? Come va? E' stato fantastico! Un breve tour della streppa. Ho cercato il loro hotel. Sono andata in tutto il luogo perché mi hanno detto che avevano una sorpresa. Mi piace le sorprese. Siete pronti? Allora, andate. Oh mio Dio! Guardate tutto questo stupendo! Mi avete portato in Vegas. Ho dovuto portare un po' di Detroit a voi. Sì! Lo sapete molto bene. E poi? buon anno per tutti questo è dove ti lascio area 15 abbiate fun con gli alieni a Omega Mart grazie per essere venuti è stato molto divertente sono così felice che sono venuti a Vegas",
             "language": "Italian",
             "durationSec": 179.7,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-07T22:11:21.785Z"
+            "updatedAt": "2026-09-08T12:22:35.528Z"
           },
           "ocrData": {
             "textOnScreen": "pe quick",
@@ -63162,7 +63380,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-07T22:17:02.616Z"
+            "updatedAt": "2026-09-08T12:17:31.415Z"
           },
           "ocrData": {
             "textOnScreen": "ow ure in an all inclusive\nwhen u hear this\nure in an all inclusive\nureinanalli\nen u hear",
