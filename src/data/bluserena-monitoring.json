@@ -22666,7 +22666,7 @@
           "url": "https://www.tiktok.com/@iannacconefamilyofficia/video/7674968601295605024",
           "date": "2026-08-17T11:58:02.000Z",
           "caption": "Tutta la vita blu Serena ❤️",
-          "location": null,
+          "location": "Bluserena",
           "views": 54400,
           "likes": 423,
           "comments": 67,
@@ -22688,7 +22688,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-08T13:08:36.877Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "scenografia",
+              "stelle",
+              "serenità"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:23.050Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "scenografia",
+            "stelle",
+            "serenità"
+          ]
         },
         {
           "platform": "tiktok",
@@ -24121,7 +24145,7 @@
           "url": "https://www.tiktok.com/@kekkaparty/video/7674385343294033184",
           "date": "2026-08-15T22:14:42.000Z",
           "caption": "Un qualcosa di meraviglioso ",
-          "location": null,
+          "location": "Bluserena",
           "views": 40100,
           "likes": 185,
           "comments": 21,
@@ -24144,7 +24168,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:11:21.944Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:23.704Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25524,7 +25573,7 @@
           "url": "https://www.tiktok.com/@eugy.valli/video/7679395672893787425",
           "date": "2026-08-29T10:17:22.000Z",
           "caption": "Il villaggio del nostro ❤️. Ferie finite 🥲 #andiamoneiperte #neiperte #perte #foryou #fyp ",
-          "location": null,
+          "location": "Bluserena",
           "views": 650,
           "likes": 18,
           "comments": 0,
@@ -25547,7 +25596,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:15:00.880Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "villaggio",
+              "hotel",
+              "ricordi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:25.855Z"
+          },
+          "sentiment": "negative",
+          "topics": [
+            "villaggio",
+            "hotel",
+            "ricordi"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27020,7 +27094,7 @@
           "url": "https://www.tiktok.com/@giuseppe.cerrone/video/7675512819885886753",
           "date": "2026-08-18T23:09:50.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": 1013,
           "imageUrl": null,
           "likes": 16,
@@ -27044,7 +27118,31 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:18:40.714Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "villaggio",
+              "vacanza",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.66,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:33.072Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "villaggio",
+            "vacanza",
+            "musica"
+          ]
         },
         {
           "platform": "tiktok",
@@ -33107,7 +33205,7 @@
           "url": "https://www.tiktok.com/@agarliviaggi/video/7657585228805983521",
           "date": "2026-07-01T15:41:43.000Z",
           "caption": "",
-          "location": null,
+          "location": "Is Serenas Badesi Resort",
           "views": 9132,
           "likes": 68,
           "comments": 3,
@@ -33130,7 +33228,37 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:19:36.326Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo",
+              "attività",
+              "famiglia",
+              "accessibilità"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:37.188Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo",
+            "attività",
+            "famiglia",
+            "accessibilità"
+          ]
         },
         {
           "platform": "tiktok",
@@ -34635,7 +34763,7 @@
           "url": "https://www.tiktok.com/@donatello.n/video/7672035717349903648",
           "date": "2026-08-09T14:16:57.000Z",
           "caption": "",
-          "location": null,
+          "location": "Is Serenas Badesi Resort",
           "views": 1499,
           "likes": 15,
           "comments": 1,
@@ -34658,7 +34786,29 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:23:50.492Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "green resort"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:41.747Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "spiaggia",
+            "green resort"
+          ]
         },
         {
           "platform": "tiktok",
@@ -38678,7 +38828,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7665340030486908193",
           "date": "2026-07-22T13:14:19.000Z",
           "caption": "Risposta a @user00  🥰🥰🥰 #innamorato #Sibari #vacanzabellissima #paratiiiiiii #viralissimo",
-          "location": null,
+          "location": "Bluserena",
           "views": 4927,
           "likes": 32,
           "comments": 12,
@@ -38701,7 +38851,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:36:04.208Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "bambini",
+              "attività per famiglie",
+              "piscina",
+              "ristorazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:43.358Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "bambini",
+            "attività per famiglie",
+            "piscina",
+            "ristorazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -39567,7 +39746,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T13:38:55.629Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relaxation",
+              "nature",
+              "wellness"
+            ],
+            "location": null,
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:48.732Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relaxation",
+            "nature",
+            "wellness"
+          ]
         },
         {
           "platform": "tiktok",
@@ -42601,14 +42805,29 @@
           },
           "sentiment": "positive",
           "topics": [
-            "vacanza",
-            "relax",
-            "natura",
-            "montagna",
-            "bosco",
-            "terme",
-            "viaggio"
-          ]
+            "relaxation",
+            "nature",
+            "wellness"
+          ],
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relaxation",
+              "nature",
+              "wellness"
+            ],
+            "location": null,
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:48.732Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -61077,7 +61296,7 @@
           "url": "https://www.tiktok.com/@williamdarcangelo/video/7667343849009810721",
           "date": "2026-07-27T22:50:09.000Z",
           "caption": "#sibarigreenresort #neipertee #nei #perte #figlia ",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 608,
           "likes": 6,
           "comments": 0,
@@ -61100,7 +61319,32 @@
             "version": 3,
             "updatedAt": "2026-09-08T13:49:48.299Z"
           },
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "vacanza",
+              "gratitudine"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:49.725Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "vacanza",
+            "gratitudine"
+          ]
         },
         {
           "platform": "tiktok",
@@ -73872,22 +74116,22 @@
             "version": 1,
             "updatedAt": "2026-09-08T11:59:33.180Z"
           },
-          "sentiment": "positive",
+          "sentiment": "negative",
           "topics": [
-            "emozioni",
-            "ricordi",
-            "famiglia"
+            "villaggio",
+            "hotel",
+            "ricordi"
           ],
           "sentimentData": {
             "status": "ok",
-            "sentiment": "positive",
+            "sentiment": "negative",
             "topics": [
-              "emozioni",
-              "ricordi",
-              "famiglia"
+              "villaggio",
+              "hotel",
+              "ricordi"
             ],
-            "location": "Serena Majestic Hotel Residence",
-            "confidence": 0.82,
+            "location": "Bluserena",
+            "confidence": 0.7,
             "minConfidence": 0.6,
             "sources": [
               "caption",
@@ -73895,7 +74139,7 @@
               "ocr"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:08:45.350Z"
+            "updatedAt": "2026-09-08T14:00:25.855Z"
           },
           "engagementData": {
             "status": "ok",
@@ -76223,31 +76467,31 @@
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "spiaggia",
               "animazione",
-              "camere",
-              "accessibilità",
+              "spiaggia",
               "cibo",
-              "famiglie"
+              "attività",
+              "famiglia",
+              "accessibilità"
             ],
             "location": "Is Serenas Badesi Resort",
-            "confidence": 0.95,
+            "confidence": 0.96,
             "minConfidence": 0.6,
             "sources": [
               "audio",
               "ocr"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T23:43:13.607Z"
+            "updatedAt": "2026-09-08T14:00:37.188Z"
           },
           "sentiment": "positive",
           "topics": [
-            "spiaggia",
             "animazione",
-            "camere",
-            "accessibilità",
+            "spiaggia",
             "cibo",
-            "famiglie"
+            "attività",
+            "famiglia",
+            "accessibilità"
           ]
         },
         {
@@ -88746,7 +88990,7 @@
           "url": "https://www.tiktok.com/@the_murray_edit/video/7680199386508299543",
           "date": "2026-08-31T14:16:06.000Z",
           "caption": "🇮🇹 🍋 Postcards from Puglia 🍋 🇮🇹  Recently Travelled: Client Case Study When two friends decided to celebrate milestone birthdays together – one turning 40 and the other 50 – they wanted something a little more special than a standard beach holiday. The result was a carefully curated week-long fly-and-drive adventure through the stunning region of Puglia. ✈️ Flying from London Gatwick to Brindisi, they collected their hire car and set off on a journey through some of southern Italy’s most beautiful coastal towns. 📍 Lecce – 2 nights at Arthotel & Park The perfect place to begin their celebrations, exploring elegant piazzas, historic streets and soaking up the atmosphere of one of Italy’s most beautiful cities. 📍 Thalasso – 3 nights at Kalidria Hotel & Thalasso Spa Resort A luxurious mid-trip retreat where they could slow down, relax and enjoy some well-deserved spa time surrounded by nature. 📍 Ostuni – 2 nights at Hotel Monte Sarago Their final stop was the iconic White City, where winding streets, spectacular views and unforgettable sunsets provided the perfect ending to a memorable birthday getaway. This itinerary was designed to strike the perfect balance between exploration, relaxation and celebrating two very special milestones in style. If this feels like something you’d like to experience, get in touch! Jothemurrayedit@Gmail.com",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 215,
           "imageUrl": null,
           "likes": 1,
@@ -88769,7 +89013,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-08T13:58:18.362Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "birthday celebration",
+              "spa",
+              "cultural exploration",
+              "coastal towns",
+              "relaxation"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:00:51.077Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "birthday celebration",
+            "spa",
+            "cultural exploration",
+            "coastal towns",
+            "relaxation"
+          ]
         },
         {
           "platform": "tiktok",
