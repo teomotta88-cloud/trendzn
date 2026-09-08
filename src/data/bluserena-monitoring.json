@@ -43570,6 +43570,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:24.698Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:45:13.517Z"
           }
         }
       ]
@@ -57595,6 +57603,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:29.214Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA\nPakistan\nSERENA HOTEL\nPakistan a\nSEREN OTEL",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:45:23.561Z"
           }
         }
       ]
@@ -74057,6 +74074,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:34.912Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MICHEAL",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:45:29.835Z"
           }
         },
         {
@@ -74080,6 +74106,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:37.000Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Hotel,\nSerena Hotel, 4\nserena Hagel, Islamabad@",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:45:35.223Z"
           }
         },
         {
@@ -74103,6 +74138,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:40.787Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kampala, Uganda",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:45:45.208Z"
           }
         },
         {
@@ -74126,6 +74170,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:47.348Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena full to\nCongs king Micheal\nSerena is full to capacity\nSerena is full to capacity 1\nSerena full to capacity",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:45:52.917Z"
           }
         },
         {
@@ -74149,6 +74202,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:52.463Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Clever j's performance in\nking\nperformance in\nking i\nClever j's performance in 4\nking Micheal's",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:46:01.600Z"
           }
         },
         {
@@ -74172,6 +74234,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:55.346Z"
+          },
+          "ocrData": {
+            "textOnScreen": "View\nSERENA HO\nPakistan\nSERENA HOTEL",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:46:05.893Z"
           }
         },
         {
@@ -74195,6 +74266,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:44:57.906Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MARA SERENA SAFARI LODGE\nLATITUDE: 1°24.09 Seconds South of Equator\nè LONGITUDE Seconds East of Greenwich\nALTITUDE. 5,321 Ft 1625 Mts x\nKENYA East Africa’",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:46:24.553Z"
           }
         }
       ]
@@ -90996,6 +91076,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T14:45:01.271Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:46:29.513Z"
           }
         }
       ]
