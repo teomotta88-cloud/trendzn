@@ -2647,13 +2647,13 @@
           "ocrInsights": "In absence of on-screen content, we cannot extract insights about the location or topics discussed. Please provide the necessary information for analysis.",
           "verificationStatus": "confirmed",
           "audioAnalysis": {
-            "transcript": "E la la Omega Alla peste Criminal Ma ora che passo nella radio Criminal Entro Milano in un ibario Criminal Come un'altra sento lo stadio Criminal Ma la cabeza mi fa Eh Fai mucho dinero In ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Fai mucho dinero in ogni maniera A me basta che Quello che io chiedo è come stasera Siamo io e te Ciao",
+            "transcript": "E la la Omega Alla peste Criminal, ma ora che passo nella radio Criminal, entro Milano in un ibarrio Criminal, come un'altra sento lo stadio Criminal, ma la cabeza mi fa re Fai mucho dinero, in ogni maniera A me basta che Quello che io chiedo, è come stasera, siamo io e te Fai molto dinero, in ogni maniera, a me basta che Quello che io chiedo, è come stasera, siamo io e te Ciao",
             "language": "Italian",
             "durationSec": 60.2,
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T11:43:45.021Z"
+            "updatedAt": "2026-09-08T12:01:31.287Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -3897,7 +3897,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:04:26.392Z"
+            "updatedAt": "2026-09-08T12:01:41.300Z"
           },
           "ocrData": {
             "textOnScreen": "BLUSERENA",
@@ -10046,7 +10046,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:15:57.119Z"
+            "updatedAt": "2026-09-08T12:01:34.546Z"
           },
           "ocrData": {
             "textOnScreen": "Rendi unica la tua vacanza\nTantissimi servizi per un soggiorno\nindimenticabile\nAnimazione Bambini e ragazzi\nLa migliore animazione italiana Un'avventura straordinaria\nRESORT",
@@ -25615,7 +25615,16 @@
           "topics": [
             "vacanza",
             "esperienza personale"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "C'è buona gascighese a noi, pur annanzi i soldi a l'una, l'amore non si spiega, l'amore non si accatta, l'amore è verissimo a noi. Ti dedico a l'una, ti dedico a vita, ti dedico tutto, si non è abbastanza, mi sei tolito, non basti minute.",
+            "language": "Italian",
+            "durationSec": 15.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:19.894Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25641,7 +25650,16 @@
           "likes": 81900,
           "comments": 269,
           "shares": 3957,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:25.309Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25688,7 +25706,16 @@
           "topics": [
             "villaggio",
             "resort"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Forse dovremmo partire, molto lontano da qui, sto pagando il mio karma, delle vite passate, mille che ho sprecato prima di conoscere te",
+            "language": "Italian",
+            "durationSec": 12.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:27.648Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25727,7 +25754,16 @@
           "likes": 282,
           "comments": 12,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vieni a montare un lutto di passeggio con me L'idea è montare un look leggero, confortabile e colorito Per uscire un po' dal tradizionale Pesa e chiave Questa saia meravigliosa là da Zandara Seconda pezza Questa blusa meravigliosa anche da Zandara La saia nel copo è stata così Estremamente bella Con la camisola è stata così Guarda che cosa più bella Il caimento perfetto Di sapato ho preso questo tenni Nella color rosso bb Per farlo un look più colorito Di accessorio ho messo questo lenzu Che è molto da coloro del look E di bolsa ho preso questa bolsa in rosso chiaro che è ben della colore del tennis e il look è pronto amiche voglio sapere se vi è piaciuto se usate questo look vi modellerò un po' per voi adesso un look più colorato, confortabile e senza perdere lo stile amiche cosa ne pensate? lasciate qui sotto se usate che voglio sapere",
+            "language": "Italian",
+            "durationSec": 46.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:34.218Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25792,7 +25828,16 @@
           "likes": 259,
           "comments": 7,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Va a essere difficile, perché la molti a sapere che ho te, ma tutto è possibile a chi crede. Sto sentendo che è arrivata la mia ora. Scusa per passare, c'è un miracolo mi aspetta lì. Scusa se mi incomoda, c'è una benedizione mi aspetta e non lo posso fare. e non va a precisar di me stendersi",
+            "language": "Italian",
+            "durationSec": 31.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:37.381Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25805,7 +25850,16 @@
           "likes": 66100,
           "comments": 110,
           "shares": 2402,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:43.413Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25844,7 +25898,16 @@
           "likes": 42000,
           "comments": 337,
           "shares": 1360,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Dopo che Cristobal Colón scriveva nel suo diario che vede tre sirene con cara di uomo, iniziò a mentire ai suoi marineri. Vi avevo già raccontato che il 9 di enero del 1493 Cristobal Colón registrò, mentre navegava nel suo primo viaggio in America, che vede tre sirene con cara di uomo. E anche specificò che non erano così belle come dicevano le leggende e che avevano raschi molto mascolini. vari storiatori dicono che quello che in realtà vedeva Cristobal Colón erano i manatisti e che lui si è confuso perché aveva avuto vari mesi in alto mar, vari mesi senza vedere le donne e che, beh, fu come una allusinazione collettiva che avevano lui e i suoi marineri quello che non sapevano è che Cristobal Colón già aveva stato in Africa, che è un continente che ha molti manatisti e conosce i manatisti perfettamente A raiz di tutto questo Cristobal Colón ha iniziato a mentire alla sua tripulazione, non gli diceva quanto stavano avanzando realmente, lui aveva una conta ma comunicava un'altra a tutti i marineri, questo con l'obiettivo di non dargli conto di quanto avevano avanzato e di quanto si avevano distrutto da Spagna e che non entrassero in panico. Il diario menziona giornate di 21 leguas che Colón comunicava a i suoi marineri come 10. Ma tutto si pone molto strano perch una sera Col gli dice ai marineri che andavano in direzione al jardin dell il jardin dove vivevano Adam e Eva Cio ricordiamo che in quella epoca erano estremamente religiosi e che l stava per sopra di tutto ossia questo aveva molto peso E perch Cristobal Col dice questo Perché osserva l'enorme quantità di acqua dolce che viene dal rio Orinoco e lui conclude che una corrente così potente come quella dovrebbe procedere dal paradiso terrenale descritto nella Bibbia. Realmente lui considerava che il giardino dell'Eden poteva essere vicino a quella regione. In effetti erano molto vicino a Venezuela e per questo c'è la credenza attuale che il giardino dell'Eden fosse in Venezuela, ma guarda, lui non ha mai affermato di essere arrivato a quel giardino. Ma ciò che si confermò è che stava molto vicino ai luoghi del giardino dell'Eden e anche diceva che nessun essere umano era capace di entrare in quel giardino senza permesso divino. Ma davvero, prenditi perché qui viene lo più perturbante. A ver, tutti sappiamo che Cristobal Colon viaggiò in La Niña, La Pinta e La Santa María. Lo che non si parla e non ti insegnano in scuola è che La Santa María desapareció sin dejar rasgo. Alcuni credono che fu attaccata da creature molto forti del mare e l'ultimo registro che si ha è che stava navegando vicino a Haiti. Ma ciò che mi esplode nella testa è che vari storici dicono che La Santa María non è sbattuta. ricordiamo che la Santa Maria fu il barco dove viaggiava Cristobal Colón era il barco principale, il più caro di tutti e fu il barco che è desaparecido e neanche Cristobal Colón lo menziona in suo diario che è passato realmente con quel barco? guarda questo video per la terza parte di questa storia",
+            "language": "Italian",
+            "durationSec": 164.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:50.895Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25857,7 +25920,16 @@
           "likes": 4352,
           "comments": 32,
           "shares": 105,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:00:59.058Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25870,7 +25942,16 @@
           "likes": 33,
           "comments": 4,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hola! Iniziamo con gli accessori per le feste patriarcaliche Iniziamo a fare le travi Mentre si stanno asciugando Abbiamo fatto un'arita di chupalla Guarda che bello! E il sombrerito nero Vediamo come si fanno Io ho messo uno di ogni Perché dobbiamo stare in modo feste patriarcaliche Per non mancare Guarda come si fanno! Sono molto belle! quindi sarò qui tutto settembre con gli alberi e qui sono le tavole secche farò più modelli ma così sono vediamo come sono puoi metterli in mezzo come io o puoi metterli a un lato per combinare con gli alberi qui va uno e qui c'è l'altro mi piacciono farei anche gli alberi e aree collarie ciao limon bain",
+            "language": "Italian",
+            "durationSec": 62.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:06.794Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25922,7 +26003,16 @@
           "likes": 915,
           "comments": 12,
           "shares": 61,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "è vero che questo vestito lo hai preso da clienti di TikTok? Sì, l'altro giorno stavo facendo un live e ho visto la raga che abbiamo dietro con la roba che è nuova e tutto il mondo voleva questo vestito e ovviamente come sempre ascoltiamo i nostri clienti O sea, non avevamo planificato che salisse già, ma lo abbiamo preso da voi, quindi è già disponibile, è veramente bello Si chiama vestito Varena E ha sacchi, guarda Sento che sia super bello anche con le chanclete e così, vero? Sì, è perfetto è super fresco la verità ciao, despidete",
+            "language": "Italian",
+            "durationSec": 33.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:16.386Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25961,7 +26051,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ragazze guardate che blusa bella disponibile dal G1 al G4 ha un'infinità di colori belle e è super soltina e stilosa con questo calore che sta arrivando ti amarei clicca sul carino per vedere i dettagli",
+            "language": "Italian",
+            "durationSec": 14.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:20.284Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26013,7 +26112,16 @@
           "likes": 244,
           "comments": 17,
           "shares": 84,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo in terra, faccia in basso. Andiamo! Oh no, non capisci, questo non è un lia! Un whata? È come un designer totalmente importante. E io totalmente...",
+            "language": "Italian",
+            "durationSec": 13.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:22.665Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26183,7 +26291,16 @@
           "likes": 16,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:24.907Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26197,7 +26314,16 @@
           "likes": 21,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vita mia, si usce il suono di un'odio, si avvita mia.",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:28.091Z"
+          }
         }
       ]
     },
@@ -29190,7 +29316,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:38:23.053Z"
+            "updatedAt": "2026-09-08T12:00:25.309Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -31885,7 +32011,16 @@
             "animazione",
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "E la la Omega Alla peste Criminal, ma ora che passo nella radio Criminal, entro Milano in un ibarrio Criminal, come un'altra sento lo stadio Criminal, ma la cabeza mi fa re Fai mucho dinero, in ogni maniera A me basta che Quello che io chiedo, è come stasera, siamo io e te Fai molto dinero, in ogni maniera, a me basta che Quello che io chiedo, è come stasera, siamo io e te Ciao",
+            "language": "Italian",
+            "durationSec": 60.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:31.287Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32081,7 +32216,16 @@
             "animazione",
             "attività",
             "famiglia"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "La vacanza perfetta non esiste, o forse sì, appena arrivati ci siamo sentiti subito coccolati in una struttura moderna e pulitissima. Qui trovi davvero tutto, negozi, farmacia, medico H24, baby kitchen e noleggio passeggini, l'ideale per partire leggeri. L'animazione è incredibile, con attività per grandi e piccoli, acquapark, giochi, sport, miniclub e balli di gruppo. Tantissime esperienze si possono prenotare direttamente dall'applicazione Mentre i bambini si divertono, i genitori possono finalmente rilassarsi Feste a tema, ogni sera spettacoli curati nei minimi dettagli E poi il cibo, preparato al momento, pesce freschissimo e dolci fatti in casa Ci troviamo al nord della Sardegna, al Serena Badesi Village, affacciato su un mare mozzafiato Questa è la vera vacanza che tu e la tua famiglia meritate Quindi prepara le valigie, al resto ci penso io",
+            "language": "Italian",
+            "durationSec": 55.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:34.546Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32198,7 +32342,16 @@
           "likes": 68,
           "comments": 3,
           "shares": 51,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi vi parliamo del Serena Badesi, è un grande villaggio da circa 360 camere. Il vantaggio principale è una vastissima spiaggia di sabbia bianca, orlata da dune di macchia miterranea. È un'animazione blu serena che è tra le migliori in Italia. È consigliata per famiglie con bambini di tutte le età e a chi cerca una vacanza dove c'è sempre qualcosa da fare, dal paddle allo yoga alla spa. Siamo a Badesi, in provincia di Sassari, spiaggia bianchissima, un'acqua cristallina e una natura selvaggia la struttura è direttamente sul mare senza strade di mezzo le camere sono circa 360 completamente nuove su due piani si va dalle classic alle prestige con piscina e i bar riservati fino alle camere family con due ambienti per 4-5 persone ottime notizie per i diventamenti abili zero barriere architettoniche e serie job in spiaggia per il bagno al mare l'animazione è sempre presente ma mai invadente band dal vivo, circensi, maghi, musical in anfiteatro e per i bimbi c'è tutta la famiglia sereno divisa per età Dai 3 ai 17 anni. Lo spray park con giochi d'acqua, la scuola calcio, scuola di magia e perfino la Light Saber Academy con spade di Star Wars. Spiaggia di sabbia fine, fondale sabbioso che degrada dolcemente. La chicca che stavate cercando per chi ha i bambini piccoli. L'ombrellone e i due lettini sono sempre assegnati a camera. Sul cibo è d'obbligo dirlo. Tre ristoranti gratuiti, il centrale a buffet con show cooking, la gaddura tipico sardo e le ristorante Leonde sulla spiaggia. Per i celiaci e intoleranti c'è sempre un assortimento dedicato, anche se la cucina è unica. E la chicca sempre per le mamme c'è la cucina baby, con brodini, pastine, prosciutto cotto e persino il latte di soia e di riso. Nei dintorni tramonto a Costa Paradiso con passeggiata fino a Cala Licossi, uno dei luoghi più scenografici del nord della Sardegna. Oppure visita a Castel Sardo, borgo medievale, affacciato direttamente sul mare, perfetto per una serata tra vicoli, artigianato sardo e ristoranti panoramici. I cani sono ammessi fino a 10 kg nelle camere dog room con un giardinetto ricintato. Questo è un prodotto consigliato da Agarli Viaggi Tour Operator. Contattaci per maggiori info.",
+            "language": "Italian",
+            "durationSec": 117.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:39.017Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32271,7 +32424,16 @@
           "topics": [
             "animazione",
             "vacanza"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "ritrova la gioia con noi oltre. Una vita più serena, un brivido che ti scappena, la melodia che ti conquista, amore a prima vista, riempie quel vuoto che hai. Qui ritroviamo la felicità.",
+            "language": "Italian",
+            "durationSec": 24.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:41.300Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32453,7 +32615,16 @@
           "likes": 114,
           "comments": 10,
           "shares": 48,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 65.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:44.243Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32856,7 +33027,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Planning a Disney trip? Here's where I'd want to relax after a full day at the parks. Arcles, Renaissance Orlando Resort in Disney Springs area gives you spacious, modern rooms, comfortable beds, and a resort-style pool with plenty of space to unwind. There's also a fitness center, multiple dining options, and outdoor areas where you can slow down after a busy day. And the location is the real win. You're just minutes from Disney Springs and close to Walt Disney World, so you get the excitement of Orlando without feeling like you're staying in the middle of the chaos. Go to the link now and check the deal before you miss it.",
+            "language": "Italian",
+            "durationSec": 27.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:47.009Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32869,7 +33049,16 @@
           "likes": 1476,
           "comments": 102,
           "shares": 335,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho visitato un posto a Mokono dove ti richiedono di toglierti le tue macchie prima di entrare nel ristorante. E devi spendere un minimo di 30.000 shillings uguali, non dimenticando se sei un individuo o un gruppo. Ma questo potrebbe essere uno dei più calmi posti che ho visitato a Mokono. Serenada Eco Resort è circondato da natura e è proprio sul water, ragazzi. non c'è nessun rumore qui, il posto è molto tranquillo e le persone sono anche molto benvenute puoi accesso il posto sia per la strada, attraverso la cattura o per la borsa se preferisci andare per la borsa puoi borsare da Gaba, la giornata prende circa 30 minuti sì, non ho provato il cibo ma ho avuto una prima scelta e era davvero bello I loro cittadini sono anche abbastanza affidabili. Ci sono diverse attività che puoi fare qui, includendo camminare, canoare e correre. E se vuoi spendere la notte qui, hanno anche un'accomodazione che comincia a 500.000 UGN. Non permettono di campare qui. Quindi, se amate i luoghi, la natura e l'acqua, This might be worth visiting Bye",
+            "language": "Italian",
+            "durationSec": 83.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:54.494Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32882,7 +33071,16 @@
           "likes": 239,
           "comments": 19,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Assalamu alaikum and hello we are Sultanul Qadir Qawwal and we are coming to perform live at Cultural Colors organized by Nittysphere happening on 27th of August 2026 in Islamabad. See you there inshallah.",
+            "language": "Italian",
+            "durationSec": 13.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:01:57.583Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32921,7 +33119,16 @@
           "likes": 334,
           "comments": 15,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "6-7",
+            "language": "Italian",
+            "durationSec": 6.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:02:00.532Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32947,7 +33154,16 @@
           "likes": 115,
           "comments": 27,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 25.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:02:03.726Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32960,7 +33176,16 @@
           "likes": 13,
           "comments": 4,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:02:06.799Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72424,7 +72649,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-07T22:19:15.575Z"
+            "updatedAt": "2026-09-08T12:01:39.017Z"
           },
           "ocrData": {
             "textOnScreen": "CON COOKING",
