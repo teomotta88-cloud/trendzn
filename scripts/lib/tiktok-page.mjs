@@ -216,10 +216,21 @@ export async function fetchAuthorVideos(context, handle, opzioni = {}) {
     const url = [...new Set([...daXhr, ...daDom])];
 
     if (url.length === 0) {
+      // Stessa diagnostica usata per le pagine hashtag (scrape-tiktok-
+      // hashtag-deep.mjs), dove ha permesso di scoprire che il vero motivo
+      // dietro "pagina vuota" con sessione autenticata era il captcha
+      // anti-automazione di TikTok, non un problema di sessione: titolo e
+      // URL da soli non bastavano a distinguerlo da un vero "zero video".
       const titolo = await page.title().catch(() => null);
+      const urlFinale = page.url();
+      const testo = await page
+        .evaluate(() => document.body?.innerText?.replace(/\s+/g, " ").trim().slice(0, 200) ?? "")
+        .catch(() => "");
       return {
         status: sembraLoginWall(titolo, page.url()) ? "login_wall" : "no_videos",
-        reason: `titolo: ${String(titolo).slice(0, 80)}`,
+        reason:
+          `titolo: ${String(titolo).slice(0, 80)} — url finale: ${urlFinale}` +
+          (testo ? ` — testo pagina: "${testo}"` : ""),
         url: [],
       };
     }
