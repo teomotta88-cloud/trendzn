@@ -20680,7 +20680,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T09:35:15.547Z"
+            "updatedAt": "2026-09-08T09:42:37.074Z"
           }
         },
         {
@@ -32577,6 +32577,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:33.191Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:40:03.319Z"
           }
         },
         {
@@ -32600,6 +32608,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:35.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": "test\ntest retreat in Mallorca...\ntest: all",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:40:23.160Z"
           }
         },
         {
@@ -32623,6 +32640,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:38.257Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:40:31.646Z"
           }
         },
         {
@@ -32646,6 +32671,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:40.612Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:40:41.498Z"
           }
         }
       ]
@@ -37728,6 +37761,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:47.057Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:40:57.038Z"
           }
         },
         {
@@ -37751,6 +37792,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:52.506Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:01.213Z"
           }
         }
       ]
@@ -42800,6 +42849,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:57.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sean\nHAPPENING NOW REMA NAMAKULA\nAT STRONG WOMAN IRENE\nNAMATOVU SERENA HOTEL\nSERENA HOTEL\nNAMATOVU SERENA",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:10.522Z"
           }
         },
         {
@@ -42823,6 +42881,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:00.114Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:24.995Z"
           }
         },
         {
@@ -42846,6 +42912,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:04.862Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THE MAIN\nVALUE/AND JUST",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:31.390Z"
           }
         },
         {
@@ -42869,6 +42944,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:10.519Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:39.541Z"
           }
         },
         {
@@ -42892,6 +42975,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:13.353Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HAPPENING NOW REMA NAMAKULA\nAT STRONG WOMAN IRENE\nNAMATOVU SERENA HOTEL\nSEAN\". p\nSERENA HOTEL\nNAMATOUU SERENA HOTEL",
+            "confidence": 0.882,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:45.991Z"
           }
         }
       ]
@@ -47096,6 +47188,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:16.208Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Shibani Hotel and",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:41:57.073Z"
           }
         },
         {
@@ -47119,6 +47220,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:18.643Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:42:26.427Z"
           }
         },
         {
@@ -47150,7 +47259,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T09:35:15.547Z"
+            "updatedAt": "2026-09-08T09:42:37.074Z"
           }
         },
         {
@@ -47174,6 +47283,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:25.711Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:42:44.259Z"
           }
         },
         {
@@ -47197,6 +47314,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:28.826Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cyprus",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:43:01.563Z"
           }
         },
         {
@@ -47220,6 +47346,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:31.814Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i-vlog\nA day in my life",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:43:31.419Z"
           }
         },
         {
@@ -47243,6 +47378,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:37.875Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BARI\nSibari\n24 DEL NASTRO PER LA TERZA EDIZIONE DI VINITALY AND THE CITY\n24 TAGLIO DEL NASTRO PER LA TERZA EDIZIONE DI VINITALY AND THE CITY\n26 TAGLIO DEL NASTRO PER LA TERZA EDIZIONE DI VINITALY AND THE CITY\nSibari i",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:43:39.804Z"
           }
         },
         {
@@ -47266,6 +47410,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:42.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:44:12.560Z"
           }
         },
         {
@@ -47289,6 +47441,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:46.242Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KEGIATAN]MAKAN\nWEDDING] LUAS SEKALI\nGREEN FOREST RESORT WEDDING\ngreenforestresortbandung.com\nENFO,\nJI. Sersan Bajuri No. 102, Cihideung, Parongpong, Kab. Bandung Barat\ngreenforestbandung +62 222 787 939\ngreenforestresortbandung.com 2\nJI. Sersan Bajuri No. 102, Cihideung, Parongpong, Kab. Bandung Barat =X\ngreenforestbandung +62 222 787 959 2",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:44:27.582Z"
           }
         },
         {
@@ -47312,6 +47473,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:48.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": "safe word",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:44:35.225Z"
           }
         },
         {
@@ -47335,6 +47505,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:51.111Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:44:41.709Z"
           }
         },
         {
@@ -47358,6 +47536,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:58.107Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Videoyu kaydet birlikte gitmek istediklerine gonder\nOtelin ve.\nDbiifesi olan yari olimpik\nbir havuzu, piknik\nplajy,\nsezlong jetski,\nBlue Green Resort Otel'de\ntatilinizin konforlu olmast icin\nBirlikte buraya tatile gitmek\nistedigin arkadasina videoyu\ngonder.",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:44:51.637Z"
           }
         }
       ]
@@ -51890,6 +52077,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:00.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:44:58.893Z"
           }
         },
         {
@@ -51913,6 +52108,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:03.911Z"
+          },
+          "ocrData": {
+            "textOnScreen": "noche\ne al comentario de\nil noche",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:45:08.914Z"
           }
         },
         {
