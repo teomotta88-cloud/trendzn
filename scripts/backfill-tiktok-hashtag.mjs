@@ -215,15 +215,14 @@ function mapApifyItem(item) {
 // L'endpoint supporta un parametro `cursor` per andare oltre la prima
 // pagina (documentazione: "Cursor to get more videos - get 'cursor' from
 // previous response"). Senza passarlo — il caso di questo script fino
-// all'8/09/2026 — ogni chiamata richiede di nuovo la STESSA prima pagina:
+// all'8/09/2026 — ogni chiamata richiedeva di nuovo la STESSA prima pagina:
 // da qui i run reali con sempre ~19-20 video restituiti e quasi nessun post
 // nuovo dopo la prima chiamata, pur consumando un credito a chiamata come
-// le altre. Il nome esatto del campo nella risposta con cui proseguire non
-// è verificabile da qui (rete di sviluppo bloccata su scrapecreators.com),
-// quindi si prova la lista di candidati più plausibile e si logga l'intera
-// risposta alla prima chiamata di ogni hashtag per confermarlo su un run
-// reale.
-async function callScrapeCreators(tag, cursor, { logRawOnce = false } = {}) {
+// le altre. Campo confermato su un run reale (8/09/2026, con un log
+// diagnostico poi rimosso): la risposta porta `cursor` e `has_more` con
+// questi stessi nomi, e passarli fa davvero avanzare la paginazione (pagina
+// 1 -> cursore 20, pagina 2 -> cursore 40, video diversi a ogni chiamata).
+async function callScrapeCreators(tag, cursor) {
   const url = new URL("https://api.scrapecreators.com/v1/tiktok/search/hashtag");
   url.searchParams.set("hashtag", tag);
   // cursor != null invece di un semplice truthy check: un cursore "0" è
@@ -240,18 +239,11 @@ async function callScrapeCreators(tag, cursor, { logRawOnce = false } = {}) {
   if (data.credits_remaining != null) {
     console.log(`  (ScrapeCreators: ${data.credits_remaining} crediti residui)`);
   }
-  if (logRawOnce) {
-    console.log(`  (diagnostica cursore — chiavi risposta: ${Object.keys(data).join(", ")})`);
-  }
-
-  const nextCursor =
-    data.cursor ?? data.next_cursor ?? data.nextCursor ?? data.max_cursor ?? data.maxCursor ?? null;
-  const hasMore = data.has_more ?? data.hasMore ?? nextCursor != null;
 
   return {
     items: list.map(mapScrapeCreatorsItem),
     costUsd: 0, // 1 credito/chiamata, non per risultato
-    cursor: hasMore ? nextCursor : null,
+    cursor: data.has_more ? data.cursor : null,
   };
 }
 
@@ -323,7 +315,6 @@ async function backfillHashtag(tag, canaleName) {
   // (fallback su errore) si riparte da capo, non ha senso passare un
   // cursore di ScrapeCreators ad Apify o viceversa.
   let cursor = null;
-  let scRawLoggedFor = null;
 
   while (call < MAX_CALLS) {
     if (sourceIdx === -1 || sourceIdx >= SOURCES.length) {
@@ -336,8 +327,7 @@ async function backfillHashtag(tag, canaleName) {
 
     let result;
     try {
-      result = await source.call(tag, cursor, { logRawOnce: scRawLoggedFor !== tag });
-      if (source.name === "ScrapeCreators") scRawLoggedFor = tag;
+      result = await source.call(tag, cursor);
     } catch (err) {
       console.error(`  Errore su ${source.name}: ${err.message}`);
       const nextIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
