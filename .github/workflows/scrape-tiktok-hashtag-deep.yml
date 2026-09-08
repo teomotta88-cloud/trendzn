@@ -32,11 +32,6 @@ permissions:
   contents: write
 
 concurrency:
-  # Gruppo dedicato, distinto da quello dell'enumerazione autori
-  # (discover-tiktok-by-author.yml): le due scoperte scrivono sullo stesso
-  # bluserena-monitoring.json ma commitNewPosts fa già retry sui conflitti
-  # (409), quindi possono girare insieme invece di mettersi in coda l'una
-  # dietro l'altra.
   group: bluserena-scoperta-hashtag
   cancel-in-progress: false
 

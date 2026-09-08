@@ -16,7 +16,6 @@ import {
   knownUrls,
   normalizePostUrl,
   nuovoPost,
-  tiktokAuthors,
   tiktokHandle,
   tiktokVideoId,
 } from "./bluserena-discovery.mjs";
@@ -107,12 +106,6 @@ test("knownUrls riconosce un post già presente anche con query string diversa",
   const noti = knownUrls(store);
   assert.equal(noti.has(normalizePostUrl("https://www.tiktok.com/@altro/video/222?_t=XYZ")), true);
   assert.equal(noti.has(normalizePostUrl("https://www.tiktok.com/@altro/video/999")), false);
-});
-
-test("tiktokAuthors raccoglie gli autori e i canali in cui compaiono", () => {
-  const autori = tiktokAuthors(store);
-  assert.equal(autori.size, 2);
-  assert.deepEqual([...autori.get("maraalbergo").canali].sort(), ["GranserenaHotel", "bluserena"]);
 });
 
 // ------------------------------------------------------------------ canali
