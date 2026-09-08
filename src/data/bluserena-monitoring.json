@@ -1224,7 +1224,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:47:09.148Z"
+            "updatedAt": "2026-09-08T13:35:28.033Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -1296,7 +1296,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:05:57.158Z"
+            "updatedAt": "2026-09-08T13:35:23.480Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -11354,7 +11354,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:00:53.295Z"
+            "updatedAt": "2026-09-08T13:35:15.378Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -24761,7 +24761,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:13:01.423Z"
+            "updatedAt": "2026-09-08T13:35:05.308Z"
           }
         },
         {
@@ -37489,6 +37489,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:09:54.519Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:32:52.479Z"
           }
         },
         {
@@ -37563,6 +37571,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:11:24.189Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:33:04.124Z"
           }
         },
         {
@@ -37585,6 +37601,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:12:03.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:33:13.487Z"
           }
         },
         {
@@ -37802,6 +37826,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:12:07.254Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ONESTATE 4",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:33:21.082Z"
           }
         },
         {
@@ -37850,6 +37883,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:12:11.395Z"
+          },
+          "ocrData": {
+            "textOnScreen": "daial\nmaybe close\nfriends, like\nTull\nfriends!\n“If we had met Under different;\nmaybe lcould've",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:33:30.246Z"
           }
         },
         {
@@ -37898,6 +37940,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:12:57.661Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Your face card after\nlistening to my\nsubmiminals",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:33:38.483Z"
           }
         },
         {
@@ -37933,6 +37984,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:13:00.374Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:33:51.445Z"
           }
         },
         {
@@ -37968,6 +38027,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:13:29.892Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:34:00.315Z"
           }
         },
         {
@@ -38016,6 +38083,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:13:34.906Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tomy\nat.the hotel looking like\nwas chauffeured!\nSerena Beach Resort and Spa\nat.the hotel looking",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:34:11.521Z"
           }
         },
         {
@@ -38051,6 +38127,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:03.124Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mila, Malis,\nDevin,\ni Ales,\nJulius, Ben, Mila, Emilia,\nNels,\nMike,\nJan, Melani, Devin,\nLeonhard, Alles, Paula, lella,\nJulius, Ben, Mila,\nAme, Falbianno oder Arthur\nMia, Sophia,\nAles Paula,\nBen, Milla, Emilio,\nMie, Sophie, Metis,\nJem, Devin,\nAlex, lella,\nBen, Milo, Emilio,\nAme, Felbienne oder",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:34:22.003Z"
           }
         },
         {
@@ -38138,6 +38223,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:07.750Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serena\nNhéntin... 8) Uj\nNhén tin... 8)",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:34:29.352Z"
           }
         },
         {
@@ -38277,6 +38371,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:15.592Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:34:48.269Z"
           }
         },
         {
@@ -38356,7 +38458,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:13:01.423Z"
+            "updatedAt": "2026-09-08T13:35:05.308Z"
           }
         },
         {
@@ -38415,6 +38517,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:20.140Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:35:15.378Z"
           }
         },
         {
@@ -38473,6 +38583,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:22.875Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE RESORT",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:35:23.480Z"
           }
         },
         {
@@ -38529,6 +38648,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:25.014Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLU SERENA DA\nSEMPREW i\nTorreserena Resort\n0 Torreserena Resort\nSEMPREW",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:35:28.033Z"
           }
         },
         {
@@ -38564,6 +38692,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:15:22.936Z"
+          },
+          "ocrData": {
+            "textOnScreen": "8 anni con Bluserena. il\nSibari in particolare lo\nconosco bene. per me la\ncatena Bluserena la\nmigliore\nRE, catena Bluserena la\nmigliore 5\nRispondi al commento di user00\nJd Sibari in particolare lo\nA 111] PISCINA SERENINO bi PROGRAMMA 7,\nSERENINO 2500\n1150 1250 3-5 Anni/Years In\nLUNEDÌ/MONDAY MARTEDÌ/TUESDAY\nper BAMBINI\nPROGRAMMA 4\nSN SERENINO PIÙ #0900 2500 IN\n6-9 Anni/Years",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:36:04.208Z"
           }
         },
         {
@@ -38586,6 +38723,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:15:59.723Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SANI IRENE v\nantonio_sepe_83 0:37\nantonio_sepe_83 0:17",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:36:23.612Z"
           }
         },
         {
@@ -38738,6 +38884,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:16:02.056Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:36:39.141Z"
           }
         },
         {
@@ -38812,6 +38966,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:16:36.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:36:51.871Z"
           }
         },
         {
@@ -38860,6 +39022,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:16:41.017Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:37:05.846Z"
           }
         },
         {
@@ -38921,6 +39091,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:16:44.191Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This vineyard resort is\ngateway to Paso\nRobles wine country\nMediterranean inspired architecture\noramic and mountain®\nviews\nvineyard\nDONT-MISS\nTHIS,\nif a quiet vineyard escape sounds\nlike your,",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:37:17.064Z"
           }
         },
         {
@@ -39047,6 +39226,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:17:06.630Z"
+          },
+          "ocrData": {
+            "textOnScreen": "thYAnni\nGoogle Play Uf Google Play Google LLC\nInc. App Storeld, Apple Inc.\nFREAK",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:37:28.752Z"
           }
         },
         {
@@ -39069,6 +39257,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:17:09.295Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DR ered\nOR call",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:37:43.351Z"
           }
         },
         {
@@ -39091,6 +39288,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:17:25.082Z"
+          },
+          "ocrData": {
+            "textOnScreen": "combs VA\nannoyed baddie (Vicky Faces)\nwoman revamped v2\nwoman\nblush fashion doll\n[hair\nfluffy short curly blowout blonde\nidol long fluffy swooped hair in blonde",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:37:49.615Z"
           }
         },
         {
