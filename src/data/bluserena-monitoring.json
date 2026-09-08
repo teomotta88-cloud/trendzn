@@ -20593,7 +20593,7 @@
           "url": "https://www.tiktok.com/@vincenzo.iandolo/video/7680154572827921697",
           "date": "2026-08-31T11:22:12.000Z",
           "caption": "#sardegna #love#bluserena #estate2026",
-          "location": null,
+          "location": "Bluserena",
           "views": 444,
           "imageUrl": null,
           "likes": 21,
@@ -20617,7 +20617,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T09:34:47.745Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "sardegna",
+              "vacanze",
+              "bluserena"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:10.963Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "sardegna",
+            "vacanze",
+            "bluserena"
+          ]
         },
         {
           "platform": "tiktok",
@@ -20657,7 +20682,7 @@
           "url": "https://www.tiktok.com/@cinziastellina93/video/7665654662929927456",
           "date": "2026-07-23T09:35:09.000Z",
           "caption": "Quando sei in vacanza e ti ritrovi ad una serata tipica calabrese 🌶️💃🏼😍 #villaggio #calabria #bluserena #sibari #allinclusive",
-          "location": null,
+          "location": "Bluserena",
           "views": 6514,
           "imageUrl": null,
           "likes": 98,
@@ -20681,7 +20706,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T09:42:37.074Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "cibo",
+              "calabria"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:16.053Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "cibo",
+            "calabria"
+          ]
         },
         {
           "platform": "tiktok",
@@ -20759,12 +20809,35 @@
           "url": "https://www.tiktok.com/@bluserena/video/7660538691869363488",
           "date": "2026-07-09T14:42:39.000Z",
           "caption": "I cocktail della formula All Inclusive sono paz-ze-schi!\nParola del nostro #DreamTeam ✈️\n\n#Bluserena #LaVacanzaCheResta #GranSerenaHotel #Puglia",
-          "location": null,
+          "location": "Bluserena",
           "views": 12300,
           "likes": 188,
           "comments": 8,
           "shares": 35,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:16.550Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -20824,12 +20897,35 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7672402462711581985",
           "date": "2026-08-10T14:00:08.000Z",
           "caption": "💧 NOVITÀ BLUSERENA 2026: arrivano i dispenser!\n\nDa quest’anno al Serenè Resort Bluserena ho trovato una novità decisamente comoda: dispenser disponibili nelle zone piscina e mare con acqua, tè e bevande analcoliche. 🥤🌊\n\nMa sono gratis? Sono inclusi per tutti? E come funziona il pacchetto bevande Bluserena?\n\nNel video ti mostro dove si trovano e ti spiego come funziona. 👆\n\nSecondo voi è una novità utile? Io dico assolutamente sì! 😎\n\n📍 Serenè Resort Bluserena – Calabria\n\n#Bluserena #Bluserena2026 #SerenèResort #SereneResort #DispenserBluserena      @bluserena ",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 63600,
           "likes": 473,
           "comments": 99,
           "shares": 422,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "dispenser",
+              "bevande",
+              "comfort"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:16.962Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "dispenser",
+            "bevande",
+            "comfort"
+          ]
         },
         {
           "platform": "tiktok",
@@ -21201,12 +21297,35 @@
           "url": "https://www.tiktok.com/@bluserena/video/7662745176040803617",
           "date": "2026-07-15T13:24:55.000Z",
           "caption": "Meet the Dream Team 💙\nIl team animazione del Torreserena Resort è pronto... e tu? 😎\n\n#Bluserena #DreamTeam #TorreserenaResort #Estate2026 ",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 10100,
           "likes": 148,
           "comments": 26,
           "shares": 60,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "team",
+              "estate"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.94,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:18.076Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "team",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -21357,12 +21476,26 @@
           "url": "https://www.tiktok.com/@ciruzzo33/video/7671388388565601568",
           "date": "2026-08-07T20:25:00.000Z",
           "caption": "@bluserena ",
-          "location": null,
+          "location": "Bluserena",
           "views": 495,
           "likes": 20,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.3,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:18.886Z"
+          },
+          "sentiment": null
         },
         {
           "platform": "tiktok",
@@ -21383,12 +21516,45 @@
           "url": "https://www.tiktok.com/@denisefailla28/video/7659360341578485024",
           "date": "2026-07-06T10:30:03.000Z",
           "caption": "@bluserena Le fotografie fermano un istante, ma non riusciranno mai a raccontare tutto quello che abbiamo vissuto davvero. \nQuesta è solo una piccolissima parte di una vacanza che ci ha regalato molto più di un mare meraviglioso: ci ha regalato sorrisi sinceri, leggerezza, emozioni, risate, divertimento e il privilegio di vivere ogni momento insieme.\nOgni dettaglio è stato curato con una passione che si percepisce in ogni angolo. Un'animazione eccezionale, coinvolgente e piena di energia capace di coinvolgere grandi e piccoli e di farci sentire parte di qualcosa di speciale. Cibo ottimo, ristoranti e bar fornitissimi e accoglienti, uno staff sempre presente e un'organizzazione che non ci ha fatto trovare nemmeno una nota stonata bensì impeccabili sotto ogni punto di vista. \nCi sono posti che visiti... e poi ci sono posti che ti restano nel cuore.\nPer noi il Blu Serena – Serenusa Resort Village è stato proprio questo: un luogo magico, dove abbiamo collezionato ricordi che porteremo con noi per sempre.❤️\nGrazie per aver reso ogni giornata speciale e ogni tramonto ancora più bello. 🌅 \nNon diciamo \"arrivederci\" con tristezza, ma con la certezza che le emozioni più belle trovano sempre la strada per riportarti dove sei stato felice.\nA presto, Serenusa Resort Noi torneremo. 🤍🌊❤️@Mirkolapira🏎🏁 ",
-          "location": null,
+          "location": "Serenusa Resort",
           "views": 507,
           "likes": 25,
           "comments": 13,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "cibo",
+              "staff",
+              "organizzazione",
+              "mare",
+              "emozioni",
+              "tramonto",
+              "divertimento"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:19.555Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "cibo",
+            "staff",
+            "organizzazione",
+            "mare",
+            "emozioni",
+            "tramonto",
+            "divertimento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -21409,12 +21575,33 @@
           "url": "https://www.tiktok.com/@www.naty85.com/video/7673521055033609504",
           "date": "2026-08-13T14:20:51.000Z",
           "caption": "#❤️❤️❤️ #my boys#vacanze2k26 #\nbluserena#",
-          "location": null,
+          "location": "Bluserena",
           "views": 520,
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:20.264Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -21929,12 +22116,37 @@
           "url": "https://www.tiktok.com/@kisskisslu/video/7680084522624355616",
           "date": "2026-08-31T06:50:32.000Z",
           "caption": "Resort Bluserena 😜😜#familylife #vacanzealmare #caldo #spensieratezza🦋 @EnzoScrocchia @bluserena ",
-          "location": null,
+          "location": "Bluserena",
           "views": 491,
           "likes": 10,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "mare",
+              "caldo",
+              "spensieratezza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:21.558Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "mare",
+            "caldo",
+            "spensieratezza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -21981,12 +22193,37 @@
           "url": "https://www.tiktok.com/@elenamatranga7/video/7679888244464504086",
           "date": "2026-08-30T18:08:50.000Z",
           "caption": "vacanze 2026 \n#bluserena #valentinoresort #estateitaliana #lovefamilly #vacanzaitaliana ",
-          "location": null,
+          "location": "Bluserena",
           "views": 406,
           "likes": 0,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanze",
+              "famiglia",
+              "estate",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:22.553Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanze",
+            "famiglia",
+            "estate",
+            "resort"
+          ]
         },
         {
           "platform": "tiktok",
@@ -22020,12 +22257,35 @@
           "url": "https://www.tiktok.com/@_dieghito97_/video/7661274794402352416",
           "date": "2026-07-11T14:19:07.000Z",
           "caption": "Sigla Serenhappy Ethra Reserve 2026\n@bluserena #ethrareserve #bluserena #serenhappy #siglabluserena #assolutamentepertee ",
-          "location": null,
+          "location": "Bluserena",
           "views": 9414,
           "likes": 191,
           "comments": 14,
           "shares": 29,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:23.080Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -22033,12 +22293,33 @@
           "url": "https://www.tiktok.com/@m.a.g.j3/video/7663850096139783457",
           "date": "2026-07-18T12:52:35.000Z",
           "caption": "relax al serene resort 🌞🐟🫧🌡️#neiperte #calabria #bluserena #vacanze ",
-          "location": null,
+          "location": "Bluserena",
           "views": 3581,
           "likes": 31,
           "comments": 2,
           "shares": 3,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "vacanze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:25.056Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "vacanze"
+          ]
         },
         {
           "platform": "tiktok",
@@ -22072,12 +22353,35 @@
           "url": "https://www.tiktok.com/@bluserena/video/7662369296751807777",
           "date": "2026-07-14T13:06:18.000Z",
           "caption": "POV: Ti svegli in una terrazza naturale affacciata sul Mediterraneo 🌞\nSei al Serenusa Resort in Sicilia.\n\n#Bluserena #LaVacanzaCheResta #SerenusaResort #Sicilia #Estate2026",
-          "location": null,
+          "location": "Serenusa Resort",
           "views": 33100,
           "likes": 313,
           "comments": 8,
           "shares": 59,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "terrazza naturale",
+              "vista sul Mediterraneo",
+              "vacanza estiva"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:26.572Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "terrazza naturale",
+            "vista sul Mediterraneo",
+            "vacanza estiva"
+          ]
         },
         {
           "platform": "tiktok",
@@ -22098,12 +22402,26 @@
           "url": "https://www.tiktok.com/@tony_vacant3/video/7659479417474796832",
           "date": "2026-07-06T18:12:07.000Z",
           "caption": "@bluserena grazie ❤️",
-          "location": null,
+          "location": "Bluserena",
           "views": 2062,
           "likes": 80,
           "comments": 2,
           "shares": 7,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 1,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:28.779Z"
+          },
+          "sentiment": "positive"
         },
         {
           "platform": "tiktok",
@@ -22111,12 +22429,33 @@
           "url": "https://www.tiktok.com/@tony_vacant3/video/7674663230324608289",
           "date": "2026-08-16T16:13:03.000Z",
           "caption": "grazie ragazzi ❤️Serenhappy \n@bluserena ",
-          "location": null,
+          "location": "Bluserena",
           "views": 2079,
           "likes": 46,
           "comments": 0,
           "shares": 13,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "servizio",
+              "staff"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:29.854Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "servizio",
+            "staff"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23047,12 +23386,33 @@
           "url": "https://www.tiktok.com/@ilaria_desimone/video/7674024997010132257",
           "date": "2026-08-14T22:56:24.000Z",
           "caption": "#vacanza #montesilvano #bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 847,
           "likes": 17,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "Montesilvano"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:31.193Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "Montesilvano"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23125,12 +23485,33 @@
           "url": "https://www.tiktok.com/@francescoeileniam/video/7664557797228547360",
           "date": "2026-07-20T10:38:50.000Z",
           "caption": "Fine settimana 💞#villaggio #bluserena#torrecanne ",
-          "location": null,
+          "location": "Bluserena",
           "views": 1851,
           "likes": 27,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "villaggio"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:33.923Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "villaggio"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23346,12 +23727,37 @@
           "url": "https://www.tiktok.com/@memy_dv88/video/7679063221055016225",
           "date": "2026-08-28T12:47:16.000Z",
           "caption": "Colleziona momenti, non cose!!! #bluserenaGreenResortSibari #ferragosto2026❤️ #love&family #estatestafinendo🌊☀️ ",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 731,
           "likes": 14,
           "comments": 1,
           "shares": 3,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "mare",
+              "estate",
+              "ferragosto"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:34.247Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "mare",
+            "estate",
+            "ferragosto"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23359,12 +23765,35 @@
           "url": "https://www.tiktok.com/@stephaniegrazios4/video/7669426865207069984",
           "date": "2026-08-02T13:33:19.000Z",
           "caption": "#calabria #bluserenasibarigreenresort #neiperteeee @bluserena @William D'arcangelo ",
-          "location": null,
+          "location": "Bluserena",
           "views": 828,
           "likes": 15,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:36.021Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23385,12 +23814,35 @@
           "url": "https://www.tiktok.com/@immanatale92/video/7660547694838009120",
           "date": "2026-07-09T15:17:34.000Z",
           "caption": "Tutto questo e tanto altro solo da \n@bluserena \n#bluserena \n#ethrareserve \n#valentinoresort \n#perteeee \n#deliciousfood ",
-          "location": null,
+          "location": "Bluserena",
           "views": 2099,
           "likes": 6,
           "comments": 3,
           "shares": 6,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:36.504Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23398,12 +23850,33 @@
           "url": "https://www.tiktok.com/@girolamo83/video/7672406245206281504",
           "date": "2026-08-10T14:14:50.000Z",
           "caption": "@bluserena @Domenico Miele @angelaragosta1 @antonellaferrara492 #divertimento #bluserena #serenevillage #mare ",
-          "location": null,
+          "location": "Bluserena",
           "views": 1440,
           "likes": 22,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "divertimento",
+              "mare"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:38.687Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "divertimento",
+            "mare"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23411,12 +23884,35 @@
           "url": "https://www.tiktok.com/@stephaniegrazios4/video/7667120423879970080",
           "date": "2026-07-27T08:23:12.000Z",
           "caption": "#calabria #bluserenasibarigreenresort #bluserena #neiperteeee @William D'arcangelo ",
-          "location": null,
+          "location": "Bluserena",
           "views": 1381,
           "likes": 17,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:41.670Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23424,12 +23920,35 @@
           "url": "https://www.tiktok.com/@bluserena/video/7670896489639480598",
           "date": "2026-08-06T12:36:12.000Z",
           "caption": "Sei pronto per un Ferragosto scoppiettante? 🎇\nStay tuned.\n\n#Bluserena #LaVacanzaCheResta #DreamTeam #Ferragosto2026",
-          "location": null,
+          "location": "Bluserena",
           "views": 25800,
           "likes": 427,
           "comments": 11,
           "shares": 49,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "Ferragosto",
+              "evento",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:43.961Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "Ferragosto",
+            "evento",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23437,12 +23956,35 @@
           "url": "https://www.tiktok.com/@bluserena/video/7660933224230554902",
           "date": "2026-07-10T16:13:37.000Z",
           "caption": "Meet the DreamTeam 💙\nEcco i volti di chi animerà la tua estate al Serenè Resort!\nTutti gli altri? Scoprili con noi nei prossimi giorni 😉",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 16000,
           "likes": 300,
           "comments": 30,
           "shares": 74,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "staff",
+              "estate"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:45.764Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "staff",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -23788,12 +24330,33 @@
           "url": "https://www.tiktok.com/@williamdarcangelo/video/7667241588975783200",
           "date": "2026-07-27T16:13:17.000Z",
           "caption": "#bluserena #sibarigreenresort#vacanza #holidays ",
-          "location": null,
+          "location": "Bluserena",
           "views": 4041,
           "likes": 29,
           "comments": 12,
           "shares": 3,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "holidays"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:46.828Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "holidays"
+          ]
         },
         {
           "platform": "tiktok",
@@ -31717,12 +32280,35 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7672402462711581985",
           "date": "2026-08-10T14:00:08.000Z",
           "caption": "💧 NOVITÀ BLUSERENA 2026: arrivano i dispenser!\n\nDa quest’anno al Serenè Resort Bluserena ho trovato una novità decisamente comoda: dispenser disponibili nelle zone piscina e mare con acqua, tè e bevande analcoliche. 🥤🌊\n\nMa sono gratis? Sono inclusi per tutti? E come funziona il pacchetto bevande Bluserena?\n\nNel video ti mostro dove si trovano e ti spiego come funziona. 👆\n\nSecondo voi è una novità utile? Io dico assolutamente sì! 😎\n\n📍 Serenè Resort Bluserena – Calabria\n\n#Bluserena #Bluserena2026 #SerenèResort #SereneResort #DispenserBluserena      @bluserena ",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 63600,
           "likes": 473,
           "comments": 99,
           "shares": 422,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "dispenser",
+              "bevande",
+              "comfort"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:16.962Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "dispenser",
+            "bevande",
+            "comfort"
+          ]
         },
         {
           "platform": "tiktok",
@@ -31795,12 +32381,35 @@
           "url": "https://www.tiktok.com/@bluserena/video/7660933224230554902",
           "date": "2026-07-10T16:13:37.000Z",
           "caption": "Meet the DreamTeam 💙\nEcco i volti di chi animerà la tua estate al Serenè Resort!\nTutti gli altri? Scoprili con noi nei prossimi giorni 😉",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 16000,
           "likes": 300,
           "comments": 30,
           "shares": 74,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "staff",
+              "estate"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:45.764Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "staff",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -34317,12 +34926,35 @@
           "url": "https://www.tiktok.com/@stephaniegrazios4/video/7667120423879970080",
           "date": "2026-07-27T08:23:12.000Z",
           "caption": "#calabria #bluserenasibarigreenresort #bluserena #neiperteeee @William D'arcangelo ",
-          "location": null,
+          "location": "Bluserena",
           "views": 1381,
           "likes": 17,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:41.670Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -36748,12 +37380,37 @@
           "url": "https://www.tiktok.com/@kisskisslu/video/7680084522624355616",
           "date": "2026-08-31T06:50:32.000Z",
           "caption": "Resort Bluserena 😜😜#familylife #vacanzealmare #caldo #spensieratezza🦋 @EnzoScrocchia @bluserena ",
-          "location": null,
+          "location": "Bluserena",
           "views": 491,
           "likes": 10,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "mare",
+              "caldo",
+              "spensieratezza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:21.558Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "mare",
+            "caldo",
+            "spensieratezza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -39845,8 +40502,9 @@
           "shares": 59,
           "sentiment": "positive",
           "topics": [
-            "mare",
-            "vacanza"
+            "terrazza naturale",
+            "vista sul Mediterraneo",
+            "vacanza estiva"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okAVaNfSMQCHesRDAMXAYqGfeK85pANIQSAPRW~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=AyceWA3uefNdedictd8bdN417tQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -39872,18 +40530,18 @@
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "mare",
-              "vacanza"
+              "terrazza naturale",
+              "vista sul Mediterraneo",
+              "vacanza estiva"
             ],
             "location": "Serenusa Resort",
-            "confidence": 0.8,
+            "confidence": 0.95,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:06:46.976Z"
+            "updatedAt": "2026-09-08T09:59:26.572Z"
           },
           "engagementData": {
             "status": "ok",
@@ -50595,9 +51253,8 @@
           "shares": 3,
           "sentiment": "positive",
           "topics": [
-            "animazione",
-            "intrattenimento serale",
-            "energia"
+            "vacanza",
+            "holidays"
           ],
           "imageUrl": null,
           "verificationStatus": "confirmed",
@@ -50623,20 +51280,17 @@
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "animazione",
-              "intrattenimento serale",
-              "energia"
+              "vacanza",
+              "holidays"
             ],
             "location": "Bluserena",
-            "confidence": 0.7,
+            "confidence": 0.92,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:07:32.304Z"
+            "updatedAt": "2026-09-08T09:59:46.828Z"
           },
           "engagementData": {
             "status": "ok",
@@ -51608,27 +52262,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "animazione",
-            "vacanze",
-            "spiaggia"
+            "famiglia",
+            "mare",
+            "estate",
+            "ferragosto"
           ],
           "sentimentData": {
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "animazione",
-              "vacanze",
-              "spiaggia"
+              "famiglia",
+              "mare",
+              "estate",
+              "ferragosto"
             ],
-            "location": "Bluserena",
-            "confidence": 0.8,
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:07:46.159Z"
+            "updatedAt": "2026-09-08T09:59:34.247Z"
           },
           "engagementData": {
             "status": "ok",
@@ -54554,7 +55209,7 @@
           "url": "https://www.tiktok.com/@cinziastellina93/video/7665654662929927456",
           "date": "2026-07-23T09:35:09.000Z",
           "caption": "Quando sei in vacanza e ti ritrovi ad una serata tipica calabrese 🌶️💃🏼😍 #villaggio #calabria #bluserena #sibari #allinclusive",
-          "location": null,
+          "location": "Bluserena",
           "views": 6514,
           "imageUrl": null,
           "likes": 98,
@@ -54578,7 +55233,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T09:42:37.074Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "cibo",
+              "calabria"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T09:59:16.053Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "cibo",
+            "calabria"
+          ]
         },
         {
           "platform": "tiktok",
@@ -55110,12 +55790,9 @@
           "shares": 416,
           "sentiment": "positive",
           "topics": [
-            "bevande",
             "dispenser",
-            "servizi",
-            "pacchetto bevande",
-            "piscina",
-            "mare"
+            "bevande",
+            "comfort"
           ],
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ocAAIEB2PJOfymLh5mo3zvjiE94iIC1gBIoAWK~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=hCkzXPfpl%2FQIUG1epWtXLMb0Jw4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -55141,22 +55818,18 @@
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "bevande",
               "dispenser",
-              "servizi",
-              "pacchetto bevande",
-              "piscina",
-              "mare"
+              "bevande",
+              "comfort"
             ],
             "location": "Serenè Resort",
-            "confidence": 0.95,
+            "confidence": 0.8,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:08:02.374Z"
+            "updatedAt": "2026-09-08T09:59:16.962Z"
           },
           "engagementData": {
             "status": "ok",
@@ -60044,11 +60717,10 @@
             "confidence": 0.8,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:08:24.315Z"
+            "updatedAt": "2026-09-08T09:59:16.550Z"
           },
           "engagementData": {
             "status": "ok",
@@ -65494,7 +66166,8 @@
           "sentiment": "positive",
           "topics": [
             "animazione",
-            "team"
+            "team",
+            "estate"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oc8YRqA5WBXiE74BDAIA87ffhJPQpiEBABmCkO~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=PNEi1amgYYcIb4Ozhdzfz2LL8hE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -65522,18 +66195,17 @@
             "sentiment": "positive",
             "topics": [
               "animazione",
-              "team"
+              "team",
+              "estate"
             ],
             "location": "Torreserena Resort",
-            "confidence": 0.85,
+            "confidence": 0.94,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:08:26.288Z"
+            "updatedAt": "2026-09-08T09:59:18.076Z"
           },
           "engagementData": {
             "status": "ok",
@@ -75103,6 +75775,8 @@
           "shares": 6,
           "sentiment": "positive",
           "topics": [
+            "animazione",
+            "spiaggia",
             "cibo"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/ow5NIRA1BoQIKNI84iE5fFRAPVIBJi529zkuBC~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=gHjL9629IxAH3zfINTwtxokvrgk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
@@ -75128,17 +75802,18 @@
             "status": "ok",
             "sentiment": "positive",
             "topics": [
+              "animazione",
+              "spiaggia",
               "cibo"
             ],
-            "location": "Valentino Resort",
-            "confidence": 0.7,
+            "location": "Bluserena",
+            "confidence": 0.8,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:08:55.266Z"
+            "updatedAt": "2026-09-08T09:59:36.504Z"
           },
           "engagementData": {
             "status": "ok",
@@ -77016,27 +77691,28 @@
           },
           "sentiment": "positive",
           "topics": [
-            "animazione",
-            "spiaggia",
-            "cibo"
+            "vacanze",
+            "famiglia",
+            "estate",
+            "resort"
           ],
           "sentimentData": {
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "animazione",
-              "spiaggia",
-              "cibo"
+              "vacanze",
+              "famiglia",
+              "estate",
+              "resort"
             ],
             "location": "Bluserena",
-            "confidence": 0.8,
+            "confidence": 0.95,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:09:34.960Z"
+            "updatedAt": "2026-09-08T09:59:22.553Z"
           },
           "engagementData": {
             "status": "ok",
@@ -81378,9 +82054,9 @@
           "shares": 26,
           "sentiment": "positive",
           "topics": [
-            "vacanza",
+            "animazione",
             "spiaggia",
-            "relax"
+            "cibo"
           ],
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/okrUf8CUfAUXLjhMggLQpoMGteAN2bKIGIDSkg~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=fr403rQrZv3oc5gUKJxmApQnQNQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
@@ -81406,19 +82082,18 @@
             "status": "ok",
             "sentiment": "positive",
             "topics": [
-              "vacanza",
+              "animazione",
               "spiaggia",
-              "relax"
+              "cibo"
             ],
             "location": "Bluserena",
             "confidence": 0.8,
             "minConfidence": 0.6,
             "sources": [
-              "caption",
-              "audio"
+              "caption"
             ],
             "version": 1,
-            "updatedAt": "2026-09-07T09:09:53.666Z"
+            "updatedAt": "2026-09-08T09:59:23.080Z"
           },
           "engagementData": {
             "status": "ok",
