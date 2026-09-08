@@ -653,7 +653,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:04.925Z"
+            "updatedAt": "2026-09-08T12:04:20.787Z"
           },
           "ocrData": {
             "textOnScreen": "ERENING\nDANEE)",
@@ -7797,7 +7797,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:08:53.052Z"
+            "updatedAt": "2026-09-08T12:05:59.322Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -18310,7 +18310,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:56:15.804Z"
+            "updatedAt": "2026-09-08T12:04:31.632Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -18378,7 +18378,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:55:15.297Z"
+            "updatedAt": "2026-09-08T12:05:51.230Z"
           },
           "ocrData": {
             "textOnScreen": "LUSEREN\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
@@ -34586,7 +34586,16 @@
           "likes": 706,
           "comments": 51,
           "shares": 46,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nostro viaggio a Serena Resort. L'ultimo settembre, ho portato la mia famiglia a un viaggio a Serena Resort Kimboi Hòa Bình. Da là, è stato un viaggio molto comodo, circa un'ora. Sui luoghi, ho vissuto delle fiamme, delle montagne, le piazze di due luoghi molto belle e molto felici. Serena Resort è un viaggio molto grande, con molte città diverse come il hotel, il bungalow e le villa. Ho avuto un'impressione che non solo c'è un luogo per viaggiare, ma anche un'altra parte di un'area per la famiglia. qui c'è la stanza tennis, la stanza piccabò, la stanza per i bambini, la stanza per gli uomini, la stanza per le auto, la stanza per il pescadoro e molti attività per le famiglie o per la comunità questa volta la famiglia di Vân ha 7 bambini e 4 bambini, perché è molto spesso, Vân ha 3 villa di giardino per chi ha un luogo di solito ma è vicino a loro questa è la villa di giardino dove Vân vive, ogni villa è di circa 70 metri quadrati, ha una sala di cliente, una sala di dormito, una sala di solito quindi il luogo è abbastanza comodo specialmente per le famiglie con bambini piccoli, c'è un'altra zona per i bambini per giocare, all'interno del luogo c'è un'attività abbastanza abbastanza buona con il wifi, la chiesa, la mini bar, la cassa, l'altezza, il latte, il caffè e il caffè la chiesa è abbastanza ampia, la stanza è abbastanza ampia, c'è anche la porta che si vede dal luogo del luogo la chiesa ha anche abbastanza di cose di base come la chiesa, la chiesa, la chiesa, la chiesa e le cose di uso personali, in generale per una famiglia che va a restare in casa questa chiesa è abbastanza abbastanza abbastanza e rilassante, perché questa volta con la famiglia, quindi non ho preso troppo di servizi. L'autore ha consigliato di mettere in prima se vuole trattare il spa o il massaggio perch in tempi freddi i clienti possono restare in attesa Ma questo viaggio ha il obiettivo di portare i bambini e i figli a un viaggio di rinascita per che ripartire per che i bambini si rilassino I bambini hanno tempo per giocare con i bambini quindi non vanno in spa invece vanno a impostare un servizio di asciugamento per la famiglia Tutti insieme, si rilassano, parlano con gli altri, si sentono molto a disposizione. Una parte che penso che tutti si interesseranno quando si ripartiranno è la città, questo viaggio la famiglia vanno a mangiare nel resort l'estate, l'estate e la mattina. non è così facile portare un buon albero alla cena. I alimenti sono piuttosto delicati e simili e adattati al gusto di casa. Ci sono alimenti abituali come il ghiaccio, la torta, il queso, il sale. Sono una serie di jianxing, che è un albero che mi piace, ma non mi piace che i alimenti siano troppo tratti o troppo condizionati. Le tue abitudini sono molto simili, la carne è molto piccola e i tuoi alimenti sono molto simili. A mezz'ora c'è una bufetta, con una serie di abituali, da caldo, al dolce, al dolce, con dei coniughi con il giardino e con il giardino con il giardino e ci vediamo a casa, a mangiare, a guardare i bambini e a vivere un po' di tempo insieme. E questo è anche il motivo più importante per la viaggio di Serena Resort.",
+            "language": "Italian",
+            "durationSec": 175.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:03.891Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34859,7 +34868,16 @@
           "likes": 521,
           "comments": 7,
           "shares": 395,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao!",
+            "language": "Italian",
+            "durationSec": 47.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:06.661Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34911,7 +34929,16 @@
           "likes": 40,
           "comments": 1,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Poche occhiali al sole Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:10.462Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34924,7 +34951,16 @@
           "likes": 4885,
           "comments": 137,
           "shares": 3993,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "se stai a planificare di stare al resort serenato all inclusive locato in putacana guarda questo video prima dalla lavastoviglie ai quartieri il resort è esteticamente soddisfacente guarda il materiale la mia stanza era una suite junior di poolview mentre è un resort bellissimo è un po' diverso da quello a cui sono acostumata tutto qui è gestito attraverso un app servizi di pulizia tavoli stocchi di friggere riservazioni di cena quindi il mio consiglio è di richiedere come tavoli e stocchi di friggere dalla notte prima perché può prendere un po' di tempo per per rispondere sull'app. C'è una varietà di cibo, ma se vuoi qualcosa di altro che il buffet, fai le riservazioni in mattina perché le riservazioni si fanno velocemente. Il mio ristorante preferito era Koi, che era un ristorante asiano. Non so se sono un lightweight, ma le bevande qui sono piuttosto forti per me. Il mio bar preferito era il bar lobby. Il bar tenere lì era così bello. Ci sono tre ponte qui, una che si fa super vivace durante il giorno, quindi guardate quella. E c'è accesso diretto a piazza per chi vuole andare a piazza. l'attrezzatura qui era ok, siamo andati a un giorno di karaoke e poi c'era una festa neon è un nuovo resort, credo si sia aperto qualche anno fa, quindi gli darò un po' di grazia vi visiterei ancora in futuro, ciao",
+            "language": "Italian",
+            "durationSec": 69.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:14.800Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -34937,7 +34973,16 @@
           "likes": 13,
           "comments": 0,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:17.252Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35049,7 +35094,16 @@
           "topics": [
             "animazione",
             "mare"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Sirelella, ancora più su, porti le tue mani, fai un po' di più, Sirelella, qui lo sai, la regina della pista, tu sarai. Ogni sera una pittura sotto l'ucinico, tutti in cerchio, una conquesta che nei cuori conosce la stessa, guarda mamma come balla, anche papà che si scatena. Serenella, cucinella, con la musica è più bella. Balla Serenella, tutti insieme qua. Grande Serenella, il ritmo ci darà. Muovi quelle gambe, dai energia. Serenella è magia. Salta Serenella, ancora più su. Matti le tue mani, falla anche tu. Se era lei qui lo sai, la regina della pista, tu sarai, tu sarai.",
+            "language": "Italian",
+            "durationSec": 70.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:20.787Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35075,7 +35129,16 @@
           "likes": 734,
           "comments": 46,
           "shares": 99,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:23.489Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35137,7 +35200,16 @@
             "animazione",
             "estate",
             "vacanza"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 81.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:28.445Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35184,7 +35256,16 @@
           "topics": [
             "spiaggia",
             "vacanza"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi, vi porto nella mia giornata al Serenè. Non ho ripreso chissà quanto, già ve lo dico, però guardate l'entrata, questi sono gli alloggi, tutti immersi nel verde. Qua invece abbiamo il ristorante dove si prende e si cena e ci dirigiamo verso la piscina, splendida e enorme ma perfetta per i bambini. Relax assicurato per le famiglie, ecco il Serenino dove potete lasciare i vostri bimbi. Un altro po' di piscina giustamente perché non ne bastava. Comunque questo è il pranzo, non sono riuscita a riprendere tutto Era tutto squisito ma avevo troppa fame Eccomi, ciao, sono io, ovviamente Comunque qua invece il serenino ha fatto una parata Che è stata veramente stupenda seguita dalla canzone del Blue Serena E questo invece ho trovato alla fine della mia permanenza Ciao ragazzi",
+            "language": "Italian",
+            "durationSec": 45,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:31.632Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35223,7 +35304,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Let's start living dangerously Ciao",
+            "language": "Italian",
+            "durationSec": 45.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:34.925Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35249,7 +35339,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:37.361Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35275,7 +35374,16 @@
           "likes": 61,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:04:43.320Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35301,7 +35409,16 @@
           "likes": 373,
           "comments": 1,
           "shares": 48,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti. Grazie a tutti. Wow! Grazie non so come si chiama Grazie a tutti. Grazie a tutti. Grazie a tutti. Grazie. Ciao. Grazie Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti. Buon Natale! Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti. Buon Natale. Grazie a tutti. Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 701.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:11.040Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35392,7 +35509,16 @@
           "likes": 48,
           "comments": 25,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:29.684Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35405,7 +35531,17 @@
           "likes": 51,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:47.721Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35469,7 +35605,16 @@
             "musica",
             "energia",
             "vacanza"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:51.230Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35508,7 +35653,16 @@
           "likes": 35,
           "comments": 0,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Immagina di svegliarsi a questa vista ogni mattina. Locato in un paese tranquillo, Casa Serena ha visite oceane, spazi di luxurio, un pool privato e tranquillità non comprensibile. Perfetto per i lavoratori o le famiglie che cercano comfort e rilassamento. Vuoi dettagli o disponibilità? Scriviti a DM, ora! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:54.014Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35544,7 +35698,16 @@
             "animazione",
             "resort",
             "villaggio"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:59.322Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35557,7 +35720,16 @@
           "likes": 18,
           "comments": 12,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 50.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:06:24.596Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35570,7 +35742,16 @@
           "likes": 219,
           "comments": 7,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non so se lo capirete come me, ma tutto questo quadro, questa bellezza, questa dolcezza, è esattamente quello che sento nella mia vita da quando l'ho incontrato. È calmo, dolce, magico e soprattutto divino. E credo che sia quello che vorrei a tutti. Bisous!",
+            "language": "Italian",
+            "durationSec": 21.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:07:45.221Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35861,7 +36042,16 @@
             "design",
             "natura",
             "relax"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Sembra quasi una meta estera, ma siamo in Italia. L'architettura naturalistica di questo luogo si integra perfettamente con il paesaggio. Etra Reserve è un concept di blu serena, dove tutto respira con il paesaggio. Materiali organici, volume armoniosi e colori naturali. Gli ecologi sui, tra pinite e mare, sono rifugi pensati per vivere la bellezza, senza confini tra interno ed esterno. Siamo in Puglia, un oasi verde nella riserva naturale di Stornara. Tra distese di pini d'Aleppo e dune sabbiose, la riserve è uno dei polmoni verdi della Puglia, 1.500 ettari di pinita costiera, casa di fauna protetta e abitati intatto affacciato sullo Ionio. Quattro resort, ognuno con la sua anima ma tutti connessi tra loro e con la natura circostante tagga le persone che potrebbero amarlo",
+            "language": "Italian",
+            "durationSec": 70.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:07:50.265Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35913,7 +36103,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 41.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:07:53.416Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35926,7 +36125,16 @@
           "likes": 147,
           "comments": 14,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie.",
+            "language": "Italian",
+            "durationSec": 30.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:07:58.628Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35939,7 +36147,16 @@
           "likes": 103,
           "comments": 33,
           "shares": 42,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:08:01.418Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -35965,7 +36182,16 @@
           "likes": 101,
           "comments": 15,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 21.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:08:24.545Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -42433,7 +42659,16 @@
             "musica",
             "energia",
             "vacanza"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:05:51.230Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70363,7 +70598,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T08:13:16.988Z"
+            "updatedAt": "2026-09-08T12:04:23.489Z"
           },
           "sentiment": "positive",
           "topics": [
