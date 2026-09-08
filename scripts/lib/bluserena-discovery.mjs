@@ -1,15 +1,19 @@
-// Parte comune alle due strade di scoperta dei post Bluserena mancanti:
-// l'enumerazione dei profili autore (discover-tiktok-by-author.mjs) e lo
-// scraping profondo delle pagine hashtag (scrape-tiktok-hashtag-deep.mjs).
+// Logica di supporto per la scoperta dei post Bluserena mancanti dalle
+// pagine hashtag TikTok (scrape-tiktok-hashtag-deep.mjs).
 //
-// Perché esistono entrambe. Le liste hashtag di TikTok sono parziali e non
+// Perché serve. Le liste hashtag di TikTok sono parziali e non
 // deterministiche: misurando i post che portano PIÙ hashtag monitorati — e
 // che quindi dovrebbero comparire in più canali — risulta che una singola
 // lista ne perde il 19,5%. Il caso che ha aperto l'indagine
 // (@maraalbergo/video/7675653655655140640, #bluserena in caption) è sfuggito
 // per 13 giorni a un campionamento ogni 3 ore. Campionare più spesso non
-// chiude il buco; enumerare i profili sì, perché un profilo elenca TUTTI i
-// video del suo autore invece di un campione.
+// chiude il buco: da qui le passate multiple sulle pagine hashtag.
+//
+// C'era anche una seconda strada, l'enumerazione dei profili autore
+// (tiktokAuthors, usata da discover-tiktok-by-author.mjs): rimossa l'8/09/2026
+// perché l'endpoint che TikTok usa per caricare la griglia video di un
+// profilo risponde vuoto all'automazione, sessione autenticata o meno — non
+// risolvibile da qui (vedi il commento in lib/tiktok-page.mjs).
 //
 // Qui sta solo la logica pura: nessuna rete, nessuna scrittura. È la parte
 // verificabile dall'ambiente di sviluppo, dove tiktok.com non è raggiungibile.
@@ -80,23 +84,6 @@ export function knownUrls(store) {
     }
   }
   return set;
-}
-
-// Autori TikTok distinti già noti, con i canali in cui compaiono. L'insieme
-// delle chiavi è il perimetro dell'enumerazione; i canali servono a decidere
-// dove mettere un post nuovo quando la sua caption non nomina nessun hashtag.
-export function tiktokAuthors(store) {
-  const map = new Map();
-  for (const canale of store.canali || []) {
-    for (const account of canale.accounts || []) {
-      const h = tiktokHandle(account.url);
-      if (!h) continue;
-      const key = h.toLowerCase();
-      if (!map.has(key)) map.set(key, { handle: h, canali: new Set() });
-      map.get(key).canali.add(canale.name);
-    }
-  }
-  return map;
 }
 
 // In quale canale (cioè sotto quale hashtag) va archiviato un post nuovo.

@@ -1,11 +1,18 @@
-// Lettura di una pagina TikTok con Playwright: il singolo video e il profilo
-// di un autore. È l'unico punto dove si parla con TikTok, così lo User-Agent,
-// la sessione autenticata, il riconoscimento del login-wall e i timeout
-// stanno scritti una volta sola.
+// Lettura di una pagina TikTok con Playwright: il singolo video. È l'unico
+// punto dove si parla con TikTok, così lo User-Agent, la sessione
+// autenticata, il riconoscimento del login-wall e i timeout stanno scritti
+// una volta sola.
 //
-// Usato da scrape-tiktok-engagement.mjs (KPI e caption), da
-// discover-tiktok-by-author.mjs (enumerazione dei profili) e da
+// Usato da scrape-tiktok-engagement.mjs (KPI e caption) e da
 // scrape-tiktok-hashtag-deep.mjs (post nuovi trovati sulle pagine hashtag).
+//
+// C'era anche fetchAuthorVideos, per l'enumerazione dei profili autore:
+// rimossa l'8/09/2026 perché l'endpoint che carica la griglia video di un
+// profilo (/api/post/item_list/) risponde HTTP 200 con corpo vuoto per
+// l'automazione — sessione autenticata o meno, la sonda originale l'aveva
+// già trovato senza sessione, la sessione vera l'ha solo confermato. Non
+// un problema risolvibile da qui: quella griglia non sta nell'HTML e non
+// c'è altra via per leggerla.
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
@@ -27,10 +34,12 @@ function sembraLoginWall(titolo, url) {
 // --------------------------------------------------------- sessione TikTok
 //
 // Da anonimo la pagina hashtag si ferma a ~58-60 video (il tetto verificato
-// due volte, con tecniche diverse: scroll del DOM e paginazione via API) e i
-// profili non consegnano affatto la griglia. Da loggati un conteggio manuale
-// ne ha trovati 414 sullo stesso hashtag — non è un limite del contenuto, è
-// un limite imposto alle sessioni anonime.
+// due volte, con tecniche diverse: scroll del DOM e paginazione via API). Da
+// loggati un conteggio manuale ne ha trovati 414 sullo stesso hashtag — non è
+// un limite del contenuto, è un limite imposto alle sessioni anonime. Sulle
+// pagine hashtag, però, la sessione autenticata ha incontrato un captcha
+// anti-automazione (8/09/2026): resta usata solo da scrape-tiktok-
+// engagement.mjs, per le pagine dei singoli video.
 //
 // Il login vero va fatto una volta sola FUORI da CI (scripts/
 // tiktok-bootstrap-session.mjs, stesso schema di tiktok-cc-bootstrap-
@@ -125,14 +134,12 @@ export async function fetchVideoDetail(context, url) {
   }
 }
 
-// Scorre una pagina che carica contenuti a scroll infinito (profilo o
-// hashtag) e ritorna gli URL dei video trovati.
+// Scorre una pagina hashtag che carica contenuti a scroll infinito e ritorna
+// gli URL dei video trovati.
 //
 // Si ferma da sola quando due giri di seguito non aggiungono nulla di nuovo,
-// invece che a un numero fisso di scroll: i profili vanno da 1 a centinaia di
-// video, e un numero fisso o taglia i profili lunghi o spreca minuti su
-// quelli corti. `maxScroll` resta come tetto per non restare appesi a una
-// pagina che continua a caricare all'infinito.
+// invece che a un numero fisso di scroll, e `maxScroll` resta come tetto per
+// non restare appesi a una pagina che continua a caricare all'infinito.
 export async function scrollAndCollectVideoUrls(
   page,
   { maxScroll = 300, giriSenzaNovita = 3, attesaMs = 1500 } = {},
@@ -164,104 +171,4 @@ export async function scrollAndCollectVideoUrls(
   }
 
   return [...trovati];
-}
-
-// Tutti i video pubblici di un autore. È la parte deterministica della
-// scoperta: un profilo elenca i suoi video, non un campione, a differenza
-// delle pagine hashtag.
-//
-// Si raccoglie da DUE strade insieme, perché la griglia NON sta nell'HTML: il
-// primo run della sonda (07/09/2026) ha trovato la pagina caricata
-// correttamente, con webapp.user-detail nello scope di idratazione ma nessuna
-// lista di post e zero link nel DOM. TikTok la carica dopo, con una chiamata
-// separata.
-//
-//   1. le risposte XHR /api/post/item_list/ che la pagina fa da sé — la firma
-//      (msToken, X-Bogus) la calcola il JS di TikTok, noi leggiamo soltanto
-//      la risposta e non dobbiamo riprodurre niente;
-//   2. i link nel DOM dopo gli scroll, per quando la griglia si materializza.
-//
-// L'unione delle due copre entrambi i casi senza dover indovinare quale sia
-// quello buono.
-export async function fetchAuthorVideos(context, handle, opzioni = {}) {
-  const page = await context.newPage();
-  const daXhr = new Set();
-  // Diagnostica delle risposte item_list, non solo i video estratti: la
-  // sonda originale (probe-tiktok-profile-videos.mjs) aveva scoperto così
-  // che l'endpoint può rispondere HTTP 200 con corpo vuoto — indistinguibile
-  // da "zero video" se ci si ferma al risultato finale.
-  const xhr = [];
-
-  page.on("response", async (res) => {
-    if (!/\/api\/post\/item_list/.test(res.url())) return;
-    const info = { status: res.status(), chiavi: null, items: null };
-    try {
-      const testo = await res.text();
-      info.raw = testo.slice(0, 150);
-      const body = JSON.parse(testo);
-      info.chiavi = Object.keys(body).join(",");
-      const lista = body?.itemList ?? [];
-      info.items = lista.length;
-      for (const item of lista) {
-        const id = item?.id;
-        const autore = item?.author?.uniqueId ?? handle;
-        if (id) daXhr.add(`https://www.tiktok.com/@${autore}/video/${id}`);
-      }
-    } catch (err) {
-      info.chiavi = `corpo illeggibile: ${String(err?.message ?? err).slice(0, 60)}`;
-    }
-    xhr.push(info);
-  });
-
-  try {
-    await page.goto(`https://www.tiktok.com/@${handle}`, {
-      waitUntil: "domcontentloaded",
-      timeout: 30000,
-    });
-
-    // Aspetta che la griglia compaia invece di scorrere subito nel vuoto; se
-    // non arriva si prosegue lo stesso, perché le XHR possono aver già
-    // consegnato la lista.
-    await page.waitForSelector('a[href*="/video/"]', { timeout: 15000 }).catch(() => null);
-
-    const daDom = await scrollAndCollectVideoUrls(page, opzioni);
-    const url = [...new Set([...daXhr, ...daDom])];
-
-    if (url.length === 0) {
-      // Stessa diagnostica usata per le pagine hashtag (scrape-tiktok-
-      // hashtag-deep.mjs), dove ha permesso di scoprire che il vero motivo
-      // dietro "pagina vuota" con sessione autenticata era il captcha
-      // anti-automazione di TikTok, non un problema di sessione: titolo e
-      // URL da soli non bastavano a distinguerlo da un vero "zero video".
-      const titolo = await page.title().catch(() => null);
-      const urlFinale = page.url();
-      const testo = await page
-        .evaluate(() => document.body?.innerText?.replace(/\s+/g, " ").trim().slice(0, 200) ?? "")
-        .catch(() => "");
-      const xhrRiassunto =
-        xhr.length === 0
-          ? "nessuna risposta item_list intercettata"
-          : xhr
-              .map(
-                (r, i) =>
-                  `#${i} HTTP ${r.status} items=${r.items} chiavi=${r.chiavi}` +
-                  (r.items === null ? ` corpo="${r.raw}"` : ""),
-              )
-              .join(" | ");
-      return {
-        status: sembraLoginWall(titolo, page.url()) ? "login_wall" : "no_videos",
-        reason:
-          `titolo: ${String(titolo).slice(0, 80)} — url finale: ${urlFinale}` +
-          (testo ? ` — testo pagina: "${testo}"` : "") +
-          ` — item_list: ${xhrRiassunto}`,
-        url: [],
-      };
-    }
-
-    return { status: "ok", url, daXhr: daXhr.size, daDom: daDom.length };
-  } catch (err) {
-    return { status: "error", reason: String(err?.message ?? err).slice(0, 200), url: [] };
-  } finally {
-    await page.close().catch(() => {});
-  }
 }
