@@ -30,6 +30,10 @@ export interface EditorialPlan {
 export interface IhcBrand {
   slug: string;
   label: string;
+  // Pagina del template Canva Bulk Create per le Story di questo sotto-brand,
+  // aperta dal bottone "Crea Stories". Hardcoded finché ogni sotto-brand non
+  // ha il proprio template pronto; undefined finché non configurato.
+  canvaTemplateUrl?: string;
 }
 
 // Tipologie di post selezionabili nel form "Nuovo post" delle pagine
@@ -42,7 +46,12 @@ export const IHC_BRANDS: IhcBrand[] = [
   { slug: "bagni-di-pisa", label: "Bagni di Pisa" },
   { slug: "fonteverde", label: "Fonteverde" },
   { slug: "grotta-giusti", label: "Grotta Giusti" },
-  { slug: "baia-di-chia", label: "Baia di Chia" },
+  {
+    slug: "baia-di-chia",
+    label: "Baia di Chia",
+    canvaTemplateUrl:
+      "https://www.canva.com/design/DAHUnoNoDZA/Db1XN48Zl0SjORoBs15RHw/edit?ui=eyJBIjp7fSwiRiI6e319",
+  },
   { slug: "conrad", label: "Conrad" },
   { slug: "chia-laguna-nature-resort", label: "Chia Laguna Nature Resort" },
   { slug: "ihc-corporate", label: "IHC Corporate" },

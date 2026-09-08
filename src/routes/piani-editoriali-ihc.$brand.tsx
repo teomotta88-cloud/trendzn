@@ -184,7 +184,11 @@ function PianiEditorialiIhcPage() {
         <div className="text-sm text-muted-foreground">Caricamento piano…</div>
       ) : tab === "calendario" ? (
         <div ref={postsColumnRef} className="space-y-4">
-          <StoryExportPanel posts={posts} sheetName={`${brand.label} Stories`} />
+          <StoryExportPanel
+            posts={posts}
+            sheetName={`${brand.label} Stories`}
+            canvaTemplateUrl={brand.canvaTemplateUrl}
+          />
           {plan && creating && (
             <NewPostCard
               planId={plan.id}

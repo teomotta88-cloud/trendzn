@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Download, Loader2 } from "lucide-react";
+import { Sparkles, Loader2 } from "lucide-react";
 import { type EditorialPost, listMedia } from "@/lib/editorialPlan";
 
 // Piani Editoriali IHC — export .xlsx per Canva Bulk Create dei soli post
@@ -21,9 +21,13 @@ function downloadBlob(filename: string, blob: Blob): void {
 export function StoryExportPanel({
   posts,
   sheetName,
+  canvaTemplateUrl,
 }: {
   posts: EditorialPost[];
   sheetName: string;
+  // Pagina del template Canva Bulk Create di questo sotto-brand (IHC_BRANDS):
+  // aperta in una nuova scheda insieme al download dell'.xlsx.
+  canvaTemplateUrl?: string;
 }) {
   const storyPosts = useMemo(() => posts.filter((p) => p.formato === "Story"), [posts]);
   const [exporting, setExporting] = useState(false);
@@ -32,6 +36,11 @@ export function StoryExportPanel({
   if (storyPosts.length === 0) return null;
 
   async function handleExport() {
+    // Va aperto PRIMA di qualunque await: dopo il primo await il browser non
+    // considera più il popup come conseguenza diretta del click e lo blocca.
+    if (canvaTemplateUrl) {
+      window.open(canvaTemplateUrl, "_blank", "noopener,noreferrer");
+    }
     setExporting(true);
     setError(null);
     try {
@@ -91,9 +100,14 @@ export function StoryExportPanel({
         disabled={exporting}
         className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 disabled:opacity-50"
       >
-        {exporting ? <Loader2 className="size-4 animate-spin" /> : <Download className="size-4" />}
-        Esporta .xlsx ({storyPosts.length})
+        {exporting ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />}
+        Crea Stories ({storyPosts.length})
       </button>
+      {!canvaTemplateUrl && (
+        <p className="w-full text-xs text-muted-foreground">
+          Nessun template Canva configurato per questo sotto-brand: verrà solo scaricato l'.xlsx.
+        </p>
+      )}
       {error && <p className="w-full text-xs text-destructive">{error}</p>}
     </div>
   );
