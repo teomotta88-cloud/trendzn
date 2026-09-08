@@ -24753,6 +24753,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:17.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MINICLUB\nmi mancheranno\nmancher\nncheranno",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:01.423Z"
           }
         },
         {
@@ -24798,6 +24807,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:58:38.458Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SAVE\nDAIE\nAGOSTO\nAGOSTO J",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:11.416Z"
           }
         },
         {
@@ -24843,6 +24861,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:04.192Z"
+          },
+          "ocrData": {
+            "textOnScreen": "e scuola calcio\nSERENE RESORT\ntruttore Fitness\nQ SERENE\nRESORT",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:33.320Z"
           }
         },
         {
@@ -24930,6 +24957,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:58:47.912Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:35.282Z"
           }
         },
         {
@@ -24952,6 +24987,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:58:52.951Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Blusa I\nBlus",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:42.534Z"
           }
         },
         {
@@ -24974,6 +25018,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:58:57.310Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:47.226Z"
           }
         },
         {
@@ -25009,6 +25061,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:58:59.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:49.174Z"
           }
         },
         {
@@ -25044,6 +25104,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:03.439Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:52.514Z"
           }
         },
         {
@@ -25066,6 +25134,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:05.890Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:54.424Z"
           }
         },
         {
@@ -25140,6 +25216,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:08.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:56.325Z"
           }
         },
         {
@@ -25188,6 +25272,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:12.707Z"
+          },
+          "ocrData": {
+            "textOnScreen": "up and going to\nup and going to E\nMONDAY THURSDA/",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:07.268Z"
           }
         },
         {
@@ -25210,6 +25303,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:17.167Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:09.215Z"
           }
         },
         {
@@ -25232,6 +25333,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:19.700Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:11.149Z"
           }
         },
         {
@@ -25267,6 +25376,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:21.988Z"
+          },
+          "ocrData": {
+            "textOnScreen": "quando non tutti apprezzano la stessa\nquando non tutti\nla stessa canzone:\nquando\ntutti apprezzano la canzone;",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:16.796Z"
           }
         },
         {
@@ -25323,6 +25441,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:24.810Z"
+          },
+          "ocrData": {
+            "textOnScreen": "siete in vacanza\n‘click",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:38.776Z"
           }
         },
         {
@@ -25381,6 +25508,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:52.064Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:45.488Z"
           }
         },
         {
@@ -25403,6 +25538,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:33.180Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bluserena Hotel Serena Majestic\nUnfaltro anno è passato. E\nlasciamo sempre un\npezzo del nostro cuore!\nStai crescendo nel posto\ngiusto amore mio\nUn altro anno è\nqui lasciamo sempre un\ngiusto amore\nUn altro anno è passato.. E\nStai posto\nGiuseppe Forte 2h i v\nili Tocca per provare v\ngiuseppeforte31 1:02\nRI USERENA HOTEL SFRENA\niD Invia messaggio...\nUn altro passato.. E\nqui lasciamo\npezzo del\nStai\ngiusto amore mio E",
+            "confidence": 0.883,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:15:00.880Z"
           }
         },
         {
@@ -25448,6 +25592,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:38.377Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AL VILLAGGIO\ncon uesTe\nSALUTE MENTALE da",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:15:16.769Z"
           }
         },
         {
@@ -25530,6 +25683,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:44.408Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:15:26.428Z"
           }
         },
         {
@@ -25573,6 +25734,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:50.102Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:15:38.741Z"
           }
         },
         {
@@ -25644,6 +25813,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:56.484Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT\nwent\nCALASERENA RESORT\nwater i\ngood\nSoren A\na Beachiparty\ndrinks,",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:15:49.394Z"
           }
         },
         {
@@ -25754,6 +25932,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T11:59:58.680Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:15:57.672Z"
           }
         },
         {
@@ -25864,6 +26050,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:05.268Z"
+          },
+          "ocrData": {
+            "textOnScreen": "arcn",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:16:17.009Z"
           }
         },
         {
@@ -25907,6 +26102,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:08.018Z"
+          },
+          "ocrData": {
+            "textOnScreen": "e chi lo spiegalil\ndivertimento",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:16:31.711Z"
           }
         },
         {
@@ -25965,6 +26169,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:14.866Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:16:39.305Z"
           }
         },
         {
@@ -26793,7 +27005,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:49:20.536Z"
+            "updatedAt": "2026-09-08T13:16:17.009Z"
           },
           "ocrInsights": "No on-screen text available.",
           "sentimentData": {
@@ -34240,6 +34452,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:04.192Z"
+          },
+          "ocrData": {
+            "textOnScreen": "e scuola calcio\nSERENE RESORT\ntruttore Fitness\nQ SERENE\nRESORT",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:33.320Z"
           }
         },
         {
@@ -37503,6 +37724,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:14:17.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MINICLUB\nmi mancheranno\nmancher\nncheranno",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:13:01.423Z"
           }
         },
         {
@@ -39986,6 +40216,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:26:52.064Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:14:45.488Z"
           }
         },
         {
@@ -40968,7 +41206,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:20:14.174Z"
+            "updatedAt": "2026-09-08T13:15:49.394Z"
           },
           "ocrInsights": "No content available for analysis.",
           "sentimentData": {
@@ -42711,7 +42949,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:53:48.186Z"
+            "updatedAt": "2026-09-08T13:14:45.488Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -49341,7 +49579,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:07:20.941Z"
+            "updatedAt": "2026-09-08T13:16:31.711Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -54961,7 +55199,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:30:56.881Z"
+            "updatedAt": "2026-09-08T13:14:38.776Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -72097,13 +72335,13 @@
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oIAZwhBXmdIzbi7Sp8NR10BIMEsJXgDuKi2Pa~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=Ci8dI9%2F2VHfuVgS13v4Ef8ny5r0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
           "verificationStatus": "confirmed",
           "ocrData": {
-            "textOnScreen": "Bluserena Hotel Serena Majestic\nanno è passato.. E i\nlasciamo sempre un\npezzo del nostro cuore!\nStai crescendo nel posto\ngiusto amore mio\nUn altro anno è\nqui lasciamo sempre un\ngiusto amore\nUn altro anno è passato.. E\nposto\nGiuseppe Forte 2h i v X\nili Tocca per provare v\ngiuseppeforte31 1:02\nRI USERENA HOTEL SFRENA\nInvia messaggio...\nUn altro anno passato..\n7 qui lasciamo\npezzo\ncrescendo",
-            "confidence": 0.876,
+            "textOnScreen": "Bluserena Hotel Serena Majestic\nUnfaltro anno è passato. E\nlasciamo sempre un\npezzo del nostro cuore!\nStai crescendo nel posto\ngiusto amore mio\nUn altro anno è\nqui lasciamo sempre un\ngiusto amore\nUn altro anno è passato.. E\nStai posto\nGiuseppe Forte 2h i v\nili Tocca per provare v\ngiuseppeforte31 1:02\nRI USERENA HOTEL SFRENA\niD Invia messaggio...\nUn altro passato.. E\nqui lasciamo\npezzo del\nStai\ngiusto amore mio E",
+            "confidence": 0.883,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:55:32.885Z"
+            "updatedAt": "2026-09-08T13:15:00.880Z"
           },
           "audioAnalysis": {
             "transcript": "sempre non passù sere d'estate dimenticate c'è un dondolo che dondola che per le scelte di lei che fie la luna è piena Sì, condona il cammino.",
