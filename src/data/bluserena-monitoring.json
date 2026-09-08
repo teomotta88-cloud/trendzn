@@ -89992,7 +89992,16 @@
           "likes": 3,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T13:02:45.399Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90006,7 +90015,16 @@
           "likes": 731,
           "comments": 125,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info Il nostro corso gratuito è www.mesmerism.info Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 70.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T13:02:59.211Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90020,7 +90038,16 @@
           "likes": 869,
           "comments": 18,
           "shares": 39,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T13:03:22.680Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90034,7 +90061,16 @@
           "likes": 21,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho trovato questo prezzo e cercherò di animare il passato e portarlo al presente, quindi vi ascolto! Buon Natale. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 61.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T13:03:36.364Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90048,7 +90084,16 @@
           "likes": 15,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Io credo che sia la godliness, come se mi riconoscessi spiritualmente, non come un tipo di chiesa, ma come un Dio e un'Earth. Hai un modo, è un regalo e io vorrei che avessi potuto raccontare tutto perché ci sono momenti in cui ti guardi e sei come, oh man, questo è così spirituale. Oh, c'è un'altezza, non è così vicino. S s e posso attestare che sia possibile perch non avrei attestato a questo prima quindi sono grati di aver esperienziato la silenzio e di ciò che fa per me la parte della meditazione è stata grande il tappare le power la Hapè ha realmente set the bar up ha davvero tappato è stato un'esperienza sì ma era come un come cosa si chiama quando le fotografie che vedi come in quel tempo è come un clip due clip tre clip e era di mia vita e oh sì ho capito certo oh manco quindi era una bella esperienza",
+            "language": "Italian",
+            "durationSec": 143.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T13:04:48.698Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90062,7 +90107,16 @@
           "likes": 17,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T13:04:54.181Z"
+          }
         }
       ]
     }
