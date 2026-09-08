@@ -82,8 +82,21 @@ async function scrapeTag(context, tag) {
     await page.waitForTimeout(2500);
     const url = await scrollAndCollectVideoUrls(page, { maxScroll: MAX_SCROLL });
     if (url.length === 0) {
+      // Il titolo da solo non basta a distinguere una pagina hashtag vuota
+      // per davvero da un redirect silenzioso altrove (es. al feed
+      // generico): con sessione autenticata, TikTok può riconoscere i
+      // cookie come validi — niente login-wall — e comunque rimandare a
+      // /foryou se tratta la sessione come sospetta (IP diverso da dove è
+      // nata, fingerprint da automazione). L'URL finale distingue i due
+      // casi: se resta su /tag/<hashtag> la pagina è davvero senza video,
+      // se è altrove il problema è la sessione, non lo scraping.
       const titolo = await page.title().catch(() => null);
-      return { status: "vuota", reason: `titolo: ${String(titolo).slice(0, 80)}`, url: [] };
+      const urlFinale = page.url();
+      return {
+        status: "vuota",
+        reason: `titolo: ${String(titolo).slice(0, 80)} — url finale: ${urlFinale}`,
+        url: [],
+      };
     }
     return { status: "ok", url };
   } catch (err) {
