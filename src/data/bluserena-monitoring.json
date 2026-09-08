@@ -2661,7 +2661,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:32:33.168Z"
+            "updatedAt": "2026-09-08T13:19:04.633Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -3906,7 +3906,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:15:52.360Z"
+            "updatedAt": "2026-09-08T13:19:43.944Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -10056,7 +10056,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:05:33.492Z"
+            "updatedAt": "2026-09-08T13:19:19.300Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -26259,6 +26259,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:19.894Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:16:55.907Z"
           }
         },
         {
@@ -26294,6 +26302,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:25.309Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:01.111Z"
           }
         },
         {
@@ -26350,6 +26366,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:27.648Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sei amici del\nEla 5 alba di fila\nSei felice e lo sai.\ndi fila",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:10.888Z"
           }
         },
         {
@@ -26398,6 +26423,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:34.218Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Saia Serena",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:18.193Z"
           }
         },
         {
@@ -26472,6 +26506,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:37.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:23.843Z"
           }
         },
         {
@@ -26494,6 +26536,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:43.413Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PANE",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:28.413Z"
           }
         },
         {
@@ -26542,6 +26593,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:50.895Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CRISTOBAL",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:34.459Z"
           }
         },
         {
@@ -26564,6 +26624,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:00:59.058Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:39.484Z"
           }
         },
         {
@@ -26586,6 +26654,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:06.794Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:50.563Z"
           }
         },
         {
@@ -26647,6 +26723,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:16.386Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:17:58.849Z"
           }
         },
         {
@@ -26695,6 +26779,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:20.284Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:18:16.503Z"
           }
         },
         {
@@ -26756,6 +26848,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:22.665Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:18:26.507Z"
           }
         },
         {
@@ -26935,6 +27035,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:24.907Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ko) Sibari Gran Village Bluserena\nLei già pronta x\nFrunciansi x tutto il\nSibari al /illage 3\nLei gia pronta x\nx tutto\nvillaggio\nage Bluserena\nx tutto è\nvillaggio ol\nibari Gran Village\naggio\nvill",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:18:40.714Z"
           }
         },
         {
@@ -26958,6 +27067,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:28.091Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Stammattina angurietta e oggi\nfragolina Si semp bell a mamma\nL A Bg, dalla mia principessa",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:18:53.111Z"
           }
         }
       ]
@@ -29959,7 +30077,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:17:24.131Z"
+            "updatedAt": "2026-09-08T13:17:01.111Z"
           },
           "sentiment": "neutral",
           "topics": [
@@ -32655,6 +32773,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:31.287Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:19:04.633Z"
           }
         },
         {
@@ -32860,6 +32986,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:34.546Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rendi unica la tua vacanza\nTantissimi servizi per un soggiorno\nindimenticabile\nAnimazione Bambini e ragazzi\nLa migliore animazione italiana Un'avventura straordinaria\nRESORT",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:19:19.300Z"
           }
         },
         {
@@ -32986,6 +33121,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:39.017Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CON COOKING",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:19:36.326Z"
           }
         },
         {
@@ -33068,6 +33212,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:41.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:19:43.944Z"
           }
         },
         {
@@ -33259,6 +33412,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:44.243Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:19:57.054Z"
           }
         },
         {
@@ -33671,6 +33832,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:47.009Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Springs\nesort\njust found a:Disney, Springs\nPOV: You just found a\nwith resort vibes and\nunbeatable\njus Disney",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:20:17.489Z"
           }
         },
         {
@@ -33693,6 +33863,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:54.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ecolresort?\nyou been to\nyou been\n0% Eco resort?",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:20:51.617Z"
           }
         },
         {
@@ -33715,6 +33894,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:01:57.583Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PRESENTED BY NIFTYSPHERE INSTITUTE OF ARTS DESIGN\nNA HOTELS\n27\" AUG,ISLAMABAD\nSERENA HOTELS\nLAMABAD\nED BY TUTE OF ARTS DESIGN\ne SERENA HOTELS\nSAFARI LODGES RESORTS\n27\" LAMABAD\nPRESENTED OF ARTS DESIGN\nPRESENTED BY UTE OF ARTS DESIGN",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:21:02.102Z"
           }
         },
         {
@@ -33763,6 +33951,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:00.532Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valmiinal",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:21:11.924Z"
           }
         },
         {
@@ -33798,6 +33995,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:03.726Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:21:18.738Z"
           }
         },
         {
@@ -33820,6 +34025,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:06.799Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:21:26.268Z"
           }
         },
         {
@@ -74697,7 +74910,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-07T23:24:30.471Z"
+            "updatedAt": "2026-09-08T13:19:36.326Z"
           },
           "sentimentData": {
             "status": "ok",
