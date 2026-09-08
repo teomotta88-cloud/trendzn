@@ -6159,7 +6159,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T15:59:49.165Z"
+            "updatedAt": "2026-09-08T12:41:17.074Z"
           },
           "ocrData": {
             "textOnScreen": "Rispondi a annastabile Q",
@@ -7268,7 +7268,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:08:22.682Z"
+            "updatedAt": "2026-09-08T12:47:39.103Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -17534,7 +17534,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-03T07:36:18.730Z"
+            "updatedAt": "2026-09-08T12:40:19.990Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -54131,7 +54131,16 @@
           "likes": 7244,
           "comments": 55,
           "shares": 52,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie mille.",
+            "language": "Italian",
+            "durationSec": 25,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:39:11.984Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54145,7 +54154,16 @@
           "likes": 50,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao amici! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:39:38.544Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54159,7 +54177,16 @@
           "likes": 4895,
           "comments": 66,
           "shares": 28,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:39:42.790Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54173,7 +54200,16 @@
           "likes": 12700,
           "comments": 116,
           "shares": 378,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:40:16.891Z"
+          }
         }
       ]
     },
@@ -58792,7 +58828,16 @@
             "vacanza",
             "resort",
             "Calabria"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "... Grazie mille! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:40:19.990Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58828,7 +58873,16 @@
             "animazione",
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Di tutti li bellizi su fraterra, chi incantano e chi fanno cantare, tu vi mi asi sempre la più bella, narara per la degna di lumari, pur usin dai lucori ballerini, si stata sempre a prima d'ogni amori. Oh grazia che mi dici, oh grazia che ti dici, oh grazia che indifici lu signori, Sti da lucenti di sta vita mia, scendi fai presto che io spetto a via Stringimi forti, stammi vicino, fammi sentire che il lume è destino Resta con mia fino alla fine, che senza di te io posso morire Siamo le passioni, la fantasia, un'ossessione, una malattia Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:41:17.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58968,7 +59022,16 @@
             "vacanza",
             "ambiente",
             "servizi"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Mamma mia Andrea questo è il momento della giornata che c'è nel rischio di domani, questo vento addosso che si bello ti fa rilassare tantissimo e ecco il momento della giornata che io amo di più comunque noi siamo in cinque e siamo capitati con tre persone vicino a noi siamo capitati con qualcuno a penso che può scegliere anche di restare da solo sulla tua richiesta a questo non te lo so dire però penso di sì quindi non ti resta che venire prenota, prenota, prenota",
+            "language": "Italian",
+            "durationSec": 36.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:41:31.340Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59002,7 +59065,16 @@
           "topics": [
             "famiglia",
             "soggiorno"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 6.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:41:33.711Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59014,7 +59086,16 @@
           "views": 608,
           "likes": 6,
           "comments": 0,
-          "shares": 1
+          "shares": 1,
+          "audioAnalysis": {
+            "transcript": "e lei disse Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 38.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:41:36.298Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59028,7 +59109,16 @@
           "likes": 9,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:42:11.954Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59042,7 +59132,16 @@
           "likes": 15500,
           "comments": 170,
           "shares": 1457,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "no_speech",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:42:15.659Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59056,7 +59155,16 @@
           "likes": 392,
           "comments": 13,
           "shares": 336,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì per vendita se si percepite con conto con i amsi presciutete Sì lei ha scoperto io se me",
+            "language": "Italian",
+            "durationSec": 9.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:42:18.478Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59070,7 +59178,16 @@
           "likes": 185,
           "comments": 38,
           "shares": 55,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il Cielo di Piazza di Piazza Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 53.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:42:43.780Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59084,7 +59201,16 @@
           "likes": 11500,
           "comments": 491,
           "shares": 3108,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Un po' di esplosione dalla realtà, ci siamo incontrati nel subareo in Indianapolis per il nostro anniversario a mezz'anno. Abbiamo dovuto fare un'altra rivelazione di questo speciale posto. A volte i migliori viaggi sono vicini a casa. La stanza era spaziosa con un bed comodissimo, una macchina di massaggio, un fuoco, un refrigeratore, un microvigilante, un sistema di musica e un grande lavabo. It had a full size pool, jacuzzi, steam shower, the perfect weekend for any occasion. I used that massage chair several times, so perfect to relax. This pool was absolutely perfect. It also had a huge waterfall on the top of the ceiling that ran down. The steam room shower was very relaxing. il tutto il posto è assolutamente divertente ha un tema di piazza ti fa sentire come se fossi in un posto tropicale ma sei ancora a casa highly recommend devi guardarlo",
+            "language": "Italian",
+            "durationSec": 70.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:43:05.666Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59098,7 +59224,16 @@
           "likes": 849,
           "comments": 6,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 44.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:43:40.597Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59112,7 +59247,16 @@
           "likes": 29,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:43:44.277Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59126,7 +59270,16 @@
           "likes": 96500,
           "comments": 617,
           "shares": 1853,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 11.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:43:48.815Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59140,7 +59293,16 @@
           "likes": 681,
           "comments": 189,
           "shares": 231,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sono a casa, finalmente. La nostra volata era intesa a mezz'ora, ma è stata interrompita, quindi siamo tornati a casa molto tardi, beh, inizialmente, quindi non sono stato a dormire. Quindi posso dire dove sono stato ora. Sono stato al Resort e Spa di Green Nature a Marmaris. Non posso falire di questo hotel, da tutto, dal cibo, alla clean, alla staff, all'entertainment, alle palle di spada. Era insomma insano. Il miglior hotel in cui sono stato in Marmaris per farlo. Se andate a Turchia e andate a marmores per le game inglesi, vi consiglio di andare a Football Square o Football Corner, sono tanti pubs e c'è un pub chiamato Manchester Bar, è insano se volete andare a guardare il football, è un'estate assolutamente brillante, i drink locali sono due per uno. In molti paesi, i loro cocktail sono due per uno. Non mi piacerebbe nemmeno cambiare niente di pieno. Abbiamo solo preso i pound inglesi e è tutto ciò che volevano. Se volete stare al Resort Green Nature, vi consiglio di prendere un croc o almeno un caldo di grigio per attraversare il pool perché è così slittido. Il nostro secondo giorno una donna stava portando un bambino e si è fallita e ha sbattuto la legge. Il primo giorno ha dovuto andare in ambulanza e ha dovuto stare lì per quattro settimane con le sue leggi in cast Il pool molto slittido e molto caldo Se stai facendo cose come jet ski e mi raccomando di book in al hotel e non sulle loro piccole parti sul lato della strada perché se booki attraverso il hotel hanno alcun tipo di insurrezione mentre all'esterno non lo hanno se stai nella natura verde e hai bambini bambini e prima di andare o a che in ordine di chiedere che la tua partita o c'è il bar e for your voce da barri sopra il 24 7 anni che l'internato Opel sia il laboratorio di scopo di spingere in grado di spingere in un anno Per i ghiotti Su e very loud and ice o so many people like family's moan e che i loro figli non siano dormiti e che non siano dormiti perché si sente molto caldo da quella parte del hotel. I negozi a posto sono davvero molto buoni, ci sono molti in lì e sono davvero molto barati. Il tatuaggio artistico a posto è assolutamente incredibile, assicurati di andare a scrivere il tuo primo giorno quando vuoi il tuo tatuaggio, forse per il giorno ultimo. I capelli sono davvero brillanti, sto cercando di pensare a qualcosa di altro perché so che la gente mi chiede se posso... I drink sull'inclusivo c'è un sacco, un sacco circa 6 cocktail mocktails vodka slush un sacco di drink sull'inclusivo c'è acqua in casa i pulitatori le mettono in casa c'è acqua bottata che puoi andare e aiutarti 24 ore al giorno sotto le bar se vedi un'altra cosa, prendi la tua perché puoi prenderli ma sono stupidamente costosi e sono solo le 600 penso che sia tutto e ora andrò a prendere tutto il resto",
+            "language": "Italian",
+            "durationSec": 238.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:45:41.889Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59154,7 +59316,16 @@
           "likes": 91,
           "comments": 1,
           "shares": 35,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Crediamo che il mobile necessita caricarci, ma a volte il 5% sei tu. Questo plan è perfetto per rilassarsi a scassi metri dal mare meno. Siamo venuti all'hotel Posidon, dove potrai disfruttare di piscina esterna, un spa con circuito termale, sauna, idromassaggio e molto più. Anche puoi completare l'esperienza con un massaggio e divertirsi della città. La città è la città. La città è la città. La città è la città. Un plan perfetto per finire con una sorriso.",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:45:50.109Z"
+          }
         }
       ]
     },
@@ -64073,7 +64244,16 @@
           "likes": 17,
           "comments": 14,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:46:26.109Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64087,7 +64267,17 @@
           "likes": 75,
           "comments": 15,
           "shares": 33,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "transcribe_failed",
+            "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:46:47.770Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64101,7 +64291,16 @@
           "likes": 315,
           "comments": 3,
           "shares": 62,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "questo episodio di romanticizzare la mia vita si realizza alla mansione a Glencoe dopo l'entrata troverete un pavimento ben preso, la stanza è facile, non ci stiamo stressando è un'establishmento familiare, quindi se cercate adulti solo, questo non è il posto ma non ho visto nessun bambino lì il domenico la cena al pavimento era ottima, la nostra servitore era attenta, era davvero un bambino I was a little worried about the food because of some bad reviews, but I thoroughly enjoyed my food. That's why you gotta take those things with a grain of salt sometimes, and that's also why I can't lose no weight. As for the pool, it was not heated, but it definitely was refreshing, especially after being out in the sun. Would I go again? Absolutely. I got much needed relaxation and girl time. It cost $60 for a half day pass, but you could get $20 off if you use my book.",
+            "language": "Italian",
+            "durationSec": 51.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:46:51.551Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64115,7 +64314,16 @@
           "likes": 60,
           "comments": 8,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se stai cercando una vacanza familiare nel Caribe senza sacrificare esclusività, guarda questo video. Questo è il Serenade Caribe Club. È un hotel familiare in Punta Cana, ma disegnato con una linea di livello superiore per chi cerca confort, migliori spazi e un servizio più esclusivo. Qui ti diverti di un'esperienza tutto incluido elevata, ristoranti a la carta, mixologia di prima e rincone pensati tanto per che i bambini divertano come per che tu rilassi davvero. Se sei interessato a conoscere le opzioni e la disponibilità per le tue prossime date, scriviti ora al 786-667-2618 per aiutarti con le tue riserve.",
+            "language": "Italian",
+            "durationSec": 40.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:47:25.360Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64129,7 +64337,16 @@
           "likes": 816,
           "comments": 37,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se stai a planificare di venire a Naran, questo è l'unico posto che devi visitare. Ladies and gentlemen, welcome to Serene Resorts Naran, a luxury 5 star experience in between these green luscious mountains surrounded by the river. It has the best food in Naran, do try their biryani whenever you go. Il piatto è complementare con queste vittime. A parte le cose usuali, hanno un'area di gioco per i bambini, un'azienda di caffè e le vittime sono da morire per. È un'esperienza di risorto a full-fledged. Poi avranno i loro spazi, gym, sauna, meeting room, tutto in un'unica posta. Ora, mi permetti di darvi un po' di room tour. Allong with all of these facilities they also offer a riverside barbecue where you can enjoy barbecue with live music I challenge you to take a place better than this in Naran Until next time",
+            "language": "Italian",
+            "durationSec": 68.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:47:34.829Z"
+          }
         }
       ]
     },
@@ -69651,7 +69868,16 @@
             "spiaggia",
             "estate",
             "hotel"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:47:39.103Z"
+          }
         },
         {
           "platform": "tiktok",
