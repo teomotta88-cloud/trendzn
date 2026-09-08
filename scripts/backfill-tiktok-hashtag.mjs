@@ -9,12 +9,12 @@
 //   1. Apify (clockworks/tiktok-hashtag-scraper) — prima scelta, già
 //      validata (probe-tiktok-hashtag-apify-depth.mjs: 400 post fino al
 //      2020, engagement reale). Costa per RISULTATO restituito.
-//   2. ScrapeCreators (/v1/tiktok/search/hashtag) — backup, usato quando
-//      Apify fallisce (in pratica: quando esaurisce il credito, ma vedi
-//      nota sotto sul perché si passa alla fonte successiva su QUALSIASI
-//      errore, non solo quello). Costa 1 credito a CHIAMATA (non per
-//      risultato): con 100 crediti gratuiti non scadenti copre molti più
-//      giri di Apify a parità di budget. La loro stessa documentazione
+//   2. ScrapeCreators (/v1/tiktok/search/keyword, non /search/hashtag: vedi
+//      il commento sopra callScrapeCreators sul perché del cambio il
+//      9/09/2026) — backup, usato quando Apify fallisce (in pratica: quando
+//      esaurisce il credito, ma vedi nota sotto sul perché si passa alla
+//      fonte successiva su QUALSIASI errore, non solo quello). Costa 1
+//      credito a CHIAMATA (non per risultato). La loro stessa documentazione
 //      conferma lo stesso fenomeno osservato con Apify: "TikTok can return
 //      duplicate results for this search" — nessuna fonte, a quanto pare,
 //      ha un cursore stabile su questo tipo di ricerca.
@@ -206,26 +206,25 @@ function mapApifyItem(item) {
 }
 
 // --- ScrapeCreators ---
-// Parametro "hashtag" (singolare) confermato su un run reale
-// (probe-scrapecreators-multi-hashtag.mjs): un hashtag per chiamata, non
-// supporta liste/comma-separated (restituisce un match spurio senza errore,
-// quindi va usato un solo hashtag alla volta senza eccezioni — per questo
-// il modo "tutti gli hashtag" qui sotto itera le chiamate, non le raggruppa).
+// Keyword search (/v1/tiktok/search/keyword, parametro `query`), non più
+// hashtag search (/v1/tiktok/search/hashtag, parametro `hashtag`): cambio
+// deciso il 9/09/2026 dopo aver visto che la ricerca per hashtag, anche con
+// paginazione vera via cursore, satura in fretta (0 post nuovi su #bluserena
+// dopo 2 pagine reali) — la keyword search cerca il termine ovunque nel
+// testo/caption, non solo tra gli hashtag formali del post, quindi copre
+// anche i video che citano il termine senza usarlo come hashtag.
 //
-// L'endpoint supporta un parametro `cursor` per andare oltre la prima
-// pagina (documentazione: "Cursor to get more videos - get 'cursor' from
-// previous response"). Senza passarlo — il caso di questo script fino
-// all'8/09/2026 — ogni chiamata richiede di nuovo la STESSA prima pagina:
-// da qui i run reali con sempre ~19-20 video restituiti e quasi nessun post
-// nuovo dopo la prima chiamata, pur consumando un credito a chiamata come
-// le altre. Il nome esatto del campo nella risposta con cui proseguire non
-// è verificabile da qui (rete di sviluppo bloccata su scrapecreators.com),
-// quindi si prova la lista di candidati più plausibile e si logga l'intera
-// risposta alla prima chiamata di ogni hashtag per confermarlo su un run
-// reale.
-async function callScrapeCreators(tag, cursor, { logRawOnce = false } = {}) {
-  const url = new URL("https://api.scrapecreators.com/v1/tiktok/search/hashtag");
-  url.searchParams.set("hashtag", tag);
+// Stesso schema di paginazione dell'endpoint hashtag (`cursor`/`has_more`),
+// confermato per quello e assunto uguale per questo — sono endpoint fratelli
+// sotto lo stesso v1/tiktok/search/*. Non verificabile da qui in anticipo
+// (rete di sviluppo bloccata su scrapecreators.com): la risposta completa
+// viene loggata alla prima chiamata di ogni termine per confermarlo, e se
+// tutti gli item risultano senza URL utilizzabile lo si segnala esplicitamente
+// invece di lasciar passare in silenzio come "zero risultati".
+let scDiagLoggedFor = null;
+async function callScrapeCreators(tag, cursor) {
+  const url = new URL("https://api.scrapecreators.com/v1/tiktok/search/keyword");
+  url.searchParams.set("query", tag);
   // cursor != null invece di un semplice truthy check: un cursore "0" è
   // falsy ma potrebbe essere un valore di pagina legittimo.
   if (cursor != null && cursor !== "") url.searchParams.set("cursor", cursor);
@@ -240,18 +239,25 @@ async function callScrapeCreators(tag, cursor, { logRawOnce = false } = {}) {
   if (data.credits_remaining != null) {
     console.log(`  (ScrapeCreators: ${data.credits_remaining} crediti residui)`);
   }
-  if (logRawOnce) {
-    console.log(`  (diagnostica cursore — chiavi risposta: ${Object.keys(data).join(", ")})`);
+  if (scDiagLoggedFor !== tag) {
+    console.log(
+      `  (diagnostica keyword search — chiavi risposta: ${Object.keys(data).join(", ")})`,
+    );
+    scDiagLoggedFor = tag;
   }
 
-  const nextCursor =
-    data.cursor ?? data.next_cursor ?? data.nextCursor ?? data.max_cursor ?? data.maxCursor ?? null;
-  const hasMore = data.has_more ?? data.hasMore ?? nextCursor != null;
+  const items = list.map(mapScrapeCreatorsItem);
+  if (list.length > 0 && items.every((i) => i == null)) {
+    console.log(
+      `  ⚠️  ${list.length} risultati ma nessuno con URL riconoscibile: probabile forma diversa ` +
+        `dell'item rispetto alla ricerca per hashtag, non un vero zero risultati.`,
+    );
+  }
 
   return {
-    items: list.map(mapScrapeCreatorsItem),
+    items,
     costUsd: 0, // 1 credito/chiamata, non per risultato
-    cursor: hasMore ? nextCursor : null,
+    cursor: data.has_more ? data.cursor : null,
   };
 }
 
@@ -323,7 +329,6 @@ async function backfillHashtag(tag, canaleName) {
   // (fallback su errore) si riparte da capo, non ha senso passare un
   // cursore di ScrapeCreators ad Apify o viceversa.
   let cursor = null;
-  let scRawLoggedFor = null;
 
   while (call < MAX_CALLS) {
     if (sourceIdx === -1 || sourceIdx >= SOURCES.length) {
@@ -336,8 +341,7 @@ async function backfillHashtag(tag, canaleName) {
 
     let result;
     try {
-      result = await source.call(tag, cursor, { logRawOnce: scRawLoggedFor !== tag });
-      if (source.name === "ScrapeCreators") scRawLoggedFor = tag;
+      result = await source.call(tag, cursor);
     } catch (err) {
       console.error(`  Errore su ${source.name}: ${err.message}`);
       const nextIdx = SOURCES.findIndex((s, i) => i > sourceIdx && s.enabled);
