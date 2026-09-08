@@ -186,19 +186,31 @@ export async function scrollAndCollectVideoUrls(
 export async function fetchAuthorVideos(context, handle, opzioni = {}) {
   const page = await context.newPage();
   const daXhr = new Set();
+  // Diagnostica delle risposte item_list, non solo i video estratti: la
+  // sonda originale (probe-tiktok-profile-videos.mjs) aveva scoperto così
+  // che l'endpoint può rispondere HTTP 200 con corpo vuoto — indistinguibile
+  // da "zero video" se ci si ferma al risultato finale.
+  const xhr = [];
 
   page.on("response", async (res) => {
     if (!/\/api\/post\/item_list/.test(res.url())) return;
+    const info = { status: res.status(), chiavi: null, items: null };
     try {
-      const body = await res.json();
-      for (const item of body?.itemList ?? []) {
+      const testo = await res.text();
+      info.raw = testo.slice(0, 150);
+      const body = JSON.parse(testo);
+      info.chiavi = Object.keys(body).join(",");
+      const lista = body?.itemList ?? [];
+      info.items = lista.length;
+      for (const item of lista) {
         const id = item?.id;
         const autore = item?.author?.uniqueId ?? handle;
         if (id) daXhr.add(`https://www.tiktok.com/@${autore}/video/${id}`);
       }
-    } catch {
-      /* risposta non JSON o già consumata: resta la strada del DOM */
+    } catch (err) {
+      info.chiavi = `corpo illeggibile: ${String(err?.message ?? err).slice(0, 60)}`;
     }
+    xhr.push(info);
   });
 
   try {
@@ -226,11 +238,22 @@ export async function fetchAuthorVideos(context, handle, opzioni = {}) {
       const testo = await page
         .evaluate(() => document.body?.innerText?.replace(/\s+/g, " ").trim().slice(0, 200) ?? "")
         .catch(() => "");
+      const xhrRiassunto =
+        xhr.length === 0
+          ? "nessuna risposta item_list intercettata"
+          : xhr
+              .map(
+                (r, i) =>
+                  `#${i} HTTP ${r.status} items=${r.items} chiavi=${r.chiavi}` +
+                  (r.items === null ? ` corpo="${r.raw}"` : ""),
+              )
+              .join(" | ");
       return {
         status: sembraLoginWall(titolo, page.url()) ? "login_wall" : "no_videos",
         reason:
           `titolo: ${String(titolo).slice(0, 80)} — url finale: ${urlFinale}` +
-          (testo ? ` — testo pagina: "${testo}"` : ""),
+          (testo ? ` — testo pagina: "${testo}"` : "") +
+          ` — item_list: ${xhrRiassunto}`,
         url: [],
       };
     }
