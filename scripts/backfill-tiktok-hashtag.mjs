@@ -61,10 +61,21 @@
 // il credito, lo script passa alla successiva invece di crashare).
 // Env opzionali: RESULTS_PER_CALL, MIN_CALLS, MAX_CALLS,
 // DELAY_BETWEEN_CALLS_MS, WINDOW_A_START/END, WINDOW_B_START/END.
+//
+// Lettura/scrittura dello store SEMPRE tramite lib/bluserena-store.mjs
+// (commitNewPosts/commitField), non con una copia locale: questo script può
+// girare per decine di minuti (pausa tra le chiamate + più hashtag), e nel
+// frattempo altri workflow scrivono sullo stesso file. Una versione
+// precedente teneva un'unica copia in memoria letta a inizio run e la
+// riscriveva per intero ad ogni chiamata rileggendo solo lo sha (non il
+// contenuto): esattamente il bug "lost update" già documentato nell'header
+// di lib/bluserena-store.mjs (53 minuti di trascrizioni audio persi in un
+// altro script, 31/08/2026). commitNewPosts/commitField rileggono lo store
+// fresco subito prima di ogni scrittura, quindi non serve più tenerne una
+// copia locale.
 
-const REPO = "teomotta88-cloud/trendzn";
-const STORE_PATH = "src/data/bluserena-monitoring.json";
-const MAX_ATTEMPTS = 5;
+import { commitField, commitNewPosts, readStore, STORE_PATH } from "./lib/bluserena-store.mjs";
+
 const APIFY_ACTOR = "clockworks~tiktok-hashtag-scraper";
 const APIFY_COST_PER_ITEM_USD = 0.005; // $5 / 1000 risultati, pricing pubblico dell'actor
 
@@ -109,17 +120,6 @@ if (!apifyToken && !scrapeCreatorsKey) {
   process.exit(1);
 }
 
-const githubToken = process.env.GITHUB_TOKEN;
-if (!githubToken) {
-  console.error("Manca GITHUB_TOKEN nell'ambiente.");
-  process.exit(1);
-}
-
-const ghHeaders = {
-  Authorization: `token ${githubToken}`,
-  Accept: "application/vnd.github.v3+json",
-};
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -159,61 +159,6 @@ function hashtagInfo(url) {
   return null;
 }
 
-async function readStore() {
-  const metaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
-    headers: ghHeaders,
-  });
-  if (!metaRes.ok) {
-    throw new Error(
-      `Lettura metadata bluserena-monitoring.json fallita: ${metaRes.status} ${await metaRes.text()}`,
-    );
-  }
-  const meta = await metaRes.json();
-  const sha = meta.sha;
-
-  const branch = process.env.GITHUB_REF_NAME || "main";
-  const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${STORE_PATH}?t=${Date.now()}`;
-  const rawRes = await fetch(rawUrl, {
-    headers: { "User-Agent": "backfill-tiktok-hashtag", Accept: "application/json,text/plain,*/*" },
-  });
-  if (!rawRes.ok) {
-    throw new Error(
-      `Lettura raw bluserena-monitoring.json fallita: ${rawRes.status} ${await rawRes.text()}`,
-    );
-  }
-
-  const raw = await rawRes.text();
-  const store = raw.trim() ? JSON.parse(raw) : { canali: [] };
-  if (!Array.isArray(store.canali)) store.canali = [];
-  return { store, sha };
-}
-
-// Stesso pattern retry-su-conflitto di sync-bluserena-hashtags.mjs.
-async function writeStore(store, tag) {
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    const { sha } = await readStore();
-    const content = Buffer.from(JSON.stringify(store, null, 2)).toString("base64");
-
-    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STORE_PATH}`, {
-      method: "PUT",
-      headers: { ...ghHeaders, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message: `chore: backfill storico hashtag TikTok #${tag} [trendzn-bot]`,
-        content,
-        sha,
-      }),
-    });
-
-    if (res.ok) return;
-    if ((res.status === 409 || res.status === 422) && attempt < MAX_ATTEMPTS) {
-      console.log(`Conflitto di scrittura (tentativo ${attempt}/${MAX_ATTEMPTS}), rileggo e riprovo...`);
-      continue;
-    }
-    throw new Error(`Scrittura bluserena-monitoring.json fallita: ${res.status} ${await res.text()}`);
-  }
-  throw new Error("Troppi conflitti di scrittura su bluserena-monitoring.json.");
-}
-
 // NON si prova a riconoscere "è un errore di credito esaurito" dal testo
 // della risposta: verificato su un run reale che, quando Apify esaurisce il
 // credito, l'errore restituito è un generico
@@ -247,7 +192,8 @@ function mapApifyItem(item) {
     handle: item.authorMeta?.name ?? item.authorMeta?.nickName ?? null,
     url: normalizeTikTokUrl(item.webVideoUrl),
     date:
-      item.createTimeISO ?? (item.createTime ? new Date(item.createTime * 1000).toISOString() : null),
+      item.createTimeISO ??
+      (item.createTime ? new Date(item.createTime * 1000).toISOString() : null),
     caption: item.text ?? null,
     location: null,
     views: item.playCount ?? null,
@@ -281,7 +227,9 @@ async function callScrapeCreators(tag) {
 function mapScrapeCreatorsItem(item) {
   const rawUrl =
     item.share_url ??
-    (item.aweme_id ? `https://www.tiktok.com/@${item.author?.unique_id}/video/${item.aweme_id}` : null);
+    (item.aweme_id
+      ? `https://www.tiktok.com/@${item.author?.unique_id}/video/${item.aweme_id}`
+      : null);
   if (!rawUrl) return null;
   return {
     platform: "tiktok",
@@ -306,7 +254,16 @@ const SOURCES = [
 // un valore già presente) — non conta come "nuovo" post.
 function enrichExisting(existing, fresh) {
   let changed = false;
-  for (const field of ["date", "caption", "location", "views", "likes", "comments", "shares", "handle"]) {
+  for (const field of [
+    "date",
+    "caption",
+    "location",
+    "views",
+    "likes",
+    "comments",
+    "shares",
+    "handle",
+  ]) {
     if ((existing[field] == null || existing[field] === "") && fresh[field] != null) {
       existing[field] = fresh[field];
       changed = true;
@@ -315,13 +272,15 @@ function enrichExisting(existing, fresh) {
   return changed;
 }
 
-// Esegue il backfill per UN hashtag/canale. Muta canale.accounts e scrive lo
-// store (via writeStore) a ogni chiamata che produce novità. sourceIdx
+// Esegue il backfill per UN hashtag/canale. Scrive lo store (via
+// commitNewPosts/commitField) a ogni chiamata che produce novità, ognuna
+// sulla base di una lettura fresca — non di una copia tenuta in memoria per
+// tutto il run, vedi il commento in testa al file sul perché. sourceIdx
 // parte sempre dalla prima fonte abilitata: se una fonte esaurisce il
 // credito su un hashtag, per quello successivo si riparte comunque da capo
 // (magari nel frattempo il credito è tornato, e comunque il costo di
 // riprovare una fonte già esaurita è un solo errore veloce).
-async function backfillHashtag(tag, canale, store) {
+async function backfillHashtag(tag, canaleName) {
   let sourceIdx = SOURCES.findIndex((s) => s.enabled);
   let call = 0;
   let totalNewPosts = 0;
@@ -358,34 +317,65 @@ async function backfillHashtag(tag, canale, store) {
     totalCostUsd += result.costUsd;
     console.log(`  ${result.items.length} video restituiti.`);
 
-    let newThisCall = 0;
-    let enrichedThisCall = 0;
+    // Classificazione su una lettura fresca dello store, fatta ORA — non
+    // sulla lista di target letta a inizio run: tra una chiamata e l'altra
+    // passano DELAY_BETWEEN_CALLS_MS (30s di default) e possono essere già
+    // passati altri hashtag di questo stesso run, per non parlare di altri
+    // workflow. `presenti` decide solo new-vs-arricchimento; la scrittura
+    // vera e propria (commitNewPosts/commitField) rilegge di nuovo lo store
+    // un'ultima volta appena prima di salvare, quindi resta corretta anche
+    // se qualcosa cambia nel frattempo fra questa lettura e quella scrittura.
+    const { store: frescoStore } = await readStore();
+    const canaleFresco = (frescoStore.canali || []).find(
+      (c) => (c.name || "").toLowerCase() === canaleName.toLowerCase(),
+    );
+    const presenti = new Map((canaleFresco?.accounts || []).map((a) => [a.url, a]));
+
+    const nuovi = [];
+    const daArricchire = new Map(); // url ESATTO già nello store -> record fresco della fonte
     let newInWindowsThisCall = 0;
     for (const post of result.items) {
       if (!post) continue;
-      const existing = canale.accounts.find((a) => a.url === post.url);
+      const existing = presenti.get(post.url);
       if (existing) {
-        if (enrichExisting(existing, post)) enrichedThisCall++;
+        daArricchire.set(existing.url, post);
         continue;
       }
-      canale.accounts.push(post);
-      newThisCall++;
+      nuovi.push(post);
       if (inWindows(post.date ? new Date(post.date) : null)) newInWindowsThisCall++;
     }
+
+    let newThisCall = 0;
+    if (nuovi.length) {
+      const { aggiunti } = await commitNewPosts({
+        byChannel: new Map([[canaleName, nuovi]]),
+        message: `chore: backfill storico hashtag TikTok #${tag} [trendzn-bot]`,
+        normalizeUrl: normalizeTikTokUrl,
+      });
+      newThisCall = aggiunti;
+    }
+
+    let enrichedThisCall = 0;
+    if (daArricchire.size) {
+      enrichedThisCall = await commitField({
+        field: "backfillEnrichment", // inutilizzato: si passa sempre `apply`
+        updates: daArricchire,
+        message: `chore: arricchimento storico hashtag TikTok #${tag} [trendzn-bot]`,
+        apply: enrichExisting,
+      });
+    }
+
     totalNewPosts += newThisCall;
     totalEnriched += enrichedThisCall;
     totalNewInWindows += newInWindowsThisCall;
     console.log(
-      `  ${newThisCall} post nuovi (${newInWindowsThisCall} nelle finestre di interesse), ${enrichedThisCall} post esistenti arricchiti.`,
+      `  ${newThisCall} post nuovi (${newInWindowsThisCall} nelle finestre di interesse), ${enrichedThisCall} post esistenti aggiornati.`,
     );
 
-    if (newThisCall > 0 || enrichedThisCall > 0) {
-      await writeStore(store, tag);
-      console.log("  Store aggiornato su GitHub.");
-    }
-
     if (call >= MIN_CALLS && newInWindowsThisCall === 0) {
-      console.log(`  Nessun post nuovo nelle finestre dopo almeno ${MIN_CALLS} chiamate, mi fermo qui.`);
+      console.log(
+        `  Nessun post nuovo nelle finestre dopo almeno ${MIN_CALLS} chiamate, mi fermo qui.`,
+      );
       stopReason = "saturazione";
       break;
     }
@@ -409,13 +399,20 @@ console.log(
   `Finestre: ${WINDOW_A.start.toISOString().slice(0, 10)}..${WINDOW_A.end.toISOString().slice(0, 10)} e ${WINDOW_B.start.toISOString().slice(0, 10)}..${WINDOW_B.end.toISOString().slice(0, 10)}`,
 );
 console.log(
-  `Fonti disponibili: ${SOURCES.filter((s) => s.enabled).map((s) => s.name).join(" -> ") || "nessuna"}\n`,
+  `Fonti disponibili: ${
+    SOURCES.filter((s) => s.enabled)
+      .map((s) => s.name)
+      .join(" -> ") || "nessuna"
+  }\n`,
 );
 
+// Solo per costruire l'elenco dei target (tag + nome canale): la scrittura
+// vera passa sempre da letture fresche dentro backfillHashtag, non da
+// questa copia.
 const { store } = await readStore();
 
 const hashtagCanali = store.canali
-  .map((c) => ({ canale: c, info: hashtagInfo(c.urls?.[0] ?? "") }))
+  .map((c) => ({ canaleName: c.name, info: hashtagInfo(c.urls?.[0] ?? "") }))
   .filter((x) => x.info);
 
 let targets;
@@ -430,14 +427,16 @@ if (requestedTag) {
   targets = [match];
 } else {
   targets = hashtagCanali;
-  console.log(`Nessun hashtag specificato: processo tutti i ${targets.length} hashtag TikTok nello store.\n`);
+  console.log(
+    `Nessun hashtag specificato: processo tutti i ${targets.length} hashtag TikTok nello store.\n`,
+  );
 }
 
 const results = [];
 for (let i = 0; i < targets.length; i++) {
-  const { canale, info } = targets[i];
+  const { canaleName, info } = targets[i];
   console.log(`\n=== [${i + 1}/${targets.length}] Backfill storico TikTok: #${info.tag} ===`);
-  const summary = await backfillHashtag(info.tag, canale, store);
+  const summary = await backfillHashtag(info.tag, canaleName);
   results.push({ tag: info.tag, ...summary });
 
   if (i < targets.length - 1) {
