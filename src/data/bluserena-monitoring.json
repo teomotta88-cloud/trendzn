@@ -58299,6 +58299,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:09.745Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BANGUN TIDUR, LANGSUNG\nMAKAN ENAK TANPA PERLU\nMASAK.\nSAATNYA Pe\nSIAPA YANG PALING SUKA\nSARAPAN PAS\nNGINEP",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:45:23.574Z"
           }
         },
         {
@@ -58322,6 +58331,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:15.006Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Y las ofertas de estos hoteles\n@yugeinyviptourstravels",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:45:41.069Z"
           }
         },
         {
@@ -58345,6 +58363,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:17.751Z"
+          },
+          "ocrData": {
+            "textOnScreen": "overwater bungalow, a pool in the\nFrey\nThis vibrant scene captures the™_\nessence of beachfront relaxation\nwith itsiclear;blue waters, lush 7\nwith its clear blue waters, lush\ngreen palm trees, and white\nsandy shores. The azure sky adds\nto this\nDon't wait, book your tickets through\nthe link",
+            "confidence": 0.876,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:45:50.593Z"
           }
         },
         {
@@ -58368,6 +58395,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:20.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": "right by the Pacific\nfeaturing award winning\nbeachfront restaurants",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:46:04.857Z"
           }
         },
         {
@@ -58391,6 +58427,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:28.715Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:46:11.261Z"
           }
         },
         {
@@ -58414,6 +58458,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:35.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:46:23.175Z"
           }
         },
         {
@@ -58437,6 +58489,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:37.923Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:46:27.023Z"
           }
         },
         {
@@ -58460,6 +58520,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:46.403Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:46:44.098Z"
           }
         },
         {
@@ -58483,6 +58551,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:52.413Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bra anew US 5\nA brand\nduplex injthelsereneland\nsecurelestatey",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:46:50.721Z"
           }
         }
       ]
@@ -63218,6 +63295,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:55.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sunrise at the Kigali\nSerena Hotel, in\nRwanda\ni Rwanda\nSunrise at the Kigali 4\nSerena Hotel, in i",
+            "confidence": 0.848,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:47:00.108Z"
           }
         },
         {
@@ -63241,6 +63327,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:29:57.897Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Grace Nakimera Concert\nPress Conference Grand Entry\n0 Press Conference Grand Entry",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:47:07.580Z"
           }
         },
         {
@@ -63264,6 +63359,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:03.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Common Grant\nApplication\nTemplate\nTEL H-2B LABOR ANALYSIS\nHotel H-2B\ne Formal\nReport\nANALYSIS\nabor\nè Data\nFIND THE\nTHEM\nhousing plus $50 deposit installment), then $133 per week for the remainder of the sez\n4. The Effective Hourly Wage Gap\nMichigan minimum wage: Increased from $10.56 to $12.48 per hour effective Februar\n2025 (Mothering Justice v. Nessel; SB 8). The $12.48 rate was in effect for the entire we\nseason\na worker opted into housing, 14 roles yield an effective net hourly rate below Michigan’\n$12.48 minimum wage when take-home pay is divided by total hours (1,240 for 31-\nJob Title Gross Rate Effective Net Rate\nDishwasher $12.53 $9.00\nF&B Cashier/Greeter $12.57\nRecreation Attendant $9.66\nAdmissions Attendant $10.21\nBar Utility\nBanquet set-up s10.34\nBus/Runner s10.34\nPrep Cook 14.37 $10.84\nAttendant run a 32-week season (1,280 hours). Their\nout of so (hair effective rates land one cent higher\n3 les where the effective nat hourly rate falls below\nhousing.\nis a gross figuro, and a worker also pays\nFLSA 3(m) (29 U.S.C. CFR\nOF 2.8 MILLION PER SEASON.",
+            "confidence": 0.892,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:47:15.757Z"
           }
         },
         {
@@ -63287,6 +63391,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:08.675Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PESA",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:47:39.017Z"
           }
         },
         {
@@ -63310,6 +63423,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:14.405Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:47:54.365Z"
           }
         },
         {
@@ -63333,6 +63454,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:25.248Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel Serena, Andalo (TN)\nFrancesco Ricci\nConsulente Senior Team Pro",
+            "confidence": 0.867,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:00.693Z"
           }
         },
         {
@@ -63356,6 +63486,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:27.746Z"
+          },
+          "ocrData": {
+            "textOnScreen": "21stAugustKampalaSerenaHotel\nGET YOUR EARLY BIRD\nDial\n3 TICKET AT\nTICKET AT\ni TICKET AT\n7 (STRONG) El",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:10.212Z"
           }
         },
         {
@@ -63379,6 +63518,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:30.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Comment Summer Style\ntime\nrest\nafter\nThen",
+            "confidence": 0.904,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:14.310Z"
           }
         },
         {
@@ -63402,6 +63550,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:33.347Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:23.232Z"
           }
         },
         {
@@ -63425,6 +63581,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:36.456Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLOOD\nJUBILATION CONCERT\nENTRY 100K TABLE",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:31.401Z"
           }
         },
         {
@@ -63448,6 +63613,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:39.121Z"
+          },
+          "ocrData": {
+            "textOnScreen": "21st August Kampala Serena Hotel\n21st August Kampala Serena Hotel li\ni 21st August Kampala Serena Hotel",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:39.256Z"
           }
         },
         {
@@ -63471,6 +63645,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:43.607Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GRAND SIRENIS RI\nDeluxe Junior Suite R",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:46.226Z"
           }
         },
         {
@@ -63494,6 +63677,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:45.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": "was at the Grand Sierra Eesort\nyesterday in Reno .When the shooting\nhappened. i was in my hotel room with\nmy son, we didnt see anything we\ndidn't hear anything but can't stop\nthinking about the victim's\nthat lost their lives\nPraying for everyone involved\nyesterday in Reno the shooting\n4 was at the Grand Sierra Eesort",
+            "confidence": 0.908,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:48:56.616Z"
           }
         },
         {
@@ -63517,6 +63709,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:48.233Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AC i on Hotel",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:49:06.125Z"
           }
         },
         {
@@ -63540,6 +63741,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:30:50.755Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:49:17.534Z"
           }
         },
         {
@@ -63563,6 +63772,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:00.434Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel\nCY SERVICES LTD\nSerena Hotel y ai fa\nEXTRA DIGEST Mugobansonga extradigest@gmail.com\nroasting and coffee profiling located in UAE Next to Al Wahda\nSerena Hotel\nÎ to Al Wahda Mall, Airport road call whatsapp on +971567952605 or\nBeauty Parlour\nEXTRA DIGEST Mugobansonga\nin Ug San Cargo Shipping Company located in\n{iy located in Arua Park Fortune Plaza 2nd Floor, shop no. SF SF",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:49:42.888Z"
           }
         },
         {
