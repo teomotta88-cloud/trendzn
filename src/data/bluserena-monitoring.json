@@ -998,7 +998,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:18.712Z"
+            "updatedAt": "2026-09-08T12:30:55.339Z"
           },
           "ocrData": {
             "textOnScreen": "i giorno a caso d'inverno\nnto ero felice adragosto nel mio\ngiorno acasod inverno. pe\nnto ero felice ad agosto nel mio\nposto del cuore\nroad\ngiorno a-caso d'inverno penserò a\ngiorno a caso d'inverno a\nnto ero felice ad agosto nel\nd'inverno a\nposto del guore",
@@ -18379,7 +18379,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T12:05:51.230Z"
+            "updatedAt": "2026-09-08T12:34:21.999Z"
           },
           "ocrData": {
             "textOnScreen": "LUSEREN\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
@@ -18452,7 +18452,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T10:05:05.650Z"
+            "updatedAt": "2026-09-08T12:31:03.056Z"
           },
           "ocrData": {
             "textOnScreen": "@pluserena=",
@@ -22258,7 +22258,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:56:31.576Z"
+            "updatedAt": "2026-09-08T12:30:58.667Z"
           }
         },
         {
@@ -35614,7 +35614,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T12:05:51.230Z"
+            "updatedAt": "2026-09-08T12:34:21.999Z"
           }
         },
         {
@@ -39923,7 +39923,16 @@
             "animazione",
             "famiglia",
             "estate"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Chiedo rayos de sul, tumbados en la arena, y ver como se pone, y el doraba en morena. Ora sì. Un pochino a poco",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:30:53.038Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39963,7 +39972,16 @@
             "version": 1,
             "updatedAt": "2026-09-08T10:00:49.178Z"
           },
-          "sentiment": "positive"
+          "sentiment": "positive",
+          "audioAnalysis": {
+            "transcript": "There was a time I met a girl of a different kind We ruled the world, I thought I'd never lose her outside We were so young, I think of her now and then",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:30:55.339Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40050,7 +40068,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:56:31.576Z"
+            "updatedAt": "2026-09-08T12:30:58.667Z"
           }
         },
         {
@@ -40167,7 +40185,16 @@
             "animazione",
             "cibo",
             "famiglia"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:31:03.056Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40180,7 +40207,16 @@
           "likes": 631,
           "comments": 82,
           "shares": 110,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:31:08.151Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40232,7 +40268,16 @@
           "likes": 104,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:31:16.124Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40246,7 +40291,16 @@
           "likes": 49,
           "comments": 8,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:31:26.174Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40260,7 +40314,16 @@
           "likes": 48,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:31:36.009Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40274,7 +40337,16 @@
           "likes": 48600,
           "comments": 1108,
           "shares": 3461,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 37.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:32:39.129Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40288,7 +40360,16 @@
           "likes": 1129,
           "comments": 28,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì Sì",
+            "language": "Italian",
+            "durationSec": 13,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:32:41.446Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40302,7 +40383,16 @@
           "likes": 20,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "umji i love this pink tower um don't mind what it said at the top or on the leaderboard but anyways i have a genuine question why are baddies players so delusional like seriously i was playing baddies the other day and i was with my friends talking then my friend said something to me that was way to real then i grabbed her for fun then tell me why some random grabs me and starts to beat me up so then i get up and clocked her only using granny person spray then i stomp her then she sneaks me and i was on orange and knew i couldn't win so before i got to the ground i logged then i joined back with my pvp off and she said oh okay scary like girl bsfr right now then i said girl i could easily say last since i already got my stomp on you then she come up in here saying no i got my last on a lull then i just say last and left but seriously y'all need to stop being so delusional it's honestly embarrassing when the person saying delulu stuff says clipped even though they're in the wrong anyways rant done ri ri out",
+            "language": "Italian",
+            "durationSec": 64.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:32:44.873Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40316,7 +40406,16 @@
           "likes": 82,
           "comments": 17,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Guarda che mi spingi la ruota di Baddy, non ho la fortuna, quindi sono andata dietro la KFC, guarda che mi spingi la ruota di Baddy. Il giorno dopo ... Ciao Sì, è vero. Grazie a tutti. Ciao Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 195.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:34:13.749Z"
+          }
         }
       ]
     },
@@ -43101,7 +43200,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T12:05:51.230Z"
+            "updatedAt": "2026-09-08T12:34:21.999Z"
           }
         },
         {
@@ -43194,7 +43293,16 @@
           "likes": 20,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:34:31.569Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43208,7 +43316,16 @@
           "likes": 65,
           "comments": 17,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:34:35.702Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43222,7 +43339,16 @@
           "likes": 9,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 13,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:34:42.287Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43236,7 +43362,16 @@
           "likes": 118,
           "comments": 88,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il 2, 31 agosto, oggi c'è ancora un giorno di resta, quindi lasciati un po' di tempo per te stesso. Non devi svegliarti molto presto, non devi correre in tempo, dormi un po', mangi un po', bevi un caffè e spendi tempo per la famiglia. Il viaggio di ogni giorno è già abbastanza insolito, ci sono giorni in cui non fai molto, non è ok. Il rinnoio non è una rinnoio, ma è un modo per ottenere più forza. Spero che tutti abbiano un giorno di resta molto divertente, con la sua famiglia e la sua famiglia. Buonanotte.",
+            "language": "Italian",
+            "durationSec": 30.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:35:15.202Z"
+          }
         }
       ]
     },
@@ -48487,7 +48622,16 @@
             "mare",
             "atmosfera",
             "prenotazione"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti!",
+            "language": "Italian",
+            "durationSec": 16.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:35:17.496Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -48631,7 +48775,16 @@
           "likes": 6547,
           "comments": 32,
           "shares": 1635,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se non lo avete già fatto, scrolla qui. Se non lo avete già fatto, sono Rocho, vi saluto e vi saluto.",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:35:20.723Z"
+          }
         }
       ]
     },
@@ -53840,7 +53993,16 @@
           "likes": 1357,
           "comments": 74,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:35:25.338Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -53854,7 +54016,16 @@
           "likes": 61,
           "comments": 1,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi chiamo William Wahome, resident naturalist di Kiraguni Serena Safari Lodge. Di solito facciamo cammini di natura, salite di ponte, ghiaccio di gioco. Anche facciamo parlare di cultura, facciamo plantaggi di ponte. E anche per la generazione giovane, per i bambini giovani, abbiamo i littori esploratori che introducono questi bambini a conservazione",
+            "language": "Italian",
+            "durationSec": 36.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:36:15.901Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -53868,7 +54039,16 @@
           "likes": 20300,
           "comments": 434,
           "shares": 178,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ci chiede che ci ci muca, se mai vuoi ci acci, ci chiede. Tu hai toglie di un'autore 2000, un'autore per il Senior 4. Un'autore 2000, eh? Un autore di Zaka, un autore di Cattolo Cattico, Sessa, che è andato a fare la scuola. Irene, è stato un anno e mezzo che ho fatto la scuola. Oh, sì? E' andato a fare la scuola. E' andato a fare la scuola. Sì, è vero. E questo non è un problema. E' un problema che non si puede rinunciare. Non si può rinunciare. Non si può rinunciare. Non si può rinunciare. Non si può nascondere. Irene, ti ringrazio. Mi chiedi di dire un cosa e i migliori hanno detto che non avevano cento e hanno detto di tempo per studiare e poi tornare a lavorare Ci sono tante persone che non si possono fare i lavori, ma io sono l'unica che si può fare. Irene, è una persona che non ha mai studiato, ma si è portata in un'università. Se non è che è stato certificato nel 4° anno, è andato a un'università. Come si dice, è andato a un'università. Mi chiedono un'amore, un'aiuto, un'irore. Perché siamo in un'unità. Se qualcuno dice che è andato a un'università, è andato a un'università. È andato a un'unità. Un giorno, un giorno, un giorno, sono un ministro. Mi chiedono un'amore. Grazie mille.",
+            "language": "Italian",
+            "durationSec": 124.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:36:46.500Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -53882,7 +54062,16 @@
           "likes": 161,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh, asci, nèi, e su, oh, a tu, geni, ma, na. e poi ci siamo riusciti a fare un'altra cosa, abbiamo fatto un'altra cosa, abbiamo fatto un'altra cosa, abbiamo fatto un'altra cosa, non ci sono più problemi.",
+            "language": "Italian",
+            "durationSec": 41.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:37:10.366Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -53896,7 +54085,16 @@
           "likes": 8674,
           "comments": 149,
           "shares": 357,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie mille. Sì, sì, sì. Grazie a tutti. Grazie mille.",
+            "language": "Italian",
+            "durationSec": 99,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:37:54.429Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -53910,7 +54108,16 @@
           "likes": 7225,
           "comments": 334,
           "shares": 64,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quindi tutte le indicazioni da VAT sembrano direttamente a Venetius Junior. Per Brizio Romano, ha riportato, e lo leggerò, ha detto che la incontro tra Real Madrid e Venetius Junior con i suoi agenti oggi è stata descrivita come molto positiva da tutte le parti involte. Le discussioni sono in avviamento con il suo agente Roc Nation e il suo giocatore. himself, Real Madrid asked for a final answer as soon as possible. So that's what he said which gives indications that things are positive, they're moving in the right direction and are looking to get a deal done. And then David Ornstein, who first broke the story, he also reported and said Real Madrid raised contract offer to Vinicius Junior and remember, that's what Vinicius Junior has been looking for. He's been looking for a raise in this contract offer, there's been a lot of dispute around image rights etc proposal said to reflect the 26 year old's importance to the Real Madrid and the project decision time he then says, now for the Brazil International, renewal await free agency next summer which is what the club want to avoid, he's put in brackets, or pursue the Arsenal opportunity so all the indications from VAT sembra dire che Vinicius Junior sta in",
+            "language": "Italian",
+            "durationSec": 95.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:38:42.965Z"
+          }
         },
         {
           "platform": "tiktok",
