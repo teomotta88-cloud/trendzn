@@ -92362,6 +92362,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:45.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:59:04.648Z"
           }
         },
         {
@@ -92385,6 +92393,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:59.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:59:19.091Z"
           }
         },
         {
@@ -92408,6 +92424,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:03:22.680Z"
+          },
+          "ocrData": {
+            "textOnScreen": "2026 Vethraa Creative House\ni All Rights Reserved 4\nETHRAA J\n2026 Reserved\nCREATIVE\nAll Rights Reserved\ni 2026 House",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:59:39.234Z"
           }
         },
         {
@@ -92431,6 +92456,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:03:36.364Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Stereograph\nPiccadilly Circus\nLondon (1913)\nBlue Glasses",
+            "confidence": 0.817,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:59:55.817Z"
           }
         },
         {
@@ -92454,6 +92488,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:04:48.698Z"
+          },
+          "ocrData": {
+            "textOnScreen": "n shut everythi\nshut everything off\na test-this\nthat was really\nWas like yes okay",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:00:04.916Z"
           }
         },
         {
@@ -92477,6 +92520,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:04:54.181Z"
+          },
+          "ocrData": {
+            "textOnScreen": "How do know if ceremony a”\nIf you feel called,\ntrust that. Curiosity S\nis often where\nthe journey begins.\n1 Absolutely. Most people\nare. Fear and excitement\noften walk hand in\nhand before transformation.\nWhat can expect?\nEvery ceremony is different.\nCome with an open N\nd trust\nreceive exactly what you need.\nTribal Goddess\nCeremony\nmore\nare always open.\nON Las Vegas 8/7\nRancho 8/8",
+            "confidence": 0.861,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T14:00:13.146Z"
           }
         }
       ]
