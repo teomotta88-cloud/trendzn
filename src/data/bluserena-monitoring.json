@@ -20576,6 +20576,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:04.482Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:34:37.396Z"
           }
         },
         {
@@ -20599,6 +20607,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:07.120Z"
+          },
+          "ocrData": {
+            "textOnScreen": "degna\n\"degp,",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:34:47.745Z"
           }
         },
         {
@@ -20622,6 +20639,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:09.608Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Married my\nMarried\nto Mexico",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:04.955Z"
           }
         },
         {
@@ -20645,6 +20671,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:21.130Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando sei in vacanza A\nin Calabria e ti ritrovi\nad una serata tipica calabrese\nQuando sei in vacanza\nsei in vacanza\nad serata tipica calabrese\nad una serata tipica calabrese Jv»\n4 in Calabria e ti ritrovi\nad una serata tipica calabrese 4»",
+            "confidence": 0.829,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:15.547Z"
           }
         },
         {
@@ -20668,6 +20703,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:14.753Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:17.845Z"
           }
         }
       ]
@@ -25698,6 +25741,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:17.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:23.892Z"
           }
         },
         {
@@ -25721,6 +25772,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:22.731Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:29.166Z"
           }
         },
         {
@@ -25744,6 +25803,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:25.943Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OWNER OF FIT:\nMUCH|MORE",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:35.033Z"
           }
         },
         {
@@ -25767,6 +25835,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:32.729Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:44.799Z"
           }
         },
         {
@@ -25790,6 +25866,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:35.229Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ghostly\nyour inventory\nsewer Rat\nVamp Tote My Dollie\nDemon Bat Earrings Spider Friend\nSanta's\nSpring Homs\nFrozen Luggage Very Cozy Hat\nPresent Disquse Santa Hat Ghost Head\nFuzzy Earmutts Cool Shadez Star Scepter\nFlip Hat Reindeer Ride American Flag\nIce's UFO Lollipop Candy Baseball Cap\nBotanist's Bag Droopy EH Ears Fuzzy Bracelets",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:55.032Z"
           }
         },
         {
@@ -25813,6 +25898,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:38.564Z"
+          },
+          "ocrData": {
+            "textOnScreen": "goth MDI i\nA ANNE",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:36:28.940Z"
           }
         },
         {
@@ -25836,6 +25930,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:40.773Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:36:40.495Z"
           }
         },
         {
@@ -25859,6 +25961,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:43.072Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena and lala got tosee\nat the YSL event\nAbsolutely stunning\neachother at the YSL event\nBEAL\nstunning O\nSPER\nAbsolutely stunning 7",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:36:51.498Z"
           }
         },
         {
@@ -25882,6 +25993,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:48.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": "baddies out fora\naboat\nmy baddies out",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:01.468Z"
           }
         },
         {
@@ -25905,6 +26025,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:51.053Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:05.334Z"
           }
         },
         {
@@ -25928,6 +26056,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:53.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:11.703Z"
           }
         },
         {
@@ -25951,6 +26087,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:26:57.781Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:21.187Z"
           }
         },
         {
@@ -25974,6 +26118,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:00.442Z"
+          },
+          "ocrData": {
+            "textOnScreen": "you can learn how to\nis beyond that\ncome a little bit closer\nWhat they tell you to do",
+            "confidence": 0.955,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:24.270Z"
           }
         },
         {
@@ -25997,6 +26150,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:04.223Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:29.291Z"
           }
         },
         {
@@ -26020,6 +26181,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:06.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:35.308Z"
           }
         },
         {
@@ -26043,6 +26212,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:10.969Z"
+          },
+          "ocrData": {
+            "textOnScreen": "the)body defends\n(Claressa Shields against\nBougie\nbody defends\ni Brorilla’s trolling\nJAMI\n#7 Shields against\nbody defends È\nShields against\ntrolling\nBrorilla’s trolling\ndIAO",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:37:44.225Z"
           }
         }
       ]
@@ -28562,6 +28740,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:13.290Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cala Estellencs\nMallorca",
+            "confidence": 0.726,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:38:18.173Z"
           }
         },
         {
@@ -28585,6 +28772,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:17.747Z"
+          },
+          "ocrData": {
+            "textOnScreen": "wild,\nPunta Negra\nmeets\nof tht island\nMandarin Oriental\nfive-stdr\nsoul of The",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:38:43.024Z"
           }
         },
         {
@@ -28608,6 +28804,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:20.177Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OOD TO HAVE\nYOU HERE",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:38:54.905Z"
           }
         },
         {
@@ -28631,6 +28836,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:27:23.969Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LASOONS\nARCO DE\nNATURAL CALETA DE\nFuste",
+            "confidence": 0.734,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:39:18.730Z"
           }
         },
         {
@@ -43219,6 +43433,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:28:21.130Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quando sei in vacanza A\nin Calabria e ti ritrovi\nad una serata tipica calabrese\nQuando sei in vacanza\nsei in vacanza\nad serata tipica calabrese\nad una serata tipica calabrese Jv»\n4 in Calabria e ti ritrovi\nad una serata tipica calabrese 4»",
+            "confidence": 0.829,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:35:15.547Z"
           }
         },
         {
