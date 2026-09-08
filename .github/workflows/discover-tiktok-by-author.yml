@@ -61,6 +61,7 @@ jobs:
         id: scoperta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TIKTOK_SESSION_SEED: ${{ secrets.TIKTOK_SESSION_SEED }}
           MAX_AUTHORS: ${{ inputs.max_authors }}
           START_INDEX: ${{ inputs.start_index || '0' }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}

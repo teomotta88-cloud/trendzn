@@ -1,10 +1,14 @@
 // Lettura di una pagina TikTok con Playwright: il singolo video e il profilo
 // di un autore. È l'unico punto dove si parla con TikTok, così lo User-Agent,
-// il riconoscimento del login-wall e i timeout stanno scritti una volta sola.
+// la sessione autenticata, il riconoscimento del login-wall e i timeout
+// stanno scritti una volta sola.
 //
 // Usato da scrape-tiktok-engagement.mjs (KPI e caption), da
 // discover-tiktok-by-author.mjs (enumerazione dei profili) e da
 // scrape-tiktok-hashtag-deep.mjs (post nuovi trovati sulle pagine hashtag).
+
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname } from "node:path";
 
 import { readVideoDetail } from "./tiktok-engagement.mjs";
 
@@ -20,10 +24,78 @@ function sembraLoginWall(titolo, url) {
   return /log ?in|accedi/i.test(titolo ?? "") || /\/login/.test(url ?? "");
 }
 
+// --------------------------------------------------------- sessione TikTok
+//
+// Da anonimo la pagina hashtag si ferma a ~58-60 video (il tetto verificato
+// due volte, con tecniche diverse: scroll del DOM e paginazione via API) e i
+// profili non consegnano affatto la griglia. Da loggati un conteggio manuale
+// ne ha trovati 414 sullo stesso hashtag — non è un limite del contenuto, è
+// un limite imposto alle sessioni anonime.
+//
+// Il login vero va fatto una volta sola FUORI da CI (scripts/
+// tiktok-bootstrap-session.mjs, stesso schema di tiktok-cc-bootstrap-
+// session.mjs per Creative Center): farlo da un runner GitHub, da IP
+// datacenter, farebbe quasi certamente scattare un captcha/verifica.
+//
+// Niente fallback di login automatico via email/password qui, a differenza
+// di tiktok-cc-session.mjs: quel fallback è pensato per sessioni che devono
+// sopravvivere settimane di run schedulati, non è il caso — qui basta una
+// sessione valida per la durata di UN run one-shot. Se la sessione seed non
+// c'è o non è più valida, meglio fermarsi e dirlo che tentare un login
+// automatico che dal runner fallirebbe comunque.
+export const SESSION_PATH =
+  process.env.TIKTOK_SESSION_PATH || ".tiktok-session/consumer-state.json";
+
+function seedSessionFromEnv() {
+  const seed = process.env.TIKTOK_SESSION_SEED;
+  if (!seed) return false;
+  try {
+    const json = Buffer.from(seed, "base64").toString("utf-8");
+    JSON.parse(json); // valida che sia JSON valido prima di scrivere il file
+    mkdirSync(dirname(SESSION_PATH), { recursive: true });
+    writeFileSync(SESSION_PATH, json);
+    console.error("[sessione tiktok] Inizializzata da TIKTOK_SESSION_SEED.");
+    return true;
+  } catch (err) {
+    console.error(`[sessione tiktok] TIKTOK_SESSION_SEED non valido: ${String(err)}`);
+    return false;
+  }
+}
+
+// Un BrowserContext con la sessione salvata, se presente, altrimenti uno
+// anonimo — mai un errore: chi chiama prosegue comunque, con la copertura
+// ridotta che questo modulo già gestisce (login_wall, no_videos, ecc.).
+export async function createTikTokContext(browser) {
+  if (!existsSync(SESSION_PATH)) seedSessionFromEnv();
+  const hasSession = existsSync(SESSION_PATH);
+  console.log(
+    hasSession
+      ? "[sessione tiktok] Sessione autenticata caricata."
+      : "[sessione tiktok] Nessuna sessione: navigazione anonima (copertura ridotta, vedi commento in testa a tiktok-page.mjs).",
+  );
+  return browser.newContext({
+    storageState: hasSession ? SESSION_PATH : undefined,
+    userAgent: REAL_CHROME_UA,
+  });
+}
+
+// Usate solo dal bootstrap manuale (tiktok-bootstrap-session.mjs): salvano la
+// sessione appena creata a mano e producono il valore per il secret GitHub.
+export async function persistSession(context) {
+  mkdirSync(dirname(SESSION_PATH), { recursive: true });
+  await context.storageState({ path: SESSION_PATH });
+  console.error(`[sessione tiktok] Sessione salvata in ${SESSION_PATH}.`);
+}
+
+export function readSessionSeedInstructions() {
+  const json = readFileSync(SESSION_PATH, "utf-8");
+  return Buffer.from(json).toString("base64");
+}
+
 // Contatori + caption di un singolo video. Ritorna sempre un record con
 // `status`: chi chiama non deve distinguere fra "non c'è" e "è andata male".
-export async function fetchVideoDetail(browser, url) {
-  const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
+export async function fetchVideoDetail(context, url) {
+  const page = await context.newPage();
   try {
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
     await page.waitForTimeout(2000);
@@ -63,7 +135,7 @@ export async function fetchVideoDetail(browser, url) {
 // pagina che continua a caricare all'infinito.
 export async function scrollAndCollectVideoUrls(
   page,
-  { maxScroll = 40, giriSenzaNovita = 2, attesaMs = 1500 } = {},
+  { maxScroll = 300, giriSenzaNovita = 3, attesaMs = 1500 } = {},
 ) {
   const trovati = new Set();
   let fermi = 0;
@@ -111,8 +183,8 @@ export async function scrollAndCollectVideoUrls(
 //
 // L'unione delle due copre entrambi i casi senza dover indovinare quale sia
 // quello buono.
-export async function fetchAuthorVideos(browser, handle, opzioni = {}) {
-  const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
+export async function fetchAuthorVideos(context, handle, opzioni = {}) {
+  const page = await context.newPage();
   const daXhr = new Set();
 
   page.on("response", async (res) => {

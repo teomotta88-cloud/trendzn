@@ -43,7 +43,11 @@ import {
   nuovoPost,
   tiktokVideoId,
 } from "./lib/bluserena-discovery.mjs";
-import { fetchVideoDetail, REAL_CHROME_UA, scrollAndCollectVideoUrls } from "./lib/tiktok-page.mjs";
+import {
+  createTikTokContext,
+  fetchVideoDetail,
+  scrollAndCollectVideoUrls,
+} from "./lib/tiktok-page.mjs";
 
 function intEnv(name, fallback) {
   const n = Number.parseInt(process.env[name] ?? "", 10);
@@ -68,8 +72,8 @@ const DRY_RUN = process.env.DRY_RUN === "true";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function scrapeTag(browser, tag) {
-  const page = await browser.newPage({ userAgent: REAL_CHROME_UA });
+async function scrapeTag(context, tag) {
+  const page = await context.newPage();
   try {
     await page.goto(`https://www.tiktok.com/tag/${encodeURIComponent(tag)}`, {
       waitUntil: "domcontentloaded",
@@ -109,6 +113,7 @@ console.log(
 
 const scadenza = Date.now() + MAX_MINUTES * 60_000;
 const browser = await chromium.launch({ headless: true });
+const context = await createTikTokContext(browser);
 const riepilogo = [];
 let totaleAggiunti = 0;
 
@@ -121,7 +126,7 @@ try {
     const perTag = [];
 
     for (const tag of nomiCanali) {
-      const esito = await scrapeTag(browser, tag);
+      const esito = await scrapeTag(context, tag);
       vistiPassata += esito.url.length;
 
       if (esito.status !== "ok") {
@@ -142,7 +147,7 @@ try {
 
       let nuoviTag = 0;
       for (const { url, date } of candidati) {
-        const dettaglio = await fetchVideoDetail(browser, url);
+        const dettaglio = await fetchVideoDetail(context, url);
         const caption = dettaglio.status === "ok" ? dettaglio.caption : null;
         // Il post è stato trovato SU questa pagina hashtag, quindi quel canale
         // è la destinazione garantita; gli altri hashtag in caption lo
@@ -222,6 +227,7 @@ try {
     await sleep(INTERVALLO_MIN * 60_000);
   }
 } finally {
+  await context.close().catch(() => {});
   await browser.close();
 }
 
