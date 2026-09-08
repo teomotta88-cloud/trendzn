@@ -82,19 +82,27 @@ async function scrapeTag(context, tag) {
     await page.waitForTimeout(2500);
     const url = await scrollAndCollectVideoUrls(page, { maxScroll: MAX_SCROLL });
     if (url.length === 0) {
-      // Il titolo da solo non basta a distinguere una pagina hashtag vuota
-      // per davvero da un redirect silenzioso altrove (es. al feed
-      // generico): con sessione autenticata, TikTok può riconoscere i
-      // cookie come validi — niente login-wall — e comunque rimandare a
-      // /foryou se tratta la sessione come sospetta (IP diverso da dove è
-      // nata, fingerprint da automazione). L'URL finale distingue i due
-      // casi: se resta su /tag/<hashtag> la pagina è davvero senza video,
-      // se è altrove il problema è la sessione, non lo scraping.
+      // Con sessione autenticata la prima run (07/09) è rimasta su
+      // /tag/<hashtag> — niente redirect verso il feed generico, l'ipotesi
+      // iniziale — eppure il titolo restava quello di default e zero video
+      // nel DOM, tranne su un hashtag senza contenuti reali, che ha dato la
+      // pagina "not found" vera. Quindi TikTok risponde in modo diverso per
+      // hashtag: il problema sta nel client-side rendering, non nel
+      // routing. Ipotesi più probabile ora: un overlay bloccante (banner
+      // cookie/onboarding) che ricompare a ogni pagina perché la sessione
+      // ha solo i cookie esportati dal browser, non il localStorage dove
+      // TikTok tiene tipicamente il consenso già dato. Un pezzo del testo
+      // reale della pagina lo conferma senza bisogno di ipotesi ulteriori.
       const titolo = await page.title().catch(() => null);
       const urlFinale = page.url();
+      const testo = await page
+        .evaluate(() => document.body?.innerText?.replace(/\s+/g, " ").trim().slice(0, 200) ?? "")
+        .catch(() => "");
       return {
         status: "vuota",
-        reason: `titolo: ${String(titolo).slice(0, 80)} — url finale: ${urlFinale}`,
+        reason:
+          `titolo: ${String(titolo).slice(0, 80)} — url finale: ${urlFinale}` +
+          (testo ? ` — testo pagina: "${testo}"` : ""),
         url: [],
       };
     }
