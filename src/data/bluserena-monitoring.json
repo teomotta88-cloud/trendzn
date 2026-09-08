@@ -64260,6 +64260,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:05.788Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:49:58.067Z"
           }
         },
         {
@@ -64283,6 +64291,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:10.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lilian Nabaasa Grand Entrance\nAt the stage at Serena Hotel\nAt the stage at Serena",
+            "confidence": 0.883,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:50:04.252Z"
           }
         },
         {
@@ -64306,6 +64323,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:15.945Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nah ini di JIn HM Yamin ya wee\nGRAND SAKURA HOTEL\nGRAND SAKURA HOTEL p\nRecepsionisnya ganteng wee 4 a è\nNah ini aku spill kamarnya ya\nRate nya from 300rban kok\nIni Fasilitasnya ya\nboleh lah lihat sendiri 2\nSpill Lengkap Toiletnya",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:50:10.233Z"
           }
         },
         {
@@ -64329,6 +64355,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:22.000Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tu nà disse quetinhz\nconhecer hada\noxente\nconfusao.",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:50:22.294Z"
           }
         },
         {
@@ -64352,6 +64387,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:25.083Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:50:36.912Z"
           }
         },
         {
@@ -64375,6 +64418,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:27.262Z"
+          },
+          "ocrData": {
+            "textOnScreen": "elax Hotel\nSerena\nRelax Hotel\nGran serena_",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:50:43.859Z"
           }
         }
       ]
@@ -68560,6 +68612,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:29.638Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: the shoes are the outfit",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:51:22.624Z"
           }
         },
         {
@@ -68583,6 +68644,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:35.859Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WENN,\nsee the'ls\nEscuché\nCelebration Key!\ni had so much fun!\nCelebration",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:51:36.416Z"
           }
         },
         {
@@ -68606,6 +68676,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:38.246Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:51:41.836Z"
           }
         },
         {
@@ -68629,6 +68707,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:45.169Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ntes:\najan",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:51:50.820Z"
           }
         },
         {
@@ -68652,6 +68739,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:50.304Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Thdi ven",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:52:14.389Z"
           }
         }
       ]
@@ -73379,6 +73475,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:54.180Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:52:20.577Z"
           }
         },
         {
@@ -73402,6 +73506,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:31:56.577Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:52:29.970Z"
           }
         },
         {
@@ -73425,6 +73537,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:02.014Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AND ABRAXOS.\nEVEN GET EVEN\nBETTER AS WE\nIREALLY LIKE\nTHE KING ISN'T\nHIS REAL FATHER.\nWHICH IS THE\nBOOK.",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:52:35.503Z"
           }
         },
         {
@@ -73448,6 +73569,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:04.678Z"
+          },
+          "ocrData": {
+            "textOnScreen": "calan\ncalan; 3\nNR calan",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:52:56.947Z"
           }
         },
         {
@@ -73471,6 +73601,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:10.634Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SYAKIRAH",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:53:09.108Z"
           }
         },
         {
@@ -73494,6 +73633,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:14.669Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Work\nTue 11 cons Wed 12 t Week\nList Work Mom Anniversary\nLIST\nLITTLE COOL LITTLE\nHERE IN ONE",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:53:16.057Z"
           }
         },
         {
@@ -73517,6 +73665,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:20.671Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:53:33.764Z"
           }
         },
         {
@@ -73540,6 +73696,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:23.160Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:54:03.814Z"
           }
         },
         {
@@ -73563,6 +73727,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:30.805Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PHRIZO00\nonly\ntion hdll not",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:54:13.733Z"
           }
         },
         {
@@ -73586,6 +73759,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:43.284Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:54:36.689Z"
           }
         },
         {
@@ -73609,6 +73790,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:46.287Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DUEL COMMANDER\nEVER\nLegal by player vote\nCOMMAND ZONE",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:54:43.766Z"
           }
         },
         {
@@ -73632,6 +73822,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:48.798Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:54:54.151Z"
           }
         },
         {
@@ -73655,6 +73853,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:53.038Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OCCITANA\nRESORT\nSKY BAR, INFINITY\nEten i",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:55:14.936Z"
           }
         },
         {
@@ -73678,6 +73885,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T09:32:56.854Z"
+          },
+          "ocrData": {
+            "textOnScreen": "jul ago sept",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T09:55:34.241Z"
           }
         }
       ]
