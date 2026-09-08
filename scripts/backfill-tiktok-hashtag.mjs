@@ -235,7 +235,13 @@ async function callScrapeCreators(tag, cursor) {
     throw new Error(`ScrapeCreators: ${res.status} ${text}`);
   }
   const data = JSON.parse(text);
-  const list = data.aweme_list ?? data.videos ?? [];
+  // search_item_list confermato su un run reale (9/09/2026, chiavi risposta:
+  // success, credits_remaining, credits_charged, search_item_list, cursor,
+  // has_more): la ricerca per keyword usa un nome diverso da quello della
+  // ricerca per hashtag (aweme_list), da cui lo "0 video restituiti" del
+  // primo run dopo il cambio di endpoint — la richiesta funzionava (crediti
+  // scalati regolarmente), il parsing della risposta no.
+  const list = data.search_item_list ?? data.aweme_list ?? data.videos ?? [];
   if (data.credits_remaining != null) {
     console.log(`  (ScrapeCreators: ${data.credits_remaining} crediti residui)`);
   }
@@ -261,7 +267,15 @@ async function callScrapeCreators(tag, cursor) {
   };
 }
 
-function mapScrapeCreatorsItem(item) {
+function mapScrapeCreatorsItem(rawItem) {
+  // Le API di ricerca generica di TikTok (a differenza di quella per
+  // hashtag, che consegna oggetti aweme già "piatti") in genere annidano il
+  // video vero sotto `aweme_info`, con `rawItem` che resta un wrapper con
+  // `type`/altri metadati di ricerca attorno. Non verificato per QUESTO
+  // endpoint in anticipo (rete di sviluppo bloccata su scrapecreators.com):
+  // se `aweme_info` non c'è si usa `rawItem` stesso, così un item già piatto
+  // funziona comunque.
+  const item = rawItem.aweme_info ?? rawItem;
   const rawUrl =
     item.share_url ??
     (item.aweme_id
