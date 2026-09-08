@@ -1215,7 +1215,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:26.792Z"
+            "updatedAt": "2026-09-08T12:14:25.014Z"
           },
           "ocrData": {
             "textOnScreen": "BLU SERENA DA\nSEMPREW i\nTorreserena Resort\n0 Torreserena Resort\nSEMPREW",
@@ -1287,7 +1287,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:01:29.468Z"
+            "updatedAt": "2026-09-08T12:14:22.875Z"
           },
           "ocrData": {
             "textOnScreen": "SERENE RESORT",
@@ -11345,7 +11345,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-02T09:20:35.042Z"
+            "updatedAt": "2026-09-08T12:14:20.140Z"
           },
           "ocrData": {
             "textOnScreen": null,
@@ -24329,7 +24329,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:58:35.140Z"
+            "updatedAt": "2026-09-08T12:14:17.861Z"
           }
         },
         {
@@ -36204,7 +36204,16 @@
           "likes": 1948,
           "comments": 86,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno ragazzi, questa è la parte 2 del mio stay a Senara Hills. È super presto in mattina, non ho mai visto me stessi a svegliare per un'attività dopo tanto tempo. Quindi andremo in alto al pico del paradiso, è dove possiamo vedere il sole. Scusate, il sole. state attenti a guardare l'estetica della viaggio e a vedere la notte quindi ho finito di mangiare il piatto ora andrò alla stanza per andare a prepararmi un po' vediamoci più tardi quindi sono molto entusiasmata andremo per l'attività prossima che è il foco volante non posso aspettare di andare e provarlo andiamo Quindi sono arrivata a casa per la mia attività di soccorso di fiori Quindi non posso aspettare Vi mostrerò come mi vedo ora Sto andando in stazione Vedete lì Ah Ah ma in generale l'esperienza era incredibile sicuramente prenderò probabilmente Flying Fox come un spazio non lo so c'è anche un spazio? c'è un spazio così? non lo so ma è così divertente volevo solo prendere il tempo per dirvi cosa ho sentito attraverso questa esperienza ero over con l'esitamento ero felice ero ansioso ma buono buono ansioso non ho davvero aspettato che andassi per due viaggi per Flying Fox perché per la natura Sono una persona molto ansiosa, a base di natura. Mi fanno spaventare quando si tratta di attività che fanno il riscaldamento dell'adrenalina. La prima volta che sono andata fu incredibile. Mi sentivo così rilassata, così... ...avvicinata. Ciao ragazzi, sono tornata. Sto qui solo per due giorni e una notte. Quindi è ora di andare a casa. Non voglio andare a casa. Non voglio mai stare qui, se posso, perché amo la natura, amo davvero la natura. Penso che potete vedere questo attraverso i miei video di Gabon. Quindi, sì, troppo male, devo tornare, ho responsabilità. Quindi, sì, c'è qualcosa che sta succedendo in fondo. Mi dispiace per il ruolo. Per concludere, dovete venire, è fantastico. Per favore. Grazie.",
+            "language": "Italian",
+            "durationSec": 215.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:09:54.519Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36269,7 +36278,16 @@
           "likes": 247,
           "comments": 14,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Posso avere un tocco del tuo cupcake? Grazie! Apri le orecchie! Sorpresa! È il tuo primo party! Buon appetito!",
+            "language": "Italian",
+            "durationSec": 24.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:11:24.189Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36282,7 +36300,16 @@
           "likes": 326,
           "comments": 115,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La storia di Amara.org Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 36.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:12:03.718Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36490,7 +36517,16 @@
           "likes": 78,
           "comments": 75,
           "shares": 185,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:12:07.254Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36529,7 +36565,16 @@
           "likes": 43900,
           "comments": 61,
           "shares": 777,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 11.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:12:11.395Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36568,7 +36613,16 @@
           "likes": 206,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 47.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:12:57.661Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36594,7 +36648,16 @@
           "likes": 49,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 17.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:13:00.374Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36620,7 +36683,16 @@
           "likes": 476,
           "comments": 8,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "When marimba rhythms start to play Dance with me, make me sway Like a lazy ocean hugs the shore Hold me close, sway me more Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 46.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:13:29.892Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36659,7 +36731,16 @@
           "likes": 83,
           "comments": 5,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ehi baby, io e io ne urlum, appena c'è un po' di napoli da boda, boda baby, non è ghiardi baby, baby non c'è cagadi baby.",
+            "language": "Italian",
+            "durationSec": 20.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:13:34.906Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36685,7 +36766,16 @@
           "likes": 25300,
           "comments": 1676,
           "shares": 5191,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 56.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:14:03.124Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36763,7 +36853,16 @@
           "likes": 79,
           "comments": 226,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:14:07.750Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36893,7 +36992,16 @@
           "likes": 92,
           "comments": 2,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La città di Bologna Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:14:15.592Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -36963,7 +37071,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-08T11:58:35.140Z"
+            "updatedAt": "2026-09-08T12:14:17.861Z"
           }
         },
         {
@@ -37013,7 +37121,16 @@
             "resort",
             "celebration",
             "Ferragosto"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:14:20.140Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37062,7 +37179,16 @@
             "vacanza",
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Allora, stiamo entrando all'interno del ristorante del CNR Resort per vedere se tutto quello che hanno pubblicato è reale o meno. Bocchieri. Uvitissimi. Salute. Uvite. Santi, com'è? Come? Astice? Domani controlliamo le formiche.",
+            "language": "Italian",
+            "durationSec": 38.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:14:22.875Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37109,7 +37235,16 @@
           "topics": [
             "spiaggia",
             "cibo"
-          ]
+          ],
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:14:25.014Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37135,7 +37270,16 @@
           "likes": 32,
           "comments": 12,
           "shares": 29,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "assolutamente da fortissimo vi faccio vedere un'altra piccola cosa del video ragazzi allora campetto per le bocce giostrine all'aperto ghibis numero 1 palestra adiacente piscina giostrine esterne numero 2 si vola coragghi spettacolo top questo boschettino bellissimo che precede il mare ragazzi e l giochi e mini club da zero a non si non sbaglio nei teenagers ragazzi di serenella tata qui accolgono i nostri bimbi e possono tenerseli anche tutta la giornata mangiano con loro mangiano con le ragazze che sono divertentissime e cenano anche con loro nell'area bambini a fianco al ristorante vi faccio vedere un attimo il programmino e qua trovate tutto il programma per i bambini da 3 a 5 anni da 6 a 9 anni anni ovviamente poi sono anche quelli per i teenagers c'è un po di tutto ragazzi che bell'area",
+            "language": "Italian",
+            "durationSec": 121.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:15:22.936Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37148,7 +37292,16 @@
           "likes": 23,
           "comments": 3,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Sono la donna romana, ma se nere non lo faccio male, non lo direi stagio, se pagano sempre la ziarezza. Sono la donna romana, e perciò non sta d'accordo, perché si maisa troppo, non t'accavazzo. La testa gira la notte vola una rapina Ciao Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 122.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:15:59.723Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37291,7 +37444,16 @@
           "likes": 383,
           "comments": 5,
           "shares": 74,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti!",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:16:02.056Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37356,7 +37518,16 @@
           "likes": 70,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:16:36.237Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37395,7 +37566,16 @@
           "likes": 240,
           "comments": 4,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:16:41.017Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37447,7 +37627,16 @@
           "likes": 22,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "What if your next wine country getaway felt like you just escaped to Greece? This is Serena Vineyard Resort in Paso Robles, surrounded by vineyards and Mediterranean-inspired architecture. You can stay in private suites with fireplaces, patios, and panoramic vineyard and mountain views, then walk straight to the on-site tasting room for a wine experience. There are also walking trails across the property, plus a pool and hot tub for relaxing. If a quiet vineyard escape sounds like your kind of trip, you can check the current offer through the green link in the bottom left.",
+            "language": "Italian",
+            "durationSec": 25.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:16:44.191Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37564,7 +37753,16 @@
           "likes": 3497,
           "comments": 52,
           "shares": 82,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:17:06.630Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37577,7 +37775,16 @@
           "likes": 21100,
           "comments": 77,
           "shares": 1865,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Io lo che ando è... Maviendo la fila e la colapola Maviendo la fila e la colapola Maviendo la fila e la colapola",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:17:09.295Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37590,7 +37797,16 @@
           "likes": 897,
           "comments": 59,
           "shares": 62,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-08T12:17:25.082Z"
+          }
         },
         {
           "platform": "tiktok",
