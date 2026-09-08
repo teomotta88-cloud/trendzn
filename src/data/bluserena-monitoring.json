@@ -1360,7 +1360,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:13:48.550Z"
+            "updatedAt": "2026-09-08T13:26:47.116Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -2159,7 +2159,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T07:49:17.214Z"
+            "updatedAt": "2026-09-08T13:24:49.418Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -3687,7 +3687,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:07:06.746Z"
+            "updatedAt": "2026-09-08T13:24:00.074Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -9651,13 +9651,13 @@
             "updatedAt": "2026-09-08T12:03:35.066Z"
           },
           "ocrData": {
-            "textOnScreen": "Matteo\nDamiano\nPeppe",
-            "confidence": 0.782,
+            "textOnScreen": "Matteo\nDamiano\nPeppe A",
+            "confidence": 0.79,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:04:50.360Z"
+            "updatedAt": "2026-09-08T13:26:26.588Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -10258,7 +10258,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:32:47.990Z"
+            "updatedAt": "2026-09-08T13:26:19.577Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -14760,7 +14760,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:21:08.563Z"
+            "updatedAt": "2026-09-08T13:23:42.933Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -16980,7 +16980,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:07:53.460Z"
+            "updatedAt": "2026-09-08T13:25:37.548Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -17120,7 +17120,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T15:48:01.758Z"
+            "updatedAt": "2026-09-08T13:22:52.434Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -20916,7 +20916,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:05:15.155Z"
+            "updatedAt": "2026-09-08T13:23:34.032Z"
           }
         },
         {
@@ -24869,7 +24869,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:13:33.320Z"
+            "updatedAt": "2026-09-08T13:24:20.639Z"
           }
         },
         {
@@ -34055,6 +34055,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:12.502Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lola and auntie just got back\nfrom the, Us, so you surprised them\n3 sd this extraordinary kakanin for,\nwhile waiting for the\nlola and auntie just got\nthis extraordinary kakanin for merienda p\nwhile waiting for the sunset\nYour lola and auntie just got back i\nfrom the US, so you surprised them with\nthis extraordinary kakanin for merienda\ndi Your lola and auntie just got\nthis extraordinary kakanin for fl\ni waiting for the sunset s A\nour lola and auntie just got back\nthe US, so you surprised them with\n2 while waiting for the sunset",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:21:48.720Z"
           }
         },
         {
@@ -34090,6 +34099,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:15.031Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:22:07.523Z"
           }
         },
         {
@@ -34112,6 +34129,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:18.863Z"
+          },
+          "ocrData": {
+            "textOnScreen": "[ooking\nZA winery is under\nthey have",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:22:22.823Z"
           }
         },
         {
@@ -34173,6 +34199,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:21.994Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VICT\nA GOLF",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:22:38.980Z"
           }
         },
         {
@@ -34208,6 +34243,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:28.104Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:22:44.877Z"
           }
         },
         {
@@ -34294,6 +34337,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:31.741Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IQUINTO\nSERENE RESORT\nANDIAMO IN\nLAMENTARCI gf\nSERENÈ\nRECEPTION A\n\"di LAMENTARCI\nQUINTO GIORNO AL\nSERENE\nANDIAMO IN RECEPTION A\nLAMENTARCI",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:22:52.434Z"
           }
         },
         {
@@ -34316,6 +34368,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:35.549Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Your\nstars hae\nwine\nPage wine\nhere\nTAR BELOW\nTO RESBRY\nsevera\nstarts\nBELO\nUO RESERV\nis only\naway,",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:23:05.048Z"
           }
         },
         {
@@ -34390,6 +34451,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:39.414Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rois 3",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:23:17.169Z"
           }
         },
         {
@@ -34412,6 +34482,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:41.894Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:23:25.203Z"
           }
         },
         {
@@ -34481,7 +34559,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:05:15.155Z"
+            "updatedAt": "2026-09-08T13:23:34.032Z"
           }
         },
         {
@@ -34527,6 +34605,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:51.098Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pondi al comm\nmina F i\nSto anke io qui dal 11 agosto\nsi sta bene ma le camere\npiccolissime che nn ti puoi\nmuovere e nn sono pulite\nl'animazione ok infatti si\nsono lamentate tante\npersone per quello che si\nprendono mi aspettavo\nCALASERENA\n(Video girato il giorno)\nbasic. le\nRispondi al commento di\nRomina Ranieri 1987\nD Sto anke io qui dal 11 agosto\n(Video giorno)\nA La mia è una camera basic. Poi ci sono anche le suite.\nCALASERENAYS\ngiorno)\nanche le\nl'animazione ok infatti si v\nSto anke io qui dal 1 te\nl'animazione ok infatti\ne ne per quell\nLa le suite",
+            "confidence": 0.929,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:23:42.933Z"
           }
         },
         {
@@ -34562,6 +34649,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:02:57.239Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serenus\nResort\nIs Serenas Badesi\nSibari green resort",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:23:50.492Z"
           }
         },
         {
@@ -34607,6 +34703,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:01.160Z"
+          },
+          "ocrData": {
+            "textOnScreen": "saluto della\nfanpage Bluserena\nOddio sta",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:24:00.074Z"
           }
         },
         {
@@ -34673,7 +34778,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:13:33.320Z"
+            "updatedAt": "2026-09-08T13:24:20.639Z"
           }
         },
         {
@@ -34709,6 +34814,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:10.296Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:24:30.141Z"
           }
         },
         {
@@ -34793,6 +34906,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:12.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:24:49.418Z"
           }
         },
         {
@@ -34836,6 +34957,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:15.318Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE\nRESORT",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:25:28.667Z"
           }
         },
         {
@@ -34881,6 +35011,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:18.619Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:25:37.548Z"
           }
         },
         {
@@ -34916,6 +35054,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:25.167Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:25:50.286Z"
           }
         },
         {
@@ -34961,6 +35107,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:30.668Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DIAM\nANDIAMO\nSERENERESORT\nOLTRE/AD ESSERE",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:26:19.577Z"
           }
         },
         {
@@ -35160,6 +35315,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:35.066Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Matteo\nDamiano\nPeppe A",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:26:26.588Z"
           }
         },
         {
@@ -35182,6 +35346,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:38.064Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a sardegna 9:17\nsardegnai9:17\nchilisiserenas/badesi",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:26:42.658Z"
           }
         },
         {
@@ -35238,6 +35411,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:41.302Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:26:47.116Z"
           }
         },
         {
@@ -35325,6 +35506,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:43.785Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:26:54.716Z"
           }
         },
         {
@@ -35399,6 +35588,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:03:49.240Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hy te vai in vacanza in\nSardegna... d\nbeata te ci\nSardegna\nBeata te che",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:27:01.428Z"
           }
         },
         {
@@ -42795,7 +42993,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:07:32.801Z"
+            "updatedAt": "2026-09-08T13:21:48.720Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -43233,7 +43431,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:37:03.619Z"
+            "updatedAt": "2026-09-08T13:22:22.823Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -60328,7 +60526,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:05:15.155Z"
+            "updatedAt": "2026-09-08T13:23:34.032Z"
           },
           "ocrInsights": "No content available for analysis.",
           "sentimentData": {
@@ -73159,7 +73357,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T17:00:53.414Z"
+            "updatedAt": "2026-09-08T13:22:38.980Z"
           },
           "audioAnalysis": {
             "transcript": "Musica Grazie a tutti.",
