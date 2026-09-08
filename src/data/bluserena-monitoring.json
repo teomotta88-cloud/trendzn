@@ -72108,6 +72108,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:49:48.966Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Exposed Pakistan's Top 5-\nStar Hotel ($300 Dirty Rooms)\nThank you: k\nThis-",
+            "confidence": 0.848,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:53:47.048Z"
           }
         },
         {
@@ -72131,6 +72140,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:51:04.726Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:54:02.635Z"
           }
         },
         {
@@ -72154,6 +72171,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:53:04.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:54:08.493Z"
           }
         },
         {
@@ -72177,6 +72202,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:54:07.697Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANZI\nFlus Pour\nFlvs i",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:54:19.345Z"
           }
         },
         {
@@ -72200,6 +72234,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:54:33.969Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Irene Namatovu rehearsals for her\nconcert at Serena Hotel\nconcert at Serena Hotel i\nhe concert at Serena Hotel",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:54:32.798Z"
           }
         },
         {
@@ -72223,6 +72266,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:54:42.823Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA\np Faisalabad, Pakistan\nOUR SEAS\n“Samundri\nFOUR SEASON\nFaisalabad Samundri Rd",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:54:43.940Z"
           }
         }
       ]
@@ -76632,6 +76684,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:55:30.737Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: khi bn bl qua nhiéu\nEA serena Resort\nSteak è",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:54:54.303Z"
           }
         },
         {
@@ -76655,6 +76716,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:55:47.153Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:55:07.033Z"
           }
         },
         {
@@ -76678,6 +76747,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:55:49.629Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hota from\nHola from Spain\nfrom Spain\nHola\nHola from",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:55:15.241Z"
           }
         },
         {
@@ -76701,6 +76779,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:56:58.904Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:55:39.881Z"
           }
         },
         {
@@ -76724,6 +76810,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:57:03.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lago Hess 13018 Km 13 Bariloche\nCuando losihuéspedes\nhuéspedes nosjpiden\nUbicacion\ntoch\n13018 lm Bariloche,\ncomplejo,\n?_Lago Hess 13018 lim 13",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:55:57.107Z"
           }
         },
         {
@@ -76747,6 +76842,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:58:10.475Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3pecb rappepo6Haa",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:56:02.157Z"
           }
         }
       ]
@@ -81928,6 +82032,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:59:05.527Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Dj Frisky Caliente Resort",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:56:06.938Z"
           }
         },
         {
@@ -81951,6 +82064,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:59:08.148Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POKE",
+            "confidence": 0.733,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:56:19.353Z"
           }
         },
         {
@@ -81974,6 +82096,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:59:12.920Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sisoy\natodamadre, pobre de/\ngente'a la qué le\nNochixtlà\na pobre de\nAs n Nochixtlan\n9 magireNpobre de\nlalgente ala que le A\npobre de\nla genteiaila\ngente a la\ncaigo",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:56:33.452Z"
           }
         },
         {
@@ -81997,6 +82128,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:59:16.588Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ssage de qualité",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:56:42.348Z"
           }
         },
         {
@@ -82020,6 +82160,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:00:20.241Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:56:54.579Z"
           }
         },
         {
@@ -82043,6 +82191,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:00:22.449Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cal is such a cornball in this\nscene “yeah you're right heh...\"\nSYBAU GO HOMEEE",
+            "confidence": 0.914,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:57:00.458Z"
           }
         },
         {
@@ -82066,6 +82223,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:00:27.513Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ENTENDI LA REFERENCIA\nENTEND LA REFERENCIA\nENTENDI LA\nINUERTERA è",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:57:07.625Z"
           }
         }
       ]
@@ -85272,6 +85438,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:01.060Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Montanas\nresort",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:57:36.838Z"
           }
         }
       ]
@@ -88505,6 +88680,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:03.432Z"
+          },
+          "ocrData": {
+            "textOnScreen": "EWASCO\nRispondi al commento d\ngiuseppepatruno23\ni Buongiorno è possibile\nsapere la spiaggia precisa\ndi Castellaneta Marina?\nNon a caso? Perché\nall'interno del hotel è\nimpossibile entrare grazie\nmille Tw\nE VASCO",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:57:46.853Z"
           }
         },
         {
@@ -88528,6 +88712,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:06.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:58:06.143Z"
           }
         },
         {
@@ -88551,6 +88743,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:09.594Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:58:18.362Z"
           }
         },
         {
@@ -88574,6 +88774,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:15.295Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ATTAN AVA\nyang\n3 suka\naku booking cuma 200.000]\nheater",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:58:31.269Z"
           }
         },
         {
@@ -88597,6 +88806,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T13:02:40.539Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a Viaha\nCetara\nToledo Inn Hotel\nBooking lewat tag lokasi di b\npastilah lebih murah!\nYuk, cuss booking!",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:58:55.310Z"
           }
         }
       ]
