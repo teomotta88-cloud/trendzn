@@ -27663,7 +27663,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7662396111990099232",
           "date": "2026-07-14T14:50:18.000Z",
           "caption": "Risposta a @Vale✨🖤 come si mangia al Serenè resort? Questo è il nostro pranzo di oggi. Da premettere che i gusti sono soggettivi, noi preferiamo mangiare alcune cose rispetto ad altre, di sicuro non facciamo la fila per pizza e patatine fritte, preferiamo mangiare secondi fatti alla griglia e primi saltati al momento. Voi come vi siete trovati? #sereneresort #bluserena #calabria #summer2026 @bluserena",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 13500,
           "imageUrl": null,
           "likes": 104,
@@ -27687,7 +27687,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T14:21:44.601Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "pranzo",
+              "servizio"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.93,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:23:52.270Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "pranzo",
+            "servizio"
+          ]
         }
       ]
     },
@@ -68032,7 +68057,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7662396111990099232",
           "date": "2026-07-14T14:50:18.000Z",
           "caption": "Risposta a @Vale✨🖤 come si mangia al Serenè resort? Questo è il nostro pranzo di oggi. Da premettere che i gusti sono soggettivi, noi preferiamo mangiare alcune cose rispetto ad altre, di sicuro non facciamo la fila per pizza e patatine fritte, preferiamo mangiare secondi fatti alla griglia e primi saltati al momento. Voi come vi siete trovati? #sereneresort #bluserena #calabria #summer2026 @bluserena",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 13500,
           "imageUrl": null,
           "likes": 104,
@@ -68056,7 +68081,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-08T14:21:44.601Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "pranzo",
+              "servizio"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.93,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-08T14:23:52.270Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "pranzo",
+            "servizio"
+          ]
         }
       ]
     },
