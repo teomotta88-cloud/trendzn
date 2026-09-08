@@ -31,7 +31,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: bluserena-scoperta
+  # Gruppo dedicato, distinto da quello dello scraping hashtag
+  # (scrape-tiktok-hashtag-deep.yml): le due scoperte scrivono sullo stesso
+  # bluserena-monitoring.json ma commitNewPosts fa già retry sui conflitti
+  # (409), quindi possono girare insieme invece di mettersi in coda l'una
+  # dietro l'altra.
+  group: bluserena-scoperta-autori
   cancel-in-progress: false
 
 jobs:
