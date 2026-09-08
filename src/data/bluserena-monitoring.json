@@ -662,7 +662,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:03:45.414Z"
+            "updatedAt": "2026-09-08T13:28:16.015Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -7805,7 +7805,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T07:56:25.906Z"
+            "updatedAt": "2026-09-08T13:30:22.674Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -18319,7 +18319,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-04T08:58:43.142Z"
+            "updatedAt": "2026-09-08T13:28:59.581Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -18388,7 +18388,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T14:27:25.514Z"
+            "updatedAt": "2026-09-08T13:30:08.688Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -35658,6 +35658,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:03.891Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:27:14.579Z"
           }
         },
         {
@@ -35940,6 +35948,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:06.661Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Beach\nSere 1a Beach Bar WE",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:27:43.613Z"
           }
         },
         {
@@ -36001,6 +36018,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:10.462Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:27:55.081Z"
           }
         },
         {
@@ -36023,6 +36048,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:14.800Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:28:02.893Z"
           }
         },
         {
@@ -36045,6 +36078,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:17.252Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:28:09.080Z"
           }
         },
         {
@@ -36166,6 +36207,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:20.787Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ERENING\nDANEE)",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:28:16.015Z"
           }
         },
         {
@@ -36201,6 +36251,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:23.489Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WAIT TILL YOU\nTORNADO\nAT SERENA",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:28:22.687Z"
           }
         },
         {
@@ -36272,6 +36331,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:28.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mattia poss\nPerrell Piccione\nRoberto Norbert\nDe Falco Pilone\nDe Felice Serra\nPettenello\nLerfone\nGiulia\nPizzurro a\nRicciarielli\nErika Delzotto Federica Carta\nFlav to\nSciacca Di Foggia” o\nkorenzo\nPomerani leoni La Rosa À\nCosenza Correale\n‘Orlando vi j L\nMarcello Bordonali",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:28:36.541Z"
           }
         },
         {
@@ -36328,6 +36396,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:31.632Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:28:59.581Z"
           }
         },
         {
@@ -36376,6 +36452,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:34.925Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:29:15.821Z"
           }
         },
         {
@@ -36411,6 +36495,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:37.361Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Samos",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:29:30.212Z"
           }
         },
         {
@@ -36446,6 +36539,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:04:43.320Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:29:40.059Z"
           }
         },
         {
@@ -36481,6 +36582,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:05:11.040Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BALCONY\nTHE COMMONIKITCHEN,IS OPEN 24/7, de\nFOR ASSISTANCE\nSCHOOL OF FISH",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:29:48.719Z"
           }
         },
         {
@@ -36581,6 +36691,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:05:29.684Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Please don’t disappear. I barely got over\nmissing the old you, don’t make me figure\nout how to miss this version of you too.\nIlya,\nMontbonne with my Dad tomorrow\ni morning, would you chase me down and\nask me to come back?\nleft Montbonne with my Dad tomorro\nmorning, would you chase me down and",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:29:56.390Z"
           }
         },
         {
@@ -36604,6 +36723,15 @@
             "reason": "Groq 429 dopo 4 tentativi: {\"error\":{\"message\":\"Rate limit reached for model `whisper-large-v3` in organization `org_01ky03pbbpf57v7zgqhkqx16p6` service tier `on_demand` on seconds of aud",
             "version": 1,
             "updatedAt": "2026-09-08T12:05:47.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SEJAK BEBERAPA\nHARI LALU DIA TERUS\nMENGAJAKKU BERTEMU\nKARENA ADA HAL YANG\nINGIN DISAMPAIKAN,\nBAHKAN HARI INI SAMPAI\nMENJEMPUTKU\nDENGAN MOBIL\nPERTAMA-TAMA,\nDIA BILANG KEJADIAN\nYANG LALU ITU MURNI\nULAH SEWENANG-WENANG\nPERDANA MENTERI SAAT\nMEMIMPIN PEMERINTAHAN,\nYANG SECARA LANCANG\nMENGATASNAMAKAN\nTITAH KERAJAAN,\nKARENA\nMEWAKILI KELUARGA\nKERAJAAN, DIA\nMEMINTA MAAF\nDENGAN TULUS.\nBAIK MENDIANG RATU DAN\nMENCATUT NAMA ISTANA,\nIA AKAN DIJATUHI\nVONIS MATI.\nDIA BERHARAP\nKEPUTUSAN ITU BISA\nSEDIKIT MEREDAKAN\nAMARAH DAN\nSAKIT\nHATIKU.",
+            "confidence": 0.879,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:30:01.825Z"
           }
         },
         {
@@ -36677,6 +36805,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:34:21.999Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LUSEREN\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:30:08.688Z"
           }
         },
         {
@@ -36725,6 +36862,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:05:54.014Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Pedasi,",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:30:16.855Z"
           }
         },
         {
@@ -36770,6 +36916,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:05:59.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:30:22.674Z"
           }
         },
         {
@@ -36792,6 +36946,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:06:24.596Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:30:36.570Z"
           }
         },
         {
@@ -36814,6 +36976,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:07:45.221Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PANY:",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:31:08.374Z"
           }
         },
         {
@@ -37114,6 +37285,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:07:50.265Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SN Stornara\n_ma tutti connessi e",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:31:39.191Z"
           }
         },
         {
@@ -37175,6 +37355,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:07:53.416Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:31:48.472Z"
           }
         },
         {
@@ -37197,6 +37385,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:07:58.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": "D thiz",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:32:02.364Z"
           }
         },
         {
@@ -37219,6 +37416,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:08:01.418Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:32:17.031Z"
           }
         },
         {
@@ -37254,6 +37459,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:08:24.545Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:32:26.045Z"
           }
         },
         {
@@ -44288,6 +44501,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:34:21.999Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LUSEREN\nGUARDA IL VIDEO\nCOMPLETO SU\nYOUTUBE",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:30:08.688Z"
           }
         },
         {
@@ -72597,7 +72819,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T16:54:36.753Z"
+            "updatedAt": "2026-09-08T13:28:22.687Z"
           },
           "audioAnalysis": {
             "transcript": "Musica",
