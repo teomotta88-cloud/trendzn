@@ -59,6 +59,10 @@ export interface EditorialPost {
   formato: string | null;
   channel_copies: Record<string, string>;
   copy_visual: string | null;
+  // Copy visual multipli (pagine Piani Editoriali IHC, bottone "+" nel form):
+  // copy_visual resta il primo valore per compatibilità con l'editing rapido
+  // inline e con il Piano Editoriale originale. null/vuoto altrove.
+  copy_visual_list: string[] | null;
   visual_url: string | null;
   visual_type: string | null;
   // Ultima rubrica/formato usati dal wizard di composizione post per
