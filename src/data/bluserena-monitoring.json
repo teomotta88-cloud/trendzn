@@ -1007,7 +1007,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:05:12.522Z"
+            "updatedAt": "2026-09-08T13:43:29.517Z"
           },
           "sentimentData": {
             "status": "ok",
@@ -18388,7 +18388,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:30:08.688Z"
+            "updatedAt": "2026-09-08T13:45:10.896Z"
           },
           "sentiment": "positive",
           "topics": [
@@ -18461,7 +18461,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-02T13:59:29.847Z"
+            "updatedAt": "2026-09-08T13:43:56.913Z"
           },
           "sentiment": "positive",
           "sentimentData": {
@@ -22402,7 +22402,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:07:40.984Z"
+            "updatedAt": "2026-09-08T13:43:44.052Z"
           }
         },
         {
@@ -36813,7 +36813,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:30:08.688Z"
+            "updatedAt": "2026-09-08T13:45:10.896Z"
           }
         },
         {
@@ -41638,6 +41638,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:30:53.038Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:43:05.763Z"
           }
         },
         {
@@ -41687,6 +41695,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:30:55.339Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i giorno a caso d'inverno\nnto ero felice adragosto nel mio\ngiorno acasod inverno. pe\nnto ero felice ad agosto nel mio\nposto del cuore\nroad\ngiorno a-caso d'inverno penserò a\ngiorno a caso d'inverno a\nnto ero felice ad agosto nel\nd'inverno a\nposto del guore",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:43:29.517Z"
           }
         },
         {
@@ -41782,7 +41799,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-08T13:07:40.984Z"
+            "updatedAt": "2026-09-08T13:43:44.052Z"
           }
         },
         {
@@ -41908,6 +41925,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:31:03.056Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@pluserena=",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:43:56.913Z"
           }
         },
         {
@@ -41930,6 +41956,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:31:08.151Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Seaden Sea Planet Resort S...\ni] 2 Seaden Sea Planet Resort S...\n2 Seaden Sea Planet Resort S...",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:21.099Z"
           }
         },
         {
@@ -41991,6 +42026,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:31:16.124Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:25.643Z"
           }
         },
         {
@@ -42014,6 +42057,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:31:26.174Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:29.992Z"
           }
         },
         {
@@ -42037,6 +42088,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:31:36.009Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Opening Box...\nlap a player toshoot\nEmotes\na player to'shoot\nthis day\nOnthisday",
+            "confidence": 0.823,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:36.016Z"
           }
         },
         {
@@ -42060,6 +42120,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:32:39.129Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Guys, found an\nabandoned house!",
+            "confidence": 0.92,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:40.301Z"
           }
         },
         {
@@ -42083,6 +42152,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:32:41.446Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA DON'T BE IN THE MOOD\nFOR SHENANIGANS\nFOR KORDELL SHENANIGANS\nSERENA DON'T BE IN THE",
+            "confidence": 0.868,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:48.095Z"
           }
         },
         {
@@ -42106,6 +42184,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:32:44.873Z"
+          },
+          "ocrData": {
+            "textOnScreen": "why some ra\nSily say last since",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:44:52.613Z"
           }
         },
         {
@@ -42129,6 +42216,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:34:13.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a me spin baddies wheell\nThat good so went behind the\nSee what get!\nmy friend btv\na c° me spin baddies\nThat good so went behind\nSeen pat\n185 my friend btv\npong tol\nWatching my friend\nThat good so went behind lé\nSee what I get!\na Watch me spin baddies\nSeewhatlget!\nTrad,",
+            "confidence": 0.853,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:45:04.125Z"
           }
         }
       ]
@@ -44923,7 +45019,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-08T13:30:08.688Z"
+            "updatedAt": "2026-09-08T13:45:10.896Z"
           }
         },
         {
@@ -45025,6 +45121,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:34:31.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MALLORDA\ncon esta calor a m\ni playa\nesta calor a\nRENA",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:45:28.162Z"
           }
         },
         {
@@ -45048,6 +45153,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:34:35.702Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:45:35.536Z"
           }
         },
         {
@@ -45071,6 +45184,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:34:42.287Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:46:13.049Z"
           }
         },
         {
@@ -45094,6 +45215,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:35:15.202Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TH CHO BAN THAN\nmn xay kénh thanh cong\nmn xay kénh thanh",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:46:53.593Z"
           }
         }
       ]
@@ -50354,6 +50484,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:35:17.496Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BLUSERENA\nHOTELS RESORTS",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:47:05.930Z"
           }
         },
         {
@@ -50507,6 +50646,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:35:20.723Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:47:16.147Z"
           }
         }
       ]
@@ -55725,6 +55872,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:35:25.338Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Hotelà i\nSerena\nSerena Hotel è\nSerena Hotel",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:47:28.058Z"
           }
         },
         {
@@ -55748,6 +55904,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:36:15.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Li ITHE YOUNG\nYOUNG",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:47:36.997Z"
           }
         },
         {
@@ -55771,6 +55936,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:36:46.500Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IRENE NAMATOVU\nHappening Now: Catherine Kusasira Speech at\nIrene Namatovu Strong Woman live in concert\ni Serena Hotel 2026 press conference Ì\nIrene Namatovu Strong Woman live in concert A\nat Serena Hotel 2026 press conference\n3 Happening Now: Catherine Kusasira Speech at",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:47:46.423Z"
           }
         },
         {
@@ -55794,6 +55968,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:37:10.366Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FROM",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:47:53.089Z"
           }
         },
         {
@@ -55817,6 +56000,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:37:54.429Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ILE MAANA HALISI YA UWOYA KUWA\nAUNT NI MSWAHILI IKO HAPA SASA\nd ruvence",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:48:05.108Z"
           }
         },
         {
@@ -55840,6 +56032,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-08T12:38:42.965Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HAS BEEN DESCRIBED\nVERY\nSAIDZ\nAND SAID\nBETTER\nIMPORTANCE\nFLY BETTER\nCLUB",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-08T13:48:13.447Z"
           }
         },
         {
