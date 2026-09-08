@@ -20,6 +20,15 @@
 // Gli hashtag sono i 14 canali già configurati nello store, non una lista
 // separata: aggiungerne uno dalla UI lo include qui automaticamente.
 //
+// NIENTE sessione autenticata qui, di proposito. Provata l'8/09: ogni pagina
+// hashtag tornava vuota con "Drag the slider to fit the puzzle" nel testo —
+// il captcha anti-automazione di TikTok, non un problema di sessione o di
+// cookie/localStorage. Da anonimo lo stesso captcha non compare e si arriva
+// comunque a ~58-60 video per hashtag, quindi resta la strada che funziona
+// per questo script. Il login (createTikTokContext in lib/tiktok-page.mjs)
+// resta usato dagli altri due script (KPI e profili autore), che non hanno
+// mostrato lo stesso blocco.
+//
 // Env:
 //   GITHUB_TOKEN: obbligatoria
 //   MAX_PASSATE: tetto di passate (default 18); di norma ci si ferma prima,
@@ -43,11 +52,7 @@ import {
   nuovoPost,
   tiktokVideoId,
 } from "./lib/bluserena-discovery.mjs";
-import {
-  createTikTokContext,
-  fetchVideoDetail,
-  scrollAndCollectVideoUrls,
-} from "./lib/tiktok-page.mjs";
+import { fetchVideoDetail, REAL_CHROME_UA, scrollAndCollectVideoUrls } from "./lib/tiktok-page.mjs";
 
 function intEnv(name, fallback) {
   const n = Number.parseInt(process.env[name] ?? "", 10);
@@ -82,17 +87,12 @@ async function scrapeTag(context, tag) {
     await page.waitForTimeout(2500);
     const url = await scrollAndCollectVideoUrls(page, { maxScroll: MAX_SCROLL });
     if (url.length === 0) {
-      // Con sessione autenticata la prima run (07/09) è rimasta su
-      // /tag/<hashtag> — niente redirect verso il feed generico, l'ipotesi
-      // iniziale — eppure il titolo restava quello di default e zero video
-      // nel DOM, tranne su un hashtag senza contenuti reali, che ha dato la
-      // pagina "not found" vera. Quindi TikTok risponde in modo diverso per
-      // hashtag: il problema sta nel client-side rendering, non nel
-      // routing. Ipotesi più probabile ora: un overlay bloccante (banner
-      // cookie/onboarding) che ricompare a ogni pagina perché la sessione
-      // ha solo i cookie esportati dal browser, non il localStorage dove
-      // TikTok tiene tipicamente il consenso già dato. Un pezzo del testo
-      // reale della pagina lo conferma senza bisogno di ipotesi ulteriori.
+      // Titolo + URL finale + un pezzo di testo pagina: la diagnostica che
+      // ha permesso di scoprire il captcha anti-automazione con la sessione
+      // autenticata (vedi commento in testa al file). Restano utili anche
+      // da anonimo, per lo stesso motivo per cui c'erano già: distinguere
+      // un vero "zero video" da un blocco (markup cambiato, login-wall,
+      // captcha) invece di scoprirlo mesi dopo da un buco nei dati.
       const titolo = await page.title().catch(() => null);
       const urlFinale = page.url();
       const testo = await page
@@ -134,7 +134,7 @@ console.log(
 
 const scadenza = Date.now() + MAX_MINUTES * 60_000;
 const browser = await chromium.launch({ headless: true });
-const context = await createTikTokContext(browser);
+const context = await browser.newContext({ userAgent: REAL_CHROME_UA });
 const riepilogo = [];
 let totaleAggiunti = 0;
 
