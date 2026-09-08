@@ -47,7 +47,7 @@ import {
   tiktokAuthors,
   tiktokVideoId,
 } from "./lib/bluserena-discovery.mjs";
-import { fetchAuthorVideos, fetchVideoDetail } from "./lib/tiktok-page.mjs";
+import { createTikTokContext, fetchAuthorVideos, fetchVideoDetail } from "./lib/tiktok-page.mjs";
 
 function intEnv(name, fallback) {
   const n = Number.parseInt(process.env[name] ?? "", 10);
@@ -84,6 +84,7 @@ if (DRY_RUN) console.log("DRY_RUN: nessuna scrittura.");
 console.log();
 
 const browser = await chromium.launch({ headless: true });
+const context = await createTikTokContext(browser);
 
 const pending = new Map(); // canale -> post[]
 const stats = { profili: 0, videoVisti: 0, inFinestra: 0, aggiunti: 0, senzaCanale: 0 };
@@ -124,7 +125,7 @@ try {
     }
 
     stats.profili++;
-    const esito = await fetchAuthorVideos(browser, autore.handle);
+    const esito = await fetchAuthorVideos(context, autore.handle);
     esiti[esito.status] = (esiti[esito.status] ?? 0) + 1;
 
     if (esito.status !== "ok") {
@@ -162,7 +163,7 @@ try {
     );
 
     for (const { url, date } of candidati) {
-      const dettaglio = await fetchVideoDetail(browser, url);
+      const dettaglio = await fetchVideoDetail(context, url);
       const caption = dettaglio.status === "ok" ? dettaglio.caption : null;
       const canali = channelsForPost({
         caption,
@@ -201,6 +202,7 @@ try {
 
   await flush();
 } finally {
+  await context.close().catch(() => {});
   await browser.close();
 }
 

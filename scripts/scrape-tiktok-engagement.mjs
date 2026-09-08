@@ -37,7 +37,7 @@ import { chromium } from "playwright";
 
 import { runEnrichment } from "./lib/bluserena-enrich.mjs";
 import { applyEngagement } from "./lib/tiktok-engagement.mjs";
-import { fetchVideoDetail } from "./lib/tiktok-page.mjs";
+import { createTikTokContext, fetchVideoDetail } from "./lib/tiktok-page.mjs";
 
 // 3, non 1: engagementData è lo stesso campo che usava lo script Emplifi, che
 // è arrivato a version 2. Il driver considera "già fatto" un record con status
@@ -68,6 +68,7 @@ function sleep(ms) {
 }
 
 const browser = await chromium.launch({ headless: true });
+const context = await createTikTokContext(browser);
 
 try {
   await runEnrichment({
@@ -78,7 +79,7 @@ try {
     select: isConfirmedTikTok,
     apply: (account, record) => applyEngagement(account, record, { overwrite: OVERWRITE_EXISTING }),
     processPost: async (account) => {
-      const record = await fetchVideoDetail(browser, account.url);
+      const record = await fetchVideoDetail(context, account.url);
       if (record.status === "ok") {
         console.log(
           `  views=${record.views ?? "-"} likes=${record.likes ?? "-"} ` +
@@ -92,5 +93,6 @@ try {
     },
   });
 } finally {
+  await context.close().catch(() => {});
   await browser.close();
 }

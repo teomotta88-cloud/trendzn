@@ -80,6 +80,7 @@ jobs:
       - name: Recupera KPI dalla pagina video
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TIKTOK_SESSION_SEED: ${{ secrets.TIKTOK_SESSION_SEED }}
           MAX_POSTS: ${{ inputs.max_posts || '2000' }}
           REPROCESS_FAILED: ${{ inputs.reprocess_failed || 'false' }}
           OVERWRITE_EXISTING: ${{ inputs.overwrite_existing || 'false' }}
