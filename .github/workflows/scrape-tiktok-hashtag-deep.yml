@@ -2,13 +2,29 @@ name: Scraping profondo hashtag TikTok
 
 # Scorre le pagine hashtag TikTok fino in fondo, salva i post mai visti dentro
 # la finestra lug-ago 25-26, e ripete il giro 15 minuti dopo il TERMINE del
-# precedente finché continua a trovarne — campioni distanziati pescano post
-# diversi, perché la lista di TikTok non è deterministica. Ci si ferma alla
-# prima passata senza post nuovi. Vedi scripts/scrape-tiktok-hashtag-deep.mjs.
+# precedente per MAX_PASSATE volte o finché non finisce il budget di tempo.
+# Vedi scripts/scrape-tiktok-hashtag-deep.mjs.
+#
+# LOOP CONTINUO (decisione dell'utente, 9/09/2026): il job "rilancia" chiama
+# l'API di GitHub per rilanciare QUESTO STESSO workflow non appena il job
+# "scraping" finisce — successo, fallimento o timeout, sempre. Non c'è più
+# nessuno stop automatico per "nessun post nuovo": la lista di TikTok non è
+# deterministica, quindi si continua a cercare a oltranza invece di fidarsi
+# di un giro vuoto. Il gruppo di concorrenza sotto impedisce le sovrapposizioni:
+# la run rilanciata resta in coda finché quella in corso (compresa un'eventuale
+# "analizza" a valle) non è finita del tutto.
+#
+# PER FERMARE IL LOOP: Actions -> questo workflow -> "..." -> Disable workflow.
+# Un workflow disabilitato rifiuta le chiamate di dispatch, quindi la catena si
+# interrompe al giro successivo. Non basta cancellare la run in corso: quella
+# in corso avrebbe comunque già schedulato la successiva prima di fermarsi.
 #
 # Fa anche da controllo di salute: se nessuna pagina hashtag restituisce video
 # lo script esce con errore, invece di lasciar passare "nessun post nuovo" —
-# che è l'esito normale quando invece funziona.
+# che è l'esito normale quando invece funziona. Con il loop continuo, un
+# fallimento persistente (es. TikTok blocca lo scraping) continua comunque a
+# rilanciarsi: le run comparirebbero rosse in Actions, quindi il modo per
+# accorgersene è guardare lì, non aspettarsi che il loop si fermi da solo.
 #
 # Gli hashtag sono i 14 canali configurati nello store, non una lista a parte.
 
@@ -16,7 +32,7 @@ on:
   workflow_dispatch:
     inputs:
       max_passate:
-        description: "Tetto di passate (ci si ferma prima, alla prima senza post nuovi)"
+        description: "Passate per run (sempre tutte, nessuno stop automatico)"
         required: false
         default: "18"
       intervallo_min:
@@ -30,6 +46,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: bluserena-scoperta-hashtag
@@ -77,3 +94,32 @@ jobs:
     if: needs.scraping.outputs.aggiunti != '0' && needs.scraping.outputs.aggiunti != ''
     uses: ./.github/workflows/analizza-post-bluserena.yml
     secrets: inherit
+
+  rilancia:
+    # needs solo "scraping", non "analizza": il gruppo di concorrenza in
+    # cima al file mette comunque in coda la run rilanciata finché anche
+    # "analizza" non è finita, quindi non serve aspettarla qui.
+    needs: scraping
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Rilancia lo scraping (loop continuo)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for tentativo in 1 2 3; do
+            status=$(curl -sS -o /tmp/resp.json -w "%{http_code}" -X POST \
+              -H "Authorization: token ${GITHUB_TOKEN}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/scrape-tiktok-hashtag-deep.yml/dispatches" \
+              -d "{\"ref\":\"${{ github.ref_name }}\"}")
+            if [ "$status" = "204" ]; then
+              echo "Rilanciato (tentativo $tentativo)."
+              exit 0
+            fi
+            echo "Tentativo $tentativo fallito (HTTP $status): $(cat /tmp/resp.json)"
+            sleep 5
+          done
+          echo "::error::Auto-rilancio fallito dopo 3 tentativi: il loop si è interrotto, va rilanciato a mano."
+          exit 1

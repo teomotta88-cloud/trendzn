@@ -1,16 +1,20 @@
 // Scraping profondo delle pagine hashtag TikTok: scorre finché la pagina
 // carica, tiene solo i post MAI VISTI e dentro la finestra lug-ago 25-26, e
-// ripete l'intero giro 15 minuti dopo il TERMINE del precedente, finché
-// continua a trovarne.
+// ripete l'intero giro 15 minuti dopo il TERMINE del precedente, per
+// MAX_PASSATE volte o finché non finisce il budget di tempo — non si ferma
+// più da solo alla prima passata senza post nuovi.
 //
 // Perché più passate. La lista che TikTok mostra su una pagina hashtag è un
 // campione, e cambia tra una visita e l'altra: è esattamente il motivo per cui
 // @maraalbergo/video/7675653655655140640 non è mai entrato pur avendo
-// #bluserena. Giri distanziati pescano campioni diversi, quindi si continua
-// finché una passata trova ancora post nuovi e ci si ferma alla prima che non
-// ne trova — quello è il segnale che la lista si è esaurita, e non un numero
-// deciso a priori. Quanti post emergono dopo la prima passata è anche la
-// misura di quanto la lista fosse incompleta.
+// #bluserena. Giri distanziati pescano campioni diversi, quindi si continua a
+// oltranza invece di fermarsi al primo giro vuoto — una passata senza novità
+// non garantisce che la successiva sia vuota anche lei, vista la non
+// determinismo della lista (decisione dell'utente, 9/09/2026: prima ci si
+// fermava al primo 0, ma la sola garanzia di aver visto tutto è continuare a
+// cercare). Il workflow che lancia questo script si auto-rilancia da solo
+// quando finisce (vedi scrape-tiktok-hashtag-deep.yml), quindi la ricerca
+// prosegue run dopo run senza intervento manuale.
 //
 // Il workflow serve anche da controllo di salute dello scraping: se una
 // pagina hashtag smette di restituire link (markup cambiato, login-wall), qui
@@ -31,8 +35,8 @@
 //
 // Env:
 //   GITHUB_TOKEN: obbligatoria
-//   MAX_PASSATE: tetto di passate (default 18); di norma ci si ferma prima,
-//     alla prima passata senza post nuovi
+//   MAX_PASSATE: numero di passate per run (default 18), sempre tutte —
+//     niente più stop alla prima senza post nuovi
 //   INTERVALLO_MIN: minuti tra il TERMINE di una passata e l'inizio della
 //     successiva (default 15)
 //   MAX_MINUTES: budget complessivo della run (default 320)
@@ -59,15 +63,17 @@ function intEnv(name, fallback) {
   return Number.isFinite(n) && n >= 0 ? n : fallback;
 }
 
-// Le passate non sono un numero fisso: si continua finché una passata trova
-// post nuovi, aspettando INTERVALLO_MIN dal TERMINE della precedente. Ci si
-// ferma alla prima passata che non trova nulla — è il segnale che la lista ha
-// smesso di restituire campioni diversi.
+// Si fanno sempre tutte le MAX_PASSATE (o finché non finisce il budget di
+// tempo), aspettando INTERVALLO_MIN dal TERMINE di ognuna: niente più stop
+// alla prima passata senza post nuovi, perché la lista di TikTok non è
+// deterministica e un giro vuoto non garantisce che il successivo lo sia
+// anche lui.
 //
-// MAX_PASSATE è solo una cintura di sicurezza contro il limite di 6 ore per
-// job di GitHub: 18 passate × (giro + 15 min) sta comodamente sotto. Se il
-// tetto viene raggiunto significa che si stavano ancora trovando post, e il
-// log lo dice esplicitamente perché si possa rilanciare.
+// MAX_PASSATE è una cintura di sicurezza contro il limite di 6 ore per job di
+// GitHub: 18 passate × (giro + 15 min) sta comodamente sotto. Il workflow che
+// lancia questo script si auto-rilancia quando la run finisce, quindi
+// raggiungere il tetto non è un problema: la ricerca continua alla run
+// successiva senza bisogno di rilanciarlo a mano.
 const MAX_PASSATE = intEnv("MAX_PASSATE", 18) || 18;
 const INTERVALLO_MIN = intEnv("INTERVALLO_MIN", 15);
 const MAX_MINUTES = intEnv("MAX_MINUTES", 320) || 320;
@@ -128,7 +134,7 @@ console.log(
 );
 console.log(`Post già nello store: ${noti.size}`);
 console.log(
-  `Passate: finché ne trovo (max ${MAX_PASSATE}), intervallo ${INTERVALLO_MIN} min ` +
+  `Passate: sempre ${MAX_PASSATE} (nessuno stop automatico), intervallo ${INTERVALLO_MIN} min ` +
     `dal termine della precedente, max ${MAX_SCROLL} scroll\n`,
 );
 
@@ -216,18 +222,16 @@ try {
 
     riepilogo.push({ passata, visti: vistiPassata, nuovi: nuoviPassata, perTag });
 
-    // Ci si ferma alla prima passata che non trova niente: è il segnale che la
-    // lista ha smesso di restituire campioni diversi. Finché invece emergono
-    // post nuovi si continua, perché vuol dire che non era ancora esaurita.
     if (nuoviPassata === 0) {
-      console.log(`\n🛑 Passata ${passata} senza post nuovi: mi fermo.`);
-      break;
+      console.log(
+        `\nPassata ${passata} senza post nuovi: continuo comunque (nessuno stop automatico).`,
+      );
     }
 
     if (passata === MAX_PASSATE) {
       console.log(
-        `\n⚠️  Raggiunto il tetto di ${MAX_PASSATE} passate mentre si trovavano ancora post ` +
-          "nuovi: rilanciare il workflow per continuare.",
+        `\n⚠️  Raggiunto il tetto di ${MAX_PASSATE} passate: la run finisce qui, il workflow si ` +
+          "auto-rilancia per continuare la ricerca.",
       );
       break;
     }
@@ -239,7 +243,7 @@ try {
     if (restanti < INTERVALLO_MIN + 5) {
       console.log(
         `\n⏱️  Restano ${Math.max(0, Math.round(restanti))} min di budget, non bastano per ` +
-          "un'altra passata: mi fermo qui. Rilanciare il workflow per continuare.",
+          "un'altra passata: mi fermo qui, il workflow si auto-rilancia per continuare.",
       );
       break;
     }
