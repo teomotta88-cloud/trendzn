@@ -270,6 +270,28 @@ for (const e of esiti.slice(1)) {
   console.log(`  ${e.nome}: ${soloSuoi} video che la pagina hashtag NON aveva`);
 }
 
+// Sovrapposizione a coppie fra tutte le strategie: non solo quanto aggiunge
+// ciascuna rispetto alla pagina hashtag, ma quanto si somigliano DUE a due —
+// es. hashtag vs ricerca video sono davvero due bacini diversi, o pescano
+// perlopiù lo stesso contenuto? Un'alta sovrapposizione vuol dire che
+// sommarle non porta lontano dai 200; una bassa vuol dire che sono
+// complementari e vale la pena tenerle entrambe.
+console.log("\n  Sovrapposizione a coppie (unici combinati / intersezione):");
+for (let i = 0; i < esiti.length; i++) {
+  for (let j = i + 1; j < esiti.length; j++) {
+    const a = esiti[i].unione;
+    const b = esiti[j].unione;
+    const intersezione = [...a].filter((id) => b.has(id)).length;
+    const combinati = new Set([...a, ...b]).size;
+    const minSize = Math.min(a.size, b.size) || 1;
+    const percSovrapposizione = Math.round((intersezione / minSize) * 100);
+    console.log(
+      `    ${esiti[i].nome} + ${esiti[j].nome}: ${combinati} unici combinati ` +
+        `(${a.size} + ${b.size}, intersezione ${intersezione}, ${percSovrapposizione}% del più piccolo dei due)`,
+    );
+  }
+}
+
 console.log(
   `\n  Obiettivo 200/hashtag a passata: ${totale.size >= 200 ? "RAGGIUNTO" : `mancano ${200 - totale.size}`} ` +
     "con queste strategie sommate.",
