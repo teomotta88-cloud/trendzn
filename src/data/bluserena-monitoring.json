@@ -46811,7 +46811,7 @@
           "url": "https://www.tiktok.com/@combo.nghiduong/video/7677581693888269585",
           "date": "2026-08-24T12:58:07.000Z",
           "caption": "Liệu đây có phải là khu nghỉ dưỡng đẹp nhất Kim Bôi chưa? #serenaresortkimboihoabinh #nghiduong #fyp #amazingo",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 955,
           "imageUrl": null,
           "likes": 12,
@@ -46835,7 +46835,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-09T08:50:27.253Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "onsen",
+              "kid club",
+              "famiglia",
+              "natura"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T09:03:36.525Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "onsen",
+            "kid club",
+            "famiglia",
+            "natura"
+          ]
         },
         {
           "platform": "tiktok",
