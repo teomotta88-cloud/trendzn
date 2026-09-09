@@ -27767,6 +27767,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T09:33:25.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i s came back\nNo matter how it got,\nthey always came back",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T09:33:42.535Z"
           }
         }
       ]
@@ -63774,6 +63783,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T09:33:29.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Avillion Port: Dicksen\nWater chale\nMacam ni",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T09:33:52.069Z"
           }
         }
       ]
