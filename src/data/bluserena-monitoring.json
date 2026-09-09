@@ -67546,7 +67546,16 @@
           "likes": 66,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:45:42.089Z"
+          }
         }
       ]
     },
@@ -72207,7 +72216,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:45:46.644Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72221,7 +72239,16 @@
           "likes": 43,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è il giorno 2 della mia solo viaggio in Mexico. Ho iniziato il mio giorno al buffet. Hanno molte opzioni da scegliere e mi piace. Hanno anche frusci e ho fatto in modo da prendere uno. Dopo il piatto ho andato a lavorare, quindi ho portato il boat al gym e ho avuto una buona sessione. E mi piace la vista che abbiamo dal gym. Ora che ho fatto il mio workout, è ora per il spa. Ora, ho preso un massaggio, un facial e un scrub per il corpo e quella era un'esperienza incredibile. Quello che mi ha aiutato a migliorare la mia stanza. Sono andata alla testa di fronte e ho detto, fammi quella sfumatura. E poi ho fatto la tour della stanza. Per la cena di oggi avevo l'italiano e ho amato tutto per questa cena. e la tavola di Tiramisu era la cerimonia in cima non mi piace molto Tiramisu ma questa è stata una bella esperienza ho avuto un dinerino in prima, quindi ho avuto tempo per andare alla piazza per prendere un po' di foto e poi sono andata alla barra di sfumatura tutto questo bevendo mi ha fatto fredda di nuovo quindi ho avuto un dinerino mexicano per la mia seconda e poi ho finito la notte con la servizio Stay tuned to see what I did on day 3.",
+            "language": "Italian",
+            "durationSec": 87.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:45:51.617Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72235,7 +72262,16 @@
           "likes": 44,
           "comments": 0,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao Grazie.",
+            "language": "Italian",
+            "durationSec": 60.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:45:55.206Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72249,7 +72285,16 @@
           "likes": 16,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:00.797Z"
+          }
         }
       ]
     },
@@ -78042,7 +78087,16 @@
           "likes": 15,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Aio, Anna Calam, grazie a tutti! Uuuuuh! Oh, c'entrano le mani, oh! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:05.053Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78056,7 +78110,16 @@
           "likes": 5825,
           "comments": 303,
           "shares": 589,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Un giovane giovane, un 20 anni, un europeo, si è uscito di un resort luxorio e di famiglia. Ma per te, un giovane, un giovane, è un giovane che espoziona la criminalità che ha sfruttato la polizia e la società. È stato uscito dal resort, è stato uscito da un camariere, è stato uscito da una persona che deve andare a prendere i piaggisti e un giovane di polizia che lavora lì non ha mai sentito la polizia e ha tentato di prendere il giovane. La situazione è in grado di rinforzare il sistema di protezione sociale. e per dire a tutti che la Cipria è l'unica città per rinforzare la climatità di Cipria.",
+            "language": "Italian",
+            "durationSec": 64.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:09.448Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78070,7 +78133,16 @@
           "likes": 33,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:12.478Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78084,7 +78156,16 @@
           "likes": 77,
           "comments": 2,
           "shares": 26,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:15.911Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78098,7 +78179,16 @@
           "likes": 34,
           "comments": 1,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è l'Alaterra, il risort, l'Alaterra, dal lato Brisa. La sua ricezione è meravigliosa anche. È gigantesca, gigantesca, guarda, tutto in pietra, rustico, ha una storia molto bella legata all'esplorazione del Brasile, ha queste caraveli, questi barcini, bello, tutti pensano, guarda, è fufo di mare, tutto in pietra. La sua ricezione è la più grande di tutte. guarda che tanto che tutto è in padella, guarda quanto è bello, rustico, meraviglioso, l'area costruita di tutti è la più grande, guarda i quarti, ha più di 600, meraviglioso, un giardino immenso, uscendo da questa parte del giardino, passa dentro un bosco, un bosco bello, tutto chiudo, un labirinto così, per uscire dal hotel, arriva questa ponte di padella incantata, guarda, ponte di padella, e poi ho usato il charme per fare foto, questo spigolo d'acqua, l'acqua con la Coca Cola, bello, bello, bello, tutto questo per arrivare alla piscina e poi alla piazza, passate per questo tragetto, guardate quanto è bello questo, è immenso, la maggior parte di questo hotel, di Alla Terra, guardate il sole fatto dal piove, disegnato in ladriglia, sono incantata, è molto bello, molto bello, non è bello? Questa piscina è una piscina gigantesca, è una piscina gigantesca, è una piscina gigantesca.",
+            "language": "Italian",
+            "durationSec": 85.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:21.534Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78112,7 +78202,16 @@
           "likes": 1463,
           "comments": 28,
           "shares": 126,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:27.686Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78126,7 +78225,16 @@
           "likes": 474,
           "comments": 39,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "She came from groundless, one in Rhode Island Where the old world shadows hang heavy in the air She packed her hopes and dreams like a refugee Just as her father came Across the sea She heard about a place People were smiling They spoke about the red man's way How they loved the man They came from everywhere To the great device Seeking a place to stay Or a place to hide",
+            "language": "Italian",
+            "durationSec": 65.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:31.759Z"
+          }
         }
       ]
     },
@@ -81632,7 +81740,16 @@
           "likes": 289,
           "comments": 42,
           "shares": 65,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nuovi perfumi di disegnatori, nuovi perfumi di Valentino Oggi parliamo di Vendetta Donna e Vendetta Uomo Nel 2026 la perfumeria di disegnatori ci sta regalando dei perfumoni O sea, io sono super contenta con tanti scoperti E queste due novità di Valentino lo confermano Iniziamo con Vendetta Donna, perché te lo dico amica, questo è il mio favorito E sarà uno di questi perfumi che in autunno e inverno mi andrò a bevere Un perfume amica che è pura sensualità imbottigliata. Una tuberosa ben carnal, luminosa e che, inoltre, in mia pelle rivela quasi una facetta comestibile che mi dà questa sensazione di olore e sapore, quasi. Un caramello di nardos con sandalo, quindi immaginate un perfume super cremoso. Un tocco appena di nectar di naranja sanguigna. Io personalmente lo percevo solo nei primi secondi, ma che in seguito lascia spazio a questo floral così potente, dolce, cremoso e, come ho detto, incredibilmente seduttore. Mi piace. E per l'altro lato abbiamo Vendetta Uomo, un perfume che sì, tecnicamente è maschilino, ha un po' di facette più verso lo maschilino, ma amica, ti dico che tu anche devi provarlo e raccontarmi cosa ti pare. A me mi sembra spettacolare, un perfume che mi fa quasi magnetico, con presenza, con molto carattere e che basicamente sa un liquore di cannella esquisito con un tocco di gengibre che contrasta un po' con questo aspetto più caldo della cannella e in fondo questo tocco di patchouli, vanigliato, che apporta un più corpo e intensità a questo aroma e che è un aroma addirittura addittivo e che ti durerà e ti proietterà in pelle, beh, ciò che non è scritto. Lasciami sapere in commenti se sei team vendetta donna o team vendetta uomo, o le due.",
+            "language": "Italian",
+            "durationSec": 108.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:37.998Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81646,7 +81763,16 @@
           "likes": 1953,
           "comments": 72,
           "shares": 178,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 15.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:40.719Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81660,7 +81786,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 20.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:43.335Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81674,7 +81809,16 @@
           "likes": 56400,
           "comments": 329,
           "shares": 4525,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Guarda la differenza della cena! Big fries, big two fucking cheeseburgers! Mini wrap, mini burger, mini fries, mini drink! Oh, sei così bello!",
+            "language": "Italian",
+            "durationSec": 12.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:46.074Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81688,7 +81832,16 @@
           "likes": 16,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica a",
+            "language": "Italian",
+            "durationSec": 41.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:49.679Z"
+          }
         }
       ]
     },
@@ -85222,7 +85375,16 @@
           "likes": 32,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cari hotel strategis di Jogja untuk rombongan atau liburan bareng keluarga? Langsung aja ke Prime Challenge Hotel Jogja! Lokasinya ada di Jalan Tan Mansiswa. Paling enak hotel ini berada di pusat kota Jogja, dekat dengan pusat perbelanjaan, tempat wisata, cafe, tempat nongkrong dan fasilitas umum lainnya. Di sini kamarnya ada banyak dan tipe kamarnya ada twin room, deluxe room, la chiesa è ampia e potrebbe aggiungere due extra bed quindi è molto adatto per le campagne ovviamente la facilità del hotel è molto completa c'è AC, TV smart, acqua calda o fredda e anche la parkiranya è molto ampia c'è anche il basement al di là della facilità super completa il hotel è anche pulito e ogni punto di hotel è molto bello e che c'è di più? per chi vuole andare a Jogja Stacchesi di hotel Prime Challenge Baru ada penawaran dan diskon khusus Untuk rombongan juga loh Yuk reservasi sekarang Prime Challenge Hotel Jogja Nyaman, strategis, pas untuk semua",
+            "language": "Italian",
+            "durationSec": 66.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:56.326Z"
+          }
         }
       ]
     },
@@ -88850,7 +89012,16 @@
           "likes": 21000,
           "comments": 148,
           "shares": 1172,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, that's not me!",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:46:59.100Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88864,7 +89035,16 @@
           "likes": 19,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 69.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T10:47:02.478Z"
+          }
         }
       ]
     }
