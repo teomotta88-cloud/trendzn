@@ -62324,6 +62324,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:41.331Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:49:57.670Z"
           }
         },
         {
@@ -62347,6 +62355,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:47.204Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:50:19.456Z"
           }
         },
         {
@@ -62370,6 +62386,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:53.471Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:50:32.561Z"
           }
         },
         {
@@ -62393,6 +62417,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:56.810Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Staying at beautiful Resortjwi ing\nmountain views and a pea\nCleaned Peaceful Rooms\nmountain\nMorning Views\nStaying at beautiful Resort with amazin,\nmountain views and a peaceful river\ntadaww",
+            "confidence": 0.823,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:50:42.862Z"
           }
         },
         {
@@ -62416,6 +62449,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:00.795Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Reply to\nCan you please do\nSeren\nitsjustserendontworry's com\nCan you please do I\nReply to i",
+            "confidence": 0.866,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:50:51.316Z"
           }
         },
         {
@@ -62439,6 +62481,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:03.989Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fore",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:51:07.105Z"
           }
         }
       ]
@@ -68736,6 +68787,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:06.654Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KAMPALA\nPENE 21,",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:51:21.955Z"
           }
         },
         {
@@ -68759,6 +68819,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:09.754Z"
+          },
+          "ocrData": {
+            "textOnScreen": "save u date 21st.08.2026 don't\nirene namatovu live in strong woman\nconcert at kampala serena hotel\nsave u date 21st .08.2026 don't miss\nirene namatovu live in strong",
+            "confidence": 0.852,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:51:31.762Z"
           }
         },
         {
@@ -68782,6 +68851,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:13.856Z"
+          },
+          "ocrData": {
+            "textOnScreen": "comment\nsing for me eshi a\nA SERENA HOTEL KAMPALA Vi\nÈ am da first to\nsing for me eshi\nGATESOPENAT3PM\nÈ first to\nLillian E",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:51:42.013Z"
           }
         },
         {
@@ -68805,6 +68883,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:17.323Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dink I",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:51:49.192Z"
           }
         },
         {
@@ -68828,6 +68915,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:22.070Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sasha Brighton strongiwoman concert\nsasha Brighton concert\nsasha\nsasha strong\nsasha Brighton'at strong woman concerti",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:52:00.579Z"
           }
         },
         {
@@ -68851,6 +68947,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:25.763Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GRAND SIERRA RESORT\npicked'up\nResort in\nSANE 4 SNA\nRENO\nPHASE 1:\nAQUA GOLF:\nAQUA\nPHASE 2:\n300 RIVERFRONT HOUSING UNITS",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:52:17.992Z"
           }
         }
       ]
@@ -73649,6 +73754,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:36.828Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:52:24.001Z"
           }
         },
         {
@@ -73672,6 +73785,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:43.352Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NI SAMPAI VILLA",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:52:37.297Z"
           }
         },
         {
@@ -73695,6 +73817,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:48.648Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BONY\nè Lokasi",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:52:56.450Z"
           }
         },
         {
@@ -73718,6 +73849,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:51.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:53:06.911Z"
           }
         },
         {
@@ -73741,6 +73880,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:42:55.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:53:15.476Z"
           }
         }
       ]
@@ -79766,6 +79913,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:03.902Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:53:30.996Z"
           }
         },
         {
@@ -79789,6 +79944,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:06.230Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:53:41.034Z"
           }
         },
         {
@@ -79812,6 +79975,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:12.685Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Promo ends: September 15th, 2026",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:53:52.747Z"
           }
         },
         {
@@ -79835,6 +80007,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:15.734Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Reveillon\nSaco do Mamangua",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:54:06.386Z"
           }
         },
         {
@@ -79858,6 +80039,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:24.298Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Conn\ni =price starts EN",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:54:29.842Z"
           }
         },
         {
@@ -79881,6 +80071,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:31.683Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:54:40.961Z"
           }
         },
         {
@@ -79904,6 +80102,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:36.830Z"
+          },
+          "ocrData": {
+            "textOnScreen": "life",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:54:47.696Z"
           }
         },
         {
@@ -79927,6 +80134,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:43:40.260Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Creek\n3 DAVE IX i",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:54:54.300Z"
           }
         },
         {
