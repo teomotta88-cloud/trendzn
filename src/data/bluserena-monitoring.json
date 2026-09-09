@@ -27735,6 +27735,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:08.635Z"
+          },
+          "ocrData": {
+            "textOnScreen": "I Look\nright now",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:49:34.509Z"
           }
         }
       ]
@@ -43624,6 +43633,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:10.995Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:49:41.060Z"
           }
         },
         {
@@ -43647,6 +43664,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:13.259Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:49:46.557Z"
           }
         },
         {
@@ -43670,6 +43695,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:15.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": "unpopular opinion: but\nserena deserved this\nunpopular opinion:",
+            "confidence": 0.915,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:49:50.595Z"
           }
         },
         {
@@ -43693,6 +43727,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:18.471Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:49:55.285Z"
           }
         },
         {
@@ -43716,6 +43758,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:20.624Z"
+          },
+          "ocrData": {
+            "textOnScreen": "before\ninsane:\nA MERON?\nsomething insane,\nSerena’s iconic stride before\nstrie",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:50:00.571Z"
           }
         }
       ]
@@ -46775,6 +46826,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:29.668Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TANONSENCHUANNHAT.\nKID CLUB...\nCOMBO BAO GOM:\nBUFFET SA Ne\nONSEN CHUAN NHAT\nTRAI NGHIEM TAM KHOANG, XONG\nKHU CHOI",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:50:27.253Z"
           }
         },
         {
@@ -46798,6 +46858,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:32.678Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:50:54.791Z"
           }
         },
         {
@@ -46821,6 +46889,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:34.989Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hidden",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:51:40.088Z"
           }
         },
         {
@@ -46844,6 +46921,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:39.052Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:52:12.825Z"
           }
         }
       ]
@@ -52322,6 +52407,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:41.902Z"
+          },
+          "ocrData": {
+            "textOnScreen": "beach",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:52:20.132Z"
           }
         },
         {
@@ -52345,6 +52439,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:56.683Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TAPOS DARATING KA\nMAY POOL ARE,\nCRISPY: i",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:52:35.958Z"
           }
         },
         {
@@ -52368,6 +52471,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:45:59.492Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LOMBOK\nPAPAR SABAH\nHidden paradise\nLOMB\nPAPAR HW\nHidden ise\nBALI\nidden paradise",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:52:45.215Z"
           }
         },
         {
@@ -52391,6 +52503,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:01.887Z"
+          },
+          "ocrData": {
+            "textOnScreen": "o. Maviopka\nIberostar Playa de Palma 5\nPlaya de Palma\nIcnaHia, o.\nde Palma 5*\nIcnaHia, 0.\nVara. x",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:53:02.289Z"
           }
         },
         {
@@ -52414,6 +52535,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:04.762Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Introducing the Overwater Villas at Rixos Murjana.\n3 and unforgettable moments.",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:53:09.347Z"
           }
         }
       ]
@@ -57980,6 +58110,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:08.921Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SEAN\nRema Namakula\nMust shine",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:53:23.431Z"
           }
         },
         {
@@ -58003,6 +58142,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:11.734Z"
+          },
+          "ocrData": {
+            "textOnScreen": "want better\nlikethe",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:53:26.426Z"
           }
         },
         {
@@ -58026,6 +58174,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:17.984Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:53:33.991Z"
           }
         }
       ]
@@ -63472,6 +63628,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:20.687Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:53:39.909Z"
           }
         },
         {
@@ -63495,6 +63659,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:23.975Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Calabria",
+            "confidence": 0.736,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:54:01.229Z"
           }
         },
         {
@@ -63518,6 +63691,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:25.953Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:54:08.177Z"
           }
         }
       ]
@@ -68675,6 +68856,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:28.307Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lakeway, Texas",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:54:16.794Z"
           }
         },
         {
@@ -68698,6 +68888,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:32.754Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:54:22.198Z"
           }
         },
         {
@@ -68721,6 +68919,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:35.965Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:54:29.318Z"
           }
         },
         {
@@ -68744,6 +68950,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T08:46:38.843Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a day in at Blac\nGFAVORI\na The Cabins at\ne life at I fat\nat Cabins k",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T08:54:50.166Z"
           }
         },
         {
