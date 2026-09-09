@@ -5,47 +5,46 @@
 // certezza di aver recuperato la gran parte dei post richiederebbe settimane
 // di passate. Serve arrivare ad almeno 200 per hashtag a passata.
 //
-// PERCHÉ NON BASTA SCROLLARE DI PIÙ. Il tetto NON è il nostro budget di
-// scroll. A 1280px il grid mostra ~5 video per riga: 60 video sono ~12 righe,
-// circa 3.000-3.600px, cioè 1-2 giri dei nostri `mouse.wheel(0, 3000)` su 40
-// disponibili. Il loop esaurisce il contenuto e si ferma per "3 giri senza
-// novità" molto prima del tetto di scroll. Lo stesso ~60 era già emerso da una
-// sonda che paginava via API invece che via DOM: è un limite imposto lato
-// server alla singola vista, non un limite nostro.
+// PRIMO GIRO (9/09/2026, un solo hashtag #bluserena, GIRI_SENZA_NOVITA=8):
+// la sola pagina hashtag (DOM+XHR) ha reso 134 video unici, più del doppio
+// del ~60 storico, fermandosi su un hasMore=false dichiarato da TikTok — non
+// un nostro stop prematuro. Le tre strategie supplementari sono risultate
+// tutte morte: C (count riscritto via page.route) rompe la firma della
+// richiesta (risposta non-JSON); D (ricerca video) ed E (ricerca generale)
+// sbattono su un muro di login per sessione anonima ("Log in | TikTok"),
+// zero risultati. Conclusione del primo giro: l'ipotesi "sommare più viste
+// diverse" non regge sui dati — l'unica vista che rende qualcosa è la
+// pagina hashtag stessa, e il tetto sembrava in realtà un artefatto del
+// nostro GIRI_SENZA_NOVITA=3 di produzione (troppo impaziente rispetto al
+// lazy-load di TikTok), non un vero limite lato server.
 //
-// LE IPOTESI CHE QUESTA SONDA MISURA, su UN hashtag alla volta:
+// SECONDO GIRO (questo): verifica se il tetto vero sta più in alto di 134
+// alzando ulteriormente la pazienza dello scroll, e se 134 è tipico o un
+// caso fortunato, ripetendo la sola strategia A/B (le uniche vive) su più
+// hashtag invece di uno solo. C/D/E restano nel codice ma sono SALTATE di
+// default (SOLO_HASHTAG=true): sono morte per come TikTok le serve da
+// anonimo, ripeterle ogni giro spreca solo tempo di run.
 //
-//   A. /tag/<T>, link dal DOM — la strategia attuale, come riferimento.
-//   B. /tag/<T>, ID dalle risposte XHR intercettate. Sugli hashtag le XHR
-//      rispondono davvero (i video si vedono), a differenza dei profili dove
-//      tornavano vuote e per cui quello script è stato ritirato. Se B > A,
-//      il DOM ci sta facendo perdere roba già scaricata.
-//   C. /tag/<T> con il parametro `count` della richiesta riscritto verso
-//      l'alto via page.route: TikTok chiede ~30 per pagina, se accetta 50+
-//      raddoppiamo a parità di chiamate. Può fallire se la firma della
-//      richiesta copre la query string — si vede dal risultato.
-//   D. /search/video?q=<T> — la ricerca video è un endpoint diverso dalla
-//      pagina hashtag, con un suo tetto e un suo ordinamento.
-//   E. /search?q=<T> — la ricerca generale, altro insieme ancora.
-//
-// L'ipotesi di fondo da verificare: se il tetto è PER VISTA, la strada per
-// arrivare a 200+ non è scrollare di più una vista sola, ma sommare più viste
-// distinte dello stesso termine. Questa sonda misura quanto ognuna rende da
-// sola e quanto si sovrappongono, così la scelta poi è sui numeri veri.
-//
-// Stampa anche gli URL delle richieste API intercettate e `hasMore`/`cursor`
-// dell'ultima risposta: servono a distinguere "TikTok dice che è finita" da
-// "ci fermiamo noi troppo presto", e a scoprire i nomi veri dei parametri
-// senza doverli indovinare.
+// Uso:
+//   node scripts/probe-tiktok-hashtag-piu-video.mjs [hashtag1,hashtag2,...]
+// Variabili d'ambiente:
+//   GIRI_SENZA_NOVITA  giri di scroll senza novità prima di fermarsi (def. 8)
+//   MAX_SCROLL         tetto massimo di giri di scroll (def. 60)
+//   ATTESA_MS          pausa tra un giro di scroll e il successivo (def. 2500)
+//   SOLO_HASHTAG       "false" per rieseguire anche C/D/E (def. true)
+//   COUNT_RISCRITTO    solo se SOLO_HASHTAG=false, vedi strategia C (def. 50)
 //
 // Gratis: solo Playwright anonimo, nessun credito, nessuna scrittura sullo
-// store. Uso: node scripts/probe-tiktok-hashtag-piu-video.mjs [hashtag]
+// store.
 
 import { chromium } from "playwright";
 
 import { REAL_CHROME_UA } from "./lib/tiktok-page.mjs";
 
-const TAG = (process.argv[2] || "bluserena").replace(/^#/, "");
+const TAGS = (process.argv[2] || "bluserena")
+  .split(",")
+  .map((t) => t.trim().replace(/^#/, ""))
+  .filter(Boolean);
 
 const MAX_SCROLL = Number.parseInt(process.env.MAX_SCROLL ?? "60", 10);
 const ATTESA_MS = Number.parseInt(process.env.ATTESA_MS ?? "2500", 10);
@@ -53,6 +52,9 @@ const ATTESA_MS = Number.parseInt(process.env.ATTESA_MS ?? "2500", 10);
 // il tetto reale, non fermarci alla prima pausa di caricamento.
 const GIRI_SENZA_NOVITA = Number.parseInt(process.env.GIRI_SENZA_NOVITA ?? "8", 10);
 const COUNT_RISCRITTO = Number.parseInt(process.env.COUNT_RISCRITTO ?? "50", 10);
+// C/D/E confermate morte nel primo giro (9/09/2026): si saltano di default
+// per non spendere tempo di run a riconfermare un esito già noto.
+const SOLO_HASHTAG = (process.env.SOLO_HASHTAG ?? "true") !== "false";
 
 const API = /\/api\/(challenge|search|post|item)[^?]*/i;
 
@@ -213,86 +215,85 @@ async function strategia(browser, { nome, url, riscriviCount = false }) {
   return { nome, daDom, daXhr, unione };
 }
 
-// --- Main ---
-console.log(`=== Sonda: più video per hashtag — #${TAG} ===`);
-console.log(
-  `Parametri: max ${MAX_SCROLL} scroll, ${ATTESA_MS}ms di attesa, stop dopo ${GIRI_SENZA_NOVITA} giri senza novità\n`,
-);
+async function sondaHashtag(browser, tag) {
+  console.log(`\n\n#################### #${tag} ####################`);
+  const q = encodeURIComponent(tag);
+  const esiti = [];
 
-const q = encodeURIComponent(TAG);
-const browser = await chromium.launch({ headless: true });
-const esiti = [];
-
-try {
   esiti.push(
     await strategia(browser, {
       nome: "A/B. Pagina hashtag (DOM + XHR)",
       url: `https://www.tiktok.com/tag/${q}`,
     }),
   );
-  esiti.push(
-    await strategia(browser, {
-      nome: `C. Pagina hashtag con count=${COUNT_RISCRITTO}`,
-      url: `https://www.tiktok.com/tag/${q}`,
-      riscriviCount: true,
-    }),
-  );
-  esiti.push(
-    await strategia(browser, {
-      nome: "D. Ricerca video",
-      url: `https://www.tiktok.com/search/video?q=${q}`,
-    }),
-  );
-  esiti.push(
-    await strategia(browser, {
-      nome: "E. Ricerca generale",
-      url: `https://www.tiktok.com/search?q=${q}`,
-    }),
-  );
+
+  if (!SOLO_HASHTAG) {
+    esiti.push(
+      await strategia(browser, {
+        nome: `C. Pagina hashtag con count=${COUNT_RISCRITTO}`,
+        url: `https://www.tiktok.com/tag/${q}`,
+        riscriviCount: true,
+      }),
+    );
+    esiti.push(
+      await strategia(browser, {
+        nome: "D. Ricerca video",
+        url: `https://www.tiktok.com/search/video?q=${q}`,
+      }),
+    );
+    esiti.push(
+      await strategia(browser, {
+        nome: "E. Ricerca generale",
+        url: `https://www.tiktok.com/search?q=${q}`,
+      }),
+    );
+  }
+
+  console.log(`\n  -------- Riepilogo #${tag}`);
+  for (const e of esiti) {
+    console.log(`    ${e.nome}: ${e.unione.size} unici (DOM ${e.daDom.size}, XHR ${e.daXhr.size})`);
+  }
+  const totale = new Set();
+  for (const e of esiti) for (const id of e.unione) totale.add(id);
+  console.log(`    UNIONE #${tag}: ${totale.size} video unici`);
+
+  return { tag, esiti, totale: totale.size };
+}
+
+// --- Main ---
+console.log(`=== Sonda: più video per hashtag — ${TAGS.map((t) => "#" + t).join(", ")} ===`);
+console.log(
+  `Parametri: max ${MAX_SCROLL} scroll, ${ATTESA_MS}ms di attesa, stop dopo ${GIRI_SENZA_NOVITA} giri senza novità, ` +
+    `strategie ${SOLO_HASHTAG ? "solo A/B (C/D/E saltate, già confermate morte)" : "tutte (A-E)"}\n`,
+);
+
+const browser = await chromium.launch({ headless: true });
+const risultatiPerTag = [];
+
+try {
+  for (const tag of TAGS) {
+    risultatiPerTag.push(await sondaHashtag(browser, tag));
+  }
 } finally {
   await browser.close();
 }
 
-console.log("\n\n==================== RIEPILOGO");
-for (const e of esiti) {
-  console.log(`  ${e.nome}: ${e.unione.size} unici (DOM ${e.daDom.size}, XHR ${e.daXhr.size})`);
+console.log("\n\n==================== RIEPILOGO FINALE");
+for (const r of risultatiPerTag) {
+  console.log(
+    `  #${r.tag}: ${r.totale} video unici ${r.totale >= 200 ? "(RAGGIUNTO 200)" : `(mancano ${200 - r.totale})`}`,
+  );
 }
 
-const totale = new Set();
-for (const e of esiti) for (const id of e.unione) totale.add(id);
-console.log(`\n  UNIONE DI TUTTE LE STRATEGIE: ${totale.size} video unici`);
-
-// Quanto ogni strategia aggiunge davvero rispetto alla pagina hashtag da
-// sola: è il numero che dice se sommare più viste è la strada per i 200.
-const base = esiti[0]?.unione ?? new Set();
-for (const e of esiti.slice(1)) {
-  const soloSuoi = [...e.unione].filter((id) => !base.has(id)).length;
-  console.log(`  ${e.nome}: ${soloSuoi} video che la pagina hashtag NON aveva`);
-}
-
-// Sovrapposizione a coppie fra tutte le strategie: non solo quanto aggiunge
-// ciascuna rispetto alla pagina hashtag, ma quanto si somigliano DUE a due —
-// es. hashtag vs ricerca video sono davvero due bacini diversi, o pescano
-// perlopiù lo stesso contenuto? Un'alta sovrapposizione vuol dire che
-// sommarle non porta lontano dai 200; una bassa vuol dire che sono
-// complementari e vale la pena tenerle entrambe.
-console.log("\n  Sovrapposizione a coppie (unici combinati / intersezione):");
-for (let i = 0; i < esiti.length; i++) {
-  for (let j = i + 1; j < esiti.length; j++) {
-    const a = esiti[i].unione;
-    const b = esiti[j].unione;
-    const intersezione = [...a].filter((id) => b.has(id)).length;
-    const combinati = new Set([...a, ...b]).size;
-    const minSize = Math.min(a.size, b.size) || 1;
-    const percSovrapposizione = Math.round((intersezione / minSize) * 100);
-    console.log(
-      `    ${esiti[i].nome} + ${esiti[j].nome}: ${combinati} unici combinati ` +
-        `(${a.size} + ${b.size}, intersezione ${intersezione}, ${percSovrapposizione}% del più piccolo dei due)`,
-    );
-  }
-}
+const valori = risultatiPerTag.map((r) => r.totale);
+const media = valori.length ? Math.round(valori.reduce((a, b) => a + b, 0) / valori.length) : 0;
+const minimo = valori.length ? Math.min(...valori) : 0;
+const massimo = valori.length ? Math.max(...valori) : 0;
 
 console.log(
-  `\n  Obiettivo 200/hashtag a passata: ${totale.size >= 200 ? "RAGGIUNTO" : `mancano ${200 - totale.size}`} ` +
-    "con queste strategie sommate.",
+  `\n  Su ${risultatiPerTag.length} hashtag: media ${media}, minimo ${minimo}, massimo ${massimo} video unici.`,
+);
+console.log(
+  `  Obiettivo 200/hashtag a passata: ${media >= 200 ? "RAGGIUNTO in media" : `mancano ${200 - media} in media`} ` +
+    `con GIRI_SENZA_NOVITA=${GIRI_SENZA_NOVITA}.`,
 );
