@@ -62099,7 +62099,16 @@
           "likes": 30,
           "comments": 7,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:41:41.331Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62113,7 +62122,16 @@
           "likes": 53,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:41:47.204Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62127,7 +62145,16 @@
           "likes": 24,
           "comments": 1,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:41:53.471Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62141,7 +62168,16 @@
           "likes": 26,
           "comments": 1,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, tu non sei un cambiamento, la stessa stessa stessa stessa. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:41:56.810Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62155,7 +62191,16 @@
           "likes": 226,
           "comments": 38,
           "shares": 84,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "heart beats fast colors and promises how to be brave how can I love when I'm afraid to fall watching you stand alone all of my doubt Suddenly goes away somehow One step closer I have died every day waiting for you Darling don't be afraid I have loved you for a thousand years I love you for a thousand",
+            "language": "Italian",
+            "durationSec": 61.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:00.795Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62169,7 +62214,16 @@
           "likes": 38,
           "comments": 0,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:03.989Z"
+          }
         }
       ]
     },
@@ -68457,7 +68511,16 @@
           "likes": 586,
           "comments": 8,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:06.654Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -68471,7 +68534,16 @@
           "likes": 378,
           "comments": 23,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:09.754Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -68485,7 +68557,16 @@
           "likes": 326,
           "comments": 8,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Esce un debile, un'idea di un'idea di un bambino. Esce un debile, esce un debile. Esce un debile, un'idea di un bambino. Pari, ho voti, come mi sento, tanti topi e caceta, ci dico che sono vera. Ah, ah, esce un debile, un bambino. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 42.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:13.856Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -68499,7 +68580,16 @@
           "likes": 18700,
           "comments": 1042,
           "shares": 783,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 22.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:17.323Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -68513,7 +68603,16 @@
           "likes": 9478,
           "comments": 115,
           "shares": 146,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:22.070Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -68527,7 +68626,16 @@
           "likes": 5336,
           "comments": 147,
           "shares": 2309,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Uno dei più grandi resort di casino a Nevada è nel mezzo di una espansione di un milione di dollari e non è a Las Vegas. Se prendessi il resort di Gran Sierra a Reno e lo toglieri a Las Vegas, avrebbe i secondi più grandi aceri sulla strippa e sarebbe più grande che la Bay Mandalay. E con tutto nel lavoro e essendo minuti lontani dall'aeroporto, è a punto di diventare uno dei più forti ecosistemi a Nevada e qualcosa da cui Las Vegas potrebbe prendere notizie. The GSR expansion is going to happen in two phases. Phase 1 is already in the works and covers the GSR Arena, a new fan plaza, an ice rink, a major transformation of the driving range and a new parking garage. Phase 2 is going to come later and feature the brand new hotel tower that's going to nearly double the rooms, along with 300 residential units on the river for employees to live and a brand new fountain show similar to something you see at the Bellagio Fountains or the Grove in LA. Tutto è pronto per essere completo all'interno del 2030.",
+            "language": "Italian",
+            "durationSec": 57.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:25.763Z"
+          }
         }
       ]
     },
@@ -73316,7 +73424,16 @@
           "likes": 119,
           "comments": 10,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ha ha ha, come è stato il giro del nord? C'è un po' di tempo che non ci siamo mai vissuti, ma è stato un po' di tempo che non ci siamo mai vissuti. Con la mia compagnia, ho chiesto a tutti i miei amici di raccontarvi il viaggio di questa volta. È stato un po' di tempo, no? È ancora un po' di tempo, ma è un po' di tempo, no? Ho vissuto un po' di tempo, ma è ancora un po' di tempo, no? E' buono! Grazie a tutti La prima volta che ho vissuto una serena non strano ma la vita non come un Ok io vorrei andare a rinforzare la temperatura per aiutare le donne Le donne che hanno vissuto una serena non strano ma strano non strano non strano Dicevo che è naturale, è ombra. Poi mi sono trasportato per prepararmi per la guerra. Qua vengo! Sto davanti a Hoa Vinh, non so come sono piccolo! le donne chiedono la guerra del nord è una cosa importante, è una cosa di amore e di amore se le donne vedono che lui ha detto il vero andiamo a rinforzare il 100% per l'amore 3, 2, 1 oggi è solo un giro quindi i bambini sono ancora in calma ma lui è arrivato sono arrivati in Italia e poi sono arrivati in Italia As c un po di cazzo quindi dovete andare a restare ragazzi Continuiamo il tuo giorno 2. L'estate, ti mangiarei un buffet, un'esercizio e un po' di l'aeroporto. Sembra così, ma è un po' caldo, quindi molti ragazzi e ragazze sono in grado di non andare a giocare. Come voi, tutti gli altri canzoni cantonano, ma a mezz'ora sono in grado di rinforzare e di ripartire, perché a mezz'ora avrò un'altra guerra. A mezz'ora, forse, le vittime sapranno che è una cosa, vero? Questa volta, sono più fortunato di averlo scoperto, e le vittime, che vanno a correre sotto questa temperatura, ho sentito che i miei piedi non sono più miei. ma veramente tutti i bambini sono in grado di farlo, e la gioia è la vera e propria parte della festa. E poi la cena del gala ha iniziato. È arrivato il momento in cui l'esterno è aperto. E' arrivato in grado di prepararsi per vivere tutta la notte. E arrivato in grado di farlo e la gioia la vera e propria parte della festa E arrivato in grado di prepararsi per vivere tutta la notte video dei decadere tutei camion no coppia di tenaro Non posso farlo a tutti i miei amici. Quando arrivo a questo punto, devo anche scappare. Ma, a dire la verità, la guerra del nord è molto divertente, non è vero, amici? Sì, i tre giorni e due notti che ho avuto a Serena Resort sono finiti. È una gara non troppo lunga, ma è sufficiente per avere molti ricordi. C'è la fredda, c'è il fallimento, c'è la vittoria e la vittoria. Ma l'importante è che ci siano molti ghiaccioli e gli amici. C'è solo divertimento, non c'è buono. Ah ah ah, il tuo video è molto lungo. Grazie a tutti i vostri amici che hanno tenuto tempo per vedere tutto questo vlog. Ci vediamo agli altri vlog.",
+            "language": "Italian",
+            "durationSec": 264.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:36.828Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73330,7 +73447,16 @@
           "likes": 14,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Masi sedikit yang tau kalau Jalan Wates punya villa secantik ini. Kenalan dengan Santifa by Sampai Villa. Villa tiga bedroom bergaya bohemian yang cocok untuk liburan bersama keluarga maupun sahabat. Dilengkapi private pool yang uas, yang cantik dan banyak spot foto. Dapur dan dining table untuk momon makan bersama, hingga relaxing area di bagian belakang villa dengan pemandangan sui yang bikin suasana semakin tenang. Non solo questo, la villa ha anche un camerello pulito con due bathtub. Buona per chi vuole mangiare i momenti di relazione dopo un giorno di circolazione. Se stai cercando un posto di staycation che è estetico, comodo e pieno di tranquillità, Santita by Sampai Villa è il posto di rilascio. Sampai Villa, Sampai di Hati!",
+            "language": "Italian",
+            "durationSec": 53.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:43.352Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73344,7 +73470,16 @@
           "likes": 6,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se magical itu kalau lagi di sini. View-nya cantik karena langsung bisa memandang dua gunung, yaitu gunung merapi dan gunung merbabu. Dan kalau ditarik garis lurus, view-nya itu langsung candi perambanan. Chandari Haven ini menawarkan resto dan terdapat villa yang punya beberapa unit yang private dan sangat intim. Dan di sini banyak banget spot-spotnya, seperti Infinity Pool, Candi juga yang menjadi icon Chandari Haven dan beberapa spot yang cakep buat foto-foto, kayak yang patung-patung ini. Jadi kalau kesini itu sangat memorable, bisa menikmati menu resto dan sekaligus bisa menginap di villa yang sangat intim. E se vuoi sentire che Chandari Haven ini Grazie per aver guardato il video.",
+            "language": "Italian",
+            "durationSec": 34.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:48.648Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73358,7 +73493,16 @@
           "likes": 42,
           "comments": 12,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 41.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:51.494Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73372,7 +73516,16 @@
           "likes": 86,
           "comments": 24,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Che fortuna più inesperata! Oggi avevamo in teoria riserva di volta da Portugale al parador di Merida, che passa che quando arriviamo non c'era riserva quindi ci siamo rimasti senza opzione perché non c'erano abitazioni disponibili per oggi. Abbiamo stato a punto di tornare a Madrid direttamente, ma ho appena visto, trovato, questo sì che non lo avevo appuntato, l'unico hotel 5 5 stelle in Merida che appartengono all'Illunion e che avevano posto e ci hanno dato un pedazzo di abitazioni la verità, non sono mai stato un fan della marca Illunion, la conosco anche, non credo che non sia andato a un Illunion nella mia vita, ma la verità è che questo è il primo 5 stelle di Extremadura, l'unico 5 stelle in tutto Merida con vista alla plaza, giuro che è la plaza di Spagna, non mi uccidete, non ho neanche idea, è arrivato e... beh, guarda, casualità che ci mettono qui. Abbiamo scoperto un nuovo hotel che non avremmo scoperto se Paradores non ci fosse sbagliato, avevamo voglia di andare a Paradores, ma siamo venuti molti, quindi è arrivato il momento di cambiare un po'.",
+            "language": "Italian",
+            "durationSec": 75.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:42:55.029Z"
+          }
         }
       ]
     },
@@ -79388,7 +79541,16 @@
           "likes": 9525,
           "comments": 52,
           "shares": 1784,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Che azzurro lai thaaccio? Io thau ma to movie shoot baikroi sa ni? Abbo kun moviei bannu ola? Mero life pani ota movie to o ni? Isto beautiful e scenic thau ma basna pauno mer life ki movie vanda kamchara Tora, ahire lai bani movie ko kura choro Ra istor thau ahiro jaha gaipochi azzurlai afei movie ko main character jasto feel huncha Yo suite ma chirna saath ave so ready to dive into this private swimming pool with the view of Nareni Just flowing on its own way Bahiro matra aina, bittro ko view pani ekdame amazing thiho la cucina, il lavabo, la lavastoviglie, la zaccuzia nessuno di questi non si sentiva come il protagonista del film guardando, guardando, è stato così bello è stato la migliore esperienza di suonare in un pool privato non l'avevo mai fatto e ora sono in grado di farlo non ho mai sentito la mia voce sono andata a suonare in un pool privato e ho detto che mi sentirei così potrebbe essere un po' sbagliato dal punto di vista della vista ma non c'è nessun problema non è un problema Abbiamo fatto il nostro piatto e abbiamo mangiato molto e il piatto era così disavvolgente Non c'erano alcune opzioni, non c'era il menu di cibo Abbiamo portato il piatto e siamo andati in un pool pubblico e era così bello Il pool era così grande e spazioso La propria è così grande che non so se potrei fare 10-12000 passaggi Se non lo potete fare, vi consiglio di fare un film",
+            "language": "Italian",
+            "durationSec": 80.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:03.902Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79402,7 +79564,16 @@
           "likes": 535,
           "comments": 8,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 13.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:06.230Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79416,7 +79587,16 @@
           "likes": 222,
           "comments": 4,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è quello che un weekend a Sweet Song's Jungle Lodge sembra. Se avete bevuto di un getaway beliceano, questo potrebbe essere il segno che state aspettando. per la maggior parte dei risorti di muyuna non offre speciali local summer discounts that you can now enjoy. This promotion ends September 18th, so call now and book your getaway using the promo code STAYCATION. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 89.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:12.685Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79430,7 +79610,16 @@
           "likes": 152,
           "comments": 51,
           "shares": 22,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hai mai pensato che vivessi in uno dei luoghi più belli di Parati? Il sacco di Momonga. Le vacanze per le nostre ospite sono già aperte. Comenta qui o chiamami in diretta che ti passo tutte le informazioni.",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:15.734Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79444,7 +79633,16 @@
           "likes": 11,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:24.298Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79458,7 +79656,16 @@
           "likes": 52,
           "comments": 4,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "dica di ospedale in penarea a 10 minuti dal centro di porto di galline a gente si ospedò nella posada la bella luna che fichi maracaipi destino perfezio per incontrare a parte a praia famosa per lo surf di una vibe super tranquilla e ari strana da posada eo grande distante integra totalmente con la praia da esperienza e da meglio veloce nascerà il sole invadendo la posada che l'indice tuttora completa e conta con stazionamento privativo e se ne levava che ti permette di visione domani quanto a prove aria infantil reddario area con churraschiere sinuca e loro disponibilizzano anche un guardasolo con mese e cadere se vuoi divertire la piazza davanti alla piazza e la gastronomia qui ha un distacco il caffè di mattina è delizioso e è già incluso nella diaria durante i nostri due giorni almociamo nel ristorante della propria piazza che è aperto anche al pubblico noi proviamo il frango a parmegiana la carne di sole e il pesce fritto che erano impeccabili e con prezzi super accessibili e loro anche hanno un bar e noi proviamo la caipa e frutta di un bucajá con limone e l'aperol spritz che inoltre erano molto bellissimi e molto gustosi la convenienza interna è super completa con lanci, bevande, itemi personali e anche opzioni congelate. Lì hanno opzioni per 2 e 4 persone, da più simili accomodazioni fino a superiori accomodazioni con baranda vista al mare e idromassaggio. Tutti sono completi, climatizzati e hanno un chiusura elettrica. Il pontale di Maracaipi è a meno di 600 metri dalla pittura. Lì si trova il ritorno del rio con il mare e ha il sole più bello che ho mai visto. È letteralmente un evento. La notte, come stavamo in carro, in 10 minuti stavamo passando per il centro di Porto e solo chi è già stato sa quanto è bello battere le braccia lì. è stata un'esperienza incredibile e non vediamo l'ora di vivere di nuovo e manda questo video per chi vivrà questa esperienza con te",
+            "language": "Italian",
+            "durationSec": 91.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:31.683Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79472,7 +79679,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 24.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:36.830Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79486,7 +79702,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao Ciao Ciao!",
+            "language": "Italian",
+            "durationSec": 106.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T14:43:40.260Z"
+          }
         },
         {
           "platform": "tiktok",
