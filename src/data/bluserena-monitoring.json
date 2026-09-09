@@ -24913,6 +24913,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:59.617Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sibari 2026\nSibari 2(",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:06.198Z"
           }
         },
         {
@@ -24936,6 +24945,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:16.960Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:47:42.875Z"
           }
         }
       ]
@@ -35847,6 +35864,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:19.487Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:47:50.547Z"
           }
         },
         {
@@ -35870,6 +35895,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:22.438Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:47:55.390Z"
           }
         },
         {
@@ -35893,6 +35926,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:26.194Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:48:00.178Z"
           }
         }
       ]
@@ -39029,6 +39070,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:30.593Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:48:16.270Z"
           }
         },
         {
@@ -39052,6 +39101,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:33.965Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tight for spa",
+            "confidence": 0.731,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:48:37.141Z"
           }
         },
         {
@@ -39075,6 +39133,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:37.235Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cala vere 3\nSerena è",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:48:58.676Z"
           }
         },
         {
@@ -39098,6 +39165,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:39.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "INI Oceanfrong i\nReso",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:49:10.232Z"
           }
         },
         {
@@ -39121,6 +39197,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:42.763Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WATERFRONT VIEWS,\nWITH HOUSE MUSIC, INCREDIBLE\nHARBOR VIEWS\nANOTHER REMINDER\nST EXPERIENCES",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:49:28.826Z"
           }
         },
         {
@@ -39144,6 +39229,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:46.325Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:49:41.796Z"
           }
         },
         {
@@ -39167,6 +39260,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:49.669Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:49:53.991Z"
           }
         }
       ]
@@ -44585,6 +44686,14 @@
             "reason": "ffmpeg exit 234",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:51.551Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:50:10.619Z"
           }
         },
         {
@@ -44608,6 +44717,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:54.689Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this is\nwhichlis\nwithin a short\nvithin a",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:50:37.378Z"
           }
         },
         {
@@ -44631,6 +44749,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:57.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": "abernochnich auf",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:50:44.831Z"
           }
         }
       ]
@@ -55724,6 +55851,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:44:59.617Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sibari 2026\nSibari 2(",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:06.198Z"
           }
         },
         {
@@ -55747,6 +55883,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:05.551Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:15.726Z"
           }
         },
         {
@@ -55770,6 +55914,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:08.710Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PON:Gls m3a sa7bi ta sonat\nw glt lih n5rjo w\nliha jibi m3ak s7btk\nPOV:Gls m3a sa7bi\n3lih s/bto glt lih n5rjo w\ngal liha jibi m3ak s7btk\nm3a sa7bi ta sonat\n~3lih szbto w gltjlih w\ngallina s7btk\nta sonat\nwalt lin nSrjo w\nm3ak s7btk\nPOV:Glsim3a sa7bi ta sonat\nglt lih nSrjo w\ngal s7btk",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:22.127Z"
           }
         },
         {
@@ -55793,6 +55946,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:11.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i Coupe du Monde de la FIFA",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:29.592Z"
           }
         },
         {
@@ -55816,6 +55978,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:16.372Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Reply to comment\nsun lounge situation\nlike? Video is brilliant i\ncan't wait to go x\nBEDS AT 4\nDOWN\nIF ALL ARE TAKEN\nLEAVE SUNBEDS STACKED\nReply to Alison's comment A\nGoing here in\nSeptember, what is the AY,\nsun lounge situation y\nis like? Video is brilliant\nSUN BEDS\nDOWN EARLIER THAN 8AM\nALL ARE TAKEN WITH TOWELS N\nLEAVE SUNBEDS STACKED UPJAND\nCAN PLACE THEM WANT\nsun lounge situation 1 /A 2 y\nil like? Video is\nN can't wait to go x\nALWAYS GOT US i\nN DOWN\nIF ALL ARE TAKEN N\nLEAVE SUNBEDS E\nCAN PLACE THEM\nReply to Alisonj's comment\nSeptember, what is the\nlike? Video is brilliant\nBEDS}AT\nWANT\nlike? Video is A\n“SUN BEDS AT; GREEN:NATURE,RESORT\nWENT\nTAKEN WITH",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:50.760Z"
           }
         },
         {
@@ -55839,6 +56010,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:20.657Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@ormmy It\n@ormmy If",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:51:58.934Z"
           }
         }
       ]
@@ -61197,6 +61377,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:23.116Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:52:10.527Z"
           }
         },
         {
@@ -61220,6 +61408,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:26.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:52:17.288Z"
           }
         },
         {
@@ -61243,6 +61439,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:29.761Z"
+          },
+          "ocrData": {
+            "textOnScreen": "STAYED AT, THE GLOBAL\nHOTEL\nROOMS\nRELAXING FELT SO\nDEFINITELY/ MADE THE\n[EVEN BETTER!",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:52:25.822Z"
           }
         },
         {
@@ -61266,6 +61471,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:32.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:52:34.406Z"
           }
         },
         {
@@ -61289,6 +61502,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:36.457Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:52:44.130Z"
           }
         }
       ]
