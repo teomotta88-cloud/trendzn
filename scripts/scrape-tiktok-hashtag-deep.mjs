@@ -27,11 +27,20 @@
 // NIENTE sessione autenticata qui, di proposito. Provata l'8/09: ogni pagina
 // hashtag tornava vuota con "Drag the slider to fit the puzzle" nel testo —
 // il captcha anti-automazione di TikTok, non un problema di sessione o di
-// cookie/localStorage. Da anonimo lo stesso captcha non compare e si arriva
-// comunque a ~58-60 video per hashtag, quindi resta la strada che funziona
-// per questo script. Il login (createTikTokContext in lib/tiktok-page.mjs)
-// resta usato dagli altri due script (KPI e profili autore), che non hanno
-// mostrato lo stesso blocco.
+// cookie/localStorage. Da anonimo lo stesso captcha non compare, quindi
+// resta la strada che funziona per questo script. Il login
+// (createTikTokContext in lib/tiktok-page.mjs) resta usato dagli altri due
+// script (KPI e profili autore), che non hanno mostrato lo stesso blocco.
+//
+// Sul numero di video per hashtag: la sonda scripts/probe-tiktok-hashtag-
+// piu-video.mjs (9/09/2026) ha verificato che il ~60 visto qui NON è un
+// tetto lato server né un nostro stop prematuro sullo scroll — con più
+// pazienza si arriva regolarmente più in alto (fino a ~140 su #bluserena),
+// fermandosi su un hasMore=false che TikTok stesso dichiara: il vero
+// limite è quanti video sono OGGI indicizzati sotto quell'hashtag, che per
+// gli hashtag meno popolari può essere ben sotto 100. Per questo l'obiettivo
+// non è "più video a passata" ma continuare a ripassare nel tempo (vedi
+// sopra): il pool cresce mano a mano che nuovi video vengono taggati.
 //
 // Env:
 //   GITHUB_TOKEN: obbligatoria
