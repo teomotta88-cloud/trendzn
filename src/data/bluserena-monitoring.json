@@ -24898,7 +24898,7 @@
           "url": "https://www.tiktok.com/@stephaniegrazios4/video/7667513438259744033",
           "date": "2026-07-28T09:48:09.000Z",
           "caption": "@William D'arcangelo #bluserenasibarigreenresort #italy #calabria",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 600,
           "imageUrl": null,
           "likes": 6,
@@ -24922,7 +24922,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-09T10:51:06.198Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "mare",
+              "relax"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T14:57:39.938Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "mare",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -24930,7 +24953,7 @@
           "url": "https://www.tiktok.com/@peppe_liccia/video/7659774789053058336",
           "date": "2026-07-07T13:18:14.000Z",
           "caption": "Color Party Serenusa! #Bluserena #ColorParty #estate2026 #Sicilia #Viral @⭐️Adriana⭐️",
-          "location": null,
+          "location": "Bluserena",
           "views": 2248,
           "imageUrl": null,
           "likes": 18,
@@ -24953,7 +24976,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-09T10:47:42.875Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "evento",
+              "color party",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T14:57:39.416Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "evento",
+            "color party",
+            "estate"
+          ]
         }
       ]
     },
@@ -56436,7 +56487,7 @@
           "url": "https://www.tiktok.com/@stephaniegrazios4/video/7667513438259744033",
           "date": "2026-07-28T09:48:09.000Z",
           "caption": "@William D'arcangelo #bluserenasibarigreenresort #italy #calabria",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 600,
           "imageUrl": null,
           "likes": 6,
@@ -56460,7 +56511,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-09T10:51:06.198Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "mare",
+              "relax"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T14:57:39.938Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "mare",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -83863,7 +83937,7 @@
           "url": "https://www.tiktok.com/@mogu.live.artist/video/7524764595576147218",
           "date": "2025-07-08T17:29:44.000Z",
           "caption": "VALENTINO resort 2026 mis looks favoritos ilustrados #velentino #resortcollection #resort #alessandromichele @Valentino  inf al correo  mogu.artstudio.illustration@gmail.com  o al Instagram: mogu.illustration #CapCut",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 376,
           "imageUrl": null,
           "likes": 16,
@@ -83886,7 +83960,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-09T10:56:10.300Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "illustrazione",
+              "moda",
+              "resort"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T14:57:41.123Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "illustrazione",
+            "moda",
+            "resort"
+          ]
         },
         {
           "platform": "tiktok",
