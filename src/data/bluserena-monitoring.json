@@ -27758,7 +27758,16 @@
           "likes": 138200,
           "comments": 324,
           "shares": 5338,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "...from you that I pushed you to do. Because you take everything from me! Nate, my mother! You can't even help it! It's who you are! Why did you leave without saying goodbye? You're supposed to be my best friend. I miss you so much. This is magic to hurt through. Please give me one last show.",
+            "language": "Italian",
+            "durationSec": 27.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T09:33:25.186Z"
+          }
         }
       ]
     },
@@ -63756,7 +63765,16 @@
           "likes": 22200,
           "comments": 834,
           "shares": 3068,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ehi, sono ok, sono bene. Kinchana, Kinchana, ten, nen, nen, nen, nen. Come nahan rasa sakit? Rasa sakit? Guru! Guru! Dica Guru!",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-09T09:33:29.695Z"
+          }
         }
       ]
     },
