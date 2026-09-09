@@ -81917,6 +81917,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:28.779Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:21:22.431Z"
           }
         },
         {
@@ -81940,6 +81948,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:34.714Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:21:33.590Z"
           }
         },
         {
@@ -81963,6 +81979,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:38.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": "id anvmor\nalways deserved!",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:22:04.638Z"
           }
         },
         {
@@ -81986,6 +82011,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:41.840Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:22:15.898Z"
           }
         },
         {
@@ -82009,6 +82042,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:44.324Z"
+          },
+          "ocrData": {
+            "textOnScreen": "elegante",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:22:24.364Z"
           }
         },
         {
@@ -82032,6 +82074,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:47.914Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i done:\nHANG\nTortas\nMenudo\nOF TACOS\nAGUAS\nHAVEICUISINE\n)SENBER",
+            "confidence": 0.844,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:22:31.310Z"
           }
         },
         {
@@ -82055,6 +82106,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:52.427Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Compré un trdgo de $25\nCompré un trago de $25\nY ahoratengoun crush!\nY ahora tengo un",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:22:44.467Z"
           }
         }
       ]
@@ -85780,6 +85840,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:58.386Z"
+          },
+          "ocrData": {
+            "textOnScreen": "100 Iconic Valentino\nGaravani Interiors\nPart 2",
+            "confidence": 0.845,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:22:54.277Z"
           }
         },
         {
@@ -85803,6 +85872,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:01.496Z"
+          },
+          "ocrData": {
+            "textOnScreen": "foam",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:12.784Z"
           }
         },
         {
@@ -85826,6 +85904,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:08.432Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:20.157Z"
           }
         },
         {
@@ -85849,6 +85935,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:10.945Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CapCut",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:23.777Z"
           }
         },
         {
@@ -85872,6 +85967,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:16.950Z"
+          },
+          "ocrData": {
+            "textOnScreen": "New York Style\nLUNCH SPECIAL\nMon Thurs from 10a-3p",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:35.273Z"
           }
         },
         {
@@ -85895,6 +85999,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:20.688Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hoy viernes de karaoke i\nBayshore\n\"1597 Manatuck Blvd, Bay\nShore, NY\nPeru en bayshore\nHoy viernes de karaoke\n1597 Manatuck BIVd) Bay\nPerù en bayshore\nPeruvian\nShore, NY411706\nShore\n2 Bayshore",
+            "confidence": 0.829,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:45.756Z"
           }
         },
         {
@@ -85918,6 +86031,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:24.931Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:53.097Z"
           }
         }
       ]
@@ -89525,6 +89646,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:28.629Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:23:59.414Z"
           }
         },
         {
@@ -89548,6 +89677,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:31.210Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PERIDESCRIVERE\nPER|DESCRIVERE!IL|CALDO3\nPER|DESCRIVERE IL\nPERIDESCRIVERE IL",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:24:08.191Z"
           }
         },
         {
@@ -89571,6 +89709,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:37.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:24:11.422Z"
           }
         }
       ]
@@ -93400,6 +93546,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:40.417Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Te BitMine\ne Purch\ne Atcul\nI'M SAYING LONG\nTERM\nNEF e Purch\nJ e Thec\nTHEY'RE\nCONTINUING TO\nBitMine I\nTO CONTINUE TO\nBUY BITCOIN\nEN BitMinet\nI e Purch\nCASH RESERVE\nREQUIREMENTS\n4 e Thec",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:24:17.458Z"
           }
         },
         {
@@ -93423,6 +93578,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:44.684Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Frax\npere\nUniswap Labs",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:24:25.844Z"
           }
         },
         {
@@ -93446,6 +93610,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:47.263Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vaeliths Aether\nembodies\nate meant to\npatterns ‘growth\nCore me?\n\"Sever Rune\nSever....always sever them with discipline\nembodies the\nIt teaches and\ntruth meant\ngrowth.\nRune\nsever them with discipline\nVaeliths-Aecher\nembodies thé\nteaches, and\n\"Sever\nSever rune embodies the\nthatsnot ate meant to\nCore binds",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:24:49.965Z"
           }
         },
         {
@@ -93469,6 +93642,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:52.550Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:24:57.082Z"
           }
         },
         {
@@ -93492,6 +93673,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:11:57.591Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MENU\nE (BATE)\nshindokosan.cafe24shop.com\nhttps://i-labo.co/go/z527s2",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:25:14.711Z"
           }
         },
         {
@@ -93515,6 +93705,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:12:02.446Z"
+          },
+          "ocrData": {
+            "textOnScreen": "traders} and ra\nleven\n“E financial",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:25:22.027Z"
           }
         }
       ]
