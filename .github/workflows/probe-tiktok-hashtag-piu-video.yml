@@ -1,26 +1,32 @@
 name: Probe TikTok Hashtag Più Video (diagnostico)
 
 # Sonda usa-e-getta: misura se si può arrivare a 200+ video per hashtag a
-# passata (contro i ~60 attuali) sommando più viste distinte dello stesso
-# termine (pagina hashtag via DOM, via XHR intercettate, con count
-# riscritto, ricerca video, ricerca generale) invece di scrollare di più la
-# stessa vista. Vedi scripts/probe-tiktok-hashtag-piu-video.mjs per il
-# perché.
+# passata (contro i ~60 attuali) alzando la pazienza dello scroll sulla
+# pagina hashtag. Vedi scripts/probe-tiktok-hashtag-piu-video.mjs per il
+# perché e per l'esito del primo giro (9/09/2026: 134 video con
+# GIRI_SENZA_NOVITA=8 su un solo hashtag, strategie alternative C/D/E morte).
+#
+# Questo giro alza ulteriormente GIRI_SENZA_NOVITA e ripete su più hashtag
+# (non solo #bluserena) per capire se 134 è tipico o un caso fortunato.
 #
 # Gratis, nessuna scrittura sullo store. Solo workflow_dispatch.
 
 on:
   workflow_dispatch:
     inputs:
-      hashtag:
-        description: "Hashtag da sondare (senza #)"
+      hashtags:
+        description: "Hashtag da sondare, separati da virgola (senza #)"
         required: false
-        default: "bluserena"
+        default: "bluserena,IsSerenasBadesiResort,KalidriaHotel"
+      giri_senza_novita:
+        description: "Giri di scroll senza novità prima di fermarsi"
+        required: false
+        default: "15"
 
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
@@ -36,4 +42,6 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Sonda più video per hashtag
-        run: node scripts/probe-tiktok-hashtag-piu-video.mjs "${{ inputs.hashtag }}"
+        env:
+          GIRI_SENZA_NOVITA: ${{ inputs.giri_senza_novita || '15' }}
+        run: node scripts/probe-tiktok-hashtag-piu-video.mjs "${{ inputs.hashtags }}"
