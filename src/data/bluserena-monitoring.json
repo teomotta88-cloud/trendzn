@@ -39927,7 +39927,7 @@
           "url": "https://www.tiktok.com/@rachelcristina00/video/7679962957811305758",
           "date": "2026-08-30T22:58:38.000Z",
           "caption": "Boat day is always a must & the only way to experience 📍Saint Tropez when staying in Antibes. 10/10 recommend checking out La Serena and finding my man Yaro for a reading #saintropez #boatday #southoffrance #beachclub",
-          "location": null,
+          "location": "Serena Majestic Hotel Residence",
           "views": 485,
           "imageUrl": null,
           "likes": 28,
@@ -39950,7 +39950,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-09T20:13:26.129Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "gita in barca",
+              "spiaggia",
+              "cibo",
+              "tarocchi",
+              "paesaggio"
+            ],
+            "location": "Serena Majestic Hotel Residence",
+            "confidence": 0.93,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T20:25:34.761Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "gita in barca",
+            "spiaggia",
+            "cibo",
+            "tarocchi",
+            "paesaggio"
+          ]
         },
         {
           "platform": "tiktok",
@@ -89662,7 +89690,7 @@
           "url": "https://www.tiktok.com/@giandomenico.vittore_jkd/video/7661939781034724640",
           "date": "2026-07-13T09:19:30.000Z",
           "caption": "Oggi fa caldo al Kalidria Hotel & Thalasso Spa A Castellaneta 🤑✌️ ciao wagliú!!! #temptationisland #caldo #mare #luxurylifestyle #PESCAMAN @bluserena @Temptation Island",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 670,
           "imageUrl": null,
           "likes": 15,
@@ -89686,7 +89714,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-09T20:24:08.191Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "caldo",
+              "mare",
+              "luxurylifestyle"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-09T20:25:41.023Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "caldo",
+            "mare",
+            "luxurylifestyle"
+          ]
         },
         {
           "platform": "tiktok",
