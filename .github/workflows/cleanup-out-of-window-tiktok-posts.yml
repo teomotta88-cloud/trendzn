@@ -1,0 +1,31 @@
+name: Cleanup Out-of-Window TikTok Posts
+
+# Workflow una tantum: rimuove i post TikTok fuori dalla finestra lug-ago
+# 2025/2026 entrati per un bug in backfill-tiktok-hashtag.mjs (filtrava per
+# finestra solo il contatore di stop, non l'inserimento vero). Vedi
+# scripts/cleanup-out-of-window-tiktok-posts.mjs.
+#
+# Il bug di origine non è ancora corretto: rilanciare questa pulizia se il
+# backfill gira di nuovo prima che sia sistemato.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Rimuovi post fuori finestra
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/cleanup-out-of-window-tiktok-posts.mjs
