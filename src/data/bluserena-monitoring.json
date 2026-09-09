@@ -57665,6 +57665,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:08:32.216Z"
+          },
+          "ocrData": {
+            "textOnScreen": "#7 Depot\npot shib\nDepot",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:17:03.358Z"
           }
         },
         {
@@ -57688,6 +57697,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:08:35.141Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:17:11.181Z"
           }
         },
         {
@@ -57711,6 +57728,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:08:41.135Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Green Coast Resort\nVilé luksoze me pishiné private\nPamje mahnitése nga Riviera Shqiptare\n“A Vilé luksoze me pishiné private",
+            "confidence": 0.877,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:17:19.353Z"
           }
         }
       ]
@@ -63446,6 +63472,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:08:44.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serene\nserene beach view at\ntickets",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:17:33.717Z"
           }
         },
         {
@@ -63469,6 +63504,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:08:51.457Z"
+          },
+          "ocrData": {
+            "textOnScreen": "kolam renangnya\nBooking disini\n@purpspastel\nkak disini ada\nJ @purpspastel",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:17:44.398Z"
           }
         },
         {
@@ -63492,6 +63536,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:08:56.752Z"
+          },
+          "ocrData": {
+            "textOnScreen": "engen nginep seng onok bathub e\nes tak bookingno rego 300\nonok bathub e sayang\n5 Seng of\nÈ saya",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:18:03.345Z"
           }
         },
         {
@@ -63515,6 +63568,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:00.731Z"
+          },
+          "ocrData": {
+            "textOnScreen": "N tural x",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:18:12.815Z"
           }
         }
       ]
@@ -70004,6 +70066,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:04.480Z"
+          },
+          "ocrData": {
+            "textOnScreen": "please",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:18:19.416Z"
           }
         },
         {
@@ -70027,6 +70098,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:13.704Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Out with my young\nPeople, love them\nwhat you make it\nlove them\n(Life is what you make it;\nSARE\nOut with n y young",
+            "confidence": 0.853,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:18:30.090Z"
           }
         },
         {
@@ -70050,6 +70130,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:17.416Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Diva Irene namatovu Rehearsals For Her\nConcert At Kampala Serena Hotel On 21st\nAugust\nMy Diva Irene namatovu Rehearsals For Her\nN Concert At Kampala Serena Hotel On 21st\nAugust È",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:18:39.975Z"
           }
         },
         {
@@ -70073,6 +70162,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:28.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IDA 92.8RADIO_O",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:18:46.476Z"
           }
         },
         {
@@ -70096,6 +70194,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:32.033Z"
+          },
+          "ocrData": {
+            "textOnScreen": "/4 Grace Nakimera\nSeptember at Serena\n2 4 Don't Miss\nGrace Nakimera\n11th September at Serena\niL Grace Nakimera\n4 Don't Miss\ni Grace Nakimera\nN i Grace Nakimera",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:03.548Z"
           }
         },
         {
@@ -70119,6 +70226,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:34.987Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:08.916Z"
           }
         },
         {
@@ -70142,6 +70257,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:39.866Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:18.651Z"
           }
         },
         {
@@ -70165,6 +70288,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:43.960Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:31.101Z"
           }
         },
         {
@@ -70188,6 +70319,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:46.814Z"
+          },
+          "ocrData": {
+            "textOnScreen": "King Micheal Live In Concert mm\nKing Micheal Live In Concert",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:37.512Z"
           }
         }
       ]
@@ -75143,6 +75283,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:52.431Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:51.409Z"
           }
         }
       ]
@@ -81517,6 +81665,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:55.199Z"
+          },
+          "ocrData": {
+            "textOnScreen": "For Rent\n3Beds 2Baths\n$850 Monthly\nIncluding\n4297 CANFLA ROAD,\nCOCOA, FL\nCall or text (601) 255-7146\n4297 CANELA ROAD,\nCANELA ROAD,",
+            "confidence": 0.923,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:19:58.055Z"
           }
         },
         {
@@ -81540,6 +81697,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:09:57.875Z"
+          },
+          "ocrData": {
+            "textOnScreen": "listen for once\naway so she wouldn't also\nget caught..\nso she wouldn't also\nfor once\nshe wouldn't also\ni caught..\ncome for once\nand stay she wouldn't also\nfo moments Sem wes\ncome save him? to once",
+            "confidence": 0.874,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:20:05.914Z"
           }
         },
         {
@@ -81563,6 +81729,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:02.343Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:20:14.607Z"
           }
         },
         {
@@ -81586,6 +81760,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:06.492Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:20:22.393Z"
           }
         },
         {
@@ -81609,6 +81791,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:09.458Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ventaveraniega",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:20:29.309Z"
           }
         },
         {
@@ -81632,6 +81823,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:13.621Z"
+          },
+          "ocrData": {
+            "textOnScreen": "clips\nsome of\nand durandal",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:20:39.615Z"
           }
         },
         {
@@ -81655,6 +81855,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:17.944Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:20:55.342Z"
           }
         },
         {
@@ -81678,6 +81886,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T20:10:20.498Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T20:21:11.001Z"
           }
         },
         {
