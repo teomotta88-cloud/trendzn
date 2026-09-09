@@ -1,0 +1,39 @@
+name: Probe TikTok Hashtag Più Video (diagnostico)
+
+# Sonda usa-e-getta: misura se si può arrivare a 200+ video per hashtag a
+# passata (contro i ~60 attuali) sommando più viste distinte dello stesso
+# termine (pagina hashtag via DOM, via XHR intercettate, con count
+# riscritto, ricerca video, ricerca generale) invece di scrollare di più la
+# stessa vista. Vedi scripts/probe-tiktok-hashtag-piu-video.mjs per il
+# perché.
+#
+# Gratis, nessuna scrittura sullo store. Solo workflow_dispatch.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hashtag:
+        description: "Hashtag da sondare (senza #)"
+        required: false
+        default: "bluserena"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Sonda più video per hashtag
+        run: node scripts/probe-tiktok-hashtag-piu-video.mjs "${{ inputs.hashtag }}"
