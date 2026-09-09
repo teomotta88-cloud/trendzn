@@ -67776,6 +67776,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:42.089Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:53:06.761Z"
           }
         }
       ]
@@ -72446,6 +72454,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:46.644Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Resort Kim Boi\nSerena Resort Kim Bòi\nSerena Resort Kim Bo6i\n2 Serpe fom BB) Resort by",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:53:33.287Z"
           }
         },
         {
@@ -72469,6 +72486,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:51.617Z"
+          },
+          "ocrData": {
+            "textOnScreen": "it's time for",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:53:49.318Z"
           }
         },
         {
@@ -72492,6 +72518,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:45:55.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Burvan klik di Lokasi\nbuat harga lebih murah",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:53:55.467Z"
           }
         },
         {
@@ -72515,6 +72550,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:00.797Z"
+          },
+          "ocrData": {
+            "textOnScreen": "enaks\nResort\nkamarnya Bersih,\nnyaman\nklik lokasi ya,",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:54:03.273Z"
           }
         }
       ]
@@ -78317,6 +78361,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:05.053Z"
+          },
+          "ocrData": {
+            "textOnScreen": "She hasn't re and hast een gone\nthe whole weekend...hop8 she\nP| trave Nith strangers\nisi ith limited signal\nShe hasn't replied and has been\nthe whole weekend...hope she's okay.\nHer; traveling with strangers\nan with limited signal\nShe hasn't replied and has been gone\nwhole weekend...hope she's okay.\nwith limited signal\nHer: traveling with sti rs\nto with lim\nto an island with limited signal",
+            "confidence": 0.86,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:54:14.823Z"
           }
         },
         {
@@ -78340,6 +78393,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:09.448Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ngajpersoni\nté ruantey\nIPER 3\nnéjfakt",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:54:23.955Z"
           }
         },
         {
@@ -78363,6 +78425,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:12.478Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:54:41.201Z"
           }
         },
         {
@@ -78386,6 +78456,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:15.911Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fat Kaluna: Resort\naudio\nrecently\n4 without audio\nPULA i»\nrecently at Kaluna\nwithout\nLife recently N\nLife recently at Kaluna",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:11.905Z"
           }
         },
         {
@@ -78409,6 +78488,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:21.534Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7(ala Terra)”\nResort\nTerra Resort;\nerralResorti",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:29.818Z"
           }
         },
         {
@@ -78432,6 +78520,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:27.686Z"
+          },
+          "ocrData": {
+            "textOnScreen": "flan la",
+            "confidence": 0.724,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:38.591Z"
           }
         },
         {
@@ -78455,6 +78552,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:31.759Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SHADOWS HANG\nHEAVY IN THE AIR\nThe Last Resort\nAND DREAMS\nLIKE A REFUGEE\nAND SPOKE\nABOUT THE\nGREAT DIVIDE",
+            "confidence": 0.923,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:42.821Z"
           }
         }
       ]
@@ -81970,6 +82076,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:37.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:48.875Z"
           }
         },
         {
@@ -81993,6 +82107,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:40.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:53.603Z"
           }
         },
         {
@@ -82016,6 +82138,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:43.335Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:55:59.796Z"
           }
         },
         {
@@ -82039,6 +82169,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:46.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:56:03.782Z"
           }
         },
         {
@@ -82062,6 +82200,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:49.679Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:56:10.300Z"
           }
         }
       ]
@@ -85605,6 +85751,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:56.326Z"
+          },
+          "ocrData": {
+            "textOnScreen": "rombongan",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:56:16.897Z"
           }
         }
       ]
@@ -89242,6 +89397,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:46:59.100Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CASE TRIAL TRIAL\nboth hajimes japanese AND’ re\nenglish vais;hadibills;to\nHajime Hinata\nenglish\nSonia A\nH-Hajime...!?\nCASE [3 TRIAL TRIAL\nboth AND\n...Ahh...ahhhhh...AHHHHHHHHHHHHHHHHHHHHHHHHHH!\ncase CLASS\ny both AND\nSonia Nevermind",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:56:27.715Z"
           }
         },
         {
@@ -89265,6 +89429,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T10:47:02.478Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ZANNI",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T10:56:52.951Z"
           }
         }
       ]
