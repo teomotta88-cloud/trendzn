@@ -35957,6 +35957,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:39:50.611Z"
+          },
+          "ocrData": {
+            "textOnScreen": "We’re all done!!",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:44:37.725Z"
           }
         },
         {
@@ -35980,6 +35989,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:39:52.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this scene REALLY pisses",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:44:43.935Z"
           }
         },
         {
@@ -36003,6 +36021,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:39:55.182Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:44:53.083Z"
           }
         },
         {
@@ -36026,6 +36052,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:39:59.656Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:03.841Z"
           }
         },
         {
@@ -36049,6 +36083,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:03.192Z"
+          },
+          "ocrData": {
+            "textOnScreen": "two scenes that gave\nN the exact same energy\nthe exact same energy,\ngave\n4 energy\nscenes that gave\nsame energy\ntwo scenes that\nenergy.",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:11.476Z"
           }
         },
         {
@@ -36072,6 +36115,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:05.482Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:14.856Z"
           }
         },
         {
@@ -36095,6 +36146,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:08.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nl SUPREMACY",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:21.199Z"
           }
         },
         {
@@ -36118,6 +36178,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:12.931Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AU DEBUT DE",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:28.305Z"
           }
         },
         {
@@ -36141,6 +36210,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:15.310Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i samelperson different font\nsame person different font\nsame\nd same person different font",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:34.781Z"
           }
         }
       ]
@@ -39498,6 +39576,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:18.527Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:45:54.428Z"
           }
         },
         {
@@ -39521,6 +39607,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:21.827Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TODO!\nSU COLUMPIO ENTRE",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:46:09.238Z"
           }
         },
         {
@@ -39544,6 +39639,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:26.978Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ROOM TOUR\nVilla\nvate i\nROOM TOUR 4\nPrivate Pool\nROOM TOUR of\nVilla Solayis\nBedroom Priv",
+            "confidence": 0.849,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:46:16.507Z"
           }
         }
       ]
@@ -45057,6 +45161,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:29.862Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tapi lebih private dan\nlebih hijau\nCuma bisa dijangkau naik sea\nplane dari Batam\ndari bambu dan\ni kayu daur ulang@\nTRIP.\nmakan dari hasil kebun\norganik mereka,\nadem tapi tetap mewah",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:46:31.763Z"
           }
         },
         {
@@ -45080,6 +45193,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:34.730Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:46:45.997Z"
           }
         },
         {
@@ -45103,6 +45224,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:38.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:46:57.092Z"
           }
         }
       ]
@@ -50751,6 +50880,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:47.136Z"
+          },
+          "ocrData": {
+            "textOnScreen": "#Pakistan\nHotel",
+            "confidence": 0.877,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:47:03.782Z"
           }
         },
         {
@@ -50774,6 +50912,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:50.019Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Shakira Shakira Lwasa\namujje Lujja\namujje ci",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:47:31.899Z"
           }
         },
         {
@@ -50797,6 +50944,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:40:54.094Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:47:35.919Z"
           }
         },
         {
@@ -50820,6 +50975,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:04.896Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:47:43.479Z"
           }
         }
       ]
@@ -56479,6 +56642,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:17.097Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pric",
+            "confidence": 0.73,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:47:54.946Z"
           }
         },
         {
@@ -56502,6 +56674,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:21.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:48:15.747Z"
           }
         },
         {
@@ -56525,6 +56706,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:24.693Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:48:23.191Z"
           }
         },
         {
@@ -56548,6 +56737,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:28.006Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sebelum lanjut, aku mau kasih\ntau kalo sekarang kita bisa\nbooking penginapan lewat\ntiktok dengan harga yang lebih\n2, hemat\ncara Bookingnya,\nKlik tag lokasi yang ini\nAmenities\nHeater\nType Carnelian\niap. 8 Dewasa, Breakfast,\nAC. Amenities, Water Heater\nPrivat kolam Air Hangat\nType Saphire\nBreakfast, AC, 7,\nÈ Amenities, Water Heater",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:49:01.118Z"
           }
         },
         {
@@ -56571,6 +56769,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:31.240Z"
+          },
+          "ocrData": {
+            "textOnScreen": "alam\nFasilitas kamar dilengkapi dengan\n1 Double bed, 2 Single bed, AC, Ketel,\nTeras/balkon, shower dengan water heater,\nmenities, wifi gratis, dll\nBETe",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:49:27.318Z"
           }
         }
       ]
@@ -62085,6 +62292,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-09T14:41:34.221Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENITE",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-09T14:49:50.725Z"
           }
         },
         {
