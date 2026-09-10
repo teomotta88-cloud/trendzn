@@ -161,6 +161,17 @@ export type AccountRef = {
   // Verifica Bluserena: il post contiene "bluserena" o un nome/hashtag resort?
   // "confirmed" se sì, "unconfirmed" se no. Modificabile manualmente via UI.
   verificationStatus?: VerificationStatus;
+  // Post inserito a mano perché nessuna fonte automatica l'ha mai trovato
+  // (scripts/add-manual-tiktok-post.mjs), tipicamente un caso noto sfuggito
+  // al campionamento parziale delle pagine hashtag TikTok. `confirmedAt` si
+  // valorizza da solo la prima volta che scraping profondo o backfill lo
+  // ripescano DA SOLI: è la conferma indipendente che il post è reale e
+  // ancora raggiungibile, segnalata in UI con una stellina.
+  manualAdd?: {
+    addedAt: string;
+    reason?: string | null;
+    confirmedAt?: string | null;
+  } | null;
 };
 export type CanaleInspo = {
   id: string;

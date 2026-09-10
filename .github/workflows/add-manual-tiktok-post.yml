@@ -1,0 +1,46 @@
+name: Aggiungi post TikTok a mano
+
+# Forza l'inserimento di UN post TikTok nello store quando è noto che porta
+# l'hashtag di un canale ma nessuna fonte automatica l'ha mai pescato (vedi
+# scripts/add-manual-tiktok-post.mjs). Il post nasce marcato "aggiunto a
+# mano"; se scraping profondo o backfill lo ripescano in futuro da soli, la
+# UI lo segnala con una stellina di conferma indipendente.
+#
+# Input pre-compilati sul caso che ha aperto questa funzionalità
+# (@maraalbergo/video/7675653655655140640, #bluserena, mai pescato in 13+
+# giorni di campionamento): sostituiscili per aggiungere un post diverso.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL del video/photo TikTok"
+        required: true
+        default: "https://www.tiktok.com/@maraalbergo/video/7675653655655140640"
+      canale:
+        description: "Nome del canale (hashtag) su cui inserirlo"
+        required: true
+        default: "bluserena"
+      motivo:
+        description: "Perché si aggiunge a mano (facoltativo)"
+        required: false
+        default: "mai pescato da nessuna fonte automatica in 13+ giorni di campionamento"
+
+permissions:
+  contents: write
+
+jobs:
+  aggiungi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Aggiungi il post
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/add-manual-tiktok-post.mjs "${{ inputs.url }}" "${{ inputs.canale }}" "${{ inputs.motivo }}"

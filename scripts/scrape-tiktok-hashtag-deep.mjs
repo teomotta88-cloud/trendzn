@@ -27,11 +27,20 @@
 // NIENTE sessione autenticata qui, di proposito. Provata l'8/09: ogni pagina
 // hashtag tornava vuota con "Drag the slider to fit the puzzle" nel testo —
 // il captcha anti-automazione di TikTok, non un problema di sessione o di
-// cookie/localStorage. Da anonimo lo stesso captcha non compare e si arriva
-// comunque a ~58-60 video per hashtag, quindi resta la strada che funziona
-// per questo script. Il login (createTikTokContext in lib/tiktok-page.mjs)
-// resta usato dagli altri due script (KPI e profili autore), che non hanno
-// mostrato lo stesso blocco.
+// cookie/localStorage. Da anonimo lo stesso captcha non compare, quindi
+// resta la strada che funziona per questo script. Il login
+// (createTikTokContext in lib/tiktok-page.mjs) resta usato dagli altri due
+// script (KPI e profili autore), che non hanno mostrato lo stesso blocco.
+//
+// Sul numero di video per hashtag: la sonda scripts/probe-tiktok-hashtag-
+// piu-video.mjs (9/09/2026) ha verificato che il ~60 visto qui NON è un
+// tetto lato server né un nostro stop prematuro sullo scroll — con più
+// pazienza si arriva regolarmente più in alto (fino a ~140 su #bluserena),
+// fermandosi su un hasMore=false che TikTok stesso dichiara: il vero
+// limite è quanti video sono OGGI indicizzati sotto quell'hashtag, che per
+// gli hashtag meno popolari può essere ben sotto 100. Per questo l'obiettivo
+// non è "più video a passata" ma continuare a ripassare nel tempo (vedi
+// sopra): il pool cresce mano a mano che nuovi video vengono taggati.
 //
 // Env:
 //   GITHUB_TOKEN: obbligatoria
@@ -46,12 +55,13 @@
 
 import { chromium } from "playwright";
 
-import { commitNewPosts, readStore } from "./lib/bluserena-store.mjs";
+import { commitField, commitNewPosts, readStore } from "./lib/bluserena-store.mjs";
 import {
   channelsForPost,
   dateFromVideoId,
   inWindow,
   knownUrls,
+  manualPostsToConfirm,
   normalizePostUrl,
   nuovoPost,
   tiktokVideoId,
@@ -151,10 +161,15 @@ try {
     let vistiPassata = 0;
     let nuoviPassata = 0;
     const perTag = [];
+    // TUTTI gli URL visti in questa passata, non solo i nuovi: serve a
+    // confermare i post aggiunti a mano (vedi manualPostsToConfirm), che per
+    // definizione sono già noti e quindi non finiscono mai tra i "nuovi".
+    const vistiPassataSet = new Set();
 
     for (const tag of nomiCanali) {
       const esito = await scrapeTag(context, tag);
       vistiPassata += esito.url.length;
+      for (const url of esito.url) vistiPassataSet.add(normalizePostUrl(url));
 
       if (esito.status !== "ok") {
         console.log(`#${tag}: ${esito.status} — ${esito.reason ?? ""}`);
@@ -218,6 +233,18 @@ try {
       console.log(`\n(DRY_RUN) Passata ${passata}: ${daScrivere} post pronti, non li scrivo.`);
     } else {
       console.log(`\nPassata ${passata}: nessun post nuovo.`);
+    }
+
+    if (!DRY_RUN) {
+      const daConfermare = manualPostsToConfirm(store, vistiPassataSet);
+      if (daConfermare.size) {
+        await commitField({
+          field: "manualAdd",
+          updates: daConfermare,
+          message: `chore: conferma dallo scraping profondo ${daConfermare.size} post aggiunti a mano [trendzn-bot]`,
+        });
+        console.log(`  ⭐ Confermati dallo scraping profondo ${daConfermare.size} post aggiunti a mano.`);
+      }
     }
 
     riepilogo.push({ passata, visti: vistiPassata, nuovi: nuoviPassata, perTag });

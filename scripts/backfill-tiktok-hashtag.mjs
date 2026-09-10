@@ -75,6 +75,7 @@
 // copia locale.
 
 import { commitField, commitNewPosts, readStore, STORE_PATH } from "./lib/bluserena-store.mjs";
+import { manualPostsToConfirm, normalizePostUrl } from "./lib/bluserena-discovery.mjs";
 
 const APIFY_ACTOR = "clockworks~tiktok-hashtag-scraper";
 const APIFY_COST_PER_ITEM_USD = 0.005; // $5 / 1000 risultati, pricing pubblico dell'actor
@@ -432,6 +433,23 @@ async function backfillHashtag(tag, canaleName) {
     console.log(
       `  ${newThisCall} post nuovi (${newInWindowsThisCall} nelle finestre di interesse), ${enrichedThisCall} post esistenti aggiornati.`,
     );
+
+    // Conferma i post aggiunti a mano (scripts/add-manual-tiktok-post.mjs)
+    // che questa chiamata ha ripescato da sola: sia i "nuovi" che gli
+    // "arricchiti" sono già noti allo store, quindi TUTTI gli item della
+    // risposta contano come "visti", non solo quelli appena scritti.
+    const vistiSet = new Set(
+      result.items.filter(Boolean).map((post) => normalizePostUrl(post.url)),
+    );
+    const daConfermare = manualPostsToConfirm(frescoStore, vistiSet);
+    if (daConfermare.size) {
+      await commitField({
+        field: "manualAdd",
+        updates: daConfermare,
+        message: `chore: conferma dal backfill ${daConfermare.size} post aggiunti a mano [trendzn-bot]`,
+      });
+      console.log(`  ⭐ Confermati dal backfill ${daConfermare.size} post aggiunti a mano.`);
+    }
 
     if (call >= MIN_CALLS && newInWindowsThisCall === 0) {
       console.log(
