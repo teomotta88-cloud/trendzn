@@ -25563,13 +25563,13 @@
             "updatedAt": "2026-09-10T23:21:17.401Z"
           },
           "ocrData": {
-            "textOnScreen": "Rispondi al commento d\nBuonasera ragazzi (3 il\nmini club come\nfunziona? vostri bimbi\nsi stanno divertendo?\nCome funziona? Cosa\nfanno? e\nVOSTRI\nBIMBI SI\nRispondi al commento di\nValenta\nBuonasera ragazzi il\nfanno?\nmini club come i\nfanno? p\nPURTROPPO\nQ Buonasera ragazzi il A\nfanno? ff\nANCHE SE\nDELLE. EH\nValenta p\nBuonasera ragazzi Ga il\nfunziona? vostri bimbi pe\nsi stanno divertendo? A\nE DAGLI\nAMICHETTI DALLE FAMIGLIE.",
-            "confidence": 0.884,
+            "textOnScreen": "Rispondi al commento di\nBuonasera ragazzi (3 il\nmini club come\nfunziona? I vostri bimbi\nsi stanno divertendo?\nCome funziona? Cosa\nfanno?\nVOSTRI\nBIMBI Si\nRispondi mmento di 3\nBuonasera ragazzi (3 il A\nfunziona? vostri bimbi\nsi stanno divertendo? A\nCome funziona? Cosa È\nPERO PURTROPPO\nPiù vera\nValenta\nQ Buonasera ragazzi (3 il A\nmini club come A\nANCHE SE\nDELLE. EH\nreaction\nValenta: ii\nè Buonasera ragazzi (3 il\nCome funziona? Cosa A A\nfanno? N\nE DAGLI\nAMICHETTI DALLE FAMIGLIE.",
+            "confidence": 0.865,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:01.109Z"
+            "updatedAt": "2026-09-10T23:30:28.049Z"
           }
         },
         {
@@ -25601,7 +25601,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:13.420Z"
+            "updatedAt": "2026-09-10T23:30:55.742Z"
           }
         },
         {
@@ -25633,7 +25633,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:25.554Z"
+            "updatedAt": "2026-09-10T23:31:20.523Z"
           }
         },
         {
@@ -25665,7 +25665,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:30.878Z"
+            "updatedAt": "2026-09-10T23:31:25.917Z"
           }
         },
         {
@@ -25697,7 +25697,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:37.628Z"
+            "updatedAt": "2026-09-10T23:31:32.673Z"
           }
         },
         {
@@ -25723,13 +25723,13 @@
             "updatedAt": "2026-09-10T23:21:45.430Z"
           },
           "ocrData": {
-            "textOnScreen": "Con questa meravigliosa\naccoglienza come fare a non\nsentirti a\nsono fiero che vi siete\nsentiti a vostro agio nei\nnostri villaggi Sibari\nalmeno qualcuno parla\nbene della nostra sibari\nLO STAN\nDI TIKTOK\nsentiti a vostro agio\nsentirti a casa™\nsentiti a vostro agio nei A\nnostri villaggi Sibari h",
-            "confidence": 0.876,
+            "textOnScreen": "Con questa meravigliosa\naccoglienza come fare a non\nsentirti a\nsono fiero che vi siete\nsentiti a vostro agio nei\nnostri villaggi Sibari\nalmeno qualcuno parla\nbene della nostra sibari\nN sono fiero che vi siete\nDI TIKTOK A\nE QUINDI\nnostri villaggi Sibari È\nsentirti a i y\nsentiti a vostro agio nei Ì\nalmeno qualcuno parla A\nCarp",
+            "confidence": 0.878,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:50.608Z"
+            "updatedAt": "2026-09-10T23:31:46.161Z"
           }
         },
         {
@@ -25761,7 +25761,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:57.986Z"
+            "updatedAt": "2026-09-10T23:31:53.650Z"
           }
         },
         {
@@ -25793,7 +25793,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:26:06.729Z"
+            "updatedAt": "2026-09-10T23:32:02.116Z"
           }
         }
       ]
@@ -62981,6 +62981,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:08.378Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ABBIAMO\nCHE TIENI\nALCOTT, CANOTTA\nCOM'E?",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:30:00.510Z"
           }
         },
         {
@@ -63018,6 +63027,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:13.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1 dovrebbero farti un a\ncontratto di lavoro\npubblicitario e di info al\nvillaggio, un ceckpoint 3\nvivente, sei un grande\nahahhaha\n3 LEGATI\nRispondi al commento di\nN Antonio lennaco\ncmq dovrebbero farti un\nvillaggio, un ceckpoint\n4 ahahhaha\nAntonio lennaco\ni villaggio, un ceckpoint\nFORZADI\nTORNA\nN cmq dovrebbero farti un\npubblicitario e al\nvivente, sei un grande a",
+            "confidence": 0.856,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:30:15.307Z"
           }
         },
         {
@@ -63043,13 +63061,13 @@
             "updatedAt": "2026-09-10T23:21:17.401Z"
           },
           "ocrData": {
-            "textOnScreen": "Rispondi al commento d\nBuonasera ragazzi (3 il\nmini club come\nfunziona? vostri bimbi\nsi stanno divertendo?\nCome funziona? Cosa\nfanno? e\nVOSTRI\nBIMBI SI\nRispondi al commento di\nValenta\nBuonasera ragazzi il\nfanno?\nmini club come i\nfanno? p\nPURTROPPO\nQ Buonasera ragazzi il A\nfanno? ff\nANCHE SE\nDELLE. EH\nValenta p\nBuonasera ragazzi Ga il\nfunziona? vostri bimbi pe\nsi stanno divertendo? A\nE DAGLI\nAMICHETTI DALLE FAMIGLIE.",
-            "confidence": 0.884,
+            "textOnScreen": "Rispondi al commento di\nBuonasera ragazzi (3 il\nmini club come\nfunziona? I vostri bimbi\nsi stanno divertendo?\nCome funziona? Cosa\nfanno?\nVOSTRI\nBIMBI Si\nRispondi mmento di 3\nBuonasera ragazzi (3 il A\nfunziona? vostri bimbi\nsi stanno divertendo? A\nCome funziona? Cosa È\nPERO PURTROPPO\nPiù vera\nValenta\nQ Buonasera ragazzi (3 il A\nmini club come A\nANCHE SE\nDELLE. EH\nreaction\nValenta: ii\nè Buonasera ragazzi (3 il\nCome funziona? Cosa A A\nfanno? N\nE DAGLI\nAMICHETTI DALLE FAMIGLIE.",
+            "confidence": 0.865,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:01.109Z"
+            "updatedAt": "2026-09-10T23:30:28.049Z"
           }
         },
         {
@@ -63073,6 +63091,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:20.722Z"
+          },
+          "ocrData": {
+            "textOnScreen": "2, ifanno",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:30:43.681Z"
           }
         },
         {
@@ -63104,7 +63131,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:13.420Z"
+            "updatedAt": "2026-09-10T23:30:55.742Z"
           }
         },
         {
@@ -63128,6 +63155,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:26.357Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nEnzo86\nciao cautuori... come\nprocede la vacanza? hai\nrisposto ad ogni nostra\ndomanda per noi che\nsaremo ospiti in questo\nresort nelle prossime\nsettimane e per questo sei\nstato davvero molto\nQUESTA'QUA\nRispondi al commento\nBELLA VISUALE,",
+            "confidence": 0.925,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:31:03.018Z"
           }
         },
         {
@@ -63151,6 +63187,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:29.960Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:31:08.235Z"
           }
         },
         {
@@ -63182,7 +63226,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:25.554Z"
+            "updatedAt": "2026-09-10T23:31:20.523Z"
           }
         },
         {
@@ -63214,7 +63258,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:30.878Z"
+            "updatedAt": "2026-09-10T23:31:25.917Z"
           }
         },
         {
@@ -63246,7 +63290,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:37.628Z"
+            "updatedAt": "2026-09-10T23:31:32.673Z"
           }
         },
         {
@@ -63272,13 +63316,13 @@
             "updatedAt": "2026-09-10T23:21:45.430Z"
           },
           "ocrData": {
-            "textOnScreen": "Con questa meravigliosa\naccoglienza come fare a non\nsentirti a\nsono fiero che vi siete\nsentiti a vostro agio nei\nnostri villaggi Sibari\nalmeno qualcuno parla\nbene della nostra sibari\nLO STAN\nDI TIKTOK\nsentiti a vostro agio\nsentirti a casa™\nsentiti a vostro agio nei A\nnostri villaggi Sibari h",
-            "confidence": 0.876,
+            "textOnScreen": "Con questa meravigliosa\naccoglienza come fare a non\nsentirti a\nsono fiero che vi siete\nsentiti a vostro agio nei\nnostri villaggi Sibari\nalmeno qualcuno parla\nbene della nostra sibari\nN sono fiero che vi siete\nDI TIKTOK A\nE QUINDI\nnostri villaggi Sibari È\nsentirti a i y\nsentiti a vostro agio nei Ì\nalmeno qualcuno parla A\nCarp",
+            "confidence": 0.878,
             "frameCount": 5,
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:50.608Z"
+            "updatedAt": "2026-09-10T23:31:46.161Z"
           }
         },
         {
@@ -63310,7 +63354,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:25:57.986Z"
+            "updatedAt": "2026-09-10T23:31:53.650Z"
           }
         },
         {
@@ -63342,7 +63386,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T23:26:06.729Z"
+            "updatedAt": "2026-09-10T23:32:02.116Z"
           }
         }
       ]
@@ -69945,6 +69989,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:55.554Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mini Vlog",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:32:19.005Z"
           }
         },
         {
@@ -69968,6 +70021,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:59.921Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:32:43.755Z"
           }
         },
         {
@@ -69991,6 +70052,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:05.025Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:32:56.327Z"
           }
         }
       ]
@@ -78068,6 +78137,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:09.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL ON\nSERENA\nSERENA HOTEL e\nSERENA HOTEL",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:33:17.059Z"
           }
         },
         {
@@ -78091,6 +78169,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:13.393Z"
+          },
+          "ocrData": {
+            "textOnScreen": "5D TH EATE\nDIDN'T",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:33:25.299Z"
           }
         },
         {
@@ -78114,6 +78201,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:19.594Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1 tried\nwater park on",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:33:36.150Z"
           }
         },
         {
@@ -78137,6 +78233,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:22.568Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Beautiful gals enjoying king\nshow",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:33:43.759Z"
           }
         },
         {
@@ -78160,6 +78265,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:25.429Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:33:50.110Z"
           }
         },
         {
@@ -78183,6 +78296,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:31.364Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Blackshuga and kazibwe\nkapo in king show\nkapo in king Micheal's show È\nkapo in king Micheal's show\nin king Micheal's show",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:34:03.274Z"
           }
         }
       ]
@@ -84427,6 +84549,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:36.204Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:34:11.405Z"
           }
         },
         {
@@ -84450,6 +84580,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:39.089Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MAS CALIDAD MAS\nCALIDAD, MAS\nRecta\nSOCIALES\n[AS VALOR",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:34:26.099Z"
           }
         },
         {
@@ -84473,6 +84612,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:41.590Z"
+          },
+          "ocrData": {
+            "textOnScreen": "iness\nappiness",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:34:29.492Z"
           }
         }
       ]
