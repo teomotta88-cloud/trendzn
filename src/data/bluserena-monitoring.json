@@ -59956,7 +59956,16 @@
           "likes": 19,
           "comments": 4,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:30.476Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59970,7 +59979,16 @@
           "likes": 19000,
           "comments": 74,
           "shares": 1449,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non sei solo, bambino! Sei il mio bambino! Sei il mio bambino e lo amo!",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:32.896Z"
+          }
         }
       ]
     },
@@ -65982,7 +66000,16 @@
           "likes": 50,
           "comments": 2,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:35.427Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -65996,7 +66023,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:38.307Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66010,7 +66046,16 @@
           "likes": 1560,
           "comments": 86,
           "shares": 236,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vesipuisto Serena Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:41.067Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66024,7 +66069,16 @@
           "likes": 68,
           "comments": 2,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Aspettate, se state cercando un resort per un getaway o una viaggia di ragazze e non vi interessa la beach perché siete più di una persona di piazza, questo è il vostro resort. Benvenuti a Secrets Moche, con piazze stupide in stile lagoon, un spazio bellissimo, un speakeasy che è aperto a tardi e un stop di show di un gazebo di bambini che richiede un decoro minimo se state cercando un settore unico per la vostra bambina di destinazione. Andiamo a portarvi a bambini!",
+            "language": "Italian",
+            "durationSec": 27.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:44.534Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66038,7 +66092,16 @@
           "likes": 7495,
           "comments": 122,
           "shares": 1911,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sono davvero impressionato, guardate questo hotel, è incredibile, guardate la qualità della costruzione, il disegno, vediamo il parco di acqua, abbiamo un rio lento che passa le persone flottando con le gommone, molto fumo d'acqua, la verità è incredibile, ci divertiamo completamente da quasi una settimana qui nel Serenade divino divino questo hotel stiamo divertendo i ragazzi come loco non lo possono credere",
+            "language": "Italian",
+            "durationSec": 44.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:48.965Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66052,7 +66115,16 @@
           "likes": 5306,
           "comments": 46,
           "shares": 2035,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:51.910Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66066,7 +66138,16 @@
           "likes": 36,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 17.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:02:54.604Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66080,7 +66161,16 @@
           "likes": 1130,
           "comments": 47,
           "shares": 363,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "RIVIEW SERINPLA RESORT HONG SON VILLA MAI TING LEO CHECK IN RAPTIKA MUMMA HACHON YU BONTI CHECK IN SING KOT MAHACHON TUKON YALUAT TIP NA MUMMI MUMM DIEL AUBILI SIP TAP SIP KHA HONG KHA HONG TUKON WANNI LAO PAK VILLA SI HONG NUNG TIANG YAI LAO TIANG NUMMA TUKON MI TV AIER YEN CHAM TIANG YAI LAO KO SA'AK MAK DUI SONG DECK KHO MAE TUNNTEN MAK TI SA' DAI MAI TIEL LUI VAI DAI MA TIEL NA TANG TUNNTEN TANG NON MI LAM un'uomo salta sullo schiena, un'uomo si riprende a dormire in realtà è un'area molto ampia in questo video non ho aggiunto nascita, ho aggiunto solo cibo per i bambini andiamo a vedere la sala di lavastoviglie la sala è separata dalla zona bianca, la zona bianca è chiaramente asciutta il sguardo è molto divertente il shampoo è molto buono, il gelo è molto buono, tutti i bambini non dovete prepararlo ho solo aggiunto le cose la sala di lavastoviglie ha un'acqua per lavare c'è un'acqua per lavare molto importante i bambini possono andare in casa con calma in realtà ho scelto la sala di lavastoviglie perché quando andiamo da 39 fino alla sala di lavastoviglie Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:01.399Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66094,7 +66184,16 @@
           "likes": 25,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 15.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:03.962Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66108,7 +66207,16 @@
           "likes": 37,
           "comments": 0,
           "shares": 19,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 12.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:06.727Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66122,7 +66230,16 @@
           "likes": 770,
           "comments": 6,
           "shares": 147,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ah, ah, ah Ah, ah, ah Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 44,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:18.261Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66136,7 +66253,16 @@
           "likes": 9,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 19.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:21.202Z"
+          }
         }
       ]
     },
@@ -72901,7 +73027,16 @@
           "likes": 40,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:25.438Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72915,7 +73050,16 @@
           "likes": 460,
           "comments": 19,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:28.627Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72929,7 +73073,16 @@
           "likes": 62,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:31.231Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72943,7 +73096,16 @@
           "likes": 31,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Sì, grazie. Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 137.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:35.277Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72957,7 +73119,16 @@
           "likes": 47,
           "comments": 20,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grand Sirenes Highlights, would you stay here?",
+            "language": "Italian",
+            "durationSec": 14.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:38.802Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72971,7 +73142,16 @@
           "likes": 152,
           "comments": 7,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:41.878Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72985,7 +73165,16 @@
           "likes": 2748,
           "comments": 47,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:46.220Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72999,7 +73188,16 @@
           "likes": 3505,
           "comments": 81,
           "shares": 95,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 42.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:56.508Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73013,7 +73211,16 @@
           "likes": 471,
           "comments": 28,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno a tutti, sono Mary, la regna di Svazio in Renzuri. Vorrei invitare tutti per il nostro gran finale che sarà preso a Camparoso in un hotel il 4 settembre. Venite a esplorare la gara in un'altra piazza. Grazie.",
+            "language": "Italian",
+            "durationSec": 23.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:03:59.671Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73027,7 +73234,16 @@
           "likes": 7220,
           "comments": 136,
           "shares": 289,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica La chiesa di Dio è la chiesa di Dio. Grazie a tutti C un che non si pu fare non si pu fare niente non si pu fare niente non si pu fare niente Grazie a tutti. Grazie a tutti Il gioco della mamma un gioco di amore di amore per tutti i bambini e per tutti i bambini E poi ci manchino a cererà, che muore e cererà un uomo sanfure, che muore e morrà, che muore e cererà un uomo sanfure. Grazie a tutti La citt di San Marco Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 287.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:04:06.340Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73041,7 +73257,16 @@
           "likes": 354,
           "comments": 2,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:04:09.211Z"
+          }
         },
         {
           "platform": "tiktok",
