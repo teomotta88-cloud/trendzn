@@ -1428,7 +1428,7 @@ function SentimentTimeline({ posts }: { posts: Post[] }) {
       </div>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={dati}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
           <XAxis dataKey="date" tick={{ fontSize: 12 }} />
           <YAxis />
           <Tooltip />
