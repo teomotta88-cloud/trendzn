@@ -14253,7 +14253,7 @@
           "comments": 39,
           "shares": 43,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
             "disservizi",
             "clima",
@@ -14278,22 +14278,12 @@
             "updatedAt": "2026-09-04T08:04:06.906Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "disservizi",
-              "clima",
-              "nostalgia di casa"
-            ],
-            "location": "Bluserena",
-            "confidence": 0.75,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "positive",
             "sources": [
-              "caption",
-              "audio"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:03:10.556Z"
+            "updatedAt": "2026-09-10T15:21:41.832Z"
           },
           "engagementData": {
             "status": "ok",
