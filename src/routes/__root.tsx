@@ -12,6 +12,8 @@ import { Menu, X } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { THEME_INIT_SCRIPT } from "../lib/theme";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 function NotFoundComponent() {
   return (
@@ -124,9 +126,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
+    // Niente className qui: lo script sotto è l'UNICO a decidere .dark
+    // sull'<html>, PRIMA che React idrati. Se questo componente dichiarasse
+    // un className fisso, React se lo aspetterebbe uguale in idratazione e
+    // andrebbe in conflitto con la classe che lo script ha già cambiato.
     <html lang="en">
       <head>
         <HeadContent />
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body>
         {children}
@@ -145,6 +152,7 @@ function RootComponent() {
         <main className="mx-auto w-full max-w-[1400px] px-4 pb-20 pt-6 sm:px-6 lg:px-10">
           <Outlet />
         </main>
+        <ThemeToggle />
       </div>
     </QueryClientProvider>
   );

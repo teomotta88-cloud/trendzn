@@ -136,7 +136,7 @@ export function BluserenaBackfillStats() {
           <h4 className="text-sm font-semibold mb-3">Post per Piattaforma</h4>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={platformData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
               <XAxis dataKey="platform" tick={{ fontSize: 12 }} />
               <YAxis />
               <Tooltip />

@@ -13,6 +13,7 @@ import { Route as TrendViraliRouteImport } from './routes/trend-virali'
 import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
 import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
+import { Route as TrascrizioneAudioRouteImport } from './routes/trascrizione-audio'
 import { Route as TiktokHashtagRouteImport } from './routes/tiktok-hashtag'
 import { Route as LinkedinRouteImport } from './routes/linkedin'
 import { Route as InfluencerFeedRouteImport } from './routes/influencer-feed'
@@ -44,6 +45,8 @@ import { Route as ApiPublicHooksTriggerSyncBluserenaHashtagsRouteImport } from '
 import { Route as ApiPublicHooksTriggerSyncAspiMonitoringRouteImport } from './routes/api/public/hooks/trigger-sync-aspi-monitoring'
 import { Route as ApiPublicHooksTriggerDiscoveryPipelineRouteImport } from './routes/api/public/hooks/trigger-discovery-pipeline'
 import { Route as ApiPublicHooksTriggerAnalyzeNewBsconfirmedRouteImport } from './routes/api/public/hooks/trigger-analyze-new-bsconfirmed'
+import { Route as ApiPublicHooksTranscribeAudioStatusRouteImport } from './routes/api/public/hooks/transcribe-audio-status'
+import { Route as ApiPublicHooksTranscribeAudioStartRouteImport } from './routes/api/public/hooks/transcribe-audio-start'
 import { Route as ApiPublicHooksTopTiktokHashtagsRouteImport } from './routes/api/public/hooks/top-tiktok-hashtags'
 import { Route as ApiPublicHooksTiktokOembedRouteImport } from './routes/api/public/hooks/tiktok-oembed'
 import { Route as ApiPublicHooksTiktokHashtagPostsRouteImport } from './routes/api/public/hooks/tiktok-hashtag-posts'
@@ -96,6 +99,11 @@ const TrendEvergreenRoute = TrendEvergreenRouteImport.update({
 const TrendAttualiRoute = TrendAttualiRouteImport.update({
   id: '/trend-attuali',
   path: '/trend-attuali',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrascrizioneAudioRoute = TrascrizioneAudioRouteImport.update({
+  id: '/trascrizione-audio',
+  path: '/trascrizione-audio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TiktokHashtagRoute = TiktokHashtagRouteImport.update({
@@ -260,6 +268,18 @@ const ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute =
   ApiPublicHooksTriggerAnalyzeNewBsconfirmedRouteImport.update({
     id: '/api/public/hooks/trigger-analyze-new-bsconfirmed',
     path: '/api/public/hooks/trigger-analyze-new-bsconfirmed',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTranscribeAudioStatusRoute =
+  ApiPublicHooksTranscribeAudioStatusRouteImport.update({
+    id: '/api/public/hooks/transcribe-audio-status',
+    path: '/api/public/hooks/transcribe-audio-status',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTranscribeAudioStartRoute =
+  ApiPublicHooksTranscribeAudioStartRouteImport.update({
+    id: '/api/public/hooks/transcribe-audio-start',
+    path: '/api/public/hooks/transcribe-audio-start',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksTopTiktokHashtagsRoute =
@@ -465,6 +485,7 @@ export interface FileRoutesByFullPath {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
+  '/trascrizione-audio': typeof TrascrizioneAudioRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -521,6 +542,8 @@ export interface FileRoutesByFullPath {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/transcribe-audio-start': typeof ApiPublicHooksTranscribeAudioStartRoute
+  '/api/public/hooks/transcribe-audio-status': typeof ApiPublicHooksTranscribeAudioStatusRoute
   '/api/public/hooks/trigger-analyze-new-bsconfirmed': typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
@@ -535,6 +558,7 @@ export interface FileRoutesByTo {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
+  '/trascrizione-audio': typeof TrascrizioneAudioRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -591,6 +615,8 @@ export interface FileRoutesByTo {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/transcribe-audio-start': typeof ApiPublicHooksTranscribeAudioStartRoute
+  '/api/public/hooks/transcribe-audio-status': typeof ApiPublicHooksTranscribeAudioStatusRoute
   '/api/public/hooks/trigger-analyze-new-bsconfirmed': typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
@@ -606,6 +632,7 @@ export interface FileRoutesById {
   '/influencer-feed': typeof InfluencerFeedRoute
   '/linkedin': typeof LinkedinRoute
   '/tiktok-hashtag': typeof TiktokHashtagRoute
+  '/trascrizione-audio': typeof TrascrizioneAudioRoute
   '/trend-attuali': typeof TrendAttualiRoute
   '/trend-evergreen': typeof TrendEvergreenRoute
   '/trend-real-time': typeof TrendRealTimeRoute
@@ -662,6 +689,8 @@ export interface FileRoutesById {
   '/api/public/hooks/tiktok-hashtag-posts': typeof ApiPublicHooksTiktokHashtagPostsRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
   '/api/public/hooks/top-tiktok-hashtags': typeof ApiPublicHooksTopTiktokHashtagsRoute
+  '/api/public/hooks/transcribe-audio-start': typeof ApiPublicHooksTranscribeAudioStartRoute
+  '/api/public/hooks/transcribe-audio-status': typeof ApiPublicHooksTranscribeAudioStatusRoute
   '/api/public/hooks/trigger-analyze-new-bsconfirmed': typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   '/api/public/hooks/trigger-discovery-pipeline': typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   '/api/public/hooks/trigger-sync-aspi-monitoring': typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
@@ -678,6 +707,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
+    | '/trascrizione-audio'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -734,6 +764,8 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/transcribe-audio-start'
+    | '/api/public/hooks/transcribe-audio-status'
     | '/api/public/hooks/trigger-analyze-new-bsconfirmed'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
@@ -748,6 +780,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
+    | '/trascrizione-audio'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -804,6 +837,8 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/transcribe-audio-start'
+    | '/api/public/hooks/transcribe-audio-status'
     | '/api/public/hooks/trigger-analyze-new-bsconfirmed'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
@@ -818,6 +853,7 @@ export interface FileRouteTypes {
     | '/influencer-feed'
     | '/linkedin'
     | '/tiktok-hashtag'
+    | '/trascrizione-audio'
     | '/trend-attuali'
     | '/trend-evergreen'
     | '/trend-real-time'
@@ -874,6 +910,8 @@ export interface FileRouteTypes {
     | '/api/public/hooks/tiktok-hashtag-posts'
     | '/api/public/hooks/tiktok-oembed'
     | '/api/public/hooks/top-tiktok-hashtags'
+    | '/api/public/hooks/transcribe-audio-start'
+    | '/api/public/hooks/transcribe-audio-status'
     | '/api/public/hooks/trigger-analyze-new-bsconfirmed'
     | '/api/public/hooks/trigger-discovery-pipeline'
     | '/api/public/hooks/trigger-sync-aspi-monitoring'
@@ -889,6 +927,7 @@ export interface RootRouteChildren {
   InfluencerFeedRoute: typeof InfluencerFeedRoute
   LinkedinRoute: typeof LinkedinRoute
   TiktokHashtagRoute: typeof TiktokHashtagRoute
+  TrascrizioneAudioRoute: typeof TrascrizioneAudioRoute
   TrendAttualiRoute: typeof TrendAttualiRoute
   TrendEvergreenRoute: typeof TrendEvergreenRoute
   TrendRealTimeRoute: typeof TrendRealTimeRoute
@@ -945,6 +984,8 @@ export interface RootRouteChildren {
   ApiPublicHooksTiktokHashtagPostsRoute: typeof ApiPublicHooksTiktokHashtagPostsRoute
   ApiPublicHooksTiktokOembedRoute: typeof ApiPublicHooksTiktokOembedRoute
   ApiPublicHooksTopTiktokHashtagsRoute: typeof ApiPublicHooksTopTiktokHashtagsRoute
+  ApiPublicHooksTranscribeAudioStartRoute: typeof ApiPublicHooksTranscribeAudioStartRoute
+  ApiPublicHooksTranscribeAudioStatusRoute: typeof ApiPublicHooksTranscribeAudioStatusRoute
   ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute: typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute
   ApiPublicHooksTriggerDiscoveryPipelineRoute: typeof ApiPublicHooksTriggerDiscoveryPipelineRoute
   ApiPublicHooksTriggerSyncAspiMonitoringRoute: typeof ApiPublicHooksTriggerSyncAspiMonitoringRoute
@@ -983,6 +1024,13 @@ declare module '@tanstack/react-router' {
       path: '/trend-attuali'
       fullPath: '/trend-attuali'
       preLoaderRoute: typeof TrendAttualiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trascrizione-audio': {
+      id: '/trascrizione-audio'
+      path: '/trascrizione-audio'
+      fullPath: '/trascrizione-audio'
+      preLoaderRoute: typeof TrascrizioneAudioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tiktok-hashtag': {
@@ -1200,6 +1248,20 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/trigger-analyze-new-bsconfirmed'
       fullPath: '/api/public/hooks/trigger-analyze-new-bsconfirmed'
       preLoaderRoute: typeof ApiPublicHooksTriggerAnalyzeNewBsconfirmedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/transcribe-audio-status': {
+      id: '/api/public/hooks/transcribe-audio-status'
+      path: '/api/public/hooks/transcribe-audio-status'
+      fullPath: '/api/public/hooks/transcribe-audio-status'
+      preLoaderRoute: typeof ApiPublicHooksTranscribeAudioStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/transcribe-audio-start': {
+      id: '/api/public/hooks/transcribe-audio-start'
+      path: '/api/public/hooks/transcribe-audio-start'
+      fullPath: '/api/public/hooks/transcribe-audio-start'
+      preLoaderRoute: typeof ApiPublicHooksTranscribeAudioStartRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/top-tiktok-hashtags': {
@@ -1441,6 +1503,7 @@ const rootRouteChildren: RootRouteChildren = {
   InfluencerFeedRoute: InfluencerFeedRoute,
   LinkedinRoute: LinkedinRoute,
   TiktokHashtagRoute: TiktokHashtagRoute,
+  TrascrizioneAudioRoute: TrascrizioneAudioRoute,
   TrendAttualiRoute: TrendAttualiRoute,
   TrendEvergreenRoute: TrendEvergreenRoute,
   TrendRealTimeRoute: TrendRealTimeRoute,
@@ -1508,6 +1571,10 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicHooksTiktokHashtagPostsRoute: ApiPublicHooksTiktokHashtagPostsRoute,
   ApiPublicHooksTiktokOembedRoute: ApiPublicHooksTiktokOembedRoute,
   ApiPublicHooksTopTiktokHashtagsRoute: ApiPublicHooksTopTiktokHashtagsRoute,
+  ApiPublicHooksTranscribeAudioStartRoute:
+    ApiPublicHooksTranscribeAudioStartRoute,
+  ApiPublicHooksTranscribeAudioStatusRoute:
+    ApiPublicHooksTranscribeAudioStatusRoute,
   ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute:
     ApiPublicHooksTriggerAnalyzeNewBsconfirmedRoute,
   ApiPublicHooksTriggerDiscoveryPipelineRoute:

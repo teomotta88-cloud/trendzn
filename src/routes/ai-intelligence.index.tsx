@@ -452,7 +452,7 @@ function AIIntelligencePage() {
           {topicData.length > 0 ? (
             <ResponsiveContainer width="100%" height={250}>
               <BarChart data={topicData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
                 <XAxis dataKey="topic" angle={-45} textAnchor="end" height={80} tick={{ fontSize: 12 }} />
                 <YAxis />
                 <Tooltip />
@@ -475,7 +475,7 @@ function AIIntelligencePage() {
           {aggregated.timelineArray.length > 0 ? (
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={aggregated.timelineArray}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
                 <XAxis dataKey="date" tick={{ fontSize: 12 }} />
                 <YAxis />
                 <Tooltip />
