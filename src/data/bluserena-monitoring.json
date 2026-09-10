@@ -8530,7 +8530,7 @@
           "comments": 89,
           "shares": 80,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "neutral",
           "topics": [
             "cibo",
             "animazione",
@@ -8556,23 +8556,12 @@
             "updatedAt": "2026-09-04T07:58:09.651Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "positive",
-            "topics": [
-              "cibo",
-              "animazione",
-              "fedeltà",
-              "vacanza in famiglia"
-            ],
-            "location": "Bluserena",
-            "confidence": 0.88,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "neutral",
             "sources": [
-              "caption",
-              "audio"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:00:00.518Z"
+            "updatedAt": "2026-09-10T15:58:16.705Z"
           },
           "engagementData": {
             "status": "ok",
