@@ -15882,7 +15882,7 @@
           "comments": 3,
           "shares": 0,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "neutral",
           "topics": [
             "animazione",
             "spiaggia",
@@ -15909,11 +15909,11 @@
           },
           "sentimentData": {
             "status": "manual",
-            "sentiment": "negative",
+            "sentiment": "neutral",
             "sources": [
               "manuale"
             ],
-            "updatedAt": "2026-09-10T16:30:26.960Z"
+            "updatedAt": "2026-09-10T16:32:44.330Z"
           },
           "engagementData": {
             "status": "ok",
