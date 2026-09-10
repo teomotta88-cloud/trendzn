@@ -25147,7 +25147,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T07:10:55.910Z"
+            "updatedAt": "2026-09-10T07:21:19.019Z"
           }
         },
         {
@@ -53719,6 +53719,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:36.115Z"
+          },
+          "ocrData": {
+            "textOnScreen": "—6 GASTRON\nVIDEO",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:20:22.822Z"
           }
         },
         {
@@ -53742,6 +53751,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:39.943Z"
+          },
+          "ocrData": {
+            "textOnScreen": "How to find us?\nKomplek Nagoya Hill\nBlok\ngrandmajestyspa.id",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:20:32.179Z"
           }
         },
         {
@@ -53765,6 +53783,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:45.102Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL N\ndate\nMATHIAS Li\nSERENA HOTEL\nE erena ho\nSERENA HOTEL a\ndate ed\ne otel",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:20:39.563Z"
           }
         },
         {
@@ -53788,6 +53815,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:50.578Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:20:44.452Z"
           }
         },
         {
@@ -53811,6 +53846,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:56.519Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Responde al comentario de\nmercysantiago6\nY qué tal ese hotel?\nqué tal ese hotel?",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:20:54.407Z"
           }
         },
         {
@@ -53834,6 +53878,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:58.956Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this\nin mallorca Il\nabout i\nstill drea bo\nthis bo\nming about!’\nstill\nin-mallerca",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:21:10.703Z"
           }
         }
       ]
@@ -59968,7 +60021,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-10T07:10:55.910Z"
+            "updatedAt": "2026-09-10T07:21:19.019Z"
           }
         },
         {
@@ -59992,6 +60045,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:07.963Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BARI GREF;\nRESORT",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:21:32.939Z"
           }
         },
         {
@@ -60015,6 +60077,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:14.824Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 Must-Visit\nMountain Resorts\ninSapa\nTopas Ecolodge\nResort",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:21:50.454Z"
           }
         },
         {
@@ -60038,6 +60109,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:18.592Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:21:55.214Z"
           }
         },
         {
@@ -60061,6 +60140,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:24.224Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:22:15.159Z"
           }
         },
         {
@@ -60084,6 +60171,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:26.828Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BENEDIKT GIMBER\nTIM SIERSLEBEN",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:22:22.290Z"
           }
         },
         {
@@ -60107,6 +60203,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:29.897Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANTI",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:22:41.813Z"
           }
         },
         {
@@ -60130,6 +60235,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:35.673Z"
+          },
+          "ocrData": {
+            "textOnScreen": "î Tochigi, Japan\nJapan\nTochigi, Japan\nhotel\nTochi",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:22:52.993Z"
           }
         },
         {
@@ -60153,6 +60267,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:38.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ritz-Carlton O'ahu, Turtle Bay Hotel\nLlegada\nThe 0'ahu, Turtle Bay\nHotel esti en tu lista de\nImagina la llegada, la habitaciòn y tu primer paseo. i\nVerifica los detalles del check-in antes de tu viaje.\nGuarda la direcciòn\nThe Ritz-Carlton O'ahu, Turtle Bay Hotel\nCarlton O‘ahu, Turtle Bay\nLanai Room\nGuarda la direccion y tu ruta con anticipacion.\nConsulta las tarifas actuales, selecciona #6\ntus fechas y toca la",
+            "confidence": 0.87,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:23:06.148Z"
           }
         },
         {
@@ -60176,6 +60299,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:41.232Z"
+          },
+          "ocrData": {
+            "textOnScreen": "checkgin\nHotel Hanale Bay\nHotel Hanalei Bay",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:23:18.781Z"
           }
         },
         {
@@ -60199,6 +60331,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:43.886Z"
+          },
+          "ocrData": {
+            "textOnScreen": "booked\nN stop)\nfound\nBory\nStaff are polite and friendly,\ncheck-in process is super\nefficient\nHotel",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:23:37.472Z"
           }
         },
         {
@@ -60222,6 +60363,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:49.720Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lowi\nResort\nreservatio P\no Haven\nFinduson\nLovina Haven\naven\nansa Lovina Haven Boutique Resort\n3 lovinahavenboutiqueresort\nreservation@lovinahavenboutiqueresort.co è",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:23:50.556Z"
           }
         },
         {
@@ -60245,6 +60395,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:01:59.498Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 NEVER J",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:24:01.425Z"
           }
         },
         {
@@ -60268,6 +60427,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:03.234Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 NEVER J",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:24:12.035Z"
           }
         },
         {
@@ -60291,6 +60459,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:05.823Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:24:24.719Z"
           }
         },
         {
@@ -60314,6 +60490,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:15.033Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Green Panorama Resort\nWGREEN PANORAMA RESORT\nKlik Tag Lokasi Hijau\nPanorama MHI 84\n@dest\\ra_na B\nINI JUGA SUDAH INCLUDE AC",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:24:48.848Z"
           }
         },
         {
@@ -60337,6 +60522,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:17.631Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This You and HER",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:24:55.804Z"
           }
         },
         {
@@ -60360,6 +60554,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:20.366Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Glamping... but\nluxury.\nmake\nJ but make'it",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:25:14.504Z"
           }
         },
         {
@@ -60383,6 +60586,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:23.748Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:25:27.073Z"
           }
         },
         {
