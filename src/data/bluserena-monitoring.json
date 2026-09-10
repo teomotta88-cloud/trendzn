@@ -25421,6 +25421,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:21.622Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:58:19.707Z"
           }
         },
         {
@@ -25456,6 +25464,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675653655655140640: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:23.191Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675653655655140640: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:58:21.322Z"
           }
         }
       ]
@@ -37473,6 +37490,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:37.201Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LEFT: 5 12:56\nCOMPUTERS LEFT 2 2 10:41\nw ured\nCOMPUTERS LEFT: 1 2 6:11\nA FIND AN EXIT 2 3:57",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:58:27.863Z"
           }
         },
         {
@@ -37496,6 +37522,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:41.419Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:58:36.451Z"
           }
         }
       ]
@@ -41534,6 +41568,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:43.969Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:58:49.931Z"
           }
         },
         {
@@ -41557,6 +41599,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:48.309Z"
+          },
+          "ocrData": {
+            "textOnScreen": "de la vida\nsé feliz\nDisfruta de la vida\nè y sé feliz",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:59:11.802Z"
           }
         },
         {
@@ -41580,6 +41631,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:51.963Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Spiaggia di Santa Maria\nCala Serena",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:59:25.650Z"
           }
         }
       ]
@@ -48010,6 +48070,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:56:56.508Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort Ronaldo yéu thich\nSHEBARA RESORT",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:59:34.209Z"
           }
         }
       ]
@@ -54614,6 +54683,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:04.595Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HORMONIZE AMKUBALI\nHAMADAI\n4 Channel No. 109 Staifimes y\n4 Channel No. 109 Staffimes y\nChannel No. 109 Staffimes",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:59:41.426Z"
           }
         }
       ]
@@ -61622,6 +61700,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:09.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cate i",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:00:13.251Z"
           }
         }
       ]
@@ -75960,6 +76047,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:15.128Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KADOONGO KAMU SHOW\nON THE 31ST.JULY.2026\nAT SERENA HOTEL GARDENS\nHOTEL\nDON'T MISS THE LEGENDS",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:00:19.758Z"
           }
         },
         {
@@ -75983,6 +76079,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:19.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESTAURANT",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:00:29.748Z"
           }
         },
         {
@@ -76006,6 +76111,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:21.483Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(WOMAN) YKAMPALA",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:00:39.293Z"
           }
         },
         {
@@ -76029,6 +76143,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:26.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LYDIA JAZMINE\npe CRICKET SEPT 50%\nN OVAL\nLYDIA\nOVAL",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:00:56.807Z"
           }
         },
         {
@@ -76052,6 +76175,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:30.146Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i parfait\nè Rinacolanda\nparfait\nÉ parfait",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:01:04.562Z"
           }
         }
       ]
@@ -82181,6 +82313,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:33.160Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:01:13.947Z"
           }
         }
       ]
@@ -94107,6 +94247,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:37.099Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Trang nay rit thoi",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:01:26.250Z"
           }
         }
       ]
@@ -98325,6 +98474,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:43.236Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:01:31.348Z"
           }
         },
         {
@@ -98348,6 +98505,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:45.553Z"
+          },
+          "ocrData": {
+            "textOnScreen": "roll",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:02:06.905Z"
           }
         },
         {
@@ -98371,6 +98537,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:48.533Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KECEISATUA\nDENGANITIPE\nKAMARESTANDAR\ntiket.com\nKamar Standard Twin Bebas Asap R...\nPromo TikTok\nI bisa dikembalikar i\nSuite King Bebas Asap Rokok\nKamar Standard\nsuite Kin?",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:02:16.830Z"
           }
         },
         {
@@ -98394,6 +98569,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:51.164Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kaliandra Resort Organic\nFarm Dusun Gamoh RT.7/\nArea Sawah,\nDayurejo, Kec. Prigen, Kab.\nPasu imur\nesia\nPasuruan, Jawa Timur",
+            "confidence": 0.878,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:02:25.752Z"
           }
         },
         {
@@ -98417,6 +98601,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:57:57.229Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ESCAPE DI",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:02:35.716Z"
           }
         },
         {
@@ -98440,6 +98633,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:58:00.230Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:02:51.419Z"
           }
         },
         {
@@ -98463,6 +98664,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:58:05.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:02:56.451Z"
           }
         }
       ]
@@ -102995,6 +103204,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T13:58:07.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T14:03:06.464Z"
           }
         }
       ]
