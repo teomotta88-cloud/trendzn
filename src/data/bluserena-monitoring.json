@@ -93467,7 +93467,16 @@
           "likes": 39,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come sempre, Valentino ha mostrato un po' di amore. Hanno mandato un po' di size di viaggio, quindi vediamo cosa hanno mandato. Allora, dalla linea Donna Born in Roma abbiamo Green Stravaganza, Coral Fantasy, l'originale Born in Roma, uno dei miei favoriti, e Purple Melancholia. Questa è la maniera di Valentino di basically dirvi di prendere la tua fragranza in giro quest'anno. I spray di viaggio sono modi estremamente facili per portare la tua fragranza, non importa dove sei. E questo è praticamente il messaggio qui, ma Valentino ha mandato le size di viaggio. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T12:50:47.542Z"
+          }
         }
       ]
     },
@@ -102153,7 +102162,16 @@
           "likes": 13300,
           "comments": 190,
           "shares": 293,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica We drifted to survive",
+            "language": "Italian",
+            "durationSec": 34.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T12:50:49.999Z"
+          }
         }
       ]
     }
