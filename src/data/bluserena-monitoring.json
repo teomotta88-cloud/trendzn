@@ -37383,6 +37383,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:11.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sitting alone outside\non a park\nremi\nfeeling of",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:51:08.306Z"
           }
         }
       ]
@@ -41359,6 +41368,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:14.324Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:51:23.353Z"
           }
         },
         {
@@ -41382,6 +41399,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:22.683Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:51:55.061Z"
           }
         }
       ]
@@ -47781,6 +47806,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:25.394Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:52:14.470Z"
           }
         }
       ]
@@ -61275,6 +61308,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:29.905Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Gusht NE\nGusht= 3100€",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:52:22.808Z"
           }
         },
         {
@@ -61298,6 +61340,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:33.320Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:52:28.310Z"
           }
         },
         {
@@ -61321,6 +61371,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:37.635Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VHIC\nPURPLE\nFORMER\nCARD\nSTANDARD ROOMS-\nDISABLED VETERAN\nFor Veterans witha\nVA-Documented Service-Connected\nDisability Rating\nDISABLED VETERANS Il\nVeterans with a 100%\nService-Connected Rating\nLISTED,UNDER",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:52:40.297Z"
           }
         }
       ]
@@ -67764,6 +67823,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:40.003Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mountain\nClose\nsBow| Deck,\nRoast snacks around\nOklahoma\nthe outdoor fire pit.\nNature",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:52:51.923Z"
           }
         },
         {
@@ -67787,6 +67855,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:44.809Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 Lakeside VI\nSARAH RESORT\nSARAH RESOR]\nGazipur, Bangladesh",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:00.681Z"
           }
         },
         {
@@ -67810,6 +67887,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:47.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sorry, I cannot hear you.\nI'm kind of busy.\nhear",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:06.668Z"
           }
         }
       ]
@@ -75536,6 +75622,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:51.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“A culture and Tourism\"\nFOR MORE INFORMATION I pi",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:13.596Z"
           }
         },
         {
@@ -75559,6 +75654,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:53.863Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Crand Siena\nGrand hotel",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:20.748Z"
           }
         },
         {
@@ -75582,6 +75686,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:49:59.243Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Halima Full ù\nHouse at Serena Hotel\nHalima Namakula's Full\nHalima Full",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:32.726Z"
           }
         }
       ]
@@ -81489,6 +81602,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:03.921Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Wastafel+Amenitie:\nDryer\nKamar Mandi\nair Dryer\nalli\nL King\nDan Biar Makin Best Deal",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:41.352Z"
           }
         },
         {
@@ -81512,6 +81634,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:07.709Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:53:46.432Z"
           }
         },
         {
@@ -81535,6 +81665,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:11.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": "f dinner inithe clubhouse,\nstars\ni we headed backitolthe\nclubhouse 4 I\nsticky toffee pudding! Sig",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:02.265Z"
           }
         },
         {
@@ -81558,6 +81697,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:15.007Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Jendela kamar panoramic view,\nbisa enjoy view sekeliling Medan!\ni @handy_luo\nKAMAR:\nEXECUTIVE SUITE",
+            "confidence": 0.855,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:06.802Z"
           }
         },
         {
@@ -81581,6 +81729,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:18.738Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:11.041Z"
           }
         },
         {
@@ -81604,6 +81760,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:22.389Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Harga Booking langsung 4 jutaan\ner Bedroom\n9 ar di sini",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:16.728Z"
           }
         },
         {
@@ -81627,6 +81792,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:27.777Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA Res",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:28.934Z"
           }
         }
       ]
@@ -89076,6 +89250,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:32.171Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a ovviamente x\ntotale",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:40.449Z"
           }
         }
       ]
@@ -93384,6 +93567,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:35.098Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SON, ORIGINALES\nRICO, N\nESTA NO,",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:47.275Z"
           }
         },
         {
@@ -93407,6 +93599,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:37.547Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Story\nPASS",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:54:58.343Z"
           }
         },
         {
@@ -93430,6 +93631,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:39.449Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ROCKSTUD\nUNTITLED",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:55:03.580Z"
           }
         },
         {
@@ -93453,6 +93663,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:41.751Z"
+          },
+          "ocrData": {
+            "textOnScreen": "reaction when my friend\ndoes something\npublic\nmy reaction when]myafriend\ndoes something embarrassing in\nm reaction when my friend\ndog s something embarrassing in\nmy honest reaction’ when\ndoes somethi g A\npublic i\nmy honest\ndoes somethi g embarrassing Na",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:55:09.645Z"
           }
         },
         {
