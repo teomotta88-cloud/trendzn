@@ -12632,7 +12632,7 @@
           "comments": 1,
           "shares": 2,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "neutral",
           "topics": [
             "concorrenza",
             "animazione",
@@ -12658,23 +12658,12 @@
             "updatedAt": "2026-09-04T08:02:40.279Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "concorrenza",
-              "animazione",
-              "giostra",
-              "iscrizione"
-            ],
-            "location": "Bluserena",
-            "confidence": 0.75,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "neutral",
             "sources": [
-              "caption",
-              "audio"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:02:15.894Z"
+            "updatedAt": "2026-09-10T16:26:23.784Z"
           },
           "engagementData": {
             "status": "ok",
