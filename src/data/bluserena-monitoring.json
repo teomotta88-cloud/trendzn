@@ -25124,7 +25124,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666417063019269408",
           "date": "2026-07-25T10:53:39.000Z",
           "caption": "Risposta a @B77 #sibarigranresort #bluserena #paratiiiiii #calabria🌶️ #virale",
-          "location": null,
+          "location": "Bluserena",
           "views": 1538,
           "imageUrl": null,
           "likes": 40,
@@ -25148,7 +25148,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T07:21:19.019Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "servizio",
+              "staff",
+              "recensioni",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T07:42:28.442Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "servizio",
+            "staff",
+            "recensioni",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25219,7 +25246,7 @@
           "url": "https://www.tiktok.com/@martaa_spamm22/video/7665476681762737441",
           "date": "2026-07-22T22:04:29.000Z",
           "caption": "mancatee❤️ #bluserena #amici #fyp #perte",
-          "location": null,
+          "location": "Bluserena",
           "views": 5371,
           "imageUrl": null,
           "likes": 407,
@@ -25243,7 +25270,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T07:11:22.135Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T07:42:26.662Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia"
+          ]
         }
       ]
     },
@@ -59998,7 +60048,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666417063019269408",
           "date": "2026-07-25T10:53:39.000Z",
           "caption": "Risposta a @B77 #sibarigranresort #bluserena #paratiiiiii #calabria🌶️ #virale",
-          "location": null,
+          "location": "Bluserena",
           "views": 1538,
           "imageUrl": null,
           "likes": 40,
@@ -60022,7 +60072,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T07:21:19.019Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "servizio",
+              "staff",
+              "recensioni",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T07:42:28.442Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "servizio",
+            "staff",
+            "recensioni",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -60030,7 +60107,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7664319444516212001",
           "date": "2026-07-19T19:13:49.000Z",
           "caption": "Risposta a @piaboscia @Puerto Svago - Pagani per quest anno abbiamo scelto il #sibariGreenResort Ecco le nostre #FirstReaction E la location che al momento sembra Da sogno🥰 Vi racconteremo man mano tutta la vacanza😎 #Trend #viralissimi #paratiiiiii @Sabrina",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2481,
           "imageUrl": null,
           "likes": 27,
@@ -60054,7 +60131,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T07:21:32.939Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "accoglienza",
+              "piscina",
+              "clima caldo"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T07:42:29.167Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "accoglienza",
+            "piscina",
+            "clima caldo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -73887,7 +73989,7 @@
           "url": "https://www.tiktok.com/@user1304526622388/video/7539469638866898198",
           "date": "2025-08-17T08:32:48.000Z",
           "caption": "Christian Canciello al Granserena Hotel",
-          "location": null,
+          "location": "Granserena Hotel",
           "views": 1231,
           "imageUrl": null,
           "likes": 31,
@@ -73910,7 +74012,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T07:29:25.293Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "animazione"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T07:42:30.093Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "musica",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
