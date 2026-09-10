@@ -550,9 +550,24 @@ export function BluserenaFeedAdvanced({ jsonUrl, tab, setTab }: BluserenaFeedAdv
 
   // Cambiare filtro riparte dalla prima pagina: restare a "500 mostrati" dopo
   // aver ristretto a 12 post non avrebbe senso, e vanificherebbe il taglio.
+  //
+  // Le dipendenze sono i criteri di filtro, non `filteredPosts`: quell'array
+  // cambia identità anche quando il polling ogni 30s rimpiazza `posts` con
+  // contenuto identico (setPosts riceve sempre un array nuovo), quindi tenere
+  // `filteredPosts` come dipendenza resettava "Mostra altri" a 24 da solo ogni
+  // 30 secondi, indipendentemente da cosa stesse guardando l'utente — bug
+  // riportato in produzione (10/09/2026).
   useEffect(() => {
     setVisibili(PAGINA);
-  }, [filteredPosts]);
+  }, [
+    searchDiffuso,
+    sentimentFilter,
+    verificationFilter,
+    dateFilter,
+    monthFilter,
+    resortFilter,
+    authorFilter,
+  ]);
 
   // Mesi effettivamente presenti nei dati, dal più recente: una tendina con
   // dodici mesi di cui dieci vuoti sarebbe solo rumore.
