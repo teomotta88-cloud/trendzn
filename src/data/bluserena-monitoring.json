@@ -25390,6 +25390,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:37.667Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:09:29.758Z"
           }
         }
       ]
@@ -37311,6 +37319,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:40.090Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ATELIER Playa Mujeres\nresort\nPlaya Mujeres N\nATELIER PlayajMujeres\nadults-only d\nPlaya Mujeres\nall-inclusive resort",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:09:40.719Z"
           }
         },
         {
@@ -37334,6 +37351,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:43.696Z"
+          },
+          "ocrData": {
+            "textOnScreen": "girl\nMANHATTENS FINEST GIRL\nNIWARSS",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:09:48.481Z"
           }
         }
       ]
@@ -41278,6 +41304,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:46.094Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TARE AGE,\nCala",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:10:06.325Z"
           }
         }
       ]
@@ -47613,6 +47648,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:48.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Situato di Noonu\nSituato nell’atollo di\nCONTATTACI PE\nMAGGIORI\nINFORMAZIONI!\nscrivi a\nofferte@mondomaldive.it\nindicando il codice",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:10:14.168Z"
           }
         },
         {
@@ -47636,6 +47680,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:54.313Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORTS",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:10:30.031Z"
           }
         }
       ]
@@ -54208,6 +54261,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:07:59.131Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bungalow/Room\nBungalow/Room Tour i",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:10:42.733Z"
           }
         }
       ]
@@ -61089,6 +61151,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:02.087Z"
+          },
+          "ocrData": {
+            "textOnScreen": "anime anime i\nOTELIN\nHOTEL OWNER",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:11:11.066Z"
           }
         }
       ]
@@ -67501,6 +67572,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:04.978Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:11:22.866Z"
           }
         }
       ]
@@ -75131,6 +75210,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:07.246Z"
+          },
+          "ocrData": {
+            "textOnScreen": "when i'm staying “ife\nhotel butim still and\nhave been‘team\nstaying\notellbut im still and always\nhave a\nstaying at\nhotellbut im still and allvays\n€'been.team Blair®\nBut im still and always\nhave,been",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:11:50.973Z"
           }
         },
         {
@@ -75154,6 +75242,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:12.581Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mDtb)I",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:12:04.623Z"
           }
         },
         {
@@ -75177,6 +75274,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:15.031Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SHEEBAH KARUNGI\nSerena Hotel i\nSerena Hotel A\nSerena Hotel\nSHEEBAH",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:12:13.809Z"
           }
         }
       ]
@@ -80956,6 +81062,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:17.794Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NO NECESITAS UNA BOCINA...",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:12:38.975Z"
           }
         },
         {
@@ -80979,6 +81094,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:25.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Top 5 Beach Resorts Spain Mombasa\nWhich One Would You Choose?\nWhich One Would You Choose? NS NI\nTop Resorts Spain Mombasa E\nLIKE a\nCOMM",
+            "confidence": 0.823,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:12:55.167Z"
           }
         },
         {
@@ -81002,6 +81126,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:28.078Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Southern\nTh 5 squa\nMAXIMUM\nHi EMERGENCY\noutdoor area, fire pits,",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:13:09.971Z"
           }
         },
         {
@@ -81025,6 +81158,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:55.531Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TRAVEL WITH\nMOEEN\nQ ARDL",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:13:36.158Z"
           }
         }
       ]
@@ -88381,6 +88523,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:08:58.176Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:13:46.738Z"
           }
         },
         {
@@ -88404,6 +88554,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:09:00.488Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:14:02.089Z"
           }
         },
         {
@@ -88427,6 +88585,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:09:12.003Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:14:17.633Z"
           }
         }
       ]
@@ -101312,6 +101478,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:09:14.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GAME\nNEW CC NARUTO GAME\nSeverance",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:14:22.243Z"
           }
         },
         {
@@ -101335,6 +101510,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:09:17.638Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:14:28.456Z"
           }
         },
         {
@@ -101358,6 +101541,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T09:09:20.389Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pi\" fill u 1\nwould\nSwitzerland's glaciers are\nheading for another year of\nJ heavy ice loss after an early\nsummer heatwave\nThi day means that\nI've been here fo\nfirst tim this summer.\nSo within these two\nA of this heatwave,",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T09:14:49.556Z"
           }
         }
       ]
