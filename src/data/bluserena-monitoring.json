@@ -25431,6 +25431,12 @@
             "addedAt": "2026-09-10T13:47:13.290Z",
             "reason": "mai pescato da nessuna fonte automatica in 13+ giorni di campionamento",
             "confirmedAt": null
+          },
+          "engagementData": {
+            "status": "no_stats",
+            "reason": "itemStruct senza contatori",
+            "version": 3,
+            "updatedAt": "2026-09-10T13:56:13.962Z"
           }
         }
       ]
