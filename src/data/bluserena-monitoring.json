@@ -91758,6 +91758,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:49.413Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Aura X Fragrances\nORIO",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:32.936Z"
           }
         },
         {
@@ -91781,6 +91790,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:53.437Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:35.115Z"
           }
         },
         {
@@ -91804,6 +91822,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:56.529Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7662220025083759902: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:36.488Z"
           }
         },
         {
@@ -91827,6 +91854,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:08:02.209Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TOP NOTES\nè Calabrian bergamot\nZi MIDDLE NOTES\nVALENTINO\nCoffee\nBASE NOTES\nVetiver\nCOFFEE EXPERIENCE\nJUST\nDRY DOWN,\nCITRON BUT\nWOULD",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:44.219Z"
           }
         },
         {
@@ -91850,6 +91886,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:08:06.235Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:50.584Z"
           }
         },
         {
@@ -91873,6 +91917,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:08:09.405Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:13.435Z"
           }
         },
         {
@@ -91896,6 +91948,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:08:12.512Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:15.621Z"
           }
         }
       ]
@@ -95750,6 +95811,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:08:16.098Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668428320421203232: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:16.938Z"
           }
         },
         {
@@ -95773,6 +95843,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:20.051Z"
+          },
+          "ocrData": {
+            "textOnScreen": "kolam renang rooftop\npadatnya",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:24.419Z"
           }
         },
         {
@@ -95796,6 +95875,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:23.824Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sofa because\nthere are",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:34.511Z"
           }
         },
         {
@@ -95819,6 +95907,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:29.535Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NAMANYA HOTEL MAHADRIA\nCARI SARAPAN DI LUAR:\nCARANYA GAMPANG BANGET,\nNAH, KALAU SUDAH,",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:40.005Z"
           }
         },
         {
@@ -95842,6 +95939,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:33.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7670141952876268818: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:41.451Z"
           }
         },
         {
@@ -95865,6 +95971,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:37.765Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Chaoticrio+\npertamalkali\nnggak ada suns\nDari)\nStasiun\nYello Urban Room\nBreakfast not included\nklik tag",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:40:48.951Z"
           }
         },
         {
@@ -95888,6 +96003,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:41.047Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POONAM DILIPKUMAR THAKKAR\nLEFT HER HOME IN BARTLETT LAST\nWEEK TO VISIT MOUNT KAILASH ON\nA RELIGIOUS PILGRIMAGE.\nand China to start my\nSHORTLY AFTER THAKKAR'S LAST\nCALL HOME, MASSIVE FLASH\nFLOODS SWEPT THROUGH THE\nBORDER REGION BETWEEN NEPAL\nAND CHINA, LEAVING THOUSANDS\nOF PEOPLE MISSING.\nand here's the line\nby this beautiful river\nTHE FAMILY SAID THEY WON'T GIVE\nUP UNTIL SHE IS FOUND.",
+            "confidence": 0.86,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:07.864Z"
           }
         },
         {
@@ -95911,6 +96035,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:46.049Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sli Ind Shower\nAmenities\nsukanya dia tefpisch",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:13.961Z"
           }
         },
         {
@@ -95934,6 +96067,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:48.799Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CITY\nOF CHAMPS.\nBE DONE\nIN SEPTEMBER.\nHEARD OCTOBER. i\nHi HEARD FEBRUARY 55",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:32.251Z"
           }
         },
         {
@@ -95957,6 +96099,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:52.075Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7536903119880523031: Unable to download webpage: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1000) (caused by SSLError('[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:35.229Z"
           }
         },
         {
@@ -95980,6 +96131,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:54.727Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7659602414760185101: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:36.559Z"
           }
         }
       ]
@@ -100128,6 +100288,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:09:58.741Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Are Crypto Treasuries\na Good Thing?\n7 /WHEN THIS BULLISH\nAre Crypto Treasuries È\nPOWER BACK'T0\nMAKERS AND\nIT COULD\nKNOWTHAT'S INTERESTING",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:43.273Z"
           }
         },
         {
@@ -100151,6 +100320,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:11.015Z"
+          },
+          "ocrData": {
+            "textOnScreen": "yaoyorozu y Todoroki\nvs Eraeserd\nCuando lo veamo i i 3",
+            "confidence": 0.86,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:48.405Z"
           }
         },
         {
@@ -100174,6 +100352,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:13.886Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:50.540Z"
           }
         },
         {
@@ -100197,6 +100384,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:27.836Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7679474502719311112: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:51.990Z"
           }
         },
         {
@@ -100221,6 +100417,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677631413520256270: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:29.156Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7677631413520256270: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:41:53.301Z"
           }
         },
         {
@@ -100244,6 +100449,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:31.973Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pack\nGREAT AGAIN",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:42:02.578Z"
           }
         },
         {
@@ -100267,6 +100481,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:34.591Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:42:04.283Z"
           }
         },
         {
