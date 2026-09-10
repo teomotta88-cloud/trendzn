@@ -5399,7 +5399,7 @@
           "comments": 0,
           "shares": 2992,
           "imageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQ4JkToRPAINUeutEBI1NsASviBziC1axN4Iu2~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=w4R1y9pQvJqeoqCfBKAKWwljhOY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "animazione",
             "musica",
@@ -5429,11 +5429,11 @@
           },
           "sentimentData": {
             "status": "manual",
-            "sentiment": "neutral",
+            "sentiment": "negative",
             "sources": [
               "manuale"
             ],
-            "updatedAt": "2026-09-10T15:59:40.315Z"
+            "updatedAt": "2026-09-10T15:59:46.742Z"
           },
           "engagementData": {
             "status": "ok",
