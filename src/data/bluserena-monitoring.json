@@ -31733,23 +31733,14 @@
           "shares": 24,
           "verificationStatus": "confirmed",
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "neutral",
-            "topics": [
-              "viaggi",
-              "sardegna",
-              "turismo"
-            ],
-            "location": "Calaserena Resort",
-            "confidence": 0.78,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "negative",
             "sources": [
-              "caption"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-08T10:00:14.253Z"
+            "updatedAt": "2026-09-10T16:34:04.038Z"
           },
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "viaggi",
             "sardegna",
