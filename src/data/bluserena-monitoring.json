@@ -74156,6 +74156,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:15.294Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:30:21.780Z"
           }
         },
         {
@@ -74179,6 +74187,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:19.303Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nIslamabad, Pakistan\nIslamabad,\nd, Pakistan",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:30:29.369Z"
           }
         },
         {
@@ -74202,6 +74219,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:21.970Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:30:38.173Z"
           }
         },
         {
@@ -74225,6 +74250,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:33.343Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:30:48.794Z"
           }
         },
         {
@@ -74248,6 +74281,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:38.907Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Strong women\nL at Serena Hotel\nat Serena Hotel",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:30:58.455Z"
           }
         },
         {
@@ -74271,6 +74313,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:42.030Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:31:05.712Z"
           }
         },
         {
@@ -74294,6 +74344,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:45.052Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:31:12.419Z"
           }
         },
         {
@@ -74317,6 +74375,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:49.904Z"
+          },
+          "ocrData": {
+            "textOnScreen": "garden area\nPrettyMountain",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:31:28.426Z"
           }
         },
         {
@@ -74340,6 +74407,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:52.451Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Steward\nCook",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:31:33.836Z"
           }
         },
         {
@@ -74363,6 +74439,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:55.277Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:31:35.560Z"
           }
         },
         {
@@ -74386,6 +74471,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:58.209Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 luxur in Grenada\nI'w gain 4\n3 luxury hot Is",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:32:01.288Z"
           }
         },
         {
@@ -74409,6 +74503,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:03.611Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Best Emily Grand\nEntrance at serena hotel\nIst session 7\nsession DI\n1st session",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:32:09.837Z"
           }
         },
         {
@@ -74432,6 +74535,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:08.287Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This hegellin iS]\n“3 Kaiseki\nThis hotel\n‘This\ncute!",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:32:19.764Z"
           }
         },
         {
@@ -74455,6 +74567,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:11.199Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LADY\nJ A WA, A PANN",
+            "confidence": 0.733,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:33:00.357Z"
           }
         },
         {
@@ -74478,6 +74599,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:14.766Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:33:17.487Z"
           }
         }
       ]
@@ -79613,6 +79742,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:17.803Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7667800286542613780: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:33:18.853Z"
           }
         },
         {
@@ -79636,6 +79774,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:22.136Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:33:35.853Z"
           }
         },
         {
@@ -79659,6 +79805,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:27.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:33:37.663Z"
           }
         },
         {
@@ -79682,6 +79837,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:29.882Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:33:47.201Z"
           }
         },
         {
@@ -79705,6 +79868,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:35.476Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESORT\nTRAI NGHIEM TAM ONSEN BE BOI",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:34:13.993Z"
           }
         },
         {
@@ -79728,6 +79900,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:42.898Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:34:15.846Z"
           }
         },
         {
@@ -79751,6 +79932,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:45.342Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:34:30.773Z"
           }
         },
         {
@@ -79774,6 +79963,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:49.008Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:34:56.807Z"
           }
         },
         {
@@ -79797,6 +79994,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:51.791Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ina kitchen\neakfa T4\nBREAKFAS” i 1",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:35:06.319Z"
           }
         },
         {
@@ -79820,6 +80026,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:05:56.218Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 [STAYED BY MYSELF\nABOUT AN\nAFFORDABLE\nTERRA a\nFoal",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:35:13.591Z"
           }
         },
         {
