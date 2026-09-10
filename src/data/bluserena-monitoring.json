@@ -12404,7 +12404,7 @@
           "comments": 4,
           "shares": 2,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "neutral",
           "topics": [
             "camere",
             "recensioni",
@@ -12430,23 +12430,12 @@
             "updatedAt": "2026-09-02T13:39:26.717Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "camere",
-              "recensioni",
-              "esperienza negativa"
-            ],
-            "location": "Calaserena Resort",
-            "confidence": 0.88,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "neutral",
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:02:10.640Z"
+            "updatedAt": "2026-09-10T16:26:54.900Z"
           },
           "engagementData": {
             "status": "ok",
