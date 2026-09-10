@@ -25412,7 +25412,16 @@
           "likes": 30,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Raga raga come fa la canzone? Non saprei che questa sera balla la nostalgia Mi accendo la tv solo per farmi compagnia Che balla di litera Insomma, ti sembra la maniera che balla sciqua Ti cerco ancora in casa quando mi pude la schiena E metto ancora un piatto in più quando apparecchio a cena So soltanto che vorrei, vorrei, vorrei, sì vorrei, vorrei tornare a quando ci bastava Vivere, piangere, fare la buona e poi stare in silenzio per ore Guido ad atto e metto il tessuto in mano, con il telefono in mano Non so più come fare senza te, te che mi fai vivere e dimenticare Tu che al mentre tu cini, ti metti a cantare E tu che vola seguire la fine, ma con te lo devo dire Sanità non è vita senza te",
+            "language": "Italian",
+            "durationSec": 72.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:21.622Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25437,6 +25446,16 @@
             "reason": "itemStruct senza contatori",
             "version": 3,
             "updatedAt": "2026-09-10T13:56:13.962Z"
+          },
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675653655655140640: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:23.191Z"
           }
         }
       ]
@@ -37445,7 +37464,16 @@
           "likes": 50,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "vedo qualcuno, quindi lo farò usare runner per raggiungere ho visto tanti passaggi intorno a me questa ragazza ha continuato a fare la cosa della porta era estremamente infuriante Zero tubes near me Heard someone here Yahoo double hit Two people hiding here Thought there was a tube outside Pensavo c un tubo fuori Ho sentito qualcuno a destra, quindi ho riportato. Mi piace questo posto di tubo. Ring around the rosy. Grazie a tutti Tutto il mondo inizia a correre in mio faccio Grazie a tutti. Grazie a tutti Tutti i computer sono fatti Finalmente qualcuno è morto lei mi ha chiamato un campionato qui, penso I see you're going to outside exit, so I will take a shortcut and... cut her off. Good game.",
+            "language": "Italian",
+            "durationSec": 292.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:37.201Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -37459,7 +37487,16 @@
           "likes": 50,
           "comments": 10,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:41.419Z"
+          }
         }
       ]
     },
@@ -41488,7 +41525,16 @@
           "likes": 493,
           "comments": 3,
           "shares": 40,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:43.969Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41502,7 +41548,16 @@
           "likes": 12,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In 100 anni, nel 2124, tutti saremo interrati con i nostri familiari e amici. I strani vivranno nelle nostre case, che combattiamo tanto per costruire, e saranno i duei di tutto ciò che abbiamo oggi, includendo quel cozzo in cui hai gastato una fortuna. I nostri descendenti non sapranno nemmeno chi eravamo. Quanti di noi conosciamo il nostro bisabuelo? Dopo la nostra morte saremo ricordati per alcuni anni, ma un giorno le nostre foto finiranno nel cubo di basura dell'olbido non saremo neanche ricordi forse se un giorno ci fermiamo a analizzare queste domande capiremmo quanto ignoranti siamo a lasciare correre opportunità che non tornano in questa vita cambio tutto questo per vivere e divertirmi delle decisioni che non ho mai fatte",
+            "language": "Italian",
+            "durationSec": 51.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:48.309Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41516,7 +41571,16 @@
           "likes": 2400,
           "comments": 49,
           "shares": 687,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è il tuo segno di portare un boat su Sardegna per un giorno. Abbiamo portato il nostro boat in Palau per riconoscere la luna di la Maddalena, dove non si può andare senza il boat. Questo è stato il nostro primo boat, lo abbiamo trovato super bello, il acqua era super blu. Abbiamo snackato un po' e abbiamo lasciato l'acqua, è stato super bello, a 9.30-10.00 è stato abbastanza freddo, poi siamo andati in questo spot, è stato il nostro spot preferito, è stata una piccola laguna, e abbiamo andato in qualche luogo, dove non c'erano tanti boat. Abbiamo perduto molto tempo, Ho anche letto e abbiamo spesso parlato molto e abbiamo anche parlato con i fanficci e poi ci siamo passati a un punto in cui non abbiamo fatto questo spazio, non era così bello come gli altri e poi siamo arrivati a questo luogo, lì abbiamo anche fatto un buon lavoro, lì ho ripetuto il mio libro e abbiamo fatto un buon lavoro e questo è stato a distanza, credo, dopo la laguna, il nostro spazio. I fesoli sembrano come se si stessero stendendo, quindi è stato davvero davvero bello. Vi mostro un'altra foto del nostro router e tutto ciò che abbiamo fatto.",
+            "language": "Italian",
+            "durationSec": 58.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:51.963Z"
+          }
         }
       ]
     },
@@ -47937,7 +48001,16 @@
           "likes": 33400,
           "comments": 365,
           "shares": 8731,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:56:56.508Z"
+          }
         }
       ]
     },
@@ -54532,7 +54605,16 @@
           "likes": 1515,
           "comments": 13,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Qui nella lista, penso che tutti i artisti che collaborano con Harmonize, Kasoro, Chidi Benz, Banana, Hamadai, questi tre non collaborano. Hamadai è molto talentoso, super talentoso. Abbiamo fatto un colabo per tutta la vita. Mi piace la musica, prima di Harmonize era un talento, un talento che ha fatto Harmonize, perché io mi dispiace molto di talento, le domande che mi fanno sono sempre di manca di tempo, le persone non si incontrano, è solo un momento di tempo, è il lavoro di Dio, ma il mio talento è molto talentoso. Questo, il bambucla, che significa? Il bambucla è un gioco, un gioco. Wow! Wow! Quindi sarà wow! Bibi! Ma anche tu, Al-Kashmiri, in vita, c'è qualcosa che ti fa felice? E' un po' di questione di harmonia. Cosa ti fa felice? E' così. E' così. Ah, con la raha Raha è molto facile da raggiungere Raha Perché Raha è facile da raggiungere? Sì, la raha è il problema Ok, qui siamo Raggiungere la raha è facile Ma raggiungere la raha Se andiamo a Serena e a Tare Saba Raggiungere la raha Sì, ovviamente Ma non diciamo raha Raggiungere la raha 24x7 Raggiungere la raha quella furaha con i nostri ticket con la chitano su shingapite ma non si parla di felicit si parla di felicit 24x7 si si si si si si si si, si si si si si si si si si Quando canto, i miei amici si divertono. Non si può fare uno stage, è un nuovo giorno in giro. Quando si presenta, i miei amici si divertono. A volte ci sono i miei amici che mi chiedono di venire. C'è Big Joe, che è un grande fan. Quello fuco la dola. Molian D'Azio. Tu sai qual è il tuo perfumo? Tu. Il mio furaha è tu. Anche io. Sì, è un furaha di amore. E' un furaha che ci guarda per il futuro. ha metibitito il collabo di Al Kashmir ma anche il collabo di Adam Omchombo grazie grazie a tutti grazie a tutti grazie a tutti grazie a tutti grazie a tutti",
+            "language": "Italian",
+            "durationSec": 205.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:04.595Z"
+          }
         }
       ]
     },
@@ -61531,7 +61613,16 @@
           "likes": 391,
           "comments": 14,
           "shares": 19,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:09.860Z"
+          }
         }
       ]
     },
@@ -75860,7 +75951,16 @@
           "likes": 42,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 50.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:15.128Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -75874,7 +75974,16 @@
           "likes": 53,
           "comments": 4,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno! Buona! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 67.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:19.021Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -75888,7 +75997,16 @@
           "likes": 428,
           "comments": 8,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 11,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:21.483Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -75902,7 +76020,16 @@
           "likes": 9626,
           "comments": 96,
           "shares": 509,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:26.504Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -75916,7 +76043,16 @@
           "likes": 425,
           "comments": 12,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao Ciao!",
+            "language": "Italian",
+            "durationSec": 69.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:30.146Z"
+          }
         }
       ]
     },
@@ -82036,7 +82172,16 @@
           "likes": 12,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 80.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:33.160Z"
+          }
         }
       ]
     },
@@ -93953,7 +94098,16 @@
           "likes": 73,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nel giro, la pose è molto bella, guardando la foto di Valentino è chiaro. Nel ricordo di Resort 2026, il regista di Alessandro Michel ha usato il giro come un'esempio per la pose. C'è solo un'altra foto, quindi la pose può essere molto bella per avere un'immagine di nuovo. Chi è in sottoposizione, chi è in sottoposizione, chi è in sottoposizione, chi è in sottoposizione. La recensione di un'immagine di un ricordo, quindi anche le vestiti e le opere, sono investite in un'impresa, è libera, ma è anche molto interessante. Quindi, se stai cercando l'idea,",
+            "language": "Italian",
+            "durationSec": 29.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:37.099Z"
+          }
         }
       ]
     },
@@ -98162,7 +98316,16 @@
           "likes": 9,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ora, questo potrebbe essere il miglior suite di famiglia che ho mai stato e se vuoi vedere come si vede, venite con me e vi darò questo luogo. Quindi ho un suite di famiglia di due sedi con un balcone. Quindi quando ti vedi in casa, la prima cosa che hai è il tuo primo closet, che è molto spazioso e ha un mini dresser all'interno, anche un safe. Poi c'è un bambino di grande dimensione per iniziare con una tv di buona dimensione, un vestito, plenamente di lampade. Ora il sink è all'esterno del room e poi qui c'è il lavabo in cui avrete il tuo toilet, il tuo lavabo, plenamente di tavole fresche, lavabotelle, hanno provato shampoo, lavabotelle e condizioner, quindi tutti i vostri bisogni sono riusciti. E questo è come il lavabo si vede, nella mia opinione è molto spazioso, tutto è assolutamente bellissima, avete abbastanza spazio in là. Ora andiamo verso il corso, c'è una porta qui dove potete chiudere e separare la prima stanza dalla seconda stanza, ma questa è come la seconda stanza si vede di nuovo, abbiamo il nostro lavabo, la lavastoviglie, i freschi, tub per uscire o bere, qualsiasi cosa preferite, lavastoviglie, shampoo, condizionante, tessuto di lavastoviglie, tutto ciò che necessita è fornito, qui c'è con un'altra spaziozza per impaccarci e un'altra per le cinture e anche dei bagagli in plastica, che usiamo per la lavastoviglie se ne vogliamo ma questo è come si vede, anche qui abbiamo dei hangers ora abbiamo i due bagagli qui sono dei bagagli di grande dimensione con il telefono hai le lampade e abbiamo anche un sedio di raffreddamento quindi questa stanza pu adattare a 6 persone ora ti danno un fuoco, il fuoco non dà nessun caldo, è solo per il display, quindi non credi che ti riempirai il fuoco e non avrai caldo perché non lo sei, ma è assolutamente bello bellissimo da guardare e questo è come il fuoco si vede una volta che è attaccato, mi piace, è assolutamente bellissimo, mi piace assolutamente questo, ancora una volta non dà nessun caldo, quindi non devi preoccuparti di nessun caldo venendo da lui, ma è bellissimo da guardare, sopra il fuoco hai la tua tv e dietro è un altro counter desk space dove hai il tuo mini friggerio che è al basso dove puoi stagionare un po' di juice e acqua, un piccolo stazione di caffè al la tavola dove potete mettere il microfono per riscaldare qualcosa, se volete riscaldare in microfono. Ora questa è la sessione dei snack. I snack non sono gratis, non sono complementari, quindi se volete ottenere un snack, assicuratevi di ascoltare il prezzo perché sono tutti di diversi prezzi e vi saranno richiesti per loro. In addition to that we have our second sink and then our towel which is set up like a cute little elephant and I absolutely love that as well. e per il posto finale che andremo a visitare è il nostro balcone. Ora, il balcone ha una bella vista del parco, quindi puoi andare e prendere un piede, guardare fuori e puoi vedere tutto il parco di acqua dal balcone. Quindi questo è quello che il balcone sembra, e poi se guardi fuori puoi vedere tutto il parco di acqua.",
+            "language": "Italian",
+            "durationSec": 198,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:43.236Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -98176,7 +98339,16 @@
           "likes": 70,
           "comments": 6,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:45.553Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -98190,7 +98362,16 @@
           "likes": 10,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao da Tanggerang, stiamo cercando un posto di staycation che è molto vicino al campus UIN Sarif Hidayatullah Wow, Fiks, devi provare questo hotel kece Il hotel è proprio stato aperto a partire da questo anno, quindi tutto è fresco, pulito e le vibes sono moderni Per la servizia non devi preoccuparti, non è una casa super amata e healthful Questa volta ho aperto con un tipo di camere standard double La prezzo è di 300 subi e la camere è lunga, 19 metri per seguito, la vista della città è molto bella Il wifi è super rapido, la qualità è completamente completa Beh, dan kemaren aku booking-nya via TikTok lho, dengan cara klik tagging lokasi di video ini, terus pilih video-nya, lanjutkan per pembayaran, selesai deh! Daripada jadi presi su kruauburuan ke Adia Suite Hotel Ciputat!",
+            "language": "Italian",
+            "durationSec": 40.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:48.533Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -98204,7 +98385,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 31.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:51.164Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -98218,7 +98408,16 @@
           "likes": 7020,
           "comments": 197,
           "shares": 1265,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo hotel è un sottotitolo, ragazzi, vedete? L'externo è così, no? L'externo è un po' più semplice, vedete? L'interno è come... Guardate, ragazzi, il interno è così bello! È un sottotitolo, no? E vedete? Ho trovato una chiesa che è presso la piazza di spazio. Questa è la mia chiesa, tipo deluxe, ma può essere presso la piazza di spazio, vedete? Guardate? È un sottotitolo, no? L'externo è così semplice, no? Terniata Ada kolam berenang Yang cakep banget Dan kamarnya juga Se bagus ini guys Terus Yang lebih gila lagi Harganya itu Cuma di 500 ribuan aja Menurut aku Kalau kalian lagi Nyari tempat staycation Butuh short escape Di Jakarta doang Bisa banget Di hotel ini Namanya C-Quarter Kalau mau booking Langsung klik tag lokasi Di video ini Dadah",
+            "language": "Italian",
+            "durationSec": 48.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:57:57.229Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -98232,7 +98431,16 @@
           "likes": 6,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Oh oh oh oh",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:58:00.230Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -98246,7 +98454,16 @@
           "likes": 43,
           "comments": 28,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ok ciao buon domenica, pensavo di venire qui e mostrare a tutti alcuni prodotti che Brooks ci ha dato la settimana passata mentre eravamo in LA quindi iniziamo con gli lips di Unreal, sa che mi piace un po' il gloss ok Unreal Juicylicious Strawberry Vanilla proviamolo mmm buona consistenza un bel piccolo tento bello prossimo andiamo in ah questo è così divertente con il L'Oreal Lumi La Glass Highlighter Stick questo è stato in realtà dato la notte dell'evento ah Ah devo sentire che sbagliato non posso vedere ma fuoco ok Solo so Forse se lo faccio come il perfetto shimmer Ok Poi abbiamo la L'Oreal con la stick di sceglie. Dio, i miei neri sempre messano questo. Spero che posso... Dio, un secondo. Ok, finalmente l'ho aperto. Oh questo giallo è così bello Devo mettere un po' di olio? Ok Un bel po' di sfumatura È una vibe Ok Poi andiamo con Un'ambizione plump L'olio di lip from L'Oreal non voglio rompere le mie labbra staccando tutto questo ma lo mettiamo un po' un po pi rosso ma bello oh sento bene un po di tingle poi abbiamo la L Lumi Glossier vediamo oh è come un oh oh bello un po' di shimmer lo metterò sulle mani per vedere quindi andiamo bello poi abbiamo il miglior Charlotte Tilbury volume mascara non ho nessuno quindi forse possiamo Grazie a tutti show y come looking like a bad bitch ok love and then we got another one the panorama panorama which I've used and it's fire y'all know I'm a big bag but we got two canes gift cards already used one hung over had to tear it up Poi, ovviamente, la sua preferita, Tabasco. E ovviamente è la tabanera. Quindi, questo ti metterà sullo stufetto. Ultimamente, ho ottenuto la crema di corpo di magic di Charlotte Tilbury. Melissa, portatela a me. Ho fatto un carry-on, quindi non ho potuto portarla con me attraverso la sicurezza. Quindi, Melissa ha la crema in suo sacco. Ho portato la crema e è fenomenale. Quindi questi erano solo alcuni dei nostri prodotti che volevo mostrare a tutti. Definitivamente nessuno vuole vedere nessun crosti di lupi, ok?",
+            "language": "Italian",
+            "durationSec": 255.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:58:05.349Z"
+          }
         }
       ]
     },
@@ -102769,7 +102986,16 @@
           "likes": 9624,
           "comments": 228,
           "shares": 3753,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "When you in the spot, everyone watching, you got them nervous With a face like that, body like that, baby, you better serve Serve",
+            "language": "Italian",
+            "durationSec": 7.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T13:58:07.776Z"
+          }
         }
       ]
     }
