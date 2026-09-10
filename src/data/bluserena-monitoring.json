@@ -12404,7 +12404,7 @@
           "comments": 4,
           "shares": 2,
           "imageUrl": null,
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "camere",
             "recensioni",
@@ -12431,11 +12431,11 @@
           },
           "sentimentData": {
             "status": "manual",
-            "sentiment": "neutral",
+            "sentiment": "negative",
             "sources": [
               "manuale"
             ],
-            "updatedAt": "2026-09-10T16:26:54.900Z"
+            "updatedAt": "2026-09-10T16:30:42.150Z"
           },
           "engagementData": {
             "status": "ok",
