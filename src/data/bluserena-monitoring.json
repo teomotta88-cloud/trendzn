@@ -94688,30 +94688,19 @@
             "version": 1,
             "updatedAt": "2026-09-03T11:31:53.557Z"
           },
-          "sentiment": "negative",
+          "sentiment": "neutral",
           "topics": [
             "cinema all'aperto",
             "rapporto qualità-prezzo",
             "intrattenimento serale"
           ],
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "cinema all'aperto",
-              "rapporto qualità-prezzo",
-              "intrattenimento serale"
-            ],
-            "location": "Kalidria Hotel & Thalasso SPA",
-            "confidence": 0.95,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "neutral",
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:09:44.486Z"
+            "updatedAt": "2026-09-10T16:25:49.553Z"
           },
           "engagementData": {
             "status": "ok",
