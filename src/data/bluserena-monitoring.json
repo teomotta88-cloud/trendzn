@@ -25012,7 +25012,7 @@
           "url": "https://www.tiktok.com/@bariventoviaggi/video/7675715926314077472",
           "date": "2026-08-19T12:17:59.000Z",
           "caption": "#bari #ventoviaggibari #serenamajestichotelresidence #bluserenaviaggi4stelle",
-          "location": null,
+          "location": "Bluserena",
           "views": 1927,
           "imageUrl": null,
           "likes": 9,
@@ -25035,7 +25035,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T01:37:37.411Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "ristoranti",
+              "servizi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T01:42:05.841Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "ristoranti",
+            "servizi"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25043,7 +25069,7 @@
           "url": "https://www.tiktok.com/@boardershadow/video/7544698481563143446",
           "date": "2025-08-31T10:43:23.000Z",
           "caption": "@bluserena Torreserena #bluserena #resort #puglia #sea #holidays",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 3184,
           "imageUrl": null,
           "likes": 33,
@@ -25066,7 +25092,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T01:39:34.270Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "resort",
+              "sea",
+              "holidays"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T01:42:08.360Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "resort",
+            "sea",
+            "holidays"
+          ]
         }
       ]
     },
@@ -51984,7 +52034,7 @@
           "url": "https://www.tiktok.com/@bariventoviaggi/video/7675715926314077472",
           "date": "2026-08-19T12:17:59.000Z",
           "caption": "#bari #ventoviaggibari #serenamajestichotelresidence #bluserenaviaggi4stelle",
-          "location": null,
+          "location": "Bluserena",
           "views": 1927,
           "imageUrl": null,
           "likes": 9,
@@ -52007,7 +52057,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T01:37:37.411Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "ristoranti",
+              "servizi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T01:42:05.841Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "ristoranti",
+            "servizi"
+          ]
         },
         {
           "platform": "tiktok",
@@ -75923,7 +75999,7 @@
           "url": "https://www.tiktok.com/@boardershadow/video/7544698481563143446",
           "date": "2025-08-31T10:43:23.000Z",
           "caption": "@bluserena Torreserena #bluserena #resort #puglia #sea #holidays",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 3184,
           "imageUrl": null,
           "likes": 33,
@@ -75946,7 +76022,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T01:39:34.270Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "resort",
+              "sea",
+              "holidays"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T01:42:08.360Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "resort",
+            "sea",
+            "holidays"
+          ]
         },
         {
           "platform": "tiktok",
