@@ -80058,6 +80058,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:03.055Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OPEN 0730-1500\nCLOSE MONDAY",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:35:26.340Z"
           }
         },
         {
@@ -80081,6 +80090,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:09.011Z"
+          },
+          "ocrData": {
+            "textOnScreen": "except the\nthat one was okay A\nthen went to go get p\nè food",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:35:39.880Z"
           }
         },
         {
@@ -80104,6 +80122,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:13.122Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:12.504Z"
           }
         },
         {
@@ -80127,6 +80153,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:27.155Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:14.222Z"
           }
         },
         {
@@ -80150,6 +80185,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:30.145Z"
+          },
+          "ocrData": {
+            "textOnScreen": "And now with TikT ok s\nThe Ritz Carlton",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:24.809Z"
           }
         },
         {
@@ -80173,6 +80217,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:34.252Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:33.411Z"
           }
         },
         {
@@ -80196,6 +80248,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:39.588Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7676231289074126101: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:34.899Z"
           }
         },
         {
@@ -80219,6 +80280,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:42.486Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:41.255Z"
           }
         },
         {
@@ -80242,6 +80311,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:47.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di lale\nvilla\nNon trovo giusto screditare\ncosì il lavoro di tanti ragazzi\nvolenterosi. Non siamo tutti\nuguali e mi spiace questo\nsignore addirittura sia\nrimasto sempre in camera a\ndormire. Se era in camera mi\ndomando come poteva\nAMBIENTE SERENO\nSICURAMENTE\ncosi il lavoro di tanti ragazzi\nA Non trovo giusto screditare\nil lavoro di tanti ragazzi",
+            "confidence": 0.923,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:36:49.170Z"
           }
         },
         {
@@ -80265,6 +80343,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:50.531Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:37:03.087Z"
           }
         }
       ]
@@ -87272,6 +87358,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:53.577Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:37:15.272Z"
           }
         },
         {
@@ -87295,6 +87389,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:56.944Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MAAS\nSARA",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:37:26.648Z"
           }
         },
         {
@@ -87318,6 +87421,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:06:59.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:37:48.932Z"
           }
         },
         {
@@ -87341,6 +87452,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:04.850Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:37:50.957Z"
           }
         },
         {
@@ -87364,6 +87484,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:08.514Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WHITE HOUSE",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:08.193Z"
           }
         },
         {
@@ -87387,6 +87516,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:11.659Z"
+          },
+          "ocrData": {
+            "textOnScreen": "just realised Cal was probably\nCal was probably\ngeeked ashiin this scene\n“Uhhh\njust was probably Ì\ngeeked ash in this scene\nprobably\ngeekediash in this scene\ngeekediashiin this scene",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:14.786Z"
           }
         },
         {
@@ -87410,6 +87548,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:14.899Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7662482566754110742: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:16.134Z"
           }
         },
         {
@@ -87433,6 +87580,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:18.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7676524607456742687: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:17.517Z"
           }
         },
         {
@@ -87456,6 +87612,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:22.681Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:26.372Z"
           }
         },
         {
@@ -87479,6 +87643,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:25.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CALENDAR i+\nME FAIR\nPacker\nGAME\nGONE",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:44.454Z"
           }
         },
         {
@@ -87502,6 +87675,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:27.720Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ganela\nCanela\nRockville; MD!\nLa,Canela 4",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:38:57.202Z"
           }
         }
       ]
@@ -91449,6 +91631,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:30.152Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:06.701Z"
           }
         },
         {
@@ -91472,6 +91662,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:32.438Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:08.500Z"
           }
         },
         {
@@ -91495,6 +91694,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:35.038Z"
+          },
+          "ocrData": {
+            "textOnScreen": "inal result of the coat\nHotel Costume/Cosplay\nfinal result of the coat\nHazbin Hotel\ni of the coat\ncoat\nfinal resultiof the Coat",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:16.583Z"
           }
         },
         {
@@ -91518,6 +91726,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:07:39.319Z"
+          },
+          "ocrData": {
+            "textOnScreen": "our favourite r 4\nValentino Swiss Hotel\nOh look!\nEXPERIENCE\nValentino Swiss\notel Apartments\nEliozu (opp. NAF Harmony Estate), Port Harcourt.\nbooking enquiries\nLuxury. Comfort. Exceptional Hospitality",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:39:23.226Z"
           }
         },
         {
