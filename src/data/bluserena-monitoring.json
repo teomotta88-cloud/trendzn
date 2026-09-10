@@ -48104,7 +48104,16 @@
           "likes": 14,
           "comments": 4,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 5.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:13.642Z"
+          }
         }
       ]
     },
@@ -61748,7 +61757,16 @@
           "likes": 86,
           "comments": 0,
           "shares": 45,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh, oh, che sarà? Oh, oh, che sarà?",
+            "language": "Italian",
+            "durationSec": 17.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:18.149Z"
+          }
         }
       ]
     },
@@ -76237,7 +76255,16 @@
           "likes": 65,
           "comments": 3,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi abbiamo trovato la bella piazza di Gran Serenis con non sargassum che nessuno ha parlato di Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 64.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:21.256Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -76251,7 +76278,16 @@
           "likes": 29,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti",
+            "language": "Italian",
+            "durationSec": 45.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:24.116Z"
+          }
         }
       ]
     },
@@ -82402,7 +82438,16 @@
           "likes": 47,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info Grazie a tutti. Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 413.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:44.829Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82416,7 +82461,16 @@
           "likes": 33,
           "comments": 3,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:47.552Z"
+          }
         }
       ]
     },
@@ -94365,7 +94419,16 @@
           "likes": 1457,
           "comments": 22,
           "shares": 935,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T15:11:49.936Z"
+          }
         }
       ]
     },
