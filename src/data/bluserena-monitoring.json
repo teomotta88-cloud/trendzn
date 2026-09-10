@@ -25027,6 +25027,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:40.478Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:37.411Z"
           }
         },
         {
@@ -25050,6 +25058,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:16.144Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:34.270Z"
           }
         }
       ]
@@ -36528,6 +36544,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:19.002Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:36:47.286Z"
           }
         },
         {
@@ -36551,6 +36575,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:21.799Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:36:51.406Z"
           }
         }
       ]
@@ -45900,6 +45932,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:25.509Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Grand Baie i\npola",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:05.638Z"
           }
         },
         {
@@ -45923,6 +45964,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:28.210Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:10.717Z"
           }
         },
         {
@@ -45946,6 +45995,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:33.370Z"
+          },
+          "ocrData": {
+            "textOnScreen": "living\nMediterranean\nande",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:22.564Z"
           }
         }
       ]
@@ -51910,6 +51968,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:36.822Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:28.020Z"
           }
         },
         {
@@ -51933,6 +51999,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:40.478Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:37.411Z"
           }
         },
         {
@@ -51956,6 +52030,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:43.199Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:41.654Z"
           }
         }
       ]
@@ -58018,6 +58100,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:46.298Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SECRET",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:37:48.679Z"
           }
         },
         {
@@ -58041,6 +58132,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:50.148Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HANASHIBUKI\nRESORT GROUP\nSH INRA\nYORO VALLEY",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:38:05.151Z"
           }
         }
       ]
@@ -63904,6 +64004,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:54.055Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:38:16.103Z"
           }
         },
         {
@@ -63927,6 +64035,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:56.652Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tryin a cute\nanc this is\nhappeni\nappening\nhappening",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:38:21.603Z"
           }
         },
         {
@@ -63950,6 +64067,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:34:59.404Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Times h\nModern\nobby Design\nLobby\nAC Hotel New York Times Square\n4-star hotel\nù Laundry service Bar\nAug 22 Aug 23 2 guests\nBooking.com View rooms\nshare",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:38:33.367Z"
           }
         },
         {
@@ -63973,6 +64099,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:02.087Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Madonnatinn\nthat's part jungle\npart cavern\nit's wildly/over the\nBitingjinto that famous pink\nChampagne cake while\nsurroundedby\nbooths.\nLeach of the 110/rooms\nBiting pink\ncolored\nTap the location tag\nto explore this\namous pink:",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:38:43.933Z"
           }
         },
         {
@@ -63996,6 +64131,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:05.005Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:38:57.348Z"
           }
         }
       ]
@@ -75733,6 +75876,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:09.142Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:08.665Z"
           }
         },
         {
@@ -75756,6 +75907,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:13.447Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:19.750Z"
           }
         },
         {
@@ -75779,6 +75938,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:16.144Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:34.270Z"
           }
         },
         {
@@ -75802,6 +75969,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:19.782Z"
+          },
+          "ocrData": {
+            "textOnScreen": "@::\"run like a girl”\nNo you clearly have never\nseen Selena Quintanilla\nPerez run from Yolanda\nwith a bullet wound to get\nto safety because she\nwas determined to live\nack to room 158 the arguing\nnues\nsaid Yolanda you're not only not\nr hand and that symbol Telegraph's\nlanda this really is it",
+            "confidence": 0.933,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:40.206Z"
           }
         }
       ]
@@ -82649,6 +82825,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:23.182Z"
+          },
+          "ocrData": {
+            "textOnScreen": "myljob\nI told",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:46.845Z"
           }
         },
         {
@@ -82672,6 +82857,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:26.517Z"
+          },
+          "ocrData": {
+            "textOnScreen": "N pp naik o)\npp naik ojek!!\nE pp naik ojek!!",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:39:56.308Z"
           }
         },
         {
@@ -82695,6 +82889,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:29.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WORST\nOVER",
+            "confidence": 0.712,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:40:01.931Z"
           }
         },
         {
@@ -82718,6 +82921,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:35.190Z"
+          },
+          "ocrData": {
+            "textOnScreen": "jtan\nDISKON DAN INSTANT CASHBACK",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:40:13.307Z"
           }
         },
         {
@@ -82741,6 +82953,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:41.225Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Welcome Drink\nPulaugeribu\nN Ocean View Cottages\nd 3 Pulau Marine Resort",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:40:22.610Z"
           }
         }
       ]
@@ -90391,6 +90612,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T01:35:44.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": "c ER ARUBA",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T01:40:27.878Z"
           }
         },
         {
