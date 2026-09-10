@@ -4626,7 +4626,7 @@
           "comments": 0,
           "shares": 82,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "negative",
           "topics": [
             "animazione",
             "spiaggia",
@@ -4653,23 +4653,12 @@
             "updatedAt": "2026-09-02T13:18:05.663Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "positive",
-            "topics": [
-              "animazione",
-              "spiaggia",
-              "cibo"
-            ],
-            "location": "Bluserena",
-            "confidence": 0.8,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "negative",
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T08:57:31.023Z"
+            "updatedAt": "2026-09-10T16:00:06.083Z"
           },
           "engagementData": {
             "status": "ok",
