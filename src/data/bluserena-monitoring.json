@@ -25473,7 +25473,18 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675653655655140640: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
             "version": 3,
             "updatedAt": "2026-09-10T13:58:21.322Z"
-          }
+          },
+          "sentimentData": {
+            "status": "no_text",
+            "sentiment": null,
+            "topics": [],
+            "location": null,
+            "confidence": 0,
+            "sources": [],
+            "version": 1,
+            "updatedAt": "2026-09-10T14:03:11.320Z"
+          },
+          "sentiment": null
         }
       ]
     },
