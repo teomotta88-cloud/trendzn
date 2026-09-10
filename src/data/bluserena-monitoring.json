@@ -77908,30 +77908,19 @@
             "version": 1,
             "updatedAt": "2026-09-08T11:59:33.180Z"
           },
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
             "villaggio",
             "hotel",
             "ricordi"
           ],
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "villaggio",
-              "hotel",
-              "ricordi"
-            ],
-            "location": "Bluserena",
-            "confidence": 0.7,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "positive",
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-08T14:00:25.855Z"
+            "updatedAt": "2026-09-10T15:18:43.697Z"
           },
           "engagementData": {
             "status": "ok",
