@@ -90405,7 +90405,16 @@
           "likes": 140,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:35:52.540Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90419,7 +90428,16 @@
           "likes": 95,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sambelghie",
+            "language": "Italian",
+            "durationSec": 13.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:35:55.258Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90433,7 +90451,16 @@
           "likes": 26,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 50.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:35:59.085Z"
+          }
         }
       ]
     },
@@ -94444,7 +94471,16 @@
           "likes": 19,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Abbiamo le meridioni, abbiamo le levi. Non abbiamo le levi, le levi sono nella Terra. Abbiamo le meridioni, ma è la stessa cosa, l'energia segue questo passaggio. E in Inghilterra, per esempio, tutte le churche sono costruite dove le levi si incontrano. Sì, certo, ovviamente. Se vai in Irlanda puoi vedere tutte queste stelle magiche, le stelle di stonaccia, posso dirvi molto di stonaccia, perché è qui dove le levi si incontrano, le energie si incontrano. e fanno queste stelle perché assorbonano queste energie e tu sei lì e dici wow è come un spettacolo ma c'è molto più il tuo corpo lo sa siamo così buoni che l'energia assorbente è ridicola",
+            "language": "Italian",
+            "durationSec": 49.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:36:02.386Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94458,7 +94494,16 @@
           "likes": 21,
           "comments": 4,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:36:05.537Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94472,7 +94517,16 @@
           "likes": 63,
           "comments": 4,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:36:08.104Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94486,7 +94540,16 @@
           "likes": 32,
           "comments": 14,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh Grazie.",
+            "language": "Italian",
+            "durationSec": 39.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T01:36:11.432Z"
+          }
         }
       ]
     }
