@@ -2,9 +2,11 @@ name: Probe Instagram Profile Feed (diagnostico)
 
 # Workflow usa-e-getta: verifica quanti post della griglia di un profilo
 # Instagram pubblico riusciamo a vedere da visitatore anonimo (senza login),
-# e quanto indietro nel tempo arriviamo scrollando, prima che scatti il
-# login-wall. Serve a capire se il "check one-shot dell'ultimo anno" del
-# piano collab-detection è fattibile così com'è o va ridimensionato.
+# e se VISITE INDIPENDENTI (sessione anonima fresca ogni volta) trovano
+# campioni diversi — quindi sommarle recupera più post di una sola visita —
+# o ripescano sempre lo stesso identico insieme. Serve a capire se il "check
+# one-shot dell'ultimo anno" del piano collab-detection è fattibile così
+# com'è o va ridimensionato ad accumulo nel tempo.
 
 on:
   workflow_dispatch:
@@ -12,11 +14,15 @@ on:
       profile_url:
         description: "URL completo del profilo Instagram pubblico da testare"
         required: true
+      num_visite:
+        description: "Quante visite indipendenti fare sullo stesso profilo"
+        required: false
+        default: "3"
 
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@v4
@@ -30,5 +36,7 @@ jobs:
           npm install playwright
           npx playwright install --with-deps chromium
 
-      - name: Apri il profilo e conta i post raggiungibili
+      - name: Apri il profilo più volte e conta i post raggiungibili
+        env:
+          NUM_VISITE: ${{ inputs.num_visite || '3' }}
         run: node scripts/probe-instagram-profile-feed.mjs "${{ github.event.inputs.profile_url }}"
