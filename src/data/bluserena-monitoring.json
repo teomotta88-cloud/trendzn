@@ -98982,7 +98982,16 @@
           "likes": 8984,
           "comments": 64,
           "shares": 49,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Le riserve di oro americane. Questo qui è Fort Knox. Questo è il più famoso delle riserve di oro americane e, per farlo in un certo modo, il più grande. Ma ci sono anche alcune in New York, West Point, come anche Colorado. Gli Stati Uniti hanno una storia molto strana e interessante quando si tratta di oro, perché la FDR ha fatto illegale per i civili normali di avere oro durante la Grande Depressione, che ha aiutato a farlo più lungo. E poi i civili americani non potevano avere oro fino ai 70, quando abbiamo scoperto il standard di oro e hanno legalizzato l'uomo di oro. Da allora, gli Stati Uniti hanno avuto circa la stessa quantità di tonnellate metricali di oro, che valutano attualmente la quantità che avevano in 1970, che era di circa 42 dollari per ounce. Oggi è molto più alto, nei 1000, che significa che è di 3 quarti di un trilione di dollari in oro. però abbiamo anche molto poco accesso a questo ci sono stati solo tre volte in storia della Reserva Federal in cui persone non autorizzate erano permesse di entrare nei vaulti questo era FDR un congressman una volta e poi la pi recente era nel 2017 in cui il Senato ha detto che dobbiamo guardare a questo E quindi questo un debattito molto strano dove gli auditori esterni non hanno guardato a vedere quanto c di gold quindi basato solo sulla trezzeria assumendo che tutto sia in alto, tutto dovrebbe essere bene. E oltre a tenere a mano il gold, hanno anche tenuto a mano i giulli del crown di Hungria, perché i sovieti lo prenderanno, quindi i hungriani lo snoccano e poi gli USA lo tenono fino al 1978. Durante la Seconda Guerra Mondiale, hanno anche preso i documenti fondamentali, come la Declarazione dell'Indipendenza e la Costituzione e Fort Knox. E questo qui è West Point. Hanno preso circa 60.000 pound di opium durante la Guerra Colde perché hanno bisogno di un stockpile strategico di queste medicinazioni in caso di essere scattate dalle nostre supplie. Quindi fino a recentemente non posso trovare documenti ufficiali che dicano quando è finita. Dicono che è finita, ma anche negli anni 90 e 2000 hanno avuto questo grande stockpile di opium e morfina in West Point. Anche per qualche motivo sono in grado di scegliere tutto. Non so, non c'è niente a che fare.",
+            "language": "Italian",
+            "durationSec": 125.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T07:10:42.323Z"
+          }
         }
       ]
     }
