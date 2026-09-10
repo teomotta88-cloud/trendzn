@@ -25424,7 +25424,17 @@
           "likes": 24,
           "comments": 4,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "extract_failed",
+            "reason": "ffmpeg exit 234",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:36.453Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25438,7 +25448,16 @@
           "likes": 65,
           "comments": 2,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:05.009Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25452,7 +25471,16 @@
           "likes": 96,
           "comments": 11,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo negli ultimi minuti di questa vacanza ragazzi e oggi ovviamente siamo un po' malinconici e riviviamo esattamente il momento in cui siamo arrivati questa vacanza... noi abbiamo tre bambini come sapete c'è chi dice che spesso è difficile spostarsi con tre bambini questa vacanza da battipaglia raga è poco distante, ci abbiamo messo due ore ad arrivare e qui abbiamo trovato un piccolo angolo di paradiso quindi andiamo via un po' a malincuore volevamo cercare di rimanere un altro po' ma meglio così perché amici e persone che abbiamo conosciuto quelli con i quali abbiamo condiviso di più sono andati via quindi adesso ci saranno i rinvii dovremo conoscere nuove persone quindi la vacanza è stata vissuta intensamente per 7 giorni è un posto che permette ai bambini di divertirsi in totale autonomia, di spostarsi in autonomia se sono un po' più grandicelli di divertirsi con l di giocare con loro di fare attivit di prendersi il loro tempo per essere bambini e divertirsi a 360 gradi ragazzi quindi su questo lato sono formidabili ovviamente questi ragazzi ti entrano nel cuore mi ha contattato qualche genitore dei animatori nei commenti, siete meravigliosi perché sono meravigliosi perché decidono ogni anno di cedere il loro momento di vacanza per accontentare detto questo i miei 3 bambini si sono divertiti tanto, oggi sono un po' tristi perché sono arrivati a casa noi invece siamo stati, abbiamo vissuto questa vacanza veramente intensamente vi assicuro che ci torneremo, vi faccio vedere ancora qualche altro piccolo angolo di questo villaggio che è stata una scopetta forse questa finora è stata la vacanza più bella a livello di famiglia che abbiamo fatto quindi raga con la consiglio a tutti e a breve daremo anche un voto a tutta questa meraviglia che ovviamente penso gi avete potuto capire i punti carenti sono veramente minimi Io forse pi di tutti quanti sono stato quello che ha raccontato tutto praticamente quindi devo obbligatoriamente non dimenticare nessuno ringraziare tutti a partire dalle figure delle urezie, a partire dallo staff delle vicine, ma tutti, tutti, tutti, ovviamente il ringraziamento più grande sono ai ragazzi che abbiamo vissuto di più e che hanno guardato a noi, che è il nostro divertimento, che sono quelli del staff animazione, i ragazzi degli spettacoli che sono di un livello, ragazzi avete visto qualcosa, quindi sono di un livello alto alto alto da da teatro e ai direttori di sala mare e piscina e bagnini tutto tutto davvero ovviamente non voglio dire nessuno però è stata una vacanza meravigliosa ragazzi Tutti questi posti tutti questi angoli li ringraziamo tutti perch ogni posto ogni piccolo angolo ci ha regalato un quindi l vista insieme a me siamo contenti e penso che per il prossimo anno restiamo con Brucerie ma non so se vengo a vivere in questo viaggio o un altro se dovessi tornare qua sicuramente mi sento al più a casa detto questo vi lascio col po' ultima immagine ragazzi questa è stata connessi perché raccontiamo tante altre cose grazie a tutti per averci seguito in questa vacanza è stato veramente bellissimo rispondere ai vostri commenti alle vostre alle vostre domande vi lascio una bellissima eredità perché il video resteranno sempre quindi per chi verrà da ora a anche qualche anno troverà sicuramente qualche informazione più dettagliata quindi credo di aver fatto un lavoro top grazie a tutti",
+            "language": "Italian",
+            "durationSec": 311.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:48.186Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25466,7 +25494,16 @@
           "likes": 68,
           "comments": 7,
           "shares": 36,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "la serata è total guai ci ci gioia che si aspettava una parte è stata una parte e che passa si mangia e non vogliamo mangiare vediamo vediamo che la roba da mangiare non è buono ma questo è proprio dei fetenti poi vi faccio vedere che video vi faccio se la roba da mangiare poi vediamo se è buona o no tu sei? Maria quando sei bella non ti preoccupare buon appetito grazie no vai vai sto a fare ciao ciao ragazzi ne hanno chiesto il video sulla cucina dicono che la cucina non è buona ma io vi faccio vedere che non è così guardate che spettacolo operativissimo e adesso vi faccio vedere un saluto grazie grazie siete il numero uno procediamo raga Ora facciamo vedere il resto. Questo qua invece ragazzi sono i secondi di questa sera purè. Vediamo che c da mangiare raga il corner pizza che bello sono pure tutte finite sono andate a ruba una prendiamo qualcuna corner antipasti ragazzi è un po' tardi quindi qualcosa è già terminato terminata vai oh è il più bello poi ragazzi di là c'è il corner vegano frutta sempre presente ragazzi corner insalatine con tarallini pane biscottato qua c'è il corner dei secondi e della pasta cambia sempre ovviamente ragazzi ci facciamo un bel piatto di qualcosa questo qua è il corner dei fritti questa sera c'è gamberi poi c'è il corner amatissimo dei dolci ragazzi è strappino non so se riesco a farvelo vedere perché stasera ci sono i babà ci sono i dolci, i vari quindi ciao dolci e gelati fanno pure i gelati e poi un altro antipasto",
+            "language": "Italian",
+            "durationSec": 217,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:55.721Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25480,7 +25517,16 @@
           "likes": 43,
           "comments": 6,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "allora, stamattina rispondiamo al commento di valenta ci tenevo, l'ho cercato apposta perché è un commento un po' più vecchio però ci tenevo a risponderti adesso in questo momento buonasera ragazzi, vabbè il miniclub come ho già fatto il video i vostri bimbi si stanno divertendo, come funziona? allora, carla come stai stamattina un po'? male perché? perché non me ne vogliamo perché vuoi rimanere qua? come se stavi, mi sei divertita, poi è uscita questa vacanza Sì, allora Carlina è un po' triste perché dobbiamo rientrare, però abbiamo provato a far di tutto per restare ancora un altro po', ragazzi, vi dico solo questo, però purtroppo non ci è possibile, anche perché è già sold out, quindi non riusciamo. abbiamo provato a vedere anche se potevamo andare in un altro club volevamo fare un'altra settimana visto che abbiamo ancora un po' di tempo anche se delle cose ci aspettano ancora a Battivaglia quindi dobbiamo rientrare ovviamente dobbiamo rientrare anche dai nostri ragazzi che hanno bisogno di noi e dagli amiche e dalle famiglie quindi diciamo che la vacanza è stata bella anche per loro non essere triste papà perché tanto ci divertiremo ancora va bene?",
+            "language": "Italian",
+            "durationSec": 87.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:20.817Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25494,7 +25540,16 @@
           "likes": 37,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Matti come fai a fare questi video non ti viene da piangere? Tu sei tornato a casa però hai vissuto la vacanza insieme a me e soprattutto te l'ho detto che non ci saremmo persi hai visto non sono stato di parole No non mi viene da piangere perché spesso non sono gli occhi che piangono ma il cuore quindi siamo sicuramente molto tristi però ovviamente siamo grandi e grossi dobbiamo far finta di niente quindi sì siamo tristi ma comunque sereni perché torniamo a casa dove ci aspettano tante cose belle grazie sempre",
+            "language": "Italian",
+            "durationSec": 40.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:24.007Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25508,7 +25563,16 @@
           "likes": 32,
           "comments": 7,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "tony grazia siamo nella piazzetta principale che bello a raga un'altra bella cosa prima che me ne vado è che nelle piscine guardate là dietro non so se si vede ci sono due scivoli grandi adesso ve li porto a vedere comunque concordi con me allora io porto la mia esperienza personale penso che sia per quello che abbiamo pagato non parliamo di cucine a 5 stelle però c'è pure da dire che magari nella vacanza una volta puoi mangiare al ristorante la terrazza mi sembra che si chiama così infatti noi stasera abbiamo anche prenotato mangeremo lì quindi se proprio magari non ti piace quello che offre il ristorante principale puoi anche passare in un altro ristorante nel quale ti servono quindi magari anche là è un'opzione in più una prima cena è gratuita sia in terrazza che al mare quindi si può anche fare questo poi c'è l'open bar qua molto molto bello ci sono i negozietti che vendono tutto, la parafarmacia l'open bar qua con i ragazzi molto gentili sempre e guardate che bella chicca sulle piscine, vi faccio vedere scivolo verde e scivolo azzurro c ancora tempo per fare qualcosina ragazzi se ne sta andando gi via qualche amico questo il momento pi brutto comunque sicuramente non li perderemo perch fortunatamente TikTok unisce molti ci seguono già comprese le signore delle polizie qui mandiamo un bacio perché quando passano la camera comincia quando passano loro la camera comincia a brillare profuma di pulito sono sono eccezionali sempre molto gentili salutano sempre quindi anche su questo un voto da 1 a 10 11, 12 sono bravissime anzi quando siamo in camera c'è qualcuno che sta riposando come le mie bimbe che si svegliano tardi loro attendono in tranquillità mettono tutto fuori e al momento giusto intervengono per la polizia raga che dirvi questa è stata la mia esperienza personale vi lascio una bella eredità perché nel momento in cui cercate negli hashtag o nella ricerca Sibari, Sibari Green Resort, vacanza e quant'altro sicuramente usciremo a darvi la nostra esperienza. Detto questo stamattina ci hanno iscritto alla gara di canoa io non so non la so fare però purtroppo non posso mai tirarmi indietro quindi dobbiamo andare a gareggiare di coperti che cosa succede saremo utilizzati sicuramente ma non fa niente dobbiamo partecipare vi faccio vedere dopo un video grazie ragazzi",
+            "language": "Italian",
+            "durationSec": 199.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:29.293Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25522,7 +25586,16 @@
           "likes": 29,
           "comments": 7,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Sara, buonasera, sono le 22.19 e noi siamo appena rientrati a casa perché stasera siamo andati a cena alla terrazza che era l'unica serata che avevamo in settimana da poter sfruttare non al ristorante generico del villaggio. La cena è stata molto bella per alcuni punti di vista però purtroppo sul lato senza glutine e senza lattosio non ci siamo, non ci siamo perché siamo arrivati, abbiamo chiesto ai ragazzi molto gentili se c'era qualcosa per mia moglie, una volta seduti a tavola, dopo vi vedo quel video, vi faccio vedere anche come era bello preparato e quant'altro, quindi eravamo speranzosi perché sull'app avevamo prenotato per una persona senza glutine e lattosio. appena arrivati l abbiamo fatto richiesta e loro non sapevano gi che noi avessimo a tavola una persona che non mangia glutine e lattosio e quindi abbiamo fatto un po di pari e dispari stavamo pensando di andare di nuovo in ristorante e magari l'avessimo fatto, perché ad un certo punto comunque hanno portato giusto, a noi arrivava la pasta, arrivavano altre cose che ti ripeto erano molto buone, però nel frattempo mia moglie è rimasta a guardare per alcune cose, hanno portato un tagliere di salumi e formaggi senza lattosio ovviamente, però si aspettavamo un qualche cosa di differente. Oltretutto ha mangiato della pasta normalissima che poteva trovare anche al ristorante, che era già preparato per quello che mangia lei. Alla fine il risultato è che siamo dovuti rientrare alle 22.21 a casa perché si è sentita poco bene purtroppo, lei soffre di questa intolleranza siamo dovuti rientrare prima perch non si sente molto bene quindi su questo punto di vista ragazzi da migliorare perch i prodotti ci sono ne hanno tanti per vanno attenzionati perch qui parliamo di intolleranza ma c nel villaggio c'è la ghia e chi mangia vegano, queste persone vanno tutelate e attenzionate, quindi su questo qua un punto purtroppo a sfavore. Per il resto il cibo c'è chi ne parla bene, c'è chi ne parla male, è soggettivo, è molto molto soggettivo, però su questo punto, su questo lato ti posso dire che questa sera purtroppo non ci hanno trattati magari proprio bene bene. quindi questa è stata un po' bocciata, è un piccolo neo in tutta questa settimana ma già lo dicevo anche prima per quanto riguarda il senso di l'ultimo lattoso abbiamo dovuto fare delle attenzioni particolari scusatemi se mi dilungo un po' ma ci tengo particolarmente perch pu essere magari una situazione sulla quale loro possono migliorare c da fare un po di strada i prodotti ci sono per va attenzionato molto molto di pi e purtroppo c mia moglie adesso che non messa proprio benissimo però diciamo che speriamo domani si senta meglio così partiamo e andiamo a casa e rientriamo con le nostre routine un altro brevissimo appunto ragazzi e sul dolce è è arrivato a noi e quando abbiamo chiesto un dolce senza glutine per lei ovviamente ha detto no signora mi dispiace per lei, qui non abbiamo nulla e quindi è stata rimandata al ristorante che purtroppo ragazzi erano le 9 e un quarto circa tra lo spettacolo che dovevano fare i bambini e la chiusura del ristorante abbiamo evitato, non è un problema per l'amor di Dio però comunque doveva essere una serata che era dedicata anche magari a un'attenzione a lei quindi speravamo che lei potesse mangiare qualcosa di differente quindi su questo volato ragazzi no, non ci siamo però per il resto è tutto bellissimo",
+            "language": "Italian",
+            "durationSec": 240.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:34.621Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25536,7 +25609,16 @@
           "likes": 28,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e siccome siete stati così tanti io stamattina vi porto nel mio posto preferito siamo arrivati da poco a battivaglia e stamattina vi faccio vedere qual è il mio posto preferito qui nella mia città ragazzi non trovo la versione di voi già lo sa però noi adesso arriviamo e vi faccio vedere il mio posto preferito lo facciamo conoscere un po' anche a voi dalla press ragazzi siete stati così gentili da ospitarci e da farci sentire a casa molti nei commenti sono stati calorosissimi con noi e io adesso vi faccio vedere il mio posto preferitore siete bellissimi eccola qua ragazzi vi faccio vedere solo una parte che spettacolo vi faccio vedere dentro quanto è bello sapete già che cos'è? dimmelo nei commenti Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 88.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:38.877Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25550,7 +25632,16 @@
           "likes": 27,
           "comments": 3,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "questa sera per la serata total white ci sono anche degli stand dedicati ci hanno offerto un bel liquorino poi c'è lo stand dei profumi uno dei prodotti tipici del posto e un altro di liquirizie con la ragazza dello stand che ci ha detto ma tu sei quello di tiktok si sono io quello di tiktok e quindi ti tocca venire nel video ve lo faccio vedere dopo ragazzi nel frattempo dietro di me la serata total white profumatissimi 3, 2, 1 Buonasera In serio, caro amico, io voglio tutte le mani al cielo della gente che si amica Voglio tutte le mani al cielo di coloro che sono al bar",
+            "language": "Italian",
+            "durationSec": 79.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:42.283Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25564,7 +25655,16 @@
           "likes": 25,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Eleonora buongiorno vero sono tutti bellissimi cioè volevo dire bravissimi eh sì allora sono bravissimi sicuramente l'abbiamo detto e ridetto ma non abbiamo detto che sono anche tutti molto belli ragazzi quindi se siete dei pinnagers se siete anche un pochettino più grandi è anche un bel vedere quindi sicuramente anche l'occhio vuole la sua parte ragazzi vi troverete veramente bene anche solo a guardarli detto questo ragazzi questo video sta avendo un enorme riscontro quindi continuate a lasciare un like continuate a ripostarlo non per me ma affinché possa arrivare a più persone in modo tale che possano vedere questa vacanza recensita a 360 gradi possono andare a vedere quali sono le loro preferenze più che altro magari si fanno una panoramica generale di quella che è l'esperienza di quella che è l'esperienza al Sibari Green Resort Blusserina grazie per i vostri commenti non siamo tornati ma vi rispondiamo lo stesso sempre buona giornata",
+            "language": "Italian",
+            "durationSec": 67.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:45.782Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -25578,7 +25678,16 @@
           "likes": 25,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "lucia ti sto seguendo grazie di tutto grazie che mi segui grazie se mi seguite tutti quanti noi siamo appena arrivati a casa nostra abbiamo fatto abbiamo sistemato un po di cose mia moglie fortissima si è chiamato quasi tutto lo dato una mano sono un po trastornato anche se piace e breve però tornare qua dalla vacanza non è mai semplice comunque vi faccio vedere la mia situazione di tiktok a distanza tra villaggio e battipaglia nel giro di due ore che cosa è successo quindi adesso mi resta che sistemare il tutto rispondere a tutti quanti vi ringrazio ragazzi è bellissima questa cosa mi avete fatto compagnia spero di avervi portato con me e magari seguitemi anche per il resto perché sicuramente vi farò vedere tante cose belle guardate che cosa è successo al mio TikTok in due ore e in tutto ciò ho già sentito ho già ricevuto due videochiamate da parte dell'amico Nicola ho visto Giovanni sull'autostrada mi sono seguito con Antonio queste sono le cose più belle ragazzi degli amici che ti porti fuori e restano sempre quindi raga non ci resta che viverci adesso il quotidiano con tutte le novità che ci aspettano in questo periodo restate connessi e grazie a voi per essere stati così tanti ne avete riempito il cuore",
+            "language": "Italian",
+            "durationSec": 99.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:50.350Z"
+          }
         }
       ]
     },
@@ -37672,7 +37781,16 @@
           "likes": 204,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "a 6 am stiamo tagliando queste cose e le mettiamo in un'altra stanza è una palla nera ancora per ora è come se fosse disegnato per portare 4 sacchi di nocciole qui oh mio dio puoi spostarli per me? ha bisogno di aiutare a riposare le cloverle perché la palla di asciugamento è così difficile abbiamo questo grande rinnovo e poi mettiamo le cloverle su tutte le palle ho finito, ma torniamo dopo per la stagione di leggere ok sono pronta, ora decoriamo le cucchiai e andiamo in scuola ho solo alcune verde e le metto un rinnovo in loro i rinnovi saranno airheads lo taglio in mezzo e lo metto in una cucchiaia così! non è bellissimo? ho preso un rainbow oh sono buoni ma ho solo pulito i miei denti guarda i piccoli cupcakes di rainbow sono così carini ne ho 4 di più mi piace ho 60 cupcakes di rainbow perché sto leggendo fino a 55 caratteristiche in caso di allergia o qualcosa le porto anche queste quindi è il giorno di parola preferito quindi ho preso una t-shirt di can I get a make chicken e la professoressa ha preso una t-shirt che diceva I heart Alani e ho 10 t-shirts di Alani a casa quindi ho pensato di portare alcuni Sherbert's world, strawberry sunrise, cherry slush, cotton candy Winter Wonderland Witch's Brew Peach Pink Slush Lime Slush and Cherry Bomb Two extra just to make it full case Hi, my name is Serena and I brought the Alonian Cupcakes Ok, heading to the Shuel Oh, look a lucky penny Put it in my pocket Come back with my energy drinks and my cupcakes Has anyone read this? I'll pull out all your laces put glitter in your hair and when you walk around you'll see my gold coins everywhere Better luck next year Those are the ones that I had in my house I brought them here and I put them right there Yep, those are my boys Does anyone know Don, my dog? Sì! È stato il miglior giorno mai! Hai altre domande? Sapete chi è Justin Bieber? Sì! Sono molto felice A fine anno posso avere il vostro autore S sarei felice di farlo all Grazie Grazie per avermi invitato stato molto divertente incontrarvi Andiamo a cucinare Ciao! Buona volta! Alcuni di loro mi hanno messo le carte e mi hanno dato un po' di hamburger, è il giorno migliore della mia vita Ho fatto una stessa con una borsa di blizzardo e tutti mi hanno detto che dovrei fare una più grande di pollo Quindi facciamo una che è di 40 metri La parte del chiesa sarà questo hulu E poi tutte le borde saranno tagliate di pollo Quindi facciamo delle borde! Facciamo! due centimetri. Oh mio Dio, sembra un punto di bocca, come facevamo in quei vecchi anni. Questo suona bello. Mi sembra di essere azzurro. Oh, ho capito che mi adattano le nocciole di piove. Nocciole chic. Per questa bella strada, useremo una ruota intera. Lo tolgo? C'è un modo più veloce per farlo? Mi sento come un magico togliendo qualcosa di un tappetino. Inizio ad aggiungere le mie bici alla mia ruota e poi le mettiamo in mezzo l'altra. e poi lo sticchiamo in row 1 row 2 5. potrebbe essere un bambino comodo se voglio fare un breve break di cena, ho il Panda Express. l'update sta diventando così grande che mi toglierà tutta la mia casa. mio marito mi ha aiutato a finire il corpo, ho solo bisogno di tagliare più noci di palla e poi iniziamo a costruire la testa sono finita con la testa ora ho solo bisogno di fare gli armi. qui c'è il mazzaro, kind of takes up the whole length of my house. It's like as big as my starfish. Why is your dad on the counter? I'm so tired, we're just gonna take a break right here. Right now our lizard looks like a snake, so now we need to make it some arms. Arms and legs. Let's attach them. I tied on this arm, this is the head, I tied on this other arm, and now we can come over, I'm gonna fall over, we can come over here, I'm gonna tie on this leg. Let's tie on the last leg and then I'm done! This is taking me like two days. Ciao Do you like my lizard Should I have it give me a hug It holding me I want to take it swimming but until then I don even know where to store this I can even walk through my house without stepping on a lizard I want to take my giant lizard swimming today, but it's 49 degrees and there's a wind advisory, and this is basically a big kite. Also, how the heck am I supposed to fit this in my car? Good morning. I'm here to pick up a U-Haul for Serena. Hey, let's go get my lizard. My gosh, it was windy. You can really tell how windy it is when you're driving a sailboat. Pull the lever, crunk. ci sarà abbastanza burro per la mia lizarda ecco, l'ho preso credo che dobbiamo affondarlo per farlo uscire dalla porta prendo la testa qui affondo le lezze questo sembra un bagaglio di bevola oh mio Dio wow, puoi aprire la porta per me? non c'è modo di spingere attorno alla porta leggero e portabile oh, è ok, è solo una peste wow facile qui viene il mio amico credi che dobbiamo affondarlo per farlo uscire? All right, let's go to the pool. The Red Rockers are saying we can go use their pool because technically it doesn't open until tomorrow, which means me and my lizard are going to break it in. Okay, we're here. It's so windy. I'm scared. All right. I'm going to see if I can throw it over my shoulder. Oh, it's so windy! If I pull a rotator cuff, it was because of the lizard and the wind. Pool this way. It's beautiful in here. I have hit every single open umbrella. Okay. Can you pull my pants down? Thank you. Keep going. andiamo a scorrere ragazzi oh è freddo lo sai, mi piace il freddo no, è andando via andiamo a sfiorare oh è freddo è così freddo sto qui per riposarmi e mi portano un piatto solo io e il mio lizard buona stagione di freddo facciamo un cake per mia mamma mia mamma viene a pulire la mia casa per me il domenico quindi facciamo un cake per lei prima facciamo un panino verde metto un uovo in l colorazione di cibo perch si mangia il cibo verde quando si mangia il cibo normale con le mani pi pulite che hai mai visto rubiamo il panino e lo stacchiamo in farina guarda mi adattano le tue tue tue ho usato il mio redbull buona cosa che non l'ho usato cuociamo questo per 40 minuti è pronto! prendiamo questo fuori e lo stacchiamo per un secondo e lo stacchiamo fuori dal panino yay ci prenderà 10.000 anni per fissarlo quindi lo stacchiamo in friggitore e lo stacchiamo in un pezzo per mangiare guarda quanto è brillante e verde lo stacchiamo in friggitore e sto a stare qui per un'ora e ascolto è fredda ora, è staccato sul panino no, no, non farlo! prendo il panino e lo taglio in pezzi e prendo un po' di stampa di clover e stampo un sacco di clover nel mio cake e il bambino lo pressa con il piede è così sponso, voglio squisicarlo ma non posso mi sembra come quando tu arricchisci il grasso e hai le piccole cose di dirt lo salvo e le metto nel mio pile di mani ora che ho tutti i miei clover cakes, faccio un altro cake cake numero 2 un uovo e zucchero e acqua mescoliamo e rimuoviamo aggiungiamo di nuovo un po' di questo qui abbastanza per coprire la parte di sotto così vedrà così e poi lo allineerò con i cloveri e li metterò qui poi vedrà come due churros di verde poi metterò la batteria qui e cercherò di non messare i cloveri ok è molto spesso e non sta coprendo molto bene quindi cercherò di spostarlo in grazia spostarlo in giù ok qui lo ho e spero che quando lo cuochi non si vada a vedere il verde quindi lo mettiamo in forno per 40 minuti quindi il mio cake è perfetto, ha coperto i cloveri di sorpresa molto bene bene, quindi mettiamolo su questo piatto e poi oh oh puoi vedere che si sta pulendo un po' lì. è ok però. svolgo questo cazzo. la cappuccia è arrivata con un mix di gelatina. ho fatto gelato a casa e aggiunto acqua a polvere. prendo una crompa da prima e la dipongo nel mio gelatino. non mi piace molto il gelatino ma è troppo tardi perché lo ho sbattito tutto attorno al piatto. don vieni qui! vuoi andare a casa di mia marmottina? ok andiamo. andiamo a portare il piatto a mia mamma. metto le rocce dal mio sacco di scioglie. sport mode on. sembra come panda express qui da quando mio Wow! Who wants to see my cake? Don't get too excited. Wow! They're little clovers!",
+            "language": "Italian",
+            "durationSec": 468.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:01.712Z"
+          }
         }
       ]
     },
@@ -41827,7 +41945,16 @@
           "likes": 3670,
           "comments": 609,
           "shares": 307,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oigan, veniamo da vacanza qui a Los Cabos e poi risulta che prima ci aspettiamo nel popolo bello e sì tutto molto bello tutto molto bene la cibo è ricco il luogo è bello ma noi che siamo di Sinaloa sentiamo che è qualcosa come se fossi in massa perché l'hotel è di Enrique Coppel ti rendi conto come se fossi nel popolo bello di là di massa molto bello e tutto ma siamo andati a La Paz, la verità non era quello che io speravo, siamo tornati, ci siamo rimasti solo una notte, ci siamo rimasti due notti a Pueblo Bonito, poi siamo andati a La Paz una notte e non ci piaceva, abbiamo cancellato la riservazione e siamo tornati a Los Cabos, non c'era disponibilità in Pueblo Bonito Rosé, quindi siamo arrivati in Pueblo Bonito Blanco fino al 27. Il caso che siamo arrivati in un hotel che mi piaciuto mi piaciuto non ricordo come si chiama dell e poi il prezzo perch come agendiamo ora 1.700 la notte, quando sono in 5.000, per lo basso 6.000, perché se lo fai con molta anticipazione, è chiaro che guadagni vantaggio economico, ma il punto è che a 1700 la notte ho più imposti, ma vi mostrerò l'hotel. A me lo che mi è più fascinato è la vista della montagna o del cerro, non so come si chiama, mi è piaciuto, vi consiglio 10 di 10, inoltre vivete l'esperienza differente perché è un hotel che sentite che è un stile di Los Cabos, è giusto a un lato della marina e è molto bello, guardalo. Questa la vista che abbiamo per la porta principale impressionante la citt le montagne ora vi mostrer l super bene per famiglie grandi ha una cucina molto completa da quel lato puoi uscire dalla terrazza che si colleghano con la alberca, questo sofà, sofà-cama, qui c'è un bagno molto grande che ora sta essendo utilizzato, qui c'è il mio mariachi, questa è una cama molto grande, a vedere, qui ci sono i miei figli in un altro bagno che ha una tina e stanno giocando con la tina, questa parte è molto bella perché è un'area di co-working, la terrazza qui stava mia mamma fumando un cigarro la luce è apagata guardate che prezioso non ho preso il flash sento come se stessi in montagna Qui c'è l'alberca, super bene, guardate i jardini, e questa è la nostra abitazione. Ora è un po' di notte, è in montagna, oh no, ho anche voglia di andare, in questo momento per la scurità mi è andata la immagine, gli sto dando accercamento, gli darò lezzanina, qui c'è per vedere tutto, ma in realtà domani video, domani video, oh Dio, in il giorno per vedere ah guarda qui c'è il nome dell'hotel, per se non mi voglio sbagliare, Solmar vero amore si chiama? Solmar Resort? Solmar Resora quindi lì avete la resegna tutto l'ambiente di Los Cabos qui è",
+            "language": "Italian",
+            "durationSec": 258.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:07.458Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41841,7 +41968,16 @@
           "likes": 93,
           "comments": 7,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi vi porto con noi in questa spiaggetta bellissima che però ci vogliono una ventina di minuti a camminare e quindi facciamo questa bellissima scarpinata e comincia il viaggio. Che è? Pensavo che era una cornacchia. Comunque starai nel mio video mentre fare così eh. sappilo si comincia a vedere mare ci troviamo una mega roccia davanti guardate qui che scarpinata dai c'è la scaletta naturale la scaletta naturale c'è dai eccolo guarda si scende tranquillamente stai prendendo la scala sbagliata di là ah ombra Ma se può fare questa scarpinata, arriva a una spiaggia che non si sa neanche se abbiamo fatto la strada giusta. Sì, sì, la conosce lui. Sono vent che stiamo a camminare Il problema che non si d la barra Ma non tanto andare che fresco sono le 7 di mattina ma è tanto il ritornare che qua in Sardegna fanno 30 gradi e ne percepisci 45, capito? C'è vole. Siamo arrivati, sì. Quasi arrivati. questa è caletta serenetta l'acqua è veramente trasparente per andare a quella spiaggia dobbiamo entrare nell'acqua che un po fredda leggermente non so che vedendo che acqua meravigliosa limpida e questa è la spiaggia Cala Serena. ...",
+            "language": "Italian",
+            "durationSec": 143,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:11.817Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41855,7 +41991,16 @@
           "likes": 291,
           "comments": 22,
           "shares": 267,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I can still recall our last summer, I still see it all Walks along the Seine, laughing in the rain Our last summer, memories that remain We made our way along the river and we sat down in the grass Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:15.740Z"
+          }
         }
       ]
     },
@@ -48340,7 +48485,16 @@
           "likes": 522,
           "comments": 22,
           "shares": 113,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questa è la mia review autentica del resort Serenade All Sweets in Putakana. Questo è un resort solo per adulti, hanno un resort familiare vicino a loro e abbiamo accesso completo alle loro amenities e ristoranti. Il mercato è il ristorante di buffet stile adulto e l'unico che mi è stato buono lì è stato l'omelette per la cena. Per la cena abbiamo fatto le riservazioni a tre ristoranti e la città era 10 volte migliore, ero così felice. una città che è in e make sure you make those reservations asap because they do get booked up now as far as entertainment on the resort it was okay they had a michael jackson tribute one night a neon party and they also had a lot of different activities to do by the pool overall i'll give this resort a 7 out of 10 if you want to see what our room looked like go check out my last video",
+            "language": "Italian",
+            "durationSec": 48.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:19.430Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -48354,7 +48508,16 @@
           "likes": 35800,
           "comments": 321,
           "shares": 13100,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 52.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:25.398Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -48368,7 +48531,16 @@
           "likes": 84,
           "comments": 18,
           "shares": 47,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 24.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:28.462Z"
+          }
         }
       ]
     },
@@ -55089,7 +55261,16 @@
           "likes": 404,
           "comments": 6,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:31.998Z"
+          }
         }
       ]
     },
@@ -62359,7 +62540,16 @@
           "likes": 47,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ah ah ah ah ah ah ah Grazie.",
+            "language": "Italian",
+            "durationSec": 33.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:34.729Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62373,7 +62563,17 @@
           "likes": 24,
           "comments": 4,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "extract_failed",
+            "reason": "ffmpeg exit 234",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:36.453Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62387,7 +62587,16 @@
           "likes": 1318,
           "comments": 95,
           "shares": 43,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:38.998Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62401,7 +62610,16 @@
           "likes": 32700,
           "comments": 217,
           "shares": 22600,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Montana All Inclusive Resort. Ma questo non è il tipo di All Inclusive dove si siede solo a un pool. A Paws Up Montana, i tuoi giorni sono fatti con la ritorna di un'auto, la città, la città, la città, la città, la città, la città, la città, la città, la città, la città, e esplorando 37.000 acere di montana. E sì, tre mani di guorme al giorno, zuccherie, trasportazione e attività sono inclusi. È praticamente un campamento di avventure di luxo nel centro di Montana. Tappate la taglia verde per ottenere discount esclusivi su TikTok.",
+            "language": "Italian",
+            "durationSec": 27.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:41.992Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62415,7 +62633,16 @@
           "likes": 96,
           "comments": 11,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo negli ultimi minuti di questa vacanza ragazzi e oggi ovviamente siamo un po' malinconici e riviviamo esattamente il momento in cui siamo arrivati questa vacanza... noi abbiamo tre bambini come sapete c'è chi dice che spesso è difficile spostarsi con tre bambini questa vacanza da battipaglia raga è poco distante, ci abbiamo messo due ore ad arrivare e qui abbiamo trovato un piccolo angolo di paradiso quindi andiamo via un po' a malincuore volevamo cercare di rimanere un altro po' ma meglio così perché amici e persone che abbiamo conosciuto quelli con i quali abbiamo condiviso di più sono andati via quindi adesso ci saranno i rinvii dovremo conoscere nuove persone quindi la vacanza è stata vissuta intensamente per 7 giorni è un posto che permette ai bambini di divertirsi in totale autonomia, di spostarsi in autonomia se sono un po' più grandicelli di divertirsi con l di giocare con loro di fare attivit di prendersi il loro tempo per essere bambini e divertirsi a 360 gradi ragazzi quindi su questo lato sono formidabili ovviamente questi ragazzi ti entrano nel cuore mi ha contattato qualche genitore dei animatori nei commenti, siete meravigliosi perché sono meravigliosi perché decidono ogni anno di cedere il loro momento di vacanza per accontentare detto questo i miei 3 bambini si sono divertiti tanto, oggi sono un po' tristi perché sono arrivati a casa noi invece siamo stati, abbiamo vissuto questa vacanza veramente intensamente vi assicuro che ci torneremo, vi faccio vedere ancora qualche altro piccolo angolo di questo villaggio che è stata una scopetta forse questa finora è stata la vacanza più bella a livello di famiglia che abbiamo fatto quindi raga con la consiglio a tutti e a breve daremo anche un voto a tutta questa meraviglia che ovviamente penso gi avete potuto capire i punti carenti sono veramente minimi Io forse pi di tutti quanti sono stato quello che ha raccontato tutto praticamente quindi devo obbligatoriamente non dimenticare nessuno ringraziare tutti a partire dalle figure delle urezie, a partire dallo staff delle vicine, ma tutti, tutti, tutti, ovviamente il ringraziamento più grande sono ai ragazzi che abbiamo vissuto di più e che hanno guardato a noi, che è il nostro divertimento, che sono quelli del staff animazione, i ragazzi degli spettacoli che sono di un livello, ragazzi avete visto qualcosa, quindi sono di un livello alto alto alto da da teatro e ai direttori di sala mare e piscina e bagnini tutto tutto davvero ovviamente non voglio dire nessuno però è stata una vacanza meravigliosa ragazzi Tutti questi posti tutti questi angoli li ringraziamo tutti perch ogni posto ogni piccolo angolo ci ha regalato un quindi l vista insieme a me siamo contenti e penso che per il prossimo anno restiamo con Brucerie ma non so se vengo a vivere in questo viaggio o un altro se dovessi tornare qua sicuramente mi sento al più a casa detto questo vi lascio col po' ultima immagine ragazzi questa è stata connessi perché raccontiamo tante altre cose grazie a tutti per averci seguito in questa vacanza è stato veramente bellissimo rispondere ai vostri commenti alle vostre alle vostre domande vi lascio una bellissima eredità perché il video resteranno sempre quindi per chi verrà da ora a anche qualche anno troverà sicuramente qualche informazione più dettagliata quindi credo di aver fatto un lavoro top grazie a tutti",
+            "language": "Italian",
+            "durationSec": 311.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:48.186Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62429,7 +62656,16 @@
           "likes": 215,
           "comments": 10,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La vita è buona, sai?",
+            "language": "Italian",
+            "durationSec": 6.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:50.536Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62443,7 +62679,16 @@
           "likes": 68,
           "comments": 7,
           "shares": 36,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "la serata è total guai ci ci gioia che si aspettava una parte è stata una parte e che passa si mangia e non vogliamo mangiare vediamo vediamo che la roba da mangiare non è buono ma questo è proprio dei fetenti poi vi faccio vedere che video vi faccio se la roba da mangiare poi vediamo se è buona o no tu sei? Maria quando sei bella non ti preoccupare buon appetito grazie no vai vai sto a fare ciao ciao ragazzi ne hanno chiesto il video sulla cucina dicono che la cucina non è buona ma io vi faccio vedere che non è così guardate che spettacolo operativissimo e adesso vi faccio vedere un saluto grazie grazie siete il numero uno procediamo raga Ora facciamo vedere il resto. Questo qua invece ragazzi sono i secondi di questa sera purè. Vediamo che c da mangiare raga il corner pizza che bello sono pure tutte finite sono andate a ruba una prendiamo qualcuna corner antipasti ragazzi è un po' tardi quindi qualcosa è già terminato terminata vai oh è il più bello poi ragazzi di là c'è il corner vegano frutta sempre presente ragazzi corner insalatine con tarallini pane biscottato qua c'è il corner dei secondi e della pasta cambia sempre ovviamente ragazzi ci facciamo un bel piatto di qualcosa questo qua è il corner dei fritti questa sera c'è gamberi poi c'è il corner amatissimo dei dolci ragazzi è strappino non so se riesco a farvelo vedere perché stasera ci sono i babà ci sono i dolci, i vari quindi ciao dolci e gelati fanno pure i gelati e poi un altro antipasto",
+            "language": "Italian",
+            "durationSec": 217,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:20:55.721Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62457,7 +62702,16 @@
           "likes": 68,
           "comments": 13,
           "shares": 62,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ragazzi buongiorno, noi siamo al giorno 4, siamo arrivati domenica con la cena e quindi adesso siamo al giorno 4. Stamattina vi faccio vedere il ristorante, come è organizzato per la colazione. Preciso ragazzi, per chi mangia senza glutine, senza lattosio, fatelo sempre presente ai maître, perché anche su questo possono avere un'attenzione maggiore per tutti quanti voi ma vi portano i piatti direttamente ragazzi guardate che spettacolo c'è anche da dire che qualcuno dice che per quanto riguarda i buffet così grandi la cucina dice così sarà pessima e quant'altro però ragazzi cucinare per così tante persone mattina pranzo e cena è assurdo anche perché la qualità dei piatti che abbiamo provato è alta. Vi lascio vedere un'anteprima di tutta la sala, con le quattro principali, Sibari, Sila, Pollino e Ionio. Sono quattro, sono enormi. Dunque vi lascio guardare, ragazzi. Buona visione. Poi io vi faccio vedere una cosa. Questa la fila per prendere la Nutella solo per la Nutella Solo per prendere la Nutella. E buongiorno così. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 164,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:21:00.693Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62513,7 +62767,16 @@
           "likes": 43,
           "comments": 6,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "allora, stamattina rispondiamo al commento di valenta ci tenevo, l'ho cercato apposta perché è un commento un po' più vecchio però ci tenevo a risponderti adesso in questo momento buonasera ragazzi, vabbè il miniclub come ho già fatto il video i vostri bimbi si stanno divertendo, come funziona? allora, carla come stai stamattina un po'? male perché? perché non me ne vogliamo perché vuoi rimanere qua? come se stavi, mi sei divertita, poi è uscita questa vacanza Sì, allora Carlina è un po' triste perché dobbiamo rientrare, però abbiamo provato a far di tutto per restare ancora un altro po', ragazzi, vi dico solo questo, però purtroppo non ci è possibile, anche perché è già sold out, quindi non riusciamo. abbiamo provato a vedere anche se potevamo andare in un altro club volevamo fare un'altra settimana visto che abbiamo ancora un po' di tempo anche se delle cose ci aspettano ancora a Battivaglia quindi dobbiamo rientrare ovviamente dobbiamo rientrare anche dai nostri ragazzi che hanno bisogno di noi e dagli amiche e dalle famiglie quindi diciamo che la vacanza è stata bella anche per loro non essere triste papà perché tanto ci divertiremo ancora va bene?",
+            "language": "Italian",
+            "durationSec": 87.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:20.817Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62541,7 +62804,16 @@
           "likes": 37,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Matti come fai a fare questi video non ti viene da piangere? Tu sei tornato a casa però hai vissuto la vacanza insieme a me e soprattutto te l'ho detto che non ci saremmo persi hai visto non sono stato di parole No non mi viene da piangere perché spesso non sono gli occhi che piangono ma il cuore quindi siamo sicuramente molto tristi però ovviamente siamo grandi e grossi dobbiamo far finta di niente quindi sì siamo tristi ma comunque sereni perché torniamo a casa dove ci aspettano tante cose belle grazie sempre",
+            "language": "Italian",
+            "durationSec": 40.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:24.007Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62583,7 +62855,16 @@
           "likes": 32,
           "comments": 7,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "tony grazia siamo nella piazzetta principale che bello a raga un'altra bella cosa prima che me ne vado è che nelle piscine guardate là dietro non so se si vede ci sono due scivoli grandi adesso ve li porto a vedere comunque concordi con me allora io porto la mia esperienza personale penso che sia per quello che abbiamo pagato non parliamo di cucine a 5 stelle però c'è pure da dire che magari nella vacanza una volta puoi mangiare al ristorante la terrazza mi sembra che si chiama così infatti noi stasera abbiamo anche prenotato mangeremo lì quindi se proprio magari non ti piace quello che offre il ristorante principale puoi anche passare in un altro ristorante nel quale ti servono quindi magari anche là è un'opzione in più una prima cena è gratuita sia in terrazza che al mare quindi si può anche fare questo poi c'è l'open bar qua molto molto bello ci sono i negozietti che vendono tutto, la parafarmacia l'open bar qua con i ragazzi molto gentili sempre e guardate che bella chicca sulle piscine, vi faccio vedere scivolo verde e scivolo azzurro c ancora tempo per fare qualcosina ragazzi se ne sta andando gi via qualche amico questo il momento pi brutto comunque sicuramente non li perderemo perch fortunatamente TikTok unisce molti ci seguono già comprese le signore delle polizie qui mandiamo un bacio perché quando passano la camera comincia quando passano loro la camera comincia a brillare profuma di pulito sono sono eccezionali sempre molto gentili salutano sempre quindi anche su questo un voto da 1 a 10 11, 12 sono bravissime anzi quando siamo in camera c'è qualcuno che sta riposando come le mie bimbe che si svegliano tardi loro attendono in tranquillità mettono tutto fuori e al momento giusto intervengono per la polizia raga che dirvi questa è stata la mia esperienza personale vi lascio una bella eredità perché nel momento in cui cercate negli hashtag o nella ricerca Sibari, Sibari Green Resort, vacanza e quant'altro sicuramente usciremo a darvi la nostra esperienza. Detto questo stamattina ci hanno iscritto alla gara di canoa io non so non la so fare però purtroppo non posso mai tirarmi indietro quindi dobbiamo andare a gareggiare di coperti che cosa succede saremo utilizzati sicuramente ma non fa niente dobbiamo partecipare vi faccio vedere dopo un video grazie ragazzi",
+            "language": "Italian",
+            "durationSec": 199.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:29.293Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62597,7 +62878,16 @@
           "likes": 29,
           "comments": 7,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Sara, buonasera, sono le 22.19 e noi siamo appena rientrati a casa perché stasera siamo andati a cena alla terrazza che era l'unica serata che avevamo in settimana da poter sfruttare non al ristorante generico del villaggio. La cena è stata molto bella per alcuni punti di vista però purtroppo sul lato senza glutine e senza lattosio non ci siamo, non ci siamo perché siamo arrivati, abbiamo chiesto ai ragazzi molto gentili se c'era qualcosa per mia moglie, una volta seduti a tavola, dopo vi vedo quel video, vi faccio vedere anche come era bello preparato e quant'altro, quindi eravamo speranzosi perché sull'app avevamo prenotato per una persona senza glutine e lattosio. appena arrivati l abbiamo fatto richiesta e loro non sapevano gi che noi avessimo a tavola una persona che non mangia glutine e lattosio e quindi abbiamo fatto un po di pari e dispari stavamo pensando di andare di nuovo in ristorante e magari l'avessimo fatto, perché ad un certo punto comunque hanno portato giusto, a noi arrivava la pasta, arrivavano altre cose che ti ripeto erano molto buone, però nel frattempo mia moglie è rimasta a guardare per alcune cose, hanno portato un tagliere di salumi e formaggi senza lattosio ovviamente, però si aspettavamo un qualche cosa di differente. Oltretutto ha mangiato della pasta normalissima che poteva trovare anche al ristorante, che era già preparato per quello che mangia lei. Alla fine il risultato è che siamo dovuti rientrare alle 22.21 a casa perché si è sentita poco bene purtroppo, lei soffre di questa intolleranza siamo dovuti rientrare prima perch non si sente molto bene quindi su questo punto di vista ragazzi da migliorare perch i prodotti ci sono ne hanno tanti per vanno attenzionati perch qui parliamo di intolleranza ma c nel villaggio c'è la ghia e chi mangia vegano, queste persone vanno tutelate e attenzionate, quindi su questo qua un punto purtroppo a sfavore. Per il resto il cibo c'è chi ne parla bene, c'è chi ne parla male, è soggettivo, è molto molto soggettivo, però su questo punto, su questo lato ti posso dire che questa sera purtroppo non ci hanno trattati magari proprio bene bene. quindi questa è stata un po' bocciata, è un piccolo neo in tutta questa settimana ma già lo dicevo anche prima per quanto riguarda il senso di l'ultimo lattoso abbiamo dovuto fare delle attenzioni particolari scusatemi se mi dilungo un po' ma ci tengo particolarmente perch pu essere magari una situazione sulla quale loro possono migliorare c da fare un po di strada i prodotti ci sono per va attenzionato molto molto di pi e purtroppo c mia moglie adesso che non messa proprio benissimo però diciamo che speriamo domani si senta meglio così partiamo e andiamo a casa e rientriamo con le nostre routine un altro brevissimo appunto ragazzi e sul dolce è è arrivato a noi e quando abbiamo chiesto un dolce senza glutine per lei ovviamente ha detto no signora mi dispiace per lei, qui non abbiamo nulla e quindi è stata rimandata al ristorante che purtroppo ragazzi erano le 9 e un quarto circa tra lo spettacolo che dovevano fare i bambini e la chiusura del ristorante abbiamo evitato, non è un problema per l'amor di Dio però comunque doveva essere una serata che era dedicata anche magari a un'attenzione a lei quindi speravamo che lei potesse mangiare qualcosa di differente quindi su questo volato ragazzi no, non ci siamo però per il resto è tutto bellissimo",
+            "language": "Italian",
+            "durationSec": 240.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:34.621Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62611,7 +62901,16 @@
           "likes": 28,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e siccome siete stati così tanti io stamattina vi porto nel mio posto preferito siamo arrivati da poco a battivaglia e stamattina vi faccio vedere qual è il mio posto preferito qui nella mia città ragazzi non trovo la versione di voi già lo sa però noi adesso arriviamo e vi faccio vedere il mio posto preferito lo facciamo conoscere un po' anche a voi dalla press ragazzi siete stati così gentili da ospitarci e da farci sentire a casa molti nei commenti sono stati calorosissimi con noi e io adesso vi faccio vedere il mio posto preferitore siete bellissimi eccola qua ragazzi vi faccio vedere solo una parte che spettacolo vi faccio vedere dentro quanto è bello sapete già che cos'è? dimmelo nei commenti Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 88.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:38.877Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62625,7 +62924,16 @@
           "likes": 27,
           "comments": 3,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "questa sera per la serata total white ci sono anche degli stand dedicati ci hanno offerto un bel liquorino poi c'è lo stand dei profumi uno dei prodotti tipici del posto e un altro di liquirizie con la ragazza dello stand che ci ha detto ma tu sei quello di tiktok si sono io quello di tiktok e quindi ti tocca venire nel video ve lo faccio vedere dopo ragazzi nel frattempo dietro di me la serata total white profumatissimi 3, 2, 1 Buonasera In serio, caro amico, io voglio tutte le mani al cielo della gente che si amica Voglio tutte le mani al cielo di coloro che sono al bar",
+            "language": "Italian",
+            "durationSec": 79.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:42.283Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62639,7 +62947,16 @@
           "likes": 25,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Eleonora buongiorno vero sono tutti bellissimi cioè volevo dire bravissimi eh sì allora sono bravissimi sicuramente l'abbiamo detto e ridetto ma non abbiamo detto che sono anche tutti molto belli ragazzi quindi se siete dei pinnagers se siete anche un pochettino più grandi è anche un bel vedere quindi sicuramente anche l'occhio vuole la sua parte ragazzi vi troverete veramente bene anche solo a guardarli detto questo ragazzi questo video sta avendo un enorme riscontro quindi continuate a lasciare un like continuate a ripostarlo non per me ma affinché possa arrivare a più persone in modo tale che possano vedere questa vacanza recensita a 360 gradi possono andare a vedere quali sono le loro preferenze più che altro magari si fanno una panoramica generale di quella che è l'esperienza di quella che è l'esperienza al Sibari Green Resort Blusserina grazie per i vostri commenti non siamo tornati ma vi rispondiamo lo stesso sempre buona giornata",
+            "language": "Italian",
+            "durationSec": 67.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:45.782Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62653,7 +62970,16 @@
           "likes": 25,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "lucia ti sto seguendo grazie di tutto grazie che mi segui grazie se mi seguite tutti quanti noi siamo appena arrivati a casa nostra abbiamo fatto abbiamo sistemato un po di cose mia moglie fortissima si è chiamato quasi tutto lo dato una mano sono un po trastornato anche se piace e breve però tornare qua dalla vacanza non è mai semplice comunque vi faccio vedere la mia situazione di tiktok a distanza tra villaggio e battipaglia nel giro di due ore che cosa è successo quindi adesso mi resta che sistemare il tutto rispondere a tutti quanti vi ringrazio ragazzi è bellissima questa cosa mi avete fatto compagnia spero di avervi portato con me e magari seguitemi anche per il resto perché sicuramente vi farò vedere tante cose belle guardate che cosa è successo al mio TikTok in due ore e in tutto ciò ho già sentito ho già ricevuto due videochiamate da parte dell'amico Nicola ho visto Giovanni sull'autostrada mi sono seguito con Antonio queste sono le cose più belle ragazzi degli amici che ti porti fuori e restano sempre quindi raga non ci resta che viverci adesso il quotidiano con tutte le novità che ci aspettano in questo periodo restate connessi e grazie a voi per essere stati così tanti ne avete riempito il cuore",
+            "language": "Italian",
+            "durationSec": 99.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-10T23:19:50.350Z"
+          }
         }
       ]
     },
