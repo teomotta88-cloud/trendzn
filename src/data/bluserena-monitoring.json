@@ -100513,6 +100513,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:10:42.323Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LONGER\ns, in Tonnes, 1880-2022\nincrementum\nOfficial US Gold Reservas\nHUNGARIANS",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:42:16.359Z"
           }
         }
       ]
