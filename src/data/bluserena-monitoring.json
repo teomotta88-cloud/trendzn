@@ -12746,7 +12746,7 @@
           "comments": 10,
           "shares": 7,
           "imageUrl": null,
-          "sentiment": "positive",
+          "sentiment": "negative",
           "topics": [
             "soddisfazione generale",
             "fedeltà al resort",
@@ -12776,27 +12776,12 @@
             "updatedAt": "2026-09-02T13:40:40.647Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "positive",
-            "topics": [
-              "soddisfazione generale",
-              "fedeltà al resort",
-              "mare",
-              "cibo",
-              "spiaggia",
-              "animali ammessi",
-              "recensioni"
-            ],
-            "location": "Calaserena Resort",
-            "confidence": 0.95,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "negative",
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:02:22.827Z"
+            "updatedAt": "2026-09-10T16:31:33.178Z"
           },
           "engagementData": {
             "status": "ok",
