@@ -93695,6 +93695,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:47.542Z"
+          },
+          "ocrData": {
+            "textOnScreen": "to take your\nfragrance\nto carry your\nfragranc eno matter\nwher hee ded",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:55:20.273Z"
           }
         }
       ]
@@ -102390,6 +102399,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T12:50:49.999Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i Rare Hermès bag with\nZERO purchase/history\nPOV: you were offered\nRare Hermès bag with\n4 ZERO purchase history\nPOV: you'were offereda\nÈ Rare Hermès bag\nHermes bag\nyou were\nRare Hermès bag\nZERO purchase",
+            "confidence": 0.845,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T12:55:27.417Z"
           }
         }
       ]
