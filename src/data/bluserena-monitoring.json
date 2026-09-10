@@ -25413,6 +25413,25 @@
           "comments": 2,
           "shares": 0,
           "verificationStatus": "unconfirmed"
+        },
+        {
+          "platform": "tiktok",
+          "handle": "maraalbergo",
+          "url": "https://www.tiktok.com/@maraalbergo/video/7675653655655140640",
+          "date": "2026-08-19T08:16:21.000Z",
+          "caption": null,
+          "location": null,
+          "views": null,
+          "imageUrl": null,
+          "likes": null,
+          "comments": null,
+          "shares": null,
+          "verificationStatus": "unconfirmed",
+          "manualAdd": {
+            "addedAt": "2026-09-10T13:47:13.290Z",
+            "reason": "mai pescato da nessuna fonte automatica in 13+ giorni di campionamento",
+            "confirmedAt": null
+          }
         }
       ]
     },
