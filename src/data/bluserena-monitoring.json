@@ -48113,6 +48113,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:13.642Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Very good stay newly redone Everything like new\nRooms are a little small but very clean\nStaff VERY nice and helpful.\n,newly redone Everything like new\nHotel hat Lift, Wasserkocher wa nicht vorhanden auch Personal freundiich hatte\nbuche cas Hotel\nHotel hat Lift, Wasserkocher war nicht vorhanden auch kee Personal mar hatte\nkene Engisch ich buche das Hotel wieder\nWada 3 2026 es\nWada 3 2026\nGoogle",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:12:22.789Z"
           }
         }
       ]
@@ -61766,6 +61775,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:18.149Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ne shtator 300€/nata.\nKushithalgeleshtelshtrenjt\nA Ne shtator 300€/nata.\nKushitha ge eshte\nGreen",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:12:32.522Z"
           }
         }
       ]
@@ -76264,6 +76282,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:21.256Z"
+          },
+          "ocrData": {
+            "textOnScreen": "the Grand\nno sargassum\none talks\nthat no\nabout\nToday we found the\nGrand Sirenis\nno one talks\nbeautiful beach at\nthe Grand Sirenis",
+            "confidence": 0.918,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:12:38.799Z"
           }
         },
         {
@@ -76287,6 +76314,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:24.116Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:12:56.798Z"
           }
         }
       ]
@@ -82447,6 +82482,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:44.829Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:13:04.609Z"
           }
         },
         {
@@ -82470,6 +82513,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:47.552Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pina colada by the S\nMe who needs a\nilo needsa\nda beach",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:13:19.347Z"
           }
         }
       ]
@@ -94428,6 +94480,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T15:11:49.936Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T15:13:25.649Z"
           }
         }
       ]
