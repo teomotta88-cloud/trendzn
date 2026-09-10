@@ -40999,6 +40999,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:58:53.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:15:16.690Z"
           }
         },
         {
@@ -41022,6 +41030,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:58:56.563Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:15:34.774Z"
           }
         }
       ]
@@ -46915,6 +46931,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:01.474Z"
+          },
+          "ocrData": {
+            "textOnScreen": "green\nlike\nOliva\nWINEUST\nbeautiful restaurants,",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:15:48.992Z"
           }
         },
         {
@@ -46938,6 +46963,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:04.913Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:15:50.799Z"
           }
         },
         {
@@ -46961,6 +46995,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:07.847Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WHAT'S\nALL-INCLUSIV A\nYOUVE EVER STAY]\ni NOT TALI\nABOUT. RI ATH\nKING A\n[COMPLETELY BLEW YOU AWAY,\nTHE FOOD, THE DRINKS,\nTHE SERVICE, THE ROOMS...\nEVERYTHING.\nWHAT'S THEBEST\nALL-INCLUSIVE HOTEL\nYOU'VE EVER STAYED AT?\nABOUT SOMEWHERE THAT I\nWAS JUST “NICE”\nI'M TALKING ABOUT\nPLACE THAT\nTHE SERVICE,\nEVER STAYED AT? E\nI'M TAEKING\nABOUT SOMEWHERE THAT\nJUST “NICE? [8\nPM TALKING ABOUT\nTHEPLACE LHAT\nCOMPLETELY YOU AWAY,\nFOOD, THE DRIN\nTHE SERVICE, TIEROOMS...\nWHAT'S THE BEST, 4\nALLANCLUSIVE 7\nYOU'VE EVER STAYED\nJUST\nTHE PLACETHAT |B\nTHE DRINKS, ig\nSERVICE, THE ROOMS...\nQA WHAT'S THE BEST WA\nN ALL-INCLUSIVE HOTEL\nAND TALKING\n“NICE”\nTHE PLACE THAT A È\nPLETELY BLEW YOU AWAY,",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:16:06.822Z"
           }
         },
         {
@@ -46984,6 +47027,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:12.007Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CORAL\nCORAL BEACH",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:16:15.720Z"
           }
         },
         {
@@ -47007,6 +47059,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:16.532Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:16:19.210Z"
           }
         },
         {
@@ -47030,6 +47090,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:19.938Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:16:28.039Z"
           }
         },
         {
@@ -47053,6 +47121,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:22.737Z"
+          },
+          "ocrData": {
+            "textOnScreen": "when the sun\nmeets the ocean",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:16:59.178Z"
           }
         },
         {
@@ -47076,6 +47153,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:25.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This is your sign to get the swim out\nals MANI",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:17:19.711Z"
           }
         },
         {
@@ -47099,6 +47185,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:27.997Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Steplinto paradise. Experience\nAmidst tranquil\nresort stands\nè FESS",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:17:29.781Z"
           }
         },
         {
@@ -47122,6 +47217,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:30.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": "liraval\nMiraval Berkshires\nLenox, Massachusetts",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:17:37.601Z"
           }
         },
         {
@@ -47145,6 +47249,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:41.831Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:17:46.951Z"
           }
         },
         {
@@ -47168,6 +47280,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:47.583Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:17:54.471Z"
           }
         },
         {
@@ -47191,6 +47311,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:50.489Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:18:17.119Z"
           }
         },
         {
@@ -47214,6 +47342,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:53.081Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:18:32.250Z"
           }
         }
       ]
@@ -53297,6 +53433,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:56.058Z"
+          },
+          "ocrData": {
+            "textOnScreen": "seren\nLite",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:18:41.022Z"
           }
         },
         {
@@ -53320,6 +53465,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T06:59:59.958Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:18:57.706Z"
           }
         },
         {
@@ -53343,6 +53496,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:04.227Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JONA i",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:19:09.612Z"
           }
         },
         {
@@ -53366,6 +53528,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:07.060Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL 11/09/2026\ni SERENA HOTEL 11/09/2026",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:19:20.248Z"
           }
         },
         {
@@ -53389,6 +53560,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:11.435Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:19:25.676Z"
           }
         },
         {
@@ -53412,6 +53591,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:14.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lilian\nLive at Serena Hotel\nI Lillian\nLillian",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:19:37.856Z"
           }
         },
         {
@@ -53435,6 +53623,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:17.507Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lillian\nLive at Serena Hotel sa\nMiMu fl.\nNASR\nMiMu\nUPDATES r",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:19:44.934Z"
           }
         },
         {
@@ -53458,6 +53655,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:24.736Z"
+          },
+          "ocrData": {
+            "textOnScreen": "All suites en\ngery 1\nsuitesien\ngery",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:19:54.363Z"
           }
         },
         {
@@ -53481,6 +53687,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:00:28.160Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ready for ma Queen\nforma queen",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:20:11.759Z"
           }
         },
         {
