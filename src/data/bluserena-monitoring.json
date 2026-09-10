@@ -25434,6 +25434,15 @@
             "reason": "ffmpeg exit 234",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:36.453Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANDROMEDA\nSERENUSA RESORT\n12-16 AGOSTO 2026\nDA €1.900 PER 2 PERSONE\nTORRESERENA RESORT\nPUGLIA\nDA 2.200 PER 2 PERSONE\nETHRA RESERVE\nVALENTINO RESORT\nDA 2.175 PER 2 PERSONE\nSERENAS\nBADESI RESORT\nSARDEGNA\nDA 2.250 PER 2 PERSONE\nFERRAGOSTO BLUSERENA\n4 NOTTI\n6 RESORT TRA SICILIA, CALABRIA,\nPUGLIA E SARDEGNA\nDA 1.590 PER 2 PERSONE\nINFORMAZIONI E PRENOTAZIONI\nVIA SARDEGNA, 72/74 PALERMO",
+            "confidence": 0.895,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:28:46.949Z"
           }
         },
         {
@@ -25457,6 +25466,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:19:05.009Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:24:27.731Z"
           }
         },
         {
@@ -25480,6 +25497,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:48.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 ADESSO CI\nNUOVI ARRIVI;\nDETTO QUESTO,\ny TUTTI QUANTI\nSONO STATO\n1 BAGNINI",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:26.101Z"
           }
         },
         {
@@ -25503,6 +25529,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:55.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di mattia\nlimoncello\namico mio mi fai\nvedere come\norganizzata la cena\nnel video di stasera\nlimoncello N\nvedere come i\nVEDIAMO,CHE\nDA MANGIARE.\nÈ amico mio mi fai\ni organizzata la cena\npondi al commento di mattia\nPIATTO DI QUALCOSA.",
+            "confidence": 0.89,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:39.431Z"
           }
         },
         {
@@ -25526,6 +25561,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:17.401Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento d\nBuonasera ragazzi (3 il\nmini club come\nfunziona? vostri bimbi\nsi stanno divertendo?\nCome funziona? Cosa\nfanno? e\nVOSTRI\nBIMBI SI\nRispondi al commento di\nValenta\nBuonasera ragazzi il\nfanno?\nmini club come i\nfanno? p\nPURTROPPO\nQ Buonasera ragazzi il A\nfanno? ff\nANCHE SE\nDELLE. EH\nValenta p\nBuonasera ragazzi Ga il\nfunziona? vostri bimbi pe\nsi stanno divertendo? A\nE DAGLI\nAMICHETTI DALLE FAMIGLIE.",
+            "confidence": 0.884,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:01.109Z"
           }
         },
         {
@@ -25549,6 +25593,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:23.340Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di mattia\nlimoncello 7\ncome fai a fare\nquesti video non ti\nviene da piangere\nTORNATO A\nRispondi al con to di mattia\nSAREMMO PERSI.\nlimoncello\nCUORE. i\nRispondi al commento di mattia 7\nNW come fai a fare\nE GROSSI\nDOBBIAMO FAR FINTA",
+            "confidence": 0.89,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:13.420Z"
           }
         },
         {
@@ -25572,6 +25625,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:34.588Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Tony\nConcordo con te\ntante cose buone\nSTELLE, PERÒ.\ngrazia\nQUA, MOLTO\nMOLTO BELLO,\nQUALCHE AMICO EH i\nVACANZA E",
+            "confidence": 0.848,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:25.554Z"
           }
         },
         {
@@ -25595,6 +25657,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:39.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di sara\nCiao scusami se chiedo\nma quest'anno come ti\nsei trovato con il cibo\nDevo andare al sibari\nlunedì per sapere grazie\nse risponderai\nRispondi al commento di ra\nA GUARDARE\nQUINDI QUESTA",
+            "confidence": 0.935,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:30.878Z"
           }
         },
         {
@@ -25618,6 +25689,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:42.358Z"
+          },
+          "ocrData": {
+            "textOnScreen": "he VI FACCIO i",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:37.628Z"
           }
         },
         {
@@ -25641,6 +25721,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:45.430Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Con questa meravigliosa\naccoglienza come fare a non\nsentirti a\nsono fiero che vi siete\nsentiti a vostro agio nei\nnostri villaggi Sibari\nalmeno qualcuno parla\nbene della nostra sibari\nLO STAN\nDI TIKTOK\nsentiti a vostro agio\nsentirti a casa™\nsentiti a vostro agio nei A\nnostri villaggi Sibari h",
+            "confidence": 0.876,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:50.608Z"
           }
         },
         {
@@ -25664,6 +25753,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:48.949Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\neleonora\nvero sono tutti\nbellissimi, cioè\nvolevo dire\nbravissimi\nSONO\nANCHE TUTTI MOLTO\nbravissimi di\nPARTE RAGAZZI\nbellissimi, cioè x\nLASCIARE UN\nLIKE,\nbellissimi, cioè ù\nbravissimi o\nEHM RECENSITA\nDI QUELLA\nCHE È L'ESPERIENZA",
+            "confidence": 0.879,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:57.986Z"
           }
         },
         {
@@ -25687,6 +25785,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:52.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Lucia\nDI COSE,\nMIA MOGLIE\nMeglio\nE Si ti sto seguendo\ni grazie di tutto\nsill}\ni COMUNQUE VI\nFACCIO VEDERE\nsi ti sto seguendo\ndi tutto\nFATTO COMPAGNIA,\nRESTANO SEMPRE.",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:26:06.729Z"
           }
         }
       ]
@@ -37790,6 +37897,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:01.712Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MeChicken:",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:26:20.331Z"
           }
         }
       ]
@@ -41954,6 +42070,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:07.458Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:26:25.371Z"
           }
         },
         {
@@ -41977,6 +42101,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:11.817Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:26:53.428Z"
           }
         },
         {
@@ -42000,6 +42132,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:15.740Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lots af",
+            "confidence": 0.736,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:27:05.040Z"
           }
         }
       ]
@@ -48494,6 +48635,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:19.430Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:27:14.251Z"
           }
         },
         {
@@ -48517,6 +48666,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:25.398Z"
+          },
+          "ocrData": {
+            "textOnScreen": "x Pri vate Ja UZ? (In: of. x\nown hot Sprii\nF esta Cafe Sabroso Resto\nskip food;\nspo at food,\nthe view?\nCosta Trop!\nA Time to let your inne id out\ngrown-ups deserve water slide,",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:27:30.330Z"
           }
         },
         {
@@ -48540,6 +48698,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:28.462Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YopHoropia",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:28:01.029Z"
           }
         }
       ]
@@ -55270,6 +55437,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:31.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:28:05.984Z"
           }
         }
       ]
@@ -62549,6 +62724,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:34.729Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CASS\nASIA",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:28:35.001Z"
           }
         },
         {
@@ -62573,6 +62757,15 @@
             "reason": "ffmpeg exit 234",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:36.453Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANDROMEDA\nSERENUSA RESORT\n12-16 AGOSTO 2026\nDA €1.900 PER 2 PERSONE\nTORRESERENA RESORT\nPUGLIA\nDA 2.200 PER 2 PERSONE\nETHRA RESERVE\nVALENTINO RESORT\nDA 2.175 PER 2 PERSONE\nSERENAS\nBADESI RESORT\nSARDEGNA\nDA 2.250 PER 2 PERSONE\nFERRAGOSTO BLUSERENA\n4 NOTTI\n6 RESORT TRA SICILIA, CALABRIA,\nPUGLIA E SARDEGNA\nDA 1.590 PER 2 PERSONE\nINFORMAZIONI E PRENOTAZIONI\nVIA SARDEGNA, 72/74 PALERMO",
+            "confidence": 0.895,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:28:46.949Z"
           }
         },
         {
@@ -62596,6 +62789,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:38.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": "datSibari",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:28:54.868Z"
           }
         },
         {
@@ -62619,6 +62821,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:41.992Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ana Al clus\nThis montana All\n37,000 Acres of Pure\nriding hiking\n37,000 s of Pure Advent re lì\nday,drinks\nis-Montan\nj of Pure Adven\nluxury adventurejca",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:11.380Z"
           }
         },
         {
@@ -62642,6 +62853,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:48.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 ADESSO CI\nNUOVI ARRIVI;\nDETTO QUESTO,\ny TUTTI QUANTI\nSONO STATO\n1 BAGNINI",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:26.101Z"
           }
         },
         {
@@ -62665,6 +62885,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:50.536Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POOLSUITES\nA SYBARIS POOL SUITES i\nSYBARIS POOL SUITES",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:32.862Z"
           }
         },
         {
@@ -62688,6 +62917,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:20:55.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di mattia\nlimoncello\namico mio mi fai\nvedere come\norganizzata la cena\nnel video di stasera\nlimoncello N\nvedere come i\nVEDIAMO,CHE\nDA MANGIARE.\nÈ amico mio mi fai\ni organizzata la cena\npondi al commento di mattia\nPIATTO DI QUALCOSA.",
+            "confidence": 0.89,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:39.431Z"
           }
         },
         {
@@ -62711,6 +62949,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:00.693Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TENZIO MAGGIORE",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:29:49.373Z"
           }
         },
         {
@@ -62794,6 +63041,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:17.401Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento d\nBuonasera ragazzi (3 il\nmini club come\nfunziona? vostri bimbi\nsi stanno divertendo?\nCome funziona? Cosa\nfanno? e\nVOSTRI\nBIMBI SI\nRispondi al commento di\nValenta\nBuonasera ragazzi il\nfanno?\nmini club come i\nfanno? p\nPURTROPPO\nQ Buonasera ragazzi il A\nfanno? ff\nANCHE SE\nDELLE. EH\nValenta p\nBuonasera ragazzi Ga il\nfunziona? vostri bimbi pe\nsi stanno divertendo? A\nE DAGLI\nAMICHETTI DALLE FAMIGLIE.",
+            "confidence": 0.884,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:01.109Z"
           }
         },
         {
@@ -62840,6 +63096,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:23.340Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di mattia\nlimoncello 7\ncome fai a fare\nquesti video non ti\nviene da piangere\nTORNATO A\nRispondi al con to di mattia\nSAREMMO PERSI.\nlimoncello\nCUORE. i\nRispondi al commento di mattia 7\nNW come fai a fare\nE GROSSI\nDOBBIAMO FAR FINTA",
+            "confidence": 0.89,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:13.420Z"
           }
         },
         {
@@ -62909,6 +63174,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:34.588Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Tony\nConcordo con te\ntante cose buone\nSTELLE, PERÒ.\ngrazia\nQUA, MOLTO\nMOLTO BELLO,\nQUALCHE AMICO EH i\nVACANZA E",
+            "confidence": 0.848,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:25.554Z"
           }
         },
         {
@@ -62932,6 +63206,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:39.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di sara\nCiao scusami se chiedo\nma quest'anno come ti\nsei trovato con il cibo\nDevo andare al sibari\nlunedì per sapere grazie\nse risponderai\nRispondi al commento di ra\nA GUARDARE\nQUINDI QUESTA",
+            "confidence": 0.935,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:30.878Z"
           }
         },
         {
@@ -62955,6 +63238,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:42.358Z"
+          },
+          "ocrData": {
+            "textOnScreen": "he VI FACCIO i",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:37.628Z"
           }
         },
         {
@@ -62978,6 +63270,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:45.430Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Con questa meravigliosa\naccoglienza come fare a non\nsentirti a\nsono fiero che vi siete\nsentiti a vostro agio nei\nnostri villaggi Sibari\nalmeno qualcuno parla\nbene della nostra sibari\nLO STAN\nDI TIKTOK\nsentiti a vostro agio\nsentirti a casa™\nsentiti a vostro agio nei A\nnostri villaggi Sibari h",
+            "confidence": 0.876,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:50.608Z"
           }
         },
         {
@@ -63001,6 +63302,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:48.949Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\neleonora\nvero sono tutti\nbellissimi, cioè\nvolevo dire\nbravissimi\nSONO\nANCHE TUTTI MOLTO\nbravissimi di\nPARTE RAGAZZI\nbellissimi, cioè x\nLASCIARE UN\nLIKE,\nbellissimi, cioè ù\nbravissimi o\nEHM RECENSITA\nDI QUELLA\nCHE È L'ESPERIENZA",
+            "confidence": 0.879,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:25:57.986Z"
           }
         },
         {
@@ -63024,6 +63334,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:21:52.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di Lucia\nDI COSE,\nMIA MOGLIE\nMeglio\nE Si ti sto seguendo\ni grazie di tutto\nsill}\ni COMUNQUE VI\nFACCIO VEDERE\nsi ti sto seguendo\ndi tutto\nFATTO COMPAGNIA,\nRESTANO SEMPRE.",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:26:06.729Z"
           }
         }
       ]
