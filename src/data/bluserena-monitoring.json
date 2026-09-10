@@ -60617,6 +60617,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:30.476Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:25:44.317Z"
           }
         },
         {
@@ -60640,6 +60648,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:32.896Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7661615456779783457: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:25:45.693Z"
           }
         }
       ]
@@ -66661,6 +66678,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:35.427Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:26:09.436Z"
           }
         },
         {
@@ -66684,6 +66709,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:38.307Z"
+          },
+          "ocrData": {
+            "textOnScreen": "highly\nang click the tag)\nto make a\nCR VideoMate v1.9.3.1: 2026-08-21 18:16:31\nBelo to make",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:26:25.093Z"
           }
         },
         {
@@ -66707,6 +66741,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:41.067Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:26:32.068Z"
           }
         },
         {
@@ -66730,6 +66772,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:44.534Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:26:56.353Z"
           }
         },
         {
@@ -66753,6 +66803,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:48.965Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nell)",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:27:25.700Z"
           }
         },
         {
@@ -66776,6 +66835,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:51.910Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:27:39.839Z"
           }
         },
         {
@@ -66799,6 +66866,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:02:54.604Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NONNA\nla CHAIYAPHUM",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:27:45.792Z"
           }
         },
         {
@@ -66822,6 +66898,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:01.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:27:54.231Z"
           }
         },
         {
@@ -66845,6 +66929,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:03.962Z"
+          },
+          "ocrData": {
+            "textOnScreen": "staying 5 mins off strip\nwhere rooms are\nunder $50>>>\ni where\ndedi\nunder",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:28:07.663Z"
           }
         },
         {
@@ -66868,6 +66961,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:06.727Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SANI",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:28:39.292Z"
           }
         },
         {
@@ -66891,6 +66993,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:18.261Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:28:40.892Z"
           }
         },
         {
@@ -66914,6 +67025,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:21.202Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Golden Palm ar Bohol.\nPal Rise",
+            "confidence": 0.736,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:28:50.051Z"
           }
         }
       ]
@@ -73688,6 +73808,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:25.438Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 sano,",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:06.780Z"
           }
         },
         {
@@ -73711,6 +73840,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:28.627Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:11.809Z"
           }
         },
         {
@@ -73734,6 +73871,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:31.231Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:20.407Z"
           }
         },
         {
@@ -73757,6 +73902,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:35.277Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:25.293Z"
           }
         },
         {
@@ -73780,6 +73933,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:38.802Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7666433506293206294: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:26.601Z"
           }
         },
         {
@@ -73803,6 +73965,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:41.878Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:29.152Z"
           }
         },
         {
@@ -73826,6 +73997,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:46.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:36.499Z"
           }
         },
         {
@@ -73849,6 +74028,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:56.508Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: unable to download video data: HTTP Error 403: Forbidden",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:38.281Z"
           }
         },
         {
@@ -73872,6 +74060,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:03:59.671Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MISS\nTOURISM\nUGANDA 1\nUGANDA\nMISS i",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:52.368Z"
           }
         },
         {
@@ -73895,6 +74092,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:06.340Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1DayTo Go Friday Don't Miss Strong\nWoman Live In Concert At Kampala Serena\nHotel\nWoman Live In Kampala Serena",
+            "confidence": 0.869,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:29:59.442Z"
           }
         },
         {
@@ -73918,6 +74124,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T07:04:09.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LIVI\n“THE POWER\nIHE POWE",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T07:30:07.237Z"
           }
         },
         {
