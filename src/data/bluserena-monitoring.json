@@ -25418,7 +25418,7 @@
           "url": "https://www.tiktok.com/@andromedatravel/video/7662747232105434401",
           "date": "2026-07-15T13:32:50.000Z",
           "caption": "Ferragosto nei Resort Bluserena ☀️ 📅 12–16 agosto 2026 🌙 4 notti 👫 Prezzi totali per 2 persone 6 resort tra Sicilia, Calabria, Puglia e Sardegna, da € 1.590 per 2 persone in Soft All Inclusive. Scorri il reel per vedere tutte le strutture e i prezzi. 📲 WhatsApp 393 918 7523 #Ferragosto #Bluserena #Vacanze2026 #Resort #AndromedaTravel",
-          "location": null,
+          "location": "Bluserena",
           "views": 6374,
           "imageUrl": null,
           "likes": 24,
@@ -25443,7 +25443,33 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:28:46.949Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "prezzi",
+              "ferragosto",
+              "prenotazioni",
+              "soft all inclusive"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:27.691Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "prezzi",
+            "ferragosto",
+            "prenotazioni",
+            "soft all inclusive"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25451,7 +25477,7 @@
           "url": "https://www.tiktok.com/@alessiaaariccii/video/7671279006158703905",
           "date": "2026-08-07T13:20:28.000Z",
           "caption": "Ma per caso qualcuno ha detto Holi color?🌈🥳 #animazione #villaggio #emozioni #party #holi @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 2376,
           "imageUrl": null,
           "likes": 65,
@@ -25474,7 +25500,37 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T23:24:27.731Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "villaggio",
+              "emozioni",
+              "party",
+              "holi",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.93,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:08.485Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "villaggio",
+            "emozioni",
+            "party",
+            "holi",
+            "musica"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25482,7 +25538,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666770501653581089",
           "date": "2026-07-26T09:45:10.000Z",
           "caption": "Scusatemi se mi sono un pô dilungato... ma ci voleva... ⏳il tempo stringe, ed è il momento di ringraziare tutti coloro che hanno contribuito a rendere speciale la nostra vacanza... Abbiamo dimenticato per un attimo Lo stress, i problemi, le ansie e ci siamo dedicati a noi anche per soli 7 Giorni! Grazie Grazie Grazie siete stati tutti Meravigliosi dal primo all ultimo, porterô a casa con me fino al prossimo anno tutti i vostri sorrisi e la vostra Energia! Ora vi basterà scrivere SIBARI  e troverete tutta la nostra Esperienza🥰❤️ Con questo \"Arrivederci\" vi lascio la promessa di tornare in un posto che mi ha accolto come fossi un principe \"TI AMO SIBARI\" GRAZIE #GRAZIESIBARI #sibarigrennresort #bluserena #calabria🌶️ #virale",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 5068,
           "imageUrl": null,
           "likes": 96,
@@ -25506,7 +25562,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:29:26.101Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "bambini",
+              "famiglia",
+              "attività",
+              "relax"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:28.845Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "bambini",
+            "famiglia",
+            "attività",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25514,7 +25599,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666229952324422945",
           "date": "2026-07-24T22:47:34.000Z",
           "caption": "Risposta a @mattia limoncello eccoti accontentato😍😎😵‍💫 #Seratatotalwhite #bluserena #sibarigreenresort #virale #trend",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 9160,
           "imageUrl": null,
           "likes": 68,
@@ -25538,7 +25623,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:29:39.431Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "cena",
+              "buffet"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:29.468Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "cena",
+            "buffet"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25546,7 +25656,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666403939025227041",
           "date": "2026-07-25T10:02:43.000Z",
           "caption": "Risposta a @Valenta💕 Vedi l effetto di questi 7 giorni😓 #sibarigreenresort #virale #bluserena #paratiiiiii #calabria🌶️",
-          "location": null,
+          "location": "Bluserena",
           "views": 1844,
           "imageUrl": null,
           "likes": 43,
@@ -25570,7 +25680,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:28.049Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:33.444Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25578,7 +25713,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666785785697324320",
           "date": "2026-07-26T10:44:29.000Z",
           "caption": "Risposta a @mattia limoncello ❤️❤️❤️🥹 Il commento più Delicato🥰 #sibarigreenresort #GRAZIESIBARI #bluserena #calabria🌶️ #virale",
-          "location": null,
+          "location": "Bluserena",
           "views": 2495,
           "imageUrl": null,
           "likes": 37,
@@ -25602,7 +25737,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:55.742Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:35.142Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25610,7 +25770,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666376066860174624",
           "date": "2026-07-25T08:14:34.000Z",
           "caption": "Risposta a @Tony grazia #sibarigreenresort #garacanoa#virale #bluserena #paratiiiiii",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1684,
           "imageUrl": null,
           "likes": 32,
@@ -25634,7 +25794,38 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:20.523Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "piscine",
+              "scivoli",
+              "ristorazione",
+              "open bar",
+              "personale",
+              "pulizia"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:39.072Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "piscine",
+            "scivoli",
+            "ristorazione",
+            "open bar",
+            "personale",
+            "pulizia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25642,7 +25833,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666572413630500128",
           "date": "2026-07-25T20:56:29.000Z",
           "caption": "Risposta a @sara Piccolo appunto di serata sicuramente da migliorare #sibarigreenresort #bluserena #paratiiiiii #calabria🌶️ #virale",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 3219,
           "imageUrl": null,
           "likes": 29,
@@ -25666,7 +25857,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:25.917Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "cibo",
+              "dieta senza glutine",
+              "dieta senza lattosio",
+              "servizio"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:39.819Z"
+          },
+          "sentiment": "negative",
+          "topics": [
+            "cibo",
+            "dieta senza glutine",
+            "dieta senza lattosio",
+            "servizio"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25674,7 +25892,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667179518628465952",
           "date": "2026-07-27T12:12:22.000Z",
           "caption": "Mi avete ospitato a casa vostra... Vi faccio conoscere la mia 🦍 il@Vostro cibo è stato Sublime ma ora è tempo di tornare a \"Regime\" #comeback #sibarigreenresort #bluserena #palestra #netfit@bluserena @NETFIT tappa obbligatoria se passate per Battipaglia",
-          "location": null,
+          "location": "Bluserena",
           "views": 2336,
           "imageUrl": null,
           "likes": 28,
@@ -25698,7 +25916,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:32.673Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "ospitalità",
+              "fitness",
+              "ritorno"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:40.702Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "ospitalità",
+            "fitness",
+            "ritorno"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25706,7 +25951,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666234370805517601",
           "date": "2026-07-24T23:04:42.000Z",
           "caption": "Risposta a @mauriziodeflaminio76 #Seratatotalwhite #sibarigreenresort #trend #virale #bluserena",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2953,
           "imageUrl": null,
           "likes": 27,
@@ -25730,7 +25975,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:46.161Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "cibo",
+              "bevande",
+              "evento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:41.750Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "cibo",
+            "bevande",
+            "evento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25738,7 +26010,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667128711610699041",
           "date": "2026-07-27T08:55:12.000Z",
           "caption": "Risposta a @eleonora Continuate a spingere questo video ragazzi❤️ e far conoscere quest angolo di paradiso a chi non c è mai stato #sibarigreenresort #bluserena @bluserena #vacanza2k26 #calabria🌶️ #paratiiiiiiiiiii",
-          "location": null,
+          "location": "Bluserena",
           "views": 1474,
           "imageUrl": null,
           "likes": 25,
@@ -25762,7 +26034,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:53.650Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:42.619Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25770,7 +26067,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666876029805284641",
           "date": "2026-07-26T16:34:40.000Z",
           "caption": "Risposta a @Lucia Meglio Sono Davvero Senza Parole Ragazzi... Oltre la vacanza, peccato non sia riuscito a Salutare tutti ma non era facile😅 ma rimarrete la mia Vacanza🥰 #sibarigreenresort #GRAZIESIBARI #bluserena #calabria🌶️ #paratiii",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1902,
           "imageUrl": null,
           "likes": 25,
@@ -25794,7 +26091,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:32:02.116Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "comunità",
+              "social media",
+              "ritorno a casa"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:43.176Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "comunità",
+            "social media",
+            "ritorno a casa"
+          ]
         }
       ]
     },
@@ -62741,7 +63065,7 @@
           "url": "https://www.tiktok.com/@andromedatravel/video/7662747232105434401",
           "date": "2026-07-15T13:32:50.000Z",
           "caption": "Ferragosto nei Resort Bluserena ☀️ 📅 12–16 agosto 2026 🌙 4 notti 👫 Prezzi totali per 2 persone 6 resort tra Sicilia, Calabria, Puglia e Sardegna, da € 1.590 per 2 persone in Soft All Inclusive. Scorri il reel per vedere tutte le strutture e i prezzi. 📲 WhatsApp 393 918 7523 #Ferragosto #Bluserena #Vacanze2026 #Resort #AndromedaTravel",
-          "location": null,
+          "location": "Bluserena",
           "views": 6374,
           "imageUrl": null,
           "likes": 24,
@@ -62766,7 +63090,33 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:28:46.949Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "prezzi",
+              "ferragosto",
+              "prenotazioni",
+              "soft all inclusive"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:27.691Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "prezzi",
+            "ferragosto",
+            "prenotazioni",
+            "soft all inclusive"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62838,7 +63188,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666770501653581089",
           "date": "2026-07-26T09:45:10.000Z",
           "caption": "Scusatemi se mi sono un pô dilungato... ma ci voleva... ⏳il tempo stringe, ed è il momento di ringraziare tutti coloro che hanno contribuito a rendere speciale la nostra vacanza... Abbiamo dimenticato per un attimo Lo stress, i problemi, le ansie e ci siamo dedicati a noi anche per soli 7 Giorni! Grazie Grazie Grazie siete stati tutti Meravigliosi dal primo all ultimo, porterô a casa con me fino al prossimo anno tutti i vostri sorrisi e la vostra Energia! Ora vi basterà scrivere SIBARI  e troverete tutta la nostra Esperienza🥰❤️ Con questo \"Arrivederci\" vi lascio la promessa di tornare in un posto che mi ha accolto come fossi un principe \"TI AMO SIBARI\" GRAZIE #GRAZIESIBARI #sibarigrennresort #bluserena #calabria🌶️ #virale",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 5068,
           "imageUrl": null,
           "likes": 96,
@@ -62862,7 +63212,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:29:26.101Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "bambini",
+              "famiglia",
+              "attività",
+              "relax"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.96,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:28.845Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "bambini",
+            "famiglia",
+            "attività",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62902,7 +63281,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666229952324422945",
           "date": "2026-07-24T22:47:34.000Z",
           "caption": "Risposta a @mattia limoncello eccoti accontentato😍😎😵‍💫 #Seratatotalwhite #bluserena #sibarigreenresort #virale #trend",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 9160,
           "imageUrl": null,
           "likes": 68,
@@ -62926,7 +63305,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:29:39.431Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "cena",
+              "buffet"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:29.468Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "cena",
+            "buffet"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62934,7 +63338,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7665257747637669152",
           "date": "2026-07-22T07:54:55.000Z",
           "caption": "Siamo al giorno #4 al #SibariGreenResort Oggi vi mostriamo la sala per la Colazione #VIRALISSIMO #paratiiiiii #DIVERTIMENTO",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 7071,
           "imageUrl": null,
           "likes": 68,
@@ -62958,7 +63362,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:29:49.373Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "colazione",
+              "ristorante",
+              "accessibilità"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:29.953Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "colazione",
+            "ristorante",
+            "accessibilità"
+          ]
         },
         {
           "platform": "tiktok",
@@ -62966,7 +63397,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7665427954108845344",
           "date": "2026-07-22T18:55:24.000Z",
           "caption": "Fit Check giorno #4 #vacanza2k26 #sibarigreenresort #paratiiiii #virale Pronti Per la serata Calabrese@Sabrina",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 4364,
           "imageUrl": null,
           "likes": 58,
@@ -62990,7 +63421,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:00.510Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:30.651Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63012,7 +63468,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666035827255921952",
           "date": "2026-07-24T10:14:15.000Z",
           "caption": "Risposta a @Antonio Iennaco E se Piove cosa si Fa?? BALDORIA #follia #sibarigreenresort #vacanza2k26 #virale #paratiiiiii @nicolagarofalo27",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 4231,
           "imageUrl": null,
           "likes": 49,
@@ -63036,7 +63492,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:15.307Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "atmosfera",
+              "vacanza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:32.890Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "atmosfera",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63044,7 +63527,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666403939025227041",
           "date": "2026-07-25T10:02:43.000Z",
           "caption": "Risposta a @Valenta💕 Vedi l effetto di questi 7 giorni😓 #sibarigreenresort #virale #bluserena #paratiiiiii #calabria🌶️",
-          "location": null,
+          "location": "Bluserena",
           "views": 1844,
           "imageUrl": null,
           "likes": 43,
@@ -63068,7 +63551,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:28.049Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:33.444Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63076,7 +63584,7 @@
           "url": "https://www.tiktok.com/@williamdarcangelo/video/7668025132169841952",
           "date": "2026-07-29T18:53:47.000Z",
           "caption": "#sibarigreenresort #nei #perte #holidays",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 4586,
           "imageUrl": null,
           "likes": 42,
@@ -63100,7 +63608,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:43.681Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "bambini",
+              "attività"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.78,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:34.492Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "bambini",
+            "attività"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63108,7 +63641,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666785785697324320",
           "date": "2026-07-26T10:44:29.000Z",
           "caption": "Risposta a @mattia limoncello ❤️❤️❤️🥹 Il commento più Delicato🥰 #sibarigreenresort #GRAZIESIBARI #bluserena #calabria🌶️ #virale",
-          "location": null,
+          "location": "Bluserena",
           "views": 2495,
           "imageUrl": null,
           "likes": 37,
@@ -63132,7 +63665,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:30:55.742Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:35.142Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63140,7 +63698,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666148601482972448",
           "date": "2026-07-24T17:31:53.000Z",
           "caption": "Risposta a @Enzo86 ecco a voi le stanze ... Noi abbiamo scelto balconcino... Ma per eventuali disagi o disabilità i garden sono comodossimi Le casette sono #paradisiache #calabria🌶️ #paratiiiiii #sibarigreenresort #checkstanze",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 4957,
           "imageUrl": null,
           "likes": 34,
@@ -63164,7 +63722,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:03.018Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:35.672Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63172,7 +63755,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7665114239513693473",
           "date": "2026-07-21T22:38:02.000Z",
           "caption": "Se siete prossimi Ospiti del #SibariGreenResort non dimenticherete il suo nome ve lo Assicuro, cominciate a tenerlo a mente, un Vulcano di Energia e Simpatia, gia dal primo BUONGIORNO #STAFF #PARATIIIIIIIII #DIVERTIMENTO #VIRALISSIMO",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2623,
           "imageUrl": null,
           "likes": 33,
@@ -63195,7 +63778,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:08.235Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "staff",
+              "divertimento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:38.643Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "staff",
+            "divertimento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63203,7 +63810,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666376066860174624",
           "date": "2026-07-25T08:14:34.000Z",
           "caption": "Risposta a @Tony grazia #sibarigreenresort #garacanoa#virale #bluserena #paratiiiiii",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1684,
           "imageUrl": null,
           "likes": 32,
@@ -63227,7 +63834,38 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:20.523Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "piscine",
+              "scivoli",
+              "ristorazione",
+              "open bar",
+              "personale",
+              "pulizia"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:39.072Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "piscine",
+            "scivoli",
+            "ristorazione",
+            "open bar",
+            "personale",
+            "pulizia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63235,7 +63873,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666572413630500128",
           "date": "2026-07-25T20:56:29.000Z",
           "caption": "Risposta a @sara Piccolo appunto di serata sicuramente da migliorare #sibarigreenresort #bluserena #paratiiiiii #calabria🌶️ #virale",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 3219,
           "imageUrl": null,
           "likes": 29,
@@ -63259,7 +63897,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:25.917Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "cibo",
+              "dieta senza glutine",
+              "dieta senza lattosio",
+              "servizio"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:39.819Z"
+          },
+          "sentiment": "negative",
+          "topics": [
+            "cibo",
+            "dieta senza glutine",
+            "dieta senza lattosio",
+            "servizio"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63267,7 +63932,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667179518628465952",
           "date": "2026-07-27T12:12:22.000Z",
           "caption": "Mi avete ospitato a casa vostra... Vi faccio conoscere la mia 🦍 il@Vostro cibo è stato Sublime ma ora è tempo di tornare a \"Regime\" #comeback #sibarigreenresort #bluserena #palestra #netfit@bluserena @NETFIT tappa obbligatoria se passate per Battipaglia",
-          "location": null,
+          "location": "Bluserena",
           "views": 2336,
           "imageUrl": null,
           "likes": 28,
@@ -63291,7 +63956,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:32.673Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "ospitalità",
+              "fitness",
+              "ritorno"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:40.702Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "ospitalità",
+            "fitness",
+            "ritorno"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63299,7 +63991,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666234370805517601",
           "date": "2026-07-24T23:04:42.000Z",
           "caption": "Risposta a @mauriziodeflaminio76 #Seratatotalwhite #sibarigreenresort #trend #virale #bluserena",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2953,
           "imageUrl": null,
           "likes": 27,
@@ -63323,7 +64015,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:46.161Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "cibo",
+              "bevande",
+              "evento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:41.750Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "cibo",
+            "bevande",
+            "evento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63331,7 +64050,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667128711610699041",
           "date": "2026-07-27T08:55:12.000Z",
           "caption": "Risposta a @eleonora Continuate a spingere questo video ragazzi❤️ e far conoscere quest angolo di paradiso a chi non c è mai stato #sibarigreenresort #bluserena @bluserena #vacanza2k26 #calabria🌶️ #paratiiiiiiiiiii",
-          "location": null,
+          "location": "Bluserena",
           "views": 1474,
           "imageUrl": null,
           "likes": 25,
@@ -63355,7 +64074,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:31:53.650Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:42.619Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -63363,7 +64107,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666876029805284641",
           "date": "2026-07-26T16:34:40.000Z",
           "caption": "Risposta a @Lucia Meglio Sono Davvero Senza Parole Ragazzi... Oltre la vacanza, peccato non sia riuscito a Salutare tutti ma non era facile😅 ma rimarrete la mia Vacanza🥰 #sibarigreenresort #GRAZIESIBARI #bluserena #calabria🌶️ #paratiii",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1902,
           "imageUrl": null,
           "likes": 25,
@@ -63387,7 +64131,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T23:32:02.116Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "comunità",
+              "social media",
+              "ritorno a casa"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T23:38:43.176Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "comunità",
+            "social media",
+            "ritorno a casa"
+          ]
         }
       ]
     },
