@@ -25434,16 +25434,14 @@
             "updatedAt": "2026-09-10T13:58:21.322Z"
           },
           "sentimentData": {
-            "status": "no_text",
-            "sentiment": null,
-            "topics": [],
-            "location": null,
-            "confidence": 0,
-            "sources": [],
-            "version": 1,
-            "updatedAt": "2026-09-10T14:03:11.320Z"
+            "status": "manual",
+            "sentiment": "negative",
+            "sources": [
+              "manuale"
+            ],
+            "updatedAt": "2026-09-10T15:55:03.000Z"
           },
-          "sentiment": null
+          "sentiment": "negative"
         }
       ]
     },
