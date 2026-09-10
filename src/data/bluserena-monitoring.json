@@ -14596,7 +14596,7 @@
           "comments": 36,
           "shares": 20,
           "imageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast2a-p-0037-euttp/oQxPKLJIIQEIg2ECsSeRIA7AjAetVGMHGAeHF6~tplv-tiktokx-origin.image?dr=9636&x-expires=1788433200&x-signature=E3w7LE3p6XHSAKr1adiALfdseIc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5",
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "topics": [
             "viaggi",
             "sardegna",
@@ -14622,21 +14622,12 @@
             "updatedAt": "2026-09-08T13:23:42.933Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "neutral",
-            "topics": [
-              "viaggi",
-              "sardegna",
-              "turismo"
-            ],
-            "location": "Calaserena Resort",
-            "confidence": 0.78,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "negative",
             "sources": [
-              "caption"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-08T10:00:14.253Z"
+            "updatedAt": "2026-09-10T16:33:57.017Z"
           },
           "engagementData": {
             "status": "ok",
