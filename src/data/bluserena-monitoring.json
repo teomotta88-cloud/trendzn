@@ -92102,6 +92102,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:48.213Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:34:38.139Z"
           }
         },
         {
@@ -92125,6 +92133,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:52.876Z"
+          },
+          "ocrData": {
+            "textOnScreen": "becite,\ncuts 5\navez une",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:35:17.494Z"
           }
         },
         {
@@ -92148,6 +92165,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:55.196Z"
+          },
+          "ocrData": {
+            "textOnScreen": "brawadis speaking\nAssyrian/Chaldean®\nbro im dying\nOkay.\nOkay. Okay.",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:35:24.862Z"
           }
         },
         {
@@ -92171,6 +92197,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:22:57.989Z"
+          },
+          "ocrData": {
+            "textOnScreen": "giorno qualunque",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:35:32.743Z"
           }
         },
         {
@@ -92194,6 +92229,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:00.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": "esta\ninclinacdo",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:35:44.156Z"
           }
         },
         {
@@ -92217,6 +92261,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:07.387Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bat mood \"cuc cool\" voi nhung trai nghiem\nthavi; ngap tran hing khòi\ndicaphe.dn\nKhong gian xanh mat\ndon tron nang giò bien trong lanh\nM Village Resort\nRIVER BEACH\nien ngi hi toan dien: gamezone, mién phi,\nworkspace, gym-yoga, ho boi,...\nicaphe.dn\nBui ng da dang,\nduong E",
+            "confidence": 0.835,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:35:55.991Z"
           }
         },
         {
@@ -92240,6 +92293,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:17.316Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LIKE CURTAINS'IN\ndone E\nTHINKJTO THE Fi\nHAT'S SO",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:36:26.955Z"
           }
         }
       ]
@@ -96861,6 +96923,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:20.608Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:36:39.154Z"
           }
         }
       ]
@@ -101346,6 +101416,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:27.854Z"
+          },
+          "ocrData": {
+            "textOnScreen": "arisan kali ini di hotel sambina\nkalideres.\ntempat nyaman bisa karoeke juga Iho\nbebas engk\nsambina\ntempat nyaman bisa karoeke juga lho\nwaktu bebas engk dibatesin\narisan kali ini el na",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:36:46.901Z"
           }
         },
         {
@@ -101369,6 +101448,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:30.767Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:36:54.240Z"
           }
         },
         {
@@ -101392,6 +101479,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:35.364Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sola 3",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:36:59.029Z"
           }
         },
         {
@@ -101415,6 +101511,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:39.127Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KALIANDRAT RESORT,\nRESORT",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:37:10.776Z"
           }
         }
       ]
@@ -105978,6 +106083,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:43.041Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Call\nRemember",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:37:28.152Z"
           }
         },
         {
@@ -106001,6 +106115,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:45.784Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 WITCH LOCATIONS\nMOTHER SHIPTONS\nKNARESBOROUGH\nYORKSHIRE\nNUTTER FAMILY GRAVE\nNEWCHURCH IN PENDLE\nNUTTER FAMILY\nWITCHES",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:37:45.990Z"
           }
         },
         {
@@ -106024,6 +106147,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-10T23:23:59.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANDIISIREADYATO\nBUT BECAUSE",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-10T23:37:56.775Z"
           }
         }
       ]
