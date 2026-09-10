@@ -25251,7 +25251,7 @@
           "url": "https://www.tiktok.com/@ary___0111/video/7679840883113479456",
           "date": "2026-08-30T15:04:55.000Z",
           "caption": "vi amo❤️ #mimancate #bluserena2026❤️",
-          "location": null,
+          "location": "Bluserena",
           "views": 302,
           "imageUrl": null,
           "likes": 30,
@@ -25274,7 +25274,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-10T13:58:19.707Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "cibo",
+              "musica",
+              "nostalgia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T18:09:27.201Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "cibo",
+            "musica",
+            "nostalgia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -25335,7 +25361,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666463647299915041",
           "date": "2026-07-25T13:54:25.000Z",
           "caption": "Risposta a @kettyschettino88 ❤️❤️❤️ Grazie di cuore #sibarigreenresort #bluserena #paratiiiiii #calabria🌶️ #virale",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1676,
           "imageUrl": null,
           "likes": 30,
@@ -25359,7 +25385,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T18:07:16.744Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "social media",
+              "divertimento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T18:09:33.479Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "social media",
+            "divertimento"
+          ]
         }
       ]
     },
@@ -61870,7 +61921,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666463647299915041",
           "date": "2026-07-25T13:54:25.000Z",
           "caption": "Risposta a @kettyschettino88 ❤️❤️❤️ Grazie di cuore #sibarigreenresort #bluserena #paratiiiiii #calabria🌶️ #virale",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1676,
           "imageUrl": null,
           "likes": 30,
@@ -61894,7 +61945,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T18:07:16.744Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "social media",
+              "divertimento"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T18:09:33.479Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "social media",
+            "divertimento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -94754,7 +94830,7 @@
           "url": "https://www.tiktok.com/@trangnayratthoi01/video/7523769766251711762",
           "date": "2025-07-06T01:09:17.000Z",
           "caption": "Valentino Resort 2026: Loạt mẫu pose dáng trên giường thú vị #LearnOnTikTok #TikTokFashion #tiktokgiaitri #trangnayratthoi",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 2909,
           "imageUrl": null,
           "likes": 73,
@@ -94778,7 +94854,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T14:01:26.250Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "fashion",
+              "photography",
+              "social media",
+              "intrattenimento"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T18:09:34.545Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "fashion",
+            "photography",
+            "social media",
+            "intrattenimento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -99285,7 +99388,7 @@
           "url": "https://www.tiktok.com/@giandomenico.vittore_jkd/video/7669765123434679585",
           "date": "2026-08-03T11:25:50.000Z",
           "caption": "Incontro i miei follower al Kalidria Hotel & Thalasso SPA 🤑 ciao wagliú!!! #follower #luxurylifestyle #luxuryresort #vacanzaitaliana #PESCAMAN @bluserena",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 980,
           "imageUrl": null,
           "likes": 29,
@@ -99309,7 +99412,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-10T18:09:15.281Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "luxury",
+              "spa",
+              "social media"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-10T18:09:36.087Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "luxury",
+            "spa",
+            "social media"
+          ]
         }
       ]
     },
