@@ -82,6 +82,29 @@ try {
   console.log("\n=== Meta tag profilo (followers/post count spesso qui) ===");
   console.log(JSON.stringify(meta, null, 2));
 
+  const title = await page.title();
+  console.log("\n=== <title> pagina ===");
+  console.log(title);
+
+  // Instagram a volte inietta i dati della pagina come JSON dentro <script>
+  // (application/ld+json, oppure blob tipo window.__additionalDataLoaded /
+  // _sharedData): se presente può contenere date/id dei post SENZA doverli
+  // dedurre dall'alt text dei thumbnail, quindi vale la pena controllare
+  // prima di scartare l'idea. Solo lettura, si logga lunghezza + assaggio:
+  // il contenuto completo può essere grosso (decine di KB).
+  const scriptBlobs = await page.$$eval("script", (nodes) =>
+    nodes
+      .map((n) => ({ type: n.getAttribute("type"), text: n.textContent || "" }))
+      .filter(
+        (s) =>
+          s.type === "application/ld+json" ||
+          /_sharedData|additionalDataLoaded|__NEXT_DATA__/.test(s.text.slice(0, 200)),
+      )
+      .map((s) => ({ type: s.type, length: s.text.length, assaggio: s.text.slice(0, 500) })),
+  );
+  console.log(`\n=== Script con dati strutturati trovati: ${scriptBlobs.length} ===`);
+  console.log(JSON.stringify(scriptBlobs, null, 2));
+
   // Ciclo di scroll: dopo ogni scroll aspettiamo il caricamento, ricontiamo i
   // post trovati e controlliamo il login-wall. Ci fermiamo quando: il conteggio
   // smette di crescere per 3 scroll di fila (probabile fine contenuto
@@ -135,6 +158,30 @@ try {
 
   console.log(`\n=== Thumbnail con una data leggibile nell'alt text: ${withDates.length}/${dedup.length} ===`);
   console.log(JSON.stringify(withDates, null, 2));
+
+  // La domanda vera non è "quanti post" ma "quanto INDIETRO NEL TEMPO":
+  // qui si prova a rispondere in giorni, non solo in conteggio, se almeno
+  // una data si è letta. new Date(...) capisce sia il formato inglese
+  // ("August 12, 2026") sia quello italiano numerico ("12 agosto 2026") lo
+  // capisce solo se il mese è già in inglese — ALT_DATE_PATTERN cattura il
+  // testo raw, la conversione a Date può fallire silenziosamente su mesi
+  // italiani: isNaN scarta quei casi invece di calcolare un'età sbagliata.
+  const parsedDates = withDates
+    .map((p) => ({ ...p, date: new Date(p.rawDate) }))
+    .filter((p) => !Number.isNaN(p.date.getTime()));
+  if (parsedDates.length > 0) {
+    const oldest = parsedDates.reduce((a, b) => (a.date < b.date ? a : b));
+    const giorniIndietro = Math.round((Date.now() - oldest.date.getTime()) / 86_400_000);
+    console.log(
+      `\n=== Post più vecchio con data leggibile: ${oldest.date.toISOString().slice(0, 10)} ` +
+        `(~${giorniIndietro} giorni fa) — ${oldest.href} ===`,
+    );
+  } else {
+    console.log(
+      "\n=== Nessuna data leggibile si è convertita in un Date valido: impossibile calcolare " +
+        "quanto indietro nel tempo si è arrivati da questo run (vedi i rawDate sopra) ===",
+    );
+  }
 
   console.log("\n=== Tutti gli href trovati (primi 60) ===");
   console.log(JSON.stringify(dedup.slice(0, 60).map((p) => p.href), null, 2));
