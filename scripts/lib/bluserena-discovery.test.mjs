@@ -14,6 +14,7 @@ import {
   dateFromVideoId,
   inWindow,
   knownUrls,
+  manualPostsToConfirm,
   normalizePostUrl,
   nuovoPost,
   tiktokHandle,
@@ -106,6 +107,77 @@ test("knownUrls riconosce un post già presente anche con query string diversa",
   const noti = knownUrls(store);
   assert.equal(noti.has(normalizePostUrl("https://www.tiktok.com/@altro/video/222?_t=XYZ")), true);
   assert.equal(noti.has(normalizePostUrl("https://www.tiktok.com/@altro/video/999")), false);
+});
+
+// --------------------------------------------------- manualPostsToConfirm
+
+test("un post aggiunto a mano si conferma quando una fonte lo ripesca da sola", () => {
+  const conManuale = {
+    canali: [
+      {
+        name: "bluserena",
+        accounts: [
+          {
+            url: "https://www.tiktok.com/@mara/video/999",
+            manualAdd: { addedAt: "2026-09-10T00:00:00.000Z", reason: null, confirmedAt: null },
+          },
+        ],
+      },
+    ],
+  };
+  const visti = new Set([normalizePostUrl("https://www.tiktok.com/@mara/video/999?_t=abc")]);
+  const updates = manualPostsToConfirm(conManuale, visti);
+  assert.equal(updates.size, 1);
+  const nuovo = updates.get("https://www.tiktok.com/@mara/video/999");
+  assert.equal(nuovo.confirmedAt !== null, true, "confirmedAt si valorizza");
+  assert.equal(nuovo.addedAt, "2026-09-10T00:00:00.000Z", "addedAt non si perde");
+});
+
+test("nessun aggiornamento se il post a mano non è tra quelli visti", () => {
+  const conManuale = {
+    canali: [
+      {
+        name: "bluserena",
+        accounts: [
+          {
+            url: "https://www.tiktok.com/@mara/video/999",
+            manualAdd: { addedAt: "2026-09-10T00:00:00.000Z", reason: null, confirmedAt: null },
+          },
+        ],
+      },
+    ],
+  };
+  const updates = manualPostsToConfirm(conManuale, new Set());
+  assert.equal(updates.size, 0);
+});
+
+test("un post già confermato non si aggiorna una seconda volta", () => {
+  const giaConfermato = {
+    canali: [
+      {
+        name: "bluserena",
+        accounts: [
+          {
+            url: "https://www.tiktok.com/@mara/video/999",
+            manualAdd: {
+              addedAt: "2026-09-10T00:00:00.000Z",
+              reason: null,
+              confirmedAt: "2026-09-11T00:00:00.000Z",
+            },
+          },
+        ],
+      },
+    ],
+  };
+  const visti = new Set([normalizePostUrl("https://www.tiktok.com/@mara/video/999")]);
+  const updates = manualPostsToConfirm(giaConfermato, visti);
+  assert.equal(updates.size, 0);
+});
+
+test("un post senza manualAdd non entra mai negli aggiornamenti", () => {
+  const visti = new Set([normalizePostUrl("https://www.tiktok.com/@maraalbergo/video/111")]);
+  const updates = manualPostsToConfirm(store, visti);
+  assert.equal(updates.size, 0);
 });
 
 // ------------------------------------------------------------------ canali

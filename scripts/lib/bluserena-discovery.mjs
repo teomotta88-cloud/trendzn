@@ -101,6 +101,33 @@ export function channelsForPost({ caption, canaliNoti = [], nomiCanali }) {
   return [...canaliNoti];
 }
 
+// Un post aggiunto a mano (scripts/add-manual-tiktok-post.mjs, quando un
+// caso noto — tipo @maraalbergo/video/7675653655655140640 — sfugge al
+// campionamento di tutte le fonti automatiche) nasce con
+// `manualAdd: { addedAt, reason, confirmedAt: null }`. `confirmedAt` resta
+// null finché nessuna fonte automatica lo ripesca DA SOLA: quando succede è
+// la conferma indipendente che il post è reale e ancora raggiungibile, e la
+// UI lo segnala con una stellina (vedi PostCard in
+// BluserenaFeedAdvanced.tsx).
+//
+// `visti` è l'insieme (già normalizzato con normalizePostUrl) di TUTTI gli
+// URL incontrati in una passata da una fonte — non solo quelli nuovi: un
+// post aggiunto a mano è per definizione già noto, quindi una fonte che
+// guardasse solo "cosa è nuovo" lo scarterebbe prima ancora di arrivare qui.
+// Ritorna una Map url-esatto-nello-store -> nuovo valore di `manualAdd`,
+// pronta per commitField({ field: "manualAdd", updates, ... }).
+export function manualPostsToConfirm(store, visti) {
+  const updates = new Map();
+  for (const canale of store.canali || []) {
+    for (const account of canale.accounts || []) {
+      if (!account.manualAdd || account.manualAdd.confirmedAt) continue;
+      if (!visti.has(normalizePostUrl(account.url))) continue;
+      updates.set(account.url, { ...account.manualAdd, confirmedAt: new Date().toISOString() });
+    }
+  }
+  return updates;
+}
+
 // Voce dello store per un post scoperto. I campi piatti restano null: li
 // riempiono gli script che vengono dopo (KPI dalla pagina video, sentiment,
 // audio, OCR), ognuno col proprio record versionato. verificationStatus parte

@@ -18,6 +18,7 @@ import {
   X,
   Loader2,
   Wand2,
+  Star,
 } from "lucide-react";
 import type { CanaleInspo, AccountRef } from "@/lib/trends";
 // recharts "raw", non il wrapper ChartContainer di shadcn: è lo stesso stile
@@ -1862,6 +1863,17 @@ function PostCard({
           <span className="inline-flex items-center gap-1 text-muted-foreground">
             <PlatformIcon platform={post.platform} className="size-3" />
             {post.platform}
+            {/* Post inserito a mano (vedi scripts/add-manual-tiktok-post.mjs)
+                e poi ripescato DA SOLO da una fonte automatica: conferma
+                indipendente che il post è reale e ancora raggiungibile, non
+                solo un URL inserito una tantum e mai più verificato. */}
+            {post.manualAdd?.confirmedAt && (
+              <span
+                title={`Aggiunto a mano il ${new Date(post.manualAdd.addedAt).toLocaleDateString("it-IT")}, confermato dallo scraping il ${new Date(post.manualAdd.confirmedAt).toLocaleDateString("it-IT")}`}
+              >
+                <Star className="size-3 text-amber-500 fill-amber-500" />
+              </span>
+            )}
           </span>
           <a
             href={post.url}

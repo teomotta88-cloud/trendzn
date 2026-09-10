@@ -55,12 +55,13 @@
 
 import { chromium } from "playwright";
 
-import { commitNewPosts, readStore } from "./lib/bluserena-store.mjs";
+import { commitField, commitNewPosts, readStore } from "./lib/bluserena-store.mjs";
 import {
   channelsForPost,
   dateFromVideoId,
   inWindow,
   knownUrls,
+  manualPostsToConfirm,
   normalizePostUrl,
   nuovoPost,
   tiktokVideoId,
@@ -160,10 +161,15 @@ try {
     let vistiPassata = 0;
     let nuoviPassata = 0;
     const perTag = [];
+    // TUTTI gli URL visti in questa passata, non solo i nuovi: serve a
+    // confermare i post aggiunti a mano (vedi manualPostsToConfirm), che per
+    // definizione sono già noti e quindi non finiscono mai tra i "nuovi".
+    const vistiPassataSet = new Set();
 
     for (const tag of nomiCanali) {
       const esito = await scrapeTag(context, tag);
       vistiPassata += esito.url.length;
+      for (const url of esito.url) vistiPassataSet.add(normalizePostUrl(url));
 
       if (esito.status !== "ok") {
         console.log(`#${tag}: ${esito.status} — ${esito.reason ?? ""}`);
@@ -227,6 +233,18 @@ try {
       console.log(`\n(DRY_RUN) Passata ${passata}: ${daScrivere} post pronti, non li scrivo.`);
     } else {
       console.log(`\nPassata ${passata}: nessun post nuovo.`);
+    }
+
+    if (!DRY_RUN) {
+      const daConfermare = manualPostsToConfirm(store, vistiPassataSet);
+      if (daConfermare.size) {
+        await commitField({
+          field: "manualAdd",
+          updates: daConfermare,
+          message: `chore: conferma dallo scraping profondo ${daConfermare.size} post aggiunti a mano [trendzn-bot]`,
+        });
+        console.log(`  ⭐ Confermati dallo scraping profondo ${daConfermare.size} post aggiunti a mano.`);
+      }
     }
 
     riepilogo.push({ passata, visti: vistiPassata, nuovi: nuoviPassata, perTag });
