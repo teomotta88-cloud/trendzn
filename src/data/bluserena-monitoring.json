@@ -5137,7 +5137,7 @@
           "comments": 13,
           "shares": 76,
           "imageUrl": null,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
             "fine vacanza",
             "pensione completa"
@@ -5163,22 +5163,12 @@
             "updatedAt": "2026-09-02T13:19:04.272Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "fine vacanza",
-              "pensione completa"
-            ],
-            "location": "Bluserena",
-            "confidence": 0.85,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "positive",
             "sources": [
-              "caption",
-              "audio",
-              "ocr"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T08:57:46.087Z"
+            "updatedAt": "2026-09-10T15:19:54.231Z"
           },
           "engagementData": {
             "status": "ok",
