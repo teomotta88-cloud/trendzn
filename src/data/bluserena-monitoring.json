@@ -55250,7 +55250,7 @@
           "likes": 7,
           "comments": 1,
           "shares": 0,
-          "sentiment": "negative",
+          "sentiment": "positive",
           "topics": [
             "animazione"
           ],
@@ -55274,20 +55274,12 @@
             "updatedAt": "2026-09-04T08:47:18.380Z"
           },
           "sentimentData": {
-            "status": "ok",
-            "sentiment": "negative",
-            "topics": [
-              "animazione"
-            ],
-            "location": "Sibari Green Resort",
-            "confidence": 0.75,
-            "minConfidence": 0.6,
+            "status": "manual",
+            "sentiment": "positive",
             "sources": [
-              "caption",
-              "audio"
+              "manuale"
             ],
-            "version": 1,
-            "updatedAt": "2026-09-07T09:07:41.183Z"
+            "updatedAt": "2026-09-10T15:23:26.100Z"
           },
           "engagementData": {
             "status": "ok",
