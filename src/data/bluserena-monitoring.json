@@ -26650,6 +26650,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:34.045Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 they could never make me\nform a solid opinion on\nt uld never make me\nform opinion on you\nthey could make me\nform a solid opinion on you serena\nthey could never make me\nthey could ne\nform opini",
+            "confidence": 0.919,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:45:20.190Z"
           }
         },
         {
@@ -26673,6 +26682,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:36.295Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:45:29.465Z"
           }
         },
         {
@@ -26696,6 +26713,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:38.775Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:45:37.770Z"
           }
         }
       ]
@@ -39053,6 +39078,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:41.363Z"
+          },
+          "ocrData": {
+            "textOnScreen": "just W know\nthat Wi will\ndecidd\nlike",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:45:50.611Z"
           }
         },
         {
@@ -39076,6 +39110,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:44.140Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:45:56.115Z"
           }
         },
         {
@@ -39099,6 +39141,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:46.920Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘dali\nMANN i PAN",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:46:25.219Z"
           }
         }
       ]
@@ -43546,6 +43597,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:49.510Z"
+          },
+          "ocrData": {
+            "textOnScreen": "My kind of cal\nCall\nReach Resort",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:46:34.109Z"
           }
         }
       ]
@@ -50355,6 +50415,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:53.745Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort\n2 Sentido Serra Resort\nSerra Resort\ni Antalya\nSentido\ni Sentido Serra Resort\nSentido Serra Resort",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:46:50.808Z"
           }
         },
         {
@@ -50378,6 +50447,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:42:57.773Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This hote]\nbaby change",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:47:05.576Z"
           }
         },
         {
@@ -50401,6 +50479,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:04.756Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:47:17.669Z"
           }
         }
       ]
@@ -57322,6 +57408,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:08.250Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HOTEL SERENA MAJESTIC",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:47:28.526Z"
           }
         },
         {
@@ -57345,6 +57440,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:12.851Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel\n#Pakista",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:47:38.970Z"
           }
         },
         {
@@ -57368,6 +57472,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:16.063Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nSERENA EL",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:47:47.131Z"
           }
         },
         {
@@ -57391,6 +57504,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:18.783Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL\nFaisalabad, Pakistan\nFAISALABAD SERENA HOTEL\nAISALABADIS HOTEL\nHOTEL",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:05.404Z"
           }
         },
         {
@@ -57414,6 +57536,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:26.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena hotel mara triangle sii i\nya mama Yako\njustice to the community 4\nSerena hotel mara triangle sii\njustice to the community\njustice to the community i\nIs ya mama Yako",
+            "confidence": 0.924,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:09.516Z"
           }
         },
         {
@@ -57437,6 +57568,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:28.648Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AINA",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:14.570Z"
           }
         }
       ]
@@ -66276,6 +66416,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:31.411Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GUSHT TSHTATOR\nPERSONA\nfalas!\nGREEN GOAST RESORT\n25 GUSHT 1 SHTATOR 5000€\nPER 3 NETE 2200€ TOTALI\nPER 4 NETE 3100€ TOTALI\n8-9 PERSONA\nSherbimi buggy falas!\nPER 3 NETE 2200€\nGREEN RESORT",
+            "confidence": 0.886,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:22.106Z"
           }
         },
         {
@@ -66299,6 +66448,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:34.025Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:31.401Z"
           }
         },
         {
@@ -66322,6 +66479,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:36.571Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:36.373Z"
           }
         }
       ]
@@ -73459,6 +73624,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:41.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:43.561Z"
           }
         },
         {
@@ -73482,6 +73655,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:44.057Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:48:51.689Z"
           }
         },
         {
@@ -73505,6 +73686,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:47.089Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:49:01.067Z"
           }
         },
         {
@@ -73528,6 +73717,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:51.850Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3D2N STAY IN WATER CHALET\nBOOK NOW 74\navillionportdickson.com\nBOOKNOW\n3D2N STAY IN WATER CHALET A\nENJOY.\nSTAVAPERIOD NOW\nMOVE",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:49:10.601Z"
           }
         }
       ]
@@ -82328,6 +82526,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:56.467Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA\nHOTEL\nPakis\nAISAEABAD\nFaisalabad; Pakistan 4\nal AD SERENA\nAISALA RENA\nHOTE\nFaisalabad, Pakistan",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:49:19.210Z"
           }
         },
         {
@@ -82351,6 +82558,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:43:59.373Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:49:51.642Z"
           }
         }
       ]
