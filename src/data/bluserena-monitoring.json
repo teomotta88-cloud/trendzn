@@ -26698,7 +26698,7 @@
           "url": "https://www.tiktok.com/@giovannanicolasru/video/7679962142379904289",
           "date": "2026-08-30T22:55:28.000Z",
           "caption": "#bluserenatorreserena ♥️♥️♥️♥️♥️",
-          "location": null,
+          "location": "Bluserena",
           "views": 354,
           "imageUrl": null,
           "likes": 14,
@@ -26721,7 +26721,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-11T20:45:37.770Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "blu",
+              "serena",
+              "serenità"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T20:54:17.114Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "blu",
+            "serena",
+            "serenità"
+          ]
         }
       ]
     },
@@ -107510,7 +107534,7 @@
           "url": "https://www.tiktok.com/@giandomenico.vittore_jkd/video/7661954097335029024",
           "date": "2026-07-13T10:15:04.000Z",
           "caption": "Non posso perdere la puntata di Temptation Island anche se sono al Kalidria Hotel & Thalasso Spa a Castellaneta 🤑✌️ ciao wagliú!!! #temptationisland #caldo #mare #luxurylifestyle #PESCAMAN @bluserena @Temptation Island",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 1149,
           "imageUrl": null,
           "likes": 29,
@@ -107534,7 +107558,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T20:53:03.449Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "caldo",
+              "cibo",
+              "luxurylifestyle"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T20:54:18.353Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "caldo",
+            "cibo",
+            "luxurylifestyle"
+          ]
         },
         {
           "platform": "tiktok",
