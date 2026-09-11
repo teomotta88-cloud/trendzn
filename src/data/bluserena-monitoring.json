@@ -26132,7 +26132,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 20.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:45:51.743Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26146,7 +26155,16 @@
           "likes": 8,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok, ma la signoria adesso attenzione, il cannaio in aria, partirà un countdown, al pegno del countdown lanciate il colore. L'hai normale, diciamo, l'hai normale. Ma come lo lanciano alla fine del countdown? Ma mi raccomando, non buttare i bicchieri a terra, al pegno, mi chiamo Donce Delisa, Mattia e tutto il gruppo di intima, perché li utilizzeremo. Pronti? Sì, paghi i bicchieri in aria. Ok, non c'è la bambina, non c'è la bambina, non c'è la bambina. Sondeggia, sondeggia! Dai! Sì, sì, sì. Ci siamo quasi, senti la musica! Arriva il cantone! 8, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 E' il momento di...",
+            "language": "Italian",
+            "durationSec": 109.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:50.201Z"
+          }
         }
       ]
     },
@@ -38272,7 +38290,16 @@
           "likes": 119,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Chi sono io? Questo è un segreto che non troverò mai. L'unico. XOXO Gossip Shop",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:45:58.465Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38286,7 +38313,16 @@
           "likes": 7588,
           "comments": 49,
           "shares": 136,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 10.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:02.674Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38300,7 +38336,16 @@
           "likes": 180,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ah, dammit. Tutto ciò che fa è così fricking bello. Ha un stile assolutamente unico che nessuno può coprire. La ragione per cui ho iniziato a giocare al basketball è perché...",
+            "language": "Italian",
+            "durationSec": 14.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:04.910Z"
+          }
         }
       ]
     },
@@ -42549,7 +42594,16 @@
           "likes": 12,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In 100 anni, nel 2124, tutti saremo interrati con i nostri familiari e amici. I strani vivranno nelle nostre case, che combattiamo tanto per costruire, e saranno i duei di tutto ciò che abbiamo oggi, includendo quel cozzo in cui hai gastato una fortuna. I nostri descendenti non sapranno nemmeno chi eravamo. Quanti di noi conosciamo il nostro bisabuelo? Dopo la nostra morte saremo ricordati per alcuni anni, ma un giorno le nostre foto finiranno nel cubo di basura dell'olbido non saremo neanche ricordi forse se un giorno ci fermiamo a analizzare queste domande capiremmo quanto ignoranti siamo a lasciare correre opportunità che non tornano in questa vita cambio tutto questo per vivere e divertirmi delle decisioni che non ho mai fatte",
+            "language": "Italian",
+            "durationSec": 51.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:07.857Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -42563,7 +42617,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:10.984Z"
+          }
         }
       ]
     },
@@ -49143,7 +49206,16 @@
           "likes": 2253,
           "comments": 879,
           "shares": 313,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 17.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:14.429Z"
+          }
         }
       ]
     },
@@ -55895,7 +55967,16 @@
           "likes": 174,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:16.892Z"
+          }
         }
       ]
     },
@@ -64298,7 +64379,16 @@
           "likes": 680,
           "comments": 21,
           "shares": 687,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:21.617Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64312,7 +64402,16 @@
           "likes": 5195,
           "comments": 149,
           "shares": 2970,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Swing, swing from the tables of my heart is crushed by a form of love. Can you help me find it?",
+            "language": "Italian",
+            "durationSec": 12.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:23.804Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64326,7 +64425,16 @@
           "likes": 608,
           "comments": 16,
           "shares": 279,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'era un tempo che, se pensavi al lusso, pensavi alla Calabria. Perché da Sparta ad Atene, da Mileto fino alle colonne d'Ercole, si parlava di Sibari. Il suo nome era diventato sinonimo di ricchezza e opulenza. E ancora oggi, chi vive nel lusso viene chiamato Sibarita. Tra l'VIII e il VII secolo a.C., i Greci raggiunsero le coste della Calabria. Gli Achei fondarono Sibari e Crotone, i Locresi Locri e i Calcidesi Reggio. Intorno al 720 a.C., secondo la tradizione, Is di Elise guidò i coloni Achei nella fondazione di Sibari, nella fertile pianura del Crati e del Coscile. Ma quella terra non era vuota, era già abitata da comunità enotrie. notrie tra greci e denotri iniziò una progressiva convivenza fatta di scambi e reciproci vantaggi ed è proprio da questa posizione tra mare e entroterra che comincia la straordinaria crescita di sibari attraverso le vie dell si compie una grande svolta commerciale per sibari Con Mileto in Asia Minore Sibari aveva stretto un rapporto di amicizia cos forte da essere ricordato dagli antichi come un legame eccezionale Da Mileto arrivavano tessuti preziosi e la famosa lana milesia, destinata anche al mercato sibarita. Ma Sibari non guardava soltanto verso il mare. Le valli del Coscile e dell'Esaro costituivano vie naturali verso l'interno e verso il Tirreno. Da qui la città entrava in contatto con le popolazioni indigene e con le grandi reti commerciali che arrivavano fino agli Etruschi. Sul versante tirrenico, la presenza di Sibari si affermò anche attraverso Poseidonia. Laos e Shidros, che al suo apice, secondo Strabone, Sibari arrivò a dominare quattro popoli vicini e venticinque città, una potenza che ormai aveva trasformato la sua posizione geografica in una straordinaria rete di commerci e di relazioni. Ma tanta ricchezza cambia anche il modo di vivere dei sibariti La citt viene organizzata pensando al comfort dei suoi abitanti Le attivit rumorose come quelle di fabbrie e artigiani vengono tenute lontane dalle zone residenziali e persino allevare galli in città viene vietato, per non disturbare il sonno. Il lusso arriva anche sulla tavola. Secondo Ateneo, se un cuoco inventava un piatto particolare, nessun altro poteva riprodurlo per un anno una vera e propria protezione per la sua invenzione si raccontano poi strade coperte da tendoni per proteggere dal sole gli invitati ai banchetti feste preparate con largo anticipo e una vita sempre più dedicata al piacere e anche gli dèi fanno parte della vita della città Atena, Era e Afrodite sono tra le divinità legate al mondo religioso Sibarita si racconta che un Sibarita, ospite a Sparta dopo aver visto la loro vita austera disse, «Fora capisco perché gli spartani vogliono morire in guerra». Per un Sibarita quella disciplina sembrava una punizione Nella stessa Calabria greca cresce Crotone una citt destinata a diventare la sua grande rivale Ma Crotone aveva gi conosciuto una grave sconfitta contro l nella battaglia della Sagra intorno alla met del VI secolo a Poi, intorno al 530 a.C., arriva Pitagora, destinato a trasformare profondamente la vita politica e sociale della città. La vera frattura arriva quando a Sibari prende il potere il tiranno Telis, che caccia gli aristocratici e confisca i loro beni. Molti cercano rifugio a Crotone. Telis ne chiede la consegna. Crotone rifiuta. Nel 510 a.C. le due città si affrontano. I crotoniati, guidati secondo la tradizione dall'atleta Milone, sconfiggono l'esercito Sibarita. La città viene saccheggiata e distrutta. secondo la tradizione antica, il corso del crati viene deviato sui suoi resti. Sibari scompare, ma il nome dei Sibariti è destinato a sopravvivere per oltre 2000 anni.",
+            "language": "Italian",
+            "durationSec": 256,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:31.231Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64340,7 +64448,16 @@
           "likes": 54,
           "comments": 9,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 26.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:33.322Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64354,7 +64471,16 @@
           "likes": 35,
           "comments": 7,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti al Dome! Sì, questo è un spazio così unico, una creazione così unica e un ambiente curato per i compagni per riconoscere. Tutti hanno grandi viti di fronte. La cucina ha tutto ciò che hai bisogno per non lasciare la propria propria quando arrivi. C'è il rastrume e il mio preferito, il tubo di coppa di coppa di coppa per due persone dove puoi soffrire, abituarti e perdere la traccia di tempo. Una delle cose che amo del Dome è che c'è quanto spazio privato e outdoor come c'è spazio indoor. faccia. E' un piacere mangiare qui, la tavola per due. Sì, c'è la stanza di giorno, la palla di pod, disegnata per due persone, la tua propria area di sedia privata con una vista, questo tubo caldo, perfetto per stargazare a notte con la persona che ti ami. Allora, e guarda questo, questo è molto unico, abbiamo il nostro sguardo outdoor per due con una vista dei monti mentre avendo la privacità completa. Quindi so che ti piacerà questa esperienza unica, ci vediamo presto. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 58.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:36.682Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64368,7 +64494,16 @@
           "likes": 124,
           "comments": 4,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:38.893Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64382,7 +64517,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti!",
+            "language": "Italian",
+            "durationSec": 49.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:42.098Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64396,7 +64540,16 @@
           "likes": 12,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:46.690Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64410,7 +64563,16 @@
           "likes": 8,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok, ma la signoria adesso attenzione, il cannaio in aria, partirà un countdown, al pegno del countdown lanciate il colore. L'hai normale, diciamo, l'hai normale. Ma come lo lanciano alla fine del countdown? Ma mi raccomando, non buttare i bicchieri a terra, al pegno, mi chiamo Donce Delisa, Mattia e tutto il gruppo di intima, perché li utilizzeremo. Pronti? Sì, paghi i bicchieri in aria. Ok, non c'è la bambina, non c'è la bambina, non c'è la bambina. Sondeggia, sondeggia! Dai! Sì, sì, sì. Ci siamo quasi, senti la musica! Arriva il cantone! 8, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 E' il momento di...",
+            "language": "Italian",
+            "durationSec": 109.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:50.201Z"
+          }
         }
       ]
     },
@@ -71097,7 +71259,16 @@
           "likes": 208,
           "comments": 8,
           "shares": 98,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come away with me Come away",
+            "language": "Italian",
+            "durationSec": 10.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:52.584Z"
+          }
         }
       ]
     },
@@ -79356,7 +79527,16 @@
           "likes": 158,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica La città di San Marco Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 65,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:46:58.013Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79370,7 +79550,16 @@
           "likes": 202,
           "comments": 20,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Welcome back Queen Serena, consider us your humble servants, cause if looks could kill, we wouldn't want to be Dan Humphrey. I'm on",
+            "language": "Italian",
+            "durationSec": 8.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:47:00.279Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79384,7 +79573,16 @@
           "likes": 215,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:47:02.984Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -79398,7 +79596,16 @@
           "likes": 82,
           "comments": 8,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ssssshhh, share, story Musica",
+            "language": "Italian",
+            "durationSec": 26.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:47:06.432Z"
+          }
         }
       ]
     },
@@ -85728,7 +85935,16 @@
           "likes": 9,
           "comments": 2,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:47:09.592Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -85742,7 +85958,16 @@
           "likes": 2803,
           "comments": 84,
           "shares": 694,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Salah Terikatnya Petin dan raga yang mengunci Di atas sang maha daya Semua kendali Terambil ali Jikalau kau keluhkan con la somma che mi ha toccato aprivi il tuo viso",
+            "language": "Italian",
+            "durationSec": 38.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:47:13.433Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -85756,7 +85981,16 @@
           "likes": 73,
           "comments": 7,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ora, questo è quello di cui parlo quando parlo di un bellissimo resort. Questo è Terranea, l'altra parte di Los Angeles, e il design mediterraneo è portato attraverso la propria. I luoghi sono spaziosi e bellissimi e mi piace che questo si apre in un suo stesso spazio outdoor. Poi c'è l'area di piazza circondata dai ristoranti e le belle vittime d'oceano. E le vittime sono davvero la star qui. Terranea siede a 102 acri all'interno del Pacific, quindi potrete vedere abbastanza di questo. se vuoi ascoltare Terranera per te stesso, clicca sul link sulla parte inferiore di questo video",
+            "language": "Italian",
+            "durationSec": 30.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T04:47:16.408Z"
+          }
         },
         {
           "platform": "tiktok",
