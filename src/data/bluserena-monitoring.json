@@ -86237,6 +86237,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:23.468Z"
+          },
+          "ocrData": {
+            "textOnScreen": "di Hola from Spain\nÈ Hola from Spain\nHola from\nIi Hola from Spain\nHola from Spain",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:54:57.335Z"
           }
         }
       ]
@@ -93941,6 +93950,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:26.653Z"
+          },
+          "ocrData": {
+            "textOnScreen": "halleluja\nECO BEACH BROOME",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:55:09.654Z"
           }
         },
         {
@@ -93964,6 +93982,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:29.884Z"
+          },
+          "ocrData": {
+            "textOnScreen": "it downiin Clarendon,\ndown in Clarendon,\nJamaica.\nIt bell'Ajor,\nhold it\ncan't always be LA\nitidown in\ncan't always 3",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:55:22.582Z"
           }
         },
         {
@@ -93987,6 +94014,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:34.230Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NECESITA\nCONFUSAS",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:55:33.301Z"
           }
         },
         {
@@ -94010,6 +94046,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:36.308Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Birthday calendar Calengarp\nJanuary February June\nNovember Decemb\n6 Ruyem\nBirthday calendar\nNovember Decem\nBirthday calendar Celendarp\nuly ugus to November Decemb\nJanuary [Apri] June\nul ugu to November Decemb\nFebruary [April] June\nJ o November Decemb",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:57:03.023Z"
           }
         },
         {
@@ -94033,6 +94078,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:45.637Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:57:24.997Z"
           }
         }
       ]
@@ -98685,6 +98738,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:48.053Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Atlantic\nCasino yesort\nCasinoreso\nCasineresort",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:57:44.745Z"
           }
         },
         {
@@ -98708,6 +98770,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:50.472Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Palazzo at The Venetian Resort\nLivin' My Best Life\ni Dylan Scott\nThe Palazzo at The Venetian Resort ha\n7 Scott\nDylan Scott",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:57:59.712Z"
           }
         },
         {
@@ -98731,6 +98802,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:53.397Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel\nHotel B\n«Todo Incly un 9\nBarcelo Tambor\nBENVENDD A iN\nNUESTRA\nPROGRAMA A\nWelcome Tanbor Beach 3 j\njour beach witout 3",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:58:28.787Z"
           }
         }
       ]
@@ -103343,6 +103423,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:58.038Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:58:37.059Z"
           }
         }
       ]
@@ -108016,6 +108104,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:48:02.539Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SUMMER\n#calanéresort\n#ethrareserve\n#Matera\nsort\n@blusergha\nSUMM",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:58:52.205Z"
           }
         },
         {
@@ -108039,6 +108136,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:48:04.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:58:57.950Z"
           }
         },
         {
@@ -108062,6 +108167,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:48:07.466Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Be very beginning\nWoody\ndesérves\nUntil next time, Cret",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:59:06.404Z"
           }
         }
       ]
