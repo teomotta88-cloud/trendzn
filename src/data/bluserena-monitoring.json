@@ -89561,6 +89561,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:07.223Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:49:59.748Z"
           }
         },
         {
@@ -89584,6 +89592,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:10.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": "esortse-cantikini i\nternyata... di Ciwidey ada\nresort se-cantik",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:50:17.634Z"
           }
         }
       ]
@@ -97732,6 +97749,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:15.077Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:50:42.166Z"
           }
         },
         {
@@ -97755,6 +97780,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:17.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Driving in the park\nSERN",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:51:18.852Z"
           }
         },
         {
@@ -97778,6 +97812,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:20.852Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:51:26.317Z"
           }
         },
         {
@@ -97801,6 +97843,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:24.830Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:51:46.274Z"
           }
         },
         {
@@ -97824,6 +97874,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:27.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DRAC\n25 DRAC",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:51:51.481Z"
           }
         },
         {
@@ -97847,6 +97906,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:30.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:52:09.666Z"
           }
         },
         {
@@ -97870,6 +97937,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:33.193Z"
+          },
+          "ocrData": {
+            "textOnScreen": "On se posera sur le\nL’Esterel\nun peu l'aîr_\nSaint\n0lell no",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:52:25.627Z"
           }
         },
         {
@@ -97893,6 +97969,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:37.053Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ESTABLYSHMENT\nOFFERS MASSAGE SERVICE\nA LOCAI RANT",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:52:35.649Z"
           }
         }
       ]
@@ -102695,6 +102780,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:39.437Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:52:53.315Z"
           }
         }
       ]
@@ -107432,6 +107525,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:42.452Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A TEMPO\nISLAND”\nALLE NOVE,\nNOVE E\nVUOI TORNARE A TEMPO\n5 PER,VEDERE “TEMPTATION\nFUORI...\nPERIVEDERE",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:03.449Z"
           }
         },
         {
@@ -107455,6 +107557,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:46.155Z"
+          },
+          "ocrData": {
+            "textOnScreen": "These are the\nmoments I\ncourse...\nDID find\nlittle t",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:15.962Z"
           }
         },
         {
@@ -107478,6 +107589,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:48.558Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:24.373Z"
           }
         }
       ]
@@ -112345,6 +112464,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:52.867Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:28.028Z"
           }
         },
         {
@@ -112368,6 +112495,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:44:55.789Z"
+          },
+          "ocrData": {
+            "textOnScreen": "whole story. “Why do they call it\nCraw Mine?”\ni His grandfather took his 3\nhand. “It swallows spirits\nwhole. The evil in this place de-\nA vours souls, not just bodies. You\ni can ask my mother, Nana Millie.\ni She remembers the old songs ù\nof why this place is cursed.\nThe stories of the enemies of\nthe First People—your people,\nUlrik.”\n4 whole story. “Why do they call it A\nHis grandfather took his\nvours souls, not just bodies. You 4\ncan ask my mother, Nana Millie.\nShe remembers the old songs\npt the First People—your people,",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:42.581Z"
           }
         },
         {
@@ -112391,6 +112527,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:45:00.175Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Reply to Matthew's comment\nwhat dc\nserveru\nwhat dc server u\nwhat dc server u a",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:50.371Z"
           }
         },
         {
@@ -112414,6 +112559,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:45:03.873Z"
+          },
+          "ocrData": {
+            "textOnScreen": "My Maori/Samoan daughter's learning\nabout funeral processes in the Pakeha world.\nWHITE PEOPLE FUNERALS\nIS IN THE BUILDING\nTHE COFFIN TO",
+            "confidence": 0.865,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:53:59.183Z"
           }
         },
         {
@@ -112437,6 +112591,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T20:45:08.119Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T20:54:05.474Z"
           }
         }
       ]
