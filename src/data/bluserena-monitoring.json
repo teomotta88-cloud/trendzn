@@ -26237,7 +26237,16 @@
           "likes": 15,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:17.798Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26251,7 +26260,16 @@
           "likes": 913,
           "comments": 2,
           "shares": 68,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 18.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:20.102Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26265,7 +26283,16 @@
           "likes": 31,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "tell a friend to tell a friend she's bad",
+            "language": "Italian",
+            "durationSec": 6.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:22.171Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26279,7 +26306,16 @@
           "likes": 832,
           "comments": 52,
           "shares": 63,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In other words, hold my hand. In other words, baby kiss me. Fill my heart with song and let me sing forevermore. You are all I long for.",
+            "language": "Italian",
+            "durationSec": 27.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:24.531Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26293,7 +26329,16 @@
           "likes": 56,
           "comments": 4,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:32.682Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26307,7 +26352,16 @@
           "likes": 212,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "You are my destiny. You are what you are to me.",
+            "language": "Italian",
+            "durationSec": 12.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:35.020Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26321,7 +26375,16 @@
           "likes": 226,
           "comments": 21,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:39.720Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26335,7 +26398,16 @@
           "likes": 68,
           "comments": 9,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ah, per voi che cercate un'auto grande, boxy, rara. Questa è la mia, da Nissan. C'è la Nissan Serena CT, Matic. La macchina è del 2009, il pagamento è del 2024. Se volete vendere, solo a 58 miliardi, potete negociare. 58 miliardi potete negociare, la macchina è così. Molto bella. La macchina è ancora pesante, la sospensione è standard, non c'è niente di anonimo, potete vedere. E' straordinaria. Il fondo è molto bello, è ancora fabbrica, è ancora blu-dru, suede. Andiamo a destra. Wow, il retro è molto grande, John! Il retro è molto grande, e poi c'è un carpet, c'è un carpet aggiunto, ma non l'ho installato, è un carpet che segue la forma della parte di lontano di questa Nissan Serena, ragazzi. Stutter è iniziato, Nissan Serena, il chilometro di via è di 180.000 km, ha usato un head unit Android, double D, e qui c'è il panel boot, il panel boot, l'AC è un po' meno freddo, probabilmente la freon è meno, poi il plafond è tutto rapido, il stefano è anche ancora di colore di gerucco, se c'è Serena, il compartimento di riserva è molto grande, se c'è Nissan Serena, il luogo di mangiare è qui, sì, asbak, in quei tempi, 4 point, comunque fino a dietro, la riserva è molto grande, John, mentre stiamo pronti per la famiglia indonesia, la Nissan Serena è un box, è rara, la Il suo motore è del 2009, ha il tipo CT Matic, ha il full original, l'esterno è solo per usare, lo ho venduto a un prezzo di 58 miliardi, potete negoziarlo, non dimenticate di Whatsapp, DM Instagram, non dimenticate di seguire, di like, di commentare, il mio showroom è solo a Sumareko.",
+            "language": "Italian",
+            "durationSec": 108.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:48.466Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26349,7 +26421,16 @@
           "likes": 18,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Serenella Batti i piedi sul selciato, canta forte a perdi fiato Gira gira senza preghiste, Nall'equipo te Alla serelella, tutti insieme qua Canta serelella, che il ritmo ci darà",
+            "language": "Italian",
+            "durationSec": 51.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:51.725Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26363,7 +26444,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tu, tu e tu, tornata na da vodi bossa",
+            "language": "Italian",
+            "durationSec": 5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:54.923Z"
+          }
         }
       ]
     },
@@ -38647,7 +38737,16 @@
           "likes": 2805,
           "comments": 16,
           "shares": 49,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:57.176Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -38661,7 +38760,16 @@
           "likes": 37,
           "comments": 2,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "You guys, this case is seriously so disturbing. It all started on Sunday, July 26th, when family members became worried because they hadn't been able to reach 69-year-old Gregory Dolnick. According to court documents, whenever they asked Serena, his daughter, if they could speak with her father, investigators say she made unusual statements instead of putting him on the phone. As concern grew, Serena's boyfriend reportedly went to the home to check on her. According to investigators, he found Serena covered in blood and immediately called the family and said he was worried she might hurt herself. All'avanti di 8 di notte, l'office del sheriff rispondeva alla casa di Morgan Township per un controllo di welfare. I deputati si sono forzati in casa. Secondo il codice di probabilità, hanno trovato Gregory dentro morto con molte malattie di forza spaziale a sua testa, faccia, collo e mani. Gli investigatori dicono che hanno recuperato molte nozze dall'interno della residenza. Poi è arrivata la scoperta che ha shockato le persone in tutto il paese. Gregory's heart had actually been removed from his body and placed on his abdomen. Police say Serena was found in the bedroom with blood on her clothing, her legs, her feet. Court records state she had cuts on her hands. According to investigators, she told officers those cuts came from gardening tools and she denied that she saw her father injured. Investigators later reported that medical staff believed her injuries appeared more consistent with a knife slipping during use. The coroner later ruled Gregory's death as a homicide due to multiple sharp force injuries. Selena has since been charged with murder. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 105.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:00.835Z"
+          }
         }
       ]
     },
@@ -43004,7 +43112,16 @@
           "likes": 30,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vivere è non di meno se andiamo da mano Mentre stiamo insieme, forse abbiamo sbagliato A volte ti perdono, a volte mi perdoni Ma al fine del giorno Continuiamo a spiegare la nostra storia E ti comparto i miei giorni Ti comparto i miei sogni Ti comparto le ore Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:04.118Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43018,7 +43135,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I got summer in my mind, nowhere else but the world, take me downtown, home to you, people show me love but I can't take it, what I said was true, real pain, can't take it.",
+            "language": "Italian",
+            "durationSec": 22.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:06.421Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43032,7 +43158,16 @@
           "likes": 8051,
           "comments": 57,
           "shares": 2023,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mango, melona, pineapple, pineapple, melona. Choco, cioccolato, choco, cioccolato. Tec, cioccolato, tec, cioccolato. Melona, coco, pineapple, pineapple. Mango, melona, pineapple. Mango, melona, pineapple. Mango, pineapple. Che lo che devo è mango, mango, mango. Commissione, mamma mia. Mango! Oh! Oh! Oh! Oh!",
+            "language": "Italian",
+            "durationSec": 35.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:15.377Z"
+          }
         }
       ]
     },
@@ -49644,7 +49779,16 @@
           "likes": 5,
           "comments": 1,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 34,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:18.195Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49658,7 +49802,16 @@
           "likes": 86,
           "comments": 0,
           "shares": 28,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Signora buonasera, infatti noi dovevamo andare a Serenuso villaggio, volesse ne che abbiamo una settimana, eh? E troppo ne usciva a chiunque per gli annanziarelli. E abbiamo preferito questo villaggio di Caffaro. In più abbiamo pagato anche 300 euro in più rispetto al Serenuso. Vabbè sarà per la prossima. Valentino mai più.",
+            "language": "Italian",
+            "durationSec": 22.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:20.551Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49672,7 +49825,16 @@
           "likes": 129,
           "comments": 13,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Serenusa Village, siamo qua in spiaggia, fine serata, guardate che spettacolo! Ora c'è il nostro amico Carmelo che riordina tutto, tutto, tutto, ciao! E mantiene tutto alla perfezione, passerà il pulisci spiagge, tutto, tutto alla perfezione, sempre e come sempre da Serenusa Village, bye bye! ovviamente aspettiamo gli ospiti che vengono a mangiare al ristorante Leonde Bye Bye",
+            "language": "Italian",
+            "durationSec": 37.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:23.202Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49686,7 +49848,16 @@
           "likes": 14,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cinghia su madre, non andiamo a mangiare per quattro giorni, ci spendiamo quello della settimana, ci spendiamo quello delle vacanze, non cagiamo di denaro, ma mentre si può, c'è da divertire, cinghia madre, e se domani ci andiamo, ci andiamo con il lujo che volevamo, quel perfume, quei calzoni, quei sapati.",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:28.339Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49700,7 +49871,16 @@
           "likes": 24,
           "comments": 6,
           "shares": 30,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:30.857Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49714,7 +49894,16 @@
           "likes": 99900,
           "comments": 123,
           "shares": 12900,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:32.750Z"
+          }
         }
       ]
     },
@@ -56594,7 +56783,16 @@
           "likes": 29,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, rompe! Grazie a tutti. ... e stavano vedete frigo ... ... Grazie!",
+            "language": "Italian",
+            "durationSec": 173.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:38.650Z"
+          }
         }
       ]
     },
@@ -65337,7 +65535,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buona vita, bro. Andiamo fuori, prendiamo il sole, l'acqua fresca, e restiamo puri. È bello, bro. Devi adorare la vita, perché tutto può passare in un secondo. Non puoi dire questo tipo di cose per granted.",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:41.061Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -65351,7 +65558,16 @@
           "likes": 78,
           "comments": 29,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "E tu secondo me stasera ti sei bevuto un po' troppo il cuore Guarda il sesso tu Facci vedere un po' i muscoli Guarda un po' il muscolo I capelli poi non ce lo voglio neanche dire Stai proprio lino d'angelo stasera Vivi, vedi come sei lino d'angelo Penso che hai scelto super bene Sì, vedi Saman Vieni, vieni",
+            "language": "Italian",
+            "durationSec": 17.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:43.282Z"
+          }
         }
       ]
     },
@@ -72292,7 +72508,16 @@
           "likes": 42,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il mio amore è il mio amore. Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 95.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:46.799Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -87970,7 +88195,16 @@
           "likes": 15,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:22:17.798Z"
+          }
         },
         {
           "platform": "tiktok",
