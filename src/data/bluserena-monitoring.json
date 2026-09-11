@@ -26126,7 +26126,7 @@
           "url": "https://www.tiktok.com/@pinkaltamuracalciof2/video/7676532256273648929",
           "date": "2026-08-21T17:05:46.000Z",
           "caption": "#CapCut @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 331,
           "imageUrl": null,
           "likes": 1,
@@ -26150,7 +26150,23 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T04:48:20.533Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T04:59:17.044Z"
+          },
+          "sentiment": "neutral"
         },
         {
           "platform": "tiktok",
@@ -26158,7 +26174,7 @@
           "url": "https://www.tiktok.com/@the_apache/video/7665688413068217633",
           "date": "2026-07-23T11:46:07.000Z",
           "caption": "Estate 2026 ☀️🌅🕶️#mare #bluserenasibarigreenresort #vacanza #famiglia #sole @carlita861",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1279,
           "imageUrl": null,
           "likes": 8,
@@ -26181,7 +26197,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-11T04:52:28.413Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanza",
+              "famiglia",
+              "animazione"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T04:59:25.977Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "vacanza",
+            "famiglia",
+            "animazione"
+          ]
         }
       ]
     },
@@ -64703,7 +64745,7 @@
           "url": "https://www.tiktok.com/@the_apache/video/7665688413068217633",
           "date": "2026-07-23T11:46:07.000Z",
           "caption": "Estate 2026 ☀️🌅🕶️#mare #bluserenasibarigreenresort #vacanza #famiglia #sole @carlita861",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1279,
           "imageUrl": null,
           "likes": 8,
@@ -64726,7 +64768,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-11T04:52:28.413Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "vacanza",
+              "famiglia",
+              "animazione"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T04:59:25.977Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "vacanza",
+            "famiglia",
+            "animazione"
+          ]
         }
       ]
     },
@@ -108089,7 +108157,7 @@
           "url": "https://www.tiktok.com/@luigi.astarita5/video/7670146960111848726",
           "date": "2026-08-04T12:07:33.000Z",
           "caption": "Davvero grazie a tutto lo staff di Bluserena  del Calanè Resort ed Ethra Reserve  per la bellissima vacanza  ..davvero una struttura da consigliare a Castellaneta Marina, non solo per l' accoglienza e la disponibilità ricevuta ma anche e soprattutto per gli eccellenti servizi offerti, l' ottimo cibo, la pulizia e l' organizzazione!👌 E poi che dire ...#mare magnifico, #spiaggia supenda e #sole rovente!!!😅 Grazie alla straordinaria guida Giulio Cappella  per la visita a Matera e alla Trattoria Stano e Ristoteca dai Tosi alle Antiche Cisterne per i fantastici piatti !😋 Matera ...#capitale della #cultura ma soprattutto  città del !!!😉",
-          "location": null,
+          "location": "Bluserena",
           "views": 993,
           "imageUrl": null,
           "likes": 11,
@@ -108113,7 +108181,42 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T04:58:52.205Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "staff",
+              "servizi",
+              "cibo",
+              "pulizia",
+              "organizzazione",
+              "spiaggia",
+              "mare",
+              "sole"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T04:59:26.941Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "staff",
+            "servizi",
+            "cibo",
+            "pulizia",
+            "organizzazione",
+            "spiaggia",
+            "mare",
+            "sole"
+          ]
         },
         {
           "platform": "tiktok",
