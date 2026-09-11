@@ -26245,7 +26245,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-11T15:22:17.798Z"
+            "updatedAt": "2026-09-11T15:24:22.393Z"
           }
         },
         {
@@ -72531,7 +72531,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. As the clocks keep disbelieving I'm running without notice Through a life that feels too fast Trying hard to catch the moment Before everything is past I'm running without notice with a heart that beats too loud searching for a quiet purpose that won't vanish in the crowd some nights I replay the silence just to hear my inner voice Grazie a tutti Maybe still there's only inside That I've always felt to be I'm beginning to see clearly What I've missed by moving yearly I'm running without notice Through a life that feels too fast Ciao Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 216.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:23:57.743Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72545,7 +72554,16 @@
           "likes": 71,
           "comments": 13,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:00.241Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72559,7 +72577,16 @@
           "likes": 1048,
           "comments": 48,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 51.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:03.816Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72573,7 +72600,16 @@
           "likes": 1931,
           "comments": 156,
           "shares": 848,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tabata Segre a Mabeo Road Appo, utaikuta Serenity Safari Parking Ndani, tukona zuu Yoshiheni Wanyama Kede Kede Uyu, nimbuni mkubwa Anaipatikanika konyi zuu Yetu ya Serenity Safari Park Lakini pia, tukona punda milia Wanyama huyu mtulivu un changa mfu un sikivu si omuoga un penda watu kivu tio adimu kumuona lakini hapa sereniti safari paki tunae kalibu uweze kuja kujonea huyu nipofu nyama yuniki a Grazie a tutti G G-Nara King Leza Queto Tanzania Tu namoita Twigga Niamo Lefu Tabasamblake Nijadidi Twigga wetu Wakalimu Kula chakula quana ciò che va come ambavio hadisi da zamani se la possiamo kusu sungula watoto fenda sana kusia masimrizi ya sungula kuyu ukeja sereni kusafari parti ueza kumona jinsi ambavio uflaia maisha kobe musahim livu polle uesci takribani miaka miambiri na kuendelea kobe hawa miua kubwa tofauti na wamtaani tunapatika na kwenye mitanda ujoti ya kijami tiktok instagram na katharika karibu sereniti safari paki nyumbani Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 180,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:12.906Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72587,7 +72623,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Pronti a contare? Da 10 a 0, 0 lancio! Tutti insieme! 10, 9, 8, 7, 6, 5, 4, 3, 2, 1! Lancio!",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:15.399Z"
+          }
         }
       ]
     },
@@ -81315,7 +81360,16 @@
           "likes": 16,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:17.415Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81329,7 +81383,16 @@
           "likes": 1862,
           "comments": 54,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi chiamano Kaonau, è la mia canzone preferita di Chris. E poi mi chiedono se mi posso fare un film di Chris in Singapore. E poi mi chiedono se mi posso fare un film di Chris in Singapore. E poi mi chiedono se mi posso fare un film di Chris in Singapore.",
+            "language": "Italian",
+            "durationSec": 23.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:20.318Z"
+          }
         }
       ]
     },
@@ -88203,7 +88266,7 @@
             "model": "whisper-large-v3",
             "status": "ok",
             "version": 1,
-            "updatedAt": "2026-09-11T15:22:17.798Z"
+            "updatedAt": "2026-09-11T15:24:22.393Z"
           }
         },
         {
@@ -88218,7 +88281,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Insane in the brain Insane in the membrane Insane in the brain Insane in the brain Insane in the membrane Insane in the brain Insane in the brain Ah man, that's just a little bit right there Ma what you say? Let's keep this party rolling y'all Keep it moving, keep it moving, come on I think we need to hit up some stuff right here Make sure we get some of that good stuff Yeah Boy Brandon You know what to do And let's do it Yeah See you tomorrow Girl I must Want you To say something Strange Situation In the E' un po' di tempo, è anche un po' di tempo, è anche un po' di tempo. Y'all ready? Grazie a tutti. Ciao Sì, sì, sì. Grazie a tutti. This is how we do it Ciao Ciao Ciao Grazie a tutti Ciao Ciao ... Grazie a tutti. Grazie a tutti Ciao Ciao Grazie a tutti. All right, come on, let's sing it one more time. Let's go! Say, just got paid. Saturday night. Why are you happy? Feeling nice. Food is shaking. Food is shaking on the road. All around. No more play. No one's saying a single thing. Last time. Say, just got paid. Ciao",
+            "language": "Italian",
+            "durationSec": 600,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:32.848Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88232,7 +88304,16 @@
           "likes": 41,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La città di Versailles ha un prezzo di 65 milioni di euro per metri con VAT, secondo la propria regola. E se si tratta di un'office, è di 53 milioni di euro. Quindi, per me, è un prezzo di 53 milioni di euro. Perché questo prodotto è molto rarissimo sul mercato. Nel mercato, c'è un prodotto che è Happy One Mori, e anche Leo Phong ha questo prodotto, ma non c'è un progetto. Quindi, se vi interessa la città di Versailles, potete pensare al hotel. a presto Il nostro corso gratuito www Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 127,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:39.692Z"
+          }
         }
       ]
     },
@@ -96213,7 +96294,16 @@
           "likes": 42,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi! Ora andrò a mangiare a un grande kiosk in Texas, lo conosci già? Il formaggio di pancetta Io volle fare un fitchec, perché ho appuntato la stazione per prima, ma è diventato super piccolo Ho trattato la parte super bassa, quindi taggherò la parte a basso È a un posto a San Antonio Avevano un sacco di cose buone. Avevano dei big tub di t-shirt, come questi Nel genere, scopriva t-shirts di grattacce Ha questi short da Uptown Cheapskate e poi ho ottenuto il bag from amazon con il piccolo bag charm i suonatrici erano da earthbound i suoni che ho sono gli stessi che ha comunque questo è il full fit grazie per aver guardato, ciao!",
+            "language": "Italian",
+            "durationSec": 47.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:44.388Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96227,7 +96317,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non crederai a quanto sia comodissimo questo set ribbato sui miei pezzi. È un due-piece chic che non prende nulla di effetto per stile per il giorno. Chiedendo qualcosa di respirabile, il cut di lungo leggo ti dà tanto spazio per muoverti. Da lauging a casa a casual outings, questo set fa tutto. Definitivamente hai bisogno di questo in ogni colore. Credimi, il tuo closet ti darà grazie.",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:49.372Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96241,7 +96340,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi un vestito versatile per le tue salite? Tela di cana elastica, tiranti giusti, si adatta perfettamente. Colore gris elegante, ideale per il caffè, città, passeggi. Non lo dubbi, fai il tuo pedito ora.",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:53.661Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96255,7 +96363,16 @@
           "likes": 5,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho finito di finire la serie di Throne of Glass oggi e prima di tutto 10 out of 10, devi leggere e è per questo che posso confidante, senza un sguardo di dubbio, dirvi che la corretta ordine per leggere questa serie è leggere Throne of Glass prima e toglierci quella tanda di leggere in il sguardo. Quando ho iniziato questa serie, ero così distrutta perché ho continuato a sentire molte risposte e uno dei miei amici mi ha letteralmente chiesto di non leggere Assassin's Blade prima e è quello che sto facendo per te e ti spiegherò perché senza spoiler la prequel non devi leggere una prequel prima non sto sentendo questa cazzo di questo stuff di ordine cronologico devi leggere Throne of Glass prima prima di leggere Assassin's Blade perché devi carenciare di questi caratteri e di ciò che sta succedendo in questa storia per che Assassin's Blade abbia alcun impatto e c'è molto che succede in Assassin's Blade che cambierà dopo che non appartiene prima che dovrai dimenticare perché non sai cosa devi fare per fare attenzione a Assassin's Blade se lo leghi prima. Certain relationships, e tutte queste cose, e chi sono le persone, e tutto ciò che è importante sapere prima di entrare in questa prequel Nella mia opinione la giusta ordine libro 1 libro 2 Assassin Blade e poi il libro 3 Io ho actually read books 1 2 and 3 and then read Assassin Blade but I would actually do Assassin Blade after 2 But what's crucial is you have to read it before book 4 and you do not read that shit first. This tandem read, throw that shit in the garbage. There are these two books in the series that happen around the same timeline. And so people think, oh, just read it at the same time. non facciate quella cosa ci sono due storie estremamente dense che sì, succedono allo stesso tempo ma se provate a leggere quella cosa insieme non vedo come siete niente ma confusi sì, si intertuiscono e sì, le persone continuano a sguerire non ho sentito nulla di questo mia ragazza ha scritto questo libro in questo ordine per un motivo se voleva che Assassin's Blade fosse il primo lei l'avrebbe scritto in questo modo se voleva che lo leghassi in tandem lei l'avrebbe scritto in questo modo perché guarda che il libro finale è dove tutto si unisce ecco, è il tuo libro in tandem quindi in conclusione, ti chiedo you please read this series it is the best series i've ever read in my life and it is a game changer do not listen to what the streets are telling you listen to what i am telling you throne of glass book two i'm sorry i can't be remembering the name like i know don't shoot me don't shoot me but book throne of glass book two assassin's blade book three book four blah blah blah to then",
+            "language": "Italian",
+            "durationSec": 153.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:24:58.077Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96269,7 +96386,16 @@
           "likes": 2762,
           "comments": 237,
           "shares": 4156,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Eh, voi, ho appena scoperto questo posto, a Montaigne, 9. Ma seriosamente, quando sono arrivato lì, ho pensato... Eh, sono in Malasia? Il nome è Ashbada River. Voi siete in un'esplosione, un'ora di più da KL. Il posto ha molte cose di divertimento. C'è una piazza grande, che può fare 10 persone. C'è una piazza di acqua, un tappo, un luogo per i vittori. Se avete un po' di famiglie, è davvero bello. Poi c'è il Mongolian Tent. Questo è davvero bello. Voi vedete come è normale. Ma dentro c'è un'aerocon. Un cotello di quinta dimensione. È davvero bello. Ha una casa di cortenone anche bella. Piccola ma cosi. Per un gruppo o un amico di due o tre persone, è davvero bello. se volete un'auto di buona qualità potete usare il camion potete portare il camion e anche il camion potete usare il camion potete usare l la sicurezza buona Grazie a tutti Sui sui, seggio, puni alam je. Boleh lepak-lepak, borak tepi api, tak payah fikir apa-apa. Semuanya, feeling. Kalau korang lapar, korang boleh masak sendiri. Kalau malas masak, food panda pun sampai tau. Serious, sepat ni, feeling jam. Korang pergi dulu, baru paham. Shami je, as badi river mantik. Weekend ni, kalau kosong, sebu cepat-cepat tau. Bye-bye! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 128.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:25:03.472Z"
+          }
         }
       ]
     },
@@ -101008,7 +101134,16 @@
           "likes": 2,
           "comments": 4,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica She said, shut up and dance with me This woman is my destiny She said, ooh, ooh Shut up and dance with me Ooh, ooh Shut up and dance with me Ooh, ooh Shut up and dance with me Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 66.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:25:06.293Z"
+          }
         }
       ]
     },
@@ -105642,7 +105777,16 @@
           "likes": 16,
           "comments": 2,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quando il sole si rivela la sua luce, mi capisco il mio terreno, e aspetto una storia che forse non sarà la mia. Ora inizio a capire la verità della amore, anche se è molto prima di te. Il mio cuore inizia a sentire Bila retta la lati, aku pun malum",
+            "language": "Italian",
+            "durationSec": 36.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:25:11.377Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -105656,7 +105800,16 @@
           "likes": 1211,
           "comments": 36,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Happy birthday to you, happy birthday to you, happy birthday dear Lucy, happy birthday to you.",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:25:14.934Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -105670,7 +105823,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non ero sbagliata. Questo spazio si stava finendo per essere la location di un film di film di film di film. La capa di Finalik. Quando vi lanciate qui, sentite di portarvi back in passato. I bambini sono coloni che sono molto grandi, la strada è molto grande, la punta di Pinos è molto strada e il sole è così pulito. E questo camion, potete scegliere. Scegliete un camion antico o moderno, come questo. Questo camion è tipo un esecutivo. Il camion è davvero comodo. Inizia a cedere con un vista verdigiano così. E sicuramente è già iniziata la possibilità di entrare E qui è uno dei spot più iconici di qui E' la villa Leduc Che è la locazione di filmato di Zaino e Dean Nel film Va bene ragazzi, se non sbagliate il botto di locazione in basso Perché il film è in promo Perfetto ragazzi, come si fa? Se non sbagliate il botto di locazione in basso qui Si trova un appartamento per i clienti Se volete, potete scoprire il programma e il pagamento Il diorato di Caliandra è veramente esigente Inviate nella vostra wishlist",
+            "language": "Italian",
+            "durationSec": 52.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:25:21.728Z"
+          }
         }
       ]
     },
@@ -110496,7 +110658,16 @@
           "likes": 1773,
           "comments": 35,
           "shares": 141,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il mio primo sacco di lupiton Il mio primo sacco di lupiton C'è un sacco di pepite Sei un fan del lupiton? Sì, sì Un sacco di lupiton Magnifico, quando l'hai comprato? Qualcuno mese fa Hai ancora il ticket cash? Ok, super, andiamo a guardare questo Ho tutto comprato qui Mi ricordo di un buon cliente Ti guarderò pezzi per pezzi E finirai con il sacco di lupiton La pepita per la fine Pulami Paris, questo l'hai acquistato qui Ovviamente autentico Io posso prenderlo a rachat cash 50 euro Credistore 70 Continuiamo con la Moncler Hai ancora tutte le etichette all'interno Il codice per verificare l'autenticità Proposito in rachat cash 180 In rachat credit posso proposire 220 Pulami sarà la stessa cosa che l'altro 50-70 Poi abbiamo la pochette Vuitton Pochette di viaggio molto simpatico Ho dimenticato 5 centi Noi la vendiamo in 400 quindi posso proponerti in rachat cash 200 un buon prezzo e in credito 240 Poi una delle grandi cose siamo su un tipo 45 damier l comprato per 1000 euro molto pulito potresti prenderlo in rachat diretto 550 e in credit store 650 una delle pepite con la bocca su questa pièce è una pièce molto bella non puoi portarla molto hai ancora tutti i documenti posso proposarti su rachat cash 700 euro il credito posso proposarti 850 euro un totale di 1730 euro in rachat brutto l'interesse è sia la piccola goya sia la grande posso fare un prezzo sulle goyare e prendere il prezzo che ti ho pagato così ti pagherò e non hai credito che lo usi più tardi 1730, questa l'ho fatta a 600, quindi ti riporti con 1130 euro 1200 ti faccio un piccolo fumi, tu ci hai portato 1000 euro, non lo sposteremo se vieni è bene 1200, se vieni resta il mio prezzo ok niente di più, quindi è 100% beneficio Nooooooo",
+            "language": "Italian",
+            "durationSec": 149.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-11T15:25:30.760Z"
+          }
         }
       ]
     }
