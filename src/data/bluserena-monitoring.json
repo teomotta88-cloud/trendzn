@@ -26231,7 +26231,7 @@
           "url": "https://www.tiktok.com/@un.quasi.pap/video/7674583530734701857",
           "date": "2026-08-16T11:03:43.000Z",
           "caption": "Bimbo felice 🤩#neiperte #vacanze #bambini #bluserena #torreserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 1001,
           "imageUrl": null,
           "likes": 15,
@@ -26255,7 +26255,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T15:31:45.415Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "bambini",
+              "vacanze",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:34:07.128Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "bambini",
+            "vacanze",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -26476,7 +26501,23 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T15:26:52.791Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": null,
+            "topics": [],
+            "location": null,
+            "confidence": 0.2,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:33:59.306Z"
+          },
+          "sentiment": null
         },
         {
           "platform": "tiktok",
@@ -26484,7 +26525,7 @@
           "url": "https://www.tiktok.com/@tony_vacant3/video/7658355417977785633",
           "date": "2026-07-03T17:30:21.000Z",
           "caption": "@bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 1248,
           "imageUrl": null,
           "likes": 18,
@@ -26507,7 +26548,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-11T15:26:58.246Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "evento"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:33:59.867Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "evento"
+          ]
         },
         {
           "platform": "tiktok",
@@ -26515,7 +26580,7 @@
           "url": "https://www.tiktok.com/@manuenatyboutique/video/7675410300153220385",
           "date": "2026-08-18T16:32:00.000Z",
           "caption": "#bluserena #bluserenaviaggi4stelle #vacanzaitaliana #meravugliosa #stupendo",
-          "location": null,
+          "location": "Bluserena",
           "views": 1633,
           "imageUrl": null,
           "likes": 10,
@@ -26539,7 +26604,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T15:27:04.792Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:34:01.034Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "vacanza"
+          ]
         }
       ]
     },
@@ -65750,7 +65838,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7664697708740971808",
           "date": "2026-07-20T19:41:40.000Z",
           "caption": "Risposta a @Enzo86 spero di poterti aiutare con un anteprima della tua permanenza❤️ Siamo solo al giorno 1 hai scelto Molto Bene! #vacanzaSibariResort #sibari #paratiiiiiii #vacanzaBluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 18500,
           "imageUrl": null,
           "likes": 78,
@@ -65774,7 +65862,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T15:29:34.492Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:34:06.211Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "resort"
+          ]
         }
       ]
     },
@@ -88525,7 +88636,7 @@
           "url": "https://www.tiktok.com/@un.quasi.pap/video/7674583530734701857",
           "date": "2026-08-16T11:03:43.000Z",
           "caption": "Bimbo felice 🤩#neiperte #vacanze #bambini #bluserena #torreserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 1001,
           "imageUrl": null,
           "likes": 15,
@@ -88549,7 +88660,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T15:31:45.415Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "bambini",
+              "vacanze",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:34:07.128Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "bambini",
+            "vacanze",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -101470,7 +101606,7 @@
           "url": "https://www.tiktok.com/@santinogadaleta/video/7671242969835474208",
           "date": "2026-08-07T11:00:38.000Z",
           "caption": null,
-          "location": null,
+          "location": "Valentino Resort",
           "views": 1501,
           "imageUrl": null,
           "likes": 2,
@@ -101494,7 +101630,29 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-11T15:33:11.735Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "intrattenimento"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T15:34:09.191Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "intrattenimento"
+          ]
         }
       ]
     },
