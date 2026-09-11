@@ -26254,7 +26254,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-11T15:26:03.947Z"
+            "updatedAt": "2026-09-11T15:31:45.415Z"
           }
         },
         {
@@ -72755,6 +72755,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:23:57.743Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:29:55.354Z"
           }
         },
         {
@@ -72778,6 +72786,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:00.241Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:29:59.364Z"
           }
         },
         {
@@ -72801,6 +72817,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:03.816Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:30:18.454Z"
           }
         },
         {
@@ -72824,6 +72848,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:12.906Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENTTY'SAEAR",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:30:42.035Z"
           }
         },
         {
@@ -72847,6 +72880,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:15.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:30:53.278Z"
           }
         }
       ]
@@ -81584,6 +81625,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:17.415Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A ASSI",
+            "confidence": 0.716,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:31:06.012Z"
           }
         },
         {
@@ -81607,6 +81657,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:20.318Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:31:22.357Z"
           }
         }
       ]
@@ -88490,7 +88548,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-11T15:26:03.947Z"
+            "updatedAt": "2026-09-11T15:31:45.415Z"
           }
         },
         {
@@ -88514,6 +88572,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:32.848Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sound series\n@Terranearesort\nA Sound series\n4 @Terranearesort\n4 Sound series\n4 i Sound\n1 @Terranearesort.",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:31:56.339Z"
           }
         },
         {
@@ -88537,6 +88604,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:39.692Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:32:17.097Z"
           }
         }
       ]
@@ -96527,6 +96602,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:44.388Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:32:25.893Z"
           }
         },
         {
@@ -96550,6 +96633,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:49.372Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Al-generated\nAl-generated A",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:32:30.977Z"
           }
         },
         {
@@ -96573,6 +96665,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:53.661Z"
+          },
+          "ocrData": {
+            "textOnScreen": "salidas?\ndo tiracustables,\nperfectmente.\n¢Color gris\ndudes,",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:32:37.444Z"
           }
         },
         {
@@ -96596,6 +96697,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:24:58.077Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:32:42.354Z"
           }
         },
         {
@@ -96619,6 +96728,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:25:03.472Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KATIL 4\nYANG\nTEMPAT NI",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:33:00.843Z"
           }
         }
       ]
@@ -101367,6 +101485,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:25:06.293Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino Resort\nA è bluserena\ni bluserena\n2 valentino Resort\na bluserena\nValentino Resort A\nbluserena",
+            "confidence": 0.817,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:33:11.735Z"
           }
         }
       ]
@@ -106010,6 +106137,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:25:11.377Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:33:22.935Z"
           }
         },
         {
@@ -106033,6 +106168,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:25:14.934Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:33:28.409Z"
           }
         },
         {
@@ -106056,6 +106199,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:25:21.728Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KAM AMAN\nYAITU VILLA",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:33:40.220Z"
           }
         }
       ]
@@ -110891,6 +111043,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T15:25:30.760Z"
+          },
+          "ocrData": {
+            "textOnScreen": "j JE VAIS\nCHECKER P\nPULL 4\nL'AMI cA\ncash A",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T15:33:47.070Z"
           }
         }
       ]
