@@ -26141,6 +26141,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:45:51.743Z"
+          },
+          "ocrData": {
+            "textOnScreen": "N ‘Bluse\nseren",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:48:20.533Z"
           }
         },
         {
@@ -26164,6 +26173,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:50.201Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:52:28.413Z"
           }
         }
       ]
@@ -38299,6 +38316,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:45:58.465Z"
+          },
+          "ocrData": {
+            "textOnScreen": "house\nTONE\nrounds\nmy? house Bue",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:48:59.979Z"
           }
         },
         {
@@ -38322,6 +38348,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:02.674Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HOWEVER, I\nDON'T THINK\nI CAN ACCEPT\n4 THEM.\nbya owner.\nIT SEEMS\nYOU DON’T EVEN\nNEED TIME TO\nCONSIDER IT.\nA prince getting rejected\nby a hotel business\nREASON? IF IT’S A MATTER\nOF TERMS, PLEASE TELL\nME WHAT YOU WANT.\na Nota] bushess\nSarena\nHOWEVER,\nMORE THAN THAT,\nI ALREADY HAVE\nSOMEONE ELSE I\nWANT TO MARRY.\nTHERE'S NO\nNEED TO APOLOGIZE.\nAFTER ALL, IT WAS A\nUNILATERAL PROPOSAL\nSTILL, IT 15\nQUITE...\nA prince\nAND DEFILNG\nTHE HONOR OF HER LATE\ni MAJESTY THE QUEEN.\nJ SAYING HE\nHOPED THAT WOULD\nEASE MY MIND EVEN\nA LITTLE BIT.",
+            "confidence": 0.881,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:49:09.304Z"
           }
         },
         {
@@ -38345,6 +38380,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:04.910Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sydneyserena\nBeach House Walk in the Park\nJ3 Beach House Walk in the Park\nJ every\nin the Park\neve hingshe",
+            "confidence": 0.823,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:49:23.082Z"
           }
         }
       ]
@@ -42603,6 +42647,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:07.857Z"
+          },
+          "ocrData": {
+            "textOnScreen": "de la vida\nsé feliz\nDisfruta de la vida\nè y sé feliz",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:49:43.527Z"
           }
         },
         {
@@ -42626,6 +42679,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:10.984Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:49:54.652Z"
           }
         }
       ]
@@ -49215,6 +49276,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:14.429Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WHAT'S\nALL-INCLUSIV A\nYOUVE EVER STAY]\ni NOT TALI\nABOUT. RI ATH\nKING A\n[COMPLETELY BLEW YOU AWAY,\nTHE FOOD, THE DRINKS,\nTHE SERVICE, THE ROOMS...\nEVERYTHING.\nWHAT'S THEBEST\nALL-INCLUSIVE HOTEL\nYOU'VE EVER STAYED AT?\nABOUT SOMEWHERE THAT I\nWAS JUST “NICE”\nI'M TALKING ABOUT\nPLACE THAT\nTHE SERVICE,\nEVER STAYED AT? E\nI'M TAEKING\nABOUT SOMEWHERE THAT\nJUST “NICE? [8\nPM TALKING ABOUT\nTHEPLACE LHAT\nCOMPLETELY YOU AWAY,\nFOOD, THE DRIN\nTHE SERVICE, TIEROOMS...\nWHAT'S THE BEST, 4\nALLANCLUSIVE 7\nYOU'VE EVER STAYED\nJUST\nTHE PLACETHAT |B\nTHE DRINKS, ig\nSERVICE, THE ROOMS...\nQA WHAT'S THE BEST WA\nN ALL-INCLUSIVE HOTEL\nAND TALKING\n“NICE”\nTHE PLACE THAT A È\nPLETELY BLEW YOU AWAY,",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:50:10.017Z"
           }
         }
       ]
@@ -55976,6 +56046,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:16.892Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POLANA SERENA\nHOTEL\nge KAMPALA SERENA\ning UGANDA\nvid catia Spa\nBRRENA",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:50:21.074Z"
           }
         }
       ]
@@ -64388,6 +64467,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:21.617Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:51:01.335Z"
           }
         },
         {
@@ -64411,6 +64498,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:23.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:51:18.878Z"
           }
         },
         {
@@ -64434,6 +64529,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:31.231Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:51:25.086Z"
           }
         },
         {
@@ -64457,6 +64560,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:33.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": "e infine anche il \"ci vediamo domani”\nè finito",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:51:34.965Z"
           }
         },
         {
@@ -64480,6 +64592,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:36.682Z"
+          },
+          "ocrData": {
+            "textOnScreen": "great front row views. Bs\nfor two people\nEnjoy meals here.\nperfect for stargazing\nwith a view i E",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:51:43.470Z"
           }
         },
         {
@@ -64503,6 +64624,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:38.893Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:51:53.452Z"
           }
         },
         {
@@ -64526,6 +64655,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:42.098Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:52:01.373Z"
           }
         },
         {
@@ -64549,6 +64686,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:46.690Z"
+          },
+          "ocrData": {
+            "textOnScreen": "villa in Bali\nol Best morning dif\njungle backdrop\nBest bath\nBest",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:52:21.189Z"
           }
         },
         {
@@ -64572,6 +64718,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:50.201Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:52:28.413Z"
           }
         }
       ]
@@ -71268,6 +71422,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:52.584Z"
+          },
+          "ocrData": {
+            "textOnScreen": "side-by-side outdoor, soaking\nSend this to the person\nSoaking tubs",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:52:55.107Z"
           }
         }
       ]
@@ -79536,6 +79699,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:46:58.013Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IRENE\nA IRENE,",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:53:07.581Z"
           }
         },
         {
@@ -79559,6 +79731,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:00.279Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:53:28.192Z"
           }
         },
         {
@@ -79582,6 +79762,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:02.984Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Hotel\n4 Happening now at Serena hotel\npe Nabaasa Lilian live in concert\nHappening now at Serena hotel\nNabaasa Lilian live in concert\nÈ Nabaasa Lilian live in concert",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:53:38.886Z"
           }
         },
         {
@@ -79605,6 +79794,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:06.432Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Isla L",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:53:45.204Z"
           }
         }
       ]
@@ -85944,6 +86142,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:09.592Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fadl",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:54:21.123Z"
           }
         },
         {
@@ -85967,6 +86174,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:13.433Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kamarnya luas banget\nSuper nyaman\nWater Heater\nFree WiFi\nada layar proyektor sebesar ini,\nbisa nonton sepuasnya\nberasa seperti di Bioskop\nLokasi dekat\nelvk Betung,",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:54:29.582Z"
           }
         },
         {
@@ -85990,6 +86206,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-11T04:47:16.408Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-11T04:54:43.203Z"
           }
         },
         {
