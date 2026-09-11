@@ -80322,7 +80322,7 @@
           "url": "https://www.tiktok.com/@mariangela.salvat8/video/7544542839468838166",
           "date": "2025-08-31T00:39:25.000Z",
           "caption": "Estate2025 #estate2025 @bluserena @Bluserena activity #granserenahotel #torrecanne #puglia #CapCut",
-          "location": null,
+          "location": "Bluserena",
           "views": 572,
           "imageUrl": null,
           "likes": 3,
@@ -80345,7 +80345,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-11T10:11:01.947Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "attività",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-11T10:15:42.553Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "estate",
+            "attività",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
