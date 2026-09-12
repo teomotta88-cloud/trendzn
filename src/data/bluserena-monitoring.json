@@ -27110,7 +27110,16 @@
           "likes": 11200,
           "comments": 374,
           "shares": 1562,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 36.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:55:45.124Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27124,7 +27133,16 @@
           "likes": 1061,
           "comments": 73,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:55:47.295Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27138,7 +27156,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Thank you, baby, thank you! Damn girl! What? What baby, what? 10 secondi sui globi, holy shit, y'all! There we go, oh, oh, get it, get it, he's fucking with it, he's fucking with it! Danielle! Oh my god! Kinga! Holy shit, guys, we got bonus, ok, y'all! Oh, oh! Kinga! Holy shit, guys, we got bonus, ok, y'all! Oh, oh! Woo! Woo! Woo! Musica Ok Musica Ciao",
+            "language": "Italian",
+            "durationSec": 94,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:55:50.714Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27152,7 +27179,16 @@
           "likes": 5616,
           "comments": 3,
           "shares": 100,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 25.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:55:52.829Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27166,7 +27202,16 @@
           "likes": 24,
           "comments": 7,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ragazzi belli buongiorno dall'ultimo giorno di vacanza quindi facciamo questi altri video da ora stasera e rispondiamo anche a questo commento me ne sono arrivati vari di spam red quindi rispondiamo a lui mi ha mandato vari messaggi riguardo riguardanti il cibo della vacanza allora non mi trovo molto d'accordo con te però io ovviamente sono qui ti ripeto per essere obiettivo e anche in una maniera tale da poter dare eventualmente uno spunto a migliorarsi per l'amor di dio quindi ben vengano questi commenti però c'è da dire che comunque danno da mangiare a 1500 persone ragazzi e io quello che tu dici anche negli altri commenti dove dicevi che per esempio c'è ad esempio qui scrivi che c'è solo pasta al sugo io ho trovato tante varietà abbiamo mangiato dei tortellini molto molto buoni gradinati con tipo una sorta di pasta al forno c'erano ogni sera fanno del pesce lo cucinano in due varianti differenti oltre poi alle paste basi con sugo, pesto poi c'è da un po' da personalizzarle anche le cose sono tantissime quindi si possono fare veramente innumerevoli piatti per ci sta capisco il tuo commento Sinceramente ho letto anche che su quello che spendi un peccato magari mangiare cos ma in realt tutta questa spesa non l avuta forse grazie alla Genzia che è stata brava, però fondamentalmente in passato io ho pagato anche il doppio di questa vacanza e ho mangiato non meglio, quindi forse abbiamo vissuto due vacanze un po' diverse anche nel modo di mangiare, non mi sto trovando male su questo, sulla qualità dei piatti e sulla varietà quindi non ti posso dire che mi trovo d'accordo però sicuramente farà bene alla struttura se gli arriva il video a migliorarsi sempre a offrire magari qualche varietà come no ho visto che c'è anche del pane integrale me l'hanno chiesto pasta integrale non lo so ma penso di sì sulla sua richiesta quindi ci sta il tuo commento ne apprezziamo figurati e perché no so che magari i villaggi blu serena hanno cambiato società stanno aumentando i prezzi però noi facciamo i commenti proprio appositamente per provare a portare l'acqua al nostro mulino affinché vada sempre meglio, quindi che dirvi, vi auguro un buongiorno e se avete dubbi prima che io parta scrivetemi e ve li tengo tutti, vi sto lasciando una grandissima esperienza quindi ripostatevela non penso che ne troverete tantissime in giro come me che vi raccontano una vacanza a 360 gradi quindi fatene buon uso e a dopo",
+            "language": "Italian",
+            "durationSec": 193.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:55:57.385Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27180,7 +27225,16 @@
           "likes": 17,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Imparerei tutto già lo so Vorrei provare anche a ballare E camminare su quei... come si chiamano? Oh! Piedi! Con le mie pinne non si può far Vorrei le gambe per saltare da Andare a spasso per la... come si dice? Strada! Vedrei anch'io la gente che al sole sempre sta con me Vorrei essere lì senza un perché in libertà",
+            "language": "Italian",
+            "durationSec": 59,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:00.329Z"
+          }
         }
       ]
     },
@@ -40002,7 +40056,16 @@
           "likes": 46000,
           "comments": 121,
           "shares": 1072,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:02.533Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40016,7 +40079,16 @@
           "likes": 4421,
           "comments": 29,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:04.745Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40030,7 +40102,16 @@
           "likes": 267,
           "comments": 33,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Don't you know you're beautiful, you're different, unusual.",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:06.853Z"
+          }
         }
       ]
     },
@@ -44721,7 +44802,16 @@
           "likes": 18,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 61.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:09.393Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44735,7 +44825,16 @@
           "likes": 381,
           "comments": 11,
           "shares": 95,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nara Nara è un'azienda di ricerca e di ricerca. Non è un riposo di solito, è un'isola privata esclusiva, dove la città è 100% a livello di qualità, in ogni modo. Nayara è una sede prestigiosa di Nayara Resorts, a cui sono anche i resorti ultra-luxus in Costa Rica e Cile. Il cuore del resort sono 16 villi di piacere a acqua. Sono luksus, bungalow a acqua in stile balese. Qualche una di queste ha i suoi baseni privati, l'altra ha le schiena sclare, attraverso le quali potete osservare la vita marina. Se volete un viaggio in alto, potete vivere in un'abitazione spettacolare di griglie, stelle di giungla tropicale. giungli. Culinarnie c'è qua un vero e proprio fine dining al pi alto livello I chef di cucina servono dei piatti ala carte preparati da i suoi prodotti locali E il meglio Il nostro corso molto pi di un mese ma molto pi di un mese Si sviluppa tutto il tempo. Si sviluppano nuove ville ultra-luxus con basini privati, che salgono direttamente dall'interno del paese per il taras, e a disposizione dei giovani c'è un privato, personale kamerdyner. Si sviluppa anche la zona spa, con una bella piazza, dove si trovano nuove saune e zone di rilassamento. Se cercate la città di un'absoluta calma, la privacità e il luxo al livello più alto del mondo, è il posto ideale. Guardate il mio profilo per più di questi perelli con i pannelli. Ciao",
+            "language": "Italian",
+            "durationSec": 176.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:19.592Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44749,7 +44848,16 @@
           "likes": 28,
           "comments": 2,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nelle città di Sambuanga City, forse non sapete che c'è questo qui. C'è un pool e puoi anche bere un'acqua. Guardate, lords, quanto è bello il view qui. Quindi, continuiamo a cercare il nostro venue per il nostro team building. In realtà, il posto che andiamo a cercare oggi non è in lista. Quando abbiamo visto il signage, abbiamo provato a entrare. E quando siamo entrati e abbiamo visto il venue, ho avuto la gustazione di mio boss, perché hanno anche un'area overnight. E questa area è esclusiva. Quindi, questa è la Villa Isabel Resort. Locato nella area del West Coast di Sambuanga City, specificamente Barangay Patalon. Quindi siamo entrati per controllare l'area. E ovviamente, c'è anche il loro caretaker per assistere a ciò per controllare il venue. Questo è un 2-story building, ragazzi. Allora, in alto ci sono le ruote. Allora, ora andiamo in alto per controllare le ruote. Allora, qui in alto, ragazzi, hanno una sala e due ruote. E hanno anche un'altra ruota di comfort. Allora, qui in alto, ragazzi, hanno una ruota piccola. Questa è una ruota per due persone fino a quattro. Allora, il loro ruota è ok. Qui in alto, ragazzi, è la ruota familiare o la ruota grande. qui vedete l'acqua perché è a via del mar, quindi è bello potete prendere il cappè e il mooney mooney vedete anche il pool, è molto bello e all'altra parte è un cottage, mi piace che potete usare il pool e anche l'acqua perché è molto vicino quindi siamo andati a scoprire l di dineo in verit molto buono se hai un budget quindi ora andiamo a partire dalla zona di mangiamento quindi ha il ref e il freezer quindi include nel package quindi non ti preoccupare se porti carne frutti o beverages hanno anche un video ok ma non include nel package il suo rentale è di 1000 quindi qui in banda andiamo alla loro kitchen di stufa e hanno anche un'altra stufa di conforto male e femmina quindi questa è la loro kitchen di stufa non c'è bisogno di portare gas perché hanno già la stufa quindi sei pronto a cuocere se vuoi grillare, hanno questo Per quanto riguarda il team building activity venue, non è solo limitato a team building activity, ma anche per family bonding o family reunion. Quindi questo è il fence dell'area esclusiva, ha un gate e puoi usare l'area fuori se non c'è nessuno e nessun abil. Quindi questa è l'area progettata che possiamo usare per il team building activity. E' molto lunga, ragazzi. E qui all'opposito, c'è il gate che va alla beach. Quindi se non vuoi usare la pool e vuoi usare la beach, puoi usare. Per quanto riguarda le ponte, la loro beach è bella, non è solo il sole bianco, ma è bella anche, l'acqua è chiarissima, è solo un po' di ponte, ma potete portare acqua. Per quanto riguarda le ponte, la zona è molto buona, ha un pool e potete anche usare la luna. Quindi ora, il prezzo è rivelato, quanto costa? Quindi questo è valido 18.000 pesos, ragazzi, li usate esclusivamente e per l'inverno. Per più inquiries, ragazzi, metterò la loro pagina FB per contattarli per la vostra riservazione. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 172.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:27.445Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44763,7 +44871,16 @@
           "likes": 129300,
           "comments": 806,
           "shares": 35800,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'è temi amore, me li beffi e, e le lea la virila, tu ma ci... C'è temi amore, me li beffi e...",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:30.685Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44777,7 +44894,16 @@
           "likes": 8,
           "comments": 1,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se vuoi divertirti con incanto e con primordio solo devi vivere un verano a New York Se vuoi divertirti con incanto e con primordio solo devi vivere un verano a New York Un ratito.",
+            "language": "Italian",
+            "durationSec": 43.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:33.893Z"
+          }
         }
       ]
     },
@@ -52051,7 +52177,16 @@
           "likes": 871,
           "comments": 0,
           "shares": 104,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 19.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:38.314Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52065,7 +52200,16 @@
           "likes": 5893,
           "comments": 25,
           "shares": 2237,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il mese di aprile in Italia è solo qui. Questo è il più bello hotel che ho visitato in tutta la mia vita. Il panorama è fantastico. E la stanza è una storia diversa. Ovviamente ogni angolo è più bello che l'altro. Ti fa sembrare che ti fotografi in ogni posto. Guarda il panorama dalla stanza. Non da questo mondo. Mi sento in un sogno. E l'ambiente di notte è più bello e più bello. La calma, la natura romantica in ogni posto. E' la più bella notte che ho visto dalla finestra della mia stanza. C'è l'opportunità di fattare il fattore con loro. e il fattore è stato l'esperienza più bella con questo panorama. Abbiamo vissuto un ambiente di meraviglia in tutta la nostra vita e sicuramente lo ritornerò un milione di volte.",
+            "language": "Italian",
+            "durationSec": 35.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:41.821Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52079,7 +52223,16 @@
           "likes": 147,
           "comments": 14,
           "shares": 163,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stai pensando di venire a Punta Cana? Lasciami raccomandarti il Serengeti Punta Cana. Ci siamo rimasti tre notti e l'esperienza è stata perfetta. Da quando sei arrivato ti metti le maniglie e ora sì, tutto è inclusivo. L'hotel ha spazi preziosi per rilassarti, parlare o divertirti di un buon trattamento. Inoltre ha due piscine grandi e belle dove puoi passare tutto il giorno. È giusto davanti alla piazza con un bar e un cartone di snack per non perderti niente. e se viaggi con i bambini questo è il tuo idealismo perché ha molti luoghi di attrezzamento per loro. Nella notte l'ambiente cambia completamente e tutto diventa una festa. Nella parte 2 ti insegno i ristoranti. Se ti è piaciuto, lascia un like e commenta con chi veniresti. Ciao!",
+            "language": "Italian",
+            "durationSec": 42.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:44.971Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52093,7 +52246,16 @@
           "likes": 86000,
           "comments": 1022,
           "shares": 5362,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Slept away I'm stolen Let the sky fall And it crumbles We will stand tall Face it all Together",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:49.465Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52107,7 +52269,16 @@
           "likes": 94,
           "comments": 18,
           "shares": 62,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, sono Kenry e sono Jonathan. Spendiamo una settimana a The Serenade in Punta Cana e vi mostreremo tutto ciò che c'è in i nostri video. Quindi non dimenticate di iscrivervi per non perdere niente. Il posto più bello del Serenade All Suites è il ponte di acqua al centro. Abbiamo avuto un bel tempo lì. Dopo questo abbiamo avuto un contesto di impersonazione di Adele. Poi siamo tornati alla piazza. Penso che tutti abbiano avuto piazze terribili pienasissime di ciliegie in recenti anni, ma non è così qui a Serenade. La piccola quantità di ciliegie che si asciuga la pianta si rilascia molto presto in mattina quindi le condizioni sono buone per l La pianta spaziosa e pulita Fun fact la acqua sottile Ho camminato tutto il modo fino alla barriera dove un gatto stava solo a calare e la acqua era solo a me rendendola perfetta per i bambini o chi paura dell Grazie a tutti. Grazie a tutti!",
+            "language": "Italian",
+            "durationSec": 130.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:54.198Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52121,7 +52292,16 @@
           "likes": 51,
           "comments": 19,
           "shares": 94,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Voglio uscire dal pavimento, uscire dal sole e vedere il mar Voglio fare un'amore per l'Africa e un amore per la guerra E partire dalle persone, e bevere le ananas E portare il naso, e stare nel sole, e sentire l'esistenza E farla Per il patato, per il patato, per il patato E farla Per il patato, per il patato, per il patato Ciao",
+            "language": "Italian",
+            "durationSec": 59.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:59.629Z"
+          }
         }
       ]
     },
@@ -59542,7 +59722,16 @@
           "likes": 2857,
           "comments": 9,
           "shares": 63,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:57:03.701Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59556,7 +59745,16 @@
           "likes": 2921,
           "comments": 370,
           "shares": 95,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:57:06.007Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59570,7 +59768,16 @@
           "likes": 51,
           "comments": 1,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:57:10.702Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59584,7 +59791,16 @@
           "likes": 349,
           "comments": 7,
           "shares": 123,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I tried to run a different way, I tried to cross the line, but every road I ever chose led back to you.",
+            "language": "Italian",
+            "durationSec": 9.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:57:13.046Z"
+          }
         }
       ]
     },
@@ -68947,7 +69163,16 @@
           "likes": 8,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 136.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:57:16.913Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -69129,7 +69354,16 @@
           "likes": 24,
           "comments": 7,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ragazzi belli buongiorno dall'ultimo giorno di vacanza quindi facciamo questi altri video da ora stasera e rispondiamo anche a questo commento me ne sono arrivati vari di spam red quindi rispondiamo a lui mi ha mandato vari messaggi riguardo riguardanti il cibo della vacanza allora non mi trovo molto d'accordo con te però io ovviamente sono qui ti ripeto per essere obiettivo e anche in una maniera tale da poter dare eventualmente uno spunto a migliorarsi per l'amor di dio quindi ben vengano questi commenti però c'è da dire che comunque danno da mangiare a 1500 persone ragazzi e io quello che tu dici anche negli altri commenti dove dicevi che per esempio c'è ad esempio qui scrivi che c'è solo pasta al sugo io ho trovato tante varietà abbiamo mangiato dei tortellini molto molto buoni gradinati con tipo una sorta di pasta al forno c'erano ogni sera fanno del pesce lo cucinano in due varianti differenti oltre poi alle paste basi con sugo, pesto poi c'è da un po' da personalizzarle anche le cose sono tantissime quindi si possono fare veramente innumerevoli piatti per ci sta capisco il tuo commento Sinceramente ho letto anche che su quello che spendi un peccato magari mangiare cos ma in realt tutta questa spesa non l avuta forse grazie alla Genzia che è stata brava, però fondamentalmente in passato io ho pagato anche il doppio di questa vacanza e ho mangiato non meglio, quindi forse abbiamo vissuto due vacanze un po' diverse anche nel modo di mangiare, non mi sto trovando male su questo, sulla qualità dei piatti e sulla varietà quindi non ti posso dire che mi trovo d'accordo però sicuramente farà bene alla struttura se gli arriva il video a migliorarsi sempre a offrire magari qualche varietà come no ho visto che c'è anche del pane integrale me l'hanno chiesto pasta integrale non lo so ma penso di sì sulla sua richiesta quindi ci sta il tuo commento ne apprezziamo figurati e perché no so che magari i villaggi blu serena hanno cambiato società stanno aumentando i prezzi però noi facciamo i commenti proprio appositamente per provare a portare l'acqua al nostro mulino affinché vada sempre meglio, quindi che dirvi, vi auguro un buongiorno e se avete dubbi prima che io parta scrivetemi e ve li tengo tutti, vi sto lasciando una grandissima esperienza quindi ripostatevela non penso che ne troverete tantissime in giro come me che vi raccontano una vacanza a 360 gradi quindi fatene buon uso e a dopo",
+            "language": "Italian",
+            "durationSec": 193.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:55:57.385Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107284,7 +107518,16 @@
           "likes": 17,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Imparerei tutto già lo so Vorrei provare anche a ballare E camminare su quei... come si chiamano? Oh! Piedi! Con le mie pinne non si può far Vorrei le gambe per saltare da Andare a spasso per la... come si dice? Strada! Vedrei anch'io la gente che al sole sempre sta con me Vorrei essere lì senza un perché in libertà",
+            "language": "Italian",
+            "durationSec": 59,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T17:56:00.329Z"
+          }
         },
         {
           "platform": "tiktok",
