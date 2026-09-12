@@ -68406,7 +68406,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-12T12:40:34.189Z"
+            "updatedAt": "2026-09-12T12:44:14.020Z"
           }
         },
         {
@@ -68525,6 +68525,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:34:42.362Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:41:36.717Z"
           }
         },
         {
@@ -68548,6 +68556,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:34:44.418Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Thursday Evening\nExperiences.\nHyatt Lodge e Oak Brook\nReserve Your Experience\nStillwaterSymphony.com\nSTILLWATER SYMPHONY”\nWATER LAND SOUND JOURNEYS\nBreathe. Float. Restore.",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:41:48.074Z"
           }
         },
         {
@@ -68571,6 +68588,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:34:48.321Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TULUM\nTulum, Mexico\nESCULTURA VEN\nBeach,",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:01.705Z"
           }
         }
       ]
@@ -75992,6 +76018,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:34:52.911Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:17.817Z"
           }
         },
         {
@@ -76015,6 +76049,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:34:55.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:27.429Z"
           }
         },
         {
@@ -76038,6 +76080,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:01.187Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:36.122Z"
           }
         },
         {
@@ -76061,6 +76111,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:03.666Z"
+          },
+          "ocrData": {
+            "textOnScreen": "There's always a grande finale to a resort beach party\nalways a grande finale to a resort beach party\nThere's always a",
+            "confidence": 0.868,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:43.014Z"
           }
         },
         {
@@ -76084,6 +76143,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:07.788Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WELCOME\nBENVENUTO\nPUNTA",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:50.446Z"
           }
         },
         {
@@ -76107,6 +76175,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:11.207Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:42:58.787Z"
           }
         },
         {
@@ -76130,6 +76206,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:16.358Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Na SCAM NA POD",
+            "confidence": 0.891,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:43:02.642Z"
           }
         },
         {
@@ -76153,6 +76238,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:21.882Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:43:27.413Z"
           }
         },
         {
@@ -76176,6 +76269,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:24.403Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:43:39.581Z"
           }
         },
         {
@@ -76199,6 +76300,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:26.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:43:46.049Z"
           }
         }
       ]
@@ -85300,6 +85409,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:30.124Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:43:54.404Z"
           }
         }
       ]
@@ -92460,7 +92577,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-12T12:40:34.189Z"
+            "updatedAt": "2026-09-12T12:44:14.020Z"
           }
         },
         {
@@ -92484,6 +92601,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:37.017Z"
+          },
+          "ocrData": {
+            "textOnScreen": "La mejor\nHotel\nucerfia Hotel",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:44:25.099Z"
           }
         },
         {
@@ -92507,6 +92633,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:39.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:44:30.772Z"
           }
         }
       ]
@@ -101095,6 +101229,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:41.681Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IL PUNTO DI PARTENZA\nIDEALE PER LE ESCURSIONI i\nScopri il Delta del Po via acqua: E\nnatura, storia e paesaggi unici 18\na pochi minuti da Ca’ Elen. A\nDA GORO E GORIN (FE) Q DA PORTOGARIBALDI (FE\nSACCA DI GORO, DELTA E FARO DI GORINO è VALLI DI COMACCHIO E FENICOTTERI\nAlla scoperta delle Val di Goro, dei caratteristici Escursioni nelle meravigliose Valli di Comacchio,\ncasoni da pesca, dela Sacca di Goro e del Faro di Gorino, tra fenicotteri, aironi e anguille\nNatura è panorami mozzafiato! Un'esperienza unica per tutta la famiglia!\ni: SPERI ATTIVITÀ PER STORIA E CULTURA\nCA\" ELENA\nDA CA\" ELEN\nRAGGIUNGI FACILMENTE è\n1 PRINCIPALI\nDEL DELTA 9\nESPERIENZE\nINDIMENTICABILI P\nPER OGNI STAGIONE PY\nScopri il Delta del Po via acqua:\nnatura, storia e paesaggi unici\na pochi minuti da Ca’ Elen:\nDA GORD E GORINO (FE) Q DA PORTOGARIBALDI (FE)\ncasoni da pesca, della Sacca di Goro e del Faro di Gorino, tra fenicotteri, aironi e anguille\nNatura incontaminata è panorami mozzafiato! Un'esperienza unica per tutta la famiglia!\nESPERIENZE STORIA CULTURA COMI\nDA CA' ELENA\nRAGGIUNGI FACILMENTE\n1 PRINCIPALI IMBARCHI\nGoro\nINDIMENTICABILI\nPER OGNI STAGIONE i\nIDEALE PER LE\nnel Della del Vo\nScopri il Delta del Po via acqua: i\na pochi minuti da Ca’ E\nQ DA GORO E GORINO (FE) DA PORTOGARIBALDI (FE)\nAlla scoperta delle Valli di Goro, dei caratteristici Escursioni nelle meravigliose Valli di Comacchio,\ncasoni da pesca, della Sacca di Goro e del Faro di Gorino. tra fenicotteri, aironi anguille.\nNatura incontaminata e panorami mozzafiato! Un'esperienza unica per tutta la famiglia!\nELENA\nRAGGIUNGI FACILMENTE 25m\n1 PRINCIPALI IMBARCHI 6 A\nDEL DELTA\nESPERIENZE A\nIDEALE PER LE ESCURSIONI 4\na pochi minuti da 1 2\nQ DA GORO E GORINO (FE) EQ DA PORTOGARIBALDI (FE)\nSACCA DI GORO, DELTA E FARO DI VALLI DI COMACCHIO E\nAla scoperta delle Val di Goro, dei caratteristici nelle meravigliose Valli di Comacchio.\ncasoni da pesca, della Socca di Goro e del Faro di Gorino, tra fenicotteri, aironi e\nNatur incontaminata e panora",
+            "confidence": 0.874,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:44:55.157Z"
           }
         },
         {
@@ -101118,6 +101261,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:44.065Z"
+          },
+          "ocrData": {
+            "textOnScreen": "is... this Was a\n10 mark on\ng grate\nand thank Go\nhave is\ntomark\nand! thank God 19\nA Feeling",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:45:11.626Z"
           }
         },
         {
@@ -101141,6 +101293,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:46.263Z"
+          },
+          "ocrData": {
+            "textOnScreen": "when u die but instead\n2026 of hell u see this",
+            "confidence": 0.911,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:45:31.010Z"
           }
         },
         {
@@ -101164,6 +101325,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:48.853Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DECEMBE R",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:45:39.937Z"
           }
         },
         {
@@ -101187,6 +101357,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:53.313Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Piscina aquecida do\notel: Buona Vitta Resort\nuecida do\nVitta Resort",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:45:46.656Z"
           }
         },
         {
@@ -101210,6 +101389,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:35:57.612Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LINDSAY CLANCY DID NOT\nSTR *NGLE CALLAN!\nvo ntithe",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:45:53.775Z"
           }
         },
         {
@@ -101233,6 +101421,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:00.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "reds\nSENT",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:45:59.980Z"
           }
         }
       ]
@@ -106098,6 +106295,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:05.972Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nueva i\nColeccion",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:09.353Z"
           }
         },
         {
