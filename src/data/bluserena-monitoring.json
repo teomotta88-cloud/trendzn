@@ -26815,7 +26815,7 @@
           "url": "https://www.tiktok.com/@rosynardiello/video/7674705621542849824",
           "date": "2026-08-16T18:57:29.000Z",
           "caption": "Il tuo sogno realizzato❤️ #granserenahotelpuglia #bluserena #family",
-          "location": null,
+          "location": "Granserena Hotel",
           "views": 717,
           "imageUrl": null,
           "likes": 7,
@@ -26838,7 +26838,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T02:10:00.141Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "famiglia",
+              "vacanza"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T02:12:51.390Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "famiglia",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -83512,7 +83536,7 @@
           "url": "https://www.tiktok.com/@rosynardiello/video/7674705621542849824",
           "date": "2026-08-16T18:57:29.000Z",
           "caption": "Il tuo sogno realizzato❤️ #granserenahotelpuglia #bluserena #family",
-          "location": null,
+          "location": "Granserena Hotel",
           "views": 717,
           "imageUrl": null,
           "likes": 7,
@@ -83535,7 +83559,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T02:10:00.141Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "famiglia",
+              "vacanza"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T02:12:51.390Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "famiglia",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
