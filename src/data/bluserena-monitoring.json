@@ -27424,7 +27424,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 36.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:25.044Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27438,7 +27447,16 @@
           "likes": 135,
           "comments": 22,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "buongiorno oggi 31 luglio siamo appena arrivati al serenusa resort di ligada faccio vedere siamo appena entrati wow qui c'è l'armadio e qui si va fuori bellissimo che pace che meraviglia giardinetto ok Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:42.176Z"
+          }
         }
       ]
     },
@@ -40354,7 +40372,16 @@
           "likes": 44,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi piace Lily, ma... Dopo avervi incontrato oggi, ha parlato. Miss Lily è il nostro boss del mondo. Hey, fans di dramma, se siete già attaccati dopo questo primo episodio, credetemi, questi prossimi episodi faranno il vostro cuore in modo più bello. Partiamo da perché dovete bingare il resto. Numero uno, che il bambino maledetto Daniel non è solo un sbagliatore, è in un'errore di grado enorme. Ciao, 500.000 dollari di cancro. Che se la maledizione di Susan è un cover per qualcosa di più scuro? E perché la vibe del boss della mafia di Roman è subito tutta sulla Serena? Hashtag misteri alert. Plus, chi è quella figura sottile all'ultimo di episodio 7? Non sono qui per aiutare. L'episodio 9 tocca un bomba. Lily, la piccola princesa di Serena con l'autismo, sapeva davvero che Serena era una bad girl. Come? Perché si parla subito? È la domanda che hai di rispondere. E il più grande twist, l'episodio 10, la cliffhanger. Serena è mancata, ma il suo marito e la figlia stanno mentendo a Roman. Your mind will explode. Click back to your home screen now to watch how this unravels. You won't regret it.",
+            "language": "Italian",
+            "durationSec": 64.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:09.444Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40368,7 +40395,16 @@
           "likes": 277,
           "comments": 154,
           "shares": 292,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Papà",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:15.270Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40382,7 +40418,16 @@
           "likes": 121800,
           "comments": 374,
           "shares": 3807,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:18.815Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40396,7 +40441,16 @@
           "likes": 2523,
           "comments": 4,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:21.636Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40410,7 +40464,16 @@
           "likes": 2654,
           "comments": 115,
           "shares": 93,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:23.968Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -40424,7 +40487,16 @@
           "likes": 1279,
           "comments": 51,
           "shares": 75,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 10.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:26.500Z"
+          }
         }
       ]
     },
@@ -52744,7 +52816,16 @@
           "likes": 389400,
           "comments": 4538,
           "shares": 24000,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:28.841Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52758,7 +52839,16 @@
           "likes": 76,
           "comments": 7,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 7.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:33.295Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52772,7 +52862,16 @@
           "likes": 29,
           "comments": 2,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'atmosfera è l'atmosfera di un'ambiente di rilassamento, un nuovo hotel stile 2023, un design moderno con notte di stile bohemico, numeri bellissimi, un bar mini, snack, pivo e piatti. Il premio alcolico è un bar cosmopolitan con festeggiamenti fino a 2 ore. La caffè Starbucks è in territorio, in zona 16+, con un bar di bambini e un bar per i giovani. È anche ideale per il rilassamento di tutta la famiglia, un bar per i bambini, un bar per i bambini, ma anche senza foto di rilascio, ma stile Instagram, l'attività di ogni zona, il piscino, il piove, il salto in mare. Per abbracciare il rilascio in questo stile in un'oddata comoda per te, scriviti a Xengo Travel.",
+            "language": "Italian",
+            "durationSec": 43.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:36.696Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52786,7 +52885,16 @@
           "likes": 33,
           "comments": 0,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:39.160Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52800,7 +52908,16 @@
           "likes": 135,
           "comments": 22,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "buongiorno oggi 31 luglio siamo appena arrivati al serenusa resort di ligada faccio vedere siamo appena entrati wow qui c'è l'armadio e qui si va fuori bellissimo che pace che meraviglia giardinetto ok Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:42.176Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -52814,7 +52931,16 @@
           "likes": 33,
           "comments": 9,
           "shares": 15,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Una vacanza non è fatta solo di mare e piscina. Ogni giorno a Serenusa troverete tante attività diverse, dalla palestra, sport, animazione, spettacoli serali, buon cibo. È davvero difficile annoiarsi. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:46.733Z"
+          }
         }
       ]
     },
@@ -60361,7 +60487,16 @@
           "likes": 82,
           "comments": 8,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:50.267Z"
+          }
         }
       ]
     },
@@ -70329,7 +70464,16 @@
           "likes": 102,
           "comments": 21,
           "shares": 30,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Avete bisogno di sapere che nel teatro c'è uno dei risorti più buoni. Non è lontano dalla porta di Sariater, il luogo è pulito e molto aserito. Il nome del luogo è Sofia Hotel & Resort Teatro Subang. Prossimo dal pavimento di Sariater, Curek Koleangkak e Curek Cipodok. La possibilità è completa, è disponibile la colonna di spazio, il ristorante e il luogo per i bambini. Le scuole sono molte, è disponibile la cabina superiore, la cabina deluxe, la cabina grandeluxe e la cabina junior. Il tariff start da 580.000 rupiah Sampai 3.500.000 rupiah Tergantung dari tipe kamarnya ya Oh iya Safia Resort baru launching kemarin ya 21 Juli 2026 Berhubung baru launching Ada promo diskon 60% Berlaku untuk seluruh kategori kamar ya Periode promo berlaku dari 28 Juni Sampai 31 Juli 2026 Kabinnya estetik Udaranya sejuk Dan ada kolam renang pripat di kamar tertentu ya Gimana? Keren banget kan? Quindi, quando stai a casa qui?",
+            "language": "Italian",
+            "durationSec": 58.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:20:55.259Z"
+          }
         }
       ]
     },
@@ -78149,7 +78293,16 @@
           "likes": 36,
           "comments": 17,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti a Aman Kila, un resort meraviglioso che si trova in un'area di carangasem, Bali. L'antai privato con il pesce nero, la suona dell'ombak che rilassano, presenta un'esperienza di rilassamento così esclusiva. L'interior della villa elegante con il compagno di un'ambulanza meravigliosa, crea la miglioria e la privacità. per la vita.",
+            "language": "Italian",
+            "durationSec": 40,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:00.734Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78163,7 +78316,16 @@
           "likes": 216,
           "comments": 1,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:03.985Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -78177,7 +78339,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è il nostro posto a Lombok Lodge, che è il mio posto preferito. Ha questa piccola zona di sedia, come un bed up high e una bar area. Ha questa piccola piazza per andare in basso, che ha alcuni closet. E poi questa era la nostra vista con un bel quartiere che si può hangare. E poi qui c'è il lavabo. Ha un grande tubo che abbiamo sicuramente usato. I suoi e le sue stelle. E una bella sciogliera all'interno con queste alte palle che sono state andate all'interno e all'esterno.",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:06.926Z"
+          }
         }
       ]
     },
@@ -87489,7 +87660,16 @@
           "likes": 39,
           "comments": 5,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo settimana mi sono andata con le mie amiche a Guatapé per celebrare il bianco di una di loro e ci siamo abituati a Bahia Serena. E davvero è stato un plan molto bello. L'hotel ha una vista spettacolare alla represa e anche alla Piedra del Peñol. Quindi, basicamente, è stato divertirsi, riposare e passare tempo insieme. Quindi, se stanno cercando un luogo per fare qualcosa di diverso con i suoi amici, disconnettarsi e passare la ricca, hanno che conoscere Bahia Serena. Grazie.",
+            "language": "Italian",
+            "durationSec": 31,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:12.116Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -87503,7 +87683,16 @@
           "likes": 9734,
           "comments": 516,
           "shares": 1167,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:15.854Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -87517,7 +87706,16 @@
           "likes": 120,
           "comments": 13,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:19.031Z"
+          }
         }
       ]
     },
@@ -94780,7 +94978,16 @@
           "likes": 3486,
           "comments": 80,
           "shares": 1176,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il concetto è come l'estero-estero di Tengah, vero? Sì, questo è il concetto di Maroko S.B.M. Sama come il nome della fila di Bapak Maroko. La forma di questo polo è così, è molto spazioso, ha anche la pianta. È grande, no? Sì, questo è per il luogo di rilassamento, c'è la polo, c'è la fiamma, c'è anche il dispensatore. C'è il dispensatore? è vero, il dispenser può essere freddo, può essere caldo o può essere per asciugare, per il penne è già in full facilità, la maschera che abbiamo preparato è già stata preparata per questo, è freebies, è un complimento da noi, oh questo è gratis? Sì, questo è gratis, ok, questa è la sua camera principale",
+            "language": "Italian",
+            "durationSec": 45.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:22.520Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94794,7 +95001,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 36.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:25.044Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94808,7 +95024,16 @@
           "likes": 28,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì Grazie a tutti. Grazie. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 107.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:29.843Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94822,7 +95047,16 @@
           "likes": 151,
           "comments": 2,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "1, 2, 3, GO! Signora, mi chiede un po' di cosa. Dove siamo? Siamo arrivati da Nam Dinh, siamo arrivati a Hoa Binh, poi siamo andati a Hoa Binh, e ora siamo arrivati qui. Grazie, ma il cibo è molto buono. È da Thanh Nam. Perché siete arrivati a Thanh Nam? Perché è molto famoso, quindi è arrivato subito. Quale cibo è? Il cibo grattuto ha un gusto molto buono e molto buono. Le prossime cibo non ho mai provato, ma il cibo grattuto ha un buon sapore, e in particolare sembra molto semplice è molto dolce rispetto al nudo che conosco in particolare il nudo è più sottile il nudo è molto sottile e ancora sottile provalo rivela, rivela, rivela mmm, buono buono buono? buono ok grazie a tutti buona salute a tutti signore, che ne pensate? la prima cosa che ho provato è il nudo ha un gusto molto buono la seconda cosa è il frutto è molto buono è molto buono Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:35.525Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94836,7 +95070,16 @@
           "likes": 3515,
           "comments": 63,
           "shares": 845,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questa è la prima parte in Kampala che in realtà favorisce tutti, da tua madre in tua madre a i tuoi figli. Quindi tutti sono cari per la città, la città è incredibile. Mi raccomando, è come Victoria's Arena, sai che le viste sono insane. Le viste sono belle, le opzioni di cibo sono crazie, come tutti sono cari per la città. Se sei vegetariano, se sei musulmano, tutti sono cari per la città. Poi viene con il vino spazzolato e è solo 120.000 per persona e i figli sono 85.000. Esatto, i tuoi ex amici non andavano a prendere i tuoi figli per il brunch E la tua madre e il tuo padre Perché questo è il brunch per tutti E la coda era deliziosa Mi è piaciuta Ogni domenica Il brunch di domenica a Lake Victoria Serena Ti saraneranno La musica è bella I vedi sono fantastici I dolci sono divertenti E c'è un sacco di attività per i figli Non sono venuto con i figli Quindi ovviamente ho dovuto agire come un figlio Allora, ci vediamo ogni domenica Alla prossima Ciao",
+            "language": "Italian",
+            "durationSec": 56.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T23:21:39.362Z"
+          }
         },
         {
           "platform": "tiktok",
