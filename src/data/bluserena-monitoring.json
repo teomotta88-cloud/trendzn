@@ -26759,7 +26759,16 @@
           "likes": 14,
           "comments": 2,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 22.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:27.678Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26773,7 +26782,16 @@
           "likes": 484,
           "comments": 4,
           "shares": 28,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:30.113Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26787,7 +26805,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ariel, ascolta, il mondo degli umani è un pasticcio, la vita sotto il mare è meglio di qualsiasi cosa abbiano lassù. Le alghe del tuo vicino ti sembrano più verdi sai, vorresti andare sulla terra, non sai che campagno fai. Se poi ti guardassi intorno, vedresti che il nostro mare è pieno di meraviglie, c'è altro che vuoi di più. In fondo al mar, in fondo al mar, tutto bagnato è molto meglio, credi a me. Quelli lassù che sbobbano, sotto a quel sole svengono, mentre con l'oto ce la smasciamo in fondo al mar. Quaggiù tutti sono allegri, guizzando di qua e di là. Invece là sulla terra il pesce è tristassai Rinchiuso in una boccia che brutto destino avrà Se l'uomo verrà un po' fame il pesce si batterà Oh no, in fondo al mar, in fondo al mar",
+            "language": "Italian",
+            "durationSec": 70.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:34.268Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -26801,7 +26828,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:36.789Z"
+          }
         }
       ]
     },
@@ -39244,7 +39280,16 @@
           "likes": 108000,
           "comments": 95,
           "shares": 464,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Scusa, comunque continuiamo. E ho iniziato a ballare e a chiamare mia mamma e ho detto, stanno cercando di fissarmi? Oh mio Dio! Stavo dicendo, oh mio Dio, mamma, ho perso il mio lavoro. Stavo chiamando, stavo freddando, ma ancora a questo punto siamo in Fiji. Quindi sono così, oh mio Dio, sono in un lavoro. Non ho nessun lavoro. E quindi sto freddando, ma poi sono tornata in Stati Uniti. E poi mi è tutto iniziato a fissarmi, quando siamo arrivati all'aeroporto e tutti quelli che erano lì. I was just like oh They were saying that because I'm genuinely Not gonna be able to come back to work Like I'm gonna have other shit to do So That was such like a Eye opening experience but I'm like Forever grateful for our cast The producers You know and Sì",
+            "language": "Italian",
+            "durationSec": 78.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:42.582Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39258,7 +39303,16 @@
           "likes": 181,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:45.953Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39272,7 +39326,16 @@
           "likes": 195,
           "comments": 3,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Outro",
+            "language": "Italian",
+            "durationSec": 11.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:48.704Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39286,7 +39349,16 @@
           "likes": 313,
           "comments": 4,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 21.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:53.204Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -39300,7 +39372,16 @@
           "likes": 46500,
           "comments": 125,
           "shares": 490,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:56.157Z"
+          }
         }
       ]
     },
@@ -43770,7 +43851,16 @@
           "likes": 23,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:59.676Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43784,7 +43874,16 @@
           "likes": 3958,
           "comments": 249,
           "shares": 332,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come on, come on, come on",
+            "language": "Italian",
+            "durationSec": 14.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:02.228Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43798,7 +43897,16 @@
           "likes": 44,
           "comments": 0,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:05.898Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43812,7 +43920,16 @@
           "likes": 27,
           "comments": 17,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:08.467Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43826,7 +43943,16 @@
           "likes": 22,
           "comments": 6,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 34.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:16.154Z"
+          }
         }
       ]
     },
@@ -50721,7 +50847,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti, questo è il shuttle stop di Gran Serenis Riviera Maya. Qui a Hotel Serenis, se vuoi andare da A a B e è molto caldo, puoi salire in uno di questi. È un shuttle stop. Il shuttle stop ti prende in quasi ogni posto. Da uno dei restauranti e la barra, a alcune delle aziende di divertimento, ti chiamano, ti prende... Gran Serenis Riviera Maya The Beautiful Mexico",
+            "language": "Italian",
+            "durationSec": 36.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:19.905Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -50735,7 +50870,16 @@
           "likes": 20300,
           "comments": 23,
           "shares": 3165,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:23.101Z"
+          }
         }
       ]
     },
@@ -57839,7 +57983,16 @@
           "likes": 3419,
           "comments": 9,
           "shares": 32,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Iscriviti al canale!",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:25.991Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57853,7 +58006,16 @@
           "likes": 125,
           "comments": 36,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'amore non è di piacere a Dio. Non abbiamo mai capito come essere. Sono di terra, mi troverò. Sono arrivato in pittura, mi troverò in pittura.",
+            "language": "Italian",
+            "durationSec": 17.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:31.085Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57867,7 +58029,16 @@
           "likes": 1753,
           "comments": 34,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, no, no, no, no. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:34.323Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -57881,7 +58052,16 @@
           "likes": 231,
           "comments": 17,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:37.111Z"
+          }
         }
       ]
     },
@@ -66805,7 +66985,16 @@
           "likes": 4,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:40.663Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66819,7 +67008,16 @@
           "likes": 814,
           "comments": 8,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 40.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:45.720Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66833,7 +67031,16 @@
           "likes": 565,
           "comments": 6,
           "shares": 479,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e poi vi mostrerò un'altra cosa che c'è in questo resort. Iniziamo con il Kids Club, questo è il nostro grande Kids Club, dove ci sono molte cose da giocare e anche una grande casa di giocatori. E c'è un altro luogo, il Kids Club Loppy, dove i bambini possono correre e giocare. E c'è anche il parco di acqua che i bambini piacciono. e abbiamo anche un'acqua per il resort Dopo qualche ghiaccio, arriviamo al mare ma prima di arrivare al mare, possiamo stare qui è il Tongka Cafe & Bar possiamo acquistare dei cibi freddi e al freddo possiamo sedere nel Tongka Bar vi un suono ma",
+            "language": "Italian",
+            "durationSec": 59.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:50.615Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66847,7 +67054,16 @@
           "likes": 23,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Baby, alami, tipi uo' fu di alawi Sibadio Sibadio Egbamio Egbamio Ide poti ma bololo",
+            "language": "Italian",
+            "durationSec": 18.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:54.848Z"
+          }
         }
       ]
     },
@@ -74100,7 +74316,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La maggior parte dei persone non lo riconosce, ma c'è un posto a Cancun dove il dinero stoppa di maturare quando ti incontri. Benvenuti a Hotel Riu Cancun, dove l'inclusività non significa alcune cose include. Significa tutto, non limitate, non escusate. Ti svegli, l'oceano è davanti a te, cammini un po' e c'è una barra di sfumatura a chiedere. No wallet, no bill, no thinking. Breakfast, cover, lunch, cover. Midnight Tacos at 2am? Yeah, still covered And somehow every night feels like a 5 star food festival No wristbands, no surprise charges No extra fee nonsense Just white sand that feels unreal In a pool that never asks you to leave This Cancun hotel has a crazy secret right inside your bedroom That shocks 90% of first time guests You can drink free wine all night until sunrise Without paying a single extra dollar This isn't just a resort It's basically a cheat code for summer So here's the real question If you could stay here for a week without spending a single extra dollar who are you bringing with you?",
+            "language": "Italian",
+            "durationSec": 68.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:02:59.106Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -83010,7 +83235,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ariel, ascolta, il mondo degli umani è un pasticcio, la vita sotto il mare è meglio di qualsiasi cosa abbiano lassù. Le alghe del tuo vicino ti sembrano più verdi sai, vorresti andare sulla terra, non sai che campagno fai. Se poi ti guardassi intorno, vedresti che il nostro mare è pieno di meraviglie, c'è altro che vuoi di più. In fondo al mar, in fondo al mar, tutto bagnato è molto meglio, credi a me. Quelli lassù che sbobbano, sotto a quel sole svengono, mentre con l'oto ce la smasciamo in fondo al mar. Quaggiù tutti sono allegri, guizzando di qua e di là. Invece là sulla terra il pesce è tristassai Rinchiuso in una boccia che brutto destino avrà Se l'uomo verrà un po' fame il pesce si batterà Oh no, in fondo al mar, in fondo al mar",
+            "language": "Italian",
+            "durationSec": 70.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-12T02:01:34.268Z"
+          }
         },
         {
           "platform": "tiktok",
