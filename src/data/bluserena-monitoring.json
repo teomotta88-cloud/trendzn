@@ -27285,7 +27285,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-12T18:01:33.410Z"
+            "updatedAt": "2026-09-12T18:10:06.461Z"
           }
         }
       ]
@@ -103030,6 +103030,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:31.974Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SHUT A",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:08:47.717Z"
           }
         },
         {
@@ -103053,6 +103062,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:35.888Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:08:54.177Z"
           }
         },
         {
@@ -103076,6 +103093,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:40.226Z"
+          },
+          "ocrData": {
+            "textOnScreen": "that meant so much E\nThe damage stretched far\nbeyond the building itself.\nRiver's a\niam restaurant or campgro\nThe lossfis also hitting\npeople who worked here,\ndestroyed",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:06.156Z"
           }
         },
         {
@@ -103099,6 +103125,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:42.787Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:10.987Z"
           }
         },
         {
@@ -103122,6 +103156,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:44.932Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SAINTS\n[15] nolo [16] do",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:18.340Z"
           }
         },
         {
@@ -103145,6 +103188,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:48.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:24.777Z"
           }
         },
         {
@@ -103168,6 +103219,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:51.065Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:31.672Z"
           }
         },
         {
@@ -103191,6 +103250,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:57.711Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:47.979Z"
           }
         },
         {
@@ -103214,6 +103281,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:59.649Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:50.670Z"
           }
         }
       ]
@@ -108237,6 +108312,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:01.642Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:09:55.732Z"
           }
         },
         {
@@ -108267,7 +108350,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-12T18:01:33.410Z"
+            "updatedAt": "2026-09-12T18:10:06.461Z"
           }
         },
         {
@@ -108291,6 +108374,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:06.468Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:14.194Z"
           }
         }
       ]
@@ -113403,6 +113494,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:08.372Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MOST EXPENSIVE HOTEL\ni edited\nTESTING 5 STAR HOTELS IN ASIA\nKalogeras Sisters No views 46 seconds ago\nVICO\ni think\ne AL ho edited\nho edited\n2 months age\nMOST EXPENSIVE HOTEL 3\ni i edited\nKalogeras Sisters No views 46 second",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:20.004Z"
           }
         },
         {
@@ -113426,6 +113526,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:11.172Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i think edited",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:24.992Z"
           }
         },
         {
@@ -113449,6 +113558,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:13.316Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 MALI E\nNot my house but know\nthe way around it\nNot my house",
+            "confidence": 0.91,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:29.487Z"
           }
         },
         {
@@ -113472,6 +113590,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:18.859Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:34.773Z"
           }
         },
         {
@@ -113495,6 +113621,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:22.710Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:44.615Z"
           }
         },
         {
@@ -113519,6 +113653,14 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675551059397348639: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:23.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:53.799Z"
           }
         }
       ]
@@ -118736,6 +118878,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:28.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": "server,\npeople,\nsmall server,\nlac eople,\nlack",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:10:58.156Z"
           }
         },
         {
@@ -118759,6 +118910,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:31.576Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AE ERIA SMP\nGr 44 anggota\ni AETHERIA SMP\nServer Survival ECOPVP CHILL M... Baca selengkapnya\nObrolan audio Tambah Can\naudio Tambah Car\nAETHERIASMP\nAETHERIA SMP M\nGrup WhatsApp",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:11:04.637Z"
           }
         },
         {
@@ -118782,6 +118942,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:36.950Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HAPPENING\nFLOOR 4\nUNPREDICTABLE",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:11:16.177Z"
           }
         },
         {
@@ -118805,6 +118974,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:39.916Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7668012143589018893: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:11:17.225Z"
           }
         },
         {
@@ -118828,6 +119006,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:45.593Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:11:40.061Z"
           }
         },
         {
@@ -118851,6 +119037,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T18:00:49.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Virginia, 7\nPennsylvania Delaware,\nRennsylvania Delaware a\nMaryland,\nDelaware",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:11:52.976Z"
           }
         }
       ]
