@@ -26901,7 +26901,7 @@
           "url": "https://www.tiktok.com/@_sbe3__/video/7535443425022315798",
           "date": "2025-08-06T12:09:02.000Z",
           "caption": "#perte #videoviral #fyp #italy #bluserena #tik_tok #lavacanzacheresta @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 888,
           "imageUrl": null,
           "likes": 87,
@@ -26924,7 +26924,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T07:19:50.886Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "gratitudine",
+              "social media"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T07:43:38.557Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "gratitudine",
+            "social media"
+          ]
         },
         {
           "platform": "tiktok",
@@ -26932,7 +26954,7 @@
           "url": "https://www.tiktok.com/@rossellalauria/video/7542140265033698582",
           "date": "2025-08-24T13:16:12.000Z",
           "caption": "#bluserenavillage #grandehotelserena #puglia #perte #loveyou  Estate 2025♥️",
-          "location": null,
+          "location": "Bluserena",
           "views": 337,
           "imageUrl": null,
           "likes": 14,
@@ -26955,7 +26977,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T07:22:42.952Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "resort",
+              "puglia",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T07:43:48.228Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "resort",
+            "puglia",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -67611,7 +67659,7 @@
           "url": "https://www.tiktok.com/@le_groupe_viaggi/video/7660837690409110817",
           "date": "2026-07-10T10:02:50.000Z",
           "caption": null,
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 13400,
           "imageUrl": null,
           "likes": 71,
@@ -67635,7 +67683,35 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T07:21:34.816Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "family package",
+              "pensione completa",
+              "soft inclusive",
+              "beach amenities",
+              "sconto"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T07:43:47.351Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "family package",
+            "pensione completa",
+            "soft inclusive",
+            "beach amenities",
+            "sconto"
+          ]
         },
         {
           "platform": "tiktok",
@@ -84076,7 +84152,7 @@
           "url": "https://www.tiktok.com/@rossellalauria/video/7542140265033698582",
           "date": "2025-08-24T13:16:12.000Z",
           "caption": "#bluserenavillage #grandehotelserena #puglia #perte #loveyou  Estate 2025♥️",
-          "location": null,
+          "location": "Bluserena",
           "views": 337,
           "imageUrl": null,
           "likes": 14,
@@ -84099,7 +84175,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T07:22:42.952Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "resort",
+              "puglia",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T07:43:48.228Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "resort",
+            "puglia",
+            "estate"
+          ]
         }
       ]
     },
