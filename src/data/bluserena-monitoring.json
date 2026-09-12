@@ -27011,7 +27011,7 @@
           "url": "https://www.tiktok.com/@sebastianoolandes/video/7659766319843167520",
           "date": "2026-07-07T12:45:22.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": 1083,
           "imageUrl": null,
           "likes": 18,
@@ -27034,7 +27034,30 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T12:37:01.650Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "romantic",
+              "wellness"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:05.576Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "romantic",
+            "wellness"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27042,7 +27065,7 @@
           "url": "https://www.tiktok.com/@pinkaltamuracalciof2/video/7673593201260825888",
           "date": "2026-08-13T19:00:44.000Z",
           "caption": "@bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 348,
           "imageUrl": null,
           "likes": 12,
@@ -27065,7 +27088,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T12:37:05.813Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "spiaggia",
+              "mare",
+              "relax",
+              "musica",
+              "amore"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:10.729Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "spiaggia",
+            "mare",
+            "relax",
+            "musica",
+            "amore"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27073,7 +27124,7 @@
           "url": "https://www.tiktok.com/@tony_belardo/video/7668382675433999638",
           "date": "2026-07-30T18:01:14.000Z",
           "caption": "Un sogno...tutto stupendo 😍😍😍 #calaserena #bluserena #sardegna #geremeas",
-          "location": null,
+          "location": "Calaserena Resort",
           "views": 562,
           "imageUrl": null,
           "likes": 4,
@@ -27096,7 +27147,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T12:38:14.645Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "bellezza",
+              "relax",
+              "vacanza"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:25.652Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "bellezza",
+            "relax",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27231,7 +27306,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666363350443511073",
           "date": "2026-07-25T07:25:13.000Z",
           "caption": "Risposta a @SpawnRedCode911 #sibarigreenresort #trend #virale #bluserena #paratiiiiii",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2506,
           "imageUrl": null,
           "likes": 24,
@@ -27255,7 +27330,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T18:07:00.248Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "servizio",
+              "vacanza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:27.835Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "servizio",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27263,7 +27363,7 @@
           "url": "https://www.tiktok.com/@santinogadaleta/video/7524743639352823062",
           "date": "2025-07-08T16:08:24.000Z",
           "caption": "#bluserena #valentinoresort #lavacanzacheresta #lasirenetta @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 898,
           "imageUrl": null,
           "likes": 17,
@@ -27286,7 +27386,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T18:10:06.461Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "libertà",
+              "esperienze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:31.849Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "libertà",
+            "esperienze"
+          ]
         }
       ]
     },
@@ -44811,7 +44935,7 @@
           "url": "https://www.tiktok.com/@tony_belardo/video/7668382675433999638",
           "date": "2026-07-30T18:01:14.000Z",
           "caption": "Un sogno...tutto stupendo 😍😍😍 #calaserena #bluserena #sardegna #geremeas",
-          "location": null,
+          "location": "Calaserena Resort",
           "views": 562,
           "imageUrl": null,
           "likes": 4,
@@ -44834,7 +44958,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T12:38:14.645Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "bellezza",
+              "relax",
+              "vacanza"
+            ],
+            "location": "Calaserena Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:25.652Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "bellezza",
+            "relax",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -69138,7 +69286,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666089322763865377",
           "date": "2026-07-24T13:41:51.000Z",
           "caption": "Risposta a @Anto-peppe Tenace🇮🇹 @elisalatifondi un attenzione soprattutto a te😂😂😂 i prossimi clienti si fionderanno a salutarti tutti😂😂😎 #Vacanza2k26 #calabria🌶️ #paratiiiiii #virale #sibarigreenresort",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 5350,
           "imageUrl": null,
           "likes": 24,
@@ -69162,7 +69310,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T12:44:14.020Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:28.824Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -69202,7 +69375,7 @@
           "url": "https://www.tiktok.com/@jordychiafele/video/7532535628643208470",
           "date": "2025-07-29T16:05:18.000Z",
           "caption": "party anni 90 estate 2025 in compagnia del dream team Sibari green resort #animazione #mare #abbronzatura #instagood #divertimento #tiktok #sole #anni90 #estate2025 #sorriso",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 4524,
           "imageUrl": null,
           "likes": 73,
@@ -69226,7 +69399,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T12:40:49.950Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "mare",
+              "vacanza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:26.685Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "mare",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -69770,7 +69968,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666363350443511073",
           "date": "2026-07-25T07:25:13.000Z",
           "caption": "Risposta a @SpawnRedCode911 #sibarigreenresort #trend #virale #bluserena #paratiiiiii",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2506,
           "imageUrl": null,
           "likes": 24,
@@ -69794,7 +69992,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T18:07:00.248Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "servizio",
+              "vacanza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.88,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:27.835Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "servizio",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -69802,7 +70025,7 @@
           "url": "https://www.tiktok.com/@le_groupe_viaggi/video/7667167799571123489",
           "date": "2026-07-27T11:26:53.000Z",
           "caption": null,
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 5251,
           "imageUrl": null,
           "likes": 26,
@@ -69826,7 +70049,31 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T18:07:06.970Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:28.357Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -94099,7 +94346,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666089322763865377",
           "date": "2026-07-24T13:41:51.000Z",
           "caption": "Risposta a @Anto-peppe Tenace🇮🇹 @elisalatifondi un attenzione soprattutto a te😂😂😂 i prossimi clienti si fionderanno a salutarti tutti😂😂😎 #Vacanza2k26 #calabria🌶️ #paratiiiiii #virale #sibarigreenresort",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 5350,
           "imageUrl": null,
           "likes": 24,
@@ -94123,7 +94370,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T12:44:14.020Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:28.824Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -108328,7 +108600,7 @@
           "url": "https://www.tiktok.com/@santinogadaleta/video/7524743639352823062",
           "date": "2025-07-08T16:08:24.000Z",
           "caption": "#bluserena #valentinoresort #lavacanzacheresta #lasirenetta @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 898,
           "imageUrl": null,
           "likes": 17,
@@ -108351,7 +108623,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T18:10:06.461Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "libertà",
+              "esperienze"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:31.849Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "libertà",
+            "esperienze"
+          ]
         },
         {
           "platform": "tiktok",
@@ -108359,7 +108655,7 @@
           "url": "https://www.tiktok.com/@f.sarnacchiarotonia/video/7544068083908971798",
           "date": "2025-08-29T17:57:07.000Z",
           "caption": "#valentinoresort @AdelaideTarantini",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 1102,
           "imageUrl": null,
           "likes": 15,
@@ -108382,7 +108678,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T18:10:14.194Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "musica",
+              "evento"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:32.424Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "musica",
+            "evento"
+          ]
         }
       ]
     },
@@ -113447,7 +113765,7 @@
           "url": "https://www.tiktok.com/@giandomenico.vittore_jkd/video/7661229802996682017",
           "date": "2026-07-11T11:24:26.000Z",
           "caption": "Chi come me? Kalidria Hotel & Thalasso Spa  #spritz #mare #vacanze #luxurylifestyle #PESCAMAN @bluserena @Giuliana Covella",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 971,
           "imageUrl": null,
           "likes": 14,
@@ -113471,7 +113789,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T12:47:27.371Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "relax",
+              "beverage",
+              "vacanze"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-12T18:12:32.906Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "relax",
+            "beverage",
+            "vacanze"
+          ]
         },
         {
           "platform": "tiktok",
