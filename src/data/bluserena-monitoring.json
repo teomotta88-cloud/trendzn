@@ -106327,6 +106327,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:14.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "100 Iconic Valentino\nGaravani Interiors\nPart 1",
+            "confidence": 0.856,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:20.551Z"
           }
         },
         {
@@ -106350,6 +106359,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:17.574Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JOEL\nPEREZ\nFANEXPD\nFANEXPO\nPEOPLE SAY VALENTINO IS EVIL,\nBUT THAT'S THE LEAST INTERESTING\n4 THING ABOUT HIM...\nOEL FANEXPD\n>EREZ\nJOEL FANEX\n4 FANEXI\nly FANEXPO\nJ PEREZ\nFANEXPD mu",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:31.077Z"
           }
         },
         {
@@ -106373,6 +106391,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:19.951Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:36.199Z"
           }
         },
         {
@@ -106396,6 +106422,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:24.437Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:40.895Z"
           }
         }
       ]
@@ -111318,6 +111352,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:26.837Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:51.083Z"
           }
         },
         {
@@ -111341,6 +111383,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:33.921Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:46:59.025Z"
           }
         },
         {
@@ -111364,6 +111414,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:36.794Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MOST EXPENSIVE HOTEL\ni edited\nTESTING 5 STAR HOTELS IN ASIA\nKalogeras Sisters No views 46 seconds ago\nVICO\ni think\ne AL ho edited\nho edited\n2 months age\nMOST EXPENSIVE HOTEL 3\ni i edited\nKalogeras Sisters No views 46 second",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:47:05.515Z"
           }
         },
         {
@@ -111387,6 +111446,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:38.953Z"
+          },
+          "ocrData": {
+            "textOnScreen": "aking up to this views\nwaking up to this view>",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:47:15.274Z"
           }
         },
         {
@@ -111410,6 +111478,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:40.996Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel Tirso\nTirso Cagliari",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:47:20.658Z"
           }
         },
         {
@@ -111433,6 +111510,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:43.372Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SPRITZ VIBES",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:47:27.371Z"
           }
         }
       ]
@@ -116618,6 +116704,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T12:36:46.426Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SHARPLINK",
+            "confidence": 0.73,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T12:47:32.760Z"
           }
         }
       ]
