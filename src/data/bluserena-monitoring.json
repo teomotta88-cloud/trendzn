@@ -27254,7 +27254,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-12T18:01:23.448Z"
+            "updatedAt": "2026-09-12T18:07:00.248Z"
           }
         },
         {
@@ -69406,6 +69406,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:22.593Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:05:02.158Z"
           }
         },
         {
@@ -69429,6 +69437,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:28.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": "adds",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:05:10.454Z"
           }
         },
         {
@@ -69452,6 +69469,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:31.709Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Balj A S\nHOTEL RESORT",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:05:20.092Z"
           }
         },
         {
@@ -69475,6 +69501,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:34.184Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:05:34.177Z"
           }
         },
         {
@@ -69498,6 +69532,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:36.792Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(FTES",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:05:40.605Z"
           }
         },
         {
@@ -69521,6 +69564,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:42.228Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:05:55.299Z"
           }
         },
         {
@@ -69544,6 +69595,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:44.777Z"
+          },
+          "ocrData": {
+            "textOnScreen": "alle",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:06:06.546Z"
           }
         },
         {
@@ -69567,6 +69627,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:47.231Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:06:22.804Z"
           }
         },
         {
@@ -69590,6 +69658,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:51.522Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GREEN COAST RESORT]\nGREEN\nRESORT\nè 5/6 Persona\nGREENICOAST\nSherbim\nPersona\nbuggy falas",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:06:29.070Z"
           }
         },
         {
@@ -69613,6 +69690,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:53.824Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:06:33.619Z"
           }
         },
         {
@@ -69637,6 +69722,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7673701469190622495: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:54.837Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Glamping to see the stars\nGlamping to seeghe\nsee the stars\nfhe Stars",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:06:43.661Z"
           }
         },
         {
@@ -69660,6 +69754,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:57:57.132Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:06:50.436Z"
           }
         },
         {
@@ -69691,7 +69793,7 @@
             "minConfidence": 60,
             "status": "ok",
             "version": 3,
-            "updatedAt": "2026-09-12T18:01:23.448Z"
+            "updatedAt": "2026-09-12T18:07:00.248Z"
           }
         },
         {
@@ -69715,6 +69817,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:58:04.739Z"
+          },
+          "ocrData": {
+            "textOnScreen": "alll\nBARI GREEN RESO",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:06.970Z"
           }
         },
         {
@@ -69738,6 +69849,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:58:06.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 morning N\nBabymoon",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:14.247Z"
           }
         }
       ]
@@ -77472,6 +77592,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:58:42.286Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 Datu Salumay, Marilog District Davao City",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:25.284Z"
           }
         },
         {
@@ -77495,6 +77624,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:58:44.682Z"
+          },
+          "ocrData": {
+            "textOnScreen": "week! ere",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:34.943Z"
           }
         },
         {
@@ -77518,6 +77656,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:58:47.262Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:42.565Z"
           }
         }
       ]
@@ -86650,6 +86796,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:58:51.145Z"
+          },
+          "ocrData": {
+            "textOnScreen": "C est situé ou?\nC'est le grand Chalet Gisenyi\nC est situé ob?\nHotel Serena\nDerrière Serena Gisenyi\nAbonnez-vous pour plus",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:48.803Z"
           }
         },
         {
@@ -86673,6 +86828,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:03.184Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Diet Nashta",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:54.588Z"
           }
         },
         {
@@ -86696,6 +86860,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:09.330Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:07:59.695Z"
           }
         },
         {
@@ -86719,6 +86891,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:14.258Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kulu kule serena hotel\nKampala 4th September\nOur grand finale\nKulu kule serena hotel i P\nKulu kule serena hotel t\nKampala 4th September 3\nKampala 4th September LEA\nKulu kule serena hotel 4 i\nKampala 4th September ahi\nOur grand finale è",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:08:07.889Z"
           }
         },
         {
@@ -86742,6 +86923,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:16.391Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:08:12.585Z"
           }
         },
         {
@@ -86765,6 +86954,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:21.567Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:08:19.169Z"
           }
         }
       ]
@@ -102801,6 +102998,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T17:59:25.401Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SESS SS",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T18:08:40.415Z"
           }
         },
         {
