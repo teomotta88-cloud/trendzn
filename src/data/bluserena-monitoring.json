@@ -95334,6 +95334,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:21:46.130Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a mirror home\nMountains\nyou check into a mirror\nin Smoky Mountains di Ì\nyou cheek mirror home\nin the Great Smoky Mountains\nmirror\ni the Great Smoky Mountains",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:27:55.547Z"
           }
         }
       ]
@@ -104460,6 +104469,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:21:48.690Z"
+          },
+          "ocrData": {
+            "textOnScreen": "time in\nOur time in Spain",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:28:04.674Z"
           }
         },
         {
@@ -104483,6 +104501,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:21:53.294Z"
+          },
+          "ocrData": {
+            "textOnScreen": "color\ncamera at\nphoto colors\nupload:\noot colors",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:28:12.340Z"
           }
         },
         {
@@ -104506,6 +104533,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:21:56.043Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:28:47.657Z"
           }
         },
         {
@@ -104529,6 +104564,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:21:58.352Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:28:53.758Z"
           }
         },
         {
@@ -104552,6 +104595,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:02.047Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:29:06.355Z"
           }
         },
         {
@@ -104575,6 +104626,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:05.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:29:35.138Z"
           }
         },
         {
@@ -104598,6 +104657,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:07.553Z"
+          },
+          "ocrData": {
+            "textOnScreen": "19 Wednesday\nto pousay i...\nHELP FORGOT SHARED\nA CALENDER WITH MY\nHolladay to pousay i...\nHolladay to pousay island\nFamily\nA Day before event at 17:00\nDuplicate Edit Share Delete More",
+            "confidence": 0.897,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:29:43.633Z"
           }
         },
         {
@@ -104621,6 +104689,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:10.328Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“Shotcrete Installation Preheater Calciner Refractory”",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:30:09.661Z"
           }
         },
         {
@@ -104644,6 +104721,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:12.711Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1100) days\nWoman calendar\n5 days before\nf Woman\n2 days before",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:30:20.837Z"
           }
         }
       ]
@@ -109806,6 +109892,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:18.243Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OU THEN HAVE THE",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:30:34.718Z"
           }
         },
         {
@@ -109829,6 +109924,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:20.910Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LINA\nUber",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:30:48.619Z"
           }
         },
         {
@@ -109852,6 +109956,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:23.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:31:13.458Z"
           }
         }
       ]
@@ -120566,6 +120678,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:28.665Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Images PlanetLabs\nvillage,\nle lit s'est élargi\nd'une intelligence artificielle J\navec précision,\nmais la glace",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:31:31.399Z"
           }
         },
         {
@@ -120589,6 +120710,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:31.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:31:37.101Z"
           }
         },
         {
@@ -120612,6 +120741,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:37.682Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Backpacking Vlog\nOmetepe, Nicaragua\nBullseyepulse\nOmetepe, Nicaragua 7\nOmetepe,",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:31:46.702Z"
           }
         },
         {
@@ -120635,6 +120773,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T23:22:40.680Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kills\nboxing ring\nSTAMINA HEALTH\nHide\nI (+157 respect/XP",
+            "confidence": 0.823,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T23:31:52.619Z"
           }
         }
       ]
