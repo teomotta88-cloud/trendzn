@@ -26768,6 +26768,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:27.678Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:04:39.630Z"
           }
         },
         {
@@ -26791,6 +26799,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:30.113Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:04:46.315Z"
           }
         },
         {
@@ -26814,6 +26830,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:21.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:04:53.978Z"
           }
         },
         {
@@ -26837,6 +26861,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:36.789Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:04:59.557Z"
           }
         }
       ]
@@ -39289,6 +39321,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:42.582Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena thought she had to\ngo back to work not\nknowing that Love Island\nher life id\nwould.change her life\nwould",
+            "confidence": 0.931,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:06.674Z"
           }
         },
         {
@@ -39312,6 +39353,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:45.953Z"
+          },
+          "ocrData": {
+            "textOnScreen": "you should Z",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:11.041Z"
           }
         },
         {
@@ -39335,6 +39385,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:48.704Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:22.289Z"
           }
         },
         {
@@ -39358,6 +39416,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:53.204Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:25.877Z"
           }
         },
         {
@@ -39381,6 +39447,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:56.157Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:36.256Z"
           }
         }
       ]
@@ -43860,6 +43934,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:01:59.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Mago in on fire",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:41.885Z"
           }
         },
         {
@@ -43883,6 +43966,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:02.228Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Abillionaire INL\nexpensive\nhotel sit there fora\nOrder coffee.\nSoak in thefenergy.\nAnd allow fuel you to the\nnext level.\nWorks every time\nmost expensive\nhotel &sit there\nÈ Order coffee.\nSoak in\nAnd allow it to fuel you to the\ni next level.\nAbillionaire\nsit there fora while.\nit to fuel you to the",
+            "confidence": 0.847,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:05:58.368Z"
           }
         },
         {
@@ -43906,6 +43998,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:05.898Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:06:22.110Z"
           }
         },
         {
@@ -43929,6 +44029,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:08.467Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Pueblo\nAIEO RESO]\nultimate food guide:\nPueblo Bonito in Ca",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:06:31.511Z"
           }
         },
         {
@@ -43952,6 +44061,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:16.154Z"
+          },
+          "ocrData": {
+            "textOnScreen": "That thay, resort nao mien Bac cò\nphong tiéu rong\nbi theo gia nhom ban dung chan ait\nchua thay resort mien\ntiéu nhu\ngia dinh/ ban dung\nsychua\nsy chua thay resort nao è mién Bic co\nnhom ban dung chan “7\nThat thay resort\nphòng day!",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:07:00.395Z"
           }
         }
       ]
@@ -50856,6 +50974,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:19.905Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SIRENIS\ni SHUTTLE\noT spa! Great for the gym",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:07:12.469Z"
           }
         },
         {
@@ -50879,6 +51006,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:23.101Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:07:28.942Z"
           }
         }
       ]
@@ -57992,6 +58127,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:25.991Z"
+          },
+          "ocrData": {
+            "textOnScreen": "EVERISINCE 2\nBEDROOM\nFUN FACT: la\nEVER SINCE SERENA FIRST OPENED HER PARENTS'\nBEDROOM WITH EISER, SHE OFTENIWEARS OR USES\nHER MOTHER'S KEEPSAKES\nWATCH, AND al\nEVER E SERENA\nITH EISER, SHES OR USES\nHER ER'S KEEPSAKE\nKEEBSAKES (i123, A,",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:07:41.389Z"
           }
         },
         {
@@ -58015,6 +58159,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:31.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:07:47.126Z"
           }
         },
         {
@@ -58038,6 +58190,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:34.323Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HAPPENING NOW CATHERINE\nAT STRONG WOMAN\nIRENE NAMATOVU SERENA HOTEL\nKUSASIRA AT STRONG WOMAN B=\nIRENE SERENA HOTEL\nKUSASIRA AT STRONG WOMAN",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:07:53.987Z"
           }
         },
         {
@@ -58061,6 +58222,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:37.111Z"
+          },
+          "ocrData": {
+            "textOnScreen": "of this place 4",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:08:01.984Z"
           }
         }
       ]
@@ -66994,6 +67164,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:40.663Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:08:09.350Z"
           }
         },
         {
@@ -67017,6 +67195,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:45.720Z"
+          },
+          "ocrData": {
+            "textOnScreen": "River View Sgr",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:08:15.435Z"
           }
         },
         {
@@ -67040,6 +67227,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:50.615Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:08:30.437Z"
           }
         },
         {
@@ -67063,6 +67258,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:54.848Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i adam\nysugar",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:08:49.924Z"
           }
         }
       ]
@@ -74325,6 +74529,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:02:59.106Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DOESNT MEAN SOME\nTHIS",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:09:02.540Z"
           }
         },
         {
@@ -83280,6 +83493,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:21.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:04:53.978Z"
           }
         },
         {
