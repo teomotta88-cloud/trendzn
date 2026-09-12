@@ -26837,7 +26837,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-12T02:04:53.978Z"
+            "updatedAt": "2026-09-12T02:10:00.141Z"
           }
         },
         {
@@ -74561,6 +74561,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:06.457Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:09:15.354Z"
           }
         },
         {
@@ -74584,6 +74592,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:11.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Reser\n2 Soriofmia LEZGO! i\nview kebun\nSonofmia LEZGO!\ny untuk\npikmatin",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:09:27.326Z"
           }
         },
         {
@@ -74607,6 +74624,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:14.641Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ARAYANNA\nTrawas No.11 Desa Ti\nKec Trawas\nINFORMASI RESERVASI 4\nINFORMASI RESERVASI\nUdayana",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:09:46.240Z"
           }
         }
       ]
@@ -83470,6 +83496,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:17.806Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:09:52.581Z"
           }
         },
         {
@@ -83500,7 +83534,7 @@
             "frameCount": 5,
             "status": "no_text",
             "version": 3,
-            "updatedAt": "2026-09-12T02:04:53.978Z"
+            "updatedAt": "2026-09-12T02:10:00.141Z"
           }
         },
         {
@@ -83524,6 +83558,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:26.783Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:10:04.898Z"
           }
         },
         {
@@ -83547,6 +83589,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:30.870Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i Geofrey Bingana performing\nat Serena Hotel\nGeofrey Bingana performing\ni at Serena Hotel\nBingana performing\nMA at Serena Hotel",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:10:21.420Z"
           }
         }
       ]
@@ -90605,6 +90656,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:33.548Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:10:38.257Z"
           }
         },
         {
@@ -90628,6 +90687,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:37.803Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:10:48.408Z"
           }
         }
       ]
@@ -99028,6 +99095,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:47.817Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:11:10.654Z"
           }
         },
         {
@@ -99051,6 +99126,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:50.414Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:11:18.061Z"
           }
         },
         {
@@ -99074,6 +99157,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:03:57.117Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:11:29.597Z"
           }
         }
       ]
@@ -108743,6 +108834,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:04:04.188Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:11:34.801Z"
           }
         }
       ]
@@ -113768,6 +113867,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:04:09.841Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tt ibutedjtojenchan\nattr è\naction",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:12:01.897Z"
           }
         },
         {
@@ -113791,6 +113899,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:04:21.829Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SACRED ENERGY\nMEDICINE\n7 DANCERS COULD",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:12:21.089Z"
           }
         },
         {
@@ -113814,6 +113931,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-12T02:04:25.511Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Herero and Nama War (1904-1908)\nCasualties and losses 90,000 including civilians\nResult German victory",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-12T02:12:32.239Z"
           }
         }
       ]
