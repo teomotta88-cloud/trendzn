@@ -108402,6 +108402,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:42:33.526Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PLAGE\nRECOMMAN",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:52:44.526Z"
           }
         },
         {
@@ -108425,6 +108434,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:42:38.647Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:00.420Z"
           }
         },
         {
@@ -108448,6 +108465,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:42:44.046Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rekomendasi\nHotel\nsini tuh\nudah cukup",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:11.766Z"
           }
         },
         {
@@ -108471,6 +108497,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:42:46.739Z"
+          },
+          "ocrData": {
+            "textOnScreen": "laguna y",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:15.674Z"
           }
         }
       ]
@@ -114236,6 +114271,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-13T19:44:46.745Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DURANTE\nCENTENARIO\nALMENO COSÌ MI HANNO\nMIEI GENITORI",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:36.250Z"
           }
         },
         {
@@ -114273,6 +114317,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:44:49.489Z"
+          },
+          "ocrData": {
+            "textOnScreen": "merece!\no descanso\nque voce",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:47.509Z"
           }
         },
         {
@@ -114296,6 +114349,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:44:51.686Z"
+          },
+          "ocrData": {
+            "textOnScreen": "rip to now hes nerfed\nrip to valentinos beautiful now hes nerfed\nand CHOPPED iy\nrip to valentinos hes nerfed\nA CHOPPED è",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:52.002Z"
           }
         },
         {
@@ -114319,6 +114381,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:44:54.841Z"
+          },
+          "ocrData": {
+            "textOnScreen": "every single\ncompartment that we have\nfinish X N\nback\n“for whatever is left of\nsummer,",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:53:58.638Z"
           }
         },
         {
@@ -114342,6 +114413,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:44:59.650Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ROMA A\nVALENTINO",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:05.628Z"
           }
         },
         {
@@ -114366,6 +114446,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-13T19:46:59.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“E arrivato il j\nrrivatolil\nsaluti\nEgitto)\nsaluti A\n#Sharm 2026 Egitto\ngiornoldei\n2. saluti",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:19.568Z"
           }
         },
         {
@@ -114389,6 +114478,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:03.281Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:26.170Z"
           }
         },
         {
@@ -114412,6 +114509,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:06.019Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TINO",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:33.075Z"
           }
         },
         {
@@ -114435,6 +114541,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:10.514Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:39.573Z"
           }
         }
       ]
@@ -120047,6 +120161,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:15.663Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:42.657Z"
           }
         },
         {
@@ -120070,6 +120192,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:23.191Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:48.451Z"
           }
         }
       ]
@@ -126363,6 +126493,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:25.774Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Clothes\nTo feel the noise quiet\nYou don't know",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:54:54.644Z"
           }
         },
         {
@@ -126386,6 +126525,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:47:29.412Z"
+          },
+          "ocrData": {
+            "textOnScreen": "&MOONLIGHTS,\n//discor\nhttps://discord.gg/moonlightvalley\nVALLEY",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:55:02.239Z"
           }
         }
       ]
