@@ -80503,6 +80503,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:52.259Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WELLNESS\nHIMALAYAN SALT\nRELAXING\nA BIG FLURRY BLANK",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:22:16.141Z"
           }
         }
       ]
@@ -89950,6 +89959,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:55.293Z"
+          },
+          "ocrData": {
+            "textOnScreen": "scene from\nCan you take a tiny step that way?\nI tried to do it on one breath",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:22:22.393Z"
           }
         },
         {
@@ -89973,6 +89991,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:03.377Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘Serena\nHotel Isb.\nHotel\nHagel",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:22:31.295Z"
           }
         },
         {
@@ -89996,6 +90023,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:11.329Z"
+          },
+          "ocrData": {
+            "textOnScreen": "un television red\noches en el buffet i\n4 Imitado",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:22:44.139Z"
           }
         },
         {
@@ -90019,6 +90055,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:17.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pier",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:02.917Z"
           }
         },
         {
@@ -90042,6 +90087,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:20.442Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kampala Serena hotel\nTikfok, A\n@uwichrista\nKampala Serena hotel o\ni Kampala Serena",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:12.920Z"
           }
         },
         {
@@ -90065,6 +90119,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:23.071Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FAISALABAD SERENA\nHOTEL\nFaisalabad, Pakistan\nFAISALABAD SE A\nFaisalabad n\nFAISALABAD SEREN",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:18.836Z"
           }
         }
       ]
@@ -97615,6 +97678,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:27.353Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AQUA SOUL de Pakbara\nAQUA SOUL de Pakbara te\nAQUA SOUL de",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:25.258Z"
           }
         },
         {
@@ -97638,6 +97710,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:33.323Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:37.403Z"
           }
         },
         {
@@ -97661,6 +97741,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:36.604Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Wied",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:44.918Z"
           }
         }
       ]
@@ -107166,6 +107255,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:42.291Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:23:54.531Z"
           }
         },
         {
@@ -107189,6 +107286,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:45.410Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TUESDAY WEDNESDAY THURSDAY FRIDAY\nReply to Mary Jane Smith's\ncomment\nCan make these\nQo cool templates with 07\nevery month?\nReply to Mary Jane\ncool templates with\n26 comment\nCan make these i\ncool templates with List\ndough bread (Costco)\nCan these\nFavorite",
+            "confidence": 0.893,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:04.371Z"
           }
         },
         {
@@ -107212,6 +107318,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:47.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Face forward until\nThe very last second\nIf it's for the sake",
+            "confidence": 0.878,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:08.900Z"
           }
         },
         {
@@ -107235,6 +107350,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:50.479Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Riccar a\nDal 19 al 21 settembre\nBLUSERENA or\nCALANE\nVILLAGE RESORT\nCOSTO\nA PERSONA\nperdere\nù aes ervizio rattamento ervizio\nPER INFO E PRENOTAZIONI\ni) RIVOLGERSI IN AGENZIA Via Ferrucci 45\nCARBONE Andria",
+            "confidence": 0.853,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:16.310Z"
           }
         },
         {
@@ -107258,6 +107382,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:11:53.422Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:24.643Z"
           }
         },
         {
@@ -107281,6 +107413,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:00.438Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KHURESORT GOLDEN CITY\nPUGC \"KHAI SINH\" TU 2017\nTUNG SE\nBO HOANG 10 NAM\nDOANH NGHIEP\nHOAN TOAN \"BAT LUC\"\n“TRONG VIEC TV VON\nNGL BRETONG HOP i\nGUON:T",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:35.474Z"
           }
         },
         {
@@ -107304,6 +107445,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:05.360Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IZ 4 LOUNGE",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:41.389Z"
           }
         },
         {
@@ -107327,6 +107477,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:09.198Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:24:55.397Z"
           }
         },
         {
@@ -107350,6 +107508,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:12.174Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BRAND NAME CALAN\nmain uses:\nwith\nTYPE CALCIUM CHANNELS;\nmain TN\nANG avoid wim\nUSES ARRHYTHMIAS\nAND RATE CONTROL\nmain\nPear! avoid win\nBRADYCARDIAY CONSTIPATION,\nmain angina,\nPearl avoid win\nAND CAUTIONIWITH\nE BETA BLOCKERS DUE",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:25:06.577Z"
           }
         },
         {
@@ -107373,6 +107540,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:19.419Z"
+          },
+          "ocrData": {
+            "textOnScreen": "È CapCut\nCapCut",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:25:21.488Z"
           }
         },
         {
@@ -107396,6 +107572,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:22.691Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:25:41.273Z"
           }
         }
       ]
@@ -112653,6 +112837,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:25.107Z"
+          },
+          "ocrData": {
+            "textOnScreen": "palette,\nTikTok\nartissomuchfun00\nIf you and your F/O have 2\nsignature color what\nIf you have a\ne, what\nsignature what",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:25:53.005Z"
           }
         },
         {
@@ -112676,6 +112869,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:37.261Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:25:57.333Z"
           }
         },
         {
@@ -112699,6 +112900,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:40.313Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:26:04.461Z"
           }
         },
         {
@@ -112722,6 +112931,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:12:42.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": "asks fornatore\nresort to_\nMike A\nWhen she nature\nWhen she asks nature",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:26:16.485Z"
           }
         },
         {
