@@ -41636,6 +41636,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:39:32.420Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:47:45.433Z"
           }
         },
         {
@@ -41659,6 +41667,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:39:35.005Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:47:48.997Z"
           }
         }
       ]
@@ -46741,6 +46757,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:39:38.409Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:47:53.808Z"
           }
         },
         {
@@ -46764,6 +46788,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:39:50.237Z"
+          },
+          "ocrData": {
+            "textOnScreen": "What the\nnonchalant\nWhat the fuck\nWhat the fuckis",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:47:57.258Z"
           }
         },
         {
@@ -46787,6 +46820,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:39:57.941Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:02.874Z"
           }
         },
         {
@@ -46824,6 +46865,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:01.081Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:09.897Z"
           }
         },
         {
@@ -46847,6 +46896,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:09.896Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CALA SERENA\na Club\nPilates Event\nMallorca Robinson Club\nPilates Event a",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:16.328Z"
           }
         },
         {
@@ -46870,6 +46928,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:12.074Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:18.748Z"
           }
         },
         {
@@ -46893,6 +46959,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:14.871Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:31.389Z"
           }
         },
         {
@@ -46916,6 +46990,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:18.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dn sang\nchan,\ntennis",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:50.467Z"
           }
         }
       ]
@@ -54979,6 +55062,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:20.600Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:48:54.001Z"
           }
         }
       ]
@@ -62692,6 +62783,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:24.059Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LotteaNew York Palace\nSerena ve en odasi olan\nve 24 size tahsi\nmaliyeti:\ntoplu bi dusunursek f",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:03.053Z"
           }
         },
         {
@@ -62715,6 +62815,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:26.336Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:06.842Z"
           }
         },
         {
@@ -62738,6 +62846,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:30.612Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:13.418Z"
           }
         },
         {
@@ -62761,6 +62877,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:40:33.627Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:28.395Z"
           }
         }
       ]
@@ -72833,6 +72957,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:06.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:31.962Z"
           }
         },
         {
@@ -72856,6 +72988,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:09.723Z"
+          },
+          "ocrData": {
+            "textOnScreen": "randuluid_\nBANDUNG]\n@liburanduluid\ny @libul\nKABAR|",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:41.785Z"
           }
         }
       ]
@@ -80940,6 +81081,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:13.263Z"
+          },
+          "ocrData": {
+            "textOnScreen": "alli\nBIENVENUE\n-COME",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:53.764Z"
           }
         },
         {
@@ -80963,6 +81113,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:15.956Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:49:59.589Z"
           }
         }
       ]
@@ -90602,6 +90760,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:18.028Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GINOW\nLIVE IN CONCERT\n4 SERENA\nATOVU\nKAMPALA\nNAMATOVU\nGITA\nIRENE\nCONCERT\nOMAN)\ni J airtel\n4 money",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:50:09.871Z"
           }
         },
         {
@@ -90625,6 +90792,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:20.100Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GSRBEACH POOL\nSparks\nsoooo cold",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:50:14.717Z"
           }
         },
         {
@@ -90648,6 +90824,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:36.432Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GranSerena Hotel",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:50:20.811Z"
           }
         }
       ]
@@ -98293,6 +98478,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:44.600Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:52:20.821Z"
           }
         },
         {
@@ -98316,6 +98510,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:41:48.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:52:25.931Z"
           }
         }
       ]
@@ -108169,6 +108371,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T19:42:03.892Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T19:52:34.497Z"
           }
         },
         {
