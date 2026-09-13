@@ -27810,7 +27810,16 @@
           "likes": 3,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "And every time I try to fly, I fall without my wings, I feel so small, I guess I need you baby And every time I see you in my dreams, I see your face, it's haunting me I guess I need you baby",
+            "language": "Italian",
+            "durationSec": 34.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:19.500Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27824,7 +27833,16 @@
           "likes": 142600,
           "comments": 1247,
           "shares": 70100,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:48.435Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27838,7 +27856,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "You just gotta ignite the light and let it shine Just own the night like the 4th of July Cause baby you're a firework, come on show us why you're work Make em go ah, ah, ah, as you shoot across the sky Ciao Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:51.341Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27852,7 +27879,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siete carichi! Bom diggidiggidiggi bom diggibom Musica Musica Musica",
+            "language": "Italian",
+            "durationSec": 9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:53.661Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -27866,7 +27902,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:56.179Z"
+          }
         }
       ]
     },
@@ -41351,7 +41396,16 @@
           "likes": 140,
           "comments": 24,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:58.573Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41365,7 +41419,16 @@
           "likes": 38,
           "comments": 6,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 7.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:01.005Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41379,7 +41442,16 @@
           "likes": 3421,
           "comments": 81,
           "shares": 59,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi consiglio di non chiamare il tuo futuro figlio Serena Joy perché di Olivia's new song. Non ho ancora visto Handmaid's Tale, ma a mio conoscimento, Serena Joy è un personaggio orribile che è lontano da un eroe. Ora, solo lo so perché ho fatto un po' di ricerca su chi era Serena Joy. Ma non dico che le persone che vogliono chiamare il loro figlio Serena Joy probabilmente non capiscono il punto della canzone.",
+            "language": "Italian",
+            "durationSec": 18.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:04.495Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41393,7 +41465,16 @@
           "likes": 33,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:06.797Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41407,7 +41488,16 @@
           "likes": 37200,
           "comments": 318,
           "shares": 8148,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Su un novio pensando che io soy su amigo, si supiera todo lo que nos hicimos.",
+            "language": "Italian",
+            "durationSec": 8.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:09.141Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -41421,7 +41511,16 @@
           "likes": 16,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Non voglio vivere solo Che il mio corpo pede e il tuo corpo nega Io corro discorso per te incontrare Mia esquina tem seu cero, teu beijo, teu medo Mia esquina tem seu cero, teu beijo, teu medo Mia esquina tem seu cero, teu beijo, teu medo Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 91.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:16.968Z"
+          }
         }
       ]
     },
@@ -46386,7 +46485,16 @@
           "likes": 3,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "And every time I try to fly, I fall without my wings, I feel so small, I guess I need you baby And every time I see you in my dreams, I see your face, it's haunting me I guess I need you baby",
+            "language": "Italian",
+            "durationSec": 34.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:19.500Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -46400,7 +46508,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:22.247Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -46414,7 +46531,16 @@
           "likes": 151,
           "comments": 15,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 31.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:24.804Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54263,7 +54389,16 @@
           "likes": 72,
           "comments": 4,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Respira lento, senti il latido, il sole si arricchisce sul cammino, tambure suave guida i miei passi, la terra canta, rilascia il cansancio. Pazza nel cuore, buona energia, balla con me, lascia che fluia, vibra alto, lascia la brisa, il ritmo cura, l'amore vive. Manos al aire, pies en la arena, cada respiración nos serena, no hay prisas, solo el presente, el ritmo ancestral nos trae al presente. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 109.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:30.998Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54277,7 +54412,16 @@
           "likes": 2879,
           "comments": 276,
           "shares": 1064,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questi sono i 10 risorti che stanno davvero bene. Nella posizione 10 abbiamo Ritz-Carlton Maldives. Definitivamente un grande nome nell'industria con delle belle villa, un servizio incredibile e la salute gastronomica vera. Poi c'è Soneva Jani, definitivamente super famosa per le sue villa e il concetto del luxury di bar. Nella posizione 8 dei migliori risorti dei Maldivi ci sono Uvafen Fushi, un risorto bellissimo con solo 45 villa. L'isola è bella e sarà ideale per i bambini o i bambini, ma non è molto riconosciuto per le famiglie. L'Islanda Private Isles è una delle 6 spot più buone nei Maldivi. Super remoto, grandi villa, buona casa per snorkeling, una buona opzione, ma non per i bambini. L'Islanda Island Resort è la 6° risorto più buono nei Maldivi. Ci amiamo per il valore di questo bel prezzo di monete e è anche molto buono perché è solo per adulti quindi se stai cercando un grande resort per il tuo annuncio, Pura Wali potrebbe essere un'opzione eccezionale. Poi c'è Park Hyatt Adaha, situato nel Gafu atoll. definitivamente la nostra pittura preferita negli Stati Uniti e anche la migliore per chi cerca strada di casa per snorkeling In quarta posizione avrete Anantara Keava che un bellissimo resort perfettamente abilizzato con un bellissimo lago, un grande servizio, un bel cibo, belle villas nuovamente rinnovate e anche un ristorante in acqua. Vaccaru prende il terzo posto tra i migliori resort del Maldives, con un bellissimo lago, una stupenda laguna, delle belle villas, un buon servizio, un buon cibo e anche una bella strada di casa per snorkeling. Nel secondo spazio troviamo Niyama Private Islands, un'isola molto buona per famiglie e amici. La laguna è sicuramente una delle nostre preferite e se sei un grande foodie è sicuramente una buona opzione con tanti restaurant. Finalmente, al topo del nostro ranking dei migliori risorti nel Maldiviano, c'è Cudadu Private Island, un'inclusione di luxurio dove praticamente tutto è inclusivo. Se vuoi divertirti nel Maldiviano senza aver di chiederti qualsiasi domanda sull'estate extra, sull'esplorazione extra o sull'acqua di champagne, Cudadu è il giusto. Abbiamo visitato 42 risorti di luxurio nel Maldiviano e conosciamo tutti i risorti all'interno. Quindi se hai bisogno di consigli, non dimenticare di contattarci per più informazioni o a book your trip to the Maldives with the most competitive rates.",
+            "language": "Italian",
+            "durationSec": 132.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:35.731Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54291,7 +54435,16 @@
           "likes": 3787,
           "comments": 364,
           "shares": 2568,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo risorto all inclusive in posti di cauda è tutto liberato, le bambine fino a 14 anni non pagano, c'è un disconto speciale e un parco di divertimenti. Il casino all inclusive risorto ha accomodazioni confortabili per te e la tua famiglia. Il tuo giorno inizia con un caffè di mattina capricciato e dopo la tua aspira c'è una piscina calda per approfittare del clima. Qui c'è tutto liberato, è sorvete a voglia, bevande alcoliche e non alcoliche liberate e c'è petisco anche. Ma non parla per lì, sono 16 ore di cibo e bevita liberata a volontà, una gastronomia con bife variati e saporosi. Per qui la divertimento è garantito e è per tutte le età. C'è gioia, idrogenastica e anche casino con dinero di mentirini. Il resort ha un monotrilio, un passaggio incredibile che ti porta a una vista panoramica, incluso in diaria. Ma c'è anche una pista di mini golf, fazendina, pedalino, chadrezze e ruote gigante e spettacoli settimanali. Le bambine in questo luogo non sono fermate, hanno pista di patinazione inclusa, triciclo incluso e ancora bolliche se ti piacere e è buono. Tu e la tua famiglia hai accesso illimitato al parco di divertimenti Walter World. Fica solo a 8 minuti dal resort e puoi passare una mattina o una sera incredibile qui. Questo passaggio di treno è per divertire a voglia, ma non dimentica di conoscere il museo dell'esercito. tornando all'hotel puoi divertirti le piscine calde e ancora fare una massaggio fluttuante inclusa nella diaria o se preferire, c'è spa anche e sta arrivando una super offerta utilizzando il nostro coupon turistando nel fine della sua riserva è solo commentare io quero iri e non seguir che va a ricevere ora il link con il sconto",
+            "language": "Italian",
+            "durationSec": 98.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:09:48.922Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54305,7 +54458,16 @@
           "likes": 88,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è l'unico hotel 5 star di Hunza. Ora vi mostrerò perché è davvero valido. La Serena Hunza è un bel hotel situato nel cuore di Hunza, a Karimabad. Sono sicura che molti di voi sono stati lì e che la maggior parte di voi l'ha sentita. Voglio solo condividere un po' la nostra esperienza in questo hotel. Il primo giorno in cui siamo arrivati abbiamo appena avuto tempo di divertirci con la città, le vittime e prenderlo tutto in. Sono una foodie completa e lo prendo molto seriamente ma mi piace anche un po' la compagnia e partecipare a alcune attività spa e ero così felice che l'hotel aveva tutte le tre opzioni ho totalmente sbagliato a usare il gym non avevo abbastanza tempo ma ho dovuto farlo anche se notate che il mio reel è principalmente sull'alimentazione ma per me la vera star è la vista immaginatevi Raka Pushi e i suoi pezzi proprio dal tuo balcone, dal tuo ristorante e da quasi ogni parte che ti avvicini amiamo Daste e lo raccomando",
+            "language": "Italian",
+            "durationSec": 52,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:04.600Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54319,7 +54481,16 @@
           "likes": 373,
           "comments": 16,
           "shares": 104,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 60.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:07.358Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54333,7 +54504,16 @@
           "likes": 26600,
           "comments": 186,
           "shares": 1945,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I love you",
+            "language": "Italian",
+            "durationSec": 12.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:12.740Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54347,7 +54527,16 @@
           "likes": 107,
           "comments": 18,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:16.727Z"
+          }
         }
       ]
     },
@@ -61957,7 +62146,16 @@
           "likes": 192,
           "comments": 3,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 24.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:19.309Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -61971,7 +62169,16 @@
           "likes": 37,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Sì, è vero. Grazie a tutti. Grazie a tutti Grazie a tutti. ... E sempre che se va, regressa a mi, non importa che dirà, non scusa sì, ehi, e sempre che se va, regressa a mi, non importa che dirà, siamo stati per la quale, e se non c'è vestito, vedi, suona.",
+            "language": "Italian",
+            "durationSec": 220.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:27.802Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -61985,7 +62192,16 @@
           "likes": 952,
           "comments": 15,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sono in vacanza in Qatar Doha e il mio uomo ci ha messo in questo molto bello hotel. Voglio mostrarvi il nostro suite. Stiamo stando a Raffles Doha. È un hotel molto bello. Non mi dimenticherò se non vi mostrerò come si vede questo hotel. Ciao, ciao. Sto entrando. la prima cosa che vedi quando entri è questa bella area di vivenza con quella vista ragazzi puoi vedere la vista e si porta direttamente all'area di mangiare come well e penso che sia una delle mie preferite e poi andate proprio fuori dall'area del diner che porta al spazio di chiusura come potete vedere ho impasto bellissimo e guardate la vista ragazzi oh mio Dio, sono così obsesso con questa vista e questo porta alla vanit poi vi passate attorno alla stanza di sede che bello anche abbiamo un balcone questa è la vista del giorno e anche vedere l'area del pool da qui e poi abbiamo il lavabo ho creato un sacco di contenuti qui e questo è la sciogliera ovviamente un bidet automatizzato oh hi day e ragazzi questa è la vista dal lavabo wow ragazzi Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 207.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:40.406Z"
+          }
         }
       ]
     },
@@ -80013,7 +80229,16 @@
           "likes": 10900,
           "comments": 117,
           "shares": 3285,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 6.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:42.743Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -80027,7 +80252,16 @@
           "likes": 32,
           "comments": 4,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:10:45.348Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -123610,7 +123844,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "You just gotta ignite the light and let it shine Just own the night like the 4th of July Cause baby you're a firework, come on show us why you're work Make em go ah, ah, ah, as you shoot across the sky Ciao Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:51.341Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -123624,7 +123867,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siete carichi! Bom diggidiggidiggi bom diggibom Musica Musica Musica",
+            "language": "Italian",
+            "durationSec": 9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:53.661Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -123638,7 +123890,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T14:08:56.179Z"
+          }
         },
         {
           "platform": "tiktok",
