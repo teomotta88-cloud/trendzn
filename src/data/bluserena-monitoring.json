@@ -108183,7 +108183,16 @@
           "likes": 382,
           "comments": 7,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se cerci un posto per bere un vero, ti consiglio il Tahiti Lagoon Resort che ha aperto le porte nel febbraio del 2026 e il quadro è proprio ideale. C'è anche un accesso alla piazza dove si può vedere dei re o dei requin. Ti raccomando molto questo posto se sei del lato di Punaia.",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:42:33.526Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108197,7 +108206,16 @@
           "likes": 5899,
           "comments": 23,
           "shares": 1718,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 26.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:42:38.647Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108211,7 +108229,16 @@
           "likes": 405,
           "comments": 4,
           "shares": 58,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo hotel è a destra della strada, in fronte al portale Gwk, ma quando entri in profondità, è molto tranquillo, neanche la suona del motocicletta è sentita. Il nome è Sapo Jimbaran, quindi è unico con il cafe, quindi è più profondo, ma è veramente worth it, perché potete ottenere una camara comoda, con un casero grande, una camara abbastanza ampia, anche una smart tv, e aggiunto l'amethyst è abbastanza completata. E' molto buono per la restazione, dopo aver circondato l'area di Uluwatu. Se volete provare la staycation qui, quando siete in Uluwatu, cliccate sull'attività di posto di sotto per ottenere un prezzo più ok da TikTok. Spero che questa informazione sia utile, ragazzi.",
+            "language": "Italian",
+            "durationSec": 38.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:42:44.046Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108225,7 +108252,16 @@
           "likes": 3379,
           "comments": 557,
           "shares": 1779,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La scappata che necessitai è molto più vicina di quello che immaginavi. A solo 100 km da Buenos Aires, Olivos Resort e Spa è il luogo perfetto per disconnettere senza passare ore a viaggiare. Una scappata romantica, un fine di settimana con amiche, un plan in famiglia o semplicemente un tempo per riconnettere con te. Sfrutta il spa, recorre la laguna, cammina tra spazi verdi, comparte una buona cena e lascia che il resto lo faccia la natura. Perché a volte non c'è bisogno di andare più lontano, solo c'è bisogno di scegliere il luogo indicato.",
+            "language": "Italian",
+            "durationSec": 27.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:42:46.739Z"
+          }
         }
       ]
     },
@@ -113980,7 +114016,17 @@
           "likes": 881,
           "comments": 92,
           "shares": 85,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:44:46.745Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114008,7 +114054,16 @@
           "likes": null,
           "comments": null,
           "shares": null,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 20.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:44:49.489Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114022,7 +114077,16 @@
           "likes": null,
           "comments": null,
           "shares": null,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 12.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:44:51.686Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114036,7 +114100,16 @@
           "likes": 18,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Breaking news, Silhouette Paris ha appena toccato i loro bagagli di mano, guardate quanto è bellissimo, questo è il bagaglio Nelly, guardate ogni compartimento che abbiamo, ha tanto dettaglio, amo il Valentino Orlandi qui in fronte, abbiamo un bel finito suede, è un bagaglio di media dimensione, perfetto per l'uso di ogni giorno, un compartimento qui in fronte, ma poi un altro compartimento qui in fondo, abbiamo un zippo che va direttamente in mezzo con quel bellissimo dettaglio Valentino Orlandi, detail we have 11 different amazing colors we have the black for the autumn season coming up and then we have the yellow with a mustardish tone and then we have our pink colorway for whatever is left of summer and 11 different beautiful colors to choose from shop now on our tiktok shop our dollar start auctions what are you waiting for",
+            "language": "Italian",
+            "durationSec": 42.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:44:54.841Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114050,7 +114123,16 @@
           "likes": 142800,
           "comments": 1193,
           "shares": 6316,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In front of me I've got every single Valentino Born in Roma, let's see which one you like the best. Starting off with the originator of the Born in Roma DNA, Born in Roma EDT. It's fresh, it's sweet, it's aquatic. This is the one that you could just pick up every day and not even think twice about it. This is just that type of fragrance that smells good to everybody and does not offend. Next up we got Born in Roma Intense, which takes the sweetness from the EDT but really dials it up. anche il juice e l'intenso sono un po' più rossi e ci sono tre note principali in questo vetiver vanilla e lavendero ancora una volta la grande differenza con questo è la dolcezza della vanilla e del lavendero è un po' più seduttivo forse per un primo amico o qualcosa del genere prossimo abbiamo quello che è molto preferito di molte persone nato in Roma la fantasia di corale questo deve essere uno dei miei preferiti, è molto più fruttico di quella di apple rosso e e la combinazione di bergamot. Ha anche una nota di geranium di bourbon che lo rende davvero aromatico. E il mio preferito, il sexy cardamomo. Coral Fantasy è probabilmente uno dei migliori compagni di complimenti in questa lista. Ora abbiamo uno dei franghi pi polarizzanti in questa lista Green Extravaganza Questo o amate o odiate perch come un caff fresco di citrus con vetiver Personalmente, penso che questo dovrebbe ottenere un po' di più amore. Ha questa piccola gormandina combinata con un tocco sottile di vetiver, che penso sia una combinazione molto bella. Super unico profilo di sè, portalo e non stai smettendo come nessuno altro. Poi abbiamo Yellow Dream, che come potete probabilmente vedere, è la più concentrata di citrus della linea Whole Born in Roma. Uff, è buono. Ha una buona citrus from the mandarin orange, questa frutta dolcezza da pinapple, che questo sacco sembra un pinapple, e ha anche un background di spezie, che è diverso da tutti gli altri Born in Roma. Ha spezie, una nota di gengibre e gengibre. Definitivamente la più brillante di tutti. E ultimamente, la nuova e più forte aggiunta alla linea Born in Roma, Extra Dose. Assolutamente powerhouse. Come descriverei Extra Dose? È una versione più intensa e più dolce dell'intensa. Parlando in termini di fragranze, è un fougere di ambro di wood. E fougere significa barbershop, ma Extra Dose lo prende e lo dolcezza al massimo. È probabilmente il mio preferito della linea, ma lo salvo per una occasione speciale. Dicami nei commenti quale Valentino nato in Roma è il tuo preferito e seguimi per di più.",
+            "language": "Italian",
+            "durationSec": 154.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:44:59.650Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114064,7 +114146,17 @@
           "likes": 361,
           "comments": 25,
           "shares": 71,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:46:59.655Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114078,7 +114170,16 @@
           "likes": 465,
           "comments": 8,
           "shares": 44,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, un video per la Valentina Open. Ecco i 44° dimensioni, sono i nuovi, sono in un'ottima condizione. Poi ci sono questi neri, sono molto attivi, sono molto divertenti. Il 42° dimensione. Sono anche questi, sono molto attivi, sono il 43° dimensione. 42° dimensione, anche un buon risultato, non c'è nessun pezzo, molto chiaro. 42° dimensione. 43° dimensione, hanno una traccia così, questi sono i più costosi di tutti a causa di questo piccolo defecto. Sono amici distanti. Tutto, a tutti, ciao.",
+            "language": "Italian",
+            "durationSec": 52.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:03.281Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114092,7 +114193,16 @@
           "likes": 9416,
           "comments": 68,
           "shares": 648,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 8.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:06.019Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -114106,7 +114216,16 @@
           "likes": 7482,
           "comments": 89,
           "shares": 618,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Lentino ha scelto Bruma, questo è uno dei migliori lanciamenti di questo anno, Giulia. Qui abbiamo Vanilla Bliss, io credo, credo che sia la mia favorita. Io amo i profumi dolci, qui dichiarano leche e vaniglia. Quando lo oliamo, questa parte lactonica, questa parte cremosa, fredda, con la textura dell'azúcar glass, lo farò finire in mezza unità di secondo. Abbiamo Golden Coconut, e voglio che tutte le mie ragazze nel verano volano questo. Una pia paradisiaca, olore esotico, quello che più ti prenderai è questo olore. Non ti metti una crema di vaniglia Poi sali dal mare L'odore a sole A sale A quello che ti resta di quella vaniglia Caramel Crush Queste sono per sentirti un postre con tacone Che odia una tartina fredda di vaniglia Di toffe, caramello salato Sta super approvata per me Queste noci di verano Che anche se l'odore sia caliente e profondo La textura no Quindi non ti aggobbierà Per ultimo Salti pistaccio Le persone di Valentino le hanno chiesto di dare una volta A questo olore che tanto ci piace del lago di pistaccio È un aroma super fresco pistaccio e avellana tostate e salate una crema di avellana o aerea questo punto salato e tostato del pistaccio super interessante mi parezcono divinissime, preziosi e super interessanti come noi quale ti chiama più l'attenzione? con la forza dei mari e con l'impetto del vento?",
+            "language": "Italian",
+            "durationSec": 71,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:10.514Z"
+          }
         }
       ]
     },
@@ -119709,7 +119828,16 @@
           "likes": 34,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Nothing's gonna change my love for you You, I don't know by now how much I love you One thing you can be sure of I'll never ask for more than your love Nothing's gonna change my love for you You, I don't know by now how much I love you The world may change my whole life through but nothing's gonna change my love for you if the road ahead is not so easy a love will lead the way for us like a guiding star Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 103.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:15.663Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -119723,7 +119851,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi un festeggio Disney World senza sbagliare la banca? Disney's Art of Animation ha quei grandi quartieri familiari e la skyline, ma è un po'... ...in your face? Vedrai se il prezzo budget-friendly viene con un overload di tema o se Art of Animation è il perfetto hotel familiare per la tua viaggia a Disney World. Quindi, dovresti fare la booking o continuare a guardare? Ciao a tutti. in tre magiche fene, trovando Nemo, Cars o il Re Lion King. Ogni suite è una propria casa da casa che dorme a 6 adulti con una stanza di re, una stanza di Murphy che si prende da sotto la piazza, sempre un'attacco con i bambini, e una stanza di sofà di dormitore. Ho bookato la famiglia Johnson, mamma, papà, tre bambini e mia mamma in una di queste grandi suite di famiglie. Si sono tornati assolutamente chiusi. Il piccolo Tommy stava dicendo a tutti di come dormiva in una piazza che si usava dalla piazza. Le suite non sono solo per la spaziozzatura. Hai una piccola cucina con un piccolo frigo, un micro-wave e un coffe maker. C'è il wifi gratuito, perché anche per i giorni di vacanza i bambini hanno bisogno dei social media. Due telli un e un in bordo Un po di ironia per i giorni di vacanza ti chiedo E un che non avevo bisogno La famiglia Smith che ho bookato l scorso ha preso un di Nemo Grazie a tutti Scusate. dove puoi mangiare, come arrivare ai parchi Disney e quei meravigliosi perchi. Stai perdendo il tuo tempo se ti arrampi in Orlando o qualunque altro. Literalmente. Aspetta, cosa? Perché importa quando ti arrampi per la tua viaggia a Walt Disney World? In avera, le persone che ci arrampiano fanno 5 più viaggi con QLess ogni giorno. Quindi se sei in Orlando per due settimane, sono 70 cose che puoi fare. Ci piace aiutare persone come te a fare più in Orlando o a fare più Orlando come vogliamo chiamarlo. Quindi come funziona? Avrai alcune richieste con il tuo guru Orlando. È il nostro lavoro trovare tutto ciò che vuoi fare e fare alcune suggestioni. Il tuo guru prende circa 9 ore per compiere il tuo planner di park personale. Questa la tua chiave per fare pi in Orlando Con tanti tipi usiamo la tecnologia di cutting edge per aiutarti a navigare i parchi e dimenticare di leggere tutte le ristoranti di ristoranti Disney World solo ha più di 205 posti da mangiare e troverai tutti i migliori per te nel tuo pianeta. E non preoccuparti, non è un plan di stile complesso e militare, è super facile da seguire. Plus it is the same as watching hundreds of hours of YouTube videos or asking questions on Facebook just to get confusing and conflicting information. We're the Orlando Curious, so you don't have to be. Normally our personal park planners cost £248, but when you book with us, you'll get this for free. Chew less and do more Orlando. Grazie a tutti. partner hotel, entriamo in theme park 30 minuti prima, questo significa che puoi attaccare le gare prima che il pubblico entri. Le opzioni di mangiare sono abbastanza impressionanti per un resort di valore, puoi creare la tua propria pasta, prendere smoothie freschi o indolgere un giulatto italiano. La corte di cibo, la terraforma dei sapori, ha anche un orderaggio mobile, quindi non devi fare il queue. C'è anche una barra di ponte chiamata Drop off by the big blue pool. La trasportazione è brillante, soprattutto poiché hanno aggiunto il skyliner di Disney Grazie a tutti o all over Alglass Lake in colori gondoli per arrivare a Epcot o Hollywood Studios Il resort ha una stazione Skyliner con Pop Century Resort e mentre potresti cambiare a Caribbean Beach Station è ancora un modo magico di viaggiare. Per altre destinazioni come Animal Kingdom, Magic Kingdom, Waterparks o Disney Springs hanno bus regolari. Se ti piace questo video, dammi un like, ci aiuta a portare questi video a più persone, come possibile. Ora, andiamo a essere onesti con le cose non così brillanti. È un po' più prezioso di altri resort di valore, ma come mi dicono sempre i miei clienti, ti stai facendo un po' di bancho per il tuo buck. La famiglia Johnson ha iniziato a lavorare a un prezzo uguale a bookare due stelle standard, ma con la suite hanno avuto un'attività di cucina. E se booki due stelle, non ci sono garantite che le stelle saranno vicine o nello stesso. Anche se dopo una settimana potresti essere felice che i tuoi figli siano all'altra parte del resort. Mentre il risultato è assolutamente fantastico per famiglie con bambini giovani e amici di Disney Animation, è valido notare che la thema è abbastanza bolda. Se non sei freddo di essere svolto da caratteri Disney massivi o se sei dopo una pausa tranquilla e sofisticata, questo non potrebbe essere il tuo tè di tè. Ma per famiglie con bambini è assolutamente brillante. Immagina di svegliarsi nel mondo underwater di Finding Nemo o dormendo in Pride Rock. È come essere nel tuo film di Disney. film. Here's a crucial tip, book early. This place fills up fast during peak seasons. Oh, and what's that? You don't know when peak seasons are? Well, this video will tell you the very best and worst times to visit Walt Disney World.",
+            "language": "Italian",
+            "durationSec": 416.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:23.191Z"
+          }
         }
       ]
     },
@@ -126007,7 +126144,16 @@
           "likes": 61,
           "comments": 4,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "What are women hungry for? A burger? A burger. Eight solid hours of sleep. Someone else deciding what's for dinner? A day without a single quick question. Clothes with actual pockets. Being able to relax in nature for 24 hours without the entire system collapsing. Whoa, that got specific. I'm hungry. But underneath all of that... I think women are hungry to be seen. To be with other women without needing to perform, explain, or hold everything together. To feel the noise quiet down. Per ricordare chi siamo sotto tutto ciò che portiamo. E' per questo che abbiamo creato Women Over Dinner. Il 24 settembre, stiamo riunendo un tavolo su un campo in California. E' un tavolo di vita bella, ci rilassiamo, ci diciamo la verità e iniziamo il weekend di ritrovazione delle donne. Il diner è aperto a tutti. Non devi conoscerci. Non devi conoscerci a nessuno. Devi solo sapere che sei cattivo. Vieni a scoprire per cosa.",
+            "language": "Italian",
+            "durationSec": 58.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:25.774Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -126021,7 +126167,16 @@
           "likes": 29,
           "comments": 19,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Moonlight Valley è più di solo un server roleplay. È diventato un luogo dove le persone di tutte le parti della vita si sono uniti, hanno fatto amicizie, hanno condiviso tante risposte e hanno creato ricordi che rimanranno con noi per molto tempo dopo che la scena finisse. Per molti di noi, Moonlight Valley è stato un luogo da scappare, dove possiamo incontrare nuovi persone, raccontare storie, essere noi stessi e sentire come ci servivamo. Le amicizie che abbiamo formato qui, i momenti ridicolosi che ci hanno fatto rispettare fino a che non potevamo dormire, Anche i momenti difficili in cui abbiamo supportato l'unico tra loro sono quelli che fanno speciale questa comunità. Sulla scuola ci sono un'enorme quantità di lavoro che a volte succede tranquillamente, fuori dal spettacolo. La dedicazione, l'administrazione e il supporto non sono mai stati in resta. Ogni decisione, ogni notte, ogni problema risolto e ogni po' di tempo che è stato portato a mantenere il Valle del Mondo a ruolo. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 97,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-13T19:47:29.412Z"
+          }
         }
       ]
     }
