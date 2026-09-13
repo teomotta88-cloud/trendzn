@@ -27819,6 +27819,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:19.500Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:18:09.163Z"
           }
         },
         {
@@ -27842,6 +27850,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:08:48.435Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fare\nJOsso fare un",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:05.836Z"
           }
         },
         {
@@ -27865,6 +27882,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:15:11.717Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:12.907Z"
           }
         },
         {
@@ -27888,6 +27913,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:15:13.903Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:21.405Z"
           }
         },
         {
@@ -27911,6 +27944,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:15:16.252Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:46.076Z"
           }
         }
       ]
@@ -41405,6 +41446,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:08:58.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:52.400Z"
           }
         },
         {
@@ -41428,6 +41477,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:01.005Z"
+          },
+          "ocrData": {
+            "textOnScreen": "eres al otro N\npero en en\notro",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:17:15.621Z"
           }
         },
         {
@@ -41451,6 +41509,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:04.495Z"
+          },
+          "ocrData": {
+            "textOnScreen": "because of Olivia's new\nsong.\n\"Ive yet ‘to see handmaids\ntale but from my\nknowledge,\nresearch\nmention\ni wanting to name",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:17:22.722Z"
           }
         },
         {
@@ -41474,6 +41541,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:06.797Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BADDIES| LASHES AT\nAstoria",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:17:30.626Z"
           }
         },
         {
@@ -41497,6 +41573,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:09.141Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:17:43.934Z"
           }
         },
         {
@@ -41520,6 +41604,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:16.968Z"
+          },
+          "ocrData": {
+            "textOnScreen": "É que o meu corpo",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:17:47.993Z"
           }
         }
       ]
@@ -46494,6 +46587,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:19.500Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:18:09.163Z"
           }
         },
         {
@@ -46517,6 +46618,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:22.247Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SUMMER\"",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:18:28.436Z"
           }
         },
         {
@@ -46540,6 +46650,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:24.804Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:18:34.218Z"
           }
         },
         {
@@ -54398,6 +54516,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:30.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Western Serene Atlantic\nHotel\nTakoradi, Ghana\ny @Let'sTrend",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:18:52.673Z"
           }
         },
         {
@@ -54421,6 +54548,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:35.731Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:19:04.299Z"
           }
         },
         {
@@ -54444,6 +54579,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:09:48.922Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:19:27.377Z"
           }
         },
         {
@@ -54467,6 +54610,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:04.600Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Hunzais a\nhotel\nexperience at this hotel.\nalsollike\ndidn't have\nreel is!",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:19:34.355Z"
           }
         },
         {
@@ -54490,6 +54642,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:07.358Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:19:40.623Z"
           }
         },
         {
@@ -54513,6 +54673,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:12.740Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:20:15.615Z"
           }
         },
         {
@@ -54536,6 +54704,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:16.727Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:20:31.928Z"
           }
         }
       ]
@@ -62155,6 +62331,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:19.309Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:20:45.021Z"
           }
         },
         {
@@ -62178,6 +62362,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:27.802Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:21:07.110Z"
           }
         },
         {
@@ -62201,6 +62393,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:40.406Z"
+          },
+          "ocrData": {
+            "textOnScreen": "n ALTI",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:21:19.017Z"
           }
         }
       ]
@@ -80238,6 +80439,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:42.743Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Collection: Republic\nDominican|Republic;\nEiji\n7. Namale, Fiji\nRoyal Davui Island, Fiji\nCouples Sans Souci, Jamaica=\nJamaica\nMexico)\nDavuilsland, Fiji\n10. Couples Sans Souci, Jamaica\nBoutique Hotell\nGrenada\nSans Souci, Jamaica\nDavuiilsland, Fiji\nSandals Grenada\nSouci, Jamaica\nHotel\nFiji\n115 Excellence QysterBay;",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:21:49.454Z"
           }
         },
         {
@@ -80261,6 +80471,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:10:45.348Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Entrance, suite jand",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:22:07.164Z"
           }
         },
         {
@@ -124366,6 +124585,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:15:11.717Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:12.907Z"
           }
         },
         {
@@ -124389,6 +124616,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:15:13.903Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:21.405Z"
           }
         },
         {
@@ -124412,6 +124647,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-13T14:15:16.252Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-13T14:16:46.076Z"
           }
         },
         {
