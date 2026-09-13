@@ -27804,7 +27804,7 @@
           "url": "https://www.tiktok.com/@tony_belardo/video/7667267290638978326",
           "date": "2026-07-27T17:52:58.000Z",
           "caption": "Relax #neiperteeee #sardegna #geremeas #bluserena #calaserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 993,
           "imageUrl": null,
           "likes": 3,
@@ -27827,7 +27827,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:18:09.163Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "mare",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:17.703Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "mare",
+            "spiaggia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27835,7 +27859,7 @@
           "url": "https://www.tiktok.com/@petrov86/video/7540651155890638102",
           "date": "2025-08-20T12:57:42.000Z",
           "caption": "#bluserenaviaggi4stelle #viralissimoooooooo #estate2025 #tuffi #risate",
-          "location": null,
+          "location": "Bluserena",
           "views": 3000000,
           "imageUrl": null,
           "likes": 142600,
@@ -27859,7 +27883,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T14:16:05.836Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "divertimento",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:13.336Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "divertimento",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27867,7 +27916,7 @@
           "url": "https://www.tiktok.com/@rossellagiffoni/video/7664989864076660000",
           "date": "2026-07-21T14:35:23.000Z",
           "caption": "#bluserena #ethrareserve #puglia2026 @Stefano Stea @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 1215,
           "imageUrl": null,
           "likes": 10,
@@ -27890,7 +27939,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:31:40.378Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:23.586Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "resort"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27898,7 +27969,7 @@
           "url": "https://www.tiktok.com/@antonellamontella4/video/7542813654660549910",
           "date": "2025-08-26T08:49:18.000Z",
           "caption": "#valentinovillage #ethrareserve #bluserena #tiktok #ibizaparty",
-          "location": null,
+          "location": "Ethra Reserve",
           "views": 822,
           "imageUrl": null,
           "likes": 10,
@@ -27921,7 +27992,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:31:48.618Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "party"
+            ],
+            "location": "Ethra Reserve",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:24.259Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "party"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27929,7 +28024,7 @@
           "url": "https://www.tiktok.com/@simycry/video/7673489170723065120",
           "date": "2026-08-13T12:17:02.000Z",
           "caption": "❤️🐚 si torna sempre dove si è stati bene ❤️  solo 987 km ci separano                                           #bluserena #ethrareserve #voliamoneixte✈🦁🔝💯💥 #fyp #holidays",
-          "location": null,
+          "location": "Bluserena",
           "views": 365,
           "imageUrl": null,
           "likes": 5,
@@ -27952,7 +28047,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:32:13.184Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "ritorno",
+              "distanza",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:24.614Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "ritorno",
+            "distanza",
+            "vacanza"
+          ]
         }
       ]
     },
@@ -46634,7 +46753,7 @@
           "url": "https://www.tiktok.com/@tony_belardo/video/7667267290638978326",
           "date": "2026-07-27T17:52:58.000Z",
           "caption": "Relax #neiperteeee #sardegna #geremeas #bluserena #calaserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 993,
           "imageUrl": null,
           "likes": 3,
@@ -46657,7 +46776,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:18:09.163Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "mare",
+              "spiaggia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:17.703Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "mare",
+            "spiaggia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -90809,7 +90952,7 @@
           "url": "https://www.tiktok.com/@verderosaboutique1/video/7657647116835147041",
           "date": "2026-07-01T19:41:47.000Z",
           "caption": "#voliamoneixte✈🦁🔝💯💥 #",
-          "location": null,
+          "location": "Granserena Hotel",
           "views": 3894,
           "imageUrl": null,
           "likes": 84,
@@ -90833,7 +90976,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T19:50:20.811Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "hotel",
+              "vacanza",
+              "viaggio"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:18.654Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "hotel",
+            "vacanza",
+            "viaggio"
+          ]
         }
       ]
     },
@@ -108103,7 +108271,7 @@
           "url": "https://www.tiktok.com/@sgarratour/video/7668418908969389345",
           "date": "2026-07-30T20:21:50.000Z",
           "caption": "Super week-end 19 - 20 - 21 settembre Calanè Village Castellaneta marina 😍😍😍",
-          "location": null,
+          "location": "Bluserena",
           "views": 811,
           "imageUrl": null,
           "likes": 3,
@@ -108127,7 +108295,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T14:24:16.310Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "weekend",
+              "costo",
+              "prenotazioni"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:19.960Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "weekend",
+            "costo",
+            "prenotazioni"
+          ]
         },
         {
           "platform": "tiktok",
@@ -126068,7 +126261,7 @@
           "url": "https://www.tiktok.com/@isabellanapoli25/video/7674301119027318049",
           "date": "2026-08-15T16:47:49.000Z",
           "caption": "💙💙💙",
-          "location": null,
+          "location": "Ethra Reserve",
           "views": 571,
           "imageUrl": null,
           "likes": 15,
@@ -126092,7 +126285,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T14:29:33.161Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "romantic",
+              "relax"
+            ],
+            "location": "Ethra Reserve",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:21.340Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "romantic",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -126353,7 +126569,7 @@
           "url": "https://www.tiktok.com/@rossellagiffoni/video/7664989864076660000",
           "date": "2026-07-21T14:35:23.000Z",
           "caption": "#bluserena #ethrareserve #puglia2026 @Stefano Stea @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 1215,
           "imageUrl": null,
           "likes": 10,
@@ -126376,7 +126592,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:31:40.378Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:23.586Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "resort"
+          ]
         },
         {
           "platform": "tiktok",
@@ -126384,7 +126622,7 @@
           "url": "https://www.tiktok.com/@antonellamontella4/video/7542813654660549910",
           "date": "2025-08-26T08:49:18.000Z",
           "caption": "#valentinovillage #ethrareserve #bluserena #tiktok #ibizaparty",
-          "location": null,
+          "location": "Ethra Reserve",
           "views": 822,
           "imageUrl": null,
           "likes": 10,
@@ -126407,7 +126645,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:31:48.618Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "party"
+            ],
+            "location": "Ethra Reserve",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:24.259Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "party"
+          ]
         },
         {
           "platform": "tiktok",
@@ -126415,7 +126677,7 @@
           "url": "https://www.tiktok.com/@simycry/video/7673489170723065120",
           "date": "2026-08-13T12:17:02.000Z",
           "caption": "❤️🐚 si torna sempre dove si è stati bene ❤️  solo 987 km ci separano                                           #bluserena #ethrareserve #voliamoneixte✈🦁🔝💯💥 #fyp #holidays",
-          "location": null,
+          "location": "Bluserena",
           "views": 365,
           "imageUrl": null,
           "likes": 5,
@@ -126438,7 +126700,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-13T14:32:13.184Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "ritorno",
+              "distanza",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T19:55:24.614Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "ritorno",
+            "distanza",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
