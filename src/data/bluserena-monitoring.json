@@ -27418,7 +27418,7 @@
           "url": "https://www.tiktok.com/@melissa.tanzi/video/7666012653948587297",
           "date": "2026-07-24T08:44:20.000Z",
           "caption": "I momenti più belli non si programmano... si vivono insieme. ❤️👭 Torreserena Resort #bluserena #sorelle #perte #summervibes #momentifeliciinsieme❤❤❤❤❤",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 82,
           "imageUrl": null,
           "likes": 2,
@@ -27442,7 +27442,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T23:27:01.280Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "summer vibes",
+              "momentifeliciinsieme"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:49:03.363Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "summer vibes",
+            "momentifeliciinsieme"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27450,7 +27475,7 @@
           "url": "https://www.tiktok.com/@agenziaperamicamazara/video/7668746738194222368",
           "date": "2026-07-31T17:33:59.000Z",
           "caption": "😍 Siamo appena arrivati al Serenusa Resort! Questa è la nostra camera e nei prossimi video vi porteremo alla scoperta di tutto il villaggio. 🌴☀️ Se state pensando alle vostre prossime vacanze e desiderate un preventivo per un villaggio, una crociera o qualsiasi altro viaggio, 📲 cliccate il link in bio per chattare con noi su WhatsApp oppure venite a trovarci in Via Castelvetrano 92/C, Mazara del Vallo. 💬 Secondo voi, qual è la cosa più importante in una vacanza? 👇 #bluserena #mazaradelvallo #villaggio #sicilia #agenziaperamicamazara",
-          "location": null,
+          "location": "Serenusa Resort",
           "views": 16400,
           "imageUrl": null,
           "likes": 135,
@@ -27473,7 +27498,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T23:24:52.805Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "camera",
+              "villaggio",
+              "giardinetto",
+              "vacanza"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:49:00.451Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "camera",
+            "villaggio",
+            "giardinetto",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27481,7 +27532,7 @@
           "url": "https://www.tiktok.com/@gemmacarannante/video/7670126243290811680",
           "date": "2026-08-04T10:47:10.000Z",
           "caption": "#vacanza2026 #finish #vitanormale@bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 140500,
           "imageUrl": null,
           "likes": 2531,
@@ -27505,7 +27556,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T04:43:31.051Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "negative",
+            "topics": [
+              "servizio",
+              "all-inclusive"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.72,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:48:56.472Z"
+          },
+          "sentiment": "negative",
+          "topics": [
+            "servizio",
+            "all-inclusive"
+          ]
         },
         {
           "platform": "tiktok",
@@ -27607,7 +27681,7 @@
           "url": "https://www.tiktok.com/@augustahallen/video/7673126792319798558",
           "date": "2026-08-12T12:50:49.000Z",
           "caption": "Unfiltered with Augustah | Episode 5 - Sardinia & Portofino fashion, beauty, becoming, and the moments in between. a reminder that not every chapter has to move fast. sometimes the best days are the ones in a new location, by the water, enjoying good food, good company, and simply being present. come along for the journey. Places: @langosteria @silviamilano54 @biviomilano @bluserena @tychegreekpita @robertaborse #UnfilteredWithAugustah #Portofino #ItalyVlog #TravelDiary...",
-          "location": null,
+          "location": "Bluserena",
           "views": 290,
           "imageUrl": null,
           "likes": 30,
@@ -27631,7 +27705,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T04:43:54.722Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "moda",
+              "bellezza",
+              "cibo",
+              "spiaggia",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:48:59.615Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "moda",
+            "bellezza",
+            "cibo",
+            "spiaggia",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -53699,7 +53802,7 @@
           "url": "https://www.tiktok.com/@agenziaperamicamazara/video/7668746738194222368",
           "date": "2026-07-31T17:33:59.000Z",
           "caption": "😍 Siamo appena arrivati al Serenusa Resort! Questa è la nostra camera e nei prossimi video vi porteremo alla scoperta di tutto il villaggio. 🌴☀️ Se state pensando alle vostre prossime vacanze e desiderate un preventivo per un villaggio, una crociera o qualsiasi altro viaggio, 📲 cliccate il link in bio per chattare con noi su WhatsApp oppure venite a trovarci in Via Castelvetrano 92/C, Mazara del Vallo. 💬 Secondo voi, qual è la cosa più importante in una vacanza? 👇 #bluserena #mazaradelvallo #villaggio #sicilia #agenziaperamicamazara",
-          "location": null,
+          "location": "Serenusa Resort",
           "views": 16400,
           "imageUrl": null,
           "likes": 135,
@@ -53722,7 +53825,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-12T23:24:52.805Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "camera",
+              "villaggio",
+              "giardinetto",
+              "vacanza"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:49:00.451Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "camera",
+            "villaggio",
+            "giardinetto",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -53730,7 +53859,7 @@
           "url": "https://www.tiktok.com/@agenziaperamicamazara/video/7676176544552717590",
           "date": "2026-08-20T18:05:25.000Z",
           "caption": "EPISODIO 3 DI 4 – SERENUSA RESORT 🌊☀️ Continuiamo il nostro tour! 😍 In questo episodio vi mostriamo alcuni dei momenti che rendono speciale una vacanza al Serenusa: sport, ristorazione e spettacolo serale! 🎾⚽🏐🍽️🎭 Siete già stati al Serenusa? ❤️ Qual è il ricordo più bello che avete di questo villaggio? Raccontatecelo nei commenti! 👇🥰 ✈️ Per la tua prossima vacanza, che sia un villaggio, una crociera, un viaggio di nozze, un viaggio a lungo raggio o una città europea: 📲 Clicca il link in bio per chattare con noi su WhatsApp! 📍 Oppure vieni a trovarci in Agenzia per Amica Travel Center Via Castelvetrano 92/C – Mazara del Vallo. #agenziaperamicamazara #mazaradelvallo #villaggituristici #licata #vacanzeinsicilia",
-          "location": null,
+          "location": "Serenusa Resort",
           "views": 6062,
           "imageUrl": null,
           "likes": 33,
@@ -53754,7 +53883,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T23:25:04.747Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "sport",
+              "ristorazione",
+              "spettacolo serale",
+              "animazione",
+              "cibo"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:49:01.112Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "sport",
+            "ristorazione",
+            "spettacolo serale",
+            "animazione",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -53762,7 +53920,7 @@
           "url": "https://www.tiktok.com/@demirviaggi/video/7660017264858615073",
           "date": "2026-07-08T04:59:10.000Z",
           "caption": "☀️ LUGLIO 2026: WEEK END SOFT ALL INCLUSIVE AL SERENUSA VILLAGE IN SICILIA! 🌊 Sogni un fine settimana di puro relax, gusto e divertimento per tutta la famiglia? Il Serenusa Village**** a Licata (AG) ti aspetta con un'offerta imperdibile per 2 notti di mare, animazione e ottima cucina! 🥂✨ 📍 Dove: Licata (AG) - SICILIA 📅 Quando: Week end dal 10 Luglio al 2 Agosto 2026 (2 Notti Ven/Dom) 🌟 LA QUOTA COMPRENDE: 🛌 Sistemazione in camera 🍽️ Trattamento di Soft All Inclusive Bluserena (colazioni ricche, pranzi e cene a buffet nel ristorante centrale) 🍷 Bevande incluse ai pasti (vino alla spina, soft drink e caffè) 🍝 Cena regionale settimanale e ristoranti tematici inclusi 🍹 Pause ai bar con bibite, succhi e caffè espresso (tavolo area esterna) 🎭 Animazione diurna e serale, miniclub, giochi e spettacoli 🏸 Utilizzo delle attrezzature sportive 🏊 Piscina e Spiaggia (ad esaurimento dalla 4ª fila in poi) 🎟️ Tessere Club incluse ⚠️ Tassa di soggiorno da pagare in loco ove prevista 🚀 NON PERDERE L'OCCASIONE, PRENOTA IL TUO WEEK END ESTIVO IN SICILIA! 📍 INFO E PRENOTAZIONI: 📞 Tel: 0921-428602 🟢 WhatsApp: 3292919701 🌐 Sito: www.demirviaggi.com 📝 Blog: www.viaggivacanzesicilia.it #DemirViaggi #WeekEnd #SerenusaVillage #Sicilia #Estate2026",
-          "location": null,
+          "location": "Bluserena",
           "views": 3938,
           "imageUrl": null,
           "likes": 9,
@@ -53786,7 +53944,40 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-13T04:45:45.262Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "soft all inclusive",
+              "animazione",
+              "miniclub",
+              "sport",
+              "piscina",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:49:02.480Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "soft all inclusive",
+            "animazione",
+            "miniclub",
+            "sport",
+            "piscina",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -96171,7 +96362,7 @@
           "url": "https://www.tiktok.com/@melissa.tanzi/video/7666012653948587297",
           "date": "2026-07-24T08:44:20.000Z",
           "caption": "I momenti più belli non si programmano... si vivono insieme. ❤️👭 Torreserena Resort #bluserena #sorelle #perte #summervibes #momentifeliciinsieme❤❤❤❤❤",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 82,
           "imageUrl": null,
           "likes": 2,
@@ -96195,7 +96386,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-12T23:27:01.280Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "summer vibes",
+              "momentifeliciinsieme"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-13T04:49:03.363Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "summer vibes",
+            "momentifeliciinsieme"
+          ]
         },
         {
           "platform": "tiktok",
