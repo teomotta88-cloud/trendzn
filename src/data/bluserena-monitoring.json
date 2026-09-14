@@ -28079,7 +28079,7 @@
           "url": "https://www.tiktok.com/@puertosvagosantantimo/video/7673943291464863008",
           "date": "2026-08-14T17:39:15.000Z",
           "caption": "LIVE . . .  Clienti felici al Bluserena 🥇 Grazie 🥰  #PuertoSvagoSantAntimo",
-          "location": null,
+          "location": "Bluserena",
           "views": 500,
           "imageUrl": null,
           "likes": 2,
@@ -28102,7 +28102,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-14T01:04:00.208Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "clienti felici",
+              "avventure",
+              "live"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T01:09:55.919Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "clienti felici",
+            "avventure",
+            "live"
+          ]
         },
         {
           "platform": "tiktok",
@@ -28110,7 +28134,7 @@
           "url": "https://www.tiktok.com/@domenicomirabella6/video/7679841719751396640",
           "date": "2026-08-30T15:08:10.000Z",
           "caption": "#vacanze#sibari#bluserenasibarigreenresort#famiglia",
-          "location": null,
+          "location": "Bluserena",
           "views": 197,
           "imageUrl": null,
           "likes": 5,
@@ -28134,7 +28158,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-14T01:05:53.245Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "alloggi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T01:10:02.734Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "alloggi"
+          ]
         },
         {
           "platform": "tiktok",
@@ -28142,7 +28191,7 @@
           "url": "https://www.tiktok.com/@radiozeta/video/7538071292466040086",
           "date": "2025-08-13T14:06:30.000Z",
           "caption": "In realtà non è un POV, @Vai Mario ha rischiato davvero di perdere un dito 🏖️💀  @bluserena  #spiaggia #ragazza #vacanze #sole #ragazzo",
-          "location": null,
+          "location": "Bluserena",
           "views": 1691,
           "imageUrl": null,
           "likes": 64,
@@ -28166,7 +28215,37 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7538071292466040086: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 3,
             "updatedAt": "2026-09-14T01:04:14.415Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "spiaggia",
+              "vacanze",
+              "sole",
+              "ragazza",
+              "ragazzo",
+              "tuffi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T01:10:02.260Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "spiaggia",
+            "vacanze",
+            "sole",
+            "ragazza",
+            "ragazzo",
+            "tuffi"
+          ]
         }
       ]
     },
@@ -73467,7 +73546,7 @@
           "url": "https://www.tiktok.com/@domenicomirabella6/video/7679841719751396640",
           "date": "2026-08-30T15:08:10.000Z",
           "caption": "#vacanze#sibari#bluserenasibarigreenresort#famiglia",
-          "location": null,
+          "location": "Bluserena",
           "views": 197,
           "imageUrl": null,
           "likes": 5,
@@ -73491,7 +73570,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-14T01:05:53.245Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "alloggi"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T01:10:02.734Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "alloggi"
+          ]
         },
         {
           "platform": "tiktok",
@@ -121225,7 +121329,7 @@
           "url": "https://www.tiktok.com/@giandomenico.vittore_jkd/video/7661277691492027681",
           "date": "2026-07-11T14:30:16.000Z",
           "caption": "Chi come me ed il pagante? Kalidria Hotel & Thalasso Spa 🤑 ciao wagliú🤑 @Il Pagante @Giuliana Covella @bluserena  #champagne #sbocciare #vacanza #oyster #PESCAMAN",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 2205,
           "imageUrl": null,
           "likes": 33,
@@ -121249,7 +121353,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-14T01:09:17.087Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "spiaggia",
+              "cibo",
+              "spa"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T01:10:03.355Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "spiaggia",
+            "cibo",
+            "spa"
+          ]
         }
       ]
     },
