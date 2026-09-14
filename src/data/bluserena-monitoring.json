@@ -121240,6 +121240,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:35.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PREFERITO\nIL MOOD\nPREFERITO IN VACANZA",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:09:17.087Z"
           }
         }
       ]
@@ -127690,6 +127699,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:39.650Z"
+          },
+          "ocrData": {
+            "textOnScreen": "And must say as professional\nastronomer, strongly side with\nitem C, that\nKemetic è",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:09:25.833Z"
           }
         },
         {
@@ -127713,6 +127731,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:42.635Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AETHERIA SMP gi\nGrup anggota\nAETHERIA SMP\nServer Survival ECO... Baca selengkapnya\nGrup 103 anggota",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:09:32.369Z"
           }
         },
         {
@@ -127736,6 +127763,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:45.702Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RETURN TO THE WILD\nWOMAN\nJANUARY 2027\nTulum, México\nWOMAN RETREAT\nJANUARY 207\nJANUARY",
+            "confidence": 0.838,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:09:46.838Z"
           }
         }
       ]
