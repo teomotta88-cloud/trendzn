@@ -110373,6 +110373,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:18.747Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AWRAPPING,\nTHAT",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:25:11.043Z"
           }
         }
       ]
@@ -116534,6 +116543,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:21.151Z"
+          },
+          "ocrData": {
+            "textOnScreen": "EI LUCHADOR",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:25:16.174Z"
           }
         }
       ]
@@ -122330,6 +122348,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:26.185Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:25:33.990Z"
           }
         }
       ]
@@ -128876,6 +128902,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:30.428Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:25:42.481Z"
           }
         },
         {
@@ -128899,6 +128933,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:33.875Z"
+          },
+          "ocrData": {
+            "textOnScreen": "01d but deep cut for\nmy Makah brethren\nTWILIGHT\nJAKE\nFORKS, WA TRAVEL GUIDE\nCANT\nHERE\n4 ORKS, WA TRAVEL GUIDE\nLOOK AT",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:25:56.529Z"
           }
         },
         {
@@ -128922,6 +128965,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:36.367Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TikTok\n2 @jeepwrangler254\ncl Metaphysical Mari",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:26:05.908Z"
           }
         }
       ]
