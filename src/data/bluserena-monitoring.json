@@ -29110,7 +29110,7 @@
           "url": "https://www.tiktok.com/@bariventoviaggi/video/7674659025652436256",
           "date": "2026-08-16T15:56:40.000Z",
           "caption": "#serenamajestichotelresidence #bluserenaviaggi4stelle #vacanzelowcost #andreaventoworld",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 2629,
           "imageUrl": null,
           "likes": 10,
@@ -29133,7 +29133,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-14T16:26:48.296Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T16:29:40.772Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -64831,7 +64855,7 @@
           "url": "https://www.tiktok.com/@bariventoviaggi/video/7674659025652436256",
           "date": "2026-08-16T15:56:40.000Z",
           "caption": "#serenamajestichotelresidence #bluserenaviaggi4stelle #vacanzelowcost #andreaventoworld",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 2629,
           "imageUrl": null,
           "likes": 10,
@@ -64854,7 +64878,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-14T16:26:48.296Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T16:29:40.772Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         }
       ]
     },
@@ -118360,7 +118408,7 @@
           "url": "https://www.tiktok.com/@thenuova.concierge/video/7657692083943263510",
           "date": "2026-07-01T22:36:16.000Z",
           "caption": "Summer feels with Valentino resort wear",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 568,
           "imageUrl": null,
           "likes": 25,
@@ -118384,7 +118432,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-14T16:28:52.489Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "moda",
+              "musica"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T16:29:41.516Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "estate",
+            "moda",
+            "musica"
+          ]
         }
       ]
     },
