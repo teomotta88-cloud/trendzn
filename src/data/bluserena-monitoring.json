@@ -28268,6 +28268,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:56.426Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hai fatto bene a\ncontinuare a vendere\n4 AGENZIA DI\nabbigliamento.\nAGENZIA DI VIAGGI\nRispondi al commento di\ncalzature ed\nhai fatto bene a fi\nAGENZIA",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:13.793Z"
           }
         },
         {
@@ -28291,6 +28300,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:36.464Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:20:00.982Z"
           }
         },
         {
@@ -28314,6 +28331,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:26.800Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:23:48.318Z"
           }
         },
         {
@@ -28337,6 +28362,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:59.268Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di 7\nCasaMosca\nSenza finestra\nnemmeno il bagno....\nGuardate\nLE ASPETTATIVE DI\nRispondi al commento di\nbagno....\nRispondi al commento di o\nSenza finestra E\nGuardate il video precendente!\nGuardate precendente!\nUNA VAGANZA",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:29.188Z"
           }
         },
         {
@@ -28360,6 +28394,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:43.817Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PONE\nHighland Naribex\nspaceship\ncraghts on an\nlooks A",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:20:40.340Z"
           }
         },
         {
@@ -28383,6 +28426,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:45.971Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YT: Daddy Dunmer\nreal. Can\nYT: Daddy D\nYT: Daddy Dunmer ji\n5 Talk aA\n0 Serana\nI'dneverknow\nhow youfooled",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:20:55.705Z"
           }
         },
         {
@@ -28406,6 +28458,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:51.386Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:01.186Z"
           }
         }
       ]
@@ -42184,6 +42244,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:53.513Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:06.833Z"
           }
         }
       ]
@@ -47619,6 +47687,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:56.426Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hai fatto bene a\ncontinuare a vendere\n4 AGENZIA DI\nabbigliamento.\nAGENZIA DI VIAGGI\nRispondi al commento di\ncalzature ed\nhai fatto bene a fi\nAGENZIA",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:13.793Z"
           }
         },
         {
@@ -47642,6 +47719,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:17:59.268Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di 7\nCasaMosca\nSenza finestra\nnemmeno il bagno....\nGuardate\nLE ASPETTATIVE DI\nRispondi al commento di\nbagno....\nRispondi al commento di o\nSenza finestra E\nGuardate il video precendente!\nGuardate precendente!\nUNA VAGANZA",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:29.188Z"
           }
         },
         {
@@ -47665,6 +47751,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:01.571Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:21:36.230Z"
           }
         },
         {
@@ -47688,6 +47782,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:05.368Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:22:15.313Z"
           }
         }
       ]
@@ -55814,6 +55916,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:09.045Z"
+          },
+          "ocrData": {
+            "textOnScreen": "print.\nwait'to\nbook\nParents... this\nsurprised",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:22:22.873Z"
           }
         },
         {
@@ -55837,6 +55948,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:12.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:22:43.400Z"
           }
         },
         {
@@ -55860,6 +55979,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:17.080Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:22:58.195Z"
           }
         }
       ]
@@ -63762,6 +63889,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:19.800Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:23:21.291Z"
           }
         }
       ]
@@ -74048,6 +74183,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:21.927Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mealis nourishing.\ndoula st newbo n ca\nZ od being taken care of.\nelse to be.",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:23:28.786Z"
           }
         },
         {
@@ -74071,6 +74215,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:24.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BERL",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:23:37.394Z"
           }
         },
         {
@@ -74094,6 +74247,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:26.800Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:23:48.318Z"
           }
         },
         {
@@ -74117,6 +74278,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:29.620Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:23:56.071Z"
           }
         },
         {
@@ -74140,6 +74309,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:33.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:04.828Z"
           }
         }
       ]
@@ -82287,6 +82464,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:36.495Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i Serenè Resort\nSerene Resort\nSerenè Resort",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:14.141Z"
           }
         },
         {
@@ -82310,6 +82496,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:38.876Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel\nrtle Tour\nWood\ngetaway p\n4 Up Paddle i A\nfora\n(he location",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:21.620Z"
           }
         },
         {
@@ -82333,6 +82528,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:43.645Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ARIEIVAL AT THE HOTEL\nCOCKTAIL DANCE",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:30.696Z"
           }
         }
       ]
@@ -92125,6 +92329,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:46.584Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:35.857Z"
           }
         },
         {
@@ -92148,6 +92361,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:18:49.333Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:40.059Z"
           }
         }
       ]
@@ -99888,6 +100109,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:07.759Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:46.403Z"
           }
         }
       ]
@@ -110113,6 +110342,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T06:19:10.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T06:24:57.037Z"
           }
         },
         {
