@@ -29196,7 +29196,7 @@
           "url": "https://www.tiktok.com/@samu.carbo11/video/7672423747646721312",
           "date": "2026-08-10T15:22:39.000Z",
           "caption": "#bluserenavillage#fyp#viral#mancate#perteeee",
-          "location": null,
+          "location": "Bluserena",
           "views": 2055,
           "imageUrl": null,
           "likes": 112,
@@ -29220,7 +29220,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-14T21:38:31.643Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "divertimento",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T21:41:58.625Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "musica",
+            "divertimento",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
@@ -65069,7 +65094,7 @@
           "url": "https://www.tiktok.com/@samu.carbo11/video/7672423747646721312",
           "date": "2026-08-10T15:22:39.000Z",
           "caption": "#bluserenavillage#fyp#viral#mancate#perteeee",
-          "location": null,
+          "location": "Bluserena",
           "views": 2055,
           "imageUrl": null,
           "likes": 112,
@@ -65093,7 +65118,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-14T21:38:31.643Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "divertimento",
+              "animazione"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-14T21:41:58.625Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "musica",
+            "divertimento",
+            "animazione"
+          ]
         },
         {
           "platform": "tiktok",
