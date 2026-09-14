@@ -121005,7 +121005,16 @@
           "likes": 33,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ostrica champagne Settina bianca Ciao a tutti",
+            "language": "Italian",
+            "durationSec": 15.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T01:03:35.846Z"
+          }
         }
       ]
     },
@@ -127446,7 +127455,16 @@
           "likes": 183,
           "comments": 10,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Atlanta, perché tutti hanno qualcosa da dire per il Doba? Hanno anche il periodo orbitale corretto, 50 anni, quindi come potrebbero sapere questo? E devo dire che come astronomo professionista, side con l'item C, che è coincidenza. Cosa? Come se non avessero una bocca e due piedi per camminare e parlare per loro stessi? Chissà cosa, saranno qui il 24 giugno al 26 al 333 Peter Street Station, non vuoi perderti questo. Ancestral Gates of Kemetic Mystery, guidati da Dogon Priest and Healer, neb iditas and mida naba learn directly about the dogon as we cover subjects as who are the dogon understanding time and space the stars libations and purifications comedic yoga dogon herbalism and more click the link in our bio or visit us at dogonwisdom.com to purchase your tickets today",
+            "language": "Italian",
+            "durationSec": 45.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T01:03:39.650Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -127460,7 +127478,16 @@
           "likes": 51,
           "comments": 48,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T01:03:42.635Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -127474,7 +127501,16 @@
           "likes": 37,
           "comments": 6,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dessert",
+            "language": "Italian",
+            "durationSec": 26.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T01:03:45.702Z"
+          }
         }
       ]
     }
