@@ -28094,6 +28094,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:01:52.891Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:04:00.208Z"
           }
         },
         {
@@ -28117,6 +28125,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:28.958Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LARE",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:05:53.245Z"
           }
         },
         {
@@ -28140,6 +28157,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:01:59.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7538071292466040086: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:04:14.415Z"
           }
         }
       ]
@@ -41886,6 +41912,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:04.462Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: You're watching\nBaddies\nBaddies Fiji\n1 POV: You're watching",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:04:28.767Z"
           }
         }
       ]
@@ -47257,6 +47292,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:07.852Z"
+          },
+          "ocrData": {
+            "textOnScreen": "y Zonas\ndias",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:04:39.861Z"
           }
         },
         {
@@ -47280,6 +47324,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:12.648Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cala Serena\n[sola di Caprera\ndi Caprera\nSerena\nCala",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:04:53.543Z"
           }
         }
       ]
@@ -55374,6 +55427,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:16.043Z"
+          },
+          "ocrData": {
+            "textOnScreen": "suas",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:05:03.816Z"
           }
         }
       ]
@@ -63212,6 +63274,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:18.883Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NATE ET DANE ATTENDENT A LA RECEPTION\nQUEEN SERENA",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:05:13.402Z"
           }
         },
         {
@@ -63235,6 +63306,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:22.501Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serena.Hotel\nHill\ni walk,",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:05:22.938Z"
           }
         }
       ]
@@ -73370,6 +73450,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:25.112Z"
+          },
+          "ocrData": {
+            "textOnScreen": "vacanza a otiu\nOstra vac a\nLa nostra vacanza a otium\nvacanza a otium\nsibari",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:05:40.972Z"
           }
         },
         {
@@ -73393,6 +73482,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:28.958Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LARE",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:05:53.245Z"
           }
         },
         {
@@ -73416,6 +73514,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:32.951Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:06:21.808Z"
           }
         },
         {
@@ -73439,6 +73545,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:38.539Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:06:29.429Z"
           }
         }
       ]
@@ -91323,6 +91437,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:44.256Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Hotel",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:06:36.619Z"
           }
         }
       ]
@@ -99031,6 +99154,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:47.973Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Torreserena Vill...\nrealme 14x 5G\n20 luglio 2026 alle ore 22:30",
+            "confidence": 0.893,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:06:42.967Z"
           }
         }
       ]
@@ -109067,6 +109199,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:51.000Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:07:09.217Z"
           }
         },
         {
@@ -109090,6 +109231,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:53.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:07:23.017Z"
           }
         },
         {
@@ -109113,6 +109262,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:02:58.720Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:07:30.492Z"
           }
         },
         {
@@ -109136,6 +109293,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:04.751Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:07:42.416Z"
           }
         },
         {
@@ -109159,6 +109324,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:11.398Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BANDUNG NGANJANG\nBANDUNG\nMENYAMBUTMU\nUTAMANYA",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:07:52.137Z"
           }
         },
         {
@@ -109182,6 +109356,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:15.955Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CANNES\nCANNES, A\nREGENT HOTEL",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:08:02.734Z"
           }
         }
       ]
@@ -115248,6 +115431,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:18.022Z"
+          },
+          "ocrData": {
+            "textOnScreen": "UNTITLED\nOCKST",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:08:09.419Z"
           }
         },
         {
@@ -115271,6 +115463,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:21.529Z"
+          },
+          "ocrData": {
+            "textOnScreen": "open.",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:08:21.053Z"
           }
         },
         {
@@ -115294,6 +115495,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:24.720Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:08:26.381Z"
           }
         }
       ]
@@ -120968,6 +121177,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:28.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:08:31.657Z"
           }
         },
         {
@@ -120991,6 +121208,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-14T01:03:30.463Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7537903380237274398: Unable to download webpage: [Errno 104] Connection reset by peer (caused by TransportError('[Errno 104] Connection reset by peer'))",
+            "version": 3,
+            "updatedAt": "2026-09-14T01:09:02.064Z"
           }
         },
         {
