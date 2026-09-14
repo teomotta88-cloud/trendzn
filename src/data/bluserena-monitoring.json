@@ -28259,7 +28259,16 @@
           "likes": 17,
           "comments": 4,
           "shares": 2,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "agenzia di viaggi premetto che sono ignorante in materia quindi correggetemi se sbaglio ma credo che sia ancora un settore molto molto redditizio se lo si va ad indicizzare in un certo segmento o un bel po di idee in mente che non sto qui a spiegare altrimenti ci vorrebbe un video di 10 minuti però sono convinto che una fascia di clientela quelle che vanno su sky scanner sul sito low cost vanno su booking quella fascia la va proprio evitata quel tipo di cliente la va proprio tolto bisogna indicizzare il proprio segmento ad un pubblico ben preciso che io già c'ho un po di cose in mente però ovviamente non essendo settore mio non so qui a spiegarle pure perché non ho le competenze",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:56.426Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28273,7 +28282,16 @@
           "likes": 63,
           "comments": 13,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "OI! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:36.464Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28287,7 +28305,16 @@
           "likes": 8,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:26.800Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28301,7 +28328,16 @@
           "likes": 14,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Allora, questo è il discorso che facevo nel video precedente, una questione di aspettative. Io sinceramente non mi ero neanche accorto che non c'era la finestra nel bagno, che non c'era la finestra nella camera da letto, perché le aspettative per me di questa vacanza corrispondono a quello che ho pagato. Ovviamente, se uno si fa una vacanza con delle aspettative super elevate, e poi dopo guarda la stanza del villaggio come si sa stessa a Cattano, manca la finestra nel bagno, manca la finestra lì, è esposta a nord, è esposta a sud sono cose che io guardo se me la devo comprare una casa, non se devo andarci una settimana, questa è una questione di aspettative",
+            "language": "Italian",
+            "durationSec": 43.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:59.268Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28315,7 +28351,16 @@
           "likes": 3720,
           "comments": 125,
           "shares": 70,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:43.817Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28329,7 +28374,16 @@
           "likes": 625,
           "comments": 12,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La pelle sembra così reale. Posso... wow. Se non fosse per queste ponte, non saprei mai. Posso vedere come avete fuggito tutti per così lungo.",
+            "language": "Italian",
+            "durationSec": 12,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:45.971Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -28343,7 +28397,16 @@
           "likes": 448,
           "comments": 10,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:51.386Z"
+          }
         }
       ]
     },
@@ -42112,7 +42175,16 @@
           "likes": 31500,
           "comments": 643,
           "shares": 226,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:53.513Z"
+          }
         }
       ]
     },
@@ -47538,7 +47610,16 @@
           "likes": 17,
           "comments": 4,
           "shares": 2,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "agenzia di viaggi premetto che sono ignorante in materia quindi correggetemi se sbaglio ma credo che sia ancora un settore molto molto redditizio se lo si va ad indicizzare in un certo segmento o un bel po di idee in mente che non sto qui a spiegare altrimenti ci vorrebbe un video di 10 minuti però sono convinto che una fascia di clientela quelle che vanno su sky scanner sul sito low cost vanno su booking quella fascia la va proprio evitata quel tipo di cliente la va proprio tolto bisogna indicizzare il proprio segmento ad un pubblico ben preciso che io già c'ho un po di cose in mente però ovviamente non essendo settore mio non so qui a spiegarle pure perché non ho le competenze",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:56.426Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -47552,7 +47633,16 @@
           "likes": 14,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Allora, questo è il discorso che facevo nel video precedente, una questione di aspettative. Io sinceramente non mi ero neanche accorto che non c'era la finestra nel bagno, che non c'era la finestra nella camera da letto, perché le aspettative per me di questa vacanza corrispondono a quello che ho pagato. Ovviamente, se uno si fa una vacanza con delle aspettative super elevate, e poi dopo guarda la stanza del villaggio come si sa stessa a Cattano, manca la finestra nel bagno, manca la finestra lì, è esposta a nord, è esposta a sud sono cose che io guardo se me la devo comprare una casa, non se devo andarci una settimana, questa è una questione di aspettative",
+            "language": "Italian",
+            "durationSec": 43.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:17:59.268Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -47566,7 +47656,16 @@
           "likes": 36,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "raga secondo voi come si sta sullo yacht? pedala cazzo pedala",
+            "language": "Italian",
+            "durationSec": 8.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:01.571Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -47580,7 +47679,16 @@
           "likes": 87,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:05.368Z"
+          }
         }
       ]
     },
@@ -55697,7 +55805,16 @@
           "likes": 288,
           "comments": 21,
           "shares": 132,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Qui c'è tutto ciò che vorrei sapere prima di stare a Ava Resorts Cancun. La prima cosa è che non tutto è inclusivo. Come la laser tag, la bowling, i simulatori e l'escapo, tutti costano extra. Le uniche attività che erano inclusi erano la forza di obbligo, le canoie e la slitta di acqua. Quella presentazione di 90 minuti è diventata tre ore. E vorrei che l'ho scoperta. I pacchetti erano di 300.000 dollari. La massaggio gratuito son stato ottimo fino a quando abbiamo scoperto che il spa era chiuso e che sarebbe all'esterno del Cancun. I crediti di quei resort non fanno le attività gratis, solo diminuiscono il prezzo. Abbiamo ancora dovuto pagare per quasi tutto, ma abbiamo ottenuto il 65% di sconto. Escapeology non era scontato nemmeno. Era di circa 40 dollari per giocatore per round, che, sinceramente, mi è sentita abbastanza interessante. Bookate le riservazioni del vostro restaurant almeno una settimana prima di arrivare. Altrimenti, probabilmente avrete un dineraggio a 9 di notte senza riservazione. Mio figlio amava il corso di obstacoli, ma ho dovuto andare con lui ogni volta. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 68,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:09.045Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -55711,7 +55828,16 @@
           "likes": 3222,
           "comments": 90,
           "shares": 830,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "E' Allah il maestro, il malicoso, il saluto, il credente, il muretto, il maestro, il capo, il capo.",
+            "language": "Italian",
+            "durationSec": 29.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:12.918Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -55725,7 +55851,16 @@
           "likes": 441,
           "comments": 3,
           "shares": 323,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 70.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:17.080Z"
+          }
         }
       ]
     },
@@ -63618,7 +63753,16 @@
           "likes": 4426,
           "comments": 69,
           "shares": 146,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica musica musica musica musica musica",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:19.800Z"
+          }
         }
       ]
     },
@@ -73895,7 +74039,16 @@
           "likes": 206,
           "comments": 3,
           "shares": 24,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti per aver guardato il video.",
+            "language": "Italian",
+            "durationSec": 20.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:21.927Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73909,7 +74062,16 @@
           "likes": 45,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "He said one day you'll leave this world behind, so live a life you will remember. My father told me when I was just a child, these are the nights to never die. My father told me. Ciao",
+            "language": "Italian",
+            "durationSec": 32.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:24.655Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73923,7 +74085,16 @@
           "likes": 8,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "confirmed"
+          "verificationStatus": "confirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:26.800Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73937,7 +74108,16 @@
           "likes": 13,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:29.620Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73951,7 +74131,16 @@
           "likes": 7858,
           "comments": 68,
           "shares": 217,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, baby, allow me, tipiù offuti, allow me, Sibadio, Sibadio, Sibadio, Egbamio, Egbamio, di deposi ma bololo.",
+            "language": "Italian",
+            "durationSec": 18.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:33.655Z"
+          }
         }
       ]
     },
@@ -82089,7 +82278,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Amare oh, oh oh oh oh, oh oh oh oh, se le ti occorroni che mi imparano la versione.",
+            "language": "Italian",
+            "durationSec": 16.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:36.495Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82103,7 +82301,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:38.876Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82117,7 +82324,16 @@
           "likes": 629,
           "comments": 15,
           "shares": 58,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 34.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:43.645Z"
+          }
         }
       ]
     },
@@ -91900,7 +92116,16 @@
           "likes": 3016,
           "comments": 13,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mettetevi in un posto di grande orgoglio, dove non c'è la vostra valutazione, e dove il portiere del vostro paese non è un haram.",
+            "language": "Italian",
+            "durationSec": 14,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:46.584Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -91914,7 +92139,16 @@
           "likes": 21,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Dominique Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:18:49.333Z"
+          }
         }
       ]
     },
@@ -99645,7 +99879,16 @@
           "likes": 63,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ora, per esempio, abbiamo due, il Serena e il Riverback. Se ho due, e posso scegliere il mio 28, il Serena è a 60 miliardi di euro al metro, quindi dovrei acquistare un'area di circa 45 metri? Ma con il 28, sicuramente con il Riverback, potrete acquistare un'area di 51 metri quadrati. 51 euro per una parte è molto grande, non è piccolo, e la chiave è completamente in gioco, è una macchina smart che ha anche la polaroid, la pagina di pagamento è 18 mesi, 18 mesi per 30% e il 10 mese per 10% cioè il 10 mese per 10% o ogni mese per 1% e così si dura più di 2 anni il suo periodo è di 3 anni, quindi non è possibile che nessuno abbia passato il progetto, e se parliamo di questo la collaborazione con la compagnia di acqua sar pi veloce ma penso che questa pi alta in un pi spessa e quindi ci stiamo aspettando informazioni dal punto di investimento Ma riguardo alla previsione del rumore è possibile che con questa 28, abbiamo comprato solo 45 Heads and Bulls, quindi credo che possiamo andare un po' in giro, ma questo posto non è neanche vicino a Sài Gòn o a Serena, ma questo posto è molto bello, molto bello, molto freddo, molto comodo, molto tranquillo, con un gioco di tempo lungo, perché i progetti che sono finiti e che sono finiti sono sempre ancora un bel progetto. Quindi, in realtà, ogni persona ha solo una storia. Ci sono persone che stanno in Divana 1, e loro preferiscono essere qui, non vogliono comprare qui, perché vivono nel luogo di Dapfus e sentono che è ok, vogliono avere una propria casa, e lo scegliono. Quindi voglio dire a tutti che l'importante sono le tre caratteristiche di una casa. La prima è la posizione, la seconda è l'efficacia, e la terza è la sensazione, la bellezza, e la terza è la sensazione di bellezza e sottile di tutti. Quindi dovete scegliere una delle tre opzioni, e io ti consiglierò di scegliere una opzione che sia molto utile per voi.",
+            "language": "Italian",
+            "durationSec": 133.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:19:07.759Z"
+          }
         }
       ]
     },
@@ -109861,7 +110104,16 @@
           "likes": 15,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Aspetta, aspetta, aspetta, aspetta, 3, 2, 1 Hey there Delilah, what's it like in New York City? I'm a thousand miles away, but girl tonight you look so pretty, yes you do",
+            "language": "Italian",
+            "durationSec": 13.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-14T06:19:10.718Z"
+          }
         },
         {
           "platform": "tiktok",
