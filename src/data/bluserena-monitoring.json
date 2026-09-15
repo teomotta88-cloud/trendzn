@@ -29857,6 +29857,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:07.684Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:46:34.838Z"
           }
         },
         {
@@ -29880,6 +29888,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:12.890Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:46:42.997Z"
           }
         },
         {
@@ -29903,6 +29919,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:08.140Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:33.828Z"
           }
         }
       ]
@@ -43993,6 +44017,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:21.507Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:02.403Z"
           }
         },
         {
@@ -44016,6 +44048,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:25.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": "peor del mundo. Ese\nhorel no es juevo\nOjala este mejor. El\nafio pasado fue lo",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:10.997Z"
           }
         },
         {
@@ -44039,6 +44080,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:27.928Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:18.997Z"
           }
         },
         {
@@ -44062,6 +44111,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:34.038Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:27.006Z"
           }
         },
         {
@@ -44085,6 +44142,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:37.593Z"
+          },
+          "ocrData": {
+            "textOnScreen": "yang kubayar urus urusan\nbuatku\nwanita ini\ni di karena\ni sepele ini?\nDia memukul ibumu sendiri\nsampai y",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:33.572Z"
           }
         },
         {
@@ -44108,6 +44174,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:41.641Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:39.372Z"
           }
         },
         {
@@ -44131,6 +44205,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:44.003Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:45.733Z"
           }
         },
         {
@@ -44154,6 +44236,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:50.433Z"
+          },
+          "ocrData": {
+            "textOnScreen": "E: Verse 1] i\nYeah, it's all for the cause\nFor the good of us all\nAnd if you close your eyes\nJ Then it can't be your fault\nLert È\nas much Gfia\nis where",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:47:56.066Z"
           }
         },
         {
@@ -44177,6 +44268,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:54.649Z"
+          },
+          "ocrData": {
+            "textOnScreen": "know angbody\njust know,\nthat\nso yall",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:02.611Z"
           }
         },
         {
@@ -44200,6 +44300,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:42:57.090Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:20.210Z"
           }
         }
       ]
@@ -50210,6 +50318,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:02.259Z"
+          },
+          "ocrData": {
+            "textOnScreen": "La mia musica che arriva anche\nnel Salento, nonostante un po’ di\ninfluenza",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:27.111Z"
           }
         },
         {
@@ -50233,6 +50350,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:08.140Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:33.828Z"
           }
         }
       ]
@@ -58648,6 +58773,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:10.787Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:39.970Z"
           }
         },
         {
@@ -58671,6 +58804,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:18.854Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:44.775Z"
           }
         },
         {
@@ -58694,6 +58835,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:22.421Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:55.693Z"
           }
         }
       ]
@@ -67024,6 +67173,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:26.723Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:48:59.516Z"
           }
         },
         {
@@ -67047,6 +67204,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:29.447Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LALA\nSerena",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:49:07.356Z"
           }
         },
         {
@@ -67070,6 +67236,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:33.829Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:49:29.926Z"
           }
         },
         {
@@ -67093,6 +67267,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:36.989Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MOMENT HERE:",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:49:36.123Z"
           }
         },
         {
@@ -67116,6 +67299,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:41.215Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:50:24.240Z"
           }
         },
         {
@@ -67139,6 +67330,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:44.646Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena Altit Fort Residence,\nHunza",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:50:38.656Z"
           }
         },
         {
@@ -67162,6 +67362,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:47.163Z"
+          },
+          "ocrData": {
+            "textOnScreen": "adding It to next time\ncat here\nIt to next t",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:50:46.696Z"
           }
         }
       ]
@@ -78353,6 +78562,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:43:53.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": "6) The Palm Course: A\n4 Q 7) Golf Resort Hotel and 9 lubhouse\n8) The Magnolia Course: A\ngolf hotel\ng i hotel\nLimited to\nB10 GALS\nTO STAY.\nThe Disney\n1 A siesta pooluide? Weve got it\nN Club\nTravel Center\nA watt [Disney",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:50:59.532Z"
           }
         },
         {
