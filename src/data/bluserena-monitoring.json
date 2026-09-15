@@ -29683,6 +29683,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:54.496Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a che ora avete fatto\nil check-in? e a che\nora c'è il checkout?\nEH BAGAGLIO\nIN AUTO\nRispondi al commento di Andrea\nRIMARREMO FINO\na Rispondi al commento di Anc\nEH. QUINDI\nQUIND\ni CECCHINO ALLE 16,\nly Rispondi al commento di Andrea\nnomice\nche ora avete fatto\nSU INSTAGRAM,\nHO POSTATO",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:40.268Z"
           }
         },
         {
@@ -29706,6 +29715,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:24.670Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Quadrupla\nIMMEDIAT®)",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:29:34.466Z"
           }
         },
         {
@@ -29729,6 +29747,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:26.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RADIO A\nRECCI\nFRECCI\nRAD/O\n104) aero\nRECCIA",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:29:42.446Z"
           }
         }
       ]
@@ -43787,6 +43814,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:29.367Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Atty O",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:29:46.944Z"
           }
         }
       ]
@@ -49765,6 +49801,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:32.537Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hall!",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:05.359Z"
           }
         }
       ]
@@ -58148,6 +58193,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:35.532Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV from",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:12.277Z"
           }
         }
       ]
@@ -66383,6 +66437,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:42.580Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dekat ke\nStanding mirror",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:17.313Z"
           }
         },
         {
@@ -66406,6 +66469,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:45.448Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Penchuwine",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:21.208Z"
           }
         },
         {
@@ -66429,6 +66501,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:48.354Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:25.631Z"
           }
         }
       ]
@@ -77465,6 +77545,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:51.476Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:29.476Z"
           }
         },
         {
@@ -77488,6 +77576,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:54.496Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a che ora avete fatto\nil check-in? e a che\nora c'è il checkout?\nEH BAGAGLIO\nIN AUTO\nRispondi al commento di Andrea\nRIMARREMO FINO\na Rispondi al commento di Anc\nEH. QUINDI\nQUIND\ni CECCHINO ALLE 16,\nly Rispondi al commento di Andrea\nnomice\nche ora avete fatto\nSU INSTAGRAM,\nHO POSTATO",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:40.268Z"
           }
         },
         {
@@ -77511,6 +77608,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:27:59.498Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GBOASRIA.4E\ndyalk fach kaychofk htitih ou mchiti tn3s\n(Nhar kamle ou nta hazou)\nimilifon dyalkifachlkaychofk htitih ou mchiti tn3s\nkamle ou nta hazou)\nfach kaychofk htitih ou mchiti tn3s\ndyalkifach'kaychofk htitih ou mchiti tn3s\ndyalkifach mchiti tn3s\nou nta hazou)",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:30:45.401Z"
           }
         },
         {
@@ -77534,6 +77640,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:03.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:31:08.125Z"
           }
         }
       ]
@@ -86185,6 +86299,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:05.928Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RETREAT\nA serene escape for rest and relaxation",
+            "confidence": 0.869,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:31:12.716Z"
           }
         },
         {
@@ -86208,6 +86331,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:09.123Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:31:20.401Z"
           }
         }
       ]
@@ -104180,6 +104311,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:11.875Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:31:42.965Z"
           }
         }
       ]
@@ -114955,6 +115094,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:18.823Z"
+          },
+          "ocrData": {
+            "textOnScreen": "julio de 2026\ncampata\ntodo dia\ntermina\ncaps tock s D G 3",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:31:49.403Z"
           }
         },
         {
@@ -114978,6 +115126,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:21.390Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Yepoda\nAdvent Calendar\na Advent Calendar",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:31:57.135Z"
           }
         },
         {
@@ -115001,6 +115158,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:27.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:06.809Z"
           }
         },
         {
@@ -115024,6 +115189,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:31.984Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:11.958Z"
           }
         }
       ]
@@ -121642,6 +121815,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:42.446Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pi Party PAL:\nBersama FERA WONG\nPesona\nSabtu, 1 Agustus 2026\n1/Agustus 2026\nParty.\n.VALENTINO.MC, &.7\nE Tanjung Pesona Beach Resort and Spa\nTq buat tuan rumah atas\nTanjung Resort and Spa)",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:21.606Z"
           }
         },
         {
@@ -121665,6 +121847,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:44.598Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CARY",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:29.773Z"
           }
         }
       ]
@@ -127884,6 +128075,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:49.127Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:33.999Z"
           }
         },
         {
@@ -127907,6 +128106,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:55.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": "were staying in Nepal\ngroup was i\nLooking at the images\nitself was",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:50.371Z"
           }
         },
         {
@@ -127930,6 +128138,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:28:57.516Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Genuinely i\nresort bro@@\nGenuinely what i\nGenuit\nGenuinely\nresort",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:32:54.927Z"
           }
         },
         {
@@ -127953,6 +128170,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T18:29:06.126Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T18:33:01.627Z"
           }
         }
       ]
