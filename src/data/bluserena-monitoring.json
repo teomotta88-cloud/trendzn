@@ -29285,7 +29285,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667191037068102944",
           "date": "2026-07-27T12:57:04.000Z",
           "caption": "Risposta a @Capitano #sibarigreenresort #commentimemorabili #netfit #bluserena #vacanza2k26",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1158,
           "imageUrl": null,
           "likes": 21,
@@ -29309,7 +29309,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T02:52:51.637Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:27.127Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29317,7 +29342,7 @@
           "url": "https://www.tiktok.com/@il_matte_il/video/7537306124907711766",
           "date": "2025-08-11T12:37:16.000Z",
           "caption": "🌊 Is Serenas Badesi – Nord Sardegna: mare da favola, cibo squisito e puro divertimento per i bambini ❤️. Grazie @bluserena  per professionalità e ospitalità impeccabili! #IsSerenasBadesi #Bluserena #VacanzeInFamiglia #Sardegna  #gifted #collaborazione #lavacanzacheresta #resort",
-          "location": null,
+          "location": "Is Serenas Badesi Resort",
           "views": 4881,
           "imageUrl": null,
           "likes": 170,
@@ -29340,7 +29365,37 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:52:04.346Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "cibo",
+              "animazione",
+              "bambini",
+              "ospitalità",
+              "vacanze in famiglia"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:26.635Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "cibo",
+            "animazione",
+            "bambini",
+            "ospitalità",
+            "vacanze in famiglia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29380,7 +29435,7 @@
           "url": "https://www.tiktok.com/@bpiera/video/7539992171970120982",
           "date": "2025-08-18T18:20:30.000Z",
           "caption": "#bluserenavillage #valentinoresort #grancaffebattipaglia #tazzapazza #ilcaffettaroditiktok",
-          "location": null,
+          "location": "Bluserena",
           "views": 487,
           "imageUrl": null,
           "likes": 4,
@@ -29403,7 +29458,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:56:18.147Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "caffè",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:33.664Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "caffè",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29411,7 +29488,7 @@
           "url": "https://www.tiktok.com/@santinogadaleta/video/7526271600530902294",
           "date": "2025-07-12T18:57:41.000Z",
           "caption": "#bluserena #lavacanzacheresta #valentinoresort #myfamily❤️",
-          "location": null,
+          "location": "Bluserena",
           "views": 585,
           "imageUrl": null,
           "likes": 4,
@@ -29434,7 +29511,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:56:25.018Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "vacanza",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:34.679Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "vacanza",
+            "musica"
+          ]
         }
       ]
     },
@@ -43290,7 +43391,7 @@
           "url": "https://www.tiktok.com/@il_matte_il/video/7537306124907711766",
           "date": "2025-08-11T12:37:16.000Z",
           "caption": "🌊 Is Serenas Badesi – Nord Sardegna: mare da favola, cibo squisito e puro divertimento per i bambini ❤️. Grazie @bluserena  per professionalità e ospitalità impeccabili! #IsSerenasBadesi #Bluserena #VacanzeInFamiglia #Sardegna  #gifted #collaborazione #lavacanzacheresta #resort",
-          "location": null,
+          "location": "Is Serenas Badesi Resort",
           "views": 4881,
           "imageUrl": null,
           "likes": 170,
@@ -43313,7 +43414,37 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:52:04.346Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "cibo",
+              "animazione",
+              "bambini",
+              "ospitalità",
+              "vacanze in famiglia"
+            ],
+            "location": "Is Serenas Badesi Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:26.635Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "cibo",
+            "animazione",
+            "bambini",
+            "ospitalità",
+            "vacanze in famiglia"
+          ]
         }
       ]
     },
@@ -76329,7 +76460,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667191037068102944",
           "date": "2026-07-27T12:57:04.000Z",
           "caption": "Risposta a @Capitano #sibarigreenresort #commentimemorabili #netfit #bluserena #vacanza2k26",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1158,
           "imageUrl": null,
           "likes": 21,
@@ -76353,7 +76484,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T02:52:51.637Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:27.127Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -84838,7 +84994,7 @@
           "url": "https://www.tiktok.com/@tiportodentroalmiocuore/video/7538478586345442582",
           "date": "2025-08-14T16:27:01.000Z",
           "caption": "Come divertirsi a 40 Anni 🤣🤣🤣  Calabria 2025 Vilaaggio  @bluserena #sereneresort #vacanze2025 #PERTE #NEIPERTE #VOLIAMONEIPERTE",
-          "location": null,
+          "location": "Bluserena",
           "views": 112900,
           "imageUrl": null,
           "likes": 141,
@@ -84862,7 +85018,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T02:53:12.172Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanze",
+              "estate"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:28.224Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "vacanze",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -119782,7 +119963,7 @@
           "url": "https://www.tiktok.com/@jed_santiago/video/7539153078688288007",
           "date": "2025-08-16T12:04:23.000Z",
           "caption": "🌿 Morning walks hit different when you’re surrounded by nature 🍃✨ #ValentinoResort@Valentino Resort and Spa",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 164,
           "imageUrl": null,
           "likes": 6,
@@ -119805,7 +119986,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:56:09.909Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "natura",
+              "relax"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:30.922Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "natura",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -119813,7 +120016,7 @@
           "url": "https://www.tiktok.com/@bpiera/video/7539992171970120982",
           "date": "2025-08-18T18:20:30.000Z",
           "caption": "#bluserenavillage #valentinoresort #grancaffebattipaglia #tazzapazza #ilcaffettaroditiktok",
-          "location": null,
+          "location": "Bluserena",
           "views": 487,
           "imageUrl": null,
           "likes": 4,
@@ -119836,7 +120039,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:56:18.147Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "caffè",
+              "vacanza"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:33.664Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "caffè",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -119844,7 +120069,7 @@
           "url": "https://www.tiktok.com/@santinogadaleta/video/7526271600530902294",
           "date": "2025-07-12T18:57:41.000Z",
           "caption": "#bluserena #lavacanzacheresta #valentinoresort #myfamily❤️",
-          "location": null,
+          "location": "Bluserena",
           "views": 585,
           "imageUrl": null,
           "likes": 4,
@@ -119867,7 +120092,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T02:56:25.018Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "famiglia",
+              "vacanza",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:34.679Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "famiglia",
+            "vacanza",
+            "musica"
+          ]
         }
       ]
     },
@@ -125884,7 +126133,7 @@
           "url": "https://www.tiktok.com/@giandomenico.vittore_jkd/video/7670567882652175648",
           "date": "2026-08-05T15:20:57.000Z",
           "caption": "Serata cinema al Kalidria con Vasco Rossi ✌️😁🎥 #cinema #vascorossi #luxuryresort #luxurylifestyle #PESCAMAN @bluserena @Giuliana Covella @Vasco Rossi",
-          "location": null,
+          "location": "Kalidria Hotel & Thalasso SPA",
           "views": 563,
           "imageUrl": null,
           "likes": 15,
@@ -125908,7 +126157,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T02:56:30.121Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cinema",
+              "musica",
+              "evento",
+              "luxuryresort"
+            ],
+            "location": "Kalidria Hotel & Thalasso SPA",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T02:58:38.405Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cinema",
+            "musica",
+            "evento",
+            "luxuryresort"
+          ]
         },
         {
           "platform": "tiktok",
