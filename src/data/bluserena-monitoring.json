@@ -29291,7 +29291,16 @@
           "likes": 21,
           "comments": 4,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "capitano che commento meraviglioso che mi hai scritto sei il numero uno pieno di vita è bello che tutti si vivessero la vacanza come te senza andare a trovare il pelo nell'uovo buona vita sempre così sei fantastico che spettacolo forse questo è uno di quelli che classifichiamo tra i commenti più belli raga capitano diciamo abbiamo vissuto la vacanza veramente non ci sono stati problemi o perché noi non siamo lamentosi ma oggi proprio ne approfitto per dirvi che ho fatto la recensione e per me è stato un 5 stelle ma poi fondamentalmente i problemi sono tantissimi, ci stanno un sacco di cose a cui badare dalla mattina quando ti svegli fino a quando non vai a corrigarti la sera, quindi una settimana di spensieratezza è bellissima, poi sinceramente noi cerchiamo di dare sempre il massimo, guardate quante sono belli questi ragazzi della Netflix lui è mio fratello Antonio capitano sei il numero uno grazie per questo commento seguici sempre perché ti facciamo vedere quante belle cose abbiamo qua a Battivaglia quante cose abbiamo da condividere quindi restate con questi ragazzi",
+            "language": "Italian",
+            "durationSec": 79.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:46.754Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29305,7 +29314,16 @@
           "likes": 170,
           "comments": 1,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "una bellissima sirenetta la uscita signor capitano ma c'è stata una sirenetta nell'acqua là direttiamoci verso il cuore acceleriamo uno due sei paura? sei paura? dai vieni in braccio allora vieni in braccio papà attento eh uno un orecchio allora c'era tanti bacini dei lupi i bacini dei lupi? si che fanno il piccolo e non la bocca al spagato e che calaro che fischia la melodia che ti conquista amore a prima vista rientra in quel guato che hai qui ritroviamo la felicità un sogno che non rimane uno due uno due tre quattro quattro quattro quattro quattro che non sentirai mai più c'è non ha qui non è pieno in buona vita 4, 5, 6, 7, 8 e non c'è mai più tutta la spiaggia questa vita la distrugge e domani? e la tre giornata distruttiva",
+            "language": "Italian",
+            "durationSec": 118.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:35.333Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29319,7 +29337,16 @@
           "likes": 78,
           "comments": 7,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Solo tu e me contro il mondo ora. La sangue di un vampiro.",
+            "language": "Italian",
+            "durationSec": 13.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:20.742Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29333,7 +29360,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Pambule, pambule, pambule Ciao",
+            "language": "Italian",
+            "durationSec": 46.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:48.390Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29347,7 +29383,16 @@
           "likes": 4,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 52.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:51.121Z"
+          }
         }
       ]
     },
@@ -43178,7 +43223,16 @@
           "likes": 84,
           "comments": 13,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Now turn me up",
+            "language": "Italian",
+            "durationSec": 35.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:31.034Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43192,7 +43246,16 @@
           "likes": 170,
           "comments": 1,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "una bellissima sirenetta la uscita signor capitano ma c'è stata una sirenetta nell'acqua là direttiamoci verso il cuore acceleriamo uno due sei paura? sei paura? dai vieni in braccio allora vieni in braccio papà attento eh uno un orecchio allora c'era tanti bacini dei lupi i bacini dei lupi? si che fanno il piccolo e non la bocca al spagato e che calaro che fischia la melodia che ti conquista amore a prima vista rientra in quel guato che hai qui ritroviamo la felicità un sogno che non rimane uno due uno due tre quattro quattro quattro quattro quattro che non sentirai mai più c'è non ha qui non è pieno in buona vita 4, 5, 6, 7, 8 e non c'è mai più tutta la spiaggia questa vita la distrugge e domani? e la tre giornata distruttiva",
+            "language": "Italian",
+            "durationSec": 118.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:35.333Z"
+          }
         }
       ]
     },
@@ -48937,7 +49000,16 @@
           "likes": 146,
           "comments": 34,
           "shares": 66,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:38.784Z"
+          }
         }
       ]
     },
@@ -57247,7 +57319,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:42.619Z"
+          }
         }
       ]
     },
@@ -76178,7 +76259,16 @@
           "likes": 21,
           "comments": 4,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "capitano che commento meraviglioso che mi hai scritto sei il numero uno pieno di vita è bello che tutti si vivessero la vacanza come te senza andare a trovare il pelo nell'uovo buona vita sempre così sei fantastico che spettacolo forse questo è uno di quelli che classifichiamo tra i commenti più belli raga capitano diciamo abbiamo vissuto la vacanza veramente non ci sono stati problemi o perché noi non siamo lamentosi ma oggi proprio ne approfitto per dirvi che ho fatto la recensione e per me è stato un 5 stelle ma poi fondamentalmente i problemi sono tantissimi, ci stanno un sacco di cose a cui badare dalla mattina quando ti svegli fino a quando non vai a corrigarti la sera, quindi una settimana di spensieratezza è bellissima, poi sinceramente noi cerchiamo di dare sempre il massimo, guardate quante sono belli questi ragazzi della Netflix lui è mio fratello Antonio capitano sei il numero uno grazie per questo commento seguici sempre perché ti facciamo vedere quante belle cose abbiamo qua a Battivaglia quante cose abbiamo da condividere quindi restate con questi ragazzi",
+            "language": "Italian",
+            "durationSec": 79.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:46.754Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -76192,7 +76282,16 @@
           "likes": 8,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:49.112Z"
+          }
         }
       ]
     },
@@ -84651,7 +84750,16 @@
           "likes": 141,
           "comments": 12,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "The summer is magic, is magic, oh oh oh",
+            "language": "Italian",
+            "durationSec": 6.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:51.665Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -84665,7 +84773,16 @@
           "likes": 432,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il miglior errore che la maggior parte dei compagni fa è stare a parire di un estate particolare prima di comprare. Se stai cercando un investimento genuino in Abuja, devi stare a City View Park & Resort, Abuja, District Gusa. Questo estate viene con un certificato di occupazione di FCDA, un mare di oro, dando a voi pazienza di mente che il vostro investimento è sicuro. Locato nel distritto di FAS Developing Gusa, è a minuti da Abujar Airport, Iru Train Station, Università di Abujar, a pochi minuti da Wuse 2, Jabi e Life Camp. Il sviluppo è già iniziato e questo è esattamente il punto in cui i smart investors si posizionano prima che i prezzi rischiano. Oggi sono qui a sito per mostrare esattamente perché molti investitori hanno attenzione a Cityview Park & Resort. Qui abbiamo il plot commerciale residentale. Con un deposito iniziale di solo 750.000 euro puoi assicurare il tuo próprio plot e spiegare convenientemente il balancio tra 6 e 18 mesi. Chiamami o mandami un DM oggi per book un'inspezione o assicurare il tuo próprio plot. A QBR Property rimane il tuo miglior plug di real estate. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 89.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:48:58.023Z"
+          }
         }
       ]
     },
@@ -94622,7 +94739,16 @@
           "likes": 19500,
           "comments": 699,
           "shares": 333,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Alì Ali Ali Ali Dam Ali Ali Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 50.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:01.596Z"
+          }
         }
       ]
     },
@@ -102482,7 +102608,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Molla tutto ciò che fa male, la vita corre, non torna uguale, corri forte senza paura, quello che perdi era solo illusione pura.",
+            "language": "Italian",
+            "durationSec": 10.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:04.113Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -102496,7 +102631,16 @@
           "likes": 32,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ci sono molti clienti che chiedono cosa deve acquistare una serena con questo posto. Vi do un piccolo consiglio. Il prezzo del quad è di 53 milioni di won e il cavallo è di 58 milioni di won. Non è neanche il prezzo del PC, ma è il prezzo di un'azienda. Io ho un servizio di circa 300-400 milioni di won. Quindi, se tutti investiscono e non stanno in casa, il Hockey Tail è un prodotto molto utile in questo periodo. Perché sul mercato si vende, come vedete, Hockey Tail, Hockey Tail è un prodotto molto utile. Se tutti ci interessano un'azienda per cui potete dare un'azienda, e la prezzi sono buone, la posizione è abbastanza bella, vicino al fiume, l'azienda è una azienda molto lucida. Con quel 400 milioni di euro, credo che per molto tempo potrete recuperare quel 400 milioni di euro dall'azienda e non dare un'azienda, sicuramente dovrete prendere un'azienda.",
+            "language": "Italian",
+            "durationSec": 63.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:08.551Z"
+          }
         }
       ]
     },
@@ -112976,7 +113120,16 @@
           "likes": 18100,
           "comments": 274,
           "shares": 8198,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "conosci il primo risorto di piazza in aree di joan perso ea che tempo in scena con onde ea te un elevatore che leva direttamente a e pro beach club ai due scuole di attese sanzionano non pagano nate totalmente free ea in amore opzione di vidrio suspensa da america latina eo mai al parco a 4 coberto del nord est e non troppo al risorto e conta con nove piscine incluendo un crido con bordo infinito aperto per foto di milioni e in breve il risorto e vai contato con sei ristoranti e li ha tenuti opzioni tematico alla carte in un ristorante specialmente per la ragazza. Il buffet è molto variato e lavorano con pensione completa, cioè il caffè di mattina, il piatto e il piatto sono inclusi. E tutte le suite hanno vista, hanno il bancho nella varanda e una di queste ha ancora una sala di cinema particolare. E la recreatione qui succede il giorno completo e non è solo per le ragazze, no, vedi? E sinceramente penso che mi divertisco più di loro. E non para per lì, oh, c'è teatro, c'è spa, c'è l'academia 24 ore, festa tematica, festa del bianco, festa della spuma questa è la bianca, è la loucura e durante il giorno c'è l'officina di pittura, culinaria maquiaggio e varie altre attività e puoi comprare il pacchetto con aereo più ospedale sul sito nasuviajes e c'è più João Pessoa riceverà in breve più voli da Azul ora mi dici, chi ti porterebbe per vivere i giorni qui? marca qui nei commenti il arroba del amico, della famiglia, del nascosto del marito, perché Dias de Gloria è il primo risorto di Pena Areia e João Pessoa merece in compagnia vuoi divertire? vieni a Taua",
+            "language": "Italian",
+            "durationSec": 90.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:16.464Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -112990,7 +113143,16 @@
           "likes": 121,
           "comments": 28,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Now here I go again to see the crystal visions I keep my visions to myself It's the day I want to wrap around your dream And have you when you dream to light yourself Cosa c'è? Sì, è vero.",
+            "language": "Italian",
+            "durationSec": 61.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:19.826Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113004,7 +113166,16 @@
           "likes": 683,
           "comments": 24,
           "shares": 293,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:22.775Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113018,7 +113189,16 @@
           "likes": 2420,
           "comments": 17,
           "shares": 459,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:25.383Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113032,7 +113212,16 @@
           "likes": 60,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ok, ho unbocciato il mio nuovo calendario digitale con me non so di voi, ma sono stata così preoccupata e onestamente, ho dovuto ottenere un'invito da qualcuno e loro mi hanno detto, ragazzi, se siete organizzati, sarete così preoccupati quindi, una cosa per me è che mi ottengerò qualcosa per aiutarmi a essere organizzata perché solo il mio iPhone non è sufficiente è il power cord e viene con scuri e cose così che puoi montare sull'acqua penso che lo metterò sull'altra parte del mio frigo o forse sull'acqua qui nella stanza di contenuto guarda il screen, questo è enorme, non lo avevo aspettato a essere così grande, questo è bello ragazzi, guarda questo è bello, si mette con un piccolo racconto, guarda, il piccolo racconto, questo piccolo stand, è per cui sono le schede, quindi scuri questo in e poi è proprio come, sai, ma penso che voglio montare il mio sul mio frigo, ok, quindi ho scurito un lato in con la mia mano, non hai bisogno di non ho alcune strutture per questo e voilà! Updating! Ok, la configurazione è super facile mi ha mostrato un codice QR e poi lo scani e ti fa downloadare l'app e poi ti connetta al tuo email ha il tuo calendario puoi impostare la tua lista ci sono le tasche i cibi che cibi Vediamo cosa questo Oh penso che se vuoi trattare i tuoi cibi quindi il tuo alimento il tuo alimento puoi mettere il tempo cosa hai mangiato questo super bello ha anche il clima puoi impostare gli eventi puoi impostare le tasche specificamente la lista, quindi la tua lista di do-do foto puoi aggiungere le tue foto qui e impostare un scrispettro o un slideshow ho già uploadato una foto super bella di me e mia sessore l'unica cosa che ho dovuto fare è usare l'app e scegliere la foto dal mio telefono e era così facile guarda che bello sicuramente rende questo un scrisponso, quindi solo per messare avanti l'app ho anche realizzato che puoi scegliere il tuo calendario dal tuo iphone quindi se vuoi usare come il tuo outlook il tuo calendario icloud qualsiasi calendario che vuoi scegliere dal tuo iphone puoi scegliere qui anche ragazzi ho notato che viene con una garantia attiva, ci sono anche istruzioni come come montare in orizzontale sulla tua palla e poi viene con un manuale usato as well but yeah if you're like me and you like super cute little like gadgets definitely get you one of these i was looking for a long time for a digital calendar and i don't want to name the other brand but this is like identical to the other brand for the fraction of the price i'm gonna link the same exact calendar right down below if you guys want it if you see the orange shopping cart it's still in stock if you don't see the shopping cart it's already sold out",
+            "language": "Italian",
+            "durationSec": 141.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:30.691Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113046,7 +113235,16 @@
           "likes": 33,
           "comments": 9,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:34.366Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113060,7 +113258,16 @@
           "likes": 108,
           "comments": 6,
           "shares": 36,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 56,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:38.959Z"
+          }
         }
       ]
     },
@@ -119381,7 +119588,16 @@
           "likes": 6,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica It's the little things that make us be A morning walk, a sunset view In every shade a different hue It's in the sound of falling leaves In memories the heart retrieves Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:44.559Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -119395,7 +119611,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Pambule, pambule, pambule Ciao",
+            "language": "Italian",
+            "durationSec": 46.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:48.390Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -119409,7 +119634,16 @@
           "likes": 4,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 52.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:51.121Z"
+          }
         }
       ]
     },
@@ -125432,7 +125666,16 @@
           "likes": 15,
           "comments": 1,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Allora, pronti per il spettacolo? Per chi ancora non lo sapesse, per chi si fosse disvegliato adesso male tanto, ricordo che cosa sta per accadere! Ciao poveri! Quanta povertà!",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:53.591Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -125446,7 +125689,16 @@
           "likes": 20,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ragazzi sono di nuovo in club bunga voglio spiegare il mio lavabo il toilet rich wow, è molto leggero e qui c'è il hair dryer e qui c'è il mirror molto bello wow molto bello ragazzi qui c'è la sala di sopra ed è il toilet lancio disini adami rovoli badinia ciò cuponi",
+            "language": "Italian",
+            "durationSec": 46.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:49:57.230Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -125460,7 +125712,16 @@
           "likes": 32,
           "comments": 1,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T02:50:00.623Z"
+          }
         },
         {
           "platform": "tiktok",
