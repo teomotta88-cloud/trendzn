@@ -29668,7 +29668,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666722484665814305",
           "date": "2026-07-26T06:38:50.000Z",
           "caption": "Risposta a @Andrea nomice  prepariamo le ultime cose #sibarigrennresort #bluserena #calabria🌶️ #virale #lastday",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2840,
           "imageUrl": null,
           "likes": 24,
@@ -29692,7 +29692,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T18:30:40.268Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "logistica",
+              "check‑in",
+              "check‑out",
+              "colazione",
+              "partenza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T18:33:20.517Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "logistica",
+            "check‑in",
+            "check‑out",
+            "colazione",
+            "partenza"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29700,7 +29729,7 @@
           "url": "https://www.tiktok.com/@le_groupe_viaggi/video/7665318143140613408",
           "date": "2026-07-22T11:49:17.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": 14400,
           "imageUrl": null,
           "likes": 80,
@@ -29724,7 +29753,33 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T18:29:34.466Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "cibo",
+              "all inclusive",
+              "prezzo",
+              "famiglia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T18:33:18.202Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "cibo",
+            "all inclusive",
+            "prezzo",
+            "famiglia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29732,7 +29787,7 @@
           "url": "https://www.tiktok.com/@_sbe3__/video/7531360448415894806",
           "date": "2025-07-26T12:05:00.000Z",
           "caption": "#italy #bluserena #lavacanzacheresta #fyp #perte #radio",
-          "location": null,
+          "location": "Bluserena",
           "views": 930,
           "imageUrl": null,
           "likes": 84,
@@ -29756,7 +29811,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T18:29:42.446Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "radio"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.73,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T18:33:19.282Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "radio"
+          ]
         }
       ]
     },
@@ -77561,7 +77639,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666722484665814305",
           "date": "2026-07-26T06:38:50.000Z",
           "caption": "Risposta a @Andrea nomice  prepariamo le ultime cose #sibarigrennresort #bluserena #calabria🌶️ #virale #lastday",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 2840,
           "imageUrl": null,
           "likes": 24,
@@ -77585,7 +77663,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-15T18:30:40.268Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "logistica",
+              "check‑in",
+              "check‑out",
+              "colazione",
+              "partenza"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T18:33:20.517Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "logistica",
+            "check‑in",
+            "check‑out",
+            "colazione",
+            "partenza"
+          ]
         },
         {
           "platform": "tiktok",
