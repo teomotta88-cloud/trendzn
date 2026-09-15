@@ -125995,6 +125995,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T02:50:06.366Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANDY A)\nANDY\nALAN J",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T02:57:10.625Z"
           }
         }
       ]
@@ -132823,6 +132832,15 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-15T02:50:10.234Z"
+          },
+          "ocrData": {
+            "textOnScreen": "to share\nPractices and\nAnd deepen,\nwait do share\nother)\n“Spiritual\nasgow.\nThis\ndble\nISF.Con e",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T02:57:40.375Z"
           }
         },
         {
@@ -132846,6 +132864,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T02:50:14.849Z"
+          },
+          "ocrData": {
+            "textOnScreen": "God, have worked so hard to take\ncare of this temple that You fearfully\nand wonderfully made in Your image.\nWhy would ever allow another man gg\nto use and misuse what You and\nso beautifully building up?\nBell\nHere's what you need to\nknow if his desire is to defile:\nwhat you need to\n|a READ\nCAPTION!",
+            "confidence": 0.895,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T02:57:47.838Z"
           }
         },
         {
@@ -132869,6 +132896,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T02:50:35.156Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T02:57:53.171Z"
           }
         },
         {
@@ -132892,6 +132927,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T02:50:39.575Z"
+          },
+          "ocrData": {
+            "textOnScreen": "oment\nKALEO CHAPTER TEA\nElogeme\nMoment\nElogeme N\nAl Moment\nÈ Elogeme",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T02:58:04.340Z"
           }
         }
       ]
