@@ -29558,6 +29558,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:39.215Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:05:29.508Z"
           }
         },
         {
@@ -29581,6 +29589,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:41.596Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:05:36.121Z"
           }
         },
         {
@@ -29604,6 +29620,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:43.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:05:43.246Z"
           }
         },
         {
@@ -29627,6 +29651,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:46.761Z"
+          },
+          "ocrData": {
+            "textOnScreen": "How Raul was moving\nfirst few years in Serenity manor\nholding his two pillars of life together\n(Eiser and Serena)\nfirstifewgyears\npillars oflife together,\nand'Serena),\npoor baby,\n(Eiser and Serena) A\npoor:\nfirst fewgyears",
+            "confidence": 0.882,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:05:52.053Z"
           }
         }
       ]
@@ -43559,6 +43592,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:50.153Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:06:06.840Z"
           }
         },
         {
@@ -43582,6 +43623,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:53.262Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:06:16.201Z"
           }
         }
       ]
@@ -49368,6 +49417,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:03:57.358Z"
+          },
+          "ocrData": {
+            "textOnScreen": "20'EUROJTO SEE\nHELL\nTOSEETHIS\nHELISVES",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:06:31.539Z"
           }
         },
         {
@@ -49391,6 +49449,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:00.152Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KRYSTAL\nGRAN\nPUERTO VALLA A",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:06:36.588Z"
           }
         }
       ]
@@ -57742,6 +57809,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:02.647Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Imperial\nDelphin'Imperial",
+            "confidence": 0.741,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:07:05.402Z"
           }
         }
       ]
@@ -65851,6 +65927,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:06.200Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:07:14.757Z"
           }
         }
       ]
@@ -76794,6 +76878,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:08.439Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:07:24.888Z"
           }
         }
       ]
@@ -85351,6 +85443,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:11.070Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:07:34.710Z"
           }
         },
         {
@@ -85374,6 +85474,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:31.532Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SUEY",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:07:46.139Z"
           }
         }
       ]
@@ -95372,6 +95481,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:35.945Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(NAMATOVY",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:07:59.178Z"
           }
         },
         {
@@ -95395,6 +95513,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:38.783Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TIME CHECK 8PM\ni IRENE\nWOMAN\nIRENE\nNAMATOVU\nWOMAN Ki MPALA)",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:08:14.202Z"
           }
         }
       ]
@@ -114016,6 +114143,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:44.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Feriado de\nancipagao Policira de Camagari\nSauige Terra All Inclusive\nValor pf besso em apartamento duplo\nFeriado Aniversdrio de Camagari\nmancipagào Policira de\nAll Inclusive\nValog pesso em apartamento duplo\nPolicira de Camagari\nSg Terra’All Inclusive\nva pesso em apartamento duplo\nde Camacari\ne Terra/All Inclusive\nglor pesso em apartamento duplo\nEmangihagao Policira de Camagari\nTerra All Inclusive\nValor pesso em apartamento duplo",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:08:24.339Z"
           }
         },
         {
@@ -114039,6 +114175,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:47.186Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sammi\nTus historias Mejores amigos",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:08:38.034Z"
           }
         }
       ]
@@ -120530,6 +120675,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:49.843Z"
+          },
+          "ocrData": {
+            "textOnScreen": "opusciip\nE OpusClip 3",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:08:43.424Z"
           }
         },
         {
@@ -120553,6 +120707,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:52.679Z"
+          },
+          "ocrData": {
+            "textOnScreen": "opusciip\nE OpusClip 3",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:08:48.949Z"
           }
         },
         {
@@ -120576,6 +120739,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:54.868Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 Vendetta\nVALENTINO",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:08:56.039Z"
           }
         },
         {
@@ -120599,6 +120771,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:04:59.659Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:09:04.651Z"
           }
         }
       ]
@@ -126786,6 +126966,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:05:03.061Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kawasan\nCocok Kan\nUntuk Liburan\nWalaupun:Nogak\nanak\nKehilangan Ì",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:09:13.422Z"
           }
         }
       ]
@@ -133741,6 +133930,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:05:08.884Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BEEN AROUND ME, YOU KNOW\nADHD,\nTHE BEST WAY TO i\n“AND MY ADHD DOESN'T CONTROL",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:09:35.355Z"
           }
         },
         {
@@ -133764,6 +133962,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:05:13.969Z"
+          },
+          "ocrData": {
+            "textOnScreen": "and looking past the cosmetic,\nstuff",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:10:04.264Z"
           }
         },
         {
@@ -133787,6 +133994,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T08:05:17.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sunday Sept 6th\nTHER\nAi LIKE\nTALKS\nJUST,",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T08:10:13.396Z"
           }
         }
       ]
