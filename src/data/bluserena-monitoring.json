@@ -29842,7 +29842,7 @@
           "url": "https://www.tiktok.com/@dorasdi/video/7675415478541552928",
           "date": "2026-08-18T16:52:06.000Z",
           "caption": "#vacanze2026#bluserena #puglia#estate",
-          "location": null,
+          "location": "Bluserena",
           "views": 190,
           "imageUrl": null,
           "likes": 3,
@@ -29865,7 +29865,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:46:34.838Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare",
+              "estate",
+              "vacanze",
+              "profumo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.86,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:10.194Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare",
+            "estate",
+            "vacanze",
+            "profumo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29873,7 +29899,7 @@
           "url": "https://www.tiktok.com/@gervasimarco4/video/7544242134832925974",
           "date": "2025-08-30T05:12:32.000Z",
           "caption": "@bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 335,
           "imageUrl": null,
           "likes": 3,
@@ -29896,7 +29922,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:46:42.997Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "eventi",
+              "famiglia"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:10.668Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "eventi",
+            "famiglia"
+          ]
         },
         {
           "platform": "tiktok",
@@ -29904,7 +29954,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7535585078911487254",
           "date": "2025-08-06T21:18:44.000Z",
           "caption": "Se non fossi un’animatore. Mosse assurde e risate assicurate #villaggioturistico #sereneresort #bluserena @bluserena  #animatori #animazione #teatro @Peppeniello",
-          "location": null,
+          "location": "Bluserena",
           "views": 1700000,
           "imageUrl": null,
           "likes": 128300,
@@ -29927,7 +29977,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:48:33.828Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "teatro",
+              "divertimento",
+              "villaggioturistico"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:12.977Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "teatro",
+            "divertimento",
+            "villaggioturistico"
+          ]
         }
       ]
     },
@@ -44002,7 +44078,7 @@
           "url": "https://www.tiktok.com/@ali_shevchuk/video/7540640062510320918",
           "date": "2025-08-20T12:14:39.000Z",
           "caption": "📍Is Serenas Badesi  @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 4662,
           "imageUrl": null,
           "likes": 220,
@@ -44025,7 +44101,27 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:47:02.403Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.7,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:12.190Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "musica"
+          ]
         },
         {
           "platform": "tiktok",
@@ -50335,7 +50431,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7535585078911487254",
           "date": "2025-08-06T21:18:44.000Z",
           "caption": "Se non fossi un’animatore. Mosse assurde e risate assicurate #villaggioturistico #sereneresort #bluserena @bluserena  #animatori #animazione #teatro @Peppeniello",
-          "location": null,
+          "location": "Bluserena",
           "views": 1700000,
           "imageUrl": null,
           "likes": 128300,
@@ -50358,7 +50454,33 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:48:33.828Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "teatro",
+              "divertimento",
+              "villaggioturistico"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:12.977Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "teatro",
+            "divertimento",
+            "villaggioturistico"
+          ]
         }
       ]
     },
@@ -58820,7 +58942,7 @@
           "url": "https://www.tiktok.com/@soniavitale5/video/7525858345694268674",
           "date": "2025-07-11T16:14:02.000Z",
           "caption": "ironman partenopeo🤣🤣#serenusaresort @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 987,
           "imageUrl": null,
           "likes": 3,
@@ -58843,7 +58965,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:48:55.693Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "sport",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:19.294Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "sport",
+            "musica"
+          ]
         }
       ]
     },
@@ -123609,7 +123753,7 @@
           "url": "https://www.tiktok.com/@chaeeeena/video/7524999188543737095",
           "date": "2025-07-09T08:40:04.000Z",
           "caption": "#SanjoseBatangas #ValentinoResort&Spa",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 1009,
           "imageUrl": null,
           "likes": 70,
@@ -123632,7 +123776,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-15T23:55:45.523Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [
+              "spa",
+              "vacanza"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-15T23:57:20.686Z"
+          },
+          "sentiment": "neutral",
+          "topics": [
+            "spa",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
