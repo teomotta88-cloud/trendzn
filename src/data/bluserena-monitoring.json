@@ -29549,7 +29549,16 @@
           "likes": 19,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 7.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:39.215Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29563,7 +29572,16 @@
           "likes": 138,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Pium Pium Pium Pium Pium Pium Hold up, wait a minute It's a chopper Bop bop bop bop bop",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:41.596Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29577,7 +29595,16 @@
           "likes": 47,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:43.801Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29591,7 +29618,16 @@
           "likes": 1105,
           "comments": 18,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:46.761Z"
+          }
         }
       ]
     },
@@ -43514,7 +43550,16 @@
           "likes": 11200,
           "comments": 70,
           "shares": 181,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "4, 5, 6, 7, 8 Sì",
+            "language": "Italian",
+            "durationSec": 9.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:50.153Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43528,7 +43573,16 @@
           "likes": 435,
           "comments": 96,
           "shares": 76,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "All I wanna say is kudos to this girl here, because I got ready for the concert I went to 10 hours ago, 10 hours ago, and I saw her, and she just had foundation on, and now here she is, still on live, with nothing else, just some contour, like she's still going at it, hardest working woman on the internet for real.",
+            "language": "Italian",
+            "durationSec": 23.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:53.262Z"
+          }
         }
       ]
     },
@@ -49305,7 +49359,16 @@
           "likes": 5069,
           "comments": 67,
           "shares": 1436,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ah ah ah cioccolato ah ah ah ah ah ah ah",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:03:57.358Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -49319,7 +49382,16 @@
           "likes": 30,
           "comments": 8,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:00.152Z"
+          }
         }
       ]
     },
@@ -57661,7 +57733,16 @@
           "likes": 24000,
           "comments": 291,
           "shares": 9954,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:02.647Z"
+          }
         }
       ]
     },
@@ -65761,7 +65842,16 @@
           "likes": 60,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 89.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:06.200Z"
+          }
         }
       ]
     },
@@ -76695,7 +76785,16 @@
           "likes": 78,
           "comments": 7,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:08.439Z"
+          }
         }
       ]
     },
@@ -85243,7 +85342,16 @@
           "likes": 42,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:11.070Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -85257,7 +85365,16 @@
           "likes": 131,
           "comments": 9,
           "shares": 46,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ragazzi, ciao! siamo qui a Barangay Baliti a Rai Pampanga qui a Serene State Private Resort siamo invitati da un maestro per scoprire il loro risorto andiamo! andiamo! wow! è fantastico la prima frutta si è riportata è davvero ragazzi guardate oh sembra che voglio bere un alimento ragazzi quindi se state cercando una staccazione in Arayat, specialmente qui in Barangay Baliti Arayat Pampanga io personalmente vi consiglio questo Sirene Stay Private Resort oh, per favore ragazzi ho notato che il barangay baliti è pulito quindi un saluto al capitano di julio puno state facendo un'ottima cosa capitano e per favore, buon bambino ho saluto il capitano del barangay baliti aray pampanga sir julio puno god bless sir e più bambini per venire e stai bene fantastico va bene, torniamo guarda Alla, talagang... Alla, crystal clear! Napaka amazing, no? And guys, yung tubig nala dito is fresh. Pinapalitan nila every time na may bagong guests. Silipin naman natin ang kanilang function hall. So, eto ang kanilang function hall. Kung meron kayong gatherings, guys. So, ayan, dito ginaganap ang mga events. All right, so ang reit nila dito guys is ten thousand pesos for maximum of fifteen packs. Quince, one five packs. Overnight na yon. Kung, indi naman overnight, kung day tour lang is eight thousand. And, ano na yan guys, lahat magagamit nyo na. Ano na yan, everything is all set. Guys, all in na yon ten thousand for overnight. Once again guys, fifteen packs lang ha. se si chiede 15 pack, per esempio 16 o una è 200 pesos, bisogna un massimo di 15 persone 15 15 fantastico non L trovato fantastico vero ma rilevata Well, da patta montalaga ma relax. Caccia. Sta che c'ho un paramag annuai. Let's go Aiuto ai alla Ancora, non. Buongiorno. Ma bambino malamig Ascenda di papuli air condition. Anna syrian state private. Rizzo Alla, come lo ha domenica e slu oh, è molto comodissimo, c'è anche una tv, tutti questi sono insieme a 10.000 pesos, per la mattina, ovviamente il mio preferito, il panino, oh, è bello, anche il luce, e poi ragazzi, questa è la loro cucina, che meraviglioso, c'è la friggere, il microvigilio, il rice cooker e in realtà la loro cucina è con le basic utensili quindi è meglio portare anche extra solo in caso, è così che deve essere guardiamo la tavola guardiamo è molto moderno guardate questa è la loro lavastoviglie Questo è davvero... Wow! E il lato... È fantastico! È bello! Guarda! Guarda, no? Ragazzi, guarda! È molto bello! È davvero... Worth it! E ho detto, è come... In mio opinion... 10.000 per una cena è molto caro, per una sera, 15 pack se avete più di 15 pack, 200 pesos per persona ok, non è male wow oh my oh mio dio cos che faccio le mie ragazzi se ci siamo fortunati Che bello Forse Non posso più estimare, ragazzi. Per esempio, se tutti siete 15 persone, 15 pappi, è troppo grande, è ancora molto grande. Se, ragazzi, se avete 15 pack, non siete più sottili, ma siete ancora sottili, non è? No, ma è ancora sottile, eh? Che 15 pack? Ma, ragazzi, ragazzi, oh! Cosa, veramente? È un'ottima... È un'ottima... La mia parola è ottima, il concetto è ottimo. il 15 pax è il massimo ma non è il massimo totale è solo per 10.000 ma se ci sono persone che hanno un'agio è una cattiva forse 20 o più 25 forse 25 ragazzi, è sufficiente se non puoi vendere Puoi portare un'altra matrice, un'altra comforter, e anche qui in Salapagdo puoi uscire. Quindi, se avete più di 15 persone, 15, 15, 15, quindi consiglio di portare un'altra matrice, un'altra comforter, un'altra matrice o qualcosa di più, per che la vita sia più bella. è bello, non? ma non puoi fare un video saluto a tutti la maricelian il caretaker di Siril ragazzi, la verità è che se avessi un'abitazione, vorrei questo ecco è sotto è bello è bello ecco il bed ala che buonissimo l'alba è molto bella è molto bello guarda se sei qui sull'alba guarda è molto bello molto bello il concetto di questa stagione molto bella il concetto molto fascinante Non ti fai fissare le mani, ragazzi. Hai pensato, hai pensato. Molto perfetto. Siamo qui nella stagione. Quindi, questo è il modo. Qui nella stagione. all young way a contadino saputa di sarò ai wow a bar ma c'è dunque la lingua aso di qui è come se avessi una festa oh eh fantastico è freddo è bello sembra questa sia la casa che voglio fare ahahah ragazzi guardate Mount Arayat qui, ecco, l'Ariat Mount è in giro. Eccolo, è fantastico, mi piace. Quindi ragazzi, siamo arrivati al Resort Serene Stay Private, qui nella barangay Baliti, Ariat Pampanga. Devo dire che è veramente perfetto. Mi hanno detto che è molto barato 10.000 pesos, la casa è piena, ti rilassi. E, ragazzi, il tempo di check in qui è 2.00 pm, il tempo di check out è 11.00 am. Una volta di nuovo, 15 pacchi, un massimo di 15 pacchi, 10.000 pesos, tutta la notte. Tutto, potete usare tutto, c'è gasol, le ammendature, tutto. Tutto. Vi posto in comment section tutti i dettagli. E anche perché è a Balibi, ci sono molti posti da visitare. È vicino al Sinukuan Cafe, Gintong Pampak e Baliba 2. Ci sono altri posti turistici che potete visitare dopo il check out qui a Serene. Certo ragazzi? È fantastico. Grazie a tutti i proprietari che ci hanno invitato. In realtà, voglio che si svegliamo, ma in realtà siamo svegliati perché è venuto l'estate. Quindi, non è più il momento. Ma grazie mille, grazie mille, grazie mille, grazie mille, grazie mille, grazie mille, grazie mille, grazie mille, grazie mille. Io vi apprezzo molto. Ancora, ragazzi, siamo davvero aperti a svegliare, ma non posso svegliare per ora. Allora, grazie mille, grazie mille, ragazzi. Recommendo questa stagione. Allora, è meraviglioso, è perfetto.",
+            "language": "Italian",
+            "durationSec": 656.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:31.532Z"
+          }
         }
       ]
     },
@@ -95246,7 +95363,16 @@
           "likes": 425,
           "comments": 7,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 11.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:35.945Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -95260,7 +95386,16 @@
           "likes": 153,
           "comments": 6,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Ciao",
+            "language": "Italian",
+            "durationSec": 31,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:38.783Z"
+          }
         }
       ]
     },
@@ -113872,7 +114007,16 @@
           "likes": 232,
           "comments": 11,
           "shares": 86,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Per chi vuole rilassarsi, due notti con tutto incluso in uno dei risorti qui sul litorale nord di Bahia, Salwipi Terra, è in promozione, oggi abbraccio due notti, nel periodo dell'anniversario qui della città di Kamasari. Quindi dal 26 al 28 settembre è in promozione. Gente, solo 10 volte di 115 reais è il valore per persona per stare due notti nel risorto con tutto incluso, bevite e cibo. Entra qui in contatto con la nostra loggia e garantisci, perché sono poche le unità.",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:44.504Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113886,7 +114030,16 @@
           "likes": 25,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Perché il verano è azzurro You know how it is, baby Come on She's moving like a rockstar Moving as a pornstar Dale go, you don't stop Ya no te pares, dale mami Mueve loca Bésame en la boca Fuerte como roca Verano azzurro pa' ti, pa' mi Baila mi soca La mano arriba loca Ya quítate la ropa Bebamos mi copa",
+            "language": "Italian",
+            "durationSec": 28.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:47.186Z"
+          }
         }
       ]
     },
@@ -120368,7 +120521,16 @@
           "likes": null,
           "comments": null,
           "shares": null,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "attraverso il cammino stiamo andando a mangiare a domani sera perchè andremo a mangiare in tutti i posti e la ultima? tutti il pane è buono? il pane di Akasha è molto molto buono è quello che ti danno? no, questo è qualcosa di altro ho dimenticato cosa era ma è buono con l'olio d'oliva",
+            "language": "Italian",
+            "durationSec": 33.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:49.843Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -120382,7 +120544,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "attraverso il cammino stiamo andando a mangiare a domani sera perchè andremo a mangiare in tutti i posti e la ultima? tutti il pane è buono? il pane di Akasha è molto molto buono è quello che ti danno? no, questo è qualcosa di altro ho dimenticato cosa era ma è buono con l'olio d'oliva",
+            "language": "Italian",
+            "durationSec": 33.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:52.679Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -120396,7 +120567,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Che confusione sarà perché ti amo, è un'emozione che cresce piano piano, stringimi forte e sta...",
+            "language": "Italian",
+            "durationSec": 10.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:54.868Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -120410,7 +120590,16 @@
           "likes": 228,
           "comments": 17,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "prima di spendere 200 dollari su Valentino Extra Dose, dammi 30 secondi. Prima di tutto, come sapore? Prendi lavendero e spezie con una base di woodie profusa. E ovviamente, quel po' di dolce Valentino Signature. E per chi è la migliore? Dico che per gli uomini di ogni età, cercando una dolce Signature Date Night o Night Out. Sì, potrebbe essere rockata come un pilota di giorni se lo vuoi. La parte migliore di questa dolce è il fattore di complimenti. This is my most complimented fragrance in my collection And the worst part? Honestly, not much I would complain about Maybe that it's hard to wear in high heat Would I buy it again? 100% And the official Joey Sprucci rating? I give this a very good 9.3",
+            "language": "Italian",
+            "durationSec": 46.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:04:59.659Z"
+          }
         }
       ]
     },
@@ -126588,7 +126777,16 @@
           "likes": 30,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:05:03.061Z"
+          }
         }
       ]
     },
@@ -133534,7 +133732,16 @@
           "likes": 23,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Do you ever just feel calm in a certain place? Usually in nature my place. I see so many people that are struggling with stress, depression, anxiety. So many people are living in fight or flight, in fear. Struggling with ADHD, autism. e la medicina più grande è la natura quando sono in natura sono calmo se qualcuno mi conosce che mi ha avuto ha avuto il D.H.D. è molto male è molto calmo di come era perché mi sono affascinato tanto mi sono messo in natura il presente ma stato il meglio modo per aiutarmi nel mio viaggio quello che mi ha aiutato la natura È il mio energia, è la terapia a freddo, sono i frutti magici microdossi. Non vivo più in paura, non vivo più in stress, depressione, ansia. Il mio ADHD non controlla la mia vita, io controllo questo. e è venuto dal trovare un posto che mi renda felice, in cui posso essere presente e mi renda a pace. La natura probabilmente sarà tua. Prova a farlo. Andate a sedere fuori, andate a prendere le tue scioglie e le tue scioglie, facciate un po' di shit, e tornate a me, soprattutto se stai soffrendo. non siamo in grado di vivere questa vita ma è a te di uscire come mi è venuto in grado di uscire",
+            "language": "Italian",
+            "durationSec": 137,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:05:08.884Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -133548,7 +133755,16 @@
           "likes": 96000,
           "comments": 1941,
           "shares": 1069,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi chiamo Ellie e ho appena comprato una casa sul rio. È qui. È conosciuta come Flood. È un po' di un fixer-upper, ma mi piace la domanda. Ho anche comprato questo lotto adattato a un'edificio. Quindi ho alcuni schemi per questo, ma per ora mi concentro sullo fixare la casa. Faremo alcuni progetti per fare questo piccolo oasis di cabine di rio per la mia famiglia nel vero pomeriggio. Lascia che ti mostri e ti mostro i progetti che stiamo planificando. Penso che sono piuttosto brava a vedere il potenziale in una casa e a guardare attraverso le cose cosmetiche. Ma ciò che mi importa è come un plan di piazza encourage le persone a andare fuori. Quindi la piazza è accessibile da quasi ogni room che amo. La casa è in grado di essere un tributario seasonal, ma è secca ora perché la dammina del vero pomeriggio non è in grado di arrivare quest'anno. Quindi andiamo fuori dal bed di dry creek e arriviamo a questa piccola beach. questo per me è la perfezione, è per questo che ho voluto comprare una casa nel rio russico perché è la cosa più bella del mondo il realtor mi ha avuto la notizia che questo posto non ha una stanza primaria fortunatamente è qualcosa che non mi importa nemmeno e questo è la stanza perfetta per me ok, qui sono i problemi la casa ha il più decrepito rufo che ho mai visto e si infla quindi ho pensato molto sui materiali e la furniture che fa senso mettere in qui l'LVP, sarò onestica, è un po' cresciuto su me è utilitario nel rio, lo capisco Ho una grande visione di come questo casa si vedrà eventualmente, come potete immaginare, ma per ora lo farò rafforzare e vedremo come si va quest'anno. Questa è una casa di settimana per la mia famiglia, spero per noi per l'altro tempo e per le generazioni a venire. Quindi seguiteci e vediamo cosa possiamo trasformare.",
+            "language": "Italian",
+            "durationSec": 101.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:05:13.969Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -133562,7 +133778,16 @@
           "likes": 30,
           "comments": 10,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho hostato la mia prima L'attrazione di Law. È solo un incontro, un chat. Non c'è un certo dialogo che facciamo. Riguardo le domande, parlo della L'attrazione di Law. È qualcosa che ha cambiato la mia vita. C'erano quattro donne che sono state presenti. Era un po' più piccola, ma abbiamo 14 spazi disponibili. E vorrei davvero rafforzare loro. se siete interessati a unirvi per gratuito, solo un chat dove ci troviamo e parliamo di qualcosa che stiamo cercando di manifestare in modo che possiamo lavorare su un'ambiente di sentimento migliore di questo o se volete parlare solo della legge dell'attrazione, forse siete staccati su un concetto e avete bisogno di un po' di supporto o forse supporto, fatemi sapere, vi lascio sapere dove è",
+            "language": "Italian",
+            "durationSec": 59,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T08:05:17.220Z"
+          }
         }
       ]
     }
