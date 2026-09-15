@@ -123592,6 +123592,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:45:56.308Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MAAAAAMA...\nno soy fan del ceviche",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:55:29.804Z"
           }
         },
         {
@@ -123615,6 +123624,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:45:59.205Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:55:45.523Z"
           }
         },
         {
@@ -123638,6 +123655,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:02.202Z"
+          },
+          "ocrData": {
+            "textOnScreen": "E 3 ME WINE i",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:07.484Z"
           }
         },
         {
@@ -123661,6 +123687,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:04.787Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Pop up Summer Fair\n4/5 juillet a\nValentino\nPop up Summer Fair x\n4/5 juillet\nPop up Summer Fair y\n4/5 juillet E",
+            "confidence": 0.855,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:13.638Z"
           }
         }
       ]
@@ -130006,6 +130041,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:08.164Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nagy,",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:22.292Z"
           }
         },
         {
@@ -130029,6 +130073,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:12.012Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Astarte Suites Hotel\nSantorini-Greece",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:29.447Z"
           }
         },
         {
@@ -130052,6 +130105,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:14.609Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:45.701Z"
           }
         }
       ]
@@ -137199,6 +137260,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:17.276Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:50.005Z"
           }
         },
         {
@@ -137222,6 +137291,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-15T23:46:22.962Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ethereum: Total Value Staked\n—Price USD Total Value\nApproximately 36 million ETH are currently staked\nSTRATEGIC ETH RESERVE\nEthereum Ecosystem TPS\nBlast",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-15T23:56:56.624Z"
           }
         }
       ]
