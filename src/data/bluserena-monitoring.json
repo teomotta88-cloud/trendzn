@@ -29848,7 +29848,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "un mare profumo di...",
+            "language": "Italian",
+            "durationSec": 2.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:07.684Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29862,7 +29871,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questa mattina è una situazione fuori dal normale, fuori dalla maglietta. Siamo pronti a vivere insieme un'emozione unica. E ragazzi, quando la famiglia si stringe, quando lo superi in un esort, si raffina. 7, 6, 5, 4, 3, 2, 1 Salta, salta, salta, salta! Ancora, ancora, ancora! E' la scena del mondo! E' il mio gran uomo del Sibori! Uno, due, tre! Pallo, pallo, pallo! Pallo, pallo, pallo! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 82.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:12.890Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -29876,7 +29894,16 @@
           "likes": 128300,
           "comments": 854,
           "shares": 5015,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se non fossi un animatore, forse non sarei qua. Se non fossi un animatore, avrei fatto il personal trainer. Facci vedere un po', se sei capace o no. Ispirare, espirare, ispirare, espirare, ispirare, espirare, ispirare, espirare. Sì, sì, sì, sì, sì! Sì, sempre, no! Grazie a tutti S un animatore Avrei fatto il compito di Criato Facci vedere un po se sei capace o no Facci un video e poi lo posto! Facci un video e poi lo posto! Facci un video e poi lo posto! Facci un video e poi lo posto! Sì, sì! Se non fossi un animatore, forse non sarei qua. Se non fossi un animatore, avrei fatto l'epilatore laser. Se sei capace o no, come pulito, dice così. Come pulito, come pulito. Come pulito, come pulito. Come pulito, come pulito. Grazie mille.",
+            "language": "Italian",
+            "durationSec": 219.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:08.140Z"
+          }
         }
       ]
     },
@@ -43957,7 +43984,16 @@
           "likes": 220,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:21.507Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43971,7 +44007,16 @@
           "likes": 106,
           "comments": 23,
           "shares": 19,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il Serenade del quale mi stai parlando è il Serenade Punta Cana, è stato aperto il 10 dicembre del 2020, io sono andata 3-4 volte, da 2 anni che non andavo, anche in ottobre del 2023 hanno aperto il Paradultos, che è al lato, e questo ha finito di aprire il 10 giugno del 2026, è bellissimo, io lamento le persone che sono venute i primi due giorni, perché i lavoratori stanno ancora nervosi e si stanno accostumando all'ambiente, ma la verità è che questa settimana è buonissima. Io vi sto mettendo video del buffet e dei ristoranti per chi mi lo sta chiedendo per vedere che buona è la coda. Vi raccomando 100% che vengano perché sì, è molto buono. Questo si chiama Serenade Caribe Club. è familiare e ha molte zone per i bambini e per gli adulti.",
+            "language": "Italian",
+            "durationSec": 58.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:25.396Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43985,7 +44030,16 @@
           "likes": 76,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh, baby mirando al telefono però",
+            "language": "Italian",
+            "durationSec": 33,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:27.928Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -43999,7 +44053,16 @@
           "likes": 14,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Gulli, Gulli Gulli, Gulli Kurmanji hara Gulli Hara dilemme Wara ba'amme Gulli Aspetta cunamme Gulli ce c'ha nemmi Gulli aspetta cunamme Gli aspettano Gli, gli Come oggi era Gli Era Gli Era Gli Era Gli Gli aspettano Gli, gli Gli, gli Gli, gli Gli Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 81.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:34.038Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44013,7 +44076,16 @@
           "likes": 289,
           "comments": 1,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come più tempo planifici di mantenere questo atto? L'intero mondo sa che tu e Miss Vance sono stati introdotti per un altro. Per farla felice, sei even stato in grado di mandare questo nuovo ristorante a lei. Serena, hai fatto tutto il errore. Lexi Vance? È solo un assistente che ho contratto per fare un po' di business per me, è tutto. Amore, devi credermi. se avessi saputo per un secondo che questa donna stava facendo questo per il mio bordo non avrei mai lasciato di farla in questo ristorante e non ho ordinato a nessuno di dare una mano a te sei davvero andando a fare una tantrum in pubblico su una cosa così minore? certo, mi ha battuto, mi ha umiliato e nei tuoi occhi sto facendo difficile, sto facendo una tantrum? e che c'è con tua madre? ha battuto tua madre in questo stato, è una cosa minore? mamma Poco Cristo!",
+            "language": "Italian",
+            "durationSec": 58.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:37.593Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44027,7 +44099,16 @@
           "likes": 140,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:41.641Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44041,7 +44122,16 @@
           "likes": 49,
           "comments": 5,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:44.003Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44055,7 +44145,16 @@
           "likes": 52700,
           "comments": 112,
           "shares": 2844,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cosa parla Olivia Rodrigo nella sua canzone Serena Joy? Serena Joy è una caratteristica di The Handmaid's Tale, che è un libro di Margaret Atwood che è diventato un show di tv su Hulu, una delle migliori show di tv che ho mai visto. The Handmaid's Tale è su Gilead. Gilead è una versione di una distopia dei Stati Uniti che è sotto un regime religioso totalitario. È un posto dove le donne non sono praticamente viste come esseri umani. per capire chi è Serena Joy, è una donna di un comandante, è al top della di teoria di cosa puoi essere come uomo e Serena è così dentro di questo sistema che non capisce quanto sia contraddittoria e maledetta per lei. La canzone di Olivia è scritta negli occhi di qualcuno come Serena Joy, qualcuno che è così ignorante dei sistemi oppressivi che viviamo e non capisce che alla fine soffriranno lo stesso. Analizziamo le parole. Yeah, it's all for the cause, for the good of us all, and if you close your eyes, then it can't be your fault. Ignorance is bliss. If you close your eyes, it can't be your fault. I'm not part of it. But if you are just accepting it, that means you are also part of the problem. Yeah, it's all for the cause, for the good of us all, here's the tower we built, painted gold on the walls. The tower, the gold, these symbols of power, used to intimidate. And we'll never be beat, no, we will never fail, while they're out on the streets, man, we're having a ball. La gente iniziando a protestare Io Serena Joy persona che non sceglie di essere politica abbiamo un ballo qui Sono al topo della hierarchia e non vedo sotto me quello che dice mentre attivamente oppressata Andate vicino, andate vicino, andate un po' più vicino. Canzoni, canzoni, ciò che ti dicono di fare. Puppetti, facendo ciò che gli dicono. Andate avanti, andate avanti, andate avanti. Se lo fanno a loro, lo faranno a te. La cosa del carattere di Serena Joy è che prima di Gilead, era un autore e ha scritto su questo regime che è diventato Gilead. questo posto che completamente strippa le donne di tutti i loro diritti, che alla fine ha fatto di lei una vittima così grande come nessuno altro, perché è una donna all'interno di Gilead. Non era mai un'eccezione, anche se ha creato le regole. Abbiamo un coca e un sorriso nella buona notte, ora andate a preoccuparvi dei vostri amici mentre facciamo ciò che vogliamo. Vedo Coca-Cola come il simbolo dell'America e del capitalismo, quindi penso che sia per questo che Olivia ha messo in questo libro. Ora andate a preoccuparvi dei vostri amici mentre facciamo ciò che vogliamo, è come se le persone in potere pensassero che si poteva provare ma che ancora faremmo quello che vogliamo non puoi togliere un punto puoi imparare a spettare penso che questo sia dove cambia la pov in la canzone e diventa sulle persone che combattono se non puoi togliere un punto come se non puoi essere violento imparare altre maniere di combattere e non dar mai in mano e non dimettere mai di subire guarda la vita dei tuoi sogni è più alto di quel cliffe la vita dei tuoi sogni non esiste è quello che hai hai, è automatico, andate avanti, andate avanti, non pensare a quello che hai, quello che hai, quello che hai rotting in the sunshine even if you don't think about it you will still fall into it everything is just fine back to the beginning if you choose not to see the problem everything will be just fine but eventually it will catch up to you",
+            "language": "Italian",
+            "durationSec": 180.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:50.433Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44069,7 +44168,16 @@
           "likes": 14700,
           "comments": 14,
           "shares": 106,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "sembra così bella? sì è così bella l'energia penso che avremo una ragazza se avrò una ragazza sarà il mio bambino ma abbiamo solo una ragazza che abbiamo scelto oh quindi è arrivato presto forse no no quando volete marciare? ho un timeline quando volete marciare? non penso se succede quando il momento si avviene non voglio planificare non penso che nessuno potrebbe planificare ma non è che se non sei pronto a farlo, non puoi andare sui piedi. Sì, ma no, abbiamo parlato di semifinali, ovviamente non ci sono bambini, se non c'è un ring, non ci sono bambini che si muovano insieme, se non c'è un ring, quindi in modo da raggiungere questi cammini, ovviamente dobbiamo diventare mariti a un certo punto, se continuiamo a andare nella direzione in cui andiamo, ma sì, non credo che ci sia un oh, in due anni, questo, in due anni, I just know that I'm done having kids at like 36 That's all I know Having kids at 36 You trying to have more than 4? No I'm just having 4 That's a lot of years When they all have to be like 1-2 years apart So y'all both live in LA which y'all don't live together? No no no no She got hers but she down the street So y'all be over each other Y'all damn near live with each other I damn near live with her I see my house like Once in a blue moon",
+            "language": "Italian",
+            "durationSec": 84.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:54.649Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -44083,7 +44191,16 @@
           "likes": 14,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 6.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:42:57.090Z"
+          }
         }
       ]
     },
@@ -50084,7 +50201,16 @@
           "likes": 15,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Change, change, oh oh Tryna find somebody to love me Oh no, but I am not in the stand to play the game Hoping I can be different, and I'll be afraid of them I wish you'd ever stop, but I can't Grazie a tutti. ma quando vedo te chiedere non so più chi sono e mi fai soffrire ogni parte e poi ti puoi sentire un risposto con un cuore rompito dentro un'acqua e poi ti puoi sentire e poi ti puoi sentire I wanna be like you, I know I wanna be like you I know I wanna be like you S vero Grazie a tutti. Grazie a tutti. Oh, facciamo un applauso a questo uomo, bravo!",
+            "language": "Italian",
+            "durationSec": 198.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:02.259Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -50098,7 +50224,16 @@
           "likes": 128300,
           "comments": 854,
           "shares": 5015,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se non fossi un animatore, forse non sarei qua. Se non fossi un animatore, avrei fatto il personal trainer. Facci vedere un po', se sei capace o no. Ispirare, espirare, ispirare, espirare, ispirare, espirare, ispirare, espirare. Sì, sì, sì, sì, sì! Sì, sempre, no! Grazie a tutti S un animatore Avrei fatto il compito di Criato Facci vedere un po se sei capace o no Facci un video e poi lo posto! Facci un video e poi lo posto! Facci un video e poi lo posto! Facci un video e poi lo posto! Sì, sì! Se non fossi un animatore, forse non sarei qua. Se non fossi un animatore, avrei fatto l'epilatore laser. Se sei capace o no, come pulito, dice così. Come pulito, come pulito. Come pulito, come pulito. Come pulito, come pulito. Grazie mille.",
+            "language": "Italian",
+            "durationSec": 219.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:08.140Z"
+          }
         }
       ]
     },
@@ -58504,7 +58639,16 @@
           "likes": 183,
           "comments": 37,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 19,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:10.787Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58518,7 +58662,16 @@
           "likes": 152,
           "comments": 92,
           "shares": 222,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In meno di un minuto, se pensi a un viaggio a Gardaia, dove potrebbe arrivare il Patrocinio Macadi? Qui siamo nella casa del Deluxe Pool View, e non so come non sia un View del Sea E perché il hotel è nuovo e in Macadi, la stanza è sicuramente molto divertente e vuoi aumentare le aspettative Questo hotel è un hotel all in one, dove troverai tutti i tuoi amici e famiglie Il mare è molto bello, ma per garantire un'esperienza migliore, abbiamo creato un lagoon di acqua. Il fondo è molto grande, è molto tranquillo, perché se vuoi vedere la pesca, puoi divertirti con l'esperienza del snorkeling. Se sei in famiglia, l'hotel ha 25 lavori, più di 15 giochi di acqueo park per tutti i giovani. È impossibile sentire la calma, perché c'è più di 19 giochi VR che puoi divertire con te e gli uomini durante la notte. Una delle belle abitazioni che puoi trovare nel hotel è la casa familiare, specialmente se sei una famiglia, perché la casa è in giro in terra e in piazza. Qui c'è l'ascensore dell'Aquapark, che ti permette di provare il gioco più volte senza che ti sbagli. Se sei interessato alla sportività, troverai giocatori di padel, tennis e sport, che sono solo per la gamba e la sportività. L'acquisto è all inclusive, con i più amici di città italiane e cinesi, che sono solo i restauranti di C-code, e gli snack e barattoli che sono spostati attorno al hotel. Il Snack's ha un grande formato di burger, pizza, patate e macarone. L'hotel ha un grande spazio, per questo è molto facilmente disponibile per il hotel. Questo rende l'acquisto particolare. E vorrei dire che questo team animativo, lo vedrai prima di entrare in reception, perché l'Aquabark è la prima cosa che vedrai all'hotel e ti dirà quanto sono interessati. Credimi, prima di arrivare all'hotel e vedere il tuo accoglimento, e vedere come fai, sai che hai scelto l'acquisto corretto. Se vuoi sapere più di questo post, scrivimi una messaggia e ti manderò tutte le informazioni.",
+            "language": "Italian",
+            "durationSec": 106.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:18.854Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -58532,7 +58685,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:22.421Z"
+          }
         }
       ]
     },
@@ -66853,7 +67015,16 @@
           "likes": 509,
           "comments": 16,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Però va a aver un... Tu sa che ho il cuore lento E se tanto ve lo vuoi incontrar Voi la guardando a rotiando Io me la sto pensando Che a questa ora tu tambien lo star",
+            "language": "Italian",
+            "durationSec": 12.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:26.723Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66867,7 +67038,16 @@
           "likes": 99,
           "comments": 17,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ristedaro, good morning! Buongiorno!",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:29.447Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66881,7 +67061,16 @@
           "likes": 316,
           "comments": 5,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buco, banco, samolocik, i do ciepłych krajów locik Su arnestra drinka daje, tylko pić nam pozostaje Słońce, plaża i drineczej, co za piękny dziś zioreczej Cały rok zapierdalamy, na to chwilę my zbieramy Grazie a tutti. Sì, è vero. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 100.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:33.829Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66895,7 +67084,16 @@
           "likes": 30,
           "comments": 7,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 12.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:36.989Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66909,7 +67107,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Andando attorno al hotel Arusha Serena, troviamo i gardeni del hotel. I gardeni erano abbastanza estensi e avevamo sempre avuto frutti e vegetali a ogni mangiare. Anche se non tutti gli itemi che avevamo a mangiare erano di questo particular garden, il hotel è commesso alla sostenibilità e alla supporto della comunità locale, e usare ingredienti locali freschi è parte di questo esercizio. Finiremo il resto del viaggio con la vostra informazione e la storia di questa regione e della città di Arusha. Arusha ha un'historia ricca e diversa. L'area è stata prima sottostituita nel 1830 da Arusha Masai, che ha intercettato prodotti agricoltori con le comunità pastorelle. La città è diventata un centro regionale nel 1860 a causa della sua locazione strategica attraverso la strada di intercettazione del Panganese. Grazie per la visione. Mi piacerebbe che ti abbiassi, seguissi e iscriviti.",
+            "language": "Italian",
+            "durationSec": 53.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:41.215Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66923,7 +67130,16 @@
           "likes": 70,
           "comments": 5,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 15.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:44.646Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66937,7 +67153,16 @@
           "likes": 19,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 16.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:47.163Z"
+          }
         }
       ]
     },
@@ -78119,7 +78344,16 @@
           "likes": 13700,
           "comments": 135,
           "shares": 980,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, ma è un po' strano che la maggior parte dei personaggi non conosca nemmeno il nome del terzo resort di Disney World. Tutti conoscono il primo e il secondo resort, il Contemporaneo e il Polonesio che si è aperto nel 1971. Ma se volevo chiederti cosa è il terzo resort, penso che alcuni si chiamino il Gran Floridiano, ma non è così. Dopo che Disney World si è aperto con il Contemporaneo e il Polonesio, hanno annunciato tre più resorti monoril. E quei tre resorti erano il resort perso, qui dove è Space Mountain oggi, il resort venetiano tra il Contemporaneo e il TTC, e il resort asiano che si aprirà dopo. ma poi Disney World aveva un problema erano molto, molto, molto successivi c'erano tanti persone che si sono spostate nei parchi hanno superato tutte le aspettative che avevano e più e sapevano che dovevano arrivare un nuovo resort e feste ma l'asiano che si era costruito qui era molto lavoro non avevano il tempo di aspettare quindi invece hanno visto il loro territorio dove potrebbero mettere un nuovo resort come se avessero due golf course di magnolia e palma avevano già un clubhouse quindi aggiungiamo il Golf Resort Hotel. Il Golf Resort Hotel era il terzo resort di Disney e aveva il primo pool caldo, come i tennis courts, due corse di golf e molte altre attività golf-centric. Riguardo al contemporaneo e al polonesio non era molto grande, ma era un resort molto bello, solo un po' più piccolo. Disney stava ancora a planificare questi altri resort monorail, ma poi... è strano che conoscavo tanto di questa cosa rara che accadde nel 1973, ma il embargo di olio del 1973 accadde praticamente c una scorda di gas e gli americani erano veramente preoccupati di viaggiare il turismo scoperto il Disney World ha avuto un grande impatto Disney sta recuperando anche Walt che passato da un po di anni fa e poi Roy che è passato da un po' di anni fa e finalmente tra tutto ciò hanno deciso di non voler fare il rischio e di costruire l'asiano e hanno finito scoppiando tutti questi altri hotel moderati e quindi per molti anni gli unici tre hotel attorno a Magic Kingdom erano i golfers, i contemporanei e i polonesi ma le cose che Disney ha iniziato a cambiare quando Michael Eisner è diventato il CEO e Michael Eisner ha guardato il resort del golfo e ha detto no, grazie questo non funzionerà ha deciso che un rebrand fosse necessario e che cosa meglio che Snow White che celebrava il 50° anniversario e quindi il resort del golfo è diventato il Disney Inn con un overhaul molto lusso di Snow White e mentre era buono in alcune maniere non era ancora così popolare e era bene quando aveva solo un paio di resort da competere con ma altre cose che Michael Eisner ha fatto è che ha spostato un sacco di altri resort come il Grand Floridian e il Caribbean Beach Resort Port Orleans, Dixie Landing, gli All Stars. E mentre cercavano di promuovere l'in-place di Disney, non funzionava. Disney diceva, oh mio Dio, cosa facciamo con questa cosa? Ma l'aiuto venne da una risposta inesistente. Entra il militare americano che ha deciso di costruire un'area di rilassamento in Orlando. Volevano un hotel a 20 mili di Disney World con 300-700 ruote, un restaurant e un pool. Disney ha detto, prendi noi, prendi noi. E quindi il Golf Resort, che poi è diventato l'in-place di Disney, poi è diventato Shades of Green. This is the hotel that only Disney military, retired or active can stay at and this is still there today.",
+            "language": "Italian",
+            "durationSec": 172.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-15T23:43:53.217Z"
+          }
         },
         {
           "platform": "tiktok",
