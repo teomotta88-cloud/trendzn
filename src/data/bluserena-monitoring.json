@@ -30265,6 +30265,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:43:42.706Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:44:47.794Z"
           }
         }
       ]
@@ -45098,6 +45106,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:43:46.380Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IN SOME WAY\nAM A SOLID",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:45:00.794Z"
           }
         },
         {
@@ -45121,6 +45138,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:43:54.415Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A KISSING ON HER",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:45:07.757Z"
           }
         }
       ]
@@ -59791,6 +59817,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:43:59.527Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:45:21.445Z"
           }
         }
       ]
@@ -68437,6 +68471,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:02.550Z"
+          },
+          "ocrData": {
+            "textOnScreen": "y 1 NOCNE\nDesde\n2 dias y 1 noche E\nA Desde\n2 dias y 1 noche\npoli dos\ndias y 1 noche\nDesde 4",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:45:37.752Z"
           }
         },
         {
@@ -68460,6 +68503,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:08.718Z"
+          },
+          "ocrData": {
+            "textOnScreen": "INVITE YOU [TO]\nEXCLUSIVE\nNATIONAL ANDE\nANNA",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:45:58.005Z"
           }
         }
       ]
@@ -99229,6 +99281,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:15.375Z"
+          },
+          "ocrData": {
+            "textOnScreen": "M City View\nW Card Board Games",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:46:03.033Z"
           }
         }
       ]
@@ -107500,6 +107561,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:21.948Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:46:09.358Z"
           }
         },
         {
@@ -107523,6 +107592,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:30.021Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:47:16.791Z"
           }
         }
       ]
@@ -119211,6 +119288,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:33.231Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Luxury Resort on North Shore\nè Rates start\nd floor-to-ceiling la:\nThe Luxury Resort on North Shore È",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:47:24.459Z"
           }
         }
       ]
@@ -140335,6 +140421,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T20:44:37.156Z"
+          },
+          "ocrData": {
+            "textOnScreen": "gets knocked\ndown, dust yourself off j=\nand get back up Team\nPerseverance\nEveryone getsknocked\ndown, dust N=\nand get back up\nPerseverance F IC\nEveryone\ndown, dust yourself off\n“Siig\nEveryone gets knocked i\ni and get back\nand get back Team",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T20:47:43.960Z"
           }
         }
       ]
