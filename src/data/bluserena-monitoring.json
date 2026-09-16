@@ -30026,6 +30026,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:00.815Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nSi deve prenotare il\ngiorno prima? È poi\nsolo di sabato è\naperto? Grazie.\nHO MENZIONATO\nmichele87 TAN\nSi prenotare il Si\ngiorno prima? È poi È\n7 i aperto? Grazie.\nVILLAGGIO LE 3\nDOVETE FARE NI\ni POTETE PRENOTARE\nmichele87\ngiorno prima? E poi\nsolo di sabato è 7\nQUINDI ANDATE\nIN TANTI.\nANCORA",
+            "confidence": 0.876,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:12:09.950Z"
           }
         },
         {
@@ -30049,6 +30058,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:04:58.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": "grandes\nÈ inoceniz\nsuper grandes",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:08:34.127Z"
           }
         }
       ]
@@ -44473,6 +44491,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:03.002Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:08:44.752Z"
           }
         },
         {
@@ -44496,6 +44522,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:09.238Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:08:52.556Z"
           }
         },
         {
@@ -44519,6 +44553,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:13.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": "placgis\nMeet Osc\ni Osca i\net Oscar-winning ed and win Oscar-winning edit\nC at Mysti Winemaker Joel Co\nthe scenic views\nvery grease like è\nanid the thing",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:09:16.442Z"
           }
         },
         {
@@ -44542,6 +44585,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:18.093Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:09:26.277Z"
           }
         },
         {
@@ -44565,6 +44616,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:20.920Z"
+          },
+          "ocrData": {
+            "textOnScreen": "[AS TING",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:09:42.384Z"
           }
         },
         {
@@ -44588,6 +44648,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:25.158Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:09:54.570Z"
           }
         },
         {
@@ -44611,6 +44679,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:31.593Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:10:29.583Z"
           }
         },
         {
@@ -44634,6 +44710,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:34.142Z"
+          },
+          "ocrData": {
+            "textOnScreen": "x sota\nserena joy 148 bpm\nOlivia Rodrigo\nexpectations 133bpm\nPresets\nVolumen AN v\nVolumen v\nOlivia Rodrigo 03:05\nexpectations\nOlivia Rodrigo 98",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:10:37.734Z"
           }
         },
         {
@@ -44657,6 +44742,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:37.288Z"
+          },
+          "ocrData": {
+            "textOnScreen": "0 ove island could\nN ever top this scene.\nseason could\nno season of love iglamd could\never top thi\nno Season",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:10:45.564Z"
           }
         },
         {
@@ -44680,6 +44774,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:42.380Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Ser. girl\njill\nSerena girl\nhave\nMefafter all\ngossip girl\nhair, i\nfun'and to go”\nur hdd just\nqifl\nWa Ì hail, h",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:10:56.521Z"
           }
         }
       ]
@@ -59286,6 +59389,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:47.279Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Afterwards, took astroll\naround the lake and just\nIt really\nabout the resortiare\nI'm going\nriding",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:11:21.482Z"
           }
         },
         {
@@ -59309,6 +59421,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:51.545Z"
+          },
+          "ocrData": {
+            "textOnScreen": "thelocean\namajor plus point too",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:11:50.487Z"
           }
         }
       ]
@@ -67860,6 +67981,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:05:56.418Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a hotel 4",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:11:57.199Z"
           }
         }
       ]
@@ -79242,6 +79372,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:00.815Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rispondi al commento di\nSi deve prenotare il\ngiorno prima? È poi\nsolo di sabato è\naperto? Grazie.\nHO MENZIONATO\nmichele87 TAN\nSi prenotare il Si\ngiorno prima? È poi È\n7 i aperto? Grazie.\nVILLAGGIO LE 3\nDOVETE FARE NI\ni POTETE PRENOTARE\nmichele87\ngiorno prima? E poi\nsolo di sabato è 7\nQUINDI ANDATE\nIN TANTI.\nANCORA",
+            "confidence": 0.876,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:12:09.950Z"
           }
         },
         {
@@ -79265,6 +79404,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:04.188Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:12:25.274Z"
           }
         }
       ]
@@ -88105,6 +88252,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:07.531Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:12:37.448Z"
           }
         }
       ]
@@ -98167,6 +98322,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:11.688Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AO SERENA)\nCONCERT",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:12:45.253Z"
           }
         },
         {
@@ -98190,6 +98354,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:17.292Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Butembo A\nisha jenga vile sana\nButembo\nisha sana\nisha jenga",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:12:52.518Z"
           }
         },
         {
@@ -98213,6 +98386,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:22.040Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(WOMAN\nKAMPALA",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:13:05.003Z"
           }
         },
         {
@@ -98236,6 +98418,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:24.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NAMATOVU\nSERENA\nLIVE IN CONCERT\nSTRON\nIRENE",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:13:14.669Z"
           }
         }
       ]
@@ -106389,6 +106580,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:30.688Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CapCutAi\nHASTA EL\nEventos i\nMOMENTO...",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:13:21.395Z"
           }
         },
         {
@@ -106412,6 +106612,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:34.137Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:13:30.365Z"
           }
         }
       ]
@@ -117629,6 +117837,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:38.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Weekend 400.000\ngoalangirinfo\nWeekend 250.0007\nWeekend",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:13:37.520Z"
           }
         },
         {
@@ -117652,6 +117869,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:41.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Colombia\nCoco Bongo Cancun\nCENOTES\ncasa\nTULUM\nPlaya Del Carmen,",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:13:52.464Z"
           }
         },
         {
