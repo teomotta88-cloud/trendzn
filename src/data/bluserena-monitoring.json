@@ -117901,6 +117901,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:48.636Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:14:07.763Z"
           }
         },
         {
@@ -117924,6 +117932,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:52.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:14:18.636Z"
           }
         },
         {
@@ -117947,6 +117963,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:06:55.149Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:14:25.473Z"
           }
         },
         {
@@ -117970,6 +117994,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:00.064Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:14:33.178Z"
           }
         }
       ]
@@ -124801,6 +124833,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:03.827Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:14:43.758Z"
           }
         },
         {
@@ -124824,6 +124864,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:06.536Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VALEN",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:14:55.312Z"
           }
         },
         {
@@ -124847,6 +124896,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:11.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": "valentino green\nstravaganza",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:15:02.850Z"
           }
         },
         {
@@ -124870,6 +124928,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:14.889Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: youfand.bro this\\",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:15:12.207Z"
           }
         },
         {
@@ -124893,6 +124960,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:19.728Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VALENTINO\nINTENSE\nVALENTIN\nLOVED",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:15:18.069Z"
           }
         },
         {
@@ -124916,6 +124992,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:22.613Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino Vendetta:\nN VÀ entin\nino endetta: i\nVENDETTA\nVALENTINO",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:15:25.656Z"
           }
         }
       ]
@@ -131356,6 +131441,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:28.130Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Property of\negieligius\nYANG\nRUANG HALAMANNYA\nDAN JAUH DARI HIRUK-PIKUK\n1Agu 2Agu 1malam 2 tamu\nPosting dan dapatkan komisi hingga 1,8%-3,6%\nAgoda\nKamar Budget Double A\nMaksimum 2 pax 16 m2\ne Termasuk sarapan RP650 000\nv Dana bisa Terendah untuk hotel ini di TikTok\ndikembalikan fi\nBayar di muka\nQ Kamar atau... v\nMaksimum 2 pax 11m\nLihat semua jenis kamar",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:15:46.452Z"
           }
         },
         {
@@ -131379,6 +131473,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:30.625Z"
+          },
+          "ocrData": {
+            "textOnScreen": "the suite\npov: the suite\nthe suite deal",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:15:54.048Z"
           }
         }
       ]
@@ -138589,6 +138692,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:33.501Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:16:04.019Z"
           }
         },
         {
@@ -138612,6 +138723,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:38.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i INTO\nCELTICS,",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:16:11.354Z"
           }
         },
         {
@@ -138635,6 +138755,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:42.565Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Groundingwhile\nDOING\nSBECAUSE I'VE\nWITH\nJAND VAN\nabundar\nBUT YOU'RE REALLY,\nAWITH\n4 IN NATURE\nwhile\n“traveling”",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:16:29.563Z"
           }
         },
         {
@@ -138658,6 +138787,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T05:07:59.741Z"
+          },
+          "ocrData": {
+            "textOnScreen": "QUIET FOREST,\ni SENG",
+            "confidence": 0.728,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T05:17:25.556Z"
           }
         }
       ]
