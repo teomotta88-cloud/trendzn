@@ -30011,7 +30011,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667167666020289825",
           "date": "2026-07-27T11:26:22.000Z",
           "caption": "Risposta a @michele87 #sibarigreenresort #bluserena #vacanza2k26 #paratiiiiiiiiiii #calabria🌶️",
-          "location": null,
+          "location": "Bluserena",
           "views": 2462,
           "imageUrl": null,
           "likes": 22,
@@ -30035,7 +30035,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-16T05:12:09.950Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-16T05:17:39.489Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -79357,7 +79382,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7667167666020289825",
           "date": "2026-07-27T11:26:22.000Z",
           "caption": "Risposta a @michele87 #sibarigreenresort #bluserena #vacanza2k26 #paratiiiiiiiiiii #calabria🌶️",
-          "location": null,
+          "location": "Bluserena",
           "views": 2462,
           "imageUrl": null,
           "likes": 22,
@@ -79381,7 +79406,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-16T05:12:09.950Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-16T05:17:39.489Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
@@ -124818,7 +124868,7 @@
           "url": "https://www.tiktok.com/@loryiervolino/video/7666570246261656864",
           "date": "2026-07-25T20:48:05.000Z",
           "caption": "#serenella 🐞 #valentinoresort2026",
-          "location": null,
+          "location": "Valentino Resort",
           "views": 1785,
           "imageUrl": null,
           "likes": 31,
@@ -124841,7 +124891,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-16T05:14:43.758Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "vacanza"
+            ],
+            "location": "Valentino Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-16T05:17:42.530Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
