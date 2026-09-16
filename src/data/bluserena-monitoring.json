@@ -45044,6 +45044,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:13.135Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:33:29.194Z"
           }
         }
       ]
@@ -68305,6 +68313,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:15.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": "[Serena\nSerena Q X",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:33:48.940Z"
           }
         }
       ]
@@ -88813,6 +88830,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:20.740Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:34:05.212Z"
           }
         }
       ]
@@ -118758,6 +118783,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:26.226Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:34:23.508Z"
           }
         },
         {
@@ -118781,6 +118814,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:31.980Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:34:47.630Z"
           }
         },
         {
@@ -118804,6 +118845,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:35.462Z"
+          },
+          "ocrData": {
+            "textOnScreen": "E me liké a\nwhen you get a taste, can you\ntell me my\nALVIN\nthat you'fe my\ni know that you've been worried but",
+            "confidence": 0.848,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:34:53.650Z"
           }
         },
         {
@@ -118827,6 +118877,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:38.475Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:34:57.614Z"
           }
         },
         {
@@ -118850,6 +118908,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:41.803Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MOUNTAIN RESORT.",
+            "confidence": 0.733,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:35:19.157Z"
           }
         },
         {
@@ -118873,6 +118940,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:45.194Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dans la bai\nARAN\nCarleton -sur- Mer\nAvec\nVisit baie des\ninstagram.com/andiangeliana\ndans la\ndans les troupes de la Marine frangaise\nÈ corsalre avec les Acadiens de Ristigouche 0\ni in the French colonial regulars and privateer.\nthe Acadians of",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:35:30.673Z"
           }
         },
         {
@@ -118896,6 +118972,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:52.412Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fato",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:36:04.338Z"
           }
         }
       ]
@@ -125940,6 +126025,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:54.905Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:36:08.249Z"
           }
         },
         {
@@ -125963,6 +126056,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:32:58.060Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vende ai\nA VENDETTA\new Valen i\nVendetta\nVesornah?\nNew V dent Fe",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:36:19.001Z"
           }
         }
       ]
@@ -132498,6 +132600,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:33:01.507Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:36:24.645Z"
           }
         }
       ]
@@ -139867,6 +139977,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:33:03.977Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The plans: 2=",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:36:35.407Z"
           }
         },
         {
@@ -139890,6 +140009,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:33:08.828Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BE THIS MAGICAL*",
+            "confidence": 0.731,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:36:56.524Z"
           }
         },
         {
@@ -139913,6 +140041,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:33:12.842Z"
+          },
+          "ocrData": {
+            "textOnScreen": "In and Around Colombo\n1931 (Colorized Footage)\nDaily Life in Ceylon’s Capital\nDisclaimer: This content is shared strictly for educational and\nhistorical purposes.No copyright infringement intended.",
+            "confidence": 0.908,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:37:05.423Z"
           }
         },
         {
@@ -139936,6 +140073,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-16T15:33:16.485Z"
+          },
+          "ocrData": {
+            "textOnScreen": "little del\n2 differ\nwilling 0\nlieve in",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-16T15:37:58.873Z"
           }
         }
       ]
