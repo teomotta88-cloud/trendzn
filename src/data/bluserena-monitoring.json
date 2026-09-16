@@ -45035,7 +45035,16 @@
           "likes": 3231,
           "comments": 26,
           "shares": 117,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:13.135Z"
+          }
         }
       ]
     },
@@ -68287,7 +68296,16 @@
           "likes": 1006,
           "comments": 17,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:15.846Z"
+          }
         }
       ]
     },
@@ -88786,7 +88804,16 @@
           "likes": 134,
           "comments": 5,
           "shares": 20,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 22.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:20.740Z"
+          }
         }
       ]
     },
@@ -118722,7 +118749,16 @@
           "likes": 14,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:26.226Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118736,7 +118772,16 @@
           "likes": 217,
           "comments": 26,
           "shares": 56,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ultima partita partagia ma come l'exterior taglio tale che bene con il comune di suona nel test di la piscina o l'obbligato la rima lo fa vedere il quadri di cadere in aria o la città piscina che potenziare una natura per il suo fuoco la piscina del suo cadro incroia blaus sulla maria giusta magnifica oltre a sforzare le monotecnici completi che profita sempre mondo l'instante già per il luoghi di hbs ancora il fuorihide i miei amici, lo hanno appena visto in questo hotel come ho detto ieri e oggi l'affitto è completo ma non abbiamo mai avuto l'impressione di quella fuga o quella... non c'è nemmeno uno, tutti hanno lo stesso spazio però per farvi vedere la stanza è un po' scusa non credo che ve la rendano perché avete questa vista non vedo come non poterla immaginare è molto calda è molto calda L'acqua è fresca, è magnifica. Chi piace le attività, l'hotel propone l'acqua. Il lupo è a 15 euro l'ora. Nel tuo pando, io sono in casa. Mi permette di andare in casa. Ho scoperto dei luoghi molto bello. Non capisco niente. Franchement, è un'esperienza che vi raccomando. Siamo arrivati alla fine del video. Se non abbonate, abbonatevi. Perché ancora non siamo arrivati ai buoni plan. Ti raccomando, salam alaykum. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 84.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:31.980Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118750,7 +118795,16 @@
           "likes": 959,
           "comments": 79,
           "shares": 103,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:35.462Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118764,7 +118818,16 @@
           "likes": 1577,
           "comments": 19,
           "shares": 116,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:38.475Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118778,7 +118841,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 19.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:41.803Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118792,7 +118864,16 @@
           "likes": 51,
           "comments": 11,
           "shares": 61,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 48.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:45.194Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118806,7 +118887,16 @@
           "likes": 19,
           "comments": 3,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ash Flakes Down Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 44.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:52.412Z"
+          }
         }
       ]
     },
@@ -125841,7 +125931,16 @@
           "likes": 271,
           "comments": 11,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 6.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:54.905Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -125855,7 +125954,16 @@
           "likes": 82,
           "comments": 15,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 12.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:32:58.060Z"
+          }
         }
       ]
     },
@@ -132381,7 +132489,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:33:01.507Z"
+          }
         }
       ]
     },
@@ -139741,7 +139858,16 @@
           "likes": 227,
           "comments": 2,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 7.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:33:03.977Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -139755,7 +139881,16 @@
           "likes": 44,
           "comments": 7,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "immagina visitare città medievali che sembrano essere rilassate direttamente da un film. Questo è Paraguay-Courcy, in Francia del sud-est, dove sono venuta a dipingere, a respirare e a sentire di nuovo vivi. Quando ho signato per i ritriti di arte di Paraguay, non ho mai aspettato che fosse così magico. Ho passato 10 giorni viaggiando, facendo arte e incontrando nuovi amici. Il centro di ritriti sentiva come una casa da quando sono arrivata. Tutto si stava prendendo a cura, da le mani alla trasportazione, alle excursioni, così potessi solo concentrarti sullo creativo e sulle tour. I nostri giorni erano spesso una miscela di fare arte in studio o viaggiare in città per fare arte e per tourare. Abbiamo visitato paesi che sembravano non aver cambiato in centinaia. Le excursioni includevano una viaggia, una piazza di fiori, un mercato di agricoltori e anche un shop di antiche. I sketched by the river, wandered cliffside paths, and felt like I was inside a painting. It was peaceful, soulful, inspiring. Paragon Retreats hosts world-class artists so you can pick the style that you're looking for. This makes it perfect for solo travelers who want a little bit of culture, a little bit of creativity, and a lot of fun. The food prepared here was phenomenal. It was nothing that I've ever experienced before. e i host erano così graciosi sono diventati come una famiglia se sei qualcuno che ama l'arte e il viaggio questa ritrovata è un sogno puoi spostarti, connettersi a te stesso e essere svolto da bellezza ogni giorno sono andata con nuovi amici ho finito le pitture e ho un cuore pieno di ispirazione se hai avuto un obiettivo come questo prendi il passo, è valido",
+            "language": "Italian",
+            "durationSec": 109.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:33:08.828Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -139769,7 +139904,16 @@
           "likes": 1381,
           "comments": 11,
           "shares": 263,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il film di Marco Paret La storia della città Grazie. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 104.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:33:12.842Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -139783,7 +139927,16 @@
           "likes": 7,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il lavoro dell'artista, il curatore, il visionario, è vivere in una piccola delusione, una realtà diversa, di essere voluti a guardare un po' di cazzata, un po' di malato, fino a quando il mondo si rilascia. We are here to create something new, to believe in and embody something that others don't yet see.",
+            "language": "Italian",
+            "durationSec": 42.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T15:33:16.485Z"
+          }
         }
       ]
     }
