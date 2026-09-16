@@ -117666,7 +117666,16 @@
           "likes": 69,
           "comments": 6,
           "shares": 40,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Salida del vuelo con destino a la Francia Ciao",
+            "language": "Italian",
+            "durationSec": 43.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:06:48.636Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -117680,7 +117689,16 @@
           "likes": 450,
           "comments": 35,
           "shares": 156,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Iruc, voglio un Max Royal Kimmer, ma la città è così... Cosa posso fare a partire da questo? Se Max Royal è caro, mi raccomando il hotel Bijal. Se Bijal è caro, mi raccomando Kalinan Balek. Se Kalinan Balek è caro, prendi NG Fazelis Bay. Se NG Fazelis Bay è caro, prendi Ethno Balek. Se Ethno Balek è caro, prendi Adalia Bliss. Se poi andate a Bles, prendete Lilo Resort.",
+            "language": "Italian",
+            "durationSec": 33.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:06:52.349Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -117694,7 +117712,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 21.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:06:55.149Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -117708,7 +117735,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 31.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:00.064Z"
+          }
         }
       ]
     },
@@ -124530,7 +124566,16 @@
           "likes": 31,
           "comments": 11,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sere lalla sere lalla, focci nella la più bella, salta nella gira, ad essa puoi partire di nuova Sere lalla sere lalla, focci nella la più bella, sei un amico che farà un bacio di lana Salta salta salta, sere lillo salta su, salta salta salta, sere lillo salta giù Salta salta salta, sere lillo salta su, salta salta salta, noi non ci fermiamo giù Ah, le mie tue seguoncine",
+            "language": "Italian",
+            "durationSec": 34.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:03.827Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -124544,7 +124589,16 @@
           "likes": 13,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 6.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:06.536Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -124558,7 +124612,16 @@
           "likes": 100,
           "comments": 4,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Queste sono le mie impressioni di questo profumo Valentino Donna Born in Roma Green Stravaganza. Che meraviglia! Ok, partendo da qui, non ho mai piacuto nessuna delle fragranze Valentino Donna Born in Roma e i flancers. Penso che l'originale smaia bene, ma non è niente di pazzesco e penso che sia abbastanza costoso per la progettazione di longevità che si ottiene per questo. Penso che questo è unico nel senso che ha una nota di tè, jasmine e vanilla. Penso che il tè sia qualcosa di unico per un frangrante designer, quindi dovete guardarlo. Nella mia pelle, sono sicuramente ottenendo il tè. Gli dà un sentimento molto fresco, quasi citrus, ma direi più fresco. Nella mia pelle, che è perfetta per l'estate e l'estate, ma la vaniglia lo balanza e gli dà un sentimento più dolce. Quindi, mi piace il sentimento. Ho fatto un test di usaggio durante il giorno, ho appena andato in un'office, e dirò che penso che ho avuto solo 4 o 5 ore di uscita con questo profumo e l'ho sprayato tutto il mio corpo e anche sulle mie braccia quindi ho voluto comparare le mie coppie e la mia pelle e le due non hanno durato molto penso che anche all'inizio è quando ho avuto la maggior progettazione e dopo un'ora non potevo nemmeno smettere se ho portato la mia braccia al mio naso quindi la progettazione e la longevità non sono buone e questo è il profumo di grande prezzo che ho mai comprato. Anche per il prezzo di grande prezzo, spero di avere un miglior packaging. Come va? Mi piace molto il senso, se durasse più tempo e si progettasse più, direi che è un 10. No, direi che è un 8. Ma perché la performance è abbastanza male e è un po' in pari con il resto dei fragranci di Borden Roma e con il prezzo, direi che è un 6.",
+            "language": "Italian",
+            "durationSec": 116.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:11.355Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -124572,7 +124635,16 @@
           "likes": 193,
           "comments": 8,
           "shares": 77,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:14.889Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -124586,7 +124658,16 @@
           "likes": 60300,
           "comments": 548,
           "shares": 1222,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questa è la settimana 46 di cercare la frangente più complessiva a scuola. Questa settimana la frangente è Valentino Coral Fantasy. È un sapore frutti-sweet, è uno dei miei designi preferiti. Vediamo come va. Monday ha iniziato molto forte con tre complimenti. Una persona mi piaceva molto, vogliava il nome, quindi può comprarlo a se stesso. Questo mostra un buon sapore. Fuori dal range Valentino, Coral Fantasy è probabilmente uno dei miei preferiti. È solo un sapore frutti-unico, è molto addictivo. Tuglio è stato buono ancora, abbiamo ottenuto due complimenti. In questa serie ho testato l'edit originalmente nato da Borna Roma ed il Intense, l'edit ha ottenuto 8 complimenti ed il Intense 6. Lundi, ancora una volta, abbiamo ottenuto 2 complimenti. Questo significa che in 3 giorni Coral Fantasy ha ottenuto 7 complimenti, già attraversando la versione Intense. Tardaglia, stiamo andando in un ruolo, abbiamo ottenuto ancora 2 complimenti. È ora il ultimo giorno della settimana, domenica, e siamo inizialmente su 9 complimenti, è il valentino con il più alto rischio nel ranking. E per finire la settimana abbiamo ottenuto ancora 2 complimenti, Coral Fantasy ha amato i suoi 2 complimenti. But that means Valentino Coral Fantasy ended off the week with 11 compliments. A very very solid week considering it's a super unique fragrance and it is a designer scent, 11 compliments is actually a really good score. I really recommend Coral Fantasy especially for a teenager. Week 47 however we're going to be doing La Taffa Honor and Glory. This used to be super hyped a couple years ago but I haven't seen many people talk about it now. It's a super unique pina colada type of scent. Let's see how it goes.",
+            "language": "Italian",
+            "durationSec": 78.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:19.728Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -124600,7 +124681,16 @@
           "likes": 3434,
           "comments": 121,
           "shares": 284,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:22.613Z"
+          }
         }
       ]
     },
@@ -131031,7 +131121,16 @@
           "likes": 146,
           "comments": 8,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Avete mai immaginato di nascondere in una villa che ha l'ambiente di tornare alla colonia? Provate a nascondere nel Kaliyandra Resort, che ha un edificio molto unico. Questo edificio è in realtà una replica della casa di lavoro della famiglia di Majad Cipro Biantoro, il quale ha il Kaliyandra Resort e è stato pubblicato in 2018. La casa che è stata ispirata è la casa di singa di Pasuruan, un edificio storico che è pensato di essere stato costruito nel 1825. Per questo motivo, anche se è stato costruito in era moderna, il design di Kalendera Resort è ancora in grado di portare in giro l'architettura di un'intesa molto speciale. Da lì in avanti, ti rivolgerai a delle pietre grandi che rendono questo palazzo leggero e elegante. Entrando nel palazzo, la nuanza classica è più rosa. L'interior è rilasciato con dettaglio, da furniture, decorazioni, fino a ornami che sono stati realizzati come le case coloniali di tempo. Il più divertente è che quasi ogni punto di villa è fotogenico. Vuoi foto sul terrasso, nel luogo, o nel palazzo, il risultato è estetico. Ciò è molto utile per chi ama il contenuto o solo per capire i momenti di viaggio. Visita al Kalendra Resort è un'esperienza che ti dà l'esperienza di tornare in passato. Anche se la sua locazione è a l'interno di Gunung Arjuna. Quindi l'aeroporto è freddo, la situazione è tranquilla e lontano da l'aeroporto. Scegliere la mattina con l'aeroporto fresco e la vista verde, la sensazione fa rilassare le idee. Se hai bisogno di un posto per ricaricare, qualità di tempo con le persone, la famiglia o il posto di stagione, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 106.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:28.130Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -131045,7 +131144,16 @@
           "likes": 38,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Uuuu, questo è bello! GRRRRRR!",
+            "language": "Italian",
+            "durationSec": 5.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:30.625Z"
+          }
         }
       ]
     },
@@ -138246,7 +138354,16 @@
           "likes": 13800,
           "comments": 368,
           "shares": 1715,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie.",
+            "language": "Italian",
+            "durationSec": 30.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:33.501Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -138260,7 +138377,16 @@
           "likes": 532,
           "comments": 94,
           "shares": 23,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'anno scorso fu un anno davvero difficile per me. Mi sentivo come se mi stessero mancando qualcosa. Non sono religiosa, non vado a chiesa e non voglio essere religiosa. Quindi mi stavo dicendo che dovevo trovare qualcosa. Il mio burnout era alto. Mi sono iniziato a separare e isolare. Quindi ho iniziato a scoprire la mia spiritualità. Ho iniziato a scoprire la mia linea, la mia heritaggia. perché sento che c'è qualcosa che mi manca spiritualmente, c'è qualcosa che manca e che è la comunità. Ogni volta che ho cercato di vedere le cose sul mio passato, sul drudgerio, sull'Appalachia, sulle Celtiche, sull'ancestria irica, tutte queste cose, tutte queste donne che si sono curate nella comunità. Quando qualcuno ha perso qualcuno nella cultura Celtica e hanno fatto il funeral, e in generale queste donne venivano a fare queste cerimonie di chiesa dove cantavano dalla loro bocca e si gridavano con tutti e tutte le loro cose erano fatte nella comunit e ho iniziato a capire che in realt ci che stiamo mancando che non posso controllare le cose che stanno avvenendo politicamente non posso controllare le cose che stanno avvenendo nelle leggi non posso controllare il capitalismo, non posso controllare il trauma, anche se come terapeutica di trauma, immagino di fare questo. E quindi ho deciso l'anno scorso di iniziare a hostare le retreats di donne, ho fatto un paio di retreats di giorni, e ora faccio uno che è un retreat di settimana, ma ho iniziato a farlo perché sento che noi, come donne, dobbiamo avere una comunità, dobbiamo tornare ai nostri ori, dobbiamo tornare alla nostra linea, dobbiamo connettersi con l'altro così possiamo iniziare a curare insieme, dobbiamo farci. Quindi se sei una donna in Oklahoma o anche se non sei una donna in Oklahoma e vuoi essere parte della nostra comunità inizia a connettersi perché noi stiamo facendo cose nella nostra comunità per aiutare altre donne. Non solo facciamo i ritriti, ma come me e il mio partner di business che è un terapeutico di trauma locale ma stiamo continuamente intercettando le persone, stiamo continuamente cercando di trovare opportunità per fare tour, per volontari, per ottenere tutti i risorsi che possiamo. Connetterci con le donne è la nostra passione e quindi continueremo a farlo. Spero che ci abbiate aggiunti.",
+            "language": "Italian",
+            "durationSec": 131.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:38.749Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -138274,7 +138400,16 @@
           "likes": 123,
           "comments": 34,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi piace pulire il spazio quando mi sono arrivata, e lo sto facendo perché ho avuto un problema con la sensazione di abbandonamento, e perché è basato sul materialismo. E la vita in van, la vita in tent, qualsiasi vita che voglia chiamare, è prima di tutto un'identificazione, ma sei davvero a trattare gli elementi molto rossi, giusto? Quindi, se io ringrazio l'abbondanza che vedo in natura, la protezione e la alimentazione, e poi la rinforzo e, letteralmente, ringrazio per questa pezza di terra che ho da chiamare casa, anche se solo per un paio di giorni.",
+            "language": "Italian",
+            "durationSec": 46.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:42.565Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -138288,7 +138423,16 @@
           "likes": 23,
           "comments": 4,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Prima di andare a Mont Constituzione, ho preso un'altra strada. Allora, siamo andati al summit e siamo andati lì. E sono curioso di vedere come sembra il piccolo summit. È circa un milione e mezzo lì. andiamo su questa strada e vediamo come sembra il piccolo summit ho sentito che ci sono delle vittime molto spettacolari da lì, quindi andiamo dopo tutto che Rolf mi ha mostrato dall'altra parte della montagna questa corta viaggia mi ha dato il tempo di pensare in realtà tutto Molte persone vengono qui per il summit, ma la verità è che c'è un altro lato a Mount Constitution che molti visitatori non vedono mai. Sotto le vittime ci sono anni di mantenimento, ristorazione e lavoro tranquillo che mantiene questo posto a guardare come lo fa. Rolf ha passato decenni carando per parti di questi terreni. Come la cruz che una volta aiutò a mantenere il parco a diventare più piccolo, più di questa responsabilità finì a restare su pochi schieni. È una di quelle storie scompartite che la maggior parte dei persone passano senza mai averlo capito. Forse è per questo che mi piace prendere il cammino più lentamente invece di andare sempre. A volte i momenti inescapabili accadono tra le destinazioni, non a loro. Anche se questo corso è corto, potrebbe essere uno dei più pacifici viaggi su Orcas Island. Grazie a tutti Il lago di Piazza di Piazza Ma non c'è problema, è una strada molto bella e sono molto felice di essere andato a girare. È molto raffreddante, appassionato dalla forma in cui il sole entra nei tre. Sì, è proprio bello. Sono molto felice di essere qui. A questo punto non ero davvero in grado di raggiungere un altro punto di vista. Stavo semplicemente appassionato di essere qui. Quando ho iniziato il giorno, ero sinceramente un po' stasso, ma questa viaggia è stata esattamente quella che ho bisogno. A volte, spingere in basso aggiunge all'avventura. è un po' magico qua è come un fuso misto in aereo non so come esprimere è un po' ti fa sentire come se fossi collegato a questo posto Non voglio dire che sia corno, ma se vuoi diventare uno con la città in cui vivi, una buona maniera di farlo è di uscire da lì e camminare attorno a tutto il trago. Vediamo tutti i lati, ti connetta a tua terra. È davvero bello. La piccola costituzione di Mount Constituzione si trova solo fuori dalla strada principale, quindi puoi guidare qui facilmente. ma prendere il cammino cambia l'esperienza. Il fiume caldo la luce filtrata e la possibilit di spingere il tempo fanno sentire come se stessi scoprendo qualcosa per te stesso E' qualcosa che penso che i primi e gli esperti canzoni si possono apprezzare. Come ho raggiunto il summit, ricordo qualcosa che Rolf ha menzionato prima. C'era una torre qui. E... ha in realtà lavorato sull'area. Allora, Rolf mi ha detto che potete vedere che c'era una torre qui fuori e che lavorava su questo. ha anche detto che puoi vedere parte della fondazione è ancora un po' qui quindi lo mostrerò a te guarda stando qui, guardando ciò che rimane è incredibile immaginare cosa sembrava il summit a volte una fondazione semplice è tutto che resta per raccontare la storia mi ha detto che questo è stato preso da un ragazzo di wires, quindi è piuttosto bello, mi chiedo come sembra, dovrei prendere alcune piccole foto perché sarebbe davvero bello vedere. In ogni caso, questo è il piccolo summit che è assolutamente bello qui in realtà. Quindi andrò qui e scuro il banco e guarderò le vittime per un po' di minuti. È assolutamente spettacolare. Prima di continuare, voglio dare un grande grazie a Chuck, Natalie, Katie e Patrick. Ci siamo incontrati qui al summit dopo aver finito di attendere una bambina e erano gentili enoughi per darmi una viaggia in carro Lo apprezzo molto. Ovviamente, la mia curiosità è migliore di me. ho trovato un altro punto di vista e ho pensato che dovevo vedere ciò che c'era lì è solitamente così come i miei avventuri vanno I think I found a geocache, but I don't know. Let's see what this is. It turned out to be what looked like a geocache. all'interno c'erano notepad con nomi di persone che avevano visitato prima di me ho aggiunto il mio alla lista e spero che la prossima persona ci piaccia trovare il mio proprio come io Allora, quindi è tutto da me per oggi, sono Jonesy e ci vediamo nel prossimo. Una delle ragioni per le quali mi piace fare questi video più lunghi è perché non so se tutti hanno la possibilità di visitare posti come questo. se questa serie lascia qualcuno esperienziare anche una piccola parte di Mount Constitution da doveveri sono è valido ogni minuto grazie per essere venuti in un'altra avventura e questo è Jonesy ci vediamo nel prossimo",
+            "language": "Italian",
+            "durationSec": 620.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-16T05:07:59.741Z"
+          }
         }
       ]
     }
