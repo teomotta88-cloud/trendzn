@@ -30164,7 +30164,7 @@
           "url": "https://www.tiktok.com/@panificioilcampanile.13/video/7666370713250467104",
           "date": "2026-07-25T07:53:47.000Z",
           "caption": "E come sempre le cose belle durano sempre poco #bluserena #TorreSerena",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 1000,
           "imageUrl": null,
           "likes": 17,
@@ -30188,7 +30188,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-16T10:26:45.655Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "mare"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-16T10:27:48.483Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "mare"
+          ]
         },
         {
           "platform": "tiktok",
@@ -107152,7 +107175,7 @@
           "url": "https://www.tiktok.com/@panificioilcampanile.13/video/7666370713250467104",
           "date": "2026-07-25T07:53:47.000Z",
           "caption": "E come sempre le cose belle durano sempre poco #bluserena #TorreSerena",
-          "location": null,
+          "location": "Torreserena Resort",
           "views": 1000,
           "imageUrl": null,
           "likes": 17,
@@ -107176,7 +107199,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-16T10:26:45.655Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "mare"
+            ],
+            "location": "Torreserena Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-16T10:27:48.483Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "mare"
+          ]
         }
       ]
     },
