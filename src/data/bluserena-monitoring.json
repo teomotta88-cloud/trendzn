@@ -30487,7 +30487,7 @@
           "url": "https://www.tiktok.com/@tobiia/video/7668686993047440673",
           "date": "2026-07-31T13:42:08.000Z",
           "caption": "#tobia #ilblogditobia #tobiaoggi #bluserena @bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 279,
           "imageUrl": null,
           "likes": 11,
@@ -30511,7 +30511,23 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-17T23:07:17.006Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "neutral",
+            "topics": [],
+            "location": "Bluserena",
+            "confidence": 0.6,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T23:18:27.702Z"
+          },
+          "sentiment": "neutral"
         }
       ]
     },
@@ -82260,7 +82276,7 @@
           "url": "https://www.tiktok.com/@cautuori_fit/video/7666172544227101984",
           "date": "2026-07-24T19:04:47.000Z",
           "caption": "Ottime Notizie anche per Questa questione... Spero vi troviate davvero bene come Vi dico e non ci siano sorprese🥰😍🥰😍🥰😍 #sibarigreenvillage #sibarigreenresort #virale #paratiiiiii #trend",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1752,
           "imageUrl": null,
           "likes": 20,
@@ -82284,7 +82300,30 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-17T23:09:48.006Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "comfort",
+              "accessibilità"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T23:18:31.070Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "comfort",
+            "accessibilità"
+          ]
         },
         {
           "platform": "tiktok",
@@ -82292,7 +82331,7 @@
           "url": "https://www.tiktok.com/@filipporiccardi80/video/7544704859157564694",
           "date": "2025-08-31T11:08:08.000Z",
           "caption": "#sibarigreenresort #vacanze2025🤩🤩",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 421,
           "imageUrl": null,
           "likes": 12,
@@ -82315,7 +82354,29 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-17T23:09:54.047Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "vacanze"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T23:18:31.748Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "musica",
+            "vacanze"
+          ]
         },
         {
           "platform": "tiktok",
@@ -82323,7 +82384,7 @@
           "url": "https://www.tiktok.com/@melaniamoio89/video/7542240195622735126",
           "date": "2025-08-24T19:43:59.000Z",
           "caption": "#sibarigreenresort #2025",
-          "location": null,
+          "location": "Sibari Green Resort",
           "views": 1505,
           "imageUrl": null,
           "likes": 11,
@@ -82346,7 +82407,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-17T23:09:59.618Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vita di coppia",
+              "relax",
+              "estate"
+            ],
+            "location": "Sibari Green Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T23:18:32.068Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vita di coppia",
+            "relax",
+            "estate"
+          ]
         },
         {
           "platform": "tiktok",
@@ -82354,7 +82439,7 @@
           "url": "https://www.tiktok.com/@andreabortone89/video/7539541238442216726",
           "date": "2025-08-17T13:10:39.000Z",
           "caption": "@bluserena @Elisabetta Conte #sibarigreenresort #calabria",
-          "location": null,
+          "location": "Bluserena",
           "views": 2082,
           "imageUrl": null,
           "likes": 7,
@@ -82378,7 +82463,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-17T23:10:16.779Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "musica",
+              "vacanza",
+              "resort"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.78,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T23:18:33.210Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "musica",
+            "vacanza",
+            "resort"
+          ]
         },
         {
           "platform": "tiktok",
