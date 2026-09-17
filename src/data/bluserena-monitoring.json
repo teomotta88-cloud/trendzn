@@ -122919,6 +122919,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:01.129Z"
+          },
+          "ocrData": {
+            "textOnScreen": "First tosk of the\nPress the power button to wake up the screen\nSpeaker\nSat 15 Add recipe a",
+            "confidence": 0.854,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:49:52.826Z"
           }
         }
       ]
@@ -130121,6 +130130,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:03.479Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:02.985Z"
           }
         },
         {
@@ -130144,6 +130161,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:08.776Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:07.379Z"
           }
         },
         {
@@ -130167,6 +130192,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:11.643Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VENDETTA\nVALE\nVENDET",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:13.876Z"
           }
         },
         {
@@ -130190,6 +130224,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:26.759Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1. BC Roma\nozénico\nacuatico 3\nsalado\nherbal\nfresco especiado\nntense\nCoral Fantasy\nafrutados È\nlavanda\nStravaganza\ncitrico 3\naromatico Ì\nfresco especiado È\naromatico\nfresco especi... i",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:24.607Z"
           }
         },
         {
@@ -130213,6 +130256,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:28.896Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Alastor\njthat\nAlastor\\doesn't stink\nto Believe\nAlastor K",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:32.164Z"
           }
         },
         {
@@ -130236,6 +130288,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:31.200Z"
+          },
+          "ocrData": {
+            "textOnScreen": "animation is so\nspecial tome",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:37.278Z"
           }
         }
       ]
@@ -137023,6 +137084,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:33.361Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Just moved into one of my favourite rooms\natthe property... the Sea of Smiles Suite\n@calilo_ios\n@echoesluxurysuites\nAt sunset the view becomes even\nmore incredible! ì\nmore incredible!",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:50:45.203Z"
           }
         }
       ]
@@ -144584,6 +144654,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:39.002Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:51:09.238Z"
           }
         },
         {
@@ -144607,6 +144685,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:44.930Z"
+          },
+          "ocrData": {
+            "textOnScreen": "But we are also\nrisk\nrivers, lakes, and all\nProjects\nJoin us in speaking up",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:51:36.056Z"
           }
         },
         {
@@ -144630,6 +144717,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T17:45:47.207Z"
+          },
+          "ocrData": {
+            "textOnScreen": "abakery”",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T17:51:45.668Z"
           }
         }
       ]
