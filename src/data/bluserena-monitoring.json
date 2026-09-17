@@ -30359,6 +30359,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:20.272Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:12:59.983Z"
           }
         }
       ]
@@ -45351,6 +45359,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:23.465Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MORE\nholly",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:13:06.043Z"
           }
         }
       ]
@@ -51450,6 +51467,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:27.368Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:13:24.034Z"
           }
         }
       ]
@@ -60169,6 +60194,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:39.006Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sereno\nOFF All Single Services\nCelebrate wellness all month long! P\nBuy now and use anytime within the next 365 days.\nTherapies:\nNIR Red Light Therapy &Vibe Plate iii ii\nNY Oxygen Therapy Chamber i\nFIR Sauna Chromotherapy 4\nIN a è Deprivation Salt Float Tank\nOffer Valid through\nNOW Redeem Within 365 Days!\nhristmas In July Serenus Sampler Pack\nSave 50% and enjoy all of our services for $139 (re g\n$279). Package includes:\n60 chamber (reg. $129)\nh chromotherapy (reg. $40) È\nBlooming\nTherapy Sale\nCred $20.00\nin July at\nFloa and Wellness Center\nristmas in July at Sere\nloat and Wellness Cen\nBloomington, Indiana\nst July at\nIness Center\nton, Indiana",
+            "confidence": 0.867,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:13:33.833Z"
           }
         },
         {
@@ -60192,6 +60226,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:41.751Z"
+          },
+          "ocrData": {
+            "textOnScreen": "just a hotel.“",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:13:44.591Z"
           }
         }
       ]
@@ -68934,6 +68977,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:46.285Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:13:49.177Z"
           }
         }
       ]
@@ -80467,6 +80518,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:49.528Z"
+          },
+          "ocrData": {
+            "textOnScreen": "vinitaly",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:14:07.075Z"
           }
         }
       ]
@@ -89745,6 +89805,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:10:57.748Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:14:12.994Z"
           }
         },
         {
@@ -89768,6 +89836,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:02.774Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Your Travel Agent",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:14:28.414Z"
           }
         },
         {
@@ -89791,6 +89868,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:07.902Z"
+          },
+          "ocrData": {
+            "textOnScreen": "but to belong to it\ni choice”",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:14:34.266Z"
           }
         }
       ]
@@ -100107,6 +100193,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:10.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:14:43.729Z"
           }
         }
       ]
@@ -108660,6 +108754,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:13.015Z"
+          },
+          "ocrData": {
+            "textOnScreen": "2 Torreserena Vill...\nTorreserena Vill...\nTorreserena Vill... Ji",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:14:54.041Z"
           }
         },
         {
@@ -108683,6 +108786,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:17.365Z"
+          },
+          "ocrData": {
+            "textOnScreen": "crisbienesraices\n@crish\nices",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:15:14.395Z"
           }
         },
         {
@@ -108706,6 +108818,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:20.650Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Twin\nBath\nRain\nshower;",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:15:21.106Z"
           }
         },
         {
@@ -108729,6 +108850,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:25.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:15:29.125Z"
           }
         },
         {
@@ -108752,6 +108881,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:29.702Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:15:42.736Z"
           }
         },
         {
@@ -108775,6 +108912,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:31.981Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cebu leading\ncebu\ncebu loading,",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:15:54.597Z"
           }
         }
       ]
@@ -120718,6 +120864,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:34.729Z"
+          },
+          "ocrData": {
+            "textOnScreen": "INSULA RESORT SPA 5*\nRESORT SPA 5*\nBean 3\nINSULA RESORT",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:03.686Z"
           }
         },
         {
@@ -120741,6 +120896,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:39.379Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:09.538Z"
           }
         },
         {
@@ -120764,6 +120927,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:45.293Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:19.035Z"
           }
         },
         {
@@ -120787,6 +120958,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:47.823Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Calanè Resort\n7 Calanè Resort\nCalané Resort\nCalanè",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:28.282Z"
           }
         },
         {
@@ -120810,6 +120990,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:51.181Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: non facciamoci riconoscere-\n\"ANDREA 2 MINUTI DOPO\nanchequi\ni ANDREA 2 MINUTI DOPO\nPOV: non riconoscere\nMINUTI DOPO\nPOV: non faccigmoci rieenoscer®",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:37.589Z"
           }
         },
         {
@@ -120833,6 +121022,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:11:54.111Z"
+          },
+          "ocrData": {
+            "textOnScreen": "wolf in sheep's clothing\nAwolfin sheep's clothing\"\nused to\ndescribe someone who\nappears to be harmless,\nfriendly, or trustworthy,\nbut is actually malicious, deceptive, or\nexterior\nsomeone\nA s clothing\"\nan idiom used to\nsomeonewho\nor trustworthy,\nbut is actually malicious, é\nG ender: N\nFemale\nMale\nwolf in\ndescribe som\nappears to be\nfriendly, or tru\nbut is actually mali",
+            "confidence": 0.86,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:43.706Z"
           }
         },
         {
@@ -120856,6 +121054,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:01.181Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HOSTEL.COM",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:16:53.730Z"
           }
         },
         {
@@ -120879,6 +121086,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:14.006Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:04.319Z"
           }
         },
         {
