@@ -30344,7 +30344,7 @@
           "url": "https://www.tiktok.com/@puerto.svago.latina/video/7658414702552272160",
           "date": "2026-07-03T21:20:24.000Z",
           "caption": "Relax by @bluserena  #PuertoSvagoLatina #Bluserena #Mare #Calabria #Relax",
-          "location": null,
+          "location": "Bluserena",
           "views": 1377,
           "imageUrl": null,
           "likes": 12,
@@ -30367,7 +30367,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-17T07:12:59.983Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "mare",
+              "musica"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T07:22:28.971Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "mare",
+            "musica"
+          ]
         }
       ]
     },
@@ -120943,7 +120967,7 @@
           "url": "https://www.tiktok.com/@centropostanocera/video/7523638989719407894",
           "date": "2025-07-05T16:41:48.000Z",
           "caption": "Che abbia inizio la nostra vacanza 🥰",
-          "location": null,
+          "location": "Calanè Resort",
           "views": 2729,
           "imageUrl": null,
           "likes": 5,
@@ -120967,7 +120991,28 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-17T07:16:28.282Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza"
+            ],
+            "location": "Calanè Resort",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T07:22:29.950Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
