@@ -91996,6 +91996,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:44.836Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sca view",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:11:22.136Z"
           }
         }
       ]
@@ -102534,6 +102543,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:49.135Z"
+          },
+          "ocrData": {
+            "textOnScreen": "King Micheal grand Entrance",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:11:30.420Z"
           }
         },
         {
@@ -102557,6 +102575,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:53.567Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL KAMPAL\nLilli",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:11:37.106Z"
           }
         },
         {
@@ -102580,6 +102607,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:03:44.347Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:12:01.901Z"
           }
         },
         {
@@ -102603,6 +102638,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:03:49.252Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SAREENA",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:12:07.927Z"
           }
         },
         {
@@ -102626,6 +102670,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:03:56.112Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:12:18.110Z"
           }
         },
         {
@@ -102649,6 +102701,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:02.406Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:12:29.861Z"
           }
         },
         {
@@ -102672,6 +102732,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:05.169Z"
+          },
+          "ocrData": {
+            "textOnScreen": "five star hotel Serena\nmargala block\nfive stàr hotel Serena",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:12:37.707Z"
           }
         },
         {
@@ -102695,6 +102764,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:11.057Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA HOTEL KAMPALA",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:12:45.928Z"
           }
         }
       ]
@@ -111597,6 +111675,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:15.544Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:13:04.737Z"
           }
         },
         {
@@ -111620,6 +111706,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:18.424Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Xuan\nSerena Resort...\nE3 serena Resort...",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:13:11.987Z"
           }
         },
         {
@@ -111643,6 +111738,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:21.732Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Presta atencion porque\nfacil participar 2\nERENR\nDarle like a este reel\nel reel",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:13:22.943Z"
           }
         },
         {
@@ -111666,6 +111770,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:24.480Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:13:34.109Z"
           }
         }
       ]
@@ -124041,6 +124153,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:28.405Z"
+          },
+          "ocrData": {
+            "textOnScreen": "GWANDERTRAVELER25",
+            "confidence": 0.721,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:14:09.428Z"
           }
         },
         {
@@ -124064,6 +124185,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:32.696Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Playa",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:14:17.908Z"
           }
         },
         {
@@ -124087,6 +124217,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:37.630Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VAMO A METERNOS PA'L\nAGUA\nPOR TO'A LA COSTA A\nCHINCHORREAR\nA DARNO UNA\nUN POCO DE BO B MARLEY\nPOCO A POQUITO",
+            "confidence": 0.86,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:14:24.646Z"
           }
         },
         {
@@ -124110,6 +124249,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:42.559Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SIVO PA",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:14:49.917Z"
           }
         },
         {
@@ -124133,6 +124281,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:45.750Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Palanas by the Sea",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:15:07.521Z"
           }
         }
       ]
@@ -131525,6 +131682,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:51.605Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:15:19.970Z"
           }
         },
         {
@@ -131548,6 +131713,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:57.500Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:15:26.412Z"
           }
         }
       ]
@@ -138367,6 +138540,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:04:59.907Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘Santorini, Greece)",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:15:35.303Z"
           }
         },
         {
@@ -138390,6 +138572,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:05:02.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DA GUSTARE\nQUINDI SE",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:15:44.274Z"
           }
         },
         {
@@ -138413,6 +138604,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:05:07.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KPYTA",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:15:53.909Z"
           }
         },
         {
@@ -138436,6 +138636,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:05:10.130Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KALAHARI DUMP! Part 1",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:16:04.107Z"
           }
         },
         {
@@ -138459,6 +138668,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:05:13.393Z"
+          },
+          "ocrData": {
+            "textOnScreen": "le VOStre giornate:\nvacanze non",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:16:13.399Z"
           }
         }
       ]
