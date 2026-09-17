@@ -120107,6 +120107,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:56:38.345Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TILALOHE\nBeach\n“POV: k emu temp\nseter\nPasi\nCH RESORT",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:02:35.959Z"
           }
         },
         {
@@ -120130,6 +120139,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:56:44.768Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CALA\nWATER\nkayaking!",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:02:55.746Z"
           }
         },
         {
@@ -120153,6 +120171,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:56:47.715Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i have done)",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:00.164Z"
           }
         },
         {
@@ -120176,6 +120203,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:56:50.372Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:04.928Z"
           }
         },
         {
@@ -120199,6 +120234,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:56:55.205Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RENI\nBERASAPUNYA PULAU\nDAN GAZEBO KAYU\nBUATCARIVITAMI",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:28.308Z"
           }
         },
         {
@@ -120222,6 +120266,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:56:59.375Z"
+          },
+          "ocrData": {
+            "textOnScreen": "piscina\nPlanazo è Verano\nresidentele\nVA puedes] Sa\nbalinesa\naule\ndiferente este verano yi\nesto es en",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:39.036Z"
           }
         }
       ]
@@ -127329,6 +127382,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:57:02.309Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:45.124Z"
           }
         },
         {
@@ -127352,6 +127413,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:57:04.643Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THE SCENTS OF UNSTOPPABLE PASSION",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:52.836Z"
           }
         }
       ]
@@ -133918,6 +133988,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:57:08.386Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:03:58.878Z"
           }
         },
         {
@@ -133941,6 +134019,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:57:11.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:04:07.156Z"
           }
         },
         {
@@ -133964,6 +134050,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T01:57:15.094Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Call",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T02:04:14.226Z"
           }
         }
       ]
