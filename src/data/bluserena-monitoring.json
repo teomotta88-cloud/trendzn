@@ -30405,7 +30405,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Blu serena, dall'alba fino al luna piena, ti toglie il fiato per magia, lo sguardo da follia, ritrova la gioia con noi oltre a una vita. Blu serena, un brivido che ti scatena, la melodia che ti conquista, amore a prima vista, rientra in quel vuoto che hai. Qui ritroviamo la felicità, un sogno che non finirà, un caldo abbraccio che è satisfecciale, le lunghe giornate che non sentirai. Blu serena un'aquino che non vola via, prova a seguirne la scia, tutta la vita blu serena, dall'alba fino al luna piena. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 75.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:21.982Z"
+          }
         }
       ]
     },
@@ -45420,7 +45429,16 @@
           "likes": 103,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:24.492Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45434,7 +45452,16 @@
           "likes": 16,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "...like a sasuterie board, lady king. Hold up, a what board? A sasuterie board. A sasuterie board?",
+            "language": "Italian",
+            "durationSec": 14,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:26.989Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45448,7 +45475,16 @@
           "likes": 231,
           "comments": 6,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:29.630Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45462,7 +45498,16 @@
           "likes": 87,
           "comments": 16,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 24,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:33.007Z"
+          }
         }
       ]
     },
@@ -60343,7 +60388,16 @@
           "likes": 45,
           "comments": 2,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non è il resort più felice del Fuqua, ma è il luogo in cui i viaggi vogliono tornare più, tra le varie zone di restauro sanzioni sull'isola di Ngoc. Salinda Resort Fuqua mantiene un sottile sottile. Il punto che salinda ha sempre avuto un'avviso è la qualità di servizio di 5 stelle, buffet santo e raffreddato con un vino e un'acqua gratis, la vittoria all'aeroporto e il luogo di restauro con la sensazione di rinnovare la salute. Questa è la scelta ideale per i due, per chi vuole trovare un luogo molto tranquillo per sfruttare Fuqua. Il prezzo di rinnovamento è di 3.3-4 milioni di rinnovamenti per la notte, Tui hạng phòng và thời điểm đặt đã bao gồm nhiều ưu đãi như buffet sáng và đưa đón sân bay, mua cao điểm thường từ khoảng 5 triệu 6 trên đêm. IP mình để đặt phòng giá ưu đãi nhé!",
+            "language": "Italian",
+            "durationSec": 36.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:36.643Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60357,7 +60411,16 @@
           "likes": 130,
           "comments": 3,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti",
+            "language": "Italian",
+            "durationSec": 12.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:39.445Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60371,7 +60434,16 @@
           "likes": 189600,
           "comments": 1212,
           "shares": 52600,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mungkin, aku senang tak bisa, tak bisa jatuh cenda, membuka hati tu apapun siapapun Sì, è vero.",
+            "language": "Italian",
+            "durationSec": 44.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:48.071Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60385,7 +60457,16 @@
           "likes": 55,
           "comments": 1,
           "shares": 98,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "7000 pesos è un buon 420 packs è qui in Quintarizal sembra che sia il risorto più di buona che abbiamo vissuto perfetto per i barcati e le famiglie vabbè andiamo qui in Westbank in Floodway è qui in Quintarizal per andare al Esteron Private Resort cerchiamo su Google Maps se state spingendo e avete molti state qui perché il loro pool è molto grande e ha anche i fountains quindi sicuramente vi divertiranno i barcati o le famiglie è anche un po' caldo l'acqua nel pool c'è anche un'area dove potete Grazie a tutti",
+            "language": "Italian",
+            "durationSec": 47.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:54.819Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60399,7 +60480,16 @@
           "likes": 47500,
           "comments": 217,
           "shares": 17500,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "5 hotel con il starbucks inclusivo, acqua da scuola e non distributore, lodo senza limiti, abitazioni con accesso al basen, acqua park e più. Suona come un direttore, ma è Turcia. Hotel Mirage Park Resort è una perella che devi scrivere. Si trova direttamente sulle piazze, puoi occupare un pavillon. Ci sono alcuni baseni, animazioni a ogni passo, e la maniera in offerta inclusiva è tutto. Fruzzi del mar, sushi, cosa vuoi? Per ogni bambino ci sono codi QR, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:28:58.375Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60413,7 +60503,16 @@
           "likes": 11,
           "comments": 7,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "qui c'è un appartamento in un'una stessa completamente affarnita, situato in Palmarina, viene con un pool di spazio, una piazza privata che accesserai mentre resti qui con noi. Questo appartamento è completamente affarnito, situato in un quartiere di una scala di riscaldamento pacifica, a solo 225.000 UGN, che costa 60 dollari per te. Il spazio è lusso, ben condizionato, installati AC, installato wifi e tante altre amenities modernamente affarnite e molto spaziosi. È un appartamento di un'altra stanza che vale ogni penna e in caso non lo scegliate ora, lasciatelo per dopo perché, credetemi, questo è un posto in cui volete essere. Contattateci per book it e tanti altri posti. Followateci per più posti legittimi. Grazie!",
+            "language": "Italian",
+            "durationSec": 45.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:01.741Z"
+          }
         }
       ]
     },
@@ -69177,7 +69276,16 @@
           "likes": 29,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:06.668Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -69191,7 +69299,16 @@
           "likes": 10500,
           "comments": 104,
           "shares": 329,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Money, money, money, money",
+            "language": "Italian",
+            "durationSec": 36.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:09.595Z"
+          }
         }
       ]
     },
@@ -80747,7 +80864,16 @@
           "likes": 28,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 60.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:13.094Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -80761,7 +80887,16 @@
           "likes": 20,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao!",
+            "language": "Italian",
+            "durationSec": 42,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:16.706Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -80775,7 +80910,16 @@
           "likes": 2720,
           "comments": 17,
           "shares": 659,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hai dovuto continuare a vivere, ragazzi! Grazie.",
+            "language": "Italian",
+            "durationSec": 32.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:22.065Z"
+          }
         }
       ]
     },
@@ -90139,7 +90283,16 @@
           "likes": 20,
           "comments": 2,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quando pensate che sorrido è troppo, non mi importa di niente, se il vestito mi scende, tutti belli, completamente ora, sono i miei di ancora, che anche se è tardi, non mi trame, ti aspetto, ma una vita intera, intera, oh, che bella questa sera, questa sera, oh. Ti sento, ti sento.",
+            "language": "Italian",
+            "durationSec": 25.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:24.561Z"
+          }
         }
       ]
     },
@@ -100477,7 +100630,16 @@
           "likes": 53,
           "comments": 1,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica 6 Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti. Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 193,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:29.890Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -100491,7 +100653,16 @@
           "likes": 575,
           "comments": 17,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 41.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:34.992Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -100505,7 +100676,16 @@
           "likes": 31,
           "comments": 5,
           "shares": 58,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 47.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:38.051Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -100519,7 +100699,16 @@
           "likes": 30,
           "comments": 5,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:43.384Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -100533,7 +100722,16 @@
           "likes": 29,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il Dio è il tuo amore Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 53.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:46.394Z"
+          }
         }
       ]
     },
@@ -109267,7 +109465,16 @@
           "likes": 94,
           "comments": 9,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tutto pronto, la grande carica, allacciate le cinture, da questo momento si vola a papete!",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:48.930Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -109281,7 +109488,16 @@
           "likes": 24,
           "comments": 0,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, no, no, no, no, no, no, no. Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 62.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:55.991Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -109295,7 +109511,16 @@
           "likes": 28,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T12:29:59.840Z"
+          }
         }
       ]
     },
