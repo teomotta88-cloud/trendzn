@@ -121117,6 +121117,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:20.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:18.177Z"
           }
         }
       ]
@@ -128287,6 +128295,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:22.920Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TRAVELLER\nPREMIERE\nTHE SCENTS OF UNSTOPPABLE PASSION",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:22.609Z"
           }
         }
       ]
@@ -134947,6 +134964,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:25.549Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SAMSARA CLIF",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:31.102Z"
           }
         },
         {
@@ -134970,6 +134996,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:31.079Z"
+          },
+          "ocrData": {
+            "textOnScreen": "D Savero\nHotel\nPARKIRIDI MANA\n#Depok\nE 3 Savero\nWOW SURPRISE-NVA\nADALAH\nSavero",
+            "confidence": 0.839,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:35.919Z"
           }
         },
         {
@@ -134993,6 +135028,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:33.696Z"
+          },
+          "ocrData": {
+            "textOnScreen": "mewan\nOrder Klik di tag",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:43.620Z"
           }
         },
         {
@@ -135016,6 +135060,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T07:12:38.382Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T07:17:50.991Z"
           }
         }
       ]
