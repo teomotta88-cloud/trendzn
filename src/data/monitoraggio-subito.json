@@ -1,8 +1,398 @@
 {
   "keywords": [
-    { "keyword": "bici", "region": "lombardia", "listings": [] },
-    { "keyword": "bicicletta", "region": "lombardia", "listings": [] },
-    { "keyword": "gravel", "region": "lombardia", "listings": [] },
-    { "keyword": "regalo", "region": "lombardia", "listings": [] }
+    {
+      "keyword": "bici",
+      "region": "lombardia",
+      "listings": [
+        {
+          "url": "https://www.subito.it/biciclette/bici-bimbo-como-661085455.htm",
+          "title": "Bici bimbo",
+          "price": "40 €",
+          "location": "Uggiate con Ronago (CO)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-bimbo-merida-como-661085343.htm",
+          "title": "Bici bimbo merida",
+          "price": "60 €",
+          "location": "Uggiate con Ronago (CO)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-cannondale-scalpel-si-carbon-3-anno-2015-milano-659712508.htm",
+          "title": "Bici mtb Cannondale Scalpel Si Carbon 3 anno 2015",
+          "price": "700 €",
+          "location": "San Donato Milanese (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-giant-da-corsa-anno-2000-bergamo-660955118.htm",
+          "title": "Bici giant da corsa anno 2000",
+          "price": "280 €",
+          "location": "Dalmine (BG)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-merida-reacto-6000-2027-salerno-649361644.htm",
+          "title": "Bici Merida Reacto 6000 2027",
+          "price": "4.150 €",
+          "location": null,
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-kuota-kugar-milano-660480089.htm",
+          "title": "Bici da Corsa Kuota Kugar",
+          "price": "1.000 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-como-606783874.htm",
+          "title": "Bici da corsa",
+          "price": "5.000 €",
+          "location": "Mariano Comense (CO)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-in-carbonio-tg-53-monza-652295850.htm",
+          "title": "Bici da corsa in carbonio tg 53",
+          "price": "950 €",
+          "location": "Mezzago (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-bottecchia-milano-642984619.htm",
+          "title": "Bici Bottecchia",
+          "price": "150 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-shadow-monza-661083729.htm",
+          "title": "bici MTB Shadow",
+          "price": "45 €",
+          "location": "Vimercate (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-rocky-bike-monza-661083638.htm",
+          "title": "bici MTB Rocky Bike",
+          "price": "30 €",
+          "location": "Vimercate (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/2-sacche-porta-bici-scicon-travel-plus-triathlon-monza-661083207.htm",
+          "title": "2 SACCHE PORTA BICI SCICON - TRAVEL PLUS TRIATHLON",
+          "price": "95 €",
+          "location": "Usmate Velate (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/porta-bici-thule-da-tetto-milano-661083112.htm",
+          "title": "Porta bici Thule da tetto",
+          "price": "120 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-e-bici-e-mtb-lapierre-alpine-bergamo-618801541.htm",
+          "title": "BICI da CORSA e BICI E MTB LAPIERRE ALPINE",
+          "price": "5.950 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-scott-foil-ultegra-2017-monza-657264511.htm",
+          "title": "Bici da corsa Scott Foil Ultegra 2017",
+          "price": "690 €",
+          "location": "Seveso (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-citta-artigianale-indistruttibile-nuova-milano-574816627.htm",
+          "title": "Bici da città artigianale indistruttibile nuova",
+          "price": "490 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-btwin-con-cestino-milano-661081356.htm",
+          "title": "Bicicletta btwin con cestino",
+          "price": "50 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/casco-bici-las-bergamo-661081362.htm",
+          "title": "casco bici LAS",
+          "price": "10 €",
+          "location": "Grassobbio (BG)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-uomo-montana-bergamo-661080922.htm",
+          "title": "bici uomo montana",
+          "price": "250 €",
+          "location": "Osio Sopra (BG)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+        }
+      ]
+    },
+    {
+      "keyword": "bicicletta",
+      "region": "lombardia",
+      "listings": [
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-mtb-16-nuzzi-colibri-bimba-fucsia-brescia-579969784.htm",
+          "title": "Bicicletta MTB 16 Nuzzi Colibrì bimba fucsia",
+          "price": "99 €",
+          "location": "Brescia (BS)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-bergamo-661084979.htm",
+          "title": "bicicletta",
+          "price": "45 €",
+          "location": "Calvenzano (BG)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-rossignol-ragazzo-milano-660528085.htm",
+          "title": "Bicicletta elettrica  Rossignol ragazzo",
+          "price": "650 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-crono-triathlon-specialized-shiv-brescia-661084072.htm",
+          "title": "Bicicletta da crono/triathlon Specialized Shiv",
+          "price": "900 €",
+          "location": "Ghedi (BS)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-mtb-rockrider-st900s-x-ragazzo-a-milano-661083867.htm",
+          "title": "Bicicletta MTB -  RockRider ST900s x ragazzo/a",
+          "price": "450 €",
+          "location": "Abbiategrasso (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-uomo-mantova-660805205.htm",
+          "title": "bicicletta uomo",
+          "price": "240 €",
+          "location": "Castiglione delle Stiviere (MN)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-olanda-artigianale-biart-bergamo-661082383.htm",
+          "title": "Bicicletta Olanda Artigianale BiArt",
+          "price": "100 €",
+          "location": "Romano di Lombardia (BG)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-btwin-con-cestino-milano-661081356.htm",
+          "title": "Bicicletta btwin con cestino",
+          "price": "50 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-mountain-bike-da-donna-24-milano-661080930.htm",
+          "title": "Bicicletta Mountain bike da donna 24”",
+          "price": "100 €",
+          "location": "Pozzuolo Martesana (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-e-bike-armony-monza-milano-660445780.htm",
+          "title": "bicicletta elettrica e-bike Armony Monza",
+          "price": "650 €",
+          "location": "Cesate (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-raggi-28-varese-661080339.htm",
+          "title": "bicicletta raggi 28",
+          "price": "45 €",
+          "location": "Saronno (VA)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-vintage-anni-50-telaio-legnano-milano-660549174.htm",
+          "title": "Bicicletta Vintage anni 50 - Telaio Legnano",
+          "price": "400 €",
+          "location": "Cernusco sul Naviglio (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-bmx-brescia-661079140.htm",
+          "title": "Bicicletta BMX",
+          "price": "100 €",
+          "location": "Gussago (BS)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-per-eroica-legnano-brescia-661079062.htm",
+          "title": "Bicicletta per Eroica Legnano",
+          "price": "200 €",
+          "location": "Desenzano del Garda (BS)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/hobby-collezionismo/bicicletta-beach-cruiser-lowrider-custom-milano-659830537.htm",
+          "title": "Bicicletta Beach Cruiser Lowrider Custom",
+          "price": "350 €",
+          "location": "Cambiago (MI)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-varese-661077603.htm",
+          "title": "Bicicletta",
+          "price": "900 €",
+          "location": "Saronno (VA)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-varese-661077212.htm",
+          "title": "Bicicletta",
+          "price": "900 €",
+          "location": "Saronno (VA)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-mantova-661076977.htm",
+          "title": "bicicletta",
+          "price": "150 €",
+          "location": "Monzambano (MN)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-bianchi-anni-70-varese-661076617.htm",
+          "title": "Bicicletta Bianchi anni '70",
+          "price": "900 €",
+          "location": "Cardano al Campo (VA)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-donna-28-in-alluminio-21v-pari-al-nuovo-como-661076446.htm",
+          "title": "Bicicletta donna 28 in alluminio 21v pari al nuovo",
+          "price": "230 €",
+          "location": "Carimate (CO)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-uomo-28-in-alluminio-21-rapporti-como-661075040.htm",
+          "title": "Bicicletta uomo 28 in alluminio 21 rapporti",
+          "price": "110 €",
+          "location": "Carimate (CO)",
+          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+        }
+      ]
+    },
+    {
+      "keyword": "gravel",
+      "region": "lombardia",
+      "listings": [
+        {
+          "url": "https://www.subito.it/biciclette/scott-speedster-30-gravel-pavia-655825326.htm",
+          "title": "Scott Speedster 30 - Gravel",
+          "price": "1.350 €",
+          "location": "Certosa di Pavia (PV)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-giant-revolt-advanced-pro-0-2026-varese-630081076.htm",
+          "title": "Bici Gravel Giant Revolt Advanced Pro 0 2026",
+          "price": "5.900 €",
+          "location": "Casciago (VA)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-cremona-644482132.htm",
+          "title": "Gravel",
+          "price": "2.990 €",
+          "location": "Romanengo (CR)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-wilier-jaroon-sram-rival-1x11-tg-s-milano-659336227.htm",
+          "title": "gravel Wilier Jaroon- Sram Rival 1x11 -Tg S",
+          "price": "1.300 €",
+          "location": "Buccinasco (MI)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/copertoni-vittoria-gravel-pavia-661070256.htm",
+          "title": "Copertoni Vittoria Gravel",
+          "price": "80 €",
+          "location": "Broni (PV)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-scott-gravel-brescia-659231447.htm",
+          "title": "BICI SCOTT GRAVEL",
+          "price": "1.690 €",
+          "location": "Corte Franca (BS)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/sonder-camino-titanio-taglia-54-gravel-bike-milano-651812587.htm",
+          "title": "SONDER CAMINO TITANIO | Taglia 54 | Gravel Bike |",
+          "price": "1.650 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-ktm-x-strada-15-pro-bergamo-661017147.htm",
+          "title": "GRAVEL KTM X-STRADA 15 PRO",
+          "price": "1.300 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-mondraker-arid-carbon-rr-taglia-m-milano-660508805.htm",
+          "title": "BICI GRAVEL MONDRAKER ARID CARBON RR TAGLIA M",
+          "price": "3.500 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/ebike-basso-volta-gravel-carbonio-tg-m-polini-pavia-660393396.htm",
+          "title": "Ebike Basso Volta Gravel carbonio tg M polini",
+          "price": "2.500 €",
+          "location": "Campospinoso (PV)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-varese-661013003.htm",
+          "title": "gravel",
+          "price": "2.500 €",
+          "location": "Ferno (VA)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-gravel-basso-prezzo-trattabile-sondrio-656817281.htm",
+          "title": "Bici da gravel basso (prezzo trattabile)",
+          "price": "1.800 €",
+          "location": "Mese (SO)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/scarpe-dmt-22-gk1-gravel-milano-652644398.htm",
+          "title": "Scarpe Dmt 22 Gk1 Gravel",
+          "price": "90 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+        }
+      ]
+    },
+    {
+      "keyword": "regalo",
+      "region": "lombardia",
+      "listings": []
+    }
   ]
 }
