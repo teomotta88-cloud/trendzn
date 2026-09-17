@@ -30502,6 +30502,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:04.838Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ASSE b>",
+            "confidence": 0.728,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:07:17.006Z"
           }
         }
       ]
@@ -45683,6 +45692,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:07.308Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Siena",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:07:25.181Z"
           }
         },
         {
@@ -45706,6 +45724,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:09.814Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i iena Vineyard Resort\nPaso California\nResort\nSiféna Vineyard Resort\nResor",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:07:39.742Z"
           }
         },
         {
@@ -45729,6 +45756,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:12.370Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vineyard Resort\nCalifornia",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:07:54.155Z"
           }
         },
         {
@@ -45752,6 +45788,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:14.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PASO) N\nSirena VineyardsResort.\nSirena Vineyard Resort",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:00.545Z"
           }
         },
         {
@@ -45775,6 +45820,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:17.493Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:15.284Z"
           }
         },
         {
@@ -45798,6 +45851,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:21.844Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serenade beach a Spa resort\nPunto Gand\nserenade resort\nPunta\nspa resort",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:24.037Z"
           }
         },
         {
@@ -45821,6 +45883,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:24.334Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sirena\nSirena Vineyard Resort\nPaso Robles,",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:33.811Z"
           }
         }
       ]
@@ -70126,6 +70197,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:27.823Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:41.215Z"
           }
         },
         {
@@ -70149,6 +70228,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:29.995Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:46.944Z"
           }
         },
         {
@@ -70172,6 +70259,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:33.708Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FOR SERENA\n(Blain) ia\nKNOW?\nWITH NOON P\nBUT YOUR CABBAGE PATCH\nBAGE PATCH?",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:08:52.304Z"
           }
         },
         {
@@ -70195,6 +70291,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:43.880Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:00.699Z"
           }
         },
         {
@@ -70218,6 +70322,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:47.183Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DISTANCE:\ny HAIN",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:10.524Z"
           }
         },
         {
@@ -70241,6 +70354,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:49.977Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FAISALABAD SERENA\nHOTEL\nFaisalabad, Pakistan\nFAISALABAD SE A\nFaisalabad n\nFAISALABAD SEREN",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:16.025Z"
           }
         },
         {
@@ -70264,6 +70386,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:01:55.099Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:21.317Z"
           }
         },
         {
@@ -70287,6 +70417,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:00.567Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:30.058Z"
           }
         }
       ]
@@ -82137,6 +82275,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:07.291Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ERI ALLE 22\nCiao scusa se ti scrivo ma io domenica\nandrò al sibari green resort ma sono\nmolto preoccupata perche sono incinta\ndi 8 mesi e lo vedo molto grande e\ndispersivo. Volevo chiederti se le stanze\nsono molto lontani dai ristoranti e dalla b\nreception e ogni quanto passa la navetta\nx il mare.. perche so che che andare al\nmare senza la navetta è un po’ lontano. 3\nTra l'altro ho problemi di salute e\nnecessito i bagni sempre vicini ci sono\nvillaggio o solo nella stanza 2\ndi 8 mesi e lo vedo molto grande e è\ndispersivo. Volevo chiederti se le stanze f\nsono molto lontani dai ristoranti e dalla\nreception e ogni quanto passa la navetta 7\nxil mare.. perche so che che andare al (4\nmare senza la navetta è un po’ lontano.\nbagni sempre ci sono\nxil villaggio o solo nella stanza\nmolto preoccupata perche sono incinta a\ndi 8 mesi e lo vedo molto grande e i\n1 dispersivo. Volevo chiederti se le stanze\nreception e ogni quanto passa la navetta 4\nmare senza la navetta è un po’ lontano. pri\nnecessito i bagni sempre vicini ci sono 7 3\nxil villaggio o solo nella stanza gl",
+            "confidence": 0.895,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:48.006Z"
           }
         },
         {
@@ -82160,6 +82307,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:10.363Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:54.047Z"
           }
         },
         {
@@ -82183,6 +82338,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:12.784Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:09:59.618Z"
           }
         },
         {
@@ -82206,6 +82369,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:16.249Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SIBARI GREEN\nRESORT A\nGalaxy",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:10:16.779Z"
           }
         },
         {
@@ -82229,6 +82401,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:20.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:10:29.362Z"
           }
         },
         {
@@ -82252,6 +82432,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:25.525Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fill\ngovernment quietly began\nconstruction beneath\nDwight Eisenhower initiated the\nonstruction of what became the go-to fallout\nor the entire Congress in the event of a nuclea\nstrike by the Soviet Union.\nG Add Us on Google\nfallout shelter designed to keep i\nCongress functioning after a\nhe blast door at Greenbrier.\nhe Greenbrier\nBut keeping a bunker this large\nready required a A company\nMeanwhile, guests above were\ngolfing,\nIts days as a secret\ncongressional refuge were over.",
+            "confidence": 0.872,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:10:42.034Z"
           }
         }
       ]
@@ -91711,6 +91900,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:28.175Z"
+          },
+          "ocrData": {
+            "textOnScreen": "my favorite section at\naylos bay (Akosombo)\nÈ my favorite section at\nmy favorite section at A",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:10:47.849Z"
           }
         },
         {
@@ -91734,6 +91932,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:30.827Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Vill\nThe Villa\npalm]\nCapture: Serene kway palm\ntrees, swaying greenery?\ngsandy\ninviting\nDon't",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:11:00.135Z"
           }
         },
         {
@@ -91757,6 +91964,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T23:02:34.704Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Check 0 dari\n@clairefavoll y",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T23:11:09.330Z"
           }
         },
         {
