@@ -30461,7 +30461,16 @@
           "likes": 38500,
           "comments": 298,
           "shares": 1021,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:10.185Z"
+          }
         }
       ]
     },
@@ -45601,7 +45610,16 @@
           "likes": 484,
           "comments": 0,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, tu vieni qui. Lascia che lo vediamo. Lascia che lo vediamo. Stop! Oh, che bello! Mi stai rovinando. Voglio vedere alcuni dei tuoi amici. Grazie. 8? Oh, 8. Sto rinnovando, ok. E mia mamma, se non è rovinata, rompe. Ho dovuto andare a cambiare per scuola, sono in ritardo. Sì? No. Ma sei tornato? Non sono tornata per te. Ma Blair è il mio migliore amico e sei il suo amico e lei ti ama. È così come pensi che sia. Ho bisogno di parlarti, che significa che puoi ascoltare. Nate, hai detto a Blair che stavamo a pensare... Come stai a pensare? Non posso parlare. Ma Blair potrebbe vedere questo? Sì, ci vediamo. Non sto cercando di farlo. Per favore, prendi il tuo amico.",
+            "language": "Italian",
+            "durationSec": 74.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:14.301Z"
+          }
         }
       ]
     },
@@ -51722,7 +51740,16 @@
           "likes": 34,
           "comments": 2,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 16.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:19.287Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -51736,7 +51763,16 @@
           "likes": 29,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, ho detto prima e lo dirò ancora. La vita si muove velocemente. Non stoppi e guardi avanti. Puoi perderti.",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:21.806Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -51750,7 +51786,16 @@
           "likes": 18,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "New furniture business in town. Casa Serena, now open. Come to Casa Serena and experience it for yourself.",
+            "language": "Italian",
+            "durationSec": 15.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:24.090Z"
+          }
         }
       ]
     },
@@ -60714,7 +60759,16 @@
           "likes": 22500,
           "comments": 99,
           "shares": 4743,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 49.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:33.842Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60728,7 +60782,16 @@
           "likes": 28,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 20.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:36.260Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60742,7 +60805,16 @@
           "likes": 28,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per aver guardato il video.",
+            "language": "Italian",
+            "durationSec": 20.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:38.682Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60756,7 +60828,16 @@
           "likes": 237,
           "comments": 17,
           "shares": 164,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I miei amici mi hanno messo un commento sui miei video di buffet e grande serena, quindi ho dovuto fare un video, ma non ho capito quanto ho fatto di video. Tutto ciò che posso dire è che l'hotel è conosciuto per la sua alimentazione incredibile, e c'è tanto da scegliere. C'è il barbecue a piazza, come anche alcuni restaurant che sono stati attaccati.",
+            "language": "Italian",
+            "durationSec": 21.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:42.482Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60770,7 +60851,16 @@
           "likes": 197,
           "comments": 13,
           "shares": 182,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sapete che al lato del Serenade Familiar c'è il Serenade Adults Only? Vieni e ti mostro. Questo è il Serenade All Suite Adults Only, un hotel esclusivo per adulti dove l'ambiente è tranquillo, elegante e perfetto per disconnettere il stress. Lo primo che voglio insegnarti è il buffet. Il buffet ha molta varietà, frutta fresca, pane, uova preparate al momento, opzioni dolci, salate e tutto ciò che necessiti per iniziare il giorno con un buon piede. L'hotel è abbiato recentemente, per questo tutto si sente moderno, limpido e molto ben cuidato. ogni rincone è pensato per rilassarti e divertirti senza pressi. Le piscine sono preziosi e hanno un ambiente molto tranquillo. Puoi passare ore bevendo il sole, divertendovi in un cocktail o semplicemente riportando mentre ascolti il sonno dell'acqua. Inoltre, ha vari ristoranti e bar per che ogni cibo sia un'esperienza diversa, senza necessità di uscire dall'hotel. Se stai cercando una vacanza per riportare, mangiare delizioso e divertirti in un hotel bello e tranquillo, un ambiente relajato, il Serenade All Sweet è il tuo. Dime se ti è piaciuto.",
+            "language": "Italian",
+            "durationSec": 59.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:46.124Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60784,7 +60874,16 @@
           "likes": 9986,
           "comments": 32,
           "shares": 76,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "What we each actually want from this vacation? For Zachary, golf and fun activities. For Alex, free flow of drinks. For Chela, sea, sand and sun. For Josh, all you can eat. As for me, having them in the same place as me so I can take unlimited pictures of them.",
+            "language": "Italian",
+            "durationSec": 22.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:51.152Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60798,7 +60897,16 @@
           "likes": 48,
           "comments": 3,
           "shares": 23,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come è il serenale All Swiss? Un all inclusive imponente, lujoso e immenso con barra da prima pileta per scaviare come se fosse il tuo ultimo giorno. Ha giochi per ragazzi, con tobogane molto buoni, anche per grandi. Tra le due pilete c'è un sport bar per mangiare come mai e perché non giocare al pool? Le abitazioni enormi, di lujo e moderne, con delle viste che ti caghi dietro. La seconda pila è più vicina alla piazza, con barra anche, e ogni pileta ha il suo idromassaggio. Salire direttamente alla piazza, cance di volley, palme, un food truck per continuare a mangiare e un'altra barra per finire flottando nel mare. Guardate questo video e inviacelo a tutti i viaggiatori che si merita questo All Inclusive. E seguiteci se stai sempre sfruttando.",
+            "language": "Italian",
+            "durationSec": 35.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:54.430Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -60812,7 +60920,16 @@
           "likes": 295,
           "comments": 13,
           "shares": 161,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:43:59.829Z"
+          }
         }
       ]
     },
@@ -69639,7 +69756,16 @@
           "likes": 89,
           "comments": 0,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buonasera, qui siamo nel fraccionamento residenziale Serena, ubicato qui nel polideportivo e oggi stiamo visitando queste belle case, qui abbiamo ancora una disponibile e abbiamo anche queste due, ma oggi visitiamo queste, guarda che bella è qui la facciata qui hai spazio per due auto, porta di sicurezza, questa casa di disegno è una casa con molta illuminazione ha finestre di cristallo per sentire la casa più aperta, quindi andiamo a passare per che la vediamo e bene qui guarda, siamo entrati e il primo che ti riceve è il ricevedore è il ricevedore che puoi mettere un specchio, un un po' di pitture belle, qualcosa che decoro molto bello e qui hai l'area della sala al cibo vedete quanto è bello questa casa ciò che mi piace molto è che è una casa molto illuminata ha queste ventane molto grandi qui è uguale la parte di dietro e qui non hai perché preoccuparti perché la zona è molto sicura ha dei finiti molto belli questo piso ha un formato di 120 x 60 è molto il piso la verità e questo piso combina con questo muro anche che è un materiale come tipo pietra molto bello è come color beige non so se si vede bene nella camera di questo lato hai la cucina con barra di granito molto padre per il prezzo che ha questa casa e ti offrono una cucina di granito eccellente la verit che una buona opzione hai gi la tua cucina cucina integrale con carpinteria la tua campana hai gi equipata la stufa in questo lato hai un spazio per guardare gli alimenti come una cena, hai il spazio per il refrigeratore tutta la casa ha illuminazione LED, hai preparazioni per il clima, hai molti spot in tutta la casa per che sia ben illuminata e da questo lato hai il lavabo di visite vedi, hai il tuo lavabo questi sono i lavaboni di una piezza anche qualcosa che mi è piaciuto è questa ventanita del lavabo per che sia ben illuminato e ventilato qui metterai la tua palla qui hai i contatti o anche la puoi mettere da questo lato dipende dal gusto e qualcosa che mi è anche piaciuto è che qui hai anche un compartimento per guardarlo qui nel passaggio hai la bomba, hai la cisterna in parte di davanti della cisterna hai un passaggio molto ampio questo è il patio, più o meno il patio mide 3 metri per 8 di spazio quello che mide la casa di davanti 8 metri guarda questa la parte di dietro e bene andiamo per la parte di sopra qui possiamo vedere l delle escalere pi o meno come 120 di spazio, hai qui questo barandolo di rariera, sali qui nel passaggio di distribuzione del lato sinistro sono le camere secondarie un bancho completo e la la camionetta principale, quindi andremo a entrare prima le camionette secondarie come puoi vedere sono molto ben illuminati, hanno le loro luci spot, hanno uno, due, tre, quattro, cinque, cinque fuochi, perdon 6, puoi fare il fuoco dove va un ventilatore se vuoi mettere un ventilatore, hanno i contatti da ogni lato, spazio per closet, contatto per la palla, preparazione per mini split e qui queste camere mediano 1.2 o 1.20, mediano più o meno circa 3 x 3 3 x 3 e mezzo più o meno mediano ogni camere secondarie, questa è uguale solamente è specchiata cerchiamo qui la finestra e vedete è praticamente lo stesso livello e ha lo stesso formato di piazza è uguale al di sotto spazio per la chiusura qualcosa che mi piaciuto molto di questa casa sono le porte sono molto belle le porte sono da piso a techo allora bene quasi a techo questo le fa molto eleganti che si vede molto elegante, questo è il luogo del compartimento del cavale di camera, ha il suo nicho, questi sono gli accessori che ha, sono molto belli, tutti platiti e andiamo a quello che viene a dire la camionetta principale la camionetta principale è molto aperta come la parte di sotto qui puoi aprire quando stai pulendo o semplicemente se vuoi che sia più ventilato puoi aprire questa finestra e poi si inizia a mettere l'aereo in padre, guarda qui hai un cristallo templato, è molto ampio e guarda questo è il bagno della camionetta principale, hai questa porta corredita, qui si ingegneranno molto bene, apri e hai quello che viene a dire il sanitario e la regadera, la mano doppia e qui da questo lato è è l'area del closet e vestito e bene se tu sei interessato in questa casa qui metterò i dati il prezzo di questa casa è di 2 milioni 580 mila pesos e ora abbiamo di promozione opzione 1 4 mini split e opzione 2 pannelli solari per non usare luce quindi se vuoi vederla manda un messaggio",
+            "language": "Italian",
+            "durationSec": 396.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:08.671Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -69653,7 +69779,16 @@
           "likes": 886,
           "comments": 10,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 48.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:11.336Z"
+          }
         }
       ]
     },
@@ -81304,7 +81439,16 @@
           "likes": 46,
           "comments": 2,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La TGC parli! La TGC parli! La TGC parli! La TGC parli!",
+            "language": "Italian",
+            "durationSec": 13.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:15.398Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81318,7 +81462,16 @@
           "likes": 1801,
           "comments": 91,
           "shares": 79,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:18.114Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81332,7 +81485,16 @@
           "likes": 5,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:20.277Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81346,7 +81508,16 @@
           "likes": 501,
           "comments": 29,
           "shares": 89,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:24.952Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81360,7 +81531,16 @@
           "likes": 126,
           "comments": 2,
           "shares": 15,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 21.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:27.715Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81374,7 +81554,16 @@
           "likes": 600,
           "comments": 11,
           "shares": 377,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "qui c'è un vlog completo del mio tempo allo resort di Greenbrier a West Virginia ho fatto un viaggio da New York a West Virginia che era circa 7 e mezza ore è stato definitivamente un buon giorno ma quando siamo arrivati lì e ho visto il bellissimo edificio è stato tutto valido ho ascoltato e scoperto l'hotel un po' questa è la prima volta che sono stata allo Greenbrier e è stato un bel momento per vedere tutto è stato così estravagante e bellissimo abbiamo scoperto le chiese in cui stavamo con questi bellissimi impianti florali che sono la signatura del Greenbrier quindi ovviamente mi sono interessata. Mio bambino è stato qui ogni anno da quando aveva cresciuto, quindi mi ha mostrato un po' e io ero onestamente solo in augurio della propria. E' veramente così stupendo. Ci sono anche tanti e tanti attività da fare qui. C'è un pool, c'è il golf, c'è il croquet, c'è la scuola. Puoi tornare nel loro bunker segreto, puoi fare una gara di carriera, puoi prendere foto. E' veramente inesistente. Spoiler alert, ma ho speso molto tempo al spa. siamo pronti per la cena e siamo andati in basso alla loro barca di lobby e abbiamo preso dei dolci Tommy è usando i suoi glasetti infamosi perché se c'è un posto dove usareli è sicuramente qui poi siamo andati a casa per la nostra prima cena a Forum, abbiamo preso un po' di cibo italiano e poi siamo andati all'allea di bollinga e abbiamo fatto un po' di bollinga familiare che era il modo perfetto per finire la notte la prossima mattina sono svegliata bianca e presto e sono andata in basso alla spa, stavo facendo il loro trattamento di Greenbrier oggi dove si soffrono in una tuba di sulfato e poi fanno un spray scottese e poi un massaggio. Era davvero fantastico e la loro spa è bellissima. Poi siamo andati al pool ho ottenuto un alcol ovviamente e abbiamo aspettato che i ragazzi venissero da golf Siamo tornati in casa abbiamo stoppato la macchina di candi e abbiamo ottenuto un po di cioccolato che era davvero buono Abbiamo cambiato e siamo andati in bus e siamo andati in club di fatti Non avevo mai tirato un fattiglio, ma una cosa che mi piace è che quando ero cresciuta mio papà mi ha insegnato a tirare fatti BB e lo ho fatto molto in campagna. E' stato sorprendentemente davvero davvero buono. E sbagliatamente, mi sono diventata un po' emozionata perché sapevo che mio papà avrebbe amato di aver fatto questo con me. dopo la fotografia siamo tornati all'hotel, abbiamo preparato la cena e abbiamo fatto alcune foto con il loro fotografo professionale e ovviamente ho fatto Tommy prendere alcune foto con me avevo dovuto prendere un altro julepino di menta prima di andare a cena e stasera stavamo mangiando nella stanza principale e la loro alimentazione era assolutamente insana, tutto era 10 di 10 quando andiamo bisogna prendere la salmonella con miso perché era così buona dopo la cena siamo andati al casino e ho detto a Tommy che mettevo 50 di red e abbiamo perso la cena quindi siamo tornati subito in alto e siamo andati a dormire La prossima mattina sono tornata in spa per fare un massaggio sui suoi capelli e mi è piaciuto. Poi ho fatto la tour del bunker e poi sono andata a Draper per un alimento. Siamo andate in stanza per un po' e poi sono andata a preparare il tè. Abbiamo avuto un tè in lobby con dei piccoli cupcake e dei snack, che erano così divertenti. Poi sono tornata in stanza, ho fatto un piccolo cambiamento e siamo andate a cena. Oggi stiamo mangiando a Prime 44, che è la loro stacca. Abbiamo ottenuto i loro insani pollo di maiale. i pomodori, se venite qui dovete assolutamente prenderlo. Ho preso il lamb che era così buono, questo è uno dei miei dinners preferiti del tutto il viaggio. Tommy e io abbiamo passato la resta della notte a giocare a chess al bar e poi siamo svegliati la prossima mattina per il brunch e era ora di andare. Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! Eccolo! i loro pezzi fritti prima di lasciarvi se avete piaciuto il mio vlog, sicuramente sarò di nuovo",
+            "language": "Italian",
+            "durationSec": 197.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:34.509Z"
+          }
         }
       ]
     },
@@ -90793,7 +90982,16 @@
           "likes": 8,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:37.387Z"
+          }
         }
       ]
     },
@@ -101290,7 +101488,16 @@
           "likes": 1339,
           "comments": 14,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 14.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:42.411Z"
+          }
         }
       ]
     },
@@ -110119,7 +110326,16 @@
           "likes": 83,
           "comments": 8,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Africa, gli anziani mi chiamano, dalla dorata di oro mi rispondo, Simuka Africa. Ciao South Africa's gold shining in the morning light Kenya's wild spirit where the lions run free The rhythm of the djembe calling back home to me Zimbabwe, Zambia, Malawi, Mozambique South Africa, Botswana, Namibia Kenya, Tanzania, Uganda, Ethiopia, Rwanda Grazie a tutti Di a Congo Camerun Gabon Egypt Morocco Sudan One heart one blood one land Nigeria, Ghana, Senegal, Ivorico Di a Congo, Camerun, Gabon, Egypt, Morocco, Sudan One heart, one blood, one land Ciao La città di Zimbabwe Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 198.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:50.509Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -110133,7 +110349,16 @@
           "likes": 537,
           "comments": 17,
           "shares": 106,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": "Italian",
+            "durationSec": 11.1,
+            "model": "whisper-large-v3",
+            "status": "no_speech",
+            "version": 1,
+            "updatedAt": "2026-09-17T17:44:53.752Z"
+          }
         }
       ]
     },
