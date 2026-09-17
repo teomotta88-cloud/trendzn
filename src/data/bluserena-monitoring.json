@@ -30493,7 +30493,16 @@
           "likes": 11,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 13.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:04.838Z"
+          }
         }
       ]
     },
@@ -45665,7 +45674,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ragazzi questo ti farà piacere non hai bisogno di un passaporto o di volare oltre per ottenere le vibra di Santa Rina questo stupendo resort di vinieria bianca è qui in America solo 150 dollari a notte villas private, visite di vinieria e tasti di vino tutti inclusi clicca il link sotto per book before room sale",
+            "language": "Italian",
+            "durationSec": 14.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:07.308Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45679,7 +45697,16 @@
           "likes": 341,
           "comments": 5,
           "shares": 46,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:09.814Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45693,7 +45720,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:12.370Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45707,7 +45743,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I don't need no light to see you shine It's your golden light",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:14.695Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45721,7 +45766,16 @@
           "likes": 12,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 27.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:17.493Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45735,7 +45789,16 @@
           "likes": 968,
           "comments": 76,
           "shares": 1382,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stavamo a Serenade Beach & Spa Resort in Punta Cana e c'era tanto divertimento. L'hotel era super bello e questa era la stanza in cui stavamo. Inizialmente abbiamo bookato per una vista dal balcone, ma abbiamo finito con l'upgrade a una salita. e era una bella vista dalla stanza, abbiamo potuto vedere il piove, il parco d'acqua, era molto rilassante e all'interno dei closet hanno dato roba e flipper che ho pensato fosse bello buonissimo questo era l'esterno della stanza in basso nella lobby avevano questo caffè che era così buono le fracce erano incredibili ci sono anche sei bar diversi da scegliere la mia barra preferita era la barra di suelo la migliore cosa mai stata è stata così divertente hanno anche questi piccoli slide d'acqua e un hibachi avevano sei differenti ristoranti da scegliere e questo era il buffet principale che servono al piatto, al pranzo e al cena. Penso che siano aperte fino a 2 am, che è molto buono. Questa era la piazza, era così bella. Ogni giorno era qualcosa di diverso, quindi questo giorno c'era una fiera, hanno anche un party bianco, hanno un disco, una notte per i bambini, hanno anche un club. Se avete bambini o non vi interessa, non vi interessa, sono sicuramente il resort a visitare. Hanno anche un adulto solo, qui vicino.",
+            "language": "Italian",
+            "durationSec": 87.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:21.844Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45749,7 +45812,16 @@
           "likes": 265,
           "comments": 3,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:24.334Z"
+          }
         }
       ]
     },
@@ -70045,7 +70117,16 @@
           "likes": 7400,
           "comments": 80,
           "shares": 43,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ora è il momento per l'hotel. every time, enough love, prestige platinum member, a me that gown teas, coffees and that water, when I drink that don't scan the QR code right now un buglet bed for my head think about life, sip on this take a quick sugary drink Fanta, blackcurrant me again one time for the view what we saying ok ok ok ok Mmm Mmm Non mi interessa la vista Non mi interessa All right Serena Hotels Those got to be back Kenya, Nairobi We're there",
+            "language": "Italian",
+            "durationSec": 73.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:27.823Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70059,7 +70140,16 @@
           "likes": 5936,
           "comments": 2,
           "shares": 235,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Gossip Girl here, your one and only source into the scandalous lives of Manhattan's elites.",
+            "language": "Italian",
+            "durationSec": 5.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:29.995Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70073,7 +70163,16 @@
           "likes": 45,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, sono qui. Dove eri? Stava aspettando in un'area hotel per mio bambino. Per parlare. Per parlare di perché non parlavamo. Non sembra più sbagliato la seconda volta. Perché non parlavate? Ha a che fare con il perché stavate aspettando Serena? Stavate aspettando cosa? Stavo a pensare che stavate aspettando me. Esattamente ciò che la situazione ha bisogno. Chuck. Ora, cosa sta succedendo qui? Stavamo appena arrivando. Claire, per favore, non faccia questo. Scusa. Vuoi dirgli? Lo dirò. Lo sai? Lo so tutto. E appena, non so niente. Sì, è vero. Purtroppo Daniel, poca tempo, pochi sottotitoli per affrontare. È tutto bene, è tutto bene, tutti possono fermarsi a guardare. È un zucco, ma è mia colpa e mi tolgo. Io ti farò con te. In realtà preferisco se non lo fai.",
+            "language": "Italian",
+            "durationSec": 76.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:33.708Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70087,7 +70186,16 @@
           "likes": 741,
           "comments": 18,
           "shares": 114,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Per quanto riguarda le proprietà di Serena in Pakistan o in Asia, posso dire con sicuro che la più bellissima è la Serena Hunza Karimabad. È un'ottima proprietà, quando stai a planificare un'attività di Serena Hunza, non dimenticare di stare in Serena Hunza. Questa è la swimming pool Serena Hunza e da qui entriamo nel club di salute. qui ci sono tutti i servizi di salute e il gym e qui c'è lo spa che vi porteremo a bordo qui abbiamo un'altra sala di rilassamento qui c'è la stima qui c'è la sauna qui c'è il luogo per il scioglio dopo il swimming pool qui c'è il changing room e qui c'è il locker Questo era il spa, ora andiamo in un'altra parte.",
+            "language": "Italian",
+            "durationSec": 98.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:43.880Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70101,7 +70209,16 @@
           "likes": 197,
           "comments": 20,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come una ragazza nera e bianca, ho sentito sicuro quando ero in Antigua, quindi volevo condividere dove mi sono rimasto, in caso ti stessi guardando. Perché, sinceramente, dove mi sono rimasto mi ha fatto la mia esperienza in Antigua molto meglio. Mi sono rimasto a La Villa Serena, che è un oasis caldo che si siede un po' fuori dal cuore di Antigua, ma ancora in distanza di tutto. Esplorare la propria propria era fantastico perché tutto si sentiva così intenzionale. Sono stata in un mondo completamente diverso e mi sento così piccola nel modo più possibile. Quindi ho speso molto tempo fuori quando potevo. Quando parlo delle chiese, sono tutte di un tema diverso, quindi la mia è la passaggio in India. Mi piace l'artigianato, i dettagli e soprattutto il balcone. La parte migliore era la piazza perché è qui che la spirito di Antigua mi ha presentato. Le vittime erano straordinarie. A ogni corner che ho tornato ho visto vulcano, ho anche visto il fuego irrupto e ho anche esperienziato uno dei migliori sottoposti che ho mai visto.",
+            "language": "Italian",
+            "durationSec": 46.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:47.183Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70115,7 +70232,16 @@
           "likes": 79,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se il tuo mercato è iniziato, il tuo mercato è successivo. Se il tuo mercato è iniziato, il tuo mercato è successivo.",
+            "language": "Italian",
+            "durationSec": 15.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:49.977Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70129,7 +70255,16 @@
           "likes": 13,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:01:55.099Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -70143,7 +70278,16 @@
           "likes": 98,
           "comments": 18,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Finali, che cu poni a vodemo primary And by the way, mu temo tu te gradually Ah, pati ca fessi na maso cosciuo per engelo mwana O no watambulati, wati wati uri moto ke kona Su zendi laki, ela pie la pie, ela si chadonia Awe limu omo visi, kona bate simba kute kukona Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:00.567Z"
+          }
         }
       ]
     },
@@ -81984,7 +82128,16 @@
           "likes": 20,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Allora raga, adesso allego sopra un commento che è stato quello più difficile al quale rispondere perché mi sono dovuto informare per bene di una signora che praticamente ha dei problemi di salute però è anche incinta di otto mesi e quindi mi chiedeva se fosse comodo il villaggio negli spostamenti da mare alle camere ci sono solo le navette per tutti quanti però io mi dovevo informare meglio e quindi ho chiesto alla turnante Vincenza, gentilissima che ha saputo dei miei video e ho chiesto a lei qualche informazione dettagliata la quale mi ha detto che praticamente su richiesta specifica solo in casi eccezionali si può richiedere una macchinetta direttamente, credo in reception, e sui vari spostamenti può essere dedicata espressamente a lei. Quindi anche su questo punto di vista riusciamo a darvi buone notizie. quindi puoi tranquillamente richiedere la macchinetta che verrà utilizzata solamente per lei spero che sei contenta di questa cosa, puoi venire tranquillamente in Resort",
+            "language": "Italian",
+            "durationSec": 95.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:07.291Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -81998,7 +82151,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 59,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:10.363Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82012,7 +82174,16 @@
           "likes": 11,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ma dillo ancora che ci credo, amore, senza una ragione, senza via d'uscita, impossibile padre e madonna è la nostra vita.",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:12.784Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82026,7 +82197,16 @@
           "likes": 7,
           "comments": 6,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 19.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:16.249Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82040,7 +82220,16 @@
           "likes": 1479,
           "comments": 17,
           "shares": 195,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:20.846Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -82054,7 +82243,16 @@
           "likes": 94,
           "comments": 14,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Per 30 anni, i guesti a uno dei resort più luxuriosi del sud non avevano idea di cosa stava scoperto sotto i loro piedi, un bunker nucleare segreto costruito per il Congresso degli Stati Uniti. Nel post-1950, durante la Guerra del Colde, il governo americano ha iniziatto la costruzione sotto il resort di Greenbrier in West Virginia, in White Sulphur Springs. Il progetto stava scoperto dietro la costruzione di un nuovo wing hotel. Bene di lui c'era un'esplosione di 112.000 m2 che era disegnata per mantenere il Congresso funzionante dopo un'attacca nucleare. All'interno c'erano porte di blasto massive, scioglie di decontaminazione, stuoli di banchiere, aziende mediche, una caffetteria e equipaggi di comunicazione. Ci sono anche chiamate separate dove la Corte e il Senato potrebbero incontrare l'interno. ma mantenere un bunker così grande era necessario per le persone. Una compagnia chiamata Forsyth Associates operava nel resort, supposamente mantenendo le sue televisioni. Di dietro a quella coppia, i lavoratori mantenevano il bunker pronto per un'emergenza. Nel momento, i clienti al di fuori golfavano, dinevano e vacanavano senza sapere cosa stava dietro. Il segreto durò tre decenni. Poi, nel 1992, una investigazione di Washington Post ha rivelato il bunker al pubblico. I suoi giorni come un rifugio congresso segreto sono finiti. Oggi, i visitanti possono tourare porzioni del facility. Per decenni, una delle installazioni di guerra fredda più segrete d'America stava scoperta sotto un resort di luxurio nelle montagne di West Virginia. Questo è Strange South Chronicles.",
+            "language": "Italian",
+            "durationSec": 110.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:25.525Z"
+          }
         }
       ]
     },
@@ -91504,7 +91702,16 @@
           "likes": 48,
           "comments": 10,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:28.175Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -91518,7 +91725,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Capture, serene walkway resort, palmi di trezzino sguardo gentilmente, greenery lusso, beach sottile, bambini di pastello, luci blu con poche nuvole, invito in area di pool, vibes tropicali. Non aspettare, book i vostri ticket attraverso il link in la destra destra.",
+            "language": "Italian",
+            "durationSec": 20.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:30.827Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -91532,7 +91748,16 @@
           "likes": 702,
           "comments": 12,
           "shares": 151,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Check out situation dari kamarku yang, aduh, susah banget sih aku move on-nya sama pemandangan ini. All good, semuanya. Ini bed-nya empuk banget, king coil. Terus pemandangan juga juara. Meja kerjanya bagus, teko listriknya berfungsi. All good, semuanya AC-nya dingin banget. Wifi-nya kenceng banget, karena ada router di situ. La chiesa è super comfotabile, vedete la piazza di dietro di me, la piazza, i giorni fa ho bevuto qui, è molto bello, sono con le bintane che vedete qui, la chiesa di shower è molto bella, non è troppo pesante, il water heater è molto sicuro, due khusushan move on dari hotel di Lombok se volete provare l'esperienza di vivere con un'ottima vista cliccate sull'occhio di giallo di qui",
+            "language": "Italian",
+            "durationSec": 71.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T23:02:34.704Z"
+          }
         },
         {
           "platform": "tiktok",
