@@ -30399,7 +30399,7 @@
           "url": "https://www.tiktok.com/@giuseppeazzarello1/video/7666484390100208929",
           "date": "2026-07-25T15:14:55.000Z",
           "caption": null,
-          "location": null,
+          "location": "Bluserena",
           "views": 600,
           "imageUrl": null,
           "likes": 9,
@@ -30423,7 +30423,31 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-17T12:31:03.796Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "relax",
+              "natura",
+              "romanticismo"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T12:35:53.146Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "relax",
+            "natura",
+            "romanticismo"
+          ]
         }
       ]
     },
@@ -90414,7 +90438,7 @@
           "url": "https://www.tiktok.com/@86nonmiinteressa/video/7665974661791894816",
           "date": "2026-07-24T06:16:54.000Z",
           "caption": "top serenusa resort Licata",
-          "location": null,
+          "location": "Serenusa Resort",
           "views": 1300,
           "imageUrl": null,
           "likes": 20,
@@ -90437,7 +90461,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-17T12:34:05.905Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "musica",
+              "serata"
+            ],
+            "location": "Serenusa Resort",
+            "confidence": 0.78,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T12:35:54.298Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "musica",
+            "serata"
+          ]
         }
       ]
     },
