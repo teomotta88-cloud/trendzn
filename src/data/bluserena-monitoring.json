@@ -120893,7 +120893,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T07:12:20.349Z"
+          }
         }
       ]
     },
@@ -128054,7 +128063,16 @@
           "likes": 308,
           "comments": 7,
           "shares": 67,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vendetta, il senso di un'impassione inondabile, Valentino",
+            "language": "Italian",
+            "durationSec": 10.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T07:12:22.920Z"
+          }
         }
       ]
     },
@@ -134705,7 +134723,16 @@
           "likes": 132,
           "comments": 8,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T07:12:25.549Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -134719,7 +134746,16 @@
           "likes": 60,
           "comments": 4,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "se vuoi andare a Cefdean di Depok ma sei bingono di dove parkare o dormire, questo è il video per te. Safero Hotel Depok, la sua locazione è giusto sulla strada di Margonda, quindi è super strategico se vuoi arrivare a Cefdean di Depok. Inoltre, sulla strada di Margonda, questo hotel è anche vicino all'area Ui. Wow, la sorpresa è che il look della camera è vintage, dal sito, dal wallpaper, dalla tavola, ma è comunque comoda. Puoi ottenere un prezzo speciale cliccando sull'occasione in basso a destra e se vuoi ottenere un'opera di piazza più alta della città, puoi scegliere Pioneer Room, è fantastico.",
+            "language": "Italian",
+            "durationSec": 47.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T07:12:31.079Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -134733,7 +134769,16 @@
           "likes": 86,
           "comments": 4,
           "shares": 46,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 23.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T07:12:33.696Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -134747,7 +134792,16 @@
           "likes": 26,
           "comments": 4,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Cari hotel nyaman di Kalianda. Dari depan, hotelnya terlihat modern dan rapi. Lobinya bersih, terang dan nyaman. Kamarnya bersih dan nyaman. Kamar mandinya juga terlihat bersih. Ada juga area makan untuk sarapan. Plus, lokasinya praktis untuk singgah di Kalianda. Kalau mau menginap di Kalianda, ini bisa jadi pilihan.",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T07:12:38.382Z"
+          }
         }
       ]
     },
