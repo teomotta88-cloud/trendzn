@@ -89532,7 +89532,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-17T02:00:36.214Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "piscina",
+              "acqua",
+              "cielo",
+              "viaggio",
+              "booking"
+            ],
+            "location": null,
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-17T02:04:26.065Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "piscina",
+            "acqua",
+            "cielo",
+            "viaggio",
+            "booking"
+          ]
         }
       ]
     },
