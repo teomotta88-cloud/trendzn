@@ -30287,7 +30287,16 @@
           "likes": 51,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se stai cercando un look per l'ufficio o per delle passeggiate estive, questo abito blu nevi è perfetto. Il colore blu è sobrio ma raffinato e questo vestito è perfetto anche per taglie più abbondanti. Il collo fatto con questi anelli lo rende davvero unico. Mi raccomando, non puoi non averlo, quindi clicca qua sul carrellino e prendilo.",
+            "language": "Italian",
+            "durationSec": 24.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:54:53.850Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30301,7 +30310,16 @@
           "likes": 15500,
           "comments": 482,
           "shares": 92,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "E' questo per chi sta arrivando ora, noi siamo le fratrici Benvenuti nella nostra pagina Brisa Serena per il mondo Noi siamo le fratrici, viaggianti, liberi, nomadi",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:54:57.299Z"
+          }
         }
       ]
     },
@@ -45189,7 +45207,16 @@
           "likes": 137,
           "comments": 37,
           "shares": 22,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:54:59.656Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45203,7 +45230,16 @@
           "likes": 18,
           "comments": 9,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "E' nuova",
+            "language": "Italian",
+            "durationSec": 16.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:04.376Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -45217,7 +45253,16 @@
           "likes": 242,
           "comments": 14,
           "shares": 23,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:06.691Z"
+          }
         }
       ]
     },
@@ -59909,7 +59954,16 @@
           "likes": 28,
           "comments": 2,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il hotel a Kipri e Ayia Napi è so nice, so white.",
+            "language": "Italian",
+            "durationSec": 24.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:09.628Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59923,7 +59977,16 @@
           "likes": 140,
           "comments": 16,
           "shares": 15,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 15.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:12.602Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -59937,7 +60000,16 @@
           "likes": 110,
           "comments": 35,
           "shares": 35,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "... Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:15.302Z"
+          }
         }
       ]
     },
@@ -68638,7 +68710,16 @@
           "likes": 37,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 64.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:18.463Z"
+          }
         }
       ]
     },
@@ -80099,7 +80180,16 @@
           "likes": 488,
           "comments": 0,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 8.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:20.987Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -80113,7 +80203,16 @@
           "likes": 23,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:26.271Z"
+          }
         }
       ]
     },
@@ -89196,7 +89295,16 @@
           "likes": 76,
           "comments": 19,
           "shares": 72,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 31.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:28.683Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -89210,7 +89318,16 @@
           "likes": 703,
           "comments": 9,
           "shares": 1160,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:31.430Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -89224,7 +89341,16 @@
           "likes": 21,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica solo su video, sto passando oh ma oh che bello Il ritorno alla casa di Maria Maria è naturale ok, quindi quando siamo in terra a notte puoi guardare e vedere stai bravo oh, sarei bella sì, è brava",
+            "language": "Italian",
+            "durationSec": 92.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:36.274Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -89238,7 +89364,16 @@
           "likes": 273,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:39.525Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -89252,7 +89387,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Un resort a ponte vibrante sotto un cielo blu chiaro con acqua turquese pristina. Un viaggio su una strada serena attraverso un quartiere tranquillo con le tre palme sguardo lentamente contro un cielo chiaro. Wanderlust invita con una barca di patio moderno, sotto un cielo aperto, sette contro le luci distante. Non aspettare, book i vostri ticket attraverso il link in destra destra.",
+            "language": "Italian",
+            "durationSec": 25.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:42.555Z"
+          }
         }
       ]
     },
@@ -99528,7 +99672,16 @@
           "likes": 1724,
           "comments": 40,
           "shares": 47,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "se ti piace la sfumatura, devi considerare la sfumatura di Serena Chigo siamo andati a Horace su Tank Hill Road, non mi chiedi perché sono in scrubs, era così cosi, volevamo solo avere un'avventura tranquilla, guardare la montagna, era così bella, Gesù la nostra stagione era molto bella, ma molto divertente, mi piaceva guardare la montagna, era così bella da Horace siamo andati al supermercato per prendere un po' di snack per la notte e dopo la stagione ho dovuto incontrare il mio amico di Serena Chigo, quindi andiamo per la nostra fiesta di sfumatura date se vuoi la roba sai da dove la prendere polsci grande corno questa è la mia prima volta che ando a serena chico i fonte erano profumati erano tipo 5 o 10 non so se c'è solo molta acqua per quanto riguarda la vista del lago ma bello la città in cui mio amico sta vivendo è così bella ha una vista del lago penso che ogni paese di serena ha una vista del lago la piscina di serena chico è così buona non so come sfumare ma stavo solo suking the water it was so fresh but the tells that the polar need to be renovated says the github lungi but there's spaba no i guess serena yeah i understand where they call your five star neither pool has few people to attend to the clients so if you love swimming try serena out or if you're someone from there let me know how was your experience like thank you nelly for inviting me for a day pass at serena chica i'm a reviewer",
+            "language": "Italian",
+            "durationSec": 70.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:47.456Z"
+          }
         }
       ]
     },
@@ -107852,7 +108005,16 @@
           "likes": 130,
           "comments": 2,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ciao, accompagnami a vedere questo bellissimo appartamento ubicato in Inara 4° Norte, Torre Nara, livello 11. Questo appartamento ha una abitazione, la verità è che è abbastanza ampio, mi piace perché ha molta amplitudine. Questo appartamento può essere massimo per tre persone, ha un bagno, un dormitorio, un sofà cama e un parcheo. Ricordate che tutti i nostri appartamenti sono equipaggiati per che potete avere un ospedale di 1000 punti. ricordate che abbiamo appartamenti di una e due abitazioni in edificio inara 4 gradi nord edificio 7 edificio cubo guardate che bella la vista da qui se volete riservare potete fare con Natalia Medina al 3038 78 42 e sar un gusto poter attenderlo noi siamo ubicati nel cuore della capitale zona 4 so che passeranno un ospedale di 10 stelle quindi non aspettare più sali dalla routine vieni e ospedali con noi ricorda al 3038 7842 con Natalia Medina e sarà un gusto poter attenderti abbiamo appartamenti di una e due abitazioni ci accomodiamo a tuo presupposto e anche alla quantità di costi quindi reserva con Natalia Medina al 3038 7842 Bye Ciao",
+            "language": "Italian",
+            "durationSec": 131.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:55.168Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107866,7 +108028,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sotto il cielo lento, la notte comincia respiro piano le stelle mi guardano vieni con me nel buio della notte",
+            "language": "Italian",
+            "durationSec": 38.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:55:57.883Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107880,7 +108051,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Serena Resort Living, da 3.450.000 pesos. L'unico resort per vivere con un muoio privato in Riviera Veracruzana. 90% di obra, entrega in mesi. Zona Premium, Foro Boca, Marina El Dorado, Escuela Cumbres, Club de Golf Villarrica. Che compras con 3.450.000 pesos? Tudepa, 20 amenidades de hotel, muoio per abbracaciones. Le sue amenità sono le alberca e il soleadero, la cance di padel, il palapavar, i passatori pregolati, il gimnasio, l'area di meditazione, i giochi infantili, il pet park, il golfito, i carri di golf, il club di kayak, il mirador al rio, la casetta 24-7, solo 108 famiglie in tutto il residenziale, 6 edifici, 18 departamenti per torre, esclusività reale, real viene in raiz di Sebarmex. Ascettiamo il credito bancario di Fonavit, Deppa mostra il list.",
+            "language": "Italian",
+            "durationSec": 64.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:56:01.836Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107894,7 +108074,16 @@
           "likes": 40,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti al Terreno Resort a Los Angeles per la boda di Stephanie e William. Ora, questo bello paese ha avuto una boda a Montreal l'anno scorso e era epico, quindi hanno deciso di farmi fuori e di DJare la celebrazione. Non posso aspettare, guardate questo.",
+            "language": "Italian",
+            "durationSec": 27.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:56:05.126Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107908,7 +108097,16 @@
           "likes": 171,
           "comments": 12,
           "shares": 87,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I came to you and never asked too much Wondering what you would say Hoping you'd understand it's not a role I usually play Don't speak too much of what's been going on Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 50.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:56:08.675Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107922,7 +108120,16 @@
           "likes": 31,
           "comments": 7,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 32.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:56:13.761Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107936,7 +108143,16 @@
           "likes": 146,
           "comments": 4,
           "shares": 38,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 24.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:56:16.502Z"
+          }
         }
       ]
     },
@@ -119647,7 +119863,16 @@
           "likes": 2264,
           "comments": 146,
           "shares": 1425,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In Moni, pochi conoscono questa città. Questa è la città di risort. Vedete che bellissima? Qui ci sono i luoghi per i clienti. Per la buona sensibilità, ho un amico che mi ha chiesto di farvi vedere il luogo. Ciao a tutti. Che nome avete? Vũ. Vũ mi ha chiesto di vederlo. È molto bellissimo. È molto bello e carino. wow, è molto bello, è un'estate di grande qualità, una chiesa di design molto bella questo è davvero bello, è bello. Wow, c'è un piano di trattamento. Con gli occhi, è davvero carino. Qui c'è una finestra. Qui c'è una finestra in formato di sottile. E qui vedete la scala, la scala è una scala doppia. Ma la maggior parte di questo luogo è una scala doppia? Sì, abbiamo una scala doppia e un'altra scala unica. Per tre persone. qui c un piattaforma con una piattaforma e due piattaforme qui c un piattaforma con a vedere guarda qua molto freddo l completamente freddo è un'ambiente molto rosa, non ho mai visto un'ambiente così è molto bello questa sala ha due stelle dopo ci sono i prodotti wow, molto bello dopo ci sono anche i bianchi per i clienti, per chi vuole portare le cose o le tue casette ci sono tante cose, tutti sono a casa qui abbiamo 4 stazioni molto comode qui abbiamo una stazione unica questo è un'estate di caos! è una caos nonna lo è il materiale è caos nonna e la caos nonna è caos nonna è molto facilmente con un bordo di caos e il fuoco è molto facilmente bello è molto bello davvero bello vediamo da dentro vediamo da fuori vediamo la casa la casa molto bella il luogo del resort è molto comodo vicino al luogo naturale la posizione è molto distante l'interno è pieno di fiori di fiori qui è molto tranquillo non c'è nessun rumore in intorno è molto bello questo è un pavimento molto raffreddante in questa sera si può usare per la boda questo pavimento è molto chiaro esatto, è un pavimento molto speciale perché è un pavimento organico quindi il sistema di raffreddamento è completamente naturale non si usa nessun tipo di strumento non si usa nessun strumento? esatto, e noi abbiamo utilizzato questo pavimento perché la parte principale è la rongreo e abbiamo utilizzato il TIOV per far freddo la rongreo e questo è un'altra cosa che mi piace di questo pavimento è molto sicuro e sicuro per le persone che vivono qui e anche per i nostri clienti e questo pavimento è molto pulito e non è usato per nascondere è fantastico e questo pavimento è molto bello e qui dentro c una piazza di Le Tant che molto bella questo un resort Diamond House qui c'è una piazza di le tante, che è molto grande quando andiamo in strada, vediamo questa piazza Ora andiamo a vedere il panorama. Questa è la strada di Gua Nghia Giap, è molto vicina. Questa è la strada di Canh Dong Di Gio. Wow, è molto freddo. è molto bello e freddo la struttura del bordo è molto veloce è una struttura molto veloce è una struttura molto veloce e molto sicura e molto sicura e molto sicura grazie per avermi portato in un'esercizio e un'esercizio nel resort Diamond Hill nel resort Diamond Hill grazie a tutti e buona salute Grazie mille, buon appetito!",
+            "language": "Italian",
+            "durationSec": 306.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-17T01:56:31.016Z"
+          }
         },
         {
           "platform": "tiktok",
