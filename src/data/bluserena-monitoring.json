@@ -121983,6 +121983,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T12:30:07.283Z"
+          },
+          "ocrData": {
+            "textOnScreen": "and barra\nO Korea nce\nandre\ny Korean bi nce\nes 5 andre rrassi\no orean e i\nbarra\nKorean dance\ne 5 rrass\no Korean e i",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T12:35:12.977Z"
           }
         },
         {
@@ -122006,6 +122015,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T12:30:10.268Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SABADO DE UN CHOLADO\nDE CALENAS ee\nDEICALENAS\nUN CHOLADO\nIDE[CALENAS\nDE CALENAS D9",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T12:35:21.575Z"
           }
         },
         {
@@ -122029,6 +122047,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T12:30:15.817Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-17T12:35:32.208Z"
           }
         }
       ]
@@ -143501,6 +143527,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-17T12:30:24.651Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Say the names\nrituals, occult\nthe moment you step out\nshould you\nAnd inforder to\nyouflitimay even",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-17T12:35:40.899Z"
           }
         }
       ]
