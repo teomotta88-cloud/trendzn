@@ -1,0 +1,38 @@
+name: Sync Monitoraggio Subito
+
+# Scraping via Playwright delle ricerche Subito.it configurate in
+# src/data/monitoraggio-subito.json (pagina nascosta "monitoraggio-subito",
+# non in nav). Ogni ora, al minuto 45 per non scrivere su GitHub in
+# contemporanea agli altri sync.
+
+on:
+  schedule:
+    - cron: "45 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Scrape annunci Subito.it per keyword
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies and Playwright browsers
+        run: npm install --include=dev && npx playwright install --with-deps chromium
+
+      - name: Sync monitoraggio-subito
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/sync-subito-monitoring.mjs
+
+      - name: Cleanup
+        if: always()
+        run: rm -rf /tmp/playwright-* 2>/dev/null || true
