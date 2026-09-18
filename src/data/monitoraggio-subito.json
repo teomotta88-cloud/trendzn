@@ -5,606 +5,964 @@
       "region": "lombardia",
       "listings": [
         {
-          "url": "https://www.subito.it/biciclette/bici-donna-milano-661158696.htm",
-          "title": "Bici donna",
+          "url": "https://www.subito.it/biciclette/bici-corsa-scott-addict-rc-pro-2026-bergamo-620401318.htm",
+          "title": "Bici CORSA SCOTT ADDICT RC Pro 2026",
+          "price": "6.999 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T07:18:00.883Z",
+          "publishedAtLabel": "Oggi alle 09:18",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e4/e474f6f0-49e3-4a02-ab39-6a1fb1c4ce24?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/sport/ginocchiere-per-bici-mtb-e-moto-milano-661162433.htm",
+          "title": "Ginocchiere PER BICI MTB e MOTO",
           "price": "45 €",
-          "location": "Cassano d'Adda (MI)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "location": "San Donato Milanese (MI)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T07:18:00.466Z",
+          "publishedAtLabel": "Oggi alle 09:18",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/43/43663cb1-507b-409f-8d56-0b6ff6cb3e5c?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-elettrica-brescia-661162135.htm",
+          "title": "BICI ELETTRICA",
+          "price": "850 €",
+          "location": "Toscolano-Maderno (BS)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T07:18:00.141Z",
+          "publishedAtLabel": "Oggi alle 09:18",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d5/d561feb8-b99f-4a50-9a4c-f8fcb82079b2?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/2-bici-uomo-monza-645355139.htm",
+          "title": "2 bici uomo",
+          "price": "70 €",
+          "location": "Brugherio (MB)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T07:17:00.789Z",
+          "publishedAtLabel": "Oggi alle 09:17",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3c/3c0586db-d173-4295-95f8-f366e5b509e1?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-graziella-bergamo-661161271.htm",
+          "title": "bici graziella",
+          "price": null,
+          "location": "Bariano (BG)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T07:10:00.528Z",
+          "publishedAtLabel": "Oggi alle 09:10",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/77/77f4c3f7-a211-4f7b-b584-7fa90ebf7dda?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicimotore-bergamo-661160677.htm",
+          "title": "bicimotore",
+          "price": "450 €",
+          "location": "Ambivere (BG)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T07:03:00.860Z",
+          "publishedAtLabel": "Oggi alle 09:03",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bf/bfec8bf3-cd57-4c10-90ce-1a587cd0a31c?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-scatto-fisso-renesto-competition-milano-661159828.htm",
+          "title": "Bici scatto fisso Renesto Competition",
+          "price": "300 €",
+          "location": "Sesto San Giovanni (MI)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T06:48:00.380Z",
+          "publishedAtLabel": "Oggi alle 08:48",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/0c/0cd93e7d-c138-4bc1-948c-8b8cd12e5124?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-corsa-milano-661159220.htm",
+          "title": "Bicicletta da corsa",
+          "price": "2.800 €",
+          "location": "Abbiategrasso (MI)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T06:41:00.714Z",
+          "publishedAtLabel": "Oggi alle 08:41",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/74/74d7848c-7eb9-4e23-bf51-06deafc2ce94?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-olympia-brescia-642489912.htm",
+          "title": "Bici da corsa Olympia",
+          "price": "350 €",
+          "location": "Polpenazze del Garda (BS)",
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-18T06:41:00.487Z",
+          "publishedAtLabel": "Oggi alle 08:41",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/0e/0e853385-93e2-4377-a67d-4797d52ad186?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/caravan-e-camper/portabici-da-gancio-traino-pieghevole-e-bike-e2-forli-cesena-660860955.htm",
           "title": "PORTABICI DA GANCIO TRAINO PIEGHEVOLE E-BIKE E2",
           "price": "630 €",
           "location": null,
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "15 set alle 20:03",
+          "publishedAt": null,
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/16/1695db32-301c-490a-b68e-1e8a439ba10b?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-donna-milano-661158696.htm",
+          "title": "Bici donna",
+          "price": "45 €",
+          "location": "Cassano d'Adda (MI)",
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 08:27",
+          "publishedAt": "2026-09-18T06:27:00.829Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f7/f71a7598-40ac-40ce-86bd-3e7ca176f7c3?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-corsa-icon-carbon-brescia-660566557.htm",
           "title": "BICI CORSA ICON CARBON",
           "price": "750 €",
           "location": "Villa Carcina (BS)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 08:05",
+          "publishedAt": "2026-09-18T06:05:00.572Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d8/d893c8f1-9855-4554-ba55-384c68e64013?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bici-mtb-city-bike-tg-24-marca-monviso-bergamo-653792090.htm",
           "title": "Bicicletta bici MTB City bike tg 24 marca Monviso",
           "price": "120 €",
           "location": "Cologno al Serio (BG)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
-        },
-        {
-          "url": "https://www.subito.it/bambini-giocattoli/bicicletta-bimba-btwin-14-brescia-646426431.htm",
-          "title": "Bicicletta bimba BTWIN 14”",
-          "price": "90 €",
-          "location": "Desenzano del Garda (BS)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 07:37",
+          "publishedAt": "2026-09-18T05:37:00.910Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8c/8c21ebb4-2eab-409d-991b-63b8ccd53061?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/casco-bici-met-adulto-como-661153618.htm",
           "title": "Casco bici Met adulto",
           "price": "17 €",
           "location": "Erba (CO)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-scott-gravel-brescia-659231447.htm",
-          "title": "BICI SCOTT GRAVEL",
-          "price": "1.690 €",
-          "location": "Corte Franca (BS)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 07:17",
+          "publishedAt": "2026-09-18T05:17:00.636Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f0/f0b70f5f-dcb0-4ad7-9419-aebacd5ba5c7?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/casco-bici-bambino-como-661153560.htm",
           "title": "Casco bici bambino",
           "price": "8 €",
           "location": "Erba (CO)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 07:10",
+          "publishedAt": "2026-09-18T05:10:00.327Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/6b/6b5dbaf5-0d16-4d99-8d31-2c803d8c748d?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-montabike-milano-661152919.htm",
           "title": "BICI MONTABIKE",
           "price": "50 €",
           "location": "Melzo (MI)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-20-lodi-661152304.htm",
-          "title": "bici 20",
-          "price": "15 €",
-          "location": "Lodi (LO)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 06:45",
+          "publishedAt": "2026-09-18T04:45:00.671Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/73/732d61ec-8355-40bb-9cd1-2457c549e74d?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-26-lodi-661152253.htm",
           "title": "bici 26",
           "price": "35 €",
           "location": "Lodi (LO)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 06:32",
+          "publishedAt": "2026-09-18T04:32:00.452Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/24/248cf4d5-1d92-4163-91cf-f13ce7279a53?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-20-lodi-661152304.htm",
+          "title": "bici 20",
+          "price": "15 €",
+          "location": "Lodi (LO)",
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 06:32",
+          "publishedAt": "2026-09-18T04:32:00.101Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/74/74115492-77b4-4149-9d9f-6187a7ba86b3?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/bambini-giocattoli/bicicletta-bimba-btwin-14-brescia-646426431.htm",
+          "title": "Bicicletta bimba BTWIN 14”",
+          "price": "90 €",
+          "location": "Desenzano del Garda (BS)",
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 05:47",
+          "publishedAt": "2026-09-18T03:47:00.323Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b5/b5ac3f30-29e2-43a9-9b29-157a4f3bc545?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-scott-gravel-brescia-659231447.htm",
+          "title": "BICI SCOTT GRAVEL",
+          "price": "1.690 €",
+          "location": "Corte Franca (BS)",
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 05:41",
+          "publishedAt": "2026-09-18T03:41:00.970Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/61/61ad19b0-50cf-4da2-b555-ce1182eed8f8?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-corsa-orbea-orca-pavia-644663179.htm",
           "title": "bici  da corsa ORBEA ORCA",
           "price": "3.500 €",
           "location": "San Giorgio di Lomellina (PV)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 05:22",
+          "publishedAt": "2026-09-18T03:22:00.805Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b6/b6be74fe-9ee5-4411-824a-8bd271c6d480?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-scott-milano-661151331.htm",
           "title": "Bici Scott",
           "price": "6.000 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-18T06:40:56.185Z"
+          "firstSeenAt": "2026-09-18T06:40:56.185Z",
+          "publishedAtLabel": "Oggi alle 05:04",
+          "publishedAt": "2026-09-18T03:04:00.144Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/69/699b5bde-6b83-44db-9ce8-dd9579c6248e?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-passeggio-varese-661146560.htm",
           "title": "BICICLETTA DA PASSEGGIO",
           "price": "90 €",
           "location": "Origgio (VA)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Oggi alle 00:45",
+          "publishedAt": "2026-09-17T22:45:00.465Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5c/5ccb8fbc-f508-4579-ba81-1b94b828b6cc?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-26-rockrider-decathlon-milano-661145518.htm",
           "title": "bici 26 rockrider decathlon",
           "price": "80 €",
           "location": "Garbagnate Milanese (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-citta-weg-telaio-basso-28-nera-monoveloci-pavia-659710046.htm",
-          "title": "bici da città WEG telaio basso 28\" nera monoveloci",
-          "price": "100 €",
-          "location": "Pavia (PV)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-gravel-mondraker-arid-carbon-rr-taglia-m-milano-660508805.htm",
-          "title": "BICI GRAVEL MONDRAKER ARID CARBON RR TAGLIA M",
-          "price": "3.500 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Oggi alle 00:12",
+          "publishedAt": "2026-09-17T22:12:00.788Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/20/20c94487-d490-4126-a7ee-11c3f1a0bbcf?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/bambini-giocattoli/bici-bimba-12-milano-661145277.htm",
           "title": "bici bimba 12\"",
           "price": "15 €",
           "location": "Paderno Dugnano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Oggi alle 00:06",
+          "publishedAt": "2026-09-17T22:06:00.815Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b5/b58606af-6bee-43cf-8191-e7b334453d4c?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-con-6-cambio-marce-milano-661145148.htm",
           "title": "Bici con 6 cambio marce",
           "price": "40 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:59",
+          "publishedAt": "2026-09-17T21:59:00.189Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b1/b1ae3365-437a-4e53-a0ad-e51c6e0ecd43?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-d-epoca-milano-655539775.htm",
-          "title": "Bici da corsa d’epoca",
-          "price": "370 €",
-          "location": "Vanzaghello (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-donna-atala-varese-660813976.htm",
-          "title": "Bicicletta Donna Atala",
-          "price": "70 €",
-          "location": "Gavirate (VA)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-cannondale-56-bergamo-660273838.htm",
-          "title": "Bici da corsa Cannondale 56",
-          "price": "1.100 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "url": "https://www.subito.it/biciclette/bici-da-citta-weg-telaio-basso-28-nera-monoveloci-pavia-659710046.htm",
+          "title": "bici da città WEG telaio basso 28\" nera monoveloci",
+          "price": "100 €",
+          "location": "Pavia (PV)",
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:33",
+          "publishedAt": "2026-09-17T21:33:00.167Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f9/f932cf6e-adc5-462e-b6e4-b80e8d314159?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-donna-modello-trek-bergamo-661143463.htm",
           "title": "Bici da donna modello TREK",
           "price": "300 €",
           "location": "Valbrembo (BG)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:20",
+          "publishedAt": "2026-09-17T21:20:00.583Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5d/5d50bddb-972c-4a21-a8dc-ab5c8898a9ec?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-mondraker-arid-carbon-rr-taglia-m-milano-660508805.htm",
+          "title": "BICI GRAVEL MONDRAKER ARID CARBON RR TAGLIA M",
+          "price": "3.500 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:20",
+          "publishedAt": "2026-09-17T21:20:00.492Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d4/d4f143a3-a596-4e84-8e05-514a6a8ad7dc?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-donna-atala-varese-660813976.htm",
+          "title": "Bicicletta Donna Atala",
+          "price": "70 €",
+          "location": "Gavirate (VA)",
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.942Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bd/bd843198-145a-498b-8020-e30b07ad861d?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-gravel-basso-prezzo-trattabile-sondrio-656817281.htm",
           "title": "Bici da gravel basso (prezzo trattabile)",
           "price": "1.800 €",
           "location": "Mese (SO)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.918Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/88/888fc639-868f-48af-9f53-70f4d83cbf82?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-d-epoca-milano-655539775.htm",
+          "title": "Bici da corsa d’epoca",
+          "price": "370 €",
+          "location": "Vanzaghello (MI)",
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.569Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/08/0850f1b7-2387-4927-962a-e8c378edb05f?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-cannondale-56-bergamo-660273838.htm",
+          "title": "Bici da corsa Cannondale 56",
+          "price": "1.100 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.262Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/86/867c0cb8-7852-461d-ac14-6dfebb94f277?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-corsa-bianchi-sempre-pro-milano-637936945.htm",
           "title": "Bici da corsa Bianchi Sempre Pro",
           "price": "1.200 €",
           "location": "Cesate (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-country-e-mountabike-bergamo-595327849.htm",
-          "title": "Bici country e mountabike",
-          "price": "100 €",
-          "location": "Trescore Balneario (BG)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.256Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/40/4057b0ad-c854-449e-a7d6-b763f8278d3e?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-elettrica-engwe-milano-660972191.htm",
           "title": "Bici Elettrica Engwe",
           "price": "900 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:16.376Z"
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:12",
+          "publishedAt": "2026-09-17T21:12:00.971Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b6/b65c2c12-6eab-42ff-8bbc-6110cb6f5fa5?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-elettrica-ktm-793-bergamo-661140625.htm",
-          "title": "bici elettrica ktm 793",
-          "price": "2.150 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "url": "https://www.subito.it/biciclette/bici-country-e-mountabike-bergamo-595327849.htm",
+          "title": "Bici country e mountabike",
+          "price": "100 €",
+          "location": "Trescore Balneario (BG)",
+          "firstSeenAt": "2026-09-17T23:07:16.376Z",
+          "publishedAtLabel": "Ieri alle 23:12",
+          "publishedAt": "2026-09-17T21:12:00.645Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/70/70d23565-7662-43c1-99c9-256a2cb80cd4?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-bambino-milano-661140566.htm",
           "title": "Bicicletta da bambino",
           "price": "110 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:31",
+          "publishedAt": "2026-09-17T20:31:00.766Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/9f/9f3b5e6d-509d-4fa0-ab13-1224321f68e4?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-elettrica-ktm-793-bergamo-661140625.htm",
+          "title": "bici elettrica ktm 793",
+          "price": "2.150 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:31",
+          "publishedAt": "2026-09-17T20:31:00.327Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d3/d3d6e9e9-b9c3-4d97-83d6-d32530624fcc?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-donna-nera-milano-661140251.htm",
           "title": "bicicletta da donna Nera",
           "price": "70 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:27",
+          "publishedAt": "2026-09-17T20:27:00.090Z",
+          "imageUrl": "https://www.subito.it/static/img/social-meta-fallback/redMarket.png"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-mountain-bike-como-661140130.htm",
           "title": "Bici Mountain Bike",
           "price": "500 €",
           "location": "Cantu' (CO)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:22",
+          "publishedAt": "2026-09-17T20:22:00.397Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/00/00490ff4-689b-49fe-bfa8-111a56d88de2?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-ragazzo-modello-brera-fire-gti-milano-661139786.htm",
           "title": "Bici ragazzo modello BRERA FIRE GTI",
           "price": "135 €",
           "location": "Corsico (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/bambini-giocattoli/seggiolino-bici-bambino-milano-661139564.htm",
-          "title": "Seggiolino bici bambino",
-          "price": "30 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-scatto-fisso-milano-661139498.htm",
-          "title": "bici scatto fisso",
-          "price": "220 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:19",
+          "publishedAt": "2026-09-17T20:19:00.835Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/41/41f1b157-bffc-4595-8743-d0fc41f00cbe?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-mtb-modificata-in-wheelie-bike-milano-661139493.htm",
           "title": "Bici MTB modificata in Wheelie Bike",
           "price": "150 €",
           "location": "Corsico (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:15",
+          "publishedAt": "2026-09-17T20:15:00.800Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8c/8cfc4357-5a7c-4797-bc57-dbee004eb1a6?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-scatto-fisso-milano-661139498.htm",
+          "title": "bici scatto fisso",
+          "price": "220 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:15",
+          "publishedAt": "2026-09-17T20:15:00.487Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/51/5168a5aa-e7f7-425c-9260-c7c43ccdffe1?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/bambini-giocattoli/seggiolino-bici-bambino-milano-661139564.htm",
+          "title": "Seggiolino bici bambino",
+          "price": "30 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:15",
+          "publishedAt": "2026-09-17T20:15:00.170Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f7/f7d72fcf-087f-444c-a363-137f41aa5736?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/borsa-bici-milano-661139475.htm",
           "title": "borsa bici",
           "price": "15 €",
           "location": "Rho (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:15",
+          "publishedAt": "2026-09-17T20:15:00.140Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b0/b083b54c-01b2-461f-b0f9-1e9e807374b1?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/bambini-giocattoli/seggiolino-bici-milano-661138836.htm",
           "title": "Seggiolino bici",
           "price": "19 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 22:06",
+          "publishedAt": "2026-09-17T20:06:00.497Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a0/a0a14c06-1d1f-493e-b47c-abc4f805a124?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/accessori-auto/portabici-varese-661136380.htm",
           "title": "portabici",
           "price": "150 €",
           "location": "Saronno (VA)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:43",
+          "publishedAt": "2026-09-17T19:43:00.821Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/49/492acc5f-065a-4dc0-88a7-1f529b8766b0?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/sacca-bici-e-2-sacche-ruote-brescia-661136042.htm",
           "title": "Sacca bici e 2 sacche ruote",
           "price": "70 €",
           "location": "Gavardo (BS)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-mtb-rockrider-27-5-monza-661135474.htm",
-          "title": "bici MTB rockrider 27,5",
-          "price": "450 €",
-          "location": "Misinto (MB)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/coppia-cerchi-bici-strada-bontrager-paradigm-sl-lecco-661135336.htm",
-          "title": "Coppia cerchi bici strada bontrager paradigm sl",
-          "price": "200 €",
-          "location": "Lecco (LC)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-mtb-milano-661135239.htm",
-          "title": "bici MTB",
-          "price": "45 €",
-          "location": "Garbagnate Milanese (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-gialla-taglia-m-monza-661135102.htm",
-          "title": "Bici da Corsa gialla taglia M",
-          "price": "550 €",
-          "location": "Monza (MB)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:43",
+          "publishedAt": "2026-09-17T19:43:00.149Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f7/f7e0a152-ffd0-48d0-b681-3dddc06c5d23?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/lotto-bici-bergamo-661134919.htm",
           "title": "lotto bici",
           "price": null,
           "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:32",
+          "publishedAt": "2026-09-17T19:32:00.827Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d3/d3f446f4-c8bd-401c-b8ce-ba7fef748e2d?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-milano-661134818.htm",
-          "title": "Bici da corsa",
-          "price": "250 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "url": "https://www.subito.it/biciclette/coppia-cerchi-bici-strada-bontrager-paradigm-sl-lecco-661135336.htm",
+          "title": "Coppia cerchi bici strada bontrager paradigm sl",
+          "price": "200 €",
+          "location": "Lecco (LC)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:32",
+          "publishedAt": "2026-09-17T19:32:00.791Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3e/3e53a3a4-7402-44d3-96b2-c1c18b982e35?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-rockrider-27-5-monza-661135474.htm",
+          "title": "bici MTB rockrider 27,5",
+          "price": "450 €",
+          "location": "Misinto (MB)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:32",
+          "publishedAt": "2026-09-17T19:32:00.463Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a1/a1010c31-abe8-4b0c-b226-9465eaba83e1?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-gialla-taglia-m-monza-661135102.htm",
+          "title": "Bici da Corsa gialla taglia M",
+          "price": "550 €",
+          "location": "Monza (MB)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:32",
+          "publishedAt": "2026-09-17T19:32:00.459Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fe/fe26b06f-625d-47b6-b47a-d2c31a80abf0?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-milano-661135239.htm",
+          "title": "bici MTB",
+          "price": "45 €",
+          "location": "Garbagnate Milanese (MI)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:32",
+          "publishedAt": "2026-09-17T19:32:00.100Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/57/5721ab61-0deb-404b-9729-cdc253a66f36?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-citta-bergamo-661134540.htm",
           "title": "bici da città",
           "price": "30 €",
           "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:31",
+          "publishedAt": "2026-09-17T19:31:00.494Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/68/68def0c3-3680-48b0-99d5-1aab42a75bc6?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-milano-661134818.htm",
+          "title": "Bici da corsa",
+          "price": "250 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:31",
+          "publishedAt": "2026-09-17T19:31:00.173Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c2/c260af9e-8b93-4271-a245-d5ce640a91de?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-milano-661134366.htm",
           "title": "Bicicletta",
           "price": "40 €",
           "location": "Paullo (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-graziella-bergamo-661134325.htm",
-          "title": "bici Graziella",
-          "price": "40 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:21",
+          "publishedAt": "2026-09-17T19:21:00.818Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a3/a3b66a79-0296-40ae-bbde-5bf3e6a39f0c?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-citta-atala-uomo-taglia-l-28-pollici-milano-661134258.htm",
           "title": "bicicletta città Atala uomo taglia L 28 pollici",
           "price": "150 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:54.901Z"
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:21",
+          "publishedAt": "2026-09-17T19:21:00.483Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d7/d713f925-2ff0-4843-b8ff-988f906902fb?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-uomo-bergamo-661123929.htm",
-          "title": "Bici uomo",
-          "price": "150 €",
-          "location": "Albino (BG)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-gravel-mantova-660076419.htm",
-          "title": "Bici - Gravel",
-          "price": "550 €",
-          "location": "Suzzara (MN)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "url": "https://www.subito.it/biciclette/bici-graziella-bergamo-661134325.htm",
+          "title": "bici Graziella",
+          "price": "40 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T20:35:54.901Z",
+          "publishedAtLabel": "Ieri alle 21:21",
+          "publishedAt": "2026-09-17T19:21:00.137Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/55/5509f8e0-3cc4-46cb-a2fb-0cef96de90a0?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/caravan-e-camper/portabici-da-gancio-traino-vsv-c2-forli-cesena-660859872.htm",
           "title": "Portabici da gancio traino VSV C2",
           "price": "450 €",
           "location": null,
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "15 set alle 20:15",
+          "publishedAt": null,
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/07/0740a4ce-2a08-4dc5-a30c-3d98dfca6dad?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/bambini-giocattoli/bici-per-bambina-como-580213352.htm",
-          "title": "bici per bambina",
-          "price": "70 €",
-          "location": "Cantu' (CO)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/nuova-bicicletta-elettrica-mini-pink-bergamo-630079394.htm",
-          "title": "Nuova Bicicletta Elettrica mini Pink",
-          "price": "1.100 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "url": "https://www.subito.it/biciclette/bici-uomo-bergamo-661123929.htm",
+          "title": "Bici uomo",
+          "price": "150 €",
+          "location": "Albino (BG)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:37",
+          "publishedAt": "2026-09-17T17:37:00.814Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a2/a299cade-2e97-4236-9dca-639d73cf2c15?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-vintage-welter-anni-50-60-lodi-661122388.htm",
           "title": "Bicicletta Vintage Welter (Anni '50/'60)",
           "price": "300 €",
           "location": "Casalmaiocco (LO)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-bike-brescia-658770548.htm",
-          "title": "bici  bike",
-          "price": "1.100 €",
-          "location": "Leno (BS)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:22",
+          "publishedAt": "2026-09-17T17:22:00.694Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/02/0222aad6-56d0-41db-b0d7-7665189abc10?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/bambini-giocattoli/machina-bici-rossa-bici-blu-bambini-da-2-a-5-anni-bergamo-661120874.htm",
           "title": "machina,bici rossa, bici blu bambini da 2 a 5 anni",
           "price": "90 €",
           "location": "Montello (BG)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:20",
+          "publishedAt": "2026-09-17T17:20:00.321Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5e/5e5add61-1d9c-4b60-89a1-40dd232639f6?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-gravel-cannondale-milano-656920678.htm",
-          "title": "Bici Gravel Cannondale",
-          "price": "900 €",
-          "location": "Senago (MI)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/ruote-in-carbonio-x-bici-da-corsa-freni-a-pattino-como-659011049.htm",
-          "title": "Ruote in carbonio x bici da corsa freni a pattino",
-          "price": "400 €",
-          "location": "Albavilla (CO)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-con-kit-elettrico-milano-661119891.htm",
-          "title": "bici con kit elettrico",
-          "price": "950 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "url": "https://www.subito.it/biciclette/bici-merida-reacto-8000-2026-salerno-649357951.htm",
+          "title": "Bici Merida Reacto 8000 2026",
+          "price": "4.499 €",
+          "location": null,
+          "firstSeenAt": "2026-09-18T07:25:10.239Z",
+          "publishedAt": "2026-09-17T17:19:00.213Z",
+          "publishedAtLabel": "Ieri alle 19:19",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/97/9747b655-f4c4-422b-8150-70d22f8889b1?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/bambini-giocattoli/bici-senza-pedali-como-661119518.htm",
           "title": "Bici senza pedali",
           "price": "20 €",
           "location": "Olgiate Comasco (CO)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:05",
+          "publishedAt": "2026-09-17T17:05:00.815Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/68/6829ce40-0d0e-416b-8e27-c7002cd09386?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/bambini-giocattoli/ruota-giroscopica-per-bici-bimbo-milano-661118540.htm",
-          "title": "Ruota Giroscopica per Bici Bimbo",
-          "price": "35 €",
-          "location": "Vittuone (MI)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "url": "https://www.subito.it/biciclette/bici-con-kit-elettrico-milano-661119891.htm",
+          "title": "bici con kit elettrico",
+          "price": "950 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:05",
+          "publishedAt": "2026-09-17T17:05:00.355Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2b/2bde902b-0075-4b6f-bc87-ad7505701a8b?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-uomo-vintage-leri-pavia-661118471.htm",
           "title": "Bici da uomo vintage Leri",
           "price": "95 €",
           "location": "Pavia (PV)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:04",
+          "publishedAt": "2026-09-17T17:04:00.580Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ff/ff1d32d7-151e-46d8-99df-dd5f58a899b9?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/bambini-giocattoli/ruota-giroscopica-per-bici-bimbo-milano-661118540.htm",
+          "title": "Ruota Giroscopica per Bici Bimbo",
+          "price": "35 €",
+          "location": "Vittuone (MI)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:04",
+          "publishedAt": "2026-09-17T17:04:00.176Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/77/77ccd2d7-bfc6-4570-a69d-0f3d60c818e1?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/bambini-giocattoli/bici-per-bambina-como-580213352.htm",
+          "title": "bici per bambina",
+          "price": "70 €",
+          "location": "Cantu' (CO)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:03",
+          "publishedAt": "2026-09-17T17:03:00.982Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/79/79277419-7cb2-4a71-a29f-405261b72229?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-mantova-660076419.htm",
+          "title": "Bici - Gravel",
+          "price": "550 €",
+          "location": "Suzzara (MN)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 19:03",
+          "publishedAt": "2026-09-17T17:03:00.182Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e5/e5ca650b-32cf-411f-867f-ff4d2e4a6fa6?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-corsa-milano-661116777.htm",
           "title": "bici da corsa",
           "price": "1.100 €",
           "location": "Cernusco sul Naviglio (MI)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:48",
+          "publishedAt": "2026-09-17T16:48:00.935Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c9/c9888c96-6564-4ba5-8f60-d4c909d922eb?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-biammortizzata-am-100-s-decathlon-milano-661116665.htm",
           "title": "bici biammortizzata am 100 S decathlon",
           "price": "629 €",
           "location": "Basiano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:48",
+          "publishedAt": "2026-09-17T16:48:00.228Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a1/a1ea408e-bea7-42c1-bd0b-9fea6486f204?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-depoca-como-661115306.htm",
-          "title": "bici depoca",
-          "price": "800 €",
-          "location": "Guanzate (CO)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "url": "https://www.subito.it/biciclette/nuova-bicicletta-elettrica-mini-pink-bergamo-630079394.htm",
+          "title": "Nuova Bicicletta Elettrica mini Pink",
+          "price": "1.100 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:47",
+          "publishedAt": "2026-09-17T16:47:00.373Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/62/62691127-ef04-4111-9e33-ecc0821f79d5?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-corsa-vontage-learco-guerra-eroica-varese-661115271.htm",
           "title": "Bici da corsa vontage learco guerra-eroica",
           "price": "200 €",
           "location": "Cuvio (VA)",
-          "firstSeenAt": "2026-09-17T17:45:26.452Z"
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:33",
+          "publishedAt": "2026-09-17T16:33:00.932Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c3/c3c987f9-4e9e-4777-b18c-7e6bd11221a0?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-bimbo-como-661085455.htm",
-          "title": "Bici bimbo",
-          "price": "40 €",
-          "location": "Uggiate con Ronago (CO)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "url": "https://www.subito.it/biciclette/bici-depoca-como-661115306.htm",
+          "title": "bici depoca",
+          "price": "800 €",
+          "location": "Guanzate (CO)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:33",
+          "publishedAt": "2026-09-17T16:33:00.585Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5c/5c9b08c6-73c2-44e9-b6f0-99ea38ed1ff8?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-bimbo-merida-como-661085343.htm",
-          "title": "Bici bimbo merida",
-          "price": "60 €",
-          "location": "Uggiate con Ronago (CO)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "url": "https://www.subito.it/biciclette/bici-bike-brescia-658770548.htm",
+          "title": "bici  bike",
+          "price": "1.100 €",
+          "location": "Leno (BS)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:31",
+          "publishedAt": "2026-09-17T16:31:00.998Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/51/51b181ca-9f2d-4024-a8b9-94ee76e1f02f?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-mtb-cannondale-scalpel-si-carbon-3-anno-2015-milano-659712508.htm",
-          "title": "Bici mtb Cannondale Scalpel Si Carbon 3 anno 2015",
-          "price": "700 €",
-          "location": "San Donato Milanese (MI)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "url": "https://www.subito.it/biciclette/bici-gravel-cannondale-milano-656920678.htm",
+          "title": "Bici Gravel Cannondale",
+          "price": "900 €",
+          "location": "Senago (MI)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:31",
+          "publishedAt": "2026-09-17T16:31:00.629Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/98/9809e9ed-4828-4b4f-a8b5-4815c295243c?rule=fullscreen-1x-auto"
         },
         {
-          "url": "https://www.subito.it/biciclette/bici-giant-da-corsa-anno-2000-bergamo-660955118.htm",
-          "title": "Bici giant da corsa anno 2000",
-          "price": "280 €",
-          "location": "Dalmine (BG)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "url": "https://www.subito.it/biciclette/ruote-in-carbonio-x-bici-da-corsa-freni-a-pattino-como-659011049.htm",
+          "title": "Ruote in carbonio x bici da corsa freni a pattino",
+          "price": "400 €",
+          "location": "Albavilla (CO)",
+          "firstSeenAt": "2026-09-17T17:45:26.452Z",
+          "publishedAtLabel": "Ieri alle 18:16",
+          "publishedAt": "2026-09-17T16:16:00.954Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5d/5d51cd30-8c39-4350-ac11-da6e6d8c5379?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-merida-reacto-6000-2027-salerno-649361644.htm",
           "title": "Bici Merida Reacto 6000 2027",
           "price": "4.150 €",
           "location": null,
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-kuota-kugar-milano-660480089.htm",
-          "title": "Bici da Corsa Kuota Kugar",
-          "price": "1.000 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-como-606783874.htm",
-          "title": "Bici da corsa",
-          "price": "5.000 €",
-          "location": "Mariano Comense (CO)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-in-carbonio-tg-53-monza-652295850.htm",
-          "title": "Bici da corsa in carbonio tg 53",
-          "price": "950 €",
-          "location": "Mezzago (MB)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-bottecchia-milano-642984619.htm",
-          "title": "Bici Bottecchia",
-          "price": "150 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-mtb-shadow-monza-661083729.htm",
-          "title": "bici MTB Shadow",
-          "price": "45 €",
-          "location": "Vimercate (MB)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-mtb-rocky-bike-monza-661083638.htm",
-          "title": "bici MTB Rocky Bike",
-          "price": "30 €",
-          "location": "Vimercate (MB)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/2-sacche-porta-bici-scicon-travel-plus-triathlon-monza-661083207.htm",
-          "title": "2 SACCHE PORTA BICI SCICON - TRAVEL PLUS TRIATHLON",
-          "price": "95 €",
-          "location": "Usmate Velate (MB)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/porta-bici-thule-da-tetto-milano-661083112.htm",
-          "title": "Porta bici Thule da tetto",
-          "price": "120 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-e-bici-e-mtb-lapierre-alpine-bergamo-618801541.htm",
-          "title": "BICI da CORSA e BICI E MTB LAPIERRE ALPINE",
-          "price": "5.950 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-corsa-scott-foil-ultegra-2017-monza-657264511.htm",
-          "title": "Bici da corsa Scott Foil Ultegra 2017",
-          "price": "690 €",
-          "location": "Seveso (MB)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-da-citta-artigianale-indistruttibile-nuova-milano-574816627.htm",
-          "title": "Bici da città artigianale indistruttibile nuova",
-          "price": "490 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "12 set alle 17:24",
+          "publishedAt": null,
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e0/e01ac2d2-81e3-4cb1-9bec-dcafaf57a8e9?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-btwin-con-cestino-milano-661081356.htm",
           "title": "Bicicletta btwin con cestino",
           "price": "50 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-bimbo-merida-como-661085343.htm",
+          "title": "Bici bimbo merida",
+          "price": "60 €",
+          "location": "Uggiate con Ronago (CO)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:47",
+          "publishedAt": "2026-09-17T12:47:00.649Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/24/24b5b2c8-6914-46e8-acd8-c699eb1dfc4b?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-bimbo-como-661085455.htm",
+          "title": "Bici bimbo",
+          "price": "40 €",
+          "location": "Uggiate con Ronago (CO)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:47",
+          "publishedAt": "2026-09-17T12:47:00.319Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e3/e36fff6c-fa67-4b96-a782-a380dc94c2ba?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-como-606783874.htm",
+          "title": "Bici da corsa",
+          "price": "5.000 €",
+          "location": "Mariano Comense (CO)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:45",
+          "publishedAt": "2026-09-17T12:45:00.663Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/44/44e3e854-e8a2-4a0f-8820-60ba13aa1a7c?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-giant-da-corsa-anno-2000-bergamo-660955118.htm",
+          "title": "Bici giant da corsa anno 2000",
+          "price": "280 €",
+          "location": "Dalmine (BG)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:45",
+          "publishedAt": "2026-09-17T12:45:00.428Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/49/4924fc5d-4307-4263-bc78-51a67c884daa?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-kuota-kugar-milano-660480089.htm",
+          "title": "Bici da Corsa Kuota Kugar",
+          "price": "1.000 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:45",
+          "publishedAt": "2026-09-17T12:45:00.322Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/56/56a6a64b-79a9-42f7-9401-7cc140edaa75?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-cannondale-scalpel-si-carbon-3-anno-2015-milano-659712508.htm",
+          "title": "Bici mtb Cannondale Scalpel Si Carbon 3 anno 2015",
+          "price": "700 €",
+          "location": "San Donato Milanese (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:45",
+          "publishedAt": "2026-09-17T12:45:00.007Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ae/ae4f0822-40db-402c-b743-e52d1479f37d?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/2-sacche-porta-bici-scicon-travel-plus-triathlon-monza-661083207.htm",
+          "title": "2 SACCHE PORTA BICI SCICON - TRAVEL PLUS TRIATHLON",
+          "price": "95 €",
+          "location": "Usmate Velate (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:31",
+          "publishedAt": "2026-09-17T12:31:00.929Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/36/36df6b5f-61fd-4d40-9024-0f0968d61006?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/porta-bici-thule-da-tetto-milano-661083112.htm",
+          "title": "Porta bici Thule da tetto",
+          "price": "120 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:31",
+          "publishedAt": "2026-09-17T12:31:00.620Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5b/5b06f4e7-3299-4cc5-8d54-d756fbf8f90c?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-rocky-bike-monza-661083638.htm",
+          "title": "bici MTB Rocky Bike",
+          "price": "30 €",
+          "location": "Vimercate (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:31",
+          "publishedAt": "2026-09-17T12:31:00.540Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e2/e2c02608-daee-4d0b-9d09-143ee0280092?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-shadow-monza-661083729.htm",
+          "title": "bici MTB Shadow",
+          "price": "45 €",
+          "location": "Vimercate (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:31",
+          "publishedAt": "2026-09-17T12:31:00.230Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/81/81f190b8-4674-414b-b069-55d631764726?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-scott-foil-ultegra-2017-monza-657264511.htm",
+          "title": "Bici da corsa Scott Foil Ultegra 2017",
+          "price": "690 €",
+          "location": "Seveso (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:29",
+          "publishedAt": "2026-09-17T12:29:00.492Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8d/8d848e43-2d4a-413c-add2-db3d7c75b52f?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-in-carbonio-tg-53-monza-652295850.htm",
+          "title": "Bici da corsa in carbonio tg 53",
+          "price": "950 €",
+          "location": "Mezzago (MB)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:29",
+          "publishedAt": "2026-09-17T12:29:00.170Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ed/edc2ad6d-5615-4996-b94a-a973bd3fe047?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-e-bici-e-mtb-lapierre-alpine-bergamo-618801541.htm",
+          "title": "BICI da CORSA e BICI E MTB LAPIERRE ALPINE",
+          "price": "5.950 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:29",
+          "publishedAt": "2026-09-17T12:29:00.060Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e9/e9800bd3-b512-43a2-b6de-d627e63081eb?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-citta-artigianale-indistruttibile-nuova-milano-574816627.htm",
+          "title": "Bici da città artigianale indistruttibile nuova",
+          "price": "490 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:28",
+          "publishedAt": "2026-09-17T12:28:00.843Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/31/31b0dcfa-b34f-4348-8c6b-f3637f658d96?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-bottecchia-milano-642984619.htm",
+          "title": "Bici Bottecchia",
+          "price": "150 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:28",
+          "publishedAt": "2026-09-17T12:28:00.833Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/45/45445740-a632-4809-933a-5d7820a70040?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/casco-bici-las-bergamo-661081362.htm",
           "title": "casco bici LAS",
           "price": "10 €",
           "location": "Grassobbio (BG)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:15",
+          "publishedAt": "2026-09-17T12:15:00.649Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b4/b43458d7-af9f-49eb-b298-0449fd2230b3?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-uomo-montana-bergamo-661080922.htm",
           "title": "bici uomo montana",
           "price": "250 €",
           "location": "Osio Sopra (BG)",
-          "firstSeenAt": "2026-09-17T12:52:55.946Z"
+          "firstSeenAt": "2026-09-17T12:52:55.946Z",
+          "publishedAtLabel": "Ieri alle 14:15",
+          "publishedAt": "2026-09-17T12:15:00.026Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/07/07f8c50a-89d7-465b-b3a7-03c1af205900?rule=fullscreen-1x-auto"
         }
       ]
     },
@@ -613,599 +971,894 @@
       "region": "lombardia",
       "listings": [
         {
+          "url": "https://www.subito.it/biciclette/bicicletta-mountan-bike-whistle-taglia-m-cremona-655272981.htm",
+          "title": "bicicletta mountan bike whistle taglia M",
+          "price": "200 €",
+          "location": "Cremona (CR)",
+          "firstSeenAt": "2026-09-18T07:25:47.438Z",
+          "publishedAt": null,
+          "publishedAtLabel": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-corsa-s-works-brescia-600383375.htm",
+          "title": "Bicicletta da corsa s-works",
+          "price": "1.550 €",
+          "location": "Botticino (BS)",
+          "firstSeenAt": "2026-09-18T07:25:47.438Z",
+          "publishedAt": null,
+          "publishedAtLabel": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-citta-da-donna-leri-26-milano-661160980.htm",
+          "title": "Bicicletta da città da donna LERI 26”",
+          "price": "120 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-18T07:25:47.438Z",
+          "publishedAt": null,
+          "publishedAtLabel": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-corsa-milano-661159220.htm",
+          "title": "Bicicletta da corsa",
+          "price": "2.800 €",
+          "location": "Abbiategrasso (MI)",
+          "firstSeenAt": "2026-09-18T07:25:47.438Z",
+          "publishedAt": "2026-09-18T06:41:00.839Z",
+          "publishedAtLabel": "Oggi alle 08:41",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/74/74d7848c-7eb9-4e23-bf51-06deafc2ce94?rule=fullscreen-1x-auto"
+        },
+        {
           "url": "https://www.subito.it/biciclette/bicicletta-ragazzi-vintage-brescia-661158942.htm",
           "title": "bicicletta ragazzi vintage",
           "price": "30 €",
           "location": "Brescia (BS)",
-          "firstSeenAt": "2026-09-18T06:40:56.863Z"
+          "firstSeenAt": "2026-09-18T06:40:56.863Z",
+          "publishedAtLabel": "Oggi alle 08:34",
+          "publishedAt": "2026-09-18T06:34:00.771Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ee/eea35e96-8e2d-46db-b6e1-bbaff59222ba?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-coppi-a-pedalata-assistita-donna-monza-656387512.htm",
           "title": "Bicicletta COPPI a pedalata assistita donna",
           "price": "750 €",
           "location": "Monza (MB)",
-          "firstSeenAt": "2026-09-18T06:40:56.863Z"
+          "firstSeenAt": "2026-09-18T06:40:56.863Z",
+          "publishedAtLabel": "Oggi alle 08:34",
+          "publishedAt": "2026-09-18T06:34:00.141Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d3/d31930b6-fb35-4fc2-90bb-f17d458eba52?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bmx-monza-661154721.htm",
           "title": "Bicicletta BMX",
           "price": "100 €",
           "location": "Biassono (MB)",
-          "firstSeenAt": "2026-09-18T06:40:56.863Z"
+          "firstSeenAt": "2026-09-18T06:40:56.863Z",
+          "publishedAtLabel": "Oggi alle 07:44",
+          "publishedAt": "2026-09-18T05:44:00.468Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8c/8cc3ee49-40d1-4494-b8ef-8f4759eefd3a?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bici-mtb-city-bike-tg-24-marca-monviso-bergamo-653792090.htm",
           "title": "Bicicletta bici MTB City bike tg 24 marca Monviso",
           "price": "120 €",
           "location": "Cologno al Serio (BG)",
-          "firstSeenAt": "2026-09-18T06:40:56.863Z"
+          "firstSeenAt": "2026-09-18T06:40:56.863Z",
+          "publishedAtLabel": "Oggi alle 07:37",
+          "publishedAt": "2026-09-18T05:37:00.529Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8c/8c21ebb4-2eab-409d-991b-63b8ccd53061?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-decathlon-uitamin-r-milano-660412975.htm",
           "title": "bicicletta decathlon Uitamin r",
           "price": "30 €",
           "location": "Cassina de' Pecchi (MI)",
-          "firstSeenAt": "2026-09-18T06:40:56.863Z"
+          "firstSeenAt": "2026-09-18T06:40:56.863Z",
+          "publishedAtLabel": "Oggi alle 07:30",
+          "publishedAt": "2026-09-18T05:30:00.912Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7b/7b8acdc1-b335-4e6a-8cea-81598eb6bcf6?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/bambini-giocattoli/bicicletta-bimba-btwin-14-brescia-646426431.htm",
           "title": "Bicicletta bimba BTWIN 14”",
           "price": "90 €",
           "location": "Desenzano del Garda (BS)",
-          "firstSeenAt": "2026-09-18T06:40:56.863Z"
+          "firstSeenAt": "2026-09-18T06:40:56.863Z",
+          "publishedAtLabel": "Oggi alle 05:47",
+          "publishedAt": "2026-09-18T03:47:00.975Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b5/b5ac3f30-29e2-43a9-9b29-157a4f3bc545?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-passeggio-varese-661146560.htm",
           "title": "BICICLETTA DA PASSEGGIO",
           "price": "90 €",
           "location": "Origgio (VA)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Oggi alle 00:45",
+          "publishedAt": "2026-09-17T22:45:00.032Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5c/5ccb8fbc-f508-4579-ba81-1b94b828b6cc?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-ragazza-ruota-24-milano-661146135.htm",
           "title": "Bicicletta ragazza ruota 24",
           "price": "60 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Oggi alle 00:32",
+          "publishedAt": "2026-09-17T22:32:00.472Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/89/8987b6c6-48e0-4c21-8180-93d8b95de1d5?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-alluminio-monza-661144921.htm",
           "title": "bicicletta alluminio",
           "price": "150 €",
           "location": "Monza (MB)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:53",
+          "publishedAt": "2026-09-17T21:53:00.813Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7a/7a79fe94-8a8c-4c5e-8044-977ae9c0e929?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-rockrider-brescia-661144778.htm",
           "title": "Bicicletta rockrider",
           "price": "60 €",
           "location": "Coccaglio (BS)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-taurus-corinto-del-2006-brescia-660270498.htm",
-          "title": "bicicletta taurus corinto del 2006",
-          "price": "1.000 €",
-          "location": "Verolavecchia (BS)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:46",
+          "publishedAt": "2026-09-17T21:46:00.155Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f6/f60558ef-09f5-4790-bdb9-2279177c052e?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-donna-town-vm-cremona-658297276.htm",
           "title": "Bicicletta da donna Town VM",
           "price": "160 €",
           "location": "Cremona (CR)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-da-donna-town-vm-cremona-658296634.htm",
-          "title": "Bicicletta da donna Town VM",
-          "price": "180 €",
-          "location": "Cremona (CR)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-donna-atala-varese-660813976.htm",
-          "title": "Bicicletta Donna Atala",
-          "price": "70 €",
-          "location": "Gavirate (VA)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.795Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3c/3c940442-7bcd-4e6b-8413-c9e7bc5a8989?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/rulli-per-bicicletta-26-29-pollici-varese-650296401.htm",
           "title": "Rulli per bicicletta 26 29 pollici",
           "price": "75 €",
           "location": "Fagnano Olona (VA)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.537Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bd/bde08984-9574-4cde-8012-92f4d78d9291?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-taurus-corinto-del-2006-brescia-660270498.htm",
+          "title": "bicicletta taurus corinto del 2006",
+          "price": "1.000 €",
+          "location": "Verolavecchia (BS)",
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.475Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/40/403bdd9f-b5f2-466f-9724-c5cb1508d87f?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-donna-atala-varese-660813976.htm",
+          "title": "Bicicletta Donna Atala",
+          "price": "70 €",
+          "location": "Gavirate (VA)",
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.212Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bd/bd843198-145a-498b-8020-e30b07ad861d?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-donna-town-vm-cremona-658296634.htm",
+          "title": "Bicicletta da donna Town VM",
+          "price": "180 €",
+          "location": "Cremona (CR)",
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.156Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/0f/0fa22d42-12ba-4dcd-91a1-f23fe25a1f8b?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-rossignoli-condorino-vintage-lodi-654972021.htm",
           "title": "Bicicletta Rossignoli  Condorino vintage",
           "price": "300 €",
           "location": "Casalmaiocco (LO)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-bammbino-a-16-pollici-4-6-milano-661143050.htm",
-          "title": "Bicicletta bammbino/a 16 pollici - 4-6",
-          "price": "45 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:12",
+          "publishedAt": "2026-09-17T21:12:00.875Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3d/3d8f60ab-824d-4056-b368-42b223d83abd?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-elettrica-pieghevole-hitway-bk6s-pro-lecco-660383555.htm",
           "title": "Bicicletta Elettrica pieghevole HITWAY BK6S Pro",
           "price": "730 €",
           "location": "Merate (LC)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:12",
+          "publishedAt": "2026-09-17T21:12:00.488Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d1/d14b2d86-6881-4112-800c-5f03ced68518?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-bammbino-a-16-pollici-4-6-milano-661143050.htm",
+          "title": "Bicicletta bammbino/a 16 pollici - 4-6",
+          "price": "45 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 23:12",
+          "publishedAt": "2026-09-17T21:12:00.187Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/68/6828c54d-b777-4071-abde-d3ad068446d6?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-uomo-brescia-661142104.htm",
           "title": "bicicletta uomo",
           "price": "90 €",
           "location": "Roncadelle (BS)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 22:52",
+          "publishedAt": "2026-09-17T20:52:00.797Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/95/95908505-442f-4174-85a2-13780412294b?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-donna-brescia-661140946.htm",
           "title": "bicicletta donna",
           "price": "90 €",
           "location": "Roncadelle (BS)",
-          "firstSeenAt": "2026-09-17T23:07:17.194Z"
+          "firstSeenAt": "2026-09-17T23:07:17.194Z",
+          "publishedAtLabel": "Ieri alle 22:36",
+          "publishedAt": "2026-09-17T20:36:00.144Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5f/5f7bca9a-1f35-4a32-9a13-4ea897735285?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-bambino-milano-661140566.htm",
           "title": "Bicicletta da bambino",
           "price": "110 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
-        },
-        {
-          "url": "https://www.subito.it/bambini-giocattoli/seggiolino-bicicletta-hamax-smiley-sondrio-661140363.htm",
-          "title": "seggiolino bicicletta hamax smiley",
-          "price": "30 €",
-          "location": "Sondrio (SO)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 22:31",
+          "publishedAt": "2026-09-17T20:31:00.213Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/9f/9f3b5e6d-509d-4fa0-ab13-1224321f68e4?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-donna-nera-milano-661140251.htm",
           "title": "bicicletta da donna Nera",
           "price": "70 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 22:27",
+          "publishedAt": "2026-09-17T20:27:00.539Z",
+          "imageUrl": "https://www.subito.it/static/img/social-meta-fallback/redMarket.png"
+        },
+        {
+          "url": "https://www.subito.it/bambini-giocattoli/seggiolino-bicicletta-hamax-smiley-sondrio-661140363.htm",
+          "title": "seggiolino bicicletta hamax smiley",
+          "price": "30 €",
+          "location": "Sondrio (SO)",
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 22:27",
+          "publishedAt": "2026-09-17T20:27:00.482Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d4/d4ca3ddc-e175-46a9-9f97-39097fb74b8b?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bianchi-spillo-rubino-bergamo-661138518.htm",
           "title": "bicicletta Bianchi spillo rubino",
           "price": "220 €",
           "location": "Scanzorosciate (BG)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 22:06",
+          "publishedAt": "2026-09-17T20:06:00.854Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/9e/9e7f4415-3d09-403d-a587-7a4618e259b7?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/paracolpi-per-bambini-in-bicicletta-bergamo-661137133.htm",
           "title": "Paracolpi per bambini in bicicletta",
           "price": "8 €",
           "location": "Treviglio (BG)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:58",
+          "publishedAt": "2026-09-17T19:58:00.217Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/54/548f7c33-4c12-4257-8a42-96bf4f4ac4dc?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-uomo-milano-661136583.htm",
           "title": "bicicletta uomo",
           "price": "70 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:44",
+          "publishedAt": "2026-09-17T19:44:00.509Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bb/bbf0257a-4425-4702-8445-fcfb5ea6b205?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mtb-olmo-grinder-shimano-milano-661135661.htm",
           "title": "Bicicletta MTB Olmo Grinder Shimano",
           "price": "30 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:43",
+          "publishedAt": "2026-09-17T19:43:00.812Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/88/88feb012-f702-46d4-a926-92ba1bbf2f8e?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-con-freni-a-bacchetta-pronta-all-uso-milano-661135261.htm",
           "title": "Bicicletta con freni a bacchetta pronta all’uso",
           "price": "75 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-milano-661134366.htm",
-          "title": "Bicicletta",
-          "price": "40 €",
-          "location": "Paullo (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/frecce-per-bicicletta-brescia-661134305.htm",
-          "title": "frecce per bicicletta",
-          "price": "10 €",
-          "location": "Manerbio (BS)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:32",
+          "publishedAt": "2026-09-17T19:32:00.140Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ff/ff0c41b8-56d3-4042-bab3-8a28fd2b7c4d?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-citta-atala-uomo-taglia-l-28-pollici-milano-661134258.htm",
           "title": "bicicletta città Atala uomo taglia L 28 pollici",
           "price": "150 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:21",
+          "publishedAt": "2026-09-17T19:21:00.673Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d7/d713f925-2ff0-4843-b8ff-988f906902fb?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/frecce-per-bicicletta-brescia-661134305.htm",
+          "title": "frecce per bicicletta",
+          "price": "10 €",
+          "location": "Manerbio (BS)",
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:21",
+          "publishedAt": "2026-09-17T19:21:00.615Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/04/04cd9a73-05f3-4ba9-9bbe-1bb4809806b1?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-milano-661134366.htm",
+          "title": "Bicicletta",
+          "price": "40 €",
+          "location": "Paullo (MI)",
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:21",
+          "publishedAt": "2026-09-17T19:21:00.203Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a3/a3b66a79-0296-40ae-bbde-5bf3e6a39f0c?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mtb-rockrider-bambini-ruota-20-nuova-monza-661133021.htm",
           "title": "Bicicletta MTB Rockrider bambini ruota 20 Nuova",
           "price": "120 €",
           "location": "Monza (MB)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-uomo-mtb-atala-shimano-funzionante-26-bergamo-661132350.htm",
-          "title": "Bicicletta Uomo MTB ATALA SHIMANO FUNZIONANTE 26\"",
-          "price": "50 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:10",
+          "publishedAt": "2026-09-17T19:10:00.014Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a0/a012c15d-8219-4c91-9d09-ba1b86b600e4?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-graziella-vicini-conservatissima-24-bergamo-661132324.htm",
           "title": "Bicicletta GRAZIELLA VICINI CONSERVATISSIMA 24\"",
           "price": "100 €",
           "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-milano-661132150.htm",
-          "title": "bicicletta",
-          "price": "75 €",
-          "location": "Bresso (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:01",
+          "publishedAt": "2026-09-17T19:01:00.782Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/3f/3f2da26c-8513-4432-81e6-83f6e4f4338f?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-legnano-monza-661132084.htm",
           "title": "bicicletta  legnano",
           "price": "120 €",
           "location": "Lissone (MB)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:01",
+          "publishedAt": "2026-09-17T19:01:00.501Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/fd/fdb0fbe1-6263-4b50-a287-b17a62acd249?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-uomo-mtb-atala-shimano-funzionante-26-bergamo-661132350.htm",
+          "title": "Bicicletta Uomo MTB ATALA SHIMANO FUNZIONANTE 26\"",
+          "price": "50 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:01",
+          "publishedAt": "2026-09-17T19:01:00.383Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/0a/0ae374ff-0adf-4f32-98ae-4113657a3c12?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-milano-661132150.htm",
+          "title": "bicicletta",
+          "price": "75 €",
+          "location": "Bresso (MI)",
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 21:01",
+          "publishedAt": "2026-09-17T19:01:00.189Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/4e/4ee01f3b-a2d4-409b-a659-e3f2e9efb1c4?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-rock-rider-st500-milano-661131225.htm",
           "title": "Bicicletta Rock Rider ST500",
           "price": "300 €",
           "location": "Rozzano (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 20:53",
+          "publishedAt": "2026-09-17T18:53:00.854Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b3/b335c006-b95d-419c-80bf-d20c5fdd5728?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-donna-botecchia-milano-661130667.htm",
           "title": "bicicletta da donna botecchia.",
           "price": "70 €",
           "location": "Cusano Milanino (MI)",
-          "firstSeenAt": "2026-09-17T20:35:55.650Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-brescia-661124969.htm",
-          "title": "bicicletta",
-          "price": "130 €",
-          "location": "Brescia (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-uomo-milano-661123717.htm",
-          "title": "bicicletta uomo",
-          "price": "100 €",
-          "location": "Parabiago (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-vintage-garanzini-anni-1980-milano-655915614.htm",
-          "title": "Bicicletta vintage Garanzini anni 1980",
-          "price": "160 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-uomo-milano-661123389.htm",
-          "title": "bicicletta uomo",
-          "price": "80 €",
-          "location": "Parabiago (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/nuova-bicicletta-elettrica-mini-pink-bergamo-630079394.htm",
-          "title": "Nuova Bicicletta Elettrica mini Pink",
-          "price": "1.100 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-spiderman-14-varese-661123223.htm",
-          "title": "Bicicletta Spiderman 14",
-          "price": "45 €",
-          "location": "Busto Arsizio (VA)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-vintage-welter-anni-50-60-lodi-661122388.htm",
-          "title": "Bicicletta Vintage Welter (Anni '50/'60)",
-          "price": "300 €",
-          "location": "Casalmaiocco (LO)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-brescia-661121795.htm",
-          "title": "bicicletta",
-          "price": "400 €",
-          "location": "Brescia (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-in-carbonio-telaio-columbus-xl8r8-varese-658964110.htm",
-          "title": "Bicicletta in Carbonio ! Telaio. Columbus XL8R8.",
-          "price": "920 €",
-          "location": "Busto Arsizio (VA)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-da-corsa-milano-659944378.htm",
-          "title": "Bicicletta da corsa",
-          "price": "1.000 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-the-one-a1-bergamo-661120882.htm",
-          "title": "Bicicletta elettrica the one A1",
-          "price": "600 €",
-          "location": "Castelli Calepio (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-lecco-660318706.htm",
-          "title": "Bicicletta",
-          "price": "290 €",
-          "location": "Lecco (LC)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-como-661119999.htm",
-          "title": "Bicicletta",
-          "price": "50 €",
-          "location": "Olgiate Comasco (CO)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-milano-658578387.htm",
-          "title": "Bicicletta",
-          "price": "249 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-como-661119825.htm",
-          "title": "Bicicletta",
-          "price": "100 €",
-          "location": "Olgiate Comasco (CO)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-donna-rush-bergamo-661119041.htm",
-          "title": "Bicicletta Donna Rush",
-          "price": "100 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-fm-bike-ruote-da-26-pollici-brescia-661117688.htm",
-          "title": "Bicicletta FM BIKE Ruote da 26 Pollici",
-          "price": "500 €",
-          "location": "Gavardo (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-ibrida-citta-e-mtb-brescia-661115516.htm",
-          "title": "Bicicletta ibrida città e mtb",
-          "price": "110 €",
-          "location": "Brescia (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-olandese-milano-661114782.htm",
-          "title": "Bicicletta olandese",
-          "price": "75 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-da-ragazzina-milano-661114048.htm",
-          "title": "Bicicletta da ragazzina",
-          "price": "70 €",
-          "location": "Lainate (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T20:35:55.650Z",
+          "publishedAtLabel": "Ieri alle 20:44",
+          "publishedAt": "2026-09-17T18:44:00.166Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/01/011b5014-9b28-45b3-a0ef-724f698d4b79?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-milano-661113249.htm",
           "title": "Bicicletta",
           "price": "70 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-milano-661112679.htm",
           "title": "Bicicletta",
           "price": "70 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-per-bimba-piccola-3-6-anni-cremona-661112594.htm",
           "title": "Bicicletta per bimba piccola 3/6 anni",
           "price": "55 €",
           "location": "Cremona (CR)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-elettrica-brescia-661112118.htm",
           "title": "bicicletta elettrica",
           "price": "280 €",
           "location": "Pisogne (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mtb-ragazzo-brescia-661111807.htm",
           "title": "bicicletta mtb ragazzo",
           "price": "40 €",
           "location": "Ospitaletto (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mountain-bike-b-twin-rockrider-340-brescia-661111715.htm",
           "title": "Bicicletta Mountain Bike B'Twin Rockrider 340",
           "price": "60 €",
           "location": "Iseo (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.173Z"
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-brescia-661124969.htm",
+          "title": "bicicletta",
+          "price": "130 €",
+          "location": "Brescia (BS)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:38",
+          "publishedAt": "2026-09-17T17:38:00.467Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/13/1390eb5e-162e-4df6-8e7d-d069e3d42728?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-spiderman-14-varese-661123223.htm",
+          "title": "Bicicletta Spiderman 14",
+          "price": "45 €",
+          "location": "Busto Arsizio (VA)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:37",
+          "publishedAt": "2026-09-17T17:37:00.799Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/25/25ae62f8-b41f-49c1-befe-d50a0dfe2fa6?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-uomo-milano-661123717.htm",
+          "title": "bicicletta uomo",
+          "price": "100 €",
+          "location": "Parabiago (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:37",
+          "publishedAt": "2026-09-17T17:37:00.777Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/51/51c9fc4c-837f-4d4c-80fb-c063ae376704?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-uomo-milano-661123389.htm",
+          "title": "bicicletta uomo",
+          "price": "80 €",
+          "location": "Parabiago (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:37",
+          "publishedAt": "2026-09-17T17:37:00.414Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/48/48b33f8a-8c1d-4b85-ba1e-f1efa0bd31b2?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-vintage-welter-anni-50-60-lodi-661122388.htm",
+          "title": "Bicicletta Vintage Welter (Anni '50/'60)",
+          "price": "300 €",
+          "location": "Casalmaiocco (LO)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:22",
+          "publishedAt": "2026-09-17T17:22:00.852Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/02/0222aad6-56d0-41db-b0d7-7665189abc10?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-brescia-661121795.htm",
+          "title": "bicicletta",
+          "price": "400 €",
+          "location": "Brescia (BS)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:21",
+          "publishedAt": "2026-09-17T17:21:00.172Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/c3/c3122457-42de-4451-be07-35c6920a90d9?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-the-one-a1-bergamo-661120882.htm",
+          "title": "Bicicletta elettrica the one A1",
+          "price": "600 €",
+          "location": "Castelli Calepio (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:20",
+          "publishedAt": "2026-09-17T17:20:00.257Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/11/11fbc9b2-7d5d-407e-955d-14db0da4faef?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-como-661119999.htm",
+          "title": "Bicicletta",
+          "price": "50 €",
+          "location": "Olgiate Comasco (CO)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:05",
+          "publishedAt": "2026-09-17T17:05:00.901Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f3/f35a3d7b-c110-41fb-b68d-4d0661150bbd?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-como-661119825.htm",
+          "title": "Bicicletta",
+          "price": "100 €",
+          "location": "Olgiate Comasco (CO)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:05",
+          "publishedAt": "2026-09-17T17:05:00.688Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b7/b7168cc4-0341-46e8-9d97-21ed2867aefa?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-donna-rush-bergamo-661119041.htm",
+          "title": "Bicicletta Donna Rush",
+          "price": "100 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:05",
+          "publishedAt": "2026-09-17T17:05:00.017Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/45/457006b8-1357-4166-9cd7-510e44ecdf2a?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-vintage-garanzini-anni-1980-milano-655915614.htm",
+          "title": "Bicicletta vintage Garanzini anni 1980",
+          "price": "160 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 19:03",
+          "publishedAt": "2026-09-17T17:03:00.094Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f1/f18257a5-b2cd-4366-ae64-7a91b0eb65e7?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-fm-bike-ruote-da-26-pollici-brescia-661117688.htm",
+          "title": "Bicicletta FM BIKE Ruote da 26 Pollici",
+          "price": "500 €",
+          "location": "Gavardo (BS)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:49",
+          "publishedAt": "2026-09-17T16:49:00.347Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f8/f8d22af5-b84f-4e9c-bd85-76a6c65be556?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/nuova-bicicletta-elettrica-mini-pink-bergamo-630079394.htm",
+          "title": "Nuova Bicicletta Elettrica mini Pink",
+          "price": "1.100 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:47",
+          "publishedAt": "2026-09-17T16:47:00.492Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/62/62691127-ef04-4111-9e33-ecc0821f79d5?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-ibrida-citta-e-mtb-brescia-661115516.htm",
+          "title": "Bicicletta ibrida città e mtb",
+          "price": "110 €",
+          "location": "Brescia (BS)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:33",
+          "publishedAt": "2026-09-17T16:33:00.659Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/2c/2c3b83ea-d193-4600-809e-9ac215ac9755?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-olandese-milano-661114782.htm",
+          "title": "Bicicletta olandese",
+          "price": "75 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:32",
+          "publishedAt": "2026-09-17T16:32:00.957Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/ff/ffb63dda-2a27-49ad-ae0d-11c8faef833f?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-ragazzina-milano-661114048.htm",
+          "title": "Bicicletta da ragazzina",
+          "price": "70 €",
+          "location": "Lainate (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:18",
+          "publishedAt": "2026-09-17T16:18:00.325Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/f9/f97c9c5a-d5ed-4d26-83f0-fe632cac4c5d?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-da-corsa-milano-659944378.htm",
+          "title": "Bicicletta da corsa",
+          "price": "1.000 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:00",
+          "publishedAt": "2026-09-17T16:00:00.913Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d1/d169eca2-a25b-4bab-b816-b2c6e3762812?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-lecco-660318706.htm",
+          "title": "Bicicletta",
+          "price": "290 €",
+          "location": "Lecco (LC)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:00",
+          "publishedAt": "2026-09-17T16:00:00.582Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/cd/cd233cc4-4252-40ff-8fbe-876b51e669c8?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-in-carbonio-telaio-columbus-xl8r8-varese-658964110.htm",
+          "title": "Bicicletta in Carbonio ! Telaio. Columbus XL8R8.",
+          "price": "920 €",
+          "location": "Busto Arsizio (VA)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 18:00",
+          "publishedAt": "2026-09-17T16:00:00.525Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/98/98e0f52a-cec4-494c-9e0e-a9dd93f1497b?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-milano-658578387.htm",
+          "title": "Bicicletta",
+          "price": "249 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.173Z",
+          "publishedAtLabel": "Ieri alle 17:28",
+          "publishedAt": "2026-09-17T15:28:00.237Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/61/611927ed-a36c-4ac7-b8de-58af5a647101?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mtb-16-nuzzi-colibri-bimba-fucsia-brescia-579969784.htm",
           "title": "Bicicletta MTB 16 Nuzzi Colibrì bimba fucsia",
           "price": "99 €",
           "location": "Brescia (BS)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bergamo-661084979.htm",
           "title": "bicicletta",
           "price": "45 €",
           "location": "Calvenzano (BG)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-elettrica-rossignol-ragazzo-milano-660528085.htm",
           "title": "Bicicletta elettrica  Rossignol ragazzo",
           "price": "650 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-da-crono-triathlon-specialized-shiv-brescia-661084072.htm",
           "title": "Bicicletta da crono/triathlon Specialized Shiv",
           "price": "900 €",
           "location": "Ghedi (BS)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mtb-rockrider-st900s-x-ragazzo-a-milano-661083867.htm",
           "title": "Bicicletta MTB -  RockRider ST900s x ragazzo/a",
           "price": "450 €",
           "location": "Abbiategrasso (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-uomo-mantova-660805205.htm",
           "title": "bicicletta uomo",
           "price": "240 €",
           "location": "Castiglione delle Stiviere (MN)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-olanda-artigianale-biart-bergamo-661082383.htm",
           "title": "Bicicletta Olanda Artigianale BiArt",
           "price": "100 €",
           "location": "Romano di Lombardia (BG)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-btwin-con-cestino-milano-661081356.htm",
           "title": "Bicicletta btwin con cestino",
           "price": "50 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mountain-bike-da-donna-24-milano-661080930.htm",
           "title": "Bicicletta Mountain bike da donna 24”",
           "price": "100 €",
           "location": "Pozzuolo Martesana (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-elettrica-e-bike-armony-monza-milano-660445780.htm",
           "title": "bicicletta elettrica e-bike Armony Monza",
           "price": "650 €",
           "location": "Cesate (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-raggi-28-varese-661080339.htm",
           "title": "bicicletta raggi 28",
           "price": "45 €",
           "location": "Saronno (VA)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-vintage-anni-50-telaio-legnano-milano-660549174.htm",
           "title": "Bicicletta Vintage anni 50 - Telaio Legnano",
           "price": "400 €",
           "location": "Cernusco sul Naviglio (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bmx-brescia-661079140.htm",
           "title": "Bicicletta BMX",
           "price": "100 €",
           "location": "Gussago (BS)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-per-eroica-legnano-brescia-661079062.htm",
           "title": "Bicicletta per Eroica Legnano",
           "price": "200 €",
           "location": "Desenzano del Garda (BS)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/hobby-collezionismo/bicicletta-beach-cruiser-lowrider-custom-milano-659830537.htm",
           "title": "Bicicletta Beach Cruiser Lowrider Custom",
           "price": "350 €",
           "location": "Cambiago (MI)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-varese-661077603.htm",
           "title": "Bicicletta",
           "price": "900 €",
           "location": "Saronno (VA)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-varese-661077212.htm",
           "title": "Bicicletta",
           "price": "900 €",
           "location": "Saronno (VA)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-mantova-661076977.htm",
           "title": "bicicletta",
           "price": "150 €",
           "location": "Monzambano (MN)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-bianchi-anni-70-varese-661076617.htm",
           "title": "Bicicletta Bianchi anni '70",
           "price": "900 €",
           "location": "Cardano al Campo (VA)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-donna-28-in-alluminio-21v-pari-al-nuovo-como-661076446.htm",
           "title": "Bicicletta donna 28 in alluminio 21v pari al nuovo",
           "price": "230 €",
           "location": "Carimate (CO)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bicicletta-uomo-28-in-alluminio-21-rapporti-como-661075040.htm",
           "title": "Bicicletta uomo 28 in alluminio 21 rapporti",
           "price": "110 €",
           "location": "Carimate (CO)",
-          "firstSeenAt": "2026-09-17T12:52:56.878Z"
+          "firstSeenAt": "2026-09-17T12:52:56.878Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         }
       ]
     },
@@ -1214,242 +1867,344 @@
       "region": "lombardia",
       "listings": [
         {
+          "url": "https://www.subito.it/biciclette/bici-scott-gravel-brescia-659231447.htm",
+          "title": "BICI SCOTT GRAVEL",
+          "price": "1.690 €",
+          "location": "Corte Franca (BS)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": "Oggi alle 05:41",
+          "publishedAt": "2026-09-18T03:41:00.166Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/61/61ad19b0-50cf-4da2-b555-ce1182eed8f8?rule=fullscreen-1x-auto"
+        },
+        {
           "url": "https://www.subito.it/biciclette/focus-atlas-6-8-gravel-milano-661145110.htm",
           "title": "Focus Atlas 6.8 Gravel",
           "price": "1.500 €",
           "location": "Lainate (MI)",
-          "firstSeenAt": "2026-09-17T23:07:18.032Z"
+          "firstSeenAt": "2026-09-17T23:07:18.032Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/trek-al-2-taglia-l-gravel-milano-660897347.htm",
           "title": "Trek AL 2  Taglia L Gravel",
           "price": "750 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T23:07:18.032Z"
+          "firstSeenAt": "2026-09-17T23:07:18.032Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/cannondale-topstone-carbon-gravel-monza-656028160.htm",
           "title": "Cannondale Topstone Carbon - gravel",
           "price": "1.400 €",
           "location": "Busnago (MB)",
-          "firstSeenAt": "2026-09-17T23:07:18.032Z"
+          "firstSeenAt": "2026-09-17T23:07:18.032Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/gici-pinarello-gravel-carbonio-milano-658829510.htm",
           "title": "gici pinarello gravel carbonio",
           "price": "2.800 €",
           "location": "Melzo (MI)",
-          "firstSeenAt": "2026-09-17T23:07:18.032Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-bianchi-brescia-661132612.htm",
-          "title": "Gravel Bianchi",
-          "price": "2.200 €",
-          "location": "Breno (BS)",
-          "firstSeenAt": "2026-09-17T20:35:56.316Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/basso-palta-ii-gravel-lecco-549929864.htm",
-          "title": "Basso PALTA II - Gravel",
-          "price": "2.499 €",
-          "location": "La Valletta Brianza (LC)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-gravel-mantova-660076419.htm",
-          "title": "Bici - Gravel",
-          "price": "550 €",
-          "location": "Suzzara (MN)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/drali-zenith-gravel-black-como-657158700.htm",
-          "title": "💣 DRALI ZENITH GRAVEL - BLACK 💣",
-          "price": "4.500 €",
-          "location": "Longone al Segrino (CO)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-gravel-cannondale-milano-656920678.htm",
-          "title": "Bici Gravel Cannondale",
-          "price": "900 €",
-          "location": "Senago (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/lapierre-corsa-gravel-ebike-touring-promo-bergamo-623081628.htm",
-          "title": "LAPIERRE CORSA GRAVEL EBIKE TOURING PROMO",
-          "price": "4.450 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/canyon-grail-gravel-monza-650360235.htm",
-          "title": "Canyon Grail Gravel",
-          "price": "2.500 €",
-          "location": "Biassono (MB)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/scott-speedster-gravel-40-grey-promo-como-632401590.htm",
-          "title": "SCOTT Speedster Gravel 40 grey PROMO",
-          "price": "1.399 €",
-          "location": "Como (CO)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-grvl-120-tagli-xs-milano-661116534.htm",
-          "title": "Gravel grvl 120 tagli xs",
-          "price": "300 €",
-          "location": "Cesano Boscone (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/f-moser-e-gravel-rival-bergamo-660965365.htm",
-          "title": "F-Moser E-Gravel Rival",
-          "price": "3.000 €",
-          "location": "Treviolo (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-gravel-milano-658274996.htm",
-          "title": "Bici Gravel",
-          "price": "1.200 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bicicletta-gravel-guerciotti-varese-656052121.htm",
-          "title": "Bicicletta Gravel Guerciotti",
-          "price": "1.300 €",
-          "location": "Varese (VA)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-jaroon-xs-bergamo-653188392.htm",
-          "title": "Gravel Jaroon XS",
-          "price": "1.300 €",
-          "location": "Sovere (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/addict-gravel-20-tg-s-e-m-milano-661113301.htm",
-          "title": "ADDICT GRAVEL 20 - tg S e M",
-          "price": "3.400 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-tipo-gravel-bergamo-661097528.htm",
-          "title": "Bici tipo gravel",
-          "price": "140 €",
-          "location": "Stezzano (BG)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/scarpe-specialized-42-mtb-gravel-brescia-661095379.htm",
-          "title": "Scarpe specialized 42 mtb/gravel",
-          "price": "90 €",
-          "location": "Lodrino (BS)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/focus-mares-9-8-gravel-taglia-small-como-651288300.htm",
-          "title": "Focus Mares 9.8 Gravel taglia Small",
-          "price": "1.549 €",
-          "location": "Como (CO)",
-          "firstSeenAt": "2026-09-17T17:45:27.809Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/scott-speedster-30-gravel-pavia-655825326.htm",
-          "title": "Scott Speedster 30 - Gravel",
-          "price": "1.350 €",
-          "location": "Certosa di Pavia (PV)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-gravel-giant-revolt-advanced-pro-0-2026-varese-630081076.htm",
-          "title": "Bici Gravel Giant Revolt Advanced Pro 0 2026",
-          "price": "5.900 €",
-          "location": "Casciago (VA)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-cremona-644482132.htm",
-          "title": "Gravel",
-          "price": "2.990 €",
-          "location": "Romanengo (CR)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-wilier-jaroon-sram-rival-1x11-tg-s-milano-659336227.htm",
-          "title": "gravel Wilier Jaroon- Sram Rival 1x11 -Tg S",
-          "price": "1.300 €",
-          "location": "Buccinasco (MI)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/copertoni-vittoria-gravel-pavia-661070256.htm",
-          "title": "Copertoni Vittoria Gravel",
-          "price": "80 €",
-          "location": "Broni (PV)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/bici-scott-gravel-brescia-659231447.htm",
-          "title": "BICI SCOTT GRAVEL",
-          "price": "1.690 €",
-          "location": "Corte Franca (BS)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/sonder-camino-titanio-taglia-54-gravel-bike-milano-651812587.htm",
-          "title": "SONDER CAMINO TITANIO | Taglia 54 | Gravel Bike |",
-          "price": "1.650 €",
-          "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-ktm-x-strada-15-pro-bergamo-661017147.htm",
-          "title": "GRAVEL KTM X-STRADA 15 PRO",
-          "price": "1.300 €",
-          "location": "Bergamo (BG)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+          "firstSeenAt": "2026-09-17T23:07:18.032Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/bici-gravel-mondraker-arid-carbon-rr-taglia-m-milano-660508805.htm",
           "title": "BICI GRAVEL MONDRAKER ARID CARBON RR TAGLIA M",
           "price": "3.500 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/ebike-basso-volta-gravel-carbonio-tg-m-polini-pavia-660393396.htm",
-          "title": "Ebike Basso Volta Gravel carbonio tg M polini",
-          "price": "2.500 €",
-          "location": "Campospinoso (PV)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
-        },
-        {
-          "url": "https://www.subito.it/biciclette/gravel-varese-661013003.htm",
-          "title": "gravel",
-          "price": "2.500 €",
-          "location": "Ferno (VA)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": "Ieri alle 23:20",
+          "publishedAt": "2026-09-17T21:20:00.308Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d4/d4f143a3-a596-4e84-8e05-514a6a8ad7dc?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/bici-da-gravel-basso-prezzo-trattabile-sondrio-656817281.htm",
           "title": "Bici da gravel basso (prezzo trattabile)",
           "price": "1.800 €",
           "location": "Mese (SO)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": "Ieri alle 23:19",
+          "publishedAt": "2026-09-17T21:19:00.454Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/88/888fc639-868f-48af-9f53-70f4d83cbf82?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-bianchi-brescia-661132612.htm",
+          "title": "Gravel Bianchi",
+          "price": "2.200 €",
+          "location": "Breno (BS)",
+          "firstSeenAt": "2026-09-17T20:35:56.316Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/basso-palta-ii-gravel-lecco-549929864.htm",
+          "title": "Basso PALTA II - Gravel",
+          "price": "2.499 €",
+          "location": "La Valletta Brianza (LC)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/drali-zenith-gravel-black-como-657158700.htm",
+          "title": "💣 DRALI ZENITH GRAVEL - BLACK 💣",
+          "price": "4.500 €",
+          "location": "Longone al Segrino (CO)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/lapierre-corsa-gravel-ebike-touring-promo-bergamo-623081628.htm",
+          "title": "LAPIERRE CORSA GRAVEL EBIKE TOURING PROMO",
+          "price": "4.450 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/canyon-grail-gravel-monza-650360235.htm",
+          "title": "Canyon Grail Gravel",
+          "price": "2.500 €",
+          "location": "Biassono (MB)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/scott-speedster-gravel-40-grey-promo-como-632401590.htm",
+          "title": "SCOTT Speedster Gravel 40 grey PROMO",
+          "price": "1.399 €",
+          "location": "Como (CO)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-grvl-120-tagli-xs-milano-661116534.htm",
+          "title": "Gravel grvl 120 tagli xs",
+          "price": "300 €",
+          "location": "Cesano Boscone (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/f-moser-e-gravel-rival-bergamo-660965365.htm",
+          "title": "F-Moser E-Gravel Rival",
+          "price": "3.000 €",
+          "location": "Treviolo (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-milano-658274996.htm",
+          "title": "Bici Gravel",
+          "price": "1.200 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-gravel-guerciotti-varese-656052121.htm",
+          "title": "Bicicletta Gravel Guerciotti",
+          "price": "1.300 €",
+          "location": "Varese (VA)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-jaroon-xs-bergamo-653188392.htm",
+          "title": "Gravel Jaroon XS",
+          "price": "1.300 €",
+          "location": "Sovere (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/addict-gravel-20-tg-s-e-m-milano-661113301.htm",
+          "title": "ADDICT GRAVEL 20 - tg S e M",
+          "price": "3.400 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-tipo-gravel-bergamo-661097528.htm",
+          "title": "Bici tipo gravel",
+          "price": "140 €",
+          "location": "Stezzano (BG)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/scarpe-specialized-42-mtb-gravel-brescia-661095379.htm",
+          "title": "Scarpe specialized 42 mtb/gravel",
+          "price": "90 €",
+          "location": "Lodrino (BS)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/focus-mares-9-8-gravel-taglia-small-como-651288300.htm",
+          "title": "Focus Mares 9.8 Gravel taglia Small",
+          "price": "1.549 €",
+          "location": "Como (CO)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-mantova-660076419.htm",
+          "title": "Bici - Gravel",
+          "price": "550 €",
+          "location": "Suzzara (MN)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": "Ieri alle 19:03",
+          "publishedAt": "2026-09-17T17:03:00.193Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/e5/e5ca650b-32cf-411f-867f-ff4d2e4a6fa6?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-cannondale-milano-656920678.htm",
+          "title": "Bici Gravel Cannondale",
+          "price": "900 €",
+          "location": "Senago (MI)",
+          "firstSeenAt": "2026-09-17T17:45:27.809Z",
+          "publishedAtLabel": "Ieri alle 18:31",
+          "publishedAt": "2026-09-17T16:31:00.293Z",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/98/9809e9ed-4828-4b4f-a8b5-4815c295243c?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/scott-speedster-30-gravel-pavia-655825326.htm",
+          "title": "Scott Speedster 30 - Gravel",
+          "price": "1.350 €",
+          "location": "Certosa di Pavia (PV)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-gravel-giant-revolt-advanced-pro-0-2026-varese-630081076.htm",
+          "title": "Bici Gravel Giant Revolt Advanced Pro 0 2026",
+          "price": "5.900 €",
+          "location": "Casciago (VA)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-cremona-644482132.htm",
+          "title": "Gravel",
+          "price": "2.990 €",
+          "location": "Romanengo (CR)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-wilier-jaroon-sram-rival-1x11-tg-s-milano-659336227.htm",
+          "title": "gravel Wilier Jaroon- Sram Rival 1x11 -Tg S",
+          "price": "1.300 €",
+          "location": "Buccinasco (MI)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/copertoni-vittoria-gravel-pavia-661070256.htm",
+          "title": "Copertoni Vittoria Gravel",
+          "price": "80 €",
+          "location": "Broni (PV)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/sonder-camino-titanio-taglia-54-gravel-bike-milano-651812587.htm",
+          "title": "SONDER CAMINO TITANIO | Taglia 54 | Gravel Bike |",
+          "price": "1.650 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-ktm-x-strada-15-pro-bergamo-661017147.htm",
+          "title": "GRAVEL KTM X-STRADA 15 PRO",
+          "price": "1.300 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/ebike-basso-volta-gravel-carbonio-tg-m-polini-pavia-660393396.htm",
+          "title": "Ebike Basso Volta Gravel carbonio tg M polini",
+          "price": "2.500 €",
+          "location": "Campospinoso (PV)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
+        },
+        {
+          "url": "https://www.subito.it/biciclette/gravel-varese-661013003.htm",
+          "title": "gravel",
+          "price": "2.500 €",
+          "location": "Ferno (VA)",
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         },
         {
           "url": "https://www.subito.it/biciclette/scarpe-dmt-22-gk1-gravel-milano-652644398.htm",
           "title": "Scarpe Dmt 22 Gk1 Gravel",
           "price": "90 €",
           "location": "Milano (MI)",
-          "firstSeenAt": "2026-09-17T12:52:57.496Z"
+          "firstSeenAt": "2026-09-17T12:52:57.496Z",
+          "publishedAtLabel": null,
+          "publishedAt": null,
+          "imageUrl": null
         }
       ]
     },
