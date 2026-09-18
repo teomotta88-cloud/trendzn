@@ -46078,7 +46078,16 @@
           "likes": 40,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 70.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:47:54.019Z"
+          }
         }
       ]
     },
@@ -52357,7 +52366,16 @@
           "likes": 338,
           "comments": 8,
           "shares": 258,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buona domenica! Potremmo servire anche noi un caffè qui? Sì, con piacere, amici miei, e per avere una giornata bella. Certo, veniamo con molto piacere, in un posto così speciale. Oana e Samy si occupano oggi dei nostri clienti. Vi aspettiamo con molto piacere, a casa Elena. Quindi, abboniamo la discussione per un'altra giornata. Certo!",
+            "language": "Italian",
+            "durationSec": 52.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:47:58.081Z"
+          }
         }
       ]
     },
@@ -83478,7 +83496,16 @@
           "likes": 116,
           "comments": 14,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:00.162Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -83492,7 +83519,16 @@
           "likes": 3282,
           "comments": 173,
           "shares": 2469,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi vi mostriamo il miglior hotel d'Espagna E' che anche se è in Spagna, appare in un altro paese Benvenuti all'Asia Garden Hotel Anta Spa Situato a fuori di Venidor Ha piscine infinite, rinnovate di jardini esotici e cascate scondite Ha anche un spa stile thailandese E' un hotel perfetto per scappare romantiche, relax totale O semplicemente per sconnettervi, rinnovato da un entorno unico",
+            "language": "Italian",
+            "durationSec": 25.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:02.730Z"
+          }
         }
       ]
     },
@@ -93229,7 +93265,16 @@
           "likes": 607,
           "comments": 9,
           "shares": 202,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Io amo il tuo cuore, quindi non è di chi, vi auguro di guardarlo per me. Quando il mio cuore è pronto, il mio cuore è pronto per capire tutto il mio cuore. Nel porto muore mai? Prudenti, pii con un bel nonno Se il tuo cuore non è un nonno C'è qualcuno, c'è qualcuno C'è qualcuno, c'è qualcuno Più che un buon nonno Prudenti, pii con un buon nonno Oh oh, le tue orecchie, puoi aspettare? Le tue orecchie, puoi aspettare? Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 86.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:10.345Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93243,7 +93288,16 @@
           "likes": 22,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:12.898Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93257,7 +93311,16 @@
           "likes": 382,
           "comments": 1,
           "shares": 114,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 30.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:15.437Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93271,7 +93334,16 @@
           "likes": 82,
           "comments": 3,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:17.695Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93285,7 +93357,16 @@
           "likes": 195,
           "comments": 2,
           "shares": 101,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:19.860Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93299,7 +93380,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi, sono al Double Tree by Hilton Fairfold Hotel & Suites. La stanza è super comodissima e pulita, il staff è così amico, è vicino a scuole e restauranti, solo un piccolo viaggio. Il lavabo è moderno e l'area di destra è ottima per il lavoro. La vista dalla stanza è incredibile. In generale, un buon viaggio!",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:22.384Z"
+          }
         }
       ]
     },
@@ -113436,7 +113526,16 @@
           "likes": 38,
           "comments": 52,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Con un po' di cibo a restare in uno dei risorti più belli di Hòa Bình, Suriname Resort Kimboi, ti offre un buffet di sveglio e un'esperienza di tassi onsen di base in italiano. Suriname Resort Kimboi è a 2 ore di corsa da Hà Nội, in mezzo a un'area di montagne bianche, nubi, tranquilla e totalmente senza la dolcezza del palazzo. Ma l'ambiente è un'ambiente con l'architettura che ha un'ambiente di cultura del nord-est, creando un'ambiente sia sancio, sia vicino ai piedi e più rossi. Il sistema di stanza qui è estremamente ampio, è grande, ha un ambiente sancio e è equipagato con tutto il necessario, da il latte, l'acqua al caffè ogni giorno. Dal pavimento, puoi uscire dal luogo del rinforzamento, portando la sensazione di rinforzamento e di tranquillità. Nel campo di alimentazione, il combo di Amazing Go ha un buon buffet. Inoltre, potete chiamare il menu di mangiamento, la mangiata al restaurant con il menu di mangiamento in europeo, asilo o i mangiamenti di nord-est molto speciali. Quando imposti il combo, puoi usare anche un paio di tipi di risorse come il salone inverno, la chiesa di calma, le biciclette in 2 ore, la chiesa di zinco e la casa di gioia in casa, inoltre per i bambini. Inoltre, il resort ha anche un luogo di sottoposizione di onsen di giustizia, che porta all'esperienza di cura di salute di pericolo per la famiglia. In particolare, per le famiglie, questa è una scelta molto utile perché sia rispettiva dei costi, sia semplice per organizzare le aziende di esercizio. Amazing Go ha anche aiutato l'organizzazione di un'esercizio, Team Building, Gala Dinner, con l'innovazione e l'innovazione per le compagnie, le organizzazioni e i clienti. Anche per le famiglie, amici o compagni, con l'innovazione di Serena Resort Kimboi, Il punto di rinforzamento più importante è la pazienza. Inboxate il Go Amazing per ottenere un'avviso di dettaglio e un'attività di gioco.",
+            "language": "Italian",
+            "durationSec": 85.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:27.749Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113450,7 +113549,16 @@
           "likes": 13,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:30.427Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -113464,7 +113572,16 @@
           "likes": 72,
           "comments": 6,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 22.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:34.799Z"
+          }
         }
       ]
     },
@@ -126147,7 +126264,16 @@
           "likes": 314,
           "comments": 8,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:36.937Z"
+          }
         }
       ]
     },
@@ -133687,7 +133813,16 @@
           "likes": 548,
           "comments": 21,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come già sapete, i fragranti sono sempre il mio tocco finale, ma questi sono il mio successo. I spray di viaggio di Valentino Verona sono letteralmente un luxurio di poche dimensioni. Si adattano nella macchina più piccola, quindi posso prendere i miei fragranti preferiti ovunque mi andi. Ho Dona Verona, Coral Fantasy, Purple Melancolia e, ovviamente, Green Estravaganza, tutti in questi piccoli stessi stessi stessi. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 38.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:39.618Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -133701,7 +133836,16 @@
           "likes": 3868,
           "comments": 24,
           "shares": 116,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:42.812Z"
+          }
         }
       ]
     },
@@ -141018,7 +141162,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "immagina te stesso in questo paradiso lusso di Jamaica, un ritiro a rive, dove la rinforza, il movimento e la sesterza fluttuano come volutamente come l'acqua questa è la tua invitazione per pausare, respirare e tornare a casa a te stesso in un spazio sagrado creato solo per te ci vediamo presto Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:45.215Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -141032,7 +141185,16 @@
           "likes": 57,
           "comments": 2,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi andare a Giorgia, ma vuoi dormire in una chiamata che non è abituale? Devi provare il Prima Hotel Giorgia. Qui, per farvi capire, c'è una chiamata che non è abituale. Per chi vuole un'ambiente industriale, puoi prendere il Type Superior o Deluxe. Tutti hanno un'ambiente con Hydrier, no? Continuiamo con il Type Executive. Qui c'è 9 tipi di chiamate. Il primo è il Type Canggu. L'ambiente è simile a quello di Bali. Il prossimo è il Type Sakura. Chi vuole dormire come in Giappone, può provarlo. Poi c'è il Type Maison. Sì, è bello, ha un disegno bello. e c'è un bathtub che si rilascia direttamente con i casuri, che rilassi dopo la viaggia. Poi c'è il tipo per anakan, che vuole che l'esotismo di questa camara sia adatto per voi. Poi, chi piace l'esotismo bohemian, potete scegliere questa camara, che è adatto per foto. Per chi vuole che l'esotismo japanese sia adatto, potete scegliere questo tipo di ryokan. Qui c'è anche la roba giapponese. Poi, nel rooftop, potete rinnovare e vedere il sunset, e a mezz'ora potete dinnare e vedere la città di Jogja. Per il parco spaziale, c'è il parco basement Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:49.623Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -141046,7 +141208,16 @@
           "likes": 20400,
           "comments": 201,
           "shares": 7656,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:51.866Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -141060,7 +141231,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:54.219Z"
+          }
         }
       ]
     },
@@ -149251,7 +149431,16 @@
           "likes": 31,
           "comments": 1,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "...e mi vivi... ...like water...",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:56.214Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -149265,7 +149454,16 @@
           "likes": 11,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 9.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:48:58.120Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -149279,7 +149477,16 @@
           "likes": 27500,
           "comments": 1437,
           "shares": 6959,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come si sono costruiti strutture come queste con cavalli, carti e strutture? Pensateci. Non c'era elettricità, non c'erano crani moderni, non c'erano strutture di potere. Invece nel 1386 la costruzione inizia sul Catedrale di Milan, una struttura enorme coperta di miliardi di statue, pinnacoli e pezzi intricate di marmellina, con le torri che avvengono a raggiungere più di 300 metri in cielo. E non lavoravano con materiali leggeri. materiali. Si stavano trasportando enormi quantità di marmellata da quarri, a milioni di metri, poi, in qualche modo, levando e caricando quella pietra in alto sopra la città. Ma Milano non è un mistero isolato. Torniamo ancora. Nel 1296 la costruzione inizia sulla cattedrale di Florence. Poi si costruiscono qualcosa che ancora sembra quasi impossibile, il Dome di Brunelleschi. L'Ordine solo è estimato a pesare circa 37.000 tonnellate e contiene più di 4 milioni di brici e è stato costruito più di 500 anni prima del crano moderna ora andiamo a Germania la costruzione sul cathedral di Cologne inizia nel 1248 la cattedrale finita risponde più di 500 metri in aereo circa 300.000 tonnelli di pietra sono usati nella struttura poi c'è il Notre-Dame de Paris la costruzione inizia circa 1163 Massive ponte di ponte riscaldano sopra il pavimento, supportate da colombe e buttresse volanti precisamente ingegnerizzate. Quindi, che se c'è qualcosa di old world architecture che abbiamo scordato? Che se le persone che hanno costruito queste strutture hanno avuto conoscenza o tecnologia che è stata finalmente perduta? Ultimamente, queste anomalie architettoniche straordinarie suggeriscono che la nostra narrativa storica è stata costruita. La nostra narrativa storica è stata costruita. La nostra narrativa è stata costruita. e la caratteristica delle incredibili dome, colombe e sculture che si possono vedere spalmare il mondo, da Russia fino a qui in America. Question everything.",
+            "language": "Italian",
+            "durationSec": 119.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:49:02.484Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -149293,7 +149500,16 @@
           "likes": 1086,
           "comments": 80,
           "shares": 252,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 17.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T09:49:05.525Z"
+          }
         }
       ]
     }
