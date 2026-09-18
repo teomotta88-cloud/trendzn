@@ -30550,6 +30550,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:16:55.281Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:18:29.608Z"
           }
         },
         {
@@ -30601,6 +30609,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:16:59.831Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:18:51.615Z"
           }
         },
         {
@@ -30624,6 +30640,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:03.843Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i la prima parte\nMa la parte 1?\ngrande richiesta\n‘A grande richie\nla prima parte\nparte?\na prima parte",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:18:58.917Z"
           }
         },
         {
@@ -30647,6 +30672,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:07.112Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i pring",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:19:09.741Z"
           }
         },
         {
@@ -30670,6 +30704,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:09.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:19:14.217Z"
           }
         }
       ]
@@ -61940,6 +61982,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:16.752Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:19:27.827Z"
           }
         },
         {
@@ -61963,6 +62013,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:19.706Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ESTAR EN\nPOV: LO TUYO ES",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:19:36.022Z"
           }
         }
       ]
@@ -71591,6 +71650,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:22.964Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:19:45.725Z"
           }
         }
       ]
@@ -83976,6 +84043,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:26.146Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:19:57.920Z"
           }
         }
       ]
@@ -94103,6 +94178,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:29.949Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AYA RETREAT\nKingsize\nZany 3",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:20:10.077Z"
           }
         }
       ]
@@ -105244,6 +105328,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:32.577Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Rioperty,\nALTA.\nENCES\nthat\nUrban Living\n16500/SQFT\nPRICE",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:20:19.085Z"
           }
         },
         {
@@ -105267,6 +105360,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:37.263Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Walk- run",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:20:35.738Z"
           }
         }
       ]
@@ -114580,6 +114682,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:39.983Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:20:51.848Z"
           }
         }
       ]
@@ -127560,6 +127670,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:42.963Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LINE",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:21:20.040Z"
           }
         }
       ]
@@ -135172,6 +135291,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:45.146Z"
+          },
+          "ocrData": {
+            "textOnScreen": "valentino\ngolden coconl\ngolden coconi\nvalentino hair&bog\nvalentino hair&body. R\nNINO",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:21:31.280Z"
           }
         },
         {
@@ -135195,6 +135323,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:47.926Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:21:44.654Z"
           }
         },
         {
@@ -135218,6 +135354,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:50.092Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sale\n8 Hicks Lane,\nA Great Neck,",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:21:53.241Z"
           }
         }
       ]
@@ -142736,6 +142881,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:52.415Z"
+          },
+          "ocrData": {
+            "textOnScreen": "3 Tamarindo Diria\n‘Tamarindo Diria\nin Costa Rica\nHotel in Costa Rica\nDiria\nPick\nlotel in CostaRica",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:22:13.014Z"
           }
         },
         {
@@ -142759,6 +142913,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:55.122Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1 INSIDE\nA Luxury Collection",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:22:20.240Z"
           }
         },
         {
@@ -142782,6 +142945,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:17:58.448Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:22:25.555Z"
           }
         }
       ]
@@ -151142,6 +151313,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:18:01.662Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ereler\ny oops\nBonnie\nown safety in the best;\ni heican’\n300 years ago\nPinza\n\"let every man seek his",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:23:02.765Z"
           }
         },
         {
@@ -151165,6 +151345,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:18:03.975Z"
+          },
+          "ocrData": {
+            "textOnScreen": "is amix\nfreewilland fate\n(Read caption below)\nis a mix between\npn freewilland fate\nfate\nLife is a between\nLife isa",
+            "confidence": 0.915,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:23:08.448Z"
           }
         },
         {
@@ -151188,6 +151377,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:18:08.437Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Iboga is a powerful psychoactive\nplant medicine derived from the\nroot bark of Tabernanthe iboga, a\nshrub native to Central West\nAfrica, particularly Gabon,\nCameroon, and the Congo Basin.\nTraditionally used in Bwiti spiritual\nceremonies, Iboga is known for its\nability to detox the body, reset\nneural pathways, and facilitate\ndeep psychological and spiritual\nhealing.\nThis 5 day retreat is designed to support deep\nhealing, nervous system reset, and soul\nalignment.\nTHE FOLLOWING IS OUR\nFOUR PHASE PROGRAM.\nPhase 1. Discovery Call:\nEach participant begins\nwith a comprehensive\nmedical and\npsychological screening\nto ensure safety, assess\nany risk factors or\ncontraindications, and\nalign their individual\ngoals with the structure\nand intention of the\nprogram protocols.\nWhat’s Included in Your\nPrivate Retreat\nIboga Bufo Retreat:\n1:1 Discovery Call\nPre-Retreat Preparation Support\n5-Day Private Sacred Retreat\nDay 2: TA Ceremony\nDay 4: Bufo Alvarius Ceremony\nNature Integration PEMF Therapy\nOrganic, Nourishing Meals Daily\nPool for Detox Nervous System\nReset\nForest Trails Electric Bike Rides\nfor Grounding\nWellness, Meditation, Breathwork,\nSomatics, Humming Sound\nBathing\nSupport\n6 weeks/Twice A Week of Post-\nIntegration Coaching\nCustom Designed\nJournal, Meditati\nVideos and\nWorkbook\nIntegration Materia\nteat i\nCEO, Board of Elder, Sacred Medicine Practitioner, Energy Medicine\nTransformational Psychedelic Soul Integration Coach\nBufo Healing Sanctuary\nwww.bufohealingsanctuary.com",
+            "confidence": 0.9,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:23:23.989Z"
           }
         },
         {
@@ -151211,6 +151409,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:18:13.623Z"
+          },
+          "ocrData": {
+            "textOnScreen": "How bots fill a game (behind the\na Powershell scenes)\nEver wondered how devs test a full\n7] bot13 server?\n7] bot2e\n27] bot2s\ns) launched. They hold their slot for 1!\nhe roster 500 s.\nteans, then Press Start.\nscenes)\nserver?\nPractice Go to the top of the duel\nteam Map Information 3\nx MASTER\nGame vay\nNormal\n3 Select Team\ni ille.\nDuel class Character Name team Map\n[2] Eifaria x MASTER\nx READY\ne bot3 x READY\nbot x READY Normal\nE Select Team\nSTART\nWindows PowerShell x\n8/27] bots\n15/27] bot1s\n27 bot(s) Launched\ndatch the hold the.\nthem client,\nIf a bot i teans, then Press\nand its log Stare,\nPS prompt, harness Prà\nCbad Pass, nts every\nVersion gate,\nx server?\nmap Mepra's hideout put\nity Private password\nway Normal [el\nout 3minute b x",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:23:40.291Z"
           }
         },
         {
@@ -151234,6 +151441,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T20:18:16.864Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PONE a\n{iilt",
+            "confidence": 0.727,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T20:24:10.762Z"
           }
         }
       ]
