@@ -52463,7 +52463,7 @@
           "url": "https://www.tiktok.com/@veroviaggi/video/7673172804057058592",
           "date": "2026-08-12T15:49:22.000Z",
           "caption": "🌊 Serenè Resort ⭐️⭐️⭐️⭐️ Direttamente sul mare, nel cuore di Marinella di Cutro, Calabria.  #SereneResort #MarinellaDiCutro #Calabria #Mare",
-          "location": null,
+          "location": "Serenè Resort",
           "views": 22400,
           "imageUrl": null,
           "likes": 298,
@@ -52487,7 +52487,28 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-18T15:02:38.650Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "mare"
+            ],
+            "location": "Serenè Resort",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-18T15:09:52.620Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "mare"
+          ]
         },
         {
           "platform": "tiktok",
