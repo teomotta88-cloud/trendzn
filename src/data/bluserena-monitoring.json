@@ -142232,6 +142232,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:36.476Z"
+          },
+          "ocrData": {
+            "textOnScreen": "cuma 2-3 menit dari Kim Yong\ndan lee garden Mark\nè Area Samal\nuntuk DUduk",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:09:12.595Z"
           }
         },
         {
@@ -142255,6 +142264,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:42.845Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JI. ARS Moh. No.7 Klandasan\n3 kanzalicio\nBooking hotel diskonnya 4\nLewat Tag Lokasi dibawah!\n‘GRAN SENYIUR Hotel bintang 5\nvang Ke\nmala 2 tamu\nAgoda\nDana\ndikembalikan Terendah untuk hotel ini di TikTok",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:09:22.194Z"
           }
         }
       ]
@@ -150583,6 +150601,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:45.919Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hopefully Will move\nwith\nbeen made aware about\nyour amazing project on\nI'can't wait to see you\nm a Dublin brother",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:09:35.877Z"
           }
         }
       ]
