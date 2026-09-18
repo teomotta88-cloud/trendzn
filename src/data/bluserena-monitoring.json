@@ -30535,7 +30535,7 @@
           "url": "https://www.tiktok.com/@themogsss/video/7529966031368899862",
           "date": "2025-07-22T17:53:57.000Z",
           "caption": "GLI 8 ANNI PIÙ BELLI DELLA MIA VITA 🥹❤️✨ Abbiamo festeggiato il nostro anniversario di matrimonio a ETHRA RESERVE in un RESORT @bluserena ed è stato bellissimo !!! Grazie di cuore a tutto lo staff e ai ragazzi dell’animazione , tutti stupendi … VI PORTEREMO NEL CUORE ❤️✨  #bluserena #bluserenahotelandresorts #LaVavanzaCheResta #invited #themogs #casamog #vitadapapà #dadlife",
-          "location": null,
+          "location": "Ethra Reserve",
           "views": 226900,
           "imageUrl": null,
           "likes": 17300,
@@ -30558,7 +30558,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-18T20:18:29.608Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "relax",
+              "bambini",
+              "divertimento",
+              "anniversario"
+            ],
+            "location": "Ethra Reserve",
+            "confidence": 0.92,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-18T20:24:21.580Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "relax",
+            "bambini",
+            "divertimento",
+            "anniversario"
+          ]
         },
         {
           "platform": "tiktok",
@@ -30594,7 +30622,7 @@
           "url": "https://www.tiktok.com/@beatricegherardini/video/7535838743068970262",
           "date": "2025-08-07T13:43:05.000Z",
           "caption": "Vi porto con me in una mia giornata in vacanza al @bluserena 🥰 #bluserena #bluserenahotelandresorts #LaVacanzaCheResta #inpartnershipwith",
-          "location": null,
+          "location": "Bluserena",
           "views": 83000,
           "imageUrl": null,
           "likes": 5325,
@@ -30617,7 +30645,35 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-18T20:18:51.615Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "attività fisica",
+              "relax",
+              "cibo",
+              "visita città"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.9,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-18T20:24:29.719Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "attività fisica",
+            "relax",
+            "cibo",
+            "visita città"
+          ]
         },
         {
           "platform": "tiktok",
@@ -30625,7 +30681,7 @@
           "url": "https://www.tiktok.com/@bettercallfolly/video/7538043915224616214",
           "date": "2025-08-13T12:20:16.000Z",
           "caption": "Risposta a @Alessio Giudici a grande richiesta la prima parte che non avevo pubblicato perché mia figlia parlava sotto #animazione #bluserena #villaggioturistico #summer2025 #teatro",
-          "location": null,
+          "location": "Bluserena",
           "views": 156900,
           "imageUrl": null,
           "likes": 2646,
@@ -30649,7 +30705,34 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-18T20:18:58.917Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "teatro",
+              "villaggioturistico",
+              "summer2025"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.75,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-18T20:24:30.482Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "teatro",
+            "villaggioturistico",
+            "summer2025"
+          ]
         },
         {
           "platform": "tiktok",
@@ -30657,7 +30740,7 @@
           "url": "https://www.tiktok.com/@ilritrovodegliamici/video/7529932796668792086",
           "date": "2025-07-22T15:44:59.000Z",
           "caption": "Con questo si chiude il capitolo vacanze… da giovedì si prova a tornare seri, ma senza troppe promesse!😂😂😂 Grazie a chi ci ha seguito, siete fantastici😘♥️  #ilritrovodegliamicimarano #poerios #vacanza #motomoto #viralreels #viralvideo #cisidiverte #bluserena",
-          "location": null,
+          "location": "Bluserena",
           "views": 57500,
           "imageUrl": null,
           "likes": 1217,
@@ -30681,7 +30764,32 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-18T20:19:09.741Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "vacanza",
+              "social media",
+              "humor"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.85,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-18T20:24:31.508Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "vacanza",
+            "social media",
+            "humor"
+          ]
         },
         {
           "platform": "tiktok",
