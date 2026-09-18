@@ -83365,6 +83365,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:03.539Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:36:39.933Z"
           }
         },
         {
@@ -83388,6 +83396,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:07.659Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sibariooooo",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:36:44.847Z"
           }
         },
         {
@@ -83411,6 +83428,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:15.011Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:36:51.490Z"
           }
         }
       ]
@@ -92998,6 +93023,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:17.413Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IONE\nStill\nRESO",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:11.107Z"
           }
         },
         {
@@ -93021,6 +93055,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:20.071Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Villa\nFasilitas Kamaf Lengk\ndi Sunsetfalls\nBetdh",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:16.574Z"
           }
         },
         {
@@ -93044,6 +93087,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:23.018Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fim de tarde\nFimdetarde i",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:25.266Z"
           }
         },
         {
@@ -93067,6 +93119,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:25.644Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:33.106Z"
           }
         },
         {
@@ -93090,6 +93150,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:31.254Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Complimentary Ì\nmini",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:37.932Z"
           }
         }
       ]
@@ -103881,6 +103950,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:36.946Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:42.369Z"
           }
         },
         {
@@ -103904,6 +103981,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:39.987Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Superior\nsekitar 21m”\nmenit\nStasiun",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:37:53.747Z"
           }
         },
         {
@@ -103927,6 +104013,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:43.492Z"
+          },
+          "ocrData": {
+            "textOnScreen": "saatnya",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:38:04.469Z"
           }
         },
         {
@@ -103950,6 +104045,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:47.095Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Apart Gran\nApart Hotel Gran\nPacifico\nLa Serena\n7 Apart Hotel Gran",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:38:16.646Z"
           }
         },
         {
@@ -103973,6 +104077,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:52.828Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MEDIAS CUERDAS DESDE\nda Sana\nINTERES/ACA\nparcelamiento\nGranjasidelSerenal\nMIS AMIGOS",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:38:27.365Z"
           }
         },
         {
@@ -103996,6 +104109,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:55.172Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Grand\nCheck into Silversands",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:38:36.465Z"
           }
         }
       ]
@@ -113024,6 +113146,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:29:59.163Z"
+          },
+          "ocrData": {
+            "textOnScreen": "terus\nkulkasnya\njuga hotelnya\nbanget",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:38:43.449Z"
           }
         },
         {
@@ -113047,6 +113178,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:04.595Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Trom via di nghi duéng book ducc\nview phòng siéu chill thé nay",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:39:01.440Z"
           }
         },
         {
@@ -113070,6 +113210,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:09.971Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:39:18.635Z"
           }
         },
         {
@@ -113093,6 +113241,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:12.985Z"
+          },
+          "ocrData": {
+            "textOnScreen": "It was just a simple cheeseburger. No hate lol\nOkay",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:39:27.859Z"
           }
         },
         {
@@ -113116,6 +113273,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:19.483Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Tour of Terranea Resort",
+            "confidence": 0.856,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:39:35.136Z"
           }
         }
       ]
@@ -125651,6 +125817,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:24.323Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Va THEM",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:39:42.761Z"
           }
         },
         {
@@ -125674,6 +125849,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:27.066Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:40:08.678Z"
           }
         },
         {
@@ -125697,6 +125880,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:29.709Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:40:34.639Z"
           }
         },
         {
@@ -125720,6 +125911,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:32.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": "os; you just sit A\nanda A\nsometimes, 3 i A\nwith the\nwith t\nyou just need to si\nthe view and",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:40:48.370Z"
           }
         },
         {
@@ -125743,6 +125943,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:35.033Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:40:57.383Z"
           }
         }
       ]
@@ -133197,6 +133405,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:30:37.625Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:41:09.394Z"
           }
         },
         {
