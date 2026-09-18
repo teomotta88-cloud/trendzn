@@ -46118,6 +46118,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T14:59:25.672Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:02:11.504Z"
           }
         }
       ]
@@ -52438,6 +52446,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T14:59:28.470Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Gul Coast\nCollection\nHotel\nSi no conoces esta Joya\nquieres ahorrarte mas del\nAL visitarlo\nEscribeme Ahora\nAhorrar hasta 36%\nSunseeker Resort Florida Gulf Coast Curio\nsi aunno co\nY quieres ahorrarte\n1 D Joya\nDehotelen Florida\nY quieres ahorrarte mas del\nP AL visitarlo\nhasta 36%\nvisitarlo\nSia ni DICONO\nquieres has det\nAhora",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:02:25.503Z"
           }
         },
         {
@@ -52461,6 +52478,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T14:59:31.181Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE RESORT\nRESORT: 1",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:02:38.650Z"
           }
         },
         {
@@ -52484,6 +52510,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T14:59:34.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANAT",
+            "confidence": 0.72,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:03:17.744Z"
           }
         }
       ]
@@ -61710,6 +61745,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T14:59:45.811Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:03:34.019Z"
           }
         }
       ]
@@ -93613,6 +93656,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T14:59:57.085Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tiktok",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:03:43.557Z"
           }
         },
         {
@@ -93636,6 +93688,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:03.032Z"
+          },
+          "ocrData": {
+            "textOnScreen": "disambu\nair yang\nliburan DE\njadi",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:04:03.600Z"
           }
         },
         {
@@ -93659,6 +93720,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:19.443Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:04:20.861Z"
           }
         },
         {
@@ -93682,6 +93751,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:22.825Z"
+          },
+          "ocrData": {
+            "textOnScreen": "REPOSADO\nNETO\nserenity out,\nserer\npout.",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:04:26.448Z"
           }
         },
         {
@@ -93705,6 +93783,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:25.564Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Would.\nsplitithis with\nWould you split this with friends?\n$3,000 total 20 $150\n10rooms\nWould you split this with\n$3,000 total 20 guests $150 each\n10 rooms Private pool",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:04:41.347Z"
           }
         },
         {
@@ -93728,6 +93815,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:28.750Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: Heaven for N\nyour kids\nOV: Heaven for\nkids\nPOV: Heaven for 4 i\nyour kids 7 i\nSERENE",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:04:50.317Z"
           }
         }
       ]
@@ -104710,6 +104806,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:34.264Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:04:59.182Z"
           }
         },
         {
@@ -104733,6 +104837,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:39.853Z"
+          },
+          "ocrData": {
+            "textOnScreen": "EDIFICIO 28\nSEER! T a\n4 OF GRAND SIRENIS\nA Bird-Watcher's Paradise:\nGRAND SIRENIS\nGRAND\nTHE SECRET\nOF GRAND",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:05:15.480Z"
           }
         },
         {
@@ -104756,6 +104869,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:43.658Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sag weet",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:05:48.026Z"
           }
         },
         {
@@ -104779,6 +104901,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:47.248Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pov: your,",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:06:15.440Z"
           }
         },
         {
@@ -104802,6 +104933,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:49.808Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A hotel in a UNESCO\nSite with a\nHeritage\nSite with",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:06:28.416Z"
           }
         }
       ]
@@ -114084,6 +114224,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:55.829Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:06:43.029Z"
           }
         }
       ]
@@ -126808,6 +126956,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:00:58.970Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Italy 1992\nItaly 1992 1\nSerigne Sam Mbaye\n1.0x Sleep timer\nCala Llenya\nCALA Ofertas especiales en la\nLLENYA web.\notel Resort Cala Llenya",
+            "confidence": 0.875,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:06:49.273Z"
           }
         },
         {
@@ -126831,6 +126988,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:03.603Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Goalangir\n16 agustus 2026",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:06:57.927Z"
           }
         },
         {
@@ -126854,6 +127020,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:08.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“2. LOOK WHATS\nLOOK\nPA TINEG ABRA\nWHATS\nFALLS, TINEG ABRA\nLOOK WHATS\nAPARKAN FALLS, TINEG ABRA\n4 FALLS, TINEG ABRA",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:07:12.651Z"
           }
         },
         {
@@ -126877,6 +127052,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:11.378Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Parkes\nchilling in the parks\nchillingiin",
+            "confidence": 0.739,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:08:02.407Z"
           }
         },
         {
@@ -126900,6 +127084,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:17.435Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BEACH RESORT\nN, SORSOGON\nWOODLAND BEACH RESORT\nIPANCALAN, SORSOGON\nVITTON WOODLAND BEACH RESORT\nDANCALAN, SORSOGON",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:08:16.301Z"
           }
         },
         {
@@ -126923,6 +127116,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:20.267Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SUNFLOW",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:08:23.847Z"
           }
         },
         {
@@ -126946,6 +127148,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:23.702Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CUINA...\n4 ALL HAPPEN\nSURE\nFINANCESI RI\nLET'S MAKE",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:08:32.749Z"
           }
         },
         {
@@ -126969,6 +127180,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T15:01:27.088Z"
+          },
+          "ocrData": {
+            "textOnScreen": "desiclisa\ndesielisa",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T15:08:54.859Z"
           }
         }
       ]
