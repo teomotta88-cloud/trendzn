@@ -142003,7 +142003,16 @@
           "likes": 1267,
           "comments": 56,
           "shares": 189,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stop dulu! Se stai cercando un hotel estetico e comodo in centro città di Hatyai, perché questo hotel può essere un hidden gem per te che vuoi stare comodo, ma stai vicino a qualsiasi cosa. La sua locazione è strategica, solo 2-3 minuti da Kim Yong e Lee Garden Market. Quindi vuoi mangiare, culinare o andare a nascere a Hatyai? Devi andare a piedi o un attimo in un'auto. Da lì in avanti, questo hotel ha una diversità di vibes. C'è un'area tranquilla che è bella per stare, bere un caffè o solo per gustare la situazione della città. Quando entriamo nel lobby del hotel, sentiamo un'ambiente meraviglioso. Il disegno è bello, pulito e la servizia è molto comoda. Allora, entriamo nella sua camiera e questa è la parte che fa il piacere. La sua camiera è minimalista, ma è estetica. Il luogo di dormire è morbido, le macchine sono spalle, le facilitazioni sono complete. Quindi, vieni e resti. La camiera ha un balcone e un view di un'ambiente di città. La sua camiera è luova, pulita e il disegno è moderno. e per te che ti piace rilassare mentre lavori o bevi c'è un luogo speciale che puoi usare per stare, bere, e anche lavorare con felicità. Oh sì, la parkirana è anche ampia e sicura. Quindi, se tu cerchi un hotel in mezzo alla città di Hatyai, vicino alle città di mangiare, vicino alle città di mangiare, felice e con un disegno bello, questo hotel è obbligatorio di entrare nella lista di te durante la vacanza a Hatyai. Grazie, sawadikrap!",
+            "language": "Italian",
+            "durationSec": 77.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T15:01:36.476Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -142017,7 +142026,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "C'è qualcosa che è scoperto da me in mezzo a me Sto cercando di trovare il mio amore Sto cercando di trovare il mio amore Forse è scoperto da me in mezzo a me Forse è scoperto da me in mezzo a me Non posso cadere in amore Perchè è così per chiunque carmona",
+            "language": "Italian",
+            "durationSec": 30.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T15:01:42.845Z"
+          }
         }
       ]
     },
@@ -150336,7 +150354,16 @@
           "likes": 24300,
           "comments": 542,
           "shares": 249,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hey Gregory, Slimzai qui. Buongiorno a tutti da Eberspace Camp. La stagione è piena, il nostro team 1 sta ora in giro per il camp 4 e spero che mi rivolga un altro team per la dependenza. Allora fratello, sono appena stato notato del tuo progetto di amatabilità in cui stai cercando di rinforzare i soldi per i bambini per aiutare con il cancro. È un progetto incredibile, non posso aspettare di vederti, e sono un fratello di Dublin. Ti auguro di prenderti cura e ci vediamo presto. Cuore, fratello, cuore.",
+            "language": "Italian",
+            "durationSec": 43.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-18T15:01:45.919Z"
+          }
         }
       ]
     }
