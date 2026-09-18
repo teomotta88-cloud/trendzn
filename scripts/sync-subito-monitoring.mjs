@@ -1,8 +1,11 @@
 // Monitora annunci Subito.it per una lista di keyword (pagina nascosta
 // "monitoraggio-subito"). Per ogni keyword scarica la pagina di ricerca via
 // Playwright (i dati sono server-rendered, niente API JSON separata) ed
-// estrae titolo, prezzo, località e URL dei nuovi annunci trovati, scrivendo
-// il risultato su src/data/monitoraggio-subito.json su GitHub.
+// estrae titolo, prezzo, località e URL dei nuovi annunci trovati. La pagina
+// di ricerca non riporta la data di pubblicazione né la foto, quindi per ogni
+// annuncio nuovo (o già salvato ma senza questi campi) si apre anche la
+// pagina di dettaglio, scrivendo il risultato su
+// src/data/monitoraggio-subito.json su GitHub.
 
 import { chromium } from "playwright";
 
@@ -116,6 +119,81 @@ async function scrapeListings(page, keyword, region) {
   return raw.filter((item) => item.url && item.title);
 }
 
+// Offset (in minuti) tra l'ora di Roma e UTC nell'istante indicato: Roma =
+// UTC + offset. Calcolato via Intl invece che hardcoded per gestire ora
+// legale/solare senza una libreria di date esterna.
+function romeOffsetMinutes(reference) {
+  const fmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Rome",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+
+  const parts = Object.fromEntries(fmt.formatToParts(reference).map((p) => [p.type, p.value]));
+  const asUTC = Date.UTC(
+    Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+    Number(parts.hour) === 24 ? 0 : Number(parts.hour),
+    Number(parts.minute),
+    Number(parts.second),
+  );
+
+  return (asUTC - reference.getTime()) / 60000;
+}
+
+// Subito.it mostra solo date relative ("Oggi alle 16:40", "Ieri alle 10:12",
+// "3 giorni fa", ...). Interpretiamo in modo affidabile solo "oggi"/"ieri"
+// (il caso che interessa per un monitoraggio dei più recenti); per gli altri
+// formati teniamo comunque il testo grezzo mostrato da Subito.it.
+function parsePublishedAt(label, now = new Date()) {
+  if (!label) return null;
+
+  const match = label.match(/^(oggi|ieri) alle (\d{1,2}):(\d{2})$/i);
+  if (!match) return null;
+
+  const [, day, hh, mm] = match;
+  const offsetMin = romeOffsetMinutes(now);
+
+  const romeFmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Rome",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const romeParts = Object.fromEntries(romeFmt.formatToParts(now).map((p) => [p.type, p.value]));
+  const dayOffset = day.toLowerCase() === "ieri" ? -1 : 0;
+
+  const asUTC = Date.UTC(
+    Number(romeParts.year),
+    Number(romeParts.month) - 1,
+    Number(romeParts.day) + dayOffset,
+    Number(hh),
+    Number(mm),
+    0,
+  );
+
+  return new Date(asUTC - offsetMin * 60000).toISOString();
+}
+
+async function fetchListingDetails(page, url) {
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+
+  const { publishedAtLabel, imageUrl } = await page.evaluate(() => {
+    const publishedAtLabel =
+      document.querySelector('[class*="insertion-date"]')?.textContent?.trim() || null;
+    const imageUrl = document.querySelector('meta[property="og:image"]')?.content || null;
+    return { publishedAtLabel, imageUrl };
+  });
+
+  return { publishedAtLabel, imageUrl, publishedAt: parsePublishedAt(publishedAtLabel) };
+}
+
 // --- Main ---
 const { store, sha } = await readStore();
 
@@ -152,6 +230,9 @@ for (const entry of store.keywords) {
       price: item.price,
       location: item.location,
       firstSeenAt: new Date().toISOString(),
+      publishedAt: null,
+      publishedAtLabel: null,
+      imageUrl: null,
     });
 
     existingUrls.add(item.url);
@@ -159,12 +240,29 @@ for (const entry of store.keywords) {
   }
 
   if (added > 0) {
-    entry.listings.sort((a, b) => new Date(b.firstSeenAt) - new Date(a.firstSeenAt));
     modified = true;
     console.log(`  +${added} nuovi annunci (${entry.listings.length} totali)`);
   } else {
     console.log("  nessun nuovo annuncio");
   }
+
+  const toEnrich = entry.listings.filter((l) => !l.imageUrl || (!l.publishedAt && !l.publishedAtLabel));
+
+  for (const listing of toEnrich) {
+    try {
+      const details = await fetchListingDetails(page, listing.url);
+      listing.publishedAtLabel = details.publishedAtLabel;
+      listing.publishedAt = details.publishedAt;
+      listing.imageUrl = details.imageUrl;
+      modified = true;
+    } catch (err) {
+      console.error(`  errore dettaglio "${listing.url}": ${String(err)}`);
+    }
+  }
+
+  entry.listings.sort(
+    (a, b) => new Date(b.publishedAt || b.firstSeenAt) - new Date(a.publishedAt || a.firstSeenAt),
+  );
 }
 
 await browser.close();

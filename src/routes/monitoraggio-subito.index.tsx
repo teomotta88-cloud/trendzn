@@ -24,6 +24,9 @@ type SubitoListing = {
   price: string | null;
   location: string | null;
   firstSeenAt: string;
+  publishedAt: string | null;
+  publishedAtLabel: string | null;
+  imageUrl: string | null;
 };
 
 type SubitoKeyword = {
@@ -59,7 +62,11 @@ function MonitoraggioSubitoPage() {
     return allListings
       .filter((l) => activeKeyword === "all" || l.keyword === activeKeyword)
       .filter((l) => !q || l.title.toLowerCase().includes(q.toLowerCase()))
-      .sort((a, b) => new Date(b.firstSeenAt).getTime() - new Date(a.firstSeenAt).getTime());
+      .sort((a, b) => {
+        const bDate = new Date(b.publishedAt || b.firstSeenAt).getTime();
+        const aDate = new Date(a.publishedAt || a.firstSeenAt).getTime();
+        return bDate - aDate;
+      });
   }, [allListings, activeKeyword, q]);
 
   return (
@@ -111,35 +118,49 @@ function MonitoraggioSubitoPage() {
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((listing) => (
-            <a
-              key={listing.url}
-              href={listing.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col gap-2 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
-            >
-              <div className="flex items-start justify-between gap-2">
-                <h2 className="text-sm font-semibold text-foreground">{listing.title}</h2>
-                <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
-              </div>
+          {filtered.map((listing) => {
+            const dateLabel = listing.publishedAtLabel
+              ? listing.publishedAtLabel
+              : `rilevato il ${new Date(listing.firstSeenAt).toLocaleString("it-IT")}`;
 
-              <p className="text-base font-bold text-primary">{listing.price ?? "Prezzo n.d."}</p>
-
-              <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                {listing.location && (
-                  <span className="inline-flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
-                    {listing.location}
-                  </span>
+            return (
+              <a
+                key={listing.url}
+                href={listing.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-2 rounded-2xl border border-border bg-card p-4 transition hover:border-primary"
+              >
+                {listing.imageUrl && (
+                  <img
+                    src={listing.imageUrl}
+                    alt={listing.title}
+                    className="aspect-video w-full rounded-lg object-cover"
+                  />
                 )}
-                <span className="rounded-full border border-border bg-background/60 px-2 py-0.5">
-                  {listing.keyword}
-                </span>
-                <span>{new Date(listing.firstSeenAt).toLocaleString("it-IT")}</span>
-              </div>
-            </a>
-          ))}
+
+                <div className="flex items-start justify-between gap-2">
+                  <h2 className="text-sm font-semibold text-foreground">{listing.title}</h2>
+                  <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
+                </div>
+
+                <p className="text-base font-bold text-primary">{listing.price ?? "Prezzo n.d."}</p>
+
+                <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                  {listing.location && (
+                    <span className="inline-flex items-center gap-1">
+                      <MapPin className="h-3 w-3" />
+                      {listing.location}
+                    </span>
+                  )}
+                  <span className="rounded-full border border-border bg-background/60 px-2 py-0.5">
+                    {listing.keyword}
+                  </span>
+                  <span>{dateLabel}</span>
+                </div>
+              </a>
+            );
+          })}
         </div>
       )}
     </div>
