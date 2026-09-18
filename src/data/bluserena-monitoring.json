@@ -45931,6 +45931,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:30.163Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:32:14.747Z"
           }
         },
         {
@@ -45954,6 +45962,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:33.971Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:32:22.830Z"
           }
         },
         {
@@ -45977,6 +45993,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:36.189Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:32:35.105Z"
           }
         },
         {
@@ -46000,6 +46024,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:38.856Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Greece in California\nTikTok GO cashback x\n50 Cashback Applied\nMin. spend $1- Up t0 $200\nvalid until 01/01/2027\nhere",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:32:43.323Z"
           }
         },
         {
@@ -46023,6 +46056,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:41.953Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:32:59.364Z"
           }
         }
       ]
@@ -52248,6 +52289,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:45.269Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MUNDO\nZihuatanejo\n1.0 MUNDO\nNIPSON\nThompson\nlista\nviaje.",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:33:04.018Z"
           }
         },
         {
@@ -52271,6 +52321,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:49.267Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:33:08.631Z"
           }
         }
       ]
@@ -70625,6 +70683,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:52.283Z"
+          },
+          "ocrData": {
+            "textOnScreen": "6 nights of\nof this 4",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:33:18.006Z"
           }
         },
         {
@@ -70648,6 +70715,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:56.319Z"
+          },
+          "ocrData": {
+            "textOnScreen": "were\nfriendship fell in ì\nthe very first episode\nsome 1",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:33:33.295Z"
           }
         },
         {
@@ -70671,6 +70747,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:27:59.390Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:33:43.225Z"
           }
         },
         {
@@ -70694,6 +70778,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:05.173Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:33:51.449Z"
           }
         },
         {
@@ -70717,6 +70809,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:07.688Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Going|tojvegas\ndoesn\nthis\nfrom\nstarts\nTap my locati",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:00.814Z"
           }
         },
         {
@@ -70740,6 +70841,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:10.207Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Book your stay here\nSerena hotel'by,\nHilton in Aventura Miami\nhere i\nHilton!\nTi Hilton in",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:08.856Z"
           }
         },
         {
@@ -70763,6 +70873,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:13.498Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:13.237Z"
           }
         },
         {
@@ -70786,6 +70904,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:15.766Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7 vibe ds everywhere\nLots of little spots to hang out\n‘Towels just sitting ia\nout for.you\nTap the tag below to book",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:22.807Z"
           }
         },
         {
@@ -70809,6 +70936,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:18.385Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WIEN",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:32.001Z"
           }
         },
         {
@@ -70832,6 +70968,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:22.221Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Nemu Renginapan\nAesthetic Di Jogja\n14 Cuma 150K Bisa Orang\ninya Strategis\nKamarnya\nFasilitas dan Amenities lengkap",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:38.921Z"
           }
         },
         {
@@ -70855,6 +71000,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:25.264Z"
+          },
+          "ocrData": {
+            "textOnScreen": "looks familiar...",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:34:59.671Z"
           }
         },
         {
@@ -70878,6 +71032,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:32.031Z"
+          },
+          "ocrData": {
+            "textOnScreen": "kursi\nBagh\ni juga estefik\nBODY",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:35:12.689Z"
           }
         },
         {
@@ -70901,6 +71064,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:37.142Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bersih.. mewah.. sinematik...",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:35:17.923Z"
           }
         },
         {
@@ -70924,6 +71096,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:42.768Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sendra grande\nx è penasaran sar) tempatnya",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:35:34.316Z"
           }
         },
         {
@@ -70947,6 +71128,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:46.044Z"
+          },
+          "ocrData": {
+            "textOnScreen": "L SPAIN\nthe caption)\nST HOTEL IN SEVILLE, SPAIN\n(Location in the caption)",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:35:41.230Z"
           }
         }
       ]
@@ -83080,6 +83270,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:48.526Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:36:11.373Z"
           }
         },
         {
@@ -83103,6 +83301,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:51.031Z"
+          },
+          "ocrData": {
+            "textOnScreen": "with its\nAhotelroom its:OWN\nhotel room with its OWN pool?!\nGrove,\na huge whirlpool\nOWN pool?!\nDowners\nand massage\nA hotel room with its OWN I?!\nnote!\nlllinols",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:36:18.466Z"
           }
         },
         {
@@ -83126,6 +83333,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T04:28:53.696Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ACAÀ\nHotel\nand the view from the\nbalcony is amazing",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T04:36:26.171Z"
           }
         },
         {
