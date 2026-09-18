@@ -46087,6 +46087,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:47:54.019Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:49:19.899Z"
           }
         }
       ]
@@ -52375,6 +52383,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:47:58.081Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Casa\nVOPONE\nPini",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:49:37.409Z"
           }
         }
       ]
@@ -83505,6 +83522,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:00.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:49:40.225Z"
           }
         },
         {
@@ -83528,6 +83553,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:02.730Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hienvenidos al Asia Gardens\nHotel y Thai spa\nde jardiné",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:49:52.775Z"
           }
         }
       ]
@@ -93274,6 +93308,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:10.345Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:00.213Z"
           }
         },
         {
@@ -93297,6 +93339,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:12.898Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:14.147Z"
           }
         },
         {
@@ -93320,6 +93370,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:15.437Z"
+          },
+          "ocrData": {
+            "textOnScreen": "healingin Kal",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:23.712Z"
           }
         },
         {
@@ -93343,6 +93402,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:17.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": "stays,\nLI Cid Moro Beach Hotel\n[events]\nCid Moro Beach Hotel",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:32.735Z"
           }
         },
         {
@@ -93366,6 +93434,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:19.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Private tub\nsteam'room\nonly-13 suites.\nPrivate pool whirlpool tub\nsteam room massage chair\nonly 13 suites. $289night\npools",
+            "confidence": 0.856,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:41.845Z"
           }
         },
         {
@@ -93389,6 +93466,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:22.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a is super\ncomfortable and clean\nRelaxed comfy hotel vibes\nclose to local eats\nshops and\nshort walk\na great stay\nDonit Ji: wl",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:48.037Z"
           }
         }
       ]
@@ -113535,6 +113621,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:27.749Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dA DANG\nRA RESORT\nDINNER KET HOP",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:50:59.788Z"
           }
         },
         {
@@ -113558,6 +113653,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:30.427Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BEEN",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:51:21.064Z"
           }
         },
         {
@@ -113581,6 +113685,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:34.799Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:51:33.289Z"
           }
         }
       ]
@@ -126273,6 +126385,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:36.937Z"
+          },
+          "ocrData": {
+            "textOnScreen": "month vo\nscam?? So we BADA:\nave aniextra\nCalendar\nAssortment\nmonth calendars\nwejre short 6\nrealize\nmonth-calendars area\nscam?? constantly\nextra months\nmonth\nwelconstantly,\naveian extra 6\n6 months?!",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:51:44.697Z"
           }
         }
       ]
@@ -133822,6 +133943,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:39.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino\nSizes; A",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:51:53.570Z"
           }
         },
         {
@@ -133845,6 +133975,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:42.812Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:51:59.400Z"
           }
         }
       ]
@@ -141171,6 +141309,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:45.215Z"
+          },
+          "ocrData": {
+            "textOnScreen": "movement)\npause, breathe;\nconte\nhomejto\nin a sacred space created just",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:52:24.950Z"
           }
         },
         {
@@ -141194,6 +141341,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:49.623Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TYPE CANGGU\nTYPE RYOKAN",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:52:29.805Z"
           }
         },
         {
@@ -141217,6 +141373,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:51.866Z"
+          },
+          "ocrData": {
+            "textOnScreen": "UIREIAR\nKalahari\nADULTS ONLY\nWATER PARK+SWIM UP BAR\nADUL",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:52:38.337Z"
           }
         },
         {
@@ -141240,6 +141405,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:54.219Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Booking hotelldi tag\nBooking",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:52:45.605Z"
           }
         }
       ]
@@ -149440,6 +149614,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:56.214Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i WITCHES CIRCLE\nAnevening\nofthelmng sacred\nhealing springs, of prophecy\nto the Otherworld, the Ancient Water\nMother Water as te guide,\nunderstand her powers of Healing\nPurification, access the Divine\nWILD HEARTH WELLNESS...\nAn evening 5\nsacred\nsprings, of prophecy\nPriestesses, womb magick. the Celtic\nWILD HEARTH WELLNESS... 850-010-8051",
+            "confidence": 0.869,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:53:04.423Z"
           }
         },
         {
@@ -149463,6 +149646,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:48:58.120Z"
+          },
+          "ocrData": {
+            "textOnScreen": "my favorite\nto cleanse a spacey r\nPeep my road\nback!\nwere\nSantuario:\nAway Negativity:\nto'Cleansing",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:53:10.853Z"
           }
         },
         {
@@ -149486,6 +149678,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:49:02.484Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MODERN TOWER CRANE\nMASSIVE STONE VAULTS",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:53:26.811Z"
           }
         },
         {
@@ -149509,6 +149710,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-18T09:49:05.525Z"
+          },
+          "ocrData": {
+            "textOnScreen": "UPCOMING\nSEVERANCE",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-18T09:53:32.048Z"
           }
         }
       ]
