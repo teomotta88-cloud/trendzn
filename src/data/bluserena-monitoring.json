@@ -30828,7 +30828,7 @@
           "url": "https://www.tiktok.com/@ilary2628/video/7659361969408970016",
           "date": "2026-07-06T10:36:17.000Z",
           "caption": "#estate2026 #bluserena #torreserenareaort #love",
-          "location": null,
+          "location": "Bluserena",
           "views": 1218,
           "imageUrl": null,
           "likes": 23,
@@ -30851,7 +30851,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-19T06:53:19.780Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "mare",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-19T06:56:37.250Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "estate",
+            "mare",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
@@ -116131,7 +116155,7 @@
           "url": "https://www.tiktok.com/@ilary2628/video/7659361969408970016",
           "date": "2026-07-06T10:36:17.000Z",
           "caption": "#estate2026 #bluserena #torreserenareaort #love",
-          "location": null,
+          "location": "Bluserena",
           "views": 1218,
           "imageUrl": null,
           "likes": 23,
@@ -116154,7 +116178,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-19T06:53:19.780Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "estate",
+              "mare",
+              "relax"
+            ],
+            "location": "Bluserena",
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-19T06:56:37.250Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "estate",
+            "mare",
+            "relax"
+          ]
         },
         {
           "platform": "tiktok",
