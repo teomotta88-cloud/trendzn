@@ -139076,7 +139076,16 @@
           "likes": 98,
           "comments": 3,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:06.075Z"
+          }
         }
       ]
     },
@@ -147185,7 +147194,16 @@
           "likes": 22,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 44.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:09.272Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -147199,7 +147217,16 @@
           "likes": 46000,
           "comments": 78,
           "shares": 572,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Go, go, go, go. Checking in? Yes. Come a parto, I got a license for that. Hello. Come to stay at the Claridge's. We heard it's the best hotel in London. Your reservation? Ten nights. Is that the most expensive? My grandmother, I want to bring my grandfather, my entire family. We'd like to have your special, the den butter. Go for McDonald's. They don't do that in McDonald's. It's the most expensive bread in my life. Please, you are not on TikTok. Il mio IQ è 78 fino a ora Il mio IQ è 9 7 La francese Ti piace? Si, mi piace molto, grazie Ho sentito un po' di tempo Mi piacerebbe parlare di business Questa è la mia carta Ti accetto i tipi Scusa, chiedi 150 120 per la casa e il resto per te è ok? Più di ok, grazie Buona visione Grazie, ti apprezzo Ho lasciato il mio amics sul sistema Sì, abbiamo un American Express Quali sono i numeri? La suite del Presidente Sei una legenda Questa è la nostra Ferrari Oh mio Dio, Arif",
+            "language": "Italian",
+            "durationSec": 57.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:13.510Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -147213,7 +147240,16 @@
           "likes": 62,
           "comments": 3,
           "shares": 73,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 35.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:15.817Z"
+          }
         }
       ]
     },
@@ -156202,7 +156238,16 @@
           "likes": 84,
           "comments": 4,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tracking Facts from Witch's Cottage ... Ciao",
+            "language": "Italian",
+            "durationSec": 85.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:18.788Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -156216,7 +156261,16 @@
           "likes": 1006,
           "comments": 71,
           "shares": 73,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Forget the Taj Mahal, because this is India's real wonder of the world, and most people have never heard of it. This is a law of caves, and buried inside them is something even crazier, Kailasa Temple. And honestly, I've never seen anything like it. This Hindu temple is one of ancient civilization's greatest achievements, and it is big, and absolutely caked in intricate sculptures. But the thing that completely baffled me is that this temple wasn't built at all. It was carved, completely out of the surrounding mountain from the top down, without the use of any modern technology, just a good old chisel. Which is pretty wild, and people can't even put together IKEA furniture anymore. Non si ferma lì, perché 200.000 tonnellate di rinforzamento di pietra per creare questo e nessuno sa dove è andato, facendo questo tempo intero di misteri architettonici molto più di questo tempo. È quasi lì con una pietra di pietra. Se c'è un posto in India che non ho perso, questo sarebbe tutto. Scrivilo.",
+            "language": "Italian",
+            "durationSec": 43.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:22.745Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -156230,7 +156284,16 @@
           "likes": 2960,
           "comments": 220,
           "shares": 100,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per la visione!",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T22:28:24.782Z"
+          }
         }
       ]
     }
