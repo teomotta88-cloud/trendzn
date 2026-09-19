@@ -30834,7 +30834,16 @@
           "likes": 23,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stempe, no mio corazon, no mio corazon, no mio corazon Stempe, no mio corazon",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:46:04.480Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -30848,7 +30857,17 @@
           "likes": 8,
           "comments": 0,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7666620491616013588: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on t",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:44:32.362Z"
+          }
         }
       ]
     },
@@ -46461,7 +46480,16 @@
           "likes": 1267,
           "comments": 14,
           "shares": 182,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 5.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:44:34.497Z"
+          }
         }
       ]
     },
@@ -62280,7 +62308,16 @@
           "likes": 77,
           "comments": 2,
           "shares": 70,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 14.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:44:37.394Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62294,7 +62331,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "1, 2, 3, 4 Musica Musica Musica Musica",
+            "language": "Italian",
+            "durationSec": 10.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:44:40.439Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62308,7 +62354,16 @@
           "likes": 22,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, è vero. Il nostro corso gratuito è www.mesmerism.info Grazie a tutti Ciao Grazie a tutti. ... Buon anno! Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 319.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:44:59.676Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62322,7 +62377,16 @@
           "likes": 163,
           "comments": 12,
           "shares": 43,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Inghinkan rasakan rindu ini menjadi satu Biar waktu yang memisahkan Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 110.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:03.946Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -62336,7 +62400,16 @@
           "likes": 20200,
           "comments": 370,
           "shares": 4082,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Trascrizione e Cato ... ha imparato il commento? Grazie a tutti. a",
+            "language": "Italian",
+            "durationSec": 65.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:07.569Z"
+          }
         }
       ]
     },
@@ -72017,7 +72090,16 @@
           "likes": 317500,
           "comments": 2208,
           "shares": 39900,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 11.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:10.728Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72031,7 +72113,16 @@
           "likes": 9839,
           "comments": 136,
           "shares": 233,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il businessman di Guuglielmo di Guuglielmo ha dato un'entrata così straordinaria al Serena Hotel che tutti gli hanno visto. La campagna di auto, il protocollo e la stessa maniera di spingere, hanno fatto vedere tutti i loro occhi. È la stessa maniera di Moussa Guuglielmo che li ha distrutti.",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:15.023Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -72045,7 +72136,16 @@
           "likes": 47,
           "comments": 2,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Wow Questo hotel è incredibile Guardate questa forma di crescita È assolutamente insano",
+            "language": "Italian",
+            "durationSec": 11.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:19.174Z"
+          }
         }
       ]
     },
@@ -84545,7 +84645,16 @@
           "likes": 238,
           "comments": 32,
           "shares": 92,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:22.628Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -84559,7 +84668,16 @@
           "likes": 220,
           "comments": 24,
           "shares": 82,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:25.523Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -84573,7 +84691,16 @@
           "likes": 183,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Un passo avanti Grazie a tutti La Cosa di Giacomo Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 157.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:29.854Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -84587,7 +84714,16 @@
           "likes": 23,
           "comments": 2,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:34.533Z"
+          }
         }
       ]
     },
@@ -94896,7 +95032,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 87.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:38.633Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94910,7 +95055,16 @@
           "likes": 561,
           "comments": 8,
           "shares": 29,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:41.103Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94924,7 +95078,16 @@
           "likes": 27,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:44.329Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94938,7 +95101,16 @@
           "likes": 12,
           "comments": 1,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hai mai domandato se il cruizzare fosse per te? Una breve cruizzazione è sempre la migliore maniera per provare le vatture. Ho questa meravigliosa opportunità per te. Royal Caribbean, Serenade of the Seas, partendo da San Diego il 11 marzo del 2027, cabin interiore per due adulti per un totale di 966,46, che può essere bookato con un deposito di 200 dollari. Devi esperienziare la vita a bordo, mangiare cibi fantastici, divertimenti, vittime d'oceano e visitare Ensenada. A volte tutto ciò che serve è una cruise per scoprire il tuo nuovo modo di viaggio preferito.",
+            "language": "Italian",
+            "durationSec": 34.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:47.194Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94952,7 +95124,16 @@
           "likes": 598,
           "comments": 15,
           "shares": 135,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, potremmo farlo. Ciao",
+            "language": "Italian",
+            "durationSec": 31,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:50.418Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -94966,7 +95147,16 @@
           "likes": 29000,
           "comments": 90,
           "shares": 1696,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:53.750Z"
+          }
         }
       ]
     },
@@ -106257,7 +106447,16 @@
           "likes": 18,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:57.284Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -106271,7 +106470,16 @@
           "likes": 19,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:45:59.848Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -106285,7 +106493,16 @@
           "likes": 50,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:46:02.209Z"
+          }
         }
       ]
     },
@@ -115715,7 +115932,16 @@
           "likes": 23,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stempe, no mio corazon, no mio corazon, no mio corazon Stempe, no mio corazon",
+            "language": "Italian",
+            "durationSec": 27,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:46:04.480Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -115729,7 +115955,16 @@
           "likes": 562,
           "comments": 7,
           "shares": 264,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi voglio vendere la mia stanza di riso al Campo Devo con un prezzo di 195 dollari. Andiamo a casa. Taraaa! Questa è la mia stanza. Questa è la mia stanza di riso, una per una, dalla stanza di riso. Come va? Qui, ragazzi, ho venduto la mia stanza di riso. Questa è molto grande. e qui potete vedere l'acqua mineral due botti, due lavori due bambini piccoli e grandi e questo è quello che mi piace la luce è molto grande e vediamo qui la shower con il bambino marmellato che è premium potete vedere qui c'è il shampoo e la shower vediamo il toilet il toilet è abbastanza grande, c'è un tessuto, qui c'è una bandiera, qui c'è una piama, qui c'è un hair dryer, e qui c'è un safety box, è molto grande, e il mio laptop e qui è lì ok questa è la piazza di fronte al luogo dove si dormono qui ci sono i frutti la rambuta c'è la lega con il gerucho e c'è il 29 e qui è il papà Asif Chomriso e benvenuti nel realm dell hotel grazie anche a Arjuna quindi per i vostri amici che vogliono dormire qui Grazie the realm of the arjuna hotel terima kasih juga arjuna ya jadi buat temen temen yang mau menginap di sini kalian kalau perlu apa bisa langsung telepon aja ke resepsionistnya atau ke staff hotel arjuna resort dari depan tadi pelayanannya bagus banget jangan lupa ke arjuna resort empuk banget wow, è molto pesante, con un casotto premium dipilito da materiali di qualità Arjuna Resort qui c'è remote AC, telefono poi c'è due bantali bantali grandi e bantali piccoli questo è il double twin qui c'è altre possibilità c'è un TV grande, di 50 inci se non mi sbaglio e poi questo può anche YouTube, e poi questo può anche order, e poi può anche Netflix, questo è proprio lì, la piu, potete vedere direttamente la piu, wow, è molto bello la piu, guardate lì, un altro, wow, guardate qui, questo, qui c'è un coppia e qui c'è un teco elettrico, qui c'è l'acqua e qui c'è la cacao e il tè ok per i vostri amici quindi per i vostri amici non dimenticate di dormire in Arjuna Resort Sihanoukville Kampung Dewa la facilità è abbastanza completa c'è un colonna di rinnovo breakfast che ho servito con un prezzo di 195 dollari in Agoda potete venire direttamente all'Arjuna Resort Kampung Dewa",
+            "language": "Italian",
+            "durationSec": 200.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-19T06:46:12.615Z"
+          }
         },
         {
           "platform": "tiktok",
