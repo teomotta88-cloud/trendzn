@@ -62153,6 +62153,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:07.517Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:33:06.000Z"
           }
         },
         {
@@ -62176,6 +62184,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:11.077Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Christmas at Gaylord q\nTexan\nNovember 13, 2026 January 3, 2027\nSHOP OFFERS\ni HARRY\nGet to Know the Experience\n5 OF HOLIDAY MAGIC\nFamilies the Christmas experience, ice!, as a beloved holiday tradition\nts debut more than two decades ago.\nMILLION POUNI\n1.4M ATTENDEES\nice! in 2025 across six\nSTAR CH RISTMA $a",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:33:25.195Z"
           }
         },
         {
@@ -62199,6 +62216,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:13.807Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:33:31.149Z"
           }
         }
       ]
@@ -71858,6 +71883,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:17.430Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:33:42.240Z"
           }
         }
       ]
@@ -84274,6 +84307,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:20.694Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:33:51.634Z"
           }
         },
         {
@@ -84297,6 +84338,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:23.951Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:33:59.558Z"
           }
         },
         {
@@ -84320,6 +84369,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:27.115Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:34:10.711Z"
           }
         }
       ]
@@ -94479,6 +94536,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:34.961Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:34:28.950Z"
           }
         },
         {
@@ -94502,6 +94567,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:40.982Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Dolan Dolan Jalan Jalan",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:34:44.254Z"
           }
         },
         {
@@ -94525,6 +94599,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:45.198Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Water Heater\nE mock",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:34:51.908Z"
           }
         },
         {
@@ -94548,6 +94631,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:49.012Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CANDI BEACHIRESORT SPA",
+            "confidence": 0.789,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:35:03.183Z"
           }
         },
         {
@@ -94571,6 +94663,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:53.696Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Go Solo Community)\nLN same\nHouse\n‘The Hanoman) Serenity;\nTiktok Go Solo Community,\nKolaborasi",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:35:15.493Z"
           }
         }
       ]
@@ -105776,6 +105877,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:31:58.419Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:35:23.711Z"
           }
         },
         {
@@ -105799,6 +105908,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:03.635Z"
+          },
+          "ocrData": {
+            "textOnScreen": "un television red\noches en el buffet i\n4 Imitado",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:35:36.611Z"
           }
         },
         {
@@ -105822,6 +105940,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:10.615Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SUPERCOMODA\nDIOS Mi0 PRIMERO",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:35:46.857Z"
           }
         }
       ]
@@ -115166,6 +115293,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:13.540Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:36:01.361Z"
           }
         },
         {
@@ -115189,6 +115324,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:20.490Z"
+          },
+          "ocrData": {
+            "textOnScreen": "amazin\nAmazing\nNHAT,\nNEU BAN CONG",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:36:23.975Z"
           }
         },
         {
@@ -115212,6 +115356,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:23.347Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort\n3 Resort\nÈ Resort",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:36:33.551Z"
           }
         }
       ]
@@ -128224,6 +128377,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:26.029Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:36:46.784Z"
           }
         },
         {
@@ -128247,6 +128408,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:30.058Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:36:50.562Z"
           }
         }
       ]
@@ -143544,6 +143713,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:32.653Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Going\nIfThey’re Going\nBuisness,...\nI Like\nloBelnOur\nit this\nreGoing\nI Lire it\nI Like it this",
+            "confidence": 0.802,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:37:01.287Z"
           }
         },
         {
@@ -143567,6 +143745,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:35.449Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:37:07.951Z"
           }
         }
       ]
@@ -152087,6 +152273,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:37.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:37:12.298Z"
           }
         },
         {
@@ -152110,6 +152304,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T01:32:41.178Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JOIN AETHER SMP STARTS TODAY\nwith the best bliss plugin\nActive mods/owners\nNo.admin abusers\nanti chgat\nDISCORD ANDIPINBIO\ncan i tean uith vou?\nÈ No admin abusers\ngood anti chegt 2\nslutic6\ncomp fights\ngood anti cheat\nDISCORD AND IP IN è\nhe No admin abusers\nDISCORD AND. BIO",
+            "confidence": 0.888,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T01:37:19.846Z"
           }
         }
       ]
