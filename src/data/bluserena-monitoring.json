@@ -139298,6 +139298,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:06.075Z"
+          },
+          "ocrData": {
+            "textOnScreen": "because\nbitch",
+            "confidence": 0.809,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:52.693Z"
           }
         }
       ]
@@ -147416,6 +147425,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:09.272Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:57.271Z"
           }
         },
         {
@@ -147439,6 +147456,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:13.510Z"
+          },
+          "ocrData": {
+            "textOnScreen": "expensive\nwe'd likejto have your\nspecial bread and butter\nat least youre not on\ncard\nappreciate it",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:32:08.209Z"
           }
         },
         {
@@ -147462,6 +147488,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:15.817Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:32:14.327Z"
           }
         }
       ]
@@ -156460,6 +156494,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:18.788Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THAT WAS\nOUR HOST! 4\nNear Mint Comparison Prices\nMarket prices for alternative printings and conditions\nNormal $1.85\nFoil $2.91\nPrice Points Near Mint\nMarket Price $1.85\nMost Recent Sale N/A\nMed Volatility\nListed Median: $2.00\nCurrent Quantity: 953 Sellers: 436",
+            "confidence": 0.883,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:32:18.445Z"
           }
         },
         {
@@ -156483,6 +156526,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:22.745Z"
+          },
+          "ocrData": {
+            "textOnScreen": "7/28 STATES\nfink\nanymore.",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:32:33.164Z"
           }
         },
         {
@@ -156506,6 +156558,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:24.782Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Aereis\ni Cottol\nCorvurax\nDyaelatura\nCosmetics\nKaK MOHATb NO B TM,\nUTO OH KOHYEHbIN\nXeternos\nNone\nSea Sky Special\nNona None\nKaK MOHATb NO cepBepy B TM,",
+            "confidence": 0.815,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:32:42.338Z"
           }
         }
       ]
