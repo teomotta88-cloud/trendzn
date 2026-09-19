@@ -46688,6 +46688,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:37.784Z"
+          },
+          "ocrData": {
+            "textOnScreen": "miami\nCona\nRepublica, Dominicana\nexperiencia",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:28:41.044Z"
           }
         },
         {
@@ -46711,6 +46720,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:40.298Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Corona è\nGita thién nhién nguyen ban\nmoi cuòc gap go tro nén dang hon\nNONI\nSau nhing giò Tàm hiéu qué\nTan huong mua hè day nang",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:28:45.010Z"
           }
         }
       ]
@@ -62888,6 +62906,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:43.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OFFERTA\nSOGG. BREVI SETTEMBRE\nin Villaggio\nSerenusa Village 4*\nLicata (Ag)\nANIMAZIONE SPETTACOLI SERALI",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:28:50.375Z"
           }
         },
         {
@@ -62911,6 +62938,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:48.140Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:28:56.248Z"
           }
         },
         {
@@ -62934,6 +62969,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:50.385Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENO SPRING RESORT\nCASA SERENO SPRING",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:06.652Z"
           }
         },
         {
@@ -62957,6 +63001,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:52.923Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:11.091Z"
           }
         }
       ]
@@ -85572,6 +85624,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:55.623Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:14.647Z"
           }
         },
         {
@@ -85595,6 +85655,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:26:57.522Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:28.416Z"
           }
         },
         {
@@ -85618,6 +85686,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:00.345Z"
+          },
+          "ocrData": {
+            "textOnScreen": "the turn dow\nit's: 20% off on all suites and\n10%-off your spa treatment\n1 been looking for an\nexcuse to escape to the\nEastern Cape",
+            "confidence": 0.866,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:32.716Z"
           }
         },
         {
@@ -85641,6 +85718,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:04.066Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SANTO ANTAO\nCABO VERDE\nWEEE",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:46.526Z"
           }
         },
         {
@@ -85664,6 +85750,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:07.591Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sugar",
+            "confidence": 0.732,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:51.354Z"
           }
         },
         {
@@ -85687,6 +85782,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:12.991Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:29:57.577Z"
           }
         },
         {
@@ -85710,6 +85813,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:15.556Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:02.252Z"
           }
         },
         {
@@ -85733,6 +85844,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:18.694Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:08.717Z"
           }
         },
         {
@@ -85756,6 +85875,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:22.142Z"
+          },
+          "ocrData": {
+            "textOnScreen": "di talg",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:26.858Z"
           }
         },
         {
@@ -85779,6 +85907,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:23.914Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Hotel at Black Oak Casin...\n2 The Hotel at Black Oak Casin...",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:34.485Z"
           }
         },
         {
@@ -85802,6 +85939,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:26.147Z"
+          },
+          "ocrData": {
+            "textOnScreen": "\"You look like you're more at peace.”\njust went on an all-inclusive\nvacation with my husband!”\n“Thanks! just went on an all-inclusive",
+            "confidence": 0.917,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:40.120Z"
           }
         }
       ]
@@ -96468,6 +96614,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:31.759Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:46.999Z"
           }
         }
       ]
@@ -108023,6 +108177,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:35.075Z"
+          },
+          "ocrData": {
+            "textOnScreen": "example",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:30:52.910Z"
           }
         },
         {
@@ -108046,6 +108209,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:38.313Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:00.111Z"
           }
         },
         {
@@ -108069,6 +108240,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:43.243Z"
+          },
+          "ocrData": {
+            "textOnScreen": "blll\nLilian Nabasa daughter opening\nthe stage for her mum\ni Lilian Nabasa daughter opening\nMAMMA\ni v ngel 5\nSECOND HAND CLOTHES",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:06.519Z"
           }
         }
       ]
@@ -117752,6 +117932,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:46.257Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:12.206Z"
           }
         }
       ]
@@ -131269,6 +131457,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:50.816Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:16.811Z"
           }
         },
         {
@@ -131292,6 +131488,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:27:53.506Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:31.781Z"
           }
         },
         {
@@ -131315,6 +131519,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-19T22:28:00.493Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i brincare)\nesse mesmo lugar",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-19T22:31:44.131Z"
           }
         }
       ]
