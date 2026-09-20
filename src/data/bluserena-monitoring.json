@@ -159042,7 +159042,16 @@
           "likes": 115,
           "comments": 4,
           "shares": 112,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T14:08:15.570Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -159056,7 +159065,16 @@
           "likes": 86,
           "comments": 5,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 15.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T14:08:18.934Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -159070,7 +159088,16 @@
           "likes": 39,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oggi stiamo a posto in un vecchio resort che era chiamato Salmon Falls e ha 11 acere di acqua e la comunità di Ketchikan ha acquistato il centro per la propria intenzione di stendere un centro di cura o di salute per i problemi di addizione che abbiamo nella nostra comunità. Creare un posto sicuro per riconnettersi e curare con la cultura che sappiamo è quello che ci farà rinforzare la loro sicurezza. Quando stiamo costruendo Salmon Falls, vogliamo che Ketchikan sia il posto primario in Alaska dove la cura può iniziare. Stiamo esplorando il sviluppo del lavoro. Come possiamo ottenere tutti i 27 voli che abbiamo ora? Come possiamo ottenere le licenze di 6 pack? Come si può assicurare che hanno le licenze commerciali di sport so that they can maybe make a livelihood. All those freezers will now be full of fish that we harvest and that we send to our elders that our young people process and smoke. I can't wait until we have hundreds and hundreds of people who come out of recovery and are running for tribal council and are leading the tribe. Those people will be exactly what our ancestors dreamed of them to be. Let's dream big. Non possiamo affrontare la cosa piccola. Le nostre comunità stanno avviando dei difficolti seriosi. E credo, con il mio entero essere, che abbiamo i giusti leader nel momento giusto per fare le decisioni giuste. Invito tutti a partecipare al video. C'è molto lavoro, lavoro spazioso qui a KIC e vi consiglio di arrivare.",
+            "language": "Italian",
+            "durationSec": 107,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T14:08:23.035Z"
+          }
         }
       ]
     }
