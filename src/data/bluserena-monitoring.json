@@ -46879,6 +46879,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:53:35.275Z"
+          },
+          "ocrData": {
+            "textOnScreen": "follow n",
+            "confidence": 0.734,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:55:42.424Z"
           }
         },
         {
@@ -46902,6 +46911,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:53:39.499Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANYTHING",
+            "confidence": 0.769,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:55:50.879Z"
           }
         }
       ]
@@ -73153,6 +73171,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:53:42.327Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:55:53.913Z"
           }
         },
         {
@@ -73176,6 +73202,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:53:45.287Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:56:03.053Z"
           }
         },
         {
@@ -73199,6 +73233,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:53:48.607Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:56:13.891Z"
           }
         },
         {
@@ -73222,6 +73264,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:53:52.553Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘N stic!\nPENN",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:56:34.457Z"
           }
         },
         {
@@ -73245,6 +73296,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:00.045Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ZADATRIP",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:56:47.848Z"
           }
         }
       ]
@@ -86446,6 +86506,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:07.771Z"
+          },
+          "ocrData": {
+            "textOnScreen": "and tell you that it's not the\ndollar\nI don't care how much the\n‘money is,\nthat just makes you\nlike why? Why you want my",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:56:56.079Z"
           }
         }
       ]
@@ -97206,6 +97275,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:11.757Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:57:06.008Z"
           }
         },
         {
@@ -97229,6 +97306,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:17.261Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:57:11.955Z"
           }
         }
       ]
@@ -109060,6 +109145,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:22.071Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:57:16.198Z"
           }
         },
         {
@@ -109083,6 +109176,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:26.525Z"
+          },
+          "ocrData": {
+            "textOnScreen": "a TABLE 3m\nENTRANCE 2\n4 ENTRANCE\nGRACE\nNAKIMERA\nTABLE 3M",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:57:28.500Z"
           }
         },
         {
@@ -109106,6 +109208,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:30.272Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:57:41.006Z"
           }
         }
       ]
@@ -118978,6 +119088,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:35.189Z"
+          },
+          "ocrData": {
+            "textOnScreen": "celnelelr\nCe e fiestes te lleve\ngina en.\nde fleva\nBELT\nlugares asi 4\nGAROMASECOHOTEL 4\nROMASECOHOTEL.",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:58:04.930Z"
           }
         },
         {
@@ -119001,6 +119120,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:38.821Z"
+          },
+          "ocrData": {
+            "textOnScreen": "y PANI",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:58:19.493Z"
           }
         }
       ]
@@ -132675,6 +132803,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:43.478Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANCORA\n“RESORT:\nAncora Resort\nancoraecoresort\nAncora Ecoresort Beach Club",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:58:30.551Z"
           }
         },
         {
@@ -132698,6 +132835,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:46.900Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:58:40.763Z"
           }
         },
         {
@@ -132721,6 +132866,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:51.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": "withtwo views,\ntains!\nwitht\nocean and\npov: stayinginaroomwithtwoview\ndmountains!",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:58:52.312Z"
           }
         },
         {
@@ -132744,6 +132898,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:54:56.924Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:59:14.411Z"
           }
         }
       ]
@@ -140769,6 +140931,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:55:06.440Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:59:22.161Z"
           }
         },
         {
@@ -140792,6 +140962,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:55:12.219Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A 11NO DREAMS\nVALENTINO DREAMS",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T08:59:36.433Z"
           }
         },
         {
@@ -140815,6 +140994,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:55:14.445Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pool... no\nbliss.\nN vill\nsuite a crystal\nN Imagine\nsuite and right A\nno eleyators,\njust pure, Re\nyour:\npool... no, elevators,\njust a\nsuitetand",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T09:00:08.096Z"
           }
         }
       ]
@@ -149121,6 +149309,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:55:19.217Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Questole singolo\nla luce ambientale e\ncon alcolici, analcolici,",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T09:00:13.981Z"
           }
         }
       ]
@@ -158215,6 +158412,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:55:22.048Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Strate i\ngic Ether,\nhits $8.4B in value\n62 participants\nThe Strategic Ethereum Reserve hits $8.4B\nin value, with 62 participants!\nSTRATEGIC RESERVE XYZ\nThe Strategic etn\nReserve hits $8.4B\nWith 62\nTOTAL STRATEGIC ETH RESERVE\nParticipants: 62 of Supply: 1.91%\nTOTAL ETF ETH HOLDINGS\n568METH\nWith 62 Participants\nSTRATEGICE THRESERVE XYZ\nThe Strateg;\nreum\nWith 62 Bin value,\n2.40M Participants\nAprd Apr18 4 May18 Jun1 Jun15 Jun29 Jul13\nETF HOLDINGS\nRE With 62 n value,\nCipants!\nJul 24 0] Ethereum Name Service -1.6K è\nJul 24 (2) Golem Foundation -0.77K\nJul 24 B Holdings +2.7K è\nJul 24 A Bitmine Immersion Tech +266.1K\nJul 24 Aave DAO +0.21K è\nJul 24 o] Ethereum Name Service -1.6K\nJul 23 Foundation -1.00K\nJul 23 stows -0.84K è\nJul 23 Ethereum Foundation -1.00K è\nJul 23 Cartesi Foundation +0.25K è\nJul 22 Abstract +0.13K è\nJul 22 Ethereum Foundation -0.99K è",
+            "confidence": 0.895,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T09:00:21.742Z"
           }
         },
         {
@@ -158238,6 +158444,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T08:55:25.980Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bitmine Immersion Tech\nReserve Unrealized P&L\nSupply Market Cap MNAV Last Price\nRecent Activity\nDate Type Amount (ETH) Total Cost (USD) Price/ETH\nsary\nINVERTIR 1\nKrugman\nLooks like Bitmine was slurping up all of that cheap ETH over the\nweekend\nwhale insider\nJUST IN: Publicly traded Bitmine Immersion buys another 208,137 SETH\nworth $757.5 million.\nDICHO\nREPETIDAS\nVoulubel",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T09:00:32.767Z"
           }
         }
       ]
