@@ -108634,7 +108634,7 @@
           "url": "https://www.tiktok.com/@blacktea9758/video/7544307495473401093",
           "date": "2025-08-30T09:26:10.000Z",
           "caption": "#granserenahotel #итальянскаякухня #италия #отпуск",
-          "location": null,
+          "location": "Granserena Hotel",
           "views": 406,
           "imageUrl": null,
           "likes": 9,
@@ -108657,7 +108657,31 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-20T03:42:44.787Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "animazione",
+              "spiaggia",
+              "cibo"
+            ],
+            "location": "Granserena Hotel",
+            "confidence": 0.8,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-20T03:46:05.065Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "animazione",
+            "spiaggia",
+            "cibo"
+          ]
         },
         {
           "platform": "tiktok",
