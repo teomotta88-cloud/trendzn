@@ -46752,6 +46752,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:06.263Z"
+          },
+          "ocrData": {
+            "textOnScreen": "naling 6\nYAN ISAN",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:12.599Z"
           }
         },
         {
@@ -46775,6 +46784,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:08.725Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LONGO TIME NO",
+            "confidence": 0.79,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:17.465Z"
           }
         },
         {
@@ -46798,6 +46816,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:11.288Z"
+          },
+          "ocrData": {
+            "textOnScreen": "saying “I\nsaying N\nstop saying 4\nstop saying “I\nvacation:\nPOV:Youlfinally È\nsaying “1\na vacation” N",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:32.387Z"
           }
         },
         {
@@ -46821,6 +46848,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:14.985Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:35.464Z"
           }
         }
       ]
@@ -53290,6 +53325,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:19.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:45.221Z"
           }
         }
       ]
@@ -72971,6 +73014,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:22.283Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:49.204Z"
           }
         },
         {
@@ -72994,6 +73045,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:27.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:41:55.027Z"
           }
         },
         {
@@ -73017,6 +73076,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:30.147Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:00.300Z"
           }
         }
       ]
@@ -86155,6 +86222,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:32.545Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HimwithSibari\nsafe\nAlhamdulillahAllahsafe\nHim with",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:13.312Z"
           }
         },
         {
@@ -86178,6 +86254,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:35.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:28.372Z"
           }
         }
       ]
@@ -96875,6 +96959,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:38.598Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:34.894Z"
           }
         },
         {
@@ -96898,6 +96990,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:42.084Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENE BEACH RESORT\nDar es Salaam, Tanzania",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:39.923Z"
           }
         }
       ]
@@ -108548,6 +108649,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:45.410Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:44.787Z"
           }
         },
         {
@@ -108571,6 +108680,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:49.428Z"
+          },
+          "ocrData": {
+            "textOnScreen": "È Lillian",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:51.197Z"
           }
         },
         {
@@ -108594,6 +108712,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:52.118Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 pill j",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:42:58.200Z"
           }
         },
         {
@@ -108617,6 +108744,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:55.586Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:43:11.612Z"
           }
         },
         {
@@ -108640,6 +108775,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:39:58.202Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:43:19.541Z"
           }
         }
       ]
@@ -118354,6 +118497,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:03.012Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:43:30.391Z"
           }
         },
         {
@@ -118377,6 +118528,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:05.008Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MOST FAMOUS CRIME\nJUST OUTSIDE\nIT'S BONNIE AND\nREAL GETAWAY CAR,\nNEWLY REOPENED\nTIMELINE",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:43:40.688Z"
           }
         },
         {
@@ -118400,6 +118560,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:09.041Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:43:51.379Z"
           }
         },
         {
@@ -118423,6 +118591,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:13.887Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LATER",
+            "confidence": 0.74,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:44:10.057Z"
           }
         },
         {
@@ -118446,6 +118623,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:16.127Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sense Style\nQ PUNTA SERENA Enperiencias que\nMEXICO viven al\nQ SERENA\nVisita:\nsensestyle.vip/eventos",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:44:15.814Z"
           }
         }
       ]
@@ -132057,6 +132243,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:21.365Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:44:31.217Z"
           }
         },
         {
@@ -132080,6 +132274,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:25.284Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NOAA\nGoogle Ear\nGoogle Earth\nGoogle Earths\nNavy",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:44:57.417Z"
           }
         }
       ]
@@ -139882,6 +140085,14 @@
             "status": "no_speech",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:27.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:00.949Z"
           }
         },
         {
