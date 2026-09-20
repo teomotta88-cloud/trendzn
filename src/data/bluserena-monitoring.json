@@ -140116,6 +140116,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:36.495Z"
+          },
+          "ocrData": {
+            "textOnScreen": "core:\nvalentino core:",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:09.134Z"
           }
         },
         {
@@ -140139,6 +140148,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:39.884Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FX) under\nlots",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:15.707Z"
           }
         },
         {
@@ -140162,6 +140180,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:42.136Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this was NOT\nworth, it over Vox\nworth it over Vi",
+            "confidence": 0.884,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:19.807Z"
           }
         },
         {
@@ -140185,6 +140212,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:46.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RIGHT AN\nEXPECT WHEN\nA BUILD",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:29.382Z"
           }
         },
         {
@@ -140208,6 +140244,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:48.793Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this any\njust\njust bought",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:34.713Z"
           }
         },
         {
@@ -140231,6 +140276,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:52.304Z"
+          },
+          "ocrData": {
+            "textOnScreen": "doing all this in\nmini skirt btw\ndoing all\nmini skirt 1A",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:38.953Z"
           }
         }
       ]
@@ -148443,6 +148497,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:55.222Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:45.960Z"
           }
         },
         {
@@ -148466,6 +148528,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:40:57.722Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:49.610Z"
           }
         },
         {
@@ -148489,6 +148559,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T03:41:01.413Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SAMBINA\nPRIME\nStairs\n4 Co Working\nSpace\nElevator\nKan AC dingin",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T03:45:55.790Z"
           }
         }
       ]
