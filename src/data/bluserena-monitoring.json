@@ -46870,7 +46870,16 @@
           "likes": 34,
           "comments": 6,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I recently attended the Pilates and R&B event hosted in Malcourt at Porto by Build a Body and I saw a lot of discourse online so I wanted to add to it. First of all I wanted to say that I did not do the Pilates section of this event, I only did the social. Upon arriving I got a drink that was $17 and it was a lemon drop. I know based off the aesthetic of the event that a lot of these prices will be upcharge which was fine, I knew that going into this. e sapevo che questo era il loro primo evento, quindi volevo usare la mia discretione e non bookare la parte pilates, soprattutto per quanto costoso era. Sono come queste, le cose che amo di più è fare amici e anche i venditori, è qui dove volevo davvero che i miei soldi andassero. Il modo in cui questo spazio era davvero enorme e l'estetica era bella, quindi la prossima volta penso che potrebbero davvero concentrarsi sulle qualità rispetto alla quantità. Prima di andare fuori ai venditori, avevano il raffo. So che alcune persone avevano un po' di discorso su non ottenere le cose che loro erano promesse, quindi spero che sia qualcosa che cambierà alla fine. parlando di qualità, vorrei davvero che avessero più venditori perché i venditori che hanno erano così interessanti, quindi penso che questo avrebbe fatto la parte più sociale di questa esperienza dopo fare i pilates e che avrebbe davvero permesso alle persone di indurre più in questa esperienza. Personalmente ho pensato per un evento che finirebbe in round 2 che avrei pi persone che rimanessero ma ho potuto capire che le persone hanno fatto i pilates e sono andate perch del piccolo numero avuto di venditori piccoli ma c alcuni venditori che mi hanno piaciuto molto e ho anche ottenuto cose da loro non sono una persona di sposta per questo evento e non sono un ambasciatore ma quello che direi che ho visto molte donne a questo evento di colore e questo è stato davvero molto spaventoso per me, è stato super spaventoso per me, diciamo che prendono il critico costruttivo, fanno il cambiamento boom, c'è un evento successivo, abbiamo una comunità e mi piace questo Ok, a questo punto stiamo arrivando a alcuni dei miei venditori preferiti. Mi piacciono questi patch, pensavo fosse perfetto per il mio passaporto, quindi ho preso un cartone perché mi interessava. Hanno dei gemelli di te, ho una profondità di loro che mi fa fallire nel mio boccolo, quindi assolutamente no. Hanno anche dei bagaggi e delle roba di Pilates. Mi piace molto questo set giallo e è stato rilasciato, quindi l'ho ottenuto. Questo è me qui. Eventualmente siamo andati a fare i bracciali e i bambini, ma ho già un altro. ho visto un piercing e ho pensato questa è la mia opportunità perfetta per ottenere un piercing ero così nervosa come se stessi respirando in e out mi sono sentita, ero davvero qui respirando in e out comunque, ho toccato il piercing, è stato un piercing ripierce perché ho pensato, devo farlo di nuovo dormendo e tutto, oh mio Dio, sono così over comunque, non posso aspettare di vedere i cambiamenti che fate e seguitemi per tutte le cose da fare in Montclair ciao",
+            "language": "Italian",
+            "durationSec": 144.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:53:35.275Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -46884,7 +46893,16 @@
           "likes": 12,
           "comments": 11,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I regard, Grand Sirenis, Riviera e Mea, has been the blueprint as to what good hotels should really be about. Ask us anything in the comments, we're replying to every single one to point you in the right direction. But here is the big question, we are building LC Chaos and Rome, a brand completely dedicated to pulling back the curtain and giving you real unfiltered reviews of the world's most unique stays. Does Grand Sirenis deserve its own dedicated chapter in our upcoming project? If you want the full deep dive breakdown, drop a yes or a chapter in the comments below. If we get enough noise, we're writing it. Let us know!",
+            "language": "Italian",
+            "durationSec": 38.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:53:39.499Z"
+          }
         }
       ]
     },
@@ -73126,7 +73144,16 @@
           "likes": 11,
           "comments": 10,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti",
+            "language": "Italian",
+            "durationSec": 34.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:53:42.327Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73140,7 +73167,16 @@
           "likes": 27,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hey ragazzi, sono arrivata a Cibras e Frankfurt per un bello piccolo getaway. Questo è il Majestic con la jacuzzi e il pool con la jacuzzi all'interno. Sì, boost e b********* con la jacuzzi con la jacuzzi. Ok, è reale, ha la tv in là con la sauna.",
+            "language": "Italian",
+            "durationSec": 24.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:53:45.287Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73154,7 +73190,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:53:48.607Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73168,7 +73213,16 @@
           "likes": 1013,
           "comments": 31,
           "shares": 111,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 38.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:53:52.553Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73182,7 +73236,16 @@
           "likes": 57,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "E questa volta, la private umra di Zedda Trip, l'hotel è a Royal Majestic, di fronte al hotel c'è un ristorante, un ristorante pakistano, poi c'è un negozio, poi c'è un apotec, e qui c'è un cibo speciale pakistano, kebab, pollo, c'è un ice cream, c'è un toko di frutti, roti, 7 days, Poi ci sono anche tanti pezzi di patate. Ci vediamo il prezzo. Circa 16-20 rial. Se c'è un cibo, è solo 10 rial. Quindi c'è il 10 rial, 15 rial, 20 rial. Qui c'è il juice. Il cheese è 10 rial e qui c'è il pollo proviamo a vedere il menu pollo che c'è qui e se vogliamo il menu pollo vediamo qui brusque, spicy 20 rial per 3 oh, 20 rial per 4 brusque",
+            "language": "Italian",
+            "durationSec": 87.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:00.045Z"
+          }
         }
       ]
     },
@@ -86374,7 +86437,16 @@
           "likes": 3,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sinceramente, le vacanze a blu e verde, se vuoi che qualcuno compri il tuo share di tempo, non puoi essere angolo con loro e essere difficile con loro. come se qualcuno fa qualcosa di diverso e vuoi che si signino così male come io che vorrei che ti chiamassi in un mondo positivo devi essere più gentile con me e patiente con me perché se non faccio le decisioni quel giorno e mi spingi a fare una decisione quel giorno e ti dico che non è l'amount di dollaro è per vedere se ho bisogno di tempo per pensare e poi mi dai tutti questi complimenti e mi dici che è così che sono successo non continuare a mi spingere su nuove offerte, nuove offerte, nuove offerte, nuove offerte e poi quando finalmente dico no, non voglio qualcosa oggi, non mi importa quanto il money sia devi dare il mio tempo per pensare su questo perché se ti dico che il money non è l'issue e poi ti stai cercando di spingermi su un piccolo deal e poi ti dico che lo offerto è... questo ti fa sembrare come scammersi e quello che è strano è che hai questo numero di riferimento da qualcosa che stai cercando di signarmi e poi stai cercando di prendere il numero di riferimento invece di darglielo a me perché vuoi la mia informazione finanziaria e poi uscire con noi? è un po' strano, mi sento scammato non lo sbaglio, mi sento scammato e che mette un look male sull'azienda Hilton in generale.",
+            "language": "Italian",
+            "durationSec": 104.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:07.771Z"
+          }
         }
       ]
     },
@@ -97125,7 +97197,16 @@
           "likes": 1452,
           "comments": 38,
           "shares": 645,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:11.757Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -97139,7 +97220,16 @@
           "likes": 37,
           "comments": 0,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 115.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:17.261Z"
+          }
         }
       ]
     },
@@ -108961,7 +109051,16 @@
           "likes": 114,
           "comments": 5,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi, di casualità, c'è una stanza? Sì, ma per quante persone le vuoi? Per me, niente più Sì, ma è una stanza perfetta per te Bene, mostramelo Che bello questo terreno Non parliamo della pazza e tranquillità che si sente qui Questo silenzio Puoi anche usare per fare foto per Facebook o Instagram La stanza è la stanza standard Si ha una cama a livello queen, un bando privato, una pizza caliente, un'aerocondizionata e un wifi gratuito Qual è la parte della stanza che inclui? Inclui il piatto e l'accesso alla piscina e se voglio andare a Granada che non conosco fuori Abbiamo anche un di viaggio in cui puoi riservarti il tuo tour qui o fuori da casa Ora faccio il check in per essere portata nella mia abitazione e anche per fare un viaggio alla isleta che è meglio per disconnettarmi di tutto lo stress di fuori Guarda che bello Grazie mille. E avete un numero telefonico? Sì, certo. Abbiamo il numero 57 52 8264. Grazie. Una sera, quando sono andata in strada, ho preso il mio caffè, che qui offre le 24 ore. Ho anche mandato a caricciare le mie piante per cena e mi hanno dato permesso di vedere la mia novella Passione di Gabinett. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 121.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:22.071Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108975,7 +109074,16 @@
           "likes": 207,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Amore mio Amore mio",
+            "language": "Italian",
+            "durationSec": 39.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:26.525Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108989,7 +109097,16 @@
           "likes": 516,
           "comments": 6,
           "shares": 170,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Così potrai arrivare a questo bellissimo e barato balneario di Uga, Ecotel, La Serrania. E' che quando sei nel municipio di Uga, vai a prendere la vita del battaglione, inizierai a salire passando per la stanza, il cruce della Maria, la Habana, fino a arrivare al corregimento di Alaska. Vai a continuare a guidare fino a vedere questa entrata che significa che sei arrivato. Qui vai a sfruttare di piscine di acqua naturale incredibili, un ristorante con piatti deliziosi, da almorzi esecutivi fino a pescati. E' un ambiente perfetto per stare con la tua famiglia o amici. anche con la cabana se vuoi ospedalarti e puoi divertirti di questo paradiso per solo 10.000 pesos l'entrata che include fino al parchiadero scriviti il numero sulla pagine e agenda la tua visita",
+            "language": "Italian",
+            "durationSec": 37.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:30.272Z"
+          }
         }
       ]
     },
@@ -118852,7 +118969,16 @@
           "likes": 20,
           "comments": 0,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:35.189Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -118866,7 +118992,16 @@
           "likes": 86,
           "comments": 20,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ti immagini di svegliarsi ogni mattina a prima linea di mare in Playa Cosón? ti presentiamo un nuovo progetto, rosseato da pura naturalezza nelle terrene dove il lujo si fusa con la tranquillità del Caribe disegnato come un resort integrale, contare una gestione hotelera completa e un stile di vita di primo livello, grazie a le sue esclusive amenità includendo un club surf privato e un completo wellness club Nel terzo livello, una proposta unica, tutto penthouses, disegnati per massimizzare la privacità e con impressionanti viste panoramiche al mare in la maggior parte delle sue unità. Naturalezza, esclusività e rentabilità.",
+            "language": "Italian",
+            "durationSec": 41.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:38.821Z"
+          }
         }
       ]
     },
@@ -132531,7 +132666,16 @@
           "likes": 35,
           "comments": 2,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Chiero raggioste sul, tumbados en la arena, y ver como se pone, fiel dorada y morena, ahora si. Chiero raggioste sul, tumbados en la arena, y ver como se pone, fiel dorada y morena, chiero raggioste sul.",
+            "language": "Italian",
+            "durationSec": 18.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:43.478Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -132545,7 +132689,16 @@
           "likes": 17,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:46.900Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -132559,7 +132712,16 @@
           "likes": 365,
           "comments": 9,
           "shares": 109,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:51.203Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -132573,7 +132735,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Oh, everything's gonna be alright",
+            "language": "Italian",
+            "durationSec": 37.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:54:56.924Z"
+          }
         }
       ]
     },
@@ -140589,7 +140760,16 @@
           "likes": 13,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "e in basso, quindi un po' più in basso, perché i baseni non si uniscono, abbiamo un baseno, 1,20 m, anche in profondità, è da questa parte, l'entrata è sui sali, e si introdusce, si aumenta, andiamo da un'altra parte, qui ho 140 cm, vi mostrerò un'applicazione, qui abbiamo un'intera, una granata, che significa che si introdusce, Ci sono delle paresole molto grandi, non da muovere. Vedete, qui ci sono le spalle. Le metterò in un attimo. Andrò ora in basso. Vedremo il basso e vi mostrerò la profondità. Vedete, ha 140 centimetri di profondità. Guardate, 140 centimetri, quindi è bello che ci sia una grande parte di 120, ma anche 140, quindi per tutti è qualcosa di bello, perché con 120 i bambini si divertiscono, ma con 140 si può già spaventare. Guardate come bello è questo basso in fondo al palmo, questa verde, se si parla di un riposo, qualcosa di bello per l'occhio, questo hotel offre molto, perché c'è molta verde, molta fiamma, ci sentiamo come in un grado, è molto divertente. L'aquapark ha molta spazio, ci sono solo quattro spazio, ma sono davvero grandi, lunghi, e si pu divertirsi e passare un bel tempo Qui al 140 c c un solo sui pedali ed cos che sembra il primo basen In un attimo andremo al secondo basen Ci troveremo qui, in questo bellissimo fiume. Ecco qui c'è l'entrata. Qui, tra i baseni, c'è un posto dove possiamo incontrare un tatuaggio così sgenuo, per fare i capelli colorati, e poi ci sono dei panni per fare dei disegni e così via e qui, quando passiamo da questo ponte abbiamo un altro basen basen senza salita basen anche grande e qui abbiamo anche un brodo abbiamo anche delle brampe dove si fanno delle animazioni qui abbiamo 90 centimetri quindi non è un brodo, ma un jacuzzi qui abbiamo un me 40 Quindi, il basen è qui, qui abbiamo il metodo 20, quindi il basen è lo stesso come lì, qui abbiamo una grande strada di 120 centimetri, e qui si si scambia fino a 140, quindi qui c'è anche un grande plus, perché in parte le bambine possono giocare più, e nella seconda parte si può più spingere. Qui abbiamo un'entrata sui schiatti, e lì, più in profondità, c'è un'entrata sui strati. Guardate, questo basen è davvero grande, quindi penso che davvero molta gente si trovi qui. Non ci sarà nessuna grande freddo o nemmeno una vacanza. Abbiamo un'altitudine di 1,20 m, la maggior parte delle persone andrà sicuramente a un'esercizio, la maggior parte a un basen, per la maggior parte delle persone, perché la beach è molto disponibile, è molto vicino alla beach, non c'è nessun grande passaggio verso la beach, e questo è un grande plus.",
+            "language": "Italian",
+            "durationSec": 225,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:55:06.440Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -140603,7 +140783,16 @@
           "likes": 146,
           "comments": 0,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Che confusione, sarà perché ti amo, è un'emozione che cresce piano piano, stringimi forte e stammi più vicino, se ci sto bene, sarà perché ti amo. Io canto al ritmo, nel dolce tuo respiro, è primavera, sarà perché ti amo, cade una stella, ma dimmi dove siamo. Che te ne frega, sarà perché ti amo E vola vola si sa, sempre più l'alto si va E vola vola con me, in modo da non perderti",
+            "language": "Italian",
+            "durationSec": 38.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:55:12.219Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -140617,7 +140806,16 @@
           "likes": 17,
           "comments": 2,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:55:14.445Z"
+          }
         }
       ]
     },
@@ -148914,7 +149112,16 @@
           "likes": 36,
           "comments": 6,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Benvenuti nelle nuove camere premium. Abbiamo pensato di creare una premium 2.0 che eravamo contenti ma abbiamo ascoltato i vostri consigli, i vostri pareri. Abbiamo dotata comunque di nuovi colori, forme e strutture. Questo è un letto singolo che può diventare anche divano. È tutto della per dormire. Abbiamo preso anche il nuovo sommier con la testiera dei colori che secondo noi si abbinavano bene con questo blu oltremare. Qui abbiamo le abagure di ultima generazione con USB-C, USB-A, luce ambientale e faretto che potete orientare come volete quando volete leggere il vostro libro preferito. Qui abbiamo 50 pollici della Samsung con definizione 4K e ovviamente Sky immancabile per vedere le vostre partite preferite della squadra del cuore piuttosto che le vostre fiction o altre. tutto questo appoggio su una cassettiera perché noi siamo attenti alle vostre segnalazioni e alcune mogli ci hanno detto che non bastava lo spazio all'interno dell'armadio e quindi abbiamo deciso di dotarvi di una cassettiera con tre scomparti qui abbiamo la macchinetta Nespresso con oltre 10 caffè prominenti dal migliore arabiche del mondo sotto abbiamo il frigorifero che solo nelle camere premium avete con la prima fornitura con alcolici, analcolici, vino, birra e succhi di fuoco. Bevande che dall'interno potete asportare all'esterno e godervi questa fantastica vista sul mare Adriatico.",
+            "language": "Italian",
+            "durationSec": 90.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:55:19.217Z"
+          }
         }
       ]
     },
@@ -157999,7 +158206,16 @@
           "likes": 3,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La riserva strategica Ethereum è di 8,4 milioni di dollari in valore, con 62 partecipanti.",
+            "language": "Italian",
+            "durationSec": 12,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:55:22.048Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -158013,7 +158229,16 @@
           "likes": 98,
           "comments": 3,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Gente, una locura lo che sta passando con Bitmain, questa impresa pubblica in Stati Uniti che acabano di aggarare il liderazgo di Ethereum. Le stanno mettendo un biglietto a Ethereum a través della compagnia Bitmain. Questi di Bitmain già hanno 833 mila Ethereum, che equivalgono a più di 3 mila milioni di dollari, e è un 0,69% di tutto il supply di Ethereum che esiste. Questi di Bitmain portano biglietti e gente per investire, investire e credetemi che questi 3 milioni di dollari non saranno l'unico che compreranno, loro continuano a comprare Ethereum perché il CEO di questa azienda ha già detto in ripetite occasioni di tutte le aziende pubbliche con riserve in Ethereum Bitmine è la numero uno e ha già letteralmente doppiato la che è in numero 2 che è Charbling Gaming che è un'altra azienda che recentemente ha iniziato a comprare Ethereum vedete tutte le compras che ha fatto Bitmine in Ethereum tutte sono di milioni di milioni di euro, cosa ne pensate di questo? Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 58.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-20T08:55:25.980Z"
+          }
         }
       ]
     }
