@@ -159268,6 +159268,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T14:08:15.570Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-20T14:13:50.755Z"
           }
         },
         {
@@ -159291,6 +159299,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T14:08:18.934Z"
+          },
+          "ocrData": {
+            "textOnScreen": "\"INNER\nTEMPLE\nORACLE\nCard reading\nfor the week\nard reading\nor the week\no INNER",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T14:13:57.528Z"
           }
         },
         {
@@ -159314,6 +159331,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-20T14:08:23.035Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KIHL XANJ EMILY EDENSHAW\nKETCHIKAN INDIAN COMMUNITY CEO",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-20T14:14:04.961Z"
           }
         }
       ]
