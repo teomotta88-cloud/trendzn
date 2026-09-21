@@ -47038,6 +47038,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:29:43.062Z"
+          },
+          "ocrData": {
+            "textOnScreen": "youif\nHolo\njust\no SENO\ntell me\nnthe videos\ni you know",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:31:23.680Z"
           }
         }
       ]
@@ -53696,6 +53705,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:29:45.650Z"
+          },
+          "ocrData": {
+            "textOnScreen": "That",
+            "confidence": 0.69,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:32:12.173Z"
           }
         },
         {
@@ -53719,6 +53737,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:29:51.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": "J una persona, A",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:32:17.809Z"
           }
         },
         {
@@ -53742,6 +53769,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:29:54.075Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ge 3 Patro\ni 5. Café Riutort\n6. Coucher de 1930 (Palma) ai\n7. Marehé de Santa Catalina\nvers de Cabrera\nO Ù SEJOURNER\non Bunyola\nen ac Hotel Mallorca\n3. touristiques front de\nouer une voiture sans House\n3. Patron Lunares\nCoucher de solei a-Foradada arcat 1920 (Palma)\nFUI OU SEIOURNER\nnidi en ac Hotel Mallorca\n3. Resto touristi ques front de Serena\nune voiture sans Grand House\nstationnement cahote\nde soll\nde soleil (Palma)\nvers Ile de Cabrera\nA FUI ili OU SEJOURNER\n3 nidi en ao r\n3. Resto touristiques front de\nune voiture sans\n6. de soleil 1920\nMarché de Santa Catalina\nA FUI ii OU SEJOURNER:\nnidi en ao Hotel Mallorca\ncalas\nCoucher de soleil\n6. Mercat 1930 (Palma)\nMarghé de\nvers de\nMaga Son “ig\n‘midi en ao Hotel Mallorca\nune voiture sans and House",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:32:39.232Z"
           }
         }
       ]
@@ -63725,6 +63761,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:29:59.345Z"
+          },
+          "ocrData": {
+            "textOnScreen": "What to Expect from Beaches in Mexico\nIsla Blanca\nCosta Mujeres\nPlaya Mujeres\n[sla Mujeres\nCancun\nHotel Zone\nMaroma\nMayakoba e\nPlaya del Carmen\nPuerto Adventuras\nAkumal 4\n(Grand Fiesta",
+            "confidence": 0.854,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:32:49.567Z"
           }
         }
       ]
@@ -87095,6 +87140,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:02.602Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:32:57.152Z"
           }
         },
         {
@@ -87118,6 +87171,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:05.550Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:33:19.010Z"
           }
         }
       ]
@@ -98130,6 +98191,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:11.632Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:33:28.890Z"
           }
         }
       ]
@@ -110214,6 +110283,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:21.999Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A KAMPALA SERENA\nHOTEL\nA Kampala, Uganda\nKAMPALA SERENA\nKampala, Uganda\nSERENA",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:33:36.999Z"
           }
         },
         {
@@ -110237,6 +110315,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:25.539Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:33:45.155Z"
           }
         },
         {
@@ -110260,6 +110346,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:28.672Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:33:52.011Z"
           }
         }
       ]
@@ -120323,6 +120417,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:35.584Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NEED\nSTREETS",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:34:00.736Z"
           }
         }
       ]
@@ -134282,6 +134385,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:38.793Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:34:41.208Z"
           }
         }
       ]
@@ -142433,6 +142544,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:46.087Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:34:48.116Z"
           }
         }
       ]
@@ -150897,6 +151016,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:50.212Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Going Down\nAgoda Kupon diskor\nKame\nVarga\nTidak terr\nDana tic\ndikemt\nBaya",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:34:55.745Z"
           }
         },
         {
@@ -150920,6 +151048,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:30:54.345Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YANG SUPER\nAgoda Kupon diskon 10%\nKamar Superior Double\nTidak termasuk sarapan\nDana tidak bisa Rp247.083\ndikembalikan\nBayar di muka\nDana bisa dikembalikan\nLihat semua opsi kamar\nCd Kamar Deluxe vB\nDAN LANGSUNG\nREDEEM,DEH",
+            "confidence": 0.867,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:35:05.221Z"
           }
         }
       ]
@@ -160299,6 +160436,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:31:04.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:35:16.004Z"
           }
         },
         {
@@ -160322,6 +160467,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T00:31:07.400Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 ETHEREUMS HIDDEN\nResistance Line Break\nì out price..\n3400 K BTCUS 119,671.2 1,893\nK@ TOTAL: 97365 290\nHYPEU 435: 0.357\n2,900.00 ETHEREUM/UsD TETHER PERPETUAL sì\nBLOFIN\n17:35:25 UTC 0 usor\nSave\nETHEREUMS HIDDEN\nResistance Line Break kam\nOut price.. pe\nout price..\nCrypto Bubbles TAXBRAKE\n\\X BloFin, where whale... Judiciary eCo\nK HYPEU 4\nETHUSDT.P\nETHEREUM/USD TET\nCONTRACT\nSwap Cng",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T00:35:30.518Z"
           }
         }
       ]
