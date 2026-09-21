@@ -143368,6 +143368,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:50.677Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 Valentino\nto grab him here he was\noffering his hand as\nhim away\ni implying he was generally\nto lose everything\nSa \"E including himself\nValentino wasn't trying\nVox swatted him away\nValentino wasn't\nto grab him here he was [4\nVox swatted\nimplying he was generally 4\nready to lose everything E\nhere including himself N\nValentino\nimplying he was generally 1\neverything\nincluding himself\nto grab Was\noffering i\nVex swatted 4 4\nready to lose 4\nhere",
+            "confidence": 0.879,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:50:30.008Z"
           }
         }
       ]
@@ -151896,6 +151905,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:53.462Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FOR THE RIDE: p2\nGREAT",
+            "confidence": 0.741,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:50:44.356Z"
           }
         }
       ]
@@ -161338,6 +161356,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:45:02.057Z"
+          },
+          "ocrData": {
+            "textOnScreen": "woman Ir",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:50:49.451Z"
           }
         },
         {
@@ -161361,6 +161388,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:45:05.194Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vincci",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:51:06.396Z"
           }
         }
       ]
