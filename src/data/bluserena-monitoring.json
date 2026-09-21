@@ -88836,6 +88836,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:22.110Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Grove, lllinois\nCyharis is\nDowners\ncomes with\npools and a hot tub?\nDowners Grove,\npools\nand every:",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:24:55.225Z"
           }
         },
         {
@@ -88859,6 +88868,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:25.308Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:25:09.442Z"
           }
         },
         {
@@ -88882,6 +88899,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:34.766Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:25:15.103Z"
           }
         },
         {
@@ -88905,6 +88930,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:39.998Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:25:40.139Z"
           }
         },
         {
@@ -88928,6 +88961,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:43.314Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Some hotels are made sleeping\nthis one is made for\nonly $180 per night\nome hotels are made for sleeping\none is made for romance.\n$180 per night\nSome hotels are made for sleeping\nis one ismade for romance. 3\nthis one is made for romance.\nthis one is made for romance. J",
+            "confidence": 0.868,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:25:51.173Z"
           }
         }
       ]
@@ -100101,6 +100143,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:46.475Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1? Sort Filter Map\nc Scottsboro 3.3 km from downtown\nE Breakfast included\nhad Vv Free cancellation\nNo prepayment needed\npay at the property\nMotel 6 Scottsboro, AL Hwy 72\nPleasant 225 review\nScottsboro 2.7 km from downtown\ntaxes and fee\nil Extended free cancellation\nT Red Roof Inn Suites Scottsboro\nGood 209 review\nScottsboro 2.3 km from downtown\nncluces taxes and fee\nWe have 4 left at this price\nBreakfast included\nFree cancellation\nVv No prepayment needed\nIncludes taxes and fe\nHampton Inn Suites\nVery Good 123\nE i Scottsboro 2.6 km from downtown\ni i Susta nability certification\nBreakfast inclu\nBudget Inn Scottsboro\nDisappointing 42 reviews\nScottsboro 1.1 km from downtown\nIncludes taxes and\nWe have 3 left at this p\nBeautiful Tented Cabin Surrounded by\nNature and Hot-tub Provided in\nScottsboro, Alabama\nScottsboro 25.1 km from downtown\nTent: 2 beds\nOnly 1 left at this price on our si\nAmazing Tree House Perfect for a\nin Alahama\nLT Sort Filter Map\n[43] Disappointing evi\nScottsboro 1.9 km from downtown\ntaxes and fe\ni We have 5 left at this price\nSweet Tiny House Nestled Among the\nTowering Trees in Alabama\ne Scottsboro 25.1 km trom downtown\nEntire vacation home: bed bedroom\n3 I bathroom kitchen\ne nehices taxes and fees\nLiberty Inn Near Lake\nGuntersville\nFeatured\nScottsboro 1.3 kim from downtown\nncluces taxes and fees\nExtended free cancellation\nprepayment needed\nColorful Tiny House with Outdoor\nSauna and Jacuzzi in Alabama\ni Scottsboro 25.1 km from downtown\nEntire vacation home: 1 bed 1\n1 bathroom 1 kitchen\n4 ncluces taxes and fee",
+            "confidence": 0.882,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:26:22.186Z"
           }
         },
         {
@@ -100124,6 +100175,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:49.619Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:26:48.003Z"
           }
         },
         {
@@ -100147,6 +100206,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:52.336Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Sanctuary Beach Resort\nThe Sanctuary Beach Resort 7\nSanctuary Beach\nToasting s'mores by the beach\nat dusk\nToasting mores by the beach\nbonfire at dusk\nthe interiorlisisoicozy;\nto explore i\nmy stay",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:26:57.602Z"
           }
         },
         {
@@ -100170,6 +100238,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:55.228Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Island Resort!\nFort Walton Beach, Florida\nResort\nWalton Beach, Florida",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:27:12.695Z"
           }
         }
       ]
@@ -112392,6 +112469,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:04.758Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SEASON\n3% Catherine kusasira calls all\nher fans to come and support\n4 Irene Namatovu\nWOMAN, i i\nIrene Namatovu\nIrene Namatovu SS\nWOMAN\nCatherine kusasira calls all\nWU Derrick",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:27:27.275Z"
           }
         },
         {
@@ -112415,6 +112501,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:13.736Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:27:33.755Z"
           }
         },
         {
@@ -112438,6 +112532,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:17.885Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RUANG FAMILY\n1 BED BESAR\nFASILITAS\nAGODA\nTIKCET.COM\nTRAVELOKA™S\nLUAS DAN BERSIH",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:27:39.347Z"
           }
         },
         {
@@ -112461,6 +112564,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:22.672Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:27:51.898Z"
           }
         },
         {
@@ -112484,6 +112595,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:26.322Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YOU CAN PICK\nENTREPRENEUR\nup s Ride Menu\nFairbanks, Alaska\nRoad Rage Ride 1 complain about every other\nriver, their vehicles and why they be\nallowed on the road!\nThe Analyst Ride Something bothering you?\nlisten with a sympathetic ear and maybe help you\nsee your problem with some clarity. (No\nGuarantees)\nThe Informative Ride tell you as much as can\nabout Alaska and why you di here long\nenough to see all the important\nThe Restaurant Ride talk about the variety of\nrestaurants and help you decide where to eat.\nSometimes even offer suggestions on which\nwaitress to ask for.\nThe Simon and Garfunkel Ride Sounds of Silence\nide share some of life’s\nGUIDE:\nYou have yours,\nThe Political Ride and you\nhave mine. 1 can t change yo\ncan’t change mine.\nThe ME Ride —1 tell you all abou\nphotography\nDIFFERENTIATION",
+            "confidence": 0.92,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:27:59.841Z"
           }
         },
         {
@@ -112507,6 +112627,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:29.590Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bake\nComo. 4 “4",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:28:15.323Z"
           }
         },
         {
@@ -112530,6 +112659,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:36.943Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Grea\nbuggy!\n$irenis 5\nWith\nì gore\nSirenis\nthe grounds\nof the Grand Sirenis\nthe grounds 4.\nthe Grand i",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:28:32.501Z"
           }
         }
       ]
@@ -122680,6 +122818,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:39.898Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:28:40.023Z"
           }
         },
         {
@@ -122703,6 +122849,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:42.818Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ED È IL POSTO PERFETTO\nDURANTE",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:28:53.958Z"
           }
         },
         {
@@ -122726,6 +122881,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:51.329Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:29:00.416Z"
           }
         }
       ]
@@ -136888,6 +137051,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:54.025Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RASH",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:29:48.128Z"
           }
         },
         {
@@ -136911,6 +137083,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:13:57.896Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This",
+            "confidence": 0.739,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:30:38.348Z"
           }
         },
         {
@@ -136934,6 +137115,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:14:02.914Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:30:43.379Z"
           }
         },
         {
@@ -136957,6 +137146,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:14:08.173Z"
+          },
+          "ocrData": {
+            "textOnScreen": "rants\nalso\nprice AN\nand Biuewater J\nVeranda Grana\n2,69 Fairways and Bluewater Boracay\nTHIRD\nUlre relaxing\noolside\noff Agoda\nCLARIZEAGODA Ago\nPROMO CODES\nCLARIZEGO: up to 5% off Agoda activities\nup to 10% off Agoda hotels\nup 5% off Klook",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:31:02.139Z"
           }
         },
         {
@@ -136980,6 +137178,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:14:12.433Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:31:10.907Z"
           }
         },
         {
@@ -137003,6 +137209,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:14:17.798Z"
+          },
+          "ocrData": {
+            "textOnScreen": "going}\nView Amenities\nwebsite\nResort View\nat Disney's Animal Kingdom Lodge\nView Photo:\nViews of Rooftop or Area E\n2 Queen Beds\nSleeps up to 4 Adults\nAvg/Night Excl Tax\nA Rate Details\nview bottom:\nViews of Rooftop or Parking Area\n2 Queen Beds i\nv 5 a beverage cooler, coffee and tea station, and a patio or balcor E\nrate\nSelect\nResort View King Bed\nRates are in US Dollars.\nAugust 2026\nresort\nView Price Per Night\nRate Details (US Dollars)\nRates shown are for the room type selected.\nExcludes applicable taxes\nAvailability has not been checked and is not guaranteed\nuntil payment is received\nLength of stay requirements may apply\n«Additional per adult charges may apply if more than 2\nadults per room",
+            "confidence": 0.858,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:31:24.128Z"
           }
         }
       ]
