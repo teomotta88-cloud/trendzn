@@ -30963,6 +30963,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:42:56.904Z"
+          },
+          "ocrData": {
+            "textOnScreen": "alll",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:45:18.670Z"
           }
         },
         {
@@ -30986,6 +30995,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:42:59.507Z"
+          },
+          "ocrData": {
+            "textOnScreen": "and serena and blair\nthey do besties better than anyone",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:45:26.013Z"
           }
         }
       ]
@@ -63839,6 +63857,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:01.877Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:45:33.077Z"
           }
         }
       ]
@@ -87271,6 +87297,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:21.946Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:45:40.283Z"
           }
         },
         {
@@ -87294,6 +87328,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:28.152Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LENGKAP DENGAN\n[DARURNY/AY",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:45:59.067Z"
           }
         },
         {
@@ -87317,6 +87360,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:38.793Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Panorama Resort by MHM\nNear Curug Cibareubeuy 4\nJI. Sariater, Ciater, Subang Regency,\nRooms Post to earn\nAgoda\nStandard\n1 queen bed 2 pax 21m? Ensuite\nv Breakfast included\nFamily Room\n2 single beds and 1 double bed 4 pax\n29m? Ensuite bathroom\nBreakfast included\npecial price\nDeluxe Pool\nI 2 single beds and 1 double bed 4 pax\n42m? Ensuite bathroom\nShare orit",
+            "confidence": 0.84,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:46:22.814Z"
           }
         },
         {
@@ -87340,6 +87392,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:41.385Z"
+          },
+          "ocrData": {
+            "textOnScreen": "but bring",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:46:32.650Z"
           }
         },
         {
@@ -87363,6 +87424,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:44.890Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:46:45.314Z"
           }
         },
         {
@@ -87386,6 +87455,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:48.281Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:46:53.228Z"
           }
         },
         {
@@ -87409,6 +87486,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:50.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sybaris: Mequon, WI\nWould you stay here?\n4 Such a romantic v\ngetaway\nSo many different\nRoom options- some with\nMassive pools!\nClick the green location\ntab below to check prices n i\nbook",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:47:00.467Z"
           }
         }
       ]
@@ -98452,6 +98538,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:53.534Z"
+          },
+          "ocrData": {
+            "textOnScreen": "night\nN only:\nWould you believe this palm'Springs\nluxury resort is only $199/night?\npool full spa included!\nthis\nonly $199/night?\nGolf, big pool full spa included.",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:47:17.774Z"
           }
         }
       ]
@@ -110630,6 +110725,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:43:58.363Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This is how féel 3\nSirenis\nleaving the",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:47:49.664Z"
           }
         }
       ]
@@ -120725,6 +120829,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:02.386Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:48:00.477Z"
           }
         }
       ]
@@ -134715,6 +134827,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:04.771Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this hotel gives\nvillain a\nvillain vibes\nvillain",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:48:06.681Z"
           }
         },
         {
@@ -134738,6 +134859,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:08.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Zone\nTali\nNew version 2.2.2\nWelcome",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:48:16.755Z"
           }
         },
         {
@@ -134761,6 +134891,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:18.616Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A Vill,",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:48:39.749Z"
           }
         },
         {
@@ -134784,6 +134923,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:21.461Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Polynésie",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:48:58.827Z"
           }
         }
       ]
@@ -142966,6 +143114,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:23.903Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:49:08.472Z"
           }
         },
         {
@@ -142989,6 +143145,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:26.450Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RENA\nFund dore,",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:49:15.958Z"
           }
         },
         {
@@ -143012,6 +143177,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:30.141Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Reply to Jess's comment\nyourself to\nValentino's in\nRowlett, love them\nso much\nGEDDA\nBOUD",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:49:25.529Z"
           }
         },
         {
@@ -143035,6 +143209,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:33.228Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BATHROOM,\nTHIS HAS A\nBECAUSE F\nsald\nWATER.",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:49:37.510Z"
           }
         },
         {
@@ -143058,6 +143241,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:36.369Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:49:44.333Z"
           }
         },
         {
@@ -143081,6 +143272,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:39.370Z"
+          },
+          "ocrData": {
+            "textOnScreen": "YOU'RE\nBURBERRY\n4 BURBERRY\nTIME",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:49:58.357Z"
           }
         },
         {
@@ -143104,6 +143304,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:42.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IEBITESS T\nBBONNIEBITESS",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:50:09.676Z"
           }
         },
         {
@@ -143127,6 +143336,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T05:44:45.080Z"
+          },
+          "ocrData": {
+            "textOnScreen": "how that\nGf-the vees\noffscreentime\nvalentino leader of the vees\nonly has one scene of screentime\nIt feel that\now It feels\nvalentino leader of CES\np only has of screentime J\nhow It feels now that\nvalentino leader of the\nonly has one scene of screentime 3\n(2 valentino",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T05:50:16.959Z"
           }
         },
         {
