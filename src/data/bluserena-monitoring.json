@@ -145790,6 +145790,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:23.433Z"
+          },
+          "ocrData": {
+            "textOnScreen": "to Settings",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:31:36.596Z"
           }
         },
         {
@@ -145813,6 +145822,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:28.461Z"
+          },
+          "ocrData": {
+            "textOnScreen": "suas:\nNaturist Resort\nasva SO\nNaturistiResort\nasve suas:",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:31:48.435Z"
           }
         },
         {
@@ -145836,6 +145854,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:33.580Z"
+          },
+          "ocrData": {
+            "textOnScreen": "/alentino",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:31:55.075Z"
           }
         }
       ]
@@ -154408,6 +154435,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:36.347Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ROOMS 4",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:32:01.669Z"
           }
         },
         {
@@ -154431,6 +154467,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:39.367Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lahari\nKalahari\nExactamente a\nPark Resort Co...\nerpark Resort Co... Ì\nNo necesitas\nPreocuparte por salira\nbuscar\no algun postre\nVa que cuenta con\nEstablecimientos\nKALAHARI k Resort Co...\nEs el lugar perfecto\nPara llegar con tu familia\nY disfrutar los juegos acudticos",
+            "confidence": 0.821,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:32:15.739Z"
           }
         },
         {
@@ -154454,6 +154499,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:42.106Z"
+          },
+          "ocrData": {
+            "textOnScreen": "id lth fill",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:32:34.213Z"
           }
         },
         {
@@ -154477,6 +154531,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:45.169Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CELEBRATE\nFOR'SUNNY{DAYS\nFOR'A'SRECIAL",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:32:48.897Z"
           }
         },
         {
@@ -154500,6 +154563,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:51.833Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Jodi kalau lan i\n‘CAM ALMIRA HOTEL KALIANDA\nSuperior\ntermasuk\nDana tidak besa\nsuperio, 1 Queen, halaman\ndi dan pilih tipe Kamar:",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:32:57.523Z"
           }
         },
         {
@@ -154523,6 +154595,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:15:56.721Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:33:01.390Z"
           }
         },
         {
@@ -154546,6 +154626,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:02.069Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tag lokasi untuk\nbooking hotel",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:33:06.827Z"
           }
         },
         {
@@ -154569,6 +154658,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:15.341Z"
+          },
+          "ocrData": {
+            "textOnScreen": "salah/satu spot palinglikonik\nmakanya setiap È\ndalam dengan\nWater, sudah disediakan\nrenang? B",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:33:29.999Z"
           }
         },
         {
@@ -154592,6 +154690,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:18.764Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MEETING\nSENI\nkamarnya luas\nsilitas yang du kasih udah leng",
+            "confidence": 0.774,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:33:48.885Z"
           }
         },
         {
@@ -154615,6 +154722,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:23.502Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:34:00.656Z"
           }
         },
         {
@@ -154638,6 +154753,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:26.989Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hotellbbslbwalsepupuldilkaliandal",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:34:05.100Z"
           }
         }
       ]
@@ -164176,6 +164300,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:30.745Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:34:09.127Z"
           }
         },
         {
@@ -164199,6 +164331,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:38.133Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Lala\ncompletely surrounded by\nbringing in views of the\nsurrounding vineyard.\nmassive\nand)your.own",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:34:22.556Z"
           }
         },
         {
@@ -164222,6 +164363,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:16:42.586Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:34:29.955Z"
           }
         }
       ]
