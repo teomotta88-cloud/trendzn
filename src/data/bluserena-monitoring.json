@@ -54526,6 +54526,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:39:57.204Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Spiaggia di Santa Maria\nCala Serena",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:40:43.833Z"
           }
         }
       ]
@@ -74999,6 +75008,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:00.845Z"
+          },
+          "ocrData": {
+            "textOnScreen": "entire Mallorca trip in Palma\nINNI",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:41:17.355Z"
           }
         },
         {
@@ -75022,6 +75040,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:04.613Z"
+          },
+          "ocrData": {
+            "textOnScreen": "disfrdtards de ou\ngastronomica\nHing Hdte 5\nlugares",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:41:33.431Z"
           }
         },
         {
@@ -75045,6 +75072,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:07.194Z"
+          },
+          "ocrData": {
+            "textOnScreen": "from\ncelona’\nfrom PITE",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:41:48.238Z"
           }
         }
       ]
@@ -89085,6 +89121,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:12.425Z"
+          },
+          "ocrData": {
+            "textOnScreen": "23 Do think it beats\nthe other resorts you\nhave been to here so\nFIVE.\nReply to Kirsty Luis T\n3 Do you think it beats\n*The poolsjreally\nshould\nGOT TO HANG\noo think\nthe other resorts you i\nthink\nnave been to here so\nWOULD ALWAYS\nDo you think it beats\nhave been to here",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:41:58.184Z"
           }
         },
         {
@@ -89108,6 +89153,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:15.104Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:42:05.729Z"
           }
         }
       ]
@@ -100408,6 +100461,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:18.359Z"
+          },
+          "ocrData": {
+            "textOnScreen": "find",
+            "confidence": 0.744,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:42:24.169Z"
           }
         }
       ]
@@ -123073,6 +123135,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:21.228Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:42:30.929Z"
           }
         }
       ]
@@ -164578,6 +164648,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:23.700Z"
+          },
+          "ocrData": {
+            "textOnScreen": "also the founder of Vandy Crisps,\nfree grass-fed\ntallow potato chips\nfounder\nseed-oil free grasszfed\nbeef\nseed-oil free grass-fed\nbeef tallow potato chips\n(While eat all my food raw,\nhighly recommend to my cooked\nfood health-conscious friends)",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:42:42.565Z"
           }
         },
         {
@@ -164601,6 +164680,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T21:40:26.099Z"
+          },
+          "ocrData": {
+            "textOnScreen": "5 POV: You step inside a pit\nhouse shaped by generations\nof Indigenous knowledge\nPOV: You step inside a pit",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T21:43:01.011Z"
           }
         }
       ]
