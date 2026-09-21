@@ -74309,6 +74309,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-21T07:40:58.147Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info",
+            "language": "Italian",
+            "durationSec": 19.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:56:44.371Z"
           }
         },
         {
@@ -74331,6 +74340,15 @@
             "status": "no_text",
             "version": 3,
             "updatedAt": "2026-09-21T07:41:09.739Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Questo resort è stato fantastico online, ma cosa è davvero come? Benvenuti a Serenade All Suites Punta Cana, un posto solo per adulti, right on Cabeza de Toro Beach. I suites sono super spaziosi, alcuni hanno anche pool e jacuzzi di suono right outside your door. Ci sono tre grandi pool, con un bar di suono e un jacuzzi, plus un beach con sanda bianca che è molto bello. La città era un po' un'errore, alcuni piatti erano buoni, altri erano ok, ma ci sono tanti opzioni e restauranti da scegliere. Se vuoi rilassarti o stare attivo, c'è un spa e un gym suono. property as well service was great and everyone was helpful so let me know would you stay here",
+            "language": "Italian",
+            "durationSec": 34,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:56:47.235Z"
           }
         },
         {
@@ -74345,7 +74363,16 @@
           "likes": 24,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ahahahah",
+            "language": "Italian",
+            "durationSec": 15.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:56:51.454Z"
+          }
         }
       ]
     },
@@ -99087,7 +99114,16 @@
           "likes": 51,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti Il nostro obiettivo di continuare a essere compatti cos a raggiungere il nostro obiettivo e per capire cosa ci sta facendo. E un'altra cosa, grazie a tutti per averci seguito. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 127,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:57:03.155Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -99101,7 +99137,16 @@
           "likes": 37,
           "comments": 2,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 51.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:57:09.569Z"
+          }
         }
       ]
     },
@@ -135557,6 +135602,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-21T07:41:34.185Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 18.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:57:11.804Z"
           }
         }
       ]
@@ -144097,6 +144151,15 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-21T07:41:43.399Z"
+          },
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:57:14.161Z"
           }
         }
       ]
@@ -162143,7 +162206,16 @@
           "likes": 4853,
           "comments": 45,
           "shares": 1001,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se Trinidad e Tobago sono siste, Maritius è una sista di mezzo. E non è solo la popolazione, la dimensione e le demografie che sono simili, è la storia. Tutte le isole sono colonie di alto valore a causa del succo. E dopo la slavatura, i britannici usavano Maritius come loro primaria testa per il sistema di lavoro. Poi hanno preso quel stesso blu print e lo hanno applicato a Trinidad, prendendo lavoratori dalla stessa regione di India. As a result, same surnames, street food is very similar, doubles in Trinidad, dolpuri in Mauritius. Many national holidays are also the same. And we even have French fuel influencing on the LA. So when you take him, my boy? It might be sooner than you think. When I say check your email. Oh, wait, what?",
+            "language": "Italian",
+            "durationSec": 50,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T10:57:27.522Z"
+          }
         }
       ]
     }
