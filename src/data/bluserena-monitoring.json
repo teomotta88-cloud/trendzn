@@ -145350,7 +145350,16 @@
           "likes": 28,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 24.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:23.433Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -145364,7 +145373,16 @@
           "likes": 205,
           "comments": 13,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:28.461Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -145378,7 +145396,16 @@
           "likes": 30,
           "comments": 3,
           "shares": 31,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 24.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:33.580Z"
+          }
         }
       ]
     },
@@ -153941,7 +153968,16 @@
           "likes": 39,
           "comments": 0,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 42.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:36.347Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -153955,7 +153991,16 @@
           "likes": 28,
           "comments": 0,
           "shares": 15,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 36.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:39.367Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -153969,7 +154014,16 @@
           "likes": 1809,
           "comments": 3,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:42.106Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -153983,7 +154037,16 @@
           "likes": 569,
           "comments": 10,
           "shares": 1035,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mark your calendars, National Water Park Day is July 28th. There's no better way to celebrate than at Kalahari, home to America's largest indoor water park. There's wave pools, lazy rivers, multi-story slides, and even an outdoor water park for sunny days. My nephew and I had the best time, perfect for kids and just as exciting for adults too. Make sure you check out my story on July 28th for a special promo to book your next splash of getaway at Kalahari.",
+            "language": "Italian",
+            "durationSec": 27.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:45.169Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -153997,7 +154060,16 @@
           "likes": 205,
           "comments": 5,
           "shares": 31,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se vuoi viaggiare in Lampung, devi abituarti a un hotel nuovo che c'è a Kalianda. Il nome è Kem Almira Hotel Kalianda, il luogo è strategico, in strada Trans Sumatra, quindi è adatto per te che stai in viaggio o vuoi esplorare le destinazioni di viaggio a Kalianda. Quando entri, la vibe del lobby è molto moderna e comoda. La chiesa è anche pulita, con un disegno minimalista, la casura è morbida, l'acciaio è super freddo, la tv, il wifi, plus la chiesa di bambino che è pulita e completa. Inoltre, qui c'è anche un ristorante, quindi se sei in grado di uscire dall'hotel, puoi mangiare con comodità. Per dormire qui, clicca sull'occasione in basso a destra e scegli il tipo di camere che vuoi. Quindi, se avrete un'occasione di vacanza a Lampung, non dimenticate di uscire dal camp Amira Hotel Kalianda.",
+            "language": "Italian",
+            "durationSec": 46,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:51.833Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -154011,7 +154083,16 @@
           "likes": 85,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il generale che è diventato un esilio, il esilio che è diventato un gladiator, il gladiator che ha defito un imperatore. Una storia straordinaria. Ora che le persone vogliono sapere come finisce la storia, solo un famoso santo farà. E cosa potrebbe essere più glorioso di affrontare l'impero stesso nella grande arena? Ti combatteresti con me? Perché no? Ti pensi che sono paura? Penso che sei stata paura tutta la tua vita. A meno di Maximus l'invincibile che non ha paura. E' un uomo che una volta disse che la morte smaglia tutto. Tutto che un uomo può fare è smagliare. Non mi ricordo. Il tuo amico smagliò la sua morte. Devi sapere. Era tuo padre. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 83.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:15:56.721Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -154025,7 +154106,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 33.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:02.069Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -154039,7 +154129,16 @@
           "likes": 46,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sai, questo resort che è un film di film, è un luogo unico per te Uno dei più iconico di questo luogo è la villa l'edukia Una piazza coloniale, che era un luogo unico per film di film, dove stava il volo di Vendelwick Non è un'errore, perché ogni lato è classico, elegante e estetico Ora mi sguardo in un'esecutiva, la camera è comoda, i tassi sono lisci, la TV è AC, il wifi, il cammino all'interno con il water heater è preparato e c'è una terrazza in ogni sua scuola, quindi puoi rilassarti. La sua scuola è comoda, la sua facilità di risorto è anche completa, inizialmente da una scuola di rinnovo, un ristorante, un'area di piazza più ampia, un'area per giocare con i bambini, fino a molti spot foto che sono molto bello. Per chi è interessato al booking, non è necessario passare per le locazioni di sotto, basta toccare il nome, cliccare la tipologia della scuola e il pagamento. Il risorto di Caliandra è molto obbligatorio per il tuo business, per la prossima vacation.",
+            "language": "Italian",
+            "durationSec": 53.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:15.341Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -154053,7 +154152,16 @@
           "likes": 7,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sala, baciana, ho conto di guardarci, è il primo giorno Sala, baciana, hai un po' di serietà, proviamo a partire Sa'a, ho voluto, non è vero, non è vero, non è vero, non è vero Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:18.764Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -154067,7 +154175,16 @@
           "likes": 53,
           "comments": 6,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "venite con me al hotel Claridge qui lo è quindi questo è un'area per 4 ha due piazze di regia vedete la prima piazza di regia dietro a me questo è io e mio figlio ovviamente per il weekend di Memorial Day la sua stanza è super spaziosa quindi ha un telefono sullo scopo quindi puoi chiamare in basso per più tavoli più pavimenti, tutto quello ha il wifi gratuito e ha anche una stanza che è collegata a questa stanza se vuoi un'altra stanza ha anche la mia parte preferita, se c'è freddo per i bambini ha un'altra stanza questa è la parte preferita del hotel, è per questo che ci stiamo sempre perché in caso c'è freddo, perché non lo sapete, perché ho un libro in avanti siamo in una stanza fredda che è di 78°C a 81°C e puoi ancora vedere in alto, puoi vedere il sole, puoi vedere il freddo e è un posto meraviglioso è così vicino al boardwalk come puoi vedere è a un blocco dal boardwalk è letteralmente lì fuori dal hotel Bally's è attraverso la strada c'è un casino lì attraverso la strada e è letteralmente così vicino al boardwalk puoi vedere il boardwalk lì avanti dove c'è il grande segno è uno dei miei posti preferiti e stiamo tornando prima di tornare a scuola per bene il 4° al 7° sarà lì ti amo, stai in alto",
+            "language": "Italian",
+            "durationSec": 85.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:23.502Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -154081,7 +154198,16 @@
           "likes": 81,
           "comments": 5,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:26.989Z"
+          }
         }
       ]
     },
@@ -163610,7 +163736,16 @@
           "likes": 199,
           "comments": 12,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:30.745Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -163624,7 +163759,16 @@
           "likes": 3956,
           "comments": 36,
           "shares": 1534,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Incredibile getaways a Adelaide per bookare almeno una volta nella vita. Se vi andate un'ora dalla città, potete stare a questa ritrova in grado di stare completamente circondati da vine. Questa è la rare earth retreat in regione del Valle di McLaren, un getaway ambientalmente consapevole che è buono per il pianeta e anche meglio per la sua vita. Entrate e troverete un spazio caldo minimo completato con pietre di concreto polvato, ceramiche hand made e finestre a cielo freddo che portano in vista le vittime del vigneto. Ogni villa è completamente in grado di usare il suo potere solare, collega la sua propria acqua di neve e è fissata con pezzi di handcraft che sono fatti dai artisti australiani locali. Alla centra c'è un grande bed, un palazzo di fiori per le notti più fredde e una cucina completamente equipaggiata, stocchata con il caffè locale, le preghiere e il vostro own bottle of wine. E all'esterno avete il vostro own deck privato con le belle vittime di sole e un bathtub outdoor che si rivolge alle vinte e un pietro di fiori che si fa per le notti più fredde sotto le stelle.",
+            "language": "Italian",
+            "durationSec": 47.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:38.133Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -163638,7 +163782,16 @@
           "likes": 133,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 42.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:16:42.586Z"
+          }
         }
       ]
     }
