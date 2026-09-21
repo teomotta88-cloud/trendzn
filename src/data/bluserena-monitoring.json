@@ -73953,7 +73953,15 @@
           "likes": 2756,
           "comments": 54,
           "shares": 554,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T07:40:58.147Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -73967,7 +73975,15 @@
           "likes": 597,
           "comments": 32,
           "shares": 274,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T07:41:09.739Z"
+          }
         }
       ]
     },
@@ -134974,7 +134990,16 @@
           "likes": 2602,
           "comments": 58,
           "shares": 972,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "MARCH 2027\nAUGUST 2027\nOCTOBER 2027",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T07:41:34.185Z"
+          }
         }
       ]
     },
@@ -143433,7 +143458,16 @@
           "likes": 7988,
           "comments": 109,
           "shares": 164,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "cosplay,\nshould have known not\nto trust Valentino.”\ngValentino\nValentino®\n“You're not getting\nanymore, out of me!”",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T07:41:43.399Z"
+          }
         }
       ]
     },
