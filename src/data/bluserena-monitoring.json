@@ -143141,7 +143141,16 @@
           "likes": 12600,
           "comments": 59,
           "shares": 514,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Per quel stupido diere! E' finita! Tu stupido! F***! F***!",
+            "language": "Italian",
+            "durationSec": 9.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T05:44:50.677Z"
+          }
         }
       ]
     },
@@ -151660,7 +151669,16 @@
           "likes": 1228,
           "comments": 27,
           "shares": 79,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T05:44:53.462Z"
+          }
         }
       ]
     },
@@ -161093,7 +161111,16 @@
           "likes": 30700,
           "comments": 291,
           "shares": 9557,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo reservoir è così curato che 8 religioni lo devono benedicare. Ma come è arrivato a una reputazione incontro? Il reservoir di Baduk è conosciuto nella comunità supernatura come un luogo notorioso. Nel giugno 2011, il corpo di un uomo di 23 anni è stato trovato nel reservoir. Solo la metà di lui è stata trovata. Ma questo era solo il principio, perché in solo 6 mesi, un totale stagionato di 6 corpi si trovavano nel reservoir. Si è avvenuto così male che, dopo quel anno, rappresentanti di 8 religioni dell'organizzazione inter-religiosa in Singapore hanno preso turno a recitare le preghiere per benedire il reservoir. Si è iniziato dal ex Ministro straniero di Singapore, George Yeoh. Sì, un Ministro ha incontrato questo evento. Ma qui è dove diventa ancora più spazzante. Perché, la mattina prima di questa cerimonia, prima che gli ufficiali religiosi si sono riusciti a rispondere, un altro corpo è stato trovato a fluttuare nel mare. E, a dispiace della cerimonia di benedizione ufficiale, i corpi continuano a essere trovati nel reservoir. Alcune delle entità che hanno incontrato l'area sono le sirene di sottoposto che liurano le persone in acqua. Le persone che si stavano innescando nel reservoir hanno sentito qualcosa che le ha portate a scendere. Un'altra entità è la donna in una roba rossa. E questo ha una base, perché è un fatto che una donna si è innamorata di essere in roba rossa prima di andare in acqua. Il suo corpo è stato trovato dopo, ancora in roba rossa. Red in tradizione cinese significa energia di vita. Diedere in red supposamente dà al spirito una quantità massima di energia young. Red anche simbolizza la vengenza. E se tu avessi mai morto in red, ti diventeresti un spirito che vengono la vengenza. Ho actually went down to Paduk Reservoir to investigate this. If you are interested in the full video, you can check it out on YouTube. It's free.",
+            "language": "Italian",
+            "durationSec": 100.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T05:45:02.057Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -161107,7 +161134,16 @@
           "likes": 124,
           "comments": 14,
           "shares": 26,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il combine tra Cairo e Sharm El Sheikh, tra le migliori destinazioni che rendono il lino in questo modo. E questo mero vi presento un programma eccezionale. Iniziate con noi questa notizia in Sharm El Sheikh Honor Inclusive Soft e aggiunte due notizie in Cairo con un piccolo pranzo. Il programma è inclusivo con i bilet d'avio internazionali e domestici con gli egipti e aggiunte le escursioni che hanno incluso nel nostro pack. Inoltre, in questo mero vi presentate una giornata completa di viaggiare alle Aramate e Aboulhou, il grande egipto, con un pranzo offerto da noi e aggiunte un raffreddamento speciale nel crozzere sul Nile. Bileman e il Sous Charm Cheikh che ci sono due escursioni l'Old Market e San Square e poi provate questa esperienza che vi raccomando di contattarci il numero di un chéche a volo è sempre a vostra disposizione a presto",
+            "language": "Italian",
+            "durationSec": 42.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T05:45:05.194Z"
+          }
         }
       ]
     }
