@@ -74372,6 +74372,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T10:56:51.454Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T10:57:42.021Z"
           }
         }
       ]
@@ -99123,6 +99131,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T10:57:03.155Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T10:58:02.106Z"
           }
         },
         {
@@ -99146,6 +99162,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T10:57:09.569Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T10:58:14.012Z"
           }
         }
       ]
@@ -162215,6 +162239,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T10:57:27.522Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MAURITIUS\nHISTORY\nTRINIDAD\nTOBAGO\nTESTING\n3 GROUND FOR THE\nINDENTURED\nLABOUR\nRamkissoon, Seepersad, Lutchman,\nRampersa d, Bo D and MI ohammed\nDivali, Eid-ul-Fitr, Good Friday and\nEaster Monday, Labour Day and also days\nthat observe Arrival of Indentured\nLabourers and Abolition of Slavery\nMANY NATIONAL\nHOLIDAYS\nARE ALSO\nTOBAGO È",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T10:58:26.283Z"
           }
         }
       ]
