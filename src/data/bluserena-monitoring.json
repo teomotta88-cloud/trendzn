@@ -31282,7 +31282,16 @@
           "likes": 1174,
           "comments": 11,
           "shares": 50,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buon Natale!",
+            "language": "Italian",
+            "durationSec": 20.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:06:19.932Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31296,7 +31305,16 @@
           "likes": 36700,
           "comments": 1593,
           "shares": 10700,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 10.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:06:23.206Z"
+          }
         }
       ]
     },
@@ -47441,7 +47459,16 @@
           "likes": 13600,
           "comments": 149,
           "shares": 203,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho fatto tutto questo insieme, ho fatto tutto questo insieme, ogni giorno, ho stato stampato, ho fatto tutto il mio lavoro, non ho mai chiesto una cosa, cosa mi hai bisogno? Cosa hai bisogno di questa connessione? E la ragazza entra qui e ti dà tre giorni di attenzione? E poi la porti a rubare in mio face? E' stato testato, ragazzi, lo hai fatto. Non è stato molto. Non è stato molto. Non è stato molto. Ho avuto il tuo aspetto in mezzo a me. No",
+            "language": "Italian",
+            "durationSec": 42.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:06:26.494Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -47455,7 +47482,17 @@
           "likes": 34,
           "comments": 8,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:26.502Z"
+          }
         }
       ]
     },
@@ -54224,7 +54261,16 @@
           "likes": 50,
           "comments": 3,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi hanno chiesto come rendiamo il yacht di Xcaret e quanto costa, quindi qui va. Xcaret ha il suo proprio club di yacht privati, Xcaret Yachts, e salgono dalla marina della casa della playa. Noi siamo venuti in famiglia e mi ha sorprendito molto quanto era comodo, avevamo molto spazio. Inoltre, vai con tripulazione e hai alimenti, bevande e equipaggi di snorkel. Ci sono diversi yacht per gruppi di fino a 20 persone e percorsi di 4 o più ore. I prezzi iniziano a 2.800 dollari per il piatto completo e si riserva attraverso Excursion Travel. Vuoi che vi insegni i vari piatti, i prezzi e quale scoglierò io? Iscriviti al mio canale.",
+            "language": "Italian",
+            "durationSec": 37.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:33.464Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54238,7 +54284,16 @@
           "likes": 30,
           "comments": 1,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:36.668Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54252,7 +54307,16 @@
           "likes": 20,
           "comments": 5,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Aspetta! Se stai planificando un ritorno a Palm Springs, salva questo hotel. La Serena Villas è un'hotel boutique solo per adulti, in centro a Palm Springs, e la locazione è incredibile. Stai andando a distanza da alcuni dei migliori negozi, restauranti, posti di caffè e giornate, quindi non hai neanche bisogno del tuo auto. La proprietà ha villas spagnolese, un bel pool e quella atmosfera romantica e serena che ti fa sentire come se sei escapato da un'ambiente completamente diverso. Il albero gratuito è inclusivo. Ma qui c'è la parte che ti voglio sapere. Se questo è il tuo primo book di hotel attraverso TikTok, puoi essere eligibile per un 50% di rafforzamento, fino a 200 dollari. Clicca la taglia verde, controlla i tuoi dati e vedrai se l'offerta di rafforzamento è disponibile per il tuo book. Gli adulti, l'atmosfera, il buon piatto, la locazione incontrabile e l'incredibile deal TikTok. Questo è definitivamente uno da mettere sul tuo listo di Palm Springs. Clicca la taglia verde e controlla i tuoi dati prima che il deal dissa.",
+            "language": "Italian",
+            "durationSec": 41,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:40.354Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54266,7 +54330,16 @@
           "likes": 12,
           "comments": 3,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:43.097Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54280,7 +54353,16 @@
           "likes": 4,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se stai planificando un viaggio a San Miguel de Allende, salva questo hotel. Sono stata a Celina, San Miguel de Allende, e mi piace la cosiddetta. Questa propria ha un'atmosfera così rilassante e benedetta. E la locazione è incredibile. Sei solo a passi da l'icona parrocchia di San Miguel Arcangel. Quindi sei proprio nel cuore della città. Il lato di sopra è sicuramente una delle mie parti preferite. Anche durante il giorno le viti sono incredibili. e che ora puoi vedere San Miguel tutto l'alto. Svita questo hotel per la tua prossima viaggio.",
+            "language": "Italian",
+            "durationSec": 33,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:46.430Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54294,7 +54376,16 @@
           "likes": 6,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:49.271Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -54308,7 +54399,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Travellando con i bambini, Terrania fa facile le vacanze familiari. C'è un'aeroporto di 1,40 metri, un pad, e un enorme resort dove i padroni hanno tempo di rilassarsi.",
+            "language": "Italian",
+            "durationSec": 12.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:52.281Z"
+          }
         }
       ]
     },
@@ -64357,7 +64457,16 @@
           "likes": 296,
           "comments": 19,
           "shares": 238,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il più bello del mio abito è Hotel Hills Un abito 5 star e il prezzo di notte è 56 dinari E' molto vicino all'aeroporto E il mio abito è uno dei più grandi abiti di Sarajevo Hanno abiti interi e esteri Spa, Thermal, Sono e Jacuzzi Hanno un waterpark con giochi per gli adulti e gli adulti E un'area di giochi per gli adulti E soprattutto perché Sarajevo non ha tanti programmi e attività per gli adulti Questo fa che il mio abito sia molto bello per gli adulti E la casa è molto ampia e tranquilla E ha una balcona e la piazza è bella",
+            "language": "Italian",
+            "durationSec": 29.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:08:55.957Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64371,7 +64480,16 @@
           "likes": 109,
           "comments": 5,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sto cercando un posto di staycation che è circondato da monti e monti. Provate a nascondere in un hotel di Ceroni Ciceroa Puncak Bogor. Potete bookare via TikTok. Cosa fare? Cliccate sull'occasione che c'è in questo video, poi scegliete la casa che volete. Questo hotel ha tre aree, cioè Ceroni 1, 2 e 3. La casa è ampia, pulita e comoda. La facilità è molto completa. C'è un'acqua per nascondere e per i bambini. C'è un playground e anche un mini zoo. Sarapan al you can eat, banyak pilihan menu dan semuanya enak enak",
+            "language": "Italian",
+            "durationSec": 32.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:09:02.628Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64385,7 +64503,16 @@
           "likes": 38,
           "comments": 4,
           "shares": 14,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "andiamo a fare una tour di stanza in bali sono così entusiasmata questo è così sorriso ragazzi non sono mai stata in un'estate così leggera stanza per me e mio compagno amate, una bella sciogliera, una stazione di caffè, un grande sedere, un'area di sedia area my favorite is the balcony look at this view guys is this not surreal it looks like my desktop screensaver at work breathtaking i know i just can't believe i'm here like it hasn't hit me fully yet non so, è solo magico è surreal",
+            "language": "Italian",
+            "durationSec": 76.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:09:10.456Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64399,7 +64526,17 @@
           "likes": 34,
           "comments": 9,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:10.466Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64413,7 +64550,16 @@
           "likes": 25,
           "comments": 2,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Le persone pensano che Selena Gomez abbiate questo resort a Cabo, ma la verità è ancora più pazzesca. Più di 17 milioni di persone hanno cercato di trovare dove si resta, e quasi tutti hanno scoperto. Questa è la collezione Esperanza Oberg Resorts, scoperta sulle cliffe di Cabo, dove le nuvole si accendono sotto il tuo luogo. Ogni suite si apre direttamente all'oceano. Pule infiniti, terrasse private, villa che sentono come case multimilionari. a sunset the entire place turns gold and at night you're dining on a cliff above the sea but here's what nobody tells you celebrities like selena gomez don't stay in just one place they rotate between ultra private resorts like this places designed so they can completely disappear and then there's the reality prices can go over one thousand dollars a night the beach isn't always swimmable and everything from food to transport comes at a premium so while it looks Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 62.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:18.225Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64427,7 +64573,16 @@
           "likes": 42,
           "comments": 9,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 74.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:21.790Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -64441,7 +64596,16 @@
           "likes": 170,
           "comments": 7,
           "shares": 189,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I can't help it, I can't help it any other way I swear she's destined for the screen Closest thing to Michelle Pfeiffer that you've ever seen Lady, running down to the rooftop Taking away to the dark side I wanna be your left hand man I love when you're singing that song And I got a lump in my throat Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:28.300Z"
+          }
         }
       ]
     },
@@ -88286,7 +88450,16 @@
           "likes": 2950,
           "comments": 50,
           "shares": 1394,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'islamo è un pezzo di c***o. L'islamo è un pezzo di c***o. Ma l'islamo è un pezzo di c***o. Mi sa il suo fuoco, il suo fuoco. Zoukouk, il goffran. Zoukouk, il goffran. Zoukouk, il goffran. Zghayba, il has, zghayba. Zoul Mongol, zoul Mongol. Come zoul Mongol? Grazie mille.",
+            "language": "Italian",
+            "durationSec": 47.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:35.567Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88300,7 +88473,16 @@
           "likes": 48,
           "comments": 2,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo non è Dubai, ma... Tengo una jeba policia, che tiene il culo del tamaño un'onda a colghe no a tria, mi diamante por la ria, to' lo que tu tiene en ese cuello me va a hacer que yo me ria, el unico con un Ferrari en los pies, lo vigi de 200 mil fue que yo capie. El unico con un Ferrari en los pies, lo vigi de 200 mil fue que yo capie. Fue que yo capie donde tenía que capiar, por eso de la silla nunca me van a parar, a veces me va a parar, si tu trae tu amante, pero tu mujer no, que eso no es de cante. Vitamina E niente, voglio che pregni Vitamina E niente",
+            "language": "Italian",
+            "durationSec": 61,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:41.427Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88314,7 +88496,16 @@
           "likes": 265,
           "comments": 16,
           "shares": 131,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il resort Rim Thale Feel Bali che è in Kiti è molto bello. Il pollo Green Season che è con il prezzo migliore. Vieni a casa e ci vediamo a Laenatu. Laenatu è un'area di hidden gem, 300 gradi. Laenatu è un'area di Kiti che è molto bella. Ha molte cose. Sarà un'area di villa, un'area di villa. C'è un'area per il contento. E l'automobile qui è molto buono. Soprattutto il cake di mapparo. Laenatu è un resort in l'acqua. e vi dico che la serata in primavera è molto bella, sono molto contenta la parte di cibo qui è molto facile da preparare serve come mini buffet e ha molte cose da scegliere anche i panini di mangiare il risorto che vi raccomando di stare per qualche tempo è molto leggero, è molto benissimo per il corpo e la mente ora c'è la Pro Green Season, inizia a 4.900 baht si può stare da ora fino a settimana di agosto chi vuole un'esistenza tranquilla, si può stare per qualche tempo Ne, ne andiamo a fare qui, la IANA 2.",
+            "language": "Italian",
+            "durationSec": 58,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:11:55.483Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88328,7 +88519,16 @@
           "likes": 25,
           "comments": 1,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "finding a place that warms my heart again i'm keeping on as i look out for you",
+            "language": "Italian",
+            "durationSec": 17.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:12:02.208Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88342,7 +88542,16 @@
           "likes": 21200,
           "comments": 115,
           "shares": 6312,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 13.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:12:04.842Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88356,7 +88565,16 @@
           "likes": 1555,
           "comments": 26,
           "shares": 875,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 61,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:12:10.315Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -88370,7 +88588,16 @@
           "likes": 24200,
           "comments": 93,
           "shares": 2798,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hey amici, venite a Cyberist Pool Suites in Downers Grove, Illinois. Questo è a 22 mila da downtown Chicago. È una esperienza molto unica e definitivamente romantica. È una suite privata con il vostro suo pool privato e jacuzzi. L'unico sbaglio a questo è che è un po' outdated. Mi sembra che devono modernizzare il decoro. ma oltre a quello è un bel little getaway per te e il tuo partner o tu per te stesso se vuoi fare qualcosa così ho anche includito il sound bath che ho fatto, sicuramente vi raccomando se non avete mai fatto un sound bath e finalmente ho fatto un viaggio sull'acqua per un cena di notte",
+            "language": "Italian",
+            "durationSec": 44.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-21T16:12:13.762Z"
+          }
         },
         {
           "platform": "tiktok",
