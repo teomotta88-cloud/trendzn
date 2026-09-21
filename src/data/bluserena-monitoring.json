@@ -31291,6 +31291,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:06:19.932Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:16:53.466Z"
           }
         },
         {
@@ -31314,6 +31322,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:06:23.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Er SERENA",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:16:59.973Z"
           }
         }
       ]
@@ -47468,6 +47485,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:06:26.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": "STAND ON BUSINESS\nSTAND\nBUSINESS",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:17:06.290Z"
           }
         },
         {
@@ -47492,6 +47518,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:26.502Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:19:06.394Z"
           }
         }
       ]
@@ -54270,6 +54305,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:33.464Z"
+          },
+          "ocrData": {
+            "textOnScreen": "è hiciste, cuanto\nDE YATES PRIVADOS,\nResponde al comentario de\nRaqui P\nè Como hiciste, cuanto\nMENU\nBOCADILLOS\nComo hiciste, coy\nte cost6?\nPoke bowl vegano VG\nArroz goham y vegetales con aderezo de\nfruta de la pasion\nAguachiles *M\nTradicional aguachile verde de camaron\ncon chips de vegetales\nAguachile vegetariano VG\nTradicional aguachile verde de jicama y\nsandia con chips de vegetales\nPizza G/L/M\nCamarén y hawaiana\nMinihamburguesa G/L\ncon chips de papas\nBrochetas G\nCubos de res y pollo de\nvegetales al grill con base de pan brioche\nBrochetas vegetarianas VG/G\nacompanado de chimichurri de la casa\nTartaleta de limén L/G\nFresas\nCon cobertura de chocolate obs:\nFruta de temporada\nTres opciones de fruta\nG contiene gluten V vegetariano L contiene lacteos M mariscos N contiene\n*El consumo de productos crudos o semi cocidos tales como aves, mariscos y hi\nComo hiciste, cuanto\nLOS PRECIOS EMPIEZAN™",
+            "confidence": 0.896,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:19:15.420Z"
           }
         },
         {
@@ -54293,6 +54337,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:36.668Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sepa Resor]\nPOV: No passport needed for Greek\nstayed at Sirena\nTASTING ROOI\nthrough\nWalking) through\nDont",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:19:29.268Z"
           }
         },
         {
@@ -54316,6 +54369,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:40.354Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(REN 1 can’t believe people don’t know\nabout this Palm Springs hotel\nFor 50% cashback i\nClick the green 7 È\nFor 50% cashback\nmort\nClick the green\nBREAKFAST\nClick th Il\nFor 50% cashback 2\nTikTok GO cashback x\nA 50% cashback\nUNBEATABLE",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:19:54.027Z"
           }
         },
         {
@@ -54339,6 +54401,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:43.097Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:20:01.725Z"
           }
         },
         {
@@ -54362,6 +54432,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:46.430Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:20:18.129Z"
           }
         },
         {
@@ -54385,6 +54463,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:49.271Z"
+          },
+          "ocrData": {
+            "textOnScreen": "listing I i\nMediterranean\nBook hotel\nfeels",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:20:35.569Z"
           }
         },
         {
@@ -54408,6 +54495,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:52.281Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:20:46.418Z"
           }
         }
       ]
@@ -64466,6 +64561,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:08:55.957Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SWIMMING POOL\nWELLNESS SPA\nKINDERLAND FITNESS\nHAIR SALON\nBEAUTY SALON",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:20:58.876Z"
           }
         },
         {
@@ -64489,6 +64593,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:09:02.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HOTEL SERUNI\nPUNCAK BOGOR\nCARANYA\nAG LOKASI\nSERUNI\nFASILITASNYA 4\nBANGET",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:21:23.162Z"
           }
         },
         {
@@ -64512,6 +64625,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:09:10.456Z"
+          },
+          "ocrData": {
+            "textOnScreen": "tour J\nUbud, Bali\nBali\n@SereSSpringsResort\n@SeresspringsResont",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:21:31.526Z"
           }
         },
         {
@@ -64536,6 +64658,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:10.466Z"
+          },
+          "ocrData": {
+            "textOnScreen": "un area\notras pues son familiares",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:21:39.817Z"
           }
         },
         {
@@ -64559,6 +64690,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:18.225Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Google\nData SIO, NOAA, U.S. Navy.",
+            "confidence": 0.722,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:22:28.066Z"
           }
         },
         {
@@ -64582,6 +64722,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:21.790Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort Mini Tour",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:22:41.121Z"
           }
         },
         {
@@ -64605,6 +64754,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:28.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:22:54.751Z"
           }
         }
       ]
@@ -88459,6 +88616,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:35.567Z"
+          },
+          "ocrData": {
+            "textOnScreen": "enzo\namjnan smiyat hhhhh\niyxxhenzo\nA J smiyat hhhhh\namjnan smiyat",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:22:59.011Z"
           }
         },
         {
@@ -88482,6 +88648,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:41.427Z"
+          },
+          "ocrData": {
+            "textOnScreen": "2 Kalahari Resorts Outdoor Wate...\nKalahari",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:23:14.858Z"
           }
         },
         {
@@ -88505,6 +88680,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:11:55.483Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:23:36.259Z"
           }
         },
         {
@@ -88528,6 +88711,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:02.208Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:24:06.947Z"
           }
         },
         {
@@ -88551,6 +88742,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:04.842Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:24:20.914Z"
           }
         },
         {
@@ -88574,6 +88773,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:10.315Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘Pool Access Twin Room\nRest. He alal A\nKAKI TRAVEL",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:24:34.987Z"
           }
         },
         {
@@ -88597,6 +88805,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-21T16:12:13.762Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-21T16:24:40.807Z"
           }
         },
         {
