@@ -47605,7 +47605,16 @@
           "likes": 963,
           "comments": 27,
           "shares": 30,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:02:54.513Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -47619,7 +47628,16 @@
           "likes": 666,
           "comments": 23,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 22.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:02:57.015Z"
+          }
         }
       ]
     },
@@ -89488,7 +89506,16 @@
           "likes": 1498,
           "comments": 58,
           "shares": 190,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Magna Grecia è il territorio di Sibari, che i sibariti chiamavano con grande orgoglio e con grande tracotanza più grande della madre patria, più grande della Grecia. Sono zone fettili, sono zone ricche d'acqua, c'è una grande pianura alluvionare, la più grande della Calabria, la piana di Sibari, circondata da una mezzaluna di montagne, il Pollino a nord, la Presila a sud, che crea un microclima eccezionale. I fiumi che l'attraversano creano dei cordoni costieri e quindi una portuosità per le barche che arrivavano dall'altra parte del Mediterraneo nell'VIII secolo a.C. assolutamente eccezionale. Questa cosa si raccorda con la possibilità, attraverso una serie di sentieri, di attraversare le montagne arrivare dall'altra parte, collegarsi con l'altro mare, risparmiando tutta la circondigazione della Calabria che prevedeva il passaggio pericolosissimo da Scilla e Caribi e quindi di poter imporre dei dazzi e quindi di fare una avrangata, un sacco di soldi. Beh, Scemi non era, ma...",
+            "language": "Italian",
+            "durationSec": 75.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:03:01.076Z"
+          }
         }
       ]
     },
@@ -113518,7 +113545,16 @@
           "likes": 89,
           "comments": 28,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:03:08.346Z"
+          }
         }
       ]
     },
@@ -123816,7 +123852,16 @@
           "likes": 193,
           "comments": 11,
           "shares": 24,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 26.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:03:13.577Z"
+          }
         }
       ]
     },
@@ -155798,7 +155843,17 @@
           "likes": 1815,
           "comments": 38,
           "shares": 462,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:05:13.583Z"
+          }
         }
       ]
     },
@@ -165548,7 +165603,16 @@
           "likes": 7789,
           "comments": 142,
           "shares": 1579,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La città di Lina Il mio lavoro è un'esistenza di un'arte. Perciò siamo vicini a loro, siamo vicini a loro.",
+            "language": "Italian",
+            "durationSec": 83,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:05:18.643Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -165562,7 +165626,16 @@
           "likes": 16600,
           "comments": 120,
           "shares": 544,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sapete che c'è una finestra in Italia che è rimasta perpetuamente aperta per più di 500 anni? E sì, dovete credere che c'è una storia di gosso dietro. Se mai vi trovate in Florence, andate a camminare nella Piazza Santissima Annunziata. Lì trovate un bellissimo palazzo di Renaissance. Formale casa della famiglia Florentina Graffoni, il Palazzo Graffoni Budini Gatti è stato costruito nel medio-sixtento e ha la distinzione di bocciare l'unico edificio di rovescia rossa esposto in tutta Florence. Carmiato dalla sua bellezza statica dell'antica vita, non potrai nemmeno notare questo piccolo, ma strano dettaglio. All'interno di destra, c'è una finestra con un fissaggio giallosi, in particolare aperto. A un punto di vista, sembra qualsiasi altra finestra che abitasse la facciata di Redbrook. Ma, a differenza dei suoi compagni, non si vedrà mai questa finestra chiusa. In effetti, secondo la tradizione locale, non è stata chiusa fin dal fine dei secoli 1500, per paura di provocare la donna Graffoni. La leggenda racconta di una bambina giovane che si è sposata nella famiglia di Graffoni, a fine XVI secolo. Almost immediately after the wedding, the newlyweds were separated when the groom was called off to war. The young bride sat at the window to watch her husband depart, and there she remained, to wait for his return. Every day she gazed out over the piazza, hoping to catch a glimpse of her beloved riding home. Then came the terrible news. Her husband had fallen in battle. Donna Graffoni refused to believe it. After all, she would know it, would sense it if her beloved had departed this world. So she kept her steadfast vigil at the window and waited. S vero Grazie a tutti It has remained open ever since, through five centuries of Florentine history, through summer heat and winter storms, through renovations and changes of ownership. Since 1890, the Palazzo has been owned by the Budini-Gatti family, who still take care to ensure that the window remains open to this day. While this bit of ghosty folklore isn't particularly groundbreaking or harrowing in and of itself, I have to say that when I first encountered the story, I felt a vague chill run down my spine. Perché, a parte di essere tranquillamente crepice, la storia è anche famosa, con un trope che è una tradizione di folclore lunga e incontro. Vedete, c'è un gran grado di grado in pratica di folclore europea che è organizzato attraverso l'idea di tempo e motione arrestati, oggetti che devono essere stoppati, pausati, chiusi o aperti nel momento della morte. Uno dei esempi più famosi di questo trope è la tradizione di stoppare tutti i clocci in una casa quando qualcuno morisce. Documentato in tutta l'Europa dal tempo del Renaissance, avanti, questa pratica popolare originata dal credito che il tempo meccanico debba essere sospeso in una casa che ha vissuto la morte che la motione continuata del cloc potrebbe in qualche modo impazzire la soul o distruggere la sua passione Un variante della tradizione e una che ho usato a full effect nel mio secondo libro Echos in Glass del 2027 involva i miri C un credenza che quando un morto accade tutti i miri vicini devono essere coperti, perché la motione riflettente del mondo vivente è pensata a essere pericolosa, diverte o disorientante per le sere dei morti. Fattori con la loro propria riflessione o l'immagine mirata in basso di un posto che conoscevano nella vita, il spirito può diventare sbagliato, perso, anche attaccato. Quindi i miri sono coperti, la loro abilità di riflettere è arrestata fino a quando la sede si ripartisce e il pericolo passa. Ci sono varianti di questa logica attraverso la pratica europea di foci. Le finestre o le porte che devono essere aperte o rinforzate nel momento della morte in modo che la sede possa passare. Le candele che non devono essere estinguite fino alla notte. Le mani che devono essere lasciate sulle tavole per un certo numero di giorni. Le palle lasciate in modo che le palle siano in la posizione in cui la morta la usa. La logica underline è consistente. La morte è capito come un'interruzione dell'ordine usuale, prevenendo la completazione di qualcosa che avrebbe altrimenti stato completato dal disceso. Il vivente risponde refusando di completare altre cose, mantenendo gli oggetti in un stato di stasis, prevenendo i rituali intendiati per slow o pausare la passaggia normale del tempo, attivando il pulsante di pausa metaforico, in modo che l'intero cittadino sia, per un periodo, arrestato, insieme ai morti. La finestra a Palazzo Graffoni è quella logica fatta permanente. Perché la maggior parte dei rituali di tempo e di motione arrestati hanno un finito. Le orecchie sono ristruite dopo il funerale, le fiamme sono ricoperte, le candele sono eventualmente permette di scattare. Il paese osserva la pausa necessaria e ritorna al tempo ordinario Ma a differenza di altri casi della tradizione la finestra di Graffoni non mai emergita da questa sospensione E penso che sia quello che ha fatto questa leggenda particolare cos crepita Quello che la leggenda descrive una finestra aperta per un specifico motivo che non è mai riuscito a riuscire a riuscire a riuscire a riuscire a riuscire a riuscire e che deve rimanere in questo stato aperto per sempre, è un rituale di foci che ha escapato dal suo conto temporale. La aspettativa non è completata, il benedetto non è tornato, e quindi la finestra non può resumere la sua funzione ordinaria di chiacchierare, perché per chiudere il giro avrebbe dovuto completare una storia che non può essere permessa. La finestra è sottoposta all'azione interromputa, all'arresto che si è attaccato a una risoluzione che non arriverà mai. Questo è un tipo di logica molto antico. Si mostra in varie varietà di storia europea. In ogni storia di verità che ha un personaggio che si è tornato a stone a mezzo gesto o che si è sottoposto a dormire per un periodo naturalmente prolungato, in ogni leggenda che parla di una bellina che non deve mai essere toccata, una ruota che non deve mai stoppare, una clocca che non deve mai essere ristrutturata o una porta che non deve mai essere aperta. The Palazzo Graffoni window is one of the most physically enduring examples we have of that old folk logic. A specific piece of Renaissance architecture that has been quietly suspended for half a millennium because a widow's watch was never allowed to end. The death of the Graffoni groom was the devastating interruption of what was meant to be the beginning of a shared life. To counteract this breach of order, the bride suspended her own life, choosing to remain in a state of stasis outside of ordinary time. e, se credi alla leggenda, non nemmeno la sua propria morte potrebbe interruttare la sua guardia vigilante. Questo, penso, è il horror quieto di questa storia e altri come la sua. Alcune azioni interruttate non si risolvono, alcune finestre non si chiudono.",
+            "language": "Italian",
+            "durationSec": 363.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:05:27.694Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -165576,7 +165649,16 @@
           "likes": 21,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 48.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T08:05:30.465Z"
+          }
         }
       ]
     }
