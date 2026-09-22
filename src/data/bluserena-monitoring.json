@@ -47919,7 +47919,16 @@
           "likes": 37000,
           "comments": 147,
           "shares": 1274,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 13.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:30:52.074Z"
+          }
         }
       ]
     },
@@ -65357,7 +65366,16 @@
           "likes": 203,
           "comments": 106,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:31:00.342Z"
+          }
         }
       ]
     },
@@ -90023,7 +90041,16 @@
           "likes": 279,
           "comments": 5,
           "shares": 50,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "darling it's true this is paradise",
+            "language": "Italian",
+            "durationSec": 9.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:31:02.717Z"
+          }
         }
       ]
     },
@@ -101632,7 +101659,16 @@
           "likes": 174,
           "comments": 16,
           "shares": 45,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 25.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:31:28.879Z"
+          }
         }
       ]
     },
@@ -114194,7 +114230,16 @@
           "likes": 840,
           "comments": 157,
           "shares": 288,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vuoi visitare San Andres Islas e non sai che hotel scegliere? Benvenuto all'hotel Gran Sirenis! Un resort tutto incluito con un disegno spettacolare, dove sentirai il lujo e la comodità da quando stai in lobby. Da la mia esperienza ti darò alcune vantagge di stare in questo hotel. La sua perfetta ubicazione a due quadri della piazza principale. E con questa meravigliosa vista lo fai molto diverso. La sua piscina senza fine è semplicemente bellissima, Questa è la città, è giusto davanti al mare, il luogo perfetto per vedere l'attardese con il tuo cocktail favorito. In quanto all'alimentazione, le do 10 di 10. Ha due bellissimi ristoranti a la carta che si possono riservare nel momento del check-in. Inoltre, il suo buffet principale ha opzioni super fresche per tutti, liquori di qualità e opzioni infinite di plati che ti saranno adorati. Se il tuo volo è troppo tardi, puoi pagare un excedente per continuare a divertirsi della abitazione. Le abitazioni sono incredibili, camere delizie per riposare davvero, buon internet e un minibar che ti surta tutte le mattine e quando sei già ricaricato, l'isola ti aspetta. San Andrés è un'allegria pura e noi ti organizziamo i migliori tour per che salgas a ballare, gocci la cultura e le sacchi tutto il jugo a tue vacanze. In fin, non ti racconto più e vieni a vivere questa incredibile esperienza con noi. Comenta Gran Sirenis per più informazioni.",
+            "language": "Italian",
+            "durationSec": 92.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:02.637Z"
+          }
         }
       ]
     },
@@ -124712,7 +124757,16 @@
           "likes": 19,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 18.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:09.226Z"
+          }
         }
       ]
     },
@@ -139118,7 +139172,16 @@
           "likes": 280,
           "comments": 4,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 16.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:11.774Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -139132,7 +139195,16 @@
           "likes": 246,
           "comments": 3,
           "shares": 85,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 13.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:17.115Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -139146,7 +139218,16 @@
           "likes": 18,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:23.108Z"
+          }
         }
       ]
     },
@@ -147964,7 +148045,16 @@
           "likes": 5421,
           "comments": 61,
           "shares": 280,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho appena realizzato che il mio nuovo bagno di Valentino è letteralmente il mio luogo, in forma di bagno. Come, stai giustificando? Non è vero che io fossi così attaccata da lei.",
+            "language": "Italian",
+            "durationSec": 16.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:25.594Z"
+          }
         }
       ]
     },
@@ -157004,7 +157094,16 @@
           "likes": 234,
           "comments": 16,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:28.118Z"
+          }
         }
       ]
     },
@@ -166849,7 +166948,16 @@
           "likes": 61100,
           "comments": 197,
           "shares": 8312,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T18:32:30.359Z"
+          }
         }
       ]
     }
