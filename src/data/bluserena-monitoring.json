@@ -147751,6 +147751,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:13.672Z"
+          },
+          "ocrData": {
+            "textOnScreen": "QUABAR\nLOCATION IS NEAR\n(GAMING CENTER",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:24:26.640Z"
           }
         },
         {
@@ -147774,6 +147783,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:18.257Z"
+          },
+          "ocrData": {
+            "textOnScreen": "You see this",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:24:35.578Z"
           }
         },
         {
@@ -147797,6 +147815,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:23.996Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DROP\nTOKYO",
+            "confidence": 0.757,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:24:47.565Z"
           }
         }
       ]
@@ -156784,6 +156811,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:26.676Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:24:54.699Z"
           }
         },
         {
@@ -156807,6 +156842,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:32.435Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:24:59.312Z"
           }
         }
       ]
