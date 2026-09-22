@@ -147529,7 +147529,16 @@
           "likes": 1907,
           "comments": 28,
           "shares": 1279,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 68.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T13:19:13.672Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -147543,7 +147552,16 @@
           "likes": 7582,
           "comments": 37,
           "shares": 233,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "a",
+            "language": "Italian",
+            "durationSec": 5.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T13:19:18.257Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -147557,7 +147575,16 @@
           "likes": 33600,
           "comments": 168,
           "shares": 484,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 9.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T13:19:23.996Z"
+          }
         }
       ]
     },
@@ -156535,7 +156562,16 @@
           "likes": 6398,
           "comments": 62,
           "shares": 1614,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Guarda questo! Oh! Perfetto! Oh mio Dio!",
+            "language": "Italian",
+            "durationSec": 5.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T13:19:26.676Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -156549,7 +156585,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-22T13:19:32.435Z"
+          }
         }
       ]
     },
