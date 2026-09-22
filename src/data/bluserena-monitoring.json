@@ -47614,6 +47614,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:02:54.513Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:05:44.601Z"
           }
         },
         {
@@ -47637,6 +47645,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:02:57.015Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:05:50.106Z"
           }
         }
       ]
@@ -89515,6 +89531,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:03:01.076Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FELL\nA Network",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:06:03.888Z"
           }
         }
       ]
@@ -113554,6 +113579,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:03:08.346Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:06:10.022Z"
           }
         }
       ]
@@ -123861,6 +123894,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:03:13.577Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:06:16.059Z"
           }
         }
       ]
@@ -155853,6 +155894,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-22T08:05:13.583Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:08:16.064Z"
           }
         }
       ]
@@ -165612,6 +165662,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:05:18.643Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Voice of Umm Sameh i\nLeadSinger\n{ihe French people know us and\nand supported\ncairo\nSCENE",
+            "confidence": 0.804,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:08:25.357Z"
           }
         },
         {
@@ -165635,6 +165694,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:05:27.694Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:08:40.686Z"
           }
         },
         {
@@ -165658,6 +165725,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T08:05:30.465Z"
+          },
+          "ocrData": {
+            "textOnScreen": "e Upper Peninsula of Northern Michigan\nIE name\nTribes\ne Chippewa Indians\nEnrolled Members\n3,586 tribal member vi\nTribal language pe",
+            "confidence": 0.873,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T08:08:45.565Z"
           }
         }
       ]
