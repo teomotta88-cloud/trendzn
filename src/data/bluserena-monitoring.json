@@ -31354,6 +31354,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:02.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:19:46.669Z"
           }
         },
         {
@@ -31377,6 +31385,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:16.663Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:19:53.573Z"
           }
         },
         {
@@ -31400,6 +31416,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:20.922Z"
+          },
+          "ocrData": {
+            "textOnScreen": "team\nthis NW È\nbecame team Blair,\nSerena A\nItiwasiin this\nbecamelteam Blair,\nscene\nbecame team\n“Serena my",
+            "confidence": 0.779,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:03.057Z"
           }
         },
         {
@@ -31423,6 +31448,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:24.979Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:09.669Z"
           }
         }
       ]
@@ -47768,6 +47801,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:28.286Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Congrats new crib!\ndoing for your bday?\nCongrats on ya new crib! What you",
+            "confidence": 0.903,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:16.452Z"
           }
         },
         {
@@ -47791,6 +47833,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:30.701Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:20.748Z"
           }
         },
         {
@@ -47814,6 +47864,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:33.955Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LA WITH A\nTikTok\nTHREE WORDS TO\nHIT YOU LIKE",
+            "confidence": 0.922,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:23.733Z"
           }
         },
         {
@@ -47837,6 +47896,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:36.578Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The way Eiser\nhe disappeared and\nSerena into an\nwant thi man.",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:30.581Z"
           }
         }
       ]
@@ -65221,6 +65289,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:39.139Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Book your next massage\nwith me!\nJ 455 North Avenue Ne\nAtlanta, Georgia 30308\ni Book your next massage\n455 North Avenue Ne\nLink in bio",
+            "confidence": 0.866,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:40.118Z"
           }
         },
         {
@@ -65244,6 +65321,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:44.098Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:46.552Z"
           }
         }
       ]
@@ -75585,6 +75670,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:47.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ANYTHING,",
+            "confidence": 0.807,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:20:53.167Z"
           }
         },
         {
@@ -75608,6 +75702,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:52.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Your sign to keep posting®\nsign to keep È",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:21:08.738Z"
           }
         }
       ]
@@ -89839,6 +89942,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:14:57.523Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:21:30.000Z"
           }
         },
         {
@@ -89862,6 +89973,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:15:00.942Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:21:42.374Z"
           }
         }
       ]
@@ -113932,6 +114051,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:16:32.131Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena and Blair\nlit the match.",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:21:52.343Z"
           }
         },
         {
@@ -113956,6 +114084,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:32.137Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BOUTIQUE\nCUESTA SERENA HOTEL BOU\nANTA CALLEJON DE HUAYLAS\nThay",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:22:19.671Z"
           }
         },
         {
@@ -113979,6 +114116,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:36.296Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:22:29.016Z"
           }
         }
       ]
@@ -124317,6 +124462,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:38.945Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:22:35.327Z"
           }
         },
         {
@@ -124340,6 +124493,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:44.406Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:22:46.433Z"
           }
         },
         {
@@ -124363,6 +124524,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:47.134Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: You just found a\nluxury resort that feels like\naprivate island near\nTerranea Resort\nTerranea\ncashback]\nResort\ncashback; “AN\nBooknow\nGet 50% cashback 1",
+            "confidence": 0.778,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:23:15.818Z"
           }
         },
         {
@@ -124386,6 +124556,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:51.146Z"
+          },
+          "ocrData": {
+            "textOnScreen": "You just found a\nresort that feels like\nisland near Los\nanea Re i\nGet 50% cashback;\nJ Booknow\ncashback,\nBooknow i",
+            "confidence": 0.796,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:23:27.842Z"
           }
         },
         {
@@ -124409,6 +124588,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:54.465Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Palos\nS California\nResort,",
+            "confidence": 0.747,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:23:42.451Z"
           }
         },
         {
@@ -124432,6 +124620,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:18:58.360Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:23:51.031Z"
           }
         }
       ]
@@ -147492,6 +147688,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:01.550Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:23:57.624Z"
           }
         },
         {
@@ -147515,6 +147719,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T13:19:04.337Z"
+          },
+          "ocrData": {
+            "textOnScreen": "people like\nthey support\nsome people\nstraight up\npeople are allowed to like\nValentino\nhis actions.\nsome'people justice some\nevil.charactersiand thatis\nokay.\ntolike\nsome like some\nstraight\nevil that's\npeople\nfor:any reason\nsome\nValentine,\nWant, 60\nsome'people some\nStraight u p unredeemable",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T13:24:08.510Z"
           }
         },
         {
