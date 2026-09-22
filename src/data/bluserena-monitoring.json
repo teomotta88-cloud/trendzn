@@ -55062,6 +55062,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:12.185Z"
+          },
+          "ocrData": {
+            "textOnScreen": "You across a place\nthat's ever ore\nè than the photos.\nping\nTERRANEA al S",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:42:38.323Z"
           }
         }
       ]
@@ -65439,6 +65448,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:18.110Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Flora Beach Resort\nCrystal Flora BeachiResorti\nFlora Beach\ni Crystal Flora Beach",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:42:54.851Z"
           }
         }
       ]
@@ -90146,6 +90164,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:21.048Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:43:03.963Z"
           }
         }
       ]
@@ -101796,6 +101822,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:24.884Z"
+          },
+          "ocrData": {
+            "textOnScreen": "meu marido nunca vai precisar se preocupar\npresentear com pulseira da\nmeu marido nunca vai preci\npresentear com pulseira da pandora, porque a Unica\nque eu gosto é a de um all inclusive v\n1 meu marido nunca vai precisar se preocupar emime}\npulseira da pandora, porque a Unica\num all inclusive",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:43:26.175Z"
           }
         },
         {
@@ -101819,6 +101854,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:28.117Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:43:47.870Z"
           }
         }
       ]
@@ -124957,6 +125000,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:31.528Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:43:54.515Z"
           }
         }
       ]
@@ -139467,6 +139518,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:35.297Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:44:20.841Z"
           }
         }
       ]
@@ -148326,6 +148385,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:39.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VALENTINO,\nINTENSE: N\nw TINO VALEN\nJUST; J",
+            "confidence": 0.784,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:44:29.350Z"
           }
         },
         {
@@ -148349,6 +148417,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:41:44.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vocé pode viver essa\nna Suite Valentino,\nquarto anexo tem uma hicama",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:44:37.133Z"
           }
         }
       ]
@@ -167293,6 +167370,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:42:05.369Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SACRED DALA CELE\nRADITIONAL HEALING EUSION J WB\nRADITIONAL HEALING EUSION SU\nRADITIONAL HEALING EUSION\nRADITIONAL HEALING\nTRADITIONAL HEALING TRAGAS J",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:44:47.954Z"
           }
         },
         {
@@ -167316,6 +167402,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-22T23:42:09.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Utah Je\nARUN i A\nLook at this, Japan,\nAzerbaijan.\nbefore\nWere these justisy\nJa Utah\nunseen\nthat people",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-22T23:45:14.136Z"
           }
         }
       ]
