@@ -65471,7 +65471,16 @@
           "likes": 195,
           "comments": 17,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T07:38:44.947Z"
+          }
         }
       ]
     },
@@ -139870,7 +139879,16 @@
           "likes": 93,
           "comments": 2,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T07:38:48.282Z"
+          }
         }
       ]
     },
@@ -167992,7 +168010,16 @@
           "likes": 11,
           "comments": 2,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 39,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T07:38:51.123Z"
+          }
         }
       ]
     }
