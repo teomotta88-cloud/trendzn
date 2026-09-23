@@ -47960,6 +47960,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:06:48.328Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:09:35.164Z"
           }
         },
         {
@@ -47984,6 +47992,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-23T15:08:48.333Z"
+          },
+          "ocrData": {
+            "textOnScreen": "crashout podcast:\nPart 1: Serena and Kaylor talk about who's invited to\nupcoming birthday trip and Kaylor makes a face\nKavylor's crashout podcast:\nSerena's upcoming birthday trip and Kaylor makes a face\nKaylor's crashout podcast:",
+            "confidence": 0.881,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:09:45.545Z"
           }
         }
       ]
@@ -90336,6 +90353,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:08:52.241Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TANE\nKOFTE",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:09:53.573Z"
           }
         }
       ]
@@ -102208,6 +102234,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:08:57.541Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hotel and Marea Al\nFresco Dining\nBellevue Hotel and Marea Al\n2 Fresco Dinin 3\nTikTok\ni Fresco Dining",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:10:05.122Z"
           }
         }
       ]
@@ -114841,6 +114876,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:09:00.151Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Maureennantumenews\nKano bulalamu a\na} R 4, #21stnovembre2025mystoryserena\nKano kali bulalamu bantu bange #omanjja a\nj Maureennantumenews\n3 #21stnovembre2025mystory\nKano Kali bulalamu bange NI i",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:10:15.279Z"
           }
         }
       ]
@@ -148975,6 +149019,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:09:03.230Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VALENTINO\nYORE",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:10:26.027Z"
           }
         },
         {
@@ -148998,6 +149051,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:09:06.742Z"
+          },
+          "ocrData": {
+            "textOnScreen": "coconut\nlavender\nwarm spicy\nsweet J\nTOP NOTES\nCardamom 74\nMIDDLE NOTES N\nCoconut Lavender\nBASE NOTES il\ni 404 Amberwood\nUNIQU",
+            "confidence": 0.783,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:10:36.363Z"
           }
         },
         {
@@ -149021,6 +149083,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:09:12.121Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Level perk\nus to ur room\nClub Level experience\nfirsthand resort knowledge.",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:10:47.703Z"
           }
         }
       ]
@@ -168349,6 +168420,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:09:14.972Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DICK\ncreator of the New Orleans Oracle\nDeck.\nIt's all about finding your tribe,\nSo, next time, we hope to see you come\nhave a drink.\ngreat people, and we look forward to\nseeing you.",
+            "confidence": 0.836,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:10:57.576Z"
           }
         },
         {
@@ -168372,6 +168452,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-23T15:09:19.047Z"
+          },
+          "ocrData": {
+            "textOnScreen": "using some of the free\nwhere you will be\n2 where to\nLA have pamphle Vg\nMonuments\nre marquables\nimetiere\nviont Royal\nthe Mount-Royal Cemetery.\nWhere all the interesting quotations\nlocated",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-23T15:11:17.144Z"
           }
         }
       ]
