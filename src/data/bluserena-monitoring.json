@@ -75853,7 +75853,16 @@
           "likes": 127,
           "comments": 125,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti. Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 167.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:30.016Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -75867,7 +75876,16 @@
           "likes": 870,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Oh, Babs, hai solo le luci di grano Bye!",
+            "language": "Italian",
+            "durationSec": 31.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:32.593Z"
+          }
         }
       ]
     },
@@ -101904,7 +101922,16 @@
           "likes": 16,
           "comments": 5,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:34.806Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -101918,7 +101945,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I vostri dreads sono ugli. Sono il mio stile. La vostra sestra è una bambina di grado. Almeno è mia. I vostri sciogli sono da Walmart. Mi piacciono. Non potete sedere con noi a cena. Beh, troverò qualcuno che mi lascerà. Ti prende troppo tempo a leggere. Uso le mie strategie.",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:37.646Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -101932,7 +101968,16 @@
           "likes": 31,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I only see my goals, I don't believe in failure, cause I know the smallest voices they can make it later.",
+            "language": "Italian",
+            "durationSec": 9.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:39.978Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -101946,7 +101991,16 @@
           "likes": 21,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:42.715Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -101960,7 +102014,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 45.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:45.280Z"
+          }
         }
       ]
     },
@@ -114553,7 +114616,16 @@
           "likes": 2559,
           "comments": 35,
           "shares": 72,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Tu che andi a Serena? Eh? Serena Hotel o Campala? E' un'altra cosa. Mamma ha lima e cibo. Eh? Eeeeh! Tu che andi a farci lima e cibo? C'è un'altra cosa. E' un'altra cosa. Tu che andi a farci lima e cibo? Eeeeh! Senta, mecca. 15. 15? Non ci vuoi capire? Ne milioni e 7. Eeeeh! Eeeeh! Ne ingochi, dogo, denga, bucciari. Eeeeh! Dei, ti giacu' un sangaio a Serena. Giacu' buari con Pim. Eeeeh! Eeeeh! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 73.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:49.550Z"
+          }
         }
       ]
     },
@@ -125134,7 +125206,16 @@
           "likes": 234,
           "comments": 30,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi, sono il tuo ragazzo Jo, un ragazzo bellissimo. Come sempre, visitiamo nuove prese insieme. Oggi stiamo cercando questa nuova laptop privata, locata in Mugnona. È molto privata, in realtà. Per arrivare qui, devi fare una riservazione. Prima di arrivare qui, non si può vedere la giangola, la guila, la giusta, o ci tocca il decino. Si può vedere la grande vista di Victoria. La stanza è molto bella e pulita. Come on, come on, bye bye.",
+            "language": "Italian",
+            "durationSec": 60.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:55.537Z"
+          }
         }
       ]
     },
@@ -139666,7 +139747,16 @@
           "likes": 110,
           "comments": 5,
           "shares": 30,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non capisco alcuni dei calendari digitali che ti fanno comprare il calendario e poi pagare una subscrizione solo per usare il calendario. Se stai cercando di ottenere uno, ho scoperto questa opzione davvero incredibile e affidabile. Questo ha letteralmente tutto ciò che hai bisogno per gestire la tua casa senza la subscrizione necessaria, quindi andiamo a guardare in più. Questo è il dashboard, ha anche il tuo calendario, le tue tasche, le tue prezzi, se vuoi fare una lista di acquistazione o qualcosa, puoi creare questo qui. Puoi creare un full meal plan on here breakfast lunch dinner and it's like a full calendar just so nice you can also see the weather this is like a brain outside of your brain so if you've been looking for the perfect way to manage your household and just life in general i will leave this one linked down below",
+            "language": "Italian",
+            "durationSec": 39.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:51:58.433Z"
+          }
         }
       ]
     },
@@ -148580,7 +148670,16 @@
           "likes": 22200,
           "comments": 157,
           "shares": 483,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "As someone who works in the fragrance industry, I get to smell fragrances months before they launch. And I genuinely haven't been able to stop thinking about these. The two new fragrances from Valentino. Vendetta Donna and Vendetta Uomo. I smelled these months ago and I finally get a chance to talk about them. Vendetta Donna is so beautiful. You're gonna get a tuberose, an orange nectar. That almost adds a liqueur-like sweetness. It's warm, a little bit floral. But in a modern way, it's still gonna feel sensual and rich. e vendetta uomo prende un po' di un approccio diverso, questo è stato aperto con una nota di ginger fresco che immediatamente prende la tua attenzione e poi si metterà in questo caldo di licor di cinamano caldo c'è un po' di patchouli ma è così bello è spessissimo è woodsy c'è anche un po' di un elemento gourmand entrambi i fragranti sentono unico ma moderno e non come qualsiasi altro che ho provato da valentino beauty prima si lanciano su sephora agosto 28 e puoi essere registrato per essere notificato per la toccata ma commenta qui sotto e fammi sapere se dovrete provare questo vi amico e ci vediamo nel prossimo video Mua",
+            "language": "Italian",
+            "durationSec": 57.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:02.124Z"
+          }
         }
       ]
     },
@@ -157652,7 +157751,16 @@
           "likes": 26,
           "comments": 4,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I'd rather be crying in a Bentley, sippin' on Hennessy, dryin' on my tears with some hundred dollar bills Billin' down in Fendisa, but I got plenty, money for debate in the world Chillin' in a Beezer, just like Justin Bieber, cause I got the money, I don't care And you can put that on my visa, roll me like a Caesar, you know that we global, bitch I'm here So far from where we comin' from And we don't stop until it's done",
+            "language": "Italian",
+            "durationSec": 33.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:06.766Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -157666,7 +157774,16 @@
           "likes": 20,
           "comments": 0,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "no teman teman saya lagi berada di jalan saledeng tompo dan ketemu salah satu hotel ini tuh namanya hotel kiriat makassar dekat banget ke pantai losari kalau ke ara sana itu jalan ratulangi makassar dan ke sebelah sana itu adalah ke ara pantai losari nah teman teman kita langsung aja ya naik ke lobbynya dan naik ke kamarnya ok? check out di sopra si trova il sofà, è bellissimo, il lobby è bellissimo, qui sotto c'è anche l'area di resto, quindi potete chiedere cibo, e se vi aspettate nel cafe, qui sotto c'è un bel posto per sedere, quindi andiamo direttamente a salire alla 5, ragazzi, ora sono in 5, nel camere 504, questo è il tipo di camere deluxe, per il camere è così, quindi il concetto è come un appartamento, Nih, kita langsung aja ya, ke dalam area kamarnya, kamar tidurnya itu sudah memiliki dua bed seperti ini, dan di sebelah sini ada ini lemari, terus ada juga ini meja rias, dan nih, jadi ini kamar wandinya, ngambung nih ke area sini, nih, mini kitchennya di sebelah sini, sudah ada juga fasilitas krukas mini, terus ada juga disediakan kompor, dan minitestnya itu sudah lengkap ya, teman-teman, di sebelah sini ada tv, dan sudah smart tv, da niente manda nani cacca pia wow jadi potete man calo mollini di hotel kiriat makassar in ituri jalan salade and tempo kalian berlin non è l'idea di video in nia jaya di adattare a gare di matri di l'opera di di tutto che da tango di hotel kiriat makassar",
+            "language": "Italian",
+            "durationSec": 104,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:14.477Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -157680,7 +157797,16 @@
           "likes": 2381,
           "comments": 53,
           "shares": 366,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao ragazzi, sono Dread, sono in Rathke. E' la mia famiglia. Oggi sono in Kilo Potra Hotel, a Nespai. E' un giro a Gendak. E' in Cora. Mi chiamo Arif. Sono un autore e mi piace molto la città. Quindi, il giorno che ci vediamo, ci vediamo a Mekevale. Ragazzi, noi stiamo facendo il rinforzamento. Ci vediamo e poi ci vediamo in città. io rimanerei in sostegno a tutti i miei amici e vi saluto a presto",
+            "language": "Italian",
+            "durationSec": 31.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:19.830Z"
+          }
         }
       ]
     },
@@ -167621,7 +167747,16 @@
           "likes": 2211,
           "comments": 209,
           "shares": 269,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 7.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:22.141Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -167635,7 +167770,16 @@
           "likes": 117,
           "comments": 14,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho tolto un cartone oracolico per vedere cosa dovrei parlare oggi e questo è quello che ho ottenuto. Dice The Great Gathering, It's All Coming Together, Intuitive Hits and Soul Tribe. E sento che questa sia una grande rappresentazione di guardare e trovare la comunità. Se vivi in o vicino o avanti da Olympia, Washington e hai la tendenza di piacere il più metafisico, spirituale, il più witchy, voglio invitarti a partecipare e venire ai miei eventi, ma anche a trovare una comunità tra loro. Penso che viviamo in una società molto individualista che è molto concentrata sull'indipendenza, non ti devono niente, e penso che ci siano alcuni praticanti solitari che ci piacciono davvero, ma penso che la comunità sia necessaria, specialmente tra un'audienza così nichee come la nostra. Penso che sia più che necessario poter costruire connessioni, sentire dentro il tuo lavoro, dentro la tua ricerca, dentro la tua pratica spirituale, e connessi con gli altri, e raggiungere conoscenza, e semplicemente sentire. Penso che ci siano molti problemi sociali che hanno causato cos tanti malattie visibili che pu sentire incontro per noi per sentire visto o per chiedere per connessione o comunit o per ingaggiare con lui ma la grande cosa di Olympia Washington che sento che c'è una più forte consapevolezza di quello che è necessario per la sostenibilità della nostra vita, sai, siamo creature di grado, ci divertiamo con la connessione, viviamo fuori di connessione e specialmente quando abbiamo già avuto una pratica così indipendente è così facile di perdere in depressione, isolamento, sentendo come non c'è una comunità out there to support you when I promise you there is. So there is a lot that I'll be expanding upon in the next few months in regards to community gatherings but for now I do have markets and I do have wonderful vendors at them that practice, that want to connect that want to engage and talk and build friendships just like me so if you live around here then please come to our next market which is going to be at Witchwood Bazaar at Capital Mall è il 19 settembre da 10 a.m. a 8 p.m. e sarà un giorno meraviglioso, pieno di artisti, pieno di oddities e di tutti i tipi di cose peculiari, divertenti, whimsical, ma più importante è che sarà fissato con comunità e connessione.",
+            "language": "Italian",
+            "durationSec": 185.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:27.686Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -167649,7 +167793,16 @@
           "likes": 83,
           "comments": 6,
           "shares": 50,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 11.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T04:52:32.274Z"
+          }
         }
       ]
     }
