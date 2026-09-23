@@ -47951,7 +47951,16 @@
           "likes": 2576,
           "comments": 67,
           "shares": 66,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:06:48.328Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -47965,7 +47974,17 @@
           "likes": 129500,
           "comments": 159,
           "shares": 508,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:08:48.333Z"
+          }
         }
       ]
     },
@@ -90308,7 +90327,16 @@
           "likes": 40,
           "comments": 1,
           "shares": 38,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo nuovamente casati, chiedono un hotel di balai a prezzo adeguato, non si preoccupi di questo video. Noi abbiamo deciso di mantenere il balai a prezzo adeguato in Turchia. Poi vogliamo viaggiare in alcune regioni. Il nome del nostro hotel è Green Nature Resort Hotel. Non è un'automobile, l'hotel l'ho scoperto e scoperto. Il hotel ha due piazze, non è zero. L'hotel è un hotel di pulizia, il cibo è molto bello. Ogni giorno c'è un nuovo etico. Un giorno il mangal, un giorno il waffle, un giorno il pollo. il giorno di primavera. I lavori erano molto puliti e il personale era davvero molto interessato. I lavori erano molto puliti e regolati. Se volete andare al mar, andate a 10 minuti. L'alcol è di marca qualitativa. Siamo andati la settimana ultima di maggio. L'aereo era 32-33°C. L'hotel Marmaris era in fiamme. Il saldo di acqua a Temmuz è un po' più caro. Potete ottenere prezzi molto adeguati con le riserve di primavera. Siamo molto contenti dell'hotel. Vi consiglio.",
+            "language": "Italian",
+            "durationSec": 59.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:08:52.241Z"
+          }
         }
       ]
     },
@@ -102171,7 +102199,16 @@
           "likes": 15,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 38.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:08:57.541Z"
+          }
         }
       ]
     },
@@ -114795,7 +114832,16 @@
           "likes": 7328,
           "comments": 79,
           "shares": 68,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 25.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:09:00.151Z"
+          }
         }
       ]
     },
@@ -148920,7 +148966,16 @@
           "likes": 10800,
           "comments": 58,
           "shares": 499,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti! Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 52.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:09:03.230Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -148934,7 +148989,16 @@
           "likes": 306,
           "comments": 22,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "dovresti acquistare Valentino Purple Melancholia nel 2026? Questa è per far Valentino la fragranza più unica, ma smette bene? Questa è una fragranza calda, spiccante e coccanutty che si presenta e si progetta come un bestia. Nella mia pelle, ottengo 7-8 ore di buona progettazione e sulle mie coppie questa cosa veramente dura giorni. Guardando le notizie, penserebbe che questa fosse una fragranza del vero pomodoro, ma secondo me è è abbastanza versatile. Puoi usare questa in caldo e caldo. Ma dovresti comprare questa fragranza nel 2026? Perché è così unica, il mio consiglio è di provarla prima di comprare. Ma se sei la mia opinione, è la mia favorita Valentino di tutti i tempi.",
+            "language": "Italian",
+            "durationSec": 40.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:09:06.742Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -148948,7 +149012,16 @@
           "likes": 123,
           "comments": 27,
           "shares": 49,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo in Irlanda e siete parte della club. Questo è Worldful Dream, un nuovo passione per me. E' un'esplosione. benvenuti a Jesse Elegant, mi chiamo Raffaele e sono un personal buffer io vado a stare con voi ogni giorno, dalla 9 alle 6 è bello qui, si trova i souvenir e tutto lì La porta, il farmaco, i clienti sono lì. Siamo arrivati al nostro luogo, il nostro veterinario sta andando in un luogo. Grazie. grazie grazie ciao Sì, ciao! ...sauce, ci sono dei prodotti di cibo, acqua, fango, ... ... ... ... ... ... ... ... ... Questo è il vostro privato. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 177.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:09:12.121Z"
+          }
         }
       ]
     },
@@ -168267,7 +168340,16 @@
           "likes": 152,
           "comments": 8,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, mi chiamo Fatima, sono l'autore di Facts of Awakenings e il creatore del new Orleans Oracle Deck. Abbiamo fatto il nostro secondo Find Your Tribe, Raise Your Vibe e è stato un successo. È tutto a proposito di trovare la tua tribù, di sentire la tua vita per la gioia e la manifestazione. Allora, la prossima volta speriamo di vederti, venite a bere un alimento, venite a mangiare un po', venite a incontrare delle persone davvero grandi e ci aspettiamo a vederti. Uno, due, tre! Ciao",
+            "language": "Italian",
+            "durationSec": 31.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:09:14.972Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -168281,7 +168363,16 @@
           "likes": 199,
           "comments": 8,
           "shares": 31,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Abbiamo organizzato tour guidati del cemitero di Monterey, ma se non è possibile per voi attendere uno di questi tour, potete venire a casa, potete scoprire il cemitero usando alcuni dei pamfletti gratuiti che offriamo all'entrata principale. Per esempio, abbiamo uno sull'istoria del cemeterio, dove vi diranno dove andare se volete vedere dove i maestri di Montreale sono sbagliati, le vittime titaniche, i primi ministri, tutto è in questo panfletto. Abbiamo un panfletto di tre, che lista le 100 specie di tre che potete trovare nel cemeterio, c'è una mappa all'interno. Abbiamo un panfletto sui memorabili in Montreale, semitario. Quindi, se siete interessati a tutti i simboli, come le croci del Celtico, gli obelisci, avete bisogno di questo. Se volete sapere dove sono tutte le interessanti quotazioni, avete bisogno di questo panfletto. Se vi piacciono gli uccelli, abbiamo un panfletto sulle 130 specie di uccelli che potete trovare nel semitario.",
+            "language": "Italian",
+            "durationSec": 65.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T15:09:19.047Z"
+          }
         }
       ]
     }
