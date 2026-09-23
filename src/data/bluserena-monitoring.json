@@ -157987,7 +157987,16 @@
           "likes": 27,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh Ciao",
+            "language": "Italian",
+            "durationSec": 48.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T10:00:50.507Z"
+          }
         }
       ]
     },
@@ -168047,7 +168056,16 @@
           "likes": 809,
           "comments": 22,
           "shares": 90,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T10:00:52.698Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -168061,7 +168079,16 @@
           "likes": 1625,
           "comments": 51,
           "shares": 239,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In questo episodio di Exploration and Paranormal, vi porto alla Semataria tedesca di Penang. Dato di 1805, è creduto essere la più antica Semataria tedesca in Asia del Sud con più di 100 gravi. Noterete che i gravi qui sono molto diversi, con queste strutture distinte, triangolari, quasi cascate, come le più comuni Sematerie che vediamo in Malasia. La Semataria è anche stata curata dalla stessa famiglia per generazioni che ancora vive sui terreni oggi. La cateca mi ha detto che è così tranquillo qui che ha dormito sulle tombe prima. Noterete anche pebbeli lasciati su alcune grise. Secondo lui, i visitanti giudici tradizionalmente lasciano stelle invece di fiori. Io lascio fiori perché è qualcosa che ho iniziato a fare dopo che mio padre è passato, la mia propria piccola maniera di mostrare amore e rispetto ai morti. Ma questa visita è stata diversa. Per la prima volta durante un'esplorazione, ho sentito in un certo modo estremamente nauseoso e sottile. Some paranormal investigators associate physical sensations like these with the energy of a place. Whether that's what happened, I don't know. I just know I've never felt it anywhere else.",
+            "language": "Italian",
+            "durationSec": 68.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-23T10:01:00.229Z"
+          }
         }
       ]
     }
