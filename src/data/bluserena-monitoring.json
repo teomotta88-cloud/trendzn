@@ -65669,6 +65669,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:20.206Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ICLUSIVEISPA",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:05.363Z"
           }
         },
         {
@@ -65692,6 +65701,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:22.953Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:08.291Z"
           }
         }
       ]
@@ -76223,6 +76240,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:29.714Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:13.684Z"
           }
         }
       ]
@@ -102619,6 +102644,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:32.666Z"
+          },
+          "ocrData": {
+            "textOnScreen": "all incl\ndoesnt know\ncoming for it\nsounds stal",
+            "confidence": 0.78,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:20.830Z"
           }
         }
       ]
@@ -149586,6 +149620,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:36.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:26.479Z"
           }
         }
       ]
@@ -158795,6 +158837,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:42.924Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:37.238Z"
           }
         },
         {
@@ -158818,6 +158868,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:48.462Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:40.288Z"
           }
         }
       ]
@@ -169024,6 +169082,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T01:31:51.159Z"
+          },
+          "ocrData": {
+            "textOnScreen": "lita\nbecomes medicine.",
+            "confidence": 0.738,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T01:32:56.115Z"
           }
         }
       ]
