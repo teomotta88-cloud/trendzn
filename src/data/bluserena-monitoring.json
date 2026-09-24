@@ -90828,6 +90828,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T11:48:02.210Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T11:48:54.590Z"
           }
         },
         {
@@ -90851,6 +90859,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T11:48:13.646Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ainda tem mergulho",
+            "confidence": 0.791,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T11:49:08.289Z"
           }
         }
       ]
@@ -103009,6 +103026,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T11:48:16.883Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Senscana sea side resort",
+            "confidence": 0.709,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T11:49:17.279Z"
           }
         }
       ]
@@ -169754,6 +169780,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T11:48:19.675Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Canoes landing at SWINOMISH\ndicine Creek Potlatch Journey 2026 Canoe Routes and Landing\nSechelt\nQualicum Bay\n5 Nanoose Bay\nKulleet\nBay p Tsawwassen\nBirch Bay\nState Park\nNooksack 7/22\ni 7/17 Bay Lummi 7/23\nRenfrew\nSamish 7/24\nNeah Bay 7/20\nPilar Bay 7/19, Q\nLower Killam\nQuileute 7/18-7/19 Port Gamble\nMuckleshoot\nQueets 7/16\nPotlatch\nQuinault 7/15\nLandings\nCanoe Routes i ‘Solo Pont Take Out\nReservation\nMedicine Creek Potlatch Journey 2026 Canoe Routes and Landings\nPark\nTanwassen\nIsland Birch Bay.\n7/17 Bay Lummi 7/23\nPort Renfrew East/West Saanich è\n7/18 Samish 7/24\nLower\nN Hoh River\nSuquamish 7/27-7/28\nQueets 7/16 729\nState P\nQuinault 7/15 tate Park 77%\nCanoe Routes ance Tata\nReservatior Landing Canon Dut\nSWINOMISH TRIBAL\nSENATE\nCanoe Journey\nSwinomish\nLanding\nNews Release Back to\nDate: 2026 News\npaddle to Nisqually, Swinomish Landing\nschedule\nFriday, July 24\n6 p.m. Jam at the Swinomish Smokehouse,\nco-hosted with Samish Indian Nation\nSaturday, July 25\n6 a.m. Canoes leave Samish. Soft landing at\nPearl Jensen Beach, with shuttles running to\nSwinomish as canoes land\nYes, tribal journey canoes are\nscheduled to land at Swinomish\ntoday (Saturday, July 25, 2026)\nat approximately 5:00 p.m. at\nswadabs Park.\nFacebook: Swinomi... +1\nLanding and Event Schedule\n6:00 a.m. Canoes leave Samish with a soft\nlanding at Pearl Jensen Beach and shuttles\nrunning to Swinomish.\n4:00 p.m. Shuttles begin returning pullers to\nPearl Jensen Beach.\n5:00 p.m. Official formal canoes land at\n6:00 p.m. Community dinner begins at the\nSwinomish Boys Girls Club.\n8:00 p.m. Skippers meeting in the local room\nat the Swinomish Smokehouse. www.swinomis... +1\nYou can check further updates on the Swinomish",
+            "confidence": 0.889,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T11:49:30.217Z"
           }
         }
       ]
