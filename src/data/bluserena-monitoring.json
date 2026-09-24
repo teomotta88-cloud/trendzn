@@ -31470,7 +31470,16 @@
           "likes": 364,
           "comments": 12,
           "shares": 50,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Io ho fatto questo top cropped chiamato Serena, gola alta, coste nuda, magnifico. La mia cliente mi ha solicitato la blusa Serena, blusa perché è più lunga, ma mantiene la gola alta, ha l'elastica sulle laterali, bojo sui seiti, che ha solicitato. Le coste della blusa sono incrociate, dando un charme totale e aggiusti al corpo. quindi vieni a solicitare la tua parla con me in diretta",
+            "language": "Italian",
+            "durationSec": 33.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:34.044Z"
+          }
         }
       ]
     },
@@ -48029,7 +48038,16 @@
           "likes": 41300,
           "comments": 107,
           "shares": 634,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Riguardo la mia e la mia relazione con Kendall, non penso che ci sia avuto qualcosa che gli sia accaduto e penso che chi lo ha fatto è stato un cazzo di cazzo. Come lo riferisci? Lo dici come un video? Non dico niente.",
+            "language": "Italian",
+            "durationSec": 13.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:36.490Z"
+          }
         }
       ]
     },
@@ -55177,7 +55195,16 @@
           "likes": 26,
           "comments": 3,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Immaginate di viaggiare in gruppo e che ogni persona vuole una vacanza completamente diversa. Uno vuole tranquillità, l'altro vuole festa, i bambini vogliono piscina e tu solo vuoi sapere dove vai a cena questa notte. È qui che Catalonia cambia un po' le regole, perché dentro un stesso complejo puoi trovare due mondi. Un'area familiare con kids club, attività, piazza e una enorme piscina. e altre solo adulti con un ambiente più tranquillo, piscina infiniti e anche strade di due livelli. Un dettaglio interessante, se ti ospedali in l'area solo adulti, puoi anche divertirti delle installazioni dell'area familiare. E quando scende la notte, ancora restano molti ristoranti italiani, asiatici, steak house, mariscos, sport bar, discoteca, show, fieste sulla piazza e anche una pizzeria aperta fino alle 2 di mattina. Quindi la domanda non è se preferisci riposare o divertirti, la domanda è perché dovresti scegliere, con quale ti resti? Vacazioni di relax o vacazioni con movimento? E se vuoi conoscere le opzioni, abitazioni e date disponibili in Catalonia Hotels & Resorts iscriviti al 786-667-2618 e ti aiutiamo a trovare l'opzione ideale.",
+            "language": "Italian",
+            "durationSec": 81,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:40.725Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -55191,7 +55218,16 @@
           "likes": 672,
           "comments": 27,
           "shares": 46,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo andando a Cala Gonone, questa città assolutamente bellissima che è praticamente molto secolata perché è coperta da un sacco di montagne per arrivare qui è un 10 minuti di distanza da questa bellissima montagna è veramente un paradiso naturale, puoi andare a viaggiare a viaggiare sulle piscine, non sono raccomandati per i bambini, non li abbiamo fatto ma è bello ma difficile Abbiamo fatto un giorno di bordo, direi che venire a Cala Gonone il giorno di bordo non è negociabile si possono vedere tutti questi bellissimi paesi, Cala Golorita, questi sono come uno dei più bellissimi paesi del mondo molto secolati, che puoi solo arrivare a calare con il bordo Cala Luna, tutti questi incredibili cavalli e tutto, quindi questo è un must-see è una bella piccola città, molto quente, piccola non è un paese di giornata o niente, è bello venire a rilassarsi famiglia, fare un giorno di bici, ci sono anche delle belle piazze, tutto è molto montagnese quindi sì, amiamo molto Cala Gonone, direi che il giorno di bici è un must, se lo fai con le tour più grandi o come abbiamo fatto con il bici privato e prendi il bici stesso che è più costoso, ma assolutamente valido il prezzo, è uno dei migliori giorni per noi tutti",
+            "language": "Italian",
+            "durationSec": 79.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:48.115Z"
+          }
         }
       ]
     },
@@ -65779,7 +65815,16 @@
           "likes": 166,
           "comments": 9,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "no_speech",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:50.873Z"
+          }
         }
       ]
     },
@@ -76332,7 +76377,16 @@
           "likes": 2,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Welcome to the Serena Oasis Experience, where you're welcome to apply today. $50 application fee and a $250 deposit for a two-bearer, one-bath. Beautiful, brand new carpets, renovated, washer and dryer connections, Nice bedroom space Large closets Walk-in closet Yes, welcome to Serena Oasis Now take a look at the patio Alright, at least today",
+            "language": "Italian",
+            "durationSec": 45,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:54.226Z"
+          }
         }
       ]
     },
@@ -102751,7 +102805,16 @@
           "likes": 24,
           "comments": 0,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:56.734Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -102765,7 +102828,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:38:59.377Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -102779,7 +102851,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 10.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:01.679Z"
+          }
         }
       ]
     },
@@ -115466,7 +115547,16 @@
           "likes": 461,
           "comments": 10,
           "shares": 78,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "i giorni domani chiedono un ritmo diverso. Iniziare il giorno con questa meravigliosa vista è un convite perfetto per il piccolo almozzo in Hotel Pulana. E io sono andata direttamente al mio posto preferito, il ristorante A Varanda, dove, ragazzi, tutto qui è preparato in tempo, ho chiesto quel mio uovo fresco preparato preparato dal chef con la sua meravigliosa tecnica. Tutto sembra un rituale di fresco. Qui, ragazzi, gli ingredienti sono tutti freschi, gli uovi sono preparati in tempo. Puoi sempre chiedere, sia un uovo stralato o un omelette. Il chef ha sempre una tecnica speciale e qualcosa sempre preparato specialmente per noi e ovviamente ho provato e ho chiesto e guardate che questa è la tecnica del chef, è la felicità che è contagiosa. Ho anche chiesto la mia acqua di coco e ha questa selezione incredibile di sementi di girasole, di abobora, castagna, bari di cereali e anche acque aromatizzate, sumi naturali naturali e diversi battiti, yogurt, avea e diverse frutti colorate. E ragazzi, qui c'è tutto fresco, c'è anche dei sumo di detox di gengibre e ancora c tabu di formaggio e fiambre C realmente una dieta ricca e equilibrata per chi cerca di avere una salute equilibrata. E ciò che mi ha più attenzione, ciò che mi piace più è il cuidado con l'inclusione. C'è anche questa sezione di cibo halal e cibo anche in gluten fritto. E anche nel caffè la nostra scelta è sempre il latte magro, gordo e anche il latte fresco naturale di soia, ciò che dimostra non solo ai persone, ma anche a tutti i nostri ospiti, che è visto e rispettato nella sua individualità. Come era un giorno così fresco, ho visto una canza, ho chiesto per montare la mia propria canza, E per finire la mia mattina, in modo migliore, con un piccolo almozzo saudabile e con le opzioni che mi sono favoribili e saudabili. quindi ragazzi questo è il menu del piccolo almeno che è disponibile tutti i giorni nel ristorante a la baranda di seconda a sesta sera dalle 7 alle 10 ore per l'adulto che non lo scusa 2050 medicare e per le bambine 1025 ha anche un buffet raffreddato perché non lo so di fine settimana e questo costa per adulto 2.500 e per criança 1.250.",
+            "language": "Italian",
+            "durationSec": 203.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:09.729Z"
+          }
         }
       ]
     },
@@ -126079,7 +126169,16 @@
           "likes": 1360,
           "comments": 30,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "venite con me in un piccolo avventura al più magico posto, un gioco nascosto in Uganda un resort Hyundai, abbiamo avuto l'onore di essere hostati da loro questo è noi quando siamo arrivati a Unyonyo, che è dove prendi il corso per arrivare al resort abbiamo giocato con alcuni bambini e alcuni donchini e poi abbiamo mangiato è stato spazio, ma finalmente la pittura ha stoppato e siamo arrivati all'islanda queste ragazze stanno mangiando e siamo arrivati questo posto era incredibile è letteralmente l'infinito che tutti avevamo necessario guardate questo posto puoi sentire la pazienza? perché è stato incredibile e poi siamo andati non so come si chiama ma sì, abbiamo andato in bici in un sole e è 6 di notte e il sole è letteralmente perfetto e abbiamo avuto un po' di campione moment dinner and this is the next morning we woke up to a yoga morning which was super thoughtful it got us in a very relaxed mindset and i changed to a pretty dress and sat by the beach and just took all that beauty in man that fly was a paid actress ci ha dato un molto rilassato e ho cambiato la mia roba e ho messo tutto questo bellissimo in questa roba e la bambina era una attrice pagata perch ha fatto cos molto bello questo video e l'ho cambiata di nuovo ora andiamo a Namba Sanctuary l'unico santuario per i chimeni in Africa guardate le mie ragazze guardate come sono belle questo è il nostro guida ci hanno dato un intro al posto e poi siamo andati verso il santuario e hanno comandato per farci il alimento e poi sono io, Kimi e Brie che stiamo andando in salita e ho detto a me stessa che abbiamo avuto un buon alimento abbiamo cambiato le nostre roba e fatto un po' di foto e poi a notte abbiamo passato la notte insieme abbiamo parlato e ci abbiamo raccontato di cose che erano molto divertenti Ciao",
+            "language": "Italian",
+            "durationSec": 132.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:15.078Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -126093,7 +126192,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 19,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:17.470Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -126107,7 +126215,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 18.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:19.952Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -126121,7 +126238,16 @@
           "likes": 52,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:22.365Z"
+          }
         }
       ]
     },
@@ -140716,7 +140842,16 @@
           "likes": 29,
           "comments": 0,
           "shares": 17,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "In the night, the stormy night, away she flies A dream of paradise, paradise, paradise Ciao",
+            "language": "Italian",
+            "durationSec": 36.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:26.290Z"
+          }
         }
       ]
     },
@@ -159100,7 +159235,16 @@
           "likes": 166,
           "comments": 17,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:28.662Z"
+          }
         }
       ]
     },
@@ -169329,7 +169473,16 @@
           "likes": 90,
           "comments": 36,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 43,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:34.431Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -169343,7 +169496,16 @@
           "likes": 7,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hedera Hashgraph non utilizza blockchain, usa un metodo più efficiente, chiamato un metodo di direzione aciclico, o DAG. Ma l'importante è che è disegnato per aiutare Hedera a raggiungere la tolleranza di faulti asincroni, che è uno dei standard di sicurezza più alti dell'industria. L'utilizza per fare questo più veloce, più efficace e più efficiente di blockchain tradizionali. Next, let's talk about the fuel for Hedera's network, the HBAR token. HBAR has a fixed supply of 50 billion HBAR and no possibility of creating more. This scarcity ensures stability and transparency, making HBAR a reliable asset for long-term use. An HBAR, the token, is cool, but how does Hedera actually generate revenue? It's about network services. Ogni volta che qualcuno usa l'ecosistema di Hedera, sia per creare token, per gestire contratti smart, o per utilizzare il servizio di consenso, le prezze sono pagate in HBAR. Queste prezze sono piccole, ma si aggiungono velocemente, e, dato il alto throughput della rete, questo modello economico fa di Hedera non solo efficiente, ma anche sostenibile. La sua versatilità actually powers applications in various industries. Per esempio, it enables fast, low-cost transactions in supply chain management, tracking goods and confirming authenticity. Il suo governo include powerhouses come Google, IBM, Boeing e Deutsche Telekom. Queste compagnie svolgono Hedera per prodotti come gestione dell'identità, trattamento di trattamento di supply chain e molto più.",
+            "language": "Italian",
+            "durationSec": 89.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T06:39:39.200Z"
+          }
         }
       ]
     }
