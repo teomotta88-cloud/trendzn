@@ -90819,7 +90819,16 @@
           "likes": 46,
           "comments": 0,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "You belong on a boat out at sea Sail away, kill off the hours You belong somewhere you feel free Sail away, go find a lover Go away, somewhere brand new I see no other moon that compares me",
+            "language": "Italian",
+            "durationSec": 40.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T11:48:02.210Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -90833,7 +90842,16 @@
           "likes": 53,
           "comments": 6,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il roteo perfetto per te che vieni al Serrambi Resort. Inizia con un trattamento in accademia e con una vista così. Fai più facile quando sei svegliato. Poi è l'ora di una delle migliori parti, il caffè d'amore, che è già incluso nella diaria. Ha frutti, pane, croissanti, freddi, sapore di nord-estero e, ovviamente, una mesa di sobremesa che merebbe tutta la tua attenzione. Caffè bevuto, ora è piede in aree. Nella piazza la programmazione non para. Volleyball, tennis, giochi e anche desafi valendo il drink. o, se preferire, è solo seguire per la nostra marina e partire per conoscere la Santa Leila o le piscine naturali di Serrambu e a volta, l'indirizzo giusto è il bar della piscina presta un drink e incaria la parte difficile che va a essere scegliere solo un prato e mezzo a tante opzioni irresistibili del nostro cardapio e quando il sole inizia a scendere, il scenario cambia puoi approfittare di un'aula di idrogenastica, rilassarti nel yoga o semplicemente parar per assistere a uno dei momenti più belli del giorno qui il sole a notte abbiamo il jantare incluso nella diaria con varie opzioni per approfittare a volontà. E ancora non è finito. Dopo il giantino, vale la pena passare per la nostra dega e divertirsi in un show esclusivo per ospiti. Hai pensato che poteva fare tutto, no? Anche per l'interno. Ancora c'è mergulho, spa, sala di gioco, squadra di tennis e molte altre esperienze spalzate nel risorto. Per questo, la domanda non è cosa fare nel Serrambino, ma di quanti giorni dovrai necessitare per approfittare tutto. E allora, quando vieni?",
+            "language": "Italian",
+            "durationSec": 80.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T11:48:13.646Z"
+          }
         }
       ]
     },
@@ -102982,7 +103000,16 @@
           "likes": 489,
           "comments": 12,
           "shares": 81,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T11:48:16.883Z"
+          }
         }
       ]
     },
@@ -169718,7 +169745,16 @@
           "likes": 56,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 28.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-24T11:48:19.675Z"
+          }
         }
       ]
     }
