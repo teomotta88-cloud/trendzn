@@ -90891,6 +90891,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T16:54:49.912Z"
+          },
+          "ocrData": {
+            "textOnScreen": "4 Green\nPOV Ketika Menginap di Green Valley Bandungan\nA dapet udara dingin dan\nview penginapan secantik ini dipagi hari",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T16:55:39.271Z"
           }
         }
       ]
@@ -141123,6 +141132,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T16:54:54.665Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T16:55:50.794Z"
           }
         },
         {
@@ -141146,6 +141163,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T16:55:04.327Z"
+          },
+          "ocrData": {
+            "textOnScreen": "peut flamber\njusqu'a 500 par personne,\nCAPITAL 1\ndes vacances\nqui sont pas abordables\nAh sympa,",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T16:55:55.708Z"
           }
         }
       ]
@@ -150291,6 +150317,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T16:55:08.860Z"
+          },
+          "ocrData": {
+            "textOnScreen": "I'VE BEEN WAITING FOR LIKE\nTWO HOURS TO OPEN THIS.\nFOR VALE\nA I'DSAY RELATIVELY.",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T16:56:02.571Z"
           }
         }
       ]
