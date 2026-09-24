@@ -48088,6 +48088,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:16.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": "(OBSESSED WITH HER\nLIKE DAN HUMPHREY",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:04:45.749Z"
           }
         }
       ]
@@ -55309,6 +55318,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:22.494Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SÌ RESERVASIDIRECTAMENTE",
+            "confidence": 0.748,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:05:09.084Z"
           }
         }
       ]
@@ -65938,6 +65956,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:29.836Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:05:30.964Z"
           }
         }
       ]
@@ -90992,6 +91018,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:32.606Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The room is awash with\na neon karaoke machine\ncasting an ambiance);",
+            "confidence": 0.798,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:05:41.649Z"
           }
         }
       ]
@@ -103182,6 +103217,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:35.765Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Enchanted beachfront with swaying\npalm trees\nDon't wait; tickets",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:05:51.842Z"
           }
         },
         {
@@ -103205,6 +103249,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:39.037Z"
+          },
+          "ocrData": {
+            "textOnScreen": "vibrant pool area\nsurrounded, i\nserene ambiance\nARRIVAL DEPARTURE\nLOUNGE\nKIDS CLUB\nLYONIA LAWN\nPAPAYA CLUB\nPOOL BEACH\nticketsithrough",
+            "confidence": 0.812,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:06:01.446Z"
           }
         },
         {
@@ -103228,6 +103281,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:41.398Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A serene beachside resort, where\nserene resort with\noverlooking\nDon't wait,-book your tickets through\nthe link in the bottom",
+            "confidence": 0.806,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:06:14.139Z"
           }
         },
         {
@@ -103251,6 +103313,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:44.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": "beach with\nyellow umbrella\nDonitiwait, book your.tickets through\nthellinkiin the bottom",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:06:24.372Z"
           }
         },
         {
@@ -103274,6 +103345,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:46.756Z"
+          },
+          "ocrData": {
+            "textOnScreen": "with\npool and lounge chairs set",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:06:39.013Z"
           }
         },
         {
@@ -103297,6 +103377,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:49.244Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Vill\nThe Villa\npalm]\nCapture: Serene kway palm\ntrees, swaying greenery?\ngsandy\ninviting\nDon't",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:06:52.953Z"
           }
         },
         {
@@ -103320,6 +103409,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:51.974Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort\ncaptures aiserene beach\nresort;\\whereithe white\nbook{your",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:07:02.135Z"
           }
         }
       ]
@@ -116047,6 +116145,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:03:59.259Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:07:10.983Z"
           }
         },
         {
@@ -116070,6 +116176,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:03.316Z"
+          },
+          "ocrData": {
+            "textOnScreen": "I love u my",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:07:16.337Z"
           }
         },
         {
@@ -116093,6 +116208,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:06.243Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:07:40.140Z"
           }
         },
         {
@@ -116116,6 +116239,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:09.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:07:48.133Z"
           }
         }
       ]
@@ -126865,6 +126996,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:15.214Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serena Resort\nCudc goi thoai da\nMOBBON BE MOI LO LANG\nChia sé bai ding [2 cau trà\nrena Resort\nx x Cudc goi thoai da hdy\nù Cudc goi thoai da két thy\nA iop Cudc goi thoai da két thic\nCudc gol\nri Chia sé bai ding Chu trà\nNhén t\nCudc goi thoai da hoy\nSIET MOI EM CHAT HON DI\nDE NHUNG DAU YEU CUNG KHONG NHAT\nCudc goi thoai da két thuc\nCube\n62 KA thic\nNhan dé goi lai\nCuòc goi thoai da két",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:07:58.177Z"
           }
         }
       ]
@@ -150717,6 +150857,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:18.202Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ASSI",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:08:54.731Z"
           }
         }
       ]
@@ -160019,6 +160168,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:22.580Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Hospedaje El|Paraiso",
+            "confidence": 0.811,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:09:07.553Z"
           }
         },
         {
@@ -160042,6 +160200,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:28.477Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:09:17.957Z"
           }
         },
         {
@@ -160065,6 +160231,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-24T22:04:33.861Z"
+          },
+          "ocrData": {
+            "textOnScreen": "INNEN A\nn LEGSZEBB\nHELYEIT\nKONNYEDEN\nBEJARHATOD",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-24T22:09:37.854Z"
           }
         }
       ]
