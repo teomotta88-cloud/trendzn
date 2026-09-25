@@ -55532,7 +55532,16 @@
           "likes": 2,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 34.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T18:49:10.795Z"
+          }
         }
       ]
     },
@@ -91781,7 +91790,16 @@
           "likes": 818,
           "comments": 100,
           "shares": 75,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi scusate, ma le persone che mi stanno dando un buon review dell'Omni mi stanno mentendo. Questa sarà la risposta più onesta che ho fatto nella mia vita. E' che questa piscina non la dà. Questa piscina è re piccola, super piena. Un calore incredibile. No. Sento che ho perso la mia pratica. Lo sento. Grazie.",
+            "language": "Italian",
+            "durationSec": 33.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T18:49:13.505Z"
+          }
         }
       ]
     },
@@ -117615,7 +117633,16 @@
           "likes": 12,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Let's go! Grazie a tutti. Grazie.",
+            "language": "Italian",
+            "durationSec": 74.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T18:49:17.795Z"
+          }
         }
       ]
     },
@@ -143157,7 +143184,16 @@
           "likes": 22,
           "comments": 3,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I came to you and never asked too much Wondering what you would say Hoping you'd understand It's not a role I usually play Don't speak too much of what's been going on Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 66.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T18:49:21.964Z"
+          }
         }
       ]
     },
@@ -161763,7 +161799,16 @@
           "likes": 169,
           "comments": 5,
           "shares": 35,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Yo! Tell you what I want, what I really, really want Don't tell me what you want, but I really, really want I'll tell you what I want, what I really, really want Don't tell me what you want, but I really, really want I wanna, I wanna, I wanna, I wanna, I wanna Really, really, really wanna, zing a, zing a If you want my future, forget my past If you wanna get with me, better make it fast Now don't go wasting, my precious time Ciao",
+            "language": "Italian",
+            "durationSec": 39.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T18:49:26.450Z"
+          }
         }
       ]
     },
@@ -172278,7 +172323,16 @@
           "likes": 3,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 15.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T18:49:28.643Z"
+          }
         }
       ]
     }
