@@ -66200,7 +66200,16 @@
           "likes": 48,
           "comments": 12,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 17.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:34:53.818Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66214,7 +66223,16 @@
           "likes": 0,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:34:56.384Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66228,7 +66246,16 @@
           "likes": 541,
           "comments": 11,
           "shares": 75,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 8.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:34:58.709Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66242,7 +66269,16 @@
           "likes": 32,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 31.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:35:02.044Z"
+          }
         }
       ]
     },
@@ -104091,7 +104127,16 @@
           "likes": 50,
           "comments": 11,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "buonanotte",
+            "language": "Italian",
+            "durationSec": 8.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:35:04.290Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -104105,7 +104150,16 @@
           "likes": 285,
           "comments": 20,
           "shares": 46,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:35:06.765Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -104119,7 +104173,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, benvenuti al Sanctuary Beach Resort. I terreni sono così bellissimi. Lascia che vi mostri il luogo. E qui c'è la vista dal balcone. Amore di questo posto, dovete visitarlo!",
+            "language": "Italian",
+            "durationSec": 17,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:35:08.958Z"
+          }
         }
       ]
     },
@@ -117340,7 +117403,16 @@
           "likes": 33,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non posso besarti, ma ogni volta che ti offro un cigarrillo è come se lo stessi facendo. E ogni volta che lo prendi, sarai rivolgendomi questo. Staremo besandonos, abbracciandonos. Nessuno altro lo saprà, solo tu e io. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:35:12.151Z"
+          }
         }
       ]
     },
@@ -171879,7 +171951,16 @@
           "likes": 172,
           "comments": 0,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Il regno di Madura Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 62.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T08:35:15.512Z"
+          }
         }
       ]
     }
