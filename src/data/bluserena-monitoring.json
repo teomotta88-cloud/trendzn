@@ -66325,7 +66325,16 @@
           "likes": 5339,
           "comments": 60,
           "shares": 417,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questo è il 5 star hotel di Naran Kagan dove puoi vivere una sera per 30-40 mila riusciti. Non preoccupatevi di questo prezzo perché le luxurie che ottenete in questo 5 star sono fantastico. Prima di tutto guardate la mia stanza, io posso stare qui e guardare il pavimento tutto il giorno. Perché mi piace molto esplorare la natura. Ok, per chi non vuole stare con questo prezzo, ho anche un posto per lui. Qui potete venire solo per il lunch, il diner o il breakfast. Se non volete farlo, provate a mangiare e potete fare i vostri video e le vostre foto. Sono arrivati a Naran, 5 km da Naran. E' un nuovo 5 star, il nome di cui è Serene Resort. Ora, dopo aver visitato questo luogo, ho visto un'altra stanza di luxurio. Se potete trovare anche un'area di gioco, non dovrete preoccuparvi. Ora, con questo luogo bellissimo, e senza il caffè d'estate, come potrebbe essere? Abbiamo già stagionato la notte, quindi perché avete dovuto provare il bar? Il donatore di questo 5 star è un cattivo, quindi potete assaggiare il cibo. Sono arrivata per un giorno, ma sono rimasta per 3 giorni in questo luogo bellissimo. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 59.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T13:40:39.360Z"
+          }
         }
       ]
     },
@@ -91688,7 +91697,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "SIFTING IT THROUGH HERE FOR SAINT LAURENT! ICH SMILE SO- 🎵 🎵",
+            "language": "Italian",
+            "durationSec": 9.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T13:40:42.375Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -91702,7 +91720,16 @@
           "likes": 90,
           "comments": 8,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quando ci siamo venuti a ospedale a queste cabine di India e Rizor sentiamo che siamo arrivati al barrio, ragazzi. Solo che qui non si può ascoltare il chimorrerio o il buion che ci abitano, qui è pura naturalezza, silenzio totale, ragazzi. Lo unico che si può ascoltare sono i canti dei parri e i fiori che si stanno mangiando. Queste cabine sono super comode e ben equipate per che ti vengano a divertire con la tua famiglia. Ha la chimenea per fare il fogatone, ha la televisione, la nevera e il microonda. Ha un quarto, un bagno e un sofà cama. venite a divertirvi con la famiglia, portate il gatto, il gatto è molto qui, ha anche un porch per che tu salga a bere il tuo caffè in mattina il quarto non è così piccolo, ha anche un closet, la vita non è collega, robot, ingresso come lo dicevano voi, perché il giorno di domani uno non sa bisogna fare memoria con i figli perché poi i figli crescono e non vogliono andare nemmeno alla schiena con uno bisogna divertirsi con i figli quando sono piccoli, bisogna fare belle memorie per insegnarli quando crescono e questo luogo i tuoi figli lo amano, te lo raccomando, è un buon cattivo Grazie.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T13:40:45.920Z"
+          }
         }
       ]
     },
@@ -143031,7 +143058,17 @@
           "likes": 47,
           "comments": 3,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 1,
+            "updatedAt": "2026-09-25T13:42:45.926Z"
+          }
         }
       ]
     },
@@ -172106,7 +172143,16 @@
           "likes": 4351,
           "comments": 1290,
           "shares": 388,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-25T13:42:50.250Z"
+          }
         }
       ]
     }
