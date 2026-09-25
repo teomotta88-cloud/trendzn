@@ -48311,6 +48311,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T23:56:02.600Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T23:56:34.010Z"
           }
         }
       ]
@@ -66420,6 +66428,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T23:56:07.467Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T23:56:43.434Z"
           }
         }
       ]
@@ -77014,6 +77030,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T23:56:10.374Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Se serena\ndlls\nserena vanderwoodsen.",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T23:56:49.061Z"
           }
         }
       ]
@@ -104491,6 +104516,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T23:56:13.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JUST\nDepths with PADI Dive Centre\nRejuvenate Mind Bo Our Tranquil Spa",
+            "confidence": 0.801,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T23:56:59.710Z"
           }
         }
       ]
@@ -117784,6 +117818,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T23:56:16.521Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Grand Hotel Royal\nSorrento\nTANG",
+            "confidence": 0.742,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T23:57:30.985Z"
           }
         }
       ]
@@ -161990,6 +162033,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T23:56:22.180Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T23:57:35.505Z"
           }
         }
       ]
