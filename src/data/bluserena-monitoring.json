@@ -66209,6 +66209,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:34:53.818Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:35:33.092Z"
           }
         },
         {
@@ -66232,6 +66240,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:34:56.384Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:35:53.233Z"
           }
         },
         {
@@ -66255,6 +66271,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:34:58.709Z"
+          },
+          "ocrData": {
+            "textOnScreen": "This is...\nSHEBARA RESORT",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:02.275Z"
           }
         },
         {
@@ -66278,6 +66303,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:35:02.044Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:16.023Z"
           }
         }
       ]
@@ -104136,6 +104169,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:35:04.290Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: 2 minutes after\ntaking the viral Soursop\nBitters Detox",
+            "confidence": 0.857,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:27.312Z"
           }
         },
         {
@@ -104159,6 +104201,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:35:06.765Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Treat 60-\n3 minute professional\nSimi Valley, CA.\nminute\nmassage for/just\nwith muscle\ni simply,\ncustomized\nmassage sessions\ndesigned\nrbest.\ndealing\nstress, time\n6 massagelsessions are)\nBook massage today\nand give\ncare itideserves:",
+            "confidence": 0.833,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:36.681Z"
           }
         },
         {
@@ -104182,6 +104233,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:35:08.958Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Sanctuary Beach Resort\nhi everyone\nSanctuary, Beach Resort\nthe grounds arejso beautiful\nToasting s'mores by the beach\nbonfire at dusk\nToasting by the beach\n10 explore this\nfrom the\nbalcony\nTap the location tag\nthik spot you\nvisit",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:48.563Z"
           }
         }
       ]
@@ -117412,6 +117472,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:35:12.151Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:54.381Z"
           }
         }
       ]
@@ -171960,6 +172028,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T08:35:15.512Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-25T08:36:56.379Z"
           }
         }
       ]
