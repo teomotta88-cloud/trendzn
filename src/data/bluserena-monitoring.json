@@ -66334,6 +66334,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T13:40:39.360Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T13:43:06.021Z"
           }
         }
       ]
@@ -91706,6 +91714,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T13:40:42.375Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T13:43:12.828Z"
           }
         },
         {
@@ -91729,6 +91745,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T13:40:45.920Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-25T13:43:20.703Z"
           }
         }
       ]
@@ -143068,6 +143092,15 @@
             "reason": "spawnSync yt-dlp ETIMEDOUT",
             "version": 1,
             "updatedAt": "2026-09-25T13:42:45.926Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "spawnSync yt-dlp ETIMEDOUT",
+            "version": 3,
+            "updatedAt": "2026-09-25T13:45:20.709Z"
           }
         }
       ]
@@ -172152,6 +172185,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-25T13:42:50.250Z"
+          },
+          "ocrData": {
+            "textOnScreen": "escape.video and taratagcore\nat this amazing escape in New Zealand\nThis is Tarata Eco Retreat\nescape.video and tarataecoretreat gi 0:22\nHiddenin Waikato\nescape.video and\nIt's home to two incredible escapes\nThis luxury safari tent\nlarata lent",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-25T13:45:28.090Z"
           }
         }
       ]
