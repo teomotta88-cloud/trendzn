@@ -66531,7 +66531,36 @@
             "status": "ok",
             "version": 3,
             "updatedAt": "2026-09-26T05:04:04.012Z"
-          }
+          },
+          "sentimentData": {
+            "status": "ok",
+            "sentiment": "positive",
+            "topics": [
+              "pool",
+              "acqua",
+              "cielo",
+              "booking",
+              "vacanza"
+            ],
+            "location": null,
+            "confidence": 0.95,
+            "minConfidence": 0.6,
+            "sources": [
+              "caption",
+              "audio",
+              "ocr"
+            ],
+            "version": 1,
+            "updatedAt": "2026-09-26T05:05:23.987Z"
+          },
+          "sentiment": "positive",
+          "topics": [
+            "pool",
+            "acqua",
+            "cielo",
+            "booking",
+            "vacanza"
+          ]
         },
         {
           "platform": "tiktok",
