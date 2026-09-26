@@ -66647,6 +66647,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T15:15:45.705Z"
+          },
+          "ocrData": {
+            "textOnScreen": "BCE ecTb pycck",
+            "confidence": 0.775,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T15:16:20.692Z"
           }
         }
       ]
@@ -92241,6 +92250,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T15:15:48.492Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T15:16:27.227Z"
           }
         }
       ]
@@ -104942,6 +104959,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T15:15:51.333Z"
+          },
+          "ocrData": {
+            "textOnScreen": "We literally stayed from 10AM to 9PM\nPurple flag at the. beach and\nSupposedly bacteria\nin the bays, lakes, etc...",
+            "confidence": 0.825,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T15:16:35.117Z"
           }
         }
       ]
@@ -143920,6 +143946,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T15:15:53.644Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Fuerteventura",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T15:16:48.865Z"
           }
         },
         {
@@ -143943,6 +143978,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T15:15:59.853Z"
+          },
+          "ocrData": {
+            "textOnScreen": "JS HIJOS\n£2 RALEZA.",
+            "confidence": 0.741,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T15:17:05.977Z"
           }
         }
       ]
@@ -173186,6 +173230,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T15:16:02.393Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T15:17:28.086Z"
           }
         }
       ]
