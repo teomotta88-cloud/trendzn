@@ -31511,6 +31511,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:18.318Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“Me gustas pero eres surefia\nAy que locura\nAZTLAN EL\nlocur",
+            "confidence": 0.826,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:10:10.119Z"
           }
         }
       ]
@@ -77273,6 +77282,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:25.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Photos Map Street View Directions",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:10:20.715Z"
           }
         }
       ]
@@ -104814,6 +104832,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:31.868Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort di Buleleng Bali\ndengan Sauna View Sunrise",
+            "confidence": 0.828,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:10:29.334Z"
           }
         },
         {
@@ -104837,6 +104864,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:39.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PRIBADI",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:10:43.846Z"
           }
         }
       ]
@@ -118193,6 +118229,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:42.163Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:10:58.049Z"
           }
         }
       ]
@@ -143775,6 +143819,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:46.722Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KIOKTI Advent",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:11:06.169Z"
           }
         }
       ]
@@ -172986,6 +173039,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T10:09:59.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SO SEE A BUNCH OF PODS\nTHEN YOU SEE WHAT'S\nHAPPENING IN NEW DELHI, NEW\nLIKE A MAGNET IS",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T10:11:17.668Z"
           }
         }
       ]
