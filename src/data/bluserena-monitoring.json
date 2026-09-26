@@ -48374,6 +48374,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:04.442Z"
+          },
+          "ocrData": {
+            "textOnScreen": "doif 4 I",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:24:12.519Z"
           }
         }
       ]
@@ -66702,6 +66711,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:16.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": "fill",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:24:27.344Z"
           }
         }
       ]
@@ -77392,6 +77410,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:19.144Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:24:36.927Z"
           }
         }
       ]
@@ -105060,6 +105086,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:21.675Z"
+          },
+          "ocrData": {
+            "textOnScreen": "there's\na summer i\nou ntsville\n4 and getaway\naway\nwe need\nPOV: you're a mom trying to pian 1\nlast mer getaway-and you just\nnd destination",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:24:54.763Z"
           }
         }
       ]
@@ -118447,6 +118482,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:24.375Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:24:57.939Z"
           }
         }
       ]
@@ -144125,6 +144168,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:27.657Z"
+          },
+          "ocrData": {
+            "textOnScreen": "i JANKA RESORT",
+            "confidence": 0.739,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:25:26.091Z"
           }
         }
       ]
@@ -162803,6 +162855,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:32.326Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:25:33.767Z"
           }
         },
         {
@@ -162826,6 +162886,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:35.203Z"
+          },
+          "ocrData": {
+            "textOnScreen": "will cashapp anyone who can spell a girl\nname that start with A and end with A\nRemember to send me a direct message\nwith the correct answer\ncashapp anyone who can spell a girl\nDI name that start with A and end with A\nm Remember to send me a direct\n4 name that start with A and end with A\n1 will cashapp anyone who can spell a girl i\nname that start with A and end with A J",
+            "confidence": 0.892,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:25:42.161Z"
           }
         }
       ]
@@ -173445,6 +173514,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:53.100Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ì Temple",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:25:53.713Z"
           }
         },
         {
@@ -173468,6 +173546,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T20:23:56.339Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TARE",
+            "confidence": 0.732,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T20:26:21.299Z"
           }
         }
       ]
