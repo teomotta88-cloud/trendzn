@@ -55604,6 +55604,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:02.681Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Catifornia Sunset",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:03:34.215Z"
           }
         },
         {
@@ -55627,6 +55636,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:06.129Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:03:52.661Z"
           }
         }
       ]
@@ -66505,6 +66522,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:08.880Z"
+          },
+          "ocrData": {
+            "textOnScreen": "under a\nristine\nwith\nagli\n[modern\nopen sky¥set against",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:04:04.012Z"
           }
         },
         {
@@ -66528,6 +66554,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:11.472Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Shebera Island\nBECK.\nSAUDI ARABIA\nebera Isla",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:04:16.300Z"
           }
         }
       ]
@@ -77154,6 +77189,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:13.808Z"
+          },
+          "ocrData": {
+            "textOnScreen": "trip",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:04:35.142Z"
           }
         }
       ]
@@ -92049,6 +92093,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:16.290Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Niche",
+            "confidence": 0.758,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:05:00.995Z"
           }
         }
       ]
@@ -117988,6 +118041,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-26T05:03:18.613Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-26T05:05:12.596Z"
           }
         }
       ]
