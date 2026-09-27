@@ -66807,6 +66807,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T11:47:36.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T11:48:15.530Z"
           }
         }
       ]
@@ -105583,6 +105591,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T11:47:39.220Z"
+          },
+          "ocrData": {
+            "textOnScreen": "therapy.",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T11:48:46.359Z"
           }
         }
       ]
@@ -144846,6 +144863,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T11:47:43.571Z"
+          },
+          "ocrData": {
+            "textOnScreen": "nzny\nsing",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T11:49:01.368Z"
           }
         }
       ]
@@ -154087,6 +154113,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T11:47:47.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Infgbae\npara,",
+            "confidence": 0.743,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T11:49:21.544Z"
           }
         }
       ]
@@ -174302,6 +174337,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T11:47:54.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PERENNIALSIN WITH",
+            "confidence": 0.731,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T11:49:48.233Z"
           }
         }
       ]
