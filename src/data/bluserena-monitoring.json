@@ -48470,6 +48470,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:47:53.026Z"
+          },
+          "ocrData": {
+            "textOnScreen": "chap 136",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:49:05.354Z"
           }
         }
       ]
@@ -77686,6 +77695,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:00.417Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:49:09.647Z"
           }
         },
         {
@@ -77709,6 +77726,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:02.801Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:49:14.928Z"
           }
         },
         {
@@ -77732,6 +77757,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:07.155Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:49:20.803Z"
           }
         },
         {
@@ -77755,6 +77788,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:10.807Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:49:28.356Z"
           }
         }
       ]
@@ -119196,6 +119237,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:16.933Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Venuse Charles\nMAIN MENU",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:49:34.556Z"
           }
         }
       ]
@@ -130071,6 +130121,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:27.294Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:50:02.605Z"
           }
         },
         {
@@ -130094,6 +130152,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:29.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:50:09.228Z"
           }
         },
         {
@@ -130117,6 +130183,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:40.000Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Khu nght SERENA RESORT\nKim Hoa Binh i",
+            "confidence": 0.794,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:50:25.283Z"
           }
         }
       ]
@@ -145102,6 +145177,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:44.343Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:50:45.993Z"
           }
         },
         {
@@ -145125,6 +145208,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:47.103Z"
+          },
+          "ocrData": {
+            "textOnScreen": "how it felt watching zero\nday for the first time",
+            "confidence": 0.955,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:50:50.115Z"
           }
         },
         {
@@ -145148,6 +145240,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:49.130Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:50:54.816Z"
           }
         }
       ]
@@ -163921,6 +164021,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:51.558Z"
+          },
+          "ocrData": {
+            "textOnScreen": "“Room\nRoom Service,",
+            "confidence": 0.728,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:51:05.940Z"
           }
         }
       ]
@@ -174668,6 +174777,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T21:48:54.631Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SPECIAL ANNOUNCEMENT\nABOUT NORTHWEST\nMY QUESTIONS\nCHANCES IN\nWHICH YOU\nTHE SASQUATCH ROOM?\n{1 TAKE AN\nOPPORTUNITY AND",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T21:51:11.435Z"
           }
         }
       ]
