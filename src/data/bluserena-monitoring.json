@@ -118513,6 +118513,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T01:30:49.041Z"
+          },
+          "ocrData": {
+            "textOnScreen": "este desayuno\nSirenis\n#stopandbook",
+            "confidence": 0.751,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T01:31:11.781Z"
           }
         },
         {
@@ -118536,6 +118545,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T01:30:52.282Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-27T01:31:17.518Z"
           }
         }
       ]
@@ -144246,6 +144263,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-27T01:30:55.001Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Pantai jogja yg cocok\nuntuk nyore",
+            "confidence": 0.82,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-27T01:31:23.617Z"
           }
         }
       ]
