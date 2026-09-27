@@ -66798,7 +66798,16 @@
           "likes": 38500,
           "comments": 296,
           "shares": 2323,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I literally have this one hanging in my room. La Serissima, the Republic of Venice.",
+            "language": "Italian",
+            "durationSec": 21,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-27T11:47:36.300Z"
+          }
         }
       ]
     },
@@ -105565,7 +105574,16 @@
           "likes": 61,
           "comments": 1,
           "shares": 31,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 21,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-27T11:47:39.220Z"
+          }
         }
       ]
     },
@@ -144819,7 +144837,16 @@
           "likes": 405,
           "comments": 4,
           "shares": 64,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "la moncom i key lungo di un pinggir passi se si indietro di sandra ieri non lo so che c'è del opel in catamu",
+            "language": "Italian",
+            "durationSec": 26.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-27T11:47:43.571Z"
+          }
         }
       ]
     },
@@ -154051,7 +154078,16 @@
           "likes": 30600,
           "comments": 67,
           "shares": 505,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Vediamo in che costa Valentino Merno un milione di dollari e io ti posso aiutare con i prezzi, ma ti ascolto. Non si può donare, è l'unica condizione che abbiamo, dobbiamo smettere. Prenderei 200 che si vanno di vacanze i miei papi. Solo loro? Sì, solo. E' un amore. 200 lucca per che metta in vacanze? Sì. Ma con questo non lo vedo più, perché è molto caro. Può essere, non so. Beh, potete vivere un viaggio. Certo, un viaggio buono. Signor viaggio. Certo, il signor viaggio. Perfetto, pronto. Io credo... per me... Alfajores, 100% Alfajores, 100% Aspetta, aspetta, aspetta, aspetta 100 lucca su Alfajores? 100% sì Ma quanti Alfajores ti comprerai? Sono troppo, lo sto pensando No, ma aspetta... O una fabbrica Ma aspetta, vuoi la varietà di Alfajores o c'è una marca che ti piaccia? No, no, di tutti Ah, come se tu direi, ho 100 lucca su Alfajores Voi sapete quanto alfajore potete comprare qui? Uff, che buono! Questo ti pinta bellissimo, perché, ovviamente, ti hai dato il viaggio, comprate qualcosa, ma comprate 100.000 dollari in alfajore! E forse i miei papà mi portano... ...al viaggio! Ti felicito, sei ben attaccato!",
+            "language": "Italian",
+            "durationSec": 74,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-27T11:47:47.858Z"
+          }
         }
       ]
     },
@@ -174257,7 +174293,16 @@
           "likes": 32,
           "comments": 7,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "È ora di prendere alcune root in terra. Quindi, continuo con questo jardin di maneggiamento. E cosa faccio è plantare un sacco di annuali che potranno gestire questo soio sottile compattato. Ma anche questo, sono sorto plottando dove voglio che ci siano. Ovviamente, diggere hole in soio compattato può essere molto lavoro. Quindi, cosa faccio è praticamente pre-diggere i hole che verrò a mettere i miei perenniali con questi annuali. così, se lo faccio questa o l'anno prossimo, ho dei fori pre-duggiti che hanno un po' di piatto migliore e sono ammendati un po' e posso farli entrare. Quindi sto usando straccia di farina e status qui e mi piace come le cose cominciano a unire e a essere legate. Si può vedere che sono tutti piantati, alcuni stanno andando un po' triste ma, vedrai che si riportano di nuovo, ma sto plantando attorno a questo corso per creare una sorta di punto centrale di interesse visivo. La pietra di ferro in fronte sarà scoperta da persone che vedranno la pietra da strada e questo è il punto in cui le cose sono. Non vogliono che le cose vengano in cemento, quindi sto plantando un status più piccolo qui, così che rimanerebbe contenuto. Ma questo è l'ultimo update.",
+            "language": "Italian",
+            "durationSec": 79,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-27T11:47:54.300Z"
+          }
         }
       ]
     }
