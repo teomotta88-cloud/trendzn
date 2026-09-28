@@ -120062,6 +120062,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:33.271Z"
+          },
+          "ocrData": {
+            "textOnScreen": "so nice part.\nAnd go ina breeze\nAnd then",
+            "confidence": 0.786,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:09:45.374Z"
           }
         },
         {
@@ -120085,6 +120094,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:36.672Z"
+          },
+          "ocrData": {
+            "textOnScreen": "habita\ncgan tha\nhabitac do\nCuando te è\nhabitacion\nCuandolti t ntua",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:09:50.776Z"
           }
         },
         {
@@ -120108,6 +120126,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:40.686Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Superior Twin A\nUpto2pax 24m? Non-smoking\nBreakfast not included\nNon-refundable $200\nBest for couple Lowest for this hotel on\nBook\nBreakfast included\nNon-refundable\nTikTok exclusive promo\nFASILITASNYA\nLENGKAP\nAMPA",
+            "confidence": 0.864,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:09:57.186Z"
           }
         },
         {
@@ -120131,6 +120158,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:45.711Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:10:06.023Z"
           }
         },
         {
@@ -120154,6 +120189,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:50.458Z"
+          },
+          "ocrData": {
+            "textOnScreen": "bags! ena",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:10:16.324Z"
           }
         }
       ]
@@ -131123,6 +131167,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:53.391Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:10:24.327Z"
           }
         },
         {
@@ -131146,6 +131198,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:56.349Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:10:47.417Z"
           }
         },
         {
@@ -131169,6 +131229,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:02:59.118Z"
+          },
+          "ocrData": {
+            "textOnScreen": "è looks like A\nè wedding looks|\nmy coastal wedding looks like\n7 looks like",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:11:10.220Z"
           }
         },
         {
@@ -131192,6 +131261,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:02.540Z"
+          },
+          "ocrData": {
+            "textOnScreen": "greet\ngood",
+            "confidence": 0.782,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:11:29.542Z"
           }
         },
         {
@@ -131215,6 +131293,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:05.326Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:11:37.415Z"
           }
         }
       ]
@@ -146294,6 +146380,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:21.675Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:11:46.353Z"
           }
         },
         {
@@ -146317,6 +146411,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:24.726Z"
+          },
+          "ocrData": {
+            "textOnScreen": "sun mo, tue wed thur fr at\nJuly\nsun mor tue wed thur fr\nsun mor tue wed thur fr at\nsun mor tue wed thur fr 1",
+            "confidence": 0.865,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:11:51.388Z"
           }
         }
       ]
@@ -155590,6 +155693,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:27.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pusClip\nOpusClip\nHARD IT\nAREYOU\nREDECORATING\nusClip\nIT'S HILARIOUS",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:11:58.547Z"
           }
         }
       ]
@@ -165145,6 +165257,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:30.517Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SPA: vasca ldro, sauna,\nstanza del ghiaccio,\nBagno turco, docce emozionali.\nMASSAGGI TRATTAMENTI\nTREATMENTS\nRELAX SVEDESE\nMASSAGGIO RIMOZIONE\nCERA\nRistorante.",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:12:18.147Z"
           }
         },
         {
@@ -165168,6 +165289,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:33.714Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Batt Regency\nHyatt Re gency Hu\nBeac 2\nbelow to make a booking",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:12:30.632Z"
           }
         }
       ]
@@ -175947,6 +176077,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:40.284Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:12:48.941Z"
           }
         },
         {
@@ -175970,6 +176108,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T03:03:43.886Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T03:12:53.078Z"
           }
         }
       ]
