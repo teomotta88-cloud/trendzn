@@ -48493,7 +48493,16 @@
           "likes": 7106,
           "comments": 98,
           "shares": 117,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 17.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:00:37.281Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -48507,7 +48516,16 @@
           "likes": 45,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I don't know where to start, but to show you the shape of my heart. I'm looking back on things I've done, I never wanna play the same old part. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 37.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:00:41.971Z"
+          }
         }
       ]
     },
@@ -55846,7 +55864,16 @@
           "likes": 89,
           "comments": 3,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 189.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:00:48.373Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -55860,7 +55887,16 @@
           "likes": 291,
           "comments": 14,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi chiamo Jasmine, sono da Los Angeles, California. Cosa faccio per lavoro? Sono in tecnologia di informazione di salute, quindi faccio informazioni di pazienti, con ospedali e dottori, per farci pagare. Mi sono venuta in viaggio, ho voluto andare a Santa Barbara, ho scoperto che non potevo e sono stata in grado di andare. È come una graduazione per me stessa. Sono felice di essere arrivata, perché abbiamo avuto un buon giorno.",
+            "language": "Italian",
+            "durationSec": 23.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:00:51.635Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -55874,7 +55910,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Se vuoi divertirti con l'ingresso e con il frigo, solo hai che vivere un verano a Nueva York.",
+            "language": "Italian",
+            "durationSec": 17.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:00:54.676Z"
+          }
         }
       ]
     },
@@ -66931,7 +66976,16 @@
           "likes": 14,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:00:59.207Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66945,7 +66999,16 @@
           "likes": 332,
           "comments": 11,
           "shares": 105,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Ciao Ciao",
+            "language": "Italian",
+            "durationSec": 60.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:03.153Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66959,7 +67022,16 @@
           "likes": 74,
           "comments": 19,
           "shares": 45,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 26.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:06.071Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66973,7 +67045,16 @@
           "likes": 30,
           "comments": 2,
           "shares": 7,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:11.150Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -66987,7 +67068,16 @@
           "likes": 84,
           "comments": 1,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 30.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:14.355Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -67001,7 +67091,16 @@
           "likes": 139,
           "comments": 5,
           "shares": 24,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:19.697Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -67015,7 +67114,16 @@
           "likes": 271,
           "comments": 9,
           "shares": 65,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 18.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:22.465Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -67029,7 +67137,16 @@
           "likes": 27,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 23.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:25.355Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -67043,7 +67160,16 @@
           "likes": 103,
           "comments": 1,
           "shares": 27,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "POV, nemmuin penginapan ala negridongeng di Chiwidei Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:28.646Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -67057,7 +67183,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo tutti in grado di farlo. Scrolliamo le foto perfette di vacanza e aspettiamo che la natura adatti ai nostri filtri. Ma poi arriviamo alla riviera Maya, vediamo un po' di seme sulla piazza e, in un momento, la tutta la viaggia è rovinata. Mentre le persone stanno mollendo di la natura essere inconveniente, le stanno lasciando l'apprezzamento blindare a ciò che c'è davanti a loro. Perché a Gran Sirenas la seme è solo una piccola parte di una storia molto più grande, molto più bella. Stai a destra di centinaia di acere di giunglo indossato, a massive vibrant ecosystem that's been here forever when we focus on the seaweed we miss the ancient trees the wildlife and the raw energy of the wild don't let a little nature stop you from seeing the vast beauty right in front of you shift your perspective the jungle is waiting are you",
+            "language": "Italian",
+            "durationSec": 43.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:32.249Z"
+          }
         }
       ]
     },
@@ -78020,7 +78155,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:35.611Z"
+          }
         }
       ]
     },
@@ -93124,7 +93268,16 @@
           "likes": 100,
           "comments": 3,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 19.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:38.553Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93138,7 +93291,16 @@
           "likes": 11,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 92.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:42.890Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93152,7 +93314,16 @@
           "likes": 118,
           "comments": 14,
           "shares": 39,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nostro corso gratuito è www.mesmerism.info Autore dei sottotitoli e revisione a cura di QTSS",
+            "language": "Italian",
+            "durationSec": 38.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:48.858Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93166,7 +93337,16 @@
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao a tutti, benvenuti a Collective Retreats su Governors Island. Questa è la nostra bellissima cabina di glampi. All'interno è così cosi e stilistica, e guardate questa incredibile vista di harbour. Un perfetto posto per una selfie.",
+            "language": "Italian",
+            "durationSec": 20.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:51.994Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93180,7 +93360,16 @@
           "likes": 7,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 55.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:01:55.491Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -93194,7 +93383,16 @@
           "likes": 5027,
           "comments": 38,
           "shares": 1003,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 53.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:02:09.249Z"
+          }
         }
       ]
     },
@@ -106078,7 +106276,16 @@
           "likes": 359,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:02:13.285Z"
+          }
         }
       ]
     },
@@ -119582,7 +119789,16 @@
           "likes": 1535,
           "comments": 78,
           "shares": 776,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 21.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:02:17.006Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -119596,7 +119812,16 @@
           "likes": 42,
           "comments": 12,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il 6 di agosto, ho provato ad adottare questo gatto in strada. È tutto malato, si sente tutte le cascarine. Ho capito che mi lasciasse aggariciarlo, ma a volte mi rascoglie. Ancora non mi confida. Oh no, tranquillo! Anche non mi confida del cellulare. Questo fu la sera, poi mi sono andata, gli ho lasciato il suo spazio e sono tornata a notte. Si è lasciato freddo molto e è apparito nel patio della mia casa ancora una volta. E era mojato. Ciao, mio amore! Gli ho offrito pollo, come sempre. E anche se ha molta disconfianza, il pollo sempre lo può. Non ho voglia di sequestrarlo. Come un pezzetto e si va corriendo alla porta. Vuelve, come un altro pezzetto e si va corriendo. Per ora solo viene per interesse. Mi miò il sillone, mi muoio. Mi ha messo il pis in tutti i lati, ma voi mi dicevate che è una buona segnale. Mi miò tutta la casa. Lo buono di questo giorno è che si è animato a esplorare la mia casa. Poi si è restato 10 minuti accostato qui dentro e io non lo potevo credere. Grazie.",
+            "language": "Italian",
+            "durationSec": 60.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T03:02:24.145Z"
+          }
         },
         {
           "platform": "tiktok",
