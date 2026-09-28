@@ -67766,6 +67766,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T23:43:59.703Z"
+          },
+          "ocrData": {
+            "textOnScreen": "«this no wifi\nMA no wifi\n“this",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T23:44:46.176Z"
           }
         }
       ]
@@ -120947,6 +120956,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T23:44:05.302Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HADDAL\nSHAD DAT:",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T23:45:03.393Z"
           }
         }
       ]
@@ -132105,6 +132123,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T23:44:11.508Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A Minecrafi Movie\nKamar Superior Twin A\nMaksimum 2 pax 24 m2\nTidak termasuk\nsarapan 476% Rp786.301\nDana tidak bisa Terendah untuk hotel ini di TikTok\ndikembalikan\nTerbaik untuk\npasanaan\nHOTE",
+            "confidence": 0.817,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T23:45:17.467Z"
           }
         }
       ]
