@@ -56204,6 +56204,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:29.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:25:44.328Z"
           }
         },
         {
@@ -56227,6 +56235,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:32.630Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:25:52.216Z"
           }
         }
       ]
@@ -93946,6 +93962,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:35.396Z"
+          },
+          "ocrData": {
+            "textOnScreen": "OrauAsthana View\nThe Best Place Fri endl\nOrau/Asthdna View\nThe Best\nOrau Ww\nThe Best Place Friend!)",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:26:17.070Z"
           }
         }
       ]
@@ -106870,6 +106895,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:37.867Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: The best vacation days start\nwith breakfast and end at the sp\ncation days star\ndays staff\nbreakfast spa.",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:26:25.772Z"
           }
         }
       ]
@@ -120732,6 +120766,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:42.940Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:26:29.788Z"
           }
         },
         {
@@ -120755,6 +120797,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:45.607Z"
+          },
+          "ocrData": {
+            "textOnScreen": "direct.\nPlus.",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:26:39.693Z"
           }
         }
       ]
@@ -147064,6 +147115,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:52.355Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:26:58.150Z"
           }
         },
         {
@@ -147087,6 +147146,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:54.996Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Spend your day where\ndoes its talking:\nA palm Resort\ntsiti\nAUTO\ndgreenery. More peace.\n‘Mo ‘e reagon to visit.",
+            "confidence": 0.776,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:27:18.071Z"
           }
         },
         {
@@ -147110,6 +147178,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:57.664Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:27:24.743Z"
           }
         }
       ]
@@ -156415,6 +156491,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:24:59.935Z"
+          },
+          "ocrData": {
+            "textOnScreen": "My family after one spray:",
+            "confidence": 0.869,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:27:29.604Z"
           }
         },
         {
@@ -156438,6 +156523,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:25:02.554Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino\n[ROY with",
+            "confidence": 0.749,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:27:36.605Z"
           }
         },
         {
@@ -156461,6 +156555,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:25:07.504Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino\nofifragrances\nValentino Beauty Partner\nValentino Beauty Paftner\nBornlin Roma, 4\nValentino Beauty Partner, i\nValentino Beauty\nVALENTINO VALENTINO",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:27:49.296Z"
           }
         }
       ]
@@ -166080,6 +166183,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-28T13:25:10.138Z"
+          },
+          "ocrData": {
+            "textOnScreen": "My overgrown spoiled A$$ when\nsomething not going my way",
+            "confidence": 0.855,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T13:27:58.521Z"
           }
         }
       ]
