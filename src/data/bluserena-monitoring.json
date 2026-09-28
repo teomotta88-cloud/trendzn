@@ -67125,7 +67125,19 @@
             "cielo",
             "booking",
             "vacanza"
-          ]
+          ],
+          "engagementData": {
+            "status": "ok",
+            "source": "tiktok-page",
+            "caption": "A vibrant poolside resort under a clear blue sky, with pristine turquoise water.",
+            "views": 18,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "version": 3,
+            "updatedAt": "2026-09-28T09:21:31.251Z",
+            "applied": []
+          }
         },
         {
           "platform": "tiktok",
