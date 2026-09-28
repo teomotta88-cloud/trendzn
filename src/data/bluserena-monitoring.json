@@ -67757,7 +67757,16 @@
           "likes": 21,
           "comments": 0,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T23:43:59.703Z"
+          }
         }
       ]
     },
@@ -120929,7 +120938,16 @@
           "likes": 1304,
           "comments": 17,
           "shares": 50,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "è l'ara del fierti o come grazie all'or l'ontre speculare triomfale della maria e ne passeremo e le chaperonné passato a far sì tutta la fierté del suo modo Mesdames e messieurs, des acclamations pour ce moment unique Unique ce moment Unique ce moment Unique ce moment Très bien Mesdames et messieurs, regardez papa, il n'a pas arrêté",
+            "language": "Italian",
+            "durationSec": 48.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T23:44:05.302Z"
+          }
         }
       ]
     },
@@ -132078,7 +132096,16 @@
           "likes": 8,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sì, ho appena capito che 10 minuti dal centro della città c'è un resort semi ala Bali che ha un prezzo molto rilevante. Il nome è Umayah Hotel. Booking è più rilevante attraverso il tag di video di video per ottenere promo e discount aggiuntivi. Questo hotel è buono per solo trip o con la famiglia. la chiesa è comoda e ampia la facilità è completa e c'è Smart TV l'ambiente e la visione sono molto Bali questo hotel è molto adatto per la referenza di te quando sei in Solo guarda il mio video e non dimentica di seguire le raccomandazioni di altri hotel",
+            "language": "Italian",
+            "durationSec": 42.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-28T23:44:11.508Z"
+          }
         }
       ]
     },
