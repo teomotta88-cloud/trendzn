@@ -31566,7 +31566,15 @@
           "likes": 976,
           "comments": 27,
           "shares": 165,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:17:04.956Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31580,7 +31588,15 @@
           "likes": 48,
           "comments": 2,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:17:21.220Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31594,7 +31610,15 @@
           "likes": 1,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:17:23.790Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31608,7 +31632,15 @@
           "likes": 115,
           "comments": 4,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:17:26.037Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31622,7 +31654,15 @@
           "likes": 10,
           "comments": 0,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:17:27.983Z"
+          }
         }
       ]
     },
@@ -48627,7 +48667,16 @@
           "likes": 49200,
           "comments": 310,
           "shares": 520,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "of all the evil things serena\ndid to blair, this was the\nWORST\nSAVE JQ",
+            "confidence": 0.901,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:17:37.733Z"
+          }
         }
       ]
     },
@@ -56061,7 +56110,15 @@
           "likes": 163,
           "comments": 5,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:18:28.886Z"
+          }
         }
       ]
     },
@@ -67436,7 +67493,16 @@
           "likes": 18200,
           "comments": 185,
           "shares": 8652,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Î opesan\nLopesan\ni REPUBLICA\nLopesan Caoba Lagoon\nLagoon\nREPUBEICA",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:18:49.440Z"
+          }
         }
       ]
     },
@@ -93710,7 +93776,15 @@
           "likes": 11,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:18:59.194Z"
+          }
         }
       ]
     },
@@ -120338,7 +120412,15 @@
           "likes": 96,
           "comments": 9,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:19:09.627Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -120352,7 +120434,16 @@
           "likes": 3694,
           "comments": 32,
           "shares": 442,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "Korpa\nBUOOM:\nMOMEHTA, e",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:19:25.706Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -120366,7 +120457,16 @@
           "likes": 107,
           "comments": 10,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "MPALA ENA\nSERENA\n1 HOTEL\nsugar\nMPALA SERENA\nKampala, Ug",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:19:37.145Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -120380,7 +120480,15 @@
           "likes": 3883,
           "comments": 70,
           "shares": 163,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:19:52.775Z"
+          }
         }
       ]
     },
@@ -131497,7 +131605,16 @@
           "likes": 18,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "coron palawan\nbaiaserena r\nPIPE i",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:20:33.927Z"
+          }
         }
       ]
     },
@@ -146630,7 +146747,16 @@
           "likes": 369,
           "comments": 22,
           "shares": 16,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": "IKINI LATORIITE\nHRM, Oba James Adelusi Aladesuru II, the Onigede of Igede-Ekiti\nHRM, Oba James Adelusi Aladesuru II, the Onigede of Igede-Ekiti A\ncheo A\nHRM, Oba James AdelusiAladesuru II, the Onigede of Igede-Ekiti 7",
+            "confidence": 0.846,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:20:44.661Z"
+          }
         }
       ]
     },
@@ -176340,7 +176466,15 @@
           "likes": 5,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-28T08:20:48.564Z"
+          }
         }
       ]
     }
