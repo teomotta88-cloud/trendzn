@@ -94372,6 +94372,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T15:05:11.197Z"
+          },
+          "ocrData": {
+            "textOnScreen": "CapCut",
+            "confidence": 0.752,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T15:05:48.437Z"
           }
         }
       ]
@@ -107391,6 +107400,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T15:05:13.464Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TS213JB\nNorth East\nr Countryside getaway NN\nwith private hot tub\nawaits\nCheck availability\nLinkin Bio",
+            "confidence": 0.788,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T15:06:00.009Z"
           }
         },
         {
@@ -107414,6 +107432,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T15:05:20.882Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T15:06:20.863Z"
           }
         }
       ]
@@ -148005,6 +148031,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T15:05:23.538Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T15:06:34.613Z"
           }
         }
       ]
