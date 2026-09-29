@@ -94363,7 +94363,16 @@
           "likes": 76,
           "comments": 2,
           "shares": 31,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T15:05:11.197Z"
+          }
         }
       ]
     },
@@ -107373,7 +107382,16 @@
           "likes": 51,
           "comments": 2,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T15:05:13.464Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -107387,7 +107405,16 @@
           "likes": 1979,
           "comments": 17,
           "shares": 391,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 27.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T15:05:20.882Z"
+          }
         }
       ]
     },
@@ -147969,7 +147996,16 @@
           "likes": 48,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T15:05:23.538Z"
+          }
         }
       ]
     },
