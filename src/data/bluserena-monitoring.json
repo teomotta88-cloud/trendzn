@@ -48744,7 +48744,16 @@
           "likes": 81,
           "comments": 3,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho visto che Serena ha postato che non è un show con le sue sensazioni. Può essere un teatro per voi, ma non è così per noi. Voi già sapete che sto dietro a Jhene e credo che lo sia. Lo sapete chi parla. Ho visto che Leah ha postato questo screenshot di un messaggio dove ha messo qualcuno dicendo che questo è il mese dei Cloud Chasers, penso. e come molto come vorremmo sapere come i dettagli qualsiasi il t sono sbagliato sereno come sono molto empatica verso janae però come mi sento completamente per lei sono interruppe ho solo vissuto uno dopo cinque anni e non è mai facile, mi sento qui I will be watching Waiting And Cordell If you want to say anything We know We know how you You know Say what you want to say Get it off your chest",
+            "language": "Italian",
+            "durationSec": 61.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T20:10:16.766Z"
+          }
         }
       ]
     },
@@ -94409,7 +94418,16 @@
           "likes": 100200,
           "comments": 485,
           "shares": 9677,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 35.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T20:10:19.488Z"
+          }
         }
       ]
     },
@@ -178191,7 +178209,17 @@
           "likes": 8478,
           "comments": 761,
           "shares": 2484,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: \r[download] Got error: HTTP Error 530: Too Many Requests. Giving up after 3 retries",
+            "version": 1,
+            "updatedAt": "2026-09-29T20:10:22.652Z"
+          }
         }
       ]
     }
