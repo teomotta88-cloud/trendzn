@@ -56298,6 +56298,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:18.677Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Vika 1",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:50:56.714Z"
           }
         }
       ]
@@ -107077,6 +107086,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:21.192Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:51:10.005Z"
           }
         }
       ]
@@ -121034,6 +121051,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:23.259Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:51:20.112Z"
           }
         }
       ]
@@ -132224,6 +132249,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:27.954Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Resort",
+            "confidence": 0.735,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:51:43.106Z"
           }
         }
       ]
@@ -147524,6 +147558,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:32.479Z"
+          },
+          "ocrData": {
+            "textOnScreen": "daysin gl\n3 INNS",
+            "confidence": 0.737,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:52:05.259Z"
           }
         },
         {
@@ -147547,6 +147590,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:35.448Z"
+          },
+          "ocrData": {
+            "textOnScreen": "viajar\nincreible",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:52:12.450Z"
           }
         }
       ]
@@ -177584,6 +177636,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T04:50:38.490Z"
+          },
+          "ocrData": {
+            "textOnScreen": "365 DAYS OF IT\nWITH TAIWO\nStores data\nserver is a computer or\nprovides services, data, or resources to\nother computers, known as clients. Hosts websites\nand applications\nTHINK OF IT LIKE A WAITER O Manages\nemails\nresources and\nback to you Keeps systems\n~J running 24/7\nserver works in a similar way.\nYour device sends a request, the server processes it\nand sends back the information you need.\nHow WITHOUT SERVERS...\nCLIENT (YOUR DEVICE) SERVER\nWebsites wouldn't load,\n‘emails wouldn't send,\napps wouldn't work,\n‘Sends a request Server processes the request and the internet as\nopen a website and sends back the information we know it wouldn't exist.\nie on Netflix\n@system that\ndata;\n(eg. Google, and stores emails software gi\ncomputers, known:as\nSERVERS ARE THE BACKBONE They work 24/7 to make sure One concept every day.\nOF THE INTERNET AND you get the information and 365 Days of IT with Taiwo.\nMODERN TECHNOLOGY. services you need. Making IT simple,\none day at a time.\nB Comment Share\nSystem Engineer save for later\nserver is a computer or system that and files\ni Hosts websites\nother computers, known as clients. and applications\nTHINK OF IT LIKE A WAITER all Manages\nJE Provides\nE services\nThe waiter\nanorder to you Keeps systems\nYour device sends a request, the server processes it Li\n(eg. open a website) and sends back the information we know it wouldn't exist.\nTYPES OF SERVERS (EXAMPLES)\nwaiter\na movie on\ntakes it'to and:\nserver\nHosts websites Sends a, at Ping on a website\nAmazon)\nGmail) documents) All rely on servers!\nother computers, known as clients. websites\nOF IT LIKE A WAITER al\nfi 7 emails\nit back to you Keeps systems\nserver works in a similar way. running 2477\nWITHOUT SERVERS...\ne Websites wouldn't load,\nway. device ust\nY V 1g your email\nHosts website pà vebsite\nthe information you J\nMODERN TECHNOLOGY. Making IT simple,\nPB. Comment Share\nother computers, known as clients. vid I è and applications\nTHINK OF IT LIKE A WAITER sl Manages\nit back to you 3 Keeps systems\nA serv",
+            "confidence": 0.89,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T04:52:51.333Z"
           }
         }
       ]
