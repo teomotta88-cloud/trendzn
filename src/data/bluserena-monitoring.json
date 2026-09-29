@@ -48753,6 +48753,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T20:10:16.766Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serena speaksjoutiand\nLeah posts once more\nserenaapagee\nremember this is not a show\nand someones actual feelings. It may\njust be tea for yall but thats not the\ncase for us\nSerena speaksioutiand\nLeah postsionce more\nCopy 8\nNI Send message.\nSerena\nLeah posts once",
+            "confidence": 0.886,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T20:10:36.875Z"
           }
         }
       ]
@@ -94427,6 +94436,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T20:10:19.488Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Jamal Musial loses consciousness\nJamal Musial loses consciousness 3",
+            "confidence": 0.912,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T20:10:40.304Z"
           }
         }
       ]
@@ -178219,6 +178237,15 @@
             "reason": "yt-dlp exit 1: ERROR: \r[download] Got error: HTTP Error 530: Too Many Requests. Giving up after 3 retries",
             "version": 1,
             "updatedAt": "2026-09-29T20:10:22.652Z"
+          },
+          "ocrData": {
+            "textOnScreen": "THEY COULD\nNOT EVEN\nThe Girmitiyas\nGIRMITIYAS i\nTHEY WERE\nEXPLOITED\nOVERWORKED",
+            "confidence": 0.847,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T20:10:48.320Z"
           }
         }
       ]
