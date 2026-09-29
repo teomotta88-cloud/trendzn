@@ -67830,6 +67830,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:03.992Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T09:58:49.241Z"
           }
         }
       ]
@@ -94176,6 +94184,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:07.138Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T09:59:11.498Z"
           }
         },
         {
@@ -94199,6 +94215,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:10.909Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T09:59:17.009Z"
           }
         },
         {
@@ -94222,6 +94246,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:13.227Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T09:59:44.017Z"
           }
         },
         {
@@ -94245,6 +94277,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:18.871Z"
+          },
+          "ocrData": {
+            "textOnScreen": "koora",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T09:59:50.548Z"
           }
         },
         {
@@ -94268,6 +94309,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:21.606Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Jamal Musial loses consciousness and Sibari intervenes",
+            "confidence": 0.9,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T09:59:54.719Z"
           }
         },
         {
@@ -94291,6 +94341,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:26.466Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T10:00:04.541Z"
           }
         }
       ]
@@ -107278,6 +107336,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:28.874Z"
+          },
+          "ocrData": {
+            "textOnScreen": "A Private\nalows\nDitch Caribbean flights\nprivate\nBungalows]\nResort\nWith\nWatersports",
+            "confidence": 0.759,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T10:00:22.932Z"
           }
         }
       ]
@@ -147806,6 +147873,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:30.697Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Breaking news:\nA get to play\nBreaking news: in rdr3 we\nget to play as Davey\nplay as Davey",
+            "confidence": 0.91,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T10:00:28.650Z"
           }
         },
         {
@@ -147829,6 +147905,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:33.015Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-29T10:00:35.236Z"
           }
         }
       ]
@@ -157230,6 +157314,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:35.281Z"
+          },
+          "ocrData": {
+            "textOnScreen": "PRIVATEEVENT,\nBEAUTIFUL SPACES\nCELEBRATE AT",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T10:00:41.080Z"
           }
         }
       ]
@@ -167008,6 +167101,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-29T09:58:37.728Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Baecation Recap\nA Mini\"",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-29T10:00:46.976Z"
           }
         }
       ]
