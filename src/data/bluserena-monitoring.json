@@ -56289,7 +56289,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 38.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:18.677Z"
+          }
         }
       ]
     },
@@ -107059,7 +107068,16 @@
           "likes": 82,
           "comments": 8,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:21.192Z"
+          }
         }
       ]
     },
@@ -121007,7 +121025,16 @@
           "likes": 4388,
           "comments": 29,
           "shares": 49,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:23.259Z"
+          }
         }
       ]
     },
@@ -132188,7 +132215,16 @@
           "likes": 16,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "musica",
+            "language": "Italian",
+            "durationSec": 17,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:27.954Z"
+          }
         }
       ]
     },
@@ -147479,7 +147515,16 @@
           "likes": 158,
           "comments": 10,
           "shares": 172,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:32.479Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -147493,7 +147538,16 @@
           "likes": 3252,
           "comments": 19,
           "shares": 1186,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sono arrivata a questo bellissimo luogo per solo 60 boliviani Volevo sconfiggermi un po' Quindi abbiamo deciso di viaggiare con mio amico a questo bellissimo hotel Mi è sorprendente quanto era grande la cama Quanto era comoda E il livello di dettagli che aveva questo hotel Potevamo divertirci dalla piscina Aveva un buffet incredibile Potevamo vivere l'esperienza di fare la calla Il quale al principio mi moriva di paura E poi fu divertitissimo Ho approfittato di fare un po' di bottiglie all'attardissima Era pieno di pescine di capybara Definitivamente questo sarà il mio scappo sicuro della città E voi? Venirete qui?",
+            "language": "Italian",
+            "durationSec": 26.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:35.448Z"
+          }
         }
       ]
     },
@@ -177521,7 +177575,16 @@
           "likes": 74,
           "comments": 5,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Un server è un computer o un sistema che offre servizi, data o risorse a altri computer, conosciuti come clienti. Pensate a un waiter in un ristorante. Poi mettete un ordine, il waiter lo prende nella cucina e vi porta il vostro cibo. Un server funziona in un modo simile. Il vostro dispositivo sende un richiesto e il server lo processa e vi sende la informazione che avete bisogno. i server possono hostare siti web, store file, gestire email, gestire applicazioni e molto più. Senza i server, l'internet e molti sistemi di business semplicemente non funzionerebbero. Un concetto ogni giorno, 365 giorni di IT con Taiwo, facendolo semplice, un giorno alla volta.",
+            "language": "Italian",
+            "durationSec": 48.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-29T04:50:38.490Z"
+          }
         }
       ]
     }
