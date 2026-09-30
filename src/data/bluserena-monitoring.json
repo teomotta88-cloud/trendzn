@@ -32312,6 +32312,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:11.279Z"
+          },
+          "ocrData": {
+            "textOnScreen": "creen nos\n4 Comolcreen nos reimos\nComo\nnos reimos",
+            "confidence": 0.75,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:26:59.746Z"
           }
         },
         {
@@ -32335,6 +32344,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:17.003Z"
+          },
+          "ocrData": {
+            "textOnScreen": "rauchkammer 100% 250 atts\npasense esto es un extreme\nFix Craviry Buc BY\nlo unico dificil es la nave invertida w\ncon las fisicas de la\nultimo 10% del 7. ‘gu\nwave si no fuera por eso esta ho\ncosa\nseria insane demon\nlo unico dificil es la nave invertida\ncon las fisicas de la 2.2 y el\nultimo 10% del 1 A ry\nwave si no fuera por eso esta\npasense\nwave si no fuera por eso esta DEPRESSIONI fhe\ngratis\nlo unico dificil es la nave invertida a\nultimo 10% del gu\nwave si no fuera por eso esta wm\ncosa d\ngratis BY\ncon las fisicas de la 2.2 y el È È\nwave si no fuera por eso esta DEPRESSION? A",
+            "confidence": 0.862,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:27:13.323Z"
           }
         }
       ]
@@ -57149,6 +57167,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:19.442Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:27:29.857Z"
           }
         }
       ]
@@ -68767,6 +68793,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:24.081Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Agentie de\nCU ZBOR PE 2\n7 Agentie de turism\nAgentie de turisi 4",
+            "confidence": 0.772,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:27:45.769Z"
           }
         },
         {
@@ -68790,6 +68825,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:27.890Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:28:01.823Z"
           }
         }
       ]
@@ -79890,6 +79933,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:32.942Z"
+          },
+          "ocrData": {
+            "textOnScreen": "contact person\ncontact",
+            "confidence": 0.808,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:28:10.352Z"
           }
         }
       ]
@@ -95695,6 +95747,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:36.148Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:28:24.141Z"
           }
         }
       ]
@@ -123179,6 +123239,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:38.383Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:28:29.283Z"
           }
         }
       ]
@@ -150038,6 +150106,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:41.890Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:28:47.549Z"
           }
         },
         {
@@ -150061,6 +150137,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T14:26:45.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ther ts\nOlongapo\nadult and kiddie pool gh\ncall e\nemail collectivelaya@gmail.com",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T14:28:58.983Z"
           }
         }
       ]
