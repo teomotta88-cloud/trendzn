@@ -148706,7 +148706,16 @@
           "likes": 17,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 27.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T01:20:25.118Z"
+          }
         }
       ]
     },
@@ -158130,7 +158139,16 @@
           "likes": 7,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Outro",
+            "language": "Italian",
+            "durationSec": 19.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T01:20:27.628Z"
+          }
         }
       ]
     },
@@ -167931,7 +167949,16 @@
           "likes": 600,
           "comments": 34,
           "shares": 73,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "La tour di Kalahari ci ha migliorato, vediamo come è Questo è enorme È così grande! Uno sedere, cosa altro? Badone, sede, badone, due sedi più E poi abbiamo un'altra stanza Balcony! E ancora una volta Siamo ricchi Guarda tutto questo spazio Guarda la vista Poconos",
+            "language": "Italian",
+            "durationSec": 33.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T01:20:30.573Z"
+          }
         }
       ]
     },
@@ -178891,7 +178918,16 @@
           "likes": 6,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Alla fine della notizia, tutti stavano affascinati. Cosa c'è con Bitcoin? Beh, qui vai. Ha postato di nuovo. Bitcoin sarà anche parte di questo. Abbiamo cercato di raccontare ai persone, da 2020, cosa sta accadendo nel sistema finanziario. Vi consiglio di tornare ai miei video dal 2020 e guardarli tutto il tempo. Vi ho detto, ragazzi, che questa è tutta la parte del gioco. Le ultime quattro settimane sono tutte manipolazioni per raggiungere i prezzi aspettando questi tipi di annunci. Il gioco è stato rigato. 100% del tempo si usavano a clippare le nostre coin in quei giorni il sistema è sempre stato lo stesso e fino a quando puoi rimanere stoico fino a quando puoi prendere il centro di gioco e capire cosa sta succedendo sarai parte del sistema vai a scuola, prendi un lavoro prendi un 401k, tradi tempo per il dinero quando inizi a imparare che la nuova infrastruttura sta cambiando e puoi comprare un pezzo di questo cambierai la vita della tua famiglia per sempre",
+            "language": "Italian",
+            "durationSec": 56,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T01:20:34.298Z"
+          }
         }
       ]
     }
