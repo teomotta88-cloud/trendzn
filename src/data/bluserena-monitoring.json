@@ -168799,7 +168799,16 @@
           "likes": 192,
           "comments": 10,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I can feel it coming in the end of night",
+            "language": "Italian",
+            "durationSec": 4.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:36.137Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -168813,7 +168822,17 @@
           "likes": 8,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7665954027758275853: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:37.180Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -168827,7 +168846,16 @@
           "likes": 62,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Simuga Africa Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 36.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:40.075Z"
+          }
         }
       ]
     },
@@ -179819,7 +179847,16 @@
           "likes": 105,
           "comments": 27,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "le esperienze di tutte e tutti le retreats delle donne sono assolutamente fenomenali a base di dove sei nella viaggia di rinascita ma vi racconto due principali motivi per cui la nostra retreat di rinascita di Feral Femme è il prossimo livello la retreat di rinascita di Feral Femme non è solo un altro retreat di amore, luce, pazza e benedizione ma ancora una volta c'è un tempo e un posto da cui sono stata in tanti, sono fucking incredibili ma il nostro retreat specifico, il retreat di Feral Femme, è disegnato per le donne che sono in questa parte della loro viaggia di rinascita dove hanno fatto questo, abbiamo fatto il amore e la luce, abbiamo incrociato la pace, abbiamo regolato noi stessi, ma ora siamo pronti a purgere il passato, siamo pronti a disintegrare queste antiche identità di chi non siamo e a full step into the woman that we are. At our retreats, Feral Femme, we essentially facilitate a pathway for you to get feral as fuck. And what that means is we are creating a pathway, a way forward, for you to get really raw, really feral, really wild, really primal, and accessing the most authentic, innate expression of your soul. We tend to attract in a lot of people pleasers and recovering good girls and eldest daughters Grazie a tutti il nostro retreat di amore e luce ci che facciamo nel nostro retreat di Farolfem incorporare workshop di cura somatico profondo con tanti giochi E la grande maniera in cui giochiamo quest nel nostro retreat di Costa Rica novembre è incorporare una scursa di ATV di valli. I nostri workshop di cura somatico variano da Somatic Breathwork, che mi e il mio co-facilitatore Jenny, che è anche il mio migliore amico, con cui ho anche andato a la medico-scienza naturopatica, facilitano per voi, perché ovviamente siamo facilitatori di breathwork. In un altro modo, siamo diversi. Possiamo supportarvi con la microdossazione di la medicina magica di Madre Terra con le nostre esperienze di breathwork somatico, che è solo un altro modo per creare l'abilità di accesso a tutto il tuo self ferro, il tuo raw, il tuo wild, il tuo innato, il tuo primo. E poi il secondo modo in cui stiamo davanti a altre esperienze di retreat è che siamo intergenerazionali, Cioè non c'è un tipo di età, come i men o i maxi, vuol dire che devi essere 18 anni o più, devi essere un adulto, viaggiare, fare le cose per te stesso, ma il più piccolo partecipante che abbiamo avuto, penso che fosse 26 o 27, e il più vecchio a questo momento, ha signato per questo, è 72. Questo ti permette di raggiungere le persone con diversi occhi, con diversi uomini, ovviamente di diversi background, ma anche di diversi età, che viene con le lezioni e le esperienze di varie generazioni. Quindi questo è per il tuo interesse e sei pronto a diventare Feroce! Commenta la parola Feroce sotto e ci riusciremo a contattare con te su più dettagli su come unirci a Costa Rica questo novembre 10-15.",
+            "language": "Italian",
+            "durationSec": 192.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:46.960Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -179833,7 +179870,16 @@
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Grazie a tutti Grazie a tutti. Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 216.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:50.866Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -179847,7 +179893,16 @@
           "likes": 69,
           "comments": 31,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Griff, questo messaggio è per te, amore. Ciò che sto insegnando e ciò che sto parlando non è per tutti. Se risonano con te, risonano con te. Ma tu hai portato a luce qualcosa per me. Ciò che sto insegnando, ciò che spero di ispirare altri a vedere dentro di loro che sono il creatore. Significa che il creatore che ti adorano, alcune persone credono in un uomo nel cielo, alcuni credono che sia ancora separato da loro, ma io sto dicendo che è con te, che non sei mai separato e che con questa realizzazione, poi inizia a capire come creatore che crei la tua propria realtà e lo fai per diventare consapevole ogni momento, quindi vedrai che vivi la tua vita ora, sei il Mr. Griffipoo, andando attraverso la vita, la tua vita può sembrare robotica, può sembrare la stessa cosa e poi avvicinati a un altro punto, potresti vedere dei pattern, queste cose continuano a succedere fino a quando diventi consapevole. Consapevole dei pensieri in te, consapevole della tua pensiera interna perchè è tu, amore. Quando chiudi gli occhi e dici l'arancione, è tu. Quindi, quando diventi consapevole dei pensieri puoi direttarli. Puoi direttare i tuoi pensieri a quei tuoi sentimenti Ora quando succede qualcosa fai una scelta di come reagire Diciamo che il tuo auto sbagliato E puoi scegliere in quel momento di dire, dammi, mio caro, è fantastico, è terribile, bla bla bla, o puoi vederlo in un altro modo. Puoi scegliere, in realtà, di vederlo come un segno di qualcosa di buono, perché quando sei il creatore, sai che tutto ciò che ti è sentito è per il buono di te. qualcosa di meglio è stato messo a te non devi sapere perché o come sai solo che lo sarà perché stai creando questo è tuo quindi ciò che ho parlato in quel video era solo l'autore di ogni momento dicendo e assicurandoci di non sbattere in old behaviors old rhythms è diventare consapevole dei pensieri e delle emozioni che stai sentendo perché il tuo cuore, quello che realmente senti Griff è il pilota puoi dire affermazioni over and over e via, ma fino a quando il tuo cuore lo senta, il tuo cuore è quello che tricchia il tuo mente subconsciente a credere. Quindi quando il tuo cuore è in questo, è il vero, è quello che è in gestione. Quindi spero che ho riempito questo per te, e anche se non l'ho, è ancora un seed. Anche se non hai mai guardato questo video, ho avuto 45 secondi del tuo mente subconsciente che è qui. E un giorno, Griff, ti risvegli, ti sarai più consapevole e dirai, oh sì, sto andando a correre questa cazzo. Andiamo. E sarò qui a guardarti, bambino.",
+            "language": "Italian",
+            "durationSec": 170.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:58.126Z"
+          }
         }
       ]
     }
