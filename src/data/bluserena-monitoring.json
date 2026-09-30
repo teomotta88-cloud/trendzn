@@ -134294,6 +134294,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:25.490Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Di chup ànhsen\ndihai tròm sen!\nhai trém sen\nDi chup",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:19:08.903Z"
           }
         },
         {
@@ -134317,6 +134326,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T09:14:40.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:19:22.765Z"
           }
         }
       ]
@@ -149806,6 +149823,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:28.434Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:19:26.659Z"
           }
         }
       ]
@@ -169088,6 +169113,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:36.137Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:19:32.741Z"
           }
         },
         {
@@ -169112,6 +169145,14 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7665954027758275853: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:37.180Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:19:40.735Z"
           }
         },
         {
@@ -169135,6 +169176,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:40.075Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:19:48.194Z"
           }
         }
       ]
@@ -180136,6 +180185,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:46.960Z"
+          },
+          "ocrData": {
+            "textOnScreen": "and lights\nTHAT RIGHT,\nFukkk\nlove\nbelgetting\nFeral! J",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:20:04.000Z"
           }
         },
         {
@@ -180159,6 +180217,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:50.866Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Earthai\nEartha\n@odly Nefure\nBrerepere Neture\npare\nEDITOR",
+            "confidence": 0.773,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:20:07.906Z"
           }
         },
         {
@@ -180182,6 +180249,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:58.126Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:20:20.904Z"
           }
         }
       ]
