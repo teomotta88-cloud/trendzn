@@ -148927,6 +148927,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T01:20:25.118Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T01:23:54.236Z"
           }
         }
       ]
@@ -158360,6 +158368,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T01:20:27.628Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T01:23:57.143Z"
           }
         }
       ]
@@ -168170,6 +168186,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T01:20:30.573Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T01:24:02.006Z"
           }
         }
       ]
@@ -179139,6 +179163,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T01:20:34.298Z"
+          },
+          "ocrData": {
+            "textOnScreen": "HOLDING YOUR CRYPTO'S ON\nEXCHANGES LIKE UPHOLD,\nCOINBASE, OR ROBINHOOD RISKS\nLOSING EVERYTHING. MAKE SURE\nYOU MOVE TO A DECENTRALIZED\nWALLET AFTER PURCHASING FROM\nTHESE EXCHANGES TO KEEP YOUR\nASSETS SAFE SECURE\nfons A\nCOMMENT 'SETUP' AND\nI'LL SEND YOU A STEP-BY-\nGUIDE ON HOW TO\nGET STARTED\n2 STEP GUIDE ON HOW TO\n4 GET STARTED\nSTEP GUIDE ON HOW TO\nGET STARTED i\nDonald J Tm\nGET STARTED r\nGET STARTED F",
+            "confidence": 0.919,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T01:24:10.601Z"
           }
         }
       ]
