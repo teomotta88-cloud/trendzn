@@ -68556,7 +68556,16 @@
           "likes": 85,
           "comments": 38,
           "shares": 49,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Sirena o Fantasia in Marsala? Questi due hotel hanno un territorio insieme e un parco, quindi la vostra infrastruttura è praticamente la stessa. Sirena è nuova, stile e moderno, con un buon alimento. L'atmosfera è più attiva, quindi per i giovani ho scelto proprio questa. Fantasia è più felice e molto piacente per l'atmosfera. Qui c'è una terrestre bella, un bel rio dove si può incontrare i cerchi e c'è un'epologia di salita in un mare con le berine. Numero di Fantasia dopo la rinnovazione, ma non in tutti i memorati. Per il ritorno, vi consigliamo di scegliere la categoria numero. Quindi, se volete una atmosfera più attiva e modernissima, è necessario Sirena. E se volete un'atmosfera più attiva, scegliete Fantasia.",
+            "language": "Italian",
+            "durationSec": 43.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T09:14:30.135Z"
+          }
         }
       ]
     },
@@ -122775,7 +122784,16 @@
           "likes": 25,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao Grazie a tutti Grazie a tutti. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 162.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T09:14:34.896Z"
+          }
         }
       ]
     },
@@ -134079,7 +134097,16 @@
           "likes": 51,
           "comments": 3,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il gioco di oggi è stato un po' più difficile, ma è stato un po' più difficile per me. Il nostro corso gratuito è www.mesmerism.info Grazie.",
+            "language": "Italian",
+            "durationSec": 66.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T09:14:40.399Z"
+          }
         }
       ]
     },
