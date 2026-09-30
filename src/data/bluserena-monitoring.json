@@ -31956,7 +31956,17 @@
           "likes": 38,
           "comments": 0,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7660747543185280276: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:16.641Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31970,7 +31980,16 @@
           "likes": 159,
           "comments": 6,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Il nome è Saranestrap, quindi ha il modello pita, ha le mani lunghe e la parte destra è pola, questa è la parte destra e la parte fronte è molto bella, la base è linen.",
+            "language": "Italian",
+            "durationSec": 19.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:18.817Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31984,7 +32003,17 @@
           "likes": 64,
           "comments": 15,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7659200104317914382: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:19.977Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -31998,7 +32027,16 @@
           "likes": 12,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Mi piace mettere un outfit molto casuale e low key. È fantastico.",
+            "language": "Italian",
+            "durationSec": 6.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:21.880Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32012,7 +32050,16 @@
           "likes": 10,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come professore di 3-5 anni, vorrei ricordare ai parenti quanto è importante che ti permettano di far fare le cose per te stesso, mettere le sue macchie, portare le loro macchie di piatto, le loro macchie di libro, mettere le loro macchie di piatto. Certo, a volte ci saranno macchie sulle spalle, macchie di piedi, ma non c'è problema. I know that you're in a rush to get out of the house in the morning to get to work. I get it, I really do. But independence is a practice skill and if we are not allowing the children to practice, how will they learn? How? What you're doing is hindering them from critical thinking skills, problem solving skills and confidence. Please, please, please let your child do things on their own. e lo apprezzerete nel lungo termine",
+            "language": "Italian",
+            "durationSec": 55.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:24.828Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32026,7 +32073,16 @@
           "likes": 169,
           "comments": 26,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao, sono Nana!",
+            "language": "Italian",
+            "durationSec": 9.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:28.568Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32040,7 +32096,16 @@
           "likes": 34,
           "comments": 5,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 10.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:30.470Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32054,7 +32119,16 @@
           "likes": 50,
           "comments": 4,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Le persone non capiscono che il vostro art fa art, sai? Come se... Si può attaccare le persone e non sai quando, dove, chi o come ma se non lo metti mai fuori non si può attaccare",
+            "language": "Italian",
+            "durationSec": 15,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:32.514Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32068,7 +32142,16 @@
           "likes": 63,
           "comments": 12,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 11.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:34.374Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32082,7 +32165,16 @@
           "likes": 14,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Street Wonder",
+            "language": "Italian",
+            "durationSec": 23.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:36.614Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32096,7 +32188,16 @@
           "likes": 153,
           "comments": 5,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 10.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:38.646Z"
+          }
         }
       ]
     },
@@ -49228,7 +49329,16 @@
           "likes": 5670,
           "comments": 74,
           "shares": 319,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I really are talented ass group. But you're here with us, so are you. We're all in the same caliber. Except for Serena. Bitch, set your ass down and shut the hell up, bitch! I'll defend myself a little bit. No, I'll defend myself a little bit. Hey, guys, guys. What's happening in the gold bar? Can I go to the gold bar, please? You knew she was the choreographer and the dancer got her own damn studio. Alleluia! Alleluia! Alleluia! non stare qui e dire cazzo perché sono staccato cazzo sei staccato cazzo sei staccato cosa è? parla inglese oggi tutti hanno avuto feedback negativo misti se qualcuno eravate gli unici che hanno avuto feedback negativo a disposizione di quello che volevano fare Era una collaborazione enorme Quindi erano a disposizione di te che li avevi scattati Perché volevi essere su Ivey's? L'hanno vinto, ragazza. Sì. Sì. A me, in tutto il mio team, ho avuto un feedback completamente positivo. A me? Sì. Lei dice che è educata. Se io leggo i libri, saremo benissimi. Quindi nessuno di noi legge i libri? Is that what you're trying to say? None of us are educated because you went to fucking school and you keep talking about you going to fucking school? Is she for real? I learned a new language while I've been here. That's good. I am now trilingual. Sorry, at this point the ghetto lexic and language is gone. No sheep and a doe. The ghetto's a place, mama. Yeah, exactly. So don't call someone a place. It's a language too. When you... Ciao",
+            "language": "Italian",
+            "durationSec": 148.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:44.490Z"
+          }
         }
       ]
     },
@@ -79491,7 +79601,16 @@
           "likes": 44,
           "comments": 4,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Non voglio che faccia una cosa magnifica, ma c'è qualcosa di bellissimo.",
+            "language": "Italian",
+            "durationSec": 8.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:47.830Z"
+          }
         }
       ]
     },
@@ -95256,7 +95375,16 @@
           "likes": 11,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "oh mio dio stai qui bambino Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 51.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:50.332Z"
+          }
         }
       ]
     },
@@ -108391,7 +108519,16 @@
           "likes": 13,
           "comments": 1,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 20.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:52.618Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108405,7 +108542,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Pack your bags. Dunes Village Resort is calling your name today. Serene beachfront balcony, tranquil sea breeze, inviting sun loungers. Treat yourself to this experience. Book via the link in the bottom left.",
+            "language": "Italian",
+            "durationSec": 23.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:55.507Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108419,7 +108565,16 @@
           "likes": 11,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 28.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:17:57.926Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108433,7 +108588,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Looking for a breathtaking escape? Welcome to the Breakers Myrtle Beach Resort. The building's modernity meets nature's serenity. A serene resort pool area, with lush green palm trees swaying gently against a clear blue sky, inviting relaxation and enjoyment. A modern restaurant interior with a green and white color scheme. Grab your spot now. Click the link below to check availability. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:00.753Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -108447,7 +108611,16 @@
           "likes": 20,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 7.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:03.180Z"
+          }
         }
       ]
     },
@@ -122519,7 +122692,16 @@
           "likes": 9,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok, quindi mio marito ci ha accaduto e questo è il nostro luogo, un piccolo cucinarello, un piccolo luogo per sedere, abbiamo il luogo per la stanza, the kitchen area even has a fancy fridge here's the closet which is almost as nice as my one at home my little guy is hiding over there in the corner here's the view from our room siamo in Reno, Nevada e questa è la vista del polo il clima è un po' strano oggi ma ci divertiremo molto",
+            "language": "Italian",
+            "durationSec": 65,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:06.929Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -122533,7 +122715,16 @@
           "likes": 31,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao",
+            "language": "Italian",
+            "durationSec": 57.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:10.695Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -122547,7 +122738,16 @@
           "likes": 17,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Hey ragazzi, pensavo di mostrare il nostro luogo. Siamo sul pavimento 17 e qui andiamo. Sto apriendo la porta e vi mostrerò come si vede. Allora, c'è un friggitore in questa porta qui con tutto il nostro stuff. Siamo andati a Walmart, è letteralmente sotto la strada. Qui c'è un bel lavabo. Un bel scioglio. Ok, questa è una closet molto bella. con un sacco puoi accendere le tue cose ha un scopo qui buono scusami, scusa seriamente questo miro ok, quindi hai un miro sui due lati della stanza e poi ciao, come stai? amiamo un buon miro hotel un buon selfie un buon check di outfit amiamo ok abbiamo lasciato la tv perché sai abbiamo cose importanti in questa stanza ma la vista è quello che volevo mostrare a voi, quindi siamo giusto al porto aerobico, sta freddando, mi sa bene, ma qui sotto c il pool un altro pool hai i tubi caldi l in e poi tutto quel trucco che c in quel piccolo ponte credo che lo chiamassi um puoi giocare e quelli sono i tuoi cheese o non lo so non so la terminologia del golf ma quelli sono i tuoi piccoli golferi lì fuori ma guarda quella vista delle montagne, bella amico sai, mi piace condividere le mie esperienze di viaggio con voi siamo in Nevada stiamo facendo una settimana tranquilla una settimana tranquilla ci vediamo domani sono io, mio figlio e mio bambino stiamo facendo un buon tempo domani spero non piova quindi possiamo andare a Lake Tahoe e vi mostrerò sicuramente che mio bambino farà video per me e Colt per fare il parasailing perché gli ho detto perché mio bambino è freddo di alto quindi non farà con me quindi gli ho detto a Colt se va a fare il parasailing con me faremo la fissatura um la carta che hanno dove perché c'è molto pescata di frutta su Lake Tahoe e poi lo faremo dopo la parisiana, ma ho sentito che Lake Tahoe è molto chiaro perché tutta questa acqua viene dalle montagne qui, quindi siamo super aspettati per questo, quindi speriamo che non piova, ma se piova domani, sicuramente lo faremo terza o francese, ma ok, spero che tutti abbiano un buon domenica e ci vediamo presto.",
+            "language": "Italian",
+            "durationSec": 176,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:16.336Z"
+          }
         }
       ]
     },
@@ -133791,7 +133991,16 @@
           "likes": 19,
           "comments": 2,
           "shares": 9,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 39.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:21.853Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -133819,7 +134028,16 @@
           "likes": 30,
           "comments": 6,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "GAN MUT THI DEN GAN THI NIN DI THU GIAN CUOT SONG CHIU BAO GER THAI NAN DO MINH BICH CACH THU GIAN LAM BAN QUI THI NIN CHI CO SANG KHOAI QUO HON NIN THAI MA NGUI TA CU BAO MINH DIN TRONG KHI MINH VAN SONG AN NIN",
+            "language": "Italian",
+            "durationSec": 18.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:25.490Z"
+          }
         }
       ]
     },
@@ -149299,7 +149517,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 20.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-09-30T08:18:28.434Z"
+          }
         }
       ]
     },
