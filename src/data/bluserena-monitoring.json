@@ -31966,6 +31966,14 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7660747543185280276: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:16.641Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:14:49.276Z"
           }
         },
         {
@@ -31989,6 +31997,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:18.817Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:14:52.424Z"
           }
         },
         {
@@ -32013,6 +32029,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7659200104317914382: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:19.977Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7659200104317914382: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:14:53.697Z"
           }
         },
         {
@@ -32036,6 +32061,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:21.880Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:04.591Z"
           }
         },
         {
@@ -32059,6 +32092,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:24.828Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7671684720249392415: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:05.862Z"
           }
         },
         {
@@ -32082,6 +32124,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:28.568Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:12.616Z"
           }
         },
         {
@@ -32105,6 +32155,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:30.470Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:23.534Z"
           }
         },
         {
@@ -32128,6 +32186,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:32.514Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:27.605Z"
           }
         },
         {
@@ -32151,6 +32217,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:34.374Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Timelapse of Frontier\norbiting Seranna\nve Follow 2006-0128\ndiameter:\nDate:\nTrack Erde\nFollow 2006-0128\nSpeed: 0,00 m/s FOV: 60° 45° 23.4” (0.48x)\nThe Frontier orbiter\ntook a picture\nevery 15 minutrs\nSpeed: 0,00 m/s FOV: 60° 45°\nPhase angle: 154 6°\nRadius: 7,0975 m\nTo make this timelapse\nSpeed: m/s 60° 45° 23.4” (0.48x)\nDistance: 3,9528 m\nApparent diameter: 79° 55’ 33.7”\nPhase angle: 154.9°",
+            "confidence": 0.896,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:34.552Z"
           }
         },
         {
@@ -32174,6 +32249,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:36.614Z"
+          },
+          "ocrData": {
+            "textOnScreen": "TRANS p",
+            "confidence": 0.734,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:15:43.989Z"
           }
         },
         {
@@ -32197,6 +32281,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:38.646Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:16:08.656Z"
           }
         }
       ]
@@ -49338,6 +49430,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:44.490Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Everyone Vs Serena cha\nfull clip\nfazer e eulconfortavell\ncomo i\nNenhuma de\nFa porquelvocè",
+            "confidence": 0.879,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:16:15.411Z"
           }
         }
       ]
@@ -68565,6 +68666,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T09:14:30.135Z"
+          },
+          "ocrData": {
+            "textOnScreen": "aKTUBHA TOM\nycix Homepax",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:16:26.532Z"
           }
         }
       ]
@@ -79633,6 +79743,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:47.830Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bon début de\nSemaine\nA tous nos abonnés 0000",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:16:32.850Z"
           }
         }
       ]
@@ -95407,6 +95526,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:50.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:16:40.437Z"
           }
         }
       ]
@@ -108551,6 +108678,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:52.618Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VANS",
+            "confidence": 0.753,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:17:08.992Z"
           }
         },
         {
@@ -108574,6 +108710,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:55.507Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:17:21.530Z"
           }
         },
         {
@@ -108597,6 +108741,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:17:57.926Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:17:29.735Z"
           }
         },
         {
@@ -108620,6 +108772,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:00.753Z"
+          },
+          "ocrData": {
+            "textOnScreen": "against{a\nA modern restaurant\nGrab your spot now! Click",
+            "confidence": 0.777,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:17:41.106Z"
           }
         },
         {
@@ -108643,6 +108804,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:03.180Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:17:55.288Z"
           }
         }
       ]
@@ -122724,6 +122893,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:06.929Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:18:02.944Z"
           }
         },
         {
@@ -122747,6 +122924,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:10.695Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:18:12.511Z"
           }
         },
         {
@@ -122770,6 +122955,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:16.336Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:18:19.088Z"
           }
         },
         {
@@ -122793,6 +122986,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T09:14:34.896Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Wing",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:18:27.648Z"
           }
         }
       ]
@@ -134046,6 +134248,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T08:18:21.853Z"
+          },
+          "ocrData": {
+            "textOnScreen": "onal",
+            "confidence": 0.831,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T09:18:32.648Z"
           }
         },
         {
