@@ -49526,6 +49526,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:40:46.476Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:41:45.664Z"
           }
         }
       ]
@@ -79988,6 +79996,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:40:49.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:41:53.925Z"
           }
         },
         {
@@ -80011,6 +80027,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:40:53.665Z"
+          },
+          "ocrData": {
+            "textOnScreen": "pani\nMajestic\nnthe A)",
+            "confidence": 0.756,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:42:13.158Z"
           }
         }
       ]
@@ -95847,6 +95872,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:40:56.492Z"
+          },
+          "ocrData": {
+            "textOnScreen": "T-Mobile\nT-Mobile ill\nT-Mobile l=",
+            "confidence": 0.853,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:42:19.004Z"
           }
         }
       ]
@@ -109148,6 +109182,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:41:02.660Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:42:26.292Z"
           }
         },
         {
@@ -109171,6 +109213,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:41:23.600Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:42:45.636Z"
           }
         },
         {
@@ -109194,6 +109244,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:41:27.336Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:42:51.475Z"
           }
         }
       ]
@@ -134770,6 +134828,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:41:29.858Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ESSI",
+            "confidence": 0.711,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:42:55.464Z"
           }
         }
       ]
@@ -169706,6 +169773,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-09-30T19:41:32.740Z"
+          },
+          "ocrData": {
+            "textOnScreen": "was just in the\nchilling in the\nwhen i was just chilling in the\nhotel and demitra kalogeras\ndecided it was my time\ni was just chilling in the",
+            "confidence": 0.863,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-09-30T19:43:01.757Z"
           }
         }
       ]
