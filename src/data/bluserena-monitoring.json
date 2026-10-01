@@ -32553,6 +32553,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:30.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:44:57.120Z"
           }
         }
       ]
@@ -49820,6 +49828,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:32.572Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:45:03.902Z"
           }
         }
       ]
@@ -96572,6 +96588,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:35.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The confidence which my daughter\nwalks into a luxury resort without a\ndollar to her name is the level of\ndelusion I aspire to.\n4 dollar to her name is the level of\ndelusion I aspire t0.\ninto a luxury resort without a\nher name is the level of\ndelusion I aspire to. gg\nconfidence which my daughter\ni delusion I aspire to.\n4 The confidence which my daughter 2 5",
+            "confidence": 0.865,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:45:17.409Z"
           }
         },
         {
@@ -96595,6 +96620,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:37.806Z"
+          },
+          "ocrData": {
+            "textOnScreen": "IDO yourself a favor and stay\nhere. Seriously.\nMOAR:\nORNING BEAUTIFUL\nSowilo Retreat\na favor and stay",
+            "confidence": 0.77,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:45:32.995Z"
           }
         }
       ]
@@ -110083,6 +110117,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:42.949Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Audi Ked",
+            "confidence": 0.745,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:45:43.201Z"
           }
         }
       ]
@@ -151567,6 +151610,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:45.904Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ISLAND\nthis is your signto\nbookatripto\nIsland, i\nthis is your sign to È\nVicente United",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:46:10.278Z"
           }
         }
       ]
@@ -182459,6 +182511,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T21:44:49.061Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T21:46:15.930Z"
           }
         }
       ]
