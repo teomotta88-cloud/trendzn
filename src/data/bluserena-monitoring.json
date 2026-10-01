@@ -32376,6 +32376,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:07:42.645Z"
+          },
+          "ocrData": {
+            "textOnScreen": "QUESTO\nbluserena\nRASSARE DA\nDICE QUANTO\nA QUESI",
+            "confidence": 0.818,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:05.676Z"
           }
         },
         {
@@ -32399,6 +32408,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:07:44.839Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Serené Resort\nTI RICORDAND\nserenè Resort\n4 Serene\nResort",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:13.286Z"
           }
         },
         {
@@ -32422,6 +32440,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:07:47.800Z"
+          },
+          "ocrData": {
+            "textOnScreen": "6 sabrinapartigianonishinys...\nSARDEGN\nSARDEGNA\nsabrinapartigianonishinys...",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:17.095Z"
           }
         }
       ]
@@ -69083,6 +69110,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:07:49.854Z"
+          },
+          "ocrData": {
+            "textOnScreen": "this\nè nota single\nenter this\nchecking into a DR\nresort on a solo trip and\nimmediately pulling this\nmove cause not a si\nsoul shall ent:\nresort on a and\nmove\nsoul shall enter this\nmove cause not a single\nroom if it's not me\nla single\ner this",
+            "confidence": 0.907,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:23.198Z"
           }
         }
       ]
@@ -96283,6 +96319,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:07:55.977Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cana, DR\nCana,",
+            "confidence": 0.832,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:29.278Z"
           }
         }
       ]
@@ -109677,6 +109722,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:07:57.970Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:34.714Z"
           }
         }
       ]
@@ -123977,6 +124030,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:00.466Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Kabul @Serena",
+            "confidence": 0.799,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:39.074Z"
           }
         },
         {
@@ -124000,6 +124062,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:03.883Z"
+          },
+          "ocrData": {
+            "textOnScreen": "illa",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:52.011Z"
           }
         }
       ]
@@ -151112,6 +151183,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:13.874Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:09:56.118Z"
           }
         }
       ]
@@ -160607,6 +160686,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:16.171Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:10:07.356Z"
           }
         },
         {
@@ -160630,6 +160717,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:19.476Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:10:21.704Z"
           }
         }
       ]
@@ -170629,6 +170724,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:29.077Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:10:26.416Z"
           }
         },
         {
@@ -170652,6 +170755,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:34.272Z"
+          },
+          "ocrData": {
+            "textOnScreen": "When the guest make\nreservations for the wrong\nroom type\nA giant",
+            "confidence": 0.874,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:10:31.079Z"
           }
         },
         {
@@ -170675,6 +170787,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:39.930Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Thaw,",
+            "confidence": 0.734,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:11:22.184Z"
           }
         },
         {
@@ -170698,6 +170819,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:43.985Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Crazy Crazy\nCrazy zi.\nCrazy ZZ\nCrazy,\nCrazé\nClazy Crazy\nCrazy, A",
+            "confidence": 0.842,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:11:31.264Z"
           }
         }
       ]
@@ -181794,6 +181924,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:46.786Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DOING SON\nSEEIWHAT\nSISTERHOOD\nNATI",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:11:39.171Z"
           }
         },
         {
@@ -181817,6 +181956,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:49.993Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WHEN",
+            "confidence": 0.803,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:11:43.072Z"
           }
         },
         {
@@ -181840,6 +181988,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T11:08:54.016Z"
+          },
+          "ocrData": {
+            "textOnScreen": "ut there's ONE\nleave\nsome of the BEST",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T11:11:49.191Z"
           }
         }
       ]
