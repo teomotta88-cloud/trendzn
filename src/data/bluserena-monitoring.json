@@ -57229,6 +57229,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T00:47:36.937Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SALTI",
+            "confidence": 0.741,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T00:48:31.081Z"
           }
         }
       ]
@@ -68910,6 +68919,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T00:47:44.627Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Bani,",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T00:48:44.604Z"
           }
         }
       ]
@@ -80105,6 +80123,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T00:47:49.158Z"
+          },
+          "ocrData": {
+            "textOnScreen": "out of your moutt\nive me one more\nchance!\npe knees begging me\ntaking Ja\nwill be donated to:\ncharity after pass:",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T00:48:52.307Z"
           }
         }
       ]
@@ -150489,6 +150516,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T00:47:53.163Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T00:48:58.655Z"
           }
         },
         {
@@ -150513,6 +150548,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675397842223123734: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
             "version": 1,
             "updatedAt": "2026-10-01T00:47:55.204Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675397842223123734: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
+            "version": 3,
+            "updatedAt": "2026-10-01T00:49:00.509Z"
           }
         }
       ]
