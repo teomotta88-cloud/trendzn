@@ -57220,7 +57220,16 @@
           "likes": 663,
           "comments": 7,
           "shares": 83,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ho scoperto un beach di seguito a Sardegna e chi è già stato in Sardegna sa che ci sono delle buche molto belle con l'acqua cristallina. Ma è raramente che ci siano buche dove non c'è nessuna sezione di vita. Questa buche speciale l'ho scelta da parte della carta e penso che sia la migliore per raggiungere il bucho. Quindi non c'è un percorso scelto, bisogna andare in questa via e sperare di essere sulla rotta giusta. Ma per questa visita è davvero valido. Puoi passare tutto il giorno a vincere, sfumare, salire e lasciare la sezione di vita. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 30,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T00:47:36.937Z"
+          }
         }
       ]
     },
@@ -68892,7 +68901,16 @@
           "likes": 37,
           "comments": 8,
           "shares": 23,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Top 5 hoteli in Crete con acquapark che abbiamo provato e che raccomandiamo a voi Atali Grand Resort, il nostro top bronio 3 anni in continuo La buca di Bali, i bellissimi paesi, i numeri, l'aquapark e il piazzo in solo qualche minuto E a mattina il show e l'animazione per tutta la famiglia Atlantica Acti Zeus, un bellissimo hotel con acquapark su un piazzino di pietra con scelte e parasoli Star Beach Village & Water Park Un hotel attivo e familiare con un grande acquapark. Qui puoi riposare tutto il giorno, anche se non sei in territorio del hotel. Il piazzo, i ristoranti e le divertimenti sono tutti vicini. Alamos Luxury Grand Resort È un livello di riposo completamente diverso. Un hotel premiale con numeri stili, bassini privati, cucina gustosa e ponte di acqua in un unico posto. Creta Maris Beach Uno dei migliori hotel familiari di Crete. Un rossiccio che ricorda il bianco-snello di Crete, vicino al mare, dove si è pensato tutto, da acquapark a show di notte. 17 bassini, acquapark, ristoranti, piazza e divertimento per tutta la famiglia. Quali di questi hotel vorreste abbracciare per il viaggio? Scrivete un commento e lo raccontiamo per la vostra famiglia.",
+            "language": "Italian",
+            "durationSec": 79.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T00:47:44.627Z"
+          }
         }
       ]
     },
@@ -80078,7 +80096,16 @@
           "likes": 8029,
           "comments": 46,
           "shares": 263,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Serena, non ascoltare la sua cazzata. Ti ho amato dal momento in cui ti ho visto. Enough! Non voglio che ti dica un altro word. Serena, non andare! Per favore, scusami! Per il motivo dei nostri 10 anni insieme, dammi un'altra chance, una volta! Se non fossi la Sinclair Aris, saresti ancora a piedi a me? Oh, c'è un'altra cosa. A questo punto, non ho un figlio. Sto toccando ogni strada legale per stradare la tua ineritazione. ogni cento del mio estate sarà donato a una carità dopo che passi non ti darai un dimo è finito tutto è finito",
+            "language": "Italian",
+            "durationSec": 39.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T00:47:49.158Z"
+          }
         }
       ]
     },
@@ -150453,7 +150480,16 @@
           "likes": 24,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao!",
+            "language": "Italian",
+            "durationSec": 21.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T00:47:53.163Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -150467,7 +150503,17 @@
           "likes": null,
           "comments": null,
           "shares": null,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7675397842223123734: This post may not be comfortable for some audiences. Log in for access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-",
+            "version": 1,
+            "updatedAt": "2026-10-01T00:47:55.204Z"
+          }
         }
       ]
     },
