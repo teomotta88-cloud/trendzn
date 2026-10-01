@@ -49557,6 +49557,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:06.273Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Me life to my\nWhenever\ntown\nMe my life to my.",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:01:20.565Z"
           }
         }
       ]
@@ -68974,6 +68983,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:11.529Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:01:37.445Z"
           }
         }
       ]
@@ -96046,6 +96063,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:16.007Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:01:46.154Z"
           }
         },
         {
@@ -96070,6 +96095,15 @@
             "reason": "yt-dlp exit 1: ERROR: [TikTok] 7663620648446479649: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:17.272Z"
+          },
+          "ocrData": {
+            "textOnScreen": "1XBET 14\nPRUSVR",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:01:59.899Z"
           }
         },
         {
@@ -96093,6 +96127,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:21.005Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MESS\nHe might",
+            "confidence": 0.764,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:02:14.826Z"
           }
         },
         {
@@ -96116,6 +96159,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:27.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": "LION SANDS A\nIVORY LODGE\nLION SANDS",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:02:26.802Z"
           }
         }
       ]
@@ -123724,6 +123776,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:32.106Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SERENA\nHOTEL\nKampala, Uganda",
+            "confidence": 0.762,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:02:37.647Z"
           }
         },
         {
@@ -123747,6 +123808,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:37.044Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:02:46.786Z"
           }
         }
       ]
@@ -135141,6 +135210,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:43.265Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:02:57.644Z"
           }
         }
       ]
@@ -150788,6 +150865,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:47.779Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:03:07.649Z"
           }
         },
         {
@@ -150811,6 +150896,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:51.791Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Alight\nAlig",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:03:15.058Z"
           }
         }
       ]
@@ -160275,6 +160369,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:00:56.357Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:03:33.475Z"
           }
         }
       ]
@@ -170242,6 +170344,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T06:01:00.933Z"
+          },
+          "ocrData": {
+            "textOnScreen": "POV: Emirates Airlines\ngave me a FREE hotel stay.\nÈ me a FREE hotel stay.\nEmirates Airlines=\nmea FREE hotel stay.",
+            "confidence": 0.877,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T06:03:42.664Z"
           }
         }
       ]
