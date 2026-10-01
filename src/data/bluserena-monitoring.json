@@ -49766,6 +49766,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:13.736Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:28:55.045Z"
           }
         }
       ]
@@ -69246,6 +69254,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:16.854Z"
+          },
+          "ocrData": {
+            "textOnScreen": "oints di to\ntel ink want\ncleal shower is\n100 aura points lost to\nli who want\nwindow where the shower is\n47 im want it\nall hotels who ink people want\na clear window Where the shower is\nidc who im idont want it\nall hotels\na clear wind",
+            "confidence": 0.874,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:29:01.775Z"
           }
         },
         {
@@ -69269,6 +69286,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:21.243Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:29:09.197Z"
           }
         }
       ]
@@ -109903,6 +109928,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:25.987Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Sha boutique retreat =X\nShanti boutique retreat\nShanti boutiqueYetreats te",
+            "confidence": 0.771,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:29:25.156Z"
           }
         },
         {
@@ -109926,6 +109960,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:31.852Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:29:30.826Z"
           }
         }
       ]
@@ -160944,6 +160986,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:34.175Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:29:40.085Z"
           }
         }
       ]
@@ -182239,6 +182289,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-01T16:28:36.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": "home of.\nthe Sovereign",
+            "confidence": 0.746,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-01T16:29:57.427Z"
           }
         }
       ]
