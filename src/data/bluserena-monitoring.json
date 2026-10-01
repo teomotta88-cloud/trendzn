@@ -49548,7 +49548,16 @@
           "likes": 278,
           "comments": 3,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I'm in the Missoni room at the Biblos The boat was rocking too much on some Aaliyah shit",
+            "language": "Italian",
+            "durationSec": 17.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:06.273Z"
+          }
         }
       ]
     },
@@ -68956,7 +68965,16 @@
           "likes": 128,
           "comments": 48,
           "shares": 66,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Grazie. Grazie.",
+            "language": "Italian",
+            "durationSec": 67.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:11.529Z"
+          }
         }
       ]
     },
@@ -96019,7 +96037,16 @@
           "likes": 11,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao Grazie.",
+            "language": "Italian",
+            "durationSec": 60,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:16.007Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96033,7 +96060,17 @@
           "likes": 152,
           "comments": 15,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": null,
+            "language": null,
+            "durationSec": null,
+            "model": "whisper-large-v3",
+            "status": "download_failed",
+            "reason": "yt-dlp exit 1: ERROR: [TikTok] 7663620648446479649: Unexpected response from webpage request; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Con",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:17.272Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96047,7 +96084,16 @@
           "likes": 38,
           "comments": 1,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 7.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:21.005Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96061,7 +96107,16 @@
           "likes": 74,
           "comments": 1,
           "shares": 8,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Questa loggia è stata votata come la più grande loggia di safari in tutta Africa. Lasciami mostrare. Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 32.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:27.300Z"
+          }
         }
       ]
     },
@@ -123660,7 +123715,16 @@
           "likes": 55,
           "comments": 1,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:32.106Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -123674,7 +123738,16 @@
           "likes": 62,
           "comments": 6,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 35.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:37.044Z"
+          }
         }
       ]
     },
@@ -135059,7 +135132,16 @@
           "likes": 33,
           "comments": 100,
           "shares": 5,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 11.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:43.265Z"
+          }
         }
       ]
     },
@@ -150697,7 +150779,16 @@
           "likes": 41,
           "comments": 9,
           "shares": 6,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 9.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:47.779Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -150711,7 +150802,16 @@
           "likes": 1239,
           "comments": 70,
           "shares": 98,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 10,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:51.791Z"
+          }
         }
       ]
     },
@@ -160166,7 +160266,16 @@
           "likes": 36,
           "comments": 2,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ok, quindi questa è Green Stravaganza. Alcuni mi hanno chiesto di rivelarla e non la ho ancora. Sono arrivato a Ulta per smetterla. Quindi, ho il bergamot al cuore con un accordo di caffè, e anche un vetro in là. Super pulito. È un vestito di ogni giorno. E è un EBT, quindi questo progetta come un pazzesco. Non dura molto, ma progetta molto bene. Quindi se vuoi che le persone ti smettano, sono super super puliti e questo è praticamente abbastanza solido",
+            "language": "Italian",
+            "durationSec": 32.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:00:56.357Z"
+          }
         }
       ]
     },
@@ -170124,7 +170233,16 @@
           "likes": 82,
           "comments": 17,
           "shares": 13,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 14.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T06:01:00.933Z"
+          }
         }
       ]
     },
