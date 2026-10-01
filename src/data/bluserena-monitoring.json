@@ -32367,7 +32367,16 @@
           "likes": 472,
           "comments": 48,
           "shares": 294,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Y'all ready for this? Y'all ready for this? Aiuto, chi rimane?",
+            "language": "Italian",
+            "durationSec": 31.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:07:42.645Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32381,7 +32390,16 @@
           "likes": 369,
           "comments": 94,
           "shares": 176,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "I soldi sono i miei e con i miei soldi faccio quello che voglio, sia chiara sta cosa. Non te li vengo a rubare a te i soldi, sono i miei soldi, faccio quello che voglio. Miei, della mia famiglia, cazzi miei.",
+            "language": "Italian",
+            "durationSec": 15.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:07:44.839Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -32395,7 +32413,16 @@
           "likes": 345,
           "comments": 2,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 46.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:07:47.800Z"
+          }
         }
       ]
     },
@@ -69047,7 +69074,16 @@
           "likes": 29900,
           "comments": 115,
           "shares": 170,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 10.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:07:49.854Z"
+          }
         }
       ]
     },
@@ -96238,7 +96274,16 @@
           "likes": 40,
           "comments": 18,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Room tour Ocean El Faro, Dominica Republic. So, we got our step back in a bit. Got your closet situation here. Pretty cool. Nice, nice, nice. This is a pretty cool room. Alright, here. This is one bathroom. quindi si ha la situazione del tubo e la situazione del lavabo che va fuori l'acqua e poi entriamo nella stanza, è così bello ok questo è molto bello la chandelier hai la tua situazione all'esterno qui è molto bello no I finna give me a piece of this what this is ok qui no sto partendo con un pezzo di questo questo fantastico è così bello poi ragazzi ho finito vieni in casa e avviati le strade è caldo qui però perché il caldo rischia quindi sento una temperatura diversa un altro lavabo questo è il secondo lavabo con la stessa sciogliera e poi andiamo in un'altra sala e poi Check this out To come out to The outside Upstairs Rooftop Adio What? It's happening With a jacuzzi We just not gonna Pass over there, right? And then the top floor I see you ocean El Faro",
+            "language": "Italian",
+            "durationSec": 159.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:07:55.977Z"
+          }
         }
       ]
     },
@@ -109623,7 +109668,16 @@
           "likes": 62,
           "comments": 12,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 8.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:07:57.970Z"
+          }
         }
       ]
     },
@@ -123914,7 +123968,16 @@
           "likes": 14,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 29.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:00.466Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -123928,7 +123991,16 @@
           "likes": 159,
           "comments": 1,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 10.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:03.883Z"
+          }
         }
       ]
     },
@@ -151031,7 +151103,16 @@
           "likes": 129,
           "comments": 11,
           "shares": 25,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Avete mai sentito di questa isola remota sul lato nord di Filippina? Questa è l'isola Scalaian. E qui ci sono 5 cose che dovete sapere prima di partire. L'isola Scalaian lavora da un'azienda di gala? Beh, preparatevi per la connettività limitata. Non c'è davvero una forte data mobile sull'isola. La maggior parte delle accomodazioni si basano su Starlink per Internet. Fortunatamente, l'accomodazione in cui stavamo aveva una connessione abbastanza forte, ma, poiché è Starlink, il segnale può ancora variare a seconda del clima. Quindi se stai a planificare di lavorare mentre sei lì, dipende davvero da dove stai. Braccia abbastanza cash. Non ci sono ATMs sull'islanda, quindi assicurati di portare abbastanza cash prima di andare. La maggior parte dei store qui sono i vostri tipici store sari-sari, quindi non aspettate un'esperienza di isla molto commercializzata. La maggior parte delle transazioni sono cash. Ci sono pochi istituzioni che accettano Gcash, ma non mi fiderei completamente. Pro tip, se hai bisogno di sbagliare di monete, faccia questo mentre stai in un pari. Sarei lì non per tutti. L'isola di Calaia è parte dei Ghiaccioli di Babuyan e arrivare lì è definitivamente parte dell'avventura. Dovrai viaggiare a luce, a terra e a mar. E questa è stata veramente una delle più lunghe viaggi di bar che abbiamo mai fatto. Da un pari stai cercando circa 6 ore da bar a seconda della condizione del mar E qui c la parte complicata Non c un regolamento di bar che si fissa in e fuori dall Quindi prima della viaggia assicurati di coordinare con la tua accomodazione che ti aiuter a controllare se c un barco disponibile sul tuo giorno preferito di viaggio Non aspettare la trasportazione di l'isola normale. Non ci sono triciclisti o jeepneys qui. Kalayan è una isola abbastanza piccola, quindi i modi principali di trasportazione sono motocicletta o colong-colong. Fortunatamente, la accomodazione a cui siamo restati ci permette per aiutarci a sbagliare il motocicletta per gratuito quando ci serve per fare alcune operazioni in città. Quindi, sicuramente chiedi al tuo appartamento delle opzioni di trasportazione prima di arrivare. Il tempo di viaggio vale per tutto. Secondo i locali con cui abbiamo parlato, la migliore volta da visitare è durante la settimana di pomeriggio. Il clima è solitamente più chiaro, che significa una migliore possibilità di raggiungere la notte e la notte, e la neve è generalmente più calda, più il albero è più abbandonato. Ci siamo andati l'anno scorso e, infortunatamente, il monsoon ha iniziato presto. C'era piove per la maggior parte del nostro stay e i luci erano piuttosto freddi. Quindi se vai principalmente per le piazze, per il salto di isola o per le belle notti e la vista di salto, il vento è definitivamente qualcosa che devi considerare. Ma, a meno di tutto, l'isola di Calaian è ancora uno dei più bellissimi e underratedi posti che abbiamo visitato. Non è l'ease più facile da trovare, ma forse è anche quello che lo rende speciale. Vi viaggierete 6 a 7 ore in bici per visit Kalayan Island? Lasciami sapere nei commenti e segui per più guide di viaggio sincero attorno alle Filippine.",
+            "language": "Italian",
+            "durationSec": 157.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:13.874Z"
+          }
         }
       ]
     },
@@ -160517,7 +160598,16 @@
           "likes": 5,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Girl, you have no idea how amazing life is about to get for you. Stay focused and trust the process.",
+            "language": "Italian",
+            "durationSec": 8.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:16.171Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -160531,7 +160621,16 @@
           "likes": 28,
           "comments": 17,
           "shares": 4,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Siamo sin testigos Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 40.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:19.476Z"
+          }
         }
       ]
     },
@@ -170521,7 +170620,16 @@
           "likes": 36,
           "comments": 3,
           "shares": 53,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Buongiorno, ho deciso di fare una breve review del hotel. Sto lavorando su un'arrivo internazionale in Orlando, Florida. E in fondo potete vedere il Star Flyer, e poi l'Olando Eye, qui. Questo hotel è incredibile per il prezzo. il prezzo si alterna in alto e in basso è proprio vicino a Mango's show club credo sia hanno DJ's ecc ma anche show è proprio qui in questa area e sei proprio nel cuore dell'area la Torre Internazionale, l'area dei turisti, Ripley, credetemi o no, è proprio sotto la strada, c'è un piccolo parco di divertimento qui sotto, e se vai qui in alto, l'area divertente dell'America è circa un milione e mezzo di distanza. E poi, proprio attraverso la strada, se stai guardando come sto guardando, ci sono i Studios Universal e le Isole di Avventura. Se vai in questo modo Epic Universe in quella direzione in quell Questo il hotel che facciamo una breve rivelazione è incredibile Aspetta fino a quando vedi il luogo Ora, ho un spazio di grande dimensione in stanza Ho preso un'acqua prima perché sto lavorando qui e ho deciso di fare una breve rivelazione su questo oh e uno di questi è proprio attorno alla strada hanno una pizza fantastica quindi andiamo in questa è la mia cosa per favore, per favore, per favore prendete i giudici questa è la stanza incredibile smell wonderful è ovviamente pulito, ovviamente pulito. Questo è il restauro, un buon toile, una scioglita di salita, un brillo dietro la macchina, penso che voglia chiamarlo così. È, come ho detto, molto bello, non c'è carpet, ha un rug di area, non senti there is not a thing out of place in this hotel it andiamo a camminare un po sull del palazzo e vedrai pi di questo andiamo in questo modo qui c'è l'Embassy Suites e molti altri hotel e resort in questo direzione se avete una famiglia sul budget, questo è il posto per venire Il ristorante vicino a casa fa servizio a casa qui. E' il pò, un po' piccolo. Fatto in stile giapponese. E il ristorante vicino a casa è un ristorante giapponese. E la loro cibo è deliziosa, l'ho mangiato la sera. Questa qui è la lavastoviglie di piatto di bambù Quanto bello questo Un piatto pieno di cibo Pieno di cibo Questa mattina hanno preso uova, patate, salsiccia, yogurt fresco... bagels, formaggio, ecc... caffè, juice, cereal per i bambini, se è quello che vogliono. E questo è il lobby. Diciamo ciao, sto facendo la mia videografia YouTube, qualunque cosa voglia chiamarla. E questo è il lobby. Per il prezzo, non puoi battere. È un'incredibile proprietà. e un po' di golf incredibile e abbiamo i computer qui per usare se necessario probabilmente in spazio di lavoro quindi con questo detto abbia una bella mattina e ci vediamo presto",
+            "language": "Italian",
+            "durationSec": 331.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:29.077Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -170535,7 +170643,16 @@
           "likes": 6106,
           "comments": 190,
           "shares": 203,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie per chiamare i servizi di guest, questa è Sherita. Siete in room 311. Mrs. Williams. E posso aiutarvi. Questa è una room con un king bed e vi serve un double. Una momenti, per favore. Scusate, Mrs. Williams, infortunatamente siamo completamente soldati delle stelle doppiate e vedo che le tue riservazioni sono state fatte per una stella di rete di rete no mi dispiace, non possiamo sbagliare qualcuno di riservazioni che hanno stelle doppiate no perché non sarebbe giusto hanno riservazioni o riservazioni confermate per stelle doppiate e Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 74.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:34.272Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -170549,7 +170666,16 @@
           "likes": 1495,
           "comments": 25,
           "shares": 452,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Escursione in uno dei miei laghi alpini del cuore, il lago Coldai, alle pendici del Civetta. Si parte da Alghe con la cabinovia e si arriva ai piani di Pezzè, 1452 metri. Il nostro obiettivo di oggi è arrivare a 2143 metri. Da piani di Pezzè imbucchiamo sentiero 564. Noi abbiamo scelto di fare la prima parte nel bosco, per poi ricongiungerci più avanti alla strada sterrata. Come sempre partenza molto presto per godersi il fresco del mattino e questo panorama con una luce meravigliosa. Nella prima parte del sentiero siamo accompagnati dalla vista maestosa della Marmolada e la salita è continua ma abbastanza gestibile. Ci aspettano in tutto circa due ore e mezza di cammino a buon passo, quindi camminiamo con calma e ci godiamo il paesaggio anche per risparmiare le forze. In corrispondenza di Malga Pioda il sentiero comincia a spianare e si apre su prati fioriti meravigliosi. Continuiamo a seguire le indicazioni per il rifugio Coldai e Rifugio Tissi, godendoci una fantastica vista del Monte Pelmo. Ricominciamo a salire, la strada sterrata qui si fa sentiero e spinge un pochino di più, ma la vista meravigliosa sul Monte Pelmo allevia la fatica. La parte finale è quella un pochino più dura, mi raccomando come sempre scarponcini e scarpe da trekking non vi dico nemmeno quante persone con le sneakers ho visto sul sentiero e poi svoltato l'angolo ecco il rifugio su Nino Alcoldai ci siamo lasciati già tutto il dislivello di oggi alle spalle ci concediamo una rinfrescante birretta con vista e poi riprendiamo il sentiero 560 per il lago in soli 20 minuti arriviamo qua un meraviglioso lago alpino dal colore azzurro chiaro intenso ai piedi di sua maestà il Civetta come tanti laghi alpini anche il lago Col Dai non è balneabile ed è sempre importantissimo informarsi prima per tutelare questi delicatissimi ecosistemi. Prima di tornare al rifugio, ammiriamo il panorama sulla marmolada, alleghe il suo lago, pranzetto delizioso con polente e funghi e poi si torna a casa.",
+            "language": "Italian",
+            "durationSec": 97.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:39.930Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -170563,7 +170689,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:43.985Z"
+          }
         }
       ]
     },
@@ -181650,7 +181785,16 @@
           "likes": 442,
           "comments": 32,
           "shares": 426,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Wild Women near Silva, North Carolina. Our next full moon circle is going to be on Wednesday, July 29th. We will be gathering at Peak Wellness Center again. We'll be doing some open-hearted, authentic share, some meditation. Kind of just see what the vibe is and where the evening wants to take us. But if you're looking for some sisterhood and some authentic, open-hearted relating, come ci abbiate, vorremmo incontrarvi e salire con la luna insieme abbiamo spazio limitato quindi rsvp via il link in bio",
+            "language": "Italian",
+            "durationSec": 38.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:46.786Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -181664,7 +181808,16 @@
           "likes": 9,
           "comments": 1,
           "shares": 3,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Ciao!",
+            "language": "Italian",
+            "durationSec": 40.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:49.993Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -181678,7 +181831,16 @@
           "likes": 146,
           "comments": 10,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Alpine ha un problema di pilota junior. Ora hanno tre piloti di F2, e tutti e tre sono a partire per la stessa cosa, una posizione in F1. Ma c'è un problema massimo. Dove devono andare? Ora Piergatli è in confinamento fino a fine 2018, e Franco Colapinto è a punto di signare un nuovo accordo, e questo ha lasciato zero opportunità per l'alpine dei F2 Junior. Gabriele Mini, che sta combattendo per la F2 Drivers' Championship, e che lo stava facendo a un certo punto. Poi abbiamo Alex Dunn, che dopo aver cambiato di macchiato, è uno dei più grandi prospetti di giovani giovani alpine. E finalmente Cushmany, che è già un giovane alpine riservato. Quindi, cosa Alpine farà con loro? Perché non puoi continuare a sviluppare giovani giovani per sempre, Soprattutto se non c'è un F1 seat disponibile. Questa è la stessa situazione che accadde con Oscar Piastri. Non ha avuto F2, ma non c'era spazio per Alpine. Inizia a cambiare per McLaren. Alpine potrebbe sviluppare alcuni dei migliori piloti in F2, solo per perdere loro a qualcuno. Se fossi Mini, Don o Miney, cosa faresti? Fammi sapere nei commenti!",
+            "language": "Italian",
+            "durationSec": 83.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T11:08:54.016Z"
+          }
         }
       ]
     }
