@@ -49757,7 +49757,16 @@
           "likes": 12,
           "comments": 3,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Niente non è più che un viaggio a jetto. E ora puoi salvare 50 euro per persona. Questo è 200 euro in offra per una famiglia di 4. Motivizio e suhali, i tuoi robo se ne vengono, un termine che puoi dirlo male, che ti mette a dare il tuo contatto, almeno ti amati, che tu ti togli la ica, e che c'è dielo sanarmi, il lobby, il coiio, i tuoi pano, monti con te, poi gioca, cantati la peggiano, se te no come ugueno, per tutto te lo mato, se te no come ugueno, la URP non se parlo, Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 70.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:13.736Z"
+          }
         }
       ]
     },
@@ -69228,7 +69237,16 @@
           "likes": 373,
           "comments": 4,
           "shares": 19,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Oh my god, bro. Oh, hell no, man. What the fuck, man? Get your ass on my...",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:16.854Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -69242,7 +69260,16 @@
           "likes": 109,
           "comments": 10,
           "shares": 10,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 16.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:21.243Z"
+          }
         }
       ]
     },
@@ -109867,7 +109894,16 @@
           "likes": 11,
           "comments": 1,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:25.987Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -109881,7 +109917,16 @@
           "likes": 32,
           "comments": 0,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 54.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:31.852Z"
+          }
         }
       ]
     },
@@ -160890,7 +160935,16 @@
           "likes": 5096,
           "comments": 35,
           "shares": 235,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 21.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:34.175Z"
+          }
         }
       ]
     },
@@ -182176,7 +182230,16 @@
           "likes": 47,
           "comments": 0,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T16:28:36.399Z"
+          }
         }
       ]
     }
