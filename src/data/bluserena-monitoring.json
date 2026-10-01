@@ -32544,7 +32544,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tersenyum dianya padaku Manis, manis, manis Ku belay rambutnya yang hitam Sayang, sayang, sayang Alangka senang hatiku Bila ku dekat denganmu Alangka senang hatiku Sayangku hanya untukmu",
+            "language": "Italian",
+            "durationSec": 53.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:30.332Z"
+          }
         }
       ]
     },
@@ -49802,7 +49811,16 @@
           "likes": 11000,
           "comments": 136,
           "shares": 798,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:32.572Z"
+          }
         }
       ]
     },
@@ -96545,7 +96563,16 @@
           "likes": 81,
           "comments": 4,
           "shares": 1,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 9.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:35.399Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -96559,7 +96586,16 @@
           "likes": 9,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 18.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:37.806Z"
+          }
         }
       ]
     },
@@ -110038,7 +110074,16 @@
           "likes": 65,
           "comments": 2,
           "shares": 12,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Stop",
+            "language": "Italian",
+            "durationSec": 18.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:42.949Z"
+          }
         }
       ]
     },
@@ -151513,7 +151558,16 @@
           "likes": 99,
           "comments": 0,
           "shares": 30,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Musica",
+            "language": "Italian",
+            "durationSec": 22.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:45.904Z"
+          }
         }
       ]
     },
@@ -182396,7 +182450,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Tutti stanno guardando Ethereum, ma potrebbero stare perdendo la più grande immagine. Mentre tutti gli occhi sono su ETH, il smart money sta guardando ciò che sta succedendo con Chainlink, o LINK. In termini semplici, Chainlink è la ponte sicura che connetta i dati del mondo reale alla blockchain. È l'essenziale plumbina che fa così molto di DeFi funzionare. E qui c'è la segreta alfa. Hanno appena lanciato la riserva Chainlink. Questo è un cambiamento di gioco per la trasparenza, fornendo riservi verificabili e on-chain per riservi per assetti. Quindi, mentre tutti stanno chiamando la pompa ETH, la tecnologia fondamentale che impara l'ecosistema è diventando più forte. Pensateci, avete sentito questo prima.",
+            "language": "Italian",
+            "durationSec": 32.7,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-01T21:44:49.061Z"
+          }
         }
       ]
     }
