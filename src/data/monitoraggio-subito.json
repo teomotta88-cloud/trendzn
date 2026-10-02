@@ -5,6 +5,76 @@
       "region": "lombardia",
       "listings": [
         {
+          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-gt2000-milano-662945928.htm",
+          "title": "Bicicletta elettrica GT2000",
+          "price": "999 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": null,
+          "publishedAtLabel": "Oggi all'01:04",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/aa/aa03a8e1-9278-4f88-b258-36be552ca3c9?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-mtb-bergamo-662951330.htm",
+          "title": "Bici mtb",
+          "price": "1.500 €",
+          "location": "Bergamo (BG)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-02T00:47:00.054Z",
+          "publishedAtLabel": "Oggi alle 02:47",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/70/705fe12a-9189-4294-9b77-166277ccfc84?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/porta-bici-thule-como-662944667.htm",
+          "title": "Porta bici Thule",
+          "price": "500 €",
+          "location": "Fino Mornasco (CO)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-01T22:12:00.296Z",
+          "publishedAtLabel": "Oggi alle 00:12",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/08/08bf70ea-9fd7-4649-a61f-30a0fb7ec5e1?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-scatto-fisso-single-speed-28-milano-662944271.htm",
+          "title": "Bici Scatto Fisso / Single Speed “28",
+          "price": "190 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-01T21:59:00.656Z",
+          "publishedAtLabel": "Ieri alle 23:59",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/49/492be02c-de5a-4872-8dce-b3dbed7f57c4?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-scarto-fisso-single-speed-28-milano-662944032.htm",
+          "title": "Bici scarto fisso / Single speed 28”",
+          "price": "190 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-01T21:59:00.036Z",
+          "publishedAtLabel": "Ieri alle 23:59",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/60/60c083cd-7c37-45be-b185-7d2fa7e5a525?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-uomo-bergamo-662943458.htm",
+          "title": "Bici uomo",
+          "price": "100 €",
+          "location": "Seriate (BG)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-01T21:33:00.573Z",
+          "publishedAtLabel": "Ieri alle 23:33",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/97/978daf63-bdba-4fe8-ab06-b129a7215614?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-per-bambina-24-bergamo-662943303.htm",
+          "title": "bici per bambina 24",
+          "price": "100 €",
+          "location": "Stezzano (BG)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-01T21:33:00.058Z",
+          "publishedAtLabel": "Ieri alle 23:33",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/0b/0bea5edc-5750-4049-90a5-e940eb9e4072?rule=fullscreen-1x-auto"
+        },
+        {
           "url": "https://www.subito.it/biciclette/bici-bambino-ruota-20-pollici-cremona-662811020.htm",
           "title": "bici bambino ruota 20 pollici",
           "price": "35 €",
@@ -233,6 +303,16 @@
           "publishedAt": "2026-10-01T19:41:00.103Z",
           "publishedAtLabel": "Oggi alle 21:41",
           "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/99/99ea960f-898d-45be-92cc-cbd26c04d683?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bici-da-corsa-colnago-lecco-661255288.htm",
+          "title": "Bici da corsa colnago",
+          "price": "1.000 €",
+          "location": "Lecco (LC)",
+          "firstSeenAt": "2026-10-02T01:05:39.012Z",
+          "publishedAt": "2026-10-01T19:26:00.797Z",
+          "publishedAtLabel": "Ieri alle 21:26",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/04/042be2ac-fbde-4b5d-a11c-a8b694beadbd?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/kryptonite-evolution-lucchetto-bici-e-moto-milano-662914890.htm",
@@ -10771,6 +10851,46 @@
       "region": "lombardia",
       "listings": [
         {
+          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-fiat-500-milano-662946165.htm",
+          "title": "BICICLETTA ELETTRICA FIAT 500",
+          "price": "750 €",
+          "location": "Sesto San Giovanni (MI)",
+          "firstSeenAt": "2026-10-02T01:05:43.781Z",
+          "publishedAt": null,
+          "publishedAtLabel": "Oggi all'01:04",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1d/1d4e30be-5e05-4df2-8390-73bf35ba1aec?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-elettrica-gt2000-milano-662945928.htm",
+          "title": "Bicicletta elettrica GT2000",
+          "price": "999 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-10-02T01:05:43.781Z",
+          "publishedAt": null,
+          "publishedAtLabel": "Oggi all'01:04",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/aa/aa03a8e1-9278-4f88-b258-36be552ca3c9?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-nera-milano-662944655.htm",
+          "title": "Bicicletta nera",
+          "price": "150 €",
+          "location": "Milano (MI)",
+          "firstSeenAt": "2026-10-02T01:05:43.781Z",
+          "publishedAt": "2026-10-01T22:12:00.873Z",
+          "publishedAtLabel": "Oggi alle 00:12",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/30/30ec9ea2-7f6d-4e35-b4ad-622dbccdf53e?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/bicicletta-donna-americana-pavia-662944071.htm",
+          "title": "Bicicletta donna americana",
+          "price": "150 €",
+          "location": "Cilavegna (PV)",
+          "firstSeenAt": "2026-10-02T01:05:43.781Z",
+          "publishedAt": "2026-10-01T21:59:00.196Z",
+          "publishedAtLabel": "Ieri alle 23:59",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/43/43ffc3f8-2ff2-4514-8ac0-4a304831b6e7?rule=fullscreen-1x-auto"
+        },
+        {
           "url": "https://www.subito.it/biciclette/bicicletta-bambino-misura-16-brescia-662812430.htm",
           "title": "bicicletta bambino misura 16",
           "price": "30 €",
@@ -21105,6 +21225,16 @@
           "publishedAt": "2026-10-01T14:11:00.000Z",
           "publishedAtLabel": "Oggi alle 16:11",
           "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d9/d9bd79ce-91c5-44ee-a6a8-ebd29c9a20e0?rule=fullscreen-1x-auto"
+        },
+        {
+          "url": "https://www.subito.it/biciclette/ruote-alluminio-gravel-como-660062403.htm",
+          "title": "Ruote alluminio gravel",
+          "price": "260 €",
+          "location": "Olgiate Comasco (CO)",
+          "firstSeenAt": "2026-10-02T01:05:46.955Z",
+          "publishedAt": "2026-10-01T09:59:00.906Z",
+          "publishedAtLabel": "Ieri alle 11:59",
+          "imageUrl": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a6/a6be2941-0999-49a0-8bd9-3748de78a3cc?rule=fullscreen-1x-auto"
         },
         {
           "url": "https://www.subito.it/biciclette/gomme-gravel-vittoria-e-pirelli-45-50-mm-brescia-662840169.htm",
