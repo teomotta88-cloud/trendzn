@@ -110706,7 +110706,16 @@
           "likes": 193,
           "comments": 2,
           "shares": 21,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 12.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-02T23:30:39.884Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -110720,7 +110729,16 @@
           "likes": 119,
           "comments": 11,
           "shares": 18,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "1, 2, 3, 4 Buona sera Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 68.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-02T23:30:43.579Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -110734,7 +110752,16 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Un resort sereno che si rivolge a un lagune tropicale con le viti blu e le sede bianche. La vista del sereno ponte a fiume. Non aspettare, book i vostri ticket attraverso il link in destra.",
+            "language": "Italian",
+            "durationSec": 16,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-02T23:30:46.174Z"
+          }
         }
       ]
     },
@@ -162370,7 +162397,16 @@
           "likes": 3300,
           "comments": 36,
           "shares": 696,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Quale di tutti i Valentino Born in Roma è meglio? Iniziamo con Valentino Born in Roma EDP, tra le sue note ha vaniglia, bergamota, grosella nera. Questo è uno dei profumi più eleganti versatili che c'è nel mondo della profumeria. Valentino Born in Roma Intense comparte lo stesso ADN, ma lo sento più intenso, seduttore e lo raccomando più per la notte. Inoltre, tra le sue note ha vaniglia, è ancora la protagonista, ma ha l'ambar che lo fa un po' più denso. È abbastanza potente e ha una proiezione molto buona. L'Opening Roma Coral Fantasy, moderno e giovenile, è uno dei migliori perfume per il verano. Tra le sue note c'è l'arancia brasilella e il kiwi, ciò che lo fa abbastanza fruttale. L'Opening Roma Extra Dose è uno dei miei favoriti della linea. Ti dico perché. Tra le sue note c'è la vaniglia, le groselle nere e il ron. Inoltre è un perfume abbastanza elegante, sexy e notturno. È uno dei perfumi più potenti che ti darai di Valentino. L'Opening Roma Purple Melancolia. Questo è uno dei perfumi più aspettati del 2026 per tutto l'esito di Valentino. Questo perfume, la nota principale è la ciruela, che lo fa abbastanza intenso. Io lo raccomando per la notte o per l'inverno. Io ti raccomando Valentino Born in Roma NP, se vuoi un perfume che sia ideale per il giorno e la notte, senza lasciare l'eleganza. Ti raccomando Valentino Born in Roma Intense, se vuoi un perfume per la notte e che ti duri abbastanza. E ti raccomando Valentino Extra Dose, un perfume per una prima cita o un evento in cui vuoi spazzare. bonus extra di questa collezione non mi posso lasciare solo con tre mi resterei anche con Valentino Boni Roma Coral Fantasy se vuoi un perfume per il giorno a giorno per il lavoro o per il verano senza lasciare questo tocco elegante e diverso",
+            "language": "Italian",
+            "durationSec": 94.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-02T23:30:52.670Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -162384,7 +162420,16 @@
           "likes": 143,
           "comments": 2,
           "shares": 41,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 18.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-02T23:30:56.465Z"
+          }
         }
       ]
     },
