@@ -96966,6 +96966,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:05.996Z"
+          },
+          "ocrData": {
+            "textOnScreen": "only, private Poo!\nfor 3 days, 2 nights\nonly, private pool waterfall=\n$448 for 3 days, 2 nights\n18+ only, private pool waterfall\nin your roomy",
+            "confidence": 0.845,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:24:24.839Z"
           }
         },
         {
@@ -96989,6 +96998,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:15.048Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:24:33.238Z"
           }
         }
       ]
@@ -110667,6 +110684,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:20.286Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:24:46.915Z"
           }
         }
       ]
@@ -125062,6 +125087,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:23.499Z"
+          },
+          "ocrData": {
+            "textOnScreen": "es salaam Hotel! war\nSerena Hotel\nk olo brunch,\nolo date",
+            "confidence": 0.763,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:25:01.714Z"
           }
         }
       ]
@@ -162209,6 +162243,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:27.939Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:25:13.699Z"
           }
         },
         {
@@ -162232,6 +162274,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:30.119Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:25:20.034Z"
           }
         },
         {
@@ -162255,6 +162305,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:23:52.400Z"
+          },
+          "ocrData": {
+            "textOnScreen": "FASZEROWANE POMIDORY RYZEM",
+            "confidence": 0.733,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:25:26.620Z"
           }
         }
       ]
@@ -183740,6 +183799,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:24:03.803Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:25:31.306Z"
           }
         },
         {
@@ -183763,6 +183830,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T18:24:07.207Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Trump specifically said BTC and\nETH would be the “heart” of\nthe reserve, while naming XRP,\nSOL and ADA as other assets to\nbe include\nDe! Technologies Inc\nDell is up 260%\nit runs North America's only facility\n2. MP Materials\nto magnet supply chain",
+            "confidence": 0.924,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T18:25:38.661Z"
           }
         }
       ]
