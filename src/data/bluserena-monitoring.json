@@ -49859,6 +49859,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:57:04.901Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:58:37.005Z"
           }
         },
         {
@@ -49882,6 +49890,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:57:08.310Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NEEL!!\nTHING B\nTHIS",
+            "confidence": 0.81,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:58:47.613Z"
           }
         }
       ]
@@ -69425,6 +69442,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:57:40.216Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:59:03.688Z"
           }
         }
       ]
@@ -80652,6 +80677,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:57:45.300Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SItSION a bm\nAl Foss\nItaly\nBali\nHacienda,Na Xamena\ni Ha: Xamena",
+            "confidence": 0.785,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:59:16.884Z"
           }
         }
       ]
@@ -110241,6 +110275,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:57:48.719Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Witness,the\nwith this stunning 1\ntranquil of\nthis stunning\naerial Viewlof'a serene park,\nlush greenery paints a\npicture\nwait, book your tickets through\nthe the bottom left",
+            "confidence": 0.827,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:59:26.660Z"
           }
         },
         {
@@ -110264,6 +110307,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:58:10.820Z"
+          },
+          "ocrData": {
+            "textOnScreen": "meu marido nunca vai precisar se preocupar\npresentear com pulseira da\nmeu marido nunca vai preci\npresentear com pulseira da pandora, porque a Unica\nque eu gosto é a de um all inclusive v\n1 meu marido nunca vai precisar se preocupar emime}\npulseira da pandora, porque a Unica\num all inclusive",
+            "confidence": 0.795,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:59:48.028Z"
           }
         }
       ]
@@ -136030,6 +136082,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:58:14.449Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T02:59:56.028Z"
           }
         }
       ]
@@ -161368,6 +161428,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:58:17.643Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T03:00:05.572Z"
           }
         },
         {
@@ -161391,6 +161459,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:58:20.388Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T03:00:10.115Z"
           }
         },
         {
@@ -161414,6 +161490,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T02:58:23.088Z"
+          },
+          "ocrData": {
+            "textOnScreen": "hidd\nfarm\nPeed\nanother hidden gem 5",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T03:00:29.757Z"
           }
         }
       ]
