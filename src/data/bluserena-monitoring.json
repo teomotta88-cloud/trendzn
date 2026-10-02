@@ -110715,6 +110715,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T23:30:39.884Z"
+          },
+          "ocrData": {
+            "textOnScreen": "SOALTEE\nWESTEND RESORT",
+            "confidence": 0.837,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T23:31:11.280Z"
           }
         },
         {
@@ -110738,6 +110747,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T23:30:43.579Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-02T23:31:25.707Z"
           }
         },
         {
@@ -110761,6 +110778,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T23:30:46.174Z"
+          },
+          "ocrData": {
+            "textOnScreen": "serene\nserene beach view at\ntickets",
+            "confidence": 0.766,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T23:31:41.610Z"
           }
         }
       ]
@@ -162406,6 +162432,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T23:30:52.670Z"
+          },
+          "ocrData": {
+            "textOnScreen": "VALENTINO\nSIENTO)\nVIEJORES;\nMERIA\n8 VALENTINO",
+            "confidence": 0.816,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T23:31:52.728Z"
           }
         },
         {
@@ -162429,6 +162464,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-02T23:30:56.465Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dinner\nsleeping",
+            "confidence": 0.76,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-02T23:32:03.062Z"
           }
         }
       ]
