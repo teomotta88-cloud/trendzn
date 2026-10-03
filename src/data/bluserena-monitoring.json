@@ -32678,6 +32678,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:38.518Z"
+          },
+          "ocrData": {
+            "textOnScreen": "how can anyone's favo ite\nbe serena when thi S ice\nists\nhow can favorite 3\nbe seren nen this icon\nFrat\nb an anyone's\ne sere\nre hen thisicon\nhow can anyo favorite “ind\n2 be serena when thisicon\nhow can favorite\nbe serena when this icon",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:51:46.585Z"
           }
         }
       ]
@@ -69779,6 +69788,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:40.451Z"
+          },
+          "ocrData": {
+            "textOnScreen": "NIU Reso\nJ RESO\nResort",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:51:57.187Z"
           }
         }
       ]
@@ -153042,6 +153060,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:42.724Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:02.254Z"
           }
         },
         {
@@ -153065,6 +153091,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:44.645Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:09.197Z"
           }
         }
       ]
@@ -163096,6 +163130,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:46.846Z"
+          },
+          "ocrData": {
+            "textOnScreen": "feeling\nstarted gl.\nstarted\nlessi",
+            "confidence": 0.761,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:20.483Z"
           }
         },
         {
@@ -163119,6 +163162,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:51.809Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino Amanecio\nHotel",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:24.869Z"
           }
         },
         {
@@ -163142,6 +163194,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:50:57.498Z"
+          },
+          "ocrData": {
+            "textOnScreen": "I'VE BEEN WAITING FOR LIKE\nTWO HOURS TO OPEN THIS.\nFOR VALE\nA I'DSAY RELATIVELY.",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:29.841Z"
           }
         },
         {
@@ -163165,6 +163226,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:51:00.905Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The beds with shade are free for guest\neveryday, first come first serve.\nThis resort has one of the bigger pools\nyou'll find in any resort in Mexico.\nBreakfast with friends and a view È",
+            "confidence": 0.822,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:41.089Z"
           }
         },
         {
@@ -163188,6 +163258,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:51:02.929Z"
+          },
+          "ocrData": {
+            "textOnScreen": "0/10 smell no pro\nhour\no/10 smell no\n0/10 smell ject\nbout one hour ity\nsmel\none gevity",
+            "confidence": 0.841,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:45.901Z"
           }
         }
       ]
@@ -184767,6 +184846,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:51:07.162Z"
+          },
+          "ocrData": {
+            "textOnScreen": "WHEN\nFACE",
+            "confidence": 0.787,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:52:55.580Z"
           }
         },
         {
@@ -184790,6 +184878,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:51:27.740Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Basalt",
+            "confidence": 0.754,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:53:05.677Z"
           }
         },
         {
@@ -184813,6 +184910,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T09:51:30.918Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T09:53:08.442Z"
           }
         }
       ]
