@@ -32701,7 +32701,16 @@
           "likes": 3661,
           "comments": 137,
           "shares": 47,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Meio milione di persone qui. Quindi, ragazzi, benvenuti al mezzo milione che ha aguantato il remedio amargo. Grazie per tutto l'appoggio e l'ingaggiamento. Quanto più persone apprendono qui, meno cafonice trovo qui. E sinceramente, le mie viste mi ringraziano, perché continuo a avere una vera allergia a cafonice. Confia in Keke.",
+            "language": "Italian",
+            "durationSec": 44.6,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T14:58:02.057Z"
+          }
         }
       ]
     },
@@ -125600,7 +125609,16 @@
           "likes": 80,
           "comments": 2,
           "shares": 22,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Così è la situazione di Gran Hyatt Indian Wells, con un 30% di sconto con Agoda. Dopo una rinnovazione di 64 milioni di dollari, è diventata Gran Hyatt Indian Wells. E appena arriva si nota. Palmele da tutti i lati, jardini molto cuidati e le montagne del deserto che circolano praticamente tutta la proprietà. Io mi sono rimasto in una abitazione con una cama king di 51 metri quadrati. È abbastanza più grande di ciò che speravo. Tiene sofà cama, una zona per sentarti e lavorare, spazio e balcone privato. Ma qui non mi resterei incerrato nel quarto. Il resort ha 9 piscine, un parco acquatico con rio lento e due tobogane, inoltre una piscina separata solo per adulti. Ora stesso in TikTok, questa abitazione appare in 381 dollari. È il prezzo più basso degli ultimi 60 giorni. Inoltre, appare la promozione Super Brand Go di fino al 30% di sconto e 50% di cashback, ma è per tempo limitato. Comenta se già sei andato e tocca l'etichetta di ubicazione che è giusto sotto per comprare.",
+            "language": "Italian",
+            "durationSec": 65.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T14:58:05.602Z"
+          }
         }
       ]
     },
@@ -153141,7 +153159,16 @@
           "likes": 6,
           "comments": 0,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Come fu di esserci la vita? Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 43.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T14:58:07.813Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -153155,7 +153182,16 @@
           "likes": 234,
           "comments": 8,
           "shares": 28,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 22,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T14:58:12.765Z"
+          }
         }
       ]
     },
