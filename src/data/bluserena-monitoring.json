@@ -57910,6 +57910,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:03:40.906Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:04:39.330Z"
           }
         },
         {
@@ -57933,6 +57941,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:03:51.164Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:04:48.530Z"
           }
         }
       ]
@@ -111269,6 +111285,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:03:56.655Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:04:53.148Z"
           }
         },
         {
@@ -111292,6 +111316,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:04:00.155Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:04:58.668Z"
           }
         }
       ]
@@ -153340,6 +153372,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:04:03.381Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:05:01.041Z"
           }
         }
       ]
@@ -173696,6 +173736,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:04:06.319Z"
+          },
+          "ocrData": {
+            "textOnScreen": "MOST EXPENSIVE HOTEL\nseeing her\nWE TESTED 5 STAR HOTELS ACROSS\nASIA\nKalogeras Sisters D24K 13 min ago\nWE TESTED 5 STAR HOTELS\nm We Tested 1-Star Vs 5-Star Hotels in\nJapan\nKalogeras Sisters D17M 2y ago",
+            "confidence": 0.859,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:05:07.911Z"
           }
         },
         {
@@ -173719,6 +173768,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:04:09.677Z"
+          },
+          "ocrData": {
+            "textOnScreen": "‘n House",
+            "confidence": 0.755,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:05:13.704Z"
           }
         }
       ]
@@ -185228,6 +185286,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T20:04:13.556Z"
+          },
+          "ocrData": {
+            "textOnScreen": "AKUMAL DIVE CENTER N\nBEFORE",
+            "confidence": 0.768,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T20:05:17.520Z"
           }
         }
       ]
