@@ -32710,6 +32710,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T14:58:02.057Z"
+          },
+          "ocrData": {
+            "textOnScreen": "que aprendeu\nquanto mais gente\naprende por aqu",
+            "confidence": 0.814,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T14:58:25.099Z"
           }
         }
       ]
@@ -125618,6 +125627,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T14:58:05.602Z"
+          },
+          "ocrData": {
+            "textOnScreen": "KING DE 51M? X\nENCERRADO\npara\nGrand Hyatt Indian Wells Resort\nVillas Hotel de 5 estrellas\nguardados\nVistas de las montafias al atardecer sobre jardines de...\nKids Stunning views\nN mi de City of Pal\n9 44600 Indian Wells Ln, In\nPublica contenido para ganar hasta 2,5 de co...\nAug 25 Aug 26 2 invitad\nUg 25 Aug 26 2 invitados\n4 Booking.com Trip.com D Pric\nSuper Brand GO Hasta un 30 de descuento\nESTA HABITACION\n1 King Bed With v\nAda Shower\ni 22 Hasta 4 personas 51m?\n2 Queen Beds with v 1\n22 Hasta 4 personas 25 m?\nDesde $406\nVer todos los tipos de habitaciones\nDestacados Ver todo\nADE HASTA'30% DE",
+            "confidence": 0.851,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T14:58:33.655Z"
           }
         }
       ]
@@ -153168,6 +153186,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T14:58:07.813Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T14:58:47.634Z"
           }
         },
         {
@@ -153191,6 +153217,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T14:58:12.765Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T14:59:06.683Z"
           }
         }
       ]
