@@ -32669,7 +32669,16 @@
           "likes": 24400,
           "comments": 219,
           "shares": 586,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "E' così che io vengo sempre. E tu perdi. Non tutti vogliono essere Blair Waldorf. Non tutti possono essere. Non è il carma una b***a? Sappiamo che Blair Waldorf è. Non puoi vederlo. Ti prego, scusa. Oh no, non è così. Ma ti prego.",
+            "language": "Italian",
+            "durationSec": 16.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:38.518Z"
+          }
         }
       ]
     },
@@ -69761,7 +69770,16 @@
           "likes": 23100,
           "comments": 222,
           "shares": 6333,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "No, no, no... Devi continuare a bevere come ti dicevi, ricorda?",
+            "language": "Italian",
+            "durationSec": 5.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:40.451Z"
+          }
         }
       ]
     },
@@ -153015,7 +153033,16 @@
           "likes": 3906,
           "comments": 70,
           "shares": 199,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "a",
+            "language": "Italian",
+            "durationSec": 8.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:42.724Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -153029,7 +153056,16 @@
           "likes": 140,
           "comments": 44,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 13.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:44.645Z"
+          }
         }
       ]
     },
@@ -163051,7 +163087,16 @@
           "likes": 208,
           "comments": 13,
           "shares": 2,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica",
+            "language": "Italian",
+            "durationSec": 12,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:46.846Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -163065,7 +163110,16 @@
           "likes": 564,
           "comments": 2,
           "shares": 23,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Perché mi chiedi dove sei? Cioè... Cioè... Cioè... Che? Che cosa Candela? Vuoi provare? Sto come una moribunda in quel bagno della milenca vomitando come una ogra come una vichinga E continui Ma no Candela, che asco! Io in un hotel? Che asco! E si, e si Airbnb, mio amore, o un resort Ah, allora, voglio vedere chi è la mia amica a ver, che te conseghe ahi, no per la chupadera e per la diversione uia, tutte le garrapate ahi, che viva il rock si, che siga vivendo poi te lo cantarei quando cominci con le corde a saltare e con le tue unghie ahi, vas a rascare e vas a dire che vive il rock a ver, che viva",
+            "language": "Italian",
+            "durationSec": 48.3,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:51.809Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -163079,7 +163133,16 @@
           "likes": 218,
           "comments": 45,
           "shares": 11,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Let's unbox Valentino Uomo Born in Roma Intense. I honestly just cannot wait to open this bag or it's gonna be a lot. I've been waiting for like two hours to open this. I got it for like $90 at Ken's Warehouse, 50ml. Oh my, look at that bottle. Let's give it a spray. For Valentino, we are going straight on the skin. Vanilla Lavender Vetiver è un sentimento così bello e versatile in mia opinione questo progetto è il miglior nel vero inverno ma è davvero un buon franguolo di ogni giorno quindi Valentino Born in Rome Intense è un provo quando questo si ritorna a la propria acquistazione? probabilmente è caro? sì, direi relativamente è buono? Sì, di 10, 7. Un buon fragranzo, forse riportare. Ciao.",
+            "language": "Italian",
+            "durationSec": 62.2,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:50:57.498Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -163093,7 +163156,16 @@
           "likes": 228,
           "comments": 38,
           "shares": 34,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Musica Grazie a tutti. Grazie a tutti. Ciao",
+            "language": "Italian",
+            "durationSec": 104.4,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:51:00.905Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -163107,7 +163179,16 @@
           "likes": 31,
           "comments": 8,
           "shares": 0,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 8.1,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:51:02.929Z"
+          }
         }
       ]
     },
@@ -184677,7 +184758,16 @@
           "likes": 14500,
           "comments": 359,
           "shares": 1015,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "Ciao",
+            "language": "Italian",
+            "durationSec": 24.8,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:51:07.162Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -184691,7 +184781,16 @@
           "likes": 989400,
           "comments": 7027,
           "shares": 77200,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "L'hanno fatto di nuovo. Hanno scannato il più impossibile templo del mondo per provare che la grande archeologia non sa nulla. Uncoverando marci di strumenti in alcune delle più difficili di roccia naturale conosciute da uomini che non possiamo nemmeno raggiungere con i nostri strumenti moderni di oggi. Se pensate che le piramidi sono impressionanti, questo è in grado di ruotare circoli attorno a voi. Questo è il templo di Kailasa in India e non è nemmeno costruito. Era carico fuori da un lato di una montagna. Questo tempo è essenzialmente un pezzo di roccia che hanno lavorato per creare un complesso monolithico funzionale con la più grande dettagliatura di qualsiasi cosa che abbia mai visto, insieme a proprietà acustiche uniche dove il più piccolo hum reverbera in un chant vibrante del corpo, pensato a essere inteso per i propri motivi di cura, tipo un ospitalio antico, o forse anche il metodo di costruzione usato per costruire questo, come la funzione della drenatura e i ventilatori che si sono ben ingegnati, che sono stati tutti ben pensati come parte del design originale, non qualcosa che hanno aggiunto dopo. Matematicamente, sono pillole artisticamente perfette che stanno più di 100 metri in alto che avrebbero dovuto diventare per creare. Tutto in un'area così grande come un campo di calcio, andando a 100 metri direttamente in alto al suo punto più profondo. Ricordatevi, hanno fatto tutto questo come un singolo pezzo di roccia carico in un montante, che significa che non c'era room for error. Soprattutto come scoprire una statua Grazie per aver guardato il video non si pu spiegare perch tutto quel roccio appena disaperto Non abbiamo idea dove lo hanno messo e non ci sono tracce di niente 400 tonnelli molto roccio che si proprio perso. Questo è solo uno dei molti tra le cave misteriose di India, più di 30 templi, tutti di cui sono stati carabinati nel lato del montante. Ciò che fa differente di Kailasa dal resto è che è stato costruito dal basso, defendo tutte le regole dell'architettura convenzionale. Per semplificare, la maniera in cui questo templo è stato costruito è, da ogni senso di word unexplainable. Historians will tell you it was built sometime around 756 to 773 AD, but as always that's just an estimate. In fact, it's a terrible estimate, even less accurate than the timeline of the pyramids, as the main source of dating for this temple were land grants. Exactly two land grants inscribed into copper plates that were found hundreds of miles away. These copper plates acted as official documents of legal ownership deeds back in their day. And all these plates did was glaze their King Krishna I for commissioning the construction del templo che avrebbe avuto un tempo di date circa l'VIII secolo a.d ma le placche contengono anche inscrizioni che bocciano che il templo era così profumato che anche i diadi volando sopra si stavano in loro i cerrioli celesti per ammirarlo i diadi volando sopra cerrioli celesti mi chiedo di cosa stavano riferendo qui e secondo leggende simili questo templo fu costruito in solo una settimana ma no no no quella parte era appena realizzata ma le actuali date sulle placche di coppia sì sì quelle erano reali puoi vedere come questo diventa un po' questionabile Questo è il motivo per cui è considerato un templo molto più abilissimo di quello che era costruito molto più tempo fa usando tecnologie che sono ancora pi utili oggi Questo perch la parte pi impressionante che questo templo di basalt lava which if you didn know is hard as a mother f ranking between a 6 on the Mohs scale of hardness making it as hard as granite just as unexplainable as what the ancient Egyptians quarried. They even ran an experiment using modern steel pickaxes on the basalt to see how much rock they can remove in 10 minutes. They timed it, and the results showed that you would have to swing away at it for 3 years straight just to remove a cubic meter of it. Ufficialmente è stato detto che questo templo è stato costruito da 18 anni. A 400.000 tonnelli di roccia, questo requerirà 5 tonnelli di roccia rimuovute per l'ora, assumendo schifo di 12 ore per 18 anni. 5 tonnelli di roccia per l'ora. I piccati di stile moderna sono stati mostrati per rimuovere un metere cubico che è di 3 tonnelli in 3 anni. Puoi vedere come questi numeri non aggiungono, come, nemmeno? E dato l'area di campo di calcio che erano confinati a lavorare, erano anche limitati a quanto persone potessero lavorare su questo a una volta. Quindi non puoi dire che c'erano centinaia di soldati lavorando su questo. Questo sarebbe fisicamente impossibile. Per mettere in prospettiva, nel 1600, l'impero Mughal, Arang Zeb, ho sicuramente sbagliato questo, comandò un'armiata di un milione di lavoratori per distruggere il templo di Kailasa come una sorta di pulizia culturale di quell'area dopo aver conquistato. Dopo tre anni di un'armiata di un milione di lavoratori che stavano hackando con strumenti di stile, la loro missione sbagliò, perché il roccio era così forte che lo chiamavano. Hanno causato un po' di danni alle statue e hanno scattato alcuni dettagli, ma ha provato quanto è difficile che questo templo sia anche un chip, a meno che si scappi da un montante dappertutto. Ora nuove investigazioni hanno rivelato alcune interessanti macchie di strumento attraverso il templo con gruvi consistenti un deep into the rock che significa che significa che c molta forza Oggi dovremmo usare macchine idrauliche di grado industriale per raggiungere qualcosa di vicino a questo in roccia basalta. Ma la cosa è che queste spaziole sono trovate nelle strade più spaziole e incrociate, tutto attorno a Kailasa. Corridori che non sono abbastanza grandi per una persona per passare attraverso, a meno che ci siano alcune macchine o strumenti necessari per la colossale quantità di forza che è necessaria per creare queste gruvi. Come su Terra si adattano le tecniche o tecniche con un'immensa potenza in queste piccole zone. E queste strutture non potrebbero solo essere massive blasti che gestiscono un'ensana quantità di forza. Dovevano essere molto precise, anche con l'amount di dettaglio che si è impastato nel basalt, nonostante sia un problema di mente. La precisione artistica di questo tipo in un materiale così pesante come il basalt dovrebbe richiedere di ottenere i pezzi di forza di alto potere di diamante che oggi si possono ottenere. Anche se lo hanno fatto più di 1000 anni fa con i cilindri e i ferri. Ora, nella mitologia hindu, si dice che questo templo è stato costruito da un deito chiamato Vishwakarma, l'architetto divino, che secondo le leggende è stato in grado di manipolare e lavorare con radianze solari e concentrate in strumenti divini che usano per la costruzione dei templi, che non so neanche te, ma concentrate radianze solari suona molto come tecnologia laser a me, laseri antichi, imponendo che questo è come hanno costruito il grande templo Kailasa in India antica, usando conoscenze scompartite dalle civilizzazioni precedenti, o forse anche tecnologia aliena che attribuiscono ai loro diadi da oltre, che onestamente fa più senso che la poca scusa di un Grazie a tutti.",
+            "language": "Italian",
+            "durationSec": 362.9,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:51:27.740Z"
+          }
         },
         {
           "platform": "tiktok",
@@ -184705,7 +184804,16 @@
           "likes": 1297,
           "comments": 31,
           "shares": 199,
-          "verificationStatus": "unconfirmed"
+          "verificationStatus": "unconfirmed",
+          "audioAnalysis": {
+            "transcript": "ODEON!",
+            "language": "Italian",
+            "durationSec": 8.5,
+            "model": "whisper-large-v3",
+            "status": "ok",
+            "version": 1,
+            "updatedAt": "2026-10-03T09:51:30.918Z"
+          }
         }
       ]
     }
