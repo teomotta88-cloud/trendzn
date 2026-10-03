@@ -32647,6 +32647,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:04.914Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 0,
+            "status": "frame_failed",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:43:15.420Z"
           }
         }
       ]
@@ -50008,6 +50016,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:07.211Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:43:34.216Z"
           }
         },
         {
@@ -50031,6 +50047,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:10.855Z"
+          },
+          "ocrData": {
+            "textOnScreen": "in interior",
+            "confidence": 0.792,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:43:41.476Z"
           }
         },
         {
@@ -50054,6 +50079,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:15.956Z"
+          },
+          "ocrData": {
+            "textOnScreen": "wa diaries\nmanhwa diaries",
+            "confidence": 0.8,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:43:47.531Z"
           }
         }
       ]
@@ -69690,6 +69724,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:20.912Z"
+          },
+          "ocrData": {
+            "textOnScreen": "dici pa\nDulich nghi",
+            "confidence": 0.734,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:44:15.156Z"
           }
         }
       ]
@@ -80949,6 +80992,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:25.012Z"
+          },
+          "ocrData": {
+            "textOnScreen": "RESET THE STANDARD\nAND SUITES AT THE!\nPENTHOUSES\nWITH OVER $200 MILLION IN",
+            "confidence": 0.813,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:44:24.475Z"
           }
         },
         {
@@ -80972,6 +81024,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:27.616Z"
+          },
+          "ocrData": {
+            "textOnScreen": "coulel\nyou locked",
+            "confidence": 0.797,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:44:30.261Z"
           }
         }
       ]
@@ -97190,6 +97251,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:30.272Z"
+          },
+          "ocrData": {
+            "textOnScreen": "All Inclusive",
+            "confidence": 0.781,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:44:44.089Z"
           }
         },
         {
@@ -97213,6 +97283,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:33.285Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:44:51.760Z"
           }
         }
       ]
@@ -111017,6 +111095,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:39.543Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Plantation Movement\nOn The Roll!\nis almost\nA 2 A PLANT SP. JOIN THE GREf\nEDEN",
+            "confidence": 0.793,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:45:07.547Z"
           }
         }
       ]
@@ -136908,6 +136995,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:44.001Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:45:14.799Z"
           }
         }
       ]
@@ -162749,6 +162844,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:46.540Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Port Red 3\nPort Red -2016 Vin\nPort Red\nPort Red q\nPort Special Spring 38\nWhite Rose’ Wines\nSoyval Spring 36\nRose 7057 Vintage Spring Special $69\nPort White Vintage Spring 69\nBianca Wine Vintage- 375ml $79 Spring Special $79\nDessert Wine Special Spring $39\nInternational Medal Winning Special Request Wines\nSignature Label 2017' Vintage 750ml $249.00 Special $14¢\nMarechal Foch Reserve 2009’ Per Request: 750ml $249.00 Special A\nSignature Label 2009’ Vintage (Red Metallic Seal) Per Request $243.00 Special $149\nSignature Label Vintage Metallic Seal Per Request $249.00 Special $149\nSignature Label 2004' Vintage International Meda! Winner) $499.00 Special $299\nPort Red Vintage Per Request 750ml $499.00 Special\n1 Red 2016 Per Request $249.00 Special $149\nort Red 2019' Vintage 750ml- $149.00 Special $99\nRed 2000° Sliver Modal Winner- $349.00 Spe\nUS ABOUT AN ADDITIONAL BOTTLE NO CHARGE WITH THE PURCHASE Of e\nVISA DISCOVER. OR MASTER CARD ACCEPTE\nPort 4\nRose\nPort White\nWine\nLimone’ Dessert Wine\nSignature Label 2017 Vintage\nMarechal Foch Reserve Vintage-—\nSignature Label Vintage\nSignature Label 2011\" Vintage {i\nPort Red 2011\" Vintagi\nart Red 2016 Vintage\nK US ABOUT AN ADDITIONAL\nMATCH\nLabel Vintage Special",
+            "confidence": 0.819,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:45:41.437Z"
           }
         },
         {
@@ -162772,6 +162876,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:49.594Z"
+          },
+          "ocrData": {
+            "textOnScreen": "DEFINITELY 4\nVANILLA 2\n=Y Nalentino\\B\nFEELS",
+            "confidence": 0.765,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:45:54.055Z"
           }
         },
         {
@@ -162795,6 +162908,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:53.399Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Valentino Beauty Partner\nDonna Born in Roma\nRendez-vous The I_\nVALENTINO",
+            "confidence": 0.83,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:46:00.217Z"
           }
         },
         {
@@ -162818,6 +162940,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:42:58.325Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Amii",
+            "confidence": 0.767,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:46:05.086Z"
           }
         },
         {
@@ -162841,6 +162972,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:43:01.033Z"
+          },
+          "ocrData": {
+            "textOnScreen": "EAU DE PARFUM\n100 mi. VAPORISATEUR SPRAY 3.4\nGlossiBottle\nSame Design",
+            "confidence": 0.805,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:46:14.533Z"
           }
         }
       ]
@@ -172998,6 +173138,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-03T04:43:05.609Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-03T04:46:25.291Z"
           }
         }
       ]
