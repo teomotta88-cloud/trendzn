@@ -111347,6 +111347,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-04T01:12:37.479Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-04T01:13:15.588Z"
           }
         }
       ]
@@ -163594,6 +163602,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-04T01:12:40.004Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-04T01:13:25.108Z"
           }
         },
         {
@@ -163617,6 +163633,14 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-04T01:12:42.348Z"
+          },
+          "ocrData": {
+            "textOnScreen": null,
+            "confidence": null,
+            "frameCount": 5,
+            "status": "no_text",
+            "version": 3,
+            "updatedAt": "2026-10-04T01:13:29.737Z"
           }
         },
         {
@@ -163640,6 +163664,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-04T01:12:45.332Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The right resort makes all the difference",
+            "confidence": 0.834,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-04T01:13:38.341Z"
           }
         }
       ]
@@ -185410,6 +185443,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-04T01:12:48.094Z"
+          },
+          "ocrData": {
+            "textOnScreen": "The Embodiment of Peace, resting upon\nthe coils of timelessness, from whose\nnavel arises the cosmic lotus—the Source\nof all gods and creation.\nThe unseen foundation of the universe,\nvast as the sky, dark as the rain-cloud,\nyet resplendent in divine beauty.\nBeloved of Lakshmi, with lotus-eyes of\ncompassion, reachable only through\ndeep yogic meditation,\n1 bow to Lord (Mahavishnu), who\nremoves the fear of worldly existence, the\none and only Lord of all the worlds.",
+            "confidence": 0.883,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-04T01:13:47.172Z"
           }
         },
         {
@@ -185433,6 +185475,15 @@
             "status": "ok",
             "version": 1,
             "updatedAt": "2026-10-04T01:12:59.839Z"
+          },
+          "ocrData": {
+            "textOnScreen": "Cajun culture originated\nin Nova Scotia (yes in Canada)\nTRUSTED\nNova Scotia (yes in Canada)",
+            "confidence": 0.85,
+            "frameCount": 5,
+            "minConfidence": 60,
+            "status": "ok",
+            "version": 3,
+            "updatedAt": "2026-10-04T01:13:58.194Z"
           }
         }
       ]
